@@ -5,32 +5,35 @@
   {
    "text": "Serve the snacks when Del pulls out his shower curtain rings.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Del is a shower curtain ring salesman, but no source opened describes a scene where he pulls out the rings. The pillows wake-up is confirmed.",
-   "source": "https://en.wikiquote.org/wiki/Planes,_Trains_and_Automobiles",
+   "verdict": "wrong",
+   "why": "Del hands his rings to the rental counter woman in a story he tells, and no scene shows him pulling them out. The waking-up-holding-hands scene is real ('Those aren't pillows').",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
    "fix": "Serve the snacks when Neal and Del wake up holding hands.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Del's bag shook it up. Open it carefully.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source mentions a shaken beer or Del's bag.",
-   "source": "https://en.wikiquote.org/wiki/Planes,_Trains_and_Automobiles",
-   "fix": "Tallboy for the motel room, after the car fire.",
+   "verdict": "wrong",
+   "why": "The beer cans burst because Del left them on a vibrating motel bed, not from a shaken bag. Neal complains about sleeping in a puddle of beer.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
+   "fix": "Shaken on the motel bed. Open it carefully.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Del's Chicago order. Those aren't pillows.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "'Those aren't pillows' is real, but nothing shows Del ordering Italian beef.",
-   "source": "https://en.wikiquote.org/wiki/Planes,_Trains_and_Automobiles",
+   "verdict": "wrong",
+   "why": "'Those aren't pillows' is Neal's real line, but no source shows Del ordering Italian beef. Chicago is where they are headed.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
    "fix": "A Chicago bite. Those aren't pillows.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

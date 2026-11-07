@@ -21,32 +21,35 @@
   {
    "text": "The giant piano at the toy store",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No source opened mentions a giant piano or a toy store scene.",
-   "source": "https://en.wikipedia.org/wiki/Shazam!_(film)",
+   "verdict": "ok",
+   "why": "Screen Rant says that when Sivana confronts Billy in the toy store they stumble onto a giant floor keyboard, a nod to Big.",
+   "source": "https://screenrant.com/shazam-movie-references-inspirations/",
    "fix": "Billy and Freddy filming his powers on Freddy's phone",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Paid with cash zapped from an ATM.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source opened describes an ATM scene. Freddy does film Billy using his powers, which Wikipedia confirms.",
-   "source": "https://en.wikipedia.org/wiki/Shazam!_(film)",
-   "fix": "Freddy posts the videos, Billy pays for dinner.",
+   "verdict": "wrong",
+   "why": "No ATM. Billy and Freddy pay for the beer with the 73 bucks Shazam made in donations for charging phones.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=shazam",
+   "fix": "Paid with 73 bucks earned charging phones.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Shazam tried real beer. Spat it straight out.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "A photo caption on one review site shows Shazam trying to buy beer, but no source opened describes him spitting it out.",
-   "source": "https://wherever-i-look.com/movies/shazam-2019-summary-review-with-spoilers",
-   "fix": "Billy in a grown man's body, still ordering a grape soda.",
+   "verdict": "wrong",
+   "why": "Billy and Freddy do drink the beer, and Freddy says it tastes like vomit, but nobody spits it out.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=shazam",
+   "fix": "Shazam tried real beer. Said it tasted like vomit.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 10,

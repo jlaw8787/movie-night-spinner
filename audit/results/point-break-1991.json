@@ -5,22 +5,22 @@
   {
    "text": "Serve the meatball subs when Johnny brings back lunch for Pappas.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "I could not find a meatball sub or a lunch run for Pappas in any source I opened. The film does have Johnny and Pappas on a bank stakeout, and Johnny reporting that Bodhi ate lunch at Patrick's Roadhouse. The printed cue and data cue match.",
-   "source": "https://en.wikipedia.org/wiki/Point_Break",
-   "fix": "Serve the meatball subs when Johnny and Pappas start the bank stakeout.",
+   "verdict": "ok",
+   "why": "On the stakeout Pappas says the sandwich shop round the corner sells the best meatball sandwiches and sends Utah to get two, so Johnny does bring back lunch for Pappas.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=point-break",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Utah's meatball subs",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Depends on the cue. No source I opened shows Utah and a meatball sub.",
-   "source": "https://en.wikipedia.org/wiki/Point_Break",
-   "fix": "Utah's stakeout subs",
+   "verdict": "ok",
+   "why": "Same scene: Utah orders the two meatball sandwiches for the stakeout.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=point-break",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 12,

@@ -5,11 +5,12 @@
   {
    "text": "the Gusteau's kitchen crew at family meal",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No family meal scene for the Gusteau's crew turns up in the plot or trivia, and no tarragon chicken is shown. The line is not on the printed menu or the phone menu, only in the dish note data.",
-   "source": "https://en.wikipedia.org/wiki/Ratatouille_(film)",
-   "fix": "the roast chicken a Gusteau's line cook would knock up after service",
-   "done": false
+   "verdict": "wrong",
+   "why": "Transcript, Wikipedia and Filmsite show no family meal for the Gusteau's crew and no tarragon chicken; the note is replaced with a plain description that claims nothing about the plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ratatouille",
+   "fix": "the Gusteau's line cooks' nightly roast",
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 21,

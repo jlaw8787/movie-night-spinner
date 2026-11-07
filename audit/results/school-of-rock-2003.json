@@ -21,12 +21,14 @@
   {
    "text": "Ned's labeled ham and egg sandwiches",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No source opened shows Ned labelling sandwiches. Ned is Dewey's roommate whose name Dewey borrows, but a labelled lunch is not described.",
-   "source": "https://schoolofrock.fandom.com/wiki/Ned_Schneebly",
+   "verdict": "wrong",
+   "why": "No transcript, plot or fan wiki source shows Ned labelling sandwiches. Dewey tells the kids to call him Mr. S, which is a name the film does use.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=school-of-rock-the",
    "fix": "Mr. S's ham and egg sandwiches",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

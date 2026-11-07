@@ -1,64 +1,65 @@
 {
-  "id": "Pulp Fiction (1994)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The opening scene, before the robbery",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Printed under Coffee shop stack. In the opening scene the robbers only drink coffee. Vincent eats pancakes and bacon in the final diner scene, with Jules.",
-      "source": "https://www.sheilaomalley.com/?p=79105",
-      "fix": "Vincent's pancakes, before Honey Bunny stands up",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "the opening scene at the diner, before the robbery",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Same issue, for the Diner pancakes dish. Pancakes belong to Vincent in the closing diner scene, not the opening one.",
-      "source": "https://www.sheilaomalley.com/?p=79105",
-      "fix": "Vincent's pancakes at the diner before the robbery",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "HOSTESS Marilyn",
-      "where": "card",
-      "verdict": "unsure",
-      "why": "Sources describe Marilyn Monroe as a waitress in Slim's, not a hostess. Vincent points her out as a waitress dressed as Marilyn.",
-      "source": "https://en.wikiquote.org/wiki/Pulp_Fiction",
-      "fix": "WAITRESS Marilyn",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 5,
-    "tone": 4,
-    "look": 4,
-    "verdict": "A fan pleasing Jack Rabbit Slim's with the right orders, only the pancake note and the hostess title slip.",
-    "missing": [
-      "Royale with Cheese (Vincent and Jules in the car)",
-      "Jules taking a bite of Brett's burger, 'tasty burger' (Brett's flat)",
-      "Mia's Durwood Kirby burger order (Slim's)",
-      "Fabienne's blueberry pancakes and blueberry pie (the motel)",
-      "Butch's pastries in the toaster (the motel)",
-      "Jules refusing bacon, 'filthy animal' (final diner)"
-    ],
-    "ideas": [
-      "Swap 'Hostess Marilyn' for 'Waitress Marilyn'.",
-      "Swap 'Mamie's devilled eggs' for Mia's Durwood Kirby burger (one source spells it Derwood).",
-      "Swap the 'Coffee shop stack' note for 'Vincent's pancakes. Jules passes on the bacon.'",
-      "Swap 'Slim's fries' for 'Royale with Cheese' and keep the Holland mayo joke on the note."
-    ],
-    "overall": 4.4,
-    "flat": false,
-    "done": false
+ "id": "Pulp Fiction (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The opening scene, before the robbery",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Printed under Coffee shop stack. In the opening scene the robbers only drink coffee. Vincent eats pancakes and bacon in the final diner scene, with Jules.",
+   "source": "https://www.sheilaomalley.com/?p=79105",
+   "fix": "Vincent's pancakes, before Honey Bunny stands up",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the opening scene at the diner, before the robbery",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same issue, for the Diner pancakes dish. Pancakes belong to Vincent in the closing diner scene, not the opening one.",
+   "source": "https://www.sheilaomalley.com/?p=79105",
+   "fix": "Vincent's pancakes at the diner before the robbery",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "HOSTESS Marilyn",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Vincent points out a waitress dressed as Marilyn Monroe at Jack Rabbit Slim's and talks about sitting in her section; there is no hostess.",
+   "source": "https://en.wikiquote.org/wiki/Pulp_Fiction",
+   "fix": "WAITRESS Marilyn",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 5,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A fan pleasing Jack Rabbit Slim's with the right orders, only the pancake note and the hostess title slip.",
+  "missing": [
+   "Royale with Cheese (Vincent and Jules in the car)",
+   "Jules taking a bite of Brett's burger, 'tasty burger' (Brett's flat)",
+   "Mia's Durwood Kirby burger order (Slim's)",
+   "Fabienne's blueberry pancakes and blueberry pie (the motel)",
+   "Butch's pastries in the toaster (the motel)",
+   "Jules refusing bacon, 'filthy animal' (final diner)"
+  ],
+  "ideas": [
+   "Swap 'Hostess Marilyn' for 'Waitress Marilyn'.",
+   "Swap 'Mamie's devilled eggs' for Mia's Durwood Kirby burger (one source spells it Derwood).",
+   "Swap the 'Coffee shop stack' note for 'Vincent's pancakes. Jules passes on the bacon.'",
+   "Swap 'Slim's fries' for 'Royale with Cheese' and keep the Holland mayo joke on the note."
+  ],
+  "overall": 4.4,
+  "flat": false,
+  "done": false
+ }
 }

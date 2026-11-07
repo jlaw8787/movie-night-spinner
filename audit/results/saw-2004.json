@@ -5,12 +5,14 @@
   {
    "text": "The detectives who won't let it go.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "By the present day Sing is dead and Tapp alone is still chasing Jigsaw, so the plural reads a little off. Tapp and Sing did chase him together five months earlier.",
+   "verdict": "wrong",
+   "why": "Sing is dead by the present day and Tapp is the only detective still chasing Jigsaw, so the plural is off.",
    "source": "https://en.wikipedia.org/wiki/Saw_(film)",
    "fix": "The detective who won't let it go.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

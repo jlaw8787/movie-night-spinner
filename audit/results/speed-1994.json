@@ -21,12 +21,14 @@
   {
    "text": "Pop quiz, hotshot. Harry's line, before the elevator job goes sideways",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The pop quiz line is Harry's, but I could not confirm where it falls against the elevator job. The plot page I read does not cover it, and no quote page for this film could be opened.",
-   "source": "https://m.imdb.com/title/tt0111257/plotsummary",
-   "fix": "Harry's pop quiz, hotshot, on the way to the elevator job",
+   "verdict": "wrong",
+   "why": "Harry's quiz in the elevator standoff opens with plain 'Pop quiz' and no 'hotshot'. 'Pop quiz, hotshot' is the bomber Howard Payne's line, said later.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=speed",
+   "fix": "Pop quiz. Harry's line, while the elevator job waits",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

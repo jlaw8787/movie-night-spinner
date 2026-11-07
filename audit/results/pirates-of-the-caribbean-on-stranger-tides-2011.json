@@ -5,12 +5,13 @@
   {
    "text": "Barbossa raises his peg leg in a toast.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Barbossa has a peg leg and takes over the Queen Anne's Revenge at the end, but no source shows a toast.",
-   "source": "https://pirates.fandom.com/wiki/Pirates_of_the_Caribbean:_On_Stranger_Tides",
-   "fix": "Barbossa claims the ship, so he pours.",
+   "verdict": "wrong",
+   "why": "No toast or peg leg raising appears in the transcript or plot. Barbossa does claim Blackbeard's ship and crew and the sword as payment for his lost leg.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pirates-of-the-caribbean-on-stranger-tides",
+   "fix": "Barbossa claims the ship, crew and sword.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

@@ -21,12 +21,13 @@
   {
    "text": "Last-meal chicken parmigiana",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The family's last supper of favourites is spaghetti and French toast, plus Graham and his mashed potatoes. Chicken parmigiana was not found.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Signs",
-   "fix": "Last supper spaghetti and French toast",
+   "verdict": "wrong",
+   "why": "In the family's boarded-up dinner scene the orders are spaghetti, French toast with mashed potatoes, chicken teriyaki and a bacon cheeseburger. No chicken parmigiana. Renamed to the boarded-up night so it still describes the recipe.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=signs",
+   "fix": "Boarded-up night chicken parmigiana",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

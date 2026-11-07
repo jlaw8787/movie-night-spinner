@@ -5,22 +5,24 @@
   {
    "text": "Harry Telford's toast to the 1930 Cup.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The film has Telford sidelined and fighting with Davis, and the sources opened show no toast.",
+   "verdict": "wrong",
+   "why": "The plot shows Telford sidelined and Tommy hiding Phar Lap before the 1930 Melbourne Cup, with no toast scene. Phar Lap winning that Cup is true.",
    "source": "https://en.wikipedia.org/wiki/Phar_Lap_(film)",
-   "fix": "Raised to the 1930 Cup win.",
+   "fix": "A toast to Phar Lap's 1930 Cup win.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Tommy's lunch, eaten on a hay bale beside Bobby.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Tommy and Bobby are close, but no source describes a lunch scene or a hay bale.",
+   "verdict": "wrong",
+   "why": "The plot shows Tommy and Bobby bonding but no lunch or hay bale scene in the plot or transcript.",
    "source": "https://en.wikipedia.org/wiki/Phar_Lap_(film)",
-   "fix": "Tommy's lunch break at the stables.",
+   "fix": "Tommy keeps Bobby close, even at mealtime.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

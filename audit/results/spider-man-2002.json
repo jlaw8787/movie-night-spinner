@@ -5,12 +5,13 @@
   {
    "text": "Forest Hills pancakes (Aunt May's Forest Hills kitchen, with syrup)",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "I could not open a source that places Aunt May's house in Forest Hills in this film.",
-   "source": "https://en.wikipedia.org/wiki/Spider-Man_(2002_film)",
-   "fix": "Aunt May's kitchen, with syrup",
+   "verdict": "ok",
+   "why": "The film is set in Queens and used a house on a Forest Hills street as Peter and Aunt May's home, which matches the comics' Forest Hills address.",
+   "source": "https://qns.com/2002/05/spider-man-brings-fame-to-two-forest-hills-blocks",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

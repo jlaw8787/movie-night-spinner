@@ -21,12 +21,13 @@
   {
    "text": "Toys, Clocks and Cheese",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "Geppetto is a woodcarver and toymaker, but the pages opened do not describe the shop's contents and cheese is not confirmed. I recall clocks and music boxes, not cheese.",
-   "source": "https://pinocchiodisney.fandom.com/wiki/Pinocchio_(1940)",
+   "verdict": "wrong",
+   "why": "Jiminy describes the shop as full of carved wooden clocks, little music boxes and shelves of toys. Cheese is never mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pinocchio",
    "fix": "Toys, Clocks and Music Boxes",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 15,

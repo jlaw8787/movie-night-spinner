@@ -5,13 +5,15 @@
   {
    "text": "Large caramel macchiato",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The note says it is not a venti and Danny is very clear. No source I opened shows this coffee gag.",
-   "source": "https://en.wikiquote.org/wiki/Role_Models",
-   "fix": "Danny's coffee order. He is very clear about it.",
+   "verdict": "wrong",
+   "why": "Danny orders a large black coffee and insists he means a large, not a venti. There is no macchiato in the scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=role-models",
+   "fix": "Large black coffee",
    "printed": false,
-   "done": false,
-   "full": "Not a venti. Danny is very clear."
+   "done": true,
+   "full": "Not a venti. Danny is very clear.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

@@ -5,12 +5,14 @@
   {
    "text": "the consulate party",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "I could not confirm a consulate party in the film. The film opens with a farewell gift handover to Consul Han in Hong Kong.",
-   "source": "https://en.wikipedia.org/wiki/Rush_Hour_(1998_film)",
-   "fix": "the farewell gift in Hong Kong",
+   "verdict": "wrong",
+   "why": "The film opens with Han's farewell speeches and a toast to Hong Kong, but there is no consulate party. The later event is an art exhibition at the convention centre.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rush-hour",
+   "fix": "the farewell party in Hong Kong",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

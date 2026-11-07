@@ -21,12 +21,13 @@
   {
    "text": "a proper staff dinner, cut off by the storm",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Attached to the roast beef and Yorkshires. The plot summary I read has no staff dinner during the hurricane, only the investigation, Ward C and the lighthouse. Teddy and Chuck do eat with Dr Cawley in the film, but I could not confirm it is cut off by the storm.",
-   "source": "https://en.wikipedia.org/wiki/Shutter_Island_(film)",
-   "fix": "a proper staff dinner, with Dr Cawley and his records",
+   "verdict": "wrong",
+   "why": "The transcript only has Cawley saying he will gather staff in the common room after dinner, with the hurricane building. No dinner scene is cut off by the storm, so the note now says only what the film shows.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=shutter-island",
+   "fix": "the staff dinner on the island, as the hurricane closes in",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 17,

@@ -5,22 +5,24 @@
     {
       "text": "Locker 541. The key? Ask the clock.",
       "where": "caption",
-      "verdict": "unsure",
-      "why": "A source confirms the locker key comes from Moe's grandfather clock and the locker is at a train station, but no opened source gives the locker number. The photo looks like a film still showing 541.",
-      "source": "https://www.ferdyonfilms.com/2014/once-upon-a-time-in-america-1984/21329",
-      "fix": "Locker at the station. The key? Ask the clock.",
+      "verdict": "wrong",
+      "why": "The locker holds the gang's money and the key comes back with Moe's clock key, at a station, but no source or search gives the number 541, so the number is unproven.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=once-upon-a-time-in-america",
+      "fix": "Station locker. The key? Ask the clock.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Music most nights, Cockeye on the flute.",
       "where": "footer",
-      "verdict": "unsure",
-      "why": "No opened source says Cockeye plays an instrument. The record of Amapola played on the gramophone for young Deborah is confirmed.",
-      "source": "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_America",
-      "fix": "Music most nights, Amapola on the gramophone.",
+      "verdict": "wrong",
+      "why": "No source says Cockeye plays the flute. The transcript only has 'Cockeye wanted to play with the band' in the speakeasy scene.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=once-upon-a-time-in-america",
+      "fix": "Music most nights, Cockeye wants to sit in with the band.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 8,

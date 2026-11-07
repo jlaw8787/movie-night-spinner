@@ -1,75 +1,76 @@
 {
-  "id": "Scream 2 (1997)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Frat party cherry bourbon smash",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "Sidney goes to a sorority house party at Delta Lambda Zeta. The fraternity only shows up in the hazing cross where Derek is tied. No frat party is part of the plot.",
-      "source": "https://en.wikipedia.org/wiki/Scream_2",
-      "fix": "Sorority party cherry bourbon smash",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "poured at the frat party while Sidney tries for one normal night",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Same as the name. The party Sidney and Hallie attend is at the sorority house.",
-      "source": "https://en.wikipedia.org/wiki/Scream_2",
-      "fix": "poured at the sorority party while Sidney tries for one normal night",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Frat house pour, before the party gets loud.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "The party is at a sorority house, Delta Lambda Zeta, not a frat house.",
-      "source": "https://en.wikipedia.org/wiki/Scream_2",
-      "fix": "Sorority house pour, before the party gets loud.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Free mask with every ticket",
-      "where": "prop",
-      "verdict": "unsure",
-      "why": "Sources read confirm the Stab screening gimmick and patrons in Ghostface and Father Death costumes. A free mask with every ticket was not confirmed.",
-      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Scream2",
-      "fix": "Opening night, Stab sneak preview",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 4,
-    "look": 3,
-    "overall": 3.6,
-    "verdict": "Campus bulletin is a smart format and the sequel jokes land, but the party drinks name the wrong house and the signature looks misread.",
-    "missing": [
-      "The Stab screening where Maureen is stabbed and climbs on stage",
-      "Randy and Cici arguing that sequels can be better in film class",
-      "Sidney and the Cassandra play and the Elfman Cassandra Aria",
-      "Derek singing I Think I Love You",
-      "Gus, Mickey and the movie violence debate",
-      "Cotton Weary and the Diane Sawyer interview"
-    ],
-    "ideas": [
-      "Fix the three party lines from frat to sorority (Delta Lambda Zeta).",
-      "Fix the script font on the Randy Meeks signature, the R reads as a C so it shows 'Candy Meeks'.",
-      "Swap the Zima house pour for 'Film class popcorn, sequels edition' using the sequel debate.",
-      "Swap 'Opening night chicken souvlaki' note for the Cassandra play chorus, with a theatre programme prop."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Scream 2 (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Frat party cherry bourbon smash",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Sidney goes to a sorority house party at Delta Lambda Zeta. The fraternity only shows up in the hazing cross where Derek is tied. No frat party is part of the plot.",
+   "source": "https://en.wikipedia.org/wiki/Scream_2",
+   "fix": "Sorority party cherry bourbon smash",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "poured at the frat party while Sidney tries for one normal night",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same as the name. The party Sidney and Hallie attend is at the sorority house.",
+   "source": "https://en.wikipedia.org/wiki/Scream_2",
+   "fix": "poured at the sorority party while Sidney tries for one normal night",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Frat house pour, before the party gets loud.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The party is at a sorority house, Delta Lambda Zeta, not a frat house.",
+   "source": "https://en.wikipedia.org/wiki/Scream_2",
+   "fix": "Sorority house pour, before the party gets loud.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Free mask with every ticket",
+   "where": "prop",
+   "verdict": "ok",
+   "why": "At the Stab screening an usher hands over a white souvenir the studio sent, which fits the free masks the crowd wears, and Phil says the tickets were free.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=scream-2",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Campus bulletin is a smart format and the sequel jokes land, but the party drinks name the wrong house and the signature looks misread.",
+  "missing": [
+   "The Stab screening where Maureen is stabbed and climbs on stage",
+   "Randy and Cici arguing that sequels can be better in film class",
+   "Sidney and the Cassandra play and the Elfman Cassandra Aria",
+   "Derek singing I Think I Love You",
+   "Gus, Mickey and the movie violence debate",
+   "Cotton Weary and the Diane Sawyer interview"
+  ],
+  "ideas": [
+   "Fix the three party lines from frat to sorority (Delta Lambda Zeta).",
+   "Fix the script font on the Randy Meeks signature, the R reads as a C so it shows 'Candy Meeks'.",
+   "Swap the Zima house pour for 'Film class popcorn, sequels edition' using the sequel debate.",
+   "Swap 'Opening night chicken souvlaki' note for the Cassandra play chorus, with a theatre programme prop."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

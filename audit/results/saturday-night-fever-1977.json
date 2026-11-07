@@ -1,63 +1,65 @@
 {
-  "id": "Saturday Night Fever (1977)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "“Two slices, one fizz, then the floor. That’s Saturday.”",
-      "where": "quote",
-      "verdict": "wrong",
-      "why": "Tony never says this and it is set in quote marks. It is an invented line, although the two stacked slices on 86th Street are real.",
-      "source": "https://filmsite.org/satnightfever.html",
-      "fix": "Set it as an unquoted note from Tony: two slices, one fizz, then the floor.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Crisp-cut potatoes under hot beef gravy and melted mozzarella. For after the last dance.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Disco fries are not in the plot I could open. Nothing shows the crew eating them after the club.",
-      "source": "https://filmsite.org/satnightfever.html",
-      "fix": "Crisp-cut potatoes under hot beef gravy and melted mozzarella. Late night.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "RAISE",
-      "where": "prop",
-      "verdict": "unsure",
-      "why": "The film has Tony asking his paint store boss Fusco for money and being refused, described as an advance on his pay. A $4.00 raise is not confirmed.",
-      "source": "https://filmsite.org/satnightfever.html",
-      "fix": "ADVANCE",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "Strong neon floor, white suit ticket and the 86th Street slices, with one invented quote and a couple of shaky props.",
-    "missing": [
-      "Tony swinging the paint can down 86th Street",
-      "The white suit",
-      "Don't mess with the hair at the family dinner",
-      "Bobby C. and the Verrazano Bridge",
-      "Stephanie and the contest",
-      "Stayin' Alive strut"
-    ],
-    "ideas": [
-      "Swap 'Garlic knots' note for 'Paint can in one hand, slice in the other.'",
-      "Swap the quote by Tony for a short real line from the film.",
-      "Swap 'Mirror ball bites' note for 'Hands off the hair.'",
-      "Swap 'Disco fries' for 'Lenny's cheese slice' stacked, with a napkin."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Saturday Night Fever (1977)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "“Two slices, one fizz, then the floor. That’s Saturday.”",
+   "where": "quote",
+   "verdict": "wrong",
+   "why": "Tony never says this and it is set in quote marks. It is an invented line, although the two stacked slices on 86th Street are real.",
+   "source": "https://filmsite.org/satnightfever.html",
+   "fix": "Set it as an unquoted note from Tony: two slices, one fizz, then the floor.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Crisp-cut potatoes under hot beef gravy and melted mozzarella. For after the last dance.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "The dish note is a plain serving suggestion for a diner side and claims nothing about the plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=saturday-night-fever",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "RAISE",
+   "where": "prop",
+   "verdict": "ok",
+   "why": "Mr. Fusco gives Tony a raise on payday (a crummy $2.50, which Fusco then jokes up to $4), so the word RAISE on the pay prop is true.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=saturday-night-fever",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Strong neon floor, white suit ticket and the 86th Street slices, with one invented quote and a couple of shaky props.",
+  "missing": [
+   "Tony swinging the paint can down 86th Street",
+   "The white suit",
+   "Don't mess with the hair at the family dinner",
+   "Bobby C. and the Verrazano Bridge",
+   "Stephanie and the contest",
+   "Stayin' Alive strut"
+  ],
+  "ideas": [
+   "Swap 'Garlic knots' note for 'Paint can in one hand, slice in the other.'",
+   "Swap the quote by Tony for a short real line from the film.",
+   "Swap 'Mirror ball bites' note for 'Hands off the hair.'",
+   "Swap 'Disco fries' for 'Lenny's cheese slice' stacked, with a napkin."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

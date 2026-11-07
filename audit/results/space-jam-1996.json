@@ -32,12 +32,14 @@
   {
    "text": "Stan from the bench, flattened again.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Stan is Michael's assistant who follows Bugs and Daffy into the Looney Tunes world and joins the team. No source opened shows him being flattened.",
+   "verdict": "wrong",
+   "why": "Stan is Jordan's assistant who follows Bugs and Daffy into the Looney Tunes world and joins the team. No source shows him being flattened.",
    "source": "https://en.wikipedia.org/wiki/Space_Jam",
-   "fix": "Stan, Michael's assistant, who followed him into cartoon land.",
+   "fix": "Stan, who followed Bugs and Daffy in.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

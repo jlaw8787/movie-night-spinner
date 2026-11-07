@@ -5,32 +5,35 @@
   {
    "text": "Bountiful Harvest Market",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The summaries read describe a farmers market heist for dried fruit but never give the market a name.",
-   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2:_The_Runaway",
+   "verdict": "wrong",
+   "why": "The film only calls it the farmers market, and the transcript never uses the name Bountiful Harvest.",
+   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2%3A_The_Runaway",
    "fix": "Farmers Market Stall",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "The Bountiful Harvest market stall",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Same naming problem as the venue.",
-   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2:_The_Runaway",
+   "verdict": "wrong",
+   "why": "No source gives the market a name. The narrator calls the job the greatest farmers market heist in history.",
+   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2%3A_The_Runaway",
    "fix": "The farmers market heist",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Barnabas swears this is the last job.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Barnabas plans a big score from the market, but no source has him calling it a last job.",
-   "source": "https://en.wikiquote.org/wiki/Peter_Rabbit_2:_The_Runaway",
-   "fix": "Barnabas swears the plan can't fail.",
+   "verdict": "wrong",
+   "why": "Barnabas shares a big plan to rob the farmers market for dried fruit, but nobody calls it the last job.",
+   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2%3A_The_Runaway",
+   "fix": "Barnabas has a big plan for the dried fruit.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 9,

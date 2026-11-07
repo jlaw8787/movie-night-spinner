@@ -1,68 +1,68 @@
 {
- "id": "Office Space (1999)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the cake when the office birthday cake goes round and skips Milton.",
-   "where": "cue",
-   "verdict": "unsure",
-   "why": "Milton is the overlooked collator whom Lumbergh humiliates, and he loses his red stapler and his desk. The Wikipedia plot I opened has no birthday cake scene, so I could not confirm this one. The printed card shows the same cue.",
-   "source": "https://en.wikipedia.org/wiki/Office_Space",
-   "fix": "Serve the cake when Lumbergh takes Milton's red stapler.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Peter's fish",
-   "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Nothing in the plot ties Peter to a fish dish. He is hypnotised into not caring, then ends up in construction. It reads as a menu joke, but it names a character.",
-   "source": "https://en.wikipedia.org/wiki/Office_Space",
-   "fix": "Peter's day off fish",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Two plates of the potato skins, please. And no, I'm not wearing a badge to dinner tonight.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Joanna's words, but it is not a line from the film. Joanna is the waitress at Chotchkie's whose boss Stan lectures her about wearing only the minimum 15 pieces of flair, so she would not be ordering potato skins. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/Office_Space",
-   "fix": "Two plates of potato skins, coming up. Yes, I'm wearing the minimum fifteen pieces of flair, Stan.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Two plates of potato skins, coming up. Yes, I'm wearing the minimum fifteen pieces of flair, Stan.",
-    "by": "Joanna",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Office Space (1999)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the cake when the office birthday cake goes round and skips Milton.",
+      "where": "cue",
+      "verdict": "ok",
+      "why": "At Lumbergh's birthday cake, Milton is told not to be greedy and to pass it on, and says he got no piece last time. The cake is the scene.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=office-space",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Peter's fish",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "Peter plans a weekend fishing trip and tells Dr Swanson he wants to feel he has been fishing all day, so a fish dish for Peter is a fair menu joke.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=office-space",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Two plates of the potato skins, please. And no, I'm not wearing a badge to dinner tonight.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Joanna's words, but it is not a line from the film. Joanna is the waitress at Chotchkie's whose boss Stan lectures her about wearing only the minimum 15 pieces of flair, so she would not be ordering potato skins. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/Office_Space",
+      "fix": "Two plates of potato skins, coming up. Yes, I'm wearing the minimum fifteen pieces of flair, Stan.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Two plates of potato skins, coming up. Yes, I'm wearing the minimum fifteen pieces of flair, Stan.",
+        "by": "Joanna",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A perfect Chotchkie's setup with flair, the stapler and the TPS gag, though the food is plain and a few lines are loose.",
+    "missing": [
+      "Milton burning down Initech and fleeing to Mexico with the traveller's cheques",
+      "Peter's hypnotherapy session with Dr. Swanson",
+      "The Bobs and the 'what would you say you do here' interviews",
+      "The fax machine or printer beaten in the field",
+      "Peter's parking space and the cubicle wall coming down",
+      "Michael Bolton and Samir's names"
+    ],
+    "ideas": [
+      "Swap 'Lumbergh's vanilla iced coffee' note for 'Lumbergh's mug, do not touch' to use his coffee mug gag.",
+      "Swap 'Office birthday cake' for 'Milton's basement cake' with a note about the red stapler.",
+      "Swap 'Peter's fish' for 'Peter's day off breakfast' with a hypnotism joke.",
+      "Swap 'Another TPS report' tagline for 'Did you get the memo' for one more office nod."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "A perfect Chotchkie's setup with flair, the stapler and the TPS gag, though the food is plain and a few lines are loose.",
-  "missing": [
-   "Milton burning down Initech and fleeing to Mexico with the traveller's cheques",
-   "Peter's hypnotherapy session with Dr. Swanson",
-   "The Bobs and the 'what would you say you do here' interviews",
-   "The fax machine or printer beaten in the field",
-   "Peter's parking space and the cubicle wall coming down",
-   "Michael Bolton and Samir's names"
-  ],
-  "ideas": [
-   "Swap 'Lumbergh's vanilla iced coffee' note for 'Lumbergh's mug, do not touch' to use his coffee mug gag.",
-   "Swap 'Office birthday cake' for 'Milton's basement cake' with a note about the red stapler.",
-   "Swap 'Peter's fish' for 'Peter's day off breakfast' with a hypnotism joke.",
-   "Swap 'Another TPS report' tagline for 'Did you get the memo' for one more office nod."
-  ],
-  "flat": false,
-  "done": false
- }
 }

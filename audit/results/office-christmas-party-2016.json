@@ -1,52 +1,54 @@
 {
- "id": "Office Christmas Party (2016)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "The photocopier scene",
-   "where": "wink",
-   "verdict": "unsure",
-   "why": "The plot summaries and quote page mention Mary's copy room story but no photocopier set piece, and the party scenes listed are the snow machine, ice sculpture and eggnog luge.",
-   "source": "https://www.imdb.com/title/tt1711525/plotsummary",
-   "fix": "The eggnog luge down the ice sculpture",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "Keep it well away from the photocopier.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Same problem as the photocopier wink: no photocopier scene turned up in the sources.",
-   "source": "https://www.imdb.com/title/tt1711525/plotsummary",
-   "fix": "Keep it well away from the snow machine.",
-   "printed": false,
-   "done": false
+  "id": "Office Christmas Party (2016)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "The photocopier scene",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "No photocopier scene in the transcript, plot or a web search. The film only has Mary's story about Andrew in the copy room changing the toner.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=office-christmas-party",
+      "fix": "Mary and Andrew in the copy room",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Keep it well away from the photocopier.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Same as the wink: no photocopier scene exists. The copy room only comes up in Mary's story about Andrew.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=office-christmas-party",
+      "fix": "Keep it well away from the copy room.",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Dark club look suits the party, but the menu skips the eggnog luge, the snow machine and Mary's doughnuts.",
+    "missing": [
+      "Josh's eggnog luge down the ice sculpture (the party)",
+      "The snow machine spraying Walter (the party)",
+      "Mary's cheese platter and doughnuts, no Cronuts (the party and the aftermath)",
+      "Clay racing the drawbridge jump (the finale)",
+      "Carol's flight cancelled by snow (Chicago airport)",
+      "Jimmy Butler turning up as himself (the party)"
+    ],
+    "ideas": [
+      "Swap 'Cinnamon vanilla eggnog' for an 'Ice sculpture eggnog luge' shot.",
+      "Swap 'Red and green cupcakes' for 'Mary's jelly and glazed doughnuts, no Cronuts'.",
+      "Swap 'Baked camembert' for 'Mary's cheese platter', which is the only party food the film names.",
+      "Swap the 'Deep-dish pizza squares' house joke for a snow machine snack line."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 10,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Dark club look suits the party, but the menu skips the eggnog luge, the snow machine and Mary's doughnuts.",
-  "missing": [
-   "Josh's eggnog luge down the ice sculpture (the party)",
-   "The snow machine spraying Walter (the party)",
-   "Mary's cheese platter and doughnuts, no Cronuts (the party and the aftermath)",
-   "Clay racing the drawbridge jump (the finale)",
-   "Carol's flight cancelled by snow (Chicago airport)",
-   "Jimmy Butler turning up as himself (the party)"
-  ],
-  "ideas": [
-   "Swap 'Cinnamon vanilla eggnog' for an 'Ice sculpture eggnog luge' shot.",
-   "Swap 'Red and green cupcakes' for 'Mary's jelly and glazed doughnuts, no Cronuts'.",
-   "Swap 'Baked camembert' for 'Mary's cheese platter', which is the only party food the film names.",
-   "Swap the 'Deep-dish pizza squares' house joke for a snow machine snack line."
-  ],
-  "flat": true,
-  "done": false
- }
 }

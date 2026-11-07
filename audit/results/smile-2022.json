@@ -21,42 +21,50 @@
   {
    "text": "Backyard party pulled pork sliders",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Jackson's birthday party is at Holly's, but no source says it is in a backyard. Rose falls into a glass coffee table, which suggests indoors.",
+   "verdict": "wrong",
+   "why": "Jackson's seventh birthday party is indoors, with adult drinks kept in the kitchen and Rose falling through a glass coffee table. No source says backyard.",
    "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
    "fix": "Birthday party pulled pork sliders",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "her sister's family party in the backyard",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same issue as the dish name. The party is Jackson's birthday at his mum Holly's house.",
+   "verdict": "wrong",
+   "why": "The party is Jackson's birthday at his mum Holly's house, and nothing shows a backyard.",
    "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
    "fix": "Jackson's birthday party at Holly's",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Trevor's engagement dinner salmon",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Trevor is Holly's fiance, but no engagement dinner is described in the plot.",
-   "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
-   "fix": "Trevor and Holly's salmon dinner",
+   "verdict": "wrong",
+   "why": "No engagement dinner is shown. There is a family dinner that Holly arranged and hired a sitter for, and Trevor is Rose's fiance.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=smile",
+   "fix": "Holly's dinner night salmon",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The birthday cake scene",
    "where": "card",
-   "verdict": "unsure",
-   "why": "The scene at Jackson's party is about the toy train gift and the cat in the box. No cake is mentioned in the plot.",
+   "verdict": "wrong",
+   "why": "At the party Rose's gift is a box holding her dead cat, and the plot never mentions a cake scene.",
    "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
    "fix": "The birthday party scene",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 8,

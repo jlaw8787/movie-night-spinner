@@ -5,22 +5,26 @@
   {
    "text": "Mindy explains the rules of a requel while the pizza goes cold.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Mindy explains the requel at the Meeks twins' home, but sources read do not mention pizza in that scene.",
-   "source": "https://themoviespoiler.com/movies/scream-2022/",
-   "fix": "Mindy explains the rules of a requel at the Meeks twins' place.",
+   "verdict": "wrong",
+   "why": "Mindy works out the requel rules at the Meeks twins' home, and no pizza is mentioned in the scene.",
+   "source": "https://en.wikipedia.org/wiki/Scream_(2022_film)",
+   "fix": "Mindy explains the rules of a requel at the Meeks twins' place",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "takeaway eaten on the motel bed while Sam and Richie lie low",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Sam does go back to her motel in the plot, but sources do not say Richie stays there or that they eat takeaway on the bed.",
-   "source": "https://themoviespoiler.com/movies/scream-2022/",
-   "fix": "takeaway eaten at the motel while Sam works out her next move",
+   "verdict": "wrong",
+   "why": "No motel appears in the transcript or plot. Dewey joins Sam and Richie at the Meeks twins' home.",
+   "source": "https://en.wikipedia.org/wiki/Scream_(2022_film)",
+   "fix": "takeaway eaten at the Meeks twins' while Sam and Richie stay put",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

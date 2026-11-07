@@ -21,32 +21,36 @@
   {
    "text": "Osgood's yacht lobster",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The yacht meal in the film is a champagne supper. Lobster was not found.",
-   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
-   "fix": "Osgood's champagne supper lobster",
+   "verdict": "wrong",
+   "why": "Osgood's yacht supper is cold pheasant, champagne and a herring in a jar. No lobster appears, so the dish becomes a plain millionaire's joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=some-like-it-hot",
+   "fix": "Millionaire's lobster",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Serve the drinks when the girls throw a party in Daphne's sleeper berth on the train.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Sources confirm a late-night party on the train. Whose berth it is was not confirmed.",
-   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
-   "fix": "Serve the drinks when the girls throw a late-night party on the train.",
+   "verdict": "ok",
+   "why": "The party is called as 'Party in upper 7', Daphne's berth, and it runs late at night on the train.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=some-like-it-hot",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The midnight party in Daphne's upper berth.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same as the cue, the berth was not confirmed.",
-   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
-   "fix": "The midnight party on the train.",
+   "verdict": "ok",
+   "why": "The late-night party is in upper 7, Daphne's berth, with Sugar climbing in and the crowd bringing food and drink.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=some-like-it-hot",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

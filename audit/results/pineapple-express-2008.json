@@ -21,32 +21,34 @@
   {
    "text": "The chase through the woods",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "They hide out in the woods and the car dies, but no chase through the woods is described. The chase is in the police car.",
-   "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
+   "verdict": "wrong",
+   "why": "Dale and Saul hide in the woods and the car battery dies, and Saul calls it a wacky night in the woods. The only chase is the car chase in the police car.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pineapple-express",
    "fix": "The night in the woods",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "For the morning after the chase through the woods.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Same problem as the wink.",
-   "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
+   "verdict": "wrong",
+   "why": "Same as the wink: it is a night in the woods, not a chase, and Saul says so himself in the transcript.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pineapple-express",
    "fix": "For the morning after the night in the woods.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Dale's process server lunch, between subpoenas.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Dale is a process server, but no source shows him with a horchata or a lunch stop.",
+   "verdict": "ok",
+   "why": "Dale is a process server who hands out subpoenas, so the line is a menu joke about his job and claims no scene.",
    "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
-   "fix": "Cold and sweet, for a process server's long day.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 9,

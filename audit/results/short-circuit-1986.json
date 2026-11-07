@@ -21,12 +21,13 @@
   {
    "text": "the lab canteen before the escape",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Attached to the Nova Robotics chilli cheese dogs. I could not confirm any canteen scene at Nova Robotics before Number 5 leaves. No plot page for this film could be opened (the Wikipedia link was refused), so I am going from the Wikiquote page only.",
-   "source": "",
-   "fix": "the Nova Robotics lab, before the lightning strike",
+   "verdict": "wrong",
+   "why": "No canteen scene in the transcript. The film shows a Nova Robotics demo presentation, with Dr Marner's gin and tonic, before Number 5 leaves the debriefing station.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=short-circuit",
+   "fix": "the Nova Robotics demo day, before Number 5 walks out",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

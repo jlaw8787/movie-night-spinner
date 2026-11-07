@@ -5,22 +5,24 @@
   {
    "text": "Apartment 7E. Mind the neighbours in 7A.",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "No source I opened gives the apartment numbers. The Castevets are next door on the seventh floor, which matches, but the letters could not be confirmed.",
-   "source": "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)",
-   "fix": "Seventh floor. Mind the neighbours next door.",
+   "verdict": "ok",
+   "why": "Rosemary says they are in 7-E and the Castevets' flat is given as 7-A, both in the transcript.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rosemarys-baby",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Rosemary's party. No Castevets on the list.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Rosemary hosts a party for her friends, but I could not confirm whether the Castevets attended.",
-   "source": "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)",
-   "fix": "Rosemary's party, and a very sore tummy.",
+   "verdict": "ok",
+   "why": "Rosemary says Minnie and Roman are not invited to the party for her young friends.",
+   "source": "https://en.wikiquote.org/wiki/Rosemary's_Baby_(film)",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

@@ -27,22 +27,25 @@
   {
    "text": "Carter's Hong Kong egg tarts",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "I could not find egg tarts in any source I opened.",
+   "verdict": "wrong",
+   "why": "Nothing shows Carter with egg tarts in the film or its plot. The tarts are a Hong Kong dish only.",
    "source": "https://en.wikipedia.org/wiki/Rush_Hour_2",
    "fix": "Hong Kong egg tarts",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Carter sings Michael Jackson after his second.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Wikipedia has Lee and Carter doing a victory dance to a Michael Jackson track in New York. I could not confirm Carter singing.",
-   "source": "https://en.wikipedia.org/wiki/Rush_Hour_2",
-   "fix": "Carter dances to Michael Jackson after his second.",
+   "verdict": "ok",
+   "why": "Carter sings Don't Stop 'Til You Get Enough in the Hong Kong club as a Michael Jackson impression, and the second-drink bit is a menu joke.",
+   "source": "https://looper.com/804459/the-rush-hour-2-scene-you-likely-didnt-know-was-inspired-by-real-life",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

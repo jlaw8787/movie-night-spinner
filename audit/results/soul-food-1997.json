@@ -5,22 +5,26 @@
   {
    "text": "Ahmad says it all starts with Sunday.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source read gives Ahmad a line like this.",
-   "source": "https://en.wikipedia.org/wiki/Soul_Food_(film)",
-   "fix": "Ahmad got everyone to one table, just once more.",
+   "verdict": "wrong",
+   "why": "Ahmad narrates that Sunday dinners at Big Mama's kept the family tight, but he never says it all starts with Sunday.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=soul-food",
+   "fix": "Ahmad says Sunday dinner kept them tight.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Poured for the kids' table, Ahmad first.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "A kids' table was not found in sources read.",
+   "verdict": "wrong",
+   "why": "No kids' table or pour for Ahmad appears in the film or plot. What is shown is Ahmad leaving the towel on the stove.",
    "source": "https://en.wikipedia.org/wiki/Soul_Food_(film)",
-   "fix": "Cold drink for whoever left the towel on the stove.",
+   "fix": "Poured for whoever left the towel on the stove.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

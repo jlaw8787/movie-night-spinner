@@ -21,22 +21,25 @@
   {
    "text": "Dorothea's story about the fish and the ocean.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source opened mentions the fish and ocean story, though Dorothea does hire Joe at the club.",
-   "source": "https://disneyfanon.fandom.com/wiki/Soul",
-   "fix": "Dorothea's quartet, with Joe on keys.",
+   "verdict": "ok",
+   "why": "Dorothea tells Joe the story of the young fish looking for the ocean while already in water, near the end of the film.",
+   "source": "https://en.wikiquote.org/wiki/Soul_(2020_film)",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A pizza slice and a falling leaf",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The object that matters at the end is a maple seed (Wikipedia) or a petal (one fan wiki), not a leaf.",
+   "verdict": "wrong",
+   "why": "The keepsake is a maple seed that Joe shows 22. No source or transcript has a falling leaf.",
    "source": "https://en.wikipedia.org/wiki/Soul_(2020_film)",
    "fix": "A pizza slice and a maple seed",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

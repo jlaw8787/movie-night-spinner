@@ -21,22 +21,26 @@
   {
    "text": "Grumpy said he wouldn't eat. He did.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Grumpy objects to the washing and to Snow White staying, but no source opened says he refuses to eat.",
+   "verdict": "wrong",
+   "why": "Grumpy objects to washing before supper and gets dunked in the tub by the others. Nothing shows him refusing to eat.",
    "source": "https://en.wikiquote.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)",
-   "fix": "Grumpy said he wouldn't wash. He did.",
+   "fix": "Grumpy said he wouldn't wash. He got washed.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Dopey riding on the others' shoulders",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No source opened describes Dopey riding on shoulders.",
-   "source": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(film)",
-   "fix": "Dopey, always last in the line to the mine",
+   "verdict": "wrong",
+   "why": "Dopey stands on Sneezy's shoulders under a long coat to dance with Snow White. It is Sneezy, not the others.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/SnowWhiteandtheSevenDwarfs",
+   "fix": "Dopey on Sneezy's shoulders",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

@@ -1,62 +1,64 @@
 {
- "id": "Oliver! (1968)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Sizzling over the fire in Fagin's den the night Oliver arrives",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia has Dodger bringing Oliver to the hideout and Fagin's treasure scene, but does not mention sausages or any supper that night.",
-   "source": "https://en.wikipedia.org/wiki/Oliver!_(film)",
-   "fix": "Sizzling over the fire in Fagin's den.",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "The first proper breakfast in the big house in Bloomsbury",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Brownlow takes Oliver in, but the sources opened never give a district or a breakfast scene.",
-   "source": "https://en.wikipedia.org/wiki/Oliver!_(film)",
-   "fix": "A proper breakfast once Mr Brownlow takes him in.",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "Saffron Hill, London. Up the stairs, mind the rats.",
-   "where": "sign",
-   "verdict": "unsure",
-   "why": "Saffron Hill is Dickens' address for the den. The film summary only says a hideout in London, and no source opened names the street.",
-   "source": "https://en.wikipedia.org/wiki/Oliver!_(film)",
-   "fix": "Somewhere in London. Up the stairs, mind the rats.",
-   "printed": true,
-   "done": false
+  "id": "Oliver! (1968)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sizzling over the fire in Fagin's den the night Oliver arrives",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "Fagin tells the Dodger to take off the sausages and lay a place for Mr Twist when Oliver reaches the den, and the sausages are mouldy.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=oliver",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "The first proper breakfast in the big house in Bloomsbury",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "The transcript has Mr Brownlow and Mrs Bedwin caring for Oliver but no breakfast scene, and Bloomsbury is never named.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=oliver",
+      "fix": "A proper breakfast for Oliver, safe in Mr Brownlow's house",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Saffron Hill, London. Up the stairs, mind the rats.",
+      "where": "sign",
+      "verdict": "wrong",
+      "why": "The film never names Saffron Hill. That is Dickens' address from the novel, and the film only shows Fagin's den in London.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=oliver",
+      "fix": "Fagin's den, London. Up the stairs, mind the rats.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 3,
+    "overall": 3.8,
+    "verdict": "A good newspaper concept with the right dishes and winks, though the look is flat and the masthead price is American.",
+    "missing": [
+      "'Please sir, I want some more' (workhouse dining hall)",
+      "Consider Yourself with the Dodger (London streets)",
+      "Fagin's pick-a-pocket lessons (the den)",
+      "The bookstall wallet theft with Mr Brownlow (London)",
+      "Nancy and the Three Cripples sing-along (tavern)",
+      "Fagin's treasure sinking in the mud (finale)"
+    ],
+    "ideas": [
+      "Change 'Two cents' on the masthead to 'Tuppence'.",
+      "Swap 'Workhouse porridge brulee' for a plain 'Please sir, one more bowl' gruel with a burnt sugar top.",
+      "Swap the Brownlow crumpets note for the bookstall wallet theft.",
+      "Make the second page photo a colour frame so the paper looks less washed out."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 3,
-  "overall": 3.8,
-  "verdict": "A good newspaper concept with the right dishes and winks, though the look is flat and the masthead price is American.",
-  "missing": [
-   "'Please sir, I want some more' (workhouse dining hall)",
-   "Consider Yourself with the Dodger (London streets)",
-   "Fagin's pick-a-pocket lessons (the den)",
-   "The bookstall wallet theft with Mr Brownlow (London)",
-   "Nancy and the Three Cripples sing-along (tavern)",
-   "Fagin's treasure sinking in the mud (finale)"
-  ],
-  "ideas": [
-   "Change 'Two cents' on the masthead to 'Tuppence'.",
-   "Swap 'Workhouse porridge brulee' for a plain 'Please sir, one more bowl' gruel with a burnt sugar top.",
-   "Swap the Brownlow crumpets note for the bookstall wallet theft.",
-   "Make the second page photo a colour frame so the paper looks less washed out."
-  ],
-  "flat": false,
-  "done": false
- }
 }

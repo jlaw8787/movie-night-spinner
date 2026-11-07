@@ -5,12 +5,13 @@
   {
    "text": "Serve the drinks when Chon and Roy hit the saloon in Carson City.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The barroom brawl where Chon and Roy meet is in a small town tavern on the way. Wikipedia puts Roy's hideout (a bordello) in Carson City, and no saloon scene there is described. Same text is printed on the card.",
-   "source": "https://en.wikipedia.org/wiki/Shanghai_Noon",
-   "fix": "Serve the drinks when Chon and Roy start the barroom brawl.",
+   "verdict": "wrong",
+   "why": "The saloon brawl where Chon and Roy meet is in a town that is not Carson City, the barman says so. Carson City is where the bordello hideout is.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=shanghai-noon",
+   "fix": "Serve the drinks when Chon and Roy brawl in the saloon on the way to Carson City.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "I came to rescue a princess, Roy. Now pass the noodles before you eat them all.",
@@ -31,12 +32,13 @@
   {
    "text": "Roy's drinking game, bathtub not included.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No opened source shows a drinking game or a bathtub for Roy.",
-   "source": "https://en.wikipedia.org/wiki/Shanghai_Noon",
+   "verdict": "ok",
+   "why": "Roy is the one who says it would be fun to play a drinking game with Chon at the hideout. The bathtub part is a plain joke that claims nothing.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=shanghai-noon",
    "fix": "Roy's round, Chon's headache.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 9,

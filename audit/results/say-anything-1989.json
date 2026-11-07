@@ -21,42 +21,49 @@
   {
    "text": "Sweet and salty road trip snack mix",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "There is no road trip in the film. Lloyd and Diane drive around Seattle and fly to England at the end.",
-   "source": "https://en.wikipedia.org/wiki/Say_Anything...",
+   "verdict": "wrong",
+   "why": "There is no road trip in the film. Lloyd teaches Diane stick shift in her car, which fits a driving lesson name.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=say-anything",
    "fix": "Sweet and salty driving lesson snack mix",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The driving lesson by the petrol station.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Lloyd does teach Diane to drive her manual Ford Tempo, but no source places the lesson by a petrol station. The petrol station is where Lloyd hangs out with his mates.",
-   "source": "https://m.imdb.com/title/tt0098258/plotsummary",
-   "fix": "Lloyd teaching Diane to drive stick.",
+   "verdict": "wrong",
+   "why": "Diane asks Lloyd to teach her stick shift and he coaches her on the clutch, but nothing places the lesson at a petrol station.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=say-anything",
+   "fix": "the driving lesson, stick shift and all",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Lloyd's road trip pick, In Your Eyes playing.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No road trip. 'In Your Eyes' plays when they have sex in the car and again on the boombox under Diane's window at dawn.",
+   "verdict": "wrong",
+   "why": "No road trip. In Your Eyes plays when Lloyd and Diane have sex and again on the boombox at her window at dawn.",
    "source": "https://en.wikipedia.org/wiki/Say_Anything...",
    "fix": "Lloyd's pick, In Your Eyes playing.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Saturday night at the Gas n' Sip.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Lloyd and his mates do hang out at a petrol station, but none of the pages opened gives its name or says it is a Saturday night.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/SayAnything",
-   "fix": "Lloyd and the guys at the petrol station.",
+   "verdict": "ok",
+   "why": "Lloyd asks the guys why they are at the Gas 'n' Sip alone on a Saturday night.",
+   "source": "https://en.wikiquote.org/wiki/Say_Anything...",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

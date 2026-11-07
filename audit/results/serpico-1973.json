@@ -1,72 +1,76 @@
 {
-  "id": "Serpico (1973)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Frank turns down the free meal at the deli.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "A summary says Serpico refuses free bagels. No opened source puts a free meal at a deli.",
-      "source": "https://synopsisandreviews.com/?p=15399",
-      "fix": "Serve the mains when Frank turns down the free bagels.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "the box on the squad room desk that Frank won't take for free",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Sources mention refused free bagels, not doughnuts.",
-      "source": "https://synopsisandreviews.com/?p=15399",
-      "fix": "the free bagels Frank turns down",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "the free lunch Frank insists on paying for",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The refused food in the sources is bagels, and no source shows a pastrami lunch.",
-      "source": "https://synopsisandreviews.com/?p=15399",
-      "fix": "the free lunch Frank pays for anyway",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "Our store on West 10th, a few doors from the Sixth Precinct.",
-      "where": "venue",
-      "verdict": "unsure",
-      "why": "No opened source places Serpico in the Sixth Precinct. His apartment was in Greenwich Village and his early posting was the 81st precinct.",
-      "source": "https://en.wikipedia.org/wiki/Frank_Serpico",
-      "fix": "Our store in the Village, a few doors from the station house.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 6,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "verdict": "A believable Village deli that gets the free food idea, the dog and the opera, but skips the shooting and the inquiry.",
-    "missing": [
-      "Serpico shot in the face and rushed to hospital (the raid)",
-      "The Knapp Commission testimony (the hearing)",
-      "Serpico's story in the New York Times (April 1970)",
-      "Serpico's Old English sheepdog Alfie (his apartment)",
-      "Opera on the soundtrack, Tosca (the apartment)",
-      "'Who can trust a cop who don't take money?' (Keough)"
-    ],
-    "ideas": [
-      "Swap 'Platters 60c more' for 'Nothing free. Not even the pickle.'",
-      "Swap 'Dogs wait outside, even the sheepdog.' for 'Water for Alfie, the only thing free.'",
-      "Swap 'Opera on the radio Saturdays.' for 'Tosca on the radio Saturdays.'",
-      "Swap the guest check line '1 coffee' for 'Cash. No favours.'"
-    ],
-    "overall": 3.8,
-    "flat": false,
-    "done": false
+ "id": "Serpico (1973)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Frank turns down the free meal at the deli.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "In the diner scene Peluce says the roast beef lunch is free and Frank asks to pay for it, he does not walk away from the meal. The lunch is a roast beef roll.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=serpico",
+   "fix": "Serve the mains when Frank asks to pay for the free roast beef lunch.",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "the box on the squad room desk that Frank won't take for free",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "No doughnut scene in the transcript. The free food shown is the roast beef lunch Frank asks to pay for. Note changed to match.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=serpico",
+   "fix": "the squad room treat that Frank would pay for, not take free",
+   "printed": false,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "the free lunch Frank insists on paying for",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The free lunch in the film is a roast beef roll, not pastrami, though Frank does ask to pay for it. Note reworded to stay true.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=serpico",
+   "fix": "the deli lunch Frank would rather pay for",
+   "printed": false,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Our store on West 10th, a few doors from the Sixth Precinct.",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "Nothing in the transcript names the Sixth Precinct. Frank lived in Greenwich Village, so the line now says that.",
+   "source": "https://en.wikipedia.org/wiki/Serpico",
+   "fix": "Our store on West 10th, in the Village where Frank lived.",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 6,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A believable Village deli that gets the free food idea, the dog and the opera, but skips the shooting and the inquiry.",
+  "missing": [
+   "Serpico shot in the face and rushed to hospital (the raid)",
+   "The Knapp Commission testimony (the hearing)",
+   "Serpico's story in the New York Times (April 1970)",
+   "Serpico's Old English sheepdog Alfie (his apartment)",
+   "Opera on the soundtrack, Tosca (the apartment)",
+   "'Who can trust a cop who don't take money?' (Keough)"
+  ],
+  "ideas": [
+   "Swap 'Platters 60c more' for 'Nothing free. Not even the pickle.'",
+   "Swap 'Dogs wait outside, even the sheepdog.' for 'Water for Alfie, the only thing free.'",
+   "Swap 'Opera on the radio Saturdays.' for 'Tosca on the radio Saturdays.'",
+   "Swap the guest check line '1 coffee' for 'Cash. No favours.'"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false
+ }
 }

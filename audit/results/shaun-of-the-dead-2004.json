@@ -21,12 +21,14 @@
   {
    "text": "Serve the drinks when Shaun and Liz argue at the Winchester.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "This is the cue on the phone menu. The data cue says they make it to the Winchester, which is right. The plot summaries only show arguments at the Winchester between Shaun and Ed (over Ed's phone) and Shaun and David. Liz and Shaun's breakup happens before the outbreak. Nothing I read shows a Shaun and Liz argument in the pub. The phone and data cues should match.",
+   "verdict": "wrong",
+   "why": "Shaun and Liz split before the outbreak and never argue inside the pub. The Winchester fight in the plot is Shaun and Ed. The source cue already reads 'when they make it to the Winchester', so the phone copy should match.",
    "source": "https://en.wikipedia.org/wiki/Shaun_of_the_Dead",
    "fix": "Serve the drinks when they make it to the Winchester.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08",
+   "nofind": true
   },
   {
    "text": "1. Cricket bat by the door  2. Crisps and peanuts, Ed",
@@ -42,12 +44,13 @@
   {
    "text": "Full English fry up",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The note says it is the morning after with Ed. The page I read names the Cornetto as Ed's hangover cure and does not mention a fry up, so I could not confirm a fry up scene.",
-   "source": "https://en.wikipedia.org/wiki/Shaun_of_the_Dead",
-   "fix": "Shaun's morning shop run, a Coke and a Cornetto",
+   "verdict": "wrong",
+   "why": "No fry-up scene. The morning after, Shaun walks to the shop for a Coke and a Cornetto, Ed's hangover cure. Note reworded so it claims no scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=shaun-of-the-dead",
+   "fix": "a lazy start to the day, before Shaun notices a thing",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 15,

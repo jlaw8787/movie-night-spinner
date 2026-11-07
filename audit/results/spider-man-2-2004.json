@@ -16,52 +16,61 @@
   {
    "text": "EST. 1962 / GREENWICH VILLAGE · SINCE 1962",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The real Joe's Pizza opened in 1975. The film gives no founding year, so 1962 is made up (a nod to Spider-Man's comic debut).",
+   "verdict": "wrong",
+   "why": "The film gives Joe's Pizza no founding year. The real Joe's Pizza on Carmine Street opened in 1975 per Wikipedia, so 1962 is invented.",
    "source": "https://en.wikipedia.org/wiki/Joe%27s_Pizza",
-   "fix": "SINCE 1975",
+   "fix": "EST. 1975 / GREENWICH VILLAGE · SINCE 1975",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "29 MINUTES OR IT'S FREE",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "The only time limit I could confirm is Peter's 42 blocks in 7 and a half minutes. I could not open a source that shows a 29 minute promise in the film.",
-   "source": "https://en.wikiquote.org/wiki/Spider-Man_2",
-   "fix": "42 BLOCKS IN 7 1/2 MINUTES",
+   "verdict": "ok",
+   "why": "Mr Aziz calls it 'Joe's 29-minute guarantee' and refuses to pay for the late pizzas.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spider-man-2",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "LATE AGAIN 31 MINUTES. PIE IS FREE.",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "Same problem as the 29 minute promise. The film's confirmed timing is 42 blocks in 7 and a half minutes. The 31 is not in any source I opened.",
-   "source": "https://en.wikiquote.org/wiki/Spider-Man_2",
-   "fix": "LATE AGAIN 8 MINUTES. PIE IS FREE.",
+   "verdict": "wrong",
+   "why": "The film's guarantee is 29 minutes and Peter is told to do 42 blocks in 7 and a half minutes. No 31 minute figure is said.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spider-man-2",
+   "fix": "LATE AGAIN PARKER. PIE IS FREE.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A stack of pies, one bungee cord, 42 blocks.",
    "where": "caption",
-   "verdict": "unsure",
-   "why": "The 42 blocks is right. I could not confirm a bungee cord holding the pies.",
-   "source": "https://mashed.com/1465988/joes-pizza-peter-parker-worked/",
+   "verdict": "wrong",
+   "why": "The 42 blocks is right, but no bungee cord holds the pies in the transcript or plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spider-man-2",
    "fix": "A stack of pies, 42 blocks, 7 and a half minutes.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "from the cart on Peter's walk to class",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened shows a knish cart on Peter's walk to class.",
-   "source": "https://en.wikipedia.org/wiki/Spider-Man_2",
-   "fix": "a hot knish on the run between jobs",
+   "verdict": "wrong",
+   "why": "No knish cart appears in the transcript or plot, and a search found nothing either. Peter does juggle jobs and class.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spider-man-2",
+   "fix": "a quick bite on the run between jobs",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

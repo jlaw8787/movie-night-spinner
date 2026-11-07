@@ -1,58 +1,59 @@
 {
- "id": "Oppenheimer (2023)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "You built it, Robert. Now come to dinner and leave the work at the lab.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Invented. Kitty's real line about Los Alamos comes from her hearing testimony and is about Robert building the place.",
-   "source": "https://en.wikiquote.org/wiki/Oppenheimer_(film)",
-   "fix": "Robert built that damn place. He was founder, mayor, sheriff all rolled into one.",
-   "printed": false,
-   "done": true,
-   "fix_note": {
-    "text": "Robert built that damn place. He was founder, mayor, sheriff all rolled into one.",
-    "by": "Kitty Oppenheimer",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Marbles in the fishbowl, beans on the plate.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "No marbles or fishbowl turned up in the plot or the quote page.",
-   "source": "https://en.wikipedia.org/wiki/Oppenheimer_(film)",
-   "fix": "A Los Alamos staple, beans on the plate.",
-   "printed": true,
-   "done": false
+  "id": "Oppenheimer (2023)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "You built it, Robert. Now come to dinner and leave the work at the lab.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Invented. Kitty's real line about Los Alamos comes from her hearing testimony and is about Robert building the place.",
+      "source": "https://en.wikiquote.org/wiki/Oppenheimer_(film)",
+      "fix": "Robert built that damn place. He was founder, mayor, sheriff all rolled into one.",
+      "printed": false,
+      "done": true,
+      "fix_note": {
+        "text": "Robert built that damn place. He was founder, mayor, sheriff all rolled into one.",
+        "by": "Kitty Oppenheimer",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Marbles in the fishbowl, beans on the plate.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "No marbles or fishbowl appear in the transcript, plot or quotes. The beans are real: Kitty says her husband Joe lived off beans and pancakes.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=oppenheimer",
+      "fix": "Beans on the plate, the way Kitty's Joe lived on them.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The green chile food is spot on for New Mexico, but few of the film's own scenes make it onto the sheet.",
+    "missing": [
+      "The Trinity test at dawn (desert tower)",
+      "The security clearance hearing (hearing room)",
+      "Teller's chain reaction chalkboard worry (Los Alamos)",
+      "Einstein at the pond, the final scene (Princeton)",
+      "Oppenheimer meeting Truman (White House)",
+      "Strauss's Senate confirmation hearing (Washington)"
+    ],
+    "ideas": [
+      "Swap 'Pinto bean and cheddar tostadas' note for something the film shows, such as a plate at the Trinity site mess.",
+      "Swap the stew note 'Pork shoulder, potato' for a Trinity countdown line.",
+      "Swap 'Los Alamos green chile cheeseburger sliders' for a 'Hearing room sandwich tray', for the Strauss and Robb scenes.",
+      "Print the Kitty line on the sheet, as a real quote."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The green chile food is spot on for New Mexico, but few of the film's own scenes make it onto the sheet.",
-  "missing": [
-   "The Trinity test at dawn (desert tower)",
-   "The security clearance hearing (hearing room)",
-   "Teller's chain reaction chalkboard worry (Los Alamos)",
-   "Einstein at the pond, the final scene (Princeton)",
-   "Oppenheimer meeting Truman (White House)",
-   "Strauss's Senate confirmation hearing (Washington)"
-  ],
-  "ideas": [
-   "Swap 'Pinto bean and cheddar tostadas' note for something the film shows, such as a plate at the Trinity site mess.",
-   "Swap the stew note 'Pork shoulder, potato' for a Trinity countdown line.",
-   "Swap 'Los Alamos green chile cheeseburger sliders' for a 'Hearing room sandwich tray', for the Strauss and Robb scenes.",
-   "Print the Kitty line on the sheet, as a real quote."
-  ],
-  "flat": false,
-  "done": false
- }
 }

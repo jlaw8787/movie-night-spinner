@@ -1,68 +1,69 @@
 {
- "id": "One Hundred and One Dalmatians (1961)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Fifteen puppies and not one of them can say no to a second helping. Roger, more dinner. The little ones are always hungry.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Nanny's words, but it is not a line from the film. Perdita does have 15 puppies and Nanny is their carer, so a signed note in her voice fits. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
-   "fix": "Fifteen puppies and not one will say no to a second helping. Roger, more dinner, please.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Fifteen puppies and not one will say no to a second helping. Roger, more dinner, please.",
-    "by": "Nanny",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Pongo's London Flat",
-   "where": "venue",
-   "verdict": "unsure",
-   "why": "The flat is Roger's bachelor flat before he marries Anita. The 15 puppies are born in the townhouse near Regent's Park, so a flat does not match a menu about the puppies at home.",
-   "source": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
-   "fix": "Pongo's Regent's Park Townhouse",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Roger's fuel for writing Cruella De Vil.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Roger writes the song Cruella De Vil at the piano, which the plot confirms, but nothing says he drinks gin and tonic while he does it.",
-   "source": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
-   "fix": "Roger's reward after the Cruella De Vil royalties came in.",
-   "printed": false,
-   "done": false
+  "id": "One Hundred and One Dalmatians (1961)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Fifteen puppies and not one of them can say no to a second helping. Roger, more dinner. The little ones are always hungry.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Nanny's words, but it is not a line from the film. Perdita does have 15 puppies and Nanny is their carer, so a signed note in her voice fits. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
+      "fix": "Fifteen puppies and not one will say no to a second helping. Roger, more dinner, please.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Fifteen puppies and not one will say no to a second helping. Roger, more dinner, please.",
+        "by": "Nanny",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Pongo's London Flat",
+      "where": "venue",
+      "verdict": "ok",
+      "why": "The film opens with Pongo narrating from the bachelor flat just off Regent's Park, so the flat is real and Pongo lives in it.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=one-hundred-and-one-dalmatians-101-dalmatians",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Roger's fuel for writing Cruella De Vil.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Roger writes Cruella De Vil at the piano and Nanny calls him for tea, but nobody gives him a gin and tonic, so the fuel claim is unproven.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=one-hundred-and-one-dalmatians-101-dalmatians",
+      "fix": "A drink for Roger, with Cruella De Vil on the piano.",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A cosy household menu with the TV show, the soot and the farm friends, but the food is ordinary and the venue is the wrong home.",
+    "missing": [
+      "The Twilight Bark spreading the news",
+      "Jasper and Horace Badun, the burglars",
+      "Hell Hall and the 84 extra puppies",
+      "The Black Labrador and the moving van to London",
+      "Roger's Cruella De Vil song becoming a radio hit",
+      "The Christmas ending with all 101 dogs flooding the house"
+    ],
+    "ideas": [
+      "Swap 'Pongo and Perdita's spotty cheese straws' for 'Twilight Bark cheese straws' with a note about the news going round.",
+      "Swap 'Butterscotch eggs with English mustard' for 'Baduns' sausage rolls' with a joke about the burglars.",
+      "Swap 'Roger and Anita's shepherd's pie' note for 'The Christmas dinner they could not enjoy without the dogs'.",
+      "Swap 'Gin and tonic' for 'Cruella De Vil cola' with a note about Roger's song."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A cosy household menu with the TV show, the soot and the farm friends, but the food is ordinary and the venue is the wrong home.",
-  "missing": [
-   "The Twilight Bark spreading the news",
-   "Jasper and Horace Badun, the burglars",
-   "Hell Hall and the 84 extra puppies",
-   "The Black Labrador and the moving van to London",
-   "Roger's Cruella De Vil song becoming a radio hit",
-   "The Christmas ending with all 101 dogs flooding the house"
-  ],
-  "ideas": [
-   "Swap 'Pongo and Perdita's spotty cheese straws' for 'Twilight Bark cheese straws' with a note about the news going round.",
-   "Swap 'Butterscotch eggs with English mustard' for 'Baduns' sausage rolls' with a joke about the burglars.",
-   "Swap 'Roger and Anita's shepherd's pie' note for 'The Christmas dinner they could not enjoy without the dogs'.",
-   "Swap 'Gin and tonic' for 'Cruella De Vil cola' with a note about Roger's song."
-  ],
-  "flat": false,
-  "done": false
- }
 }

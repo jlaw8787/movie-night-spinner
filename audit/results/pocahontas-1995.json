@@ -5,12 +5,13 @@
   {
    "text": "Serve the snacks when Meeko goes digging through John Smith's bag for biscuits.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "In the film John Smith gives Meeko a biscuit when the raccoon bumps into him. The sources opened don't show Meeko digging through his bag.",
-   "source": "https://en.wikiquote.org/wiki/Pocahontas_(1995_film)",
+   "verdict": "wrong",
+   "why": "The transcript has John Smith handing Meeko a ship's biscuit ('It's a biscuit. It's food. Well, sort of.'), and nothing shows Meeko digging through his bag for biscuits.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pocahontas",
    "fix": "Serve the snacks when John Smith hands Meeko a ship's biscuit.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Child, the corn is roasted and the fish is fresh from the river. Sit down among my roots and eat slowly.",

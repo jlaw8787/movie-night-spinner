@@ -1,58 +1,59 @@
 {
- "id": "Ocean's Twelve (2004)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Benedict wants his money back, so dinner on the terrace is on a budget. Twelve people, one pot of pasta, I eat first.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Rusty's words, but it is not a line from the film. The money plot is real (Benedict wants the $160 million back plus interest). I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/Ocean's_Twelve",
-   "fix": "Benedict wants his money back, so dinner is on a budget. One pot of pasta, twelve people, and I serve myself first.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Benedict wants his money back, so dinner is on a budget. One pot of pasta, twelve people, and I serve myself first.",
-    "by": "Rusty Ryan",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Toulour's drink, after dancing through the lasers.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Toulour does dance past the museum security to steal the egg, but the plot I opened does not say he drinks Campari soda or anything after.",
-   "source": "https://en.wikipedia.org/wiki/Ocean's_Twelve",
-   "fix": "Toulour's kind of drink, after dancing past the lasers.",
-   "printed": true,
-   "done": false
+  "id": "Ocean's Twelve (2004)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Benedict wants his money back, so dinner on the terrace is on a budget. Twelve people, one pot of pasta, I eat first.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Rusty's words, but it is not a line from the film. The money plot is real (Benedict wants the $160 million back plus interest). I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/Ocean's_Twelve",
+      "fix": "Benedict wants his money back, so dinner is on a budget. One pot of pasta, twelve people, and I serve myself first.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Benedict wants his money back, so dinner is on a budget. One pot of pasta, twelve people, and I serve myself first.",
+        "by": "Rusty Ryan",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Toulour's drink, after dancing through the lasers.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Toulour does dance through the laser field, but the transcript never shows him drinking Campari soda or any drink after.",
+      "source": "https://en.wikipedia.org/wiki/Ocean's_Twelve",
+      "fix": "A drink for Toulour, after dancing through the lasers.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Good European food that fits the film's tour, but the funniest bits (Julia Roberts, the laser dance, Linus's mum) are barely used.",
+    "missing": [
+      "Tess posing as a pregnant Julia Roberts and Bruce Willis turning up",
+      "Toulour's dance past the laser security",
+      "The holographic egg swap",
+      "Linus's mother as the FBI agent",
+      "Lahiri forging a signature on the Europol form",
+      "Gaspar LeMarc and the stock certificate"
+    ],
+    "ideas": [
+      "Swap 'Burrata with heirloom tomatoes' for 'Julia Roberts burrata' keeping the note 'Tess plays Julia Roberts. Long story.'",
+      "Swap 'Campari soda' for 'Night Fox martini' with a note about the laser dance.",
+      "Swap 'Lake Como espresso tiramisu' note for 'Bet with the baron, paid in cash'.",
+      "Swap the 'Rail pass' line 'Twelve names, one story' for 'Twelve crooks, one bet'."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Good European food that fits the film's tour, but the funniest bits (Julia Roberts, the laser dance, Linus's mum) are barely used.",
-  "missing": [
-   "Tess posing as a pregnant Julia Roberts and Bruce Willis turning up",
-   "Toulour's dance past the laser security",
-   "The holographic egg swap",
-   "Linus's mother as the FBI agent",
-   "Lahiri forging a signature on the Europol form",
-   "Gaspar LeMarc and the stock certificate"
-  ],
-  "ideas": [
-   "Swap 'Burrata with heirloom tomatoes' for 'Julia Roberts burrata' keeping the note 'Tess plays Julia Roberts. Long story.'",
-   "Swap 'Campari soda' for 'Night Fox martini' with a note about the laser dance.",
-   "Swap 'Lake Como espresso tiramisu' note for 'Bet with the baron, paid in cash'.",
-   "Swap the 'Rail pass' line 'Twelve names, one story' for 'Twelve crooks, one bet'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

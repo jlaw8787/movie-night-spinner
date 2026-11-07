@@ -21,22 +21,25 @@
   {
    "text": "Harry and MJ's omelette bites",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "None of the sources opened (Wikipedia plot, Wikiquote, TV Tropes, a Surf Wiki page) show Harry and Mary Jane eating or cooking eggs together. Harry does lose his memory and later blackmails MJ.",
-   "source": "https://en.wikipedia.org/wiki/Spider-Man_3",
-   "fix": "Harry's amnesia omelette bites",
+   "verdict": "wrong",
+   "why": "MJ does visit Harry at the Osborn mansion and he asks for food, with 'Hope you like peppers', but no omelette or eggs are named in the script, plot or a search.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spider-man-3",
+   "fix": "Osborn mansion egg bites",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Serve dessert when Peter takes MJ to the fancy French restaurant to propose.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The sources opened confirm Peter plans to propose, Aunt May gives him her ring, and Bruce Campbell plays a French maitre d' who helps him. None of them place dessert in the scene, so the exact timing is unconfirmed.",
-   "source": "https://en.wikipedia.org/wiki/Spider-Man_3",
-   "fix": "Serve dessert when Peter and MJ sit down at the fancy French restaurant and he tries to propose.",
+   "verdict": "ok",
+   "why": "Peter books a table at a French restaurant with the maitre d' and the ring, and plans to propose to MJ over champagne there. The cue only sets when dessert comes out.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spider-man-3",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

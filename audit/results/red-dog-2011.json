@@ -21,32 +21,35 @@
   {
    "text": "Dampier Hotel",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The sources opened only call it the town pub and don't name it.",
+   "verdict": "wrong",
+   "why": "The film and its plot summary only call it the town pub in Dampier; no source gives the name Dampier Hotel.",
    "source": "https://en.wikipedia.org/wiki/Red_Dog_(film)",
    "fix": "Dampier Pub",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "DAMPIER HOTEL, PILBARA",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "Same problem as the venue. The pub's name isn't given in the sources opened.",
+   "verdict": "wrong",
+   "why": "Same as the venue: the pub is never named Dampier Hotel in the film or the plot summary.",
    "source": "https://en.wikipedia.org/wiki/Red_Dog_(film)",
    "fix": "DAMPIER PUB, PILBARA",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "John Grant's lunch, half of it for Red.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source opened shows John Grant sharing a sausage sizzle with Red.",
-   "source": "https://en.wikipedia.org/wiki/Red_Dog_(film)",
+   "verdict": "wrong",
+   "why": "The film never shows John sharing his lunch with Red; the miners do feed Red steak, so the line is changed to a plain pub joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=red-dog",
    "fix": "The pub's lunch, half of it for Red.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 11,

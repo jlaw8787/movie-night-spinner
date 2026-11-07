@@ -1,63 +1,63 @@
 {
-  "id": "Pirates of the Caribbean: Dead Men Tell No Tales (2017)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Dockside tavern, last call",
-      "where": "sign",
-      "verdict": "wrong",
-      "why": "The Dying Gull is Jack's ship, not a tavern. The compass is traded in an unnamed local tavern on St Martin.",
-      "source": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales",
-      "fix": "Aboard the Dying Gull, last call",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Ghost shark tempura prawns",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "The summaries read show Salazar's ghost crew and the Silent Mary but no ghost sharks.",
-      "source": "https://www.plotexplained.com/movie/pirates-of-the-caribbean-dead-men-tell-no-tales",
-      "fix": "Salazar's ghost crew tempura prawns",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Ghost sharks of the Devil's Triangle",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Same problem as the dish name.",
-      "source": "https://www.plotexplained.com/movie/pirates-of-the-caribbean-dead-men-tell-no-tales",
-      "fix": "Salazar's ghost ship, the Silent Mary",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Good use of the compass cue and the Dying Gull, but it calls the ship a tavern and misses a few big moments.",
-    "missing": [
-      "The bank vault dragged through town (St Martin)",
-      "Carina escaping the witchcraft execution (St Martin)",
-      "The sea parting to walk to the Trident (Trident island)",
-      "Barbossa's death and the monkey Jack (finale)",
-      "The Black Pearl released from the bottle (the voyage)",
-      "Henry meeting Will on the Dutchman (opening)"
-    ],
-    "ideas": [
-      "Swap the 'Dockside tavern' sign for 'Aboard the Dying Gull'.",
-      "Swap 'Steamed guava duff pudding' for a 'Bank vault pudding' with a gold coin.",
-      "Swap 'Parmesan thyme crisps' for 'Where's the dosh?' bar snacks (Scrum's line).",
-      "Swap the 'Reunion pork belly' note for Barbossa's last stand."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Pirates of the Caribbean: Dead Men Tell No Tales (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Dockside tavern, last call",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "The Dying Gull is Jack's ship, not a tavern. The compass is traded in an unnamed local tavern on St Martin.",
+   "source": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Men_Tell_No_Tales",
+   "fix": "Aboard the Dying Gull, last call",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Ghost shark tempura prawns",
+   "where": "dish-name",
+   "verdict": "ok",
+   "why": "The film has Salazar's rotting ghost sharks, the VFX team built them, and the transcript has the 'Shark' cry in the sea chase.",
+   "source": "https://www.motionpictures.org/2018/01/pirates-caribbean-dead-men-tell-no-tales-vfx-team-created-ghost-sharks/",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Ghost sharks of the Devil's Triangle",
+   "where": "wink",
+   "verdict": "ok",
+   "why": "The ghost sharks come with Salazar's crew, who are freed from the Devil's Triangle, so the wink is fair.",
+   "source": "https://www.motionpictures.org/2018/01/pirates-caribbean-dead-men-tell-no-tales-vfx-team-created-ghost-sharks/",
+   "printed": false,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good use of the compass cue and the Dying Gull, but it calls the ship a tavern and misses a few big moments.",
+  "missing": [
+   "The bank vault dragged through town (St Martin)",
+   "Carina escaping the witchcraft execution (St Martin)",
+   "The sea parting to walk to the Trident (Trident island)",
+   "Barbossa's death and the monkey Jack (finale)",
+   "The Black Pearl released from the bottle (the voyage)",
+   "Henry meeting Will on the Dutchman (opening)"
+  ],
+  "ideas": [
+   "Swap the 'Dockside tavern' sign for 'Aboard the Dying Gull'.",
+   "Swap 'Steamed guava duff pudding' for a 'Bank vault pudding' with a gold coin.",
+   "Swap 'Parmesan thyme crisps' for 'Where's the dosh?' bar snacks (Scrum's line).",
+   "Swap the 'Reunion pork belly' note for Barbossa's last stand."
+  ],
+  "flat": true,
+  "done": false
+ }
 }
