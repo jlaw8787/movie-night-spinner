@@ -543,7 +543,7 @@ const FMT_FILMS={
         {k:"Vanilla Coke",note:"Vincent's order. Cola, with vanilla",p:"1.50",how:"Fill four tall glasses with ice. Add 15ml vanilla syrup to each (or half a teaspoon of vanilla extract with a teaspoon of sugar syrup), top with 300ml cold cola and stir once.",shop:["1.25L cola@Drinks","vanilla syrup@Pantry","1 bag ice@Frozen"]},
         {k:"Diner pancakes",n:"Coffee shop stack",note:"Vincent's pancakes, before Honey Bunny stands up",p:"3.50"}]}],
     trophy:["Twist contest","Won by Vincent and Mia. They kept the trophy."],
-    hosts:{h:"Tonight at Slim's",rows:[["Your waiter","Buddy Holly"],[\"Waitress\",\"Marilyn\"],["Your booth","A '50s convertible"],["On the floor","The twist contest"]]}},
+    hosts:{h:"Tonight at Slim's",rows:[["Your waiter","Buddy Holly"],["Waitress","Marilyn"],["Your booth","A '50s convertible"],["On the floor","The twist contest"]]}},
   "Kung Fu Panda (2008)":{fmt:"noodle",brand:"Mr Ping's Noodle Shop",sign:"Mr Ping's Noodle Shop",signZh:"平記麵館",
     tag:"Every bowl made by hand.<br>Plus dumplings.",motto:"沒有秘方",quote:["Family noodles, made fresh every morning.","Mr Ping"],sheetH:"Today's menu in plain words",sheetSide:"Serves four · priced in coins",
     colA:[{h:"Small plates",items:[

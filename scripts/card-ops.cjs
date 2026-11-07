@@ -37,7 +37,7 @@ function replaceAll(id,old,nw){
     set(walk(get(),s=>mode==='exact'?(s===old?nw:s):s.split(old).join(nw)));hits.push(lab+' x'+n)}
   for(const b of [fmtBlock(id),fmtFn(id)].filter(Boolean)){const blk=b.L.slice(b.i,b.j).join('\n');
     /* the spec line is JSON, the face templates are HTML: try the text as written, then HTML escaped */
-    const forms=[[old,b.html?htm(nw):JSON.stringify(nw).slice(1,-1)]];if(b.html)forms.push([htm(old),htm(nw)],[htm2(old),htm2(nw)]);
+    const forms=[[old,b.html?htm(nw):(/["\\]/.test(old)?nw:JSON.stringify(nw).slice(1,-1))]];/* an old text that carries its own quotes is code, not string content: keep the new text raw */if(b.html)forms.push([htm(old),htm(nw)],[htm2(old),htm2(nw)]);
     for(const [o,n2] of forms){const n=blk.split(o).length-1;if(!n)continue;b.L.splice(b.i,b.j-b.i,...blk.split(o).join(n2).split('\n'));FMT=b.L.join('\n');hits.push((b.html?'formats.js template':'formats.js spec')+' x'+n);break}}
   return hits}
 function hasText(id,t){const f=film(id);let hit=false;const chk=v=>walk(v,x=>{if(x.includes(t)||x.trim().replace(/[.]$/,'').toLowerCase()===t.trim().replace(/[.]$/,'').toLowerCase())hit=true;return x});
