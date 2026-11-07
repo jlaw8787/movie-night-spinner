@@ -1,0 +1,62 @@
+{
+  "id": "Miller's Crossing (1990)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Plate up when Tom goes back into the woods looking for his hat.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Tom never goes back into the woods for his hat. The hat is a dream he tells Verna, and he says he did not chase it ('Nothing more foolish than a man chasin' his hat'). He goes into the woods at Miller's Crossing to deal with Bernie.",
+      "source": "https://en.wikiquote.org/wiki/Miller%27s_Crossing",
+      "fix": "Plate up when Tom walks Bernie into the woods at Miller's Crossing.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Plate up when Tom first walks into Leo's office.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "This is the cue shown on the phone menu. In the opening scene Tom is already in Leo's office, backing Leo while Johnny Caspar airs his gripe. He is not shown walking in.",
+      "source": "https://filmsite.org/millerscrossing.html",
+      "fix": "Plate up when Johnny Caspar storms into Leo's office with his gripe about a fixed fight.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Leo's office, where Tom walks in unannounced",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Sources put Tom in the office already when Caspar visits. No opened source shows him walking in unannounced.",
+      "source": "https://filmsite.org/millerscrossing.html",
+      "fix": "Leo's office, where Caspar airs his gripe",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "verdict": "A well built speakeasy supper club that uses the hat, the High Hat gag and Danny Boy, let down by a cue that gets the hat wrong.",
+    "missing": [
+      "Tom's hat dream, 'Nothing more foolish than a man chasin' his hat' (Tom and Verna)",
+      "Caspar's rant about ethics and 'I'm sick of the high hat' (Leo's office)",
+      "Leo's tommy gun shootout to Danny Boy (the assassination attempt)",
+      "Tom walking Bernie into the woods, Bernie begging for his life (Miller's Crossing)",
+      "'What heart?' (Tom and Verna at the end)",
+      "Tom's debt to Lazarre and the beating from his messenger (card game aftermath)"
+    ],
+    "ideas": [
+      "Swap the cue for 'Plate up when Tom walks Bernie into the woods at Miller's Crossing'.",
+      "Swap 'Not our fault' on the hat check tag for 'Nothing more foolish than a man chasin' his hat.' (a real Tom line).",
+      "Swap 'Oysters on the half shell' for Caspar's penne and sausage so the ethics speech has a plate.",
+      "Swap 'Really coffee.' for 'What heart?' on the coffee line, or add it under the signed line from Leo."
+    ],
+    "overall": 4.0,
+    "flat": false,
+    "done": false
+  }
+}

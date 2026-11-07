@@ -1,0 +1,82 @@
+{
+ "id": "The Out-of-Towners (1970)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when George finally gets to eat something.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot summary has George going nearly 24 hours with virtually no food, with only crackers, olives and Cracker Jacks turning up. No source I opened says which moment counts as him finally eating, so the trigger is vague. The Cracker Jacks in Central Park is the clearest scene.",
+   "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
+   "fix": "Serve dessert when George cracks his tooth on the stale Cracker Jacks in Central Park.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the flight that gets diverted to Boston, and nothing left to eat on board",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The diversion to Boston is right. A review says George turns down the plane meal to save his appetite for dinner, so 'nothing left to eat on board' does not match what the film shows.",
+   "source": "https://culturedarm.com/the-out-of-towners-1970/",
+   "fix": "the flight that gets diverted to Boston, after George turns down the plane dinner",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "the only food they find all night",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "This goes with 'Central Park hot dogs'. Hot dogs are not in the plot summary. The food they find is peanut butter sandwiches, olives and crackers on the train, then stale Cracker Jacks in the park that crack George's tooth (the cover photo shows the box).",
+   "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
+   "fix": "the stale Cracker Jacks that crack George's tooth (rename the dish 'Central Park Cracker Jacks')",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "breakfast in the room at last",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Their guaranteed reservation is given away and the hotel is full. A review says they never get the room. No source I opened shows them having breakfast in a room.",
+   "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
+   "fix": "the hotel breakfast they never get to order",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "rationed between George and Gwen through one very long night",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No opened source mentions shortbread, or food being rationed between them. Their luggage with the spare cash is left in Boston.",
+   "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
+   "fix": "boxed for the handbag, long before the luggage goes missing",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 2,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A lovely Waldorf room service card, but the dishes and lines barely use what actually goes wrong for George and Gwen.",
+  "missing": [
+   "Cracker Jacks and the cracked tooth (Central Park, Trefoil Arch)",
+   "Peanut butter sandwiches, olives and crackers (train dining car)",
+   "George's notebook of names to sue (every disaster)",
+   "The guaranteed reservation given away (Waldorf front desk)",
+   "Walking past the garbage in the rain (strike night)",
+   "The flight hijacked to Cuba (final scene)"
+  ],
+  "ideas": [
+   "Swap 'Central Park hot dogs' for Cracker Jacks, the box already in the cover photo.",
+   "Swap 'Cocktail Franks' for a dining car plate of peanut butter sandwiches, green olives and crackers.",
+   "Swap the 'Rooms held until 6 P.M. unless guaranteed' line for a stamp saying 'Reservation guaranteed to 10 P.M. only'.",
+   "Replace 'Box lunches on request' with 'George will sue. Names taken at the desk.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

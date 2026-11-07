@@ -1,0 +1,87 @@
+{
+ "id": "The Adjustment Bureau (2011)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "THE HOTEL CARROW",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The hotel is not named in any source I opened. It reads as invented.",
+   "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
+   "fix": "THE HOTEL CARROW (invented, fine as a made-up venue)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Charlie Traynor",
+   "where": "note-by",
+   "verdict": "unsure",
+   "why": "Sources I opened name David's campaign manager as Charlie but give no surname. The note itself fits his job.",
+   "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
+   "fix": "Charlie",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "Whatever the count says, thank you. Eat something, the returns run late. Hats to the cloakroom, and no photographs at the bar. The bus back to Brooklyn leaves the side doors at 1 A.M.",
+    "by": "Charlie",
+    "kind": "note"
+   }
+  },
+  {
+   "text": "from the cart beside the bus stop",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened mentions a nut cart at the bus stop.",
+   "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
+   "fix": "hot nuts, for the bus ride that changes his day",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "the date they're not supposed to have",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "David and Elise meet on the bus. The film does not show a dinner date at this point.",
+   "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
+   "fix": "the second meeting they're not supposed to have",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "the dance company party",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened shows a dance company party. Elise's dance scenes are rehearsals.",
+   "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
+   "fix": "Elise's rehearsal, after the show",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A neat election night banquet built on the bathroom and coffee-spill moments, but the Bureau's hats and doors barely appear.",
+  "missing": [
+   "Hats that open doors (Bureau men)",
+   "The bus on the 7:05 a.m. morning (David and Elise)",
+   "Coffee spilled on David's shirt, by 7:05 (Harry Mitchell)",
+   "Rain blocks the Bureau tracking (Harry and David)",
+   "The Chairman's plan going blank at the end",
+   "Elise's rehearsal with the ballet company"
+  ],
+  "ideas": [
+   "Swap the 'Hat check' ticket for a Bureau hat check with a door on the back.",
+   "Replace the plain 'Beer' line with 'Rain, on tap (no tracking)'.",
+   "Swap 'Soft drinks' note for 'Cola, ginger ale, club soda. Not the Chairman's choice'.",
+   "Add a blank page headed 'The Plan' at the foot of the cocktail list."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

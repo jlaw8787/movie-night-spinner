@@ -1,0 +1,72 @@
+{
+ "id": "When Harry Met Sally... (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The lady at the next table orders one too",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "In the film the woman at the next table says 'I'll have what she's having' after Sally fakes the orgasm. She does not order an egg cream, and Sally is eating a sandwich.",
+   "source": "https://en.wikiquote.org/wiki/When_Harry_Met_Sally...",
+   "fix": "The lady at the next table will have what you're having",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Exactly as she orders it",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The chef salad and apple pie order happens at the diner on the drive from Chicago, not at Katz's, and the check is Katz's. The card caption also says 'The diner. Sally orders'.",
+   "source": "https://www.sheilaomalley.com/?p=77665",
+   "fix": "Exactly as she ordered it on the drive",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Harry's order. Hand cut, piled high, a pickle on the side",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "A review says they eat pastrami at Katz's, but no source I opened says it is Harry's order.",
+   "source": "https://www.sheilaomalley.com/?p=77665",
+   "fix": "The Katz's classic. Hand cut, piled high, a pickle on the side",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "18 hours, one argument",
+   "where": "caption",
+   "verdict": "unsure",
+   "why": "The drive from Chicago to New York is in the plot, but I found no source for the 18 hours.",
+   "source": "https://en.wikipedia.org/wiki/When_Harry_Met_Sally...",
+   "fix": "One long drive, one argument",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Great idea to use a Katz's check, but it mixes the diner order into the deli and misreads the egg cream gag.",
+  "missing": [
+   "Sally's diner order on the side (the drive)",
+   "I'll have what she's having (Katz's)",
+   "Harry spitting grape seeds (the drive)",
+   "The New Year's Eve run to the party (finale)",
+   "Pecan pie in the museum (friendship)",
+   "Send a salami to your boy in the army (Katz's sign)"
+  ],
+  "ideas": [
+   "Swap the egg cream line 'The lady at the next table orders one too' for 'Order what she's having.'",
+   "Move the chef salad and apple pie to a separate 'The diner' check, replacing the Katz's check lines.",
+   "Swap 'Fried pickles' for a pecan pie slice from the museum scene.",
+   "Replace the busy photo collage with two stills and a bigger check."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

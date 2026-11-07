@@ -1,0 +1,52 @@
+{
+ "id": "The Departed (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Costigan's bar order, and the bartender who won't let it go",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "At the bar, Mr. French is the one who rips into Costigan over the cranberry juice and tells him to get a cranberry. It is not the bartender.",
+   "source": "https://en.wikiquote.org/wiki/The_Departed",
+   "fix": "Costigan's bar order, and Mr. French who won't let it go",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Split and grilled, drawn butter. Robe optional.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened shows Costello in a robe.",
+   "source": "https://en.wikiquote.org/wiki/The_Departed",
+   "fix": "Split and grilled, drawn butter. Knock first.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 19,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A Southie pub split into cops' and crooks' sides, with the rat joke and the cranberry juice order done well.",
+  "missing": [
+   "Costello's envelope on Sullivan's desk (deciding clue)",
+   "Stolen microprocessors sold to Chinese mobsters (sting)",
+   "Queenan thrown from the building",
+   "Costigan's prison term as cover",
+   "Madden and the recording",
+   "Trooper Barrigan in the elevator"
+  ],
+  "ideas": [
+   "Swap 'Irish stout' for 'Costello's stout, pulled slow, no envelope'.",
+   "Replace 'Clam chowder' note with 'Cup, with oyster crackers and a microchip'.",
+   "Swap the tag 'Citizens' for a plain 'Envelope' tag.",
+   "Add a lift sign 'Going down' near the Boston cream pie."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

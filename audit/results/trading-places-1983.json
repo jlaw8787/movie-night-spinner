@@ -1,0 +1,82 @@
+{
+ "id": "Trading Places (1983)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "18 74",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The crest reads HC 18 74. The club president in the film says the club has been going two hundred and seven years, which is 1776 for a 1983 film.",
+   "source": "https://en.wikiquote.org/wiki/Trading_Places",
+   "fix": "17 76",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the mains during the New Year's Eve train party.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The four board Beeks's train in disguise on New Year's Eve. The plot summary does not mention a party on the train.",
+   "source": "https://en.wikipedia.org/wiki/Trading_Places",
+   "fix": "Serve the mains when the four board Beeks's train on New Year's Eve.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "prime rib at the club",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No opened source says what Billy Ray eats at the club.",
+   "source": "https://en.wikipedia.org/wiki/Trading_Places",
+   "fix": "Billy Ray's first lunch at the club",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Louis's usual at the club, before the bet",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No opened source says Louis orders Caesar salad at the club.",
+   "source": "https://en.wikipedia.org/wiki/Trading_Places",
+   "fix": "a club salad, before the bet",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "best kept out of the beard",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The Christmas party scene with Winthorpe is in the plot, but no opened source mentions smoked salmon or a Santa beard.",
+   "source": "https://en.wikipedia.org/wiki/Trading_Places",
+   "fix": "Winthorpe's Christmas party salmon",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "The best of the batch: a believable Heritage Club with the dollar wager, orange crest and a juice joke.",
+  "missing": [
+   "Looking good, Billy Ray! (Louis)",
+   "The gorilla on the train (Beeks)",
+   "Merry New Year! (Billy Ray as Santa)",
+   "Eggnog? (Coleman, hideout)",
+   "The $394 million margin call (trading floor)",
+   "Beeks and the gorilla on the ship (ending)"
+  ],
+  "ideas": [
+   "Fix the crest to HC 17 76.",
+   "Swap 'Never concentrate.' for 'Looking good, Billy Ray.' on one house line.",
+   "Add a 'Merry New Year' eggnog in place of 'Rice pudding'.",
+   "Add a gorilla suit napkin ring or stamp on the wager book."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

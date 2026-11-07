@@ -1,0 +1,62 @@
+{
+ "id": "The Pope of Greenwich Village (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Benedetto's",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The plot summaries and reviews I opened do not name the restaurant where Charlie and Paulie work. It is described only as a high end Village restaurant.",
+   "source": "https://en.wikipedia.org/wiki/The_Pope_of_Greenwich_Village",
+   "fix": "Keep only if the restaurant name is confirmed in the film; otherwise rename.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Bleecker Street, New Year's Eve. This block has always blown its own horn.",
+   "where": "caption",
+   "verdict": "unsure",
+   "why": "No source I opened puts the film on New Year's Eve or on Bleecker Street.",
+   "source": "https://en.wikipedia.org/wiki/The_Pope_of_Greenwich_Village",
+   "fix": "Greenwich Village, a Friday night. This block has always blown its own horn.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "for a day at the track with Paulie's racehorse",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Paulie bets on a horse. A review says he puts everything on it to win, but nothing says he owns it. Charlie is the one who collects $20,000.",
+   "source": "https://bandsaboutmovies.com/2020/09/28/the-pope-of-greenwich-village-1984",
+   "fix": "for a day at the track with Paulie's can't-lose horse",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A smart captain's book that uses the staff and the cops well, but it skips the safe job and the lye in the coffee.",
+  "missing": [
+   "Lye in Eddie's coffee (the finale)",
+   "Paulie's thumb (Eddie's men)",
+   "Barney cracking the safe (the robbery)",
+   "Bunky Ritter falling down the elevator shaft (robbery)",
+   "The $20,000 horse win (Charlie)",
+   "The taped payoffs (Bunky and Eddie Grant)"
+  ],
+  "ideas": [
+   "Swap the footer 'Espresso 1.25. Prices subject to change.' for 'Espresso 1.25. Ask who poured it.'",
+   "Swap Barney's note 'Back booth, facing the door.' for 'Back booth. Brings his own tools.'",
+   "Swap the street photo on page 84 for a film still of Charlie and Paulie.",
+   "Swap the 'Parties of six or more, see the captain.' footer for 'Mr. Grant's table is always six. Nobody sits there.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "Teenage Mutant Ninja Turtles (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Channel 3 news, live from the sewers",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "April reports for Channel 3, but I found no scene of her reporting live from the sewers.",
+   "source": "https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles_(1990_film)",
+   "fix": "April's Channel 3 newsroom crew",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "April O'Neil, reporting live from the sewer",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same issue. The sources show her hiding with the turtles, not reporting live from below.",
+   "source": "https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles_(1990_film)",
+   "fix": "April O'Neil, Channel 3 News",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good corner-grate pizza place with the Domino's style delivery gag, but the film's story beats barely appear.",
+  "missing": [
+   "Raph loses a sai and April picks it up (opening fight)",
+   "The turtles bonding with April over pizza at her flat",
+   "Casey Jones and his hockey stick in the fight at April's flat",
+   "Splinter kidnapped and the lair ransacked",
+   "April's family farm upstate",
+   "Shredder crushed in the garbage truck"
+  ],
+  "ideas": [
+   "Swap 'Sensei's cheeses' note for 'Splinter's lesson, after pizza'.",
+   "Replace the plain 'Milk' with 'Farmhouse milk, from the farm upstate'.",
+   "Swap the tips box line for a bent sai on the delivery ticket.",
+   "Add a hockey stick sticker to the 'No hockey masks' footer."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

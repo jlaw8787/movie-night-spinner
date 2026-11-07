@@ -1,0 +1,97 @@
+{
+ "id": "The Taking of Pelham One Two Three (1974)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when the four men in moustaches board the train.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot says four men in similar disguises board the same train at different stations. No opened source says moustaches. The phone menu cue says 'in disguise', which is safe.",
+   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
+   "fix": "Serve the snacks when the four men in disguise board the train.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Best hero in the building, and it reaches the Command Center inside the hour. Tell them Garber sent you.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Garber is a Transit Police lieutenant, so a note from him fits. The film's Transit Authority base is a control center (the set was a replica of the Brooklyn control center), not a command center.",
+   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
+   "fix": "Best hero in the building, and it reaches the Control Center inside the hour. Tell them Garber sent you.",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "Best hero in the building, and it reaches the Control Center inside the hour. Tell them Garber sent you.",
+    "by": "Z. Garber",
+    "kind": "note"
+   }
+  },
+  {
+   "text": "Call KLondike 5-0123. Command Center orders up inside the hour.",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "Same naming issue. The Transit Authority's base in the film is the control center.",
+   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
+   "fix": "Call KLondike 5-0123. Control Center orders up inside the hour.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "A dozen for the Command Center floor.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same naming issue, on the phone menu.",
+   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
+   "fix": "A dozen for the Control Center floor.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Garber's command centre",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same naming issue. Garber works with the Transit Authority control center.",
+   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
+   "fix": "Garber's control center",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "the mayor has the flu",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The cast list has a mayor's nurse and the mayor in bed, but no source I opened says what is wrong with him.",
+   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
+   "fix": "the mayor is in bed with a nurse",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Right city, right job and a good Garber, but it misses the film's best jokes and has one line crossed out by a rule.",
+  "missing": [
+   "Gesundheit (Garber answering Mr. Green's sneezes)",
+   "Mr. Blue, Green, Grey and Brown (the hijackers' colour names)",
+   "One million dollars inside one hour (Blue's demand)",
+   "The dead man's switch (Garber explains it)",
+   "The runaway train into the South Ferry loop (final minutes)",
+   "Garber's Gesundheit at the door (final scene)"
+  ],
+  "ideas": [
+   "Swap 'Flu season special. Get well!' under the Hot Toddy for 'Gesundheit.' and fix the clash with the rule line.",
+   "Swap 'Over a million cups poured' for 'One million. One hour.'",
+   "Rename the four bakery case items on page one with Mr. Blue, Mr. Green, Mr. Grey and Mr. Brown tags.",
+   "Swap the coupon 'No. 123' stamp for a 'Pelham 1 2 3' departure board."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

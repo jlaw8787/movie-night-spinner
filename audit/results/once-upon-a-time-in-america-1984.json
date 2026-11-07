@@ -1,0 +1,52 @@
+{
+  "id": "Once Upon a Time in America (1984)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Locker 541. The key? Ask the clock.",
+      "where": "caption",
+      "verdict": "unsure",
+      "why": "A source confirms the locker key comes from Moe's grandfather clock and the locker is at a train station, but no opened source gives the locker number. The photo looks like a film still showing 541.",
+      "source": "https://www.ferdyonfilms.com/2014/once-upon-a-time-in-america-1984/21329",
+      "fix": "Locker at the station. The key? Ask the clock.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Music most nights, Cockeye on the flute.",
+      "where": "footer",
+      "verdict": "unsure",
+      "why": "No opened source says Cockeye plays an instrument. The record of Amapola played on the gramophone for young Deborah is confirmed.",
+      "source": "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_America",
+      "fix": "Music most nights, Amapola on the gramophone.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 8,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "verdict": "A believable Lower East Side deli with the cake on the stairs, the watch and the locker all in play.",
+    "missing": [
+      "Deborah dancing in the storeroom to Amapola (Moe's back room)",
+      "Max's stolen pocket watch coming back at the end (the 1968 party)",
+      "Noodles hiding in the opium den (opening and ending)",
+      "The garbage truck and the smile in the opium den (final shot)",
+      "Bugsy and the young gang on the street (1918)",
+      "The key in Moe's clock (opening)"
+    ],
+    "ideas": [
+      "Swap 'Cockeye on the flute' for 'Amapola on the gramophone'.",
+      "Swap the 'Cold tea' line 'Ask for it by name.' for 'Open the clock and ask for the key.'",
+      "Swap the 'Watch claim check' fine print for 'Max wants it back.'",
+      "Add a final line under Moe's note: 'Opium den round the corner is closed.'"
+    ],
+    "overall": 4.2,
+    "flat": false,
+    "done": false
+  }
+}

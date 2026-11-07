@@ -1,0 +1,62 @@
+{
+ "id": "The Godfather Part II (1974)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Champagne and the President's toast",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "The film shows the countdown and Batista's fall. I could not confirm a toast from the President at this party.",
+   "source": "https://en.wikipedia.org/wiki/The_Godfather_Part_II",
+   "fix": "Champagne and the countdown",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Rum, lime and sugar, ice cold. Banana on request.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "I could not open a source for Fredo's banana daiquiri in Havana. It is widely known, but no page I read confirmed it.",
+   "source": "https://en.wikipedia.org/wiki/Fredo_Corleone",
+   "fix": "Rum, lime and sugar, ice cold. Banana on request.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Fredo would ask for a banana in his",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same as above, no opened source.",
+   "source": "https://en.wikipedia.org/wiki/Fredo_Corleone",
+   "fix": "Fredo's Havana daiquiri, banana on request",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A lovely Havana New Year postcard, with the Cuba cake and countdown used, though it avoids the midnight betrayal.",
+  "missing": [
+   "Michael's kiss of death on Fredo at the countdown (Havana party)",
+   "Fredo pretends not to know Johnny Ola, then slips (Havana)",
+   "Batista fleeing as the rebels advance",
+   "Roth in hospital, the pillow attempt",
+   "Roth's 'we're bigger than U.S. Steel' (his suite)",
+   "Vito's olive oil business (Sicily, 1922)"
+  ],
+  "ideas": [
+   "Swap 'A kiss at midnight is customary' for 'A kiss at midnight is customary. Mind who gives it.'.",
+   "Replace 'Café cubano' note with 'Roth, in his suite, 'bigger than U.S. Steel''.",
+   "Swap the cloakroom ticket for a hospital visitor pass for Roth.",
+   "Add a 'Hail Mary' fishing lure motif next to the Daiquiri."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

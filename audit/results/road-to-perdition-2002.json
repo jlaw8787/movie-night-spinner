@@ -1,0 +1,62 @@
+{
+  "id": "Road to Perdition (2002)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Rooney wake Irish coffee",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "The wake in the film is for Finn McGovern's brother, not for Rooney. Rooney attends, and McGovern speaks at it.",
+      "source": "https://en.wikipedia.org/wiki/Road_to_Perdition",
+      "fix": "McGovern wake Irish coffee",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "the Rooney wake, 1931, whiskey poured freely for the dead",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "The wake is McGovern's brother's wake, not Rooney's.",
+      "source": "https://en.wikipedia.org/wiki/Road_to_Perdition",
+      "fix": "the McGovern wake, 1931, whiskey poured freely for the dead",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "the Rooney wake, 1931",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Note for the wake table soda bread. Same issue: the wake is for Finn McGovern's brother.",
+      "source": "https://en.wikipedia.org/wiki/Road_to_Perdition",
+      "fix": "the McGovern wake, 1931",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 7,
+  "vibe": {
+    "world": 5,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "verdict": "A rain soaked Depression diner that nails the world, but Maguire, the bank jobs and the letter stay off the card.",
+    "missing": [
+      "Maguire with half a cup of sugar in his coffee (the diner)",
+      "Maguire's corpse photographs (every scene he is in)",
+      "Connor's letter, 'Kill Sullivan and all debts are paid' (Calvino's speakeasy)",
+      "Michael learning to drive and robbing banks (the road)",
+      "The old farm couple who patch up Sullivan (the farm)",
+      "'He was my father' (final lines)"
+    ],
+    "ideas": [
+      "Swap 'Strictly medicinal.' on Wake coffee for 'Half a cup of sugar, like a certain photographer.'",
+      "Swap 'Hot from the urn, or cold.' for 'Coffee or milk. Sullivan takes the booth facing the door.'",
+      "Swap 'Drivers must see over the wheel.' House Rule for 'Getaway drivers must see over the wheel.'",
+      "Swap 'Irish soda bread' for the farmhouse bread from the old couple, with a note."
+    ],
+    "overall": 3.8,
+    "flat": false,
+    "done": false
+  }
+}

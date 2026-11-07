@@ -1,0 +1,92 @@
+{
+ "id": "Spider-Man 2 (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "AZIZ'S PIZZA",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The shop in the film is Joe's Pizza. Mr. Aziz is the owner, not the name on the sign. The badge, the headline and the coupon all say AZIZ'S.",
+   "source": "https://en.wikipedia.org/wiki/Joe%27s_Pizza",
+   "fix": "JOE'S PIZZA (badge: JOE'S, coupon: JOE'S)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "EST. 1962 / GREENWICH VILLAGE · SINCE 1962",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The real Joe's Pizza opened in 1975. The film gives no founding year, so 1962 is made up (a nod to Spider-Man's comic debut).",
+   "source": "https://en.wikipedia.org/wiki/Joe%27s_Pizza",
+   "fix": "SINCE 1975",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "29 MINUTES OR IT'S FREE",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "The only time limit I could confirm is Peter's 42 blocks in 7 and a half minutes. I could not open a source that shows a 29 minute promise in the film.",
+   "source": "https://en.wikiquote.org/wiki/Spider-Man_2",
+   "fix": "42 BLOCKS IN 7 1/2 MINUTES",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "LATE AGAIN 31 MINUTES. PIE IS FREE.",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "Same problem as the 29 minute promise. The film's confirmed timing is 42 blocks in 7 and a half minutes. The 31 is not in any source I opened.",
+   "source": "https://en.wikiquote.org/wiki/Spider-Man_2",
+   "fix": "LATE AGAIN 8 MINUTES. PIE IS FREE.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "A stack of pies, one bungee cord, 42 blocks.",
+   "where": "caption",
+   "verdict": "unsure",
+   "why": "The 42 blocks is right. I could not confirm a bungee cord holding the pies.",
+   "source": "https://mashed.com/1465988/joes-pizza-peter-parker-worked/",
+   "fix": "A stack of pies, 42 blocks, 7 and a half minutes.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "from the cart on Peter's walk to class",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened shows a knish cart on Peter's walk to class.",
+   "source": "https://en.wikipedia.org/wiki/Spider-Man_2",
+   "fix": "a hot knish on the run between jobs",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Cheerful pizza coupon sheet built on the delivery run, but the shop name is wrong and the big moments from the film are thin.",
+  "missing": [
+   "Pizza time! (Peter drops the pizza boxes on the desk)",
+   "42 blocks in 7 and a half minutes (Mr. Aziz)",
+   "Spider-Man webs a man's pizza out of his hands (street)",
+   "Octavius and the four tentacles at the fusion demo",
+   "Fighting Doc Ock on the subway train",
+   "Aunt May and the eviction notice"
+  ],
+  "ideas": [
+   "Swap the AZIZ'S badge for JOE'S and keep Mr. Aziz as the signature on the driver warning.",
+   "Swap the 29 MINUTES burst for 42 BLOCKS, 7 1/2 MINUTES.",
+   "Swap the 'Costume party?' line for a PIZZA TIME stamp across the coupon.",
+   "Replace 'Cheese pie, Eight big slices' note with 'Webbed to your hand, no charge'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}
