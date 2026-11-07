@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "The photocopier scene",
-   "new": "Mary and Andrew in the copy room"
+   "new": "Mary and Andrew in the copy room",
+   "done": true
   },
   {
    "old": "Keep it well away from the photocopier.",
-   "new": "Keep it well away from the copy room."
+   "new": "Keep it well away from the copy room.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

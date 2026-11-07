@@ -1,54 +1,56 @@
 {
-  "id": "Once Upon a Time in America (1984)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Locker 541. The key? Ask the clock.",
-      "where": "caption",
-      "verdict": "wrong",
-      "why": "The locker holds the gang's money and the key comes back with Moe's clock key, at a station, but no source or search gives the number 541, so the number is unproven.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=once-upon-a-time-in-america",
-      "fix": "Station locker. The key? Ask the clock.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Music most nights, Cockeye on the flute.",
-      "where": "footer",
-      "verdict": "wrong",
-      "why": "No source says Cockeye plays the flute. The transcript only has 'Cockeye wanted to play with the band' in the speakeasy scene.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=once-upon-a-time-in-america",
-      "fix": "Music most nights, Cockeye wants to sit in with the band.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "verdict": "A believable Lower East Side deli with the cake on the stairs, the watch and the locker all in play.",
-    "missing": [
-      "Deborah dancing in the storeroom to Amapola (Moe's back room)",
-      "Max's stolen pocket watch coming back at the end (the 1968 party)",
-      "Noodles hiding in the opium den (opening and ending)",
-      "The garbage truck and the smile in the opium den (final shot)",
-      "Bugsy and the young gang on the street (1918)",
-      "The key in Moe's clock (opening)"
-    ],
-    "ideas": [
-      "Swap 'Cockeye on the flute' for 'Amapola on the gramophone'.",
-      "Swap the 'Cold tea' line 'Ask for it by name.' for 'Open the clock and ask for the key.'",
-      "Swap the 'Watch claim check' fine print for 'Max wants it back.'",
-      "Add a final line under Moe's note: 'Opium den round the corner is closed.'"
-    ],
-    "overall": 4.2,
-    "flat": false,
-    "done": false
+ "id": "Once Upon a Time in America (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Locker 541. The key? Ask the clock.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The locker holds the gang's money and the key comes back with Moe's clock key, at a station, but no source or search gives the number 541, so the number is unproven.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=once-upon-a-time-in-america",
+   "fix": "Station locker. The key? Ask the clock.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Music most nights, Cockeye on the flute.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "No source says Cockeye plays the flute. The transcript only has 'Cockeye wanted to play with the band' in the speakeasy scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=once-upon-a-time-in-america",
+   "fix": "Music most nights, Cockeye wants to sit in with the band.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A believable Lower East Side deli with the cake on the stairs, the watch and the locker all in play.",
+  "missing": [
+   "Deborah dancing in the storeroom to Amapola (Moe's back room)",
+   "Max's stolen pocket watch coming back at the end (the 1968 party)",
+   "Noodles hiding in the opium den (opening and ending)",
+   "The garbage truck and the smile in the opium den (final shot)",
+   "Bugsy and the young gang on the street (1918)",
+   "The key in Moe's clock (opening)"
+  ],
+  "ideas": [
+   "Swap 'Cockeye on the flute' for 'Amapola on the gramophone'.",
+   "Swap the 'Cold tea' line 'Ask for it by name.' for 'Open the clock and ask for the key.'",
+   "Swap the 'Watch claim check' fine print for 'Max wants it back.'",
+   "Add a final line under Moe's note: 'Opium den round the corner is closed.'"
+  ],
+  "overall": 4.2,
+  "flat": false,
+  "done": false
+ }
 }

@@ -1,59 +1,60 @@
 {
-  "id": "Oliver & Company (1988)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Name's Dodger, kid. Stick with the crew and you eat, but keep your paws off the hot dog cart.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Dodger is the one who leads Oliver in raiding Louie's hot dog cart. He would never tell him to keep off it.",
-      "source": "https://en.wikipedia.org/wiki/Oliver_%26_Company",
-      "fix": "Name's Dodger, kid. Stick with the crew and you eat, and the hot dog cart is first on the list.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Name's Dodger, kid. Stick with the crew and you eat, and the hot dog cart is first on the list.",
-        "by": "Dodger",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Einstein the Great Dane pulling the cart",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Einstein is the Great Dane in Fagin's gang, but no source or search shows him pulling a cart. In the chauffeur shuffle Dodger asks him for a fender bender at two lights.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=oliver-and-company",
-      "fix": "Einstein the Great Dane and the fender bender at two lights",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A good chalkboard barge, but it only uses the hot dog cart and skips the songs and best scenes.",
-    "missing": [
-      "Georgette's bubble bath and 'Perfect Isn't Easy'",
-      "Oliver and Dodger stealing hot dogs (the opening chase)",
-      "Dodger's 'Why Should I Worry?' street walk",
-      "Jenny's birthday at the end with Winston",
-      "Roscoe and DeSoto on the subway third rail",
-      "Fagin's trike escape"
-    ],
-    "ideas": [
-      "Swap the Dodger note for a safe one: 'Stick with the crew and you eat, kid.'",
-      "Swap 'Black cherry soda' for 'Georgette's bubble bath bubbly'.",
-      "Swap 'Fish crackers' for 'Winston's birthday sandwiches'.",
-      "Add a birthday candle to 'Kitten cookies' for Jenny's party."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Oliver & Company (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Name's Dodger, kid. Stick with the crew and you eat, but keep your paws off the hot dog cart.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Dodger is the one who leads Oliver in raiding Louie's hot dog cart. He would never tell him to keep off it.",
+   "source": "https://en.wikipedia.org/wiki/Oliver_%26_Company",
+   "fix": "Name's Dodger, kid. Stick with the crew and you eat, and the hot dog cart is first on the list.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Name's Dodger, kid. Stick with the crew and you eat, and the hot dog cart is first on the list.",
+    "by": "Dodger",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Einstein the Great Dane pulling the cart",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Einstein is the Great Dane in Fagin's gang, but no source or search shows him pulling a cart. In the chauffeur shuffle Dodger asks him for a fender bender at two lights.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=oliver-and-company",
+   "fix": "Einstein the Great Dane and the fender bender at two lights",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A good chalkboard barge, but it only uses the hot dog cart and skips the songs and best scenes.",
+  "missing": [
+   "Georgette's bubble bath and 'Perfect Isn't Easy'",
+   "Oliver and Dodger stealing hot dogs (the opening chase)",
+   "Dodger's 'Why Should I Worry?' street walk",
+   "Jenny's birthday at the end with Winston",
+   "Roscoe and DeSoto on the subway third rail",
+   "Fagin's trike escape"
+  ],
+  "ideas": [
+   "Swap the Dodger note for a safe one: 'Stick with the crew and you eat, kid.'",
+   "Swap 'Black cherry soda' for 'Georgette's bubble bath bubbly'.",
+   "Swap 'Fish crackers' for 'Winston's birthday sandwiches'.",
+   "Add a birthday candle to 'Kitten cookies' for Jenny's party."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

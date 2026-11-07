@@ -1,69 +1,71 @@
 {
-  "id": "Night at the Museum (2006)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Rule one for night guards, eat before your shift starts. Rule two, save some snacks for Rexy.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Printed in quote marks as Larry's words, but he never says it. In the film Cecil hands Larry a manual that Dexter later destroys, and Larry tames Rexy by throwing a bone. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-      "source": "https://en.wikipedia.org/wiki/Night_at_the_Museum_(film)",
-      "fix": "Rule one, eat before your shift. Rule two, keep a bone handy for Rexy.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Rule one, eat before your shift. Rule two, keep a bone handy for Rexy.",
-        "by": "Larry Daley",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Some men are born great, says Teddy.",
-      "where": "dish-note",
-      "verdict": "ok",
-      "why": "Teddy Roosevelt says 'Some men are born great' to Larry in the film, and repeats it the next night.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=night-at-the-museum",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Dum Dum the Easter Island head",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "In the film the Moai calls Larry 'dum-dum' and asks him for 'gum-gum'. The head is never called Dum Dum, so the name is backwards.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=night-at-the-museum",
-      "fix": "Gum-gum the Easter Island head",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A cosy museum cafe with the right exhibits and the bone game, but the dishes are generic cafe food with a museum label.",
-    "missing": [
-      "Dexter slapping Larry and stealing his keys (only in the footer)",
-      "Cecil's manual and Dexter tearing it up",
-      "Attila the Hun and the wax figures",
-      "Ahkmenrah's golden tablet",
-      "Teddy and Sacagawea",
-      "The exhibits all disintegrating at sunrise"
-    ],
-    "ideas": [
-      "Swap 'Hot roasted nuts in a paper cone' for 'Dum Dum's gum gum nuts' with a gum wrapper.",
-      "Swap 'Dexter's banana bread' note for 'Slapped and stolen, one keyring'.",
-      "Swap 'Night guard thermos hot chocolate' note for 'To stay awake until Rexy's done'.",
-      "Swap 'Manhattan hot dog cart' for 'Attila's Hun dog' with a Hun joke."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Night at the Museum (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Rule one for night guards, eat before your shift starts. Rule two, save some snacks for Rexy.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Larry's words, but he never says it. In the film Cecil hands Larry a manual that Dexter later destroys, and Larry tames Rexy by throwing a bone. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Night_at_the_Museum_(film)",
+   "fix": "Rule one, eat before your shift. Rule two, keep a bone handy for Rexy.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Rule one, eat before your shift. Rule two, keep a bone handy for Rexy.",
+    "by": "Larry Daley",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Some men are born great, says Teddy.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Teddy Roosevelt says 'Some men are born great' to Larry in the film, and repeats it the next night.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=night-at-the-museum",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Dum Dum the Easter Island head",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "In the film the Moai calls Larry 'dum-dum' and asks him for 'gum-gum'. The head is never called Dum Dum, so the name is backwards.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=night-at-the-museum",
+   "fix": "Gum-gum the Easter Island head",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A cosy museum cafe with the right exhibits and the bone game, but the dishes are generic cafe food with a museum label.",
+  "missing": [
+   "Dexter slapping Larry and stealing his keys (only in the footer)",
+   "Cecil's manual and Dexter tearing it up",
+   "Attila the Hun and the wax figures",
+   "Ahkmenrah's golden tablet",
+   "Teddy and Sacagawea",
+   "The exhibits all disintegrating at sunrise"
+  ],
+  "ideas": [
+   "Swap 'Hot roasted nuts in a paper cone' for 'Dum Dum's gum gum nuts' with a gum wrapper.",
+   "Swap 'Dexter's banana bread' note for 'Slapped and stolen, one keyring'.",
+   "Swap 'Night guard thermos hot chocolate' note for 'To stay awake until Rexy's done'.",
+   "Swap 'Manhattan hot dog cart' for 'Attila's Hun dog' with a Hun joke."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

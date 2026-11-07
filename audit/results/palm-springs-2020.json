@@ -1,65 +1,65 @@
 {
-  "id": "Palm Springs (2020)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the snacks when Nyles floats in the pool on his pizza float.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "No source or search shows a pizza float. The film has Nyles splashing into the pool and opening beer after beer, so the cue now says beer in hand.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=palm-springs",
-      "fix": "Serve the snacks when Nyles floats in the pool with a beer in hand.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Serve the snacks when Nyles floats in the pool on his pizza float.",
-      "where": "cue-printed",
-      "verdict": "wrong",
-      "why": "Same cue as printed on the card, and the pizza float is unproven.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=palm-springs",
-      "fix": "Serve the snacks when Nyles floats in the pool with a beer in hand.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Pool float pizza bites",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "The name depends on a pizza float that no source shows. Poolside pizza bites keeps the recipe honest without claiming a prop.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=palm-springs",
-      "fix": "Poolside pizza bites",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 5,
-    "overall": 3.8,
-    "verdict": "The kiosk and poster look great, but the cue and one dish lean on a pizza float nobody could confirm.",
-    "missing": [
-      "Sarah's heartfelt wedding speech to Tala (the reception)",
-      "Roy hunting Nyles with his crossbow (the desert)",
-      "The dive bar dance (the loop)",
-      "Sarah studying quantum physics (the loop)",
-      "Nyles and Roy's reconciliation in Irvine (Roy's house)",
-      "The explosion in the glowing cave (finale)"
-    ],
-    "ideas": [
-      "Swap 'Pool float pizza bites' for 'One-handed beer can opener nuts', tied to Nyles's beer habit.",
-      "Swap 'Reception chicken with spinach and ricotta' note for Sarah's wedding speech.",
-      "Swap 'Wedding cake again' for 'Sarah's last wedding speech' cake slice.",
-      "Swap the margarita house note for a line about Roy's crossbow."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Palm Springs (2020)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Nyles floats in the pool on his pizza float.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Nyles floats on an inflatable pepperoni pizza slice, beer in hand, in the resort pool (AP review).",
+   "source": "https://abc6onyourside.com/news/entertainment/review-palm-springs-serves-a-time-loop-rom-com-cocktail",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Serve the snacks when Nyles floats in the pool on his pizza float.",
+   "where": "cue-printed",
+   "verdict": "ok",
+   "why": "Nyles floats on an inflatable pepperoni pizza slice, beer in hand, in the resort pool (AP review).",
+   "source": "https://abc6onyourside.com/news/entertainment/review-palm-springs-serves-a-time-loop-rom-com-cocktail",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Pool float pizza bites",
+   "where": "dish-name",
+   "verdict": "ok",
+   "why": "Nyles floats on an inflatable pepperoni pizza slice, beer in hand, in the resort pool (AP review).",
+   "source": "https://abc6onyourside.com/news/entertainment/review-palm-springs-serves-a-time-loop-rom-com-cocktail",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 3.8,
+  "verdict": "The kiosk and poster look great, but the cue and one dish lean on a pizza float nobody could confirm.",
+  "missing": [
+   "Sarah's heartfelt wedding speech to Tala (the reception)",
+   "Roy hunting Nyles with his crossbow (the desert)",
+   "The dive bar dance (the loop)",
+   "Sarah studying quantum physics (the loop)",
+   "Nyles and Roy's reconciliation in Irvine (Roy's house)",
+   "The explosion in the glowing cave (finale)"
+  ],
+  "ideas": [
+   "Swap 'Pool float pizza bites' for 'One-handed beer can opener nuts', tied to Nyles's beer habit.",
+   "Swap 'Reception chicken with spinach and ricotta' note for Sarah's wedding speech.",
+   "Swap 'Wedding cake again' for 'Sarah's last wedding speech' cake slice.",
+   "Swap the margarita house note for a line about Roy's crossbow."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

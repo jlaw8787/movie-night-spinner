@@ -1,65 +1,66 @@
 {
-  "id": "Night of the Living Dead (1968)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Barbara's cemetery sandwiches",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "The character's name is Barbra, with no second A. The card spells it right in the house line ('Barbra') but wrong here.",
-      "source": "https://livingdead.fandom.com/wiki/Night_of_the_Living_Dead",
-      "fix": "Barbra's cemetery sandwiches",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Barbara and Johnny's visit to their father's grave",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Same spelling slip. It is Barbra.",
-      "source": "https://livingdead.fandom.com/wiki/Night_of_the_Living_Dead",
-      "fix": "Barbra and Johnny's visit to their father's grave",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Ben finds it in the kitchen, boards still going up.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Neither the transcript nor the plot has Ben finding lemonade in the kitchen. He finds a rifle, ammunition and a radio, so the line claims a scene that is not shown.",
-      "source": "https://en.wikipedia.org/wiki/Night_of_the_Living_Dead",
-      "fix": "Cold drink for the long night, boards still going up.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 2,
-    "overall": 2.8,
-    "verdict": "The farmhouse story is used well, but the bright poster and rustic camp styling fight the stark black and white film.",
-    "missing": [
-      "Barbra's car rolling down the hill and into the tree",
-      "Tom and Judy and the truck exploding at the gas pump (only a wink)",
-      "Karen with the cement trowel",
-      "Ben shot by the posse at dawn",
-      "The radio and TV bulletins about ghouls",
-      "The zombie eating an insect off the tree"
-    ],
-    "ideas": [
-      "Swap the colour illustrated poster for a black and white still.",
-      "Swap the wood grain background for grainy grey paper.",
-      "Swap 'Cloudy farmhouse lemonade' note for 'Black coffee and no lights'.",
-      "Rename 'Black and white popcorn' to a bigger nod: 'Chocolate syrup blood popcorn', the film's real fake blood."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Night of the Living Dead (1968)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Barbara's cemetery sandwiches",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The character's name is Barbra, with no second A. The card spells it right in the house line ('Barbra') but wrong here.",
+   "source": "https://livingdead.fandom.com/wiki/Night_of_the_Living_Dead",
+   "fix": "Barbra's cemetery sandwiches",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Barbara and Johnny's visit to their father's grave",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same spelling slip. It is Barbra.",
+   "source": "https://livingdead.fandom.com/wiki/Night_of_the_Living_Dead",
+   "fix": "Barbra and Johnny's visit to their father's grave",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Ben finds it in the kitchen, boards still going up.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Neither the transcript nor the plot has Ben finding lemonade in the kitchen. He finds a rifle, ammunition and a radio, so the line claims a scene that is not shown.",
+   "source": "https://en.wikipedia.org/wiki/Night_of_the_Living_Dead",
+   "fix": "Cold drink for the long night, boards still going up.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 2,
+  "overall": 2.8,
+  "verdict": "The farmhouse story is used well, but the bright poster and rustic camp styling fight the stark black and white film.",
+  "missing": [
+   "Barbra's car rolling down the hill and into the tree",
+   "Tom and Judy and the truck exploding at the gas pump (only a wink)",
+   "Karen with the cement trowel",
+   "Ben shot by the posse at dawn",
+   "The radio and TV bulletins about ghouls",
+   "The zombie eating an insect off the tree"
+  ],
+  "ideas": [
+   "Swap the colour illustrated poster for a black and white still.",
+   "Swap the wood grain background for grainy grey paper.",
+   "Swap 'Cloudy farmhouse lemonade' note for 'Black coffee and no lights'.",
+   "Rename 'Black and white popcorn' to a bigger nod: 'Chocolate syrup blood popcorn', the film's real fake blood."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

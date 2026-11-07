@@ -5,22 +5,24 @@
   {
    "text": "Lawrence quits the Style Boyz for a farm in Colorado and his woodwork.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Lawrence leaves the group, tries going solo, then farms in Colorado. No source mentions woodwork.",
-   "source": "https://en.wikipedia.org/wiki/Popstar:_Never_Stop_Never_Stopping",
-   "fix": "Lawrence quits the Style Boyz and ends up farming in Colorado.",
+   "verdict": "wrong",
+   "why": "Lawrence leaves the group, fails at going solo and takes up farming in Colorado. Neither the plot nor the transcript mentions woodwork.",
+   "source": "https://en.wikipedia.org/wiki/Popstar%3A_Never_Stop_Never_Stopping",
+   "fix": "Lawrence quits the Style Boyz for a farm in Colorado.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Owen's snack between pressing play on the iPod.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Owen is Conner's DJ, but no source mentions an iPod.",
-   "source": "https://en.wikipedia.org/wiki/Popstar:_Never_Stop_Never_Stopping",
-   "fix": "Owen's snack between sets.",
+   "verdict": "wrong",
+   "why": "Owen is Conner's DJ, but nothing in the transcript or plot shows him pressing play on an iPod.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=popstar-never-stop-never-stopping",
+   "fix": "Owen's snack between DJ sets.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 11,
