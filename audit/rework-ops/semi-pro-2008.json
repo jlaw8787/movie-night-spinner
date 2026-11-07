@@ -1,0 +1,27 @@
+{
+ "id": "Semi-Pro (2008)",
+ "ops": [
+  {
+   "old": "Hot dogs at halftime are on the Tropics tonight. Grab one before the bear gets out again.",
+   "new": "Hot dogs at halftime are on the Tropics tonight. If the bear gets out, there will be no refunds."
+  },
+  {
+   "old": "Tropics pineapple teriyaki chicken skewers",
+   "new": "Let's get Tropical teriyaki chicken skewers"
+  },
+  {
+   "old": "Tropics pineapple teriyaki haloumi skewers",
+   "new": "Let's get Tropical teriyaki haloumi skewers"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Flint Tropics",
+    "Jackie Moon and Love Me Sexy",
+    "Ed Monix, the new guy",
+    "Coffee Black on the court",
+    "Bear wrestling at the game"
+   ]
+  }
+ ]
+}

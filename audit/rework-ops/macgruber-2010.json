@@ -1,0 +1,49 @@
+{
+ "id": "MacGruber (2010)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the snacks when MacGruber explains the celery trick."
+  },
+  {
+   "old": "Emergency celery with blue cheese dip",
+   "new": "Old celery trick with blue cheese dip"
+  },
+  {
+   "old": "Celery sticks with a creamy blue cheese dip",
+   "new": "Celery, thick end first, with blue cheese dip"
+  },
+  {
+   "old": "Car stereo nuts",
+   "new": "KFBR392 chilli nuts"
+  },
+  {
+   "old": "Mixed nuts roasted with honey, chilli, paprika and rosemary, plus jerky",
+   "new": "Honey chilli rosemary nuts and jerky. Say KFBR392 till they're gone."
+  },
+  {
+   "old": "Lt. Piper's grilled chicken souvlaki with tzatziki",
+   "new": "Piper's human shield chicken souvlaki with tzatziki"
+  },
+  {
+   "old": "Piper, one of the best men the Colonel has got",
+   "new": "Chicken in pita with tzatziki, vest not included"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "I'm more like a three wire guy",
+    "The upper-decker, master bathroom",
+    "Piper, the human shield"
+   ]
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Never ever say 'never ever'.",
+    "by": "MacGruber",
+    "kind": "quote"
+   }
+  }
+ ]
+}

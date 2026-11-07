@@ -1,87 +1,98 @@
 {
- "id": "Practical Magic (1998)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Detective Gary Hallet",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The investigator is called Gary Hallett, with two t's, and he is a state investigator from Tucson rather than a detective.",
-   "source": "https://en.wikipedia.org/wiki/Practical_Magic",
-   "fix": "State investigator Gary Hallett",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Serve the margaritas at midnight when the aunts start dancing.",
-   "where": "cue",
-   "verdict": "ok",
-   "why": "At midnight the aunts and sisters drink margaritas and dance round the kitchen to Coconut, the film's best-known scene.",
-   "source": "https://filminquiry.com/practical-magic-1998-review",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Serve the margaritas at midnight when the aunts start dancing.",
-   "where": "cue-printed",
-   "verdict": "ok",
-   "why": "At midnight the aunts and sisters drink margaritas and dance round the kitchen to Coconut, the film's best-known scene.",
-   "source": "https://filminquiry.com/practical-magic-1998-review",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Keep rosemary by the gate. Salt over the shoulder.",
-   "where": "house",
-   "verdict": "ok",
-   "why": "Sally's closing narration says to throw spilled salt over your left shoulder and keep rosemary by your garden gate.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Plant lavender for luck. An Owens family rule.",
-   "where": "house",
-   "verdict": "ok",
-   "why": "Sally's closing narration says to plant lavender for luck, the Owens rules she knows for certain.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Practical Magic (1998)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Detective Gary Hallet",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The investigator is called Gary Hallett, with two t's, and he is a state investigator from Tucson rather than a detective.",
+      "source": "https://en.wikipedia.org/wiki/Practical_Magic",
+      "fix": "State investigator Gary Hallett",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Serve the margaritas at midnight when the aunts start dancing.",
+      "where": "cue",
+      "verdict": "ok",
+      "why": "At midnight the aunts and sisters drink margaritas and dance round the kitchen to Coconut, the film's best-known scene.",
+      "source": "https://filminquiry.com/practical-magic-1998-review",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Serve the margaritas at midnight when the aunts start dancing.",
+      "where": "cue-printed",
+      "verdict": "ok",
+      "why": "At midnight the aunts and sisters drink margaritas and dance round the kitchen to Coconut, the film's best-known scene.",
+      "source": "https://filminquiry.com/practical-magic-1998-review",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Keep rosemary by the gate. Salt over the shoulder.",
+      "where": "house",
+      "verdict": "ok",
+      "why": "Sally's closing narration says to throw spilled salt over your left shoulder and keep rosemary by your garden gate.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Plant lavender for luck. An Owens family rule.",
+      "where": "house",
+      "verdict": "ok",
+      "why": "Sally's closing narration says to plant lavender for luck, the Owens rules she knows for certain.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 3,
+    "overall": 3.8,
+    "verdict": "Margaritas and chocolate cake for breakfast are the right notes, but one name is misspelled and the look is plain.",
+    "missing": [
+      "Sally's spell for a man who flips pancakes in the air (childhood)",
+      "Belladonna in Jimmy's tequila (the drive home)",
+      "The townswomen forming a coven (finale)",
+      "Gary's silver badge against Jimmy's spirit (the house)",
+      "The yearly Halloween roof flying (ending)",
+      "The blood spell between Sally and Gillian (teens)"
+    ],
+    "ideas": [
+      "Swap 'Lavender shortbread' for 'Star-shaped pancakes, flipped in the air', from Sally's spell.",
+      "Swap 'Garden herb cheese' for a 'Coven supper' cheese board, for the townswomen who help Sally.",
+      "Swap 'Aunts' roast chicken' note for the aunts' 'chocolate cake for breakfast' rule.",
+      "Swap the grey card paper for a candle-lit dark purple."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Midnight margaritas",
+      "Chocolate cake for breakfast",
+      "The Owens curse",
+      "The townswomen's coven",
+      "Gary Hallett"
+    ],
+    "changed": [
+      "Wink: the coven replaces Aunts Jet and Frances (aunts still on the signed note)"
+    ]
   }
- ],
- "checked_ok": 9,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 3,
-  "overall": 3.8,
-  "verdict": "Margaritas and chocolate cake for breakfast are the right notes, but one name is misspelled and the look is plain.",
-  "missing": [
-   "Sally's spell for a man who flips pancakes in the air (childhood)",
-   "Belladonna in Jimmy's tequila (the drive home)",
-   "The townswomen forming a coven (finale)",
-   "Gary's silver badge against Jimmy's spirit (the house)",
-   "The yearly Halloween roof flying (ending)",
-   "The blood spell between Sally and Gillian (teens)"
-  ],
-  "ideas": [
-   "Swap 'Lavender shortbread' for 'Star-shaped pancakes, flipped in the air', from Sally's spell.",
-   "Swap 'Garden herb cheese' for a 'Coven supper' cheese board, for the townswomen who help Sally.",
-   "Swap 'Aunts' roast chicken' note for the aunts' 'chocolate cake for breakfast' rule.",
-   "Swap the grey card paper for a candle-lit dark purple."
-  ],
-  "flat": false,
-  "done": false
- }
 }

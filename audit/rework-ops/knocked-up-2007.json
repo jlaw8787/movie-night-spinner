@@ -1,0 +1,35 @@
+{
+ "id": "Knocked Up (2007)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "With emotion?",
+    "by": "Ben Stone",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the snacks when Ben and Alison find out.",
+   "new": "Serve the snacks when Alison tells Ben she's pregnant."
+  },
+  {
+   "old": "Craving pickle-brined popcorn chicken",
+   "new": "Sadie's chicken pox popcorn chicken"
+  },
+  {
+   "old": "Fantasy baseball draft nachos",
+   "new": "Pete's fantasy draft nachos"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ben and his roommates running a website",
+    "Alison and Ben meeting at a club",
+    "Pete at the fantasy baseball draft, no wives",
+    "Vegas mushrooms and Cirque du Soleil",
+    "Dr. Howard at a bar mitzvah in San Francisco"
+   ]
+  }
+ ]
+}

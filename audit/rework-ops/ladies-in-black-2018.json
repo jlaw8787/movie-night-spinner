@@ -1,0 +1,37 @@
+{
+ "id": "Ladies in Black (2018)",
+ "ops": [
+  {
+   "old": "Model Gowns poppy seed cake",
+   "new": "35 guinea poppy seed cake"
+  },
+  {
+   "old": "Goodes tearoom egg sandwiches",
+   "new": "Goode's lunch room egg sandwiches"
+  },
+  {
+   "old": "Rudi, the Hungarian who wins Fay over",
+   "new": "Rudi, who proposes to Fay in his new flat"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Staff Lunch Slip",
+    "lines": [
+     "Goode's lunch room",
+     "Frocks, now 35 guineas"
+    ]
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Lisa starting her summer job",
+    "Magda planning her own fashion shop",
+    "Patty's pink nightdress",
+    "Sydney summer, 1959"
+   ]
+  }
+ ]
+}

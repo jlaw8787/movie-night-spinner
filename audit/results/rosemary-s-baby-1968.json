@@ -1,54 +1,66 @@
 {
- "id": "Rosemary's Baby (1968)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Apartment 7E. Mind the neighbours in 7A.",
-   "where": "sign",
-   "verdict": "ok",
-   "why": "Rosemary says they are in 7-E and the Castevets' flat is given as 7-A, both in the transcript.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rosemarys-baby",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Rosemary's party. No Castevets on the list.",
-   "where": "dish-note",
-   "verdict": "ok",
-   "why": "Rosemary says Minnie and Roman are not invited to the party for her young friends.",
-   "source": "https://en.wikiquote.org/wiki/Rosemary's_Baby_(film)",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Rosemary's Baby (1968)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Apartment 7E. Mind the neighbours in 7A.",
+      "where": "sign",
+      "verdict": "ok",
+      "why": "Rosemary says they are in 7-E and the Castevets' flat is given as 7-A, both in the transcript.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rosemarys-baby",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Rosemary's party. No Castevets on the list.",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "Rosemary says Minnie and Roman are not invited to the party for her young friends.",
+      "source": "https://en.wikiquote.org/wiki/Rosemary's_Baby_(film)",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "The hotel room service frame suits the Bramford, the mousse and tannis root are used well.",
+    "missing": [
+      "Terry's fall and her tannis root pendant",
+      "Hutch's coma and the anagram book",
+      "Dr Sapirstein's tannis root smell",
+      "Minnie's health drink poured down the sink",
+      "Rosemary's short haircut",
+      "The Pope's visit on TV"
+    ],
+    "ideas": [
+      "Swap 'Minnie's herbal tonic shots' note for 'Poured down the sink'.",
+      "Rename 'Tannis root tea' to 'Terry's pendant tea'.",
+      "Swap the 'Vodka gimlet' note for the real party reference.",
+      "Add Hutch's anagram clue to the hang tag."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Don't eat the chocolate mousse",
+      "Tannis root charm",
+      "Minnie's chalky mousse",
+      "What have you done to its eyes?",
+      "Hail Satan",
+      "Scrabble tiles"
+    ],
+    "changed": [
+      "Duplicate building wink swapped for Rosemary's last-act line"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "The hotel room service frame suits the Bramford, the mousse and tannis root are used well.",
-  "missing": [
-   "Terry's fall and her tannis root pendant",
-   "Hutch's coma and the anagram book",
-   "Dr Sapirstein's tannis root smell",
-   "Minnie's health drink poured down the sink",
-   "Rosemary's short haircut",
-   "The Pope's visit on TV"
-  ],
-  "ideas": [
-   "Swap 'Minnie's herbal tonic shots' note for 'Poured down the sink'.",
-   "Rename 'Tannis root tea' to 'Terry's pendant tea'.",
-   "Swap the 'Vodka gimlet' note for the real party reference.",
-   "Add Hutch's anagram clue to the hang tag."
-  ],
-  "flat": false,
-  "done": false
- }
 }

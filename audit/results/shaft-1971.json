@@ -1,43 +1,56 @@
 {
-  "id": "Shaft (1971)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The window booth at Harlem Late-Night Diner, after midnight.",
-      "where": "caption",
-      "verdict": "wrong",
-      "why": "The still above it shows Shaft on a street, not sitting in a diner booth.",
-      "source": "",
-      "fix": "Shaft out on the street, before the diner.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Neon diner and Bumpy Jonas jokes suit the film, but the food is generic and the best scenes are unused.",
-    "missing": [
-      "Shaft ordering espresso while the mob contact offers soul food",
-      "Shaft pretending to be a bartender to call Androzzi",
-      "The hotel rooftop swing with Ben Buford's men dressed as staff",
-      "Isaac Hayes theme",
-      "Shaft telling Vic to close it himself on the phone booth call",
-      "Bumpy Jonas and his kidnapped daughter"
-    ],
-    "ideas": [
-      "Swap 'Manhattan, straight up' for 'Shaft's espresso, no garlic' from the mob contact scene.",
-      "Swap 'Fried green tomatoes' note for 'Soul food while the car waits' from the same scene.",
-      "Swap the note's 'hot plate of ribs' for chicken or pastrami so it matches the menu.",
-      "Swap the house line 'They say this cat Shaft is a bad mother' for a plain film line like 'Right on'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Shaft (1971)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The window booth at Harlem Late-Night Diner, after midnight.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The still above it shows Shaft on a street, not sitting in a diner booth.",
+   "source": "",
+   "fix": "Shaft out on the street, before the diner.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Neon diner and Bumpy Jonas jokes suit the film, but the food is generic and the best scenes are unused.",
+  "missing": [
+   "Shaft ordering espresso while the mob contact offers soul food",
+   "Shaft pretending to be a bartender to call Androzzi",
+   "The hotel rooftop swing with Ben Buford's men dressed as staff",
+   "Isaac Hayes theme",
+   "Shaft telling Vic to close it himself on the phone booth call",
+   "Bumpy Jonas and his kidnapped daughter"
+  ],
+  "ideas": [
+   "Swap 'Manhattan, straight up' for 'Shaft's espresso, no garlic' from the mob contact scene.",
+   "Swap 'Fried green tomatoes' note for 'Soul food while the car waits' from the same scene.",
+   "Swap the note's 'hot plate of ribs' for chicken or pastrami so it matches the menu.",
+   "Swap the house line 'They say this cat Shaft is a bad mother' for a plain film line like 'Right on'."
+  ],
+  "flat": false,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "I haven't finished my espresso",
+   "Right on",
+   "Theme from Shaft by Isaac Hayes",
+   "Harlem, Bumpy Jonas and Ben Buford",
+   "Vic Androzzi"
+  ],
+  "changed": [
+   "Signed note is now the real espresso line (also stops the ribs mismatch)",
+   "House line was a song lyric, now names the Theme from Shaft",
+   "Last wink is Right on"
+  ]
+ }
 }

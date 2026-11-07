@@ -1,0 +1,35 @@
+{
+ "id": "Kindergarten Cop (1990)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "It's not a tumor!",
+    "by": "John Kimble",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the snacks when Kimble blows the whistle in class.",
+   "new": "Serve the snacks when Kimble catches the lunch thief."
+  },
+  {
+   "old": "the cop part of the job",
+   "new": "Steak for a man who loves his car"
+  },
+  {
+   "old": "Snack time chocolate malt milkshake",
+   "new": "Big and strong chocolate malt milkshake"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Kimble's pet ferret, Junior",
+    "Who is your daddy and what does he do?",
+    "Whistle drill, one toy each",
+    "There is no bathroom",
+    "It's not a tumor, at all"
+   ]
+  }
+ ]
+}

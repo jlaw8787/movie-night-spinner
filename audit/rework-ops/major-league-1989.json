@@ -1,0 +1,39 @@
+{
+ "id": "Major League (1989)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "And the Indians win it! The Indians win it!",
+    "by": "Harry Doyle",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Cherry pie with a woven pastry top, served with ice cream",
+   "new": "Cherry pie with a woven top and ice cream, for Vaughn's entrance"
+  },
+  {
+   "old": "Dark rum, lime and ginger beer over ice with bitters",
+   "new": "Dark rum, lime, ginger beer. Very bad to steal Jobu's rum."
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Boilermaker, bourbon and lager",
+    "note": "Yo, bartender, Jobu needs a refill.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jobu, the voodoo idol in the locker",
+    "Rick Vaughn and his thick glasses",
+    "American Express slide, tux and all",
+    "A live chicken for Jobu",
+    "Die Hard Night at the stadium"
+   ]
+  }
+ ]
+}

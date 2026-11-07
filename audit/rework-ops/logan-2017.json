@@ -1,0 +1,38 @@
+{
+ "id": "Logan (2017)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ah, so this is what it feels like.",
+    "by": "Logan",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The adamantium bullet he kept",
+    "Laura's X-Men comic book",
+    "A limo driver named Logan",
+    "Shane on the hotel TV, then the grave",
+    "The cross tilted into an X"
+   ]
+  },
+  {
+   "old": "the casino hotel where they stop for a night",
+   "new": "The hotel night Charles and Laura watched Shane"
+  },
+  {
+   "old": "Pan-fried pork chops in apple mustard sauce, mashed potatoes, green beans",
+   "new": "Pan-fried pork chops in apple mustard sauce, mash and beans, at the Munson table"
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pan cornbread with honey",
+    "note": "A home, people who love each other."
+   }
+  }
+ ]
+}

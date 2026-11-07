@@ -1,0 +1,34 @@
+{
+ "id": "Last Action Hero (1993)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Hey, Claudius, you killed my father. Big mistake.",
+    "by": "Hamlet",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Matinee ice cream sundae",
+   "new": "To cone a phrase sundae"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The magic ticket Houdini once owned",
+    "Whiskers, the cartoon cat detective",
+    "Death, stepping out of The Seventh Seal",
+    "Danny riding into the movie in a car",
+    "Benedict and his plan to escape the film"
+   ]
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Nacho cheese and jalapeño tray",
+    "note": "Hot and cheesy. Silent but deadly, like Jack Slater."
+   }
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "Kick-Ass (2010)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "With no power comes no responsibility, except that wasn't true.",
+    "by": "Dave Lizewski",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "A Staten Island breakfast for Dave.",
+   "new": "Dave's breakfast roll. Mister Bitey gets none."
+  },
+  {
+   "old": "Bowling alley ice cream sundae",
+   "new": "Mindy's hot fudge sundae"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "A green wetsuit and mask",
+    "Hit-Girl in her purple wig",
+    "A butterfly knife, not a puppy",
+    "Big Daddy's cape and cowl",
+    "A bazooka in the penthouse"
+   ]
+  }
+ ]
+}

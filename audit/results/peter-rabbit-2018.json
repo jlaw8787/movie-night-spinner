@@ -1,31 +1,42 @@
 {
- "id": "Peter Rabbit (2018)",
- "checked": "2026-11-07",
- "facts": [],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A sweet tea room that hits the garden, Bea and the blackberry joke, though the voice is a bit plain.",
-  "missing": [
-   "Thomas's blackberry allergy (the garden)",
-   "The dynamite and the detonator (the war with Thomas)",
-   "The electric fence (the garden)",
-   "Bea's paintings of the rabbits (the garden wall)",
-   "Thomas at Harrods (London)",
-   "Peter's jacket caught in McGregor's trap (opening)"
-  ],
-  "ideas": [
-   "Swap 'Elderflower cordial' note for the electric fence prank.",
-   "Swap 'Cottontail's garden crudités' for 'Thomas's blackberry-free crudités' as a joke on his allergy.",
-   "Swap 'Garden Pass' prop for a Harrods toy department badge.",
-   "Swap the Peter note for something in his bossy voice, about the blackberry ambush."
-  ],
-  "flat": false,
-  "done": false
- }
+  "id": "Peter Rabbit (2018)",
+  "checked": "2026-11-07",
+  "facts": [],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A sweet tea room that hits the garden, Bea and the blackberry joke, though the voice is a bit plain.",
+    "missing": [
+      "Thomas's blackberry allergy (the garden)",
+      "The dynamite and the detonator (the war with Thomas)",
+      "The electric fence (the garden)",
+      "Bea's paintings of the rabbits (the garden wall)",
+      "Thomas at Harrods (London)",
+      "Peter's jacket caught in McGregor's trap (opening)"
+    ],
+    "ideas": [
+      "Swap 'Elderflower cordial' note for the electric fence prank.",
+      "Swap 'Cottontail's garden crudités' for 'Thomas's blackberry-free crudités' as a joke on his allergy.",
+      "Swap 'Garden Pass' prop for a Harrods toy department badge.",
+      "Swap the Peter note for something in his bossy voice, about the blackberry ambush."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Thomas's blackberry allergy",
+      "The electric fence",
+      "The dynamite",
+      "Bea's paintings",
+      "Peter's blue jacket"
+    ],
+    "changed": [
+      "Wink: dynamite and the detonator replaces Benjamin Bunny"
+    ]
+  }
 }

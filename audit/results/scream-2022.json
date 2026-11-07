@@ -1,56 +1,67 @@
 {
- "id": "Scream (2022)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Mindy explains the rules of a requel while the pizza goes cold.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Mindy works out the requel rules at the Meeks twins' home, and no pizza is mentioned in the scene.",
-   "source": "https://en.wikipedia.org/wiki/Scream_(2022_film)",
-   "fix": "Mindy explains the rules of a requel at the Meeks twins' place",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "takeaway eaten on the motel bed while Sam and Richie lie low",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "No motel appears in the transcript or plot. Dewey joins Sam and Richie at the Meeks twins' home.",
-   "source": "https://en.wikipedia.org/wiki/Scream_(2022_film)",
-   "fix": "takeaway eaten at the Meeks twins' while Sam and Richie stay put",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Scream (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Mindy explains the rules of a requel while the pizza goes cold.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Mindy works out the requel rules at the Meeks twins' home, and no pizza is mentioned in the scene.",
+      "source": "https://en.wikipedia.org/wiki/Scream_(2022_film)",
+      "fix": "Mindy explains the rules of a requel at the Meeks twins' place",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "takeaway eaten on the motel bed while Sam and Richie lie low",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "No motel appears in the transcript or plot. Dewey joins Sam and Richie at the Meeks twins' home.",
+      "source": "https://en.wikipedia.org/wiki/Scream_(2022_film)",
+      "fix": "takeaway eaten at the Meeks twins' while Sam and Richie stay put",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The motel postcard looks great and Mindy's note is fun, but it uses few of the film's loudest moments.",
+    "missing": [
+      "Tara on the phone saying she prefers elevated horror like The Babadook",
+      "Mindy's requel speech",
+      "Sam's hallucinations of Billy",
+      "Wes's memorial party at the old Macher house",
+      "Stab 8 and the angry fans",
+      "Dewey alone in his trailer"
+    ],
+    "ideas": [
+      "Swap 'Lime hard seltzer' note for Tara's Babadook line, which is in the film.",
+      "Swap 'Requel brownies' note for 'Elevated horror brownies, no Babadook in the pan'.",
+      "Swap 'Macher house cherry rum and cola' for 'Amber's kitchen, same spot as the old kitchen'.",
+      "Add Dewey's trailer key tag to the motel key card instead of the plain 'Insert this way'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Landline call",
+      "Mindy's requel rules",
+      "Babadook, Tara's favourite scary movie",
+      "Amber's party at the Macher house",
+      "Dewey's trailer"
+    ],
+    "changed": [
+      "Brownies renamed for Tara's favourite scary movie"
+    ]
   }
- ],
- "checked_ok": 15,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The motel postcard looks great and Mindy's note is fun, but it uses few of the film's loudest moments.",
-  "missing": [
-   "Tara on the phone saying she prefers elevated horror like The Babadook",
-   "Mindy's requel speech",
-   "Sam's hallucinations of Billy",
-   "Wes's memorial party at the old Macher house",
-   "Stab 8 and the angry fans",
-   "Dewey alone in his trailer"
-  ],
-  "ideas": [
-   "Swap 'Lime hard seltzer' note for Tara's Babadook line, which is in the film.",
-   "Swap 'Requel brownies' note for 'Elevated horror brownies, no Babadook in the pan'.",
-   "Swap 'Macher house cherry rum and cola' for 'Amber's kitchen, same spot as the old kitchen'.",
-   "Add Dewey's trailer key tag to the motel key card instead of the plain 'Insert this way'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

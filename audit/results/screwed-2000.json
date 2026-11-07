@@ -1,96 +1,105 @@
 {
- "id": "Screwed (2000)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the cookies when Willard and Rusty hatch the plan.",
-   "where": "cue-printed",
-   "verdict": "ok",
-   "why": "Willard and Rusty do hatch the dog kidnap plan, and the cue only says when to serve the cookies, so it claims nothing false about the film.",
-   "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Serve the pie when Willard and Rusty hatch the plan.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Miss Crock's cookies",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "Miss Crock's business is pies and a bakery in the film, and her gift to Willard is a mincemeat pie. Cookies are never shown. Renamed as a nod to the cuff links she gives him, so it still describes a cookie.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=screwed",
-   "fix": "Cuff link cookies",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Crock cookie milkshake",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "No cookies in the film, Miss Crock is a pie heiress. Renamed after Willard so it does not claim a Crock cookie.",
-   "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Willard's cookie milkshake",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Kidnap the dog. Keep the cookies.",
-   "where": "tagline",
-   "verdict": "wrong",
-   "why": "The film is about a pie heiress, and the kids keep nothing but trouble. Swapped cookies for the pie Crock gives Willard.",
-   "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Kidnap the dog. Skip the pie.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Twenty years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "Willard does get cuff links and a pie, but no source gives twenty years. His family has served her for generations.",
-   "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",
-    "by": "Willard Fillmore",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Screwed (2000)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the cookies when Willard and Rusty hatch the plan.",
+      "where": "cue-printed",
+      "verdict": "ok",
+      "why": "Willard and Rusty do hatch the dog kidnap plan, and the cue only says when to serve the cookies, so it claims nothing false about the film.",
+      "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
+      "fix": "Serve the pie when Willard and Rusty hatch the plan.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Miss Crock's cookies",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "Miss Crock's business is pies and a bakery in the film, and her gift to Willard is a mincemeat pie. Cookies are never shown. Renamed as a nod to the cuff links she gives him, so it still describes a cookie.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=screwed",
+      "fix": "Cuff link cookies",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Crock cookie milkshake",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "No cookies in the film, Miss Crock is a pie heiress. Renamed after Willard so it does not claim a Crock cookie.",
+      "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
+      "fix": "Willard's cookie milkshake",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Kidnap the dog. Keep the cookies.",
+      "where": "tagline",
+      "verdict": "wrong",
+      "why": "The film is about a pie heiress, and the kids keep nothing but trouble. Swapped cookies for the pie Crock gives Willard.",
+      "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
+      "fix": "Kidnap the dog. Skip the pie.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Twenty years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "Willard does get cuff links and a pie, but no source gives twenty years. His family has served her for generations.",
+      "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
+      "fix": "Years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",
+        "by": "Willard Fillmore",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 3,
+    "overall": 3.6,
+    "verdict": "Good takeaway setting with Muffin, Rusty's lamp and the kids stealing the briefcase, but the cookie angle is shaky and the phone number runs off its box.",
+    "missing": [
+      "Mrs. Crock's pie and the cheap cuff links",
+      "Rusty hitting people with a desk lamp when scared",
+      "The two kids who steal the ransom case with a taser and a shiv",
+      "Grover and the morgue body swap",
+      "The lava lamp finish",
+      "The fake ransom video for the media"
+    ],
+    "ideas": [
+      "Fix the phone number '555 020001' on the front, it spills out of its box.",
+      "Swap 'Fried chicken gizzards with hot sauce' note for 'Grover's morgue run'.",
+      "Swap 'Limo back seat prosciutto grissini' for 'Cuff link crackers' using the cheap gift.",
+      "Add a cabbage and newspaper briefcase gag to the movie night bag, from the empty ransom case."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Muffin the dog",
+      "Rusty's desk lamp",
+      "Cuff links and the pie",
+      "Kids steal the ransom briefcase",
+      "Kidnap the dog"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 4,
-  "look": 3,
-  "overall": 3.6,
-  "verdict": "Good takeaway setting with Muffin, Rusty's lamp and the kids stealing the briefcase, but the cookie angle is shaky and the phone number runs off its box.",
-  "missing": [
-   "Mrs. Crock's pie and the cheap cuff links",
-   "Rusty hitting people with a desk lamp when scared",
-   "The two kids who steal the ransom case with a taser and a shiv",
-   "Grover and the morgue body swap",
-   "The lava lamp finish",
-   "The fake ransom video for the media"
-  ],
-  "ideas": [
-   "Fix the phone number '555 020001' on the front, it spills out of its box.",
-   "Swap 'Fried chicken gizzards with hot sauce' note for 'Grover's morgue run'.",
-   "Swap 'Limo back seat prosciutto grissini' for 'Cuff link crackers' using the cheap gift.",
-   "Add a cabbage and newspaper briefcase gag to the movie night bag, from the empty ransom case."
-  ],
-  "flat": false,
-  "done": false
- }
 }

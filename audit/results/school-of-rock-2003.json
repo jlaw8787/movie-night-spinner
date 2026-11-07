@@ -1,60 +1,72 @@
 {
- "id": "School of Rock (2003)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Textbooks down, grab a slice. We've got a band to start after tea.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Dewey line. A real one on Wikiquote is about the band name and fits in the same space.",
-   "source": "https://en.wikiquote.org/wiki/School_of_Rock",
-   "fix": "The School of Rock. And we shall teach rock 'n' roll to the world.",
-   "printed": true,
-   "fix_note": {
-    "text": "The School of Rock. And we shall teach rock 'n' roll to the world.",
-    "by": "Dewey Finn",
-    "kind": "quote"
-   },
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Ned's labeled ham and egg sandwiches",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "No transcript, plot or fan wiki source shows Ned labelling sandwiches. Dewey tells the kids to call him Mr. S, which is a name the film does use.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=school-of-rock-the",
-   "fix": "Mr. S's ham and egg sandwiches",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "School of Rock (2003)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Textbooks down, grab a slice. We've got a band to start after tea.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Dewey line. A real one on Wikiquote is about the band name and fits in the same space.",
+      "source": "https://en.wikiquote.org/wiki/School_of_Rock",
+      "fix": "The School of Rock. And we shall teach rock 'n' roll to the world.",
+      "printed": true,
+      "fix_note": {
+        "text": "The School of Rock. And we shall teach rock 'n' roll to the world.",
+        "by": "Dewey Finn",
+        "kind": "quote"
+      },
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Ned's labeled ham and egg sandwiches",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "No transcript, plot or fan wiki source shows Ned labelling sandwiches. Dewey tells the kids to call him Mr. S, which is a name the film does use.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=school-of-rock-the",
+      "fix": "Mr. S's ham and egg sandwiches",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The school canteen layout and the Mr. S name tag are right, but the best scenes (band parts, Man rant, Battle of the Bands) get a nod at most.",
+    "missing": [
+      "Dewey's 'The Man' rant on the first day",
+      "The Pledge of Allegiance to the band",
+      "Summer made band manager",
+      "Dewey's failed stage dive with No Vacancy",
+      "Mullins and Dewey at the bar, Stevie Nicks",
+      "Zack's song at the Battle of the Bands"
+    ],
+    "ideas": [
+      "Swap the 'Gold star cheese stars' note for 'Summer's job: band manager'",
+      "Swap 'Horace Green raspberry fruit punch' for 'The Man's lemonade', ruined by MTV",
+      "Swap the 'Rock and roll pizza' name for 'Teach, Teach, Teach pizza'",
+      "Swap the name tag line 'Substitute teacher' for 'Ned Schneebly, allegedly'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Band parts handed out",
+      "The Man rant",
+      "Pledge of allegiance to the band",
+      "Battle of the Bands",
+      "Mr. S",
+      "Mullins and Stevie Nicks"
+    ],
+    "changed": [
+      "Pizza renamed for Dewey's rant about The Man"
+    ]
   }
- ],
- "checked_ok": 10,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The school canteen layout and the Mr. S name tag are right, but the best scenes (band parts, Man rant, Battle of the Bands) get a nod at most.",
-  "missing": [
-   "Dewey's 'The Man' rant on the first day",
-   "The Pledge of Allegiance to the band",
-   "Summer made band manager",
-   "Dewey's failed stage dive with No Vacancy",
-   "Mullins and Dewey at the bar, Stevie Nicks",
-   "Zack's song at the Battle of the Bands"
-  ],
-  "ideas": [
-   "Swap the 'Gold star cheese stars' note for 'Summer's job: band manager'",
-   "Swap 'Horace Green raspberry fruit punch' for 'The Man's lemonade', ruined by MTV",
-   "Swap the 'Rock and roll pizza' name for 'Teach, Teach, Teach pizza'",
-   "Swap the name tag line 'Substitute teacher' for 'Ned Schneebly, allegedly'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

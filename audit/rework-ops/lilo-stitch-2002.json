@@ -1,0 +1,11 @@
+{
+ "id": "Lilo & Stitch (2002)",
+ "ops": [
+  {"set": "flavour.note", "value": {"text": "Ohana means family. Family means nobody gets left behind or forgotten.", "by": "Lilo", "kind": "quote"}},
+  {"set": "house.s", "value": {"n": "Spam musubi", "note": "Pudge gets peanut butter. The rest of us get Spam.", "meat": true}},
+  {"old": "Diced tuna in soy and sesame on rice crackers", "new": "Tuna, soy and sesame on rice crackers. Never for Pudge."},
+  {"old": "Lilo, Nani and Stitch all around the table", "new": "Slow-roast kalua pork, and a seat for Stitch"},
+  {"old": "Frozen pineapple and coconut cream blended into dairy free soft serve", "new": "Pineapple and coconut cream soft serve, dairy free. Also cute and fluffy."},
+  {"set": "flavour.winks", "value": ["Pudge, who controls the weather", "Elvis records on the player", "Experiment 626 causing trouble", "Nani's job at the luau", "Cobra Bubbles on the doorstep"]}
+ ]
+}

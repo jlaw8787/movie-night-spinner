@@ -1,0 +1,11 @@
+{
+ "id": "Lock, Stock and Two Smoking Barrels (1998)",
+ "ops": [
+  {"old": "Puffed roasted pork crackling with a splash of malt vinegar", "new": "Pork crackling and malt vinegar. Mind Barry's hatchet."},
+  {"old": "the rigged three-card brag game with Hatchet Harry", "new": "Smoked chilli peanuts. Three 3s beat three aces."},
+  {"old": "Peated Scotch, lemon and honey shaken with egg white until frothy", "new": "Peated Scotch, lemon, honey and egg white. Antique shotguns not included."},
+  {"set": "house.s", "value": {"n": "Ploughman's with Stilton and pickle", "note": "Soap's the cook. Fingers out of his soup."}},
+  {"set": "flavour.winks", "value": ["Barry the Baptist and his hatchet", "Hatchet Harry's back room", "The pair of antique shotguns", "Big Chris and his son", "Rory Breaker and the weed farm"]},
+  {"set": "flavour.prop", "value": {"kind": "slip", "title": "IOU", "lines": ["Owed to Harry: 500000", "Due in a week, or JD's bar"]}}
+ ]
+}

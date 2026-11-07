@@ -1,68 +1,78 @@
 {
- "id": "Planes, Trains and Automobiles (1987)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the snacks when Del pulls out his shower curtain rings.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Del hands his rings to the rental counter woman in a story he tells, and no scene shows him pulling them out. The waking-up-holding-hands scene is real ('Those aren't pillows').",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
-   "fix": "Serve the snacks when Neal and Del wake up holding hands.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Del's bag shook it up. Open it carefully.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "The beer cans burst because Del left them on a vibrating motel bed, not from a shaken bag. Neal complains about sleeping in a puddle of beer.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
-   "fix": "Shaken on the motel bed. Open it carefully.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Del's Chicago order. Those aren't pillows.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "'Those aren't pillows' is Neal's real line, but no source shows Del ordering Italian beef. Chicago is where they are headed.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
-   "fix": "A Chicago bite. Those aren't pillows.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Planes, Trains and Automobiles (1987)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the snacks when Del pulls out his shower curtain rings.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Del hands his rings to the rental counter woman in a story he tells, and no scene shows him pulling them out. The waking-up-holding-hands scene is real ('Those aren't pillows').",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
+      "fix": "Serve the snacks when Neal and Del wake up holding hands.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Del's bag shook it up. Open it carefully.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "The beer cans burst because Del left them on a vibrating motel bed, not from a shaken bag. Neal complains about sleeping in a puddle of beer.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
+      "fix": "Shaken on the motel bed. Open it carefully.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Del's Chicago order. Those aren't pillows.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "'Those aren't pillows' is Neal's real line, but no source shows Del ordering Italian beef. Chicago is where they are headed.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=planes-trains-and-automobiles",
+      "fix": "A Chicago bite. Those aren't pillows.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A good postcard motel for the pillows and the burnt car, though three claims about Del can't be backed.",
+    "missing": [
+      "Waking up holding hands, 'Those aren't pillows!' (motel)",
+      "Neal's rant at the car rental desk (St. Louis airport)",
+      "The burnt car and the melted speedometer (the road)",
+      "Riding in the refrigerated truck to Chicago (Thanksgiving Day)",
+      "Neal's wallet and the missing $700 (breakfast)",
+      "Del's family-less Thanksgiving (the train station)"
+    ],
+    "ideas": [
+      "Swap the cue for the 'Those aren't pillows' wake up.",
+      "Swap 'Truck stop smoky pepper beef jerky' for 'Frozen truck trailer turkey sandwiches'.",
+      "Swap 'Braidwood Inn vending machine mix' note for the missing $700.",
+      "Swap 'Home for Thanksgiving apple cider punch' note for Del at Neal's table."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Those aren't pillows",
+      "Shower curtain rings",
+      "Burnt out rental car, melted speedometer",
+      "Thanksgiving, New York to Chicago"
+    ],
+    "changed": [
+      "Jerky note now the burnt-out rental car"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A good postcard motel for the pillows and the burnt car, though three claims about Del can't be backed.",
-  "missing": [
-   "Waking up holding hands, 'Those aren't pillows!' (motel)",
-   "Neal's rant at the car rental desk (St. Louis airport)",
-   "The burnt car and the melted speedometer (the road)",
-   "Riding in the refrigerated truck to Chicago (Thanksgiving Day)",
-   "Neal's wallet and the missing $700 (breakfast)",
-   "Del's family-less Thanksgiving (the train station)"
-  ],
-  "ideas": [
-   "Swap the cue for the 'Those aren't pillows' wake up.",
-   "Swap 'Truck stop smoky pepper beef jerky' for 'Frozen truck trailer turkey sandwiches'.",
-   "Swap 'Braidwood Inn vending machine mix' note for the missing $700.",
-   "Swap 'Home for Thanksgiving apple cider punch' note for Del at Neal's table."
-  ],
-  "flat": false,
-  "done": false
- }
 }

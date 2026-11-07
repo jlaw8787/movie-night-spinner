@@ -1,48 +1,59 @@
 {
- "id": "Pirates of the Caribbean: At World's End (2007)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Nine Pirate Lords, one long table. We eat, we vote, and nobody touches the apples but me.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a line Barbossa says. The apple belongs to the first film, and at the Court Barbossa argues to free Calypso while Teague keeps the Code. No quote page could be opened.",
-   "source": "https://www.wikiwand.com/en/articles/Pirates_of_the_Caribbean%3A_At_World's_End",
-   "fix": "Nine Pirate Lords, one long table. We eat, we vote, and nobody leaves until it is settled.",
-   "fix_note": {
-    "text": "Nine Pirate Lords, one long table. We eat, we vote, and nobody leaves until it is settled.",
-    "by": "Barbossa",
-    "kind": "note"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Pirates of the Caribbean: At World's End (2007)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Nine Pirate Lords, one long table. We eat, we vote, and nobody touches the apples but me.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a line Barbossa says. The apple belongs to the first film, and at the Court Barbossa argues to free Calypso while Teague keeps the Code. No quote page could be opened.",
+      "source": "https://www.wikiwand.com/en/articles/Pirates_of_the_Caribbean%3A_At_World's_End",
+      "fix": "Nine Pirate Lords, one long table. We eat, we vote, and nobody leaves until it is settled.",
+      "fix_note": {
+        "text": "Nine Pirate Lords, one long table. We eat, we vote, and nobody leaves until it is settled.",
+        "by": "Barbossa",
+        "kind": "note"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The map fold and the Singapore dishes suit the film well, but the words rarely use the big moments.",
+    "missing": [
+      "The crab-carried Pearl on the white sand (the Locker)",
+      "Jack's many selves on the Pearl (the Locker)",
+      "Flipping the ship at sunset for the green flash",
+      "Elizabeth voted Pirate King by Jack's tie-break (Brethren Court)",
+      "Wedding vows said mid-battle (Maelstrom)",
+      "Sao Feng's bathhouse meeting with Barbossa (Singapore)"
+    ],
+    "ideas": [
+      "Swap 'Arrack and lime punch' note for 'Jack votes last, and votes for himself.'",
+      "Swap 'Green flash pandan pudding' note for 'Flip the ship at sunset. Watch for the flash.'",
+      "Swap the 'Overheard at the bar' footer for 'One vote each. Jack wants two.'",
+      "Swap 'Locker crab and chive brioche toasts' note for 'The Pearl rode on their backs.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Brethren Court at Shipwreck Cove",
+      "Jack votes Elizabeth Pirate King",
+      "The crabs carrying the Pearl",
+      "The Maelstrom battle and wedding",
+      "Many Jacks in the Locker"
+    ],
+    "changed": [
+      "Wink: Jack votes Elizabeth Pirate King"
+    ]
   }
- ],
- "checked_ok": 15,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The map fold and the Singapore dishes suit the film well, but the words rarely use the big moments.",
-  "missing": [
-   "The crab-carried Pearl on the white sand (the Locker)",
-   "Jack's many selves on the Pearl (the Locker)",
-   "Flipping the ship at sunset for the green flash",
-   "Elizabeth voted Pirate King by Jack's tie-break (Brethren Court)",
-   "Wedding vows said mid-battle (Maelstrom)",
-   "Sao Feng's bathhouse meeting with Barbossa (Singapore)"
-  ],
-  "ideas": [
-   "Swap 'Arrack and lime punch' note for 'Jack votes last, and votes for himself.'",
-   "Swap 'Green flash pandan pudding' note for 'Flip the ship at sunset. Watch for the flash.'",
-   "Swap the 'Overheard at the bar' footer for 'One vote each. Jack wants two.'",
-   "Swap 'Locker crab and chive brioche toasts' note for 'The Pearl rode on their backs.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

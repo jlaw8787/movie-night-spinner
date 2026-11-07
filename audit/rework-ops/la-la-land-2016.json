@@ -1,0 +1,39 @@
+{
+ "id": "La La Land (2016)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Charcuterie with cornichons and grissini",
+    "note": "Samba. Tapas. Pick one, you know?",
+    "meat": true
+   }
+  },
+  {
+   "old": "Hollywood pool party smash sliders",
+   "new": "Someone in the Crowd smash sliders"
+  },
+  {
+   "old": "Observatory starry chocolate tart",
+   "new": "Griffith Observatory starry chocolate tart"
+  },
+  {
+   "old": "the club name Seb drops for Seb's",
+   "new": "the club name Mia talked him out of"
+  },
+  {
+   "old": "Gin rickey with lime",
+   "new": "I Ran gin rickey with lime"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The freeway traffic jam to open",
+    "Mia's car, towed after the party",
+    "Mia's one woman show",
+    "Mia's yellow dress",
+    "Seb's club with his name on the sign"
+   ]
+  }
+ ]
+}

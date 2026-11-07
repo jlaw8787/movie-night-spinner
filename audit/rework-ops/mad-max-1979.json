@@ -1,0 +1,43 @@
+{
+ "id": "Mad Max (1979)",
+ "ops": [
+  {
+   "old": "Interceptor highway meat pie",
+   "new": "Last of the V8s meat pie"
+  },
+  {
+   "old": "Jessie's ice cream",
+   "new": "Sproggo's ice cream"
+  },
+  {
+   "old": "the family trip up the coast",
+   "new": "Max, Jessie and Sprog, up north"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "I'm a fuel-injected suicide machine",
+    "Toecutter and his gang on the highway",
+    "Goose, 100% snafued",
+    "The last of the V8s",
+    "Johnny the Boy and the hacksaw"
+   ]
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Fried dim sims with soy",
+    "note": "Not hungry anymore? Give it here.",
+    "meat": true
+   }
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "It's that rat circus out there.",
+    "by": "Max Rockatansky",
+    "kind": "quote"
+   }
+  }
+ ]
+}

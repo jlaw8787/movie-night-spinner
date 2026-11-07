@@ -1,0 +1,31 @@
+{
+ "id": "Lady Bird (2017)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "What if this is the best version?",
+    "by": "Lady Bird",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "the big Thanksgiving at Danny's family home",
+   "new": "Danny's gran's turkey, the house she called hers"
+  },
+  {
+   "old": "Thanksgiving at Danny's crostini",
+   "new": "Danny's Thanksgiving crostini"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The name Lady Bird, given to herself",
+    "Jumping out of the moving car",
+    "Writing with Sister Sarah Joan",
+    "Kyle and his band at the Deuce",
+    "Sacramento, the town she can't wait to leave"
+   ]
+  }
+ ]
+}

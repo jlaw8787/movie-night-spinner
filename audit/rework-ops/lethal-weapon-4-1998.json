@@ -1,0 +1,13 @@
+{
+ "id": "Lethal Weapon 4 (1998)",
+ "ops": [
+  {"old": "Serve the Chinese food when Uncle Benny turns up.", "new": "Serve the Chinese food when Riggs sets off the sprinklers."},
+  {"old": "a fishing boat should mean fish for dinner", "new": "Whole snapper on the barbecue. Roger's boat sank."},
+  {"old": "the fishing trip on Roger's boat", "new": "Trout dip and crackers, hold the shark"},
+  {"old": "Chinatown dumplings", "new": "Sprinkler-soaked dumplings"},
+  {"old": "Crisp vanilla cookies folded into the classic shape", "new": "Crisp vanilla fortune cookies. Rabbi sold separately."},
+  {"set": "flavour.sign", "value": "Family Dinner, Boat Sunk"},
+  {"set": "flavour.note", "value": {"text": "We're not too old for this. Eat up, the new guy included.", "by": "Roger Murtaugh", "kind": "note"}},
+  {"set": "flavour.winks", "value": ["Chris Rock's Lee Butters joins the crew", "Jet Li's Wah Sing Ku, a fistfight on a collapsing pier", "Murtaugh hiding a family of immigrants in his house", "Lorna expecting a baby with Riggs", "Leo Getz fussing around the whole gang"]}
+ ]
+}

@@ -376,3 +376,4 @@ Next, in order:
 - Josh, 8 Nov: Grandma's Boy keeps "My grandma drank all my pot." Questions to Josh as pop-ups, one at a time.
 - GitHub pushes work again from Claude sessions (8 Nov).
 - Dry run of all ops so far: 0 missed.
+- 8 Nov, 10:20am: 537 of 900 done (F01 to F24, I01 to I23). Left: F25 to F52 and I24 to I33 (38 batches). Dry run of all 466 ops files: 1504 ops, 0 missed. Agent prompt used: brief plus "Reply in under 150 words", "never pkill", "don't invent jokes about scenes that don't exist". Append each batch's clash notes to audit/rework-clashes.md, commit and push after each round.

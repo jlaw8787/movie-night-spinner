@@ -1,0 +1,46 @@
+{
+ "id": "Kicking & Screaming (2005)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "New game plan. Get the ball to the Italians.",
+    "by": "Phil Weston",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "From the butcher's boys, the Tigers' secret weapons.",
+   "new": "Don't forget the meatballs! Keep passing to the Italians."
+  },
+  {
+   "old": "No caffeine. Ditka got Phil hooked on that.",
+   "new": "No caffeine. Ditka says kids in Mexico drink coffee."
+  },
+  {
+   "old": "Butcher shop Italian sausage rolls",
+   "new": "Apprentice butcher Italian sausage rolls"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Time out, everyone with glasses",
+    "Phil's dad, Buck, and the Tigers",
+    "Orange slices at halftime",
+    "Buck, King of Sporting Goods",
+    "Buck's vitamin is a steak"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Tigers Coach",
+    "lines": [
+     "Phil Weston",
+     "Pass to the Italians"
+    ]
+   }
+  }
+ ]
+}

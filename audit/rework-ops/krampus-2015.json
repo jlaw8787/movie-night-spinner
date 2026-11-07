@@ -1,0 +1,42 @@
+{
+ "id": "Krampus (2015)",
+ "ops": [
+  {
+   "old": "Christmas Eve lasagne",
+   "new": "Table fight lasagne"
+  },
+  {
+   "old": "Engel house fennel and apple salad",
+   "new": "Der Klown fennel and apple salad"
+  },
+  {
+   "old": "Shaved fennel, apple, rocket and parmesan. Fresh before the storm hits",
+   "new": "Shaved fennel, apple, rocket and parmesan. Fresh before the jack in the box opens."
+  },
+  {
+   "old": "Spiced ginger cookies with piped icing teeth and red eyes",
+   "new": "Ginger cookies with icing teeth, like the one that took Howie Jr."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Omi's old stories from the old country",
+    "Max tearing up his letter to Santa",
+    "The snowman that appears in the yard",
+    "Der Klown, the jack in the box",
+    "Howard: \"Jesus was born in a barn!\""
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Letter to Santa",
+    "lines": [
+     "Torn up by Max",
+     "Back in a bauble"
+    ]
+   }
+  }
+ ]
+}

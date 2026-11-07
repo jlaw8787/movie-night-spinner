@@ -1,0 +1,34 @@
+{
+ "id": "La Bamba (1987)",
+ "ops": [
+  {
+   "old": "Serve the mains when Ritchie plays his first show with the Silhouettes.",
+   "new": "Serve the mains when Ritchie sees the band play La Bamba in Tijuana."
+  },
+  {
+   "old": "Tijuana street tacos",
+   "new": "Tijuana prom night tacos"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ritchie's guitar in the backyard",
+    "The talisman Bob breaks at Christmas",
+    "Donna, the girl and the song",
+    "Buddy Holly and the Big Bopper on tour",
+    "\"Ricky Zuela\", the name Ritchie dodged"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Winter Tour 1959",
+    "lines": [
+     "Ritchie Valens",
+     "Clear Lake, Iowa, cold night"
+    ]
+   }
+  }
+ ]
+}

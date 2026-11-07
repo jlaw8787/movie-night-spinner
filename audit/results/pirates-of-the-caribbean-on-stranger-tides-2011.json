@@ -1,44 +1,53 @@
 {
- "id": "Pirates of the Caribbean: On Stranger Tides (2011)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Barbossa raises his peg leg in a toast.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "No toast or peg leg raising appears in the transcript or plot. Barbossa does claim Blackbeard's ship and crew and the sword as payment for his lost leg.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pirates-of-the-caribbean-on-stranger-tides",
-   "fix": "Barbossa claims the ship, crew and sword.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Pirates of the Caribbean: On Stranger Tides (2011)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Barbossa raises his peg leg in a toast.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "No toast or peg leg raising appears in the transcript or plot. Barbossa does claim Blackbeard's ship and crew and the sword as payment for his lost leg.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pirates-of-the-caribbean-on-stranger-tides",
+      "fix": "Barbossa claims the ship, crew and sword.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A solid galley layout with the chalices, mermaid and cream puff all in, though the food names are generic.",
+    "missing": [
+      "Jack's chandelier escape with a cream puff (St James's Palace)",
+      "The Captain's Daughter tavern duel with the fake Jack (London)",
+      "Syrena's tear (Fountain of Youth)",
+      "Blackbeard's sword controlling the ropes (Queen Anne's Revenge)",
+      "The poisoned sword and the poisonous toads (finale)",
+      "Jack marooning Angelica (island)"
+    ],
+    "ideas": [
+      "Swap 'London tavern beef and gravy pies' for 'Captain's Daughter tavern pies', the tavern's real name.",
+      "Swap 'Spanish expedition olives' for 'Palace cream puffs on the chandelier'.",
+      "Swap the sherry house line for a poisoned toad cocktail mocktail.",
+      "Swap 'Whitecap Bay prawns' note for 'Mermaids, keep your hands inside the boat'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Cream puffs at the palace",
+      "The Fountain of Youth",
+      "Mermaid attack",
+      "Blackbeard's sword and ropes",
+      "Silver chalices"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A solid galley layout with the chalices, mermaid and cream puff all in, though the food names are generic.",
-  "missing": [
-   "Jack's chandelier escape with a cream puff (St James's Palace)",
-   "The Captain's Daughter tavern duel with the fake Jack (London)",
-   "Syrena's tear (Fountain of Youth)",
-   "Blackbeard's sword controlling the ropes (Queen Anne's Revenge)",
-   "The poisoned sword and the poisonous toads (finale)",
-   "Jack marooning Angelica (island)"
-  ],
-  "ideas": [
-   "Swap 'London tavern beef and gravy pies' for 'Captain's Daughter tavern pies', the tavern's real name.",
-   "Swap 'Spanish expedition olives' for 'Palace cream puffs on the chandelier'.",
-   "Swap the sherry house line for a poisoned toad cocktail mocktail.",
-   "Swap 'Whitecap Bay prawns' note for 'Mermaids, keep your hands inside the boat'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

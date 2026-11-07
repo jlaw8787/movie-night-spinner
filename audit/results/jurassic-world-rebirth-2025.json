@@ -1,31 +1,49 @@
 {
-  "id": "Jurassic World Rebirth (2025)",
-  "checked": "2026-11-07",
-  "facts": [],
-  "checked_ok": 20,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.2,
-    "verdict": "A fun beach kiosk with the three samples and the Delgado family, but it plays it safe.",
-    "missing": [
-      "The six-limbed Distortus rex in the tunnels",
-      "Isabella's pet Aquilops, Dolores",
-      "The Spinosaurus helping the Mosasaurus hunt (Zora's mutualism line)",
-      "The T. rex attack on the raft",
-      "The Quetzalcoatlus nest in the cave temple",
-      "Duncan's flare to distract the Distortus"
-    ],
-    "ideas": [
-      "Swap 'Fried calamari with saffron aioli' note for 'Mutualism, the Spinosaurus helping.'",
-      "Swap 'Research station beef chilli' for 'Distortus rex hot six pack' with 'Six limbs, one chilli.'",
-      "Swap 'Jungle coconut cooler' note for 'Raft run, T. rex behind.'",
-      "Swap the surf report 'SPOTTED' box for 'Distortus rex, tunnels, stay inside.'"
-    ],
-    "flat": true,
-    "done": false
-  }
+ "id": "Jurassic World Rebirth (2025)",
+ "checked": "2026-11-07",
+ "facts": [],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A fun beach kiosk with the three samples and the Delgado family, but it plays it safe.",
+  "missing": [
+   "The six-limbed Distortus rex in the tunnels",
+   "Isabella's pet Aquilops, Dolores",
+   "The Spinosaurus helping the Mosasaurus hunt (Zora's mutualism line)",
+   "The T. rex attack on the raft",
+   "The Quetzalcoatlus nest in the cave temple",
+   "Duncan's flare to distract the Distortus"
+  ],
+  "ideas": [
+   "Swap 'Fried calamari with saffron aioli' note for 'Mutualism, the Spinosaurus helping.'",
+   "Swap 'Research station beef chilli' for 'Distortus rex hot six pack' with 'Six limbs, one chilli.'",
+   "Swap 'Jungle coconut cooler' note for 'Raft run, T. rex behind.'",
+   "Swap the surf report 'SPOTTED' box for 'Distortus rex, tunnels, stay inside.'"
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Distortus rex (six limbs, tunnels)",
+   "Mosasaurus flips the Delgado sailboat",
+   "Mutualism, the Spinosaurus helping the Mosasaurus",
+   "Isabella's Aquilops, Dolores",
+   "Quetzalcoatlus nest in the cave temple",
+   "None of what you just said is good (Zora)"
+  ],
+  "changed": [
+   "Note now Zora's real line",
+   "Cue is the mosasaur flipping the Delgados' boat",
+   "Calamari note nods to Spinosaurus mutualism",
+   "Beef chilli renamed Distortus rex beef chilli, note ties to the lab",
+   "Fish bites renamed Capsized sailboat fish bites",
+   "Coconut cooler renamed Raft run coconut cooler",
+   "Winks: Distortus rex first"
+  ]
+ }
 }

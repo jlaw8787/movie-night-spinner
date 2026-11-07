@@ -41,3 +41,10 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Fixed footers in shared templates: Mad Max 2 lab footer; Man of Steel diner footer and "Open" line.
 - Length check after apply: Labyrinth chicken note, Little Shop snap-peas note, Julie & Julia "Bon appétit!", Moonstruck cannoli, Greek Wedding lamb, Jurassic World pretzel, Dominion Kayla and almond milk notes.
 - Unverified in transcript: Napoleon Dynamite dance wink, Nacho Libre corn and eagle lines (Wikiquote), Gremlins microwave, Snape "Always".
+- Lethal Weapon 4 (1998), galley: DECK 9, SHIP'S MESS, RATION, MESS CALL (sign now "Family Dinner, Boat Sunk").
+- Lock, Stock (1998), saloon: WANTED FOR SUPPER, REWARD, WHEN THE BELL RINGS, LUNCH COUNTER on a London card game.
+- Kingpin (1996), saloon: WANTED, BILL OF FARE, AT THE BAR western headings.
+- Length check after apply: Scarface house rules "Say hello to my little friend." (248px box), Premium Rush footer, KFBR392 chilli nuts, Penguins' ice-cold sushi rolls.
+- Unverified: Saturday Night Fever cue (Stayin' Alive over the opening strut), Rudy sack.
+- Shaft (1971): house line was a song lyric, op swaps it for the song title.
+- Mad Max (1979): old "Fried dim sims" meat flag left in place.

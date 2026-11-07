@@ -1,0 +1,54 @@
+{
+ "id": "Kingpin (1996)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I took the liberty of milking your cow for you.",
+    "by": "Roy Munson",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the mains when Roy and Ishmael hit the road to Reno.",
+   "new": "Serve the mains when Roy milks what turns out to be a bull."
+  },
+  {
+   "old": "Ishmael's Amish pot roast",
+   "new": "Gravy train Amish pot roast"
+  },
+  {
+   "old": "Braised beef for the farmhands",
+   "new": "Braised beef. Biscuit wheels extra."
+  },
+  {
+   "old": "Farmyard vanilla malt milkshake",
+   "new": "Lots of cream vanilla malt milkshake"
+  },
+  {
+   "old": "Straight from the barn. Ask Roy where.",
+   "new": "Milked by Roy. Turned out to be a bull."
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Reno Tournament",
+    "lines": [
+     "Prize: $1 million",
+     "Roy and Ishmael"
+    ]
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Roy's rubber hand",
+    "Big Ern McCracken, Tanqueray and Tab",
+    "Ishmael's coffee: extra large, lots of cream",
+    "Claudia on the road trip",
+    "Roy, the Rubber Man of Reno"
+   ]
+  }
+ ]
+}
