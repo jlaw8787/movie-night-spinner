@@ -1,0 +1,57 @@
+{
+ "id": "Boy (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "My dad is a deep sea diver and a war hero. Eat your kai and I'll tell you more.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented line signed Boy. His real stories are about Michael Jackson and his father's supposed past, but this wording is not in the IMDb quotes. A real line: 'Hey Auntie, can I have an ice block please?'",
+   "source": "https://imdb.com/title/tt1560139/quotes",
+   "fix": "Hey Auntie, can I have an ice block please?",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "Hey Auntie, can I have an ice block please?",
+    "by": "Boy",
+    "kind": "quote"
+   }
+  },
+  {
+   "text": "Crazy Horses dairy lime milkshake",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "A dairy and a lime milkshake fit a 1984 East Cape setting, but I could not confirm the gang name Crazy Horses in any source I opened.",
+   "source": "",
+   "fix": "Dairy lime milkshake",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Warm and local, with the right dairy and kai feel for 1984 East Cape. Only the Boy note is invented and one name could not be confirmed.",
+  "missing": [
+   "The pet goat that eats the buried money",
+   "Ice blocks and lollies from the dairy",
+   "Digging up fields for the money Alamein buried",
+   "Kingi's Thriller jacket and the haka and Thriller finish",
+   "'How was Japan?' (Boy and Rocky)",
+   "The spoon prison escape story Boy tells about his dad"
+  ],
+  "ideas": [
+   "Swap the Boy note for his real ice block line.",
+   "Swap 'Crazy Horses dairy lime milkshake' for 'Dairy lime milkshake'.",
+   "Add 'Ice block from Auntie' as a dessert.",
+   "Swap the hangi note for a goat joke about the buried money."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

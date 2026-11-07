@@ -1,0 +1,72 @@
+{
+ "id": "Batman v Superman: Dawn of Justice (2016)",
+ "facts": [
+  {
+   "text": "An evening with Lex Luthor. Martha's peach tea. Lex's jar.",
+   "where": "tagline",
+   "verdict": "wrong",
+   "why": "The jar is labelled Granny's Peach Tea. Martha is Clark Kent's mother and has nothing to do with the tea.",
+   "source": "https://en.wikiquote.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
+   "fix": "An evening with Lex Luthor. Granny's peach tea. Lex's jar.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Bruce slipping out with the drive.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Bruce does not leave with the drive. Diana Prince takes it first at the gala, says she only borrowed it, and returns it to him.",
+   "source": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
+   "fix": "Bruce chasing the drive Diana borrowed.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the drinks when Lex hands over the jar of peach tea at the hearing.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The fandom wiki says Finch notices the jar of Granny's Peach Tea sitting on her desk during the Capitol hearing. Nothing I could open shows Lex handing it over. Finch's 'bucket of piss' line is from an earlier meeting with Lex.",
+   "source": "https://dcextendeduniverse.fandom.com/wiki/June_Finch",
+   "fix": "Serve the drinks when Finch finds Lex's jar of peach tea on her desk at the hearing.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Wayne gala chocolate soufflé",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The gala in the film is Lex's at LexCorp, which the menu itself names elsewhere. A Wayne gala is not in the sources.",
+   "source": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
+   "fix": "Luthor gala chocolate soufflé",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "The jar and the gala are the right ideas, but it is a pale ivory banquet for a dark, grim film and the best lines are missing.",
+  "missing": [
+   "Martha! Why did you say that name? (Batman and Superman fight)",
+   "Granny's Peach Tea jar and Finch's bucket line",
+   "Diana saying she borrowed the drive and left it in the glove box",
+   "Batman's armoured suit and the Bat-Signal",
+   "Doomsday impaled on the kryptonite spear",
+   "Lex's hearing bomb"
+  ],
+  "ideas": [
+   "Swap 'Martha Kent's corn fritters' note for 'Why did you say that name?', with the fritters split in two for the Martha moment.",
+   "Swap the tagline 'Martha's peach tea' for 'Granny's peach tea. Not for drinking'.",
+   "Swap 'Wayne gala chocolate soufflé' note for 'Diana borrowed the drive and left the pudding'.",
+   "Swap the ivory page for a dark slate and red banner so it reads as the film."
+  ],
+  "flat": true,
+  "done": false,
+  "overall": 3.0
+ },
+ "checked": "2026-11-07"
+}

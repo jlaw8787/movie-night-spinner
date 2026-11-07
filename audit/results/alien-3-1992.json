@@ -1,0 +1,62 @@
+{
+  "id": "Alien 3 (1992)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the snacks when Ripley first walks into the mess hall and every prisoner stops eating.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "A dinner scene with Ripley at the prisoners' table is real (Dillon lets her sit). None of the pages read say every prisoner stops eating when she walks in.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Alien3",
+      "fix": "Serve the snacks when Ripley first sits down to dinner with the prisoners.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "The EEV crashed in the shallows",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "The pages read say the pod crash-lands on Fiorina 161 and the inmates recover it. Only the Assembly Cut has Ripley washing up on a shore. No page says shallows.",
+      "source": "https://filmsite.org/series-alien3.html",
+      "fix": "The EEV crash-landed on Fiorina 161",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "pulled from the wreck on the beach, still in one piece",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Same gap as the wink: the pages read don't put the wreck on a beach.",
+      "source": "https://en.wikipedia.org/wiki/Alien_3",
+      "fix": "recovered from the crashed pod, still in one piece",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A dry, believable Fiorina breakroom with Dillon, Aaron and the furnace, but it leaves out the lead pour and Ripley's best lines.",
+    "missing": [
+      "The molten lead finale in the foundry (Dillon, Morse and the Alien)",
+      "'You've been in my life so long I can't remember anything else' (Ripley)",
+      "Rumour control in the mess hall, when Andrews is dragged into the vent",
+      "'I hate bugs!' (Morse)",
+      "Clemens and his prison barcode tattoo (the infirmary)",
+      "Spike the dog and the first chestburster (after the funeral)"
+    ],
+    "ideas": [
+      "Swap 'Leadworks molten hot chocolate' note for the lead pour: 'Poured slow, like the lead in the mould.'",
+      "Swap the 'UNSOLVED' stamp for 'RUMOUR CONTROL', from Andrews's mess hall briefing.",
+      "Swap Dillon's desk note for his real line: 'We recognize that we are poor sinners in the hands of an angry God.'",
+      "Swap 'Builder's tea' note for Morse's 'I hate bugs!' on the 85 joke."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+ "id": "Atlantis: The Lost Empire (2001)",
+ "facts": [
+  {
+   "text": "Serve the mains when Cookie dishes up dinner around the campfire.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Cookie does serve the crew ('Come and get it!' with slop he calls an appetizer of Caesar salad and escargot), but neither Wikipedia nor Wikiquote nor the fandom wiki puts it at a campfire.",
+   "source": "https://en.wikiquote.org/wiki/Atlantis:_The_Lost_Empire",
+   "fix": "Serve the mains when Cookie yells 'Come and get it!' and dishes up for the crew.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Fellas, this is the opportunity of a lifetime. Cookie's made dinner, so grab a plate before we dive.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Milo never says this. It reads as speech from Milo to the crew, but Wikiquote has no such line and Milo does not call the crew to dinner. A real food line belongs to radio operator Packard on the sub PA.",
+   "source": "https://en.wikiquote.org/wiki/Atlantis:_The_Lost_Empire",
+   "fix": "Attention. Tonight's supper will be baked beans. Musical program to follow... Who wrote this?",
+   "printed": true,
+   "fix_note": {
+    "text": "Attention. Tonight's supper will be baked beans. Musical program to follow... Who wrote this?",
+    "by": "Wilhelmina Packard",
+    "kind": "quote"
+   },
+   "done": false
+  },
+  {
+   "text": "Cookie feeding the crew in the caverns",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The sources I could open show Cookie feeding the crew and cooking from his wagon, but none place a meal in the caverns.",
+   "source": "https://atlantisthelostempire.fandom.com/wiki/Cookie_Farnsworth",
+   "fix": "Cookie dishing out from his chuck wagon",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "verdict": "Cookie's beans and the crystal give it some flavour, but a 1914 school lunch hall is an odd fit for an expedition film.",
+  "missing": [
+   "Beans, bacon, whisky and lard (Cookie, already half used in the house line)",
+   "Tonight's supper will be baked beans (Packard on the PA)",
+   "Cookie's slop served as 'Caesar salad, escargot and spring rolls'",
+   "You have disturbed the dirt (Mole's dirt collection)",
+   "Vinny's 'office supplies' of nitroglycerin and fuses",
+   "Cookie's bacon grease goodbye gift"
+  ],
+  "ideas": [
+   "Swap 'Cookie's campfire chilli and cornbread' for 'Cookie's slop of the day' with the Caesar salad and escargot joke.",
+   "Swap 'Mole smelling the dirt' period for 'You have disturbed the dirt' so the line is the real one.",
+   "Swap 'Cheese, salami and cracker tins' for 'Vinny's office supplies' with a tin of fuses and paper clips gag.",
+   "Swap the pudding price line for 'Bacon grease, a parting gift' on the bill."
+  ],
+  "flat": true,
+  "done": false,
+  "overall": 3.2
+ },
+ "checked": "2026-11-07"
+}

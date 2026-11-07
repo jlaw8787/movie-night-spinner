@@ -1,0 +1,47 @@
+{
+ "id": "Breakfast at Tiffany's (1961)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Coffee and a pastry from a paper bag tastes best on the footpath out front. Cat gets the crumbs.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented line signed Holly Golightly. A real Holly line about Cat: 'I'm like Cat, here. We're a couple of no-name slobs.'",
+   "source": "https://en.wikiquote.org/wiki/Breakfast_at_Tiffany%27s_(film)",
+   "fix": "I'm like Cat, here. We're a couple of no-name slobs.",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "I'm like Cat, here. We're a couple of no-name slobs.",
+    "by": "Holly Golightly",
+    "kind": "quote"
+   }
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.0,
+  "verdict": "Close to the film: the opening pastry, Tiffany's and Cat are all right. Only Holly's note is made up.",
+  "missing": [
+   "The mean reds (Holly to Paul)",
+   "The Cracker Jack ring (the Tiffany's engraving)",
+   "The party with Mag Wildwood and Rusty Trawler",
+   "The day of firsts: do something you've never done",
+   "Cat in the alley in the rain",
+   "Moon River on the fire escape"
+  ],
+  "ideas": [
+   "Swap the Holly note for her Cat line.",
+   "Add 'The Cracker Jack prize' as a dessert.",
+   "Swap the footpath note for 'Fire escape guitar, Moon River'.",
+   "Add a 'mean reds' cure drink."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

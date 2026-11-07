@@ -1,0 +1,97 @@
+{
+  "id": "A Star Is Born (2018)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Drag night, so the queens get first go at the snacks. If the country guy in the hat turns up, sit him at the end of the bar with a gin.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "A bar note, not a quote. The hat and the gin are not in anything read: the plot pages say Jackson stops at the drag bar after his show, with no hat or drink order described.",
+      "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
+      "fix": "Drag night, so the queens get first go at the snacks. If a country singer turns up, sit him at the end of the bar.",
+      "printed": true,
+      "done": false,
+      "fix_note": {
+        "text": "Drag night, so the queens get first go at the snacks. If a country singer turns up, sit him at the end of the bar.",
+        "by": "Behind the bar",
+        "kind": "note"
+      }
+    },
+    {
+      "text": "Jack's order, poured strong at the end of the bar.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "No page read names Jackson's drink. IMDb's plot summary says he stops at the drag bar because the car is out of alcohol.",
+      "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
+      "fix": "What Jack came in for after the show, poured strong.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "1 straight gin, 1 cosmo, 1 bag frozen peas",
+      "where": "prop",
+      "verdict": "unsure",
+      "why": "The frozen peas are right (Jackson buys them for Ally's hand). No page read confirms a gin or a cosmo on the night.",
+      "source": "https://whatsafterthemovie.com/summary/a-star-is-born",
+      "fix": "1 cosmo, 1 bag frozen peas",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Paid by the guy in the hat",
+      "where": "prop",
+      "verdict": "unsure",
+      "why": "Jackson pays for the peas, but nothing read says he wears a hat at the bar.",
+      "source": "https://whatsafterthemovie.com/summary/a-star-is-born",
+      "fix": "Paid by the country singer",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Swiped off the dessert tray on Ally's last night waiting tables",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Ally works a waitress and kitchen job and her restaurant manager berates her for being late. Nothing read mentions a catering shift, a last night or a dessert tray.",
+      "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
+      "fix": "For Ally's late shifts waiting tables",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Ally on the bar, singing La Vie en Rose.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Ally sings La Vie en Rose as a tribute performance on the drag bar's stage, not standing on the bar.",
+      "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
+      "fix": "Ally on stage, singing La Vie en Rose.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A moody bar tab that finds the peas, Piaf and limo crew, but several drinks and props are made up and Shallow, the heart of the film, is missing.",
+    "missing": [
+      "Ally singing Shallow with Jack on stage (Jack's show)",
+      "The guitar string ring (Jack's proposal at Noodles's place)",
+      "Bobby's 'twelve notes' speech (after Jack's death)",
+      "Ally's first Grammy night and Jack's pull-up on stage (the Coachella-style festival)",
+      "The Roy Orbison tribute at the Grammys",
+      "The Arizona ranch turned into a wind farm (Jack and Bobby)"
+    ],
+    "ideas": [
+      "Swap the 'Jack's order' line on 'Gin martini with a twist' for Jack's real line 'I just wanted to take another look at you.'",
+      "Put the peeled eyebrow on the printed menu as a lost property line, in place of 'Prices subject to change.'",
+      "Swap 'Truffle salted popcorn' for 'Guitar string ring pretzels', a nod to the ring Jack makes for Ally.",
+      "Swap 'Carried over' and 'Brought forward' for 'Twelve notes' and 'Same story', from Bobby's speech."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

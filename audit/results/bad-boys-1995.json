@@ -1,0 +1,57 @@
+{
+ "id": "Bad Boys (1995)",
+ "facts": [
+  {
+   "text": "Marcus pretending to be Mike Lowrey; Julie Mott, the witness who will not cooperate",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Julie does not refuse to cooperate. She insists on talking only to Mike, and Captain Howard makes Marcus pose as Mike so she will talk.",
+   "source": "https://en.wikipedia.org/wiki/Bad_Boys_(1995_film)",
+   "fix": "Marcus pretending to be Mike Lowrey; Julie Mott, the witness who will only talk to Mike",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Two cops, one apartment, and nothing in the fridge. Switch names and put the pizza on Mike's card.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "They do not share one apartment. Howard has them swap lives, with Mike living at the Burnett house and Marcus staying with Julie at Mike's. The nothing-in-the-fridge claim is also not in the film.",
+   "source": "https://en.wikipedia.org/wiki/Bad_Boys_(1995_film)",
+   "fix": "I'm Mike this week and Mike's eating my wife's cooking. Put the pizza on his card.",
+   "printed": true,
+   "fix_note": {
+    "text": "I'm Mike this week and Mike's eating my wife's cooking. Put the pizza on his card.",
+    "by": "Marcus Burnett",
+    "kind": "note"
+   },
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "verdict": "A decent Miami breakroom with the identity swap as its hook, but it skips the French fry carjacker scene and the Porsche that fans quote.",
+  "missing": [
+   "It's not about the french fry (Mike and the carjackers)",
+   "The Porsche with no cup holder and no back seat",
+   "Captain Howard shouting on the basketball court",
+   "I haven't killed anybody yet today, Captain (Mike)",
+   "The ether barrel car chase",
+   "Theresa finding out about the swap at Mike's apartment"
+  ],
+  "ideas": [
+   "Swap 'Fried sweet plantains' for 'Not about the french fry fries' with the Mike line in the note.",
+   "Swap 'Miami croquetas' note for 'No cup holder, no back seat, so no eating in the Porsche'.",
+   "Swap 'Captain Howard needs three before the briefing' for 'Do you want me to yell at you? I can do that'.",
+   "Swap 'South Beach prawn fritters' note for 'Ether barrel fritters, handle with care' to nod to the car chase."
+  ],
+  "flat": true,
+  "done": false,
+  "overall": 3.4
+ },
+ "checked": "2026-11-07"
+}

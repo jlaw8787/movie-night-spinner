@@ -1,0 +1,62 @@
+{
+ "id": "Beneath Hill 60 (2010)",
+ "facts": [
+  {
+   "text": "Charters Towers corned beef rolls",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Neither the film's Wikipedia page, Oliver Woodward's page nor the 1st Australian Tunnelling Company page mentions Charters Towers. Woodward was born in Tenterfield, NSW. The link to Charters Towers is not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Oliver_Woodward",
+   "fix": "Tunnellers' corned beef rolls",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Warming the Charters Towers boys after a shift underground.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Same problem. No source I could open ties the tunnellers or Woodward to Charters Towers.",
+   "source": "https://en.wikipedia.org/wiki/Beneath_Hill_60",
+   "fix": "Warming the tunnellers after a shift underground.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "The café behind the lines where the tunnellers spend their pay",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The film's early tunnel scenes are near Armentieres, but the plot summary has no estaminet or scene of the tunnellers spending their pay.",
+   "source": "https://en.wikipedia.org/wiki/Beneath_Hill_60",
+   "fix": "Armentieres, where the tunnelling starts in 1916",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A gritty tunnel camp with fitting bully beef and Anzac biscuits, but it leaves out the Red House raid and the Messines blast.",
+  "missing": [
+   "The Red House raid across no man's land",
+   "The rugby game against the British soldiers",
+   "Tiffin trapped as the mines are about to fire",
+   "The Messines mines going off",
+   "Marjorie and the wedding at the end",
+   "The Germans digging towards the main tunnel"
+  ],
+  "ideas": [
+   "Swap 'Armentières estaminet chicken and leek pie' for 'Red House raid chicken pie', with the cable too short joke in the note.",
+   "Swap 'Fruit cake from home' note for 'From Marjorie, eaten in the tunnel'.",
+   "Swap 'Tunnellers' macadamia Anzac biscuits' note for 'Half time after the rugby game'.",
+   "Swap the 'Bugle call' line for 'Mines fired at Messines'."
+  ],
+  "flat": false,
+  "done": false,
+  "overall": 3.8
+ },
+ "checked": "2026-11-07"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "Blade Runner 2049 (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I've never had real food. Joi cooks dinner for me every night. It looks perfect. It just isn't there.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented line signed Officer K. Deckard's real food line in the casino is 'Many is the night I dream of cheese. Toasted, mostly.'",
+   "source": "https://en.wikiquote.org/wiki/Blade_Runner_2049",
+   "fix": "Many is the night I dream of cheese. Toasted, mostly.",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "Many is the night I dream of cheese. Toasted, mostly.",
+    "by": "Rick Deckard",
+    "kind": "quote"
+   }
+  },
+  {
+   "text": "The small wooden horse K carves into his memory.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "K does not carve the horse. It is a memory (really Dr Stelline's) and he later finds the toy horse in the orphanage furnace where he remembers hiding it. The date 6.10.21 is carved on the tree.",
+   "source": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
+   "fix": "The small wooden horse K remembers hiding in the orphanage furnace.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Deckard pours one for the dog too.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Deckard has a dog, but nothing I opened says he pours it a drink. 'Bad dog' is Luv's line to K.",
+   "source": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
+   "fix": "Deckard keeps a dog and a bottle in the old casino.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Joi, a hologram who cooks for him",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Joi is K's holographic girlfriend. No source I could open says she cooks for him.",
+   "source": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
+   "fix": "Joi, the hologram who keeps him company",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Sapper's pot, still going on the stove.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened shows a pot on Sapper Morton's stove.",
+   "source": "",
+   "fix": "Sapper Morton's farm, where K finds the buried box.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Strong dark neon look and the right farm and horse, but the food leans on a guessed Joi dinner and a made-up Deckard dog drink.",
+  "missing": [
+   "K's baseline poem 'cells interlinked within cells interlinked' (the test)",
+   "Deckard dreaming of toasted cheese (Las Vegas casino)",
+   "Joi's emanator and the name Joe (K's apartment)",
+   "Sapper Morton: 'You've never seen a miracle' (the farm)",
+   "Wallace's synthetic farming empire and his blindness",
+   "Luv crying while she kills Lieutenant Joshi"
+  ],
+  "ideas": [
+   "Swap the Officer K note for Deckard's 'dream of cheese' line.",
+   "Swap the old fashioned note 'Deckard pours one for the dog too' for 'Deckard's bar in the empty casino, toasted cheese on the side'.",
+   "Swap 'Roasted garlic bulbs with sourdough' for 'Toasted cheese on sourdough' (Deckard's dream).",
+   "Swap the wooden horse note for the real memory of hiding it in the furnace."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

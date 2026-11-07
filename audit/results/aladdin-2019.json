@@ -1,0 +1,72 @@
+{
+  "id": "Aladdin (2019)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the snacks when Aladdin runs through the Agrabah market with the bread.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "In the 2019 film Aladdin doesn't steal bread. Abu takes Jasmine's bracelet, and Aladdin trades a necklace for dates for a hungry kid while they run from the guards. Bread is the 1992 film.",
+      "source": "https://www.thisisbarry.com/film/every-difference-between-aladdin-1992-and-2019-movies/",
+      "fix": "Serve the snacks when Aladdin and Jasmine run through the Agrabah market with the guards behind them.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Steal the bread. Share the plate.",
+      "where": "tagline",
+      "verdict": "wrong",
+      "why": "Same slip as the cue: the bread is from the 1992 film. In 2019 the market scene is about the bracelet and the dates.",
+      "source": "https://www.thisisbarry.com/film/every-difference-between-aladdin-1992-and-2019-movies/",
+      "fix": "Run the market. Share the plate.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Abu stealing fruit.",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "The page read has Abu stealing Jasmine's bracelet in the market, and the ruby in the Cave of Wonders. It describes no fruit.",
+      "source": "https://www.thisisbarry.com/film/every-difference-between-aladdin-1992-and-2019-movies/",
+      "fix": "Abu snatching Jasmine's bracelet.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Seventy five golden camels, one golden pastry.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Prince Ali's entrance is real, but the pages read don't give the camel count for the 2019 film.",
+      "source": "https://en.wikiquote.org/wiki/Aladdin_(2019_film)",
+      "fix": "A parade for Prince Ali, one golden pastry.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "An elegant palace banquet with good dishes, but the bread line comes from the 1992 film and the 2019 moments are thin.",
+    "missing": [
+      "'Get your own jams!' (Genie, when Aladdin asks him for snacks)",
+      "Prince Ali's grand arrival (the parade into Agrabah)",
+      "The magic carpet ride (Aladdin and Jasmine)",
+      "Jafar's cobra staff being destroyed (the palace)",
+      "'Only the diamond in the rough' can enter the cave (Jafar's plan)",
+      "Genie and Dalia, the new couple"
+    ],
+    "ideas": [
+      "Swap the Genie's note for his real line, 'Get your own jams!', which is about snacks and is much shorter.",
+      "Swap 'Abu stealing fruit' in the order of cheers for 'Abu snatching Jasmine's bracelet'.",
+      "Swap the 'the golden Cave of Wonders' note under the falafel for 'Only a diamond in the rough gets through'.",
+      "Swap 'Camel parking in the rear' on the place card for 'Prince Ali of Ababwa, by invitation'."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

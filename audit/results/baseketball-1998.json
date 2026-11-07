@@ -1,0 +1,42 @@
+{
+ "id": "BASEketball (1998)",
+ "facts": [
+  {
+   "text": "Baxter Cain, the team owner",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Baxter Cain owns the Dallas Felons, a rival team. Ted Denslow owns the Milwaukee Beers, and after his death Coop holds ownership for a year. It is not printed on this layout.",
+   "source": "https://en.wikipedia.org/wiki/BASEketball",
+   "fix": "Baxter Cain, owner of the Dallas Felons",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 19,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "verdict": "The scoreboard and ticket make a fun stadium and the beer-and-cheese food fits Milwaukee, but the film's dumbest, best gags are mostly missing.",
+  "missing": [
+   "Denslow choking on a hot dog at the championship",
+   "The La-Z-Boy ball popping and the Barcalounger replacement",
+   "The Dude, Dude, Dude exchange between Coop and Remer",
+   "Squeak's speech about the Malaka-Laka board",
+   "The psych-out rule (only used in a dish name)",
+   "Cain's clothing line scandal in Calcutta"
+  ],
+  "ideas": [
+   "Swap 'Hot buffalo wings' note for 'Ted Denslow's last hot dog' with a choke warning.",
+   "Swap 'Driveway hot fudge peanut sundaes' note for 'Served in a La-Z-Boy bowl'.",
+   "Swap the scorecard 'Now serving: snacks' for 'Dude. Dude. Dude'.",
+   "Swap 'Ice cold Milwaukee lager' note for 'Malaka-Laka board, seven inning stretch round'."
+  ],
+  "flat": false,
+  "done": false,
+  "overall": 3.6
+ },
+ "checked": "2026-11-07"
+}

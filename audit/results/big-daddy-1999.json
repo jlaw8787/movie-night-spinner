@@ -1,0 +1,67 @@
+{
+ "id": "Big Daddy (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm a kid's dad now, and I'm making this up as I go. Pass the cereal.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented line signed Sonny Koufax. In the film he says things like 'Dented cans are half-price. Microsoft went down 3 points. We gotta save some money.' while shopping with Julian.",
+   "source": "https://en.wikiquote.org/wiki/Big_Daddy",
+   "fix": "Dented cans are half price. Microsoft went down three points. We gotta save some money.",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "Dented cans are half price. Microsoft went down three points. We gotta save some money.",
+    "by": "Sonny Koufax",
+    "kind": "quote"
+   }
+  },
+  {
+   "text": "Julian and Sonny. Signed in a hurry.",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "The fortune slip is headed 'Adoption Papers'. In the film Sonny never signs adoption papers. He keeps Julian until a family is found, then fights for custody in court, and Kevin ends up with Julian. Nothing I opened mentions hurried signing.",
+   "source": "https://en.wikipedia.org/wiki/Big_Daddy_(1999_film)",
+   "fix": "Custody Papers. Julian and Sonny. Fought for in court.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Julian's order. Sonny lets him pick everything.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "In the McDonald's scene Julian asks for Cheerios and then lasagna. No source mentions a banana smoothie. 'Sonny lets him pick everything' is true to the film.",
+   "source": "https://en.wikiquote.org/wiki/Big_Daddy",
+   "fix": "Julian wanted lasagna. Sonny lets him pick everything.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good takeaway look and the delivery-guy world fits, but the food is mostly guesswork and the McDonald's, Yoohoo and Cozy's moments are missing.",
+  "missing": [
+   "Yoohoo at the school playground (Sonny and the kids)",
+   "McDonald's stops breakfast at 10:30 and Julian asks for Cheerios then lasagna (breakfast scene)",
+   "Cozy's delivery guy Nazo and his chocolate cake (the apartment)",
+   "Dented SpaghettiOs cans, 'Microsoft went down three points' (grocery aisle)",
+   "Curly fries at the Hooters party (Vanessa the waitress)",
+   "Scuba Steve keeping his flippers on, even bowling (the couch chat)"
+  ],
+  "ideas": [
+   "Swap 'Banana smoothie' for 'Yoohoo, hold the rum' (the playground scene).",
+   "Swap the cheeseburger note for 'McDonald's hotcakes, 30 minutes and 4 seconds too late.'",
+   "Swap 'Central Park everything bagel bites' for 'Cozy's chocolate cake, hand delivered by Nazo.'",
+   "Swap the note for Sonny's real dented cans line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "Annabelle (2014)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "1969 cocktail party bites",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "Sources give different years: Wikipedia says 1967, the Warner fandom page says 1969, TV Tropes says 1970. A single year is a risk.",
+      "source": "https://en.wikipedia.org/wiki/Annabelle_(film)",
+      "fix": "Cocktail party bites",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "1969 grasshopper shakes",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "Same year clash as the other dish: the sources disagree on 1967, 1969 and 1970.",
+      "source": "https://en.wikipedia.org/wiki/Annabelle_(film)",
+      "fix": "Grasshopper shakes",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Poured while the popcorn burns on the stove.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Mia does put popcorn on the stove and the fire follows, but the plot has no cocktail poured then.",
+      "source": "https://en.wikipedia.org/wiki/Annabelle_(film)",
+      "fix": "A 1960s cocktail for a nervous night in Santa Monica.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Mia's needle stops. The doll's head turns.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Mia's sewing machine runs by itself in the film. No page read has the doll's head turning.",
+      "source": "https://en.wikipedia.org/wiki/Annabelle_(film)",
+      "fix": "Mia's sewing machine starts on its own.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3,
+    "verdict": "A decent 1960s home setting, but the years clash across sources and the dishes lean on generic retro party food.",
+    "missing": [
+      "The wedding dress doll found in a box in Pasadena (John's gift)",
+      "The Pasadena apartment fire from the popcorn (Mia)",
+      "Evelyn's bookshop, and her daughter's doll",
+      "Father Perez and the rocking chair",
+      "The sewing machine running alone",
+      "The red sugar rose, and the cult murders next door"
+    ],
+    "ideas": [
+      "Swap 'Chicken and rice mushroom casserole' for 'Wedding dress cupcakes with a red sugar rose'.",
+      "Swap 'John's gift-box doll cupcakes' note for 'Found in a box in Pasadena'.",
+      "Swap 'Swedish meatballs in grape jelly' note for a line about the sewing machine running alone.",
+      "Swap the 'Sewing basket parmesan cheese straws' note for a Father Perez line."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

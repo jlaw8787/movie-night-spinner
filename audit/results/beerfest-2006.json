@@ -1,0 +1,52 @@
+{
+ "id": "Beerfest (2006)",
+ "facts": [
+  {
+   "text": "Serve the mains when the team enters the Beerfest tent.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Beerfest is a secret underground tournament, not a tent. The brothers first take down an Oktoberfest tent in a brawl, and the team later gets into Beerfest hidden inside an empty wooden keg like a Trojan horse.",
+   "source": "https://en.wikipedia.org/wiki/Beerfest",
+   "fix": "Serve the mains when the team rolls into Beerfest hidden in a wooden keg.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Last call: Serve the mains when the team enters the Beerfest tent.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same cue as printed on the card. Beerfest is an underground tournament and the team enters in a keg, not a tent.",
+   "source": "https://en.wikipedia.org/wiki/Beerfest",
+   "fix": "Last call: Serve the mains when the team rolls into Beerfest hidden in a wooden keg.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "A dark pub tab with Das Boot and a schnitzel, but it misses the secret underground games, the Trojan keg and the Schnitzengiggle recipe that drive the film.",
+  "missing": [
+   "The Trojan horse keg into Beerfest (the cue scene)",
+   "Schnitzengiggle beer, brewed from the recipe hidden in Po-Po the puppet",
+   "Great Gam Gam: I always sleep better with a little sausage in me",
+   "Landfill drowning in the vat and his twin Gil taking his place",
+   "Barry's Ping-Pong beer glass smash",
+   "The Germans' low-carb strawberry beer mix-up"
+  ],
+  "ideas": [
+   "Swap 'Apple strudel' for 'Schnitzengiggle beer pudding', with Po-Po the puppet in the note.",
+   "Swap 'Bavarian wheat beer by the stein' note for 'Great Gam Gam sleeps better with a little sausage'.",
+   "Swap the 'Ticket: Bring a team' line for 'Enter in a keg'.",
+   "Swap 'Landfill's beer garden Obatzda' note for 'Gil carries on for his brother'."
+  ],
+  "flat": true,
+  "done": false,
+  "overall": 2.8
+ },
+ "checked": "2026-11-07"
+}

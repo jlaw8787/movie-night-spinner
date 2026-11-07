@@ -1,0 +1,87 @@
+{
+  "id": "Animal Kingdom (2010)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Smurf puts dinner on the table for her boys.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The Wikipedia plot has the family gathering at a restaurant. A home dinner put on the table by Smurf isn't described.",
+      "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
+      "fix": "Serve the mains when Smurf and her sons sit down together at the restaurant.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Smurf cooks for her boys. Behave at the table.",
+      "where": "tagline",
+      "verdict": "unsure",
+      "why": "Smurf is the matriarch who runs the family. No page read shows her cooking.",
+      "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
+      "fix": "Smurf runs the family. Behave at the table.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Come in, J. Dinner is on. Sit down and stay close to the family.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "A note in Smurf's voice. J does move in with Smurf after his mum dies, but the 'dinner is on' part has no source.",
+      "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
+      "fix": "Come in, J. Sit down and stay close to the family.",
+      "printed": true,
+      "done": false,
+      "fix_note": {
+        "text": "Come in, J. Sit down and stay close to the family.",
+        "by": "Smurf",
+        "kind": "note"
+      }
+    },
+    {
+      "text": "the boys on the couch with the footy on",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "No page read has the brothers on a couch with the footy on.",
+      "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
+      "fix": "the boys with nothing to do but wait for the next job",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "J's drink on the couch, TV still on.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "J is shown on a couch with the TV on at the very start, beside his dead mother. A drink isn't described.",
+      "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
+      "fix": "J's drink, with the telly still on.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 2,
+    "moments": 2,
+    "food": 3,
+    "tone": 2,
+    "look": 2,
+    "overall": 2.2,
+    "verdict": "The home layout with pastel fridge magnets is too cute for a crime drama, and the dinner at the table idea is not in the film.",
+    "missing": [
+      "Leckie's 'worked out where you fit?' (Leckie and J)",
+      "Smurf's 'J needs to go' (the family decides)",
+      "Smurf's kiss on the lips for her sons (the family greeting)",
+      "Pope's cold stare on the street",
+      "The Melbourne police ambush on Pope's mates",
+      "Nicky's pool, and the family in the backyard"
+    ],
+    "ideas": [
+      "Swap the 'Smurf cooks for her boys' tagline for Smurf's own kind of warning.",
+      "Swap the note on 'Leckie's lemon, lime and bitters' for Leckie's question about where J fits.",
+      "Swap the pastel EAT magnets on the home layout for plain tiles and a dark colour scheme.",
+      "Swap the 'Smurf's roast lamb' note for 'The family decides who stays'."
+    ],
+    "flat": true,
+    "done": false
+  }
+}
