@@ -1,0 +1,68 @@
+{
+ "id": "Enchanted (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Giselle cooks breakfast in Robert's apartment.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Neither Wikipedia nor the plot summary has a breakfast scene. Both have Giselle singing the city animals into cleaning Robert's apartment. A cooking scene was not found.",
+   "source": "https://www.whatsafterthemovie.com/summary/enchanted",
+   "fix": "Serve the mains when Giselle sings the city animals into cleaning Robert's apartment.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "I made dinner with help from the city animals. The pigeons set the table, the rats did the dishes, and Robert still looks worried.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The animals help Giselle clean the apartment, not make dinner. The moviemistakes quote page has none of this and no lines from Pip or Nancy. It reads as an invented quote.",
+   "source": "https://moviemistakes.com/film7089/quotes",
+   "fix": "Use a note: I cleaned the whole apartment with help from the city animals, even the cockroaches. Robert still looks worried.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I cleaned the whole apartment with help from the city animals, even the cockroaches. Robert still looks worried.",
+    "by": "Giselle",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Breakfast made with help from the cockroaches.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The city animals, cockroaches included, clean the apartment in the film. No source shows them helping with breakfast.",
+   "source": "https://www.whatsafterthemovie.com/summary/enchanted",
+   "fix": "Cleaned up with help from the cockroaches.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 2,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 2,
+  "overall": 2.6,
+  "verdict": "A tiki island layout on a New York fairy tale, with a cue and note that drift from what the film shows.",
+  "missing": [
+   "That's How You Know in Central Park (the song)",
+   "Giselle's dress made from Robert's curtains (the apartment)",
+   "The city animals cleaning up, cockroaches and all (Robert's apartment)",
+   "Narissa as the dragon at the ball (the finale)",
+   "Edward climbing out of the manhole in Times Square",
+   "Robert and Giselle waltzing at the ball"
+  ],
+  "ideas": [
+   "Swap the 'Island hopping' tiki layout for a storybook meets Manhattan look in pink and blue.",
+   "Swap 'Lagoon Coolers' for 'From the Wishing Well'.",
+   "Swap the 'Pip's acorn nuts' note for 'Pip can't tell you how good they are. He is in New York.'",
+   "Swap 'Pink meringues' note for 'Sweet enough for a curtain dress and a happy ending.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

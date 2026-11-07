@@ -1,0 +1,48 @@
+{
+ "id": "Casino Royale (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "A Vesper for me, and a light meal before the card game. The buy in is steep enough.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Bond never says this. At the bar he is asked 'Shaken or stirred?' and answers with the line on the Bond drinks page. It is printed in quote marks as his words.",
+   "source": "https://www.thejamesbonddossier.com/films/casino-royale/drinks.htm",
+   "fix": "Do I look like I give a damn?",
+   "fix_note": {
+    "text": "Do I look like I give a damn?",
+    "by": "James Bond",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Sharp black and red card with the right hold'em and Vesper cues, but the plates are generic and the buy in prints as raw numbers.",
+  "missing": [
+   "Le Chiffre's bleeding eye and inhaler (the table)",
+   "The poisoned martini and the defibrillator (the break)",
+   "'Because once you've tasted it, that's all you want to drink' (the Vesper naming at dinner)",
+   "The carpet beater chair (the torture)",
+   "The sinking palace in Venice (the ending)",
+   "The Aston Martin DB5 won at poker (Nassau)"
+  ],
+  "ideas": [
+   "Swap the 'Tournament buy in' ticket from '10000000' to '$10,000,000'.",
+   "Swap 'Grilled octopus' note for 'Poisoned drink not included.'",
+   "Swap 'The Vesper gin and vodka martini' note for 'Shaken, because he did not give a damn.'",
+   "Swap 'Venice seafood risotto' note for 'A house that sinks, not the rice.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

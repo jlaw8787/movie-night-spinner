@@ -1,0 +1,68 @@
+{
+ "id": "Bloodsport (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Ray and Frank arrive in Hong Kong.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Frank arrives in Hong Kong on his own, then meets Ray Jackson and their guide Victor Lin. They do not arrive together.",
+   "source": "https://www.wikiwand.com/en/articles/Bloodsport_(film)",
+   "fix": "Serve the snacks when Frank meets Ray in Hong Kong.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "I came for my teacher. Now I'm in it for the dumplings after the bout.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Frank never says this. The quote page lists his real lines. It is printed in quote marks as his words.",
+   "source": "https://moviemistakes.com/film187/quotes",
+   "fix": "Aren't you a little old for videogames?",
+   "fix_note": {
+    "text": "Aren't you a little old for videogames?",
+    "by": "Frank Dux",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Tiger Tanaka, Frank's teacher",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Frank's teacher is Senzo Tanaka. There is no Tiger Tanaka in the film (Tiger Tanaka is a James Bond name). Senzo's son is Shingo.",
+   "source": "https://www.wikiwand.com/en/articles/Bloodsport_(film)",
+   "fix": "Senzo Tanaka, Frank's teacher",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The scoreboard and ticket look suit a fight night, and the Hong Kong street food is spot on, but the quote is made up and a teacher is misnamed.",
+  "missing": [
+   "Chong Li's powder in Frank's eyes and Frank fighting blind (the final)",
+   "Frank's splits and hand drills (the training)",
+   "Ray's showboating loss (day two)",
+   "The Kumite in the Walled City (the arena)",
+   "Frank saying 'matte' (the finish)",
+   "Frank's escape from the army agents on the canal chase"
+  ],
+  "ideas": [
+   "Swap the Frank note for his real 'Aren't you a little old for videogames?'",
+   "Swap 'Hong Kong iced lemon tea' note for 'Powder in the eyes? Rinse and keep fighting.'",
+   "Swap the 'Prawn wonton noodle soup' note for 'Ray lost on day two, so he gets the big bowl.'",
+   "Swap 'Tiger Tanaka' wink for 'Senzo Tanaka, Frank's teacher'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Car Wash (1976)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the lunch when the crew takes a break between cars.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot summary I opened shows a single working day but does not describe a lunch break. It does mention Big Joe's Dog House, a food stand beside the car wash, though most of its scenes were cut.",
+   "source": "https://en.wikipedia.org/wiki/Car_Wash_(film)",
+   "fix": "Serve the lunch when T.C. waits on the radio contest call.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "A second chance means you show up tomorrow. Grab a burger first.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Lonnie never says this. It is printed in quote marks as his words. Lonnie is the ex-convict foreman trying to stay on the right side of his parole officer, so a note in his voice is true to the character.",
+   "source": "https://en.wikipedia.org/wiki/Car_Wash_(film)",
+   "fix": "A second chance means showing up tomorrow. Grab a burger first.",
+   "fix_note": {
+    "text": "A second chance means showing up tomorrow. Grab a burger first.",
+    "by": "Lonnie",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Bright car wash colours and a fair menu, but it skips the film's best known characters and the soundtrack.",
+  "missing": [
+   "Lindy's 'more man than you'll ever be' line (Abdullah's confrontation)",
+   "Daddy Rich and the Wilson Sisters (the sermon)",
+   "T.C.'s radio contest (the radio)",
+   "Big Joe's Dog House (the stand next door)",
+   "Abdullah and Lonnie in the office (the evening)",
+   "Mr. B's miser routine (the office)"
+  ],
+  "ideas": [
+   "Swap 'Lunch truck tacos' for 'Big Joe's Dog House chilli dog' to use the real stand next door.",
+   "Swap 'Daddy Rich fruit ice blocks' note for 'Donations to the Wilson Sisters.'",
+   "Swap the 'Car wash ticket' text for 'Win the radio tickets, T.C.'",
+   "Swap the 'Cajun spiced boiled peanuts' note for 'The radio is on, the day is long.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

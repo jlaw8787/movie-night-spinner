@@ -1,0 +1,68 @@
+{
+ "id": "Batman & Robin (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Mr Freeze freezes the charity auction.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia says Freeze crashes a Wayne Enterprises charity event, steals a diamond and is captured. It does not call it an auction or say he freezes it.",
+   "source": "https://wikiwand.com/en/Batman_&_Robin_(film)",
+   "fix": "Serve dessert when Mr Freeze crashes the Wayne charity event.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "The diamond auction at the Gotham botanical gardens.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot sources I opened never name the botanical gardens as the venue for the charity event, and only the natural history museum and the observatory are named.",
+   "source": "https://wikiwand.com/en/Batman_&_Robin_(film)",
+   "fix": "The charity event where Freeze crashes in for the diamonds.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Master Bruce, I made soup. A hot meal in a cold world is no small thing.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line Alfred says. IMDb quotes would not load, and nothing in the plot sources matches it. Alfred is ill with MacGregor's syndrome and hides it, so a written note in his voice can lean on the cold.",
+   "source": "",
+   "fix": "Master Bruce, I made soup. Eat it while it's hot, the city is turning cold.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Master Bruce, I made soup. Eat it while it's hot, the city is turning cold.",
+    "by": "Alfred Pennyworth",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 2,
+  "overall": 3,
+  "verdict": "Clever in-room dining idea with good dish names, but the quiet cream hotel look fights the film's neon camp and the cue is shaky.",
+  "missing": [
+   "Freeze's 'Ice to see you' and 'everybody chill' puns",
+   "Freeze freezing Robin at the natural history museum",
+   "The Gotham Observatory telescope turned into a freeze ray",
+   "Barbara Wilson racing and becoming Batgirl",
+   "Alfred's illness and the cure Freeze gives Batman",
+   "Poison Ivy's lair and plants"
+  ],
+  "ideas": [
+   "Swap 'Mr Freeze iced prawns' note for 'Everybody chill' on a block of ice.",
+   "Swap 'Pimm's cup with cucumber' for 'Poison Ivy's kiss', a green cocktail.",
+   "Swap 'Frozen Gotham ice cream cake' note for 'A freeze ray from the observatory, blue layer on top'.",
+   "Swap the cream hotel paper for neon blue and green to match the poster."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

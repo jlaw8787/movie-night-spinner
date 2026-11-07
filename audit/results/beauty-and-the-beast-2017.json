@@ -1,0 +1,48 @@
+{
+ "id": "Beauty and the Beast (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Chip, mind your manners, we have a guest. Tea first, tart next. The Beast can wait, and so can the dishes.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line Mrs Potts says. The quote page I tried only held stage directions, so no source could be opened to prove it, but it matches nothing in the film's plot or songs.",
+   "source": "",
+   "fix": "Chip, mind your manners, we have a guest. Tea first, tart after, and the Beast can wait.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Chip, mind your manners, we have a guest. Tea first, tart after, and the Beast can wait.",
+    "by": "Mrs. Potts",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 21,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A tidy cafe menu with good dish names and a rose tart, but the Gaston's Tavern setting clashes with the castle dinner cue and the note is invented.",
+  "missing": [
+   "Lumiere's 'Be Our Guest' dinner show with the dancing plates",
+   "Gaston's song and the five dozen eggs in the tavern",
+   "The enchanted rose under glass with the last petal falling",
+   "Belle and the Beast in the library",
+   "Mrs Potts pouring tea for Maurice",
+   "LeFou dancing with Stanley"
+  ],
+  "ideas": [
+   "Swap the venue 'Gaston's Tavern' for 'The Castle Dining Room' to match the Be Our Guest cue.",
+   "Swap 'Enchanted rose tart' note for 'Last petal. Eat it now.'",
+   "Swap the 'CHIP' stamp on the Library Pass for 'ROSE PETAL' stamps.",
+   "Swap 'Villeneuve market bread' note for 'Belle's baguette, carried in a basket'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Cruella (2021)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Estella, I've fed the dogs. Horace ate the dinner. Again. Please do not tell the Baroness.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Jasper's lines on the quote page. It is printed in quote marks as dialogue. As a note Jasper might write it is fine, because he and Horace end up minding the Baroness's Dalmatians.",
+   "source": "https://noguiltdisney.com/quotes-from-the-movie-cruella/",
+   "fix": "Estella, I've fed the dogs. Horace ate the dinner. Again. Please do not tell the Baroness.",
+   "fix_note": {
+    "text": "Estella, I've fed the dogs. Horace ate the dinner. Again. Please do not tell the Baroness.",
+    "by": "Jasper",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Thick twice fried chips shaken with m​alt vinegar and salt.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "A hidden zero-width space sits inside the word 'malt' in the printed text. It can break copy, search and line wrapping.",
+   "source": "",
+   "fix": "Thick twice fried chips shaken with malt vinegar and salt.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.2,
+  "verdict": "A sharp black, white and red club menu that fits the film, with only a note that should be a note and a stray hidden character.",
+  "missing": [
+   "Dalmatian puppies Perdita and Pongo (the ending)",
+   "The garbage truck entrance in a newspaper bodice (the Baroness's event)",
+   "The moth cocoon dress that wrecks the collection (the spring show)",
+   "The Panther De Ville car and the 'de Vil' name",
+   "Hell Hall, the manor Cruella takes over",
+   "'I was born brilliant. Born bad. And a little bit mad.' (the opening)"
+  ],
+  "ideas": [
+   "Swap the 'Black and white cake' note for 'I was born brilliant. Born bad. And a little bit mad.'",
+   "Swap 'Punk London pub chips' for 'Moth cocoon macarons', note 'The Baroness's collection never saw the show.'",
+   "Add 'Panther De Ville, parked out front' to the footer in place of the 'Cover charge after nine' joke.",
+   "Swap 'Wink's spotted whipped feta crostini' into the printed menu, in place of the fry-up note."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

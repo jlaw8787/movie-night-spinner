@@ -1,0 +1,68 @@
+{
+ "id": "El Mariachi (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I only came to play guitar. Please, can the case stay under the table?",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No quote page was opened for this film. The plot sources have the Mariachi saying nothing like this, and the film is in Spanish with very little talk. It reads as an invented quote.",
+   "source": "",
+   "fix": "Use a note, not a quote: I came for work, not trouble. It's only a guitar in the case.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I came for work, not trouble. It's only a guitar in the case.",
+    "by": "El Mariachi",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Domino's bar. The keyboard guy plays all night.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The keyboard player belongs to the first bar, where a surly bartender hires him instead of the Mariachi. Domino's bar is where the Mariachi plays and her customers come to hear him.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/ElMariachi",
+   "fix": "The bartender hires a keyboard guy instead of the mariachi.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the hotel where he hides out",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "He rents a cheap room at a hotel (Wikipedia calls it a motel), the hitmen attack, he kills four of them and flees. He hides upstairs at Domino's bar, not at the hotel.",
+   "source": "https://en.wikipedia.org/wiki/El_Mariachi",
+   "fix": "the hotel room the hitmen storm",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 2.8,
+  "verdict": "A generic chalkboard bar with a guitar case joke, and it gets two of its few film beats wrong.",
+  "missing": [
+   "Guitar case swapped with Azul's case of weapons (the bar)",
+   "Domino's pit bull riding out of town with him (the ending)",
+   "Moco striking matches off the Dragon's face (the ranch)",
+   "The surly bartender hiring a keyboard player (the first bar)",
+   "Domino's letter-opener at his throat (the upstairs room)",
+   "The turtle on the yellow road line (the poster)"
+  ],
+  "ideas": [
+   "Swap the 'Ceviche tostadas' note for 'The bartender hired a keyboard guy instead. Tip the mariachi.'",
+   "Swap 'Agua de jamaica' note for 'The mariachi drinks soda. Azul keeps his beer in the bottle.'",
+   "Swap 'the hotel where he hides out' for 'the hotel room the hitmen storm'.",
+   "Swap the plain chalkboard tab for a sun-bleached border town look with the road and turtle from the poster."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

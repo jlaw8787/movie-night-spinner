@@ -1,0 +1,68 @@
+{
+ "id": "Footloose (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Everybody deserves one good night. Dinner first, then we push the table back and dance. Even this town.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No quote page opened has this line, and in the film the dance is not at the town hall. The prom is held in a grain mill just over the county line, out of Bomont's reach. It reads as an invented quote.",
+   "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Footloose_(1984_film)",
+   "fix": "Use a note: Dinner first. Then we take the party to the grain mill, just over the county line, where nobody can stop us.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Dinner first. Then we take the party to the grain mill, just over the county line, where nobody can stop us.",
+    "by": "Ren McCormack",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The church social in Bomont.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Neither plot source opened mentions a church social. The film has church scenes and Reverend Moore's sermons, but a social was not found.",
+   "source": "https://whatsafterthemovie.com/summary/footloose-1984",
+   "fix": "The Sunday sermon in Bomont.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Church social caramel popcorn balls",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Same issue: no church social was found in the plot sources.",
+   "source": "https://whatsafterthemovie.com/summary/footloose-1984",
+   "fix": "Prom night caramel popcorn balls",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A good prom night frame with an 80s look, but the food only touches a few scenes and the note misplaces the dance.",
+  "missing": [
+   "Ren's warehouse dance (the old mill)",
+   "Willard's dance lessons to Let's Hear It for the Boy",
+   "Ren quoting scripture to the town council",
+   "The book burning outside the church",
+   "Chuck's gang and the fight at the prom",
+   "Ren's yellow VW bug"
+  ],
+  "ideas": [
+   "Swap the 'Hush puppies' house note for a Let's Hear It for the Boy nod.",
+   "Swap 'Preacher's Sunday roast' for 'Reverend Moore's Sunday roast' with a 'Passes without a single complaint.' note.",
+   "Swap the 'Prom punch' for 'County line punch' with 'Poured past the council's reach.'",
+   "Swap the 'Bomont Town Hall' header for 'Grain Mill, Just Past the County Line'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

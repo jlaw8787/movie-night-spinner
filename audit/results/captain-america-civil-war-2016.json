@@ -1,0 +1,88 @@
+{
+ "id": "Captain America: Civil War (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Tony sits in Aunt May's kitchen with her walnut date loaf.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Tony does visit Peter's home in Queens. I could not find a walnut date loaf, or any food, in that scene in the sources I opened.",
+   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
+   "fix": "Serve dessert when Tony sits in Aunt May's kitchen.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Berlin airport currywurst",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The airport fight is at Leipzig/Halle Airport, not Berlin. The menu itself says Leipzig Airport Cafe.",
+   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
+   "fix": "Leipzig airport currywurst",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Bucky buying plums at the Bucharest market the morning the whole world comes for him.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Bucky is in Bucharest and is hunted there, but I found no market or plums scene in the sources I opened.",
+   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
+   "fix": "Bucky's quiet morning in Bucharest before the chase.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Peter rates Bucky's metal arm.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Peter's debut is at the airport fight, but the sources I opened do not quote him talking about Bucky's arm.",
+   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
+   "fix": "Peter's big first day out at the airport.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Sit down and eat. We can disagree tomorrow. Tonight, let's just be friends.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Steve never says this. It is set in quote marks as his words and does not match anything in the film. Steve is the peacemaker, so a note in his voice is fine.",
+   "source": "",
+   "fix": "Sit down and eat first. The Accords can wait until tomorrow.",
+   "fix_note": {
+    "text": "Sit down and eat first. The Accords can wait until tomorrow.",
+    "by": "Steve Rogers",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The airport cafe and seat card fit the airport fight, but one dish is mislabelled and the best food moment, Vision's paprikash, is missing.",
+  "missing": [
+   "Vision cooking paprikash for Wanda (the compound)",
+   "Spider-Man webbing Cap's shield (the airport)",
+   "Ant-Man turning giant (the airport)",
+   "Cap and Bucky's shield and arm in Siberia",
+   "Black Widow letting Cap go (the airport)",
+   "'Underoos' (Tony and Peter)"
+  ],
+  "ideas": [
+   "Swap 'Siberian winter goulash' for 'Vision's paprikash' with the note 'He tried, Wanda stayed in.'",
+   "Swap 'Berlin airport currywurst' for 'Leipzig airport currywurst'.",
+   "Swap 'Team Cap and Team Iron Man fizz' note for 'Red, white and blue, pick a side.'",
+   "Swap the 'Sokovia Accords' card text for 'Cap's shield, please return before landing'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

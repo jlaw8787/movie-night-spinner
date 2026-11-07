@@ -1,0 +1,48 @@
+{
+ "id": "Fantastic Four (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Reed, I'm made of rock and I still can't get a decent sandwich. Fix that next.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No quote page opened has Ben asking for a sandwich. TV Tropes shows his real Brooklyn Bridge line ('You take a good look, pal!') and nothing about lunch. It reads as an invented quote.",
+   "source": "https://tvtropes.org/Film/FantasticFour2005",
+   "fix": "Use a note: Reed, I'm made of rock and I still want a sandwich. Cure first, then lunch.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Reed, I'm made of rock and I still want a sandwich. Cure first, then lunch.",
+    "by": "Ben Grimm",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A tidy lab canteen with decent powers-themed dishes, but light on the film's best-known beats.",
+  "missing": [
+   "Johnny shouting 'Flame on' and flying off a building (Doom's missile)",
+   "Reed's stretching reach (the lab)",
+   "Sue's force field on the Brooklyn Bridge",
+   "Ben and his fiancee Debbie ending it (the bridge)",
+   "Doom frozen in place by thermal shock (the finale)",
+   "Reed proposing to Sue (the end)"
+  ],
+  "ideas": [
+   "Swap the 'Stretchy cheese pull bread' note for 'Reed can reach the top shelf without standing.'",
+   "Swap the 'Cosmic storm sundae' note for 'Served just before it hits.'",
+   "Swap 'Iced coffee with ice cream' house note for 'Hot and cold, ask Doom.'",
+   "Swap the 'Staff only' badge line for 'Access: Richards, Storm, Storm, Grimm, and one lunch lady'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

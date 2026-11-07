@@ -1,0 +1,58 @@
+{
+ "id": "Butch Cassidy and the Sundance Kid (1969)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I've got a plan for dessert, Sundance. You won't like it, but it involves Bolivia.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Butch never says this. His real Bolivia line is on the quote page. It is printed in quote marks as his words.",
+   "source": "https://moviemistakes.com/film1876/quotes",
+   "fix": "Kid, next time I say 'Let's go someplace like Bolivia,' let's go someplace like Bolivia.",
+   "fix_note": {
+    "text": "Kid, next time I say 'Let's go someplace like Bolivia,' let's go someplace like Bolivia.",
+    "by": "Butch Cassidy",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The gang's new life in Bolivia",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Only Butch and Sundance (and Etta) go to Bolivia. The rest of the Hole in the Wall gang stays behind. This is a small point.",
+   "source": "https://moviemistakes.com/film1876/quotes",
+   "fix": "Butch and Sundance's new life in Bolivia",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The hideout and the dynamite pretzels suit it, but it leaves out the best known lines and scenes.",
+  "missing": [
+   "'Who are those guys?' about the posse (the chase)",
+   "'Raindrops Keep Fallin' on My Head' on the bicycle",
+   "Harvey Logan's knife fight, 'Rules? In a knife fight?' (the hideout)",
+   "Spanish phrases written on a card for the Bolivian bank (the robbery)",
+   "The final freeze frame (the ending)",
+   "The cliff jump, 'The fall will probably kill ya'"
+  ],
+  "ideas": [
+   "Swap the 'Pisco punch' note for 'Who are those guys? Drink up, ride on.' as a real quote nod with quote marks.",
+   "Swap 'Bicycle ride lemon cake' for 'Raindrop lemon cake' with a note on the song.",
+   "Swap 'Hole-in-the-Wall chilli' note for 'No rules at this table.'",
+   "Swap 'Table for two, quietly' on the slip for 'Table for three, Etta rides along'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

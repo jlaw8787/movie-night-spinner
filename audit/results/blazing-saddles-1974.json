@@ -1,0 +1,58 @@
+{
+ "id": "Blazing Saddles (1974)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm your new sheriff, so please pass the beans and hold the applause.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Bart never says this. The quote page lists his real lines and none mentions beans. It is printed in quote marks as his words.",
+   "source": "https://moviemistakes.com/film184/quotes",
+   "fix": "A man drink like that and he don't eat, he is going to DIE.",
+   "fix_note": {
+    "text": "A man drink like that and he don't eat, he is going to DIE.",
+    "by": "Sheriff Bart",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The railroad crew's supper on the trail",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The railroad crew appears at the start laying track and singing. The sources I opened show no supper scene for them. The campfire beans scene is the cowboys, not the rail gang.",
+   "source": "https://www.filmsite.org/blaz.html",
+   "fix": "What the rail gang sang about while laying track",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Bill of fare and chuckwagon fit the western, and the Johnson joke is good, but Hedley, Mongo and the pie fight are barely there.",
+  "missing": [
+   "Hedley Lamarr, 'It's Hedley, not Hedy' (the Governor's office)",
+   "Mongo punching a horse (the town)",
+   "Candygram for Mongo (Bart's delivery)",
+   "Lili von Shtupp's 'I'm tired' act (the saloon)",
+   "Gabby Johnson's speech (the town meeting)",
+   "The pie fight on the Burbank set (the finale)"
+  ],
+  "ideas": [
+   "Swap 'Rock Ridge welcome pie' for 'Burbank studio pie fight pie' with the note 'Throw it, do not eat it.'",
+   "Swap the 'Chuck wagon pepper rib eyes' note for 'Mongo wants his ribs first.'",
+   "Put the Candygram truffles on the printed sweets instead of the cobbler.",
+   "Swap the 'Waco Kid's whiskey nuts' note for 'Jim. The fastest gun in the west, if he has had his nuts.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

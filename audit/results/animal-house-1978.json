@@ -1,0 +1,58 @@
+{
+ "id": "Animal House (1978)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Cafeteria rules don't apply here. Grab a tray, pile it high, and leave room for jello.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Bluto never says this. The Bluto lines on the Moviemistakes page are his 'Over? Did you say over?' speech, with nothing about trays, jello or cafeteria rules. The real line is 'Nothing is over until we decide it is!'",
+   "source": "https://moviemistakes.com/film67/quotes",
+   "fix": "Nothing is over until we decide it is!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Nothing is over until we decide it is!",
+    "by": "John Bluto Blutarsky",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Spring Formal, Class of 1978",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The film is set in 1962 (the Deltas join in fall 1962). 1978 is the year it was released. The ticket number on the same card, 1962, has it right.",
+   "source": "https://www.wikiwand.com/en/articles/Animal_House",
+   "fix": "Spring Formal, Class of 1962",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Messy and loud in the right way, but it sits on a pale generic prom card and the year is wrong.",
+  "missing": [
+   "'Food fight!' in the cafeteria",
+   "The 'Toga! Toga!' chant at the party",
+   "Bluto's 'Was it over when the Germans bombed Pearl Harbor?' speech",
+   "Double secret probation in Wormer's office",
+   "The cake-shaped float in the homecoming parade",
+   "Otis Day and the Knights at the Dexter Lake Club"
+  ],
+  "ideas": [
+   "Swap 'Food fight cupcakes' for 'Cake float cupcakes', note 'The parade float they drive a tank out of'.",
+   "Swap the ticket line 'Signed, Dean Wormer' for 'Double secret probation'.",
+   "Swap 'Delta house sloppy joes' note for 'Pile it high. Bluto's orders.'",
+   "Swap the cream card for a toga bedsheet look with a Faber College crest and the 'Knowledge is Good' motto."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

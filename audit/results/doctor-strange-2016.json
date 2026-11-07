@@ -1,0 +1,48 @@
+{
+ "id": "Doctor Strange (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Doctor, the books are catalogued and the food is hot. Sit down before the portal opens.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Wong's lines in the sources I opened. A real Wong line is 'Well, don't stop now!' (after Strange reverses time to save him). This one is printed in quote marks.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Funny/DoctorStrange2016",
+   "fix": "Well, don't stop now!",
+   "fix_note": {
+    "text": "Well, don't stop now!",
+    "by": "Wong",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Kamar-Taj is a good setting and the Wi-Fi joke lands, but the poster sits in black bars and the menu hardly uses the film's magic.",
+  "missing": [
+   "The Cloak of Levitation grabbing Strange (the Sanctum)",
+   "Dormammu and 'I've come to bargain' (the Dark Dimension)",
+   "Strange stealing library books by astral projection",
+   "Mordo and the Wi-Fi password (arrival at Kamar-Taj)",
+   "The Mirror Dimension fight in New York",
+   "The Eye of Agamotto reversing time to save Wong (Hong Kong)"
+  ],
+  "ideas": [
+   "Replace the Wong note with 'Well, don't stop now!'",
+   "Fix the poster crop so it fills the frame and the black bars at top and bottom go.",
+   "Change the 'Wong's chicken and avocado sandwiches' note to 'Late fees may involve maiming.'",
+   "Swap 'Pesto parmesan puff pastry pinwheels' for 'Mirror Dimension folded pastries', note 'Layered and folded until the city bends.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

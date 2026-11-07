@@ -1,0 +1,48 @@
+{
+ "id": "Arthur Christmas (2011)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "One girl got missed tonight. Grab a mince pie for the sleigh, we're eating on the way to Trelew.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Arthur never says this. No quote page for the film could be opened (Ranker would not load), and nothing in the Wikipedia plot matches it.",
+   "source": "",
+   "fix": "One girl got missed tonight. Grab a mince pie for the sleigh, we're eating on the way to Trelew.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "One girl got missed tonight. Grab a mince pie for the sleigh, we're eating on the way to Trelew.",
+    "by": "Arthur",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 21,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good idea, a mission control canteen with Gwen, Bryony and Grandsanta, but the food is standard British Christmas and the note is made up.",
+  "missing": [
+   "Evie, Grandsanta's old wooden sleigh, and the reindeer",
+   "The wrong Trelew in Mexico, where Steve hands the bike to Pedro",
+   "The Clauses' Christmas dinner board game argument",
+   "Bryony stowing away on the sleigh",
+   "The S-1 renamed EVIE at the end",
+   "Gwen's pink bike delivered before she wakes"
+  ],
+  "ideas": [
+   "Swap 'Cornish pasties for Gwen' note for 'Wrong Trelew, wrong country. Mexico got the first one.'",
+   "Swap 'Elf mission control popcorn' for 'Pedro's pink bike cake'.",
+   "Swap 'Christmas pudding with orange custard' note for 'Served after the board game argument'.",
+   "Swap the 3:30 timetable slot 'Gwen's pink bicycle' for 'Wrong Trelew'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

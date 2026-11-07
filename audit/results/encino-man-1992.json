@@ -1,0 +1,68 @@
+{
+ "id": "Encino Man (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We dug a pool and found a caveman. Link is a great guy, just keep him away from the food.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Dave's words, but no source has Dave saying it. It is a note in his voice and fits the plot (pool dig, frozen caveman), so it needs no quote marks.",
+   "source": "https://wiki.riteme.site/wiki/Encino_Man",
+   "fix": "Keep the words, store it as a note with no quote marks.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "We dug a pool and found a caveman. Link is a great guy, just keep him away from the food.",
+    "by": "Dave Morgan",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Stoney's backyard loaded nachos",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The pool is dug in Dave's backyard, and Link is found there. It is not Stoney's backyard.",
+   "source": "https://wiki.riteme.site/wiki/Encino_Man",
+   "fix": "Dave's backyard loaded nachos",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Stoney shows Link how. Link eats the lot.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source opened has a corn on the cob scene. Stoney does teach Link modern life, but the corn claim is not confirmed.",
+   "source": "https://wiki.riteme.site/wiki/Encino_Man",
+   "fix": "Stoney shows Link modern life. Link takes to it fast.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Camp bunk styling with a backyard dig skin, fine but plain for a loud teen mess of a film.",
+  "missing": [
+   "Link starting a fire in Dave's bedroom (the house)",
+   "The Estonian exchange student cover story (Dave's parents)",
+   "Stoney's lighter calming Link down",
+   "Link making Dave and Stoney popular at school",
+   "The caveman dance at prom",
+   "Link's cave girlfriend in the bathtub (the end)"
+  ],
+  "ideas": [
+   "Swap the 'Buttered corn on the cob' note for 'Stoney's lighter calms Link down.'",
+   "Swap 'Caveman club drumsticks' for 'Estonian exchange student drumsticks'.",
+   "Swap 'Frozen yoghurt bark' for 'Block of ice yoghurt bark' with 'Thawed in the garage overnight.'",
+   "Swap the camp 'Bugle call' heading for 'Space heaters left on'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

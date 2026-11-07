@@ -1,0 +1,58 @@
+{
+ "id": "American Pie (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "My dad means well. He just picks dinner to have the big talk with me, so eat fast and don't mention pie.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Jim never says this. His dad catches him with the warm apple pie, then the awkward talks follow; he does not pick dinner for them. No such line turned up in the sources I opened.",
+   "source": "https://en.wikipedia.org/wiki/American_Pie_(film)",
+   "fix": "Dad means well. He picks the worst moment for a talk, so eat fast and leave the pie alone.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Dad means well. He picks the worst moment for a talk, so eat fast and leave the pie alone.",
+    "by": "Jim Levenstein",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Stifler's party, keg in the basement.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Wikipedia confirms the pact is made at Stifler's house party, but it never mentions a keg or a basement.",
+   "source": "https://en.wikipedia.org/wiki/American_Pie_(film)",
+   "fix": "Stifler's party, where the pact is made.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Uses the pie, the webcam and the mocha well, but the layout is the same prom card as other teen films and the note is made up.",
+  "missing": [
+   "Jim and the warm apple pie in the kitchen (cue)",
+   "Stifler spiking Finch's mocha with a laxative (school)",
+   "Oz joining the choir and the duet (school)",
+   "The post-prom party at Stifler's lake house",
+   "Finch and Stifler's mum on the pool table",
+   "Michelle's band camp stories"
+  ],
+  "ideas": [
+   "Swap 'Finch's mochaccino' note for 'Finch's mocha. Check it before you drink it.'",
+   "Swap 'Graduation barbecue pork ribs' for 'Lake house ribs', note 'The after party. Stifler faints.'",
+   "Swap 'Mum's apple pie' note for 'Served warm. Do not ask.'",
+   "Swap 'Prom Pact' ticket line 'Four friends' for 'Four friends. Three weeks.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

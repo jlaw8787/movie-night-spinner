@@ -1,0 +1,58 @@
+{
+ "id": "Django Unchained (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm a bounty hunter, Django. Supper's on me tonight, don't mistake it for charity.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Schultz's lines on the quote page. His real saloon line is 'Good morning, innkeeper! Two beers for two weary travelers.' This one is printed in quote marks.",
+   "source": "https://en.wikiquote.org/wiki/Django_Unchained",
+   "fix": "Two beers for two weary travelers.",
+   "fix_note": {
+    "text": "Two beers for two weary travelers.",
+    "by": "Dr King Schultz",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Monsieur Candie's favourite. Don't speak French.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Candie is obsessed with all things French and cannot speak it, but no source I opened has him drinking cognac.",
+   "source": "https://en.wikiquote.org/wiki/Django_Unchained",
+   "fix": "Monsieur Candie loves all things French. He does not speak it.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "The dentist wagon suits Schultz well, but the menu is a bare list with no scene jokes and the note is invented.",
+  "missing": [
+   "Candie's 'White cake?' at the Candyland dinner",
+   "The bag-hood raiders arguing about their masks",
+   "Schultz telling Django the Brunhilde and Siegfried story",
+   "Django's blue valet suit (Greenville)",
+   "Schultz pouring his own beer in the empty saloon (Daughtrey)",
+   "The handbill Django keeps as a good luck charm"
+  ],
+  "ideas": [
+   "Replace the note with 'Two beers for two weary travelers.'",
+   "Add plain dish notes, such as 'Schultz's saloon pretzels: served in the empty saloon, with his own beer.'",
+   "Swap 'French cognac, neat' for 'Candie's white cake and coffee', note 'White cake? Schultz doesn't go in for sweets.'",
+   "Add a 'Prost?' stamp to the business card, in place of the 'Mississippi' line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

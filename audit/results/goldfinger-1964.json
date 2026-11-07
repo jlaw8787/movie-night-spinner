@@ -1,0 +1,58 @@
+{
+ "id": "Goldfinger (1964)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the drinks when Goldfinger offers Bond a mint julep at his Kentucky stud farm.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "A mint julep is served at the stud farm, but the page opened does not say who offers it.",
+   "source": "https://www.thejamesbonddossier.com/films/goldfinger.htm",
+   "fix": "Serve the drinks when Bond is handed a mint julep at Goldfinger's Kentucky stud farm.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Dinner at Auric Enterprises is gold plated, Mr Bond. Oddjob will take your hat at the door.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a film line. Goldfinger's real lines on the page opened include 'No Mr Bond, I expect you to die!'. The printed words are an invented quote.",
+   "source": "https://www.thejamesbonddossier.com/films/goldfinger.htm",
+   "fix": "No, Mr. Bond, I expect you to die!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "No, Mr. Bond, I expect you to die!",
+    "by": "Auric Goldfinger",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A hotel in-room layout that matches the Miami and Kentucky scenes, with Oddjob, Fort Knox and the champagne line used well.",
+  "missing": [
+   "Jill Masterson painted gold (the Miami hotel)",
+   "The laser table and 'I expect you to die!'",
+   "Bond cheating Goldfinger at gin rummy (the hotel)",
+   "The Aston Martin DB5 ejector seat",
+   "Oddjob's hat throw",
+   "Pussy Galore's flying circus"
+  ],
+  "ideas": [
+   "Swap the 'Gold-dusted truffles' note for 'Everything he touches turns to gold, except the biscuit.'",
+   "Swap 'Kentucky stud farm steak' note for 'Rare, like the laser table.'",
+   "Swap the 'GS' monogram header for 'Fontainebleau, Miami Beach'.",
+   "Swap the 'Mint julep' note for 'Sour mash, but not too sweet.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

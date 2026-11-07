@@ -1,0 +1,58 @@
+{
+ "id": "Arrival (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eat first. The shell opens every eighteen hours, and we go in with a full stomach.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Louise never says this. Her lines on the quote page I opened (a long list) do not include it or anything about eating. A real short line she says is 'If you could see your whole life from start to finish, would you change things?'",
+   "source": "https://destructoidmod.netlify.app/host-https-en.wikiquote.org/wiki/Arrival_(film)",
+   "fix": "If you could see your whole life from start to finish, would you change things?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "If you could see your whole life from start to finish, would you change things?",
+    "by": "Louise Banks",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Ian's story. Kangaroo means I don't know.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Louise tells the Captain Cook kangaroo story, not Ian, and the punchline is that 'kangaroo' means 'I don't understand'.",
+   "source": "https://destructoidmod.netlify.app/host-https-en.wikiquote.org/wiki/Arrival_(film)",
+   "fix": "Louise's story. Kangaroo means I don't understand.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 19,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "Restrained and on theme, with ring pavlova and logogram crisps that work; the kangaroo note has the wrong storyteller and the note is invented.",
+  "missing": [
+   "The Sanskrit word for war meaning 'a desire for more cows' (Louise to the Colonel)",
+   "Louise pressing her hand to the glass while the ink forms",
+   "The canary carried into the shell",
+   "Teaching the heptapods with a game, 'Let's say I taught them chess instead of English'",
+   "Costello, where's Abbott",
+   "Hannah's lake house in the visions"
+  ],
+  "ideas": [
+   "Swap 'Montana camp jerky' note for 'A desire for more cows' as a Sanskrit nod.",
+   "Swap 'Canary seed crackers' note for 'The canary goes in first'.",
+   "Swap 'Logogram parmesan and black sesame crisps' for 'Ink logogram crisps' served with a black squid ink dip.",
+   "Swap 'Long night tea' note for 'Eighteen hours between visits'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

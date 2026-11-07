@@ -1,0 +1,68 @@
+{
+ "id": "City Slickers (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when the friends take over the cooking on the trail.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The filmsite summary and Wikipedia do not say the three friends take over the cooking. They do clearly show Cookie driving the chuck wagon off a cliff and wrecking the food supply.",
+   "source": "https://filmsite.org/cityslickers.html",
+   "fix": "Serve the mains when Cookie sends the chuck wagon over the cliff.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eat up, city boy. Out here supper's beans and coffee, and you'll be grateful for both.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Curly line. His famous speech is 'One thing. Just one thing.' This one is printed in quote marks and its 'beans and coffee' talk is not in his dialogue.",
+   "source": "https://filmsite.org/cityslickers.html",
+   "fix": "One thing. Just one thing.",
+   "fix_note": {
+    "text": "One thing. Just one thing.",
+    "by": "Curly",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Bonnie, the other cowhand",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Bonnie Rayburn is a fellow paying guest on the drive, not a cowhand. The ranch hands are Jeff and T.R.",
+   "source": "https://en.wikipedia.org/wiki/City_Slickers",
+   "fix": "Bonnie, the only woman on the drive",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A fair chuck wagon board and Curly's finger is in, but the food skips the film's own jokes and the signed note is invented.",
+  "missing": [
+   "Curly's 'One thing. Just one thing.' (riding with Mitch)",
+   "Barry and Ira's ice cream flavour game: 'Rum raisin!'",
+   "Cookie driving the chuck wagon off the cliff",
+   "Mitch's battery coffee grinder starting the stampede (early morning camp)",
+   "Norman the calf, bottle fed (after Mitch delivers him)",
+   "Phil on Curly: 'The man ate bacon at every meal.'"
+  ],
+  "ideas": [
+   "Swap 'Fry bread with honey and chilli' for 'Rum raisin ice cream cones', note 'Barry's pick. Ira got the high five.'",
+   "Replace the Curly note with the real line, 'One thing. Just one thing.'",
+   "Swap 'Prickly pear lemonade' for 'Coffee grinder cold brew', note 'Mitch started a stampede with one of these.'",
+   "Swap 'Chuckwagon coffee with cinnamon cream' note for 'Curly ate bacon at every meal. Have the coffee too.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

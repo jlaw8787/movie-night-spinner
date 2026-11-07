@@ -1,0 +1,78 @@
+{
+ "id": "Cool Runnings (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eat up, boys. Bobsledding in the cold takes a lot out of you, and the sled will not push itself.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Blitzer line. His real lines on the quote page include 'When you cross that finish line, you'll know.' This one is printed in quote marks and the 'sled will not push itself' idea is not in his dialogue.",
+   "source": "https://en.wikiquote.org/wiki/Cool_Runnings",
+   "fix": "When you cross that finish line, you'll know.",
+   "fix_note": {
+    "text": "When you cross that finish line, you'll know.",
+    "by": "Irving Blitzer",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Flaky pastry filled with spiced beef, thyme and butterscotch bonnet",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The data note says scotch bonnet, the chilli used in Jamaican beef patties. The printed face reads 'butterscotch bonnet', which is a sweet toffee word stuck on the chilli. No outside source is needed, the printed text simply differs from the menu's own data note.",
+   "source": "",
+   "fix": "Flaky pastry filled with spiced beef, thyme and scotch bonnet",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the mains when the team first sees snow in Calgary.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia only says the team reaches Calgary, registers and borrows a rundown sled. I could not open a source that shows the moment they first see snow.",
+   "source": "https://en.wikipedia.org/wiki/Cool_Runnings",
+   "fix": "Serve the mains when the team lands in Calgary.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Yul Brenner shaving his head",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Yul is shown bald, but I found no source for a scene of him shaving his head. The sources do show his mirror pep talk with Junior ('I see pride! I see power!').",
+   "source": "https://en.wikiquote.org/wiki/Cool_Runnings",
+   "fix": "Yul Brenner's mirror pep talk: pride, power",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A warm, food-led menu with the right Jamaican dishes and Sanka's egg, held back by one invented note and a couple of shaky scene claims.",
+  "missing": [
+   "Yul's mirror pep talk with Junior: 'I see pride! I see power!' (the bathroom)",
+   "Naming the sled Talulah (Junior's mum)",
+   "Irv's 'dig where I'm coming from' speech (the driver argument)",
+   "Josef Grool and the East Germans, and the bar brawl",
+   "Sanka pulling on everything in his clothes bag in the cold (Calgary)",
+   "Derice: 'Cool runnings means peace be the journey' (naming the team)"
+  ],
+  "ideas": [
+   "Replace the Blitzer note with 'When you cross that finish line, you'll know.'",
+   "Swap the 'Yul Brenner shaving his head' badge for 'Yul's mirror pep talk: pride, power'.",
+   "Change the 'Cool Runnings sorrel ginger punch' note to 'Cool runnings means peace be the journey.'",
+   "Swap the 'Calgary curry goat with roti' note for 'Sanka wore his whole bag of clothes.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

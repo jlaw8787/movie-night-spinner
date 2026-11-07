@@ -1,0 +1,68 @@
+{
+ "id": "Deadpool 2 (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Listen up, X-Force. Dinner is mandatory and so is wearing pants. Peter, that means you.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Wade's lines in any source I opened. It is printed in quote marks as dialogue. As a note Wade might write it is true to Peter, who has no powers and joins X-Force after seeing an ad.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Deadpool2",
+   "fix": "Listen up, X-Force. Dinner is mandatory and so is wearing pants. Peter, that means you.",
+   "fix_note": {
+    "text": "Listen up, X-Force. Dinner is mandatory and so is wearing pants. Peter, that means you.",
+    "by": "Wade Wilson",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks when X-Force jumps out of the plane.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia says the team attacks the convoy by parachute and does not say from what. TV Tropes talks about a helicopter in the drop. I could not confirm it is a plane.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Deadpool2",
+   "fix": "Serve the snacks when X-Force parachutes in to hit the convoy.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Russell's order at the Ice Box. Big trouble follows.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source I opened mentions mac and cheese or any food at the Ice Box.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Deadpool2",
+   "fix": "Russell's lunch tray at the Ice Box. Big trouble follows.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The right prison cafeteria and the key X-Force jokes, but a lot of the food has no film hook.",
+  "missing": [
+   "Vanessa's Skee-Ball token (the anniversary gift)",
+   "Peter's application: 'I just saw the ad and thought it looked fun.'",
+   "The X-Force parachute drop and who survives (Domino)",
+   "Domino's luck: the parachute landing on a car",
+   "Dopinder's superpower, courage (the taxi)",
+   "Juggernaut ripping Wade in half (the convoy)"
+  ],
+  "ideas": [
+   "Change the 'Wade and Vanessa's steak frites' note to 'Skee-Ball token on the side, for Vanessa.'",
+   "Swap 'Mac and cheese bites' for 'Courage wings', note 'Dopinder's superpower.'",
+   "Swap the 'Peter' slip text for 'I just saw the ad and thought it looked fun.'",
+   "Replace the 'Hot line' heading with 'Ice Box line' and add the power-nullifier collar as a stamp."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

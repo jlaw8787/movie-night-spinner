@@ -1,0 +1,48 @@
+{
+ "id": "Dodgeball: A True Underdog Story (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eat fast and keep your head down, kid. If the bread rolls start flying, you'd better be ready.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Patches line. On the quote page he says 'If you can dodge a wrench, you can dodge a ball!' This one is printed in quote marks and the bread rolls are not in his dialogue.",
+   "source": "https://en.wikiquote.org/wiki/Dodgeball:_A_True_Underdog_Story",
+   "fix": "If you can dodge a wrench, you can dodge a ball!",
+   "fix_note": {
+    "text": "If you can dodge a wrench, you can dodge a ball!",
+    "by": "Patches O'Houlihan",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A stadium scoreboard and concessions that fit well, with most of the best lines in use, but the signed note is not Patches's.",
+  "missing": [
+   "Chuck Norris's tie-break vote on the forfeit (the judges)",
+   "Lance Armstrong's pep talk before the final",
+   "Steve the Pirate and the 'buried treasure' (the ending)",
+   "White Goodman's hidden camera in a cutout of himself",
+   "Peter's blindfold finish in the sudden-death match",
+   "Patches's sack of wrenches (the first training session)"
+  ],
+  "ideas": [
+   "Replace the note with 'If you can dodge a wrench, you can dodge a ball!'",
+   "Swap the 'Globo Gym choc peanut protein balls' note for 'White Goodman's hidden camera cutout is watching.'",
+   "Add a 'Blindfold' stamp: 'Just remember your training and trust your instincts.'",
+   "Swap 'Underdog cake' for 'Buried treasure cake', note 'Steve the Pirate found it.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Desperado (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sit down, stranger. The bookstore's closed, but the coffee pot isn't.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Carolina's lines on the quote page ('No.', 'I know.', 'Where are you going?'). It is printed in quote marks as her words. In the film she tends his wounds in the bookstore, so a note about that would be true to her.",
+   "source": "https://en.wikiquote.org/wiki/Desperado_(film)",
+   "fix": "Sit down. The shop is closed, but the back room is not. Let me look at that hand.",
+   "fix_note": {
+    "text": "Sit down. The shop is closed, but the back room is not. Let me look at that hand.",
+    "by": "Carolina",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "A home-cooked meal in Carolina's flat.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Wikipedia has Carolina taking El Mariachi to her bookstore and treating his wounds there. It does not mention a flat or a home-cooked meal.",
+   "source": "https://en.wikipedia.org/wiki/Desperado_(film)",
+   "fix": "Carolina takes him in and patches him up.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A moody Tarasco Bar menu with good Mexican food, but the Carolina note is invented and the film's best set pieces are barely used.",
+  "missing": [
+   "Buscemi's barroom story of the stranger and the bartender (the opening)",
+   "Navajas and his throwing knives (the church)",
+   "El Mariachi giving the boy guitar lessons",
+   "Bucho turning out to be El Mariachi's brother Cesar (the rooftop)",
+   "Campa and Quino with their gear (the roadside gunfight)",
+   "The bookstore burning and the rooftop escape"
+  ],
+  "ideas": [
+   "Swap the Carolina note for a true note about patching up his hand.",
+   "Add 'Chango beer, cleaner mug please' to the bar in place of the 'Paloma' note.",
+   "Change the 'Bookshop jalapeno cheese quesadillas' note to 'Bucho paid for the shelves.'",
+   "Swap 'Mariachi guacamole' note for 'Easier to destroy than to create. Eat it anyway.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

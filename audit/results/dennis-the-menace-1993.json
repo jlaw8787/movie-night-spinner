@@ -1,0 +1,58 @@
+{
+ "id": "Dennis the Menace (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Mrs Wilson brings out the cookies.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Neither the Wikipedia plot nor the TV Tropes and quote pages I opened mention Mrs Wilson bringing out cookies. A dessert moment that is in the film is the garage door sending the Floraganza dessert table flying.",
+   "source": "https://en.wikipedia.org/wiki/Dennis_the_Menace_(1993_film)",
+   "fix": "Serve dessert when Dennis's garage door sends the dessert table flying.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mr. Wilson, I brought you a cookie to say sorry about your garden. I only ate a little bit of it on the way over.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Dennis's lines on the quote page, and printed in quote marks as his words. As a note Dennis might write it is true to the plot, because he wrecks the night of the flower and has to say sorry. The flower, not the garden, is what he ruins.",
+   "source": "https://moviemistakes.com/film1512/quotes",
+   "fix": "Dear Mr. Wilson, sorry about the flower. I brought you a cookie. I only ate a little bit of it on the way over.",
+   "fix_note": {
+    "text": "Dear Mr. Wilson, sorry about the flower. I brought you a cookie. I only ate a little bit of it on the way over.",
+    "by": "Dennis Mitchell",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Right neighbourhood and a good Mr Wilson tone, but the cookie cue is not backed by the sources and the Dennis note is invented.",
+  "missing": [
+   "Dennis slingshotting an aspirin into Mr Wilson's mouth (the opening)",
+   "Paint blown onto Mr Wilson's barbecue steak: 'tastes like paint, and wood'",
+   "Chiclets stuck in for Mr Wilson's dentures (the newspaper photo)",
+   "Dennis feeding Switchblade Sam a whole pot of baked beans (the campfire)",
+   "Mr Wilson's flower blooming for under fifteen seconds (the Floraganza)",
+   "Mothballs in the Wilsons' attic"
+  ],
+  "ideas": [
+   "Swap 'Switchblade Sam's campfire snags' for 'Switchblade Sam's pot of baked beans', note 'Dennis fed him the whole pot.'",
+   "Swap 'Mr Wilson's lamb chops with mint sauce' for 'Mr Wilson's barbecue steak', note 'Tastes like paint, and wood.'",
+   "Replace the cue with 'Serve dessert when Dennis's garage door sends the dessert table flying.'",
+   "Swap 'Mrs Wilson's cookies' for 'Chiclet tooth cookies', note 'Mr Wilson's front teeth, one more time.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

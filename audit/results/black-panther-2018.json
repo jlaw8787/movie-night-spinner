@@ -1,0 +1,58 @@
+{
+ "id": "Black Panther (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Brother, taste this. It came out of my lab. Do not tell Mother how I made it.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Shuri never says this. The quote page lists her real lines and none of them is about tasting something from her lab. It is set in quote marks as her words.",
+   "source": "https://en.wikiquote.org/wiki/Black_Panther_(film)",
+   "fix": "I invite you to my lab and you just kick things around?!",
+   "fix_note": {
+    "text": "I invite you to my lab and you just kick things around?!",
+    "by": "Shuri",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The busy street market in Birnin Zana",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot summary I opened shows the Golden City as the capital but does not describe a market scene in Birnin Zana. The only market it names is the Busan fish market.",
+   "source": "https://www.wikiwand.com/en/Black_Panther_(film)",
+   "fix": "Street food from the Golden City",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good Wakanda market window and the right Marvel colours, but the food and the note are generic and Shuri's line is made up.",
+  "missing": [
+   "Shuri's sandals and 'What are those?!' (the lab)",
+   "Wakanda Forever crossed-arms salute (the coronation)",
+   "W'Kabi's war rhinos (the final battle)",
+   "The Busan casino and Okoye's wig (the Busan sequence)",
+   "Killmonger asking to be buried in the ocean (the ending)",
+   "The heart-shaped herb ceremony on the ancestral plane"
+  ],
+  "ideas": [
+   "Swap the Shuri note for her real line 'I invite you to my lab and you just kick things around?!'",
+   "Swap 'Puff-puff with chilli honey' for 'Okoye's wig skewers' with a note about the Busan casino fight.",
+   "Swap 'Vibranium sample' ticket text for 'Kimoyo bead, tap to pay'.",
+   "Swap 'Chilled baobab and ginger' note for 'Shuri's pick after she fixed the sandals.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

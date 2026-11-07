@@ -1,0 +1,68 @@
+{
+ "id": "Big Hero 6 (2014)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Aunt Cass brings out her hot wings.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Fandom says Cass offers to cook wings for a dinner celebrating Hiro's first day at college, and Hiro takes the wings to his room to hide Baymax. No source I opened says the wings are hot.",
+   "source": "https://bighero6.fandom.com/wiki/Aunt_Cass",
+   "fix": "Serve the snacks when Aunt Cass brings out her wings.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Showtime: Serve the snacks when Aunt Cass brings out her hot wings.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "Same cue as printed on the card. The wings are confirmed, the word hot is not.",
+   "source": "https://bighero6.fandom.com/wiki/Aunt_Cass",
+   "fix": "Showtime: Serve the snacks when Aunt Cass brings out her wings.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Hiro, sweetheart, you can't save the city on an empty stomach. Eat.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line Cass says. The two quote pages I opened (Hiro, Fred and Honey Lemon lines only) have no Cass dialogue, so no source could prove it, but it matches nothing I know from the film. She does cook for Hiro, so a written note fits.",
+   "source": "",
+   "fix": "Hiro, sweetheart, saving the city is no reason to skip dinner. Eat.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Hiro, sweetheart, saving the city is no reason to skip dinner. Eat.",
+    "by": "Aunt Cass",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Right cafe and right crew, with a cute care card prop, but the cue says hot wings without proof and the note is invented.",
+  "missing": [
+   "Baymax's 'Hello. I am Baymax' and the scan",
+   "Hiro hiding Baymax in his room",
+   "Cass cooking dinner for Hiro's first day at college",
+   "Tadashi's nerd lab and the microbot demo",
+   "Fred's mansion",
+   "Baymax inflating to carry the team"
+  ],
+  "ideas": [
+   "Swap 'Iced matcha latte' for 'Baymax latte', a marshmallow body floating on top.",
+   "Swap 'Cafe cream puffs' for 'Microbot puffs', tiny choux that stack.",
+   "Swap 'Nerd lab salmon and avocado sushi rolls' note for 'Tadashi's lab, nerds only'.",
+   "Swap 'Baymax marshmallow bites' note for 'Are you satisfied with your care?'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

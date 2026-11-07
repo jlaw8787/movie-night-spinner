@@ -1,0 +1,48 @@
+{
+ "id": "Collateral (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Grab something at the next stop, Max. Five stops tonight and I don't do them on an empty stomach.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Vincent's lines on the quote page. It is printed in quote marks as his words, and the 'empty stomach' idea does not match how he talks to Max.",
+   "source": "https://en.wikiquote.org/wiki/Collateral_(film)",
+   "fix": "Focus on the job. Drive.",
+   "fix_note": {
+    "text": "Focus on the job. Drive.",
+    "by": "Vincent",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Hits the five stops, the jazz club and Ida, but the signed note is made up and the photo strip on the second face is a dark blur.",
+  "missing": [
+   "Vincent's story of the man who rode the MTA for six hours (the first fare)",
+   "Daniel's Miles Davis story at the jazz club (22 July 1964)",
+   "The corpse landing on the cab roof (the first stop)",
+   "Annie's business card for Max (the first fare)",
+   "Max's island postcard on the visor (the Island dream)",
+   "Vincent's last ride on the train (the finale)"
+  ],
+  "ideas": [
+   "Replace the Vincent note with 'Focus on the job. Drive.'",
+   "Swap 'Cab driver's pretzel, peanut and jerky mix' for 'Miles Davis bar nuts', note 'Daniel played twenty minutes beside Miles.'",
+   "Replace the dark blurry strip on the second face with a clear still from the jazz club or the train.",
+   "Change the 'Ida's hospital chicken noodle soup' note to 'Max told his mum he ran a limousine company.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

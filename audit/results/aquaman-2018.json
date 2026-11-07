@@ -1,0 +1,58 @@
+{
+ "id": "Aquaman (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Arthur, the sea gave me you. Eat up, then go and get your kingdom.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a Tom Curry line. The only Tom lines on the Wikiquote page are 'Here, you feel them.' and 'That's my superpower.' No real line about eating or kingdoms. Tom did rescue Atlanna from the sea, so a note in his voice can say that.",
+   "source": "https://en.wikiquote.org/wiki/Aquaman_(film)",
+   "fix": "Arthur, the sea sent your mum to my door, and you after her. Eat up, then go and claim your kingdom.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Arthur, the sea sent your mum to my door, and you after her. Eat up, then go and claim your kingdom.",
+    "by": "Tom Curry",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Tom and Arthur's afternoon at the bikers' bar.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The Wikiquote page has Arthur and Tom drinking at a bar ('you can still drink me under the table'), but no source I opened mentions bikers. The dish 'Bikers' bar wings' has the same problem.",
+   "source": "https://en.wikiquote.org/wiki/Aquaman_(film)",
+   "fix": "Tom and Arthur's afternoon at the bar.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 2,
+  "look": 3,
+  "overall": 2.8,
+  "verdict": "A decent seaside kiosk, but it reads like any beach shack and says little about the film beyond the lighthouse and the rose.",
+  "missing": [
+   "Arthur and Tom drinking at the bar ('drink me under the table')",
+   "Black Manta hijacking the Russian submarine (opening)",
+   "Mera eating the rose at the market (cue, already in)",
+   "Topo drumming in the final battle",
+   "The Karathen guarding the trident",
+   "Atlanna washing up at the lighthouse in the storm"
+  ],
+  "ideas": [
+   "Swap 'Blue Hawaiian with rum and pineapple' for 'Mera's rose cocktail' with rosewater and a petal on top.",
+   "Swap the 'Pint of stout' note for 'Drink me under the table'.",
+   "Swap 'Maine lobster rolls' note for 'Karathen sized, almost'.",
+   "Swap the surf report conditions 'Small and clean, perfect for learners' for 'Tsunami warning. Orm is in a mood.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

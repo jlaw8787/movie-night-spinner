@@ -1,0 +1,58 @@
+{
+ "id": "Carrie (1976)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Carrie should go to the prom. Tommy, take her and get her some punch and cake.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Sue never says this. In the film she asks Tommy to invite Carrie to the prom out of guilt, but this wording is made up. It is printed in quote marks as her words.",
+   "source": "https://wikiwand.com/en/Carrie_(1976_film)",
+   "fix": "Tommy, take Carrie to the prom. Get her some punch and cake, and be kind.",
+   "fix_note": {
+    "text": "Tommy, take Carrie to the prom. Get her some punch and cake, and be kind.",
+    "by": "Sue Snell",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Tommy's toast to the new prom king and queen.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Tommy and Carrie are crowned, and then the blood drops. The plot summary I opened has no toast and does not mention punch.",
+   "source": "https://wikiwand.com/en/Carrie_(1976_film)",
+   "fix": "For the new prom king and queen.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Right prom setting, dark humour about the rafters and a good photo strip, but the colours are warm retro cream, not the film's blood and red.",
+  "missing": [
+   "The pig blood bucket (the rafters, shown as the joke)",
+   "'They're all gonna laugh at you!' (Margaret's warning)",
+   "Carrie's telekinesis in the gym (the climax)",
+   "The prayer closet (the White house)",
+   "Sue's nightmare of the arm from the grave (the ending)",
+   "The pink prom dress Carrie sewed"
+  ],
+  "ideas": [
+   "Swap 'Bucket-free prom punch' for 'Bucket-free strawberry punch' with 'Look up before you sip.'",
+   "Swap the 'Gym class pretzel bites' note for 'Creepy Carrie missed the ball.'",
+   "Swap the cream paper for a deep red and pink prom flyer.",
+   "Swap the 'Shirley Temple' note for 'Pink, like the dress.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

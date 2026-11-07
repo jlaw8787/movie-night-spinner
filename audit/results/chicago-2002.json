@@ -1,0 +1,48 @@
+{
+ "id": "Chicago (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I want my name in every paper in town, so tonight's dinner is for the cameras. Smile, Amos, and pass the rolls.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Roxie's lines on the quote page. Her real lines include 'And that's showbiz, kid.' and 'I bet you want to know why I shot the bastard?' This one is printed in quote marks as her words.",
+   "source": "https://en.wikiquote.org/wiki/Chicago_(2002_film)",
+   "fix": "And that's showbiz, kid.",
+   "fix_note": {
+    "text": "And that's showbiz, kid.",
+    "by": "Roxie Hart",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A jail canteen suits Cook County, but it plays like a stock canteen and reaches for Chicago foods that came long after 1924.",
+  "missing": [
+   "Cell Block Tango and the merry murderesses (Murderess' Row)",
+   "Billy Flynn's question about the five thousand dollars (Amos pays him)",
+   "Roxie working the press as Flynn's ventriloquist dummy (We Both Reached for the Gun)",
+   "Mister Cellophane (Amos at the trial)",
+   "Roxie's fake pregnancy (the middle of the trial)",
+   "Velma running out of ice at the Hotel Cicero (her story)"
+  ],
+  "ideas": [
+   "Swap 'Deep dish pizza' (a 1940s invention) for a 1920s dish such as 'Razzle dazzle fried oysters', note 'Billy Flynn's three ring circus.'",
+   "Swap 'Billy Flynn's Italian beef rolls' for 'Billy Flynn's five thousand dollar steak', note 'He asks one question first.'",
+   "Rename 'Bathtub gin fizz' to 'Hotel Cicero gin and ice', note 'Velma ran out of ice. Don't.'",
+   "Change the layout from a jail canteen to a nightclub or speakeasy format, to match the Onyx and the jazz age."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

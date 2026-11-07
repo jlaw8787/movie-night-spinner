@@ -1,0 +1,58 @@
+{
+ "id": "Crouching Tiger, Hidden Dragon (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I wanted to tell you over dinner for years. Tea first, the truth can wait.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Shu Lien's lines on the quote pages. A real line about feelings left unsaid is 'To repress one's feelings only makes them stronger.' This one is printed in quote marks.",
+   "source": "https://moviemistakes.com/film313/quotes",
+   "fix": "To repress one's feelings only makes them stronger.",
+   "fix_note": {
+    "text": "To repress one's feelings only makes them stronger.",
+    "by": "Shu Lien",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "For the Invincible Sword Goddess. Mind the furniture.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "I could not open a source that gives Jen the title 'Invincible Sword Goddess'. She is the Hidden Dragon of the title, and she wrecks a teahouse with the Green Destiny, so the furniture part works.",
+   "source": "",
+   "fix": "For Jen, the Hidden Dragon. Mind the furniture.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Good dishes from the film, but a British tearoom layout is a poor fit for a wuxia teahouse and the note is invented.",
+  "missing": [
+   "Lo stealing Jen's comb in the desert cave (the flashback)",
+   "Mu Bai's last words to Shu Lien (the cave)",
+   "Jade Fox posing as Jen's governess",
+   "The Green Destiny breaking Shu Lien's weapons (the duel)",
+   "The bamboo forest treetop duel (Mu Bai and Jen)",
+   "Jen leaping from the bridge at Mount Wudang"
+  ],
+  "ideas": [
+   "Replace the Shu Lien note with 'To repress one's feelings only makes them stronger.'",
+   "Change the 'Desert lamb skewers' note to 'Lo stole Jen's comb in the desert.'",
+   "Rename 'Luncheon and Tea' to 'Tea at the Inn' and swap the tearoom frame for a lattice screen layout.",
+   "Swap the 'Green Destiny sesame balls' note for 'It cuts through anything, even the teahouse.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "George of the Jungle (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Ursula, George make dinner. George find fruit, George find nuts. Ape cook better, but George try.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as George's words, but it is not a line from the film. It sounds like him and fits the plot, so it works as a note without quote marks.",
+   "source": "https://en.wikipedia.org/wiki/George_of_the_Jungle_(film)",
+   "fix": "Keep the words, store it as a note with no quote marks.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Ursula, George make dinner. George find fruit, George find nuts. Ape cook better, but George try.",
+    "by": "George",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A jungle tiki setting that fits, with Ape and Shep on the plates, but only the tree gag really lands.",
+  "missing": [
+   "The theme song's 'Watch out for that tree' (every swing)",
+   "Ape reading and speaking like a professor",
+   "Lyle accidentally marrying a gorilla (the finale)",
+   "Tookie the toucan",
+   "George saving the paraglider at the Bay Bridge",
+   "Ursula's engagement party"
+  ],
+  "ideas": [
+   "Swap the 'Coconut prawns' house note for a Lyle line about the wrong bride.",
+   "Swap 'Safari tropical fruit' note for 'Tookie the toucan insists on the mango.'",
+   "Swap the 'Mai tai' house note for 'Ape's recipe. Ask for the long version.'",
+   "Swap 'Jungle tree crash coconut pudding' note for 'Do not look at the next tree.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

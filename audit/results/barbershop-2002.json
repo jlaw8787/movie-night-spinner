@@ -1,0 +1,48 @@
+{
+ "id": "Barbershop (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Everybody gets a say in here, but I get the last slice of pizza.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line Eddie says in the film. No quote page with Eddie's dialogue could be opened, and nothing in the apple juice write up on Looper matches it. He is the loud one with the opinions, so a written note in his voice fits.",
+   "source": "",
+   "fix": "Everybody gets a say in here. I just get the longest one.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Everybody gets a say in here. I just get the longest one.",
+    "by": "Eddie",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 21,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A very fitting menu with the shop crew on the loyalty card and the apple juice gag as the cue; only the Eddie note is invented.",
+  "missing": [
+   "Terri's red sign on the juice, 'do not drink me'",
+   "Isaac suggesting it evaporated",
+   "Ricky accusing Jimmy and Jimmy asking for 'ocular proof'",
+   "Terri buying a new bottle and the lecture on respect and decency",
+   "Calvin mediating the fight",
+   "Calvin finally selling the shop"
+  ],
+  "ideas": [
+   "Swap 'Terri's apple ginger cooler' note 'bottled with a name on each' for 'Red sign on the bottle: do not drink me'.",
+   "Swap 'Green River lime soda' for an apple juice shot called 'Maybe it evaporated'.",
+   "Swap 'Chicago Italian beef with giardiniera' note for 'Ocular proof, Jimmy'.",
+   "Swap the FREE stamp slot on the card for 'Terri's juice, hands off'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

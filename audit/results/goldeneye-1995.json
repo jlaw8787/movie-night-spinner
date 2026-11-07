@@ -1,0 +1,68 @@
+{
+ "id": "GoldenEye (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Business is business, Mr. Bond. The vodka is on me, but the information will cost you.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The quote page has Zukovsky's real line about the Walther PPK and nothing like this. The printed words are an invented quote, though as a note it suits a man who sells information.",
+   "source": "https://moviemistakes.com/film550/quotes",
+   "fix": "Use a note: The vodka is on me, Mr. Bond. The information will cost you.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The vodka is on me, Mr. Bond. The information will cost you.",
+    "by": "Valentin Zukovsky",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Zukovsky's Casino Lounge",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "Sources opened do not name or describe Zukovsky's St Petersburg place. The Monte Carlo casino is a separate scene.",
+   "source": "https://www.thejamesbonddossier.com/films/goldeneye.htm",
+   "fix": "Zukovsky's Club",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Valentin's, St. Petersburg",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "No source opened gives a name for his club, so 'Valentin's' is not confirmed.",
+   "source": "https://www.thejamesbonddossier.com/films/goldeneye.htm",
+   "fix": "Zukovsky's, St. Petersburg",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A smoky club frame with the VIP 006 card and a good Russian menu, missing the film's famous gadgets and lines.",
+  "missing": [
+   "Bond's vodka martini, shaken not stirred (the casino)",
+   "Xenia Onatopp's thighs (the helicopter)",
+   "Boris's 'I am invincible' (the control room)",
+   "Q's 'Don't touch that! It's my lunch.' (the lab)",
+   "The pen grenade",
+   "The 006 baccarat hand"
+  ],
+  "ideas": [
+   "Swap the 'Vodka martini' description for 'Shaken, not stirred, and ordered before the cards turn.'",
+   "Swap the 'Syrniki' note for 'Q wants his lunch back.'",
+   "Swap the 'Cuban mojo pork' note for 'The dish in the lake. Boris is invincible.'",
+   "Swap the 'Cover charge after nine' footer for 'Two vodka martinis minimum. Both ordered, neither drunk.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

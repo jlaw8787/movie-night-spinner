@@ -264,7 +264,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const SH=84,PH=H-SH,PW=PM?593:740;
   const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
   const cells=beach?[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]]
-    :[["Out front",""],["Sky",ctx.tone==="eerie"?"Fog":["Fine","Clear","Cloudy","Overcast"][+num%4]],["Wind",["still","light breeze","gusty","fresh"][+num%4]],["Temp",`${water+4} C`],["Last orders",`${(+yy%3)+8}:${["00","15","30","45"][+num%4]}`]];
+    :[["Out front",""],["Sky",ctx.tone==="eerie"?"Fog":["Fine","Clear","Cloudy","Overcast"][+num%4]],["Wind",["still","light breeze","gusty","fresh"][+num%4]],["Temp",/\bwinter\b/i.test(String(fl.sign||"")+" "+String(fl.venue||""))?`-${(+yy%9)+6} C`:`${water+4} C`],["Last orders",`${(+yy%3)+8}:${["00","15","30","45"][+num%4]}`]];
   const cw=c=>c[1]?Math.max(c[0].length*15*.78,c[1].length*20*(E.bcw+.06))+36:c[0].length*24*(E.dcw+.04)+36;
   const room=W-48-cells.reduce((a,c)=>a+cw(c),0)-4;
   const tail=[[beach?"Conditions":"Forecast",TK.cond]];if(winks[0]&&room>=560)tail.push(["Spotted",trunc(winks[0],44)]);

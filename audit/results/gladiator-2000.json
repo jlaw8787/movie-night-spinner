@@ -1,0 +1,58 @@
+{
+ "id": "Gladiator (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "In the arena I fight for the crowd, but my heart is at home with my wife and son. Hand me the bread.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The quote page lists Maximus's real lines (such as 'What we do in life echoes in eternity.') and not this one. It reads as invented, though it fits his longing for home.",
+   "source": "https://moviemistakes.com/film541/quotes",
+   "fix": "Use a note: A soldier eats bread and olives, and dreams of his farm. I would trade the arena for one meal at home.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "A soldier eats bread and olives, and dreams of his farm. I would trade the arena for one meal at home.",
+    "by": "Maximus",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Maximus drops his sword",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "No source opened pins this to a scene. He throws his sword in the arena and spares Tigris, but 'drops his sword' is not confirmed.",
+   "source": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Gladiator_(2000_film)",
+   "fix": "Maximus spares Tigris of Gaul",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A parchment tavern with the wheat, olives and Zucchabar in the right places, but it feels like a generic ancient menu.",
+  "missing": [
+   "'Are you not entertained?' (the arena)",
+   "'Strength and honour' (the battlefield)",
+   "Commodus's tigers in the arena (Tigris of Gaul)",
+   "Juba burying the figurines at the Colosseum",
+   "Maximus rubbing dirt on his hands before a fight",
+   "Proximo's 'win the crowd' (Zucchabar)"
+  ],
+  "ideas": [
+   "Swap the 'Roast chickpeas' note for 'Proximo says win the crowd, then eat.'",
+   "Swap 'Colosseum lamb' note for 'Tigris of Gaul would not share.'",
+   "Swap the Maximus quote for a note about the farm and the bread.",
+   "Swap the generic parchment border for sand and stone from the Colosseum floor."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "Free Willy (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Willy, I saved you the good fish from the bucket. Eat up, big guy, you need your strength for tonight.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The quote page opened lists other characters and no line like this from Jesse. As a note it fits the plot, but it is printed in quote marks as dialogue.",
+   "source": "https://moviequotes.com/s-movie/free-willy",
+   "fix": "Use a note: Willy, I saved you the good fish. Eat up, big guy, because we are getting you home tonight.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Willy, I saved you the good fish. Eat up, big guy, because we are getting you home tonight.",
+    "by": "Jesse",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Jesse's park kiosk chilli cheese dogs",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The plot summary has no park kiosk job for Jesse. It has him sneaking into the park and falling into Willy's tank.",
+   "source": "https://whatsafterthemovie.com/summary/free-willy",
+   "fix": "Escape night chilli cheese dogs",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "For the night drive to the cove.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The escape drive in the plot summary ends at Dawson's Marina after the truck sticks in mud. No cove is named.",
+   "source": "https://whatsafterthemovie.com/summary/free-willy",
+   "fix": "For the night drive to the marina.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The iconic leap poster helps, but a beach kiosk is not an amusement park tank and the writing is plain.",
+  "missing": [
+   "Jesse scrubbing the graffiti he sprayed (the park wall)",
+   "Willy rescuing Jesse after he falls into the tank",
+   "Randolph's Haida prayer (the escape)",
+   "The truck stuck in the mud (the road)",
+   "Jesse calling Glen and Annie on the CB radio",
+   "Willy leaping the breakwater (the finale)"
+  ],
+  "ideas": [
+   "Swap the 'Surf report' strip for a park sign: 'Shows daily. Willy not on the bill.'",
+   "Swap the 'Grilled corn' house note for 'Jesse's harmonica, and Willy answers.'",
+   "Swap 'Orca cookies and cream' for 'Breakwater leap ice cream'.",
+   "Swap the 'Randolph's chilli crab linguine' name for 'Randolph's Haida prayer linguine'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

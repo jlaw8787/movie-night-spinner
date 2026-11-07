@@ -1,0 +1,48 @@
+{
+ "id": "Alice in Wonderland (1951)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Move down, move down, clean cups all round! The jam tarts are fresh and the Dormouse is asleep in the teapot again.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. The Hatter's real line is 'Clean cup, clean cup! Move down.' The longer version about jam tarts and the Dormouse is not in the film.",
+   "source": "https://moviemistakes.com/film2465/quotes",
+   "fix": "Clean cup, clean cup! Move down.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Clean cup, clean cup! Move down.",
+    "by": "Mad Hatter",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 19,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "The strongest of the batch, a proper tearoom with a Hatter price tag and a good look; only the note needs a real Hatter line.",
+  "missing": [
+   "The Unbirthday Song at the table",
+   "The Hatter's watch that is exactly two days slow (tea party)",
+   "Painting the roses red (the Queen's garden)",
+   "The Caterpillar's smoke letters (mushroom)",
+   "The Dodo's caucus race (the beach)",
+   "The Cheshire Cat appearing and fading until only the grin is left"
+  ],
+  "ideas": [
+   "Swap 'Tea party cake' for 'Unbirthday cake' with one candle and a note 'Not a birthday cake'.",
+   "Swap 'Lapsang souchong' note for 'Two days slow, like the Hatter's watch', since the cup line is now the main note.",
+   "Swap 'Queen of Hearts tarts' note for 'Painted red by the gardeners before she sees'.",
+   "Swap 'Eat me cakes' note for 'Small enough for the little door', with a matching Drink Me bottle prop."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

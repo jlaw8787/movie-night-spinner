@@ -1,0 +1,67 @@
+{
+ "id": "Deadpool (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sister Margaret's Home for Wayward Girls",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "In the film the bar is Sister Margaret's School for Wayward Children, the name used for Weasel's bar. The printed title says 'Home for Wayward Girls', on both faces.",
+   "source": "https://xmenmovies.fandom.com/wiki/Weasel",
+   "fix": "Sister Margaret's School for Wayward Children",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Yes, I'm talking to you. Eat up, the fourth wall is closed for the night.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not found among Wade's lines on the quote page. A real fourth wall line is 'A fourth wall break inside a fourth wall break. That's, like, sixteen walls!' This one is printed in quote marks.",
+   "source": "https://en.wikiquote.org/wiki/Deadpool_(film)",
+   "fix": "A fourth wall break inside a fourth wall break. That's, like, sixteen walls!",
+   "fix_note": {
+    "text": "A fourth wall break inside a fourth wall break. That's, like, sixteen walls!",
+    "by": "Wade Wilson",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the taxi driver who becomes his sidekick",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Dopinder is Wade's cab driver. No source I opened calls him a sidekick in this film, and the sequel has him wanting to be a hitman.",
+   "source": "",
+   "fix": "Wade's regular cab driver, and a big fan",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "The bar tab layout suits Sister Margaret's very well, but the bar's name is wrong and the signed note is invented.",
+  "missing": [
+   "Rob Liefeld's name on the dead pool board (behind the bar)",
+   "Ajax's real name, Francis (the lab)",
+   "Weasel picking the name Deadpool from the dead pool",
+   "Blind Al's house (Wade's hideout)",
+   "The Helicarrier showdown (the finale)",
+   "Wade reconciling with Vanessa (the end)"
+  ],
+  "ideas": [
+   "Fix the title to 'Sister Margaret's School for Wayward Children'.",
+   "Swap the 'Pickled eggs from the jar' note for 'Behind the dead pool board, where Weasel took bets.'",
+   "Replace the 'Unicorn cupcakes' note with 'Blind Al's house, unicorns and all.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

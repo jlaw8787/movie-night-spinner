@@ -1,0 +1,68 @@
+{
+ "id": "Bambi (1942)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Thumper teaches Bambi to eat the clover.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The greens scene in the film is Thumper's mother making him recite his greens rhyme. The pages I opened say nothing about clover or Thumper teaching Bambi to eat.",
+   "source": "https://moviemistakes.com/film115/quotes",
+   "fix": "Serve the snacks when Thumper recites his greens rhyme.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the snacks when Thumper teaches Bambi to eat the clover.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "Same cue as printed on the card. No source shows Thumper teaching Bambi to eat clover.",
+   "source": "https://moviemistakes.com/film115/quotes",
+   "fix": "Serve the snacks when Thumper recites his greens rhyme.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Bambi, the clover down by the creek is the sweetest. Fill up now, we have a big day of hopping tomorrow.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Thumper never says this. His lines on the Moviemistakes page are the greens rhyme, 'Whatcha gonna call 'im?' and 'Bambi... Yep, I guess that'll do all right.' The rhyme is 'Eating greens is a special treat, it makes long ears and great big feet.'",
+   "source": "https://moviemistakes.com/film115/quotes",
+   "fix": "Eating greens is a special treat. It makes long ears and great big feet.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Eating greens is a special treat. It makes long ears and great big feet.",
+    "by": "Thumper",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Charming dishes and the right characters, but the army camp layout does not suit a meadow and the cue gets Thumper's greens scene wrong.",
+  "missing": [
+   "Thumper's greens rhyme for his mother",
+   "Thumper asking 'Whatcha gonna call 'im?' and naming Bambi",
+   "Friend Owl explaining twitterpation",
+   "The Great Prince of the Forest on the cliff",
+   "Bambi slipping on the frozen pond",
+   "Man in the forest, the hunters"
+  ],
+  "ideas": [
+   "Swap 'Spring greens and ricotta tart' for 'Awful stuff to eat' tart, with Thumper's 'But it sure is awful stuff to eat'.",
+   "Swap 'Frozen pond pavlova' note for 'Do not skate on it'.",
+   "Swap the 'Meadow Tag' prop for a thump tally, 'Thump once for yes'.",
+   "Swap the khaki camp paper for soft forest greens and painted backdrops."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Boyz n the Hood (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains at the backyard welcome-home barbecue.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot summary has a homecoming party for Doughboy after he gets out, but it does not say it is a barbecue or a backyard.",
+   "source": "https://en.wikipedia.org/wiki/Boyz_n_the_Hood",
+   "fix": "Serve the mains at Doughboy's homecoming party.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "A father's job is getting us to the table. Sit, son, dinner's hot.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Furious never says this. The quote pages list his real lines and none is about dinner. It is printed in quote marks as his words. Furious is the film's father figure, so a note in his voice is true to the character.",
+   "source": "https://everydaypower.com/boyz-n-the-hood-quotes",
+   "fix": "Sit down and eat first. The talk can wait until the plates are clean.",
+   "fix_note": {
+    "text": "Sit down and eat first. The talk can wait until the plates are clean.",
+    "by": "Furious Styles",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The corner market chalkboard is a fair setting, but it plays safe and leaves out the street scenes people remember.",
+  "missing": [
+   "Furious's speech about the gun shop on every corner (Crenshaw and Slauson)",
+   "Ricky's SAT envelope (the day he dies)",
+   "The 'Increase the Peace' street sign (the opening)",
+   "Doughboy and Ricky's football in the street",
+   "The corner store shoplifting arrest (1984)",
+   "Doughboy's homecoming party"
+  ],
+  "ideas": [
+   "Swap the 'Doughboy's welcome-home wings' note for 'Out and home. Plates first.'",
+   "Swap 'Caramelised onion dip' note for 'The corner store, 1984.'",
+   "Swap the 'Corner market receipt' text for 'Increase the Peace' as a sign line.",
+   "Swap 'Buttermilk fried chicken with greens' note for 'Dinner at Furious's table.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

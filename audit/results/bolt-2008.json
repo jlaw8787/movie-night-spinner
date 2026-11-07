@@ -1,0 +1,58 @@
+{
+ "id": "Bolt (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bolt, the hamster ball is my whole dinner plan. It's a hard rolling life. Mittens, please feed the dog.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Rhino never says this. The quote page I opened shows none of his real lines about food or his ball. It is printed in quote marks as his words. Rhino does live in his ball, so a note in his voice is fine.",
+   "source": "https://moviemistakes.com/film7705/quotes",
+   "fix": "Bolt, a hamster ball is a hard rolling life. Mittens, please feed the dog before he super barks the place down.",
+   "fix_note": {
+    "text": "Bolt, a hamster ball is a hard rolling life. Mittens, please feed the dog before he super barks the place down.",
+    "by": "Rhino",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Mittens taught Bolt to beg for these.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot summary says Mittens teaches Bolt to act like a needy dog and he is rewarded with food at the RV park, but it does not say the food was bacon wrapped hot dogs.",
+   "source": "https://www.imdb.com/title/tt0397892/plotsummary",
+   "fix": "Mittens taught Bolt to beg for a feed like this.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The studio trailer and call sheet suit Bolt, but the dishes are plain and the big moments are mostly missing.",
+  "missing": [
+   "Bolt shipped to New York in a box of packing peanuts (the opening road trip)",
+   "The super bark knocking things over (the TV show)",
+   "The green eyed man (the TV show villain)",
+   "Penny's cry of 'Bolt!' (the set)",
+   "Rhino's action hamster act (the RV park)",
+   "Pigeons giving directions in New York"
+  ],
+  "ideas": [
+   "Swap 'Rhino's cheese balls' note for 'Action hamster approved.'",
+   "Swap 'Lightning bolt cookies' for 'Packing peanut popcorn' with a note on the box Bolt got shipped in.",
+   "Swap the 'Chocolate malt thickshake' note for 'Super bark strength.'",
+   "Swap the 'Call sheet' text for 'Green eyed man, no appearance fee'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

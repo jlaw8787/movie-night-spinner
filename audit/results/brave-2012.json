@@ -1,0 +1,68 @@
+{
+ "id": "Brave (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Clan DunBroch Butterscotch eggs",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "A Scotch egg is an egg wrapped in sausage meat. The data file says Scotch eggs. The printed menu says Butterscotch, which looks like a find and replace that caught Scotch.",
+   "source": "",
+   "fix": "Clan DunBroch Scotch eggs",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Butterscotch broth",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The dish is lamb and barley soup, which is Scotch broth. The data file says Scotch broth. Butterscotch is a sweet sauce and is wrong here.",
+   "source": "",
+   "fix": "Scotch broth",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "A princess does not shoot arrows at the feast. And she does not bake a cake for her mother like that.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Elinor never says this. Her real line on the quote page is about not putting a weapon on the table. It is printed in quote marks as her words.",
+   "source": "https://moviemistakes.com/film9298/quotes",
+   "fix": "A lady does not place her weapon on the table.",
+   "fix_note": {
+    "text": "A lady does not place her weapon on the table.",
+    "by": "Queen Elinor",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Castle kitchen and the cake cue are right, but two dish names are spelled wrong and the poster sits in black bars.",
+  "missing": [
+   "Elinor as a bear stealing fish from the river (the forest)",
+   "The witch's carvings and her bear shop (the cottage)",
+   "The wisps leading Merida (the forest)",
+   "Angus and the archery contest (the Games)",
+   "Elinor bear sneaking through the kitchen (the castle)",
+   "Fergus's missing leg and Mor'du (the great hall)"
+  ],
+  "ideas": [
+   "Fix 'Butterscotch eggs' to 'Scotch eggs' and 'Butterscotch broth' to 'Scotch broth'.",
+   "Swap 'Bear mum's salmon bites' note for 'Elinor's river feast.'",
+   "Swap the 'Triplets' stolen raspberry jam tarts' note for 'The triplets got to the cake first.'",
+   "Fill the black bars around the poster with the castle kitchen still."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

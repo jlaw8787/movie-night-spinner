@@ -1,0 +1,68 @@
+{
+ "id": "Gallipoli (1981)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Run fast, Frank, and eat what you can. Tomorrow is a long way off.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The quote page lists Archy's real lines (such as 'I'll see you when I see you.') and not this one. It is printed in quote marks and reads as invented.",
+   "source": "https://moviemistakes.com/film2921/quotes",
+   "fix": "Use a note: Frank, eat what you can and keep your legs ready. We have a long way to go.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Frank, eat what you can and keep your legs ready. We have a long way to go.",
+    "by": "Archy Hamilton",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Frank and Archy on leave in Cairo",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "They are sent in separate troop shipments and meet again by chance during training exercises near the Pyramids. They climb the Great Pyramid and carve their names. The sources do not call it leave together.",
+   "source": "https://filmsite.org/gallipoli.html",
+   "fix": "Frank and Archy meet again near the pyramids",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The stopwatch race",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "No source opened describes a stopwatch race. The carnival race is Frank against Archy, and watches matter at the Nek, where they are not synchronised.",
+   "source": "https://en.wikipedia.org/wiki/Gallipoli_(1981_film)",
+   "fix": "The athletics carnival race",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "A solid wartime mess with Jack's steel springs, the pyramids and the Nek, held back by a pale poster and cent prices.",
+  "missing": [
+   "Archy beating Les, barefoot against a horse (the race)",
+   "The freight train and the walk across the dry lake bed",
+   "Frank carving names on the pyramid beside Napoleon's",
+   "Frank failing the Light Horse riding test",
+   "Major Barton's order and the unsynchronised watches (the Nek)",
+   "Archy's last sprint (the finale)"
+  ],
+  "ideas": [
+   "Swap the 'c' prices for shillings and pence, as 1915 Australia used.",
+   "Swap 'Frank and Archy on leave in Cairo' for 'Frank and Archy carve their names on the pyramid.'",
+   "Swap 'Billy tea' note for 'Brewed on the dry lake bed, 50 miles from anywhere.'",
+   "Swap the 'Poster and stills' silhouette for a still of Archy running."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

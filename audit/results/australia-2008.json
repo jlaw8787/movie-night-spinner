@@ -1,0 +1,58 @@
+{
+ "id": "Australia (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The drive starts at dawn. Eat well, Drover, because the cattle will not wait for you.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line Lady Sarah says. No quote page for the film could be opened and nothing in the Wikipedia style plot matches it. She does run Faraway Downs and ride with the Drover on the drive, so a written note in her voice fits.",
+   "source": "",
+   "fix": "The drive starts at dawn. Eat well, Drover, because the cattle will not wait for you.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The drive starts at dawn. Eat well, Drover, because the cattle will not wait for you.",
+    "by": "Lady Sarah Ashley",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Kipling Flynn's tipple. He never stopped at one.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Kipling Flynn is the station accountant who rides with the drive and dies in the fire set by Carney's men. The plot I opened does not say what he drinks or that he drinks too much.",
+   "source": "https://cavac.at/cavacopedia/Australia%20%282008%20film%29",
+   "fix": "Kipling Flynn's pick. He never made it to Darwin.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 21,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Handsome station menu with real Aussie tucker, but the film's big moments barely show and the note and one drink line are not backed up.",
+  "missing": [
+   "The cattle stampede and fire set by Carney's men",
+   "Crossing the Never Never desert with King George's help",
+   "Rescuing the children from Mission Island during the bombing",
+   "King George and Nullah going walkabout at the end",
+   "Fletcher being shot by King George",
+   "The Darwin ball, the Drover in a white dinner jacket"
+  ],
+  "ideas": [
+   "Swap 'Faraway Downs corned beef sandwiches' note for 'Eaten in the saddle in the Never Never'.",
+   "Swap 'Campfire beef and vegetables' for 'Stampede stew', note 'Cooked after the fire'.",
+   "Swap 'Wattleseed pavlova' note for 'The Darwin ball, white jacket optional'.",
+   "Swap 'Drover's rum and ginger beer billy punch' for 'Mission Island billy tea', alcohol free."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

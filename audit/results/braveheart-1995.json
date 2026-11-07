@@ -1,0 +1,58 @@
+{
+ "id": "Braveheart (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eat well tonight, lads. There's bread, mutton and plenty of ale, and we ride at first light.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Wallace never says this. The quote page lists his real lines and none is about bread, mutton or ale. It is printed in quote marks as his words.",
+   "source": "https://en.wikiquote.org/wiki/Braveheart",
+   "fix": "Every man dies. Not every man really lives.",
+   "fix_note": {
+    "text": "Every man dies. Not every man really lives.",
+    "by": "William Wallace",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The army's feast after Stirling",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "I found no feast for the army after Stirling in the sources I opened. After the victory the film moves to Wallace planning to invade England.",
+   "source": "https://en.wikiquote.org/wiki/Braveheart",
+   "fix": "Stirling style, for the army",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The food is Scottish and well chosen, but the army mess hall layout and bugle call feel like a modern camp, not medieval Scotland.",
+  "missing": [
+   "The freedom speech (Stirling)",
+   "Murron's handkerchief (the wedding)",
+   "Scots lifting their kilts at the English (before the battle)",
+   "Hamish and Stephen the Irishman",
+   "Wallace's long sword (the battle)",
+   "Wallace shouting 'Freedom!' (the execution)"
+  ],
+  "ideas": [
+   "Swap the 'BUGLE CALL' label for 'Alba gu brath' with the cue.",
+   "Swap 'Thistle-topped smoked salmon' note for 'Murron's thistle.'",
+   "Swap 'Highland haggis bon bons' note for 'Stephen the Irishman wants seconds.'",
+   "Swap the 'Chow line' heading for 'Before Stirling'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

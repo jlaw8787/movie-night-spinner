@@ -1,0 +1,58 @@
+{
+ "id": "Frozen (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Can you keep the soup a little further away from me? It smells amazing, but I am made of snow.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Olaf's real lines on the Wikiquote page show him loving summer, sun and heat, not keeping away from soup. This line is not on the page.",
+   "source": "https://en.wikiquote.org/wiki/Frozen_(2013_film)",
+   "fix": "I've always loved the idea of summer, and sun, and all things hot.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I've always loved the idea of summer, and sun, and all things hot.",
+    "by": "Olaf",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the coronation night Anna meets Hans",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Anna meets Hans at the harbour on the morning of the coronation, before the ceremony. At the party that night they sing together and she says they finish each other's sandwiches. No plot page was opened for this call, so the link is left empty.",
+   "source": "",
+   "fix": "the coronation night Anna and Hans finish each other's sandwiches",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A cosy castle tea room with carrots for Sven, Oaken and the ice harvesters, and a made-up Olaf note.",
+  "missing": [
+   "'Do you want to build a snowman' (the closed door)",
+   "Elsa's ice palace and Let It Go (the mountain)",
+   "Anna and Hans finishing each other's sandwiches (the party)",
+   "Olaf's warm hugs",
+   "Kristoff's carrots for Sven (the trading post)",
+   "Oaken's sauna and summer blowout"
+  ],
+  "ideas": [
+   "Swap the 'Arendelle open sandwiches' note for 'Anna and Hans finish each other's sandwiches.'",
+   "Swap the 'Gloves optional. Smiles required.' footer for 'Gloves optional. Conceal, don't feel.'",
+   "Swap 'Eternal winter school bread' note for 'Kristoff gets the carrots. Sven gets the glory.'",
+   "Swap the Olaf note for his real summer line."
+  ],
+  "flat": false,
+  "done": false
+ }
+}
