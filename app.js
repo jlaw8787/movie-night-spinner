@@ -1468,6 +1468,20 @@ function libPhotoPass(card,L,poster){
   libAim(card,L);
   /* 6. black and white films (flavour mono:true) print every photo and the poster in black and white; the Save PDF copy bakes the filter in */
   if(L.flavour&&L.flavour.mono)card.querySelectorAll(".fx-face img").forEach(i=>{const f=i.style.filter||"";if(!/grayscale\(1\)/.test(f))i.style.filter=(f&&f!=="none"?f+" ":"")+"grayscale(1)"});
+  /* 7. iPhone and iPad Safari draw a CSS-filtered photo inside the scaled card as a blurry, zoomed-in corner (Josh's E.T. still, 8 Nov).
+     There, every filtered photo is baked into a plain picture of its frame, the same way Save PDF does it, and the filter comes off. */
+  if(IOS_SAFARI)iosBakeFilters(card);
+}
+const IOS_SAFARI=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+function iosBakeFilters(card){
+  card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.baked)return;
+    const cs=getComputedStyle(i);if(!cs.filter||cs.filter==="none")return;
+    const k=/blur\(/.test(cs.filter)?1:2,snap={filter:cs.filter,width:parseFloat(cs.width)*k+"px",height:parseFloat(cs.height)*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen; blur radii stay true at 1x */
+    const src=i.currentSrc||i.src;if(!src||/^data:/.test(src))return;
+    i.dataset.baked="1";
+    const im=new Image();im.crossOrigin="anonymous";
+    im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)return;i.src=u;i.removeAttribute("srcset");i.style.filter="none";i.style.objectFit="fill"}catch(e){}};
+    im.src=src});
 }
 /* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
    Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */

@@ -426,3 +426,9 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - Live on reeldinner.com from 35316aa (deploy 6aefff03), HTTPS on, app.js?v=ab343b23.
 - Next: Review 21 (not started; skipped this chat to keep usage down). Then the small items under "8 Nov, 12:30pm" (Crocodile Dundee II doubles, Hitch tag, Goonies note and so on).
 - GitHub Pages still waiting on GitHub Support. When it works, the workflow publishes on a push to main; point reeldinner.com there only if Josh wants to leave Netlify.
+
+## 8 Nov, 6pm: E.T. (Josh checked it on his iPhone)
+
+- iPhone fix: Safari drew CSS-filtered photos inside the scaled card as a blurry zoomed corner (E.T.'s back still). libPhotoPass step 7: on iPhone and iPad, every filtered .fx-face photo is baked into a plain picture at 2x (pdfFiltered, the Save PDF baker) and the filter comes off. Affects every menu with tinted photos, not just E.T. Not yet tried on a real phone: ask Josh to recheck E.T. page 2.
+- E.T. front: flavour stillStrip:true. Badges are now three film stills (stills 4 to 6) with the badge lines as captions, the pillow note sits in the right column, signed with the top line of the E.T. title logo. Josh wants all 56 campfire menus done the same way later, each placed a little differently so they don't all look alike. Kept to E.T. for now to save usage.
+- Still open from the E.T. check: 121 of 124 editions print their older plain notes over the reworked film notes (522 notes). Josh hasn't picked the fix yet; "film notes win" was the recommendation.

@@ -304,6 +304,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const mis=E.mis?`text-shadow:3px 2px 0 ${rgba(C.accA,.4)};`:"";
   const vlen=String(F.venue).length,hp=ph.heroIsPoster,vs=hp?(vlen>34?28:vlen>22?32:38):(vlen>34?34:vlen>22?40:46);
   const badges=F.winks.slice(0,3),rest=F.winks.slice(3);
+  /* per-film flavour stillStrip (E.T., 8 Nov, Josh): the badges become three film stills with the badge lines as captions,
+     the pillow note moves up into the empty column beside the poster, signed in the film's own title lettering (the logo's top line only) */
+  const strip=!!(ctx.flavour&&ctx.flavour.stillStrip)&&hp&&ph.list.length>=6,sigLogo=strip?logoUrl(ctx):"";
   const sigCol=C.ink;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C.ink)}
@@ -313,11 +316,19 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     ${ph.heroIsPoster?`${photo(ph.hero,{poster:1,x:14,y:104,w:440,h:650,pad:10,print:P.print,rot:TN.tilt*.5,sheen:E.sheen})}
     ${logoPanel(ctx,466,130,196,ty,C,P,year)}
-    <div style="position:absolute;left:470px;top:420px;width:186px;box-sizing:border-box;padding:12px 14px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
+    <div style="position:absolute;left:470px;top:${strip?318:420}px;width:186px;box-sizing:border-box;padding:12px 14px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
       <div style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};line-height:1.15">Now showing</div>
       <div style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:4px">${T(F.venue)}</div></div>`:`${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:"center 35%"})}
     ${logoPanel(ctx,34,560,400,ty,C,P,year)}`}
-    <div data-box style="position:absolute;left:38px;top:${hp?766:708}px;width:596px;height:${hp?84:118}px;overflow:hidden;mix-blend-mode:multiply">
+${strip?`    <div data-box style="position:absolute;left:474px;top:478px;width:180px;height:268px;overflow:hidden;mix-blend-mode:multiply;display:flex;flex-direction:column">
+      <div data-fs="15" data-min="13" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
+      <div data-fs="20" data-min="15" style="margin-top:6px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
+      ${sigLogo?`<div style="margin:14px 0 0 auto;width:118px;height:52px;overflow:hidden;transform:rotate(-4deg)"><img alt="${T(F.note.by)}" crossorigin="anonymous" src="${sigLogo}" style="display:block;width:118px;height:auto;filter:brightness(0);opacity:.82"></div>`:`<div style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};margin-top:8px;transform:rotate(-2deg)">${T(F.note.by)}</div>`}
+    </div>
+    <div style="position:absolute;left:38px;top:770px;width:596px">
+      <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden;width:596px">${V.b}</div></div>
+    ${[3,4,5].map((k,n)=>{const r=(n-1)*1.6;return `${photo(ph.list[k],{x:24+n*208,y:800,w:200,h:140,pad:6,print:P.print,rot:r,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%"})}${badges[n]?`<div data-box style="position:absolute;left:${34+n*208}px;top:898px;width:180px;max-height:34px;overflow:hidden;box-sizing:border-box;padding:3px 8px;background:${C.dark};opacity:.92;opacity:.92;transform:rotate(${r}deg)"><div data-fs="13" data-min="12" style="font:${ty.cw} 13px ${ty.caps};line-height:1.1;color:#fbf3e2;letter-spacing:.03em;text-align:center">${T(badges[n])}</div></div>`:""}`}).join("")}
+`:`    <div data-box style="position:absolute;left:38px;top:${hp?766:708}px;width:596px;height:${hp?84:118}px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="16" style="margin-top:4px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
       <div data-fs="${ty.sigS}" data-min="18" style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};line-height:1.15;margin-top:2px;transform:rotate(-2deg)">${T(F.note.by)}</div>
@@ -326,6 +337,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden;width:596px">${V.b}</div>
       <div style="display:flex;gap:12px;margin-top:6px">${badges.map((b,i)=>`<div data-box style="flex:1;height:${hp?58:68}px;overflow:hidden;box-sizing:border-box;padding:6px 10px;border-radius:12px;background-color:${i%2?C.dark:C.deep};background-image:${noise(".7",3,[255,255,255],.12,seed+i)};outline:2px dashed ${rgba(mix(C.accA,WHITE,.6),.85)};outline-offset:-6px;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(${(i-1)*1.2*(TN.tilt?1:0)}deg)"><div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};line-height:1.12;color:#fbf3e2;letter-spacing:.04em">${T(b)}</div></div>`).join("")}</div>
     </div>
+`}
     ${wearLayer(P,tone,seed)}
   </div>`;
   const stampRot=-4+TN.tilt;
