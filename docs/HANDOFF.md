@@ -377,3 +377,22 @@ Next, in order:
 - GitHub pushes work again from Claude sessions (8 Nov).
 - Dry run of all ops so far: 0 missed.
 - 8 Nov, 10:20am: 537 of 900 done (F01 to F24, I01 to I23). Left: F25 to F52 and I24 to I33 (38 batches). Dry run of all 466 ops files: 1504 ops, 0 missed. Agent prompt used: brief plus "Reply in under 150 words", "never pkill", "don't invent jokes about scenes that don't exist". Append each batch's clash notes to audit/rework-clashes.md, commit and push after each round.
+
+## 8 Nov, 12:30pm: rework, clashes and re-score done (start here in the next chat)
+
+Done and pushed (not deployed; live is still 911f5f3):
+- Rework finished: all 900 films (410 full rework, 490 iconic check), 2,691 ops applied from audit/rework-ops, editions synced (edition-sync now reads audit/rework-ops too).
+- Clash list: per-film layout word swaps, film-flavour "words" {"Old":"New"} applied by libWords() in app.js (text only, any case, capitals kept), on about 50 films. Free Willy beach:false. Lyric house lines fixed (Alice, Hobbit 1, Rocky Horror). Analyze This is The Waldorf. libStops() stops doubled full stops after quotes.
+- Re-score of the 410 reworked menus (docs/rescore-agent-prompt.md): average 3.26 to 3.48, 207 at 3.5 or better, 203 still under. Old scores kept in vibe.before.
+- Cards and shots re-extracted for all 900 on 8 Nov.
+
+Josh's calls waiting (ask as pop-ups, one at a time):
+1. Layouts that never print dish notes or the cue (truck, chalkboard, lab, some canteen, stadium, banquet faces). Most of the remaining flat scores come from this: the rework is in slots those layouts drop. Options: let those layouts print a short note line, or move the worst films to a layout that does.
+2. Night of the Living Dead prints a colour poster on a black and white film.
+3. Josh bought the domain "reeldinner" (TLD not confirmed) and thinks Reel Dinner will be the main name. No rename done. Point the domain at Netlify when he confirms.
+
+Left to do, in order:
+1. check-print-text on all 900 was running in chunks of 50 (/tmp/run-cpt.sh, log /tmp/cpt2.log; /tmp may be wiped). Chunks 00 to 04 passed apart from After Hours, fixed by reverting "Terminal Bar burger" to "Last Stop burger". Rerun from chunk 05 (films sorted by id, 50 a chunk) or all of it.
+2. Review 21 was started and stopped to save usage (Josh, 12:20pm: keep usage back for the deploy). Not written. Run it later.
+3. Deploy from the trimmed copy (top of this file).
+Small items the re-score noted: Crocodile Dundee II prints snags, barra and pavlova twice (older fault); Hitch Keep This tag cut ("effort is"); Goonies Sloth note cut; Mickey Blue Eyes lot note cut; Silver Linings signature clipped; Top Gun doubled logo; Wall Street, Wish, Clerks III, Despicable Me 2 empty gaps; Great Mouse Detective, Proposal, Sword in the Stone posters as white blocks.
