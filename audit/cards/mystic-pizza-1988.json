@@ -45,7 +45,7 @@
    "1 large pie, extra cheese",
    "Table 4, Mystic, Connecticut",
    "A WORD FROM THE HOUSE",
-   "\"Everybody in town thinks the sauce is a big secret. It is. Don't ask me.\"",
+   "The sauce is a secret and it stays a secret. Eat up before the critic gets here.",
    "Leona",
    "SHOWTIME CUE",
    "Serve the pizza when the food critic takes his first bite."
@@ -100,8 +100,9 @@
   "venue": "Mystic Pizza",
   "sign": "Mystic Pizza, A Slice of Heaven",
   "note": {
-   "text": "Everybody in town thinks the sauce is a big secret. It is. Don't ask me.",
-   "by": "Leona"
+   "text": "The sauce is a secret and it stays a secret. Eat up before the critic gets here.",
+   "by": "Leona",
+   "kind": "note"
   },
   "winks": [
    "Three waitresses: Daisy, Kat and Jojo",

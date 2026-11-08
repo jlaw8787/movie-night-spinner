@@ -40,19 +40,15 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A fair Roman tavern, but the card is mostly honey dishes and the poster image has big black bars across it.",
+  "overall": 3.4,
+  "verdict": "A Roman parchment menu with Macrinus's line, Dondus and the rhino note, but the layout is the same parchment as every other tavern.",
   "missing": [
-   "Caracalla naming his monkey Dondus a consul (the Senate)",
-   "The flooded Colosseum naval battle (the games)",
-   "Macrinus: 'Rome will fall. I need only give it a push.'",
-   "Maximus's sword and armour shrine (the gladiator school)",
-   "Lucius reciting Virgil at Thraex's party",
-   "Lucilla giving Lucius Maximus's ring"
+   "The flooded Colosseum naval battle (the arena)",
+   "Baboons at Ostia (the arena)"
   ],
   "ideas": [
    "Swap 'Bread and circuses rosemary flatbread' note for Dondus: 'Dondus the consul gets the first slice'",
@@ -77,6 +73,15 @@
    "Flatbread note: first slice for Consul Dondus",
    "Lamb stew note: Hanno's Numidia",
    "Last wink: Dondus the monkey consul replaces the twin emperors"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -22,18 +22,13 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "verdict": "The Tunstall ranch and Regulators are right, but the menu is a plain western and the 'Mess hall mains' heading sits alone with the dishes in the other column.",
+  "verdict": "Ranch cookhouse sounds right with 'hacking on me', crockery duty, Doc's poetry and the PALS wink.",
   "missing": [
-   "The peyote trip with Chavez (the desert)",
-   "Billy and the Regulators killing Sheriff Brady",
-   "The outhouse shootout with Buckshot Roberts",
-   "The burning McSween house and Billy in the trunk",
-   "'Regulators, mount up' (Dick Brewer)",
-   "The 'PALS' epitaph"
+   "Burning McSween house (trunk only on cover)"
   ],
   "ideas": [
    "Move 'MESS HALL MAINS' heading to sit above the two mains in the right column",
@@ -41,8 +36,8 @@
    "Replace 'Hard apple cider' note with a Doc Scurlock poem line",
    "Swap 'Biscochitos' for 'Pals' epitaph cookies stamped with PALS"
   ],
-  "overall": 3.2,
-  "flat": true,
+  "overall": 3.6,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,6 +56,15 @@
    "House starter note: crockery duty replaces an invented rule",
    "Winks: trunk, peyote and PALS replace Tunstall, Chavez name and Garrett",
    "Campfire headings renamed for a ranch"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

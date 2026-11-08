@@ -18,18 +18,15 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good army-camp layout for the Narnians, but the battle, the trees and Aslan are mostly missing.",
+  "overall": 3.6,
+  "verdict": "Reepicheep's real line, the trees, the duel and the night raid now print on a decent army camp card, but the food is still generic camp fare.",
   "missing": [
-   "Aslan waking the trees to attack the Telmarines",
-   "Reepicheep's tail growing back",
-   "Peter's duel with Miraz",
-   "The night raid on Miraz's castle",
    "Lucy's cordial",
+   "Reepicheep's tail growing back",
    "The White Witch in the ice wall"
   ],
   "ideas": [
@@ -38,7 +35,7 @@
    "Swap 'Cair Paravel apples' note for Lucy's cordial.",
    "Add a Strand station ticket to the cover."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -53,6 +50,15 @@
    "Pork note: the night raid",
    "Winks: trees, duel",
    "Camp labels renamed (mains, drinks, note, call)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

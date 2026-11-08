@@ -45,19 +45,15 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A fair Southern tavern with the lightning glass and the papers, but the writing is generic and a few claims are unverified.",
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Roots and wings, the kiss line, lightning glass and the divorce slip all print on a Southern tab, though the dark bar look is generic.",
   "missing": [
-   "Jake's glass shop and 'Deep South Glass' franchise in the mid-credits",
-   "Planting lightning rods on the beach to make glass",
-   "Melanie punching Kate at the wedding",
-   "Melanie emptying Jake's checking account",
-   "The wedding at the Carmichael estate with Bobby Ray",
-   "Jake signing the papers: 'only reason I ain't signin' is'..."
+   "Melanie punches Kate at the wedding",
+   "Make it a slow one"
   ],
   "ideas": [
    "Swap 'Re-enactment pan cornbread' for 'Lightning rod fried pickles' with the beach glass line.",
@@ -65,7 +61,7 @@
    "Swap 'Pigeon Creek cornmeal fish and slaw' note for 'Jake's glass shop special'.",
    "Swap the divorce slip for a 'JAKE SIGNED, MELANIE DIDN'T' stamp."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -83,6 +79,15 @@
    "Fish note: the lightning beach",
    "Peanut note: exact Young Jake line",
    "Divorce slip: Jake signed, Melanie never did"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

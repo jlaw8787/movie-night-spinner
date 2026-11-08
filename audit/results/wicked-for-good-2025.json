@@ -54,19 +54,16 @@
  "checked_ok": 8,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Smart palace and bubble ideas, but a lot of the film's biggest moments are not on the menu.",
+  "overall": 3.6,
+  "verdict": "Strong Emerald City look with the Yellow Brick Road, bubble, trapdoor and bucket of water all printing, though the dish names are still mostly generic.",
   "missing": [
-   "Dorothy's house landing on Nessarose in the tornado",
    "Boq turned into the Tin Man",
-   "Fiyero revealed as the Scarecrow",
-   "Dorothy's bucket of water and the melting",
-   "The Yellow Brick Road opening",
-   "Elphaba hiding under the trapdoor at Kiamo Ko"
+   "Dorothy's house and tornado",
+   "Fiyero the Scarecrow as a named gag"
   ],
   "ideas": [
    "Swap 'Pistachio shortbread cookies' for 'Tin Man heart tarts' (Boq's shrunken heart)",
@@ -74,7 +71,7 @@
    "Rename 'Glinda's bubble emerald mint fizz' to 'Yellow Brick Road mint fizz'",
    "Add a 'Scarecrow straw potato nests' item"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -96,6 +93,15 @@
    "House drink note fixed (no balcony)",
    "Note is Elphaba's real bubble line",
    "Wink 3 is the bucket of water"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

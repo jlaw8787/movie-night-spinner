@@ -51,27 +51,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A smart grand hotel dinner, but New Orleans, Emeril and the ledge scene are missing.",
-  "missing": [
-   "Georgia cooking Emeril's recipes at home for her neighbour",
-   "BASE jumping and snowboarding",
-   "Winning at roulette",
-   "Ms. Gunther snooping through the suite",
-   "The New Year's Eve feast in Didier's kitchen",
-   "The faulty CT scan fax and Georgia's Joint"
-  ],
+  "overall": 3.6,
+  "verdict": "A grand dining card with Tout baby, the Book of Possibilities, Georgia's Joint and the BASE jumping wink all printing, though the header photo is stock.",
+  "missing": [],
   "ideas": [
    "Swap \"Georgia's crab cakes\" for \"Georgia's Joint gumbo\", the restaurant she opens.",
    "Swap \"Karlovy Vary mushroom tarts\" note for the New Year's Eve feast.",
    "Add \"Emeril's kick\" hot sauce in place of the foie gras note.",
    "Swap the cue for the kitchen invitation."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -91,6 +84,15 @@
    "Champagne cocktail note: roulette win",
    "Slivovitz note adds BASE jumping",
    "Winks: Gunther snooping and the faulty scanner"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

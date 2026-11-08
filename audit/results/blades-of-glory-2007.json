@@ -21,20 +21,17 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 3,
-  "food": 3,
+  "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "Right film and good stills, but the baseball scoreboard and general arena food could belong to any sports film.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The rink, scoreboard, Iron Lotus, Lone Wolf, Fairchild's pearls and Grublets all print, but the Lady Hump cue is missing.",
   "missing": [
-   "Jimmy's wolf tattoo on Chazz's arm ('Welcome to the pack')",
-   "The cold storage rink flooded with a garden hose (Coach's secret practice)",
-   "Grublets on Ice, Chazz's kids show with fog machines",
-   "Fairchild's pearl necklace spilled on the ice (the final)",
-   "'Lady Hump' as the routine music",
-   "Rocket skates carrying them into the sky (the ending)"
+   "Lady Hump as the routine music (cue does not print)",
+   "Mind-bottling",
+   "Chazz in sequins"
   ],
   "ideas": [
    "Swap 'Coconut snowball ice cream balls' for 'Pearls on ice' (Fairchild's necklace).",
@@ -42,7 +39,7 @@
    "Swap the baseball scoreboard for a judges' score card.",
    "Swap the 'Hot mulled wine' note for the wolf tattoo line 'Welcome to the pack'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,6 +58,15 @@
    "Hot chocolate renamed for Grublets on Ice",
    "Chicken parmigiana renamed Lone Wolf",
    "Second printed wink now the Lone Wolf and his wolf tattoo"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

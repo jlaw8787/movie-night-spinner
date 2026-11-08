@@ -58,27 +58,20 @@
  "checked_ok": 9,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Looks like a real airline, but the menu plays it straight where the film never stops joking.",
-  "missing": [
-   "'Looks like I picked the wrong week to quit...' (McCroskey)",
-   "Otto's inflatable partner at the end",
-   "Jive-talking passengers",
-   "Johnny asking the kid about gladiator movies",
-   "Ted's long boring story that puts passengers to sleep",
-   "Rex Kramer talking Ted down over the radio"
-  ],
+  "overall": 3.8,
+  "verdict": "The Shirley line, the wrong week to quit martini and Ted's biscotti all print on a clean airline card, though the food itself is standard galley fare.",
+  "missing": [],
   "ideas": [
    "Rename 'Airline peanuts' to 'Wrong week to quit peanuts' with the note 'Looks like I picked the wrong week to quit...'",
    "Swap 'Cheese, grape and onion picks' for 'Otto's inflatable nibbles' with a note about Otto's date.",
    "Swap 'Just-in-case beef lasagne' note for 'Ordered by everyone who watched the fish go round.'",
    "Change the ticket stub to 'Meal: steak or fish' and use the real Rumack line on the card."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -94,6 +87,15 @@
    "Lasagne renamed 'Roger, Roger beef lasagne'",
    "Lasagne note now says what the food is",
    "Printed wink swapped for Johnny's 'big Tylenol' plane"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

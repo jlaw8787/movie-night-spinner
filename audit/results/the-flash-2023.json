@@ -46,17 +46,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The family kitchen and the tomatoes are the right heart of the film, but the rest is a generic diner with a few superhero names stuck on.",
+  "overall": 3.8,
+  "verdict": "The Allen family diner now carries the tomatoes, Chronobowl, the nuts line and the two Barrys, with stills that suit the film.",
   "missing": [
-   "The Chronobowl (Barry's time travel scenes)",
-   "Keaton's Batman saying 'Let's get nuts' (Wayne Manor)",
-   "Two Barrys in one room (alternate 2013)",
-   "Supergirl freed from the Siberian bunker"
+   "Supergirl in the Siberian bunker (still only)"
   ],
   "ideas": [
    "Swap 'Speed force popcorn' for 'Chronobowl' popcorn served in a bowl that keeps going round.",
@@ -64,7 +61,7 @@
    "Swap 'Wayne Manor baked brie' for 'Let's get nuts' mixed nuts in a Batman 89 bat bowl.",
    "Replace the generic diner paper with a grocery-store theme: shelves, cans of tomatoes, a till receipt."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -79,6 +76,15 @@
    "Brie note is Barry asking Bruce Are you in?",
    "Hazelnut latte note quotes the nuts line",
    "Fifth wink now the two Barrys"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -33,19 +33,15 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Pumpkin dishes and Sally's soup fit Halloween Town, but the pale kiosk with a weather strip lacks the film's spooky look.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Sally's soup, Sandy Claws, What's This and the Pumpkin King all print on a strong Halloween Town kiosk with good names.",
   "missing": [
-   "Sally's soup laced with Deadly Nightshade (the real soup scene)",
-   "Oogie Boogie's gambling lair and his game with Santa",
-   "'Sandy Claws' (Jack's name for Santa)",
-   "What's This? in Christmas Town, with the snow",
-   "The Mayor's two faces and the prize-giving",
-   "Lock, Shock and Barrel kidnapping Santa"
+   "Lock, Shock and Barrel kidnapping Santa",
+   "Oogie Boogie's gambling lair"
   ],
   "ideas": [
    "Swap 'Oogie Boogie chocolate mousse dirt cups' note for a line about Oogie's gambling lair, with dice sprinkles",
@@ -53,7 +49,7 @@
    "Swap 'Christmas Town candy cane cheese twists' note for 'Sandy Claws' special",
    "Swap the pale grey panel for a dark purple and orange palette so it looks like Halloween Town at night"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +66,15 @@
    "House seeds note drops the lyric repeat, keeps the song title",
    "House milk note now kidnapped Sandy Claws",
    "Fifth wink now Jack's real line 'That's not Sandy Claws.'"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

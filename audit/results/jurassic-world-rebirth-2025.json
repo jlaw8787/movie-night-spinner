@@ -4,20 +4,15 @@
  "facts": [],
  "checked_ok": 20,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A fun beach kiosk with the three samples and the Delgado family, but it plays it safe.",
+  "overall": 3.6,
+  "verdict": "Beach kiosk with a surf report, Zora's line, Distortus rex, the Delgado boat and the Quetzalcoatlus nest, though most dishes have no note.",
   "missing": [
-   "The six-limbed Distortus rex in the tunnels",
-   "Isabella's pet Aquilops, Dolores",
-   "The Spinosaurus helping the Mosasaurus hunt (Zora's mutualism line)",
-   "The T. rex attack on the raft",
-   "The Quetzalcoatlus nest in the cave temple",
-   "Duncan's flare to distract the Distortus"
+   "Mutualism, the Spinosaurus helping the Mosasaurus"
   ],
   "ideas": [
    "Swap 'Fried calamari with saffron aioli' note for 'Mutualism, the Spinosaurus helping.'",
@@ -25,7 +20,7 @@
    "Swap 'Jungle coconut cooler' note for 'Raft run, T. rex behind.'",
    "Swap the surf report 'SPOTTED' box for 'Distortus rex, tunnels, stay inside.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -44,6 +39,15 @@
    "Fish bites renamed Capsized sailboat fish bites",
    "Coconut cooler renamed Raft run coconut cooler",
    "Winks: Distortus rex first"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

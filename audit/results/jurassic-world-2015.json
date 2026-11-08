@@ -43,19 +43,16 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Clean park-admission look and the right ride and feeding show, but the writing is plain for a film full of jokes and sponsors.",
+  "overall": 3.6,
+  "verdict": "Main Street food court with the mosasaur show, gyrosphere, Claire's line and the Indominus sponsor joke printing, though the food is generic.",
   "missing": [
-   "Lowery's $150 eBay Jurassic Park t-shirt (Claire tells him not to wear it)",
-   "'Verizon Wireless presents the Indominus Rex' (corporate sponsor gag)",
-   "Owen rolling under the raptor pen gate",
-   "Claire releasing the Tyrannosaurus rex to fight the Indominus",
-   "Pteranodons breaking out of the aviary and hitting the resort",
-   "Zach and Gray repairing the old Jeep at the ruined visitor centre"
+   "Margarita Man and the pterosaur attack",
+   "Lowery's eBay Jurassic Park shirt",
+   "Claire lets the T. rex out to fight the Indominus"
   ],
   "ideas": [
    "Swap 'Gyrosphere cheese balls' note for the sponsor gag, such as a 'presented by' name.",
@@ -63,7 +60,7 @@
    "Swap 'Dino egg chocolate mousse' plain line for Lowery's eBay t-shirt.",
    "Add a 'Blue' raptor item in place of the 'Popcorn chicken with ranch' house line."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -81,6 +78,15 @@
    "Lemonade note: sponsored like the Indominus rex",
    "Mousse note: dinosaurs are wow enough",
    "Winks: Lowery's shirt, Claire lets the T. rex out"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

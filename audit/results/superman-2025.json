@@ -34,27 +34,20 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Krypto is used well, but the rest of the menu avoids the film's weirder best bits.",
-  "missing": [
-   "Krypto fetching the toy ('Krypto! Get the toy.')",
-   "Lois's interview with Superman about Boravia",
-   "The pocket universe where Lex holds his enemies",
-   "Metamorpho and his infant son Joey",
-   "Guy Gardner: 'Make a move, Big Blue.'",
-   "Kara Zor-El arriving drunk to pick up Krypto"
-  ],
+  "overall": 3.6,
+  "verdict": "A Daily Planet break room paper with Krypto, Lois's interview, the pocket universe and Guy Gardner's line all printing, though the dish writing is mild.",
+  "missing": [],
   "ideas": [
    "Swap 'Oat milk cold brew' for 'Interview on the record' coffee (Lois, 'This is on the record, Superman').",
    "Swap 'Fortress crystal prawn rice paper rolls' for 'Pocket universe dumplings'.",
    "Swap 'Buffalo chicken dip' note for 'Krypto, get the toy' fetch joke.",
    "Add 'Metamorpho jelly' that changes colour."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +64,15 @@
    "Shawarma note: Lois interviews Superman",
    "Prawn rolls renamed for the pocket universe",
    "Winks: Kara, Metamorpho and Joey, Big Blue added"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

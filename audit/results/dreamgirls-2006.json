@@ -81,19 +81,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 4,
+  "look": 3,
   "overall": 3.4,
-  "verdict": "A moody club card with the right name and soul food, but it skips Effie's big moment and Jimmy's rib song.",
+  "verdict": "The Detroit talent night has the Creamettes cue, Curtis's $500 bet and Effie's tomatoes, but the menu face has big empty gaps between sections.",
   "missing": [
-   "Effie's 'And I Am Telling You I'm Not Going' showdown (Effie White)",
-   "Jimmy's 'Jimmy want a rib, Jimmy want a steak, Jimmy want a piece of your chocolate cake!' (Jimmy Early)",
-   "The MC calling them the Creamettes at the talent show (MC and Deena)",
-   "Cadillac Car and the cover by Dave and the Sweethearts (first single)",
-   "Marty: 'That place is so white they will not even hire us to wash dishes!' (Miami Beach club)",
-   "Rainbow's tenth anniversary special where Jimmy drops his pants (1974)"
+   "Effie's And I Am Telling You I'm Not Going",
+   "Jimmy Early: You can't kill a man with soul"
   ],
   "ideas": [
    "Swap house starter note 'Jimmy Early's order, eaten between costume changes.' for Jimmy's rib, steak and chocolate cake chant.",
@@ -118,6 +114,15 @@
    "Jimmy's rib tips note uses his real soul line",
    "Vegas drink note is the 1966 New Year's Eve debut, gold sequins dropped",
    "Wink about the Creamettes replaces the wigs wink"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

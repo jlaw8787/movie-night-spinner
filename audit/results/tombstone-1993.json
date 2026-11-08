@@ -51,14 +51,13 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Oriental Saloon and Doc's cup are right, but the huckleberry and Latin moments are left out.",
+  "verdict": "The Oriental Saloon and the huckleberry cue are right, but the Latin and O.K. Corral nods are tiny footer text and the dishes carry no wit.",
   "missing": [
-   "'I'm your huckleberry' (Doc to Ringo)",
-   "Doc and Ringo trading Latin (saloon)",
+   "Doc and Ringo trading Latin (only in the footer)",
+   "The O.K. Corral gunfight (only in the footer)",
    "Curly Bill's red sash Cowboys",
-   "The O.K. Corral gunfight",
-   "Wyatt walking into the creek (riverside)",
-   "Kate and Doc's cough"
+   "You're a daisy if you do (not on the menu)",
+   "Wyatt walking into the creek (riverside)"
   ],
   "ideas": [
    "Swap 'Huckleberry gin fizz' note to match 'I'm your huckleberry'.",
@@ -82,6 +81,15 @@
    "Note: Doc's defile line replaces the repeat of huckleberry",
    "Jerky note: Wyatt's posse",
    "Old fashioned note: Say when"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

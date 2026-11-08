@@ -30,19 +30,15 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "A good pub tab with the leap day tradition, but the best scenes on the road are missing.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Declan's pub tab with the house fire crab claws, cow pat farls, Claddagh crumble, Murphy's hailstones and Anna's proposal line, though the dish names are mostly plain.",
   "missing": [
-   "Pretending to be married at the Tipperary B&B and the dinner kiss",
-   "Anna stepping in a cow pat and the car rolling into a stream",
-   "The 60-second house fire question at Ballycarbery Castle",
-   "Anna drunk at the wedding reception",
-   "Declan's mother's Claddagh ring",
-   "The cliff top proposal"
+   "Pretending to be married at the B&B dinner kiss",
+   "The car in the stream"
   ],
   "ideas": [
    "Swap the cue for the B&B dinner.",
@@ -50,7 +46,7 @@
    "Rename \"Irish lamb stew\" to \"Married couple stew\", from the B&B.",
    "Swap the Murphy's note for the wedding reception."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -68,6 +64,15 @@
    "Irish coffee note nods to drunk Anna",
    "Murphy's note: Murphy's Law, hailstones",
    "Note is Anna's real proposal line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

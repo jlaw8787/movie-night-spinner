@@ -18,19 +18,15 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A pretty hotel front desk idea that uses Paris, Bill's boat and the storm, but the food is generic Greek and the big musical numbers are missing.",
+  "overall": 3.6,
+  "verdict": "Bella Donna reopening hotel card with the Dynamos, Harry's Paris, the trapped horse, Fernando and Ruby, and ordinary Greek dishes.",
   "missing": [
-   "Cher's Ruby arriving to Fernando (the party)",
-   "Donna and the Dynamos in denim flares (the stage)",
-   "Alexio the fisherman getting back to his love (Bill's boat)",
-   "The horse in the storm (the farmhouse)",
-   "Sofia handing over the farmhouse (Donna's pregnancy)",
-   "Dancing Queen on the boat"
+   "Donna lifted to Kalokairi on Bill's sailboat",
+   "The graduation at Oxford"
   ],
   "ideas": [
    "Swap 'Ouzo over ice and water' note for 'Fernando, pouring for Ruby at last'",
@@ -38,7 +34,7 @@
    "Swap 'Room 1979' door hanger for 'Dynamos denim flares, size generous'",
    "Swap 'Fried saganaki' note for 'Alexio's thank you catch'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -57,6 +53,15 @@
    "Pie note: ferries cut off",
    "Fizz note: Ruby uninvited",
    "Winks: the Dynamos and Ruby crashing the party"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

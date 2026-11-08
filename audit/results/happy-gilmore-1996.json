@@ -22,26 +22,19 @@
  "checked_ok": 18,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "A shared stadium layout with golf-film photos. It nods to Chubbs and Shooter but the food leans on Grandma and misses the famous gags.",
-  "missing": [
-   "The 'happy place' scene (Variety called it Felliniesque)",
-   "Happy's fight with Bob Barker at the pro-am",
-   "The alligator that took Chubbs's hand, and its head at the end",
-   "Shooter's heckler Donald running Happy over at the Tour Championship",
-   "The Rube Goldberg putt with the fallen TV tower",
-   "Shooter chased by the crowd for the gold jacket"
-  ],
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Same stadium shell, but nearly every famous gag now prints in the item names and notes, and the photos suit the golf course.",
+  "missing": [],
   "ideas": [
    "Swap 'Happy's lemon shandy pitchers' note for a 'Happy place' drink with a daisy garnish.",
    "Rename 'Hockey puck cheeseburger sliders' to 'Slap shot sliders' and add the Shooter gold jacket as a dessert, a gold leaf cake.",
    "Replace 'Grandma's biscuits' with 'Alligator bites' (battered prawns) to use the Chubbs gag."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,6 +54,15 @@
    "Cheese ball note uses Just tap it in",
    "Lemon bars renamed Gold jacket lemon bars",
    "Winks now lead with Bob Barker and the gator that took Chubbs's hand"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -41,19 +41,16 @@
  "checked_ok": 8,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A clean New York deli menu with box No. 392 as a nice nod, but the heist itself feels a step away.",
+  "overall": 4.0,
+  "verdict": "A believable deli with a catering order slip, the vault still and Russell's opening line, which sits well with the heist.",
   "missing": [
-   "Pizzas with bugs in the boxes",
-   "Dalton Russell's opening monologue",
-   "Painter overalls and masks on the hostages",
+   "Pizza boxes sent in bugged",
    "The fake wall",
-   "Follow the ring",
-   "Albanian propaganda on the bugs"
+   "Follow the ring"
   ],
   "ideas": [
    "Swap 'Party pizzettes' note for 'Delivered with a bug in the box.'",
@@ -61,7 +58,7 @@
    "Swap the quote by Frazier for 'I'll only say this once.' signed Dalton Russell.",
    "Add the hostages' matching overalls to the catering slip."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -76,6 +73,15 @@
    "Pizzettes renamed Delivery pizzettes, note winks at the bugged boxes",
    "Sirloin note no longer an invented Frazier quote",
    "Espresso note tied to the long negotiation"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

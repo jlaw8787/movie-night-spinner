@@ -68,20 +68,13 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 2.8,
-  "verdict": "A Jersey diner menu that mixes up which friends are in the diner and does little with the comic, convention or Meow Mix scenes.",
-  "missing": [
-   "Jay and Silent Bob's lunch at the diner (Holden hands over their residual pay)",
-   "Silent Bob's 'chasing Amy' speech",
-   "Hooper X's White-Hating Coon comic at the convention",
-   "The Meow Mix bar in the East Village (where Holden finds out Alyssa is gay)",
-   "The hockey game where Holden presses Alyssa about her past",
-   "Alyssa's last line, 'Oh, just some guy I knew' (the final convention)"
-  ],
+  "overall": 3.4,
+  "verdict": "Bluntman and Chronic, the birds pudding and the inker line give it some bite, but the dark neon board feels more arcade than Jersey diner.",
+  "missing": [],
   "ideas": [
    "Swap 'Diner patty melt on rye' note for 'Where Silent Bob tells Holden about Amy.'",
    "Swap 'Jersey ham, egg and cheese sliders' note for 'Bluntman and Chronic residual pay, handed over with a side of chips.'",
@@ -105,6 +98,15 @@
    "Rice pudding note: painting of birds not included",
    "Pizza bagels renamed Bluntman and Chronic pizza bagels",
    "Winks: not in a friendly way, Hooper X on Return of the Jedi, You're Chasing Amy, Idiosyncratic Routine"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 2.8
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -29,19 +29,15 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Neon backstage look and the ramyeon hook land, but the big songs and the Derpy and Sussie jokes are barely used.",
+  "overall": 3.8,
+  "verdict": "Dark neon backstage card where the ramyeon, kimbap, Saja Boys hot dogs and Happy fans line all print, with the writing a little flat.",
   "missing": [
-   "Rumi's \"pre-game ramyeon\" and Mira never finishing hers",
-   "Zoey tearing open a bag of snacks",
-   "Derpy the tiger and Sussie the magpie",
-   "The Honmoon turning golden",
-   "The Saja Boys' \"Soda Pop\" and \"Your Idol\" numbers",
-   "Huntrix's weapons: Mira's gok-do and Zoey's throwing knives"
+   "Soda Pop and the Saja Boys' song",
+   "The Honmoon"
   ],
   "ideas": [
    "Swap the tagline for \"Ramyeon first, then concert night.\"",
@@ -49,7 +45,7 @@
    "Swap the house float for \"Derpy's melon soda\".",
    "Add \"Golden\" as a gold honey tea heading in place of \"From the Bar\"."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,6 +62,15 @@
    "Ramyeon renamed Pre-game ramyeon with egg, note keeps the food",
    "Beef bone soup note now Mira finishing a meal",
    "Cue now the pre-game ramyeon toast"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

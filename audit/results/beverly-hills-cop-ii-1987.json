@@ -16,18 +16,13 @@
  "checked_ok": 21,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "The case-file look and the Detroit jacket poster work, but the menu is Eddie Murphy with the jokes taken out.",
+  "verdict": "Johnny Wishbone, Dirty Rosewood and the cement truck split print well, but the station house is generic and the mansion bluff note is dropped.",
   "missing": [
-   "Axel as Johnny Wishbone, psychic from St Croix (Lutz's office)",
-   "The cement mixer chase and parking it at the Playboy Mansion for $50",
-   "Rosewood's huge pistol, Dirty Rosewood",
-   "Axel's alias Sidney Bernstein and the Food for the Homeless donation",
-   "Chief Lutz yelling 'KISS MINE!'",
-   "Hugh Hefner showing everyone out"
+   "Axel bluffing into the mansion as the Board of Health"
   ],
   "ideas": [
    "Swap 'Room service club sandwich and fries' for 'Johnny Wishbone psychic special' with the St Croix Gazette joke in the note.",
@@ -37,7 +32,7 @@
   ],
   "flat": true,
   "done": false,
-  "overall": 3.2,
+  "overall": 3.4,
   "rework": "2026-11-08",
   "iconic": [
    "Axel as Johnny Wishbone, psychic from St Croix",
@@ -53,7 +48,16 @@
    "Tequila sunrise renamed Dirty Rosewood's (Axel to Rosewood about his huge pistol)",
    "Tequila note: Rosewood's 'you can never have too much firepower'",
    "Quiche note: Axel crashes the mansion with the Board of Health"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

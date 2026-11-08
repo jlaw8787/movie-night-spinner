@@ -20,7 +20,7 @@
    "Snow White",
    "No. 7",
    "A NOTE FROM SNOW WHITE",
-   "\"Bashful, please wash your hands. Grumpy, you too. The stew is ready, and I made extra for all of you. Now sit down.\"",
+   "\"March straight outside and wash, or you'll not get a bite to eat.\"",
    "Luncheon from noon. Afternoon tea 3 till 5.",
    "Mind the cake trolley on your way in."
   ],
@@ -105,21 +105,22 @@
   "venue": "The Dwarfs' Cottage",
   "sign": "Wash Up Before Supper",
   "note": {
-   "text": "Bashful, please wash your hands. Grumpy, you too. The stew is ready, and I made extra for all of you. Now sit down.",
-   "by": "Snow White"
+   "text": "March straight outside and wash, or you'll not get a bite to eat.",
+   "by": "Snow White",
+   "kind": "quote"
   },
   "winks": [
    "Seven little beds in a row",
-   "The diamond mine and the work song",
+   "Heigh-Ho from the diamond mine",
    "A poison apple, red and shiny",
-   "The wishing well in the courtyard",
-   "Dopey riding on the others' shoulders"
+   "Magic Mirror on the wall",
+   "Dopey on Sneezy's shoulders"
   ]
  },
  "house": {
   "s": {
    "n": "Buttermilk scones with apple butter",
-   "note": "Grumpy said he wouldn't eat. He did."
+   "note": "Grumpy said he wouldn't wash. He got washed."
   },
   "d": {
    "n": "Fresh raspberry cordial",

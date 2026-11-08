@@ -47,14 +47,10 @@
   "tone": 3,
   "look": 4,
   "overall": 3.2,
-  "verdict": "A friendly market truck, but it misses the dried fruit heist and most of the sequel's gags.",
+  "verdict": "A good looking market stall, but the dishes carry no notes on the menu and the Barnabas cue and fox jogging gag don't print.",
   "missing": [
-   "The dried fruit heist at the farmers market (the market)",
-   "Sammy Whiskers and the gang with the pincushion map (Barnabas's hideout)",
-   "Mr Tod on a plant-based diet asking about jogging (the city)",
-   "Thomas's nut-eater list: almond milk, cashew cheese, walnut butter (pet store)",
-   "Peter hearing the book makes him the bad bunny (publisher meeting)",
-   "Rabbits caught by animal catchers and the pet pound (town)"
+   "Barnabas names the target, the dried fruit (cue)",
+   "The fox on a plant-based diet, try jogging (juice note)"
   ],
   "ideas": [
    "Swap 'Honey oat and almond crunch mix' for a 'Dried fruit heist mix: lasts forever'.",
@@ -78,6 +74,15 @@
    "Juice note: the plant-based, jogging gag",
    "Market slip: dried fruit, lasts forever",
    "Footer wink: Whiskers and his pincushion map"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

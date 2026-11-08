@@ -46,19 +46,14 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A neat cop cafeteria with the PAGAN joke, but the best food moments, the Brown Derby dinner and the chili dog, are left out.",
+  "overall": 3.6,
+  "verdict": "The dress code line, the sausage press, PAGAN and Granny Mundy's birthday all print on a neat precinct diner menu, but the food is plain.",
   "missing": [
-   "Granny Mundy's birthday dinner at the Brown Derby (Friday's grandmother)",
-   "Streebek's toast: 'may you live as long as you want but never want as long as you live' (Pep at the dinner)",
-   "The chili dog and the industrial sausage press warning (Pep and Friday)",
-   "The tank raid on the milk pasteurizing plant (Friday and Streebek)",
-   "Friday's dress code speech: clean shirt, short hair, tie, pressed trousers (Friday to Streebek)",
-   "Connie Swail thrown into the pit with the anaconda (PAGAN ceremony)"
+   "Chili dog and the industrial sausage press warning (only the press line prints)"
   ],
   "ideas": [
    "Swap 'Streebek's smashed cheeseburger sliders' for 'The chili dog', with Pep's 'industrial sausage press' warning.",
@@ -66,7 +61,7 @@
    "Swap the milk note 'Just the facts. And the milk.' for 'Pasteurized, unlike the plant next door'.",
    "Swap the table line 'Booths for four or more, please.' for Pep's toast to Granny Mundy."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -82,6 +77,15 @@
    "Meatloaf renamed Brown Derby birthday meatloaf, note ties Granny Mundy and Pep's toast",
    "Milk note ties the milk plant tank raid",
    "Counter aside is the real dress code line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

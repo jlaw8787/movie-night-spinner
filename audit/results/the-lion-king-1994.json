@@ -34,19 +34,15 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Southern African dishes suit the Pride Lands and the grub mousse hits the best food moment, but the kiosk frame and weather strip are generic.",
+  "overall": 3.6,
+  "verdict": "Hakuna Matata, slimy yet satisfying grubs, Timon's line and Rafiki lifting Simba all print around a strong poster, on a standard kiosk layout.",
   "missing": [
-   "Slimy yet satisfying (grubs on the log)",
-   "Scar and the mouse, 'Life's not fair' (the lunch he loses)",
-   "Hakuna Matata on the log, with Timon in a hula skirt",
-   "Zazu 'Didn't your mother tell you not to play with your food'",
-   "Rafiki cracking the fruit at Simba's presentation",
-   "Be Prepared and the hyenas in the elephant graveyard"
+   "Hasta no stampede: the wildebeest stampede",
+   "Scar and the hyenas"
   ],
   "ideas": [
    "Swap 'Biltong and droëwors' note 'Strictly beef. Pumbaa checked twice.' for 'Tastes like chicken' (Timon, the grub)",
@@ -54,7 +50,7 @@
    "Swap 'Pride Rock punch' for a 'Mouse on a stick' joke dish, no mice, a nod to Scar's lunch",
    "Replace the cloudy weather strip with a 'Hakuna Matata: no worries' line"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +67,15 @@
    "Mousse note gets Slimy yet satisfying",
    "Sosaties note nods to Scar losing his lunch to Zazu",
    "Smoothie note uses Mufasa's light line"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

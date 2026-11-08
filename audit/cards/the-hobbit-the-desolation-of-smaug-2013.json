@@ -30,7 +30,7 @@
    "Sips",
    "Beorn's honey milk punch",
    "A NOTE FROM THE WINDOW",
-   "I've smuggled dwarves in barrels before. Tonight there's fish for supper and not much else.",
+   "Dwarves in the barrels and fish on top. Say nothing at the gate. Supper is fish.",
    "Bard",
    "NOW SERVING",
    "No. 13",
@@ -89,8 +89,9 @@
   "venue": "Lake-town Market",
   "sign": "Esgaroth, Town on the Lake",
   "note": {
-   "text": "I've smuggled dwarves in barrels before. Tonight there's fish for supper and not much else.",
-   "by": "Bard"
+   "text": "Dwarves in the barrels and fish on top. Say nothing at the gate. Supper is fish.",
+   "by": "Bard",
+   "kind": "note"
   },
   "winks": [
    "Dwarves riding barrels down the river",

@@ -33,28 +33,21 @@
  ],
  "checked_ok": 13,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Good dishes from the film, but a British tearoom layout is a poor fit for a wuxia teahouse and the note is invented.",
-  "missing": [
-   "Lo stealing Jen's comb in the desert cave (the flashback)",
-   "Mu Bai's last words to Shu Lien (the cave)",
-   "Jade Fox posing as Jen's governess",
-   "The Green Destiny breaking Shu Lien's weapons (the duel)",
-   "The bamboo forest treetop duel (Mu Bai and Jen)",
-   "Jen leaping from the bridge at Mount Wudang"
-  ],
+  "overall": 3.6,
+  "verdict": "A warm roadside inn card with Lo's comb, the bamboo forest, Jade Fox, Green Destiny and Mu Bai's last line all printing, in a fairly plain parchment look.",
+  "missing": [],
   "ideas": [
    "Replace the Shu Lien note with 'To repress one's feelings only makes them stronger.'",
    "Change the 'Desert lamb skewers' note to 'Lo stole Jen's comb in the desert.'",
    "Rename 'Luncheon and Tea' to 'Tea at the Inn' and swap the tearoom frame for a lattice screen layout.",
    "Swap the 'Green Destiny sesame balls' note for 'It cuts through anything, even the teahouse.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -72,6 +65,15 @@
    "Peking duck note: Jade Fox as governess in Governor Yu's house",
    "Lamb skewers note: Lo and Jen's desert cave",
    "Jasmine tea note: Make a wish, Lo"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

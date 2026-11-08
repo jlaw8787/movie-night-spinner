@@ -17,20 +17,18 @@
  ],
  "checked_ok": 17,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 3,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A tidy Christmas tea room with the right names, but it leans on Phoenix and Snowcone and skips the film's best jokes.",
+  "overall": 3.4,
+  "verdict": "A tidy North Pole tea room with the sleigh cue and 'thank garland', but the snowcone letter, Gabriel's list and the yoga retreat don't print.",
   "missing": [
-   "Sleigh and reindeer parked at Desert Ridge Marketplace (arrival in Phoenix)",
-   "Snowcone the reindeer bringing Mrs Claus's letter (mall)",
-   "Gabriel's naughty-or-nice algorithm finding only 2,837 nice children (North Pole)",
-   "Nick at the yoga retreat in the Desert Botanical Garden",
-   "Noelle suddenly understanding other languages and sign language (Phoenix)",
-   "Nick trying out as a mall Santa (Desert Ridge)"
+   "Snowcone arriving with Mrs. Claus's letter",
+   "Gabriel's 2,837 nice children",
+   "Nick at the yoga retreat and as a mall Santa",
+   "Hot chocolate, double whip and peppermint"
   ],
   "ideas": [
    "Swap 'Gingerbread latte' for a 'Naughty or nice hot chocolate' with a note about Gabriel's list of 2,837 nice kids.",
@@ -53,6 +51,15 @@
    "Cue is now the sleigh landing at the mall",
    "Bark note nods to hot chocolate and peppermint ('Thank garland')",
    "Winks: Snowcone and letter, Gabriel's list, yoga retreat"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

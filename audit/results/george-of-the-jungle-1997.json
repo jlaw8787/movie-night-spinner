@@ -22,19 +22,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A jungle tiki setting that fits, with Ape and Shep on the plates, but only the tree gag really lands.",
+  "overall": 3.8,
+  "verdict": "The treehouse cafe with the swing line, Ape's Queensbury rules, Tookie and the tree crash pudding, plus an island map spread that looks great.",
   "missing": [
-   "The theme song's 'Watch out for that tree' (every swing)",
-   "Ape reading and speaking like a professor",
-   "Lyle accidentally marrying a gorilla (the finale)",
-   "Tookie the toucan",
-   "George saving the paraglider at the Bay Bridge",
-   "Ursula's engagement party"
+   "Lyle accidentally marrying a gorilla",
+   "George rescuing the paraglider on the Bay Bridge"
   ],
   "ideas": [
    "Swap the 'Coconut prawns' house note for a Lyle line about the wrong bride.",
@@ -42,7 +38,7 @@
    "Swap the 'Mai tai' house note for 'Ape's recipe. Ask for the long version.'",
    "Swap 'Jungle tree crash coconut pudding' note for 'Do not look at the next tree.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -62,6 +58,15 @@
    "Brittle note says what it is and who it is for",
    "Pudding note adds George not feel so good",
    "Winks: Tookie, gorilla wedding, Bay Bridge paraglider"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -29,20 +29,17 @@
  ],
  "checked_ok": 20,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The lunch scene food is spot on, but the lab and ration-sheet layout feels like a barracks, not a school library.",
+  "overall": 3.6,
+  "verdict": "Library badge, lunch scene dishes and the essay form feel right, but the writing is mostly plain and the page is a plain lab sheet.",
   "missing": [
-   "Bender asking Vernon 'Does Barry Manilow know that you raid his wardrobe?'",
-   "Bender crawling through the ceiling (used on card only)",
-   "Allison's makeover and the earring",
-   "Brian's essay letter signed 'The Breakfast Club'",
-   "The flare gun locker (Brian's reason for detention)",
-   "Carl the janitor: 'I am the eyes and ears of this institution'"
+   "Does Barry Manilow know that you raid his wardrobe?",
+   "Bender crawling through the ceiling",
+   "Carl: eyes and ears of this institution"
   ],
   "ideas": [
    "Swap the 'Ration sheet' and 'Night shift' wording for 'Saturday detention' and 'Lunch in the library'.",
@@ -50,7 +47,7 @@
    "Swap the 'Detention brownies' note ('Vernon isn't watching') for the line where Bender calls Vernon a brownie hound.",
    "Put the essay letter on the cover as the stamp instead of the access badge."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -67,6 +64,15 @@
    "Brownie note: brownie hound",
    "Milkshake note: Will milk be made available?",
    "Tab cola renamed cola (Tab not sourced)"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

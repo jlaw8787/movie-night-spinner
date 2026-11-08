@@ -18,27 +18,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A nice department store tea room with the right Cole's name, but it skips the film's big moments: the courtroom, the dollar bill and Kris signing with a deaf child.",
-  "missing": [
-   "Dollar bill with In God We Trust circled (courtroom)",
-   "Kris signing with a deaf girl (Cole's Santa chair)",
-   "Reindeer in the courtroom: 'He only flies on Christmas Eve' (trial)",
-   "The catalogue house Susan wants (Christmas morning)",
-   "Shopper's Express rivals (plot to ruin Kris)",
-   "Judge Harper's grandson at the start (courthouse)"
-  ],
+  "overall": 3.6,
+  "verdict": "Cole's tea room with the reindeer line, In God We Trust cookies, the beard tug and Susan's house letter all printing, with plain dishes.",
+  "missing": [],
   "ideas": [
    "Swap the beard tug note on the hot chocolate for 'Kris signed with a deaf girl and Susan noticed'.",
    "Rename 'Cole's Santa grotto gingerbread cookies' to 'In God We Trust gingerbread coins' with a dollar bill icing detail.",
    "Replace 'Letter to Santa' prop with a courtroom exhibit card: 'Exhibit A: one dollar bill'.",
    "Put 'He only flies on Christmas Eve' under the pumpkin pie."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -54,6 +47,15 @@
    "Gingerbread renamed In God We Trust gingerbread cookies",
    "House wink now Susan's dollar bill",
    "Court wink now the courtroom reindeer"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

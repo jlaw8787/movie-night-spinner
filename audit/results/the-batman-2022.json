@@ -56,19 +56,15 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The Iceberg Lounge setting and the Riddler's cards are on target, but the rain, riddles and the Gotham flood are barely used.",
+  "overall": 3.6,
+  "verdict": "Dark Iceberg Lounge with the green envelope, Oz quote and I am vengeance cue sits well, though the food is standard upmarket pub.",
   "missing": [
-   "The Riddler's riddles read out loud",
-   "Colson's collar bomb at Mitchell's funeral",
-   "The Penguin car chase",
-   "Batman and Selina on the rooftop",
-   "The flooded Gotham finale",
-   "Alfred hurt by the letter bomb"
+   "I am the shadows",
+   "Penguin car chase beyond the martini name"
   ],
   "ideas": [
    "Swap 'Flood night chocolate pots' note for the flooded Gotham finale.",
@@ -76,7 +72,7 @@
    "Swap 'Riddler's question mark pretzels' note for a riddle printed on the pretzel bag.",
    "Replace 'Iceberg Lounge espresso martini' with 'Penguin chase martini' with a car chase note."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -93,6 +89,15 @@
    "Chocolate pots: Gotham floods",
    "Martini renamed Batmobile chase",
    "Negroni note: the shadows"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

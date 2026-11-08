@@ -22,27 +22,20 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Gets the Quick Stop, rooftop hockey and Veronica's lasagne, but the paper is plain and leaves out the funeral home, the shutters and the sign.",
-  "missing": [
-   "The 'I ASSURE YOU; WE'RE OPEN!' shoe polish sign on the jammed shutters (the opening)",
-   "The Chewlies rep with the tar lung in the bag",
-   "Veronica's list, 'something like 36' (the counter)",
-   "Randal knocking over the casket at the funeral home",
-   "The health inspector fining Dante for cigarettes sold to a four year old",
-   "Randal: 'You're closed!' (the last scene)"
-  ],
+  "moments": 5,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "A Quick Stop street edition with the receipt, the closed shutters line, Veronica's lasagne and the hockey and Death Star gags packed into the menu page.",
+  "missing": [],
   "ideas": [
    "Swap 'Open late, mostly' sign for 'I assure you, we're open' to use the shoe polish sheet.",
    "Swap 'Perfect dozen devilled eggs' note for 'Dante's twelve, give or take' to use the numbers argument.",
    "Swap 'Smoked beef jerky sticks' note for the tar lung gum.",
    "Swap the receipt prop for the fine from the health inspector."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,6 +54,15 @@
    "Pretzel note now says what the food is and ties to the roof hockey",
    "Lasagne note now says what the food is",
    "Receipt line now You're closed"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

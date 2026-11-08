@@ -64,27 +64,20 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good summer-camp feel and the right icons, but the food could be about anything and the best food scene is missing.",
-  "missing": [
-   "Pennywise listing the circus smells to Georgie: peanuts, cotton candy, hot dogs, popcorn (storm drain scene)",
-   "'You'll float, too' (root beer float is a free pun)",
-   "Eddie's 'gray water' rant at the Barrens",
-   "Richie's Street Fighter summer in the arcade",
-   "Gretta signing Eddie's cast",
-   "The Losers' blood oath at the end"
-  ],
+  "overall": 3.8,
+  "verdict": "Barrens camp card with the red balloon, raincoat, gray water, beep beep and float lines all printing, and decent snack puns.",
+  "missing": [],
   "ideas": [
    "Swap the 'Root beer float' house note for a 'We all float down here' nod.",
    "Replace 'Derry diner double cheeseburgers' note with Pennywise's circus smells and add popcorn.",
    "Swap 'Derry summer strawberry lemonade' for 'Gray water lemonade' with Eddie's rant.",
    "Replace 'Saltines with spray cheese' note with Eddie's cast that nobody signed."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -106,6 +99,15 @@
    "Wink 4 now Pennywise's circus smells",
    "Prop line: Swore to come back",
    "Camp labels set for the film"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

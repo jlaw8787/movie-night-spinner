@@ -57,19 +57,15 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The depot roster looks right and the ice cream and fish and chips nod to the family trip, but the food is mostly generic roadhouse.",
+  "overall": 3.6,
+  "verdict": "A patrol depot roster with servo and pub food, the rat circus line, the Nightrider and the V8s, though the quote card is mostly blank space.",
   "missing": [
-   "Jessie and Sprog's ice cream stop where Toecutter licks her cone (beach shop)",
-   "The black Pursuit Special being unveiled (MFP garage)",
-   "Goose's burning ute (the road)",
-   "I'm a fuel-injected suicide machine (Nightrider on the radio)",
-   "Johnny the Boy with the hacksaw (the ending)",
-   "I'm scared, Fif, it's a rat circus (Max's resignation)"
+   "Goose burned in the wrecked ute",
+   "Johnny the Boy and the hacksaw"
   ],
   "ideas": [
    "Swap 'Interceptor highway meat pie' for 'Pursuit Special pie, black as the car'",
@@ -77,7 +73,7 @@
    "Swap the data cue to the ice cream moment so the sweet course lands on Toecutter at the beach shop",
    "Replace 'Narcotics Unit' with 'Pursuit Squad'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -96,6 +92,15 @@
    "Winks: Nightrider line, Goose snafued, V8s, hacksaw",
    "Dim sim house note: Goose at the restaurant",
    "Signed note now Max's rat circus line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

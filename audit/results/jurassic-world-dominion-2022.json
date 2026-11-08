@@ -35,19 +35,15 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A neat Biosyn canteen but too much plain Italian food and not enough of the film's big set pieces.",
+  "overall": 3.6,
+  "verdict": "Biosyn canteen ration sheet with locusts, Owen, Kayla, Beta, Malta and the Therizinosaurus swamp all on the page, with ordinary dish names.",
   "missing": [
-   "Pyroraptor in the icy wilderness",
-   "Quetzalcoatlus attack on Kayla's plane",
-   "Dodgson burning the locusts and starting a firestorm",
-   "Ellie and Alan reuniting over a locust",
-   "Beta, the baby raptor Maisie names",
-   "Malta black market with Barry Sembene"
+   "Giganotosaurus, biggest carnivore ever seen",
+   "Quetzalcoatlus attack on Kayla's plane"
   ],
   "ideas": [
    "Swap 'Sierra Nevada smoky beef jerky' note for 'Owen's, stored in a plane crash.'",
@@ -55,7 +51,7 @@
    "Swap 'Locust swarm corn' note for 'Dodgson's locusts, crispy.'",
    "Swap 'Speck and fontina crostini' note for 'Kayla's, flown in over the ice.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -74,6 +70,15 @@
    "Crostini note: Kayla Watts, You're welcome",
    "Almond milk note: Maisie named Beta",
    "Winks: Giganotosaurus and the Quetzalcoatlus replace the snow wink and the controls wink"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -46,19 +46,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The ship's plan paper and galley tag feel right, but the dishes are guesses and the cook's best lines are missing.",
+  "overall": 3.6,
+  "verdict": "Ship's galley paper is right and Ryback's real lines, the spit-free bouillabaisse and the cake all print, but the food is still safe.",
   "missing": [
-   "'I'm just a cook'",
-   "Ryback locked in the walk-in fridge",
-   "Jordan Tate jumping out of the cake",
-   "'Go tell the captain he spit in my soup'",
-   "'Get my pies out of the oven'",
-   "The 16 inch guns"
+   "Krill spits in the soup",
+   "Jordan Tate in the cake (only Miss July in the footer)"
   ],
   "ideas": [
    "Swap 'Navy galley glazed meatloaf and mash' note for 'Get my pies out of the oven.'",
@@ -66,7 +62,7 @@
    "Rename 'Ryback's bouillabaisse' to 'Ryback's spit-free soup' with the note 'Krill spit in it, apparently.'",
    "Swap the quote by Ryback for 'No, I'm just a cook.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -85,6 +81,15 @@
    "Cake note: Jordan Tate came in a bigger one",
    "Wink 2: the cake with Miss July inside",
    "Prop tag: fires the 16 inch guns"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

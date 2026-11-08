@@ -42,27 +42,20 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Dusty camp and the right horses and wells, but it stays on the ration tin and never gets to the charge itself.",
-  "missing": [
-   "The haversack ruse (Meinertzhagen)",
-   "Dave unable to fire his rifle (battle)",
-   "The four mates Frank, Scotty, Chiller and Tas",
-   "The charge and the Turks firing over their heads",
-   "Scotty capturing Reichert at the wells",
-   "Allenby walking into Jerusalem on foot"
-  ],
+  "overall": 3.6,
+  "verdict": "The charge, the Turks firing high, Dave and the wells all print on a solid Beersheba camp card, though the food is standard camp tucker.",
+  "missing": [],
   "ideas": [
    "Swap 'Trooper's bully beef rissoles' note for 'Frank's last meal' mates note.",
    "Replace 'Light horse camp beef and stout stew' with 'Haversack ruse stew' joke.",
    "Swap 'Camp golden syrup dumplings' for 'Water first' dumplings in a bucket.",
    "Add 'Beersheba wells, 31 October' on the footer."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -78,6 +71,15 @@
    "Sign gains the date, 31 October",
    "Stew renamed for Meinertzhagen's decoy",
    "Pilaf note ties to Dave"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

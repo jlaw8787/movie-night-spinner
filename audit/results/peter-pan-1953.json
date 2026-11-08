@@ -46,27 +46,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good cardboard and badge look, but the food and the words stay generic for such a famous film.",
-  "missing": [
-   "Flying out the nursery window over London (second star to the right)",
-   "The crocodile with the ticking clock (Hook's hand)",
-   "The bomb hidden in Peter's present (Hook's cabin)",
-   "Mr Smee with his glasses and cap (pirate ship)",
-   "Wendy sewing Peter's shadow back on (nursery)",
-   "Tinker Bell jealous of Wendy (Lost Boys' hideout)"
-  ],
+  "overall": 3.8,
+  "verdict": "The Lost Boys' hideout reads like the film, with the second star line, the croc, Hook's surprise package and the wonderful thought fairy bread.",
+  "missing": [],
   "ideas": [
    "Swap 'Johnny cakes' note 'Tick tock. The croc wants seconds.' for 'Tick tock. Hook still has the hand.'",
    "Swap 'Skull Rock gruyère and pepper puffs' for 'Smee's ship biscuits' with 'Hook's cook, mostly crumbs.'",
    "Swap the 'Flight card' prop for a 'Shadow sewn on' ticket.",
    "Swap 'Lemon barley water' note for 'Wendy mends shadows after supper.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -83,6 +76,15 @@
    "Stew note nods to Hook's surprise package",
    "Fairy bread note: think a wonderful thought",
    "Camp headings renamed for Neverland"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

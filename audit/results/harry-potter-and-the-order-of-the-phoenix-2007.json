@@ -22,19 +22,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 4,
+  "look": 3,
   "overall": 3.2,
-  "verdict": "A neat recipe card, but headquarters is a small part of a film that lives at Hogwarts under Umbridge.",
+  "verdict": "The pre-meal list covers Umbridge, the DA, fireworks, Thestrals and the prophecy, but the food and grey look are plain.",
   "missing": [
-   "Umbridge's tea and the blood quill detention",
-   "Dumbledore's Army forming at the Hog's Head",
-   "Luna's Quibbler read upside down",
-   "The Department of Mysteries and the prophecy",
-   "Molly's Boggart and Fred and George leaving on brooms",
-   "Snape's Occlumency lessons"
+   "Educational Decree (Hogwarts noticeboard)"
   ],
   "ideas": [
    "Swap 'Pumpkin juice' for 'Umbridge's tea in a kitten plate cup' (the pink office).",
@@ -60,6 +55,15 @@
    "First wink now carries I must not tell lies",
    "Last wink adds the Dumbledore and Voldemort duel",
    "Popcorn renamed for Fred and George"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -45,19 +45,14 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A solid mess hall tray with the right characters, but the dishes are mostly generic and it misses the film's loud, gory humour.",
+  "overall": 3.8,
+  "verdict": "Mess hall tray look is strong and the jokes land, with the Harley red flag line and the timetable tiles.",
   "missing": [
-   "Peacemaker's helmet: 'It's not a toilet seat, it's a beacon of freedom!' (Waller briefing)",
-   "King Shark's 'Nom nom' (feeding)",
-   "Ratcatcher 2 and her rat Sebastian (rat swarm finale)",
-   "Weasel in the jungle (mid-credits)",
-   "Harley killing the red flags: 'Killing kids? Kind of a red flag.'",
-   "Bloodsport's rat phobia (Harcourt, post-credits)"
+   "Ratcatcher 2 and Sebastian (camembert note)"
   ],
   "ideas": [
    "Swap 'Salt and pepper calamari' note for a King Shark 'Nom nom' line",
@@ -65,7 +60,7 @@
    "Replace 'Starro starfish cookies' note with the Starro hole in the eye gag",
    "Add a Peacemaker 'Beacon of freedom' helmet shaped bun"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -83,6 +78,15 @@
    "Harley note: the red flag line on the red wine dish",
    "Camembert note: Say hello, Sebastian",
    "Starro cookie note: Starro the Conqueror"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

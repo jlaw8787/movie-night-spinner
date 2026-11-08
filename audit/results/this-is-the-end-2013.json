@@ -40,19 +40,14 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Gets the sinkhole, Emma Watson and the Milky Way fight, but it is a quiet grey invite for a very loud film.",
+  "overall": 3.6,
+  "verdict": "The inventory line, the Milky Way cue and the Emma Watson wink make it sound like the film.",
   "missing": [
-   "The Backstreet Boys in Heaven (finale)",
-   "Michael Cera's missing phone (party)",
-   "Channing Tatum on a leash (cannibals)",
-   "Danny wasting the water and the food (morning)",
-   "The exorcism and Jonah on the bed",
-   "'Don't give the Milky Way away!' (Craig)"
+   "Danny wastes the supplies (fry-up has no note)"
   ],
   "ideas": [
    "Name the dessert 'Franco's Milky Way' instead of 'The last chocolate caramel nougat bar'",
@@ -60,7 +55,7 @@
    "Replace the hot honey pizza line with a Backstreet Boys 'Everybody' tune joke",
    "Add a Cera 'Three-one-zero-nine' phone number place card"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -78,6 +73,15 @@
    "Pretzels note: strictly rationed",
    "Watermelon note: Danny wasted the water",
    "Winks: Backstreet Boys in"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

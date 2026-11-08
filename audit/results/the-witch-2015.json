@@ -35,17 +35,14 @@
   "world": 4,
   "moments": 3,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The parchment and blackletter feel right for 1630s New England, but the food is plain and the best moments are mostly missing.",
+  "overall": 3.6,
+  "verdict": "Olde prices, Black Phillip, the butter line, the silver cup and Mother's apple print on parchment with a moody poster, and the cue prints.",
   "missing": [
-   "Black Phillip: 'Wouldst thou like to live deliciously?'",
-   "Caleb vomiting up an apple",
-   "The baby Samuel vanishing at the woods' edge",
-   "The twins chanting to the goat",
-   "Katherine's hens and the butter that will not churn",
-   "The witch's hut in the woods"
+   "Wouldst thou like to live deliciously?",
+   "Baby Samuel vanishing at the edge of the woods",
+   "Caleb and the apple"
   ],
   "ideas": [
    "Swap 'Woodland apples and cheese' note for 'The apple Caleb brought back from the woods.'",
@@ -53,7 +50,7 @@
    "Add 'Wouldst thou like the taste of butter?' to Black Phillip's goat stew note.",
    "Swap \"Mulled cider\" note for \"The goat watched us drink it.\""
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -69,6 +66,15 @@
    "Goat stew note: Phillip would not approve",
    "Baked apples note: Mother wished for an apple",
    "Winks: Samuel and the hovel replace the hare and the forest edge"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

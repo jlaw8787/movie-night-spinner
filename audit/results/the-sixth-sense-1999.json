@@ -26,17 +26,13 @@
   "world": 4,
   "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Gets the cupboards, the party and the cold, but it is a standard diner layout with a calm tone for a film that is all about a quiet creep.",
+  "overall": 3.6,
+  "verdict": "Cole's line, the red balloon and the cold room all print and the diner suits the film, though the stills are dull.",
   "missing": [
-   "I see dead people (Cole's confession)",
-   "The red balloon at the birthday party",
-   "Cole's tent and toy soldiers (his bedroom)",
-   "Malcolm's wedding ring dropping (twist)",
-   "Kyra's videotape at her wake",
-   "Cole's play and 'Staunton Witt' (school)"
+   "Red doorknob and red tent (only the strawberries)",
+   "Kyra's videotape (wink)"
   ],
   "ideas": [
    "Swap the 'Hot chocolate with marshmallows' note for 'I see dead people' wording on a 'Table for six, four of them guests' line",
@@ -44,7 +40,7 @@
    "Replace the pierogies note with Cole's cold breath at the kitchen table",
    "Change the cover still caption, since the Malcolm library photo is not a diner booth"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,6 +57,15 @@
    "House note: they only see what they want to see, replacing a repeat of the cupboards line",
    "Pigs in blankets note: red balloon party and the cupboard",
    "Wink: Kyra's videotape replaces Cole's tent wink"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

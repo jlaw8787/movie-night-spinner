@@ -29,28 +29,23 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3,
-  "verdict": "Fine Miami family kitchen flavour, but it avoids the film's loudest moments and the layout is plain.",
+  "overall": 3.6,
+  "verdict": "Focker family kitchen with the Wall of Gaylord, Focker Method, Little Jack's first word, circle of trust and the RV flush all on the page, on a plain white layout.",
   "missing": [
-   "Little Jack and the Ferber method (the playpen)",
-   "Greg's truth serum speech at the engagement party",
-   "Little Jack saying his first word, with Scarface on the TV",
-   "The RV toilet and Moses (Jinx flushes the dog)",
-   "Roz, the sex therapist (the Focker house)",
-   "Touch football and Jack's back"
+   "Jack's truth serum on Greg"
   ],
   "ideas": [
    "Swap 'Jinx and Moses key lime pie' note to 'The RV toilet, a flush too far'",
    "Swap the 'Reserved' table card for a nanny cam stamp",
    "Swap 'Cuban black bean dip' note for 'Greg's shot of truth serum, hold the toast'",
-   "Swap 'Caf\u00e9 con leche' note to include 'Jack's rubber boob'"
+   "Swap 'Café con leche' note to include 'Jack's rubber boob'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,6 +61,15 @@
    "Winks: circle of trust and the RV toilet flush",
    "Cue now the Wall of Gaylord",
    "Mojito note: Roz and the teething rum"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

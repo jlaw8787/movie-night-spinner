@@ -4,20 +4,16 @@
  "facts": [],
  "checked_ok": 13,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "Looks smart but formal, and a bill of fare with courses suits a feast more than a battle film.",
+  "overall": 3.6,
+  "verdict": "Erebor banquet card with Bilbo's tea at four, Dain's sodding off and the Eagles, in a fitting parchment look but with plain dishes.",
   "missing": [
-   "Thorin's death scene and the armchair line (Ravenhill)",
-   "The auction at Bag End (return)",
-   "Dain on his war pig (Erebor)",
-   "Bard's black arrow on Smaug (Laketown)",
-   "The Eagles arriving (battle)",
-   "Legolas and Tauriel at the end (Bolg)"
+   "Thorin: Farewell, Master Burglar",
+   "Bard black arrow on Smaug"
   ],
   "ideas": [
    "Swap 'Bag End auction day crumble' for 'Thorin's last word' with the line from the death scene.",
@@ -25,7 +21,7 @@
    "Swap 'Dark Erebor stout' for a Dain war pig pork roll.",
    "Add 'tea is at four' on the footer in place of the price line."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -42,6 +38,15 @@
    "Stout note now Thorin's farewell",
    "Dain wink uses his just sodding off line",
    "Damper note says what the bread is and tied to Dale survivors"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -69,19 +69,15 @@
  "checked_ok": 8,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Strong dark neon look and the right farm and horse, but the food leans on a guessed Joi dinner and a made-up Deckard dog drink.",
+  "overall": 3.6,
+  "verdict": "Wooden horse, Joi's hologram, Sapper's farm, baseline test, cheese and snow all print on a good orange and teal takeaway menu.",
   "missing": [
-   "K's baseline poem 'cells interlinked within cells interlinked' (the test)",
-   "Deckard dreaming of toasted cheese (Las Vegas casino)",
-   "Joi's emanator and the name Joe (K's apartment)",
-   "Sapper Morton: 'You've never seen a miracle' (the farm)",
-   "Wallace's synthetic farming empire and his blindness",
-   "Luv crying while she kills Lieutenant Joshi"
+   "The name Joe",
+   "Luv"
   ],
   "ideas": [
    "Swap the Officer K note for Deckard's 'dream of cheese' line.",
@@ -89,7 +85,7 @@
    "Swap 'Roasted garlic bulbs with sourdough' for 'Toasted cheese on sourdough' (Deckard's dream).",
    "Swap the wooden horse note for the real memory of hiding it in the furnace."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -107,6 +103,15 @@
    "Rib eye note: Joi's version was a hologram",
    "Panna cotta note: meringue snow, K's last scene",
    "Overheard wink now the baseline test line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

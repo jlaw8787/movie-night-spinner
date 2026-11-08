@@ -21,7 +21,7 @@
    "TONIGHT'S FEATURE",
    "Raised in Smallville. Fed on farm cooking.",
    "A WORD FROM LOIS LANE",
-   "I'm filing the story and Clark is buying lunch. He just doesn't know it yet.",
+   "You've got me? Who's got you?",
    "Lois Lane",
    "at Daily Planet Lunch Counter",
    "STOP PRESS",
@@ -70,7 +70,7 @@
    "CHOCOLATE EGG CREAM",
    "1.40",
    "Clark's, usually knocked over on the way back.",
-   "ALSO IN THIS EDITION: Clark's glasses and clumsy stumble. Lois dangling from a helicopter. Pa Kent's farm in Smallville. Lex Luthor's lair below the city. Green crystal on a chain.",
+   "ALSO IN THIS EDITION: Clark's glasses and clumsy stumble. Superman flying back in time. Pa Kent's farm in Smallville. Lex Luthor's lair below the city. Green crystal on a chain.",
    "Prices subject to change. Printed offset at the counter. Form DS-1978.",
    "Page 2 of 2"
   ]
@@ -124,12 +124,13 @@
   "venue": "Daily Planet Lunch Counter",
   "sign": "Daily Planet, Metropolis",
   "note": {
-   "text": "I'm filing the story and Clark is buying lunch. He just doesn't know it yet.",
-   "by": "Lois Lane"
+   "text": "You've got me? Who's got you?",
+   "by": "Lois Lane",
+   "kind": "quote"
   },
   "winks": [
    "Clark's glasses and clumsy stumble",
-   "Lois dangling from a helicopter",
+   "Superman flying back in time",
    "Pa Kent's farm in Smallville",
    "Lex Luthor's lair below the city",
    "Green crystal on a chain"

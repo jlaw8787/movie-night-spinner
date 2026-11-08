@@ -4,18 +4,16 @@
  "checked_ok": 23,
  "vibe": {
   "world": 3,
-  "moments": 4,
+  "moments": 3,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "verdict": "A tidy invite that hits the hammer party, Seoul, Sokovia and Joburg, but the look is a plain cream card with no Avengers punch.",
+  "verdict": "Good dish names and the hammer cue and Ultron place card print, but the party hall invite clashes with the farm note and most of the reworked notes drop out.",
   "missing": [
-   "Elevator's not worthy (Steve)",
-   "You're all not worthy (Thor flips the hammer)",
-   "Tony fixing Laura's tractor at the farm",
-   "Ultron: Worthy, how could you be worthy? You're all killers",
-   "Stan Lee slurring 'Excelsior' after Thor's mead",
-   "Clint's farmhouse, 'Honey? I'm home'"
+   "Language wink (does not print)",
+   "Excelsior and the mead (does not print)",
+   "You're all not worthy (does not print)",
+   "Hulk versus Hulkbuster note (does not print)"
   ],
   "ideas": [
    "Swap 'Farmhouse roast chicken and vegetables' note for 'Laura's roast, a tractor needs fixing after'.",
@@ -25,7 +23,7 @@
   ],
   "flat": true,
   "done": false,
-  "overall": 3.4,
+  "overall": 3.2,
   "rework": "2026-11-08",
   "iconic": [
    "Everyone trying to lift Thor's hammer, You're all not worthy (cue, crostini note)",
@@ -42,7 +40,16 @@
    "Roast chicken note ties to the Barton farm",
    "Boerewors note names Hulk versus Hulkbuster",
    "Pavlova note ties to floating Sokovia"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

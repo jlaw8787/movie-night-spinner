@@ -22,19 +22,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good voyage galley with the right crew mascots, but the sequel's own beats (Matangi, Tamatoa, the rising island) are missing.",
+  "overall": 3.6,
+  "verdict": "Kakamora, Nalo, Motufetu and Moana's real line all print on a tidy canoe galley sheet, but the Matangi and Tamatoa wink is missing.",
   "missing": [
-   "Matangi's lair inside the giant clam",
-   "The Kakamora ships and Kotu helping the crew",
-   "Nalo's storm and the lightning",
-   "Motufetu rising from the sea",
-   "Tamatoa arriving at the end (post credits)",
-   "Moni being a huge Maui fan"
+   "Matangi and Tamatoa after the credits (wink)"
   ],
   "ideas": [
    "Swap 'Motunui chilli lime fruit with coconut' for 'Giant clam ceviche' with the note 'Matangi's front door'.",
@@ -42,7 +37,7 @@
    "Swap the 'Crew Tag' line 'Destination: over the horizon' for 'Destination: Motufetu'.",
    "Swap the 'Moni' house line for the printed menu so 'Maui fan facts' shows up where guests see it."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -59,6 +54,15 @@
    "Slushie renamed after Nalo",
    "Starter note now the boat snack",
    "Last wink now Matangi and Tamatoa"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -9,15 +9,12 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Facts are fine, but it reads like a tidy Christmas party invite and misses the film's mess, from Betsy's gift box to vomiting at Midnight Mass.",
+  "overall": 3.0,
+  "verdict": "The Nutcracker Ball hunt and Mr Green print, but the Miley, church and Home Alone gags did not make it and the toast and mains have no notes.",
   "missing": [
-   "Betsy's gift box of drugs for Isaac's last night",
-   "Isaac vomiting in church at Midnight Mass ('We did not kill Jesus')",
-   "Chris and the stolen marijuana, 'She Home Alone'd me'",
-   "Miley Cyrus at the Nutcracker Ball and Ethan's proposal",
-   "Mr. Green's 'Miley was flawless'",
-   "The drunk pub-crawl Santas"
+   "Miley was flawless",
+   "Isaac at church: we did not kill Jesus",
+   "Chris Home Alone'd"
   ],
   "ideas": [
    "Swap 'Christmas gingerbread cake' for 'Midnight Mass cake', with a note about the church vomit.",
@@ -39,6 +36,15 @@
    "Venue note marked as a note, not a quote",
    "Eggnog note: Miley was flawless",
    "Winks: Mr. Green, church, Home Alone"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

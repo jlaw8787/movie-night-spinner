@@ -24,17 +24,14 @@
   "world": 4,
   "moments": 3,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Neat case file layout and the redneck bar is in, but the food is generic and Jack's quote is invented.",
+  "overall": 3.6,
+  "verdict": "The new sheriff quote and the tax refund pork rinds land, but the Porsche, Ganz and the forged release are missing and two of the new notes are dropped by the layout.",
   "missing": [
-   "Reggie's 'new sheriff in town' bar scene",
-   "Reggie's Porsche",
-   "Jack's battered Cadillac convertible",
-   "The bus chase",
+   "Reggie's Porsche with the $500,000",
    "Ganz and Billy Bear",
-   "The 48 hour release forged by Jack"
+   "The forged 48 hour release, six months left"
   ],
   "ideas": [
    "Swap the note by Jack for Reggie's 'There's a new sheriff in town.'",
@@ -42,7 +39,7 @@
    "Swap 'Spicy fried pork rinds' note for 'For the cowboys Reggie just walked in on.'",
    "Swap 'Jailhouse chocolate cake' note for 'Six months left on the sentence.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -59,6 +56,15 @@
    "Bacon note nods to Jack's we ain't partners speech",
    "Porsche wink now the stashed cash",
    "Cue now the new sheriff announcement"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

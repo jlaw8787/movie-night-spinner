@@ -40,19 +40,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A handsome 1959 tea room, but decimal cents break the period and the film's dress, Patty's nightdress and Magda's party get no look in.",
+  "overall": 3.6,
+  "verdict": "Goode's tea room in 1959 with the 35 guinea cake, Magda's party punch, Rudi's proposal and prices in shillings, but the food names stay conventional.",
   "missing": [
-   "Lisa's dress marked down from 150 to 75, 50 and finally 35 guineas",
    "Patty's pink nightdress",
-   "Magda's New Year's Eve party at her house",
-   "Rudi buying an apartment and proposing to Fay",
-   "Fay being wary of immigrants",
-   "Magda planning her own fashion shop"
+   "Magda planning her own shop"
   ],
   "ideas": [
    "Reprice every dish in shillings and pence.",
@@ -60,7 +56,7 @@
    "Swap the egg sandwiches for \"Patty's pink nightdress pink iced fancies\".",
    "Add a \"New Year's Eve at Magda's\" place card."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -77,6 +73,15 @@
    "Capsicum note now Rudi proposing in his new flat",
    "Slip prop now says lunch room and the 35 guinea frock",
    "Winks add Magda's shop and Patty's nightdress"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

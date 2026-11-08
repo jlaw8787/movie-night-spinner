@@ -47,17 +47,13 @@
   "world": 3,
   "moments": 4,
   "food": 3,
-  "tone": 3,
-  "look": 2,
-  "overall": 3,
-  "verdict": "Clever in-room dining idea with good dish names, but the quiet cream hotel look fights the film's neon camp and the cue is shaky.",
+  "tone": 4,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "The Freeze puns and Alfred notes all print in a tidy hotel menu, but the cue does not and the design is still polite and plain.",
   "missing": [
-   "Freeze's 'Ice to see you' and 'everybody chill' puns",
-   "Freeze freezing Robin at the natural history museum",
-   "The Gotham Observatory telescope turned into a freeze ray",
-   "Barbara Wilson racing and becoming Batgirl",
-   "Alfred's illness and the cure Freeze gives Batman",
-   "Poison Ivy's lair and plants"
+   "Cue (Freeze freezes the charity auction) does not print",
+   "We're going to need a bigger cave (staff tag shows only 'A bigger cave')"
   ],
   "ideas": [
    "Swap 'Mr Freeze iced prawns' note for 'Everybody chill' on a block of ice.",
@@ -84,6 +80,15 @@
    "Chilli note: thawing out after Freeze's Observatory freezing gun",
    "Wink: Ivy's one kiss, for luck",
    "Staff tag: Alfred's 'We're going to need a bigger cave'"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 2,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

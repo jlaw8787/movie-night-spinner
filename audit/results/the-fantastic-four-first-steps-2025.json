@@ -34,19 +34,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "A fun retro dinner table with 1960s dishes, but the photo on the second page is cropped badly and the film's biggest moments are missing.",
+  "overall": 3.6,
+  "verdict": "A Baxter Building recipe box with HERBIE, Galactus, the Surfer and Sunday dinner all printing, though the photo panel crops the team and leaves empty space.",
   "missing": [
-   "Sunday dinner where Ben guesses Sue is pregnant",
-   "Franklin born on the trip home from space",
-   "Johnny working out the Silver Surfer's language",
-   "Sue standing up to the protesters with baby Franklin",
-   "The teleport bridges and Times Square",
-   "Shalla-Bal pushing Galactus into the portal"
+   "Ben's sauce gag (only a garlic note)"
   ],
   "ideas": [
    "Swap 'Space race glazed meatloaf' note ('the space race era') for the Sunday dinner scene.",
@@ -54,7 +49,7 @@
    "Re-crop the second page photo so the cast is not pushed to the right edge.",
    "Swap 'Cherry lime rickey' note for Sue's talk to the protesters."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +68,15 @@
    "Potatoes note: a little more garlic",
    "Jelly note: Galactus would eat the lot",
    "Wink: Times Square bridge"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

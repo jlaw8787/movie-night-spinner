@@ -80,19 +80,14 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A stadium stand with a scoreboard, playbook ticket and section map fits well, but the best-known plays and people are missed and a few lines get Becky wrong.",
+  "overall": 3.6,
+  "verdict": "Stadium scoreboard and section map with the Annexation of Puerto Rico, Icebox, the 21 point halftime and Kevin's water tower line printing, with plain food.",
   "missing": [
-   "John Madden and the NFL stars arriving on the bus (before the final)",
-   "Danny's halftime speech, each kid recalling a personal win (21 point comeback)",
-   "Jake Berman's 99 yard touchdown on the Annexation play (final play)",
-   "The Chevrolet dealership versus gas station bet (the brothers)",
-   "The water tower reading 'Home of The O'Shea Brothers' (the ending)",
-   "Spike spearing Junior with his helmet (the dirty hit)"
+   "The Chevy dealership against the gas station bet"
   ],
   "ideas": [
    "Swap the ticket line 'Pass to Icebox' for 'Lateral to Berman'.",
@@ -100,7 +95,7 @@
    "Swap the scoreboard row 'ATT 94' for 'Madden bus arrives' as a wink to the NFL stars.",
    "Swap 'Icebox's baked mac and cheese' note for the water tower line, 'Home of The O'Shea Brothers.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -118,6 +113,15 @@
    "Cooler note: the 21 point halftime",
    "Note is Kevin's real water tower line",
    "Wink: Madden and the NFL stars on the bus"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

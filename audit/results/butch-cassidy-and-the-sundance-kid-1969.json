@@ -34,19 +34,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The hideout and the dynamite pretzels suit it, but it leaves out the best known lines and scenes.",
+  "overall": 3.6,
+  "verdict": "A hideout card in sepia and kraft with Bolivia, the knife fight, the cliff jump, the bicycle and the dynamite sticks all printing.",
   "missing": [
-   "'Who are those guys?' about the posse (the chase)",
-   "'Raindrops Keep Fallin' on My Head' on the bicycle",
-   "Harvey Logan's knife fight, 'Rules? In a knife fight?' (the hideout)",
-   "Spanish phrases written on a card for the Bolivian bank (the robbery)",
-   "The final freeze frame (the ending)",
-   "The cliff jump, 'The fall will probably kill ya'"
+   "Raindrops on the bicycle"
   ],
   "ideas": [
    "Swap the 'Pisco punch' note for 'Who are those guys? Drink up, ride on.' as a real quote nod with quote marks.",
@@ -54,7 +49,7 @@
    "Swap 'Hole-in-the-Wall chilli' note for 'No rules at this table.'",
    "Swap 'Table for two, quietly' on the slip for 'Table for three, Etta rides along'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +66,15 @@
    "Chilli note: Rules? In a knife fight?",
    "Prop: table for three, Etta rides along",
    "Wink: Bolivia and the freeze frame"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

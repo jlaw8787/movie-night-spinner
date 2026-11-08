@@ -30,19 +30,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good stage and VIP pass look, but the menu misses the wolves, the turtle and the Donkey Roll.",
+  "overall": 3.8,
+  "verdict": "Gold glitter poster and a Conner4Real tour stop with Donkey Roll tacos, Party Wolves, Lawrence's farm and Maximus' ashy cookies hits the tone.",
   "missing": [
-   "The Party Wolves at the E! proposal with Seal (TV stage)",
-   "The Donkey Roll on the Tonight Show (Fallon)",
-   "Maximus the pet turtle's death (home)",
-   "Pancakes mixed with dog mess to test loyalty (Conner's house)",
-   "Aquaspin appliances playing his songs (the tour)",
-   "Hunter the Hungry stealing the show (the tour)"
+   "Equal Rights song (house drink)",
+   "Aquaspin appliances playing the album"
   ],
   "ideas": [
    "Swap 'Tour bus crispy chicken sliders' for 'Party Wolf sliders' tied to the E! proposal.",
@@ -50,7 +46,7 @@
    "Swap 'Conner4Real cucumber gin spritz' note for the Aquaspin blender gag.",
    "Swap 'Style Boyz fish tacos' note for the Donkey Roll."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -68,6 +64,15 @@
    "Cookie note ties to Maximus's ashy scales",
    "Owen's popcorn note adds the robot mask",
    "Wink 1 now The Party Wolves (prints in the footer)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

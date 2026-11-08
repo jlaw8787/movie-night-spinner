@@ -34,26 +34,20 @@
  "checked_ok": 10,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Sweet scuttlebutt tone and a pretty island map, but a tiki bar is a loose fit for the underwater kingdom and the key scenes are missing.",
-  "missing": [
-   "Ursula taking Ariel's voice into the nautilus shell (sea witch's lair)",
-   "Ursula as Vanessa (castle)",
-   "Flotsam and Jetsam the eels",
-   "King Triton's trident (grotto)",
-   "The engagement party (Eric)"
-  ],
+  "overall": 3.6,
+  "verdict": "Scuttle's dinglehopper line, Under the Sea and Vanessa now print, though the last two are tiny footer text on a fairly generic island chart.",
+  "missing": [],
   "ideas": [
    "Swap 'Ariel's grotto jelly' note for 'Voice in a shell' set in a nautilus mould.",
    "Replace 'Lagoon garlic lime prawns' with 'Flotsam and Jetsam eel' crispy noodles.",
    "Swap 'Plantain chips' for 'Treasure chips' with a plastic fork on the side.",
    "Replace the tiki gong with 'Ring the conch'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -67,6 +61,15 @@
   "changed": [
    "Two winks now Under the Sea and Ursula as Vanessa",
    "Jelly note nods to the nautilus shell"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

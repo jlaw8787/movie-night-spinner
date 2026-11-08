@@ -36,16 +36,13 @@
   "world": 3,
   "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "verdict": "Right crater camp and the knife nod is a good one, but the cheery camp tone is off for a horror film and the look is plain.",
+  "verdict": "Dark, deadpan lines like the knife jerky, stopped watches and the entry tag fit, but the campfire layout and food stay generic.",
   "missing": [
-   "Mick's 'head on a stick' line (the shed)",
-   "Ben's camera footage showing Mick followed them from the petrol station",
-   "The shot-out ute chase (the road)",
-   "Liz hiding in Mick's garage of cars (the mine site)",
-   "Mick's long tall stories while he pretends to fix the car (the camp)",
-   "The title card saying no trace of Liz or Kristy was found"
+   "Head on a stick",
+   "Mick's tall stories as a bigger gag",
+   "Ben's camera footage of the ute at the petrol station (only a small footer line)"
   ],
   "ideas": [
    "Swap 'Road trip honey soy roasted nuts' note for 'The petrol station where it began' to fix the roadhouse cue",
@@ -53,7 +50,7 @@
    "Swap the 'Mess hall door' heading for a darker 'Crater entry notice' look",
    "Replace 'Campfire sausage and onion sandwiches' with a billy-boiled meal named for Mick's camp"
   ],
-  "overall": 3.2,
+  "overall": 3.4,
   "flat": true,
   "done": false,
   "rework": "2026-11-08",
@@ -71,6 +68,15 @@
    "House drink note: Mick's tall stories",
    "Wink: Mick's ute in Ben's footage replaces the dead car",
    "Campfire headings renamed to suit the film"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

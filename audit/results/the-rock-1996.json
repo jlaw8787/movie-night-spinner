@@ -22,19 +22,15 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The cioppino and the Rob Roy suit a San Francisco cop caper, but the plain canteen look and notes are flat.",
+  "overall": 3.6,
+  "verdict": "Mason's haircut cue, glass beads, green flares, VX and the Losers line all print on a canteen sheet with a red Alcatraz poster.",
   "missing": [
-   "Mason's haircut and room service at the hotel (the cue)",
-   "The glass beads of VX that nobody can drop (Goodspeed in the lab)",
-   "Losers always whine about their best (Mason to Goodspeed)",
-   "Goodspeed's atropine needle to the heart (the cell block)",
-   "The green flares signalling the abort (the finish)",
-   "Mason's tunnel escape from the Rock (the history)"
+   "Goodspeed and Mason, the only man to escape Alcatraz (ticket only)",
+   "Car chase through San Francisco"
   ],
   "ideas": [
    "Swap the made up Goodspeed note for a real Mason line.",
@@ -42,7 +38,7 @@
    "Swap 'Fisherman's Wharf prawns' for 'Fairmont room service prawns, Mason orders everything'.",
    "Recolour the page with burnt orange and Alcatraz grey rather than pale cream."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -56,6 +52,15 @@
   "changed": [
    "Signed note is now Mason's real line",
    "Winks reworked to short phrases that print in the timetable strip"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -19,19 +19,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A decent camp mess hall with Argotron and the Minotaur, but it leaves out the Kiss costumes and Ronnie's chicken wings song.",
+  "overall": 3.6,
+  "verdict": "Sturdy Wings canteen with Taste the beast!, Kiss-My-Anthia, King Argotron and the LAIRE cue all printing, though the dishes are plain camp food.",
   "missing": [
-   "Wheeler's Kiss costumes and the Kiss themed Minotaur truck",
-   "'Kiss-My-Anthia', Danny and Augie's new country",
-   "Ronnie's chicken wings song",
-   "Danny singing 'Beth' to Beth",
-   "Ronnie's 'Booby Watcher' comic book",
-   "Augie facing King Argotron in the battle"
+   "Large black coffee, not a venti"
   ],
   "ideas": [
    "Swap 'Sturdy Wings honey soy chicken wings' for 'Chicken wings, chicken wings' with Ronnie's song as the note.",
@@ -39,7 +34,7 @@
    "Add 'Love Gun' as a house note on the Minotaur drink.",
    "Rewrite the note so Wheeler sounds more like himself."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -55,6 +50,15 @@
    "Wings note: a simple concept",
    "Chilli note: Gayle's cocaine-for-lunch line",
    "Wink: Kiss-My-Anthia replaces generic Augie wink"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

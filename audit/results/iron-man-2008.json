@@ -17,19 +17,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The cheeseburger cue and arc reactor cupcakes are spot on and the timetable is a neat touch, but it is a generic canteen list.",
+  "overall": 3.8,
+  "verdict": "Cheeseburger first, box of scraps, arc reactor and I am Iron Man all print, and the timetable winks suit the film.",
   "missing": [
-   "Burger King burgers straight after the rescue, before the hospital (the plane)",
-   "Pepper's arc reactor in the glass showcase (the office)",
-   "Pepper hacking Stane's database (the office)",
-   "Mark I built from spare parts (the cave)",
-   "Tony test flying the Mark II (the workshop)",
-   "Stane stealing the arc reactor (Tony's home)"
+   "Rhodey: Next time, baby",
+   "Stane flies in the New York pizza"
   ],
   "ideas": [
    "Swap the 'Tony's American cheeseburger' note for 'Before the hospital, before the press'.",
@@ -37,7 +33,7 @@
    "Add 'Whiskey with Obadiah' for the drinks list in place of 'Tony's workshop scotch penicillin'.",
    "Put the Mark II flight on the 3:30 timetable in place of 'Rhodey and the silver armour'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -56,6 +52,15 @@
    "Cupcake note: I am Iron Man",
    "Rib eye note: Pepper and the dry cleaning",
    "Timetable winks: box of scraps, Mark 2, Stane takes the reactor"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

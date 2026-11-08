@@ -24,17 +24,13 @@
   "world": 3,
   "moments": 4,
   "food": 4,
-  "tone": 2,
+  "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Good Pandora dish names, but the Hawaiian tiki island map belongs to a beach bar and not the Omaticaya, and the note is invented.",
+  "overall": 3.4,
+  "verdict": "Strong Pandora dish names and the Neytiri line, Toruk and Tree of Souls all print, but the beige wood layout feels generic for a glowing film.",
   "missing": [
-   "'I see you' at the Tree of Souls",
-   "Jake's first night in the glowing forest (cue)",
-   "'Tell them Toruk Makto calls to them!' (calling the clans)",
-   "Bonding with the ikran at the Hallelujah Mountains",
-   "Hometree falling",
-   "The woodsprites floating down at the Tree of Souls"
+   "I see you (does not print)",
+   "The floating mountains (footer only)"
   ],
   "ideas": [
    "Swap 'Pandora blue lagoon' for 'Woodsprite lagoon' served glowing with tonic water under a black light.",
@@ -60,6 +56,15 @@
    "Ikran curry note: the first flight that seals the bond",
    "Tree of Souls pudding note: tapioca pearls like the seeds of the sacred tree",
    "Winks: Toruk Makto calls to the clans, Toruk the last shadow, seeds of the sacred tree"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 2,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

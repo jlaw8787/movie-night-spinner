@@ -45,19 +45,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good takeaway look and the delivery-guy world fits, but the food is mostly guesswork and the McDonald's, Yoohoo and Cozy's moments are missing.",
+  "overall": 3.8,
+  "verdict": "A takeaway menu from Sonny's apartment with the dented cans note, Cheerios then lasagna, Scuba Steve, blue jelly sundaes and Yoo-hoo all printing.",
   "missing": [
-   "Yoohoo at the school playground (Sonny and the kids)",
-   "McDonald's stops breakfast at 10:30 and Julian asks for Cheerios then lasagna (breakfast scene)",
-   "Cozy's delivery guy Nazo and his chocolate cake (the apartment)",
-   "Dented SpaghettiOs cans, 'Microsoft went down three points' (grocery aisle)",
-   "Curly fries at the Hooters party (Vanessa the waitress)",
-   "Scuba Steve keeping his flippers on, even bowling (the couch chat)"
+   "McDonald's breakfast (only in the cue)"
   ],
   "ideas": [
    "Swap 'Banana smoothie' for 'Yoohoo, hold the rum' (the playground scene).",
@@ -65,7 +60,7 @@
    "Swap 'Central Park everything bagel bites' for 'Cozy's chocolate cake, hand delivered by Nazo.'",
    "Swap the note for Sonny's real dented cans line."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -79,6 +74,15 @@
    "Wink: Cheerios, then lasagna at McDonald's",
    "Wink: Scuba Steve keeps his flippers on, even bowling",
    "Milkshake note: Sonny's Yoo-hoo at the playground, hold the rum"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

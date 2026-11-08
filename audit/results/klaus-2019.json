@@ -51,14 +51,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A fish stall in a frozen feuding town is a fair idea, but it skips Klaus and his toys, so it reads like a generic Nordic bistro.",
+  "verdict": "Nice painted poster and a fish stall board with the Klaus quote and postal quota, but the dish notes dropped out so it reads as names and prices.",
   "missing": [
-   "Klaus's cabin full of handmade toys (Jesper's first visit)",
-   "Márgu asking for a sled and Jesper building it (Klaus and Jesper make up)",
-   "Children writing letters asking for toys (the postal scheme)",
-   "Jesper's silk sheets and spoiled start (arrival on the island)",
-   "Magdalone and Olaf falling in love during the chase (the feud ends)",
-   "Alva reopening her school to teach reading and writing"
+   "Jesper delivers the first toy secretly",
+   "Fresh out of mackerel, only herring and burbot (Alva)",
+   "Jesper misses his silk sheets",
+   "Márgu's sled"
   ],
   "ideas": [
    "Swap 'Letter gingerbread envelopes' for 'Márgu's sled gingerbread', sled shapes with red icing.",
@@ -82,6 +80,15 @@
    "Herring note uses Alva's line",
    "Gingerbread renamed Dear Mr. Klaus gingerbread envelopes",
    "Duck note nods to the silk sheets"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -17,19 +17,15 @@
  "checked_ok": 18,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A warm farmhouse recipe box that nails the corn and dust, but leaves out most of the film's big ideas.",
+  "overall": 3.8,
+  "verdict": "Warm farmhouse recipe box that now prints Murphy's Law, Stay, TARS at ninety percent and the Morse second hand, with plain dishes.",
   "missing": [
-   "Cooper's line that Murphy's law means whatever can happen will happen",
-   "TARS: 'Ninety percent' honesty parameter (Wikiquote)",
-   "The wristwatch Cooper leaves Murph",
-   "Dr. Mann's planet and his falsified data",
-   "The wormhole near Saturn",
-   "The 5,000 frozen embryos on the Endurance"
+   "Dr Mann's planet and his faked data",
+   "The drone chase through the corn"
   ],
   "ideas": [
    "Swap 'Cold sweet tea with lemon' note for 'Murphy's law: whatever can happen will happen.'",
@@ -37,7 +33,7 @@
    "Swap 'Soft pretzel bites with beer cheese' for 'Embryo egg bites' with 'Five thousand, frozen.'",
    "Swap 'Ice planet crackling pork roast' note for 'Mann's planet, the data was faked.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -57,6 +53,15 @@
    "Pork roast note: Mann's faked data",
    "Pie note: The books said Stay",
    "Wink 4: TARS honesty at ninety percent"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

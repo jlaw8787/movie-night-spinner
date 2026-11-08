@@ -69,19 +69,15 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A bright mall placemat that fits the film, but the food court argument and the best-known gags are missing.",
+  "overall": 3.6,
+  "verdict": "Food court placemat with downstairs and upstairs line, Truth or Date, the sailboat and the Easter Bunny, though most dish notes are filler.",
   "missing": [
-   "The food court and cookie stand argument (Brodie and T.S.)",
-   "The Magic Eye sailboat poster (Willam)",
-   "Jay and Silent Bob's plans to wreck the stage",
-   "Stan Lee's advice to Brodie",
-   "The Cheese Haus lunch date (Gill Hicks)",
-   "The Superman debate in the food court"
+   "Jay: kneel before Zod, snootchie-bootchies",
+   "Stan Lee: trust me, True Believer"
   ],
   "ideas": [
    "Swap 'Food court pretzels' note for the cookie stand argument.",
@@ -89,7 +85,7 @@
    "Add a Jay and Silent Bob dip plate to replace 'Food court pork egg rolls' note.",
    "Swap 'Truth or Date lemonade' note for the Bob Summers game show."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -109,6 +105,15 @@
    "Cookie note: the cookie stand upstairs",
    "Nuts house note: snootchie-bootchies",
    "Winks: Easter Bunny, Zod, Stan Lee"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

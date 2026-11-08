@@ -51,28 +51,21 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
+  "world": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Takeaway layout fits the delivery plot, but the cue and pizza name get the best food scene wrong and the funniest set pieces are missing.",
-  "missing": [
-   "Korean barbecue date where Rick throws up raw meat on the grill",
-   "The elevator trap with the claustrophobic delivery man",
-   "Creepy Tim and the security cameras",
-   "Parent Trapping and Cyrano-ing, the scheme names",
-   "Becca's 'liking because, loving despite' speech",
-   "The kiss cam at the baseball game, three tries"
-  ],
+  "overall": 3.6,
+  "verdict": "The kiss cam, the elevator trap, Kirsten's order and the pizza on the floor all print, in a standard takeaway wrapper with good stills.",
+  "missing": [],
   "ideas": [
    "Swap 'Late-night office pizza' for 'Bedroom floor pizza' and fix the cue to match.",
    "Swap 'Spicy tuna crispy rice' for 'Korean barbecue, cook it first' with the raw meat gag.",
    "Swap 'Office party cupcakes' note for 'Creepy Tim's love in enclosed spaces'.",
    "Swap 'Iced salted caramel latte for the boss' note for 'Pandora's Box, Harper's code phrase'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -89,6 +82,15 @@
    "Pretzel note: kiss cam took three tries",
    "Latte note: handed over each morning",
    "Receipt line: Kirsten's real dinner order"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

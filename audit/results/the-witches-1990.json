@@ -66,19 +66,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good hotel room service look with the Grand High Witch grinning from the banquet photo, but the cue, sign and quote are off and the best witch moments are missing.",
+  "overall": 3.8,
+  "verdict": "Formula 86 soup, Bruno's cake, no toes, the mouse pocket line and the Grand High Witch photo all print on a dark hotel menu, though the soup cue does not print.",
   "missing": [
-   "The Grand High Witch peeling off her mask",
-   "Luke turned into a mouse",
-   "Helga's cigar",
-   "Erica trapped in the painting",
-   "Mr Stringer and the cleaver",
-   "The witches turned to mice at the banquet"
+   "Grand High Witch's mask",
+   "Luke turned into a mouse (the soup cue does not print)",
+   "Erica in the painting (footer only)"
   ],
   "ideas": [
    "Swap 'Mini Cornish pasties' for 'Bruno's chocolate bar' with the note 'Look what happened to him.'",
@@ -86,7 +83,7 @@
    "Swap 'Formula 86 watercress soup' note for 'Keep a spare bowl for the witches.'",
    "Swap \"Hotel Excelsior roast beef and Yorkshires\" note for \"Mr Stringer carves. Keep the cleaver away from the mice.\""
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -102,6 +99,15 @@
    "Roast note: Mr Stringer and the cleaver",
    "Cake note: Bruno's bar had Formula 86",
    "Winks: Erica in the painting, Formula 86 vial"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

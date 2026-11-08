@@ -39,14 +39,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A friendly lunch truck with the right robot nods, but it mostly ignores the funniest Number 5 scenes.",
+  "verdict": "The chalkboard truck has Number 5's no disassemble line, Laser Lips and the lightning footer, but the chalkboard layout drops every dish note so most of the jokes never print.",
   "missing": [
-   "Number 5 squashes a grasshopper, then says reassemble (Stephanie's yard)",
-   "Learning English from TV, Three Stooges and Johnny Carson (Number 5 on the couch)",
-   "Hey, Laser Lips, your mama was a snow blower (Number 5 and the Nova guards)",
-   "Ben Jabituya's mangled idioms (Ben, Newton and Howard)",
-   "No disassemble! (Number 5 panicking in the lab)",
-   "Number 5 reading in Stephanie's house at high speed (the cue)"
+   "Need input, more input",
+   "Your mama was a snow blower (dropped note)",
+   "The squashed grasshopper"
   ],
   "ideas": [
    "Swap the made up Johnny 5 note for 'No disassemble!'.",
@@ -70,6 +67,15 @@
    "Egg roll note: More input!",
    "Crush note: Squash, dead",
    "Winks: alive after lightning, squashed grasshopper"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

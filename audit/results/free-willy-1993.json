@@ -45,20 +45,16 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The iconic leap poster helps, but a beach kiosk is not an amusement park tank and the writing is plain.",
+  "overall": 3.6,
+  "verdict": "A park kiosk with the jump poster, Jesse's real line, the breakwater cue and Nobody steals a whale, about as good as the film's food allows.",
   "missing": [
-   "Jesse scrubbing the graffiti he sprayed (the park wall)",
-   "Willy rescuing Jesse after he falls into the tank",
-   "Randolph's Haida prayer (the escape)",
-   "The truck stuck in the mud (the road)",
-   "Jesse calling Glen and Annie on the CB radio",
-   "Willy leaping the breakwater (the finale)"
+   "Truck stuck in the mud, CB radio call to Glen and Annie (the road)",
+   "Jesse scrubbing his graffiti (the park)"
   ],
   "ideas": [
    "Swap the 'Surf report' strip for a park sign: 'Shows daily. Willy not on the bill.'",
@@ -66,7 +62,7 @@
    "Swap 'Orca cookies and cream' for 'Breakwater leap ice cream'.",
    "Swap the 'Randolph's chilli crab linguine' name for 'Randolph's Haida prayer linguine'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -86,6 +82,15 @@
    "Drinks house note now the mud scene",
    "Winks reordered, jump first",
    "Prop ticket now opening day, Willy refusing to perform"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

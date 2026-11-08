@@ -22,19 +22,14 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Right rig and the right animal cracker cue, but it reads like a school canteen and skips the film's loudest moments.",
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A neat rig mess with the animal cracker fight, the Taiwan components line and the shuttle pass, though the dishes are plain rig food.",
   "missing": [
-   "Harry chasing AJ across the rig with a shotgun",
-   "The drillers' demands before they agree to go",
-   "Lev's 'American components. Russian components. All made in Taiwan!'",
-   "The Armadillo driller vehicle",
-   "Independence crashing on approach",
-   "Harry sending AJ back into the airlock"
+   "The drillers' demand: no taxes ever again"
   ],
   "ideas": [
    "Swap 'Oil rig jerky' for 'Armadillo sliders', note 'Rolls over rock, stops for nothing.'",
@@ -42,7 +37,7 @@
    "Swap 'Cajun popcorn shrimp' note for 'The drillers' price: never pay taxes again.'",
    "Rename the layout stamp from 'Mess Chit' to 'Shotgun warning' with AJ's name on it."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,6 +56,15 @@
    "Lemonade note: AJ running from Harry's shotgun",
    "Animal crackers and cream note carries AJ's cracker or cookie argument",
    "Winks: the Armadillo driving clinic and Make your peace with God, AJ"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

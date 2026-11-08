@@ -19,18 +19,11 @@
   "world": 3,
   "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Uses the allergy, Ellis Island and Albert well, but the stock bistro layout makes it feel like any date night menu.",
-  "missing": [
-   "Albert's mustard stain on his shirt (the date)",
-   "Hitch tossing the salad on Sara (the food slap)",
-   "The Benadryl store run (the convenience store)",
-   "Hitch kicking his date on the jet ski (the water)",
-   "Albert ripping his pants at the wedding (the splits)",
-   "The Butcher of Cadiz record at Ellis Island (the archives)"
-  ],
+  "overall": 3.4,
+  "verdict": "The date coach lines land well, but the layout is a generic bistro and the Keep This tag cuts off mid sentence.",
+  "missing": [],
   "ideas": [
    "Rename 'Albert's meatball sliders' to 'Albert's mustard dogs' and change the note.",
    "Swap 'Seared scallops with pea purée' note for 'Skipped after the swollen face'.",
@@ -56,6 +49,15 @@
    "Steak note: Michelangelo and Sistine Chapel",
    "Martini note: Sara's Grey Goose dirty",
    "Wink: Q-tip dance and split"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

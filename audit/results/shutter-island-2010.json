@@ -34,19 +34,14 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The hospital canteen works and the No. 67 voucher is a clever nod, but the dishes and notes stay safe for a film this twisty.",
+  "overall": 3.6,
+  "verdict": "A moody hospital canteen with the monster line, who is 67, the lighthouse and the hurricane cue, though the food is mostly plain.",
   "missing": [
-   "The missing patient's note: the law of 4, who is 67 (Rachel's cell)",
-   "Teddy's matches and cigarettes, the flame on the poster (Teddy's headaches and fire dreams)",
-   "Which would be worse, to live as a monster or die as a good man (the ending)",
-   "The cave woman claiming to be the real Rachel (cliffs)",
-   "Dr Cawley's brandy and Mahler in his house (Cawley's study)",
-   "Ward C and its locked doors (Teddy's break in)"
+   "Cawley's study and the Mahler record"
   ],
   "ideas": [
    "Swap the made up Teddy note for the real monster or good man line.",
@@ -54,7 +49,7 @@
    "Swap 'Lighthouse cheese straws' for 'Matchbook breadsticks' with a nod to Teddy's lighter.",
    "Rename 'Chuck and Teddy's storm chowder' to 'Chowder for Marshals, 67th bowl'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -69,6 +64,15 @@
    "Baked beans renamed Barefoot Rachel baked beans on toast",
    "Rachel's cell wink now reads Rachel's note: who is 67?",
    "House drink note now Teddy asking Cawley for soda and ice (Wikiquote)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

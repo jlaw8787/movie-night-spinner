@@ -57,20 +57,16 @@
  ],
  "checked_ok": 11,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The talent night lounge fits a vocal group, but the Sunday dinner idea is not in the film and the big moments are missing.",
+  "overall": 3.6,
+  "verdict": "The 'Is there a heart' line, Choirboy wings and the Duck cue print on a good dark lounge menu, but the dishes are generic soul food.",
   "missing": [
-   "Duck taking over the piano stool at the Battle of the Bands",
-   "Eddie's number making Bird's girlfriend faint",
-   "The album cover that shows white people",
-   "Sarge out-dancing Dresser",
-   "Big Red Records and the contract",
-   "The hotel reveal with Tanya and J.T."
+   "Sarge out-dances Dresser: Hold my cane",
+   "The album cover with white people"
   ],
   "ideas": [
    "Swap 'Sunday fried chicken with ham hock greens' note for the final family reunion.",
@@ -78,7 +74,7 @@
    "Swap 'Devilled eggs' for 'Battle of the Bands' hot wings with a piano stool note.",
    "Replace the 'Backstage cherry limeade' note with the matching suits."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -96,6 +92,15 @@
    "Wings renamed Choirboy's go-to-church wings",
    "Chicken renamed Reunion, note on the old moves",
    "House hot dog note is Hold my cane"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

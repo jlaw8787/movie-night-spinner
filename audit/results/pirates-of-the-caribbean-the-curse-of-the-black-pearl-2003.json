@@ -22,19 +22,14 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The dishes are on point, but the blueprint sheet and the line 'Laser issue, fleet standard' feel like a navy canteen, not a pirate galley.",
+  "overall": 3.4,
+  "verdict": "Rum line, Apple?, the medallion and the crew notes all print, but the plan sheet is a generic galley template and the Tortuga fritters are gone.",
   "missing": [
-   "'Why is the rum gone?' (the island, Jack)",
-   "Elizabeth burning the rum as a signal fire (the island)",
-   "Barbossa's apple tasting of ash (Black Pearl cabin)",
-   "Skeleton pirates in the moonlight (Isla de Muerta)",
-   "Jack's dinghy sinking at the Port Royal dock",
-   "Jack the monkey and the medallion (Black Pearl)"
+   "Tortuga bouquet (fritters note)"
   ],
   "ideas": [
    "Swap the footer 'Laser issue, fleet standard' for 'Rum rationed. Savvy?'",
@@ -62,6 +57,15 @@
    "Plantain coins renamed Aztec gold",
    "Snapper stew note says what the food is",
    "Wink: the worst pirate you've ever heard of replaces the medallion, which stays on the prop"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

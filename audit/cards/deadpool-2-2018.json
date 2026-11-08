@@ -23,7 +23,7 @@
    "MEAL VOUCHER",
    "No. 18",
    "Serve the snacks when X-Force jumps out of the plane.",
-   "\"Listen up, X-Force. Dinner is mandatory and so is wearing pants. Peter, that means you.\"",
+   "Listen up, X-Force. Dinner is mandatory and so is wearing pants. Peter, that means you.",
    "Wade Wilson",
    "SLIP",
    "X-Force Application",
@@ -105,7 +105,8 @@
   "sign": "Ice Box Lunch Line",
   "note": {
    "text": "Listen up, X-Force. Dinner is mandatory and so is wearing pants. Peter, that means you.",
-   "by": "Wade Wilson"
+   "by": "Wade Wilson",
+   "kind": "note"
   },
   "winks": [
    "X-Force and the parachute accident",
@@ -118,7 +119,7 @@
  "house": {
   "s": {
    "n": "Mac and cheese bites",
-   "note": "Russell's order at the Ice Box. Big trouble follows."
+   "note": "Comfort food for Russell. Big trouble follows."
   },
   "d": {
    "n": "Fruit punch in a carton",

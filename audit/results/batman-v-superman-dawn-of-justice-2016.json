@@ -50,29 +50,22 @@
  ],
  "checked_ok": 18,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "verdict": "The jar and the gala are the right ideas, but it is a pale ivory banquet for a dark, grim film and the best lines are missing.",
-  "missing": [
-   "Martha! Why did you say that name? (Batman and Superman fight)",
-   "Granny's Peach Tea jar and Finch's bucket line",
-   "Diana saying she borrowed the drive and left it in the glove box",
-   "Batman's armoured suit and the Bat-Signal",
-   "Doomsday impaled on the kryptonite spear",
-   "Lex's hearing bomb"
-  ],
+  "look": 4,
+  "verdict": "A proper LexCorp gala with Lex's open bar line, the Martha fritters, Granny's peach tea and Alfred's place card, though the dishes are generic banquet food.",
+  "missing": [],
   "ideas": [
    "Swap 'Martha Kent's corn fritters' note for 'Why did you say that name?', with the fritters split in two for the Martha moment.",
    "Swap the tagline 'Martha's peach tea' for 'Granny's peach tea. Not for drinking'.",
    "Swap 'Wayne gala chocolate soufflé' note for 'Diana borrowed the drive and left the pudding'.",
    "Swap the ivory page for a dark slate and red banner so it reads as the film."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3,
+  "overall": 3.6,
   "rework": "2026-11-08",
   "iconic": [
    "Why did you say that name? (Martha)",
@@ -89,7 +82,16 @@
    "Club sandwich note: Perry's 'Don't let them take your lunch money'",
    "Fizz note nods to Granny's peach tea",
    "Place card: Alfred's 'He's been invited'"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

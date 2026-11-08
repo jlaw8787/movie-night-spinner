@@ -5,19 +5,14 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A neat staff canteen and efficiency review slip, but it leans on Chicago and the North Pole in general and misses Slam, Chirp Chirp and the naughty list.",
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.8,
+  "verdict": "The North Pole cafeteria has Siblings Anonymous, the repo man dogs, the cocoa for nice kids and Fred's halo note.",
   "missing": [
-   "Slam at the top of the naughty list (Fred marks everyone nice)",
-   "Chirp Chirp's birdhouse (Nick's gift to Fred)",
-   "DJ Donnie and the nonstop Here Comes Santa Claus",
-   "The three-strike assessment from Clyde Northcutt",
-   "Clyde's Superman cape (the ending)",
-   "The intervention with Fred's family and Wanda"
+   "Slam at the top of the naughty list (wink)"
   ],
   "ideas": [
    "Swap the note on 'Everybody's nice marshmallow cocoa' for 'Fred marks every naughty child as nice.'",
@@ -25,7 +20,7 @@
    "Swap 'Iced gingerbread men' for 'Chirp Chirp birdhouse cookies', the replica Nick gives Fred.",
    "Swap the house note on 'Caramel popcorn balls' for 'DJ Donnie plays the same Santa song on repeat.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -44,6 +39,15 @@
    "Ham note: the dinner Nick talked him into",
    "Winks: Clyde's three strikes, Slam, Chirp Chirp",
    "Slip: three strikes, then closed"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -18,19 +18,15 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 2,
+  "moments": 4,
+  "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The comic shop and the online costume order work, but the food has nothing to do with the film and Hit-Girl and Big Daddy barely get a look in.",
+  "overall": 3.6,
+  "verdict": "Comic shop snack bar with the narration line, costume order, Mister Bitey and the butterfly knife, though the food is still ordinary.",
   "missing": [
-   "Mister Bitey the cat on the billboard ledge (opening stunt)",
-   "Mindy asking for a butterfly knife instead of a puppy (Big Daddy's birthday scene)",
-   "Red Mist and the Mist Mobile (Chris D'Amico)",
-   "The bazooka finale in D'Amico's penthouse",
-   "Kick-Ass's MySpace page and the video that made him famous",
-   "Big Daddy's jetpack with gatling guns"
+   "Red Mist",
+   "Bazooka in the penthouse"
   ],
   "ideas": [
    "Swap \"Bodega bacon, egg and cheese rolls\" for \"Mister Bitey's tuna melt\", after the cat Dave tries to rescue.",
@@ -38,7 +34,7 @@
    "Swap \"Bowling alley burger\" for \"Big Daddy's burger\", with a note about training Mindy.",
    "Swap the house slushie note for \"Hit-Girl's purple wig, sipped slowly\" and make the combo \"Bazooka Combo\"."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -55,6 +51,15 @@
    "Bodega roll note ties to Mister Bitey",
    "Sundae renamed Mindy's hot fudge sundae",
    "Winks add butterfly knife and bazooka, drop the unsourced jetpack"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 2,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

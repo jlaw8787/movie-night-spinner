@@ -46,19 +46,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 2,
+  "moments": 3,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A tidy mess tent with the Nui Dat concert and the 108 men right, but it skips almost every part of the battle and the signed note is made up for a real officer.",
+  "overall": 3.2,
+  "verdict": "A Nui Dat mess tent with Little Pattie's satay and Major Smith's note, but Iroquois, rain and the roll call only appear as timetable labels and the poster leaves a blank patch below it.",
   "missing": [
-   "Private Large firing his weapon during the mortar attack, then killed at the end",
-   "11 Platoon radioing artillery to land 'danger close'",
-   "The two RAAF Iroquois pilots flying in with ammunition under fire",
-   "The roll call of the men who died",
-   "Harry Smith refusing to leave 11 Platoon behind and the M113s arriving",
-   "Little Pattie's concert going on while D Company is fighting"
+   "Major Smith refusing to leave 11 Platoon",
+   "Iroquois pilots flying in the ammunition resupply under fire (label only)",
+   "Roll call of the men who died (label only)"
   ],
   "ideas": [
    "Swap 'Ration pack chocolate orange pots' note for 'Danger close', the artillery call on 11 Platoon.",
@@ -83,6 +80,15 @@
    "Satay note: Little Pattie's show",
    "Winks: Smith and 11 Platoon, Iroquois pilots, rain, roll call",
    "Badge prop line: Long Tan, August 1966"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

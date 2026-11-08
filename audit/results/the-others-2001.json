@@ -58,19 +58,15 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Dark, quiet manor look with sound 1945 British food, but a room service layout fits a hotel better than a haunted house and the best scares are left out.",
+  "overall": 3.6,
+  "verdict": "Dark manor look with the piano, keys and 'say hello' lines now printing, though the door hanger has a blank black circle and the cover footer is clipped.",
   "missing": [
-   "The piano that plays itself (the drawing room)",
-   "The nineteenth-century album of photographs of the dead (already a wink)",
-   "The séance and the old blind medium",
-   "Anne's veiled communion dress and the old woman",
-   "The servants' headstones in the cemetery",
-   "'If you see a ghost, you say hello' for the children"
+   "The seance with the old blind medium",
+   "The album of photographs of the dead"
   ],
   "ideas": [
    "Swap 'Welsh rarebit with English mustard' note for the real door rule, 'Close one door before you open the next', in the Grace voice",
@@ -78,7 +74,7 @@
    "Rename 'Curtains-drawn Jersey cream rice pudding' for the album, 'Keepsake pudding'",
    "Swap the room service header for 'House rules' with the one-door-at-a-time rule as the sign"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -93,6 +89,15 @@
   "changed": [
    "Shepherd's pie note now the piano that plays itself",
    "Winks: ghost 'say hello' nod and the blind medium's seance replace fog and Mrs Mills"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

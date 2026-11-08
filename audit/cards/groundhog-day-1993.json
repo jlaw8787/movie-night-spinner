@@ -17,7 +17,7 @@
    "POSTER: TMDB",
    "WAKE UP CALL",
    "6:00 AM, Punxsutawney",
-   "Same as yesterday",
+   "I Got You Babe, again",
    "NOW SHOWING ABOVE THE COUNTER",
    "1993",
    "Same breakfast. Every day.",
@@ -52,7 +52,7 @@
    "ORDER UP WHEN",
    "Serve the breakfast feast when Phil gorges at the diner.",
    "LEFT ON THE COUNTER",
-   "Same breakfast as yesterday, Rita. Same coffee too. I've stopped complaining about the sweet rolls.",
+   "What if there is no tomorrow? There wasn't one today.",
    "Phil Connors",
    "Overheard at the counter: Ice sculpture at the party.",
    "Prices subject to change. Tip your waitress.",
@@ -119,7 +119,7 @@
   {
    "course": "W",
    "name": "Angel food cake",
-   "note": "Phil orders it with everything else"
+   "note": "Part of Phil's binge at the diner"
   },
   {
    "course": "W",
@@ -136,8 +136,9 @@
   "venue": "Tip Top Cafe",
   "sign": "Tip Top Cafe, Punxsutawney",
   "note": {
-   "text": "Same breakfast as yesterday, Rita. Same coffee too. I've stopped complaining about the sweet rolls.",
-   "by": "Phil Connors"
+   "text": "What if there is no tomorrow? There wasn't one today.",
+   "by": "Phil Connors",
+   "kind": "quote"
   },
   "winks": [
    "The alarm clock at six",

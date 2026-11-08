@@ -34,19 +34,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A cosy Circle K diner with the phone booth, Napoleon and Socrates, but it plays the film safe and has one wrong mall note.",
+  "overall": 4.0,
+  "verdict": "A proper Circle K menu with the phone booth pass, Lincoln's note, the Ziggy Piggy sundae, Genghis Khan and Wyld Stallyns all printing.",
   "missing": [
-   "Air guitar and 'Excellent!' (Bill and Ted's catchphrase)",
-   "Napoleon at the Waterloo water park eating ice cream, called Ziggy Piggy",
-   "Genghis Khan's sporting goods rampage (San Dimas mall)",
-   "Iron Maiden and Henry VIII's castle ('Iron Maiden?')",
-   "Future Bill and Ted answering '69, dudes!' (Circle K lot)",
-   "Abraham Lincoln: 'Be excellent to each other and party on, dudes' (the presentation)"
+   "Genghis Khan and the Twinkies at the mall"
   ],
   "ideas": [
    "Swap 'San Dimas mall sundae' for a Waterloo 'Ziggy Piggy' sundae, from Napoleon at the water park.",
@@ -54,7 +49,7 @@
    "Swap the 'Ask about pie' note for 'Air guitar first, then order.'",
    "Swap the 'Socrates lost in a San Dimas mall' line for 'Socrates and Billy the Kid, arrested at the mall.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -74,6 +69,15 @@
    "Sundae renamed Ziggy Piggy sundae to match the dessert cue",
    "Sundae note: Eat the pig!",
    "Taquito house note now Excellent! and air guitar"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

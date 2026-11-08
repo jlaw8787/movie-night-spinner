@@ -5,19 +5,16 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Toy shop candy bar layout fits and the Chip Hazard and Archer nods are right, but the food is plain party fare.",
+  "overall": 3.8,
+  "verdict": "Chip Hazard, Archer and the power pole all print in a toy shop setting that fits, with plain party food underneath.",
   "missing": [
-   "Gwendy dolls attacking Christy's house",
-   "Alan climbing the power pole for the EMP",
-   "Chip thrown into the transformer",
-   "Gorgonites in a toy boat to Gorgon",
-   "GloboTech and the X1000 chip",
-   "The Commando Elite tapping Alan's phone line"
+   "Gorgonites toy boat to Gorgon",
+   "Chip into the transformer (EMP)",
+   "GloboTech X1000 chip"
   ],
   "ideas": [
    "Swap 'Cheese-stuffed jalapeños' note for the Gwendy dolls getting a gun.",
@@ -25,7 +22,7 @@
    "Swap 'Last stand crispy chicken burgers' note for 'power pole fizz' EMP finish.",
    "Add a GloboTech chip stamp to the keep this tag prop."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -42,6 +39,15 @@
    "House jalapenos: launches, lacerates, detonates",
    "House soda: toy boat to Gorgon",
    "Wink 3: Gwendy dolls, to die for"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

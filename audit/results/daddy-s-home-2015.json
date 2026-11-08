@@ -22,20 +22,13 @@
  "checked_ok": 15,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A neat recipe card with a good 'dad-off' joke, but it is a generic family kitchen and skips the dog, treehouse and basketball game.",
-  "missing": [
-   "Dusty getting the kids a dog and naming it Tumor",
-   "Dusty finishing Brad's treehouse in a day",
-   "Brad's half-court shot at the Lakers game hitting a cheerleader and a disabled child",
-   "Griff and the motorcycle fiasco",
-   "The King and the Step King story told at the table",
-   "Brad spending thousands on a pony and tickets to win the kids back"
-  ],
+  "overall": 3.4,
+  "verdict": "The kitchen table recipe box covers the dad-off, Tumor, the Lakers shot and the Smooth Jazz drink, but it still reads as a shared template.",
+  "missing": [],
   "ideas": [
    "Swap 'Brad's rainbow rice paper rolls' note for 'Tumor, the dog Dusty picked.'",
    "Swap 'Daddy-daughter dance cupcakes' note for Megan choosing Dusty at the dance.",
@@ -60,6 +53,15 @@
    "Cupcake note: Megan picks Dusty for the dance",
    "Winks: motorcycle, Tumor, half-court shot, King and Step King",
    "House starter note: treehouse two months vs a day"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

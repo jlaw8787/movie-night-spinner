@@ -32,20 +32,16 @@
  ],
  "checked_ok": 13,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Good Chinese dishes and cast jokes, but the boat galley idea does not match where the film's family scenes happen.",
+  "overall": 3.6,
+  "verdict": "A boat galley sheet with the sprinkler cue, Chinese food, Butters on the tab and Wah Sing Ku, though the blueprint grid is only a loose fit.",
   "missing": [
-   "Riggs pulling the fire alarm at Uncle Benny's restaurant",
-   "Laughing gas in the dentist's chair",
-   "Butters revealed as the father of Rianne's baby",
-   "Hong family hiding in the Murtaugh house",
-   "Riggs and Lorna's rabbi wedding and baby Billy",
-   "Jet Li's final pier fight"
+   "Laughing gas at the dentist",
+   "Riggs and Lorna's rabbi wedding (only a cookie note)"
   ],
   "ideas": [
    "Rename 'Chinatown dumplings' to 'Sprinkler-soaked dumplings' for the fire alarm scene.",
@@ -53,7 +49,7 @@
    "Swap the 'Fortune cookies' note for 'Rabbi not included' as the wedding nod.",
    "Replace the blueprint 'Deck 9' header with a Chinatown restaurant header."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +69,15 @@
    "Sign: Family Dinner, Boat Sunk",
    "Note works in not too old for this",
    "Wink: Wah Sing Ku and the collapsing pier"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

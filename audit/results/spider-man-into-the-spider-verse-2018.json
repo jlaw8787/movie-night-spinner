@@ -34,19 +34,16 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A decent Brooklyn school lunch, but the grey canteen look misses the comic book colour and graffiti of the film.",
+  "overall": 3.6,
+  "verdict": "A fun Brooklyn newsstand with the leap of faith cue and Peter B.'s advice, but the look is still cream paper with no comic colour.",
   "missing": [
-   "Miles's leap of faith off the building (the cue)",
-   "Spider-Ham saying that's all, folks (the safe house)",
-   "Peni Parker and her robot SP//dr (the safe house)",
-   "Spider-Gwen rescuing Miles and Peter in the forest (the forest)",
-   "Peter B. Parker, tired and out of shape, training Miles (the warehouse)",
-   "The Prowler and Uncle Aaron on the roof (Miles and Aaron)"
+   "Peni Parker and SP//dr as a dish or prop",
+   "Spider-Gwen rescue in the forest",
+   "Prowler and Uncle Aaron on the roof"
   ],
   "ideas": [
    "Swap the made up Miles note for Peter B.'s real advice line and sign it Peter B. Parker.",
@@ -54,7 +51,7 @@
    "Swap 'Coconut milk coquito' for 'Aunt May's hot chocolate for the whole safe house'.",
    "Recolour the lunchroom with halftone dots and graffiti tags instead of plain grey."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +67,15 @@
    "Pinwheel note: that's all folks",
    "Pancakes note: the Aunt May safe house",
    "Cue: the leap of faith"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

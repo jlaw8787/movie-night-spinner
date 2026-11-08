@@ -21,18 +21,13 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "verdict": "A fresh beach kiosk with the surf report suits the reef, but the film's strongest lines and creatures are mostly absent.",
+  "verdict": "The kiosk and surf report suit the film and Payakan, the family fortress, I see you and why so blue all print.",
   "missing": [
-   "I see you (Tsireya to Lo'ak)",
-   "This family is our fortress (Jake)",
-   "Why so blue? (recombinant Quaritch to his squad)",
-   "Kiri at the Spirit Tree",
-   "Lo'ak learning to ride, 'If you want to live here, you have to ride' (Aonung)",
-   "Tonowari accepting the Sullys, 'Treat them as our brothers and sisters'"
+   "The way of water has no beginning and no end"
   ],
   "ideas": [
    "Swap 'Sully family chilli lime chicken' note for 'This family is our fortress'.",
@@ -40,9 +35,9 @@
    "Swap the surf report 'Conditions' line for 'If you want to live here, you have to ride'.",
    "Swap 'Iced hibiscus and lime' note for 'I see you', Tsireya's line to Lo'ak."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.4,
+  "overall": 3.8,
   "rework": "2026-11-08",
   "iconic": [
    "I see you (Tsireya to Lo'ak)",
@@ -58,7 +53,16 @@
    "Nori crisps note ties to Lo'ak learning to ride",
    "House drink note uses I see you",
    "Spotted wink now Quaritch asking why so blue"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

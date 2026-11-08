@@ -18,19 +18,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Right bathroom and the right badge idea, but the clean blue lab look and plain snack names miss how grimy and tense the film is.",
+  "overall": 3.6,
+  "verdict": "The bathroom cell ration sheet is deadpan and prints rise and shine, hacksaws, Jigsaw and I want to play a game, but the page is clean and clinical.",
   "missing": [
-   "Hacksaws in the toilet cistern bag (Adam finds them)",
-   "Reverse bear trap in Amanda's game (flashback)",
-   "Two cigarettes, a lighter and the one-way cell phone in the box",
-   "Billy the puppet rolling up on his tricycle to congratulate Amanda",
-   "Zep and the pig mask in the parking garage",
-   "The key that went down the bathtub drain"
+   "Live or die. Make your choice."
   ],
   "ideas": [
    "Swap the note 'The puzzles in every trap' on the cheddar crackers for 'Hacksaw breadsticks, in a bag from the toilet cistern'.",
@@ -38,7 +33,7 @@
    "Change the clean blue and white paper to dirty green tile with grime so it feels like the bathroom.",
    "Replace the note on 'Red cream soda over ice' with Billy rolling in on his tricycle."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -53,6 +48,15 @@
    "Cracker note: hacksaws in the toilet tank",
    "House drink note: I want to play a game",
    "Cupcakes renamed Billy's red velvet cupcakes"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

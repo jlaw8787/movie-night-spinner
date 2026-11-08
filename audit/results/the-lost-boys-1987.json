@@ -34,19 +34,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Santa Carla's boardwalk is the right setting and the noodles cue is a good pick, but the surf report strip and plain dishes feel generic.",
+  "overall": 3.6,
+  "verdict": "Maggots cue, Grandpa's last line, Death by stereo and the garlic T shirt all print on a dark red boardwalk kiosk with a strong poster.",
   "missing": [
-   "Noodles turning into worms in the cave (the cue)",
-   "Bottle of blood passed round (David's cave)",
-   "One thing about living in Santa Carla I never could stomach, all the damn vampires (Grandpa, the last line)",
-   "The Frog brothers' garlic and holy water test on Max (dinner with Lucy)",
-   "Sam and Nanook stopping Michael (the fridge raid)",
-   "Michael hanging upside down with the bats (the bridge and the hotel)"
+   "Frog Brothers badge",
+   "Murder capital of the world (only in the corn dog note)",
+   "Grandpa's second shelf rule (does not print)"
   ],
   "ideas": [
    "Swap the made up Grandpa note for the real stomach line.",
@@ -54,7 +51,7 @@
    "Swap 'Garlic bread' for 'Frog brothers garlic bread, sticks of it' with a stake joke.",
    "Replace the surf report strip with a Santa Carla 'Murder Capital of the World' sign."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +67,15 @@
    "Garlic bread note uses Edgar's garlic T-shirt line",
    "Meatloaf note uses Grandpa's second shelf rule",
    "First wink is Death by stereo"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

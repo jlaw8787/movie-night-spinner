@@ -55,28 +55,21 @@
  ],
  "checked_ok": 6,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Handsome Little Italy menu with decent food, but the details lean on guesses and the film's own jokes are thin.",
-  "missing": [
-   "Michael's wire at the wedding",
-   "Gina's warning shot that ricochets",
-   "The staged execution at the wedding",
-   "The auction house money scam",
-   "Mickey Blue Eyes in front of the family",
-   "Frank and Vito at the table"
-  ],
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Little Italy trattoria with the accent lesson, Kansas City ravioli, the auction lot and No wires all printing, but the Lot 1 note is cut off behind the lot tile.",
+  "missing": [],
   "ideas": [
    "Swap 'Carafe of red' note for 'Pour for the table, then pretend you're from Kansas City.'",
    "Swap 'Tiramisu' note for 'Wire not included.'",
    "Rename 'Vito's' to 'Vitale's' to match Gina's dad.",
    "Swap the clam still life for an auction lot from Cromwell's."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -90,6 +83,15 @@
   "changed": [
    "Carafe note now nods to the wedding speech plot",
    "Tea sandwich note names Cromwell's auctioneer"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

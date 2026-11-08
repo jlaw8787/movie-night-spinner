@@ -4,21 +4,14 @@
  "facts": [],
  "checked_ok": 16,
  "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
+  "world": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
-  "look": 4,
+  "look": 3,
   "overall": 3.4,
-  "verdict": "Nice recipe box and the firehouse kitchen fits, but it never uses the orb, the freeze or Garraka.",
-  "missing": [
-   "The brass orb and Garraka's freeze (the firehouse)",
-   "Melody the chess ghost in the park (Phoebe)",
-   "Slimer living in the firehouse attic (the firehouse)",
-   "Nadeem's fire power and the Firemaster armour (the finale)",
-   "Mayor Walter Peck shutting the HQ (the condemned firehouse)",
-   "Ray's cursed objects (the bookstore)"
-  ],
+  "verdict": "The Firehouse kitchen has Slimer's fizz, the orb shortbread and Ray's possessed possessions line, but the recipe box template is generic.",
+  "missing": [],
   "ideas": [
    "Swap 'Frozen city chicken noodle soup' note for 'Garraka freezes things solid, so serve it hot'",
    "Swap 'Dr Brown's cream soda' note for the brass orb: 'Ray keeps the orb in a brass box'",
@@ -43,6 +36,15 @@
    "S'mores renamed Mini-Puft",
    "Fizz renamed Slimer's ectoplasm lime fizz",
    "Winks: Melody, Peck, Nadeem and the orb"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

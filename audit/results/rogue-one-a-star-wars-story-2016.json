@@ -33,19 +33,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Neat rebel canteen with the right planets and droid, but the dishes are generic Middle Eastern and the big moments are barely touched.",
+  "overall": 3.6,
+  "verdict": "Hope runs through the cue, the sphere and Chirrut's line, but K-2SO's rescue line and Vader's choke line don't print.",
   "missing": [
-   "Rebellions are built on hope (Jyn to the Council, Yavin 4)",
-   "Vader boarding the Rebel ship and the plans slipping away",
-   "Hope, Leia's last word as the plans arrive",
-   "Chirrut walking through the firefight on Jedha",
-   "Kyber crystals looted on Jedha",
-   "K-2SO: 'Congratulations. You're being rescued.'"
+   "Congratulations. You're being rescued (K-2SO)",
+   "Be careful not to choke on your aspirations, Director (Vader)"
   ],
   "ideas": [
    "Swap 'Chirrut's tea' for 'Kyber crystal rock candy', with the note 'The crystals the Empire loots from Jedha'",
@@ -53,7 +49,7 @@
    "Swap the 'Death Star plans chocolate sphere' note for 'The plans, handed to Leia at the end'",
    "Swap 'Ginger, lemon and honey tonic' note for Vader's 'Be careful not to choke on your aspirations, Director.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +66,15 @@
    "House starter note: K-2SO rescue line",
    "House drink note: Vader's choke line",
    "Wink: rebellions are built on hope"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

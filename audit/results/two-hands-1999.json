@@ -58,26 +58,22 @@
  "checked_ok": 8,
  "vibe": {
   "world": 4,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3,
-  "verdict": "Kings Cross bar tab is on theme, but most of the film's plot beats are missing.",
+  "overall": 3.6,
+  "verdict": "A Kings Cross bar tab with ten grand, Pando, Deirdre and Sharon jokes that sound like the film, but the look is basic.",
   "missing": [
-   "Jimmy burying the envelope in the sand (Bondi)",
-   "Street kids Pete and Helen stealing the cash",
-   "The monorail chase (Chinatown)",
-   "Deirdre's bank robbery in Bankstown",
-   "Wozza's failed jump over the counter",
-   "Jimmy's brother Michael as guardian angel"
+   "Street kids steal the cash",
+   "Alex and the monorail near Chinatown"
   ],
   "ideas": [
    "Swap 'Pando's crew potato scallops' note for 'Wozza's counter jump gone wrong'.",
    "Swap 'Bondi fish and chips' note for 'the beach where the envelope went missing'.",
    "Add Acko's Ford Falcon as a run slip stamp."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -95,6 +91,15 @@
    "Scallops note: Pando's gang waiting on ten grand",
    "Roast pork note: Deirdre's house, where the bank job starts",
    "Run slip prop: Sharon, Bondi"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

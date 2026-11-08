@@ -5,27 +5,20 @@
  "checked_ok": 18,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Right place and right lines from Wooderson and Pink, but it sits on a generic diner card and leaves out the night's best scenes.",
-  "missing": [
-   "Mailbox baseball and the man with the gun",
-   "Slater climbing the Moon Tower",
-   "The paint dumped on O'Bannion at the Emporium",
-   "Pink and Wooderson on the 50-yard line, 'keep livin'",
-   "The road trip to Houston for Aerosmith tickets",
-   "Mitch and Julie making out on the hill, with 'Slow Ride' at the end"
-  ],
+  "overall": 3.6,
+  "verdict": "Wooderson's line, Moon Tower, mailbox baseball and the paint on O'Bannion all print on a clean diner menu, though the diner itself is generic.",
+  "missing": [],
   "ideas": [
    "Swap 'Moon tower chips' note for Slater's Moon Tower story.",
    "Swap 'Emporium chilli butter beer nuts' note for the paint on O'Bannion.",
    "Swap 'Texas salt and pepper brisket' note for 'Mailbox baseball, and the man with the gun.'",
    "Swap the 'Hot coffee, homemade pie' line for 'Last day of school, 28 May 1976' to drop the diner cliche."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -45,6 +38,15 @@
    "Brisket note: mailbox baseball and the gun",
    "Chips note: Slater climbs the tower",
    "Winks: mailbox baseball, Pink won't sign"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

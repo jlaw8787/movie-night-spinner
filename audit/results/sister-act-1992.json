@@ -34,19 +34,16 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The convent canteen setup works and the stew and Reno touches are fun, but the big choir moments are barely used.",
+  "overall": 3.6,
+  "verdict": "The convent canteen now carries Deloris's grace and the bar sneak-out, but the food is still standard stew and scones.",
   "missing": [
-   "Deloris's wild grace ('valley of the shadow of no food')",
-   "The 'My Guy' to 'My God' rewrite",
-   "Sister Mary Lazarus: 'Four Popes now'",
-   "Deloris in the habit: 'I'm a penguin'",
-   "The nuns' helicopter ride to Reno",
-   "Souther and the Monsignor at the church"
+   "My Guy to My God rewrite",
+   "Mary Lazarus: four Popes now",
+   "Deloris as a penguin in the habit"
   ],
   "ideas": [
    "Swap the 'Warm rosemary focaccia' note for a wink to Deloris's long grace",
@@ -54,7 +51,7 @@
    "Swap 'Mother Superior's firm rules' for 'Reverend Mother's firm rules' (the film's title for her)",
    "Swap 'Choir practice cheese scones' note for 'Hail Holy Queen, then My God'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +67,15 @@
    "Bar burgers note now Deloris sneaks out, two nuns follow her (Wikipedia)",
    "Tea renamed Hail Holy Queen honey ginger lemon tea",
    "Winks: Reverend Mother's firm rules and Mary Lazarus, four Popes now"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

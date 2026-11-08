@@ -17,19 +17,15 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Nice ship's galley blueprint look, but the menu is light on the island stops that make the film.",
+  "overall": 3.6,
+  "verdict": "The seven swords cue, Reepicheep's line and the dragon and painting gags all print on a neat ship's galley sheet, though the dishes are plain.",
   "missing": [
-   "Lucy's beauty spell dream and Aslan telling her off",
-   "The sea of lilies",
-   "Ramandu's daughter Lilliandil and the falling star",
-   "The golden pool island",
-   "Reepicheep sailing into Aslan's country",
-   "The Dark Island and the sea serpent"
+   "Sea serpent and Dark Island",
+   "Lucy's Book of Incantations spell"
   ],
   "ideas": [
    "Swap 'Lone Islands market olives' for a slave market nod ('Lone Islands, sold off').",
@@ -37,7 +33,7 @@
    "Swap 'Sweet water elderflower lemonade' note for the farewell to Reepicheep.",
    "Add a seven swords stamp to the ticket."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -54,6 +50,15 @@
    "Rum grog note: Drinian's crew and the sea serpent tales",
    "Signed note: Reepicheep's real line about seeing Aslan's country",
    "Winks: Lucy's spell and Dark Island serpent added"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

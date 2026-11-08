@@ -33,20 +33,17 @@
  ],
  "checked_ok": 14,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The biker bar and mall cues are right, but the beach kiosk weather strip has nothing to do with the film.",
+  "overall": 3.4,
+  "verdict": "The biker bar cue, Come with me, the Galleria and the Judgment Day forecast all print on a kiosk with a strong poster.",
   "missing": [
-   "Come with me if you want to live (the Galleria mall)",
-   "Hasta la vista, baby (the Terminator and John)",
-   "The T-1000 arm blade and the police cap (the mall and the hospital)",
-   "John's dirt bike through the canal with the tow truck (the chase)",
-   "Sarah's chin ups and the checkered floor (Pescadero hospital)",
-   "The thumbs up in the molten steel (the finale)"
+   "Hasta la vista, baby",
+   "NO FATE",
+   "Thumbs up into the molten steel"
   ],
   "ideas": [
    "Swap the weather strip for a Cyberdyne style readout, 'System: Online, Model 101'.",
@@ -69,6 +66,15 @@
    "Cue quotes the biker bar request",
    "Elote note uses clothes, food and a truck",
    "Wink 3 is NO FATE carved in the table"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

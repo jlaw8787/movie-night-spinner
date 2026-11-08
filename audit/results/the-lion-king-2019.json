@@ -22,19 +22,14 @@
  "checked_ok": 17,
  "vibe": {
   "world": 3,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3,
-  "verdict": "Nearly the same menu as the 1994 film with a few swaps, and it ignores what makes the remake different, so a fan would not grin.",
+  "overall": 3.4,
+  "verdict": "Pumbaa's line, Timon's umami and Zazu's drill all print, but a kiosk with a weather strip is a thin match for the film's world.",
   "missing": [
-   "Slimy, yet satisfying and the umami joke (the grub log)",
-   "Scar and the mouse, 'Life is not fair, is it, my little friend?'",
-   "Zazu's 'This is not a drill' announcement",
-   "Pumbaa saving Simba from the vultures",
-   "Simba's 'Protect everything the light touches'",
-   "The animals crowding the log to feast on grubs"
+   "Protect everything the light touches"
   ],
   "ideas": [
    "Swap 'Crispy puffed rice noodles' for 'Umami grubs' crispy noodle clusters named after Timon's joke",
@@ -58,6 +53,15 @@
    "Samosa note uses Zazu's not a drill",
    "Vetkoek note uses Timon's umami",
    "Braai note uses Protect everything the light touches"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

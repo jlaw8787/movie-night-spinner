@@ -41,27 +41,20 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A real pizzeria with the right town and the right butler, but two of the lines are wrong and the biggest moments barely appear.",
-  "missing": [
-   "Crazy Eyes' pizza with French fries and Oreos",
-   "Deeds saving Babe from the frozen lake with his frostbitten foot",
-   "Emilio is Blake's son and takes over the company (shareholder meeting)",
-   "The Hallmark card poem Deeds writes",
-   "Corvettes for everyone in Mandrake Falls (finale)",
-   "Deeds beating up the thieves who mock him (Babe's purse)"
-  ],
+  "overall": 3.8,
+  "verdict": "Deeds' pizzeria is a proper small town diner with the mugger line, Emilio, Hallmark pinwheels and the frostbitten foot cue all printing.",
+  "missing": [],
   "ideas": [
    "Rename 'Greeting card cheese and tomato pinwheels' to 'Hallmark pinwheels' with a poem on a toothpick flag.",
    "Swap 'Cola float with whipped cream' for 'Crazy Eyes' fries and Oreos float'.",
    "Replace the foot line on the baked ziti with 'Emilio is very, very sneaky, sir'.",
    "Add a corvette red cherry to the pie case: 'Corvette cherry cheesecake' for the finale."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -76,6 +69,15 @@
    "Signed note is now Deeds's real mugger line",
    "Last wink is Crazy Eyes' fries and Oreos pizza",
    "Pinwheels renamed Hallmark card pinwheels"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

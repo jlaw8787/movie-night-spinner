@@ -40,19 +40,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The desert outpost works for the setting, but the dishes and the words don't use the film's funniest avatar jokes.",
+  "overall": 3.6,
+  "verdict": "Desert outpost bill of fare with Fridge's cake line, Oberon's weakness, Ming's pollen and Milo and Eddie's place, but the dishes stay plain.",
   "missing": [
-   "Bethany as the black stallion Cyclone (who can fly)",
-   "Professor Oberon's weaknesses: heat, sun and sand",
-   "The magic river that swaps avatars",
-   "Fridge killed by a piece of cake",
-   "Ming Fleetfoot, Spencer's thief avatar, at the bazaar",
-   "Ostriches loose in the real world at the end"
+   "Ostrich stampede on the dunes",
+   "Cyclone, Bethany as the winged horse",
+   "Mandrills on the rope bridge"
   ],
   "ideas": [
    "Swap the 'Desert oasis cooler' note for Oberon's weakness line: heat, sun and sand.",
@@ -60,7 +57,7 @@
    "Swap 'Mountain fortress goulash' note for the avatar swap river.",
    "Add a 'Cyclone' drink in place of the 'Frozen mint lemonade' house line."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -79,6 +76,15 @@
    "Flatbread note: ostrich stampede on the dunes",
    "Wink: Cyclone in place of the cartridge",
    "Prop: Ming Fleetfoot, weakness pollen"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

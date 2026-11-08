@@ -34,19 +34,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Cheery candy bar with the right show and hair jokes, but it uses little of the plot.",
+  "overall": 3.6,
+  "verdict": "A Corny Collins board with the show cue, Ma it's changing out there, the fallout shelter and the beat, and a bright poster.",
   "missing": [
-   "Penny hiding Tracy in the fallout shelter (the Pingletons' house)",
-   "Prudy tying Penny to her bed (the Pingleton house)",
-   "The march for integration and the police roadblock (the protest)",
-   "Miss Teenage Hairspray rigged by Velma (the pageant)",
-   "Edna filming Velma's rigging (the pageant)",
-   "Maybelle's store party (Seaweed)"
+   "Edna's makeover and the plus-size boutique (the shop)"
   ],
   "ideas": [
    "Swap 'Record shop devilled eggs' for 'Fallout shelter fruit cocktail', the tin Penny hides Tracy with",
@@ -54,7 +49,7 @@
    "Swap 'Beehive cupcakes' note for the pageant: 'Vote for Little Inez'",
    "Swap the 'Combo 196' line for 'Combo Negro Day, every day'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -72,6 +67,15 @@
    "Cupcakes renamed for the pageant",
    "Malt note: You Can't Stop the Beat",
    "Winks: Velma rigging the pageant, Penny's fallout shelter"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

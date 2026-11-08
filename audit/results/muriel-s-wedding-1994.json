@@ -35,18 +35,14 @@
  "vibe": {
   "world": 4,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The cafe and the island holiday work, but the dark grey look is a poor match for the film's bright, colourful world.",
+  "overall": 3.6,
+  "verdict": "Porpoise Spit cafe with the loser line, Waterloo, Mariel and the Van Arkle drop, but the dark chalkboard look is dull for such a bright film.",
   "missing": [
-   "'You're terrible, Muriel' from the bridesmaids",
-   "The sham wedding to David Van Arkle for the Olympics",
-   "Muriel trying on wedding dresses in the bridal shop and photographing herself",
-   "Muriel changing her name to Mariel",
-   "Rhonda leaving the bridesmaid role and going back to Porpoise Spit",
-   "Muriel and Rhonda's ABBA performance on the island"
+   "You're terrible, Muriel",
+   "Muriel trying on wedding dresses"
   ],
   "ideas": [
    "Swap the grey chalkboard background for bright wedding pastels to match the film.",
@@ -54,7 +50,7 @@
    "Swap 'Fluffy duck cocktail' house drink for 'Mariel's cocktail' with a name-change joke.",
    "Swap the 'Welcome to Porpoise Spit' sign for a postcard sign in the film's own colours."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -68,6 +64,15 @@
    "Cue is now the Waterloo star search",
    "Alternate drop note names the $10,000 sham wedding",
    "Wedding cake renamed Mariel's wedding cake"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

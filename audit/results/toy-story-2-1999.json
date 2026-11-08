@@ -18,18 +18,16 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Looks right as a toy store board, but it uses the big moments lightly and the food is plain.",
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Toy store board with Ride like the wind, the buck-buck-buck chicken, Woody's Finest Hour and the Zurg and Pizza Planet winks, but the poster looks like the first film's.",
   "missing": [
-   "The Pizza Planet truck chase",
-   "Zurg: 'I am your father'",
-   "Buzz meeting Ultra Buzz Lightyear",
+   "Stinky Pete in the box",
    "Tour Guide Barbie",
-   "Stinky Pete stuck in the box and the girl's backpack",
+   "Buzz meeting Ultra Buzz Lightyear",
    "Jessie's story with Emily"
   ],
   "ideas": [
@@ -38,7 +36,7 @@
    "Replace 'Bullseye's caramel apple wedges' note with 'Ride like the wind, Bullseye!'",
    "Add a Zurg dessert named 'Emperor Zurg's ion blast brownie'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -55,6 +53,15 @@
    "Beans note: Woody's Finest Hour",
    "Winks: Pizza Planet truck and Zurg",
    "Cue: Al takes Woody home to his apartment"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

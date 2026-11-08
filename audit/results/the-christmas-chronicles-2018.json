@@ -46,19 +46,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3,
-  "verdict": "A generic cosy Christmas kitchen. It ignores the actual adventure, the stolen car, the Chicago crash and the jailhouse sing-along.",
+  "overall": 3.4,
+  "verdict": "The Pierce recipe box now lists the camera, the Challenger, the sleigh crash and the jailhouse singalong, but the dishes are plain Christmas fare.",
   "missing": [
-   "Santa's sleigh crashing in Chicago",
-   "The red Dodge Challenger car chase",
-   "Santa and the inmates singing 'Santa Claus Is Back in Town'",
-   "Kate in Santa's bag, meeting the elves at the North Pole",
-   "Teddy's magic ornament and the glimpse of his dad",
-   "Officer Poveda and his ex-wife Lisa"
+   "Santa Claus Is Back in Town by name"
   ],
   "ideas": [
    "Swap 'Stakeout salted caramel choc chip cookies' for 'Jailhouse sing-along cookies' after the holding cell scene.",
@@ -81,6 +76,15 @@
    "Slider note: Chicago crash",
    "Milk note: Santa's millions of cookies",
    "Winks: Challenger, sleigh and elves, jailhouse singalong"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

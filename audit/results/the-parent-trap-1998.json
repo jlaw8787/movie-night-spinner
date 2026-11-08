@@ -34,26 +34,21 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Right camp and the Oreos with peanut butter, but it skips the pranks and the best Meredith moments.",
+  "overall": 3.6,
+  "verdict": "The peanut butter biscuits, fencing match, handshake, mattress in the lake and the yacht dinner all print on a good camp mess card.",
   "missing": [
-   "Honey in the shoes and chocolate syrup in the bucket (bunkhouse prank)",
-   "Meredith dragged into the lake on her mattress (camping trip)",
-   "Annie and Hallie's fencing match and poker game (camp)",
-   "Nick falling into the hotel pool when he sees Elizabeth (San Francisco)",
-   "Dinner on the yacht that recreates the night the parents met",
-   "Martin and Annie's handshake goodbye (camp drop-off)"
+   "Honey in the shoes and the prank war"
   ],
   "ideas": [
    "Swap 'London afternoon tea scones' for a 'Bunkhouse prank sundae' with honey and chocolate syrup.",
    "Swap 'Camping trip snags with fried onions' note for 'Meredith's mattress ends up in the lake'.",
    "Add the twins' 'That is so weird... So do I!' to the Oreo and peanut butter dip note."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -69,6 +64,15 @@
    "Snags note now Meredith's mattress in the lake",
    "Beef fillet note now the yacht dinner",
    "Winks: fencing match and Nick in the pool replace Camp Walden and Meredith Blake"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

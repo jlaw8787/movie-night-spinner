@@ -35,14 +35,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "A tidy motel postcard, but the log truck, the omens and Bludworth's new life rule are mostly missing from the food.",
+  "verdict": "The motel postcard has Death working backwards and Kimberly's note, but the log truck cue and most scene notes do not print.",
   "missing": [
-   "The log truck pile-up on Route 23 (Kimberly's premonition)",
-   "Day-old spaghetti tossed out the window (Evan's death)",
-   "Only new life can defeat Death (Bludworth)",
-   "Death working backwards through the list (Clear)",
-   "Isabella's baby being born (the loophole)",
-   "The Gibbons family barbecue and the propane grill"
+   "Log truck pile-up on Route 23 (the highway)",
+   "Only new life can defeat Death (the hospital)",
+   "Evan and the fire escape (the apartment)",
+   "The Gibbons barbecue and propane grill (the Gibbons house)"
   ],
   "ideas": [
    "Swap the note on 'Evan's jackpot spaghetti and meatballs' for 'Day-old spaghetti, tossed out the window. Mind the fire escape.'",
@@ -68,6 +66,15 @@
    "Cue now Kimberly's log truck premonition",
    "House drink note now the Gibbons barbecue grill",
    "Winks: Death working backwards, Bludworth's new life rule"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

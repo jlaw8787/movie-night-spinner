@@ -22,19 +22,15 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A good looking dark club menu, but it plays like a generic Delta supper and leaves out the film's big scenes.",
+  "overall": 3.6,
+  "verdict": "Stack's opening line, the garlic toast, Annie, Sammie and Remmick at the door all print on a dark, moody juke joint card.",
   "missing": [
-   "Sammie's guitar scene where the music pulls spirits through time (the juke joint)",
-   "Remmick asking to come in and play, the Irish jig at the door (outside the joint)",
-   "Plantation tokens instead of cash at the door (Cornbread on the door)",
-   "Annie's mojo bag and fried catfish (Annie helping at the joint)",
-   "Garlic water scalding Stack (the storage room)",
-   "Bo and Grace Chow painting the sign and supplying food (the grocery)"
+   "Catfish for a hundred people",
+   "Sammie's guitar pulling spirits through time (only a food note)"
   ],
   "ideas": [
    "Print 'Annie's fried catfish bites' in place of 'Garlic toast', and keep the garlic as a nod to the vampire fight.",
@@ -42,7 +38,7 @@
    "Swap the made up Stack note for a real line from the film.",
    "Add 'We take tokens too, ask Smoke' to the footer, a nod to the plantation tokens at the door."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -62,6 +58,15 @@
    "Stout renamed Stack's Chicago Irish stout (transcript)",
    "First wink now Remmick wanting to come in",
    "House whiskey note now Delta Slim plays for all he can drink (transcript)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

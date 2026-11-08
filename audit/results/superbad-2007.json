@@ -38,14 +38,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Right party and McLovin ID nods, but the dishes are generic party food and the poster layout is plain.",
+  "verdict": "McLovin ID, the shop, I love you man brownies and squad car doughnuts print, but the doughnut and pizza notes drop and it reads as a grey party menu.",
   "missing": [
-   "The liquor store robbery that wrecks McLovin's purchase",
-   "Slater and Michaels driving McLovin around and drinking on duty",
-   "Seth stained dancing with Jacinda at the first party",
-   "Seth headbutting Jules at the end of the night",
-   "The cops smashing their cruiser with Fogell",
-   "Seth and Evan's mall reconciliation"
+   "Seth's stained pants",
+   "Seth headbutting Jules",
+   "Pizza bagels at the sleepover (note does not print)",
+   "Cop car doughnuts in the car park (note does not print)"
   ],
   "ideas": [
    "Swap 'Cinnamon schnapps shots' for 'Cop car punch' with a note about Slater driving.",
@@ -69,6 +67,15 @@
    "Pizza note: sleepover and pizza bagels",
    "Cue: Fogell at the liquor store counter with the ID",
    "Brownies renamed I love you, man"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

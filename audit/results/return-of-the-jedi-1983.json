@@ -4,20 +4,17 @@
  "facts": [],
  "checked_ok": 11,
  "vibe": {
-  "world": 2,
+  "world": 3,
   "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Plenty of Endor and Jabba, but the tiki bar frame has nothing to do with Star Wars.",
+  "overall": 3.2,
+  "verdict": "C-3PO's god line, the toasts and Jabba's Bantha fodder print, but the gilded banquet look reads fancy dinner more than Star Wars and Endor.",
   "missing": [
-   "Han thawed from carbonite",
-   "Leia strangling Jabba with her chain",
-   "'It's a trap!' (Ackbar)",
-   "Luke cremating Vader on Endor",
-   "The rancor pit",
-   "Luke's duel with Vader and the Emperor"
+   "Yub nub, the Ewok party song",
+   "Admiral Ackbar's It's a trap (tiny footer line)",
+   "Sarlacc pit (one phrase)"
   ],
   "ideas": [
    "Swap the tiki lagoon bar theme for an Endor forest village layout.",
@@ -43,6 +40,15 @@
    "Cue now Luke's Free us or die at Jabba's",
    "Brisket renamed Jabba's Bantha fodder smoked brisket",
    "Toast I now Han thawed from carbonite, toast III now Luke and the rancor"
-  ]
+  ],
+  "before": {
+   "world": 2,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

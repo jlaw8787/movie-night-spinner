@@ -65,19 +65,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy formal banquet for the Council of Legendary Figures, but the writing is generic and the best gags (Toy Santa, the Molinator, the cocoa buzz) are missing.",
+  "overall": 3.6,
+  "verdict": "A proper North Pole banquet with the Mrs Claus Clause, Easter Bunny offspring and tinsel football, but the cocoa buzz cue does not print on either face.",
   "missing": [
-   "Toy Santa 'buzz' after hot cocoa (North Pole)",
-   "Abby's designer Brazilian cocoa beans (North Pole)",
-   "The Molinator, Tooth Fairy's new name (Council meeting)",
-   "Easter Bunny's 33,000 offspring in private school (Council meeting)",
-   "Tinsel football (North Pole)",
-   "The de-Santafication, and Toy Santa's lumps of coal plan"
+   "Toy Santa's cocoa buzz (cue)"
   ],
   "ideas": [
    "Rename 'Elf-made peppermint hot cocoa' to 'Abby's designer bean cocoa' and add a 'Toy Santa feels a little buzz' note",
@@ -85,7 +80,7 @@
    "Replace the Mother Nature maple vegetables note with the Easter Bunny's 33,000 offspring joke",
    "Change the place card to the de-Santafication countdown, '28 days, find a wife by Christmas Eve'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -101,6 +96,15 @@
    "Cocoa renamed for Abby's designer beans",
    "Vegetable note now the Easter Bunny's 33,000 offspring",
    "Fourth wink now tinsel football"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

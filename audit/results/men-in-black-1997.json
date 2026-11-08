@@ -17,20 +17,16 @@
  ],
  "checked_ok": 16,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "Good stills and a few sharp nods (Edgar's sugar water, the neuralyzer, the tabloids), but the shared diner layout could be any film.",
+  "overall": 3.6,
+  "verdict": "A lunch counter with K's line, Edgar's sugar water, the worm guys, the tabloids and the neuralyzer cake pops, all reading as the film.",
   "missing": [
-   "The Arquillians ordering pierogi (the restaurant)",
-   "Frank the Pug (the informant)",
-   "Jeebs and the pawnshop (Jack Jeebs)",
-   "The Bug in Edgar's skin (the farmhouse)",
-   "The galaxy on Orion's belt (Rosenberg's cat)",
-   "The worm guys at HQ"
+   "The Noisy Cricket",
+   "The galaxy on Orion's belt"
   ],
   "ideas": [
    "Swap 'Pie so good it ought to be a crime' for 'Anything odd you see, you did not see it'",
@@ -38,7 +34,7 @@
    "Swap the 'Black bean dip' for 'Orion's belt crackers', on a collar",
    "Swap 'Vanilla cream soda' note for 'The Noisy Cricket, small gun, big kick'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -56,6 +52,15 @@
    "Hot dog note ties to J handing Laurel a hot dog",
    "Worm cup note says what the food is",
    "Cornbread renamed Edgar's farmhouse cornbread"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

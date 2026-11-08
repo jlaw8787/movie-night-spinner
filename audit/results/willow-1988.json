@@ -26,14 +26,13 @@
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "A good village fair setting with the right names, but it leans on place names and misses the film's biggest running gags.",
+  "verdict": "Good Nelwyn fair look with the peck quote, wizard's test and tavern brawl stew, but the acorn and Bavmorda lines did not print.",
   "missing": [
-   "The 'peck' insult (Madmartigan, Willow)",
-   "Madmartigan in the crow's cage at the crossroads",
-   "Bavmorda turning the army into pigs (Nockmaar)",
-   "Fin Raziel turned into a possum, rook and goat (Willow's failed spells)",
-   "Two-headed Eborsisk (Tir Asleen)",
-   "Madmartigan under love dust ('I love you, Sorsha')"
+   "Bavmorda pig line (note dropped)",
+   "Willow's acorn threat (note dropped)",
+   "Madmartigan in the crow's cage (cue not printed)",
+   "Love dust on Madmartigan",
+   "Raziel's three forms"
   ],
   "ideas": [
    "Swap 'Tir Asleen fennel crackling pork' note for 'You're all pigs!' (Bavmorda's spell at Nockmaar)",
@@ -59,6 +58,15 @@
    "Stew renamed Tavern brawl beef and root veg stew",
    "Acorn bites note tied to Willow's acorn threat",
    "Winks: grass raft, love dust, Raziel's three forms replace basket, swordsman, possum"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

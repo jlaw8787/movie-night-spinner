@@ -45,19 +45,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A fair chuck wagon board and Curly's finger is in, but the food skips the film's own jokes and the signed note is invented.",
+  "overall": 3.6,
+  "verdict": "The chuck wagon chalkboard has Curly's line, the no rum raisin slip and bacon at every meal, but the cliff cue doesn't print anywhere.",
   "missing": [
-   "Curly's 'One thing. Just one thing.' (riding with Mitch)",
-   "Barry and Ira's ice cream flavour game: 'Rum raisin!'",
-   "Cookie driving the chuck wagon off the cliff",
-   "Mitch's battery coffee grinder starting the stampede (early morning camp)",
-   "Norman the calf, bottle fed (after Mitch delivers him)",
-   "Phil on Curly: 'The man ate bacon at every meal.'"
+   "Cookie and the chuck wagon over the cliff (cue, wink)",
+   "Norman the calf (s'mores, wink)",
+   "Mitch's fresh coffee starts the stampede (drink name)"
   ],
   "ideas": [
    "Swap 'Fry bread with honey and chilli' for 'Rum raisin ice cream cones', note 'Barry's pick. Ira got the high five.'",
@@ -65,7 +62,7 @@
    "Swap 'Prickly pear lemonade' for 'Coffee grinder cold brew', note 'Mitch started a stampede with one of these.'",
    "Swap 'Chuckwagon coffee with cinnamon cream' note for 'Curly ate bacon at every meal. Have the coffee too.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -84,6 +81,15 @@
    "First wink now Curly's finger and bacon at every meal",
    "Last wink now Cookie's chuck wagon over the cliff",
    "Slip prop line now No rum raisin"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

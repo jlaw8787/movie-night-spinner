@@ -34,27 +34,20 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Right camp and the right Thanksgiving play, but the writing is a generic mess hall with none of the family's deadpan.",
-  "missing": [
-   "Harmony Hut and the hours of forced cheerful films",
-   "Wednesday going off script in the Thanksgiving play",
-   "Fester and Debbie's honeymoon, the boombox in the bath",
-   "Debbie's slide show and the electric chairs",
-   "Wednesday and Joel's first kiss at the fire",
-   "The campfire ghost story where the old noses grow back"
-  ],
+  "overall": 3.8,
+  "verdict": "A proper camp mess hall with the break bread note, the Black Widow lobster and Wednesday's pageant, and the food is the only thing still ordinary.",
+  "missing": [],
   "ideas": [
    "Swap 'Camp Chippewa campfire sausage rolls' for 'Break bread with the Pilgrims' dinner rolls, note 'We cannot break bread with you.'",
    "Swap 'Mess hall bug juice' for 'Harmony Hut punch', note 'Sickly sweet. Wednesday will not smile.'",
    "Swap 'Debbie's wedding lobster' for 'Black widow lobster', note 'She marries them, then buries them.'",
    "Swap 'Wednesday's smile cookies' note for 'Wednesday smiles once, at the end, and it is terrifying.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -72,6 +65,15 @@
    "Lobster note tied to the black widow's honeymoon",
    "Sausage roll note tied to the Harmony Hut",
    "Winks: Black Widow, Pocahontas off script"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -40,27 +40,20 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The green lab suits the film, but it swaps in the wrong car and leaves out Smith and Wesson, the flubber shoes and Weebette.",
-  "missing": [
-   "Brainard's flying Ford Thunderbird",
-   "Flubber dancing around the house (Weebo)",
-   "Flubber on the basketball team's shoes (Medfield vs Rutland)",
-   "Smith and Wesson hit with a golf ball and a bowling ball",
-   "Weebo's hologram and her daughter Weebette",
-   "Hoenicker and his grab for Flubber"
-  ],
+  "overall": 3.8,
+  "verdict": "The Medfield lab sheet is on theme with the green goo dip, basketball puffs, Weebo and the Thunderbird milk.",
+  "missing": [],
   "ideas": [
    "Swap the note 'The Model T flies home for dinner' for 'The Thunderbird flies home for dinner.'",
    "Swap the note on 'Medfield College honey barbecue meatballs' for 'Bouncing golf ball meatballs. Smith and Wesson learned the hard way.'",
    "Swap the note on 'Weebo's green pesto pizza' for 'Weebo and her daughter Weebette.'",
    "Swap the note on 'Green goo dip' for 'Flubber, short for flying rubber.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -78,6 +71,15 @@
    "Meatballs note: Smith and Wesson's golf ball",
    "Pizza note: Weebo's hologram",
    "Jelly note: wobbling like dancing Flubber"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

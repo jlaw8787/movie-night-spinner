@@ -21,20 +21,16 @@
  ],
  "checked_ok": 16,
  "vibe": {
-  "world": 2,
-  "moments": 3,
+  "world": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "The Indian dishes suit the film, but the tiki island layout (pupu platters, island map) is a different world from the Indian jungle.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Baloo's grove with the river poster and stills now carries Man Village, the burning tail and the bare necessities, with Indian dishes that suit the jungle.",
   "missing": [
-   "The Bare Necessities (prickly pear, ants, bananas, the river float)",
-   "King Louie wanting to learn how to make fire (the temple)",
-   "Kaa's 'Trust in me' hypnosis",
-   "The vultures and Shere Khan's burning tail (the wastelands)",
-   "Mowgli meeting the girl at the river (man village)",
-   "Colonel Hathi's dawn patrol parade"
+   "King Louie wanting the red fire",
+   "Shere Khan chase"
   ],
   "ideas": [
    "Swap the 'Pupu Platters' and 'Island hopping' headings for jungle ones like 'The Bare Necessities' and 'King Louie's Temple'",
@@ -42,7 +38,7 @@
    "Swap 'Baloo's banana bites' for 'Bare necessities, ants and all' to name the song moment",
    "Replace the blue ocean island map with a jungle river map, Mowgli and Baloo floating on the water"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,6 +56,15 @@
    "Banana bites note names the bare necessities",
    "Pudding note ties to Shere Khan's burning tail",
    "Winks 3 and 4 now King Louie's fire and the burning branch"
-  ]
+  ],
+  "before": {
+   "world": 2,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

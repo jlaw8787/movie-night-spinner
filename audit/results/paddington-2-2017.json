@@ -34,19 +34,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Right kitchen and the marmalade heart is there, but it looks like a plain school canteen and leaves out the pink uniforms and the pop-up book chase.",
+  "overall": 3.4,
+  "verdict": "The marmalade sandwich, red sock sponge, hard stare line and bear pie all print, but it's a plain canteen tray with a blank strip under the poster.",
   "missing": [
-   "Paddington knocking Knuckles out with a baguette (prison kitchen)",
-   "The red sock turning every uniform pink (prison laundry)",
-   "Paddington's hard stare when Knuckles insults Aunt Lucy",
-   "Candy apples to climb the train roof (train chase)",
-   "Phoenix Buchanan as Sister Isabella the nun (disguises)",
-   "The pop-up book of London used as a treasure map"
+   "Phoenix Buchanan in disguise (only a time slot)"
   ],
   "ideas": [
    "Swap 'Pink tea party Victoria sponge' for 'Pink uniform sponge' with the note 'One red sock in the wash. The whole yard went pink.'",
@@ -70,6 +65,15 @@
    "Signed note now Knuckles's real hard stare line",
    "Scone note: hairy marmalade from the barbershop",
    "Chicken pie renamed Dish of the day: bear pie (it's chicken)"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

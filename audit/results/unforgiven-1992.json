@@ -34,18 +34,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "verdict": "Right saloon, town and sheriff, but the dishes and the tone are a generic western and the film's grim best moments are missing.",
+  "verdict": "Saloon bill of fare with Will's real line, Ned's coffin and Bill's lecture reads like a Western poster.",
   "missing": [
-   "Ned Logan's body propped in a coffin outside the saloon",
-   "Will's whiskey after he hears what happened to Ned",
-   "English Bob's biographer writing down Little Bill's debunking of gunfighter legends",
-   "The Schofield Kid confessing he has never killed anyone",
-   "Will's hog farm and the fever in the rain",
-   "'Deserve's got nothing to do with it' (Will, final showdown)"
+   "It's a hell of a thing, killing a man",
+   "We all have it coming, Kid"
   ],
   "ideas": [
    "Swap 'Saloon pickled eggs' note for a nod to Beauchamp's notebook ('Little Bill tells the biographer how it really goes')",
@@ -53,8 +49,8 @@
    "Swap 'Whiskey trail coffee with cream' for a plain 'Will's first whiskey in years' pour, since that is the film's turning point",
    "Add Ned's coffin to the 'Wanted for supper' slip as a stamped line"
   ],
-  "overall": 3.4,
-  "flat": true,
+  "overall": 3.8,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +69,15 @@
    "Pork chops renamed for Munny's hog farm",
    "Pork chops note: new start for them youngsters",
    "Wink 1: Ned Logan's coffin outside the saloon"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

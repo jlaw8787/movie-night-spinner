@@ -27,14 +27,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Officers' club tab and Goose at the piano work, but the look and food are fairly plain.",
+  "verdict": "Danger Zone wings, Goose at the piano and the wingman line all print, but the food is plain and the back panel has a doubled logo.",
   "missing": [
-   "Maverick and Goose singing 'You've Lost That Lovin' Feelin'' to Charlie (bar)",
-   "'I am dangerous' (Maverick to Iceman)",
+   "I am dangerous (Maverick to Iceman)",
    "Buzzing the control tower",
-   "Throwing Goose's dog tags overboard",
    "Hop 31 and the flat spin",
-   "Volleyball on the beach"
+   "Maverick and Goose singing to Charlie, only as a song title"
   ],
   "ideas": [
    "Swap 'Tequila sunrise' note for 'Maverick and Goose serenade Charlie'.",
@@ -59,6 +57,15 @@
    "Sliders note: Talk to me, Goose, Great Balls of Fire",
    "Slushie note: wingman anytime",
    "Tequila sunrise note: Lovin' Feelin' as a song title only"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

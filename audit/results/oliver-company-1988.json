@@ -39,14 +39,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A good chalkboard barge, but it only uses the hot dog cart and skips the songs and best scenes.",
+  "verdict": "Fagin's houseboat chalkboard with Dodger's first-meeting line and Sykes's three sunrises, but the dish notes about Louie's cart and Jenny's birthday don't print.",
   "missing": [
-   "Georgette's bubble bath and 'Perfect Isn't Easy'",
-   "Oliver and Dodger stealing hot dogs (the opening chase)",
-   "Dodger's 'Why Should I Worry?' street walk",
-   "Jenny's birthday at the end with Winston",
-   "Roscoe and DeSoto on the subway third rail",
-   "Fagin's trike escape"
+   "Raiding Louie's hot dog cart (note dropped by the layout)",
+   "Jenny's birthday party",
+   "Why Should I Worry"
   ],
   "ideas": [
    "Swap the Dodger note for a safe one: 'Stick with the crew and you eat, kid.'",
@@ -70,6 +67,15 @@
    "Hot dog note: franks liberated from Louie",
    "Starter note: from Louie's cart",
    "Debt notice carries Sykes's three sunrises line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

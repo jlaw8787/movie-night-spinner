@@ -29,19 +29,15 @@
  ],
  "checked_ok": 8,
  "vibe": {
-  "world": 3,
-  "moments": 2,
+  "world": 4,
+  "moments": 3,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "verdict": "A friendly station cafe, but the film's big set pieces are barely touched.",
+  "verdict": "A Cuban cafe by the subway with the 15,000 debt check and token booth nuts, but the guest check stamp overlaps the footer text.",
   "missing": [
-   "The Torch setting a token booth on fire (token booth attack)",
-   "Charlie's $15,000 gambling debt to Mr. Brown (the roof scene)",
-   "Charlie sneaking aboard the money train on New Year's Eve (the heist)",
-   "The runaway money train thrown into reverse (finale)",
-   "Patterson spitting in John's face (station)",
-   "Brothers ending up in Times Square at midnight (final scene)"
+   "The Torch and the token booth fire (only a nuts note)",
+   "The New Year's Eve cue is not on the sheet"
   ],
   "ideas": [
    "Swap the guest check line 'Charlie: on the tab? NO.' for 'Mr. Brown: 15,000, due New Year's Day' stamped past due.",
@@ -49,7 +45,7 @@
    "Swap the cue for 'Pour drinks when Charlie sneaks aboard the money train on New Year's Eve'.",
    "Swap 'Friday is payday. Cash only.' for 'New Year's Eve: the money train runs late tonight.'"
   ],
-  "overall": 2.8,
+  "overall": 3.4,
   "flat": true,
   "done": false,
   "rework": "2026-11-08",
@@ -62,6 +58,15 @@
    "Nuts note now nods to the token booth fire",
    "Guest check line uses Charlie's 15,000 debt",
    "Michelada note ties payday to New Year's Eve"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 2.8
+  },
+  "rescored": "2026-11-08"
  }
 }

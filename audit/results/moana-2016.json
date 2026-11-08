@@ -34,19 +34,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A pretty island hut with the right pirates and demigod food, but Tamatoa, Te Ka and the songs are not used.",
+  "overall": 3.8,
+  "verdict": "Village hut with Tamatoa poke cups, Maui's huli huli chicken and Gramma Tala reads right, though the Heihei rock gag doesn't print.",
   "missing": [
-   "Maui's 'You're Welcome' and his tattoos",
-   "Tamatoa's lair in Lalotai and his shiny shell",
-   "Te Ka the lava demon at Te Fiti's island",
-   "Heihei eating a rock",
-   "Gramma Tala as the glowing manta ray",
-   "The cavern of voyaging canoes"
+   "Heihei eating the rock (house drink note)"
   ],
   "ideas": [
    "Swap 'Ocean poke cups' for 'Tamatoa's shiny shellfish' with a note about the glittering crab.",
@@ -54,7 +49,7 @@
    "Swap the 'Voyager Tag' pic caption for 'Cavern of canoes, Tala's secret'.",
    "Swap 'Young green coconut' note for 'Heihei will try to eat the shell, then a rock'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +65,15 @@
    "Huli huli chicken note now 'You're welcome, mortal.'",
    "Heihei note adds the rock",
    "Winks swap the filler for 'I am Moana of Motunui'"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

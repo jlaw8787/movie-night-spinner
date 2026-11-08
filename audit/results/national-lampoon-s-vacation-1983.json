@@ -16,20 +16,16 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A fair road trip snack bar, but it plays safe and skips the funniest scenes.",
+  "overall": 3.6,
+  "verdict": "Walley World kiosk with the quest line, Marty Moose, Eddie's brisket and the Truckster, on the classic poster.",
   "missing": [
-   "Christie Brinkley's red Ferrari",
-   "Clark's naked swim in the motel pool",
-   "Walley World closed for repairs and Roy Walley's welcome",
-   "Marty Moose's recorded message",
-   "Cousin Eddie and Catherine in Coolidge, Kansas",
-   "Clark's BB gun and the security guard tour"
+   "Clark's BB gun at Walley World",
+   "Cousin Eddie and Aunt Edna's Kansas visit (only the brisket)"
   ],
   "ideas": [
    "Swap 'Walley World corn dogs' note for 'Sorry folks, closed for cleaning'.",
@@ -37,7 +33,7 @@
    "Rename 'Kansas barbecue brisket bites' to 'Cousin Eddie's backyard brisket bites'.",
    "Add the BB gun to the spotted strip."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -53,6 +49,15 @@
    "Corn dogs renamed Marty Moose corn dogs, note nods to Sorry folks",
    "Brisket bites renamed Eddie's Kansas brisket bites",
    "Arnold Palmer renamed Motel pool Arnold Palmer"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

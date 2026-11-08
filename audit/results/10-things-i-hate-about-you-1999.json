@@ -22,19 +22,15 @@
  "checked_ok": 23,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy school canteen with the right plot beats, but the writing is generic and has none of Kat's bite.",
+  "overall": 3.6,
+  "verdict": "A tidy canteen that now prints Kat's poem line, the serenade cue, Walter's rule on the prom ticket and Club Skunk, but the dish writing is still plain.",
   "missing": [
-   "Patrick making Spaghettios (Wikiquote, Patrick's line)",
-   "Patrick serenading Kat with the marching band in the stadium",
-   "Kat's poem '10 Things I Hate About You' read to the English class",
-   "The Fender guitar Patrick buys her at the end",
-   "Letters to Cleo playing at Club Skunk",
-   "Kat and Patrick's paintball date, shown on the printed face only as a heading"
+   "Patrick buys Kat the Fender Stratocaster (not printed)",
+   "Paintball date (only a timetable heading)"
   ],
   "ideas": [
    "Swap 'Prom night pasta' for 'Patrick's Spaghettios', a tin of spaghetti on toast with a guitar pick on the side.",
@@ -42,7 +38,7 @@
    "Swap the plain 'Prom Ticket' line 'Bring a date, or don't' for 'Bring a date. Someone may have paid him.'",
    "Move 'Paintball splatter meatballs' onto the printed menu in place of 'Bogey's party spinach dip', since the paintball date is the film's best food-free setpiece."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,6 +56,15 @@
    "Latte note ties to Letters to Cleo at Club Skunk",
    "Ticket line now Walter's rule",
    "Poem wink adds the Fender"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -34,19 +34,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Right bar and family nods (the sisters, MTV girl), but the HBO crack documentary and the big fights are missing.",
+  "overall": 3.6,
+  "verdict": "Charlene's bar carries the pride of Lowell, the MTV line, the $200 and the subtitled movie, on a dark chalkboard that looks fine but plain.",
   "missing": [
-   "Dicky's 'Crack in America' HBO documentary reveal",
-   "Micky's hand broken by the police",
-   "Micky against Mungin: 'He did not just get off the couch'",
-   "Charlene's complaint about the subtitled movie date",
-   "Alice's kitchen: 'You owe me $200'",
-   "Dicky's prison visit advice before the big fight"
+   "The seven sisters",
+   "Dicky and the crack pipe house or window scene"
   ],
   "ideas": [
    "Swap 'New England clam chowder cups' note for the 'Crack in America' TV screening.",
@@ -54,7 +50,7 @@
    "Swap 'Boston cream pie' note for Alice's kitchen row.",
    "Replace the gym pass with a Lowell newspaper clipping."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -69,6 +65,15 @@
    "Chowder note now the HBO documentary",
    "Pot roast note is Alice's $200 line",
    "House starter note is Charlene's MTV girl reply"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

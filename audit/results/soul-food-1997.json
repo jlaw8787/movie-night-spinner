@@ -30,19 +30,15 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Warm Sunday table fits, but it is a generic soul food menu that skips the film's best story beats.",
+  "overall": 3.4,
+  "verdict": "Forty years of Sunday dinner, Uncle Pete's TV and the towel on the stove all print, but the recipe box look is generic and the second photo is a tight crop that cuts off the sisters.",
   "missing": [
-   "The towel on the stove fire at the last Sunday dinner",
-   "Uncle Pete's TV hiding Big Mama's money",
-   "Big Mama's stroke and her last words to Ahmad",
-   "Bird's salon",
-   "Big Mama dancing with Lem to calm a wedding",
-   "Teri's knife at the anniversary party"
+   "Ahmad's lie about Big Mama's money",
+   "Big Mama's death and last word to Ahmad"
   ],
   "ideas": [
    "Swap 'Big Mama's baked mac and cheese' note for 'The dish everyone fights over, hidden money underneath' tied to Uncle Pete's TV.",
@@ -65,6 +61,15 @@
    "Mac and cheese note: hands up (the vote)",
    "House yams: money under Uncle Pete's TV",
    "Winks: forty years of Sunday dinner, Uncle Pete's TV"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

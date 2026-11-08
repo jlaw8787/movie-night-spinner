@@ -40,27 +40,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The airline set suits Jackie's job, but the words skip the schemes that make the film fun.",
-  "missing": [
-   "The dressing room swap at the department store (the bag with $40,000, the rest left for Max)",
-   "Jackie pulling Max's gun on Ordell in her apartment",
-   "Beaumont refusing to get in the trunk",
-   "Louis forgetting where he parked, right before Melanie is shot",
-   "Ordell selling the Tec-9 and the AK-47",
-   "Max and Jackie's drink at the bar after the bail"
-  ],
+  "overall": 3.8,
+  "verdict": "Cabo Air trolley with the AK-47 pitch, the Del Amo bag swap, Louis and the Delfonics, all printing and in the right voice.",
+  "missing": [],
   "ideas": [
    "Swap 'Mini croissants with ham and Swiss' for a dressing room tray with the $500,000 swapped for the tray.",
    "Replace the 'Ordell's South Bay hot honey fried chicken' note with a line about Ordell's gun sales pitch.",
    "Add a 'Parking lot fries' item with Louis forgetting where he parked, replacing the plain 'Cabo flight lime chilli peanuts' note.",
    "Swap 'Max Cherry's steak dinner' note for the bar scene where Max takes Jackie for a drink."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -79,6 +72,15 @@
    "House drink note: Louis asks Melanie for a beer",
    "Printed wink: AK-47, accept no substitutes",
    "Printed wink: Louis forgot where he parked"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

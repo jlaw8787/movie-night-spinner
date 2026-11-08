@@ -44,14 +44,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Good use of the compass cue and the Dying Gull, but it calls the ship a tavern and misses a few big moments.",
+  "verdict": "A dark bar tab with Salazar's line, the compass for rum cue, ghost sharks and Carina the horologist, but the vault and Pearl in a bottle are missing.",
   "missing": [
-   "The bank vault dragged through town (St Martin)",
-   "Carina escaping the witchcraft execution (St Martin)",
-   "The sea parting to walk to the Trident (Trident island)",
-   "Barbossa's death and the monkey Jack (finale)",
-   "The Black Pearl released from the bottle (the voyage)",
-   "Henry meeting Will on the Dutchman (opening)"
+   "Bank vault dragged through town (wink)",
+   "Black Pearl in a bottle (wink)",
+   "Where's the dosh? (wink)"
   ],
   "ideas": [
    "Swap the 'Dockside tavern' sign for 'Aboard the Dying Gull'.",
@@ -76,6 +73,15 @@
    "Star map cracker note now says what the food is",
    "Pork belly note now says what the food is",
    "Wink: Scrum's 'where's the dosh' replaces Salazar's crew"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

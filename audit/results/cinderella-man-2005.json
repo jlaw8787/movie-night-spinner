@@ -56,20 +56,15 @@
  ],
  "checked_ok": 14,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "A tidy Depression kitchen, but the signed note is invented and it uses few of the film's well known scenes.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The Braddock kitchen table recipe box suits the Depression setting, with relief bread and dripping, the Baer fight list and Mae's line.",
   "missing": [
-   "Mae throwing a drink at Max Baer when he taunts her (the public taunt)",
-   "Braddock paying back the relief money (the government help)",
-   "The gasman cutting off the heat (the hard winter)",
-   "Damon Runyon calling him the Cinderella Man",
-   "Mae and the kids listening to the Baer fight on the radio",
-   "Gould and his wife also hit by hard times"
+   "Jim dreams of a thick juicy steak (rib eye note)"
   ],
   "ideas": [
    "Swap 'Ballantine ale in the bottle' for 'Mae's spilled drink' to use the Baer taunt.",
@@ -77,7 +72,7 @@
    "Swap the 'Before you sit down' item 'Braddock's right hand' for 'Paying back the relief money'.",
    "Swap the sign 'warm bread' line for 'No gas, no heat, warm bread' to use the gasman."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -95,6 +90,15 @@
    "Franks note now says what the food is and ties to the Baer fight",
    "Bread and dripping renamed Relief line bread and dripping",
    "Milk note now the milk for the kids"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

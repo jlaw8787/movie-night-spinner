@@ -14,7 +14,7 @@
    "FRANK'S CASTLE BANQUET HALL",
    "Dinner Is Served, Darlings",
    "SCRIBBLED ON A COASTER",
-   "“Brad, Janet, you'll stay the night. Dinner is ready, and so is the laboratory.”",
+   "“It's not easy having a good time! Even smiling makes my face ache!”",
    "Dr Frank-N-Furter",
    "VIP",
    "Castle Welcome",
@@ -98,8 +98,9 @@
   "venue": "Frank's Castle Banquet Hall",
   "sign": "Dinner Is Served, Darlings",
   "note": {
-   "text": "Brad, Janet, you'll stay the night. Dinner is ready, and so is the laboratory.",
-   "by": "Dr Frank-N-Furter"
+   "text": "It's not easy having a good time! Even smiling makes my face ache!",
+   "by": "Dr Frank-N-Furter",
+   "kind": "quote"
   },
   "winks": [
    "A flat tyre in the rain",
@@ -112,7 +113,7 @@
  "house": {
   "s": {
    "n": "Cheese fondue with crusty bread",
-   "note": "It's just a jump to the left. Then dip."
+   "note": "Dip, then do the Time Warp."
   },
   "d": {
    "n": "Tequila sunrise",

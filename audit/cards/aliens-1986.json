@@ -62,7 +62,7 @@
    "9 cr",
    "Strong cold brew poured over ice and sweet condensed milk in tall glasses, stirred until creamy.",
    "FROM THE BRIDGE",
-   "\"Nobody told me the mess only serves protein bars. I signed up for a bug hunt, not a diet.\"",
+   "\"Game over, man. Game over!\"",
    "Private Hudson",
    "BADGE",
    "COLONIST ID",
@@ -70,7 +70,7 @@
    "Resident: Newt",
    "MESS CALL",
    "Serve the snacks at the marines' breakfast on the Sulaco.",
-   "Keep the hatch sealed. Prices subject to change, paid in ship's credit. Printed by the ship's system. Form G-426, sheet 2 of 2. 1986. Crew notes: Ripley in the power loader facing the Queen. Newt hiding in the air ducts. Bishop and the knife trick on the table."
+   "Keep the hatch sealed. Prices subject to change, paid in ship's credit. Printed by the ship's system. Form G-426, sheet 2 of 2. 1986. Crew notes: Ripley in the power loader facing the Queen. Newt says they mostly come at night. Mostly. Nuke the entire site from orbit."
   ]
  ],
  "phone": "Sulaco Mess HallAliensColonial Marines. Dinner's on.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersSulaco mess hall cornbreadGolden buttermilk cornbread baked in a hot buttered pan.How to make it100g fine cornmeal80g plain flour20g caster sugar1 tsp baking powderpinch of salt150ml buttermilk1 egg40g butterHeat the oven to 200°C with a 20cm ovenproof frying pan inside. Mix the cornmeal, flour, sugar, baking powder and salt.Whisk the buttermilk, egg and melted butter, then stir into the dry mix.Carefully butter the hot pan, pour in the batter and bake until golden and a skewer comes out clean.Cool briefly and cut into squares.Bishop's knife trick breadsticksLong crisp dough sticks brushed with oil, sesame and salt.How to make it250g pizza dough1 tbsp extra virgin olive oil15g sesame seeds1/2 tsp sea salt flakesHeat the oven to 220°C and line a tray. Roll the dough into long thin sticks.Brush with oil and roll in the sesame seeds and salt.Bake until crisp and golden, then cool slightly.MainsSulaco mess hall meatloafBeef and pork loaf with tomato glaze and creamy mashed potato.How to make it50g breadcrumbs260ml milk350g beef mince250g pork mince1 egg1 onion, finely diced1 tbsp anchovy-free Worcestershire sauce1/2 tsp salt1/4 tsp black pepper60g tomato sauce800g potatoes40g butterHeat the oven to 180°C. Soak the breadcrumbs in some of the milk.Mix with the beef and pork mince, egg, onion, Worcestershire, salt and pepper, and shape into a loaf on a lined tray.Glaze with the tomato sauce and bake until at least 75°C in the centre.Meanwhile peel and chop the potatoes, boil until tender, then mash with the butter and warm milk.Rest the loaf, slice and serve with the mash.Colonial Marines breakfast burritosThe marines' first meal after cryosleepHow to make itAs written, serves 4Flour tortillas stuffed with chorizo, soft scrambled eggs, crispy potato, cheddar and salsa, rolled tight and toasted in a hot pan until golden.Dice 400g potatoes and fry in oil for 12 minutes until crisp.Slice 2 chorizo sausages and fry until the fat runs.Whisk 8 eggs with salt and scramble softly in 20g butter.Lay out 4 large flour tortillas and fill each with potato, chorizo, egg, 30g grated cheddar and 2 tbsp salsa.Fold in the sides, roll tight and toast seam side down in a dry pan for 2 minutes a side.SweetsFacehugger panna cottaWobbly vanilla cream with candied orange peel strips fanned around it.How to make it4g gelatine leaves250ml thickened cream150ml full cream milk40g caster sugar1/2 vanilla bean40g candied orange peel strips1 tsp neutral oil, for the mouldsSoak the gelatine leaves in cold water and lightly oil four small round moulds.Warm the cream, milk, sugar and vanilla seeds until steaming, without boiling.Squeeze the gelatine dry and stir in until dissolved, then divide between the moulds.Refrigerate until set.Dip each mould briefly in warm water, turn out and fan the orange peel around as legs.DrinksSulaco condensed milk iced coffeeStrong cold brew poured over ice and sweet condensed milk in tall glasses, stirred until creamy, with a pinch of cinnamon on top.How to make it100g coarsely ground dark roast coffee800ml cold water1 tin sweetened condensed milkground cinnamon, a pinch2 cups iceThe night before, stir the coffee into the cold water, cover and refrigerate for 12 to 16 hours.Strain through a paper filter.Spoon condensed milk into four tall glasses, fill with ice, pour in the cold brew and stir until creamy.Dust with cinnamon.\n    Showtime cueServe the snacks at the marines' breakfast on the Sulaco.\n    Read the printed menu full size",
@@ -117,13 +117,14 @@
   "venue": "Sulaco Mess Hall",
   "sign": "Colonial Marines. Eat fast, drop in five.",
   "note": {
-   "text": "Nobody told me the mess only serves protein bars. I signed up for a bug hunt, not a diet.",
-   "by": "Private Hudson"
+   "text": "Game over, man. Game over!",
+   "by": "Private Hudson",
+   "kind": "quote"
   },
   "winks": [
    "Ripley in the power loader facing the Queen",
-   "Newt hiding in the air ducts",
-   "Bishop and the knife trick on the table",
+   "Newt says they mostly come at night. Mostly",
+   "Nuke the entire site from orbit",
    "The Sulaco in orbit above LV-426",
    "Hudson and his smart mouth"
   ]
@@ -136,7 +137,7 @@
   },
   "d": {
    "n": "Long black, double shot",
-   "note": "Wake-up call before the drop on LV-426."
+   "note": "Express elevator to hell, going down."
   }
  },
  "sources": {

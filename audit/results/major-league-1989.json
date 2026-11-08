@@ -28,19 +28,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 4,
+  "moments": 4,
+  "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "A good Cleveland bar with Jobu's rum and Wild Thing pie, but it leans on bar snacks more than the film's famous gags.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Jobu's corner bar tab with the rum, Wild Thing, Harry Doyle's call and the offering ticket printing, but the Hayes slide and the chicken dropped out.",
   "missing": [
-   "Jobu and the cigars (Cerrano's locker)",
-   "Wild Thing walking out to the song (the bullpen)",
-   "Harry Doyle's Die Hard Night (the booth)",
-   "The live chicken for Cerrano (clubhouse)",
-   "Willie Mays Hayes and the American Express slide (the tux scene)",
-   "The red tag in the locker (spring training)"
+   "Hayes's American Express slide in a tux",
+   "The live chicken for Cerrano",
+   "Die Hard Night"
   ],
   "ideas": [
    "Swap 'Boilermaker' for 'Live chicken wings, Cerrano's special'",
@@ -48,7 +45,7 @@
    "Swap 'Wild Thing lattice cherry pie' note to 'Wild Thing, in glasses'",
    "Replace the 'FROM THE BAR' note with a Harry Doyle line, 'Juuust a bit outside'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -67,6 +64,15 @@
    "Rum punch note: stealing Jobu's rum",
    "Boilermaker note: Jobu needs a refill",
    "Winks: American Express slide, live chicken, Die Hard Night"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

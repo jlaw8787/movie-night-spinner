@@ -65,19 +65,18 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 2,
+  "moments": 3,
   "food": 3,
   "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A lovely Waldorf room service card, but the dishes and lines barely use what actually goes wrong for George and Gwen.",
+  "overall": 3.6,
+  "verdict": "A dry, well dressed Waldorf menu with the Cracker Jacks photo and Gwen's steak note, but the tooth cue and everything going wrong don't print.",
   "missing": [
-   "Cracker Jacks and the cracked tooth (Central Park, Trefoil Arch)",
-   "Peanut butter sandwiches, olives and crackers (train dining car)",
-   "George's notebook of names to sue (every disaster)",
-   "The guaranteed reservation given away (Waldorf front desk)",
-   "Walking past the garbage in the rain (strike night)",
-   "The flight hijacked to Cuba (final scene)"
+   "Cracker Jacks and the cracked tooth (cue does not print)",
+   "Dining car peanut butter sandwiches",
+   "George's list of names to sue",
+   "Reservation given away",
+   "Flight hijacked to Cuba"
   ],
   "ideas": [
    "Swap 'Central Park hot dogs' for Cracker Jacks, the box already in the cover photo.",
@@ -85,7 +84,7 @@
    "Swap the 'Rooms held until 6 P.M. unless guaranteed' line for a stamp saying 'Reservation guaranteed to 10 P.M. only'.",
    "Replace 'Box lunches on request' with 'George will sue. Names taken at the desk.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -100,6 +99,15 @@
   "changed": [
    "Shortbread phone note and printed line now Cracker Jacks",
    "Central Park note now Trefoil Arch"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

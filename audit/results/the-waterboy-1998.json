@@ -45,19 +45,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Right swamp shack and a good gator joke, but it leaves out the loudest bits of the film and the cardboard look is plain.",
+  "overall": 3.6,
+  "verdict": "The swamp shack finally sounds like the film with fool's ball, Captain Insano and H2O not Gatorade, though the stills are generic.",
   "missing": [
-   "Captain Insano ('Captain Insano shows no mercy', wrestling)",
-   "High quality H2O vs the dirty jug (Mud Dogs sideline)",
-   "Colonel Sanders: 'Mama's right!' (classroom)",
-   "Fool's ball and the devil (Mama's lines)",
-   "Steve the donkey (Mama's yard)",
-   "Bobby's riding lawnmower"
+   "All them teeth, no toothbrush (house starter)",
+   "Bobby's big tackle (footer only)"
   ],
   "ideas": [
    "Swap 'Bobby Boucher's cucumber lime cooler' for 'High quality H2O' with a Mud Dogs jug gag",
@@ -65,7 +61,7 @@
    "Replace the prawns note with 'Mama's right, Colonel Sanders'",
    "Add a donkey 'Steve' name to the hush puppies"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -84,6 +80,15 @@
    "Cooler note: H2O, not Gatorade",
    "Wink: Steve the donkey replaces Mama's swamp cooking",
    "Camp headings renamed for the bayou"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

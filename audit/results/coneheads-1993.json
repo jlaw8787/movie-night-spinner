@@ -18,19 +18,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The Remulak talk is right and the family fits a suburban kitchen, but the snacks are plain and the best moments are missing.",
+  "overall": 3.6,
+  "verdict": "Maintain low tones, the France cover story, the Garthok and consume mass quantities all print on a tidy recipe box, but the food is ordinary.",
   "missing": [
-   "Prymaat inviting Larry and Lisa to 'char some mammal flesh' at the barbecue",
-   "Beldar hitting a rock into the Garthok's mouth with his golf swing (Remulak)",
-   "'Maintain low tones with me' (Beldar to Connie)",
-   "INS agent Gorman posing as a Jehovah's Witness at the door",
-   "Beldar's driving school in Paramus",
-   "Beldar saying he is an illegal alien to Otto"
+   "Prymaat: char some mammal flesh"
   ],
   "ideas": [
    "Swap 'Suburban cookout sausages and chicken' note for 'Char some mammal flesh' as Prymaat's barbecue invite.",
@@ -38,7 +33,7 @@
    "Swap 'Cone-shaped ice cream' note for the Garthok golf rock.",
    "Swap the 'Read me first' note for Beldar's real line, 'Maintain low tones, maintain low tones.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -57,6 +52,15 @@
    "Burgers renamed Beldar's driving school burgers",
    "Winks: France, appetite, driving school, Jehovah's Witnesses, Garthok",
    "House starter note: char some mammal flesh"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

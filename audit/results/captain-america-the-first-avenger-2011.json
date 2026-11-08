@@ -34,19 +34,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The 1940s feel is right with the Expo and flying car, but the baseball scoreboard and bleachers belong to another film.",
+  "overall": 3.4,
+  "verdict": "A 1943 Stark Expo food hall with I can do this all day, the rain check, the dud grenade and Peggy's Stork Club pie printing, but Erskine's good man line and the flying car are gone.",
   "missing": [
-   "'I can do this all day' (the alley)",
-   "Erskine's schnapps toast ('Not a perfect soldier, a good man')",
-   "The 4F rejection at the recruiting office",
-   "The dancing girls at the USO show",
-   "The Stork Club date",
-   "The Howling Commandos"
+   "Erskine: to the little guys, a good man not a perfect soldier",
+   "Stark Expo flying car"
   ],
   "ideas": [
    "Swap the Peggy note for Steve's rain check line.",
@@ -72,6 +68,15 @@
    "Peggy pie note: 8:00 on the dot at the Stork Club",
    "House drink note: Erskine's toast to the little guys",
    "Winks: I can do this all day and Erskine's good man line"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -18,19 +18,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "The school lunch tray and Iceman angle fit, but the film's big moments are mostly missing and the layout is generic.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The school timetable layout and Magneto line suit the film, and Iceman and Pyro gags print, but the dishes are plain.",
   "missing": [
-   "Nightcrawler's White House attack",
-   "Jean's sacrifice at the dam",
-   "Storm's snowstorm in Cerebro",
-   "Mystique disguised as Logan",
-   "Pyro fighting the police at Bobby's house",
-   "Logan facing Yuriko in the adamantium lab"
+   "Bobby's mum: have you tried not being a mutant",
+   "Nightcrawler's White House attack (timetable line only)",
+   "Stryker's raid on the school"
   ],
   "ideas": [
    "Swap 'Boston baked beans on buttered toast' note for the Boston visit to Bobby's family",
@@ -38,7 +35,7 @@
    "Rename 'Alkali Lake beef stew' to 'Stryker's dam beef stew'",
    "Add a 'Storm's snowstorm' sorbet"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -54,6 +51,15 @@
    "Note is Magneto's real X-Jet line, not an invented Logan note",
    "Chicken note ties to Stryker's invasion",
    "Winks: Nightcrawler's White House raid reworded to print on the timetable, snowstorm in Cerebro added"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -5,19 +5,16 @@
  "checked_ok": 22,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Smart idea to move the menu to San Diego with the rex rampage jokes, but the poster is only a logo on black and it skips the trailer cliff and raptors in the long grass.",
+  "overall": 3.6,
+  "verdict": "Ian's real line, the compy cue and the rex-in-San-Diego jokes now print, though the cover is still a logo on black.",
   "missing": [
-   "Raptors in the long grass (the field ambush)",
-   "The trailer pushed over the cliff and Eddie's SUV",
-   "Malcolm: 'Ooh, ahh, that's how it always starts'",
-   "The rex stomping into the video store in San Diego",
-   "Kelly's gymnastics kick on the raptor",
-   "Roland and Ajay's restaurant scene (Roland's 'trophy room')"
+   "Raptors in the long grass (only a footer wink)",
+   "Trailer over the cliff (only a footer wink)",
+   "Kelly's gymnastics (only a footer wink)"
   ],
   "ideas": [
    "Swap 'Fish tacos with lime crema' for 'Long grass salad' with a raptor-in-the-grass note.",
@@ -25,7 +22,7 @@
    "Swap the front cover logo-on-black for a still of the rex in the San Diego street.",
    "Rename 'Rex parents' mud pie' note to 'Pushed halfway over the cliff, same as the trailer'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -39,6 +36,15 @@
   "changed": [
    "Malcolm note is now his real line",
    "Roland hunting wink swapped for raptors in the long grass"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

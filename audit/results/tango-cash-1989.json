@@ -34,19 +34,16 @@
  "checked_ok": 15,
  "vibe": {
   "world": 3,
-  "moments": 2,
+  "moments": 3,
   "food": 3,
-  "tone": 2,
+  "tone": 3,
   "look": 3,
-  "overall": 2.6,
-  "verdict": "A generic prison canteen that skips the drag scene, the armoured RV and the buddy cop banter.",
+  "overall": 3.0,
+  "verdict": "A tidy prison canteen with Tango's real line, the RV cue and Kiki's cupcakes, but the Cleopatra Club and the hall of mirrors don't print and it stays generic.",
   "missing": [
-   "Cash disguised as a woman at the Cleopatra Club (Kiki's club)",
-   "The armoured RV storming Perret's hideout (the finish)",
-   "Rambo is a pussy (Cash in the prison yard)",
-   "Tango's Cadillac and his stock tips (Tango's day job)",
-   "The hall of mirrors showdown with Perret (the hideout)",
-   "Cash zip lining over the prison wall (the escape)"
+   "Cash dressed as a woman at the Cleopatra Club",
+   "Hall of mirrors showdown with Perret",
+   "Cash ziplining over the prison wall (only in meatloaf note)"
   ],
   "ideas": [
    "Swap 'Prison canteen sandwiches' for 'Cleopatra Club cucumber sandwiches, Cash's cover'.",
@@ -72,6 +69,15 @@
    "Meatloaf note: zip line breakout",
    "Rib eye note: dresses like a banker",
    "Winks: hall of mirrors replaces explosions"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 2,
+   "look": 3,
+   "overall": 2.6
+  },
+  "rescored": "2026-11-08"
  }
 }

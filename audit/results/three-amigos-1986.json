@@ -67,26 +67,23 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Looks the part, but the village name is wrong in three places and the famous gags are barely used.",
+  "overall": 3.6,
+  "verdict": "A plethora of churros, the singing bush salsa, Is it fattening and Flugelman print on a bright Santa Poco bill of fare with the poster.",
   "missing": [
-   "A plethora of pinatas (El Guapo and Jefe)",
-   "'My Little Buttercup' (cantina)",
-   "The Singing Bush (road)",
-   "The invisible swordsman ritual (Lucky and Dusty)",
-   "Villagers sewing Amigo outfits (final stand)",
-   "The German pilot and his plane"
+   "My Little Buttercup",
+   "The Invisible Swordsman",
+   "Do you have anything besides Mexican food? (prints as the quote)"
   ],
   "ideas": [
    "Swap 'Birthday churros' name for 'A plethora of churros' (plethora scene).",
    "Swap 'Singing bush salsa' note for 'Randy Newman's bush sings along'.",
    "Add 'Our reward is that justice has been done' as the sign."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -106,6 +103,15 @@
    "Margarita note: Is it fattening?",
    "Enchiladas note: Flugelman fired them",
    "Prop: face your El Guapo"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

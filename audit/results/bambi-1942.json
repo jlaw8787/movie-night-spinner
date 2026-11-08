@@ -45,28 +45,21 @@
  ],
  "checked_ok": 17,
  "vibe": {
-  "world": 3,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Charming dishes and the right characters, but the army camp layout does not suit a meadow and the cue gets Thumper's greens scene wrong.",
-  "missing": [
-   "Thumper's greens rhyme for his mother",
-   "Thumper asking 'Whatcha gonna call 'im?' and naming Bambi",
-   "Friend Owl explaining twitterpation",
-   "The Great Prince of the Forest on the cliff",
-   "Bambi slipping on the frozen pond",
-   "Man in the forest, the hunters"
-  ],
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A tidy meadow table with Thumper's greens rhyme, the awful stuff line, the frozen pond pavlova and twitterpated all printing, with a food list that is sweet but safe.",
+  "missing": [],
   "ideas": [
    "Swap 'Spring greens and ricotta tart' for 'Awful stuff to eat' tart, with Thumper's 'But it sure is awful stuff to eat'.",
    "Swap 'Frozen pond pavlova' note for 'Do not skate on it'.",
    "Swap the 'Meadow Tag' prop for a thump tally, 'Thump once for yes'.",
    "Swap the khaki camp paper for soft forest greens and painted backdrops."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -84,6 +77,15 @@
    "Custard tartlets note names Flower",
    "Mushroom pie renamed for the Great Prince",
    "Faline wink swapped for Thumper's nice rule"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

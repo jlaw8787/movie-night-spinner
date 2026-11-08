@@ -46,19 +46,14 @@
  "checked_ok": 10,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3,
-  "verdict": "The Byrnes house setting is right, but the dark generic bistro layout doesn't feel like a Long Island family weekend.",
+  "overall": 3.4,
+  "verdict": "The Circle of Trust, grace cue, Mr Jinx, the altar tart and the cat milking joke all print, but the bistro template is generic.",
   "missing": [
-   "The lie detector test (Jack's study)",
-   "Greg saying grace",
-   "The spray-painted cat (Mr. Jinx)",
-   "The urn used as kitty litter",
-   "The Circle of Trust",
-   "Jack's hidden cameras"
+   "The urn used as kitty litter"
   ],
   "ideas": [
    "Swap the bistro layout for a family dining table layout with place cards.",
@@ -85,6 +80,15 @@
    "Lemon tart note ties to the altar fire",
    "Winks: spray-painted stray and the urn kitty litter",
    "Prop card renamed Circle of Trust"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

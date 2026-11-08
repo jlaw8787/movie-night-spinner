@@ -51,14 +51,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The wanted-poster saloon looks right, but the menu skips the film's best bits like the chopsticks, the buried Roy and Falling Leaves.",
+  "verdict": "A good Carson City saloon with the train ticket and noodles note, but chipichawa, the chopsticks and Roy buried in the sand don't print.",
   "missing": [
-   "Wang leaves two chopsticks in Roy's mouth when he is buried to the chin",
-   "Falling Leaves and the Sioux wedding",
-   "Roy trains Wang to be a cowboy (horse Fido)",
-   "Chipichawa (Roy calls Wang's nobility)",
-   "Chon Wang, 'John Wayne?' (Roy)",
-   "Hanging scene, Falling Leaves shoots Roy loose"
+   "Chipichawa",
+   "Chopsticks left in Roy's mouth",
+   "Roy buried up to his chin"
   ],
   "ideas": [
    "Swap 'Chon Wang cornbread' note for 'Chon Wang? John Wayne?'",
@@ -81,6 +78,15 @@
    "Steak note: cowboy lessons",
    "Jerky note: tavern rematch",
    "Train ticket line: outlaws permitting"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

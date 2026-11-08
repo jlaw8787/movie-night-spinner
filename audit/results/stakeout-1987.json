@@ -27,14 +27,13 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The stakeout snacks are on the money, but a chalkboard lunch truck is an odd home for two cops in a parked car.",
+  "verdict": "Good stakeout snacks and the not a boating accident cod, but the chalkboard truck still isn't a parked car and most of the new notes don't print.",
   "missing": [
-   "The movie trivia game, This is no boating accident (Lecce and Reimers in the car)",
-   "Lecce posing as a telephone lineman (Maria's street)",
-   "The cops hiding under Maria's bed, as on the poster (Maria's bedroom)",
-   "Reimers eating non stop on the job (the car)",
-   "The paper mill showdown (the finish)",
-   "Montgomery's escape and the river crash (the car chase)"
+   "Movie trivia game (only in the cue, not on the board)",
+   "Where are my donuts? (note does not print)",
+   "Lecce as telephone lineman (note does not print)",
+   "Cops hiding under Maria's bed (only on the poster)",
+   "Paper mill showdown"
   ],
   "ideas": [
    "Swap 'Cold fried chicken drumsticks' for 'Reimers' second lunch, eaten in the dark'.",
@@ -58,6 +57,15 @@
    "Cod note: car trivia game",
    "Salmon crisps note: phone lineman Lecce",
    "Signed note: To protect and to serve"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

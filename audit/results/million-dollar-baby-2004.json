@@ -18,19 +18,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Ira's diner is a lovely fit, with the lemon pie and Mo cuishle nods, though the menu is breezy for a film this heavy.",
+  "overall": 3.6,
+  "verdict": "Ira's diner holds up and now carries Tough ain't enough, Mo cuishle, Yeats and the no canned filling pie, though the food notes stay plain.",
   "missing": [
-   "Mo cuishle, my darling, my blood (Frankie at the end)",
-   "Girlie, tough ain't enough (Frankie in the gym)",
-   "Maggie eating customers' leftovers (the diner where she waitresses)",
-   "Frankie reading Yeats (his chair)",
-   "The Blue Bear and the sucker punch (Vegas)",
-   "Frankie's priest and the Rice Krispies line"
+   "Protect yourself at all times (Frankie's rule)"
   ],
   "ideas": [
    "Swap 'Lemon oregano chicken with rice' note for 'Tough ain't enough, girlie'",
@@ -38,7 +33,7 @@
    "Swap 'Diner steak and eggs' note for 'Maggie's leftovers, eaten on the sly'",
    "Swap the 'Gym dues' card for a speed bag token"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -54,6 +49,15 @@
    "Spare pie wink now protect yourself at all times",
    "Pie note adds no canned filling",
    "Root beer note now spells out what mo cuishle means"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -39,23 +39,18 @@
  ],
  "checked_ok": 13,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "Cheerful Christmas look with the Turbo Man poster, but a generic food court setting that leaves out the film's best set pieces.",
+  "overall": 3.6,
+  "verdict": "Food court placemat with Turbo Time, the reindeer contest, Mickey's Diner and Dementor, but the cookie line and Santa password don't print.",
   "missing": [
-   "Mickey's Diner, where Howard and Myron have coffee and swap Christmas stories",
-   "The radio contest to name all of Santa's reindeer (KQRS)",
-   "The counterfeit Santa warehouse fight",
-   "Myron's package 'bomb' that turns out to be a music box",
-   "Howard stuck in the Turbo Man suit at the parade",
-   "The Turbo Man gift certificate prize",
-   "Liz's post-credits 'What did you get me?'"
+   "Put that cookie down! Now!",
+   "Jingle bells, Batman smells (Santa password)"
   ],
-  "flat": true,
+  "flat": false,
   "ideas": [
    "Swap 'Booster's spiced eggnog' for 'Mickey's Diner coffee' with a note about Howard and Myron talking Christmas.",
    "Replace 'Parade float popcorn' note with the reindeer radio contest, such as 'Name all eight, win the toy'.",
@@ -80,6 +75,15 @@
    "Popcorn note: Dementor jumps the parade float",
    "Winks: Santa password in place of Dementor wink",
    "Prop lines: It's Turbo Time, Dementor not invited"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

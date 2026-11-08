@@ -35,19 +35,16 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Good SMI office framing, but the famous lines and moments barely show up.",
+  "overall": 3.6,
+  "verdict": "Lunchroom timetable carries hello, help me help you, the Kwan and the mission statement, though the layout is plain and several dish notes dropped out.",
   "missing": [
-   "'Show me the money!' on the phone with Rod",
-   "'You had me at hello'",
-   "'Help me, help you'",
-   "The Kwan, Rod's word for love, respect and community",
-   "Ray's fact that the human head weighs eight pounds",
-   "Rod's end zone dance after his touchdown"
+   "Rod's touchdown and dance after the scare",
+   "These fish have manners, the goldfish",
+   "Ray: the human head weighs eight pounds"
   ],
   "ideas": [
    "Swap 'Rod's Arizona street corn' note for 'Show me the money.'",
@@ -55,7 +52,7 @@
    "Swap 'Jerry and Dorothy's wedding cupcakes' note for 'You had me at hello.'",
    "Swap the 'Home time' timeline slot for 'Help me help you.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -75,6 +72,15 @@
    "Timetable wink: You had me at hello",
    "Timetable wink: Help me help you",
    "Lunch aside: Ray and the eight pound head"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

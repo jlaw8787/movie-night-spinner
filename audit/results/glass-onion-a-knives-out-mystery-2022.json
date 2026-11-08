@@ -32,20 +32,16 @@
  ],
  "checked_ok": 16,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Good nods (Duke's pineapple, Klear, the Mona Lisa), but the tiki 'Pupu Platters' dressing doesn't suit a Greek island.",
+  "overall": 3.6,
+  "verdict": "The island chart works well with the pineapple, Klear and Mona Lisa jokes and the in-breathe-iate line all printing.",
   "missing": [
-   "Pineapple juice in Duke's whiskey: 'It's so dumb' (Blanc's reveal)",
-   "Miles saying 'Can we just take a second and fully imbreathiate this moment?'",
-   "Birdie's Cuban Breeze (the poolside)",
-   "The napkin that decides the case (Miles's office)",
    "Helen smashing the glass sculptures (the finale)",
-   "The Mona Lisa burning (the finale)"
+   "Birdie's Cuban Breeze (the pool bar)"
   ],
   "ideas": [
    "Swap the 'Pupu Platters' heading for 'Meze', and the tiki straw header for blue and white Greek tiles",
@@ -53,7 +49,7 @@
    "Swap 'Glass onion petals' note for Miles: 'Fully imbreathiate this moment'",
    "Swap 'Duke's pineapple upside-down cake' note for 'Do not serve to Duke'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -72,6 +68,15 @@
    "Souvlaki note: Blanc solved the game faster",
    "Kombucha note: the hard kombucha at the pool",
    "Winks: pineapple juice and Helen smashing the sculptures"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -33,19 +33,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A pretty invite that picks the right Spectre, Karl and circus bits, but the plates are plain and the giant catfish never reaches the table.",
+  "overall": 3.6,
+  "verdict": "Spectre, the Beast, Karl and the circus all print on a soft invite, but the dish notes are plain and Karl's cornfield joke is dropped.",
   "missing": [
-   "The Beast, the giant catfish Edward catches with his wedding ring (Will's wedding party)",
-   "A field of daffodils outside Sandra's window (Auburn)",
-   "Karl the giant eating a cornfield and a neighbour's dog (Ashton)",
-   "Norther Winslow's three-line poem about Spectre",
-   "Amos Calloway, the ringmaster who is a werewolf",
-   "The witch's glass eye that shows Edward his death"
+   "Karl the giant, who ate a cornfield"
   ],
   "ideas": [
    "Swap 'Whole snapper' in The Big Fish for a whole fried catfish, the fish in the story.",
@@ -53,7 +48,7 @@
    "Swap the place card line 'Seated near: Karl the giant' for 'Seated near: Amos Calloway, who sells one fact about Sandra a month.'",
    "Swap 'Daffodil lemon cake' for a yellow daffodil cake, served with a sprig of daffodil, from Sandra's window scene."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -68,6 +63,15 @@
    "Karl note: the giant who ate a whole cornfield (the old 'whole flock' was not in the film)",
    "Cream soda note: Edward's thirsty his whole life",
    "Daffodil cake note: daffodils are Sandra's favourite flowers"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

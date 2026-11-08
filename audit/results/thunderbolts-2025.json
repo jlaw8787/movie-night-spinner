@@ -51,19 +51,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A neat ration sheet in the right grey and blue, but the film's funniest food beats (cactus berries, the soccer team) are missing.",
+  "overall": 3.6,
+  "verdict": "Vault mess hall tray suits the film and the cactus berry, Alexei and hug jokes all print, with a stray double full stop on the stroganoff.",
   "missing": [
-   "Walker's cactus berry: 'Anybody hungry?' (desert walk)",
-   "Peewee soccer team, West Chesapeake Valley Thunderbolts (the name)",
-   "The group hug that beats the Void (finale)",
-   "The incinerator trap in the vault (opening)",
-   "The Void's black darkness over New York",
-   "Yelena calling an Uber (escape)"
+   "Thunderbolts team name from Yelena's soccer club"
   ],
   "ideas": [
    "Swap 'Bob's Void black sesame cookies' note for a hug line",
@@ -71,7 +66,7 @@
    "Replace 'Vault escape smash burger sliders' note with the incinerator countdown",
    "Add a Thunderbolts soccer team patch, Shane's Tire Shop, to the badge"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -88,6 +83,15 @@
    "Stroganoff note: Alexei's I'll make you something",
    "Shawarma note: before the Void arrives",
    "Cookies note: hug included"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

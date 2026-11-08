@@ -36,14 +36,10 @@
   "food": 4,
   "tone": 3,
   "look": 4,
-  "verdict": "A decent Miami breakroom with the identity swap as its hook, but it skips the French fry carjacker scene and the Porsche that fans quote.",
+  "verdict": "Marcus as Mike and the french fry argument are in, but the Porsche cup holder joke and Julie Mott are gone and the tone is mild.",
   "missing": [
-   "It's not about the french fry (Mike and the carjackers)",
-   "The Porsche with no cup holder and no back seat",
-   "Captain Howard shouting on the basketball court",
-   "I haven't killed anybody yet today, Captain (Mike)",
-   "The ether barrel car chase",
-   "Theresa finding out about the swap at Mike's apartment"
+   "No cup holder, no back seat in Mike's Porsche",
+   "Julie Mott, the witness who only talks to Mike"
   ],
   "ideas": [
    "Swap 'Fried sweet plantains' for 'Not about the french fry fries' with the Mike line in the note.",
@@ -67,7 +63,16 @@
    "Plantain note nods to the french fry",
    "Mojito note adds the missing cup holder",
    "Cafecito note quotes Captain Howard"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

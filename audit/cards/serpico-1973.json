@@ -7,7 +7,7 @@
  "theme": "street",
  "tagline": "One honest cop. No free sandwiches.",
  "about": "An honest New York cop blows the whistle on police corruption.",
- "cue": "Serve the mains when Frank turns down the free meal at the deli.",
+ "cue": "Serve the mains when Frank asks to pay for the free roast beef lunch.",
  "faces": [
   [
    "GREENWICH VILLAGE, NEW YORK",
@@ -15,7 +15,7 @@
    "Garfein’s",
    "DELICATESSEN",
    "& APPETIZING",
-   "Our store on West 10th, a few doors from the Sixth Precinct.",
+   "Our store on West 10th, in the Village where Frank lived.",
    "Platters 60¢ more",
    "HOT FROM THE STEAM TABLE",
    "HOT PASTRAMI ON RYE",
@@ -76,7 +76,7 @@
    "Prices subject to change."
   ]
  ],
- "phone": "Garfein'sSerpicoOne honest cop. No free sandwiches.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersNova on a bagelToasted and spread thick with cream cheese, smoked salmon, capers, red onion and fresh dill.1.10 at the appetizing counter.How to make it4 bagels200g cream cheese200g smoked salmon1 tbsp capers1 red onion, thinly sliced1 bunch dillSplit and toast the bagels.Spread each half thickly with cream cheese, then top with smoked salmon, capers, onion and small sprigs of dill. Cut each half in two to share.Hot pastrami on ryeSteamed soft, hand sliced, piled high, with mustard and a pickle.Paco's usual. Paid at the register.How to make it500g sliced pastrami8 slices of rye bread4 tbsp deli mustard4 dill picklesSteam the pastrami in a covered colander over simmering water until hot and soft.Spread the rye with mustard, pile the pastrami high on half the slices and close. Cut in half and serve with a pickle each.MainsThe Village heroSteamed pastrami, Swiss, slaw and Russian dressing on a long roll.1.73. Everybody pays, the Sixth too.How to make it500g sliced pastrami100g mayonnaise2 tbsp tomato sauce1 tsp horseradish1 dill pickle, chopped250g coleslaw mix4 long rolls8 slices of Swiss cheeseSteam the pastrami until glossy.Mix the mayonnaise, tomato sauce, horseradish and pickle for Russian dressing.Toss the coleslaw mix with half the dressing.Fill the rolls with pastrami, Swiss cheese, slaw and the rest of the dressing.SweetsBlack and whiteSoft sour cream cake cookie, iced half vanilla, half chocolate.Baked here every morning.How to make it115g butter150g caster sugar1 egg80g sour cream1 tsp vanilla extract250g plain flour1 tsp baking powder250g icing sugar2 tbsp cocoa powderBeat the butter and sugar, add the egg, sour cream and vanilla, then mix in the flour and baking powder.Scoop 12 mounds onto lined trays.Bake at 180°C until set, then cool completely.Make a thick icing with the icing sugar and a little hot water. Ice half of each flat side, then stir the cocoa into the rest and ice the other half.DrinksIced coffee floatDark roast steeped overnight in the icebox, vanilla syrup, milk and a scoop of vanilla ice cream.45 cents, cash on the counter.How to make it80g coarse ground coffee800ml cold water50g sugar50ml water, for syrup1/2 tsp vanilla extract350ml milk500ml vanilla ice cream4 cups iceStir the coffee into the cold water the night before and refrigerate.Steep for 12 hours, then strain through a paper filter.Simmer the sugar with the syrup water and vanilla and cool.Fill 4 glasses with ice and add coffee, syrup and milk to each. Top with a small scoop of ice cream.\n    Showtime cueServe the mains when Frank turns down the free meal at the deli.\n    Read the printed menu full size",
+ "phone": "Garfein'sSerpicoOne honest cop. No free sandwiches.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersNova on a bagelToasted and spread thick with cream cheese, smoked salmon, capers, red onion and fresh dill.1.10 at the appetizing counter.How to make it4 bagels200g cream cheese200g smoked salmon1 tbsp capers1 red onion, thinly sliced1 bunch dillSplit and toast the bagels.Spread each half thickly with cream cheese, then top with smoked salmon, capers, onion and small sprigs of dill. Cut each half in two to share.Hot pastrami on ryeSteamed soft, hand sliced, piled high, with mustard and a pickle.Paco's usual. Paid at the register.How to make it500g sliced pastrami8 slices of rye bread4 tbsp deli mustard4 dill picklesSteam the pastrami in a covered colander over simmering water until hot and soft.Spread the rye with mustard, pile the pastrami high on half the slices and close. Cut in half and serve with a pickle each.MainsThe Village heroSteamed pastrami, Swiss, slaw and Russian dressing on a long roll.1.73. Everybody pays, the Sixth too.How to make it500g sliced pastrami100g mayonnaise2 tbsp tomato sauce1 tsp horseradish1 dill pickle, chopped250g coleslaw mix4 long rolls8 slices of Swiss cheeseSteam the pastrami until glossy.Mix the mayonnaise, tomato sauce, horseradish and pickle for Russian dressing.Toss the coleslaw mix with half the dressing.Fill the rolls with pastrami, Swiss cheese, slaw and the rest of the dressing.SweetsBlack and whiteSoft sour cream cake cookie, iced half vanilla, half chocolate.Baked here every morning. Better than a gold badge.How to make it115g butter150g caster sugar1 egg80g sour cream1 tsp vanilla extract250g plain flour1 tsp baking powder250g icing sugar2 tbsp cocoa powderBeat the butter and sugar, add the egg, sour cream and vanilla, then mix in the flour and baking powder.Scoop 12 mounds onto lined trays.Bake at 180°C until set, then cool completely.Make a thick icing with the icing sugar and a little hot water. Ice half of each flat side, then stir the cocoa into the rest and ice the other half.DrinksIced coffee floatDark roast steeped overnight in the icebox, vanilla syrup, milk and a scoop of vanilla ice cream.45 cents, cash on the counter.How to make it80g coarse ground coffee800ml cold water50g sugar50ml water, for syrup1/2 tsp vanilla extract350ml milk500ml vanilla ice cream4 cups iceStir the coffee into the cold water the night before and refrigerate.Steep for 12 hours, then strain through a paper filter.Simmer the sugar with the syrup water and vanilla and cool.Fill 4 glasses with ice and add coffee, syrup and milk to each. Top with a small scoop of ice cream.\n    Showtime cueServe the mains when Frank asks to pay for the free roast beef lunch.\n    Read the printed menu full size",
  "cooked": [
   "Village bagels and lox",
   "Deli pastrami on rye",
@@ -93,12 +93,12 @@
   {
    "course": "S",
    "name": "Squad room maple-glazed doughnuts",
-   "note": "the box on the squad room desk that Frank won't take for free"
+   "note": "the squad room treat that Frank would pay for, not take free"
   },
   {
    "course": "S",
    "name": "Deli pastrami on rye",
-   "note": "the free lunch Frank insists on paying for"
+   "note": "the deli lunch Frank would rather pay for"
   },
   {
    "course": "M",

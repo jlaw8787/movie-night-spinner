@@ -45,27 +45,20 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good sewer and pizza energy, but the best jokes (Go-Gurt, the watermelon head, the movie) are missing.",
-  "missing": [
-   "The Go-Gurt mission (Master Splinter's supply run)",
-   "The watermelon head on the rooftop (Mikey and Raph)",
-   "The turtles sneaking into the open air movie",
-   "Superfly turning into a whale-like kaiju",
-   "April commandeering the news broadcast",
-   "Bebop and Rocksteady vibing to the boombox"
-  ],
+  "overall": 3.8,
+  "verdict": "The sewer takeaway with fortune slip and delivery run chat now reads like the film, with Ratatouille, the watermelon and Super Duper Fly all printing.",
+  "missing": [],
   "ideas": [
    "Swap 'Turtle shell guacamole' for 'Go-Gurt mission yoghurt tubes'.",
    "Swap 'Kiwi lime slushie' note for 'Mikey's watermelon head'.",
    "Swap 'Chinatown pork and chive dumplings' note for 'Movie night, no humans needed'.",
    "Rename 'Superfly's loaded supreme pizza' to 'Super Duper Fly supreme'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -81,6 +74,15 @@
    "Dumpling note now the supply run",
    "Cupcake note names the green ooze",
    "Winks: Ratatouille, watermelon, news broadcast, Super Duper Fly"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

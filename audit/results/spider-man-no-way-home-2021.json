@@ -22,27 +22,20 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Good food ideas from the film's own world (F.E.A.S.T., lumpia, Delmar's), but the layout shows the poster boxed in black bars and few big moments.",
-  "missing": [
-   "Strange's Mirror Dimension trap (Peter steals the spell)",
-   "Ned opening portals with the sling ring",
-   "Happy's line about going into battle dressed as a youth pastor",
-   "Peter 2 and Peter 3 sharing stories of Uncle Ben and Gwen",
-   "The MIT rejection letters",
-   "Aunt May's 'With great power there must also come great responsibility'"
-  ],
+  "overall": 3.8,
+  "verdict": "A Sanctum parchment menu that now carries May, Hello Peter, the coffee line and the Liberty Island showdown, with a plain parchment look.",
+  "missing": [],
   "ideas": [
    "Swap 'Hot spiced apple juice' note 'Three Peters, one jug' for Happy's coffee order: 'I would like a coffee, please.'",
    "Replace the black-barred poster with a full-bleed still of the Sanctum.",
    "Swap the 'Liberty Island chilli cheese dogs' note for 'Peter 2: Comes great responsibility.'",
    "Add the MIT rejection letters as a prop ticket in place of the Bill No. stamp."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -59,6 +52,15 @@
    "Latte note: I would like a coffee, please",
    "Apple juice note: youth pastor, suit underneath",
    "Cue: Strange trapped in the Mirror Dimension"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

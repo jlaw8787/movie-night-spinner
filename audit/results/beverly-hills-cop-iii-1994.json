@@ -45,27 +45,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "A tidy theme park snack stand with the Spider ride cue, but it plays the film polite and leaves out its funniest props.",
-  "missing": [
-   "Axel cuts the line in front of George Lucas to ride the Spider (Wonder World)",
-   "The Annihilator 2000 all-in-one weapon (Axel's gadget scene)",
-   "Wonder Dollars printed on the stolen mint paper (Axel's counterfeit)",
-   "Axel's made-up 'coffee break' last words for Inspector Todd (Mrs Todd scene)",
-   "Serge's blinding keychain (the DeWald banquet)",
-   "Uncle Dave's Axel Fox mascot (the ending)"
-  ],
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A good theme park snack stand with the Spider line, the line jumper pass and Todd's last words, though the food notes are mostly plain.",
+  "missing": [],
   "ideas": [
    "Swap the Axel note for his real line from the Spider ride: 'Yeah, I'm okay, just don't let go.'",
    "Swap the churros note 'The queues at Wonder World.' for 'Axel jumps the queue in front of George Lucas.'",
    "Swap 'Combo 94: one of each' for 'The Annihilator 2000 combo, everything on one tray.'",
    "Swap the pretzel note 'Grab one before the Spider ride stalls.' for 'Pay in Wonder Dollars.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -80,6 +73,15 @@
    "Winks: the Annihilator 2000 (with a microwave oven) and Axel Fox the mascot",
    "Pass: Axel Foley, line jumper (he cuts the Spider queue)",
    "Pretzel house note: Axel cuts the Spider queue (not printed on this layout)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

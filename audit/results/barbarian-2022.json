@@ -4,28 +4,21 @@
  "checked_ok": 18,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "verdict": "The postcard and key card suit the double-booked rental, but the menu stays on the safe first act and misses the cellar and the film's turns.",
-  "missing": [
-   "Keith opening the wine in front of Tess (first night)",
-   "The hidden room with the mattress, bucket and camera",
-   "Andre the stranger warning Tess to leave",
-   "AJ's sudden fall into the pit",
-   "Tess sleeping with the bedroom door open",
-   "The water tower finale"
-  ],
+  "verdict": "The rental key card, Tess's warning, the untouched tea, the wine basket and the bedroom door all print, with ordinary diner food underneath.",
+  "missing": [],
   "ideas": [
    "Swap 'Barbary Street red wine sangria' note for 'Keith opens the bottle first. Watch him pour', from the first night.",
    "Swap 'Welcome basket baked brie' note for 'Proof of booking in the basket, Keith has his copy'.",
    "Swap the 'Key Tag' line for 'Do not go down there, said the stranger in the street' to bring in Andre.",
    "Swap 'Sticky date pudding' note for 'Sweet, until the door opens by itself'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.4,
+  "overall": 3.8,
   "rework": "2026-11-08",
   "iconic": [
    "Double-booked rental, Keith on the couch (cue, wink, tagline)",
@@ -41,7 +34,16 @@
    "Date sponge note uses the bedroom door",
    "Shortbread note uses the untouched tea",
    "Short ribs note names AJ and the measuring"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

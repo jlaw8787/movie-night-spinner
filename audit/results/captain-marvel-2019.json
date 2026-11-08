@@ -22,27 +22,20 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The ship's ration sheet looks good, but a Louisiana kitchen and 1995 video store should feel warmer than a spaceship form.",
-  "missing": [
-   "Carol crashing through the Blockbuster roof (the 1995 video store)",
-   "Goose coughing up the Tesseract (the Flerken scene)",
-   "Fury's Nine Inch Nails shirt and pager (the 1995 look)",
-   "Goose scratching Fury's eye (the office)",
-   "The train chase (the Skrull fight)",
-   "Maria and Monica's 'Higher, further, faster' motto (Louisiana)"
-  ],
+  "overall": 3.6,
+  "verdict": "Blockbuster popcorn, the lunchbox pie, Goose and the pager slip all print, but the Flerken and Fury gags sit in small footer text.",
+  "missing": [],
   "ideas": [
    "Swap the 'MESS CALL' label for 'Blockbuster Late Fee' with the cue.",
    "Swap 'Goose's fish bites' note for 'Do not look at its mouth.'",
    "Swap 'Video store brown butter parmesan popcorn' note for 'Rewind first.'",
    "Swap the 'PAGER MESSAGE' slip for a Blockbuster rental card."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -59,6 +52,15 @@
    "Fish bites note uses Fury's line to Goose",
    "Pie note: take the pie, leave the lunchbox",
    "First wink now That's not a cat. That's a Flerken."
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

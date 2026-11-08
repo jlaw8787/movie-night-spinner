@@ -33,24 +33,23 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 4,
+  "moments": 3,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "The lobster tank cue and tab are a fun hit, but the corner store setting and the dishes are generic and the dark look is better than the writing.",
+  "verdict": "Lobster tank cue, tab and the Fuel in the tank note land, but the corner store menu and dishes are still generic.",
   "missing": [
-   "Venom's 'Eyes, lungs, pancreas. So many snacks, so little time.' (after he saves Eddie)",
-   "Eddie climbing into the restaurant lobster tank mid dinner with Anne",
-   "Venom wanting heads piled in the corner ('Piles of bodies, piles of heads')",
-   "Eddie's bike chase with Venom taking over",
-   "Eddie raiding Mrs. Chen's corner shop (the symbiote's first hunger)"
+   "Eyes, lungs, pancreas line (dropped, house standard)",
+   "Eddie in the lobster tank at the restaurant (only on the cue and tab)",
+   "Piles of heads line",
+   "Bike chase with Venom taking over"
   ],
   "ideas": [
    "Swap 'Char siu pork buns' note 'So many snacks, so little time.' for a printed 'Eyes, lungs, pancreas' item name on the menu board",
    "Replace 'Eddie's late-night bacon cheeseburger' with a raw lobster in a tank style plate so the cue is on the board",
    "Swap 'Mrs Chen's mango pudding' for 'Head on a plate' cherry jelly dessert with a black sesame top, to match the film's tone"
   ],
-  "overall": 3.4,
+  "overall": 3.2,
   "flat": true,
   "done": false,
   "rework": "2026-11-08",
@@ -66,6 +65,15 @@
    "Lobster note: Eddie climbs into the tank",
    "Char siu house note: Eyes, lungs, pancreas",
    "Chocolate house note: tater tots and chocolate order"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

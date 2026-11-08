@@ -30,18 +30,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The station and Trainman idea fits, but it stays on the platform and leaves out the Oracle's cookies, Trinity and the Neo versus Smith finish.",
+  "overall": 3.6,
+  "verdict": "Mobil Avenue, the Trainman, the Oracle's line and Sati all print on a convincing dining car, but the Oracle's cookies line is gone.",
   "missing": [
-   "The Oracle's cookies with Sati ('Cookies need love like everything does')",
-   "Smith's 'Everything that has a beginning has an end' in the final fight",
-   "Neo and Smith's rain fight in the street",
-   "The Sentinels at the Zion dock and the Mjolnir's EMP",
-   "Trinity piloting above the clouds to the open sky"
+   "Cookies need love like everything does"
   ],
   "ideas": [
    "Move 'Warm oatmeal raisin cookies' from unprinted to the dessert slot with the line 'Cookies need love like everything does.'",
@@ -49,7 +45,7 @@
    "Swap 'Mobil Avenue platform sausage rolls' note for a Rama-Kandra karma line.",
    "Add a rain fight stamp to the check, 'Smith owes a tip'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -65,6 +61,15 @@
    "Cookie note: the real kitchen line (old one was from the first film)",
    "Dal note: Rama-Kandra on karma",
    "Wink 2: Neo and Smith"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

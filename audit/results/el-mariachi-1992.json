@@ -44,19 +44,17 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 2,
+  "moments": 3,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 2.8,
-  "verdict": "A generic chalkboard bar with a guitar case joke, and it gets two of its few film beats wrong.",
+  "overall": 3.0,
+  "verdict": "A chalkboard bar with the poster turtle, the full band line and a real signed quote, but the guitar case swap and the rest of the film stay out.",
   "missing": [
    "Guitar case swapped with Azul's case of weapons (the bar)",
    "Domino's pit bull riding out of town with him (the ending)",
    "Moco striking matches off the Dragon's face (the ranch)",
-   "The surly bartender hiring a keyboard player (the first bar)",
-   "Domino's letter-opener at his throat (the upstairs room)",
-   "The turtle on the yellow road line (the poster)"
+   "Domino's letter-opener at his throat (the upstairs room)"
   ],
   "ideas": [
    "Swap the 'Ceviche tostadas' note for 'The bartender hired a keyboard guy instead. Tip the mariachi.'",
@@ -80,6 +78,15 @@
    "Cocada note ties the free coconut at the edge of town",
    "Michelada note ties Azul ordering a beer in a bottle",
    "Agua de jamaica note swaps the invented free pour for the turtle on the highway"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 2.8
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -25,16 +25,14 @@
   "moments": 3,
   "food": 3,
   "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "The school cafeteria tray suits Peter's world and Delmar's is right, but it skips most of the film's best-known moments.",
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The Midtown cafeteria and Delmar's number five fit, but the rest is generic school lunch and the Vulture and Washington Monument rescue are absent.",
   "missing": [
-   "Ned dropping the Lego Death Star when he learns Peter's secret (Ned's bedroom)",
-   "Karen the suit AI and the baby monitor protocol",
-   "Captain America's gym class fitness videos",
-   "Toomes driving Peter and Liz to the homecoming dance",
-   "The Washington Monument elevator rescue",
-   "Peter's 'Number five with pickles, and smush it flat' order at Delmar's"
+   "Washington Monument elevator rescue",
+   "Captain America fitness videos",
+   "Ned and the Lego Death Star",
+   "Toomes the Vulture"
   ],
   "ideas": [
    "Swap 'Decathlon team bubble tea' for 'Lego Death Star cake pops' with a note about Ned dropping the set.",
@@ -59,6 +57,15 @@
    "Cue names the number five",
    "Ferry heroes note describes the food",
    "Wink 1: Karen, the Suit lady"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

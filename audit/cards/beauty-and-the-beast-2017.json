@@ -14,7 +14,7 @@
    "Gaston's Tavern",
    "Villeneuve. Antlers on every wall.",
    "A NOTE FROM THE COUNTER",
-   "“Chip, mind your manners, we have a guest. Tea first, tart next. The Beast can wait, and so can the dishes.”",
+   "Chip, mind your manners, we have a guest. Tea first, tart after, and the Beast can wait.",
    "Mrs. Potts",
    "Library Pass",
    "No. 2017",
@@ -101,8 +101,9 @@
   "venue": "Gaston's Tavern",
   "sign": "Villeneuve. Antlers on every wall.",
   "note": {
-   "text": "Chip, mind your manners, we have a guest. Tea first, tart next. The Beast can wait, and so can the dishes.",
-   "by": "Mrs. Potts"
+   "text": "Chip, mind your manners, we have a guest. Tea first, tart after, and the Beast can wait.",
+   "by": "Mrs. Potts",
+   "kind": "note"
   },
   "winks": [
    "Chip the teacup with a chipped rim",

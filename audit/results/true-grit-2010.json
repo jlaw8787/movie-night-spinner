@@ -42,19 +42,15 @@
  "checked_ok": 10,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Solid frontier food list, but the fridge-magnet recipe box feels modern and the cue may belong to the wrong film.",
+  "overall": 3.4,
+  "verdict": "Mattie's opening line, the corn dodgers cue and the 400 yard shot print and the food suits, but it is still a generic recipe box for a gritty western.",
   "missing": [
-   "Cogburn charging the gang with the reins in his teeth",
-   "Mattie's snake bite and the long ride to the doctor",
    "Mattie horse trading with Colonel Stonehill",
-   "Mattie's opening voice-over about paying for everything",
-   "LaBoeuf's 400 yard shot at Ned Pepper",
-   "The old Cogburn at the Wild West show"
+   "Mattie's snake bite and long ride"
   ],
   "ideas": [
    "Swap 'Fort Smith buttermilk fried chicken' note for Mattie's horse trading with Stonehill",
@@ -80,6 +76,15 @@
    "Hand pies note: the 400 yard shot",
    "Collard greens house note: not paying for talk",
    "Winks: 400 yard shot and reins in his teeth"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

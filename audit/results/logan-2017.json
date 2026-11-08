@@ -46,27 +46,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The hideout and limo booking feel right, but the food mostly isn't tied to scenes from the film.",
-  "missing": [
-   "The Munson family dinner (Will and Kathryn Munson)",
-   "Shane playing on the hotel TV and the eulogy at the grave",
-   "Laura's X-Men comic and Eden (Oklahoma City hotel)",
-   "The adamantium bullet Logan kept",
-   "Charles's seizure at the casino hotel",
-   "Caliban in the smelting plant"
-  ],
+  "overall": 3.6,
+  "verdict": "A gritty hideout card where the last line, Shane, the comic, the bullet and the Munson dinner all print, though the food stays plain.",
+  "missing": [],
   "ideas": [
    "Swap 'Pan cornbread with honey' note for Charles's line about a home and people who love each other, said at the Munson table.",
    "Swap 'Gas station corn dogs' for the Munson table spread, with the farm family named in the note.",
    "Add a Shane toast to the hotel rib eye note, since the Western plays on the TV there.",
    "Swap the root beer note for Laura's X-Men comic and the Eden map."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -83,6 +76,15 @@
    "Rib eye note: the hotel night they watched Shane",
    "Pork chops note: at the Munson table",
    "Cornbread house note: Charles at the Munson table"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

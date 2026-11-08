@@ -21,27 +21,23 @@
  ],
  "checked_ok": 17,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good Greek food and strong cartoon stills in a shared stadium frame, but the plot gags are thin.",
+  "overall": 3.8,
+  "verdict": "A training camp stadium with the landslide line, Hydra haloumi, Pain and Panic and Hades's hair, though the Zero to Hero cue is not visible.",
   "missing": [
-   "Zero to Hero and the Muses singing it",
-   "Hercules and Pegasus meeting Phil",
-   "Pain and Panic disguised as boys in the gorge",
-   "Hades' deal with Meg and the Fates",
-   "Hercules and the Hydra landslide",
-   "Hercules giving up his strength for Meg and the Styx"
+   "Zero to Hero (the Muses)",
+   "Meg: it's been a real slice (the Meg scene)"
   ],
   "ideas": [
    "Swap 'Hades's fiery chilli garlic prawns' note for Pain and Panic as a pair of sliders.",
    "Rename 'Greek frappé' to 'Zero to Hero frappé'.",
    "Replace 'Meg playing it cool' wink with her 'Hydra' line, 'Hydra heads haloumi' note about the landslide."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,6 +56,15 @@
    "Prawn note: is my hair out",
    "Hydra haloumi note: cut one, get two",
    "Winks: real slice, audience or mosaic"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

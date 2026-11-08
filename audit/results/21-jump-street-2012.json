@@ -34,18 +34,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "verdict": "The church HQ and the party at Schmidt's place are right, but the lunch tray menu is plain and the film's best jokes are missing.",
+  "verdict": "The church HQ, the HFS jellies and the prom penthouse chicken are in, but the tray layout is plain and Korean Jesus never prints.",
   "missing": [
-   "Captain Dickson's 'Korean Jesus' rant (the church)",
-   "Schmidt and Jenko mixing up their identities (first day)",
-   "HFS first dose and the vomit attempt (Eric)",
-   "Jenko's AP Chem friends (the lab)",
-   "The prom penthouse deal with Mr. Walters",
-   "Reading Mr. Walters his Miranda rights (end)"
+   "Korean Jesus (Captain Dickson)",
+   "Reading Mr Walters his Miranda rights, right to remain an attorney"
   ],
   "ideas": [
    "Swap 'Chemistry class layered fruit jellies' for a 'HFS' blue jelly shot, alcohol-free",
@@ -53,8 +49,8 @@
    "Swap 'Prom night chicken' note for the prom penthouse deal",
    "Replace 'Cafeteria pizza squares' with 'Schmidt's mum's lunch tray'"
   ],
-  "overall": 3.2,
-  "flat": true,
+  "overall": 3.6,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -72,6 +68,15 @@
    "Prom chicken note now the penthouse deal",
    "Slider note now the party crashers",
    "Cue now the party fight"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

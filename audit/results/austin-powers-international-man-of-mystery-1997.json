@@ -43,19 +43,16 @@
  ],
  "checked_ok": 16,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "verdict": "The poster and Union Jack colours are right and the sixties food is clever, but the lab ration sheet only half sounds like Dr Evil.",
+  "verdict": "The lair badge, Bigglesworth eggs, laser beam picks, the million dollar steak and Oh, behave all print, but the sharks and Fembots are still missing.",
   "missing": [
-   "Sharks with frickin' laser beams (Dr Evil's one simple request)",
-   "Throw me a frickin' bone here (Dr Evil, after thirty years frozen)",
-   "Oh, behave!",
-   "Dr Evil dancing the Macarena with Scott",
-   "The fembots overloaded by Austin's striptease",
-   "Mr Bigglesworth, it's frickin' freezing in here (last line)"
+   "Sharks with frickin' laser beams attached to their heads",
+   "Throw me a frickin' bone here (Dr Evil, Number Two)",
+   "The Fembots"
   ],
   "ideas": [
    "Swap 'Union Jack berry trifle' note for 'Sharks with frickin' laser beams not included'.",
@@ -63,9 +60,9 @@
    "Swap 'Austin's gin martini' for 'Fembot overload punch' with the striptease joke in the note.",
    "Swap the footer 'Return tray to the hatch' for 'It's frickin' freezing in here, Mr. Bigglesworth'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.4,
+  "overall": 3.8,
   "rework": "2026-11-08",
   "iconic": [
    "Sharks with frickin' laser beams attached to their heads",
@@ -83,7 +80,16 @@
    "Devilled eggs note: bald as Mr Bigglesworth",
    "Martini note: Oh, behave!",
    "Vol au vent note: Throw me a frickin' bone here, Number Two"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

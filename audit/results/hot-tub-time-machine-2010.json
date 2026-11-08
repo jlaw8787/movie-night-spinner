@@ -5,19 +5,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Postcard from the lodge works and Chernobly is a good pick, but the film's mad moments are left out.",
+  "overall": 3.6,
+  "verdict": "A Kodiak Valley postcard that gets the fondue, great white buffalo, Chernobly, fork and Blaine lines onto the page, with only the bellhop missing.",
   "missing": [
-   "Lou fighting Blaine the ski patrol bully",
-   "Adam getting stabbed in the eye with a fork",
-   "Nick's open mic cover set",
-   "The hot tub repairman (Chevy Chase) warning them not to change anything",
-   "Lou ends up founding Lougle",
-   "Jacob flickering in and out of reality"
+   "The bellhop loses his arm"
   ],
   "ideas": [
    "Swap 'Snowcapped fudge brownies' for 'Fork in the eye cherry tart' (Adam's fork injury).",
@@ -25,7 +20,7 @@
    "Swap 'Kodiak Valley lodge chicken schnitzel' note for 'Blaine's beating at the cabin'.",
    "Add a Lougle napkin as the 2010 stamp (the future Lou builds)."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -45,6 +40,15 @@
    "Chernobly note: Russian Red Bull",
    "Signed note: Nick's hot tub line",
    "Winks: fork, great white buffalo"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

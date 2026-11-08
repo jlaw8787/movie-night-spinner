@@ -34,19 +34,16 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Canteen layout works for a school but is plain, and the only quote is invented.",
+  "overall": 3.2,
+  "verdict": "The school timetable winks and the cage fight cue print, but the menu is plain and the cage fight peanuts are not on it.",
   "missing": [
-   "Storm's toad line",
-   "Wolverine's claws and the cage fight in Laughlin City",
-   "Rogue's first touch",
-   "Magneto's plastic prison",
-   "The Statue of Liberty finale",
-   "Sabretooth on the train"
+   "Cage fight maple chilli peanuts (not on the menu)",
+   "What happens to a toad when it's struck by lightning",
+   "Statue of Liberty finale"
   ],
   "ideas": [
    "Swap 'Xavier's School cereal bars' note for 'Do you know what happens to a toad?'",
@@ -69,6 +66,15 @@
    "Cue is the cage fight win",
    "Peanuts renamed Cage fight maple chilli peanuts, note King of the Cage",
    "Winks: chess in the plastic prison, uniforms line replace prison and Mystique"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

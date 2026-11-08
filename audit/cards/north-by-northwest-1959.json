@@ -14,7 +14,7 @@
    "TWENTIETH CENTURY DINING CAR",
    "NOW SHOWING",
    "1959",
-   "I'm not George Kaplan, whoever he is. I'll take the brook trout, and sit down, you're making the train nervous.",
+   "\"My name is Thornhill, Roger Thornhill! It's never been anything else.\"",
    "Roger Thornhill",
    "DINING CAR SERVICE",
    "DINNER TIMETABLE",
@@ -70,7 +70,7 @@
    "Gin and dry vermouth stirred over ice, sparkling water if you prefer",
    "HEARD IN THE CLUB CAR",
    "The crop duster chase in the open field.",
-   "Mount Rushmore and the final chase.",
+   "Mount Rushmore and the train tunnel.",
    "Write your order on the check. Prices subject to change. Images: TMDB."
   ]
  ],
@@ -123,12 +123,13 @@
   "venue": "Twentieth Century Dining Car",
   "sign": "Twentieth Century Limited",
   "note": {
-   "text": "I'm not George Kaplan, whoever he is. I'll take the brook trout, and sit down, you're making the train nervous.",
-   "by": "Roger Thornhill"
+   "text": "My name is Thornhill, Roger Thornhill! It's never been anything else.",
+   "by": "Roger Thornhill",
+   "kind": "quote"
   },
   "winks": [
    "The crop duster chase in the open field",
-   "Mount Rushmore and the final chase",
+   "Mount Rushmore and the train tunnel",
    "George Kaplan, who does not exist",
    "Meeting Eve Kendall on the train",
    "The auction scene and the Vandamm gang"
@@ -137,7 +138,7 @@
  "house": {
   "s": {
    "n": "Crab Louis on iceberg",
-   "note": "Roger's Oak Bar lunch, before the page for Kaplan.",
+   "note": "Oak Room fare, for the night Roger is paged as Kaplan.",
    "meat": true
   },
   "d": {

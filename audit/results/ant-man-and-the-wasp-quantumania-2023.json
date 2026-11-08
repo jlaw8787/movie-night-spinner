@@ -21,24 +21,17 @@
   "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Veb and the book title are good, but the market template is a plain takeaway look for a very strange film.",
-  "missing": [
-   "Kang's 'They all blend together after a while' (Kang and Scott)",
-   "Janet's 'A monster. Who thinks he's a god.' (Janet on Kang)",
-   "The cantina and its odd creatures",
-   "MODOK and his huge head (the end fight)",
-   "Quaz and his mind reading",
-   "The ant army's final charge"
-  ],
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Kang's line, Janet's quote, Quaz, Veb, MODOK, Hank's ants and Scott's book all print on a neat takeaway menu with a strong poster.",
+  "missing": [],
   "ideas": [
    "Swap 'Colour-changing quantum lemonade' note for Kang's line about everything blending together.",
    "Swap 'Sparkling yuzu and passionfruit soda' note for Janet's line about a monster who thinks he's a god.",
    "Swap 'San Francisco cioppino' note for a cantina drink with a creature in it.",
    "Swap the 'Giant ant gruyère cheese puffs' note for a line about the ant army's charge."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -58,6 +51,15 @@
    "Soda note carries Janet's 'A monster. Who thinks he's a god.'",
    "Doughnut hole note: Quaz says Scott has seven holes",
    "Wink: Veb and Quaz in the cantina; Kang and his many variants"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

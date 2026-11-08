@@ -34,19 +34,14 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A fair bar tab for the last night in town, but it skips the film's best moments, like Ginny wearing Pamela's sweater in the shack.",
+  "overall": 3.4,
+  "verdict": "A grimy bar tab with Crazy Ralph's warning, Paul's urban legend line and the no seconds receipt, but the food is plain.",
   "missing": [
-   "Ginny puts on Pamela's sweater to fool Jason (the shack)",
-   "Pamela's severed head on the altar (the shack)",
-   "Crazy Ralph: 'You're all doomed' (the road, before the garrotte)",
-   "Deputy Winslow's chase into the woods (the shack)",
-   "Mark and Vickie's handheld video games (the lodge)",
-   "Jason's burlap sack mask (used only as a pudding name)"
+   "Ginny puts on Pamela's sweater in the shack (the shack)"
   ],
   "ideas": [
    "Swap the 'Receipt' stamp for a Crazy Ralph chalkboard special: 'You're all doomed' (a quote said by Ralph in the film)",
@@ -72,6 +67,15 @@
    "House beer note: Paul calls Jason an urban legend",
    "Winks: sweater, Ralph, sack, handheld games",
    "Prop receipt: no seconds for Jeff and Sandra"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

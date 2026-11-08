@@ -68,19 +68,15 @@
  "checked_ok": 14,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3,
-  "verdict": "Power lunch bistro is on theme but safe, with invented lines for Gekko and a few scenes placed wrongly.",
+  "overall": 3.4,
+  "verdict": "Lunch is for wimps, greed is good, the cigars and the Bluestar tip all print, but the first face has a big empty gap beside the poster.",
   "missing": [
-   "Bud's birthday cigars for Gekko",
-   "The Teldar shareholder speech",
-   "'Lunch is for wimps'",
-   "Gekko's red suspenders and big phone",
-   "The Central Park punch",
-   "Bud wearing a wire"
+   "Money never sleeps, only as an espresso note",
+   "Bud's five minutes in Gekko's office, only in the cue"
   ],
   "ideas": [
    "Swap 'Cheesecake' note for 'Bud's box of Cuban cigars, on Gekko's birthday.'",
@@ -105,6 +101,15 @@
    "Old fashioned renamed Teldar speech old fashioned",
    "Wink: Blue Horseshoe loves Anacott Steel",
    "Espresso note: Money never sleeps"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

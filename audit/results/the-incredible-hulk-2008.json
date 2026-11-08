@@ -34,19 +34,14 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A decent Rio kiosk with the soda bottle and purple pants, but it plays safe and skips the big fights and the 200 beats a minute hook.",
+  "overall": 4.0,
+  "verdict": "A Rocinha kiosk with the hungry line, the blood in the bottle, Stan Lee and the heart rate puffs, and the weather strip is a fun touch.",
   "missing": [
-   "The 200 beats per minute heart rate limit (Culver lab)",
-   "Bruce's drop of blood in the soda bottle, then Stan Lee drinking it",
-   "The Harlem fight with the Abomination and the chain",
-   "Stanley's pizzeria and the pizzas used as a bribe",
-   "Mr. Blue and Dr. Sterns' lab",
-   "Bruce's breathing and yoga lessons in Rio"
+   "Abomination chain fight in Harlem"
   ],
   "ideas": [
    "Swap 'Heart rate watch cheese bread puffs' note for '200 beats a minute and it is lights out'",
@@ -54,7 +49,7 @@
    "Swap the weather strip 'Fine, still, 22 C' for a heart rate readout that creeps up",
    "Rename 'Guarana, straight off the line' to a bottle with a drop of Bruce's blood on the label"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +65,15 @@
    "Puffs note carries the 200 beats limit",
    "Cue is the blood drop in the soda bottle",
    "Abomination wink names the Harlem chain fight"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

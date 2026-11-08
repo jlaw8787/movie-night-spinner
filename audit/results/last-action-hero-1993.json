@@ -16,20 +16,16 @@
  ],
  "checked_ok": 14,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A bold neon cinema with the magic ticket and Whiskers, but Arnold's Hamlet, the glass eye and Death are missing.",
+  "overall": 3.6,
+  "verdict": "Pandora Theater with Hamlet's line, the magic ticket, Whiskers and Death in the footer, and a sundae named after Jack's phrase.",
   "missing": [
-   "Arnold as Hamlet in Danny's daydream (\"Big mistake\")",
-   "Benedict's exploding glass eye",
-   "Death stepping out of The Seventh Seal",
-   "Danny snuffing a lit fuse with his popcorn bucket",
-   "The ice cream truck explosion",
-   "Jack's \"rubber baby buggy bumpers\" line"
+   "Benedict's smiley glass eye",
+   "Rubber baby buggy bumpers"
   ],
   "ideas": [
    "Swap \"Times Square knishes\" for \"Hamlet's cigar chocolates\" with the line \"Big mistake\".",
@@ -37,7 +33,7 @@
    "Swap \"Matinee ice cream sundae\" for \"Ice cream truck special, hold the explosion\".",
    "Swap the popcorn note for Danny putting out the fuse with his bucket."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -54,6 +50,15 @@
    "Sundae renamed To cone a phrase sundae",
    "Third wink now Death from The Seventh Seal",
    "Nacho house note now Jack's 'Silent but deadly'"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

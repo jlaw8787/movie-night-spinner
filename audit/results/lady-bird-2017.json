@@ -34,19 +34,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy school canteen with a stained glass poster frame and the right Thanksgiving cue, but the writing could be any teen film.",
+  "overall": 3.6,
+  "verdict": "School lunch timetable with the car jump, the best version line, Danny's Thanksgiving and the Deuce, but the dishes read as ordinary canteen food.",
   "missing": [
-   "Lady Bird and Julie eating the unconsecrated communion wafers (church)",
-   "Sister Sarah Joan telling her 'You clearly love Sacramento' (the writing scene)",
-   "The blue house with white shutters she wants (Danny points it out)",
-   "Kyle and the coffee shop (first meeting)",
-   "Danny in the bathroom stall and the school musical (breakup)",
-   "The prom at Julie's (the end of the friendship fight)"
+   "Sister Sarah Joan on love and attention",
+   "The unblessed communion wafers",
+   "The pink cast"
   ],
   "ideas": [
    "Move the communion wafer crisps from the data onto the printed menu in place of 'Rosemary smoked salt almonds'.",
@@ -54,7 +51,7 @@
    "Swap 'Thanksgiving turkey with sage stuffing' note for 'Danny's gran says she has been anxious to meet you.'",
    "Swap period 4 'The pink cast on her arm' for 'Sister Sarah Joan' so the timetable has a second school scene."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +67,15 @@
    "Turkey note ties to the house she lied about",
    "Crostini renamed Danny's Thanksgiving crostini",
    "Timetable wink now the writing class with Sister Sarah Joan"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

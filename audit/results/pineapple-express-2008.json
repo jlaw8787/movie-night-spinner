@@ -57,19 +57,16 @@
  "checked_ok": 9,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Pineapple everywhere is a fair joke, but it skips Red's cat cake, the dumpster and the Quiznos line.",
+  "overall": 3.2,
+  "verdict": "Saul's bar tab prints the Quizno's line, the cat cake and the dead battery, but the dumpster and diner breakfast don't print and the look is a plain dark menu.",
   "missing": [
-   "Red frosting the cake for his dead cat's birthday (Red's place)",
-   "'Two ideas: Nowhere and Quizno's' (the woods)",
-   "Saul in the dumpster, 'I am in the dumpster already' (Ted's)",
-   "Saul's leg through the windshield (the car chase)",
-   "The car battery dying from talk radio (the woods)",
-   "Breakfast at the diner after the shootout (ending)"
+   "Saul in the dumpster already",
+   "Breakfast at the diner",
+   "Car chase"
   ],
   "ideas": [
    "Swap 'Angie's family pineapple upside-down cake' for 'Red's cat's birthday cake'.",
@@ -95,6 +92,15 @@
    "House drink note: talk radio kills the battery",
    "House snack note: the diner breakfast",
    "Winks: dumpster and car chase replace the apartment and Red the dealer"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

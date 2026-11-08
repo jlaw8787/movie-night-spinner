@@ -21,20 +21,15 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "Photo booth and frat house match the film, and the De Niro party and airbags are in, but it misses the best gags and the barbecue note is made up.",
+  "overall": 3.6,
+  "verdict": "A frat prom with the airbag prank, Baby's first rave and the De Niro party all printing, though the food is mostly standard party fare.",
   "missing": [
-   "Stella and the condom (lawn)",
-   "Airbag prank on the Radners",
-   "Teddy as a shirtless Abercrombie greeter (epilogue)",
-   "Fireworks in Teddy's room (the breaker box)",
-   "Mac and Kelly forging the dean's letter",
-   "Hall of Fame (Delta Psi plan)"
+   "Stella and the frat's condom"
   ],
   "ideas": [
    "Swap 'Backyard barbecue steak with chimichurri' for 'Airbag burgers' with a pop of sauce.",
@@ -42,7 +37,7 @@
    "Replace the 'Keg lager' note with 'Mac and Kelly's first night at the Delta Psi party'.",
    "Add a 'Delta Psi Hall of Fame' trophy sweet for Teddy and Pete's big party."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -59,6 +54,15 @@
    "Brie renamed Baby's first rave",
    "Keg lager note now beer pong",
    "Winks: Baby's first rave, Abercrombie greeter, forged dean's letter"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

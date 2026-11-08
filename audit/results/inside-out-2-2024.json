@@ -29,19 +29,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A friendly Headquarters canteen but the menu has almost none of the sequel's new emotions or its best jokes.",
+  "overall": 3.8,
+  "verdict": "Headquarters canteen with Anxiety, Oui-Oui, Bloofy and the Fire Hawks all printing, with the food itself staying fairly plain.",
   "missing": [
-   "Bloofy and French Fry Forest in Imagination Land",
-   "Joy calling Ennui 'Oui-Oui' (Wikiquote)",
-   "Embarrassment's sweaty high five with Joy",
-   "Blowing up the bad memory cliff with dynamite",
-   "Anxiety's whirlwind at the console during the panic attack",
-   "Pouchy the backpack pouch giving a hand"
+   "Blowing up the cliff with dynamite"
   ],
   "ideas": [
    "Swap 'Camp cafeteria chicken broccoli pasta bake' note 'lunch in the hockey camp cafeteria' for 'French Fry Forest, a long way round.'",
@@ -49,7 +44,7 @@
    "Swap 'Family taco night' for 'Pouchy pocket tacos' with the note 'Anything in there that can help?'",
    "Swap 'Cheese, crackers and fruit platter' note for 'Bloofy, we're in a real pickle.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -65,6 +60,15 @@
    "Brownie note nods to Anger and the Fire Hawks",
    "Cue is now Anxiety arriving at Headquarters",
    "Signed note is Joy Oui-Oui line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

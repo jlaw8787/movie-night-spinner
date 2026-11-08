@@ -37,15 +37,13 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Sandusky brake pad canteen is fine but flat, with one real quote swapped for an invented one and the funniest scenes left off.",
+  "overall": 3.0,
+  "verdict": "Helen's fryer-on wings and the timetable winks help, but the dishes are still plain and the funniest lines are gone.",
   "missing": [
-   "Fat guy in a little coat",
-   "Holy schnikes",
-   "The deer in the back seat",
-   "The wings at the diner",
-   "The 1967 Plymouth GTX getting wrecked",
-   "Tommy's guarantee speech"
+   "Fat guy in a little coat (sausage roll not printed)",
+   "Holy schnikes (milkshake not on the menu)",
+   "Shut up, Richard",
+   "Butcher's word on a T-bone"
   ],
   "ideas": [
    "Swap 'Tommy's tight coat sausage rolls' note for 'Fat guy in a little coat.'",
@@ -69,6 +67,15 @@
    "Wings renamed Helen's fryer-on wings with the scene in the note",
    "Sausage roll note: Fat guy in a little coat",
    "Winks: That's gonna leave a mark and Shut up, Richard"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

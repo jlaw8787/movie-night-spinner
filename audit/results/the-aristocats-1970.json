@@ -18,27 +18,20 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy Paris bistro with the right cats and the cream, but it only nods at the film's best moments and the food barely uses cream, fish or the jazz band.",
-  "missing": [
-   "Everybody Wants to Be a Cat jam on the Paris rooftops (Scat Cat's band)",
-   "Edgar dosing the cats' cream with sleeping pills",
-   "Napoleon and Lafayette chasing Edgar's motorbike",
-   "Edgar's Timbuktu packing crate",
-   "Frou-Frou the horse joining the final fight",
-   "Madame Bonfamille rewriting her will"
-  ],
+  "overall": 3.6,
+  "verdict": "A Parisian house menu with Duchess's line, Edgar's cream cue, Scat Cat, the hounds and the Timbuktu crate all printing, though the food writing is plain.",
+  "missing": [],
   "ideas": [
    "Swap 'Parisian gruyere gougeres' note ('Madame's grand house in Paris') for Napoleon and Lafayette, who chase Edgar's motorbike.",
    "Make the sardine pate a headline dish named for Scat Cat's gang and drop the 'leftovers' joke.",
    "Swap 'Abigail and Amelia's chicken leek pie' for a goose-sized pie with a nod to Uncle Waldo.",
    "Add a 'Packed for Timbuktu' takeaway box as the Movie Night For Two style closer."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -54,6 +47,15 @@
    "Gougeres and pie notes",
    "Drink note names the song",
    "Winks: hounds, Timbuktu crate"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

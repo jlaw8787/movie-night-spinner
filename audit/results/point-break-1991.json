@@ -28,19 +28,17 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Surf shack is right and the masks and storm are in, but the main dish rests on a scene I could not find.",
+  "overall": 3.6,
+  "verdict": "Bodhi's wave line, Utah's subs and the ex president masks give it a proper kiosk feel, though the food is still mostly generic beach fare.",
   "missing": [
-   "Utah's gun shot in the air: 'I am an F-B-I agent!'",
-   "The Reagan mask foot chase",
-   "Bodhi's mask thrown at his feet in Australia: 'Lost something, brah?'",
-   "Utah throwing his badge into the sea",
-   "Skydiving jump with Utah after Bodhi",
-   "Patrick's Roadhouse lunch"
+   "I am an FBI agent",
+   "Vaya con Dios (margarita)",
+   "The skydive",
+   "Utah's first tube"
   ],
   "ideas": [
    "Swap 'Utah's meatball subs' for 'Patrick's Roadhouse lunch plate'.",
@@ -48,7 +46,7 @@
    "Swap 'Pineapple and ginger crush' note for 'Lost something, brah?'",
    "Add a badge-shaped cookie to the margarita line."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -69,6 +67,15 @@
    "House drink note: Utah's first tube",
    "Margarita note adds Vaya con Dios",
    "Wink: I am an FBI agent"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

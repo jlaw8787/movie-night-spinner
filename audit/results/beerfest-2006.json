@@ -29,19 +29,12 @@
  "checked_ok": 14,
  "vibe": {
   "world": 3,
-  "moments": 2,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "verdict": "A dark pub tab with Das Boot and a schnitzel, but it misses the secret underground games, the Trojan keg and the Schnitzengiggle recipe that drive the film.",
-  "missing": [
-   "The Trojan horse keg into Beerfest (the cue scene)",
-   "Schnitzengiggle beer, brewed from the recipe hidden in Po-Po the puppet",
-   "Great Gam Gam: I always sleep better with a little sausage in me",
-   "Landfill drowning in the vat and his twin Gil taking his place",
-   "Barry's Ping-Pong beer glass smash",
-   "The Germans' low-carb strawberry beer mix-up"
-  ],
+  "verdict": "The Wolfhouse tab, Great Gam Gam, the Das Boot radler and the keg ticket all print, but the look is a dark generic bar tab.",
+  "missing": [],
   "ideas": [
    "Swap 'Apple strudel' for 'Schnitzengiggle beer pudding', with Po-Po the puppet in the note.",
    "Swap 'Bavarian wheat beer by the stein' note for 'Great Gam Gam sleeps better with a little sausage'.",
@@ -50,7 +43,7 @@
   ],
   "flat": true,
   "done": false,
-  "overall": 2.8,
+  "overall": 3.2,
   "rework": "2026-11-08",
   "iconic": [
    "Great Gam Gam: I always sleep better with a little sausage in me",
@@ -64,7 +57,16 @@
    "Radler note: the Das Boot chant",
    "Ticket: Enter in a keg (the Trojan keg)",
    "Wheat beer note: the 'Drink, drink, drink!' chant"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 2.8
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

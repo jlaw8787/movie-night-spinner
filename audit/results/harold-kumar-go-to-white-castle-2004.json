@@ -29,19 +29,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Right destination and the cheetah ride, but the night's best scenes and Harold's real order are left out.",
+  "overall": 3.6,
+  "verdict": "The White Castle board has the cheetah sliders, Freakshow pickles, Doogie's shake and the 30 slider order slip, but the raccoon and fake 911 bits are left out.",
   "missing": [
-   "Burger Shack employee's rant about White Castle onions (New Brunswick)",
-   "Neil Patrick Harris paying for the order at the counter",
-   "Freakshow the tow truck mechanic (boils, his house)",
-   "The hang glider drop onto the castle",
-   "The raccoon bite on the roadside",
-   "Kumar's fake 911 call to bust Harold out"
+   "The raccoon bite and Kumar's fake 911 call are left out"
   ],
   "ideas": [
    "Swap 'Midnight cherry vanilla cola' for 'Large Cherry Coke' (Harold orders four large Cherry Cokes).",
@@ -49,7 +44,7 @@
    "Swap the house 'Battered onion rings with ranch' for 'Burger Shack onion rings, not a patch on the castle' (the employee's rant).",
    "Rename 'Jersey gravy fries' to 'Five orders of fries' (Harold's order, plus Kumar raising him five)."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -68,6 +63,15 @@
    "Malt shakes renamed Doogie's",
    "House starter now Burger Shack onion rings",
    "Receipt now shows the order"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

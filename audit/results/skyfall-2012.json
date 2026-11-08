@@ -39,19 +39,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Scottish lodge food is spot on, but the Bond set pieces are only name checks and the photo is a London rooftop.",
+  "overall": 3.6,
+  "verdict": "The DB5 drive, Kincade's line, the priest hole, Silva's island and the fifty year malt all print, but the white poster panel and recipe box styling are plain for a Bond film.",
   "missing": [
-   "Aston Martin DB5 drive to Scotland",
-   "The priest hole and chapel escape",
-   "Silva and the glass on Severine's head",
-   "Hashima island and the abandoned town",
-   "The booby trapped lodge",
-   "M's last stand"
+   "Q's gun and a radio at the gallery (only a list line)",
+   "The booby trapped lodge"
   ],
   "ideas": [
    "Swap 'Shanghai skyline pork belly bao' note for 'Patrice fight' and add a DB5 starter 'Aston Martin silver oatcakes'.",
@@ -59,7 +55,7 @@
    "Swap 'Fifty year old single malt' for a 'Severine glass' joke, 'steady hand'.",
    "Swap the London rooftop photo for a Scottish lodge still."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -75,6 +71,15 @@
    "Cue now Bond driving M to Skyfall in the DB5 (Wikipedia)",
    "Winks: DB5 to Skyfall, Kincade and the priest hole",
    "Cullen skink note now rigging the lodge before Silva arrives (Wikipedia)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -69,19 +69,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The airport cafe and seat card fit the airport fight, but one dish is mislabelled and the best food moment, Vision's paprikash, is missing.",
+  "overall": 3.8,
+  "verdict": "An airport flight card with the Leipzig tarmac currywurst, Vision's goulash, the Accords and Spider-Man and Ant-Man winks all printing.",
   "missing": [
-   "Vision cooking paprikash for Wanda (the compound)",
-   "Spider-Man webbing Cap's shield (the airport)",
-   "Ant-Man turning giant (the airport)",
-   "Cap and Bucky's shield and arm in Siberia",
-   "Black Widow letting Cap go (the airport)",
-   "'Underoos' (Tony and Peter)"
+   "Underoos (only in the cue)"
   ],
   "ideas": [
    "Swap 'Siberian winter goulash' for 'Vision's paprikash' with the note 'He tried, Wanda stayed in.'",
@@ -89,7 +84,7 @@
    "Swap 'Team Cap and Team Iron Man fizz' note for 'Red, white and blue, pick a side.'",
    "Swap the 'Sokovia Accords' card text for 'Cap's shield, please return before landing'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -108,6 +103,15 @@
    "Goulash note tied to Vision cooking for Wanda",
    "Currywurst note tied to the tarmac fight",
    "Winks: Ant-Man giant with the Empire Strikes Back trick, Spider-Man webbing Cap's shield"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

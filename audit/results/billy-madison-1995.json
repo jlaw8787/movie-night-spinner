@@ -34,19 +34,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The hotel front desk idea fits the setup, but the school lunch gags (pudding snack pack, Sloppy Joes) and O'Doyle are barely there.",
+  "overall": 3.6,
+  "verdict": "The blue duck cue, snack pack and banana, O'Doyle, Mr. Penguin and shampoo all print with a chalkboard poster and classroom still.",
   "missing": [
-   "O'Doyle rules! (12th grade locker, and the O'Doyle family ending)",
-   "Extra sloppy Sloppy Joes from the lunch lady (school cafeteria)",
-   "The chocolate pudding snack pack and the banana trade (first grade)",
-   "Mr. Penguin at the pool",
-   "'Shampoo is better; I go on first' (Billy's bath)",
-   "The bus driver eating the kids' stolen bagged lunches"
+   "Extra sloppy Sloppy Joes from the lunch lady"
   ],
   "ideas": [
    "Swap 'Madison Hotel mini club sandwiches' for 'Extra sloppy Sloppy Joes' (lunch lady).",
@@ -54,7 +49,7 @@
    "Swap the Arnold Palmer note for 'O'Doyle rules!' on the bill.",
    "Swap 'Pool party chilli cheese dogs' for fish sticks 'for Mr. Penguin'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +68,15 @@
    "Pudding note: no trading it for a banana",
    "Prawn cocktail house note now O'Doyle rules!",
    "Printed winks now Mr. Penguin and shampoo is better, I go on first"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

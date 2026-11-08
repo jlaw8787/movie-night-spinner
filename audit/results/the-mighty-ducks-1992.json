@@ -58,27 +58,20 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The stadium section map and scoreboard feel like peewee hockey, but the dishes are generic Minnesota food and some film facts are shaky.",
-  "missing": [
-   "Charlie's triple-deke penalty shot (the final)",
-   "Quack, quack, quack at Mr. Ducksworth",
-   "Goldberg and the goalie pads",
-   "Tommy and Tammy Duncan the figure skaters",
-   "Gordon missing the penalty shot as a kid",
-   "The Hawks' coach Reilly and 'go for the W'"
-  ],
+  "overall": 3.6,
+  "verdict": "The quack chant, Flying V, triple deke and the 0 and 9 record all print on a good stadium concessions layout.",
+  "missing": [],
   "ideas": [
    "Swap 'Hans' frozen pond brownies' note for a line about Hans' sporting goods store",
    "Swap 'Flying V fried cheese bites' note for 'triple-deke' tots, the winning shot",
    "Swap the scoreboard 8-0 for the 17-0 loss to the Hawks, the real first game",
    "Swap 'Ice-cold root beer' note 'Charlie calls the Flying V.' for a 'Quack' line, safer and more fun"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -93,6 +86,15 @@
    "Root beer note: triple deke",
    "Wink 3: Charlie's triple deke",
    "Prop line: record 0 and 9"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

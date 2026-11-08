@@ -50,15 +50,13 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Lawn care truck and the thousand dollar deal fit, but the board is a generic Tex Mex list and the poster crops badly.",
+  "overall": 3.0,
+  "verdict": "The rent a date slip, the thousand dollar sundae and the riding mower print, but the notes and cue do not and it is still a generic chalkboard.",
   "missing": [
-   "The African Anteater Ritual dance (the school dance)",
-   "Ronald on his riding mower at Cindy's door (the ending)",
-   "Ronald's telescope (the reason for the money)",
-   "Cindy's mother's ruined suede outfit (the party)",
-   "Kenneth ignoring Ronald's apology",
-   "Ronald reciting Cindy's poem as his own (New Year's party)"
+   "African Anteater Ritual (does not print)",
+   "Cindy's mother's suede outfit (does not print)",
+   "Cue (Ronald and Cindy at lunch) does not print",
+   "Ronald's telescope"
   ],
   "ideas": [
    "Swap 'Party potato skins' for 'Anteater ritual nachos' with the note 'Dance not included.'",
@@ -82,6 +80,15 @@
    "Punch note: mind the suede",
    "Wink: riding mower ending",
    "Prop: I want to rent you"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -55,19 +55,15 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Pizza the Hutt and the Winnebago are in, but the blueprint style is too serious for a spoof.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Pizza the Hutt, the Mawg line, the jammed radar, the doll and the air shield code all print on a convincing ship's galley sheet.",
   "missing": [
-   "Ludicrous speed (Spaceball One)",
-   "May the Schwartz be with you and Spaceballs the flamethrower (Yogurt)",
-   "Pizza the Hutt eating himself to death (his final scene)",
-   "Dark Helmet playing with his dolls and the plaid speed (the bridge)",
-   "Mr Radar and the sound of the radar (Spaceball One)",
-   "Dot Matrix and the Dinks (the desert)"
+   "Ludicrous speed (only a header)",
+   "They've gone to plaid (only a pretzel note)"
   ],
   "ideas": [
    "Swap 'Yoghurt parfait' for 'Spaceballs the Flamethrower, a toasted marshmallow cone' with the Yogurt merchandise joke.",
@@ -75,7 +71,7 @@
    "Swap 'Perri-Air sparkling lime and mint cooler' for 'Perri-Air, the canned stuff'. It already has a name nod, so lean in.",
    "Change the blueprint sheet colours to plaid lines to match Dark Helmet's ludicrous plaid."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -91,6 +87,15 @@
    "Hash note describes the food, keeps the guest",
    "Parfait note: even with strawberries",
    "Winks: jammed radar, Spaceballs the Doll, plaid"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -45,19 +45,15 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Poster and scoreboard look the part and the secret stuff is there, but the food reads like generic sports food.",
+  "overall": 3.6,
+  "verdict": "The scoreboard and section map look right and the Secret Stuff cooler and Swackhammer line print, but the food is still plain concession fare.",
   "missing": [
-   "Michael's golf game with Bill Murray and Larry Bird",
-   "Daffy and Bugs going to Michael's house for his gear",
-   "The Nerdlucks stealing talent from Barkley, Ewing and the others",
-   "Swackhammer launched to the moon in a missile",
-   "Lola Bunny joining the Tune Squad",
-   "Michael stretching his arm for the dunk"
+   "Bill Murray as the fifth guy (photo only, no line)",
+   "North Carolina shorts, washed"
   ],
   "ideas": [
    "Swap 'Basketball cheese balls' for 'Nerdluck bites', since the Nerdlucks steal the talent",
@@ -65,7 +61,7 @@
    "Swap 'Tropical fruit punch' note for 'Swackhammer, launched to the moon'",
    "Swap the 'Moron Mountain pigs in blankets' note for 'Where the Tunes were headed'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -83,6 +79,15 @@
    "Wink: Nerdlucks stealing talent",
    "Wink: North Carolina shorts, washed",
    "Prop: buzzer beater, extra-long arm"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -22,19 +22,17 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Great poster and a proper brewery bar, but it misses the dead mouse, the flying dog and the beer tank.",
+  "overall": 3.6,
+  "verdict": "The brewery counter, dead mouse beer pass and Hosehead smokies land, but the hold the toast and shot in 3B gags are dropped.",
   "missing": [
-   "The dead mouse in the beer bottle (Doug's blackmail for a free case)",
-   "Hosehead flying over the city for beer and sausages",
-   "Bob drinking the beer tank to escape",
-   "Brewmeister Smith's mind control beer and light-up world map",
-   "Rosie LaRose, the hockey great gone wrong",
-   "The Oktoberfest finale with the tainted beer"
+   "Gimmie a toasted back bacon, hold the toast",
+   "Take off, you hoser",
+   "Shot in 3B, three beers",
+   "Beer tank"
   ],
   "ideas": [
    "Swap 'Bacon wrapped smokies' for 'Hosehead's sausages' ('all the free beer and sausages you want').",
@@ -42,7 +40,7 @@
    "Swap 'Doughnut shop honey glazed crullers' for 'Moth jar popcorn' (the cinema escape).",
    "Add a 'Beer tank challenge' drink: 'Bob drank it all.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -58,6 +56,15 @@
    "Smokies renamed for Hosehead",
    "Shandy note: shot in 3B",
    "Beer pass: valid with one dead mouse"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

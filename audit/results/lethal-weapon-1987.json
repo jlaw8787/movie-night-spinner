@@ -42,27 +42,20 @@
  "checked_ok": 18,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Right family kitchen and Christmas feel, but it never reaches for the film's best-known moments.",
-  "missing": [
-   "Riggs cuffed to the jumper and leaping off the ledge (opening)",
-   "Riggs giving Murtaugh the hollow-point bullet (Christmas Day ending)",
-   "Christmas tree lot sting (Riggs and the trees)",
-   "Mr. Joshua's helicopter arrival (Hunsaker killing)",
-   "Riggs's trailer and Sam the dog (home life)",
-   "Murtaugh's 'too old for this' mood"
-  ],
+  "overall": 3.8,
+  "verdict": "The Murtaugh dinner is now built on the worst turkey, the brown roast line, the 50th birthday and the bullet from Riggs.",
+  "missing": [],
   "ideas": [
    "Swap the 'Riggs gets the guest room' keep card for 'Riggs hands over the bullet'.",
    "Swap 'Riggs' trailer snacks' note for 'A beer and a biscuit for Sam, dinner for one'.",
    "Rename 'Christmas party crab dip' to 'Christmas tree lot crab dip' to use the opening sting.",
    "Add a bullet-shaped chocolate to 'Roger's birthday cake' as the Christmas Day gift."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -81,6 +74,15 @@
    "House line: You really like my wife's cooking? No.",
    "Wink: Riggs cuffed to a jumper",
    "Prop: Fifty years old, plus one bullet from Riggs"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

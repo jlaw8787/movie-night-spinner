@@ -34,19 +34,16 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "A tidy Italian tavern look, but the poster sits in a frame with black bars and the famous moments are mostly missing.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Geppetto's workshop prints the real nobody eats a bite line, Monstro snapper, Pleasure Island doughnuts and Cleo's crackers, with no nose or strings gag.",
   "missing": [
-   "'Always let your conscience be your guide' (Jiminy)",
-   "I've Got No Strings (Stromboli's stage)",
-   "Pinocchio's nose growing (Blue Fairy)",
-   "Lampwick turning into a donkey (Pleasure Island)",
-   "Monstro sneezing the raft out (the whale)",
-   "The apple for the teacher (school day)"
+   "No strings, Stromboli's stage (wink)",
+   "Nose growing when he lies (wink)",
+   "Lampwick and the donkeys (Chinotto drink)"
   ],
   "ideas": [
    "Swap 'Jiminy's sparkling mint lime crush' note for 'Let your conscience be your guide, and sip slowly.'",
@@ -54,7 +51,7 @@
    "Swap the poster block for a full-bleed crop so the black bars go.",
    "Swap 'Cleo's fish-shaped crackers' for 'Apple for the teacher' with a candied apple."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +68,15 @@
    "Monstro snapper note now says what the food is",
    "Doughnut note now says what the food is and ties to Pleasure Island",
    "Winks: no strings stage and the growing nose"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

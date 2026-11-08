@@ -34,19 +34,14 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The food is Scottish and well chosen, but the army mess hall layout and bugle call feel like a modern camp, not medieval Scotland.",
+  "overall": 3.4,
+  "verdict": "The blue face paint, Murron's thistle and the Stirling speech are in, but the freedom line itself never prints and the page is a standard campfire card.",
   "missing": [
-   "The freedom speech (Stirling)",
-   "Murron's handkerchief (the wedding)",
-   "Scots lifting their kilts at the English (before the battle)",
-   "Hamish and Stephen the Irishman",
-   "Wallace's long sword (the battle)",
-   "Wallace shouting 'Freedom!' (the execution)"
+   "They may take our lives, but never our freedom (Stirling speech)"
   ],
   "ideas": [
    "Swap the 'BUGLE CALL' label for 'Alba gu brath' with the cue.",
@@ -71,6 +66,15 @@
    "Haggis note: Stephen the Irishman",
    "Wink: freedom speech",
    "Wink: Longshanks and the trouble with Scotland"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

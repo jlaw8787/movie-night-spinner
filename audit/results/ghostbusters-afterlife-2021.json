@@ -17,19 +17,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A believable roller diner, but it leans on the Mini-Pufts and leaves out Muncher, Gozer and the Ecto-1 chase.",
+  "overall": 3.6,
+  "verdict": "Spinners Roller Hop suits Summerville, with the Keymaster okra, Muncher fritters, mini marshmallow men and Gary's plague line.",
   "missing": [
-   "Muncher the foundry ghost and the Ecto-1 chase through town (Trevor and Podcast)",
-   "Gary Grooberson's horror movie class (the summer school)",
-   "Egon's field of buried ghost traps (the farm)",
-   "Podcast and his mic (the mine)",
-   "Vinz Clortho and Zuul possessing Gary and Callie (the finale)",
-   "Ray, Peter and Winston turning up (the finale)"
+   "Ecto-1 chasing Muncher"
   ],
   "ideas": [
    "Swap 'Corn fritters with jalapeno ranch' for 'Muncher's fritters', named for the ghost the kids chase",
@@ -37,7 +32,7 @@
    "Swap 'Mini marshmallow men' note for the Walmart scene, since the Mini-Pufts hit the store",
    "Swap the 'Ghost trap slip' contents 'unknown' for 'Contents: Gozer, probably'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -56,6 +51,15 @@
    "Burgers renamed Ecto-1 roller diner burgers",
    "Winks: Muncher chase, summer science class, Egon's ghost, buried traps",
    "Prop slip contents: the Keymaster"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

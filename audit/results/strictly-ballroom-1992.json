@@ -45,19 +45,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The red poster looks the part but the prom layout and generic canapés miss the film's loud Federation fights and Fran's family.",
+  "overall": 3.6,
+  "verdict": "Gutless wonder, status quo vadis, Federation approved and the life half lived line all print on a red Pan Pacific ticket and photo strip.",
   "missing": [
-   "Fran calling Scott a 'gutless wonder' backstage",
-   "Barry Fife's status quo speeches",
-   "Wayne Burns cutting the PA so Scott and Fran can finish the paso doble",
-   "Doug's secret footage in the studio back room",
-   "Fran's family clapping the paso doble rhythm",
-   "Scott's flashy crowd-pleasing steps against Federation steps"
+   "Non-Federation steps"
   ],
   "ideas": [
    "Swap 'Pan Pacific canapés' for 'Federation approved steps' tapas.",
@@ -65,7 +60,7 @@
    "Swap the photo booth for stills of the paso doble in the backyard.",
    "Rename 'Barry Fife's dinner dance chicken' to 'Status quo chicken'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -81,6 +76,15 @@
    "Tortilla renamed Federation approved",
    "Chicken note: status quo vadis",
    "Caption wink: gutless wonder"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

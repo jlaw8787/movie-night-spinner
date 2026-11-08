@@ -33,19 +33,16 @@
  "checked_ok": 14,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Bright beach kiosk with good Hawaiian dishes and the Pudge cue, but it leaves out most of Stitch's famous moments.",
+  "overall": 3.6,
+  "verdict": "Beach kiosk with the ohana line, Pudge's peanut butter, Spam musubi, loco moco and POG, but a generic surf report stands in for the Pelekai house.",
   "missing": [
-   "Elvis records and Lilo's Elvis obsession (the Pelekai house)",
-   "Ohana means family (Lilo and Stitch)",
-   "Pudge controls the weather (Lilo's belief)",
-   "'If I gave Pudge tuna, I'd be an abomination' (the sandwich run)",
-   "Cobra Bubbles, the former CIA social worker (house visits)",
-   "Jumba and Pleakley and Experiment 626 (the aliens)"
+   "Elvis records",
+   "Tuna and the abomination line",
+   "Cute and fluffy Stitch"
   ],
   "ideas": [
    "Swap 'Kauai poke' for 'Tuna sandwich, not for Pudge' as a nod to the abomination line.",
@@ -53,7 +50,7 @@
    "Swap 'POG juice' note for 'Pudge controls the weather. Drink up.'",
    "Swap the venue sign 'Pelekai Family Table' for a record player wink, so the Elvis records get printed."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +68,15 @@
    "Kalua pork note: a seat for Stitch",
    "Soft serve note: also cute and fluffy",
    "Wink: Pudge controls the weather"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

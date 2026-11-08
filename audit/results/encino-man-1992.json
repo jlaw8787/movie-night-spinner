@@ -44,20 +44,15 @@
  ],
  "checked_ok": 11,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3,
-  "verdict": "Camp bunk styling with a backyard dig skin, fine but plain for a loud teen mess of a film.",
+  "overall": 3.6,
+  "verdict": "Dave's backyard dig with Stoney's food groups, weasin' the juice and the Link name tag is fun, though the cardboard look is plain.",
   "missing": [
-   "Link starting a fire in Dave's bedroom (the house)",
-   "The Estonian exchange student cover story (Dave's parents)",
-   "Stoney's lighter calming Link down",
-   "Link making Dave and Stoney popular at school",
-   "The caveman dance at prom",
-   "Link's cave girlfriend in the bathtub (the end)"
+   "The caveman dance at prom"
   ],
   "ideas": [
    "Swap the 'Buttered corn on the cob' note for 'Stoney's lighter calms Link down.'",
@@ -65,7 +60,7 @@
    "Swap 'Frozen yoghurt bark' for 'Block of ice yoghurt bark' with 'Thawed in the garage overnight.'",
    "Swap the camp 'Bugle call' heading for 'Space heaters left on'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -82,6 +77,15 @@
    "Frozen yoghurt bark renamed Block of ice yoghurt bark",
    "Juice joke now the transcript's Weasin' the juice",
    "Badge wink is Stoney's four food groups lesson"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

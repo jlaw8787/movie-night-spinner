@@ -47,18 +47,14 @@
  "vibe": {
   "world": 4,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Castle kitchen and the cake cue are right, but two dish names are spelled wrong and the poster sits in black bars.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A parchment castle kitchen with the witch's cake cue, Elinor's weapons line, Fergus and Mor'du, the triplets' tarts and crowns for prices.",
   "missing": [
-   "Elinor as a bear stealing fish from the river (the forest)",
-   "The witch's carvings and her bear shop (the cottage)",
-   "The wisps leading Merida (the forest)",
-   "Angus and the archery contest (the Games)",
-   "Elinor bear sneaking through the kitchen (the castle)",
-   "Fergus's missing leg and Mor'du (the great hall)"
+   "Merida's archery contest",
+   "Will-o-the-wisps (wink does not print)"
   ],
   "ideas": [
    "Fix 'Butterscotch eggs' to 'Scotch eggs' and 'Butterscotch broth' to 'Scotch broth'.",
@@ -66,7 +62,7 @@
    "Swap the 'Triplets' stolen raspberry jam tarts' note for 'The triplets got to the cake first.'",
    "Fill the black bars around the poster with the castle kitchen still."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -85,6 +81,15 @@
    "Wink: triplets and the cake",
    "Wink: witch cottage of carved bears",
    "Wink: wisps lead to fate"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

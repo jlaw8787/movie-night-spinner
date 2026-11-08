@@ -34,19 +34,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A police case file layout does not fit a heist film that is mostly about the crew, and the note falls flat next to the sharp tipping scene.",
+  "overall": 3.2,
+  "verdict": "Mr Pink's tipping line, Like a Virgin and K-Billy print, but the face-one sheet is a big empty note panel and the food is plain diner fare.",
   "missing": [
-   "Mr. Blonde dancing to 'Stuck in the Middle with You'",
-   "The 'Like a Virgin' breakfast chat",
-   "Mr. Orange bleeding in the back of the car",
-   "The Mexican standoff",
-   "Nice Guy Eddie and Joe Cabot",
-   "The warehouse and the K-Billy radio"
+   "Mexican standoff",
+   "Are you gonna bark all day, little doggie",
+   "Mr. Blonde's razor (only a name-drop)"
   ],
   "ideas": [
    "Swap 'Fresh-squeezed grapefruit juice' for 'Mr. Blonde's straight razor lemonade' as a nod to the ear scene.",
@@ -70,6 +67,15 @@
    "Lemon meringue pie renamed Like a Virgin lemon meringue pie",
    "Second On file wink now Mr. Blonde and Stuck in the Middle with You",
    "K-Billy house note now says all weekend, as the DJ does"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

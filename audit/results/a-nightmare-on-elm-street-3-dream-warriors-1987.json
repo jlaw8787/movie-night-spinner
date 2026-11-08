@@ -35,14 +35,13 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "A hospital ration sheet suits Westin Hills, but it is the same lab template as other films and misses Freddy's lines and Kristen's coffee trick.",
+  "verdict": "The hospital ration sheet is right, but the reworked notes and the cue do not print, so Freddy's lines are still missing.",
   "missing": [
-   "Kristen eating instant coffee grounds with fizzy drink to stay awake (the ward)",
-   "'Welcome to prime time' (Freddy to Jennifer, through the TV)",
-   "Hypnocil, the dream suppressant (Dr Gordon)",
-   "Joey's scream shattering the mirrors (the dream, after Freddy's tongues)",
-   "'Seven, eight, better stay up late' (Kristen's rhyme)",
-   "The roast suckling pig in Kristen's dream house"
+   "Welcome to prime time (does not print)",
+   "Feeling tongue-tied, Joey (does not print)",
+   "Nancy: I used to live in this house (signed note does not print)",
+   "Roland: Nobody's putting me to sleep (does not print)",
+   "Kristen's rhyme, Seven eight better stay up late"
   ],
   "ideas": [
    "Swap 'Westin Hills stay-awake iced coffee' for 'Kristen's coffee grounds and cola', after how she stays awake on the ward.",
@@ -68,6 +67,15 @@
    "Joey wink now the tongue-tied line",
    "Gingerbread note now the model house Nancy lived in",
    "Soup note now Roland's line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -68,20 +68,17 @@
  ],
  "checked_ok": 10,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The Bruce cake and newt are in, but it's a generic school canteen and the cottage tea is wrong.",
+  "overall": 3.6,
+  "verdict": "Bruce's cake, the newt, Wormwood Motors and Miss Honey's tea all print on a school canteen sheet, with Chokey still missing.",
   "missing": [
-   "Bruce Bogtrotter and the cake (assembly hall)",
-   "The Chokey (Trunchbull's punishment)",
-   "Trunchbull throwing Amanda by her pigtails",
-   "Lavender's newt (Trunchbull's water jug)",
-   "Harry's glued hat",
-   "Miss Honey's tea and cookies (cottage)"
+   "The Chokey",
+   "Amanda Thripp thrown by her pigtails",
+   "Harry's hat glued to his head"
   ],
   "ideas": [
    "Swap 'Matilda's pancakes' for tea and cookies at Miss Honey's.",
@@ -89,7 +86,7 @@
    "Add a Chokey-shaped spiked cracker to replace 'Library book cheese stacks'.",
    "Fix the school name to Elementary."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -108,6 +105,15 @@
    "Chilli dog note ties to Harry's great deal",
    "Cake note adds the crowd's 'You can do it, Brucey!'",
    "Scone note ties to tea at Miss Honey's"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

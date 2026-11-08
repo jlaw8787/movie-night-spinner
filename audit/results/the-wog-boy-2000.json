@@ -55,27 +55,20 @@
  ],
  "checked_ok": 9,
  "vibe": {
-  "world": 3,
-  "moments": 2,
-  "food": 3,
+  "world": 4,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 2.8,
-  "verdict": "Greek cafe food is fine, but it misses the dole bludger plot and Melbourne jokes.",
-  "missing": [
-   "Steve's Chrysler Valiant Pacer",
-   "Derryn Hinch naming Steve Australia's worst dole bludger (TV)",
-   "Reversing into the Employment Minister's limo and sending her the bill",
-   "Church bingo night",
-   "Concrete lions and salamis, the film's running jokes",
-   "Frank's building site and apprentices"
-  ],
+  "overall": 3.6,
+  "verdict": "Hinch, the Valiant Pacer, the plaster lion and Get Tzatziki With It all print on a believable Greek cafe board, though the look is a bit muddy.",
+  "missing": [],
   "ideas": [
    "Swap 'Pork souvlaki wraps with chips inside' note for 'Lunch for Australia's biggest dole bludger'.",
    "Swap 'Nescafe frappe' note for 'church bingo night'.",
    "Add the Valiant Pacer as a stamp on the order slip."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -92,6 +85,15 @@
    "Lamb note: plaster lion",
    "Loukoumades note: bingo thank you",
    "Prop: Valiant Pacer on the order slip"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 2.8
+  },
+  "rescored": "2026-11-08"
  }
 }

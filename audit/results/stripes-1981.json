@@ -33,19 +33,15 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy mess hall and the EM-50 nod, but it misses the graduation drill and the mud wrestling night.",
+  "overall": 3.6,
+  "verdict": "The Fort Arnold mess hall hits Francis, the fact Jack and the EM-50, but the rest is ordinary army canteen food.",
   "missing": [
-   "Winger's unorthodox graduation drill ('The quick brown fox jumps over the lazy dog!')",
-   "Mud wrestling at the bar (the platoon, Ox, Stella and Louise)",
-   "Psycho's 'Any of you guys call me Francis, and I'll kill you.'",
-   "'Lighten up, Francis' (Hulka)",
-   "The EM-50 disguised as an RV",
-   "Ox's 'lot of pizzas' confession"
+   "Lighten up, Francis",
+   "Mud wrestling bar"
   ],
   "ideas": [
    "Swap 'Boot camp crackers with pimento cheese' for 'Mud wrestling pizza' for Ox.",
@@ -53,7 +49,7 @@
    "Swap 'Psycho's barracks cocktail franks' note for 'Call him Francis and he'll kill you'.",
    "Add a 'Winnebago' RV-shaped sandwich for the EM-50."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +67,15 @@
    "Fudge cake renamed for the graduation drill",
    "Cue now the graduation drill",
    "House beer note: dropped unverified claim, mud wrestling bar night"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

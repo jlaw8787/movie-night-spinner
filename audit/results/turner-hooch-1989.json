@@ -34,19 +34,15 @@
  "checked_ok": 10,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 2,
+  "tone": 3,
   "look": 3,
-  "overall": 2.8,
-  "verdict": "The poster is right but the beach kiosk and surf report have little to do with this film and the tone is generic.",
+  "overall": 3.2,
+  "verdict": "Don't eat the car, the drool jokes and Scott's real line now print, but the beach kiosk and surf report still have little to do with the film.",
   "missing": [
-   "Hooch wrecking Scott's house",
-   "Hooch drooling on everything",
-   "Scott's spotless house",
-   "The stakeout with the dog biscuit",
-   "Hooch at the seafood plant",
-   "Camille the collie and the puppy at the end"
+   "Hooch and Camille",
+   "Scott's house wrecked"
   ],
   "ideas": [
    "Swap the surf report for a stakeout log with the line 'Hooch ate the notes.'",
@@ -72,6 +68,15 @@
    "Prawns note: stakeout, Hooch sniffs out the cash",
    "Fish and chips note: quiet until Hooch moved in",
    "Milkshake note: drool check"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 2,
+   "look": 3,
+   "overall": 2.8
+  },
+  "rescored": "2026-11-08"
  }
 }

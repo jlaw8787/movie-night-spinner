@@ -17,19 +17,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
-  "food": 4,
+  "moments": 4,
+  "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "The pastries and Jacob's bakery are right, but the badge and ration sheet layout is a canteen look, not a 1926 New York bakery.",
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A good Kowalski ration sheet with the Niffler, Jacob's beast pastries, Occamy shells and the strudel cue, but the food notes are thin.",
   "missing": [
-   "Dougal the invisible Demiguise (Newt's case)",
-   "Queenie and Tina's cocoa (the Goldstein flat)",
-   "The Erumpent in the zoo scene",
-   "Occamy silver eggshells as Jacob's bakery money",
-   "Newt's case switching to Muggle worthy (customs)",
-   "Swooping Evil saving Tina in the death cell"
+   "The swapped suitcases (the bank)",
+   "Gnarlak's Blind Pig (the speakeasy)",
+   "Frank the Thunderbird over New York (the finale)"
   ],
   "ideas": [
    "Swap 'Speakeasy lemonade' for 'Queenie's cocoa' (\"But we made 'em cocoa.\").",
@@ -55,6 +52,15 @@
    "Gougères note keeps the Niffler and describes the food",
    "Pot roast note now a No-Maj at Tina and Queenie's table",
    "Strudel note uses Queenie's Strudel it is"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

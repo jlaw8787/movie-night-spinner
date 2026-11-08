@@ -82,27 +82,20 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "The Louisiana and Rose Garden touches are right, but the 'state dinner' framing is repeated four times when the film has a summit.",
-  "missing": [
-   "'Mr. Blue' (Samuel Sterns)",
-   "Adamantium on Celestial Island",
-   "Ross: 'lose the mustache or lose the election'",
-   "Isaiah: 'Safety ain't all it's cracked up to be'",
-   "The Oaxaca deal",
-   "Ross's heart pills"
-  ],
+  "overall": 3.6,
+  "verdict": "A tidy White House Summit menu with the mustache, adamantium and Red Hulk lines up front and Joaquin's note signed by Sam.",
+  "missing": [],
   "ideas": [
    "Change 'state dinner' to 'summit' in all four places.",
    "Swap the Sam note for 'Don't make me look up words, Joaquin.'",
    "Add a 'Mr. Blue' drink.",
    "Replace the Isaiah pour with a chair for him."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -121,6 +114,15 @@
    "Falcon wings note tied to Joaquin",
    "Pavlova note tied to Ross and Betty's cherry blossoms",
    "Winks: mustache line, adamantium, Red Hulk, Isaiah's last hit"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

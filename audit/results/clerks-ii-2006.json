@@ -22,27 +22,20 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A Mooby's placemat in the right colours, but it skips the donkey show party, the quick stop fire and Emma with the cake.",
-  "missing": [
-   "The donkey show party and the fog mistaken for a fire",
-   "Emma tipping the cake over Dante's head",
-   "The Quick Stop burned down by the coffee pot",
-   "Elias defending the Transformers",
-   "Jay and Silent Bob's antics in the Mooby's car park",
-   "'Can you feel it? Today is the first day of the rest of our lives' (final scene)"
-  ],
+  "overall": 3.8,
+  "verdict": "Mooby's with the donkey show poppers, the trilogy argument note, the Dante badge and the cake line all printing clearly.",
+  "missing": [],
   "ideas": [
    "Swap 'Farewell party sheet cake' note for 'Emma's cake, delivered to the face.'",
    "Swap 'Grill-line jalapeño poppers' note for the donkey show fog machine.",
    "Swap 'Mooby's hot honey crispy chicken burger' note for Elias's Transformers rant.",
    "Swap the 'Official badge' line for 'Today is the first day of the rest of our lives'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -62,6 +55,15 @@
    "Cake renamed Emma's farewell sheet cake, note on wearing it",
    "First wink now the coffee pot that burned the Quick Stop",
    "Badge line now first day of the rest of our lives"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

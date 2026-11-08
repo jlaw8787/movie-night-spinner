@@ -30,19 +30,15 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Hits Clone 8, acid blood and the flooded galley, but it is the same lab template as other films with a lot of invented food jokes.",
+  "overall": 3.6,
+  "verdict": "Clone 8 eggs, the no-look basketball gougeres, flooded galley and 'I died.' all print, though the cue and the last-line note do not.",
   "missing": [
-   "'I'm a stranger here myself' (Ripley, looking down at Earth)",
-   "The lab of failed clones, Ripley 1 to 7 (the Auriga)",
-   "Call revealed as an android (Wren shoots her)",
-   "The newborn hybrid and its mother, Ripley (the nest)",
-   "Johner mocking Ripley on the court, then her no-look shot",
-   "The Betty crew swimming through the flooded kitchen"
+   "I'm a stranger here myself (signed note does not print)",
+   "Cue (Betty docks with the Auriga) does not print"
   ],
   "ideas": [
    "Swap the note on 'Lemon vodka on ice' for Ripley's last line, 'I'm a stranger here myself.'",
@@ -50,7 +46,7 @@
    "Swap 'Basketball court gougères' for 'No-look lemon meringue', after Ripley's shot.",
    "Swap 'Ration sheet. Eat with your own spoon.' for 'Clone 8. Handle with care.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -68,6 +64,15 @@
    "Lemon vodka note carries Ripley's 'I died.'",
    "Signed note is now Ripley's real last line (badge name becomes Ripley)"
   ],
-  "layout_clash": "lab prints note only as the badge name; winks and note text do not print"
+  "layout_clash": "lab prints note only as the badge name; winks and note text do not print",
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

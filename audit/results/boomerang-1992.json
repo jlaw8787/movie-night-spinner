@@ -34,19 +34,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 4,
+  "look": 3,
   "overall": 3.4,
-  "verdict": "The Lady Eloise room service card looks classy and fits the film, but the food is safe and a few famous moments are skipped.",
+  "verdict": "Jet magazine, Strange's merger party, Tyler and Gerard, the feet and the Star Trek reruns print in a smooth hotel menu, but the cue is missing and the look is quiet.",
   "missing": [
-   "Marcus dumping a date over her corns (the feet rule)",
-   "The missing dog Kirby (the pickup line)",
-   "Strangé sniffing the 'essence of sex' perfume (the launch)",
-   "Jacqueline telling Marcus 'you'll know' (the office)",
-   "Gerard's dad and his matching mushroom outfit (Thanksgiving)",
-   "The suit shop that takes no cash and no layaway (Marcus and the boys)"
+   "Cue (Thanksgiving dinner) does not print",
+   "Rooter to tooter"
   ],
   "ideas": [
    "Swap 'Bowling alley black bean nachos' for 'Lost dog Kirby chilli dogs' with the note 'Missing since Tuesday.'",
@@ -71,6 +67,15 @@
    "Pie note: Star Trek reruns",
    "Meatballs note: merger party",
    "Wink: Jacqueline you will know"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

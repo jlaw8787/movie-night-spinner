@@ -58,27 +58,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Dark, moody look and a few good nods, but the dishes and the tagline could belong to any haunted house film.",
-  "missing": [
-   "Lipstick-Face Demon (Dalton's bedroom)",
-   "The metronome in Josh's hypnosis (Elise puts him under)",
-   "Dalton's drawings in his room (Josh finds them)",
-   "Bloody handprint on Dalton's bed (Renai)",
-   "Home security alarm going off by itself",
-   "Elise explaining astral projection and 'travelers'"
-  ],
+  "overall": 3.6,
+  "verdict": "Dark Lambert house look with the Elise quote, Specs and Tucker, the metronome and the red-faced demon now printing, though the dishes are still ordinary.",
+  "missing": [],
   "ideas": [
    "Swap 'Red-faced cherry pie' for 'Lipstick-face cherry pie' with a note about the demon sharpening his claws in Dalton's room.",
    "Replace the tagline 'Spooky house. Spookier snacks.' with something about leaving the body, such as 'Leave your body. Not your dinner.'",
    "Swap 'Spinach and artichoke dip with pita' for 'Tulips salad' and keep the Tiny Tim record player line.",
    "Change the 'Lambert family lasagne' note to say it is plated to the beat of Elise's metronome."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -95,6 +88,15 @@
    "Spinach dip renamed Tulip, Tiny Tim nod kept",
    "Cherry pie note ties to the red-faced demon",
    "Tagline now Leave your body. Not your dinner."
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

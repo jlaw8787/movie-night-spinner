@@ -34,26 +34,22 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The school lunch timetable is a clever fit, but the food reads as generic canteen and leaves out the film's sharp humour.",
+  "overall": 3.6,
+  "verdict": "Westerburg cafeteria with funeral lasagne, corn nuts, the red scrunchie crostini and J.D.'s slushie line, but the look is soft pastel rather than sharp.",
   "missing": [
-   "The red scrunchie passing between the girls (wink only)",
-   "Heather Chandler's drain cleaner 'hangover cure'",
-   "J.D. pulling a gun in the cafeteria with blanks",
-   "Heather Duke in green, McNamara in yellow",
-   "Strip croquet",
-   "Chandler's forged suicide note"
+   "What is your damage (house starter note)",
+   "Heather Chandler's wake-up cup of drain cleaner (house drink note)"
   ],
   "ideas": [
    "Swap 'Funeral reception lasagne' for 'Hangover cure' (a blue Gatorade slushie) in the drinks.",
    "Rename 'Cafeteria schnitzel' to 'Heather Chandler's mug' and make it a layered red soup, using the drain cleaner gag.",
    "Dress the three drink options in red, green and yellow to match the Heathers."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +69,15 @@
    "Toasted corn renamed Corn nuts, chilli lime toasted",
    "Slushie renamed Snappy Snack Shack cherry slushie",
    "House drink note now Chandler's wake-up cup"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -46,26 +46,23 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The elf canteen idea is cute, but it leaves out the best-known moments and the poster is the only real colour.",
+  "overall": 3.6,
+  "verdict": "The fine print card, Neal's head, Dad burnt the turkey, the lactose joke and the 1,200 year cocoa all print on a tidy elf canteen sheet.",
   "missing": [
-   "Scott's turkey fire and the Denny's 'Men Who Burned the Turkey' room (Christmas Eve)",
-   "Santa falling off the roof (opening)",
-   "The business card in the suit: read the fine print",
-   "Monogrammed pajamas with SC (North Pole)",
-   "Scott's sudden craving for milk and cookies despite being lactose intolerant",
-   "The snow globe from Bernard"
+   "Santa falling off the roof (timetable strip only)",
+   "The snow globe",
+   "Bernard the head elf"
   ],
   "ideas": [
    "Swap 'Christmas Eve diner pancake stack' for 'Men Who Burned the Turkey pancake stack' as a room-themed name.",
    "Swap 'Santa's milk and cookies' note for 'Scott used to be lactose intolerant'.",
    "Add the snow globe as a prop on the mess chit."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -85,6 +82,15 @@
    "Cocoa note now the 1,200 year recipe",
    "Milkshake note now the snow globe",
    "Winks: Santa falling off the roof, beard regrows overnight"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

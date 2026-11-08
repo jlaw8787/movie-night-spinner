@@ -38,19 +38,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The school timetable is a good idea, but it lacks the film's best lines and the whistle and ferret method.",
+  "overall": 3.6,
+  "verdict": "The school lunchroom now carries the tumor line and the timetable gags (daddy, whistle drill, no bathroom), but the dish notes are mostly plain.",
   "missing": [
-   "'It's not a tumor' (the classroom)",
-   "The whistle and ferret method (first week)",
-   "The school fire and the ferret biting Crisp (the school)",
-   "The class picnic at Ecola State Park (the picnic)",
-   "Kimble returning, 'I'm back' (the finish)",
-   "The bathroom shootout (the school)"
+   "Stop it! (the boy eating other kids' lunches)"
   ],
   "ideas": [
    "Swap 'Ferret-free fruit cups' note for 'Class mascot gets none'.",
@@ -58,7 +53,7 @@
    "Add 'Whistle blown, lunch served' as the voucher line in place of the generic cue.",
    "Rename the 'Reports' timetable slot to 'Who is your daddy'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -75,6 +70,15 @@
    "Steak note nods to 'I love my car'",
    "Milkshake renamed Big and strong chocolate malt milkshake",
    "Timetable winks: daddy game, whistle drill, no bathroom, tumor"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

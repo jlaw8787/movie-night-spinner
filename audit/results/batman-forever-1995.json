@@ -3,19 +3,14 @@
  "facts": [],
  "checked_ok": 21,
  "vibe": {
-  "world": 3,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
   "look": 4,
-  "verdict": "A neon snack bar that looks right for Schumacher's Gotham, but the food jokes are safe and it ignores the Riddler's big show.",
+  "verdict": "A neon circus concession board with the Riddler's rhyme, Two-Face's coin flip, Nygma's Box and Joygasm, and the Graysons cue.",
   "missing": [
-   "We're of two minds about what to eat first (Two-Face to his henchwomen)",
-   "The Riddler's Box and his Brain Drain 'Thick Skull Number One' joke",
-   "Riddle me this, riddle me that, who's afraid of the big black bat? (only a drink note)",
-   "Chase Meridian's line about the wrong kind of man, 'Black rubber'",
-   "Two-Face's coin flip, heads we accept",
-   "Dick Grayson's circus trapeze and the Graysons' fall"
+   "Alfred: I'll get drive-thru"
   ],
   "ideas": [
    "Swap 'Two-Face beef and chicken sliders' note for 'Two minds about what to eat first. Heads, we accept'.",
@@ -23,9 +18,9 @@
    "Swap the 'Combo 95' line for 'Heads, we accept' as the bundle price tag.",
    "Swap 'Pink lemonade' note for 'Who's afraid of the big black bat?'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.2,
+  "overall": 4.0,
   "rework": "2026-11-08",
   "iconic": [
    "Riddle me this, riddle me that, who's afraid of the big black bat?",
@@ -43,7 +38,16 @@
    "Eye fillet note: Alfred's sandwich, upgraded (Alfred offers a sandwich, Batman: I'll get drive-thru)",
    "Float note: Riddler's 'Joygasm!'",
    "Winks: Nygma's Box and Thick Skull Number One, Two-Face of two minds"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

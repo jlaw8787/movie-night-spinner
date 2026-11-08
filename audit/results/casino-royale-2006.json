@@ -22,27 +22,20 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Sharp black and red card with the right hold'em and Vesper cues, but the plates are generic and the buy in prints as raw numbers.",
-  "missing": [
-   "Le Chiffre's bleeding eye and inhaler (the table)",
-   "The poisoned martini and the defibrillator (the break)",
-   "'Because once you've tasted it, that's all you want to drink' (the Vesper naming at dinner)",
-   "The carpet beater chair (the torture)",
-   "The sinking palace in Venice (the ending)",
-   "The Aston Martin DB5 won at poker (Nassau)"
-  ],
+  "overall": 3.8,
+  "verdict": "A dark, quiet casino card with the Vesper line, Le Chiffre's weeping eye, the $10,000,000 buy in and the poisoned drink all printing.",
+  "missing": [],
   "ideas": [
    "Swap the 'Tournament buy in' ticket from '10000000' to '$10,000,000'.",
    "Swap 'Grilled octopus' note for 'Poisoned drink not included.'",
    "Swap 'The Vesper gin and vodka martini' note for 'Shaken, because he did not give a damn.'",
    "Swap 'Venice seafood risotto' note for 'A house that sinks, not the rice.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -62,6 +55,15 @@
    "Risotto note: the sinking house in Venice",
    "Buy in prints as $10,000,000",
    "Winks: poisoned drink and defibrillator, three measures of Gordon's, carpet beater chair"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

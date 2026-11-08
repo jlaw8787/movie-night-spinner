@@ -60,17 +60,13 @@
   "world": 4,
   "moments": 4,
   "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "The airline idea suits Fhloston Paradise, but the colours are dark and plain next to the film's orange and neon.",
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Meat popsicle, big badaboom, the Multipass, super green and Chicken, good all print on a flight card with a strong poster.",
   "missing": [
-   "Korben ordering from the flying noodle boat (the cue)",
-   "I am a meat popsicle (Korben to the cops)",
-   "Ruby Rhod's big bada boom (Fhloston Paradise)",
-   "Leeloo's orange suspenders and bandage costume (Leeloo)",
-   "The four stones and the fifth element ceremony (the temple)",
-   "The Diva's blue aria (the opera)"
+   "The four stones",
+   "Leeloo crashing into Korben's cab (only as a photo)"
   ],
   "ideas": [
    "Swap the made up Leeloo note for her real fifth element line.",
@@ -78,7 +74,7 @@
    "Recolour the page with Gaultier orange and white in place of plain navy.",
    "Swap 'Fhloston Paradise prawns' for 'Big bada boom prawns' for Ruby Rhod."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -95,6 +91,15 @@
    "Prawn skewers renamed Meat popsicle prawn skewers",
    "Lychee champagne renamed Big badaboom lychee champagne",
    "Wink: Leeloo crashing into the cab"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

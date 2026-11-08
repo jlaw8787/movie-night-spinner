@@ -41,7 +41,7 @@
    "SHOWTIME CUE",
    "Serve the snacks when the ants pile up the harvest offering.",
    "STICKY FINGERS WELCOME",
-   "\"Flik, I saved you a seed from the harvest dinner. Eat it quick before the grasshoppers come round asking for more.\"",
+   "Flik, I saved you a seed from the harvest. Eat it quick before the grasshoppers come round asking for more.",
    "Princess Dot",
    "Spot prize for the loudest cheer. Prices subject to change. Kiosk licence 1998.",
    "Out front",
@@ -108,13 +108,14 @@
   "venue": "P.T. Flea's Circus Tent",
   "sign": "P.T. Flea's Circus, Bugs Welcome",
   "note": {
-   "text": "Flik, I saved you a seed from the harvest dinner. Eat it quick before the grasshoppers come round asking for more.",
-   "by": "Princess Dot"
+   "text": "Flik, I saved you a seed from the harvest. Eat it quick before the grasshoppers come round asking for more.",
+   "by": "Princess Dot",
+   "kind": "note"
   },
   "winks": [
    "Flik's harvesting machine",
    "Heimlich the caterpillar and his dream of butterfly wings",
-   "Hopper and the grasshopper gang",
+   "Hopper: keep those ants in line",
    "The fake bird built to scare them off",
    "Tuck and Roll, the pill bug act"
   ]

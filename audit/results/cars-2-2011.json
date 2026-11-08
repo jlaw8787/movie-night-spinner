@@ -22,19 +22,14 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The pit lane scoreboard and the three race cities suit it, with the wasabi gag in the cue, but the spy plot is missing.",
+  "overall": 3.6,
+  "verdict": "The wasabi gag lands in the takoyaki and pistachio notes and Mater signs off, but the pit lane stadium is still a generic venue.",
   "missing": [
-   "Finn McMissile's gadgets (the spy)",
-   "Holley's electric shocker (the spy)",
-   "The lemons and Professor Z (the villains)",
-   "The Tokyo toilet scene (Mater at the party)",
-   "Allinol and the camera fire (the races)",
-   "Big Bentley and the clock tower (London)"
+   "Allinol (wink)"
   ],
   "ideas": [
    "Swap 'Takoyaki with Japanese mayo' note for 'Wasabi not included.'",
@@ -42,7 +37,7 @@
    "Swap 'Sesame chilli edamame' note for 'Mater's party snack.'",
    "Swap the scoreboard's 'SCRATCHED' row label for 'LEMONS'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,6 +55,15 @@
    "Pistachio ice cream note: no wasabi",
    "Chips note: Mater inside Big Bentley",
    "Winks: Finn British Intelligence, the lemons and Professor Z, Allinol with Big Bentley"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -17,19 +17,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The airline format fits a parody, but it reads as Airplane more than Top Gun and misses the best gags.",
+  "overall": 3.4,
+  "verdict": "The gags are in the notes now (chafing dish, Ramada's belly, enemy toast), but it is still a generic airline template with a doubled mess hall subtitle.",
   "missing": [
-   "Admiral Benson thanking Block for a stroganoff dinner that never happened (the base)",
-   "Dead Meat saluting in the credits (the end)",
-   "Topper melting an ice cube on Ramada's belly button (the bedroom)",
-   "Wash Out and his wall eye (the mission)",
-   "Kent Gregory blessing the romance (the finish)",
-   "Topper's father Buzz and the plane (flashback)"
+   "Benson's pants short at the knees (only the poster shows it)"
   ],
   "ideas": [
    "Swap 'Airbase rib eye, corn and slaw' note for 'Admiral Benson thanks everyone for dinner nobody had'.",
@@ -55,6 +50,15 @@
    "Fajita note fixed to Ramada's belly",
    "Signed note: Strogonoff line",
    "Winks: chafing dish, Benson's pants"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
  }
 }

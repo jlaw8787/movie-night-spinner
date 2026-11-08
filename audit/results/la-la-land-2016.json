@@ -34,19 +34,14 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A moody jazz cafe that suits Seb's club and uses the Chicken on a Stick gag well, but the dishes are generic and it skips the dance and song moments.",
+  "overall": 3.8,
+  "verdict": "Seb's club with the I Ran rickey, Griffith tart, Chicken on a Stick and samba tapas line all printing, with only the freeway number missing.",
   "missing": [
-   "Rebel Without a Cause date and the Griffith Observatory dance (the night out)",
-   "Mia requesting an 80s song from Seb's cover band (the party)",
-   "Mia's yellow dress and the lamp post on the poster",
-   "Mia's one woman play (the flop)",
-   "The Seb's logo Mia designed with a music note for the apostrophe (the club at the end)",
-   "The five year epilogue (Mia finds Seb's)"
+   "Another Day of Sun freeway jam"
   ],
   "ideas": [
    "Swap the tagline 'Jazz club. Taco truck.' for 'Jazz club. Chicken on a Stick.'",
@@ -54,7 +49,7 @@
    "Swap the 'Observatory starry chocolate tart' note for 'Where they dance among the stars' and print it on the face.",
    "Swap the cover title 'Seb's' for the logo style with a music note in place of the apostrophe."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +68,15 @@
    "Chicken on a Stick note now Mia talking Seb out of the name",
    "Gin rickey renamed I Ran gin rickey",
    "Wink swapped to Mia's car towed after the party"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

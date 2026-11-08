@@ -34,19 +34,16 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good Goon Docks setting and the poster looks the part, but the notes are thin and the best-known food moments are left out.",
+  "overall": 3.6,
+  "verdict": "Truffle Shuffle cue, treasure map, Fratelli pizza and doubloons on a bright checkerboard placemat, but the Sloth Baby Ruth note is cut off mid line.",
   "missing": [
-   "Baby Ruth swapped with Sloth (Chunk befriends him)",
-   "Chunk smelling ice cream, then stuck in the freezer with the body",
-   "Mama Fratelli's kitchen interrogation of Chunk",
-   "The bone organ in the caves",
-   "The scales in front of One-Eyed Willy and the marble bag of jewels",
-   "Data's gadgets (Pinchers of Peril, Slick Shoes)"
+   "Chunk's confession (house hot dog)",
+   "Hey you guys!",
+   "Sloth and Baby Ruth (note prints cut off)"
   ],
   "ideas": [
    "Swap 'Sloth's peanut caramel nougat bars' note 'Chunk wins Sloth.' for 'Swapped for a Baby Ruth, the way Chunk makes friends'",
@@ -54,7 +51,7 @@
    "Swap the fish tacos note 'The Walsh house.' for a real line about the dish, or rename them 'Rosalita's tacos'",
    "Add a 'Mikey's marble bag' sweet of jewel-coloured candy, the thing that saves the houses"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +67,15 @@
    "Nougat note is Sloth's Baby Ruth line",
    "Fish taco note is Rosalita and the marble bag",
    "Float renamed Chunk's root beer float"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

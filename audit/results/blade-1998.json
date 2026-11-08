@@ -34,19 +34,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Dark bar tab layout fits Blade, but the garlic serum idea is off and the menu skips the sword, the rave and the fights.",
+  "overall": 3.6,
+  "verdict": "A dark safehouse tab with the blood rave dip, ice skating uphill, Is everybody thirsty and the Frost guest tag all printing, on fairly standard garlic pub food.",
   "missing": [
-   "Blood rave with blood from the sprinklers (the nightclub)",
-   "Blade's silver glaive and sword (the final fight)",
-   "Whistler's weapons wall (the safehouse)",
-   "Karen's EDTA serum work (the lab)",
-   "Quinn and his sunglasses (the climax)",
-   "Whistler explaining vampires are allergic to silver and garlic (the safehouse)"
+   "Quinn: you can slice him, you can dice him",
+   "EDTA serum and Karen's bloodwork (only a Bloody Mary nod)"
   ],
   "ideas": [
    "Swap 'Garlic serum bread' for 'Whistler's garlic bread' so it does not call the serum garlic.",
@@ -54,7 +50,7 @@
    "Swap the Bloody Mary note for 'Blade's order. Extra thick, no questions.'",
    "Swap 'Closed to daywalkers' on the guest tag for 'Daywalkers welcome, vampires use the back'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,6 +69,15 @@
    "Chilli note says what it is and keeps Whistler's weapons den",
    "Sangria note: Is everybody thirsty?",
    "Printed winks now Frost's thirsty line and Quinn"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

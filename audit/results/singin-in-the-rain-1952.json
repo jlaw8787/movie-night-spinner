@@ -5,19 +5,15 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Studio commissary suits the film and the cake cue is right, but the menu skips the big song moments.",
+  "overall": 3.6,
+  "verdict": "Studio commissary with the pop-out cake cue, Lina's bush line, wet walk toasties and Dignity, but Make 'Em Laugh and Moses Supposes don't print.",
   "missing": [
-   "Gene Kelly splashing in the rain with the umbrella",
-   "Make 'Em Laugh with Cosmo's sofa flips",
-   "Moses Supposes elocution lesson",
-   "Lina's voice and the microphone in the flowers",
-   "The curtain raise on Kathy dubbing Lina",
-   "Good Morning in the small hours"
+   "Make 'Em Laugh (Cosmo)",
+   "Moses Supposes elocution lessons"
   ],
   "ideas": [
    "Swap 'Sparkling lemonade in coupes' note for an umbrella and puddle joke.",
@@ -25,7 +21,7 @@
    "Swap the Cosmo note's 'earplugs' joke for the curtain raise when Lina's voice is exposed.",
    "Add a lamppost to the poster frame area."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -43,6 +39,15 @@
    "Cheese toasties renamed Wet walk home cheese toasties",
    "House starter note now elocution lessons and Moses Supposes (title only)",
    "Ticket line now Dignity. Always dignity. (Don's motto in the transcript)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

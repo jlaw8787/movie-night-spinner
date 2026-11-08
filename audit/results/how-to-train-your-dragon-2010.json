@@ -34,27 +34,20 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Berk hall is a good fit and the fish bites cue is right, but the poster sits in black bars and it ignores the film's best scenes.",
-  "missing": [
-   "Toothless spitting half a fish into Hiccup's lap",
-   "Fishlegs reading out dragon stats",
-   "Gobber's training lessons (wet the Gronckle)",
-   "Hiccup's lost foot and Toothless's new fin",
-   "The Red Death at the nest",
-   "Stoick disowning Hiccup"
-  ],
+  "overall": 3.8,
+  "verdict": "A tidy Berk hall menu where the fish bites, Gobber's lesson and Fishlegs' stats all print, though the parchment look is stock.",
+  "missing": [],
   "ideas": [
    "Swap 'Night Fury fire-roasted chicken legs' for 'Gronckle wet end sausage' (Gobber's lesson, douse the correct end).",
    "Swap 'Gobber's smoked sausages' note for 'Fishlegs reads the stats'.",
    "Swap the poster block for the film's cove image to remove the black bars.",
    "Add 'Half a fish, Toothless style' as the dessert or a side joke."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +63,15 @@
    "Chicken note uses Fishlegs stats",
    "Punch renamed Meridian of Misery",
    "Fish bites note tied to Toothless and the fish"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

@@ -34,27 +34,20 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Good dishes and the bus and airship get a nod, but a hotel room service layout is a stretch for a film about racing to an oasis.",
-  "missing": [
-   "The pygmy mummies in the oasis jungle",
-   "The Spear of Osiris that kills the Scorpion King",
-   "Alex's seven days on the bracelet and the sun on the pyramid",
-   "Izzy's 'I'm in mourning for my arse' (the dirigible)",
-   "Rick's 'rules about snakes and dismemberment' (the manor)",
-   "Imhotep's face in the sand storm"
-  ],
+  "overall": 3.6,
+  "verdict": "The bus chase, Alex's water, the snakes rule and Izzy all print and the food suits the film, but the manor hotel layout is only so-so and the prices look off.",
+  "missing": [],
   "ideas": [
    "Swap 'Iced karkade with orange and mint' for 'Seven day countdown' iced tea with a sun on the glass",
    "Swap 'Airship falafel wraps' note for a line about Izzy repairing the dirigible",
    "Swap 'London beef and stout pie' note for Rick's rule about snakes and dismemberment",
    "Change the hotel layout to a manor dining table, which fits the venue name O'Connell Manor Kitchen"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,6 +63,15 @@
    "Pie note: Izzy and his arse",
    "Karkade note: ice for Alex",
    "Prop line: seven days, then the sun"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

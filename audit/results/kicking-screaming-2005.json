@@ -21,20 +21,16 @@
  ],
  "checked_ok": 13,
  "vibe": {
-  "world": 4,
-  "moments": 2,
+  "world": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "A decent sideline kiosk with a coffee hook, but it leaves out the Pele Ball bet, Ditka and Phil's meltdown.",
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Sideline kiosk with Phil's game plan line, the Ditka coffee joke, meatballs and the glasses time out all printing, though the surf report panel is a generic kiosk device.",
   "missing": [
-   "The Pele Ball bet between Phil and Buck",
-   "Mike Ditka coaching with his cigar",
-   "\"Get the ball to the Italians\" mantra",
-   "Phil being banned from Beantown coffee (\"Your name is liar\")",
-   "The goalie vision test using glasses from the crowd",
-   "The \"He's Got Balls\" ad ending with Phil's Pills"
+   "Buck's He's got balls sporting goods ad",
+   "A vitamin a day is a steak (Buck)"
   ],
   "ideas": [
    "Swap \"Mini Italian meatball subs\" for \"Get the ball to the Italians meatball subs\".",
@@ -42,7 +38,7 @@
    "Swap \"Phil's vitamin shop granola bars\" for \"Phil's Pills energy bars\".",
    "Add a soccer ball cookie called \"The Pele Ball\" in place of the plain sweets heading."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,6 +56,15 @@
    "Sausage rolls renamed for the apprentice butchers",
    "Winks: glasses, King of Sporting Goods, steak",
    "Prop badge corrected to Tigers Coach"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 2,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

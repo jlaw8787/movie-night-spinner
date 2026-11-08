@@ -4,18 +4,13 @@
  "checked_ok": 22,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "A smart Wayne Manor banquet with the Himalayan training and the Narrows, but Alfred's best lines and Scarecrow are barely used.",
+  "verdict": "A sepia Wayne Manor banquet with Alfred's line, the blue flower, the Tumbler, the burning manor and the black Collins, though the cue does not print.",
   "missing": [
-   "Why do we fall, sir? So that we can learn to pick ourselves up (Alfred)",
-   "It's not who I am underneath, but what I do that defines me (Bruce)",
-   "I'm Batman",
-   "The manor burning at Bruce's birthday party",
-   "The Tumbler chase (used only as a wink)",
-   "Crane's fear toxin, 'I respect the mind's power over the body'"
+   "Cue (Bruce comes home to the manor) does not print"
   ],
   "ideas": [
    "Swap 'Wayne Manor Sunday roast' note for 'Why do we fall, sir? So we can pick ourselves up'.",
@@ -23,9 +18,9 @@
    "Swap 'Salted butter chai' house note for 'It's not who I am underneath, but what I do that defines me'.",
    "Swap the monorail 'One way, hang on' line for 'I'm Batman' in the place card."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.4,
+  "overall": 3.6,
   "rework": "2026-11-08",
   "iconic": [
    "Why do we fall, sir? (Alfred, signed note)",
@@ -42,7 +37,16 @@
    "Cake note uses the manor burning",
    "Potstickers note names the fear toxin",
    "Collins note uses Does it come in black"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

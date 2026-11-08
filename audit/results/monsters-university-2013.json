@@ -34,19 +34,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 4,
+  "look": 3,
   "overall": 3.4,
-  "verdict": "A frat party that suits Oozma Kappa, but it is a generic party menu and skips the Scare Games challenges and Hardscrabble.",
+  "verdict": "Oozma Kappa party with the scream canister cue, Scare Games fries, misfit wings and Randall, but the greyscale stills look flat and the Monsters Inc sneak-in is gone.",
   "missing": [
-   "The Scare Games trials (the first round and the library)",
-   "Dean Hardscrabble's broken scream canister",
-   "Mike and the team sneaking into Monsters Inc",
-   "The RΩR party prank on Oozma Kappa",
-   "Sulley rigging the simulator",
-   "The summer camp door and the park rangers"
+   "Mike sneaks the team into Monsters Inc"
   ],
   "ideas": [
    "Swap 'Frat house party wings' for 'Scare Games wings' with a note about the first round.",
@@ -69,6 +64,15 @@
    "Cupcakes renamed Scream can cupcakes",
    "Cue is now the broken scream canister",
    "Winks add the scream can and the Monsters Inc sneak-in"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

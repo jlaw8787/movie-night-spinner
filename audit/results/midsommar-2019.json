@@ -41,18 +41,15 @@
  "vibe": {
   "world": 4,
   "moments": 3,
-  "food": 3,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A gentle, flowery invite that suits the film's cheerful menace, but the menu is generic Swedish and skips the bear, the cliff and the May Queen's crowning.",
+  "overall": 3.6,
+  "verdict": "A Hårga feast with the May Queen, maypole and flower crown printing over a good still, but the bear, tea and temple are gone.",
   "missing": [
-   "The bear in the cage (Pelle shrugs, that's a bear)",
-   "The ättestupa cliff (the elders)",
-   "Dani crowned May Queen after the maypole dance",
-   "The hallucinogenic tea (the long table)",
-   "The ninth sacrifice and the burning temple (finale)",
-   "The mushroom trip (Dani's bad trip)"
+   "The bear",
+   "Mushroom tea for the competition",
+   "The cliff and the burning temple"
   ],
   "ideas": [
    "Swap 'Midsummer aged cheese tart' note for 'That's a bear'",
@@ -60,7 +57,7 @@
    "Swap the 'Aquavit' house line for a plain tea cup, 'drink the tea'",
    "Swap the place card for 'Table 90, the long table in the sun'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -77,6 +74,15 @@
    "Lamb note nods to the bear",
    "House drink note is the May Queen toast",
    "Two unprinted winks now tea, cliff, bear and temple"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

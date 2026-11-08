@@ -1,99 +1,105 @@
 {
-  "id": "Despicable Me 2 (2013)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Gru and Lucy go undercover at Eduardo's Mexican restaurant in the mall.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "Gru and Lucy are undercover at the cupcake shop. At Eduardo's restaurant they break in to look for El Macho, kick the door open, set off a bell and get pecked by the chicken. They are not undercover there.",
-      "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
-      "fix": "Serve the mains when Gru and Lucy break into Eduardo's Mexican restaurant in the mall.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Showtime: Serve the mains when Gru and Lucy go undercover at Eduardo's Mexican restaurant in the mall.",
-      "where": "cue-printed",
-      "verdict": "wrong",
-      "why": "Same cue as printed on the card. Gru and Lucy break into the restaurant, they are not undercover there.",
-      "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
-      "fix": "Showtime: Serve the mains when Gru and Lucy break into Eduardo's Mexican restaurant in the mall.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Gru dances at Eduardo's Cinco de Mayo party.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "At the party Gru sits with his guac chip hat and a broken heart, and Eduardo comforts him. Antonio is the one calling the kids to dance. Gru's happy dance is in the mall, on his way to the cupcake shop.",
-      "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
-      "fix": "Gru nurses a broken heart at Eduardo's Cinco de Mayo party.",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Jams and jellies are a real business. Mostly. Please ignore the basement.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Gru never says this. His real line about the business is in the first meeting with Silas and Lucy.",
-      "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
-      "fix": "I am developing a line of delicious jams and jellies.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "I am developing a line of delicious jams and jellies.",
-        "by": "Gru",
-        "kind": "quote"
-      },
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "The mall and the jelly are in, but it is a plain dark cafe board that mostly says jelly and nachos and skips El Macho and the chicken.",
-    "missing": [
-      "Gru dressed as the fairy princess Zinkerbell at Agnes's birthday (backyard party)",
-      "Evil Kevin eating Agnes's unicorn (Margo and Agnes)",
-      "Lucy's lipstick taser (Lucy to Gru)",
-      "El Macho riding a shark into the volcano (Eduardo's backstory)",
-      "Pollito the chicken pecking Gru's bald head (Salsa y Salsa kitchen)",
-      "Eduardo's order for 200 cupcakes decorated with the Mexican flag (Gru's cupcake shop front)"
-    ],
-    "ideas": [
-      "Swap 'Gru's jelly tarts' for 'Mexican flag cupcakes', from Eduardo's order at the cupcake shop.",
-      "Swap the nachos note for 'Guac from a chip hat', Gru at the Cinco de Mayo party.",
-      "Swap 'Agnes, easy on the churros' into the cafe board as a churros starter, replacing 'Agnes's fairy princess star fairy bread' note.",
-      "Swap the stamp card words 'JELLY' and 'FREE' for 'ZINKERBELL' and 'POLLITO'."
-    ],
-    "flat": true,
-    "done": false,
-    "rework": "2026-11-08",
-    "iconic": [
-      "Gru as the fairy princess Zinkerbell at Agnes's party",
-      "Lucy's lipstick taser",
-      "Purple evil Minions",
-      "El Macho riding a shark into the volcano",
-      "Evil Kevin eating Agnes's unicorn",
-      "Pollito the chicken",
-      "Gru: I am developing a line of delicious jams and jellies"
-    ],
-    "changed": [
-      "Cue is Lucy's lipstick taser",
-      "Fairy bread note is Gru as Zinkerbell",
-      "Spaghetti note is Kevin trapped in the lab",
-      "Jelly cups renamed Evil purple minion jelly cups",
-      "Jam tarts note ties to Gru's jams and jellies",
-      "Winks: Evil Kevin and the unicorn, El Macho's shark and volcano"
-    ]
+ "id": "Despicable Me 2 (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Gru and Lucy go undercover at Eduardo's Mexican restaurant in the mall.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Gru and Lucy are undercover at the cupcake shop. At Eduardo's restaurant they break in to look for El Macho, kick the door open, set off a bell and get pecked by the chicken. They are not undercover there.",
+   "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
+   "fix": "Serve the mains when Gru and Lucy break into Eduardo's Mexican restaurant in the mall.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Showtime: Serve the mains when Gru and Lucy go undercover at Eduardo's Mexican restaurant in the mall.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same cue as printed on the card. Gru and Lucy break into the restaurant, they are not undercover there.",
+   "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
+   "fix": "Showtime: Serve the mains when Gru and Lucy break into Eduardo's Mexican restaurant in the mall.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Gru dances at Eduardo's Cinco de Mayo party.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "At the party Gru sits with his guac chip hat and a broken heart, and Eduardo comforts him. Antonio is the one calling the kids to dance. Gru's happy dance is in the mall, on his way to the cupcake shop.",
+   "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
+   "fix": "Gru nurses a broken heart at Eduardo's Cinco de Mayo party.",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Jams and jellies are a real business. Mostly. Please ignore the basement.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Gru never says this. His real line about the business is in the first meeting with Silas and Lucy.",
+   "source": "https://en.wikiquote.org/wiki/Despicable_Me_2",
+   "fix": "I am developing a line of delicious jams and jellies.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I am developing a line of delicious jams and jellies.",
+    "by": "Gru",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The jam and jellies line, Zinkerbell fairy bread, Kevin in the lab and the purple minion jelly cups print, but the lipstick taser is only in the footer and the top right of the first face is mostly empty.",
+  "missing": [
+   "Lucy's lipstick taser (cue only)",
+   "El Macho riding a shark into the volcano",
+   "Pollito the chicken"
+  ],
+  "ideas": [
+   "Swap 'Gru's jelly tarts' for 'Mexican flag cupcakes', from Eduardo's order at the cupcake shop.",
+   "Swap the nachos note for 'Guac from a chip hat', Gru at the Cinco de Mayo party.",
+   "Swap 'Agnes, easy on the churros' into the cafe board as a churros starter, replacing 'Agnes's fairy princess star fairy bread' note.",
+   "Swap the stamp card words 'JELLY' and 'FREE' for 'ZINKERBELL' and 'POLLITO'."
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Gru as the fairy princess Zinkerbell at Agnes's party",
+   "Lucy's lipstick taser",
+   "Purple evil Minions",
+   "El Macho riding a shark into the volcano",
+   "Evil Kevin eating Agnes's unicorn",
+   "Pollito the chicken",
+   "Gru: I am developing a line of delicious jams and jellies"
+  ],
+  "changed": [
+   "Cue is Lucy's lipstick taser",
+   "Fairy bread note is Gru as Zinkerbell",
+   "Spaghetti note is Kevin trapped in the lab",
+   "Jelly cups renamed Evil purple minion jelly cups",
+   "Jam tarts note ties to Gru's jams and jellies",
+   "Winks: Evil Kevin and the unicorn, El Macho's shark and volcano"
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
+ }
 }

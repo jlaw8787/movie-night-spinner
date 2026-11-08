@@ -1,85 +1,92 @@
 {
-  "id": "Dick Tracy (1990)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "His usual order, between radio calls.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The plot gives no scene of Tracy eating his usual order. A diner patron appears in the cast, but no meal scene is described.",
-      "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
-      "fix": "dinner for a cop with Big Boy still loose",
-      "printed": true,
-      "done": true,
-      "settled": "2026-11-08",
-      "applied": "2026-11-08"
-    },
-    {
-      "text": "the Kid's diner on the corner",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The Kid is a street orphan who eats out of garbage cans and is taken in by Tracy and Tess. No diner of his is shown.",
-      "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
-      "fix": "the street kid Tracy takes in",
-      "printed": false,
-      "done": true,
-      "settled": "2026-11-08",
-      "applied": "2026-11-08"
-    },
-    {
-      "text": "Breathless sings, Big Boy misquotes somebody famous.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Breathless Mahoney is the singer at Big Boy's Club Ritz. Nothing shows Big Boy misquoting anyone.",
-      "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
-      "fix": "Breathless sings at Club Ritz, Big Boy holds court.",
-      "printed": false,
-      "done": true,
-      "settled": "2026-11-08",
-      "applied": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "A smooth black and gold nightclub, but it plays it safe and ignores the comic strip colours and the best villains.",
-    "missing": [
-      "Breathless singing 'Sooner or Later' (Club Ritz)",
-      "Lips Manlis and the cement bath (Club Ritz)",
-      "Big Boy's mob summit to unite the bosses (Club Ritz)",
-      "The Blank's hidden face and the Breathless reveal",
-      "Tracy's proposal cut off by the wrist radio (ending)",
-      "The Kid's honorary detective badge (Dick Tracy Jr.)"
-    ],
-    "ideas": [
-      "Swap the note on 'Big Boy's spaghetti' for 'Served at the mob summit where Big Boy runs the room'.",
-      "Replace the 'Sidecar in a sugared coupe' note with 'Breathless sings Sooner or Later'.",
-      "Add a 'Cement bath' set pudding joke for Lips Manlis in place of 'Lemon meringue pie'.",
-      "Use the primary yellow, red and blue of the comic strip for the bar and badge colours instead of gold."
-    ],
-    "flat": true,
-    "done": false,
-    "rework": "2026-11-08",
-    "iconic": [
-      "Breathless singing Sooner or Later at Club Ritz",
-      "Lips Manlis and the cement Bath",
-      "Big Boy: There was one Napoleon, one Washington, one me!",
-      "Big Boy's mob summit at Club Ritz",
-      "The Blank with no face",
-      "The Kid: When do we eat?",
-      "Yellow coat and wrist radio"
-    ],
-    "changed": [
-      "Signed note is Big Boy's Napoleon line, replacing an invented Tess note",
-      "Cue is Big Boy's mob summit",
-      "Pickle chip note is the Kid's When do we eat",
-      "Sidecar note names Breathless's song",
-      "Winks: Lips and the Bath, the Blank, the Kid's badge"
-    ]
+ "id": "Dick Tracy (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "His usual order, between radio calls.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The plot gives no scene of Tracy eating his usual order. A diner patron appears in the cast, but no meal scene is described.",
+   "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
+   "fix": "dinner for a cop with Big Boy still loose",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "the Kid's diner on the corner",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The Kid is a street orphan who eats out of garbage cans and is taken in by Tracy and Tess. No diner of his is shown.",
+   "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
+   "fix": "the street kid Tracy takes in",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Breathless sings, Big Boy misquotes somebody famous.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Breathless Mahoney is the singer at Big Boy's Club Ritz. Nothing shows Big Boy misquoting anyone.",
+   "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
+   "fix": "Breathless sings at Club Ritz, Big Boy holds court.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A moody Club Ritz in black and gold with Big Boy's Napoleon line, but Sooner or Later, Lips Manlis and the Blank do not print and the notes are thin.",
+  "missing": [
+   "Breathless singing Sooner or Later at Club Ritz",
+   "Lips Manlis and the cement bath",
+   "The Blank with no face",
+   "The Kid: When do we eat?"
+  ],
+  "ideas": [
+   "Swap the note on 'Big Boy's spaghetti' for 'Served at the mob summit where Big Boy runs the room'.",
+   "Replace the 'Sidecar in a sugared coupe' note with 'Breathless sings Sooner or Later'.",
+   "Add a 'Cement bath' set pudding joke for Lips Manlis in place of 'Lemon meringue pie'.",
+   "Use the primary yellow, red and blue of the comic strip for the bar and badge colours instead of gold."
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Breathless singing Sooner or Later at Club Ritz",
+   "Lips Manlis and the cement Bath",
+   "Big Boy: There was one Napoleon, one Washington, one me!",
+   "Big Boy's mob summit at Club Ritz",
+   "The Blank with no face",
+   "The Kid: When do we eat?",
+   "Yellow coat and wrist radio"
+  ],
+  "changed": [
+   "Signed note is Big Boy's Napoleon line, replacing an invented Tess note",
+   "Cue is Big Boy's mob summit",
+   "Pickle chip note is the Kid's When do we eat",
+   "Sidecar note names Breathless's song",
+   "Winks: Lips and the Bath, the Blank, the Kid's badge"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-08"
+ }
 }

@@ -3,19 +3,16 @@
  "facts": [],
  "checked_ok": 22,
  "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
+  "world": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 4,
   "look": 3,
-  "verdict": "Cute pink food names and a smart morning-goes-wrong cue, but the page itself is pale blue and grey, not Barbieland pink.",
+  "verdict": "Pink dishes, the waffles cue, the dying question and the gynecologist wink print with real Barbie voice, but the teal prom frame is not very Barbieland.",
   "missing": [
-   "Do you guys ever think about dying? (used only as a drink note, not as a moment)",
-   "Barbie's burnt waffle, freezing shower and rancid milk (the cue morning)",
-   "Ken and the Mojo Dojo Casa House's mink coat and mini fridge",
-   "I'm here to see my gynecologist (final line)",
-   "Barbie choosing between heels and Birkenstocks at Weird Barbie's",
-   "Kenough"
+   "Weird Barbie",
+   "Kenough hoodie (wink does not print)",
+   "I burned the waffles"
   ],
   "ideas": [
    "Swap the pale blue header for hot pink so the page is Barbieland, in place of the teal band.",
@@ -23,9 +20,9 @@
    "Swap 'Mojo Dojo sticky barbecue ribs' note for 'Kenough to share'.",
    "Swap 'Strawberry frosé' note for 'Do you guys ever think about dying? Not tonight', moved to the footer as the closing joke."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.4,
+  "overall": 3.6,
   "rework": "2026-11-08",
   "iconic": [
    "Do you guys ever think about dying? (house drink note)",
@@ -40,7 +37,16 @@
    "Waffle note now minus the burnt one",
    "Shake note nods to the rancid milk morning",
    "Ribs note names the Kens at the Mojo Dojo Casa House"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

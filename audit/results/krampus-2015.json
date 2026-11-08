@@ -29,19 +29,14 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Right house, right family and a good snow globe poster, but the writing is cosy where the film is mean.",
+  "overall": 3.6,
+  "verdict": "Engel family recipe box with Omi, Der Klown, the table fight, Howard's barn line and the gingerbread that took Howie Jr., though the food is plain.",
   "missing": [
-   "Sarah's crème brûlée at the dinner table fight",
-   "Der Klown the jack in the box",
-   "The gingerbread men dragging Howie Jr. up the chimney",
-   "Max's bauble wrapped in the torn letter",
-   "Krampus's snow globe lair",
-   "Howard: \"Jesus was born in a barn!\""
+   "Krampus in the snow globes"
   ],
   "ideas": [
    "Swap \"Christmas Eve lasagne\" note for the dinner table fight over Sarah's crème brûlée.",
@@ -49,7 +44,7 @@
    "Rename \"Engel house fennel and apple salad\" to \"The Der Klown salad\" with a jack in the box garnish.",
    "Add a snow globe dessert in place of the fennel salad."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,6 +61,15 @@
    "Gingerbread note ties to the one that took Howie Jr.",
    "Winks now include Der Klown and Howard's barn line",
    "Letter prop now ends with the bauble"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

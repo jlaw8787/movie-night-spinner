@@ -24,17 +24,13 @@
   "world": 4,
   "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Strong nods (3:07 clocks, hide and clap, the music box, the cellar), but the poster sits in black bars and the food is plain.",
+  "overall": 3.6,
+  "verdict": "The Perron farmhouse prints hide and clap, Sadie, the music box and the 3:07 cue, but the food is plain and the look is stock parchment.",
   "missing": [
-   "Carolyn trapped in the cellar: 'Want to play hide and clap?'",
-   "April's imaginary friend Rory in the music box",
-   "Annabelle in the Warrens' artefact room",
-   "Ed's exorcism with Carolyn tied to a chair",
-   "Bathsheba's curse on the land",
-   "Lorraine's visions"
+   "Annabelle in the Warrens cabinet",
+   "The cellar"
   ],
   "ideas": [
    "Swap 'Music box raspberry jam drop shortbread' note for April's mirror line.",
@@ -42,7 +38,7 @@
    "Swap 'Rhode Island coffee cabinet' note for the cellar door creaking open.",
    "Replace 'Harrisville farmhouse apple crisp' note with Annabelle on the shelf."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -58,6 +54,15 @@
    "Johnnycakes note: clap three times",
    "Pot roast note: Sadie stays out",
    "Shortbread note: twist the key and wait"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

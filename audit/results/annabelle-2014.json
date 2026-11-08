@@ -54,19 +54,14 @@
  "checked_ok": 10,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A decent 1960s home setting, but the years clash across sources and the dishes lean on generic retro party food.",
+  "overall": 3.2,
+  "verdict": "The doll, the sewing machine, the popcorn cue and the last-box champagne all print on a moody keepsake box, but the dishes read like a normal family menu.",
   "missing": [
-   "The wedding dress doll found in a box in Pasadena (John's gift)",
-   "The Pasadena apartment fire from the popcorn (Mia)",
-   "Evelyn's bookshop, and her daughter's doll",
-   "Father Perez and the rocking chair",
-   "The sewing machine running alone",
-   "The red sugar rose, and the cult murders next door"
+   "Evelyn's sacrifice at the bookshop (list item only)"
   ],
   "ideas": [
    "Swap 'Chicken and rice mushroom casserole' for 'Wedding dress cupcakes with a red sugar rose'.",
@@ -92,6 +87,15 @@
    "Tom Collins note: John asking for champagne at the last box",
    "Winks: doll at the bottom of the last box, Father Perez at the church door"
   ],
-  "layout_clash": "home layout words 'Recipe box no.' and 'Serves everyone on the couch' are cosy for a horror film"
+  "layout_clash": "home layout words 'Recipe box no.' and 'Serves everyone on the couch' are cosy for a horror film",
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

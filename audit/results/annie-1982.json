@@ -58,19 +58,14 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Pretty hotel card and the right characters, but the food and lines could be from any rich house.",
+  "overall": 3.6,
+  "verdict": "A neat mansion room service card with Hannigan's note, Punjab's curry and Radio City, but Leaping lizards no longer prints and the writing is gentle.",
   "missing": [
-   "The 'Hard Knock Life' scrubbing",
-   "Miss Hannigan's bathtub gin",
-   "Rooster chasing Annie up the raised drawbridge",
-   "Punjab's helicopter rescue",
-   "Meeting President Roosevelt at the White House",
-   "Bert Healy and the radio reward announcement"
+   "Leaping lizards (Annie, at the mansion door)"
   ],
   "ideas": [
    "Swap 'Mansion ginger beer and orange punch' note for 'Miss Hannigan brews hers in the bath. Ours is alcohol free.'",
@@ -78,7 +73,7 @@
    "Swap 'Punjab's lamb curry' for 'Drawbridge dinner' with a note about the rescue.",
    "Swap 'Mansion sundaes' note for 'Sent up to the White House for the Roosevelts.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -97,6 +92,15 @@
    "Waldorf house note: Washington apples from Mrs. Pugh's list",
    "Sundae note: easier than Mrs. Pugh's baked Alaska",
    "Printed wink: Sandy in Warbucks's pool"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

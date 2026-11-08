@@ -42,19 +42,15 @@
  "checked_ok": 19,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The prison canteen and badge suit the film, but the dishes lean on peaches and a few scenes that are shaky.",
+  "overall": 3.6,
+  "verdict": "A good prison canteen sheet with the church shootout, Castor's peaches and the magnetic boots, but the signed hangar line and Pollux's tiramisu do not print.",
   "missing": [
-   "Pollux eating a gourmet meal in FBI custody and singing opera",
-   "Pollux and his tiramisu (the interview room)",
-   "Castor's butterfly knife, given to Jamie",
-   "The speedboat chase and the speargun fight on the shore",
-   "Adam's headphones during the raid on Castor's headquarters",
-   "Archer and Castor's Mexican standoff in the hangar"
+   "Hangar standoff: Wow! We've got something in common",
+   "Pollux's tiramisu in custody"
   ],
   "ideas": [
    "Swap the note on 'Church canapés' for 'The funeral shootout in the church, doves and all.'",
@@ -62,7 +58,7 @@
    "Swap the note on 'Archer family lemon thyme roast chicken' for 'Castor and Eve, candlelight dinner, Archer's face.'",
    "Swap the note on 'Garlic butter grilled lobster tails' for 'Pollux orders the good stuff in custody.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -79,6 +75,15 @@
    "Cheddar stacks renamed for the magnetic boots, note updated",
    "House Reuben note now Pollux's tiramisu line",
    "Signed note now Castor's real hangar line"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

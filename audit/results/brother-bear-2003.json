@@ -34,19 +34,14 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The salmon run and bear camp fit, but the food is general. The 'MESS HALL MAINS' heading is orphaned at the bottom of the left column.",
+  "overall": 3.6,
+  "verdict": "Koda's story line, the raging ball of fur, Rutt and Tuke, Bucky's pine nut and the spirit lights all print under a lovely aurora banner.",
   "missing": [
-   "Bucky the pine nut (the moose)",
-   "The mammoth ride (the herd)",
-   "'I don't speak bear' (Kenai to Koda)",
-   "Kenai's totem of love (the ending)",
-   "Koda's 'The Slasher' (the story)",
-   "The aurora and Sitka's eagle"
+   "Mammoth ride"
   ],
   "ideas": [
    "Swap the Koda note for his salmon run line.",
@@ -54,7 +49,7 @@
    "Add a salmon run main.",
    "Swap the Tanana note for her mountain send off."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,6 +66,15 @@
    "Wink: Koda raging ball of brown fur",
    "Wink: Rutt and Tuke mammoth",
    "Wink: milk a caribou"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

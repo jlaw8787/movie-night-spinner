@@ -29,28 +29,21 @@
  ],
  "checked_ok": 14,
  "vibe": {
-  "world": 3,
-  "moments": 3,
+  "world": 4,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "A tidy bus station counter, but the pastel look feels nothing like the grimy film and the cowboy is missing.",
-  "missing": [
-   "'I'm walkin' here!' (the taxi on the street)",
-   "Joe's cowboy hat and boots (the whole film)",
-   "Joe's portable radio (hotel room)",
-   "The X on the condemned windows (the squat)",
-   "Scribbage at the Warhol party (Shirley)",
-   "Rico asking not to be called Ratso (the bus)"
-  ],
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A 1969 bus terminal lunch counter with period prices, the Miami postcard from Rico and I'm walkin' here, all in the right voice.",
+  "missing": [],
   "ideas": [
    "Swap 'Texas hamburger' for 'Cowboy Hamburger, Texas style', with a boot stamp.",
    "Swap the pastel heading 'Southbound' for a dirty neon 42nd Street sign.",
    "Add 'I'm walkin' here!' as a house line in place of 'Open all night.'",
    "Swap 'Pineapple coconut cooler' note for 'Ratso says sunshine and coconut milk are all you need'."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,6 +59,15 @@
    "Burger note: just in from Texas",
    "Cooler note: Ratso's sunshine and coconut milk",
    "Fine print: Hey, I'm walkin' here! replaces Prices subject to change"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  },
+  "rescored": "2026-11-08"
  }
 }

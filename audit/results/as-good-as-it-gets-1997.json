@@ -16,28 +16,21 @@
  "checked_ok": 21,
  "vibe": {
   "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
+  "moments": 5,
+  "food": 4,
+  "tone": 4,
   "look": 4,
-  "verdict": "A believable corner diner with Melvin's cutlery and the sidewalk cracks, but the funniest lines and the Baltimore dinner are only half used.",
-  "missing": [
-   "I'm drowning here, and you're describing the water (Melvin in the waiting room)",
-   "What if this is as good as it gets? (Dr Green's waiting room)",
-   "The borrowed tie and jacket at the Baltimore restaurant",
-   "Melvin's compliment about taking the pills (Baltimore dinner)",
-   "Verdell on the lead, avoiding sidewalk cracks",
-   "Melvin's soap bars and paper towel rituals"
-  ],
+  "verdict": "Every best-known Melvin line and prop prints on a believable diner, with funny dish names and real stills.",
+  "missing": [],
   "ideas": [
    "Swap 'Café meatloaf with brown sugar glaze' note for 'Jacket required. Loan tie available', from the Baltimore dinner.",
    "Swap the 'Overheard at the counter' wink for 'What if this is as good as it gets?'",
    "Swap 'Potato latkes' for 'Hard shell crab dinner' to match what Melvin orders in Baltimore.",
    "Swap the 'Manhattan Special espresso soda' price line for 'Pay me a compliment' on the bill."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
-  "overall": 3.4,
+  "overall": 4.2,
   "rework": "2026-11-08",
   "iconic": [
    "I'm drowning here, and you're describing the water",
@@ -57,7 +50,16 @@
    "Banana cream pie renamed Pay me a compliment",
    "Coffee milkshake renamed As good as it gets",
    "Verdell's bacon note: Melvin keeps some in his pocket"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  },
  "checked": "2026-11-07"
 }

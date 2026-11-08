@@ -55,19 +55,15 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A cheerful flying car boarding pass with real touches, but the signed note has the wrong person, a food name got garbled and the best songs and candy are missing.",
+  "overall": 3.6,
+  "verdict": "The boarding pass flight to Vulgaria with the breakfast machine eggs and Toot Sweets note is charming, though the boat and Child Catcher gags are buried in the footer.",
   "missing": [
-   "Toot Sweets, the whistle candy that draws a crowd of dogs (the Scrumptious factory pitch)",
-   "Chitty turning into a boat when the tide traps it (the beach)",
-   "Truly and Caractacus posing as dolls and jack-in-the-boxes in Vulgaria",
-   "The grotto under the castle where the town hides its children",
-   "Baron Bomburst's birthday banquet taken over by the children",
-   "The hair-cutting machine at the carnival"
+   "Jack-in-the-boxes at the Toymaker's shop (gingerbread note)",
+   "Baron's birthday banquet taken over by the children (schnitzel)"
   ],
   "ideas": [
    "Swap 'Ginger beer from a stone bottle' note for 'Toot Sweets, dogs not included.'",
@@ -75,7 +71,7 @@
    "Swap the 'Seat 31A' and 'Seat 1A' mix on the card so the seat is the same on both faces.",
    "Swap the 'Jeremy and Jemima' drink note for the beach where Chitty becomes a boat."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -93,6 +89,15 @@
    "Schnitzel note now the banquet stormed by the children",
    "Boarding pass seat now 31A to match the card",
    "Gingerbread note now the jack-in-the-boxes"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }

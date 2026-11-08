@@ -45,19 +45,15 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The basement is a good setting, but the menu names places and cover identities rather than the film's best jokes.",
+  "overall": 3.6,
+  "verdict": "Ten cats, the owl toast and the 179 poisons all print in a tidy CIA basement sheet, but the Paris cue and the murder-y hotel line don't.",
   "missing": [
-   "Rick Ford's wild boasts ('I'm immune to one hundred seventy nine different types of poison')",
-   "Susan's cat lady cover and the Penny Morgan cat T-shirt",
-   "The rats in the CIA basement (Nancy's laptop)",
-   "Rayna's insults ('Looks like you ate a box of crayons')",
-   "The towel-lumps dinner with Fine and the Rome dinner with Rayna",
-   "Susan jumping onto De Luca's helicopter at the end"
+   "Could this hotel be any more murder-y?",
+   "Susan lands in Paris, Ford follows"
   ],
   "ideas": [
    "Swap 'Negroni on the rocks' note for 'Rick Ford once drank 179 poisons, allegedly'.",
@@ -65,7 +61,7 @@
    "Replace the 'Susan Cooper' badge with a 'Penny Morgan' alias badge.",
    "Add 'Rayna's box of crayons' as a jelly dessert, using her insult."
   ],
-  "flat": true,
+  "flat": false,
   "done": false,
   "rework": "2026-11-08",
   "iconic": [
@@ -80,6 +76,15 @@
    "Spritz note: the owl toast",
    "Negroni note: 179 poisons",
    "Cue: Paris and Rick Ford"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-08"
  }
 }
