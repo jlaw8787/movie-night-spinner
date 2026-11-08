@@ -402,3 +402,9 @@ Small items the re-score noted: Crocodile Dundee II prints snags, barra and pavl
 - Live on Netlify from 0741870 (deploy 6aefeab7). main now holds everything (wip/store-overhaul merged, same commit).
 - GitHub Pages: account still can't run Actions or Pages builds (no runs start, even by hand, after Actions were set to "Allow all"). Josh to ask GitHub Support. Pages source is set to "GitHub Actions" with .github/workflows/pages.yml (publishes site files only); once Actions work, a push to main publishes.
 - .netlify/state.json is not in git: recreate it in /tmp/deploy with the site id before running the connector command.
+
+## 8 Nov, 1:50pm: domain
+
+- reeldinner.com bought at VentraIP (auto-renew was off: remind Josh). Added in Netlify as primary domain, www as alias, external DNS.
+- VentraIP DNS Hosting: A reeldinner.com 75.2.60.5, CNAME www movie-night-spinner.netlify.app, parking A records (103.42.108.46) deleted, NS left alone. Waiting on caches (about an hour) and then Netlify's automatic HTTPS. If it hasn't turned green: Netlify Domain management, Verify DNS configuration, Provision certificate.
+- No rename to Reel Dinner done in the app yet; that's a brand change for Josh to lock first.
