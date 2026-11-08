@@ -123,8 +123,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
   const fw=parseInt(e.frame)||14,pad=26;
-  const CWall=RW-2*fw-2*pad-8,colGap=24,mTop=96,menuH=boardH-2*fw-mTop-18;
-  const tiers=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:12,h:30,nl:2},{d:24,n:18,g:10,h:27,nl:1},{d:22,n:17,g:8,h:25,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:4,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
+  const CWall=RW-2*fw-2*pad-8,colGap=24,mTop=96;
+  /* the showtime cue, a short line along the foot of the board (8 Nov: truck never printed it) */
+  const cue=tx(f.P||"").trim(),cueN=cue?Math.min(2,wrapLines("Showtime: "+cue,15,CWall,e.cw)):0,cueH=cueN?cueN*15*1.3+12:0;
+  const menuH=boardH-2*fw-mTop-18-cueH;
+  const tiers=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:12,h:30,nl:2},{d:24,n:18,g:10,h:27,nl:1},{d:22,n:17,g:8,h:25,nl:1},{d:20,n:15,g:6,h:22,nl:1},{d:19,n:14,g:5,h:21,nl:1},{d:18,n:14,g:4,h:20,nl:1},{d:17,n:13,g:3,h:19,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:4,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*(ei>=6?1.5:2.5)+8;
   let CW=CWall;
   const cH=(tr,k)=>tr.h*1.3+14+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd*(e.caps?1.12:1)));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g},0);
@@ -150,7 +153,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${boardTex}
     <div style="position:absolute;left:${pad}px;right:${pad}px;top:22px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:${e.board==="enamel"?`3px solid ${e.btx}`:`2px solid ${mix(e.btx,e.bbg,.6)}`};padding-bottom:10px">
       <div style="${boardTitle};color:${e.btx}">${e.board_t}</div>${kick(t.win.length>34?"Order at the window":t.win,bacc,14)}</div>
-    <div style="position:absolute;left:${pad}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div></div>`;
+    <div style="position:absolute;left:${pad}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>
+    ${cueN?`<div data-fit="cue" style="position:absolute;left:${pad}px;width:${CWall}px;bottom:16px;border-top:1px solid ${mix(e.btx,e.bbg,.7)};padding-top:6px;font:italic 400 15px/1.3 ${BF};color:${bsoft}"><b style="font-style:normal;color:${bacc}">Showtime:</b> ${esc(cap(cue))}</div>`:""}</div>`;
 
   /* order window: note, logo panel, now serving ticket */
   const WY=BH+boardH,WH=H-WY;

@@ -1466,6 +1466,8 @@ function libPhotoPass(card,L,poster){
     const nx=faceless.shift();if(!nx)return;used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx});
   /* 5. a still swapped in above gets aimed at its faces too */
   libAim(card,L);
+  /* 6. black and white films (flavour mono:true) print every photo and the poster in black and white; the Save PDF copy bakes the filter in */
+  if(L.flavour&&L.flavour.mono)card.querySelectorAll(".fx-face img").forEach(i=>{const f=i.style.filter||"";if(!/grayscale\(1\)/.test(f))i.style.filter=(f&&f!=="none"?f+" ":"")+"grayscale(1)"});
 }
 /* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
    Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */
@@ -2054,7 +2056,7 @@ function calText(o){const p=o.plan,ah=calList(p.before),ah2=calList(p.before2),e
 /* an alarm already due when the file is made is left out (review 17): the panel says "now" instead */
 function calICS(o){const t=calText(o),p=o.plan,now=o.now||new Date(),end=new Date(o.show.getTime()+(o.span||150)*6e4);
   const alarm=(mins,txt)=>["BEGIN:VALARM","ACTION:DISPLAY",`DESCRIPTION:${calEsc(txt)}`,`TRIGGER;RELATED=START:${calBefore(mins)}`,"END:VALARM"];
-  const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Movie Night Spinner//Movie night//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+  const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Reel Dinner//Movie night//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
     "BEGIN:VEVENT",`UID:${o.uid}`,`DTSTAMP:${calUTC(now)}`,`DTSTART:${calUTC(o.show)}`,`DTEND:${calUTC(end)}`,
     `SUMMARY:${calEsc(t.title)}`,`DESCRIPTION:${calEsc(t.notes)}`,`URL:${o.url}`,"TRANSP:OPAQUE",
     ...(p.startNow?[]:alarm((o.show-p.start)/6e4,t.cook)),...(p.early&&!p.early.now?alarm((o.show-p.early.at)/6e4,t.early):[]),...(p.before&&!p.before.now?alarm((o.show-p.before.at)/6e4,t.ahead):[]),...(p.before2&&!p.before2.now?alarm((o.show-p.before2.at)/6e4,t.ahead2):[]),

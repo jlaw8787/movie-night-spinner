@@ -6,11 +6,12 @@
 <meta name="theme-color" content="#5a0f1f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Movie Night">
+<meta name="apple-mobile-web-app-title" content="Reel Dinner">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preload" as="image" fetchpriority="high" href="assets/hero/palace-1000.webp" imagesrcset="assets/hero/palace-1000.webp 1000w, assets/hero/palace-1400.webp 1400w, assets/hero/palace.webp 1774w" imagesizes="(max-width:640px) 460px, 1240px" fetchpriority="high">
 <link rel="prefetch" href="trailers.js?v=0009383f">
-<link rel="icon" href="assets/app/icon-192.png">
+<link rel="icon" href="assets/app/favicon-48.png" sizes="48x48">
+<link rel="icon" href="assets/app/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/app/apple-touch-icon.png">
 <style>html{-webkit-text-size-adjust:100%;text-size-adjust:100%}[hidden]{display:none!important}body{margin:0}img{max-width:100%}.planner{margin:0 0 12px;padding:12px 14px;border:1px solid rgba(231,192,105,.35);border-radius:10px;background:rgba(18,6,10,.6);color:#f4e6c8;font-size:15px}
 .pl-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}.pl-l{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
@@ -72,23 +73,23 @@
 </head>
 <body>
 <a class="skip-link" href="#spin" id="skipLink">Skip to the wheel</a>
-<title>Movie Night Spinner</title>
+<title>Reel Dinner</title>
 <meta name="description" content="Spin the wheel for tonight's film and get a themed menu to cook, with a shopping list and prep sheet. 900 films to land on.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Movie Night Spinner">
-<meta property="og:title" content="Movie Night Spinner">
+<meta property="og:site_name" content="Reel Dinner">
+<meta property="og:title" content="Reel Dinner">
 <meta property="og:description" content="Spin the wheel for tonight's film and get a themed menu to cook, with a shopping list and prep sheet. 900 films to land on.">
-<meta property="og:url" content="https://jlaw8787.github.io/movie-night-spinner/">
-<meta property="og:image" content="https://jlaw8787.github.io/movie-night-spinner/assets/app/share.jpg">
+<meta property="og:url" content="https://reeldinner.com/">
+<meta property="og:image" content="https://reeldinner.com/assets/app/share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A lit art deco cinema at dusk with Movie Night Spinner on the marquee">
+<meta property="og:image:alt" content="A red Reel Dinner badge: a cinema marquee over a plate, knife and fork">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Movie Night Spinner">
+<meta name="twitter:title" content="Reel Dinner">
 <meta name="twitter:description" content="Spin the wheel for tonight's film and get a themed menu to cook, with a shopping list and prep sheet. 900 films to land on.">
-<meta name="twitter:image" content="https://jlaw8787.github.io/movie-night-spinner/assets/app/share.jpg">
-<link rel="canonical" href="https://jlaw8787.github.io/movie-night-spinner/">
+<meta name="twitter:image" content="https://reeldinner.com/assets/app/share.jpg">
+<link rel="canonical" href="https://reeldinner.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Limelight&family=Jost:wght@400;500;600&family=Archivo:wght@400;600;800&family=Permanent+Marker&family=Mr+Dafoe&family=Yellowtail&display=swap">
@@ -1527,6 +1528,9 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* ---------- quick mute in the top bar ---------- */
 .top{position:relative}
+.brand-badge{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.5),0 0 0 2px rgba(217,164,65,.55)}.brand-badge img{display:block;width:100%;height:100%;border-radius:50%}
+.palace-badge{display:none}
+@media (max-width:820px){.brand-badge{display:none}.palace-badge{display:block;position:absolute;left:10px;top:10px;width:58px;height:58px;z-index:3;border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.6),0 0 0 2px rgba(217,164,65,.55)}}
 .quick-mute{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--line);background:rgba(0,0,0,.25);color:var(--screen);cursor:pointer}
 .quick-mute:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
 body.in-shop .quick-mute:focus-visible{outline-color:#ff3d6e}
@@ -2888,10 +2892,11 @@ html,body{overflow-x:clip}
 <div id="printArea"></div>
 <div class="wrap">
   <aside class="feature" id="feature" aria-label="Your locked-in film" hidden></aside>
-  <header class="palace" aria-label="Movie Night">
+  <header class="palace" aria-label="Reel Dinner">
+    <img class="palace-badge" src="assets/app/reel-dinner-logo.webp" alt="" width="64" height="64" aria-hidden="true">
     <div class="palace-stage">
       <img class="palace-img" src="assets/hero/palace-1000.webp" srcset="assets/hero/palace-1000.webp 1000w, assets/hero/palace-1400.webp 1400w, assets/hero/palace.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="" fetchpriority="high">
-      <h1 class="blade" aria-label="Movie Night"><span aria-hidden="true"><i>M</i><i>O</i><i>V</i><i>I</i><i>E</i></span><span aria-hidden="true"><i>N</i><i>I</i><i>G</i><i>H</i><i>T</i></span></h1>
+      <h1 class="blade" aria-label="Reel Dinner"><span aria-hidden="true"><i>R</i><i>E</i><i>E</i><i>L</i></span><span aria-hidden="true"><i>D</i><i>I</i><i>N</i><i>N</i><i>E</i><i>R</i></span></h1>
       <div class="mq"><span class="mq-k">Now showing</span><span class="mq-t" id="now">Spin the wheel</span></div>
       <img class="lbox lb1" alt="" hidden><img class="lbox lb2" alt="" hidden><img class="lbox lb3" alt="" hidden><img class="lbox lb4" alt="" hidden>
       <div class="palace-glow" aria-hidden="true"></div>
@@ -2907,6 +2912,7 @@ html,body{overflow-x:clip}
   </div>
 </div>
   <header class="top">
+    <a class="brand-badge" href="./" aria-label="Reel Dinner home"><img src="assets/app/reel-dinner-logo.webp" alt="" width="52" height="52"></a>
     <nav class="views" role="tablist" aria-label="View">
       <button type="button" role="tab" id="viewWheelBtn" aria-selected="true" aria-controls="viewWheel">Box office</button>
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
@@ -3069,9 +3075,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=651232b3" defer></script>
-<script src="formats-core.js?v=f5714066" defer></script>
-<script src="app.js?v=ab490144" defer></script>
+<script src="films.js?v=482c42ea" defer></script>
+<script src="formats-core.js?v=673abc08" defer></script>
+<script src="app.js?v=ab343b23" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

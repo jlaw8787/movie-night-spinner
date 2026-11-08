@@ -107,6 +107,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const f=ctx.f||{},E=ERA[eraGroup(ctx.era||"modern")],T=TONE[ctx.tone]||TONE.grand,root=rootPath(ctx);
   loadFonts(ID+"-"+eraGroup(ctx.era||"modern"),E.fonts.concat(["Pinyon+Script"]));
   const fam=isFamily(f),fl=ctx.flavour||null,menu=ctx.menu||{};
+  /* the showtime cue on the front, under the toasts (8 Nov: banquet never printed it; the back is too full on some films) */
+  const cueB=clean(fam?dry(f.P||""):(f.P||"")).trim();
   const D=dry;const txt=s=>fam?D(s):clean(s);
   /* colours: film dark and accent, checked against the stock */
   const pd=hex(ctx.palette&&ctx.palette.dark)||[40,24,16],pa0=hex(ctx.palette&&ctx.palette.accent);
@@ -187,6 +189,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:19px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
        <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
        ${toasts.map((t,i)=>`<div style="font:${E.bodyW} 1em/1.28 ${E.body};margin-bottom:.32em"><span style="color:${ACC};font-weight:700">${["I","II","III"][i]}.</span> ${esc(t)}</div>`).join("")}</div>
+     ${cueB?`<div data-cue style="flex:none;border-top:1px solid ${GOLD};padding-top:8px;text-align:center;font:italic ${E.bodyW} 15px/1.3 ${E.body};color:${SOFT}"><div style="font:600 13px/1.2 ${E.body};font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.3em">Showtime</div>${esc(cueB)}</div>`:""}
    </div>
    <div style="position:absolute;left:96px;right:96px;top:852px;height:1px;background:${GOLD};opacity:.8"></div>
    <div data-fit data-min="15" style="position:absolute;left:66px;right:66px;top:866px;height:130px;overflow:hidden;font-size:21px;color:${INK}">
