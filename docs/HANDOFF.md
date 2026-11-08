@@ -420,3 +420,9 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - check-print-text: all 900 done (chunks 05 to 17 on 8 Nov afternoon, then every truck, lab and banquet film again after the note-line changes). Fixed on the way: Mickey Blue Eyes "La Trattoria" heading (92px, was 150px and ran under the Lesson one panel), Spider-Man 2 "&amp;middot;" in its header, banquet cue moved to the front under the toasts (the back was too full on Santa Clause 2 and Violent Night), lab cue is data-spare 4 so it gives way before a dish note (Mad Max 2).
 - Pulp Fiction (Josh liked a Grok redraw of it, 2:32pm): its five lines are in (Bloody as hell, No bourbon on the $5 star, "The next best thing to a time machine", Ed Sullivan as host, the Holland and Paris fries line) and its Jack Rabbit Slim's sign, cut from Josh's Grok image, is assets/era/slims/slims-sign.webp (spec.sign and spec.motto on the slims format). Josh's view: AI images are fine as a source of copy and art, the menus stay HTML.
 - Pushes from this session are refused (the Claude GitHub App has no access to the repo). Commits are local until access is fixed or Josh pushes.
+
+## 8 Nov, 2:55pm: deployed (start here in the next chat)
+
+- Live on reeldinner.com from 35316aa (deploy 6aefff03), HTTPS on, app.js?v=ab343b23.
+- Next: Review 21 (not started; skipped this chat to keep usage down). Then the small items under "8 Nov, 12:30pm" (Crocodile Dundee II doubles, Hitch tag, Goonies note and so on).
+- GitHub Pages still waiting on GitHub Support. When it works, the workflow publishes on a push to main; point reeldinner.com there only if Josh wants to leave Netlify.
