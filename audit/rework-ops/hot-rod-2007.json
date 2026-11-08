@@ -3,35 +3,43 @@
  "ops": [
   {
    "old": "Rod's loaded black bean dip",
-   "new": "Cool beans black bean dip"
+   "new": "Cool beans black bean dip",
+   "done": true
   },
   {
    "old": "Grilled beef patties, American cheese, pickle sauce and lettuce",
-   "new": "Burgers with cheese and pickle sauce. No tool in this pool"
+   "new": "Burgers with cheese and pickle sauce. No tool in this pool",
+   "done": true
   },
   {
    "old": "Rico builds the ramps, Rico grills the fish",
-   "new": "Fish tacos for a Rico who's freakin' pumped"
+   "new": "Fish tacos for a Rico who's freakin' pumped",
+   "done": true
   },
   {
    "old": "Soft dark chocolate chip cookies with flaky salt",
-   "new": "Dark choc chip cookies. One more bus than Evel Knievel"
+   "new": "Dark choc chip cookies. One more bus than Evel Knievel",
+   "done": true
   },
   {
    "old": "Stunt day cherry lime soda",
-   "new": "Safe-word cherry lime soda"
+   "new": "Safe-word cherry lime soda",
+   "done": true
   },
   {
    "old": "Cherry syrup, lime and soda water over crushed ice",
-   "new": "Cherry syrup, lime and soda. Safe word: whiskey"
+   "new": "Cherry syrup, lime and soda. Safe word: whiskey",
+   "done": true
   },
   {
    "old": "Rod's carb load before fifteen buses.",
-   "new": "Rod, Dave and Rico all like to party."
+   "new": "Rod, Dave and Rico all like to party.",
+   "done": true
   },
   {
    "old": "Cool beans. Rod hydrates before the fall.",
-   "new": "Eat some smoke. Rod hydrates before the jump."
+   "new": "Eat some smoke. Rod hydrates before the jump.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -39,7 +47,8 @@
     "text": "So, cool beans?",
     "by": "Rod Kimble",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -49,7 +58,10 @@
     "Rod's punch dancing",
     "Rod's quiet place",
     "Denise, the girl next door"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,19 +3,23 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the cheese straws when the cellar trapdoor flies open during dinner."
+   "value": "Serve the cheese straws when the cellar trapdoor flies open during dinner.",
+   "done": true
   },
   {
    "old": "Deadite devil's food cake",
-   "new": "Naturom Demonto devil's food cake"
+   "new": "Naturom Demonto devil's food cake",
+   "done": true
   },
   {
    "old": "dark, rich and not quite itself",
-   "new": "dark, rich and best not read aloud"
+   "new": "dark, rich and best not read aloud",
+   "done": true
   },
   {
    "old": "road trip snacks for the drive up into the hills",
-   "new": "Road snacks, and a bridge as solid as a rock"
+   "new": "Road snacks, and a bridge as solid as a rock",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Cheryl's card guessing game",
     "The bridge that gets wrecked",
     "The porch swing banging in the wind"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

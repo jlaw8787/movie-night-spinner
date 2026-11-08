@@ -7,11 +7,13 @@
     "text": "This is not a horse, Harry. This is a cross between a sheepdog and a kangaroo.",
     "by": "David Davis",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Tommy keeps Bobby close, even at mealtime.",
-   "new": "Bobby won't eat without Tommy."
+   "new": "Bobby won't eat without Tommy.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +23,10 @@
     "Shirt-ripping Bobby",
     "The Melbourne Cup win, 1930",
     "The trip to Mexico"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

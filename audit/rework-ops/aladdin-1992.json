@@ -1,16 +1,19 @@
 {
-  "id": "Aladdin (1992)",
-  "ops": [
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "ticket",
-        "title": "Cave of Wonders Pass",
-        "lines": [
-          "Lamp pickup only, itty bitty living space",
-          "Admit one, from the market"
-        ]
-      }
-    }
-  ]
+ "id": "Aladdin (1992)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Cave of Wonders Pass",
+    "lines": [
+     "Lamp pickup only, itty bitty living space",
+     "Admit one, from the market"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

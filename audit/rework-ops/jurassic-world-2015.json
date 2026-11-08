@@ -1,31 +1,38 @@
 {
-  "id": "Jurassic World (2015)",
-  "ops": [
-    {
-      "old": "Cheddar and cream cheese balls rolled in walnuts and paprika, with crackers",
-      "new": "Cheese balls in walnuts and paprika. Hamster ball, basically."
-    },
-    {
-      "old": "the busy theme park main street",
-      "new": "Before the pterosaurs hit Main Street."
-    },
-    {
-      "old": "Slushy frozen lemonade blended with ice, served in big cups",
-      "new": "Slushy lemonade in big cups. Sponsored, like the Indominus rex."
-    },
-    {
-      "old": "Dark chocolate mousse topped with crushed cookies",
-      "new": "Chocolate mousse. Dinosaurs are \"wow\" enough."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "The Mosasaurus feeding show",
-        "Gyrosphere ride in the valley",
-        "Lowery's $150 eBay Jurassic Park shirt",
-        "Owen's raptor squad",
-        "Claire lets the T. rex out of its paddock"
-      ]
-    }
-  ]
+ "id": "Jurassic World (2015)",
+ "ops": [
+  {
+   "old": "Cheddar and cream cheese balls rolled in walnuts and paprika, with crackers",
+   "new": "Cheese balls in walnuts and paprika. Hamster ball, basically.",
+   "done": true
+  },
+  {
+   "old": "the busy theme park main street",
+   "new": "Before the pterosaurs hit Main Street.",
+   "done": true
+  },
+  {
+   "old": "Slushy frozen lemonade blended with ice, served in big cups",
+   "new": "Slushy lemonade in big cups. Sponsored, like the Indominus rex.",
+   "done": true
+  },
+  {
+   "old": "Dark chocolate mousse topped with crushed cookies",
+   "new": "Chocolate mousse. Dinosaurs are \"wow\" enough.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Mosasaurus feeding show",
+    "Gyrosphere ride in the valley",
+    "Lowery's $150 eBay Jurassic Park shirt",
+    "Owen's raptor squad",
+    "Claire lets the T. rex out of its paddock"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

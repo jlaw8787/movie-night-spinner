@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "hearty and red, with cornbread",
-   "new": "Hearty red chilli. American, Russian, all made in Taiwan."
+   "new": "Hearty red chilli. American, Russian, all made in Taiwan.",
+   "done": true
   },
   {
    "old": "On the house. None of us pay taxes again.",
-   "new": "On the house. None of us pay taxes again. Ever."
+   "new": "On the house. None of us pay taxes again. Ever.",
+   "done": true
   },
   {
    "old": "Bourbon, lime and bitters topped with ginger beer",
-   "new": "Make your peace with God, AJ. Bourbon, lime, bitters and ginger beer."
+   "new": "Make your peace with God, AJ. Bourbon, lime, bitters and ginger beer.",
+   "done": true
   },
   {
    "old": "For AJ, who still has to ask Harry.",
-   "new": "For AJ, running from Harry's shotgun."
+   "new": "For AJ, running from Harry's shotgun.",
+   "done": true
   },
   {
    "old": "Animal cookies dipped in pink candy melts, with a bowl of whipped cream",
-   "new": "Pink-dipped animal cookies with whipped cream. Not a cracker, says AJ."
+   "new": "Pink-dipped animal cookies with whipped cream. Not a cracker, says AJ.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +34,10 @@
     "The Armadillo driving clinic",
     "Rockhound and his mouth",
     "Make your peace with God, AJ"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

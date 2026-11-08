@@ -3,27 +3,33 @@
  "ops": [
   {
    "old": "Serve the sweets when they fight over the last chocolate bar.",
-   "new": "Serve the sweets when James won't share his Milky Way."
+   "new": "Serve the sweets when James won't share his Milky Way.",
+   "done": true
   },
   {
    "old": "The last chocolate caramel nougat bar",
-   "new": "That's my Milky Way, homemade nougat bars"
+   "new": "That's my Milky Way, homemade nougat bars",
+   "done": true
   },
   {
    "old": "Marshmallow nougat, soft caramel and milk chocolate, cut into bars",
-   "new": "Nougat, caramel and milk chocolate. Don't touch it, Jonah."
+   "new": "Nougat, caramel and milk chocolate. Don't touch it, Jonah.",
+   "done": true
   },
   {
    "old": "Big breakfast fry-up",
-   "new": "Danny's big breakfast fry-up"
+   "new": "Danny's big breakfast fry-up",
+   "done": true
   },
   {
    "old": "Bite-size soft pretzels with a warm beer cheese dip",
-   "new": "Pretzel bites with beer cheese dip, strictly rationed"
+   "new": "Pretzel bites with beer cheese dip, strictly rationed",
+   "done": true
   },
   {
    "old": "Blended watermelon, lime and mint served cold",
-   "new": "Watermelon, lime and mint, cold. Danny wasted the real water."
+   "new": "Watermelon, lime and mint, cold. Danny wasted the real water.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +39,10 @@
     "James Franco's housewarming",
     "Michael Cera at the party",
     "The big sinkhole in the yard"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

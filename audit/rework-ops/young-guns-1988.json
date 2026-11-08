@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "riding out as the Regulators",
-   "new": "\"Regulators, mount up!\""
+   "new": "\"Regulators, mount up!\"",
+   "done": true
   },
   {
    "old": "Pork shoulder braised in roasted green chilli and tomatillo sauce, over rice",
-   "new": "Green chilli pork over rice. Charley says pigs are smarter than you."
+   "new": "Green chilli pork over rice. Charley says pigs are smarter than you.",
+   "done": true
   },
   {
    "old": "Tunstall's rule: napkins on, elbows off.",
-   "new": "Charley and Dirty Steve get crockery duty."
+   "new": "Charley and Dirty Steve get crockery duty.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,8 @@
     "Doc Scurlock, the poet",
     "Chavez's peyote trip",
     "PALS on the grave at Fort Sumner"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.labels",
@@ -32,7 +36,10 @@
     "d": "Saloon Drinks",
     "n": "Said at supper",
     "call": "Dinner call"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

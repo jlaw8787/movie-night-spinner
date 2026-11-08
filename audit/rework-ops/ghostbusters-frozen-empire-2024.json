@@ -1,39 +1,47 @@
 {
-  "id": "Ghostbusters: Frozen Empire (2024)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Here we pay top dollar for your possessed possessions.",
-        "by": "Ray Stantz",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "the deep freeze over New York",
-      "new": "Hot soup for Garraka's deep freeze"
-    },
-    {
-      "old": "Ray's dusty occult shop",
-      "new": "Shortbread, nowhere near the brass orb"
-    },
-    {
-      "old": "Marshmallow chocolate s'mores",
-      "new": "Mini-Puft marshmallow chocolate s'mores"
-    },
-    {
-      "old": "Ectoplasm lime fizz",
-      "new": "Slimer's ectoplasm lime fizz"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Ecto-1 parked in the old firehouse",
-        "Slimer raiding the fridge",
-        "Melody the chess ghost in the park",
-        "Mayor Peck condemning the firehouse",
-        "Nadeem and the brass orb"
-      ]
-    }
-  ]
+ "id": "Ghostbusters: Frozen Empire (2024)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Here we pay top dollar for your possessed possessions.",
+    "by": "Ray Stantz",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "the deep freeze over New York",
+   "new": "Hot soup for Garraka's deep freeze",
+   "done": true
+  },
+  {
+   "old": "Ray's dusty occult shop",
+   "new": "Shortbread, nowhere near the brass orb",
+   "done": true
+  },
+  {
+   "old": "Marshmallow chocolate s'mores",
+   "new": "Mini-Puft marshmallow chocolate s'mores",
+   "done": true
+  },
+  {
+   "old": "Ectoplasm lime fizz",
+   "new": "Slimer's ectoplasm lime fizz",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ecto-1 parked in the old firehouse",
+    "Slimer raiding the fridge",
+    "Melody the chess ghost in the park",
+    "Mayor Peck condemning the firehouse",
+    "Nadeem and the brass orb"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

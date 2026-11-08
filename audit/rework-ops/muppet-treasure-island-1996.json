@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Billy Bones sat here till Blind Pew came",
-   "new": "Billy Bones sat here until the black spot came"
+   "new": "Billy Bones sat here until the black spot came",
+   "done": true
   },
   {
    "old": "Ginger beer, pineapple, lime and orange over ice, no alcohol",
-   "new": "Ginger beer, pineapple, lime and orange over ice. Rum free, Billy."
+   "new": "Ginger beer, pineapple, lime and orange over ice. Rum free, Billy.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -16,7 +18,10 @@
     "Gonzo and Rizzo as the sailors",
     "Mr Arrow plays his own ghost",
     "Sweetums switches sides"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

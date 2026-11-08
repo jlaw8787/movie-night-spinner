@@ -1,11 +1,49 @@
 {
-  "id": "Rogue One: A Star Wars Story (2016)",
-  "ops": [
-    {"old": "Serve the snacks when the team walks through the crowded streets of Jedha.", "new": "Serve the snacks when Jyn tells the Council rebellions are built on hope."},
-    {"old": "Green tea steeped with fresh ginger and honey, served hot or iced", "new": "Green tea with ginger and honey, hot or iced, for a Guardian of the Whills"},
-    {"old": "Chocolate mousse set in round moulds under a dark chocolate glaze", "new": "Dark glazed chocolate mousse spheres. What is it they've sent us? Hope."},
-    {"set": "house.s", "value": {"n": "Fried cauliflower with tahini", "note": "Congratulations. You're being rescued."}},
-    {"set": "house.d", "value": {"n": "Ginger, lemon and honey tonic", "note": "Be careful not to choke on your aspirations, Director."}},
-    {"set": "flavour.winks", "value": ["Jyn Erso and the Death Star plans", "Rebellions are built on hope", "K-2SO the droid", "Chirrut and Baze", "The beach on Scarif"]}
-  ]
+ "id": "Rogue One: A Star Wars Story (2016)",
+ "ops": [
+  {
+   "old": "Serve the snacks when the team walks through the crowded streets of Jedha.",
+   "new": "Serve the snacks when Jyn tells the Council rebellions are built on hope.",
+   "done": true
+  },
+  {
+   "old": "Green tea steeped with fresh ginger and honey, served hot or iced",
+   "new": "Green tea with ginger and honey, hot or iced, for a Guardian of the Whills",
+   "done": true
+  },
+  {
+   "old": "Chocolate mousse set in round moulds under a dark chocolate glaze",
+   "new": "Dark glazed chocolate mousse spheres. What is it they've sent us? Hope.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Fried cauliflower with tahini",
+    "note": "Congratulations. You're being rescued."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ginger, lemon and honey tonic",
+    "note": "Be careful not to choke on your aspirations, Director."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jyn Erso and the Death Star plans",
+    "Rebellions are built on hope",
+    "K-2SO the droid",
+    "Chirrut and Baze",
+    "The beach on Scarif"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

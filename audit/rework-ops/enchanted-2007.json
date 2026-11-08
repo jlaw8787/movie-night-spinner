@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "the big song in Central Park",
-   "new": "the Central Park song, That's How You Know"
+   "new": "the Central Park song, That's How You Know",
+   "done": true
   },
   {
    "old": "Hazelnuts and almonds roasted with honey and cinnamon",
-   "new": "Honey and cinnamon nuts. Pip can't say a word in New York."
+   "new": "Honey and cinnamon nuts. Pip can't say a word in New York.",
+   "done": true
   },
   {
    "old": "Red apples dipped in hard red toffee on sticks",
-   "new": "Toffee apples. Poison ones don't grow on trees, says Narissa."
+   "new": "Toffee apples. Poison ones don't grow on trees, says Narissa.",
+   "done": true
   },
   {
    "old": "the King and Queen's costume ball where Giselle turns up in blue",
-   "new": "the ball where Robert dances. He never said he couldn't."
+   "new": "the ball where Robert dances. He never said he couldn't.",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -26,7 +30,10 @@
      "Woolworth Building",
      "Dress: ball gown"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

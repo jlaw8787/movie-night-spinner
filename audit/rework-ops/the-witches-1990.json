@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Creamy bright green soup with leek, potato and watercress",
-   "new": "Bright green watercress and leek soup. Luke's secret ingredient."
+   "new": "Bright green watercress and leek soup. Luke's secret ingredient.",
+   "done": true
   },
   {
    "old": "Sunday lunch in the hotel dining room. Mice not welcome",
-   "new": "Hotel Sunday roast. Mr Stringer has the cleaver, mice beware."
+   "new": "Hotel Sunday roast. Mr Stringer has the cleaver, mice beware.",
+   "done": true
   },
   {
    "old": "Dense dark chocolate cake with a chocolate cream glaze",
-   "new": "Dark chocolate cake, cream glaze. Bruno's bar had Formula 86."
+   "new": "Dark chocolate cake, cream glaze. Bruno's bar had Formula 86.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Erica trapped in the painting",
     "The Grand High Witch's mask",
     "Formula 86 in a tiny purple vial"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

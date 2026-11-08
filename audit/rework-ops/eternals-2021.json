@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "London museum tea sandwiches",
-   "new": "Sersi's museum tea sandwiches"
+   "new": "Sersi's museum tea sandwiches",
+   "done": true
   },
   {
    "old": "Chicken thighs in a dried chilli, almond and dark chocolate sauce",
-   "new": "Chilli chocolate chicken at Druig's, before the Deviants arrive"
+   "new": "Chilli chocolate chicken at Druig's, before the Deviants arrive",
+   "done": true
   },
   {
    "old": "Serve the snacks when the Eternals track down Kingo on his film set.",
-   "new": "Serve the snacks when the Eternals find Kingo filming Legend of Ikaris."
+   "new": "Serve the snacks when the Eternals find Kingo filming Legend of Ikaris.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,14 +24,18 @@
     "Thena and her sword",
     "Makkari, the fastest one",
     "Tiamut turned to stone"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Fresh pomegranate and mint juice",
     "note": "Sprite makes the glass look full."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

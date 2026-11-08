@@ -3,30 +3,38 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when Wall-E watches Hello, Dolly! at home after work."
+   "value": "Serve the snacks when Wall-E watches Hello, Dolly! at home after work.",
+   "done": true
   },
   {
    "old": "Pumpkin, red lentil and coconut milk soup with ginger, served in big mugs",
-   "new": "Time for lunch in a cup. Pumpkin, red lentil and coconut soup, ginger"
+   "new": "Time for lunch in a cup. Pumpkin, red lentil and coconut soup, ginger",
+   "done": true
   },
   {
    "old": "the plant that means Earth can grow again",
-   "new": "Vegetable plants. Pizza plants!"
+   "new": "Vegetable plants. Pizza plants!",
+   "done": true
   },
   {
    "old": "Marshmallow puffed rice treats cut into neat cubes",
-   "new": "Marshmallow puffed rice cubes, stacked into trash towers"
+   "new": "Marshmallow puffed rice cubes, stacked into trash towers",
+   "done": true
   },
   {
    "old": "Frozen raspberries and lemon blended with blue cordial and ice",
-   "new": "Try blue. It's the new red. Frozen raspberries, lemon and blue cordial."
+   "new": "Try blue. It's the new red. Frozen raspberries, lemon and blue cordial.",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Cold pressed watermelon juice",
     "note": "McCrea learns farms grow food, like pizza."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

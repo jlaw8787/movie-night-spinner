@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Big in Los Angeles, we hear.",
-   "new": "La-dee-da. Big in Los Angeles."
+   "new": "La-dee-da. Big in Los Angeles.",
+   "done": true
   },
   {
    "old": "Baked every morning. Never leaves Manhattan.",
-   "new": "Never leaves Manhattan. We need the eggs."
+   "new": "Never leaves Manhattan. We need the eggs.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

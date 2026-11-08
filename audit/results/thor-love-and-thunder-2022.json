@@ -1,47 +1,59 @@
 {
- "id": "Thor: Love and Thunder (2022)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I'll tell the story later, I promise. Eat while it's warm. The goats are hungry too.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Invented. Korg's real storytelling line is 'Let me tell you the story of the space viking, Thor Odinson.'",
-   "source": "https://en.wikiquote.org/wiki/Thor:_Love_and_Thunder",
-   "fix": "Let me tell you the story of the space viking, Thor Odinson.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Let me tell you the story of the space viking, Thor Odinson.",
-    "by": "Korg",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
+  "id": "Thor: Love and Thunder (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I'll tell the story later, I promise. Eat while it's warm. The goats are hungry too.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Invented. Korg's real storytelling line is 'Let me tell you the story of the space viking, Thor Odinson.'",
+      "source": "https://en.wikiquote.org/wiki/Thor:_Love_and_Thunder",
+      "fix": "Let me tell you the story of the space viking, Thor Odinson.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Let me tell you the story of the space viking, Thor Odinson.",
+        "by": "Korg",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "New Asgard kiosk, goats and Omnipotence City food are all on point.",
+    "missing": [
+      "Mjolnir choosing Jane Foster (New Asgard)",
+      "Zeus's thunderbolt being thrown back at him (Omnipotence City)",
+      "Gorr's Necrosword and the Shadow Realm",
+      "'Kids, get your popcorn out' (Korg's narration)",
+      "Eternity's wish at the end",
+      "Valkyrie's winged horse"
+    ],
+    "ideas": [
+      "Swap 'Goat's cheese bites' note for 'Toothgnasher and Toothgrinder scream for the cheese'.",
+      "Swap 'New Asgard fish platter' note to 'Valkyrie, king of New Asgard, signs the tab'.",
+      "Add 'Grape?' as a nod on the honey baklava (Omnipotence City)."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The giant screaming goats",
+      "Jane Foster wielding Mjolnir",
+      "Gorr the God Butcher",
+      "Zeus's thunderbolt in Omnipotence City",
+      "Korg narrating the story of Thor"
+    ],
+    "changed": [
+      "Feta note carries Zeus's thunderbolt",
+      "Soup note carries Mjolnir choosing Jane and Gorr's attack"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "New Asgard kiosk, goats and Omnipotence City food are all on point.",
-  "missing": [
-   "Mjolnir choosing Jane Foster (New Asgard)",
-   "Zeus's thunderbolt being thrown back at him (Omnipotence City)",
-   "Gorr's Necrosword and the Shadow Realm",
-   "'Kids, get your popcorn out' (Korg's narration)",
-   "Eternity's wish at the end",
-   "Valkyrie's winged horse"
-  ],
-  "ideas": [
-   "Swap 'Goat's cheese bites' note for 'Toothgnasher and Toothgrinder scream for the cheese'.",
-   "Swap 'New Asgard fish platter' note to 'Valkyrie, king of New Asgard, signs the tab'.",
-   "Add 'Grape?' as a nod on the honey baklava (Omnipotence City)."
-  ],
-  "flat": false,
-  "done": false
- }
 }

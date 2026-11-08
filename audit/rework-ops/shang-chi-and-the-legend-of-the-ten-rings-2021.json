@@ -1,6 +1,36 @@
-{"id":"Shang-Chi and the Legend of the Ten Rings (2021)","ops":[
-{"old":"Slow-simmered jasmine rice porridge with ginger, shredded chicken and fried shallots","new":"Jasmine rice porridge, ginger, chicken and fried shallots. Shaun eats here daily."},
-{"old":"Shang-Chi and Katy parking cars for a living","new":"Valet Katy, with a Berkeley honours degree"},
-{"set":"house.d","value":{"n":"Iced chrysanthemum tea with honey","note":"Trevor's cuppa. Nuncle, nuncle, nuncle."}},
-{"set":"flavour.winks","value":["The San Francisco bus fight","Go, Wong! at the fight club","Morris, the furry guide","Wenwu and his ten rings","Xialing's fight club"]}
-]}
+{
+ "id": "Shang-Chi and the Legend of the Ten Rings (2021)",
+ "ops": [
+  {
+   "old": "Slow-simmered jasmine rice porridge with ginger, shredded chicken and fried shallots",
+   "new": "Jasmine rice porridge, ginger, chicken and fried shallots. Shaun eats here daily.",
+   "done": true
+  },
+  {
+   "old": "Shang-Chi and Katy parking cars for a living",
+   "new": "Valet Katy, with a Berkeley honours degree",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Iced chrysanthemum tea with honey",
+    "note": "Trevor's cuppa. Nuncle, nuncle, nuncle."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The San Francisco bus fight",
+    "Go, Wong! at the fight club",
+    "Morris, the furry guide",
+    "Wenwu and his ten rings",
+    "Xialing's fight club"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

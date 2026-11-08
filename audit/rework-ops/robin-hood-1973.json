@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Serve the mains when the outlaws celebrate in Sherwood Forest.",
-   "new": "Serve the mains when Robin robs Prince John as a fortune teller."
+   "new": "Serve the mains when Robin robs Prince John as a fortune teller.",
+   "done": true
   },
   {
    "old": "Prince John counting his taxes on the throne",
-   "new": "The Phony King of England, calling for Mommy"
+   "new": "The Phony King of England, calling for Mommy",
+   "done": true
   },
   {
    "old": "Archery tournament skewers",
-   "new": "Golden Arrow skewers"
+   "new": "Golden Arrow skewers",
+   "done": true
   },
   {
    "old": "Friar Tuck feeding his poor parish",
-   "new": "Friar Tuck and the last farthing"
+   "new": "Friar Tuck and the last farthing",
+   "done": true
   },
   {
    "old": "Golden coin honey cakes",
-   "new": "Skippy's birthday cakes"
+   "new": "Skippy's birthday cakes",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +34,10 @@
     "Sir Hiss, tied in a knot",
     "Robin disguised as a Devonshire stork",
     "Maid Marian and Lady Kluck"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

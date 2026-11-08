@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Colombian home cooking for the Madrigal kitchen",
-   "new": "Dolores heard you were hungry before you did"
+   "new": "Dolores heard you were hungry before you did",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -12,7 +13,10 @@
     "Casita's tiles moving and clapping",
     "Antonio and his animal friends",
     "Luisa carrying a whole donkey"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -1,8 +1,44 @@
-{"id":"Turner & Hooch (1989)","ops":[
-{"set":"flavour.note","value":{"text":"Oh, what am I yelling at you for? You're a dog.","by":"Scott Turner","kind":"quote"}},
-{"old":"Serve the mains when Hooch wrecks the car.","new":"Serve the mains when Hooch eats the car."},
-{"old":"Butter and parmesan crackers cut into bone shapes","new":"Butter and parmesan bones. Don't eat the car, Hooch."},
-{"old":"the seafood plant at the centre of the case","new":"Boyett Seafood, where Hooch sniffed out the cash."},
-{"old":"a coastal town built around its seafood plant","new":"Cypress Beach, quiet until Hooch moved in."},
-{"set":"house.d","value":{"n":"Banana milkshake","note":"Turner checks it twice for drool."}}
-]}
+{
+ "id": "Turner & Hooch (1989)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Oh, what am I yelling at you for? You're a dog.",
+    "by": "Scott Turner",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Serve the mains when Hooch wrecks the car.",
+   "new": "Serve the mains when Hooch eats the car.",
+   "done": true
+  },
+  {
+   "old": "Butter and parmesan crackers cut into bone shapes",
+   "new": "Butter and parmesan bones. Don't eat the car, Hooch.",
+   "done": true
+  },
+  {
+   "old": "the seafood plant at the centre of the case",
+   "new": "Boyett Seafood, where Hooch sniffed out the cash.",
+   "done": true
+  },
+  {
+   "old": "a coastal town built around its seafood plant",
+   "new": "Cypress Beach, quiet until Hooch moved in.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Banana milkshake",
+    "note": "Turner checks it twice for drool."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

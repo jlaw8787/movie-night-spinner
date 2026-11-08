@@ -1,0 +1,24 @@
+{
+ "id": "Willy Wonka & the Chocolate Factory (1971)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "stub",
+    "title": "Golden Ticket",
+    "lines": [
+     "Inventing Room, Chocolate Room",
+     "Gobstopper included"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Do not rush.",
+   "new": "Strike that. Reverse it.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

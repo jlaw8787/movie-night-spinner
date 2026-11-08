@@ -3,23 +3,30 @@
  "ops": [
   {
    "old": "Hand cut, fried twice",
-   "new": "Hand cut, fried twice. Ready at 88 miles an hour"
+   "new": "Hand cut, fried twice. Ready at 88 miles an hour",
+   "done": true
   },
   {
    "old": "Black, nothing added",
-   "new": "Black, nothing added. No Pepsi Free"
+   "new": "Black, nothing added. No Pepsi Free",
+   "done": true
   },
   {
    "old": "School dance tonight.<br>Back by 10:04.",
-   "new": "School dance. Johnny B. Goode.<br>Back by 10:04."
+   "new": "School dance. Johnny B. Goode.<br>Back by 10:04.",
+   "done": true
   },
   {
    "old": "10:04 PM, Saturday",
-   "new": "10:04 PM, 1.21 gigawatts"
+   "new": "10:04 PM, 1.21 gigawatts",
+   "done": true
   },
   {
    "old": "Eggs, bacon, toast. No robot arm",
-   "new": "Eggs, bacon, toast. Great Scott, no robot arm"
+   "new": "Eggs, bacon, toast. Great Scott, no robot arm",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

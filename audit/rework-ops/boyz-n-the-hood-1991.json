@@ -1,6 +1,40 @@
-{"id":"Boyz n the Hood (1991)","ops":[
-{"old":"a father teaching his son","new":"Chicken after the fishing trip"},
-{"old":"Serve the mains at the backyard welcome-home barbecue.","new":"Serve the mains when Doughboy's welcome-home barbecue gets going."},
-{"set":"flavour.winks","value":["Crenshaw, a gun shop on every corner","Furious Styles' talks on the neighbourhood","Doughboy and Ricky","Tre and Brandi","Ricky's football dreams"]},
-{"set":"flavour.prop","value":{"kind":"receipt","title":"Corner Market Receipt","lines":["Chips, soda, bread","Welcome home, Doughboy"]}}
-]}
+{
+ "id": "Boyz n the Hood (1991)",
+ "ops": [
+  {
+   "old": "a father teaching his son",
+   "new": "Chicken after the fishing trip",
+   "done": true
+  },
+  {
+   "old": "Serve the mains at the backyard welcome-home barbecue.",
+   "new": "Serve the mains when Doughboy's welcome-home barbecue gets going.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Crenshaw, a gun shop on every corner",
+    "Furious Styles' talks on the neighbourhood",
+    "Doughboy and Ricky",
+    "Tre and Brandi",
+    "Ricky's football dreams"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Corner Market Receipt",
+    "lines": [
+     "Chips, soda, bread",
+     "Welcome home, Doughboy"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

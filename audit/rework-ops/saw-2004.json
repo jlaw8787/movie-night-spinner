@@ -1,9 +1,27 @@
 {
-  "id": "Saw (2004)",
-  "ops": [
-    {"old": "Serve the snacks when the first tape starts playing.", "new": "Serve the snacks when the tape says rise and shine, Adam."},
-    {"old": "The puzzles in every trap.", "new": "Hacksaws are in the toilet tank."},
-    {"old": "Press play on the tape first.", "new": "I want to play a game. Drink first."},
-    {"old": "Red velvet cupcakes", "new": "Billy's red velvet cupcakes"}
-  ]
+ "id": "Saw (2004)",
+ "ops": [
+  {
+   "old": "Serve the snacks when the first tape starts playing.",
+   "new": "Serve the snacks when the tape says rise and shine, Adam.",
+   "done": true
+  },
+  {
+   "old": "The puzzles in every trap.",
+   "new": "Hacksaws are in the toilet tank.",
+   "done": true
+  },
+  {
+   "old": "Press play on the tape first.",
+   "new": "I want to play a game. Drink first.",
+   "done": true
+  },
+  {
+   "old": "Red velvet cupcakes",
+   "new": "Billy's red velvet cupcakes",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

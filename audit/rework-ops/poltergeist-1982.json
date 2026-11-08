@@ -1,13 +1,17 @@
 {
-  "id": "Poltergeist (1982)",
-  "ops": [
-    {
-      "old": "Popcorn with butter, black pepper and black sesame seeds",
-      "new": "Buttered popcorn, pepper and sesame static. They're here."
-    },
-    {
-      "old": "Crisp white meringue drops piped tall",
-      "new": "Crisp white meringue. This house is clean."
-    }
-  ]
+ "id": "Poltergeist (1982)",
+ "ops": [
+  {
+   "old": "Popcorn with butter, black pepper and black sesame seeds",
+   "new": "Buttered popcorn, pepper and sesame static. They're here.",
+   "done": true
+  },
+  {
+   "old": "Crisp white meringue drops piped tall",
+   "new": "Crisp white meringue. This house is clean.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

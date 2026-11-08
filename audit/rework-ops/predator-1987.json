@@ -1,13 +1,17 @@
 {
-  "id": "Predator (1987)",
-  "ops": [
-    {
-      "old": "Dutch running for the rescue chopper",
-      "new": "Get to the chopper!"
-    },
-    {
-      "old": "Traps built from jungle vines and logs",
-      "new": "If it bleeds, we can kill it"
-    }
-  ]
+ "id": "Predator (1987)",
+ "ops": [
+  {
+   "old": "Dutch running for the rescue chopper",
+   "new": "Get to the chopper!",
+   "done": true
+  },
+  {
+   "old": "Traps built from jungle vines and logs",
+   "new": "If it bleeds, we can kill it",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

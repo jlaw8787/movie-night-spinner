@@ -1,5 +1,35 @@
-{"id":"Brother Bear (2003)","ops":[
-{"set":"flavour.labels","value":{"s":"Trail Snacks","m":"Salmon Run Mains","w":"Berry Treats","d":"Spirit Cups","t":"Salmon Run Table","n":"Told at the salmon run"}},
-{"old":"Pecans and walnuts roasted in maple syrup with a pinch of salt","new":"Maple roasted pecans and walnuts, bigger than Bucky's pine nut"},
-{"set":"flavour.winks","value":["Kenai becoming a bear","Koda, a raging ball of brown fur","Rutt and Tuke, driving the mammoth","Never try to milk a caribou","The northern lights spirits"]}
-]}
+{
+ "id": "Brother Bear (2003)",
+ "ops": [
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Trail Snacks",
+    "m": "Salmon Run Mains",
+    "w": "Berry Treats",
+    "d": "Spirit Cups",
+    "t": "Salmon Run Table",
+    "n": "Told at the salmon run"
+   },
+   "done": true
+  },
+  {
+   "old": "Pecans and walnuts roasted in maple syrup with a pinch of salt",
+   "new": "Maple roasted pecans and walnuts, bigger than Bucky's pine nut",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Kenai becoming a bear",
+    "Koda, a raging ball of brown fur",
+    "Rutt and Tuke, driving the mammoth",
+    "Never try to milk a caribou",
+    "The northern lights spirits"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Amount due: see paperboy",
-   "new": "Amount due: two dollars"
+   "new": "Amount due: two dollars",
+   "done": true
   },
   {
    "old": "Lane's job at the burger place",
-   "new": "Lane's job at Pig Burgers"
+   "new": "Lane's job at Pig Burgers",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

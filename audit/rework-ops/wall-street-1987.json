@@ -7,15 +7,18 @@
     "text": "Lunch? Aw, you gotta be kidding. Lunch is for wimps.",
     "by": "Gordon Gekko",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Cheesecake",
-   "new": "Gekko's birthday cheesecake"
+   "new": "Gekko's birthday cheesecake",
+   "done": true
   },
   {
    "old": "Old fashioned",
-   "new": "Teldar speech old fashioned"
+   "new": "Teldar speech old fashioned",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,14 +28,18 @@
     "Carl Fox, Bud's dad, the Bluestar union man",
     "Gekko's suspenders and the big phone",
     "The greed speech at the shareholder meeting"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Bluestar espresso tonic",
     "note": "Money never sleeps, and neither does this."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -9,26 +9,33 @@
     "w": "Sweet Things",
     "d": "Tent Drinks",
     "t": "Inside the Tent"
-   }
+   },
+   "done": true
   },
   {
    "old": "Godric's Hollow in the snow",
-   "new": "The Ministry break-in"
+   "new": "The Ministry break-in",
+   "done": true
   },
   {
    "old": "Foil baked trout with potatoes",
-   "new": "Frozen pond foil baked trout with potatoes"
+   "new": "Frozen pond foil baked trout with potatoes",
+   "done": true
   },
   {
    "old": "Lemon curd sponge cake",
-   "new": "Harry's birthday lemon curd sponge"
+   "new": "Harry's birthday lemon curd sponge",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Hot blackcurrant cordial",
     "note": "For Dobby, who never meant to kill."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

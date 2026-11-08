@@ -1,104 +1,115 @@
 {
- "id": "Ticket to Paradise (2022)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when both families sit down together in Bali.",
-   "where": "cue",
-   "verdict": "ok",
-   "why": "After Gede's family welcome, someone says let's get something to eat and Gede's father then toasts the guests of distinction, so a shared welcome meal in Bali is in the film.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ticket-to-paradise",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "A dolphin bit Georgia. This helps.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "David is the one bitten by a dolphin, on the swim Gede takes the Cottons on. The snake bite at Tanah Lot goes to Paul, the pilot. Georgia is not bitten.",
-   "source": "https://themoviespoiler.com/?p=3041",
-   "fix": "A dolphin bit David. This helps.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Lily wants to marry a seaweed farmer. David and I agree the seaweed salad is good. She's still not marrying him.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Lily does marry Gede. David and Georgia give their blessing at the ceremony and the couple finish the wedding. The line also has Georgia agreeing about a seaweed salad, which no source shows.",
-   "source": "https://en.wikipedia.org/wiki/Ticket_to_Paradise_(2022_film)",
-   "fix": "Lily wants to marry a seaweed farmer. David and I tried to stop her. We lost, and the wedding was lovely.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Lily wants to marry a seaweed farmer. David and I tried to stop her. We lost, and the wedding was lovely.",
-    "by": "Georgia Cotton",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "The beach in Bali where Lily falls for Gede",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Lily and Gede meet in the sea, where he picks up Lily and Wren after the boat leaves them out there; no source puts it on a beach.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ticket-to-paradise",
-   "fix": "The Bali waters where Lily first meets Gede",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Beer pong rematch. Georgia and David, same team.",
-   "where": "house",
-   "verdict": "ok",
-   "why": "Georgia and David talk about all the beer pong they played in college, then play couple against couple on the same side, so a college rematch for the pair is fair.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ticket-to-paradise",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "A drinking game on the sand",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The beer pong is played at a bar on the island, not on the sand.",
-   "source": "https://themoviespoiler.com/?p=3041",
-   "fix": "A beer pong game at the bar",
-   "printed": false,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Ticket to Paradise (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when both families sit down together in Bali.",
+      "where": "cue",
+      "verdict": "ok",
+      "why": "After Gede's family welcome, someone says let's get something to eat and Gede's father then toasts the guests of distinction, so a shared welcome meal in Bali is in the film.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ticket-to-paradise",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "A dolphin bit Georgia. This helps.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "David is the one bitten by a dolphin, on the swim Gede takes the Cottons on. The snake bite at Tanah Lot goes to Paul, the pilot. Georgia is not bitten.",
+      "source": "https://themoviespoiler.com/?p=3041",
+      "fix": "A dolphin bit David. This helps.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Lily wants to marry a seaweed farmer. David and I agree the seaweed salad is good. She's still not marrying him.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Lily does marry Gede. David and Georgia give their blessing at the ceremony and the couple finish the wedding. The line also has Georgia agreeing about a seaweed salad, which no source shows.",
+      "source": "https://en.wikipedia.org/wiki/Ticket_to_Paradise_(2022_film)",
+      "fix": "Lily wants to marry a seaweed farmer. David and I tried to stop her. We lost, and the wedding was lovely.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Lily wants to marry a seaweed farmer. David and I tried to stop her. We lost, and the wedding was lovely.",
+        "by": "Georgia Cotton",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "The beach in Bali where Lily falls for Gede",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Lily and Gede meet in the sea, where he picks up Lily and Wren after the boat leaves them out there; no source puts it on a beach.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ticket-to-paradise",
+      "fix": "The Bali waters where Lily first meets Gede",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Beer pong rematch. Georgia and David, same team.",
+      "where": "house",
+      "verdict": "ok",
+      "why": "Georgia and David talk about all the beer pong they played in college, then play couple against couple on the same side, so a college rematch for the pair is fair.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ticket-to-paradise",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "A drinking game on the sand",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The beer pong is played at a bar on the island, not on the sand.",
+      "source": "https://themoviespoiler.com/?p=3041",
+      "fix": "A beer pong game at the bar",
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 8,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Looks and tastes like a Bali warung, but the host note and the dolphin line get the plot wrong and the cue is a guess.",
+    "missing": [
+      "Georgia and David stealing the couple's wedding rings (the Trojan horse plan)",
+      "Gede rescuing Lily and Wren at sea",
+      "Paul the pilot and his two proposals (snake bite at Tanah Lot)",
+      "Beer pong at the bar after the ring ceremony",
+      "The Balinese ceremony with the dagger through the pandan mat",
+      "David and Georgia jumping off the boat at the end"
+    ],
+    "ideas": [
+      "Swap the Bintang note for 'A dolphin bit David. This helps.'",
+      "Replace the 'The beach wedding' wink with 'Two stolen wedding rings, one Trojan horse plan'",
+      "Swap the satay description for a Tanah Lot snake bite joke ('Paul got bitten, the satay is safe')",
+      "Replace 'Pupu Platters' with a section named after the rescue at sea, such as 'Snorkel rescue snacks'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Georgia and David's Trojan horse plan",
+      "Stealing the wedding rings",
+      "Gede rescuing Lily and Wren at sea",
+      "The beer pong game",
+      "The dolphin bite"
+    ],
+    "changed": [
+      "Stolen rings wink in place of the beach wedding wink"
+    ]
   }
- ],
- "checked_ok": 8,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Looks and tastes like a Bali warung, but the host note and the dolphin line get the plot wrong and the cue is a guess.",
-  "missing": [
-   "Georgia and David stealing the couple's wedding rings (the Trojan horse plan)",
-   "Gede rescuing Lily and Wren at sea",
-   "Paul the pilot and his two proposals (snake bite at Tanah Lot)",
-   "Beer pong at the bar after the ring ceremony",
-   "The Balinese ceremony with the dagger through the pandan mat",
-   "David and Georgia jumping off the boat at the end"
-  ],
-  "ideas": [
-   "Swap the Bintang note for 'A dolphin bit David. This helps.'",
-   "Replace the 'The beach wedding' wink with 'Two stolen wedding rings, one Trojan horse plan'",
-   "Swap the satay description for a Tanah Lot snake bite joke ('Paul got bitten, the satay is safe')",
-   "Replace 'Pupu Platters' with a section named after the rescue at sea, such as 'Snorkel rescue snacks'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

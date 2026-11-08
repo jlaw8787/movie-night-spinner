@@ -3,31 +3,38 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the mains when Kang asks Scott, \"Have I killed you before?\""
+   "value": "Serve the mains when Kang asks Scott, \"Have I killed you before?\"",
+   "done": true
   },
   {
    "old": "Hank's army of super-sized ants",
-   "new": "Hank's ants, who grow clever and rescue him"
+   "new": "Hank's ants, who grow clever and rescue him",
+   "done": true
   },
   {
    "old": "home in San Francisco",
-   "new": "Fish and prawn stew from Scott's home city, San Francisco"
+   "new": "Fish and prawn stew from Scott's home city, San Francisco",
+   "done": true
   },
   {
    "old": "Shrinking cupcakes",
-   "new": "Probability storm cupcakes"
+   "new": "Probability storm cupcakes",
+   "done": true
   },
   {
    "old": "Butter sponge baked as mini cupcakes and one giant cupcake",
-   "new": "Butter sponge minis and one giant, like Scott's many copies"
+   "new": "Butter sponge minis and one giant, like Scott's many copies",
+   "done": true
   },
   {
    "old": "Kang is not getting one. Ask Janet.",
-   "new": "Janet on Kang: \"A monster. Who thinks he's a god.\""
+   "new": "Janet on Kang: \"A monster. Who thinks he's a god.\"",
+   "done": true
   },
   {
    "old": "Veb would like to talk about holes.",
-   "new": "Quaz says Scott has seven holes."
+   "new": "Quaz says Scott has seven holes.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -37,7 +44,10 @@
     "MODOK and his huge head",
     "Kang and his many variants",
     "Janet's secret past in the realm"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

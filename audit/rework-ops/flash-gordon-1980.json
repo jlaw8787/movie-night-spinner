@@ -1,17 +1,21 @@
 {
-  "id": "Flash Gordon (1980)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Klytus, I'm bored. What plaything can you offer me today?",
-        "by": "Ming the Merciless",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "Prince Vultan and the Hawkmen",
-      "new": "Prince Vultan: \"Gordon's alive?!\""
-    }
-  ]
+ "id": "Flash Gordon (1980)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Klytus, I'm bored. What plaything can you offer me today?",
+    "by": "Ming the Merciless",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Prince Vultan and the Hawkmen",
+   "new": "Prince Vultan: \"Gordon's alive?!\"",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

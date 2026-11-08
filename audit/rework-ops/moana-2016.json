@@ -3,22 +3,26 @@
  "ops": [
   {
    "old": "Ocean poke cups",
-   "new": "Tamatoa's shiny poke cups"
+   "new": "Tamatoa's shiny poke cups",
+   "done": true
   },
   {
    "old": "Ocean poke cups (vegetarian)",
-   "new": "Tamatoa's shiny poke cups (vegetarian)"
+   "new": "Tamatoa's shiny poke cups (vegetarian)",
+   "done": true
   },
   {
    "old": "a feast fit for a demigod",
-   "new": "Fit for Maui. You're welcome."
+   "new": "Fit for Maui. You're welcome.",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Young green coconut with a straw",
     "note": "Heihei will eat the shell or a rock."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -27,7 +31,10 @@
     "I am Moana of Motunui",
     "Maui's magic fish hook",
     "Heihei the rooster who is not very bright"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

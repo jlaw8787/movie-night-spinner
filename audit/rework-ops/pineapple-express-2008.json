@@ -7,19 +7,23 @@
     "text": "I had two ideas. Nowhere and Quizno's.",
     "by": "Saul Silver",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Angie's family pineapple upside-down cake",
-   "new": "Red's cat's pineapple upside-down cake"
+   "new": "Red's cat's pineapple upside-down cake",
+   "done": true
   },
   {
    "old": "Dale's process server lunch, between subpoenas.",
-   "new": "Talk radio killed the car battery. Cool off."
+   "new": "Talk radio killed the car battery. Cool off.",
+   "done": true
   },
   {
    "old": "For the morning after the night in the woods.",
-   "new": "Breakfast at the diner with Red after the lair."
+   "new": "Breakfast at the diner with Red after the lair.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +33,10 @@
     "Saul in the dumpster already",
     "The car chase",
     "The night in the woods"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

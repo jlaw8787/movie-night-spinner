@@ -7,19 +7,23 @@
     "text": "Still waiting for cookies!",
     "by": "North",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Jack Frost's frosty blue slushie",
-   "new": "Jack's Snow Day frosty blue slushie"
+   "new": "Jack's Snow Day frosty blue slushie",
+   "done": true
   },
   {
    "old": "Bunny's from Down Under, and he won't let you forget it",
-   "new": "Bunny's from Down Under. \"You don't wanna race a rabbit, mate.\""
+   "new": "Bunny's from Down Under. \"You don't wanna race a rabbit, mate.\"",
+   "done": true
   },
   {
    "old": "Warms the yetis on the toy line.",
-   "new": "Warms the yetis. Everyone loves the sleigh!"
+   "new": "Warms the yetis. Everyone loves the sleigh!",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +33,10 @@
     "Sandman's golden dream sand",
     "Tooth and her lateral incisor",
     "Bunny's warren"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

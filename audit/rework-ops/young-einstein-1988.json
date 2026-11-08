@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Scallops in curry cream in a shortcrust pie with a puff pastry lid",
-   "new": "Curried scallop pies, fuel for inventing rock and roll"
+   "new": "Curried scallop pies, fuel for inventing rock and roll",
+   "done": true
   },
   {
    "old": "Beer battered chips tossed in chicken salt, with garlic mayo",
-   "new": "Beer battered chips, chicken salt, garlic mayo, bubbles included"
+   "new": "Beer battered chips, chicken salt, garlic mayo, bubbles included",
+   "done": true
   },
   {
    "old": "Lager and cider layered over blackcurrant cordial",
-   "new": "Lager and cider over blackcurrant, not Preston's keg"
+   "new": "Lager and cider over blackcurrant, not Preston's keg",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Surfing for Marie Curie",
     "Preston Preston's keg",
     "Electric guitar rebuilt from his violin"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

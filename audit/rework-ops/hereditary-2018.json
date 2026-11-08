@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Dense dark chocolate cake with chocolate glaze, no nuts",
-   "new": "Dense dark chocolate cake, glazed. Does that have nuts? No."
+   "new": "Dense dark chocolate cake, glazed. Does that have nuts? No.",
+   "done": true
   },
   {
    "old": "Crisp sunflower, pumpkin, sesame and chia seed crackers",
-   "new": "Sunflower, pumpkin, sesame and chia crackers. Click, click."
+   "new": "Sunflower, pumpkin, sesame and chia crackers. Click, click.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

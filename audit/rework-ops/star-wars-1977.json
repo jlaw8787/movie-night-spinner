@@ -1,0 +1,21 @@
+{
+ "id": "Star Wars (1977)",
+ "ops": [
+  {
+   "old": "Pork and beef meatballs in a creamy mushroom and Dijon sauce",
+   "new": "That's no moon: pork and beef meatballs, creamy mushroom Dijon sauce",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "May the Force be with you.",
+    "by": "Han Solo",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

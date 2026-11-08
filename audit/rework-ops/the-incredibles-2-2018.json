@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Edna looking after Jack-Jack",
-   "new": "Salmon and asparagus while Edna minds Jack-Jack"
+   "new": "Salmon and asparagus while Edna minds Jack-Jack",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,7 +14,10 @@
     "The Screenslaver's hypnotic screens",
     "Dash's math homework",
     "The Incredibile, Bob's old supercar"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

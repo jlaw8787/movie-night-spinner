@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Jane's awkward restaurant date before Thor turns up",
-   "new": "Tomato bruschetta. Jane hid behind a three-choice menu."
+   "new": "Tomato bruschetta. Jane hid behind a three-choice menu.",
+   "done": true
   },
   {
    "old": "Frigga's home in the golden halls of Asgard",
-   "new": "Honey and rosemary lamb. A toast to Frigga."
+   "new": "Honey and rosemary lamb. A toast to Frigga.",
+   "done": true
   },
   {
    "old": "Twice-fried thick fries shaken with malt vinegar and sea salt flakes",
-   "new": "Twice-fried chips with malt vinegar. Thor took the Tube here."
+   "new": "Twice-fried chips with malt vinegar. Thor took the Tube here.",
+   "done": true
   },
   {
    "old": "Vodka, blood orange, cranberry and lime topped with soda water over ice",
-   "new": "Vodka, blood orange, cranberry and lime with soda. Red as the Aether."
+   "new": "Vodka, blood orange, cranberry and lime with soda. Red as the Aether.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Thor's hammer hung on a coat rack",
     "Thor catches the Jubilee line",
     "Portals opening over Greenwich"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the mains when Uncle Gaston fires the meatball cannon at dinner.",
-   "new": "Serve the mains when Gaston yells \"Ready, aim... FIRE!\" at the dinner table."
+   "new": "Serve the mains when Gaston yells \"Ready, aim... FIRE!\" at the dinner table.",
+   "done": true
   },
   {
    "old": "Todayland chicken tacos with lime slaw",
-   "new": "Time machine chicken tacos with lime slaw"
+   "new": "Time machine chicken tacos with lime slaw",
+   "done": true
   },
   {
    "old": "the bright future, Lewis's family home",
-   "new": "Grilled lime chicken tacos, a taste of the future"
+   "new": "Grilled lime chicken tacos, a taste of the future",
+   "done": true
   },
   {
    "old": "the school science fair",
-   "new": "Parmesan chicken nuggets. Uncle Joe's seen the toast!"
+   "new": "Parmesan chicken nuggets. Uncle Joe's seen the toast!",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -24,7 +28,8 @@
     "Doris the hat and Tiny the T. rex",
     "Wilbur's time machine",
     "The Robinson family dinner chaos"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -35,7 +40,10 @@
      "Time machine, one way",
      "Back before dessert"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -1,10 +1,35 @@
 {
  "id": "Star Wars: Episode I - The Phantom Menace (1999)",
  "ops": [
-  {"set": "flavour.sign", "value": "No money, no parts, no deal"},
-  {"old": "Tatooine blue milk", "new": "Podracer blue coconut milk"},
-  {"old": "the underwater Gungan city", "new": "Mesa your humble servant"},
-  {"old": "the grand palace in Theed", "new": "I have a bad feeling about this."},
-  {"set": "house.d", "value": {"n": "Sparkling pear and ginger", "note": "Republic credits are no use out here."}}
- ]
+  {
+   "set": "flavour.sign",
+   "value": "No money, no parts, no deal",
+   "done": true
+  },
+  {
+   "old": "Tatooine blue milk",
+   "new": "Podracer blue coconut milk",
+   "done": true
+  },
+  {
+   "old": "the underwater Gungan city",
+   "new": "Mesa your humble servant",
+   "done": true
+  },
+  {
+   "old": "the grand palace in Theed",
+   "new": "I have a bad feeling about this.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Sparkling pear and ginger",
+    "note": "Republic credits are no use out here."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

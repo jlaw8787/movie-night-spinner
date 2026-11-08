@@ -3,27 +3,33 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when Billy draws the blue duck."
+   "value": "Serve the snacks when Billy draws the blue duck.",
+   "done": true
   },
   {
    "old": "Pool party chilli cheese dogs",
-   "new": "Extra sloppy chilli cheese dogs"
+   "new": "Extra sloppy chilli cheese dogs",
+   "done": true
   },
   {
    "old": "Hot dogs under spiced beef chilli and melted cheese",
-   "new": "Chilli and cheese on hot dogs, extra sloppy for yous"
+   "new": "Chilli and cheese on hot dogs, extra sloppy for yous",
+   "done": true
   },
   {
    "old": "Lunch box chocolate pudding cups",
-   "new": "Snack pack chocolate pudding cups"
+   "new": "Snack pack chocolate pudding cups",
+   "done": true
   },
   {
    "old": "Stovetop chocolate pudding chilled in small cups",
-   "new": "Chocolate pudding cups. No trading it for a banana"
+   "new": "Chocolate pudding cups. No trading it for a banana",
+   "done": true
   },
   {
    "old": "A poolside starter, before O'Doyle rules.",
-   "new": "Chilled by the pool. O'Doyle rules!"
+   "new": "Chilled by the pool. O'Doyle rules!",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +39,10 @@
     "Shampoo is better, I go on first",
     "The imaginary penguin",
     "Billy's hotel empire"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

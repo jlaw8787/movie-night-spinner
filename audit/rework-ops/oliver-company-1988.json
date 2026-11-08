@@ -7,22 +7,26 @@
     "text": "Whoa, chill, man. I don't eat cats, too much fur!",
     "by": "Dodger",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Crisp butter cookies cut into cat shapes and iced",
-   "new": "Iced cat-shaped butter cookies for Jenny's birthday party"
+   "new": "Iced cat-shaped butter cookies for Jenny's birthday party",
+   "done": true
   },
   {
    "old": "Griddled franks in steamed buns with sauerkraut, mustard, onion and relish",
-   "new": "Franks liberated from Louie, in steamed buns with sauerkraut, mustard, onion and relish"
+   "new": "Franks liberated from Louie, in steamed buns with sauerkraut, mustard, onion and relish",
+   "done": true
   },
   {
    "old": "Mini hot dogs glazed sticky with Dijon and honey",
-   "new": "Mini hot dogs glazed sticky with Dijon and honey, from Louie's cart"
+   "new": "Mini hot dogs glazed sticky with Dijon and honey, from Louie's cart",
+   "done": true
   },
   {
-   "set": "prop",
+   "set": "flavour.prop",
    "value": {
     "kind": "slip",
     "title": "Fagin's Debt Notice",
@@ -30,7 +34,10 @@
      "Owed to Sykes: a lot",
      "Three sunrises, three sunsets"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

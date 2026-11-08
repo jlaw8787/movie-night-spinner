@@ -1,6 +1,41 @@
-{"id":"Braveheart (1995)","ops":[
-{"set":"flavour.labels","value":{"s":"Highland Snacks","m":"From the Pot","w":"Sweet Things","d":"Drams and Ale","t":"Highland Table","n":"Said before Stirling","call":"Battle cry"}},
-{"old":"a Scottish supper","new":"Stephen the Irishman wants seconds"},
-{"old":"Serve the mains when Wallace rallies the army before Stirling.","new":"Serve the mains when Wallace roars for freedom before Stirling."},
-{"set":"flavour.winks","value":["Murron's thistle given in childhood","The blue face paint before battle","Wallace's freedom speech before Stirling","Robert the Bruce and his wavering loyalty","Longshanks and the trouble with Scotland"]}
-]}
+{
+ "id": "Braveheart (1995)",
+ "ops": [
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Highland Snacks",
+    "m": "From the Pot",
+    "w": "Sweet Things",
+    "d": "Drams and Ale",
+    "t": "Highland Table",
+    "n": "Said before Stirling",
+    "call": "Battle cry"
+   },
+   "done": true
+  },
+  {
+   "old": "a Scottish supper",
+   "new": "Stephen the Irishman wants seconds",
+   "done": true
+  },
+  {
+   "old": "Serve the mains when Wallace rallies the army before Stirling.",
+   "new": "Serve the mains when Wallace roars for freedom before Stirling.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Murron's thistle given in childhood",
+    "The blue face paint before battle",
+    "Wallace's freedom speech before Stirling",
+    "Robert the Bruce and his wavering loyalty",
+    "Longshanks and the trouble with Scotland"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

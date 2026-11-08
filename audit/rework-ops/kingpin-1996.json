@@ -7,27 +7,33 @@
     "text": "I took the liberty of milking your cow for you.",
     "by": "Roy Munson",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the mains when Roy and Ishmael hit the road to Reno.",
-   "new": "Serve the mains when Roy milks what turns out to be a bull."
+   "new": "Serve the mains when Roy milks what turns out to be a bull.",
+   "done": true
   },
   {
    "old": "Ishmael's Amish pot roast",
-   "new": "Gravy train Amish pot roast"
+   "new": "Gravy train Amish pot roast",
+   "done": true
   },
   {
    "old": "Braised beef for the farmhands",
-   "new": "Braised beef. Biscuit wheels extra."
+   "new": "Braised beef. Biscuit wheels extra.",
+   "done": true
   },
   {
    "old": "Farmyard vanilla malt milkshake",
-   "new": "Lots of cream vanilla malt milkshake"
+   "new": "Lots of cream vanilla malt milkshake",
+   "done": true
   },
   {
    "old": "Straight from the barn. Ask Roy where.",
-   "new": "Milked by Roy. Turned out to be a bull."
+   "new": "Milked by Roy. Turned out to be a bull.",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -38,7 +44,8 @@
      "Prize: $1 million",
      "Roy and Ishmael"
     ]
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -48,7 +55,10 @@
     "Ishmael's coffee: extra large, lots of cream",
     "Claudia on the road trip",
     "Roy, the Rubber Man of Reno"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

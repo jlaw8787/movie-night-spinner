@@ -7,19 +7,23 @@
     "text": "Men suffer more from imagining too little than too much.",
     "by": "P.T. Barnum",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Big top caramel popcorn",
-   "new": "The Greatest Show caramel popcorn"
+   "new": "The Greatest Show caramel popcorn",
+   "done": true
   },
   {
    "old": "the sideshow stalls",
-   "new": "Red toffee apples for the sideshow troupe"
+   "new": "Red toffee apples for the sideshow troupe",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the snacks when the troupe sings This Is Me."
+   "value": "Serve the snacks when the troupe sings This Is Me.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +33,10 @@
     "W.D. and Anne Wheeler on the trapeze",
     "Phillip Carlyle joins the show",
     "Barnum arrives on an elephant at the ballet recital"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

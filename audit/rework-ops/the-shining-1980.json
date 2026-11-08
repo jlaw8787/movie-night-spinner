@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Gold Room bourbon old fashioned",
-   "new": "Lloyd's bourbon old fashioned"
+   "new": "Lloyd's bourbon old fashioned",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the drinks when Lloyd says Jack's money's no good here."
+   "value": "Serve the drinks when Lloyd says Jack's money's no good here.",
+   "done": true
   },
   {
    "old": "Homemade dark chocolate custard ice cream",
-   "new": "Chocolate it shall be. Dark custard ice cream."
+   "new": "Chocolate it shall be. Dark custard ice cream.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,8 @@
     "Here's Johnny",
     "Danny on his tricycle",
     "The typewriter and the stack of pages"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -32,7 +36,10 @@
      "Overlook Hotel",
      "Redrum. Try a mirror."
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

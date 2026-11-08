@@ -1,23 +1,27 @@
 {
-  "id": "The Rock (1996)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Your best? Losers always whine about their best.",
-        "by": "John Mason",
-        "kind": "quote"
-      }
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "A haircut at the Fairmont",
-        "Glass beads nobody can drop",
-        "Green flares to abort",
-        "The rocket threat of VX gas",
-        "The car chase through San Francisco streets"
-      ]
-    }
-  ]
+ "id": "The Rock (1996)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Your best? Losers always whine about their best.",
+    "by": "John Mason",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "A haircut at the Fairmont",
+    "Glass beads nobody can drop",
+    "Green flares to abort",
+    "The rocket threat of VX gas",
+    "The car chase through San Francisco streets"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

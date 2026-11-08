@@ -12,19 +12,23 @@
     "n": "From the Willow",
     "b": "Friends in the story",
     "call": "Drum call"
-   }
+   },
+   "done": true
   },
   {
    "old": "Flaky buttermilk biscuits, baked hot",
-   "new": "Hot buttermilk biscuits. Better than a ship's biscuit."
+   "new": "Hot buttermilk biscuits. Better than a ship's biscuit.",
+   "done": true
   },
   {
    "old": "the river Pocahontas paddles down",
-   "new": "Corn fritters with lime crema, for a day just around the riverbend."
+   "new": "Corn fritters with lime crema, for a day just around the riverbend.",
+   "done": true
   },
   {
    "old": "the English settlers building their fort",
-   "new": "Beef and onion pie for the settlers digging for Ratcliffe's gold."
+   "new": "Beef and onion pie for the settlers digging for Ratcliffe's gold.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -34,7 +38,10 @@
     "Percy the pampered pug",
     "Grandmother Willow, the talking tree",
     "Governor Ratcliffe's gold fever"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

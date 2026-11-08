@@ -1,28 +1,34 @@
 {
-  "id": "The Mummy Returns (2001)",
-  "ops": [
-    {
-      "old": "the O'Connell family home in London",
-      "new": "House rules: snakes and dismemberment"
-    },
-    {
-      "old": "Rick and Evie back home in England",
-      "new": "Izzy is in mourning for his arse."
-    },
-    {
-      "old": "Chilled hibiscus tea with cinnamon, orange and mint over ice",
-      "new": "Chilled hibiscus tea, cinnamon, orange, mint, with ice for Alex"
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "badge",
-        "title": "Bracelet Pass",
-        "lines": [
-          "Alex O'Connell",
-          "Seven days, then the sun"
-        ]
-      }
-    }
-  ]
+ "id": "The Mummy Returns (2001)",
+ "ops": [
+  {
+   "old": "the O'Connell family home in London",
+   "new": "House rules: snakes and dismemberment",
+   "done": true
+  },
+  {
+   "old": "Rick and Evie back home in England",
+   "new": "Izzy is in mourning for his arse.",
+   "done": true
+  },
+  {
+   "old": "Chilled hibiscus tea with cinnamon, orange and mint over ice",
+   "new": "Chilled hibiscus tea, cinnamon, orange, mint, with ice for Alex",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Bracelet Pass",
+    "lines": [
+     "Alex O'Connell",
+     "Seven days, then the sun"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

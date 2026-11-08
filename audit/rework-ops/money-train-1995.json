@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Roasted here. Never torched.",
-   "new": "Token booth nuts, nothing on fire."
+   "new": "Token booth nuts, nothing on fire.",
+   "done": true
   },
   {
    "old": "Charlie: on the tab? ",
-   "new": "Charlie owes 15,000. Tab? "
+   "new": "Charlie owes 15,000. Tab? ",
+   "done": true
   },
   {
    "old": "Friday is payday. Cash only.",
-   "new": "New Year's Eve is payday. Cash only."
+   "new": "New Year's Eve is payday. Cash only.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

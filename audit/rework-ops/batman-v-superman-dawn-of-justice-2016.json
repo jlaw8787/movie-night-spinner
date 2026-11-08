@@ -7,11 +7,13 @@
     "text": "Blah, blah, blah. Open bar. The end.",
     "by": "Lex Luthor",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Martha Kent's farm in Kansas",
-   "new": "Why did you say that name?"
+   "new": "Why did you say that name?",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,15 +23,18 @@
     "Doomsday rising",
     "The Kryptonite spear",
     "The Batsuit armour"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "Lois and Clark at the Daily Planet",
-   "new": "Don't let them take your lunch money"
+   "new": "Don't let them take your lunch money",
+   "done": true
   },
   {
    "old": "Pear nectar and fresh ginger syrup in a flute, topped up with bubbles",
-   "new": "Pear nectar and ginger syrup with bubbles. Nothing like Granny's peach tea"
+   "new": "Pear nectar and ginger syrup with bubbles. Nothing like Granny's peach tea",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -40,7 +45,10 @@
      "Bruce Wayne plus one",
      "He's been invited"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

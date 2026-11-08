@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Preacher's Sunday roast",
-   "new": "Reverend Moore's Sunday roast"
+   "new": "Reverend Moore's Sunday roast",
+   "done": true
   },
   {
    "old": "Prom punch",
-   "new": "County line punch"
+   "new": "County line punch",
+   "done": true
   },
   {
    "old": "the senior prom in Bomont",
-   "new": "the prom at the grain mill"
+   "new": "the prom at the grain mill",
+   "done": true
   },
   {
    "old": "Buttermilk-marinated chicken pieces fried crisp, honey for dipping",
-   "new": "Crisp buttermilk chicken, honey to dip, for Ren and Chuck's tractor game"
+   "new": "Crisp buttermilk chicken, honey to dip, for Ren and Chuck's tractor game",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Willard learning to dance",
     "The tractor game of chicken",
     "Reverend Moore ending the book burning"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

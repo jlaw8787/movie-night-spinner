@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Serve the main after the concert at Nui Dat.",
-   "new": "Serve the main when 11 Platoon calls the artillery in close."
+   "new": "Serve the main when 11 Platoon calls the artillery in close.",
+   "done": true
   },
   {
    "old": "Lemongrass chicken skewers with peanut satay sauce",
-   "new": "Lemongrass chicken and satay for Little Pattie's show"
+   "new": "Lemongrass chicken and satay for Little Pattie's show",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -16,7 +18,8 @@
     "The Iroquois pilots flying in under fire",
     "Monsoon rain on the day",
     "The roll call at the end"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -27,7 +30,10 @@
      "Long Tan, August 1966",
      "Major Harry Smith"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

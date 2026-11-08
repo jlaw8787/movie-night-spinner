@@ -1,7 +1,36 @@
-{"id":"The Breakfast Club (1985)","ops":[
-{"set":"flavour.note","value":{"text":"You see us as a brain, an athlete, a basket case, a princess, and a criminal.","by":"Brian Johnson","kind":"quote"}},
-{"set":"flavour.sign","value":"Detention, No Monkey Business"},
-{"old":"Vernon isn't watching","new":"Vernon, the brownie hound"},
-{"old":"Andrew's carton of milk, upgraded for Saturday detention","new":"Brian asks, \"Will milk be made available?\""},
-{"old":"Ice cold Tab cola","new":"Ice cold cola"}
-]}
+{
+ "id": "The Breakfast Club (1985)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "You see us as a brain, an athlete, a basket case, a princess, and a criminal.",
+    "by": "Brian Johnson",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Detention, No Monkey Business",
+   "done": true
+  },
+  {
+   "old": "Vernon isn't watching",
+   "new": "Vernon, the brownie hound",
+   "done": true
+  },
+  {
+   "old": "Andrew's carton of milk, upgraded for Saturday detention",
+   "new": "Brian asks, \"Will milk be made available?\"",
+   "done": true
+  },
+  {
+   "old": "Ice cold Tab cola",
+   "new": "Ice cold cola",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

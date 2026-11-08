@@ -7,26 +7,31 @@
     "text": "Someone took Nick. We're gonna find him.",
     "by": "Callum Drift",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the snacks when the search for Santa begins.",
-   "new": "Serve the snacks when Callum shouts, \"We've got snowmen!\""
+   "new": "Serve the snacks when Callum shouts, \"We've got snowmen!\"",
+   "done": true
   },
   {
    "old": "Maple pecan pretzel crunch",
-   "new": "Naughty List maple pecan pretzel crunch"
+   "new": "Naughty List maple pecan pretzel crunch",
+   "done": true
   },
   {
    "old": "Code Red velvet crinkle cookies",
-   "new": "Snow globe red velvet crinkle cookies"
+   "new": "Snow globe red velvet crinkle cookies",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Cardamom double espresso",
     "note": "For Callum's one last Christmas run."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -36,7 +41,10 @@
     "Callum Drift, head of Santa's security",
     "Krampus, who made the Naughty List",
     "Grýla and her Glaskäfig snow globes"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

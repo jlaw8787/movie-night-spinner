@@ -1,13 +1,17 @@
 {
-  "id": "Frequency (2000)",
-  "ops": [
-    {
-      "old": "From the big percolator, all game long.",
-      "new": "From the big percolator, northern lights night."
-    },
-    {
-      "old": "Transistor Radio",
-      "new": "Ham Radio"
-    }
-  ]
+ "id": "Frequency (2000)",
+ "ops": [
+  {
+   "old": "From the big percolator, all game long.",
+   "new": "From the big percolator, northern lights night.",
+   "done": true
+  },
+  {
+   "old": "Transistor Radio",
+   "new": "Ham Radio",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

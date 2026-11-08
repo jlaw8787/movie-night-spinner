@@ -1,8 +1,41 @@
-{"id":"Alien: Resurrection (1997)","ops":[
-{"old":"Basketball court gougères","new":"No-look basketball gougères"},
-{"old":"Ripley takes on Johner at the hoop and never misses","new":"Warm cheese puffs, after Ripley's no-look shot"},
-{"old":"Johner's snack, before Ripley's no-look shot.","new":"Johner's snack, with a little one-on-one on the side."},
-{"old":"cooked in the Auriga's kitchen before it went under","new":"Fish stew, from the kitchen the crew swims through"},
-{"old":"The Betty crew's toast to a clean getaway.","new":"Lemon vodka over ice. Ask Ripley what she did: \"I died.\""},
-{"set":"flavour.note","value":{"text":"I'm a stranger here myself.","by":"Ripley","kind":"quote"}}
-]}
+{
+ "id": "Alien: Resurrection (1997)",
+ "ops": [
+  {
+   "old": "Basketball court gougères",
+   "new": "No-look basketball gougères",
+   "done": true
+  },
+  {
+   "old": "Ripley takes on Johner at the hoop and never misses",
+   "new": "Warm cheese puffs, after Ripley's no-look shot",
+   "done": true
+  },
+  {
+   "old": "Johner's snack, before Ripley's no-look shot.",
+   "new": "Johner's snack, with a little one-on-one on the side.",
+   "done": true
+  },
+  {
+   "old": "cooked in the Auriga's kitchen before it went under",
+   "new": "Fish stew, from the kitchen the crew swims through",
+   "done": true
+  },
+  {
+   "old": "The Betty crew's toast to a clean getaway.",
+   "new": "Lemon vodka over ice. Ask Ripley what she did: \"I died.\"",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I'm a stranger here myself.",
+    "by": "Ripley",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

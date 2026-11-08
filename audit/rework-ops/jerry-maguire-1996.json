@@ -3,22 +3,26 @@
  "ops": [
   {
    "old": "Tidwell's prickly pear margarita",
-   "new": "Tidwell's Kwan prickly pear margarita"
+   "new": "Tidwell's Kwan prickly pear margarita",
+   "done": true
   },
   {
    "old": "Tequila, prickly pear, lime and agave with a chilli salt rim",
-   "new": "Tequila and prickly pear. The Kwan is love, respect, community."
+   "new": "Tequila and prickly pear. The Kwan is love, respect, community.",
+   "done": true
   },
   {
    "old": "Rod's big Monday Night Football game",
-   "new": "Rod's touchdown, then the dance"
+   "new": "Rod's touchdown, then the dance",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Goldfish-shaped cheddar crackers",
     "note": "These fish have manners."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +32,10 @@
     "You had me at hello",
     "Help me help you",
     "Ray says a human head weighs eight pounds"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

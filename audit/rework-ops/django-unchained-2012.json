@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "The snowbound winter Django learns the bounty trade",
-   "new": "Pumpkin and lentil soup for the winter Django learns the trade"
+   "new": "Pumpkin and lentil soup for the winter Django learns the trade",
+   "done": true
   },
   {
    "old": "a campfire supper on the trail",
-   "new": "Rib eye with pan spuds, a campfire supper on the trail"
+   "new": "Rib eye with pan spuds, a campfire supper on the trail",
+   "done": true
   },
   {
    "old": "Two-layer white vanilla cake with buttercream frosting",
-   "new": "Two-layer white cake, buttercream. We're havin' white cake"
+   "new": "Two-layer white cake, buttercream. We're havin' white cake",
+   "done": true
   },
   {
    "old": "German wheat beer poured slowly over lemon honey syrup in a tall mug",
-   "new": "Wheat beer over lemon honey syrup. Prost?"
+   "new": "Wheat beer over lemon honey syrup. Prost?",
+   "done": true
   },
   {
    "old": "Bounty hunter's jerky",
-   "new": "Dead or alive bounty hunter's jerky"
+   "new": "Dead or alive bounty hunter's jerky",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -30,7 +35,10 @@
      "Dentistry, teeth and bounties",
      "Prost?"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

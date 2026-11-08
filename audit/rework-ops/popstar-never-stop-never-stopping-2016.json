@@ -3,27 +3,33 @@
  "ops": [
   {
    "old": "Serve the snacks when Conner's tour kicks off.",
-   "new": "Serve the snacks when the wolves break loose."
+   "new": "Serve the snacks when the wolves break loose.",
+   "done": true
   },
   {
    "old": "Tour bus crispy chicken sliders",
-   "new": "Party Wolf crispy chicken sliders"
+   "new": "Party Wolf crispy chicken sliders",
+   "done": true
   },
   {
    "old": "Buttermilk fried chicken tenders on small soft buns",
-   "new": "Buttermilk fried chicken tenders on small buns, wolf free"
+   "new": "Buttermilk fried chicken tenders on small buns, wolf free",
+   "done": true
   },
   {
    "old": "Style Boyz fish tacos with mango salsa",
-   "new": "Donkey Roll fish tacos with mango salsa"
+   "new": "Donkey Roll fish tacos with mango salsa",
+   "done": true
   },
   {
    "old": "Round vanilla bean shortbread cookies",
-   "new": "Ashy grey shortbread cookies, for Maximus"
+   "new": "Ashy grey shortbread cookies, for Maximus",
+   "done": true
   },
   {
    "old": "Owen's snack between DJ sets.",
-   "new": "Owen's snack, robot mask on."
+   "new": "Owen's snack, robot mask on.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +39,10 @@
     "Conner leaving for a solo career",
     "Lawrence, the third member",
     "The giant tour stage"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Medovik honey cake",
-   "new": "Watch swap medovik"
+   "new": "Watch swap medovik",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -11,7 +12,8 @@
     "text": "Captain Danko does not smile. Eat your eggs and keep your hands where I can see them.",
     "by": "Art Ridzik",
     "kind": "note"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +23,8 @@
     "Popping the cleanheads",
     "The wild bus versus bus chase",
     "Danko and Ridzik swap watches"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.d",
@@ -29,7 +32,10 @@
     "n": "Chilled kvass",
     "note": "Not vodka, which Danko says cures stress.",
     "alc": true
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

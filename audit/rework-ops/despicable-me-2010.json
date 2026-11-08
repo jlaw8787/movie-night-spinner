@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "the lab under Gru's house",
-   "new": "Crumbed chicken tenders from Nefario's lab"
+   "new": "Crumbed chicken tenders from Nefario's lab",
+   "done": true
   },
   {
    "old": "the girls selling boxes of cookies door to door",
-   "new": "Chewy coconut cookies. Cookie robots! I said cookie robots!"
+   "new": "Chewy coconut cookies. Cookie robots! I said cookie robots!",
+   "done": true
   },
   {
    "old": "Franks dipped in buttermilk cornmeal batter and fried golden",
-   "new": "Cornmeal franks fried golden, with a fluffy unicorn to win"
+   "new": "Cornmeal franks fried golden, with a fluffy unicorn to win",
+   "done": true
   },
   {
    "old": "Agnes's unicorn cake",
-   "new": "Agnes's so fluffy unicorn cake"
+   "new": "Agnes's so fluffy unicorn cake",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Vector and his squid gun",
     "Miss Hattie's Home for Girls",
     "Dr Nefario in the lab"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

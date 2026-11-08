@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Marty, eat now.",
-   "new": "Great Scott, Marty, eat now."
+   "new": "Great Scott, Marty, eat now.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,7 +14,10 @@
     "A hologram shark from Jaws 19",
     "Shoes that tie their own laces",
     "Griff calling Marty chicken"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

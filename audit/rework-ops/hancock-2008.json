@@ -7,23 +7,28 @@
     "text": "Do I look like I care what people think?",
     "by": "John Hancock",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "what Ray's family brings him in prison",
-   "new": "Spaghetti madness, brought to the prison."
+   "new": "Spaghetti madness, brought to the prison.",
+   "done": true
   },
   {
    "old": "Hancock doing his time in prison",
-   "new": "Jail watch, day five: good job."
+   "new": "Jail watch, day five: good job.",
+   "done": true
   },
   {
    "old": "Green prawns grilled with garlic, chilli, lime and butter",
-   "new": "Garlic chilli prawns. Walter the whale took out a sailboat."
+   "new": "Garlic chilli prawns. Walter the whale took out a sailboat.",
+   "done": true
   },
   {
    "old": "Ray's PR brownies",
-   "new": "Ray's All-Heart brownies"
+   "new": "Ray's All-Heart brownies",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,10 @@
     "Hancock's public apology",
     "Hancock agreeing to go to prison",
     "Mary's quiet dinner table"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

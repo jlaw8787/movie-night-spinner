@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "the truckers' stops on the CB radio",
-   "new": "Cayenne crackling, split with Fred"
+   "new": "Cayenne crackling, split with Fred",
+   "done": true
   },
   {
    "old": "the run home to Georgia",
-   "new": "Ribs, with Smokey Bear on your tail"
+   "new": "Ribs, with Smokey Bear on your tail",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,8 @@
     "Fred, riding with Snowman",
     "Trigger, the black Trans Am",
     "Smokey Bear on the CB"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -28,7 +31,10 @@
      "Texarkana to Atlanta",
      "Then Boston chowder"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,29 +3,34 @@
  "ops": [
   {
    "old": "Last stand crispy chicken burgers",
-   "new": "Power pole last stand chicken burgers"
+   "new": "Power pole last stand chicken burgers",
+   "done": true
   },
   {
    "old": "defending the house against the toy soldiers",
-   "new": "Fried chicken burger, Alan's house under siege"
+   "new": "Fried chicken burger, Alan's house under siege",
+   "done": true
   },
   {
    "old": "Chip Hazard and his toy soldiers",
-   "new": "Salami crackers, mobile and lethile"
+   "new": "Salami crackers, mobile and lethile",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Cheese-stuffed jalapeños",
     "note": "Launches, lacerates, detonates."
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Grape soda with crushed ice",
     "note": "Sent off to Gorgon in a toy boat."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -35,7 +40,10 @@
     "Gwendy dolls, to die for",
     "Globotech chips inside the toys",
     "Alan Abernathy's family toy store"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

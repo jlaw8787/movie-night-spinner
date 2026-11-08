@@ -3,22 +3,26 @@
  "ops": [
   {
    "old": "Steve's Brooklyn neighbourhood",
-   "new": "A kid from Brooklyn who can do this all day."
+   "new": "A kid from Brooklyn who can do this all day.",
+   "done": true
   },
   {
    "old": "Beef chuck stewed with carrots, onion and potatoes",
-   "new": "Beef stew with carrots and potatoes, for the Howling Commandos"
+   "new": "Beef stew with carrots and potatoes, for the Howling Commandos",
+   "done": true
   },
   {
    "old": "Peggy Carter and the Strategic Scientific Reserve",
-   "new": "Peggy Carter, 8:00 on the dot at the Stork Club"
+   "new": "Peggy Carter, 8:00 on the dot at the Stork Club",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Lime rickey",
     "note": "To the little guys, Dr Erskine's toast."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +32,10 @@
     "Howard Stark's flying car",
     "The Red Skull and Hydra",
     "Erskine: not a perfect soldier, but a good man"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

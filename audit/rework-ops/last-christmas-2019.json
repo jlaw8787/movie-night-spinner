@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Christmas Eve at the shelter where Tom volunteers, and Kate pitches in",
-   "new": "Christmas Eve turkey at the shelter, where Kate stages the show"
+   "new": "Christmas Eve turkey at the shelter, where Kate stages the show",
+   "done": true
   },
   {
    "old": "Santa's shop mince pies with orange cream",
-   "new": "Santa's Danish admirer mince pies"
+   "new": "Santa's Danish admirer mince pies",
+   "done": true
   },
   {
    "old": "Covent Garden mulled wine",
-   "new": "Christmas Eve show mulled wine"
+   "new": "Christmas Eve show mulled wine",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -20,7 +23,10 @@
     "Tom, who told her to look up",
     "Tom on his bicycle",
     "Santa, and the Danish man who loves Christmas"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

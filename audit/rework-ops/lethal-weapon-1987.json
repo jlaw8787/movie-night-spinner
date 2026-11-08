@@ -1,12 +1,63 @@
 {
  "id": "Lethal Weapon (1987)",
  "ops": [
-  {"set": "flavour.note", "value": {"text": "If you think I'm gonna eat the world's worst turkey by myself, you're crazy.", "by": "Roger Murtaugh", "kind": "quote"}},
-  {"old": "Serve the mains when Riggs meets the family over a roast dinner.", "new": "Serve the mains when Roger calls the roast a brown, roast-like substance."},
-  {"old": "Trish's stew, made properly", "new": "Brown sticky stew, done right"},
-  {"old": "Murtaugh Christmas turkey and stuffing", "new": "Not the world's worst turkey and stuffing"},
-  {"set": "house.s", "value": {"n": "Sausage rolls with tomato relish", "note": "You really like my wife's cooking? No. But these.", "meat": true}},
-  {"set": "flavour.winks", "value": ["Riggs cuffed to a jumper, off the ledge", "Murtaugh turning fifty, and feeling every year", "Mr. Joshua and his crew of mercenaries", "Riggs cuffing himself to a jumper and leaping off the ledge", "Christmas in Los Angeles, no snow, plenty of trouble"]},
-  {"set": "flavour.prop", "value": {"kind": "card", "title": "Happy 50th, Roger", "lines": ["Fifty years old. What a birthday.", "Plus one bullet from Riggs"]}}
- ]
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "If you think I'm gonna eat the world's worst turkey by myself, you're crazy.",
+    "by": "Roger Murtaugh",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Serve the mains when Riggs meets the family over a roast dinner.",
+   "new": "Serve the mains when Roger calls the roast a brown, roast-like substance.",
+   "done": true
+  },
+  {
+   "old": "Trish's stew, made properly",
+   "new": "Brown sticky stew, done right",
+   "done": true
+  },
+  {
+   "old": "Murtaugh Christmas turkey and stuffing",
+   "new": "Not the world's worst turkey and stuffing",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Sausage rolls with tomato relish",
+    "note": "You really like my wife's cooking? No. But these.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Riggs cuffed to a jumper, off the ledge",
+    "Murtaugh turning fifty, and feeling every year",
+    "Mr. Joshua and his crew of mercenaries",
+    "Riggs cuffing himself to a jumper and leaping off the ledge",
+    "Christmas in Los Angeles, no snow, plenty of trouble"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Happy 50th, Roger",
+    "lines": [
+     "Fifty years old. What a birthday.",
+     "Plus one bullet from Riggs"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -7,18 +7,21 @@
     "text": "I see dead people.",
     "by": "Cole Sear",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Pierogies with sour cream and onion",
     "note": "Eat up. They only see what they want to see."
-   }
+   },
+   "done": true
   },
   {
    "old": "the birthday party that goes wrong for Cole",
-   "new": "The party with the red balloon, and the cupboard"
+   "new": "The party with the red balloon, and the cupboard",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +31,10 @@
     "Cold air and visible breath",
     "Vincent Gray at the bedroom door",
     "Dr Crowe's award on the wall"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

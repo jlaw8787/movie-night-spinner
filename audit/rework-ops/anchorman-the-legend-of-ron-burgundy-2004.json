@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Brick's pick. Two sugars.",
-   "new": "Brick's pick. He loves lamp."
+   "new": "Brick's pick. He loves lamp.",
+   "done": true
   },
   {
    "old": "Skip the milk.",
-   "new": "Milk was a bad choice."
+   "new": "Milk was a bad choice.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

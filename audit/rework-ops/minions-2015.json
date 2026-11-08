@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Bob's banana caramel thickshake",
-   "new": "King Bob's banana caramel thickshake"
+   "new": "King Bob's banana caramel thickshake",
+   "done": true
   },
   {
    "old": "the villain convention in Orlando",
-   "new": "for Kevin, when he grows giant"
+   "new": "for Kevin, when he grows giant",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

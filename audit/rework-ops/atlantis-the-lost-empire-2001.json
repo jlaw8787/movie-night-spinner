@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Navy beans simmered with bacon, molasses and Dijon",
-   "new": "Navy beans, bacon, molasses and Dijon. Two of Cookie's four food groups."
+   "new": "Navy beans, bacon, molasses and Dijon. Two of Cookie's four food groups.",
+   "done": true
   },
   {
    "old": "Cheese, salami and cracker tins",
-   "new": "Vinny's office supply cheese, salami and cracker tins"
+   "new": "Vinny's office supply cheese, salami and cracker tins",
+   "done": true
   },
   {
    "old": "Cookie feeding the crew in the caverns",
-   "new": "Cookie calls it Caesar salad, escargot and spring rolls"
+   "new": "Cookie calls it Caesar salad, escargot and spring rolls",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "You have disturbed the dirt",
     "Lobster on a silver platter",
     "Kida's glowing blue crystal"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

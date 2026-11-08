@@ -3,15 +3,20 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when the 151st Division turns up to surprise General Waverly."
+   "value": "Serve the snacks when the 151st Division turns up to surprise General Waverly.",
+   "done": true
   },
   {
    "old": "Eggnog by the fire",
-   "new": "White Christmas eggnog"
+   "new": "White Christmas eggnog",
+   "done": true
   },
   {
    "old": "Liverwurst, mustard, pickles and red onion on rye, with cold buttermilk",
-   "new": "Emma's snack bar snack: liverwurst, mustard, pickles, red onion, with cold buttermilk"
+   "new": "Emma's snack bar snack: liverwurst, mustard, pickles, red onion, with cold buttermilk",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

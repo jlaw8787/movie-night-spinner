@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "the dance battle in the living room",
-   "new": "Kid and Play vs Sydney and Sharane"
+   "new": "Kid and Play vs Sydney and Sharane",
+   "done": true
   },
   {
    "old": "Thin pepperoni and mozzarella pizza baked hot and cut in squares",
-   "new": "Thin pepperoni pizza. Chill, don't bump the table."
+   "new": "Thin pepperoni pizza. Chill, don't bump the table.",
+   "done": true
   },
   {
    "old": "Kid's dad waiting up at home",
-   "new": "Pop waits at home with a belt"
+   "new": "Pop waits at home with a belt",
+   "done": true
   },
   {
    "old": "Chocolate sheet cake with chocolate frosting and sprinkles",
-   "new": "Chocolate cake and frosting. Stab fails to burn the house"
+   "new": "Chocolate cake and frosting. Stab fails to burn the house",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -23,7 +27,8 @@
     "text": "I'm gonna whup that damn high-top fade off of you!",
     "by": "Pop",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,10 @@
     "Stab, the bully",
     "Sydney tricks Pop at the door",
     "Kid raps in the jail cell"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

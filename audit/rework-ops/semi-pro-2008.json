@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Hot dogs at halftime are on the Tropics tonight. Grab one before the bear gets out again.",
-   "new": "Hot dogs at halftime are on the Tropics tonight. If the bear gets out, there will be no refunds."
+   "new": "Hot dogs at halftime are on the Tropics tonight. If the bear gets out, there will be no refunds.",
+   "done": true
   },
   {
    "old": "Tropics pineapple teriyaki chicken skewers",
-   "new": "Let's get Tropical teriyaki chicken skewers"
+   "new": "Let's get Tropical teriyaki chicken skewers",
+   "done": true
   },
   {
    "old": "Tropics pineapple teriyaki haloumi skewers",
-   "new": "Let's get Tropical teriyaki haloumi skewers"
+   "new": "Let's get Tropical teriyaki haloumi skewers",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Ed Monix, the new guy",
     "Coffee Black on the court",
     "Bear wrestling at the game"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "the man village at the end of the journey",
-   "new": "Dal and roti for the girl at the river and the man village"
+   "new": "Dal and roti for the girl at the river and the man village",
+   "done": true
   },
   {
    "old": "Kaa the snake coiling around Mowgli",
-   "new": "Spinach and feta coils. You can believe in Kaa."
+   "new": "Spinach and feta coils. You can believe in Kaa.",
+   "done": true
   },
   {
    "old": "Frozen chocolate banana bites",
-   "new": "Frozen chocolate banana bites, the bare necessities"
+   "new": "Frozen chocolate banana bites, the bare necessities",
+   "done": true
   },
   {
    "old": "Set coconut milk with mango",
-   "new": "Set coconut milk with mango. Cools a burning tail."
+   "new": "Set coconut milk with mango. Cools a burning tail.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "King Louie wants to learn how to make fire",
     "Shere Khan's tail and the burning branch",
     "The elephant patrol marching by"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

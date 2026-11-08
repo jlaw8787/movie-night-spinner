@@ -3,18 +3,23 @@
  "ops": [
   {
    "old": "Chocolate mousse with crushed cookie dirt, gummy worms and a mint leaf",
-   "new": "Chocolate mousse, cookie dirt, gummy worms and mint. Slimy yet satisfying."
+   "new": "Chocolate mousse, cookie dirt, gummy worms and mint. Slimy yet satisfying.",
+   "done": true
   },
   {
    "old": "a nod to Southern African street food",
-   "new": "Lamb skewers, no lunch lost to Zazu."
+   "new": "Lamb skewers, no lunch lost to Zazu.",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Mango and baobab smoothie",
     "note": "Everything the light touches, in a cup."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

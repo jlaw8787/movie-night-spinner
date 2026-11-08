@@ -7,7 +7,8 @@
     "text": "You can be the boss down there. I'm boss up here.",
     "by": "Ben",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.labels",
@@ -20,11 +21,15 @@
     "n": "Said at the farmhouse",
     "b": "Earlier tonight",
     "call": "Newsflash"
-   }
+   },
+   "done": true
   },
   {
    "old": "Ben pulls up at the farmhouse in a truck",
-   "new": "Ben found his truck at Beekman's Diner"
+   "new": "Ben found his truck at Beekman's Diner",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

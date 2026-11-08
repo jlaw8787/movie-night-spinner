@@ -7,18 +7,21 @@
     "n": "Buffalo wings with blue cheese",
     "note": "Bill Murray, the fifth guy, turns up late.",
     "meat": true
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Tropical fruit punch",
     "note": "Swackhammer, sent to the moon by missile."
-   }
+   },
+   "done": true
   },
   {
    "old": "the halftime team talk in the locker room",
-   "new": "Tenders and wedges, then the secret stuff"
+   "new": "Tenders and wedges, then the secret stuff",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +31,8 @@
     "Lola Bunny on the court",
     "Mr. Swackhammer and Moron Mountain",
     "North Carolina shorts, washed"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -39,7 +43,10 @@
      "Looney Tunes vs Monstars",
      "Buzzer beater, extra-long arm"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

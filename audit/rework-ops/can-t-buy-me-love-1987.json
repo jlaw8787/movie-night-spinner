@@ -1,6 +1,40 @@
-{"id":"Can't Buy Me Love (1987)","ops":[
-{"old":"a Tucson favourite","new":"Fuel for the anteater ritual"},
-{"old":"Cranberry juice and lemonade with orange slices, no alcohol","new":"Cranberry lemonade and orange punch, no alcohol. Mind the suede"},
-{"set":"flavour.winks","value":["Ronald on the riding mower at Cindy's","Cindy's mother's white suede outfit, ruined","The $1,000 deal","Ronald's telescope","The African Anteater Ritual dance"]},
-{"set":"flavour.prop","value":{"kind":"receipt","title":"Rent a Date","lines":["I want to rent you, $1,000","Cindy Mancini, paid in full"]}}
-]}
+{
+ "id": "Can't Buy Me Love (1987)",
+ "ops": [
+  {
+   "old": "a Tucson favourite",
+   "new": "Fuel for the anteater ritual",
+   "done": true
+  },
+  {
+   "old": "Cranberry juice and lemonade with orange slices, no alcohol",
+   "new": "Cranberry lemonade and orange punch, no alcohol. Mind the suede",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ronald on the riding mower at Cindy's",
+    "Cindy's mother's white suede outfit, ruined",
+    "The $1,000 deal",
+    "Ronald's telescope",
+    "The African Anteater Ritual dance"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Rent a Date",
+    "lines": [
+     "I want to rent you, $1,000",
+     "Cindy Mancini, paid in full"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

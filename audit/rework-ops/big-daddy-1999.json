@@ -3,19 +3,25 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the wings when Sonny and Julian sprint for McDonald's breakfast."
+   "value": "Serve the wings when Sonny and Julian sprint for McDonald's breakfast.",
+   "done": true
   },
   {
    "old": "Julian, the five-year-old",
-   "new": "Cheerios, then lasagna"
+   "new": "Cheerios, then lasagna",
+   "done": true
   },
   {
    "old": "Teaching Julian the rules of the street",
-   "new": "Scuba Steve in flippers, even bowling"
+   "new": "Scuba Steve in flippers, even bowling",
+   "done": true
   },
   {
    "old": "Vanilla ice cream, milk, chocolate sauce and malt blended thick",
-   "new": "Ice cream, milk, chocolate and malt blended thick. Yoo-hoo, hold the rum"
+   "new": "Ice cream, milk, chocolate and malt blended thick. Yoo-hoo, hold the rum",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

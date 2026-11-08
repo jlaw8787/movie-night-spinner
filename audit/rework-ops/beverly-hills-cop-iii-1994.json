@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "the queues at Wonder World",
-   "new": "Axel, are you on a coffee break?"
+   "new": "Axel, are you on a coffee break?",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,7 +14,8 @@
     "Ellis DeWald, the security chief with a secret",
     "Axel's boss gunned down at the chop shop",
     "Rosewood back in action at Wonder World"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -24,11 +26,15 @@
      "Admit one, all rides",
      "Axel Foley, line jumper"
     ]
-   }
+   },
+   "done": true
   },
   {
    "old": "Grab one before the Spider ride stalls.",
-   "new": "Grab one before Axel cuts the Spider queue."
+   "new": "Grab one before Axel cuts the Spider queue.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

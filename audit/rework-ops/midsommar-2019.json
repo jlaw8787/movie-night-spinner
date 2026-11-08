@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the feast when everyone sits at the long table under the sun.",
-   "new": "Serve the feast when Dani is crowned May Queen and the table toasts her."
+   "new": "Serve the feast when Dani is crowned May Queen and the table toasts her.",
+   "done": true
   },
   {
    "old": "Pelle's pickled herring and new potatoes",
-   "new": "May Queen's lucky herring and new potatoes"
+   "new": "May Queen's lucky herring and new potatoes",
+   "done": true
   },
   {
    "old": "Strawberry midsummer cake",
-   "new": "May Queen strawberry cake"
+   "new": "May Queen strawberry cake",
+   "done": true
   },
   {
    "old": "the commune's open-air cooking",
-   "new": "Grilled over coals. Ignore the bear."
+   "new": "Grilled over coals. Ignore the bear.",
+   "done": true
   },
   {
    "set": "house.d",
@@ -23,7 +27,8 @@
     "n": "Aquavit and lingonberry spritz",
     "note": "To our May Queen! Skal! Check your glass first.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,10 @@
     "Long tables under the sun",
     "Tea for the competition",
     "The cliff, the bear, the burning temple"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

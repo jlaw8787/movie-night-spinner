@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Speed force popcorn",
-   "new": "Chronobowl popcorn"
+   "new": "Chronobowl popcorn",
+   "done": true
   },
   {
    "old": "the older Batman's run-down Wayne Manor",
-   "new": "Barry at the manor: \"Are you in?\""
+   "new": "Barry at the manor: \"Are you in?\"",
+   "done": true
   },
   {
    "old": "Keaton's Batman wants to get nuts.",
-   "new": "Batman asks, \"You wanna get nuts?\""
+   "new": "Batman asks, \"You wanna get nuts?\"",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Supergirl in the Siberian bunker",
     "General Zod in a new timeline",
     "The two Barrys"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

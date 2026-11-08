@@ -3,35 +3,43 @@
  "ops": [
   {
    "old": "Serve the drinks when Velma takes the stage at the nightclub.",
-   "new": "Serve the drinks when the murderesses start the Cell Block Tango."
+   "new": "Serve the drinks when the murderesses start the Cell Block Tango.",
+   "done": true
   },
   {
    "old": "Deep dish pizza with fennel mushroom crumble",
-   "new": "Razzle Dazzle deep dish pizza with fennel mushroom crumble"
+   "new": "Razzle Dazzle deep dish pizza with fennel mushroom crumble",
+   "done": true
   },
   {
    "old": "Deep dish pizza",
-   "new": "Razzle Dazzle deep dish pizza"
+   "new": "Razzle Dazzle deep dish pizza",
+   "done": true
   },
   {
    "old": "Chicago deep dish with mozzarella, Italian sausage and garlicky crushed tomato",
-   "new": "Billy Flynn's courtroom razzle dazzle: mozzarella, sausage and garlicky tomato"
+   "new": "Billy Flynn's courtroom razzle dazzle: mozzarella, sausage and garlicky tomato",
+   "done": true
   },
   {
    "old": "the slick lawyer, Billy Flynn",
-   "new": "Billy Flynn's three ring circus"
+   "new": "Billy Flynn's three ring circus",
+   "done": true
   },
   {
    "old": "Bathtub gin fizz",
-   "new": "Hotel Cicero gin fizz"
+   "new": "Hotel Cicero gin fizz",
+   "done": true
   },
   {
    "old": "Gin, lemon and sugar syrup shaken and topped with soda over ice",
-   "new": "Plenty of ice, unlike Cicero. Gin, lemon and syrup shaken, topped with soda"
+   "new": "Plenty of ice, unlike Cicero. Gin, lemon and syrup shaken, topped with soda",
+   "done": true
   },
   {
    "old": "Sparkling wine jelly set in coupes over raspberries",
-   "new": "Mister Cellophane's clear sparkling jelly, raspberries"
+   "new": "Mister Cellophane's clear sparkling jelly, raspberries",
+   "done": true
   },
   {
    "set": "house.s",
@@ -39,7 +47,8 @@
     "n": "Liverwurst on rye crackers",
     "note": "Mama Morton does favours. For a price.",
     "meat": true
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
@@ -47,7 +56,10 @@
     "n": "Manhattan with a cherry",
     "note": "Smuggled in, if you're good to Mama.",
     "alc": true
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

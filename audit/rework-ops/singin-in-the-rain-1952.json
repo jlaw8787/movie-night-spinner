@@ -1,7 +1,53 @@
-{"id":"Singin' in the Rain (1952)","ops":[
-{"set":"flavour.note","value":{"text":"Well, I can't make love to a bush!","by":"Lina Lamont","kind":"quote"}},
-{"set":"flavour.winks","value":["Don Lockwood and Lina Lamont, silent film stars","Kathy Selden jumping out of a cake","Cosmo, Make 'Em Laugh","The Dueling Cavalier turning into a musical","Lina's microphone in the bush"]},
-{"old":"Rainy day cheese toasties","new":"Wet walk home cheese toasties"},
-{"set":"house.s","value":{"n":"Crab Louie in lettuce cups","note":"Between elocution lessons, Moses Supposes.","meat":true}},
-{"set":"flavour.prop","value":{"kind":"ticket","title":"Movie Premiere","lines":["Monumental Pictures","Dignity. Always dignity."]}}
-]}
+{
+ "id": "Singin' in the Rain (1952)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Well, I can't make love to a bush!",
+    "by": "Lina Lamont",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Don Lockwood and Lina Lamont, silent film stars",
+    "Kathy Selden jumping out of a cake",
+    "Cosmo, Make 'Em Laugh",
+    "The Dueling Cavalier turning into a musical",
+    "Lina's microphone in the bush"
+   ],
+   "done": true
+  },
+  {
+   "old": "Rainy day cheese toasties",
+   "new": "Wet walk home cheese toasties",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Crab Louie in lettuce cups",
+    "note": "Between elocution lessons, Moses Supposes.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Movie Premiere",
+    "lines": [
+     "Monumental Pictures",
+     "Dignity. Always dignity."
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

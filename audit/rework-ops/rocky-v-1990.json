@@ -7,15 +7,18 @@
     "text": "Sue me for what?",
     "by": "Rocky Balboa",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the snacks when the Balboas pull up outside their old house in Kensington.",
-   "new": "Serve the snacks when Tommy and Duke walk into the local bar with a TV crew."
+   "new": "Serve the snacks when Tommy and Duke walk into the local bar with a TV crew.",
+   "done": true
   },
   {
    "old": "Christmas Eve back in the old house, and the old recipes too",
-   "new": "Christmas dinner at the Balboa mansion, and the old recipes too"
+   "new": "Christmas dinner at the Balboa mansion, and the old recipes too",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +28,10 @@
     "Christmas dinner at the Balboa mansion",
     "The accountant who lost it all",
     "The street fight on the old block"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

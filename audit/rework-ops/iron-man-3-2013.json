@@ -6,15 +6,18 @@
    "value": {
     "n": "Pimento cheese with saltines",
     "note": "Dad went out for scratchers. That was six years ago."
-   }
+   },
+   "done": true
   },
   {
    "old": "Christmas with Pepper",
-   "new": "What would you like for Christmas, kid?"
+   "new": "What would you like for Christmas, kid?",
+   "done": true
   },
   {
    "old": "Vanilla butter cake shaped like a bunny, with white icing and coconut",
-   "new": "Vanilla bunny cake with coconut. It's a big bunny. Relax about it."
+   "new": "Vanilla bunny cake with coconut. It's a big bunny. Relax about it.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -24,7 +27,10 @@
     "Tony in a broken suit in snow",
     "Pepper in the armour",
     "The House Party Protocol"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

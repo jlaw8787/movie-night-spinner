@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Serve the mains when Steve's mother arrives from Greece with his father's other shoe.",
-   "new": "Serve the mains when Derryn Hinch outs Steve as Australia's worst dole bludger."
+   "new": "Serve the mains when Derryn Hinch outs Steve as Australia's worst dole bludger.",
+   "done": true
   },
   {
    "old": "Tzatziki, taramasalata and warm pita",
-   "new": "Get tzatziki with it, taramasalata and warm pita"
+   "new": "Get tzatziki with it, taramasalata and warm pita",
+   "done": true
   },
   {
    "old": "a bite before the TV studio",
-   "new": "Lunch for Australia's worst dole bludger"
+   "new": "Lunch for Australia's worst dole bludger",
+   "done": true
   },
   {
    "old": "Lemon and oregano lamb, roast potatoes",
-   "new": "Lemon and oregano lamb. Not a plaster lion."
+   "new": "Lemon and oregano lamb. Not a plaster lion.",
+   "done": true
   },
   {
    "old": "Honey puffs with walnuts",
-   "new": "Honey puffs with walnuts, the bingo thank you"
+   "new": "Honey puffs with walnuts, the bingo thank you",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -30,7 +35,10 @@
      "Valiant Pacer parked out front",
      "Pay at the counter"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

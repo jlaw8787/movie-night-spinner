@@ -3,22 +3,28 @@
  "ops": [
   {
    "old": "Crispy puffed rice noodles",
-   "new": "Extra crunchy puffed rice noodles"
+   "new": "Extra crunchy puffed rice noodles",
+   "done": true
   },
   {
    "old": "the view from Pride Rock",
-   "new": "Zazu says this is not a drill"
+   "new": "Zazu says this is not a drill",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Vetkoek with apricot jam",
     "note": "Umami, says Timon. Jam, not grubs."
-   }
+   },
+   "done": true
   },
   {
    "old": "the open savannah of the Pride Lands",
-   "new": "Protect everything the light touches."
+   "new": "Protect everything the light touches.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

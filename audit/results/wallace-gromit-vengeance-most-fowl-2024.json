@@ -1,44 +1,56 @@
 {
- "id": "Wallace & Gromit: Vengeance Most Fowl (2024)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Wallace's tipple once the gnomes go rogue.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Wallace is shown with tea and the old teapot, and the transcript has no beer or pub scene, so 'his tipple' is unbacked; the fix keeps the pint but makes it a plain joke.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wallace-gromit-vengeance-most-fowl",
-   "fix": "What Wallace needs after the gnomes go rogue.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Wallace & Gromit: Vengeance Most Fowl (2024)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Wallace's tipple once the gnomes go rogue.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Wallace is shown with tea and the old teapot, and the transcript has no beer or pub scene, so 'his tipple' is unbacked; the fix keeps the pint but makes it a plain joke.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wallace-gromit-vengeance-most-fowl",
+      "fix": "What Wallace needs after the gnomes go rogue.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "Right house, right gadgets and the right villain, but the food leans on cheese and tea and skips the film's set pieces.",
+    "missing": [
+      "Feathers McGraw hiding the Blue Diamond in plain sight at No. 62",
+      "Narrowboat chase down the canal and across the aqueduct",
+      "Norbot reprogrammed and gnome army stealing garden goods",
+      "PC Mukherjee and Chief Inspector Mackintosh on bikes",
+      "Gromit tracking the gnomes to the zoo",
+      "Wallace's pantry lock-in"
+    ],
+    "ideas": [
+      "Swap 'Cheese, potato and onion pasties' for 'Narrowboat chase pasties' with a note about the canal aqueduct",
+      "Swap 'Pint of best bitter' for a 'Tin of tea for the stakeout' to match Wallace's habits",
+      "Rename 'Bangers and mash' to 'Mackintosh's bangers and mash' to nod to the police chase",
+      "Add a 'Blue Diamond' sparkling jelly to the sweet course"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Feathers McGraw",
+      "Norbot the gnome",
+      "Blue Diamond hidden at No. 62",
+      "Narrowboat chase",
+      "Wensleydale and tea at No. 62"
+    ],
+    "changed": [
+      "Pasty note now the narrowboat chase",
+      "Fourth wink now the Blue Diamond hidden at No. 62"
+    ]
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "Right house, right gadgets and the right villain, but the food leans on cheese and tea and skips the film's set pieces.",
-  "missing": [
-   "Feathers McGraw hiding the Blue Diamond in plain sight at No. 62",
-   "Narrowboat chase down the canal and across the aqueduct",
-   "Norbot reprogrammed and gnome army stealing garden goods",
-   "PC Mukherjee and Chief Inspector Mackintosh on bikes",
-   "Gromit tracking the gnomes to the zoo",
-   "Wallace's pantry lock-in"
-  ],
-  "ideas": [
-   "Swap 'Cheese, potato and onion pasties' for 'Narrowboat chase pasties' with a note about the canal aqueduct",
-   "Swap 'Pint of best bitter' for a 'Tin of tea for the stakeout' to match Wallace's habits",
-   "Rename 'Bangers and mash' to 'Mackintosh's bangers and mash' to nod to the police chase",
-   "Add a 'Blue Diamond' sparkling jelly to the sweet course"
-  ],
-  "flat": false,
-  "done": false
- }
 }

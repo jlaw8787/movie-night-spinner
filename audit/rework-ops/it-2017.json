@@ -3,30 +3,36 @@
  "ops": [
   {
    "old": "Serve the snacks when the Losers jump into the quarry.",
-   "new": "Serve the snacks when Pennywise asks Georgie about popcorn."
+   "new": "Serve the snacks when Pennywise asks Georgie about popcorn.",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Root beer float",
     "note": "Ice cream in root beer. We all float down here."
-   }
+   },
+   "done": true
   },
   {
    "old": "Derry summer strawberry lemonade",
-   "new": "Not gray water strawberry lemonade"
+   "new": "Not gray water strawberry lemonade",
+   "done": true
   },
   {
    "old": "Strawberry syrup stirred into fresh lemon juice, served cold",
-   "new": "Strawberry and lemon, served cold. Not gray water, Eddie."
+   "new": "Strawberry and lemon, served cold. Not gray water, Eddie.",
+   "done": true
   },
   {
    "old": "a summer in 1989 Derry",
-   "new": "Richie's summer of Street Fighter"
+   "new": "Richie's summer of Street Fighter",
+   "done": true
   },
   {
    "old": "Sourdough with whipped ricotta and roasted cherry tomatoes with thyme",
-   "new": "Whipped ricotta and roast tomatoes on sourdough, red as the balloon"
+   "new": "Whipped ricotta and roast tomatoes on sourdough, red as the balloon",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -36,7 +42,8 @@
     "Eddie's inhaler",
     "Pennywise's circus smells",
     "The house on Neibolt Street"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -47,7 +54,8 @@
      "Member, summer of 1989",
      "Swore to come back"
     ]
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.labels",
@@ -57,7 +65,10 @@
     "w": "Red Balloon Treats",
     "d": "Sodas",
     "call": "Storm drain call"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

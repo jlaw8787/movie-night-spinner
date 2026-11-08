@@ -1,6 +1,32 @@
-{"id":"Airplane! (1980)","ops":[
-{"old":"Flight 209 espresso martini","new":"Wrong week to quit espresso martini"},
-{"old":"Just-in-case beef lasagne","new":"Roger, Roger beef lasagne"},
-{"old":"for anyone who skipped the fish","new":"Beef lasagne for anyone who skipped the fish"},
-{"set":"flavour.winks","value":["Steak or fish, and why you chose wrong","Otto the inflatable autopilot","A big pretty white plane, like a big Tylenol","Flight 209, Los Angeles to Chicago"]}
-]}
+{
+ "id": "Airplane! (1980)",
+ "ops": [
+  {
+   "old": "Flight 209 espresso martini",
+   "new": "Wrong week to quit espresso martini",
+   "done": true
+  },
+  {
+   "old": "Just-in-case beef lasagne",
+   "new": "Roger, Roger beef lasagne",
+   "done": true
+  },
+  {
+   "old": "for anyone who skipped the fish",
+   "new": "Beef lasagne for anyone who skipped the fish",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Steak or fish, and why you chose wrong",
+    "Otto the inflatable autopilot",
+    "A big pretty white plane, like a big Tylenol",
+    "Flight 209, Los Angeles to Chicago"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

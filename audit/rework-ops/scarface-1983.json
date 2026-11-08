@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Everybody gets a turn.",
-   "new": "Say hello to my little friend."
+   "new": "Say hello to my little friend.",
+   "done": true
   },
   {
    "old": "Jackets after nine.",
-   "new": "The world is yours."
+   "new": "The world is yours.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

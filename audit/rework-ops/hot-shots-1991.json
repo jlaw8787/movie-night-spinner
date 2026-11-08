@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Brioche rounds topped with fried quail eggs, crisp bacon and chives",
-   "new": "Brioche, quail egg and bacon, minus Ramada's belly"
+   "new": "Brioche, quail egg and bacon, minus Ramada's belly",
+   "done": true
   },
   {
    "old": "before the mission briefing",
-   "new": "Enemy toast, not coast, sir"
+   "new": "Enemy toast, not coast, sir",
+   "done": true
   },
   {
    "old": "Grilled rib eyes and corn on the cob with creamy cabbage slaw",
-   "new": "Rib eye, corn, slaw. The chafing dish is not yours"
+   "new": "Rib eye, corn, slaw. The chafing dish is not yours",
+   "done": true
   },
   {
    "old": "Topper cooking on Ramada's stomach. We used a cast iron pan",
-   "new": "Cooked on Ramada's belly in the film. We used a cast iron pan"
+   "new": "Cooked on Ramada's belly in the film. We used a cast iron pan",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -23,7 +27,8 @@
     "text": "Cheryl and I loved the Strogonoff.",
     "by": "Admiral Benson",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -32,7 +37,10 @@
     "Ramada, the navy psychologist love interest",
     "Kent Gregory and the chafing dish",
     "Admiral Benson's pants, short at the knees"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

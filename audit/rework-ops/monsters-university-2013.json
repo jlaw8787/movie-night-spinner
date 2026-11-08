@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Frat house party wings",
-   "new": "Oozma Kappa misfit wings"
+   "new": "Oozma Kappa misfit wings",
+   "done": true
   },
   {
    "old": "Sulley blue cupcakes",
-   "new": "Scream can cupcakes"
+   "new": "Scream can cupcakes",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the snacks when Mike and Sulley break the dean's scream canister."
+   "value": "Serve the snacks when Mike and Sulley break the dean's scream canister.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Squishy, Don, Art, Terri and Terry",
     "The sneak into Monsters Inc",
     "Randall, once a friend"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

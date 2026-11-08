@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Shiz dining hall stuffed chicken",
-   "new": "Galinda's Popular stuffed chicken"
+   "new": "Galinda's Popular stuffed chicken",
+   "done": true
   },
   {
    "old": "Small pink meringues, crisp outside and light inside",
-   "new": "Crisp pink meringues for Galinda's Popular lesson"
+   "new": "Crisp pink meringues for Galinda's Popular lesson",
+   "done": true
   },
   {
    "old": "Lemon juice and sugar with cranberry juice for colour, over ice",
-   "new": "Cranberry pink lemonade, for the black hat dance"
+   "new": "Cranberry pink lemonade, for the black hat dance",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Dr Dillamond's history class",
     "Defying Gravity on a broom",
     "The train to the Emerald City"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

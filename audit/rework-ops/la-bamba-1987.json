@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Serve the mains when Ritchie plays his first show with the Silhouettes.",
-   "new": "Serve the mains when Ritchie sees the band play La Bamba in Tijuana."
+   "new": "Serve the mains when Ritchie sees the band play La Bamba in Tijuana.",
+   "done": true
   },
   {
    "old": "Tijuana street tacos",
-   "new": "Tijuana prom night tacos"
+   "new": "Tijuana prom night tacos",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,8 @@
     "Donna, the girl and the song",
     "Buddy Holly and the Big Bopper on tour",
     "\"Ricky Zuela\", the name Ritchie dodged"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -28,7 +31,10 @@
      "Ritchie Valens",
      "Clear Lake, Iowa, cold night"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

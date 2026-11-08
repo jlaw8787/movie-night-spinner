@@ -7,19 +7,23 @@
     "text": "When a fighter ain't got nothing to lose, he's dangerous.",
     "by": "Rocky Balboa",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "layered and patient, like everything the Dragos do",
-   "new": "Honey and sour cream layers. Ivan throws in the towel."
+   "new": "Honey and sour cream layers. Ivan throws in the towel.",
+   "done": true
   },
   {
    "old": "cooked low at the end of a day in the dirt",
-   "new": "Slow beef chilli for the desert comeback"
+   "new": "Slow beef chilli for the desert comeback",
+   "done": true
   },
   {
    "old": "Serve the snacks when Ivan puts Viktor through his training in Ukraine.",
-   "new": "Serve the snacks when Ivan talks of the stray dogs of Ukraine."
+   "new": "Serve the snacks when Ivan talks of the stray dogs of Ukraine.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +33,8 @@
     "Viktor training under Ivan back in Ukraine",
     "Adrian's, Rocky's restaurant back in Philly",
     "Bianca's music and her hearing aids"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.s",
@@ -37,14 +42,18 @@
     "n": "Grilled chicken skewers with tahini",
     "note": "Little Duke's orders. Protein first, then the desert.",
     "meat": true
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Cold pressed beetroot and ginger juice",
     "note": "To Amara, with Rocky as godfather."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

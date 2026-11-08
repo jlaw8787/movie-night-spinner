@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Serve the snacks when Dalton takes over the Double Deuce.",
-   "new": "Serve the snacks when Dalton gives the bouncers his three rules."
+   "new": "Serve the snacks when Dalton gives the bouncers his three rules.",
+   "done": true
   },
   {
    "old": "the rowdy roadhouse bar",
-   "new": "Tossed hot. Pain don't hurt."
+   "new": "Tossed hot. Pain don't hurt.",
+   "done": true
   },
   {
    "old": "Buttery yellow cake topped with a sweet cream cheese layer",
-   "new": "Buttery yellow cake, cream cheese layer. Not the big white mint."
+   "new": "Buttery yellow cake, cream cheese layer. Not the big white mint.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Wade Garrett, Dalton's mentor",
     "Jasper, Missouri",
     "Dalton's philosophy degree"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

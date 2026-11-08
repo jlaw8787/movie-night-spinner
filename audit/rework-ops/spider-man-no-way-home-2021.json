@@ -1,10 +1,39 @@
 {
  "id": "Spider-Man: No Way Home (2021)",
  "ops": [
-  {"set": "flavour.note", "value": {"text": "With great power... Comes great... responsibility.", "by": "Aunt May", "kind": "quote"}},
-  {"old": "the final battle at the Statue of Liberty", "new": "Peter 3 saves MJ at the Statue of Liberty"},
-  {"old": "Espresso with homemade vanilla syrup and cold milk over ice", "new": "Vanilla syrup, cold milk, ice. I would like a coffee, please."},
-  {"set": "house.d", "value": {"n": "Hot spiced apple juice", "note": "Cool youth pastor, suit underneath."}},
-  {"old": "Serve dessert when Peter visits Strange at the Sanctum.", "new": "Serve dessert when Peter traps Strange in the Mirror Dimension."}
- ]
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "With great power... Comes great... responsibility.",
+    "by": "Aunt May",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "the final battle at the Statue of Liberty",
+   "new": "Peter 3 saves MJ at the Statue of Liberty",
+   "done": true
+  },
+  {
+   "old": "Espresso with homemade vanilla syrup and cold milk over ice",
+   "new": "Vanilla syrup, cold milk, ice. I would like a coffee, please.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hot spiced apple juice",
+    "note": "Cool youth pastor, suit underneath."
+   },
+   "done": true
+  },
+  {
+   "old": "Serve dessert when Peter visits Strange at the Sanctum.",
+   "new": "Serve dessert when Peter traps Strange in the Mirror Dimension.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

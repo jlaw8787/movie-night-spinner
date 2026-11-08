@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve dessert when Tony visits Peter in Queens and meets Aunt May.",
-   "new": "Serve the mains when Tony yells Underoos at the airport."
+   "new": "Serve the mains when Tony yells Underoos at the airport.",
+   "done": true
   },
   {
    "old": "Underoos. Grab one before the tarmac fight.",
-   "new": "Grab one before Ant-Man gets big."
+   "new": "Grab one before Ant-Man gets big.",
+   "done": true
   },
   {
    "old": "Paprika goulash over egg noodles",
-   "new": "Paprika goulash over egg noodles, to lift Wanda's spirits."
+   "new": "Paprika goulash over egg noodles, to lift Wanda's spirits.",
+   "done": true
   },
   {
    "old": "Bratwurst in curry sauce, fries",
-   "new": "Bratwurst in curry sauce, fries, for the tarmac fight"
+   "new": "Bratwurst in curry sauce, fries, for the tarmac fight",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Spider-Man webs Cap's shield",
     "T'Challa chasing Bucky",
     "Zemo and the red book"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

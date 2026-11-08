@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Queen Ramonda leading Wakanda",
-   "new": "An olive branch. Wakanda forever!"
+   "new": "An olive branch. Wakanda forever!",
+   "done": true
   },
   {
    "old": "Achiote citrus pork wrapped in banana leaf and roasted 4 hours, served in tortillas",
-   "new": "Achiote pork in banana leaf, roasted 4 hours, in tortillas. Namor's people are Maya"
+   "new": "Achiote pork in banana leaf, roasted 4 hours, in tortillas. Namor's people are Maya",
+   "done": true
   },
   {
    "old": "Caramel flan made with coconut milk and condensed milk",
-   "new": "Coconut and condensed milk caramel flan, fit for Namor"
+   "new": "Coconut and condensed milk caramel flan, fit for Namor",
+   "done": true
   },
   {
    "old": "Thin fried plantain chips with a peanut butter, chilli and lime dip",
-   "new": "Plantain chips with a peanut butter, chilli and lime dip. Herb not included"
+   "new": "Plantain chips with a peanut butter, chilli and lime dip. Herb not included",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Shuri on the ancestral plane",
     "Okoye without her title",
     "A machine that finds vibranium"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

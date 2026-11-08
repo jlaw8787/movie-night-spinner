@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Don't make me hungry. Bruce's Portuguese needs work.",
-   "new": "Bruce's Portuguese needs work. Order in English."
+   "new": "Bruce's Portuguese needs work. Order in English.",
+   "done": true
   },
   {
    "old": "Chewy tapioca and parmesan cheese puffs, baked until golden",
-   "new": "Chewy tapioca and parmesan puffs. Keep it under 200 beats."
+   "new": "Chewy tapioca and parmesan puffs. Keep it under 200 beats.",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the snacks when a drop of Bruce's blood lands in the soda bottle."
+   "value": "Serve the snacks when a drop of Bruce's blood lands in the soda bottle.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Stan Lee and the soda bottle",
     "The Abomination and the chain in Harlem",
     "Culver University"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

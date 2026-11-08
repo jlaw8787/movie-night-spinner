@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Young Donna's first night on the island in 1979",
-   "new": "Donna's lift on Bill's sailboat to Kalokairi"
+   "new": "Donna's lift on Bill's sailboat to Kalokairi",
+   "done": true
   },
   {
    "old": "Sophie's big night at her mother's hotel",
-   "new": "The reopening Sophie nearly lost to the storm"
+   "new": "The reopening Sophie nearly lost to the storm",
+   "done": true
   },
   {
    "old": "Summer of 1979, back before the hotel",
-   "new": "Donna and Sam and the trapped horse"
+   "new": "Donna and Sam and the trapped horse",
+   "done": true
   },
   {
    "old": "Baked in the hotel kitchen the morning of the party",
-   "new": "Baked for the reopening, ferries or no ferries"
+   "new": "Baked for the reopening, ferries or no ferries",
+   "done": true
   },
   {
    "old": "Raised on the terrace on the hotel's opening night",
-   "new": "Raised to the uninvited guest, Ruby, at the party"
+   "new": "Raised to the uninvited guest, Ruby, at the party",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +34,10 @@
     "A night in Paris with a nervous Englishman",
     "The storm that threatens the big party",
     "Ruby crashes the party, uninvited"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

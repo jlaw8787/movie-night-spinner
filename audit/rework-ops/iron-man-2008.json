@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the cheeseburgers when Tony asks for one after getting home.",
-   "new": "Serve the cheeseburgers when Tony tells Happy cheeseburger first."
+   "new": "Serve the cheeseburgers when Tony tells Happy cheeseburger first.",
+   "done": true
   },
   {
    "old": "Yoghurt flatbreads brushed with garlic butter, with a tub of hummus",
-   "new": "Yoghurt flatbreads and hummus, from a box of scraps"
+   "new": "Yoghurt flatbreads and hummus, from a box of scraps",
+   "done": true
   },
   {
    "old": "Vanilla cupcakes with a blue buttercream ring and white centre",
-   "new": "Vanilla cupcakes, blue ring. I am Iron Man."
+   "new": "Vanilla cupcakes, blue ring. I am Iron Man.",
+   "done": true
   },
   {
    "old": "Pepper's dinner after a long day of Tony",
-   "new": "Pepper's dinner, after the dry cleaning"
+   "new": "Pepper's dinner, after the dry cleaning",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Tony tests the Mark 2 in the workshop",
     "Stane takes the arc reactor",
     "A cheeseburger right after the rescue"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

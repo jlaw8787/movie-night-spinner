@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Space station dumplings",
-   "new": "Tiangong dumplings"
+   "new": "Tiangong dumplings",
+   "done": true
   },
   {
    "old": "Space station dumplings (vegetarian)",
-   "new": "Tiangong dumplings (vegetarian)"
+   "new": "Tiangong dumplings (vegetarian)",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -15,7 +17,10 @@
     "text": "Ryan, you're gonna have to learn to let go.",
     "by": "Matt Kowalski",
     "kind": "quote"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

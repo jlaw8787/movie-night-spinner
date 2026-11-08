@@ -1,41 +1,49 @@
 {
-  "id": "Friendship (2025)",
-  "ops": [
-    {
-      "old": "Serve the snacks when Craig and Austin first hang out.",
-      "new": "Serve the snacks when Austin shows Craig the tunnels under City Hall."
-    },
-    {
-      "old": "Dinner party rump with chimichurri",
-      "new": "Cheap shot rump with chimichurri"
-    },
-    {
-      "old": "Supper club broccolini with whipped feta",
-      "new": "Play hooky broccolini with whipped feta"
-    },
-    {
-      "old": "From-scratch French onion dip and chips",
-      "new": "Just ask French onion dip and chips"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Mushroom hunting in the bog",
-        "The tunnels under Clovis City Hall",
-        "Craig's mantra: just ask",
-        "Craig, a boxing match and a bar of soap"
-      ]
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "slip",
-        "title": "Neighbour's Gift",
-        "lines": [
-          "Left at the door for Tami",
-          "Please say hi next door"
-        ]
-      }
-    }
-  ]
+ "id": "Friendship (2025)",
+ "ops": [
+  {
+   "old": "Serve the snacks when Craig and Austin first hang out.",
+   "new": "Serve the snacks when Austin shows Craig the tunnels under City Hall.",
+   "done": true
+  },
+  {
+   "old": "Dinner party rump with chimichurri",
+   "new": "Cheap shot rump with chimichurri",
+   "done": true
+  },
+  {
+   "old": "Supper club broccolini with whipped feta",
+   "new": "Play hooky broccolini with whipped feta",
+   "done": true
+  },
+  {
+   "old": "From-scratch French onion dip and chips",
+   "new": "Just ask French onion dip and chips",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mushroom hunting in the bog",
+    "The tunnels under Clovis City Hall",
+    "Craig's mantra: just ask",
+    "Craig, a boxing match and a bar of soap"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Neighbour's Gift",
+    "lines": [
+     "Left at the door for Tami",
+     "Please say hi next door"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

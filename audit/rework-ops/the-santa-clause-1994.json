@@ -1,39 +1,47 @@
 {
-  "id": "The Santa Clause (1994)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Well, Neal's head comes to a point.",
-        "by": "Scott Calvin",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "Christmas Eve diner pancake stack",
-      "new": "Dad burnt the turkey pancake stack"
-    },
-    {
-      "old": "Brown butter chocolate chip cookies, dough rested overnight for chewy centres",
-      "new": "Brown butter choc chip cookies, no nuts. Scott was lactose intolerant."
-    },
-    {
-      "old": "Cocoa made with milk and cream, cinnamon and vanilla, warmed to drinking heat",
-      "new": "Cocoa with milk, cream, cinnamon and vanilla. Took 1,200 years to get right."
-    },
-    {
-      "old": "Workshop treat, made for the new big guy.",
-      "new": "Shake it like Charlie's snow globe."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "The card left on the sleigh",
-        "Santa falling off the roof",
-        "A beard that regrows overnight",
-        "Reindeer on Scott's roof",
-        "Bernard, the head elf"
-      ]
-    }
-  ]
+ "id": "The Santa Clause (1994)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Well, Neal's head comes to a point.",
+    "by": "Scott Calvin",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Christmas Eve diner pancake stack",
+   "new": "Dad burnt the turkey pancake stack",
+   "done": true
+  },
+  {
+   "old": "Brown butter chocolate chip cookies, dough rested overnight for chewy centres",
+   "new": "Brown butter choc chip cookies, no nuts. Scott was lactose intolerant.",
+   "done": true
+  },
+  {
+   "old": "Cocoa made with milk and cream, cinnamon and vanilla, warmed to drinking heat",
+   "new": "Cocoa with milk, cream, cinnamon and vanilla. Took 1,200 years to get right.",
+   "done": true
+  },
+  {
+   "old": "Workshop treat, made for the new big guy.",
+   "new": "Shake it like Charlie's snow globe.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The card left on the sleigh",
+    "Santa falling off the roof",
+    "A beard that regrows overnight",
+    "Reindeer on Scott's roof",
+    "Bernard, the head elf"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

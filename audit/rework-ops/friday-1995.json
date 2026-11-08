@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Off the kitchen counter, grill-charred.",
-   "new": "Grill-charred. Bye, Felisha."
+   "new": "Grill-charred. Bye, Felisha.",
+   "done": true
   },
   {
    "old": "Eat it on the steps.",
-   "new": "Deebo, keep walking."
+   "new": "Deebo, keep walking.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

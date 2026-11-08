@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "the club where Jerry dances with Amy, and she forgets everyone else",
-   "new": "Jerry dances with Amy. Welcome to Fright Night. For real."
+   "new": "Jerry dances with Amy. Welcome to Fright Night. For real.",
+   "done": true
   },
   {
    "old": "Jerry Dandrige next door",
-   "new": "Jerry's missing reflection"
+   "new": "Jerry's missing reflection",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

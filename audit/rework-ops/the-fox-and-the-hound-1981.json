@@ -7,18 +7,21 @@
     "text": "My, my. Look at that. A fox and a hound, playing together.",
     "by": "Big Mama",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "the farm on the edge of the forest",
-   "new": "Tod is \"one of the family now.\""
+   "new": "Tod is \"one of the family now.\"",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Warm milk with honey",
     "note": "Widow Tweed: \"There goes my milk!\""
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -27,7 +30,10 @@
     "Squeeks the caterpillar",
     "Chief and the train",
     "The waterfall bear"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

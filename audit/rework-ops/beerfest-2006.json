@@ -7,15 +7,18 @@
     "text": "I always sleep better with a little sausage in me.",
     "by": "Great Gam Gam",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Great Gam Gam's pork schnitzel",
-   "new": "Schnitzengiggle Tavern pork schnitzel"
+   "new": "Schnitzengiggle Tavern pork schnitzel",
+   "done": true
   },
   {
    "old": "German lager topped with homemade lemon soda",
-   "new": "Lager and lemon soda. Das Boot! Das Boot!"
+   "new": "Lager and lemon soda. Das Boot! Das Boot!",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -26,7 +29,8 @@
      "Munich, Germany",
      "Enter in a keg"
     ]
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
@@ -34,7 +38,10 @@
     "n": "Bavarian wheat beer by the stein",
     "note": "Chug like Landfill. Drink, drink, drink!",
     "alc": true
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

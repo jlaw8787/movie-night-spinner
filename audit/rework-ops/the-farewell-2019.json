@@ -3,11 +3,13 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the main when Hao Hao breaks down on the wedding day."
+   "value": "Serve the main when Hao Hao breaks down on the wedding day.",
+   "done": true
   },
   {
    "old": "Pork, wombok and ginger dumplings pan-fried until crisp underneath",
-   "new": "Pork and ginger dumplings, crisp underneath. \"Five? That's not enough.\""
+   "new": "Pork and ginger dumplings, crisp underneath. \"Five? That's not enough.\"",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,10 @@
     "Hao Hao and Aiko's wedding banquet",
     "The red envelope on the wedding night",
     "The bull and the corner of the room"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

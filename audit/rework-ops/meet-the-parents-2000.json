@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "the pool volleyball game Greg takes too far",
-   "new": "Chipotle chicken nachos, post pool volleyball"
+   "new": "Chipotle chicken nachos, post pool volleyball",
+   "done": true
   },
   {
    "old": "the dinner where Greg says grace",
-   "new": "Roast sirloin, with grace said by Greg"
+   "new": "Roast sirloin, with grace said by Greg",
+   "done": true
   },
   {
    "old": "Silky baked lemon tart in a sweet shortcrust shell, dusted with sugar",
-   "new": "Silky lemon tart, dusted with sugar. Greg burned the altar"
+   "new": "Silky lemon tart, dusted with sugar. Greg burned the altar",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,8 @@
     "The lie detector test",
     "Grandma's urn, used as kitty litter",
     "Greg Focker, the name"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -32,7 +36,10 @@
      "Byrnes family only",
      "Focker pending"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

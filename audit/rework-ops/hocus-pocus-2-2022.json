@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Winifred's spell book, with its one eye that never stops watching",
-   "new": "Devilled eggs. Do not worry, Mister Book."
+   "new": "Devilled eggs. Do not worry, Mister Book.",
+   "done": true
   },
   {
    "old": "the Halloween festival filling Salem's town square",
-   "new": "Corn dogs. Mary rides past on two robot vacuums."
+   "new": "Corn dogs. Mary rides past on two robot vacuums.",
+   "done": true
   },
   {
    "old": "Gilbert's shop special. Black Flame Candle sold separately.",
-   "new": "Gilbert's shop special. Black Flame candles half off."
+   "new": "Gilbert's shop special. Black Flame candles half off.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -19,7 +22,8 @@
     "text": "Lock up your children! Yes, Salem, we're back!",
     "by": "Winifred Sanderson",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +33,10 @@
     "Billy Butcherson, a good zombie",
     "Gilbert's magic shop on the old cottage site",
     "Walgreens aisle four, for children's souls"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

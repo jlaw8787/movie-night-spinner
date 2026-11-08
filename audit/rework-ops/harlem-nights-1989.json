@@ -3,27 +3,33 @@
  "ops": [
   {
    "old": "Serve the drinks when the gambling and dancing start up at Club Sugar Ray.",
-   "new": "Serve the drinks when Jack Jenkins steps into the ring against Kirkpatrick."
+   "new": "Serve the drinks when Jack Jenkins steps into the ring against Kirkpatrick.",
+   "done": true
   },
   {
    "old": "Craps table crumbed cheese dice",
-   "new": "Snake Eyes' crumbed cheese dice"
+   "new": "Snake Eyes' crumbed cheese dice",
+   "done": true
   },
   {
    "old": "the gambling and dancing out front",
-   "new": "Bennie deals, with something in his eye."
+   "new": "Bennie deals, with something in his eye.",
+   "done": true
   },
   {
    "old": "Harlem hush puppies",
-   "new": "Vault hush puppies"
+   "new": "Vault hush puppies",
+   "done": true
   },
   {
    "old": "Club Sugar Ray lemon chess pie",
-   "new": "Bag of sugar lemon chess pie"
+   "new": "Bag of sugar lemon chess pie",
+   "done": true
   },
   {
    "old": "Club champagne cocktail",
-   "new": "Fight night champagne cocktail"
+   "new": "Fight night champagne cocktail",
+   "done": true
   },
   {
    "set": "house.s",
@@ -31,7 +37,10 @@
     "n": "Pinky toe fried whiting bites with hot sauce",
     "note": "For Vera's pinky toe, which Quick swore to shoot.",
     "meat": true
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

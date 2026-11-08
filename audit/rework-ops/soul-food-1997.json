@@ -3,18 +3,21 @@
  "ops": [
   {
    "old": "Serve the mains when the whole family sits down for Sunday dinner at Big Mama's.",
-   "new": "Serve the mains when Ahmad gets the family back to Big Mama's for one more Sunday dinner."
+   "new": "Serve the mains when Ahmad gets the family back to Big Mama's for one more Sunday dinner.",
+   "done": true
   },
   {
    "old": "the dish everyone fights over",
-   "new": "Baked mac and cheese, hands up"
+   "new": "Baked mac and cheese, hands up",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Candied yams with toasted pecans",
     "note": "The money was under Uncle Pete's TV."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -23,7 +26,10 @@
     "Maxine, Teri and Bird, the sisters",
     "Ahmad narrating the family story",
     "Uncle Pete's TV, and the money"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

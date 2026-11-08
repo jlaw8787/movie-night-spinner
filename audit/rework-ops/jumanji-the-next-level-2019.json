@@ -1,50 +1,60 @@
 {
-  "id": "Jumanji: The Next Level (2019)",
-  "ops": [
-    {
-      "old": "Grandpa's diner glazed meatloaf",
-      "new": "Milo and Eddie's glazed meatloaf"
-    },
-    {
-      "old": "Eddie and Milo's old diner",
-      "new": "Their place, Nora's now."
-    },
-    {
-      "old": "Desert oasis cooler",
-      "new": "Oberon's sand and sun cooler"
-    },
-    {
-      "old": "Blended watermelon with lime and mint, chilled and poured over ice",
-      "new": "Blended watermelon, lime and mint. Oberon's weakness is heat."
-    },
-    {
-      "old": "Lime jelly set with kiwi and green grapes, topped with whipped cream",
-      "new": "Lime jelly, kiwi and grapes. \"May I offer you a piece of cake?\""
-    },
-    {
-      "old": "the long chase across the desert dunes",
-      "new": "Flatbread. Ostrich stampede on the dunes."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Grandpa Eddie and Milo's feud",
-        "Ostriches chasing the whole group",
-        "Mandrills on the rope bridge",
-        "Jurgen the Brutal and the Falcon",
-        "Cyclone, the horse that is Bethany"
-      ]
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "card",
-        "title": "Player Card",
-        "lines": [
-          "Ming Fleetfoot, cat burglar",
-          "Weakness: pollen"
-        ]
-      }
-    }
-  ]
+ "id": "Jumanji: The Next Level (2019)",
+ "ops": [
+  {
+   "old": "Grandpa's diner glazed meatloaf",
+   "new": "Milo and Eddie's glazed meatloaf",
+   "done": true
+  },
+  {
+   "old": "Eddie and Milo's old diner",
+   "new": "Their place, Nora's now.",
+   "done": true
+  },
+  {
+   "old": "Desert oasis cooler",
+   "new": "Oberon's sand and sun cooler",
+   "done": true
+  },
+  {
+   "old": "Blended watermelon with lime and mint, chilled and poured over ice",
+   "new": "Blended watermelon, lime and mint. Oberon's weakness is heat.",
+   "done": true
+  },
+  {
+   "old": "Lime jelly set with kiwi and green grapes, topped with whipped cream",
+   "new": "Lime jelly, kiwi and grapes. \"May I offer you a piece of cake?\"",
+   "done": true
+  },
+  {
+   "old": "the long chase across the desert dunes",
+   "new": "Flatbread. Ostrich stampede on the dunes.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Grandpa Eddie and Milo's feud",
+    "Ostriches chasing the whole group",
+    "Mandrills on the rope bridge",
+    "Jurgen the Brutal and the Falcon",
+    "Cyclone, the horse that is Bethany"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Player Card",
+    "lines": [
+     "Ming Fleetfoot, cat burglar",
+     "Weakness: pollen"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

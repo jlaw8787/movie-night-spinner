@@ -10,7 +10,8 @@
      "Jack Frost, on the lawn",
      "Cork nose included"
     ]
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -20,22 +21,28 @@
     "The J-shot, and hockey with Charlie",
     "Three balls, two sticks, one cork nose",
     "I'm a snowdrift with arms"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "Vanilla cupcakes with buttercream rolled in coconut, snowman faces",
-   "new": "Vanilla cupcakes rolled in coconut. Snowman? No, much more."
+   "new": "Vanilla cupcakes rolled in coconut. Snowman? No, much more.",
+   "done": true
   },
   {
    "old": "Maple, butter and thyme, roasted while the snow piles up",
-   "new": "Maple, butter and thyme. Jack's nose is cork, not a carrot."
+   "new": "Maple, butter and thyme. Jack's nose is cork, not a carrot.",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Cherry cola float",
     "note": "Hot enough to melt a snowman, says the radio."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

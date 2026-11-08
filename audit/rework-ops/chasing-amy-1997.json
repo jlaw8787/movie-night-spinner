@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Root beer poured over vanilla ice cream, topped with whipped cream",
-   "new": "Root beer over vanilla ice cream and whipped cream, for the hockey game"
+   "new": "Root beer over vanilla ice cream and whipped cream, for the hockey game",
+   "done": true
   },
   {
    "old": "Creamy stovetop rice pudding with vanilla, served warm or cold",
-   "new": "Creamy vanilla rice pudding, warm or cold. Painting of birds not included."
+   "new": "Creamy vanilla rice pudding, warm or cold. Painting of birds not included.",
+   "done": true
   },
   {
    "old": "Comic strip pizza bagels",
-   "new": "Bluntman and Chronic pizza bagels"
+   "new": "Bluntman and Chronic pizza bagels",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Hooper X on Return of the Jedi",
     "You're Chasing Amy, says Silent Bob",
     "Alyssa Jones and Idiosyncratic Routine"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

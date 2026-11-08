@@ -7,7 +7,8 @@
     "text": "I'll find them and I'll bring them home to you.",
     "by": "Joshua Connor",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,25 +18,31 @@
     "The cricket bat on the train",
     "Major Hasan",
     "The search across Gallipoli"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Simit with white cheese and olives",
     "note": "Orhan promises anything his mama can make."
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Turkish coffee with a square of lokum",
     "note": "Now we wait. We decide everything here by coffee."
-   }
+   },
+   "done": true
   },
   {
    "old": "Black tea simmered with apple, cinnamon and clove",
-   "new": "Black tea, apple and spice. Told you there was water there."
+   "new": "Black tea, apple and spice. Told you there was water there.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

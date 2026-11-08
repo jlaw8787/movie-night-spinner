@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Crispy potato gems with sriracha mayo",
-   "new": "Venom's tater tot gems with sriracha mayo"
+   "new": "Venom's tater tot gems with sriracha mayo",
+   "done": true
   },
   {
    "old": "Grilled lobster tails with garlic parsley butter, double fried fries",
-   "new": "Eddie climbs into the tank. Grilled tails, garlic parsley butter, fries"
+   "new": "Eddie climbs into the tank. Grilled tails, garlic parsley butter, fries",
+   "done": true
   },
   {
    "set": "house.s",
@@ -15,14 +17,18 @@
     "n": "Char siu pork buns",
     "note": "Eyes, lungs, pancreas. So many snacks.",
     "meat": true
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Iced chocolate with cream",
     "note": "Tater tots and chocolate. Venom's order."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

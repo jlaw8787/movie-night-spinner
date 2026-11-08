@@ -1,6 +1,37 @@
-{"id":"Sister Act (1992)","ops":[
-{"set":"flavour.note","value":{"text":"Yea, though I walk through the valley of the shadow of no food.","by":"Deloris Van Cartier","kind":"quote"}},
-{"old":"the nuns sneaking into the bar across the road","new":"Deloris sneaks out, two nuns follow her"},
-{"old":"Choir practice honey ginger lemon tea","new":"Hail Holy Queen honey ginger lemon tea"},
-{"set":"flavour.winks","value":["Choir practice in the church","Sister Mary Patrick, always cheerful","Reverend Mother's firm rules","The Reno lounge act","Mary Lazarus, four Popes now"]}
-]}
+{
+ "id": "Sister Act (1992)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Yea, though I walk through the valley of the shadow of no food.",
+    "by": "Deloris Van Cartier",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "the nuns sneaking into the bar across the road",
+   "new": "Deloris sneaks out, two nuns follow her",
+   "done": true
+  },
+  {
+   "old": "Choir practice honey ginger lemon tea",
+   "new": "Hail Holy Queen honey ginger lemon tea",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Choir practice in the church",
+    "Sister Mary Patrick, always cheerful",
+    "Reverend Mother's firm rules",
+    "The Reno lounge act",
+    "Mary Lazarus, four Popes now"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

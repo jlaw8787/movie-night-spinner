@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Serve the snacks when Noelle lands in Phoenix.",
-   "new": "Serve the snacks when the sleigh lands at the mall."
+   "new": "Serve the snacks when the sleigh lands at the mall.",
+   "done": true
   },
   {
    "old": "Dark and white chocolate bark with crushed peppermint candy canes",
-   "new": "Dark and white chocolate peppermint bark. Thank garland for it."
+   "new": "Dark and white chocolate peppermint bark. Thank garland for it.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,10 @@
     "Gabriel's list of 2,837 nice children",
     "Jake Hapman, the detective",
     "A yoga retreat at the Desert Botanical Garden"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

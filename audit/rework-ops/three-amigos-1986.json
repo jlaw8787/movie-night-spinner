@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Serve the mains at El Guapo's birthday party.",
-   "new": "Serve the mains when El Guapo asks if he has a plethora of piñatas."
+   "new": "Serve the mains when El Guapo asks if he has a plethora of piñatas.",
+   "done": true
   },
   {
    "old": "My Little Buttercup at the cantina",
-   "new": "Black bean nachos for My Little Buttercup"
+   "new": "Black bean nachos for My Little Buttercup",
+   "done": true
   },
   {
    "old": "Birthday churros",
-   "new": "A plethora of churros"
+   "new": "A plethora of churros",
+   "done": true
   },
   {
    "old": "Tequila, orange liqueur and lime shaken and strained into a salt rimmed glass",
-   "new": "Tequila, orange liqueur, lime, salt rim. \"Is it fattening?\""
+   "new": "Tequila, orange liqueur, lime, salt rim. \"Is it fattening?\"",
+   "done": true
   },
   {
    "old": "back on the studio lot",
-   "new": "Red chilli chicken enchiladas, the day Flugelman fired them"
+   "new": "Red chilli chicken enchiladas, the day Flugelman fired them",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -30,7 +35,10 @@
      "Lucky, Dusty and Ned",
      "Face your El Guapo, one night only"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

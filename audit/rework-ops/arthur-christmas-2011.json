@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Packed for Gwen, in Grandsanta's old sleigh.",
-   "new": "Packed for Gwen, in Evie, Grandsanta's old sleigh."
+   "new": "Packed for Gwen, in Evie, Grandsanta's old sleigh.",
+   "done": true
   },
   {
    "old": "the house in Cornwall where Gwen waits for her bike",
-   "new": "the house in Cornwall where Gwen waits for her bike, not Pedro's in Mexico"
+   "new": "the house in Cornwall where Gwen waits for her bike, not Pedro's in Mexico",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,10 @@
     "Bryony, always time for a bow",
     "Gwen's pink bicycle",
     "Gwen in Trelew, Cornwall"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

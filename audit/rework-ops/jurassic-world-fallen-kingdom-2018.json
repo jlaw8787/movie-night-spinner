@@ -1,39 +1,47 @@
 {
-  "id": "Jurassic World: Fallen Kingdom (2018)",
-  "ops": [
-    {
-      "old": "Beef sausages grilled over coals, sliced with jammy onions and wholegrain mustard",
-      "new": "Beef sausages with jammy onions and mustard. \"You silly sausage!\""
-    },
-    {
-      "old": "Soft-boiled eggs wrapped in sausage meat and breadcrumbs, fried or baked, halved",
-      "new": "Eggs in sausage meat and breadcrumbs. Life finds a way."
-    },
-    {
-      "old": "the auction at the Lockwood mansion",
-      "new": "Sold to the highest bidder."
-    },
-    {
-      "old": "Blue butterfly pea tea with honey, topped with lemonade and lime",
-      "new": "Butterfly pea tea, honey, lemonade and lime. \"Blue is alive.\""
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Mount Sibo erupting over the island",
-        "Blue rescued from the lab",
-        "The Indoraptor on the rooftop",
-        "The Lockwood dinosaur auction",
-        "Rexy devours Eli Mills"
-      ]
-    },
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Welcome to Jurassic World.",
-        "by": "Dr Ian Malcolm",
-        "kind": "quote"
-      }
-    }
-  ]
+ "id": "Jurassic World: Fallen Kingdom (2018)",
+ "ops": [
+  {
+   "old": "Beef sausages grilled over coals, sliced with jammy onions and wholegrain mustard",
+   "new": "Beef sausages with jammy onions and mustard. \"You silly sausage!\"",
+   "done": true
+  },
+  {
+   "old": "Soft-boiled eggs wrapped in sausage meat and breadcrumbs, fried or baked, halved",
+   "new": "Eggs in sausage meat and breadcrumbs. Life finds a way.",
+   "done": true
+  },
+  {
+   "old": "the auction at the Lockwood mansion",
+   "new": "Sold to the highest bidder.",
+   "done": true
+  },
+  {
+   "old": "Blue butterfly pea tea with honey, topped with lemonade and lime",
+   "new": "Butterfly pea tea, honey, lemonade and lime. \"Blue is alive.\"",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mount Sibo erupting over the island",
+    "Blue rescued from the lab",
+    "The Indoraptor on the rooftop",
+    "The Lockwood dinosaur auction",
+    "Rexy devours Eli Mills"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Welcome to Jurassic World.",
+    "by": "Dr Ian Malcolm",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

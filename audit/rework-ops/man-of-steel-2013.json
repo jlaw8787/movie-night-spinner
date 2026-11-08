@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Martha's recipe, cooled on the porch rail.",
-   "new": "Not an S. On my world it means hope."
+   "new": "Not an S. On my world it means hope.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,7 +14,10 @@
     "Clark working on a fishing boat",
     "Lois Lane and her press pass",
     "Zod sneering, trained on a farm?"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "the jungle on the remote island",
-   "new": "Fruit cups, leech checked."
+   "new": "Fruit cups, leech checked.",
+   "done": true
   },
   {
    "old": "Homemade mango lime sorbet, scraped and frozen, scooped into glasses",
-   "new": "Mango lime sorbet. The crown was red seashells, not fire."
+   "new": "Mango lime sorbet. The crown was red seashells, not fire.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,10 @@
     "Leeches in the lake",
     "Jack Trainer, rescue guy",
     "Beth the loyal publisher"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

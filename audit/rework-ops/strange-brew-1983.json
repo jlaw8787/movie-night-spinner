@@ -1,9 +1,34 @@
 {
  "id": "Strange Brew (1983)",
  "ops": [
-  {"old": "Cornmeal crusted back bacon, fried onions and maple mustard on buns", "new": "Cornmeal back bacon, onions, maple mustard. Hold the toast."},
-  {"old": "Bacon-wrapped smokies", "new": "Hosehead's bacon-wrapped smokies"},
-  {"old": "Lager and lemonade with maple lemon syrup", "new": "Lager, lemonade and maple. Shot in 3B, three beers."},
-  {"set": "flavour.prop", "value": {"kind": "slip", "title": "Free Beer Pass", "lines": ["Elsinore Brewery", "Valid with one dead mouse"]}}
- ]
+  {
+   "old": "Cornmeal crusted back bacon, fried onions and maple mustard on buns",
+   "new": "Cornmeal back bacon, onions, maple mustard. Hold the toast.",
+   "done": true
+  },
+  {
+   "old": "Bacon-wrapped smokies",
+   "new": "Hosehead's bacon-wrapped smokies",
+   "done": true
+  },
+  {
+   "old": "Lager and lemonade with maple lemon syrup",
+   "new": "Lager, lemonade and maple. Shot in 3B, three beers.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Free Beer Pass",
+    "lines": [
+     "Elsinore Brewery",
+     "Valid with one dead mouse"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

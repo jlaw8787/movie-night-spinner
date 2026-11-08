@@ -1,43 +1,54 @@
 {
-  "id": "Total Recall (1990)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The cheap eats in the Mars mining quarter.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Venusville is the colony's red-light district where the mutants live. The Last Resort there is a bar and brothel. The mines are a separate place.",
-      "source": "https://en.wikipedia.org/wiki/Total_Recall_(1990_film)",
-      "fix": "The cheap eats in Venusville, the mutant quarter.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "Cold lab ration sheet that fits Mars and Rekall, with good nods to the Last Resort and 'two weeks'.",
-    "missing": [
-      "'Consider that a divorce' (Quaid and Lori)",
-      "The fat lady disguise at Mars customs",
-      "Hauser's video: 'Get ready for the big surprise'",
-      "Johnny Cab chase",
-      "The Mars sky turning blue at the end",
-      "Kuato inside his brother George"
-    ],
-    "ideas": [
-      "Swap 'Red planet raspberry pavlova' note for 'Get ready for a big surprise'",
-      "Rename 'Mars colony stew' to 'Fat lady disguise stew' with a 'Two weeks' note",
-      "Replace 'Rekall memory chips' note with 'Is this a dream? Eat first.' (Quaid's last-scene doubt)",
-      "Add a Johnny Cab drink named 'Johnny Cab cold brew'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Total Recall (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The cheap eats in the Mars mining quarter.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Venusville is the colony's red-light district where the mutants live. The Last Resort there is a bar and brothel. The mines are a separate place.",
+   "source": "https://en.wikipedia.org/wiki/Total_Recall_(1990_film)",
+   "fix": "The cheap eats in Venusville, the mutant quarter.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Cold lab ration sheet that fits Mars and Rekall, with good nods to the Last Resort and 'two weeks'.",
+  "missing": [
+   "'Consider that a divorce' (Quaid and Lori)",
+   "The fat lady disguise at Mars customs",
+   "Hauser's video: 'Get ready for the big surprise'",
+   "Johnny Cab chase",
+   "The Mars sky turning blue at the end",
+   "Kuato inside his brother George"
+  ],
+  "ideas": [
+   "Swap 'Red planet raspberry pavlova' note for 'Get ready for a big surprise'",
+   "Rename 'Mars colony stew' to 'Fat lady disguise stew' with a 'Two weeks' note",
+   "Replace 'Rekall memory chips' note with 'Is this a dream? Eat first.' (Quaid's last-scene doubt)",
+   "Add a Johnny Cab drink named 'Johnny Cab cold brew'"
+  ],
+  "flat": false,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Get your ass to Mars",
+   "Two weeks",
+   "Consider that a divorce",
+   "Venusville and the Last Resort",
+   "Rekall"
+  ],
+  "changed": [
+   "Signed note now Quaid's Consider that a divorce"
+  ]
+ }
 }

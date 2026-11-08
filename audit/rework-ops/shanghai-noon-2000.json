@@ -1,6 +1,40 @@
-{"id":"Shanghai Noon (2000)","ops":[
-{"set":"flavour.winks","value":["Roy O'Bannon, the talky outlaw","Princess Pei Pei","Lo Fong, the traitor","Chipichawa, Roy's word for nobility","Two chopsticks in Roy's mouth"]},
-{"old":"the outlaw's camp under the stars","new":"Roy's cowboy lessons for Wang"},
-{"old":"the dusty saloons of Nevada","new":"the tavern where they meet again"},
-{"set":"flavour.prop","value":{"kind":"ticket","title":"Imperial Train Ticket","lines":["Forbidden City to Carson City","One way, outlaws permitting"]}}
-]}
+{
+ "id": "Shanghai Noon (2000)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Roy O'Bannon, the talky outlaw",
+    "Princess Pei Pei",
+    "Lo Fong, the traitor",
+    "Chipichawa, Roy's word for nobility",
+    "Two chopsticks in Roy's mouth"
+   ],
+   "done": true
+  },
+  {
+   "old": "the outlaw's camp under the stars",
+   "new": "Roy's cowboy lessons for Wang",
+   "done": true
+  },
+  {
+   "old": "the dusty saloons of Nevada",
+   "new": "the tavern where they meet again",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Imperial Train Ticket",
+    "lines": [
+     "Forbidden City to Carson City",
+     "One way, outlaws permitting"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

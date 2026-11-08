@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Neil McCauley, the careful crew boss who travels light",
-   "new": "Neil McCauley: for me, the action is the juice."
+   "new": "Neil McCauley: for me, the action is the juice.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,7 +14,10 @@
     "The armoured car heist",
     "Chris Shiherlis in the crew",
     "Waingro, the problem on the first job"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

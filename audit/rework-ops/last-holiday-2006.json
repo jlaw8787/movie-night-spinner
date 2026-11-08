@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Serve the main when Georgia orders everything Chef Didier makes.",
-   "new": "Serve the main when Georgia says \"Tout, baby!\" and orders it all."
+   "new": "Serve the main when Georgia says \"Tout, baby!\" and orders it all.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -11,23 +12,28 @@
     "text": "Next time... we will laugh more, we'll love more; we just won't be so afraid.",
     "by": "Georgia Byrd",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Georgia's crab cakes with lemon aioli",
-   "new": "Georgia's Joint crab cakes, lemon aioli"
+   "new": "Georgia's Joint crab cakes, lemon aioli",
+   "done": true
   },
   {
    "old": "Puff pastry squares with garlicky mushrooms and gruyère",
-   "new": "Mushroom and gruyère puff squares fit for a New Year's Eve feast"
+   "new": "Mushroom and gruyère puff squares fit for a New Year's Eve feast",
+   "done": true
   },
   {
    "old": "Crisp-skinned duck breast with orange honey sauce and potatoes",
-   "new": "Crisp duck, orange honey sauce, potatoes. Didier never repeats a menu."
+   "new": "Crisp duck, orange honey sauce, potatoes. Didier never repeats a menu.",
+   "done": true
   },
   {
    "old": "Sugar cube, bitters and brandy topped with champagne",
-   "new": "Sugar cube, bitters, brandy and champagne for a roulette win"
+   "new": "Sugar cube, bitters, brandy and champagne for a roulette win",
+   "done": true
   },
   {
    "set": "house.d",
@@ -35,7 +41,8 @@
     "n": "Slivovitz plum brandy",
     "note": "Georgia snowboards, tries BASE jumping, then this by the fire.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -45,7 +52,10 @@
     "Lampington's disease, or a dodgy scanner",
     "Kragen's department store",
     "Sean Williams, back home"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

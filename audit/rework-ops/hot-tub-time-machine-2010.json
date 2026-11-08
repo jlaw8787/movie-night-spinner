@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Melted gruyère and emmental in white wine, with bread for dipping",
-   "new": "Melted gruyère and emmental. My fondue's getting cold"
+   "new": "Melted gruyère and emmental. My fondue's getting cold",
+   "done": true
   },
   {
    "old": "Ski lodge chilli con carne",
-   "new": "Great White Buffalo chilli"
+   "new": "Great White Buffalo chilli",
+   "done": true
   },
   {
    "old": "Après ski at the lodge, 1986, before anyone touches the future",
-   "new": "Crumbed chicken. Blaine pummels Lou like it's his job"
+   "new": "Crumbed chicken. Blaine pummels Lou like it's his job",
+   "done": true
   },
   {
    "old": "Fudgy dark chocolate brownies dusted with icing sugar",
-   "new": "Fudgy brownies, icing sugar. Watch the fork, Adam"
+   "new": "Fudgy brownies, icing sugar. Watch the fork, Adam",
+   "done": true
   },
   {
    "old": "Ginger syrup, lemon, lime and vodka topped with soda",
-   "new": "Ginger, lemon, lime and vodka with soda. Russian Red Bull"
+   "new": "Ginger, lemon, lime and vodka with soda. Russian Red Bull",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -27,7 +32,8 @@
     "text": "It must be some kind of hot tub time machine.",
     "by": "Nick",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -37,7 +43,10 @@
     "Lou, Nick, Adam and nephew Jacob",
     "Adam's fork in the eye",
     "The great white buffalo"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

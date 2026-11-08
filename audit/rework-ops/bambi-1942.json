@@ -10,23 +10,28 @@
     "d": "Spring Drinks",
     "t": "In the Meadow",
     "call": "Thumper's call"
-   }
+   },
+   "done": true
   },
   {
    "old": "Long ears and great big feet, guaranteed.",
-   "new": "Awful stuff to eat, Thumper says. He made that bit up."
+   "new": "Awful stuff to eat, Thumper says. He made that bit up.",
+   "done": true
   },
   {
    "old": "Crisp meringue round topped with whipped cream and berries",
-   "new": "Meringue pond, cream and berries, for Bambi's slip on the ice"
+   "new": "Meringue pond, cream and berries, for Bambi's slip on the ice",
+   "done": true
   },
   {
    "old": "the forest in spring",
-   "new": "Berry custard, sweet as Flower the skunk"
+   "new": "Berry custard, sweet as Flower the skunk",
+   "done": true
   },
   {
    "old": "Woodland mushroom pie",
-   "new": "Great Prince's woodland mushroom pie"
+   "new": "Great Prince's woodland mushroom pie",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -36,7 +41,10 @@
     "If you can't say somethin' nice, don't say nothin' at all",
     "The Great Prince of the Forest",
     "Bambi slipping on the frozen pond"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

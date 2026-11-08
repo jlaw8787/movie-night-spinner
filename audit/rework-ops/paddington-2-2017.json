@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Pink tea party Victoria sponge",
-   "new": "One red sock pink Victoria sponge"
+   "new": "One red sock pink Victoria sponge",
+   "done": true
   },
   {
    "old": "Two sponge layers with raspberry jam and whipped cream, pale pink icing",
-   "new": "Jam and cream sponge layers, pale pink icing that brightens the place up"
+   "new": "Jam and cream sponge layers, pale pink icing that brightens the place up",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -15,15 +17,20 @@
     "text": "You don't have to tell me about hard stares, I practically invented them.",
     "by": "Knuckles McGinty",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Scone fingers served with strawberry jam and clotted cream",
-   "new": "Scone fingers with strawberry jam and clotted cream, no hairy marmalade"
+   "new": "Scone fingers with strawberry jam and clotted cream, no hairy marmalade",
+   "done": true
   },
   {
    "old": "Prison canteen chicken and leek pie",
-   "new": "Dish of the day: bear pie (it's chicken)"
+   "new": "Dish of the day: bear pie (it's chicken)",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

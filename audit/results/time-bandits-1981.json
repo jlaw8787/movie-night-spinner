@@ -1,54 +1,65 @@
 {
- "id": "Time Bandits (1981)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the main when the boys reach Agamemnon's feast.",
-   "where": "cue",
-   "verdict": "ok",
-   "why": "Agamemnon adopts Kevin and orders 'Let the banquet begin', and the dwarfs turn up at that banquet posing as magic act helpers before stealing his riches.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=time-bandits",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Robin Hood's men keep the takings.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Robin Hood takes the dwarfs' haul and gives it to the poor, and the dwarfs leave angry. Randall complains about him 'giving away what isn't even his'.",
-   "source": "https://en.wikiquote.org/wiki/Time_Bandits",
-   "fix": "Robin Hood hands the takings to the poor.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Time Bandits (1981)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the main when the boys reach Agamemnon's feast.",
+      "where": "cue",
+      "verdict": "ok",
+      "why": "Agamemnon adopts Kevin and orders 'Let the banquet begin', and the dwarfs turn up at that banquet posing as magic act helpers before stealing his riches.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=time-bandits",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Robin Hood's men keep the takings.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Robin Hood takes the dwarfs' haul and gives it to the poor, and the dwarfs leave angry. Randall complains about him 'giving away what isn't even his'.",
+      "source": "https://en.wikiquote.org/wiki/Time_Bandits",
+      "fix": "Robin Hood hands the takings to the poor.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 3,
+    "overall": 3.6,
+    "verdict": "A neat map-room tavern with the right historical stops, held back by a boxed poster and generic pub food.",
+    "missing": [
+      "Evil's speech about digital watches and the microchip",
+      "The cage over the bottomless pit",
+      "Vermin eating the rat ('Rat, anybody?')",
+      "The dwarfs' soft-shoe 'Me and My Shadow' for Napoleon",
+      "Kevin's parents and the smouldering rock in the toaster oven",
+      "The Supreme Being: 'I am the nice one'"
+    ],
+    "ideas": [
+      "Swap 'Ploughman's board' for a rat-on-toast joke starter named 'Vermin's rat, anybody?'",
+      "Replace the mackerel pâté note with 'Robin Hood hands the takings to the poor'",
+      "Rename 'Napoleon's little custard tarts' to 'Napoleon's dinner tarts' and add a note that the dwarfs rob him after he passes out from wine",
+      "Crop the poster so it fills the frame instead of sitting between black bars"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Agamemnon adopting Kevin",
+      "Robin Hood and the dwarfs",
+      "Napoleon and the dwarfs' act",
+      "Evil and his digital watches",
+      "The Titanic"
+    ],
+    "changed": [
+      "Evil's digital watches wink in place of the map wink"
+    ]
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 4,
-  "look": 3,
-  "overall": 3.6,
-  "verdict": "A neat map-room tavern with the right historical stops, held back by a boxed poster and generic pub food.",
-  "missing": [
-   "Evil's speech about digital watches and the microchip",
-   "The cage over the bottomless pit",
-   "Vermin eating the rat ('Rat, anybody?')",
-   "The dwarfs' soft-shoe 'Me and My Shadow' for Napoleon",
-   "Kevin's parents and the smouldering rock in the toaster oven",
-   "The Supreme Being: 'I am the nice one'"
-  ],
-  "ideas": [
-   "Swap 'Ploughman's board' for a rat-on-toast joke starter named 'Vermin's rat, anybody?'",
-   "Replace the mackerel pâté note with 'Robin Hood hands the takings to the poor'",
-   "Rename 'Napoleon's little custard tarts' to 'Napoleon's dinner tarts' and add a note that the dwarfs rob him after he passes out from wine",
-   "Crop the poster so it fills the frame instead of sitting between black bars"
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,17 +1,22 @@
 {
-  "id": "After Hours (1985)",
-  "ops": [
-    {
-      "old": "Full menu on the back.",
-      "new": "Tonight is mohawk night."
-    },
-    {
-      "old": "The bar, a quiet night after midnight.",
-      "new": "Is That All There Is? on the jukebox."
-    },
-    {
-      "old": "Last Stop burger",
-      "new": "Terminal Bar burger"
-    }
-  ]
+ "id": "After Hours (1985)",
+ "ops": [
+  {
+   "old": "Full menu on the back.",
+   "new": "Tonight is mohawk night.",
+   "done": true
+  },
+  {
+   "old": "The bar, a quiet night after midnight.",
+   "new": "Is That All There Is? on the jukebox.",
+   "done": true
+  },
+  {
+   "old": "Last Stop burger",
+   "new": "Terminal Bar burger",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -7,7 +7,8 @@
     "text": "Tea is at four. There's plenty of it. You are welcome anytime.",
     "by": "Bilbo Baggins",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
@@ -15,7 +16,8 @@
     "n": "Dark Erebor stout",
     "note": "Farewell, Master Burglar. A cup for Thorin.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,11 +27,15 @@
     "Dain asks them to consider just sodding off",
     "Eagles turning the tide",
     "Bard's black arrow"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "the survivors camping in the ruins of Dale",
-   "new": "Damper bread for the survivors in the ruins of Dale"
+   "new": "Damper bread for the survivors in the ruins of Dale",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

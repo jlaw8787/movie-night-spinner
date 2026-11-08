@@ -7,11 +7,13 @@
     "text": "Hey, Claudius, you killed my father. Big mistake.",
     "by": "Hamlet",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Matinee ice cream sundae",
-   "new": "To cone a phrase sundae"
+   "new": "To cone a phrase sundae",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,14 +23,18 @@
     "Death, stepping out of The Seventh Seal",
     "Danny riding into the movie in a car",
     "Benedict and his plan to escape the film"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Nacho cheese and jalapeño tray",
     "note": "Hot and cheesy. Silent but deadly, like Jack Slater."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

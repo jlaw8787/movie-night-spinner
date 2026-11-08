@@ -7,19 +7,23 @@
     "text": "That looks like the creature that ate Fred Dukes.",
     "by": "Logan",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Weapon X garlic butter rib eye",
-   "new": "Fred Dukes garlic butter rib eye"
+   "new": "Fred Dukes garlic butter rib eye",
+   "done": true
   },
   {
    "old": "the Weapon X facility",
-   "new": "Dukes' Las Vegas boxing gym"
+   "new": "Dukes' Las Vegas boxing gym",
+   "done": true
   },
   {
    "old": "Canadian whisky, lemon, maple syrup and egg white shaken",
-   "new": "Whisky, lemon and maple, for drinking to remember"
+   "new": "Whisky, lemon and maple, for drinking to remember",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,13 +33,17 @@
     "The Blob and his big appetite",
     "Zero's helicopter coming down",
     "Three Mile Island"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.labels",
    "value": {
     "n": "Growled by Logan"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

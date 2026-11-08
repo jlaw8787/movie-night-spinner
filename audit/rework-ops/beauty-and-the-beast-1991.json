@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "the enchanted castle kitchen cooks dinner for Belle",
-   "new": "beef stew for the girl he told to go ahead and starve"
+   "new": "beef stew for the girl he told to go ahead and starve",
+   "done": true
   },
   {
    "old": "Lumière pours, Cogsworth checks the clock.",
-   "new": "Lumière pours, Belle and the Beast waltz."
+   "new": "Lumière pours, Belle and the Beast waltz.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

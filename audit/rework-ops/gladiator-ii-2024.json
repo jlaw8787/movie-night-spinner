@@ -7,19 +7,23 @@
     "text": "Rome will fall. I need only give it a push.",
     "by": "Macrinus",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the mains when Senator Thraex throws his party for the emperors.",
-   "new": "Serve the mains when Hanno wins the duel at Thraex's party and quotes Virgil."
+   "new": "Serve the mains when Hanno wins the duel at Thraex's party and quotes Virgil.",
+   "done": true
   },
   {
    "old": "bread for the Colosseum crowd",
-   "new": "First slice for Consul Dondus."
+   "new": "First slice for Consul Dondus.",
+   "done": true
   },
   {
    "old": "the Roman siege of Numidia",
-   "new": "Lamb stew from Hanno's Numidia."
+   "new": "Lamb stew from Hanno's Numidia.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +32,10 @@
     "The flooded Colosseum sea battle",
     "Baboons in the Ostia fight",
     "Dondus the monkey, named consul"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

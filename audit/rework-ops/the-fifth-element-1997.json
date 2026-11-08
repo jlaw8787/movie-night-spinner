@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Fhloston Paradise prawns",
-   "new": "Meat popsicle prawn skewers"
+   "new": "Meat popsicle prawn skewers",
+   "done": true
   },
   {
    "old": "Lychee champagne cocktail",
-   "new": "Big badaboom lychee champagne"
+   "new": "Big badaboom lychee champagne",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,10 @@
     "Ruby Rhod screaming into his microphone",
     "The four stones and the fifth element",
     "Leeloo crashing into Korben's flying cab"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

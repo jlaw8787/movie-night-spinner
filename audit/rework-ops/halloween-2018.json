@@ -7,23 +7,28 @@
     "text": "Happy Halloween, Michael.",
     "by": "Laurie Strode",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the jerky when the two podcasters walk into the courtyard at Smith's Grove.",
-   "new": "Serve the jerky when Aaron holds up Michael's mask at Smith's Grove."
+   "new": "Serve the jerky when Aaron holds up Michael's mask at Smith's Grove.",
+   "done": true
   },
   {
    "old": "Laurie's bunker beef jerky",
-   "new": "Laurie's safe room beef jerky"
+   "new": "Laurie's safe room beef jerky",
+   "done": true
   },
   {
    "old": "rations from the pantry in Laurie's compound",
-   "new": "rations for the safe room in Laurie's basement"
+   "new": "rations for the safe room in Laurie's basement",
+   "done": true
   },
   {
    "old": "Karen's dinner at home, where Laurie turns up uninvited",
-   "new": "Karen is trying to prepare dinner for her family."
+   "new": "Karen is trying to prepare dinner for her family.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,10 @@
     "Dr. Sartain: Say something",
     "Officer Hawkins, forty years on the case",
     "Michael's breathing under the end credits"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

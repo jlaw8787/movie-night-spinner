@@ -1,6 +1,34 @@
-{"id":"Uncle Buck (1989)","ops":[
-{"set":"flavour.note","value":{"text":"You should see the toast. I couldn't get it through the door!","by":"Buck Russell","kind":"quote"}},
-{"old":"Buck cooks big, like those gigantic birthday pancakes","new":"Cooked in the oven. The microwave is for socks."},
-{"set":"house.d","value":{"n":"Fresh-squeezed orange juice","note":"Poured before Buck locks Bug in the trunk."}},
-{"old":"Popcorn and marshmallow caramel balls rolled in rainbow sprinkles","new":"Marshmallow caramel popcorn balls in sprinkles. Pooter's late."}
-]}
+{
+ "id": "Uncle Buck (1989)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "You should see the toast. I couldn't get it through the door!",
+    "by": "Buck Russell",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Buck cooks big, like those gigantic birthday pancakes",
+   "new": "Cooked in the oven. The microwave is for socks.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Fresh-squeezed orange juice",
+    "note": "Poured before Buck locks Bug in the trunk."
+   },
+   "done": true
+  },
+  {
+   "old": "Popcorn and marshmallow caramel balls rolled in rainbow sprinkles",
+   "new": "Marshmallow caramel popcorn balls in sprinkles. Pooter's late.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

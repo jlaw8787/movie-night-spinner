@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Mother, the ship's computer",
-   "new": "Ash and his milky blood"
+   "new": "Ash and his milky blood",
+   "done": true
   },
   {
    "set": "tagline",
-   "value": "In space no one can hear you scream. Eat up."
+   "value": "In space no one can hear you scream. Eat up.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

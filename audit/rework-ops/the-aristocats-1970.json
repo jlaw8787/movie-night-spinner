@@ -1,8 +1,49 @@
-{"id":"The Aristocats (1970)","ops":[
-{"set":"flavour.note","value":{"text":"Ladies do not start fights. But they can finish them.","by":"Duchess","kind":"quote"}},
-{"old":"Serve dessert when Edgar the butler prepares the cream.","new":"Serve dessert when Edgar spikes the cats' cream."},
-{"old":"Madame's grand house in Paris","new":"Cheese puffs for Madame's mansion"},
-{"old":"Abigail and Amelia, the English geese","new":"A very English chicken and leek pie"},
-{"set":"house.d","value":{"n":"Citron pressé","note":"Scat Cat sings Ev'rybody Wants to Be a Cat."}},
-{"set":"flavour.winks","value":["Edgar the butler","Napoleon and Lafayette, the hounds","Crate to Timbuktu","Marie, Toulouse and Berlioz"]}
-]}
+{
+ "id": "The Aristocats (1970)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ladies do not start fights. But they can finish them.",
+    "by": "Duchess",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Serve dessert when Edgar the butler prepares the cream.",
+   "new": "Serve dessert when Edgar spikes the cats' cream.",
+   "done": true
+  },
+  {
+   "old": "Madame's grand house in Paris",
+   "new": "Cheese puffs for Madame's mansion",
+   "done": true
+  },
+  {
+   "old": "Abigail and Amelia, the English geese",
+   "new": "A very English chicken and leek pie",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Citron pressé",
+    "note": "Scat Cat sings Ev'rybody Wants to Be a Cat."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Edgar the butler",
+    "Napoleon and Lafayette, the hounds",
+    "Crate to Timbuktu",
+    "Marie, Toulouse and Berlioz"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

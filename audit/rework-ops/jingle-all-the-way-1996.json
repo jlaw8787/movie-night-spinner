@@ -1,46 +1,55 @@
 {
-  "id": "Jingle All the Way (1996)",
-  "ops": [
-    {
-      "old": "Serve the snacks when Howard hits the toy store on Christmas Eve.",
-      "new": "Serve the snacks when Howard races to name Santa's reindeer on air."
-    },
-    {
-      "old": "the too-perfect neighbour always popping over",
-      "new": "Iced cookies. \"Put that cookie down! Now!\""
-    },
-    {
-      "old": "Popcorn tossed in white chocolate with red and green sprinkles",
-      "new": "White chocolate popcorn. Dementor jumps the parade float."
-    },
-    {
-      "old": "Minnesota beef and potato gem hotdish",
-      "new": "Mickey's Diner beef gem hotdish"
-    },
-    {
-      "old": "Booster's spiced eggnog",
-      "new": "Turbo Time spiced eggnog"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Turbo Man sold out everywhere",
-        "Myron Larabee, the mail carrier",
-        "Ted Maltin, the neighbour next door",
-        "Jingle bells, Batman smells, the Santa password",
-        "Turbo Man parade on Christmas Eve"
-      ]
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "ticket",
-        "title": "Turbo Man Parade",
-        "lines": [
-          "It's Turbo Time!",
-          "Dementor not invited"
-        ]
-      }
-    }
-  ]
+ "id": "Jingle All the Way (1996)",
+ "ops": [
+  {
+   "old": "Serve the snacks when Howard hits the toy store on Christmas Eve.",
+   "new": "Serve the snacks when Howard races to name Santa's reindeer on air.",
+   "done": true
+  },
+  {
+   "old": "the too-perfect neighbour always popping over",
+   "new": "Iced cookies. \"Put that cookie down! Now!\"",
+   "done": true
+  },
+  {
+   "old": "Popcorn tossed in white chocolate with red and green sprinkles",
+   "new": "White chocolate popcorn. Dementor jumps the parade float.",
+   "done": true
+  },
+  {
+   "old": "Minnesota beef and potato gem hotdish",
+   "new": "Mickey's Diner beef gem hotdish",
+   "done": true
+  },
+  {
+   "old": "Booster's spiced eggnog",
+   "new": "Turbo Time spiced eggnog",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Turbo Man sold out everywhere",
+    "Myron Larabee, the mail carrier",
+    "Ted Maltin, the neighbour next door",
+    "Jingle bells, Batman smells, the Santa password",
+    "Turbo Man parade on Christmas Eve"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Turbo Man Parade",
+    "lines": [
+     "It's Turbo Time!",
+     "Dementor not invited"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,7 +3,8 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the pizza when Deeds breaks the ice with his frostbitten foot."
+   "value": "Serve the pizza when Deeds breaks the ice with his frostbitten foot.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -11,7 +12,8 @@
     "text": "Ma'am, you were just the victim of a New York City mugger.",
     "by": "Longfellow Deeds",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,15 +23,20 @@
     "Babe Bennett, the undercover reporter",
     "Emilio the butler",
     "Crazy Eyes' pizza, with French fries and Oreos"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "Greeting card cheese and tomato pinwheels",
-   "new": "Hallmark card cheese and tomato pinwheels"
+   "new": "Hallmark card cheese and tomato pinwheels",
+   "done": true
   },
   {
    "old": "Greeting card cheese and tomato pinwheels (vegetarian)",
-   "new": "Hallmark card cheese and tomato pinwheels (vegetarian)"
+   "new": "Hallmark card cheese and tomato pinwheels (vegetarian)",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

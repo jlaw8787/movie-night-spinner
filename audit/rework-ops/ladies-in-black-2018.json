@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Model Gowns poppy seed cake",
-   "new": "35 guinea poppy seed cake"
+   "new": "35 guinea poppy seed cake",
+   "done": true
   },
   {
    "old": "Goodes tearoom egg sandwiches",
-   "new": "Goode's lunch room egg sandwiches"
+   "new": "Goode's lunch room egg sandwiches",
+   "done": true
   },
   {
    "old": "Rudi, the Hungarian who wins Fay over",
-   "new": "Rudi, who proposes to Fay in his new flat"
+   "new": "Rudi, who proposes to Fay in his new flat",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -22,7 +25,8 @@
      "Goode's lunch room",
      "Frocks, now 35 guineas"
     ]
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -31,7 +35,10 @@
     "Magda planning her own fashion shop",
     "Patty's pink nightdress",
     "Sydney summer, 1959"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

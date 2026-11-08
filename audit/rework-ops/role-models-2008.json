@@ -1,10 +1,38 @@
 {
-  "id": "Role Models (2008)",
-  "ops": [
-    {"old": "Kingdom of LAIRE honey spice cakes", "new": "Kiss-My-Anthia honey spice cakes"},
-    {"old": "Spicy ginger syrup, lime and soda water over ice", "new": "Ginger and lime soda over ice. Taste the beast!"},
-    {"old": "Crisp baked wings in a sticky honey soy glaze", "new": "Crisp baked honey soy wings. A simple concept."},
-    {"old": "Gayle runs Sturdy Wings on second chances and big pots", "new": "Veggie chilli with cornbread. Gayle used to have cocaine for lunch."},
-    {"set": "flavour.winks", "value": ["The Minotaur energy drink", "Wheeler in the Minotaur costume", "Gayle Sweeny, the program boss", "Kiss-My-Anthia, Augie's new nation", "King Argotron"]}
-  ]
+ "id": "Role Models (2008)",
+ "ops": [
+  {
+   "old": "Kingdom of LAIRE honey spice cakes",
+   "new": "Kiss-My-Anthia honey spice cakes",
+   "done": true
+  },
+  {
+   "old": "Spicy ginger syrup, lime and soda water over ice",
+   "new": "Ginger and lime soda over ice. Taste the beast!",
+   "done": true
+  },
+  {
+   "old": "Crisp baked wings in a sticky honey soy glaze",
+   "new": "Crisp baked honey soy wings. A simple concept.",
+   "done": true
+  },
+  {
+   "old": "Gayle runs Sturdy Wings on second chances and big pots",
+   "new": "Veggie chilli with cornbread. Gayle used to have cocaine for lunch.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Minotaur energy drink",
+    "Wheeler in the Minotaur costume",
+    "Gayle Sweeny, the program boss",
+    "Kiss-My-Anthia, Augie's new nation",
+    "King Argotron"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Puff pastry rolls with tomato paste, ham, pineapple and mozzarella",
-   "new": "Puff pastry rolls with ham, pineapple and mozzarella. That's all folks."
+   "new": "Puff pastry rolls with ham, pineapple and mozzarella. That's all folks.",
+   "done": true
   },
   {
    "old": "the safe house at Aunt May's place",
-   "new": "Pancakes for the Aunt May safe house"
+   "new": "Pancakes for the Aunt May safe house",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the snacks when Miles takes his leap of faith off the building."
+   "value": "Serve the snacks when Miles takes his leap of faith off the building.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

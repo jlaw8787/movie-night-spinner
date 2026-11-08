@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "the golden idol swapped for a bag of sand",
-   "new": "the idol swapped for sand, then the boulder"
+   "new": "the idol swapped for sand, then the boulder",
+   "done": true
   },
   {
    "old": "Handle with care",
-   "new": "Mind the snakes"
+   "new": "Mind the snakes",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

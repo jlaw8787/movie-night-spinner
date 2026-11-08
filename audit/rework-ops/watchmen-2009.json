@@ -7,15 +7,18 @@
     "text": "I triggered it thirty-five minutes ago.",
     "by": "Adrian Veidt",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the beans when Rorschach tells Dan he helped himself to the beans."
+   "value": "Serve the beans when Rorschach tells Dan he helped himself to the beans.",
+   "done": true
   },
   {
    "old": "Smiley face cookies",
-   "new": "Comedian's badge cookies"
+   "new": "Comedian's badge cookies",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -26,7 +29,10 @@
      "One spot of red",
      "Human bean juice, said Rorschach"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

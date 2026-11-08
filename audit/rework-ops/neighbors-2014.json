@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Backyard barbecue steak with chimichurri",
-   "new": "Second strike barbecue steak with chimichurri"
+   "new": "Second strike barbecue steak with chimichurri",
+   "done": true
   },
   {
    "old": "Teddy and Pete's sprinkle sheet cake",
-   "new": "Delta Psi Hall of Fame sheet cake"
+   "new": "Delta Psi Hall of Fame sheet cake",
+   "done": true
   },
   {
    "old": "Baby Stella date night baked brie",
-   "new": "Baby's first rave baked brie"
+   "new": "Baby's first rave baked brie",
+   "done": true
   },
   {
    "old": "Mac and Kelly's first round at Delta Psi.",
-   "new": "Delta Psi gave the world beer pong."
+   "new": "Delta Psi gave the world beer pong.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Teddy, shirtless at Abercrombie",
     "Pete, the frat brother",
     "A forged letter from the dean"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

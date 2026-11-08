@@ -1,6 +1,40 @@
-{"id":"Terminator 2: Judgment Day (1991)","ops":[
-{"set":"flavour.note","value":{"text":"Come with me if you want to live.","by":"The Terminator","kind":"quote"}},
-{"old":"Serve the mains when the Terminator walks into the biker bar to borrow some clothes.","new":"Serve the mains when the Terminator asks the biker for his clothes, boots and motorcycle."},
-{"set":"house.s","value":{"n":"Elote with cotija and chilli","note":"Sarah asks Enrique for clothes, food and a truck."}},
-{"set":"flavour.winks","value":["John's dirt bike ride through the canal","The T-1000 flowing out of the floor","NO FATE carved into the table","The Model 101 giving a thumbs up","The steel mill and the vat of molten metal"]}
-]}
+{
+ "id": "Terminator 2: Judgment Day (1991)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Come with me if you want to live.",
+    "by": "The Terminator",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Serve the mains when the Terminator walks into the biker bar to borrow some clothes.",
+   "new": "Serve the mains when the Terminator asks the biker for his clothes, boots and motorcycle.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Elote with cotija and chilli",
+    "note": "Sarah asks Enrique for clothes, food and a truck."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "John's dirt bike ride through the canal",
+    "The T-1000 flowing out of the floor",
+    "NO FATE carved into the table",
+    "The Model 101 giving a thumbs up",
+    "The steel mill and the vat of molten metal"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

@@ -1,8 +1,50 @@
-{"id":"Animal House (1978)","ops":[
-{"old":"Toga party grapes","new":"Toga! Toga! party grapes"},
-{"old":"Baked crisp chicken wings tossed in honey barbecue sauce","new":"Crisp honey barbecue wings, with Otis Day on stage"},
-{"old":"the homecoming parade they wreck","new":"Sauerkraut hot dogs, for the parade the Deltas wreck"},
-{"old":"Vanilla cupcakes with brightly coloured swirled buttercream","new":"Vanilla swirl cupcakes. Thank you, sir, may I have another?"},
-{"set":"flavour.prop","value":{"kind":"slip","title":"Probation Notice","lines":["Delta Tau Chi","Double secret probation"]}},
-{"set":"flavour.winks","value":["Bluto the zit, then the food fight","Toga! Toga!","Dean Wormer's probation notice","Otis Day and the Knights","Faber College and its founder statue"]}
-]}
+{
+ "id": "Animal House (1978)",
+ "ops": [
+  {
+   "old": "Toga party grapes",
+   "new": "Toga! Toga! party grapes",
+   "done": true
+  },
+  {
+   "old": "Baked crisp chicken wings tossed in honey barbecue sauce",
+   "new": "Crisp honey barbecue wings, with Otis Day on stage",
+   "done": true
+  },
+  {
+   "old": "the homecoming parade they wreck",
+   "new": "Sauerkraut hot dogs, for the parade the Deltas wreck",
+   "done": true
+  },
+  {
+   "old": "Vanilla cupcakes with brightly coloured swirled buttercream",
+   "new": "Vanilla swirl cupcakes. Thank you, sir, may I have another?",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Probation Notice",
+    "lines": [
+     "Delta Tau Chi",
+     "Double secret probation"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bluto the zit, then the food fight",
+    "Toga! Toga!",
+    "Dean Wormer's probation notice",
+    "Otis Day and the Knights",
+    "Faber College and its founder statue"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

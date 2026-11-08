@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Mini Ash sausage rolls",
-   "new": "Boomstick mini sausage rolls"
+   "new": "Boomstick mini sausage rolls",
+   "done": true
   },
   {
    "old": "Shop smart. The medieval aisle is out back.",
-   "new": "Hail to the king, baby. Tear into the hock."
+   "new": "Hail to the king, baby. Tear into the hock.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -17,7 +19,10 @@
     "The windmill and the cracked mirror",
     "The little Ashes",
     "Three books waiting in the graveyard"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

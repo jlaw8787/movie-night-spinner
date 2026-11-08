@@ -1,15 +1,18 @@
 {
-  "id": "A Bug's Life (1998)",
-  "ops": [
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Flik's harvesting machine",
-        "Heimlich the caterpillar and his dream of butterfly wings",
-        "Hopper: keep those ants in line",
-        "The fake bird built to scare them off",
-        "Tuck and Roll, the pill bug act"
-      ]
-    }
-  ]
+ "id": "A Bug's Life (1998)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Flik's harvesting machine",
+    "Heimlich the caterpillar and his dream of butterfly wings",
+    "Hopper: keep those ants in line",
+    "The fake bird built to scare them off",
+    "Tuck and Roll, the pill bug act"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

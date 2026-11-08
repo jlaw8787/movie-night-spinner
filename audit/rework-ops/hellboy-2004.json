@@ -3,39 +3,48 @@
  "ops": [
   {
    "old": "Hellboy's pancake stack",
-   "new": "Six-a-day pancake stack"
+   "new": "Six-a-day pancake stack",
+   "done": true
   },
   {
    "old": "Clay says Hellboy gets fed six times a day",
-   "new": "Pancakes and bacon, fed six times a day"
+   "new": "Pancakes and bacon, fed six times a day",
+   "done": true
   },
   {
    "old": "Abe Sapien's devilled eggs",
-   "new": "Abe's delicacy devilled eggs"
+   "new": "Abe's delicacy devilled eggs",
+   "done": true
   },
   {
    "old": "Boiled eggs with a Dijon, mayo and dill yolk filling",
-   "new": "Not rotten, whatever Abe says. Dijon, mayo, dill filling"
+   "new": "Not rotten, whatever Abe says. Dijon, mayo, dill filling",
+   "done": true
   },
   {
    "old": "Bureau red chilli wings",
-   "new": "Fireproof red chilli wings"
+   "new": "Fireproof red chilli wings",
+   "done": true
   },
   {
    "old": "the agents of the Bureau for Paranormal Research",
-   "new": "Chilli dogs. Eat up, your chilli's getting cold"
+   "new": "Chilli dogs. Eat up, your chilli's getting cold",
+   "done": true
   },
   {
    "old": "Bureau brown butter choc chip cookies",
-   "new": "Give-him-the-candy brown butter cookies"
+   "new": "Give-him-the-candy brown butter cookies",
+   "done": true
   },
   {
    "old": "Chocolate chip cookies made with browned butter",
-   "new": "Brown butter choc chip cookies, not Myers's candy"
+   "new": "Brown butter choc chip cookies, not Myers's candy",
+   "done": true
   },
   {
    "old": "Bureau strawberry malted milk",
-   "new": "Cat lover's strawberry malted milk"
+   "new": "Cat lover's strawberry malted milk",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -45,7 +54,10 @@
     "Liz Sherman: not a firestarter",
     "Kittens saved from the monster",
     "The Right Hand of Doom"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

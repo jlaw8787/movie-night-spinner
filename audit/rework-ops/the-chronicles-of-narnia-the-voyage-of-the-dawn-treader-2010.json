@@ -3,11 +3,13 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the mains when the crew lays the seven swords on Aslan's table."
+   "value": "Serve the mains when the crew lays the seven swords on Aslan's table.",
+   "done": true
   },
   {
    "old": "the great table on Ramandu's island",
-   "new": "Enough for all at Aslan's table"
+   "new": "Enough for all at Aslan's table",
+   "done": true
   },
   {
    "set": "house.d",
@@ -15,7 +17,8 @@
     "n": "Ship's rum and lime grog",
     "note": "For Drinian's crew, who hear tales of sea serpents.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -23,7 +26,8 @@
     "text": "Ever since I can remember, I have dreamt of seeing your country.",
     "by": "Reepicheep",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +37,10 @@
     "Seven lost lords' swords",
     "Lucy's spell from the Book of Incantations",
     "The Dark Island and the sea serpent"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

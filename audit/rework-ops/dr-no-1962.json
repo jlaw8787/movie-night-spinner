@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Table 3, Mr. Bond",
-   "new": "Table 3, Bond. James Bond."
+   "new": "Table 3, Bond. James Bond.",
+   "done": true
   },
   {
    "old": "2 punches, 1 fritters",
-   "new": "2 punches, shaken, not stirred"
+   "new": "2 punches, shaken, not stirred",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

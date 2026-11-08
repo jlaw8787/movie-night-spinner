@@ -1,7 +1,38 @@
-{"id":"Cinderella Man (2005)","ops":[
-{"set":"flavour.winks","value":["Max Baer in the title fight","Braddock's right hand","Paying back the relief money","Mae throwing a drink at Baer","Joe Gould, the loyal manager"]},
-{"old":"Comeback rib eye with mash and gravy","new":"Cinderella Man's rib eye with mash and gravy"},
-{"old":"the fight crowd at the big arena","new":"Franks and caraway kraut at the Baer fight"},
-{"old":"Depression bread and dripping","new":"Relief line bread and dripping"},
-{"old":"Milk warmed with honey, cinnamon and vanilla, whisked frothy","new":"Warm milk for the kids, with honey, cinnamon and vanilla"}
-]}
+{
+ "id": "Cinderella Man (2005)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Max Baer in the title fight",
+    "Braddock's right hand",
+    "Paying back the relief money",
+    "Mae throwing a drink at Baer",
+    "Joe Gould, the loyal manager"
+   ],
+   "done": true
+  },
+  {
+   "old": "Comeback rib eye with mash and gravy",
+   "new": "Cinderella Man's rib eye with mash and gravy",
+   "done": true
+  },
+  {
+   "old": "the fight crowd at the big arena",
+   "new": "Franks and caraway kraut at the Baer fight",
+   "done": true
+  },
+  {
+   "old": "Depression bread and dripping",
+   "new": "Relief line bread and dripping",
+   "done": true
+  },
+  {
+   "old": "Milk warmed with honey, cinnamon and vanilla, whisked frothy",
+   "new": "Warm milk for the kids, with honey, cinnamon and vanilla",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

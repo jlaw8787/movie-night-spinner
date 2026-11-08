@@ -1,8 +1,48 @@
-{"id":"Two Hands (1999)","ops":[
-{"set":"flavour.note","value":{"text":"You know, Pando's a good bloke.","by":"Jimmy","kind":"quote"}},
-{"old":"Lager-battered flathead with thick twice-fried chips, wrapped to go","new":"Lager-battered flathead and chips. Mind the envelope."},
-{"old":"Sichuan pepper squid and egg fried rice","new":"Chinatown squid and egg fried rice"},
-{"old":"the gang waiting at Pando's office","new":"Pando's gang, waiting on his ten grand."},
-{"old":"Deirdre's family house out in the suburbs","new":"Deirdre's house, where the bank job starts."},
-{"set":"flavour.prop","value":{"kind":"slip","title":"Run Slip","lines":["Jimmy to deliver","Sharon, Bondi"]}}
-]}
+{
+ "id": "Two Hands (1999)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "You know, Pando's a good bloke.",
+    "by": "Jimmy",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Lager-battered flathead with thick twice-fried chips, wrapped to go",
+   "new": "Lager-battered flathead and chips. Mind the envelope.",
+   "done": true
+  },
+  {
+   "old": "Sichuan pepper squid and egg fried rice",
+   "new": "Chinatown squid and egg fried rice",
+   "done": true
+  },
+  {
+   "old": "the gang waiting at Pando's office",
+   "new": "Pando's gang, waiting on his ten grand.",
+   "done": true
+  },
+  {
+   "old": "Deirdre's family house out in the suburbs",
+   "new": "Deirdre's house, where the bank job starts.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Run Slip",
+    "lines": [
+     "Jimmy to deliver",
+     "Sharon, Bondi"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

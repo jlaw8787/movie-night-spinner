@@ -1,9 +1,59 @@
-{"id":"Under Siege (1992)","ops":[
-{"set":"flavour.note","value":{"text":"I'm just a cook.","by":"Casey Ryback","kind":"quote"}},
-{"old":"Ryback's bouillabaisse","new":"Ryback's spit-free bouillabaisse"},
-{"old":"Fish, mussel and prawn stew with saffron, fennel and tomato, rouille toast","new":"Saffron fish and prawn stew with rouille toast. Fifty gallons, due tomorrow."},
-{"old":"the mess hall standard","new":"Get my pies out of the oven!"},
-{"old":"Two-layer butter cake with buttercream and a piped blue message","new":"Two-layer butter cake. Jordan Tate came in a bigger one."},
-{"set":"flavour.winks","value":["Casey Ryback, the ship's cook with a past","The cake, with Miss July 1989 inside","Strannix, the former CIA man leading the takeover","Krill, the unhinged officer on the inside","The Tomahawk missile and the battleship"]},
-{"set":"flavour.prop","value":{"kind":"tag","title":"Galley Duty Tag","lines":["Cook Ryback","Fires the 16 inch guns"]}}
-]}
+{
+ "id": "Under Siege (1992)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I'm just a cook.",
+    "by": "Casey Ryback",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Ryback's bouillabaisse",
+   "new": "Ryback's spit-free bouillabaisse",
+   "done": true
+  },
+  {
+   "old": "Fish, mussel and prawn stew with saffron, fennel and tomato, rouille toast",
+   "new": "Saffron fish and prawn stew with rouille toast. Fifty gallons, due tomorrow.",
+   "done": true
+  },
+  {
+   "old": "the mess hall standard",
+   "new": "Get my pies out of the oven!",
+   "done": true
+  },
+  {
+   "old": "Two-layer butter cake with buttercream and a piped blue message",
+   "new": "Two-layer butter cake. Jordan Tate came in a bigger one.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Casey Ryback, the ship's cook with a past",
+    "The cake, with Miss July 1989 inside",
+    "Strannix, the former CIA man leading the takeover",
+    "Krill, the unhinged officer on the inside",
+    "The Tomahawk missile and the battleship"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Galley Duty Tag",
+    "lines": [
+     "Cook Ryback",
+     "Fires the 16 inch guns"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

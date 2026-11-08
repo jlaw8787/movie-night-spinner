@@ -3,15 +3,18 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when the bras go on their heads and Lisa comes alive."
+   "value": "Serve the snacks when the bras go on their heads and Lisa comes alive.",
+   "done": true
   },
   {
    "old": "the computer that makes Lisa",
-   "new": "Chips and dips, as Lisa promised"
+   "new": "Chips and dips, as Lisa promised",
+   "done": true
   },
   {
    "old": "Blues bar bourbon lemon smash",
-   "new": "Blind Dog bourbon lemon smash"
+   "new": "Blind Dog bourbon lemon smash",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Chet, Wyatt's mean older brother",
     "Chet turning into a creature",
     "The mutant biker party"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

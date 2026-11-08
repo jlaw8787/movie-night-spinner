@@ -3,11 +3,13 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the mains when Reed and Sue turn up a single minute late for Sunday dinner."
+   "value": "Serve the mains when Reed and Sue turn up a single minute late for Sunday dinner.",
+   "done": true
   },
   {
    "old": "Family dinner at six sharp",
-   "new": "Sunday dinner at seven sharp"
+   "new": "Sunday dinner at seven sharp",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -15,19 +17,23 @@
     "text": "Sunday at seven on the dot. No matter what, we're all here.",
     "by": "Reed Richards",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Paprika devilled eggs, plus cheddar and pineapple cubes on toothpicks",
-   "new": "Paprika devilled eggs and cheese picks. Planet versus egg is only scale."
+   "new": "Paprika devilled eggs and cheese picks. Planet versus egg is only scale.",
+   "done": true
   },
   {
    "old": "Baby potatoes roasted in foil with butter, garlic and rosemary",
-   "new": "Foil-roasted baby potatoes, butter, rosemary and a little more garlic"
+   "new": "Foil-roasted baby potatoes, butter, rosemary and a little more garlic",
+   "done": true
   },
   {
    "old": "Strawberry jelly set in a ring with strawberries and green grapes",
-   "new": "Strawberry jelly ring with grapes. Galactus would eat the lot."
+   "new": "Strawberry jelly ring with grapes. Galactus would eat the lot.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -37,7 +43,10 @@
     "The Silver Surfer on her board",
     "Sue expecting baby Franklin",
     "The teleport bridge in Times Square"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

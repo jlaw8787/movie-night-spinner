@@ -1,7 +1,42 @@
-{"id":"Brave (2012)","ops":[
-{"set":"flavour.note","value":{"text":"A princess does not place her weapons on the table.","by":"Queen Elinor","kind":"quote"}},
-{"old":"Oatcakes with cream cheese, smoked salmon, dill and lemon","new":"Oatcakes, cream cheese and smoked salmon, Elinor's river feast"},
-{"old":"Honey cake with oats and raspberries, finished with a glaze","new":"Honey cake with oats and raspberries. Fate be changed"},
-{"old":"Merida's little brothers pinching the tarts","new":"Raspberry jam tarts, pinched by the triplets"},
-{"set":"flavour.winks","value":["Merida's archery contest for her own hand","The triplets who got to the cake first","The witch's cottage of carved bears","Angus, and the wisps that lead to fate","Mor'du the bear and King Fergus's missing leg"]}
-]}
+{
+ "id": "Brave (2012)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "A princess does not place her weapons on the table.",
+    "by": "Queen Elinor",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Oatcakes with cream cheese, smoked salmon, dill and lemon",
+   "new": "Oatcakes, cream cheese and smoked salmon, Elinor's river feast",
+   "done": true
+  },
+  {
+   "old": "Honey cake with oats and raspberries, finished with a glaze",
+   "new": "Honey cake with oats and raspberries. Fate be changed",
+   "done": true
+  },
+  {
+   "old": "Merida's little brothers pinching the tarts",
+   "new": "Raspberry jam tarts, pinched by the triplets",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Merida's archery contest for her own hand",
+    "The triplets who got to the cake first",
+    "The witch's cottage of carved bears",
+    "Angus, and the wisps that lead to fate",
+    "Mor'du the bear and King Fergus's missing leg"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

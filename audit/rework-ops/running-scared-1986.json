@@ -1,8 +1,22 @@
 {
-  "id": "Running Scared (1986)",
-  "ops": [
-    {"old": "Serve the mains when they daydream about Key West.", "new": "Serve the mains when the pair requisition bulletproof vests."},
-    {"old": "Chicago Italian beef", "new": "Best of the worst Italian beef"},
-    {"old": "Retirement papers always one case away", "new": "The showdown in the State of Illinois Center atrium"}
-  ]
+ "id": "Running Scared (1986)",
+ "ops": [
+  {
+   "old": "Serve the mains when they daydream about Key West.",
+   "new": "Serve the mains when the pair requisition bulletproof vests.",
+   "done": true
+  },
+  {
+   "old": "Chicago Italian beef",
+   "new": "Best of the worst Italian beef",
+   "done": true
+  },
+  {
+   "old": "Retirement papers always one case away",
+   "new": "The showdown in the State of Illinois Center atrium",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

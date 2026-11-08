@@ -1,12 +1,63 @@
 {
  "id": "Legally Blonde (2001)",
  "ops": [
-  {"set": "flavour.note", "value": {"text": "Whoever said orange was the new pink was seriously disturbed.", "by": "Elle Woods", "kind": "quote"}},
-  {"old": "Harvard dining hall pasta", "new": "Warner's break up penne"},
-  {"old": "Elle's move to Boston for Harvard Law", "new": "Cob loaf chowder for Elle's Boston arrival"},
-  {"old": "Bend and snap, then grab another.", "new": "Bend and snap, 83% rate of return."},
-  {"set": "house.d", "value": {"n": "Strawberry daiquiri", "note": "A 179 on the LSATs. What, like it's hard?", "alc": true}},
-  {"set": "flavour.winks", "value": ["Bruiser the Chihuahua", "The salon dance move", "The scented pink resume", "Paulette and her salon", "Happy people don't shoot their husbands"]},
-  {"set": "flavour.prop", "value": {"kind": "card", "title": "Pink Scented Resume", "lines": ["Elle Woods, Delta Nu", "It's pink. And it's scented."]}}
- ]
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Whoever said orange was the new pink was seriously disturbed.",
+    "by": "Elle Woods",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Harvard dining hall pasta",
+   "new": "Warner's break up penne",
+   "done": true
+  },
+  {
+   "old": "Elle's move to Boston for Harvard Law",
+   "new": "Cob loaf chowder for Elle's Boston arrival",
+   "done": true
+  },
+  {
+   "old": "Bend and snap, then grab another.",
+   "new": "Bend and snap, 83% rate of return.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Strawberry daiquiri",
+    "note": "A 179 on the LSATs. What, like it's hard?",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bruiser the Chihuahua",
+    "The salon dance move",
+    "The scented pink resume",
+    "Paulette and her salon",
+    "Happy people don't shoot their husbands"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Pink Scented Resume",
+    "lines": [
+     "Elle Woods, Delta Nu",
+     "It's pink. And it's scented."
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

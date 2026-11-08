@@ -1,9 +1,33 @@
 {
  "id": "Strictly Ballroom (1992)",
  "ops": [
-  {"old": "A life lived in fear is half lived.", "new": "A life lived in fear is a life half lived."},
-  {"old": "Spanish potato tortilla", "new": "Federation approved potato tortilla"},
-  {"old": "the Federation's safe choice, Barry Fife presiding", "new": "Barry's status quo vadis, so to speak"},
-  {"set": "flavour.winks", "value": ["Scott Hastings and his own steps", "Fran, the beginner from the back", "Barry Fife runs the federation", "Fran's father Rico and the paso doble", "Fran, calling Scott a gutless wonder"]}
- ]
+  {
+   "old": "A life lived in fear is half lived.",
+   "new": "A life lived in fear is a life half lived.",
+   "done": true
+  },
+  {
+   "old": "Spanish potato tortilla",
+   "new": "Federation approved potato tortilla",
+   "done": true
+  },
+  {
+   "old": "the Federation's safe choice, Barry Fife presiding",
+   "new": "Barry's status quo vadis, so to speak",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Scott Hastings and his own steps",
+    "Fran, the beginner from the back",
+    "Barry Fife runs the federation",
+    "Fran's father Rico and the paso doble",
+    "Fran, calling Scott a gutless wonder"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

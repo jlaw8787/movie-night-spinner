@@ -7,11 +7,13 @@
     "text": "Did you go run and get the camera first?",
     "by": "Katie Featherston",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "the footprints in the powder on the hallway floor",
-   "new": "the baby powder footprints that lead to the attic hatch"
+   "new": "the baby powder footprints that lead to the attic hatch",
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -22,7 +24,8 @@
      "Bedroom camera, 24 hours",
      "Katie by the bed, two hours"
     ]
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -32,7 +35,10 @@
     "The spirit board",
     "Dr Fredrichs, the psychic",
     "The timestamp rolling in the corner"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

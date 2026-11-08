@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Christmas Eve lasagne",
-   "new": "Table fight lasagne"
+   "new": "Table fight lasagne",
+   "done": true
   },
   {
    "old": "Engel house fennel and apple salad",
-   "new": "Der Klown fennel and apple salad"
+   "new": "Der Klown fennel and apple salad",
+   "done": true
   },
   {
    "old": "Shaved fennel, apple, rocket and parmesan. Fresh before the storm hits",
-   "new": "Shaved fennel, apple, rocket and parmesan. Fresh before the jack in the box opens."
+   "new": "Shaved fennel, apple, rocket and parmesan. Fresh before the jack in the box opens.",
+   "done": true
   },
   {
    "old": "Spiced ginger cookies with piped icing teeth and red eyes",
-   "new": "Ginger cookies with icing teeth, like the one that took Howie Jr."
+   "new": "Ginger cookies with icing teeth, like the one that took Howie Jr.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,8 @@
     "The snowman that appears in the yard",
     "Der Klown, the jack in the box",
     "Howard: \"Jesus was born in a barn!\""
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -36,7 +41,10 @@
      "Torn up by Max",
      "Back in a bauble"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

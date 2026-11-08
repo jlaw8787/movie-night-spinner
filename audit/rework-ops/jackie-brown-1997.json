@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "the half-million-dollar switch at the Del Amo mall",
-   "new": "A Del Amo bag of cash, and a bag of beach towels"
+   "new": "A Del Amo bag of cash, and a bag of beach towels",
+   "done": true
   },
   {
    "old": "Ordell's South Bay",
-   "new": "Ordell, the Tec-9 and the AK-47"
+   "new": "Ordell, the Tec-9 and the AK-47",
+   "done": true
   },
   {
    "old": "Moist banana loaf studded with walnuts",
-   "new": "Banana loaf with walnuts. Put on the Delfonics."
+   "new": "Banana loaf with walnuts. Put on the Delfonics.",
+   "done": true
   },
   {
    "old": "Vodka, blood orange and orange juice with ginger syrup over ice",
-   "new": "Vodka and blood orange over ice. Let me have a screwdriver, homes."
+   "new": "Vodka and blood orange over ice. Let me have a screwdriver, homes.",
+   "done": true
   },
   {
    "set": "house.d",
@@ -23,7 +27,8 @@
     "n": "Mexican beer with lime",
     "note": "Louis to Melanie: got a beer? In the fridge.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,10 @@
     "Louis forgot where he parked",
     "Max Cherry the bail bondsman",
     "Louis and Melanie in the van"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

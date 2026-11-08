@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the snacks when Carol crashes through the roof of the video store.",
-   "new": "Serve the snacks when Carol crashes through the roof of the Blockbuster."
+   "new": "Serve the snacks when Carol crashes through the roof of the Blockbuster.",
+   "done": true
   },
   {
    "old": "Video store brown butter parmesan popcorn",
-   "new": "Blockbuster brown butter parmesan popcorn"
+   "new": "Blockbuster brown butter parmesan popcorn",
+   "done": true
   },
   {
    "old": "Panko crusted salmon pieces baked golden, with tartar sauce to dip",
-   "new": "Panko salmon with tartar sauce. \"I'm trusting you not to eat me.\""
+   "new": "Panko salmon with tartar sauce. \"I'm trusting you not to eat me.\"",
+   "done": true
   },
   {
    "old": "Tart lemon filling in a sweet crust under glossy meringue",
-   "new": "Tart lemon meringue pie. Take the pie, leave the lunchbox."
+   "new": "Tart lemon meringue pie. Take the pie, leave the lunchbox.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Skrulls changing faces",
     "A pager used for the last page",
     "Maria Rambeau flying jets"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

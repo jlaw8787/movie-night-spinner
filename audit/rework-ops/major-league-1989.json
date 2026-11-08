@@ -7,15 +7,18 @@
     "text": "And the Indians win it! The Indians win it!",
     "by": "Harry Doyle",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Cherry pie with a woven pastry top, served with ice cream",
-   "new": "Cherry pie with a woven top and ice cream, for Vaughn's entrance"
+   "new": "Cherry pie with a woven top and ice cream, for Vaughn's entrance",
+   "done": true
   },
   {
    "old": "Dark rum, lime and ginger beer over ice with bitters",
-   "new": "Dark rum, lime, ginger beer. Very bad to steal Jobu's rum."
+   "new": "Dark rum, lime, ginger beer. Very bad to steal Jobu's rum.",
+   "done": true
   },
   {
    "set": "house.d",
@@ -23,7 +26,8 @@
     "n": "Boilermaker, bourbon and lager",
     "note": "Yo, bartender, Jobu needs a refill.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +37,10 @@
     "American Express slide, tux and all",
     "A live chicken for Jobu",
     "Die Hard Night at the stadium"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

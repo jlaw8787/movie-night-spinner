@@ -3,23 +3,30 @@
  "ops": [
   {
    "old": "Rum and brandy eggnog",
-   "new": "Luge eggnog, rum and brandy"
+   "new": "Luge eggnog, rum and brandy",
+   "done": true
   },
   {
    "old": "Homemade egg custard nog with dark rum, brandy and nutmeg",
-   "new": "Egg custard nog with dark rum, brandy and nutmeg, for the eggnog luge"
+   "new": "Egg custard nog with dark rum, brandy and nutmeg, for the eggnog luge",
+   "done": true
   },
   {
    "old": "Baked camembert with garlic and honey",
-   "new": "Mary's cheeseboard camembert, baked with honey"
+   "new": "Mary's cheeseboard camembert, baked with honey",
+   "done": true
   },
   {
    "old": "Vanilla cupcakes with red and green buttercream",
-   "new": "Vanilla cupcakes with red and green buttercream. Mary says no Cronuts."
+   "new": "Vanilla cupcakes with red and green buttercream. Mary says no Cronuts.",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve the snacks when the snow machine douses the party and Walter."
+   "value": "Serve the snacks when the snow machine douses the party and Walter.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

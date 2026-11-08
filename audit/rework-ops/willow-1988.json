@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Tir Asleen fennel crackling pork",
-   "new": "Nockmaar fennel crackling pork"
+   "new": "Nockmaar fennel crackling pork",
+   "done": true
   },
   {
    "old": "the castle of Tir Asleen",
-   "new": "Bavmorda: \"You're all pigs!\""
+   "new": "Bavmorda: \"You're all pigs!\"",
+   "done": true
   },
   {
    "old": "Crossroads tavern beef and root veg stew",
-   "new": "Tavern brawl beef and root veg stew"
+   "new": "Tavern brawl beef and root veg stew",
+   "done": true
   },
   {
    "old": "Bocconcini rolled in toasted hazelnut and chives, drizzled with honey",
-   "new": "Bocconcini in hazelnut, like Willow's acorn threat"
+   "new": "Bocconcini in hazelnut, like Willow's acorn threat",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Raziel: possum, rook, goat",
     "Queen Bavmorda at Nockmaar Castle",
     "The tiny brownies Franjean and Rool"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the mains when the Sully family is taken in by the reef clan.",
-   "new": "Serve the mains when Payakan the outcast tulkun saves Lo'ak."
+   "new": "Serve the mains when Payakan the outcast tulkun saves Lo'ak.",
+   "done": true
   },
   {
    "old": "the Sully family settling in by the water",
-   "new": "Jake says it: this family is our fortress."
+   "new": "Jake says it: this family is our fortress.",
+   "done": true
   },
   {
    "old": "the kids riding ilu through the kelp",
-   "new": "Lo'ak learning to ride an ilu in the kelp"
+   "new": "Lo'ak learning to ride an ilu in the kelp",
+   "done": true
   },
   {
    "old": "The way of water has no beginning.",
-   "new": "Tsireya's line to Lo'ak: I see you."
+   "new": "Tsireya's line to Lo'ak: I see you.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Tsireya and her riding fish",
     "Tulkun whales, Payakan",
     "Reef clan homes"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

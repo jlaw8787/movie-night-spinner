@@ -7,11 +7,13 @@
     "text": "I don't tip because society says I have to.",
     "by": "Mr. Pink",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Diner lemon meringue pie",
-   "new": "Like a Virgin lemon meringue pie"
+   "new": "Like a Virgin lemon meringue pie",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,14 +23,18 @@
     "Joe Cabot handing out the colours",
     "The breakfast table argument about tipping",
     "The warehouse after the job"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Fresh-squeezed grapefruit juice",
     "note": "K-Billy's Super Sounds of the Seventies, all weekend."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

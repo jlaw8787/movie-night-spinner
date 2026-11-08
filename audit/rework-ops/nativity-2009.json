@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the sweets when the nativity play starts.",
-   "new": "Serve the sweets when Mr Poppy calls the helicopter Hollywood."
+   "new": "Serve the sweets when Mr Poppy calls the helicopter Hollywood.",
+   "done": true
   },
   {
    "old": "Pork, apple and sage sausage rolls in puff pastry",
-   "new": "Pork, apple and sage sausage rolls to share with Mr Poppy"
+   "new": "Pork, apple and sage sausage rolls to share with Mr Poppy",
+   "done": true
   },
   {
    "old": "Mr Shakespeare's posh rival school does a very fancy nativity",
-   "new": "Mr Shakespeare's five-star pick for posh Oakmoor, naturally"
+   "new": "Mr Shakespeare's five-star pick for posh Oakmoor, naturally",
+   "done": true
   },
   {
    "old": "Nativity night hot blackcurrant punch",
-   "new": "Nativity Hollywood hot blackcurrant punch"
+   "new": "Nativity Hollywood hot blackcurrant punch",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -23,7 +27,8 @@
     "text": "Nativity The Musical, in 3-D with 5-D sound, and we're all going to be famous!",
     "by": "Mr. Poppy",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -32,7 +37,10 @@
     "The rival school, Oakmoor",
     "Paul's big claim that Hollywood is coming",
     "The Coventry Cathedral ruins"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

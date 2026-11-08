@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Blood orange and lemon juice with honey syrup over ice",
-   "new": "Blood orange and lemon juice with honey syrup. A lemon that works."
+   "new": "Blood orange and lemon juice with honey syrup. A lemon that works.",
+   "done": true
   },
   {
    "old": "Edamame tossed warm in sesame oil, chilli flakes and sea salt",
-   "new": "Tokyo party edamame, tossed warm in sesame oil, chilli and sea salt"
+   "new": "Tokyo party edamame, tossed warm in sesame oil, chilli and sea salt",
+   "done": true
   },
   {
    "old": "Pistachio ice cream with crushed pistachios and honey",
-   "new": "Pistachio ice cream with crushed pistachios and honey, no wasabi"
+   "new": "Pistachio ice cream with crushed pistachios and honey, no wasabi",
+   "done": true
   },
   {
    "old": "the final race through the streets of London",
-   "new": "London, where Mater ends up inside Big Bentley"
+   "new": "London, where Mater ends up inside Big Bentley",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "The lemons and Professor Z",
     "Mater mistaking wasabi for ice cream",
     "Allinol, Big Bentley and the London chase"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

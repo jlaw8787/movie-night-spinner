@@ -1,6 +1,48 @@
-{"id":"Butch Cassidy and the Sundance Kid (1969)","ops":[
-{"set":"flavour.labels","value":{"s":"Trail Snacks","m":"Hideout Mains","w":"Sweet Things","d":"Saloon Drinks","t":"Hole in the Wall Table","n":"Said at the hideout","call":"Posse call"}},
-{"old":"Beef chuck braised with dried chilies and tomatoes, baked cornbread alongside","new":"Beef chilli with cornbread. Rules? In a knife fight?"},
-{"set":"flavour.prop","value":{"kind":"slip","title":"Hideout Order Slip","lines":["Hole in the Wall Gang","Table for three, Etta rides along"]}},
-{"set":"flavour.winks","value":["The posse that will not quit","The leap from the cliff into the river","Etta Place on the bicycle","The Union Pacific safe and too much dynamite","Bolivia, and that last freeze frame"]}
-]}
+{
+ "id": "Butch Cassidy and the Sundance Kid (1969)",
+ "ops": [
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Trail Snacks",
+    "m": "Hideout Mains",
+    "w": "Sweet Things",
+    "d": "Saloon Drinks",
+    "t": "Hole in the Wall Table",
+    "n": "Said at the hideout",
+    "call": "Posse call"
+   },
+   "done": true
+  },
+  {
+   "old": "Beef chuck braised with dried chilies and tomatoes, baked cornbread alongside",
+   "new": "Beef chilli with cornbread. Rules? In a knife fight?",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Hideout Order Slip",
+    "lines": [
+     "Hole in the Wall Gang",
+     "Table for three, Etta rides along"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The posse that will not quit",
+    "The leap from the cliff into the river",
+    "Etta Place on the bicycle",
+    "The Union Pacific safe and too much dynamite",
+    "Bolivia, and that last freeze frame"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

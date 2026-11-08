@@ -3,23 +3,28 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve dessert when Sam reminds Red Hulk Ross of the cherry blossoms."
+   "value": "Serve dessert when Sam reminds Red Hulk Ross of the cherry blossoms.",
+   "done": true
   },
   {
    "old": "White House eye fillet with red wine jus",
-   "new": "Red Hulk eye fillet with red wine jus"
+   "new": "Red Hulk eye fillet with red wine jus",
+   "done": true
   },
   {
    "old": "the summit at the White House",
-   "new": "Since when were they red? Medium-rare, sir."
+   "new": "Since when were they red? Medium-rare, sir.",
+   "done": true
   },
   {
    "old": "Crisp baked wings with smoked paprika and honey barbecue glaze",
-   "new": "Joaquin's wings, baked crisp with paprika and honey barbecue glaze"
+   "new": "Joaquin's wings, baked crisp with paprika and honey barbecue glaze",
+   "done": true
   },
   {
    "old": "Meringue topped with whipped cream, cooked cherries and pink rose petals",
-   "new": "Ross and Betty's cherry blossoms: meringue, cream, cherries, rose petals"
+   "new": "Ross and Betty's cherry blossoms: meringue, cream, cherries, rose petals",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +34,10 @@
     "Red Hulk in the Rose Garden",
     "Isaiah Bradley: the last hit is the only hit",
     "Joaquin Torres as the new Falcon"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

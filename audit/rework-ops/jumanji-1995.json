@@ -1,13 +1,17 @@
 {
-  "id": "Jumanji (1995)",
-  "ops": [
-    {
-      "old": "Roll the dice, move the piece",
-      "new": "In the jungle you must wait,"
-    },
-    {
-      "old": "Two to four players, ages 8 up",
-      "new": "Till the dice read five or eight."
-    }
-  ]
+ "id": "Jumanji (1995)",
+ "ops": [
+  {
+   "old": "Roll the dice, move the piece",
+   "new": "In the jungle you must wait,",
+   "done": true
+  },
+  {
+   "old": "Two to four players, ages 8 up",
+   "new": "Till the dice read five or eight.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

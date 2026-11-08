@@ -3,27 +3,33 @@
  "ops": [
   {
    "set": "flavour.venue",
-   "value": "The Chateau Tea Room"
+   "value": "The Chateau Tea Room",
+   "done": true
   },
   {
    "old": "Pumpkin coach risotto (vegetarian)",
-   "new": "Bibbidi-Bobbidi-Boo pumpkin risotto (vegetarian)"
+   "new": "Bibbidi-Bobbidi-Boo pumpkin risotto (vegetarian)",
+   "done": true
   },
   {
    "old": "Pumpkin coach risotto",
-   "new": "Bibbidi-Bobbidi-Boo pumpkin risotto"
+   "new": "Bibbidi-Bobbidi-Boo pumpkin risotto",
+   "done": true
   },
   {
    "old": "Slipper-shaped meringues",
-   "new": "Glass slipper meringues"
+   "new": "Glass slipper meringues",
+   "done": true
   },
   {
    "old": "the King's grand palace",
-   "new": "Lemon thyme chicken for the royal ball"
+   "new": "Lemon thyme chicken for the royal ball",
+   "done": true
   },
   {
    "old": "Cinderella carrying breakfast trays up the stairs",
-   "new": "breakfast trays, and the mouse under Anastasia's teacup"
+   "new": "breakfast trays, and the mouse under Anastasia's teacup",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +39,10 @@
     "The clock striking midnight",
     "Jaq and Gus sewing the dress from the stepsisters' beads",
     "Bibbidi-Bobbidi-Boo from the Fairy Godmother"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

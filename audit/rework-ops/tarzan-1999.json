@@ -1,27 +1,33 @@
 {
-  "id": "Tarzan (1999)",
-  "ops": [
-    {
-      "old": "proper English tea, for Jane's camp in the jungle",
-      "new": "teatime, the cups and teapots Terk drums on"
-    },
-    {
-      "old": "Serve the tea when the gorillas wreck Jane's camp.",
-      "new": "Serve the tea when Terk trashes Jane's camp."
-    },
-    {
-      "old": "Caught below the waterfall Tarzan climbs",
-      "new": "Caught where Tantor panics over piranhas"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Tarzan's treehouse, built by his shipwrecked parents",
-        "Jane's sketchbook of the jungle",
-        "Terk wearing Jane's dress",
-        "Kala caring for baby Tarzan",
-        "Tarzan sliding along branches on his feet"
-      ]
-    }
-  ]
+ "id": "Tarzan (1999)",
+ "ops": [
+  {
+   "old": "proper English tea, for Jane's camp in the jungle",
+   "new": "teatime, the cups and teapots Terk drums on",
+   "done": true
+  },
+  {
+   "old": "Serve the tea when the gorillas wreck Jane's camp.",
+   "new": "Serve the tea when Terk trashes Jane's camp.",
+   "done": true
+  },
+  {
+   "old": "Caught below the waterfall Tarzan climbs",
+   "new": "Caught where Tantor panics over piranhas",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Tarzan's treehouse, built by his shipwrecked parents",
+    "Jane's sketchbook of the jungle",
+    "Terk wearing Jane's dress",
+    "Kala caring for baby Tarzan",
+    "Tarzan sliding along branches on his feet"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

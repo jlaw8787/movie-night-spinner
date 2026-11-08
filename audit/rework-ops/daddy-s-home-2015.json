@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Serve the mains when Brad and Dusty go head to head.",
-   "new": "Serve the mains when Dusty declares a dad-off."
+   "new": "Serve the mains when Dusty declares a dad-off.",
+   "done": true
   },
   {
    "old": "Corn chips under spiced beef and melted cheese",
-   "new": "Corn chips, spiced beef, cheese. Tumor grows on you."
+   "new": "Corn chips, spiced beef, cheese. Tumor grows on you.",
+   "done": true
   },
   {
    "old": "Vanilla cupcakes filled with jam, pink buttercream and sprinkles",
-   "new": "Jam-filled vanilla cupcakes, pink buttercream. Megan picks Dusty."
+   "new": "Jam-filled vanilla cupcakes, pink buttercream. Megan picks Dusty.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -20,7 +23,8 @@
     "Dusty's dog Tumor, who grows on you",
     "Brad's half-court shot at the Lakers game",
     "The King and the Step King story"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.s",
@@ -28,7 +32,10 @@
     "n": "Smoked brisket sliders with pickles",
     "note": "Brad's treehouse took two months. Dusty took a day.",
     "meat": true
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

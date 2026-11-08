@@ -7,15 +7,18 @@
     "text": "I'm a Mawg. Half-man, half-dog. I'm my own best friend.",
     "by": "Barf",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "the roadside diner on the moon, with an unexpected guest",
-   "new": "Corned beef hash and eggs, and an unexpected guest"
+   "new": "Corned beef hash and eggs, and an unexpected guest",
+   "done": true
   },
   {
    "old": "Honey vanilla Greek yoghurt layered with granola and mixed berries",
-   "new": "Honey yoghurt, granola, berries. Even with strawberries."
+   "new": "Honey yoghurt, granola, berries. Even with strawberries.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +28,10 @@
     "Yogurt and Spaceballs the Doll",
     "They've gone to plaid",
     "Ludicrous speed"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

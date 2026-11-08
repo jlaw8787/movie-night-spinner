@@ -1,19 +1,23 @@
 {
-  "id": "The Others (2001)",
-  "ops": [
-    {
-      "old": "dinner by candlelight, curtains closed",
-      "new": "Lamb under mash. The piano plays itself."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Heavy curtains drawn in every room",
-        "Grace and her keys to all fifty doors",
-        "If you see a ghost, say hello",
-        "The old blind medium and her séance",
-        "The old photograph album"
-      ]
-    }
-  ]
+ "id": "The Others (2001)",
+ "ops": [
+  {
+   "old": "dinner by candlelight, curtains closed",
+   "new": "Lamb under mash. The piano plays itself.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Heavy curtains drawn in every room",
+    "Grace and her keys to all fifty doors",
+    "If you see a ghost, say hello",
+    "The old blind medium and her séance",
+    "The old photograph album"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

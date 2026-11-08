@@ -3,22 +3,28 @@
  "ops": [
   {
    "old": "Serve the drinks when J.D. and Veronica stop at the convenience store for slushies.",
-   "new": "Serve the drinks when J.D. and Veronica stop at the Snappy Snack Shack for slushies."
+   "new": "Serve the drinks when J.D. and Veronica stop at the Snappy Snack Shack for slushies.",
+   "done": true
   },
   {
    "old": "JD's chilli lime toasted corn",
-   "new": "Corn nuts, chilli lime toasted"
+   "new": "Corn nuts, chilli lime toasted",
+   "done": true
   },
   {
    "old": "Cherry slushie",
-   "new": "Snappy Snack Shack cherry slushie"
+   "new": "Snappy Snack Shack cherry slushie",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Iced green tea",
     "note": "Not Heather Chandler's wake-up cup, thankfully."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

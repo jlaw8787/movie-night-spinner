@@ -1,54 +1,63 @@
 {
-  "id": "Friday the 13th Part 2 (1981)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "I told the others; they didn't believe me. You're all doomed, you're all doomed.",
-        "by": "Crazy Ralph",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "campfire treats, eaten with one eye on the trees",
-      "new": "toasted marshmallow bars, named for the burlap sack mask"
-    },
-    {
-      "old": "a big pot for the counsellors-in-training at the lodge",
-      "new": "beef chilli with rice, for the six who stay behind at the lodge"
-    },
-    {
-      "old": "the last round at the bar before lights out",
-      "new": "Ginny's theory about Jason, over bourbon lemonade"
-    },
-    {
-      "set": "house.d",
-      "value": {
-        "n": "Pitcher of draught beer",
-        "note": "Paul calls Jason an urban legend. Last round.",
-        "alc": true
-      }
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Paul's campfire legend about Jason",
-        "Ginny in Pamela's sweater, in the shack",
-        "Crazy Ralph: You're all doomed",
-        "The burlap sack over the killer's head",
-        "Mark and Vickie's handheld video games"
-      ]
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "receipt",
-        "title": "Bar Tab",
-        "lines": [
-          "Counsellors' table, last night out",
-          "No seconds for Jeff and Sandra"
-        ]
-      }
-    }
-  ]
+ "id": "Friday the 13th Part 2 (1981)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I told the others; they didn't believe me. You're all doomed, you're all doomed.",
+    "by": "Crazy Ralph",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "campfire treats, eaten with one eye on the trees",
+   "new": "toasted marshmallow bars, named for the burlap sack mask",
+   "done": true
+  },
+  {
+   "old": "a big pot for the counsellors-in-training at the lodge",
+   "new": "beef chilli with rice, for the six who stay behind at the lodge",
+   "done": true
+  },
+  {
+   "old": "the last round at the bar before lights out",
+   "new": "Ginny's theory about Jason, over bourbon lemonade",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pitcher of draught beer",
+    "note": "Paul calls Jason an urban legend. Last round.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Paul's campfire legend about Jason",
+    "Ginny in Pamela's sweater, in the shack",
+    "Crazy Ralph: You're all doomed",
+    "The burlap sack over the killer's head",
+    "Mark and Vickie's handheld video games"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Bar Tab",
+    "lines": [
+     "Counsellors' table, last night out",
+     "No seconds for Jeff and Sandra"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

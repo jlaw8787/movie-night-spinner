@@ -7,27 +7,33 @@
     "text": "But why is the rum gone?",
     "by": "Jack Sparrow",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Jack asks why the rum is gone. Here.",
-   "new": "Nothing satisfied Barbossa's crew. Try this."
+   "new": "Nothing satisfied Barbossa's crew. Try this.",
+   "done": true
   },
   {
    "old": "Lime-tossed green apple slices, warm salted caramel dip, sharp cheddar shards",
-   "new": "Lime-tossed green apple slices, salted caramel dip, cheddar shards. Apple?"
+   "new": "Lime-tossed green apple slices, salted caramel dip, cheddar shards. Apple?",
+   "done": true
   },
   {
    "old": "the pirate port of Tortuga",
-   "new": "Prawn and capsicum fritters, with the sweet, proliferous bouquet of Tortuga."
+   "new": "Prawn and capsicum fritters, with the sweet, proliferous bouquet of Tortuga.",
+   "done": true
   },
   {
    "old": "Gold-dusted fried plantain coins",
-   "new": "Aztec gold fried plantain coins"
+   "new": "Aztec gold fried plantain coins",
+   "done": true
   },
   {
    "old": "the British fort at Port Royal",
-   "new": "Snapper stew in coconut milk, served at the fort in Port Royal."
+   "new": "Snapper stew in coconut milk, served at the fort in Port Royal.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -37,7 +43,10 @@
     "The worst pirate you've ever heard of",
     "Barbossa's cursed monkey",
     "Will Turner's blacksmith shop"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

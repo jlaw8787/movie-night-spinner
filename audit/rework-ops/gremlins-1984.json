@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Snowball cupcakes",
-   "new": "Snow White cupcakes"
+   "new": "Snow White cupcakes",
+   "done": true
   },
   {
    "old": "Mrs Peltzer fights back with the kitchen blender",
-   "new": "Mrs Peltzer fights back with the blender and the microwave"
+   "new": "Mrs Peltzer fights back with the blender and the microwave",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

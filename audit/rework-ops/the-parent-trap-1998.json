@@ -1,23 +1,28 @@
 {
-  "id": "The Parent Trap (1998)",
-  "ops": [
-    {
-      "old": "the camping trip where Meredith gets pranked",
-      "new": "Snags, and Meredith's mattress goes in the lake."
-    },
-    {
-      "old": "Roast beef eye fillet, creamy potato bake and a rich pan gravy",
-      "new": "Roast beef fillet, potato bake and gravy for the yacht dinner"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "The fencing match",
-        "The secret handshake",
-        "Isolation House cabin",
-        "Chessy the housekeeper",
-        "Nick falling into the pool"
-      ]
-    }
-  ]
+ "id": "The Parent Trap (1998)",
+ "ops": [
+  {
+   "old": "the camping trip where Meredith gets pranked",
+   "new": "Snags, and Meredith's mattress goes in the lake.",
+   "done": true
+  },
+  {
+   "old": "Roast beef eye fillet, creamy potato bake and a rich pan gravy",
+   "new": "Roast beef fillet, potato bake and gravy for the yacht dinner",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The fencing match",
+    "The secret handshake",
+    "Isolation House cabin",
+    "Chessy the housekeeper",
+    "Nick falling into the pool"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

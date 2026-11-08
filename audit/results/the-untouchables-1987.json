@@ -1,78 +1,91 @@
 {
- "id": "The Untouchables (1987)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve Ness his drink when he first arrives in Chicago and meets Malone.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Ness's first liquor raid fails before he meets Malone, so he does not meet Malone on first arriving; the plot has him soon encountering Malone after that raid.",
-   "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
-   "fix": "Serve Ness his drink when he meets Malone after the failed raid.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "POUR THE DRINKS WHEN NESS FIRST MEETS MALONE WALKING HIS BEAT STOP",
-   "where": "cue-printed",
-   "verdict": "ok",
-   "why": "In the transcript Malone says he is walking the beat at his age and calls himself a poor beat cop when Ness asks for his help.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=untouchables-the",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "BANQUET ROOM · THURSDAY, 16 OCTOBER 1930",
-   "where": "card",
-   "verdict": "wrong",
-   "why": "The film is set in 1930 but no source opened gives any day or month for the banquet.",
-   "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
-   "fix": "BANQUET ROOM · 1930",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Capone's own beer. Every bar in town has to stock it",
-   "where": "dish-note",
-   "verdict": "ok",
-   "why": "Capone supplies the liquor, and the opening shows his men bombing a shop that refused to buy his green beer; he is also quoted on dealing violently with those who do not purchase his product.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=untouchables-the",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "The Untouchables (1987)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve Ness his drink when he first arrives in Chicago and meets Malone.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Ness's first liquor raid fails before he meets Malone, so he does not meet Malone on first arriving; the plot has him soon encountering Malone after that raid.",
+      "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
+      "fix": "Serve Ness his drink when he meets Malone after the failed raid.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "POUR THE DRINKS WHEN NESS FIRST MEETS MALONE WALKING HIS BEAT STOP",
+      "where": "cue-printed",
+      "verdict": "ok",
+      "why": "In the transcript Malone says he is walking the beat at his age and calls himself a poor beat cop when Ness asks for his help.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=untouchables-the",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "BANQUET ROOM · THURSDAY, 16 OCTOBER 1930",
+      "where": "card",
+      "verdict": "wrong",
+      "why": "The film is set in 1930 but no source opened gives any day or month for the banquet.",
+      "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
+      "fix": "BANQUET ROOM · 1930",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Capone's own beer. Every bar in town has to stock it",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "Capone supplies the liquor, and the opening shows his men bombing a shop that refused to buy his green beer; he is also quoted on dealing violently with those who do not purchase his product.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=untouchables-the",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A great Lexington banquet room that uses the bat dinner and Ness's last drink, but misses the station stairs.",
+    "missing": [
+      "The baby carriage on the Union Station stairs (the shootout)",
+      "Here endeth the lesson (Ness, Capone's trial)",
+      "Capone's baseball bat banquet (the Lexington dinner)",
+      "The Mounties border raid (Canadian border)",
+      "Malone's St. Jude medal (farewell)",
+      "Nitti thrown off the courthouse roof (finale)"
+    ],
+    "ideas": [
+      "Swap 'Cold tea, served in china cups' for a Malone line: 'Here endeth the lesson, and the tea.'",
+      "Swap 'Chicago deep dish' (unprinted) for a mother and pram plate for four, a stairs nod.",
+      "Replace 'Gratuities at the table' with 'Never stop fighting until the fight is done.'",
+      "Swap 'Mr Capone is not seeing the press' for 'Ness is seeing Capone. Fourth floor.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The Chicago way, he pulls a knife you pull a gun",
+      "Here endeth the lesson",
+      "The baby carriage on the Union Station stairs",
+      "Capone's baseball bat banquet",
+      "Malone meeting Ness on his beat"
+    ],
+    "changed": [
+      "Cold tea notice swapped for the Chicago way",
+      "Accounts notice swapped for the Union Station pram",
+      "Old fashioned note ends on Here endeth the lesson"
+    ]
   }
- ],
- "checked_ok": 10,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "A great Lexington banquet room that uses the bat dinner and Ness's last drink, but misses the station stairs.",
-  "missing": [
-   "The baby carriage on the Union Station stairs (the shootout)",
-   "Here endeth the lesson (Ness, Capone's trial)",
-   "Capone's baseball bat banquet (the Lexington dinner)",
-   "The Mounties border raid (Canadian border)",
-   "Malone's St. Jude medal (farewell)",
-   "Nitti thrown off the courthouse roof (finale)"
-  ],
-  "ideas": [
-   "Swap 'Cold tea, served in china cups' for a Malone line: 'Here endeth the lesson, and the tea.'",
-   "Swap 'Chicago deep dish' (unprinted) for a mother and pram plate for four, a stairs nod.",
-   "Replace 'Gratuities at the table' with 'Never stop fighting until the fight is done.'",
-   "Swap 'Mr Capone is not seeing the press' for 'Ness is seeing Capone. Fourth floor.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

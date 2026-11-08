@@ -3,11 +3,13 @@
  "ops": [
   {
    "old": "Cooked prawns on crushed ice with a mayo, tomato sauce and lemon dip",
-   "new": "Cooked prawns on crushed ice with a mayo dip. All right everyone, chill"
+   "new": "Cooked prawns on crushed ice with a mayo dip. All right everyone, chill",
+   "done": true
   },
   {
    "old": "Lemonade ice cubes blended with blue butterfly pea tea into a slush",
-   "new": "Lemonade ice cubes and blue pea tea in a slush. Stay cool, Birdboy"
+   "new": "Lemonade ice cubes and blue pea tea in a slush. Stay cool, Birdboy",
+   "done": true
   },
   {
    "set": "house.d",
@@ -15,15 +17,18 @@
     "n": "Pimm's cup with cucumber",
     "note": "What killed the dinosaurs? The Ice Age.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "old": "Chicken thighs simmered with carrot, celery and egg noodles",
-   "new": "Chicken, carrot and noodle soup. Alfred cancels the pizzas"
+   "new": "Chicken, carrot and noodle soup. Alfred cancels the pizzas",
+   "done": true
   },
   {
    "old": "thawing out after Gotham freezes over",
-   "new": "thawing out after Freeze's Observatory gun"
+   "new": "thawing out after Freeze's Observatory gun",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,8 @@
     "Barbara Wilson becoming Batgirl",
     "Alfred falling ill",
     "The Gotham Observatory"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -44,7 +50,10 @@
      "Pennyworth, A.",
      "A bigger cave"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

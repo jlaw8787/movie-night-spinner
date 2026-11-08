@@ -1,6 +1,40 @@
-{"id":"Clerks (1994)","ops":[
-{"set":"flavour.winks","value":["A hockey game on the store roof","Silent Bob on women who bring lasagna to work","The Chewlies rep and his tar lung","Randal and the Death Star contractors","Veronica's something like 36"]},
-{"old":"the hockey game on the store roof","new":"Soft pretzels for the roof hockey game"},
-{"old":"the lasagne Veronica brings to the store","new":"Beef and ricotta lasagne, brought to work"},
-{"set":"flavour.prop","value":{"kind":"receipt","title":"Quick Stop Receipt","lines":["Cashier: Dante Hicks","Thank you. You're closed."]}}
-]}
+{
+ "id": "Clerks (1994)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "A hockey game on the store roof",
+    "Silent Bob on women who bring lasagna to work",
+    "The Chewlies rep and his tar lung",
+    "Randal and the Death Star contractors",
+    "Veronica's something like 36"
+   ],
+   "done": true
+  },
+  {
+   "old": "the hockey game on the store roof",
+   "new": "Soft pretzels for the roof hockey game",
+   "done": true
+  },
+  {
+   "old": "the lasagne Veronica brings to the store",
+   "new": "Beef and ricotta lasagne, brought to work",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Quick Stop Receipt",
+    "lines": [
+     "Cashier: Dante Hicks",
+     "Thank you. You're closed."
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

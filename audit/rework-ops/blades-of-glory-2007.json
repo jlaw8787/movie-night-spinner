@@ -3,19 +3,23 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when Chazz says they will skate to Lady Hump."
+   "value": "Serve the snacks when Chazz says they will skate to Lady Hump.",
+   "done": true
   },
   {
    "old": "Coconut snowball ice cream balls",
-   "new": "Fairchild's pearl ice cream balls"
+   "new": "Fairchild's pearl ice cream balls",
+   "done": true
   },
   {
    "old": "Rinkside peppermint hot chocolate",
-   "new": "Grublets peppermint hot chocolate"
+   "new": "Grublets peppermint hot chocolate",
+   "done": true
   },
   {
    "old": "Championship chicken parmigiana",
-   "new": "Lone Wolf chicken parmigiana"
+   "new": "Lone Wolf chicken parmigiana",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +29,10 @@
     "Jimmy MacElroy, the clean skater",
     "The Van Waldenberg siblings",
     "Pairs skating's first all-male team"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

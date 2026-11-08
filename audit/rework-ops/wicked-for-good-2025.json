@@ -3,30 +3,36 @@
  "ops": [
   {
    "old": "Serve the banquet when the Emerald City celebrates Glinda's engagement.",
-   "new": "Serve the banquet when Oz celebrates the opening of the Yellow Brick Road."
+   "new": "Serve the banquet when Oz celebrates the opening of the Yellow Brick Road.",
+   "done": true
   },
   {
    "old": "Engagement banquet roast chicken",
-   "new": "Yellow Brick Road roast chicken"
+   "new": "Yellow Brick Road roast chicken",
+   "done": true
   },
   {
    "old": "Nessarose's jewelled shoe raspberry tarts",
-   "new": "Nessarose's enchanted shoe raspberry tarts"
+   "new": "Nessarose's enchanted shoe raspberry tarts",
+   "done": true
   },
   {
    "old": "Buttery pistachio shortbread rounds dusted with icing sugar",
-   "new": "Buttery pistachio shortbread, green as the elixir bottle"
+   "new": "Buttery pistachio shortbread, green as the elixir bottle",
+   "done": true
   },
   {
    "old": "Kiamo Ko, the abandoned castle where Elphaba hides",
-   "new": "Kiamo Ko, where Elphaba hides under a trapdoor"
+   "new": "Kiamo Ko, where Elphaba hides under a trapdoor",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Spinach and gruyère puff pastry twists",
     "note": "Glinda's wedding, interrupted by Elphaba."
-   }
+   },
+   "done": true
   },
   {
    "set": "house.d",
@@ -34,7 +40,8 @@
     "n": "Green apple martini",
     "note": "Raised to Glinda the Good, now running Oz.",
     "alc": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -42,7 +49,8 @@
     "text": "Well, we can't all come and go by bubble.",
     "by": "Elphaba",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -52,7 +60,10 @@
     "Dorothy's bucket of water",
     "Flying monkeys over the city",
     "The Wizard's balloon"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

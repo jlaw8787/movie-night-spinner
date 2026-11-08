@@ -1,7 +1,36 @@
-{"id":"The Batman (2022)","ops":[
-{"old":"Serve the snacks when Batman and Gordon walk into the Iceberg Lounge.","new":"Serve the snacks when Batman says \"I'm vengeance\" to the thugs."},
-{"old":"Selina Kyle and the cats in her apartment","new":"Tuna cakes for the strays Selina keeps"},
-{"old":"Dark chocolate cream pots set in small glasses","new":"Dark chocolate cream pots as Gotham floods"},
-{"old":"Iceberg Lounge espresso martini","new":"Batmobile chase espresso martini"},
-{"set":"house.d","value":{"n":"Classic Negroni, orange peel","note":"They think he hides in the shadows. He is the shadows.","alc":true}}
-]}
+{
+ "id": "The Batman (2022)",
+ "ops": [
+  {
+   "old": "Serve the snacks when Batman and Gordon walk into the Iceberg Lounge.",
+   "new": "Serve the snacks when Batman says \"I'm vengeance\" to the thugs.",
+   "done": true
+  },
+  {
+   "old": "Selina Kyle and the cats in her apartment",
+   "new": "Tuna cakes for the strays Selina keeps",
+   "done": true
+  },
+  {
+   "old": "Dark chocolate cream pots set in small glasses",
+   "new": "Dark chocolate cream pots as Gotham floods",
+   "done": true
+  },
+  {
+   "old": "Iceberg Lounge espresso martini",
+   "new": "Batmobile chase espresso martini",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Classic Negroni, orange peel",
+    "note": "They think he hides in the shadows. He is the shadows.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

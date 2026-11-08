@@ -1,27 +1,32 @@
 {
-  "id": "The Martian (2015)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "I don't want to come off as arrogant here, but I'm the greatest botanist on this planet.",
-        "by": "Mark Watney",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "rationing the crew's packs",
-      "new": "Stretched four more days."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Potatoes grown in Martian soil",
-        "Duct tape fixing the hab",
-        "Sol logs, solving one problem at a time",
-        "Pathfinder dug up from the dust",
-        "Commander Lewis and her disco playlist"
-      ]
-    }
-  ]
+ "id": "The Martian (2015)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I don't want to come off as arrogant here, but I'm the greatest botanist on this planet.",
+    "by": "Mark Watney",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "rationing the crew's packs",
+   "new": "Stretched four more days.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Potatoes grown in Martian soil",
+    "Duct tape fixing the hab",
+    "Sol logs, solving one problem at a time",
+    "Pathfinder dug up from the dust",
+    "Commander Lewis and her disco playlist"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

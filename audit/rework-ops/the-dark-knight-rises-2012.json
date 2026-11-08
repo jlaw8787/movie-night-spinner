@@ -3,22 +3,26 @@
  "ops": [
   {
    "old": "Masquerade ball smoked salmon blinis",
-   "new": "Wayne Manor smoked salmon blinis"
+   "new": "Wayne Manor smoked salmon blinis",
+   "done": true
   },
   {
    "old": "the charity ball where Bruce dances with Selina",
-   "new": "Salmon blinis, for the night the pearls go missing"
+   "new": "Salmon blinis, for the night the pearls go missing",
+   "done": true
   },
   {
    "old": "the rich of Gotham before Bane strikes",
-   "new": "Rib eye for the rich, before the storm"
+   "new": "Rib eye for the rich, before the storm",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Rosemary and olive focaccia",
     "note": "\"Girl's gotta eat,\" says Selina."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +32,10 @@
     "The football field collapsing",
     "The Bat hauling the bomb over the bay",
     "Bane breaking Batman's back"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -7,26 +7,33 @@
     "text": "You gotta take the helm and chart your own course!",
     "by": "John Silver",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Beef chuck stewed with onions, carrots, stout and potatoes",
-   "new": "Old family recipe: beef chuck, onion, carrot, stout, potato."
+   "new": "Old family recipe: beef chuck, onion, carrot, stout, potato.",
+   "done": true
   },
   {
    "old": "the busy spaceport of Montressor",
-   "new": "Silver's gears come in mighty handy."
+   "new": "Silver's gears come in mighty handy.",
+   "done": true
   },
   {
    "old": "Treasure chest brownies",
-   "new": "Flint's trove brownies"
+   "new": "Flint's trove brownies",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Mulled blackcurrant cordial",
     "note": "Beware the cyborg! Warm up with a mug first."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

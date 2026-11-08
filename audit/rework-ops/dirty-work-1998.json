@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "Serve the mains when Mitch and Sam open Dirty Work for business.",
-   "new": "Serve the mains when skunks wreck opening night of Don Giovanni."
+   "new": "Serve the mains when skunks wreck opening night of Don Giovanni.",
+   "done": true
   },
   {
    "old": "Bite-size soft pretzels with salt",
-   "new": "Soft pretzel bites, for fourteen jobs in three months"
+   "new": "Soft pretzel bites, for fourteen jobs in three months",
+   "done": true
   },
   {
    "old": "Hot fudge peanut sundaes",
-   "new": "Opera night hot fudge peanut sundaes"
+   "new": "Opera night hot fudge peanut sundaes",
+   "done": true
   },
   {
    "old": "Beef patty, Swiss cheese and fried onions on grilled rye",
-   "new": "Patty, Swiss, fried onions on rye. Take no crap from anyone"
+   "new": "Patty, Swiss, fried onions on rye. Take no crap from anyone",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -24,7 +28,8 @@
     "Sam's dad needing a new heart",
     "Skunks at Don Giovanni",
     "Chris Farley, a quick cameo"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -35,7 +40,10 @@
      "Mitch and Sam",
      "Revenge, delivered"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

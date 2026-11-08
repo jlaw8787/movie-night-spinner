@@ -1,9 +1,48 @@
-{"id":"Animal Kingdom (2010)","ops":[
-{"old":"Serve the mains when Smurf and her sons meet at a restaurant.","new":"Serve the mains when Smurf decides that J needs to go."},
-{"old":"Footy night pork and fennel sausage rolls","new":"Deal or No Deal pork and fennel sausage rolls"},
-{"old":"the boys on the couch, telly on, alibi set","new":"Pork and fennel in pastry, on the couch with the telly on"},
-{"old":"Grandma Smurf feeding her boys","new":"Roast lamb and mint sauce, with Smurf's positive spin"},
-{"old":"Vanilla slice","new":"Acquittal party vanilla slice"},
-{"old":"Lime cordial, lemon and bitters topped with lemonade over ice, no alcohol","new":"Lime, lemon and bitters over ice, no alcohol. Have you worked out where you fit?"},
-{"set":"flavour.winks","value":["Smurf, the matriarch","J, with Deal or No Deal on the telly","Pope, Craig and Baz","Detective Leckie, asking where J fits","The family kitchen where everything is decided"]}
-]}
+{
+ "id": "Animal Kingdom (2010)",
+ "ops": [
+  {
+   "old": "Serve the mains when Smurf and her sons meet at a restaurant.",
+   "new": "Serve the mains when Smurf decides that J needs to go.",
+   "done": true
+  },
+  {
+   "old": "Footy night pork and fennel sausage rolls",
+   "new": "Deal or No Deal pork and fennel sausage rolls",
+   "done": true
+  },
+  {
+   "old": "the boys on the couch, telly on, alibi set",
+   "new": "Pork and fennel in pastry, on the couch with the telly on",
+   "done": true
+  },
+  {
+   "old": "Grandma Smurf feeding her boys",
+   "new": "Roast lamb and mint sauce, with Smurf's positive spin",
+   "done": true
+  },
+  {
+   "old": "Vanilla slice",
+   "new": "Acquittal party vanilla slice",
+   "done": true
+  },
+  {
+   "old": "Lime cordial, lemon and bitters topped with lemonade over ice, no alcohol",
+   "new": "Lime, lemon and bitters over ice, no alcohol. Have you worked out where you fit?",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Smurf, the matriarch",
+    "J, with Deal or No Deal on the telly",
+    "Pope, Craig and Baz",
+    "Detective Leckie, asking where J fits",
+    "The family kitchen where everything is decided"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

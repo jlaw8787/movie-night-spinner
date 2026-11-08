@@ -3,27 +3,33 @@
  "ops": [
   {
    "old": "Toasted brioche squares with whipped ricotta, berries, honey and mint",
-   "new": "Brioche with ricotta, honey, mint and Aurora's berries"
+   "new": "Brioche with ricotta, honey, mint and Aurora's berries",
+   "done": true
   },
   {
    "old": "Black olive and caper spread with garlic and lemon, on baguette toasts",
-   "new": "Black olive and caper spread on toasts, as dark as a raven"
+   "new": "Black olive and caper spread on toasts, as dark as a raven",
+   "done": true
   },
   {
    "old": "the wall of thorns around the Moors",
-   "new": "The wall of thorns cannot be burned."
+   "new": "The wall of thorns cannot be burned.",
+   "done": true
   },
   {
    "old": "Pork shoulder roasted with crackling, apples and potatoes",
-   "new": "Pork shoulder with crackling, apples and potatoes. No invitation."
+   "new": "Pork shoulder with crackling, apples and potatoes. No invitation.",
+   "done": true
   },
   {
    "old": "Woodland cottage shepherd's pie",
-   "new": "Godmother's cottage shepherd's pie"
+   "new": "Godmother's cottage shepherd's pie",
+   "done": true
   },
   {
    "old": "Aurora growing up in the woodland cottage",
-   "new": "You're my Fairy Godmother, says Aurora"
+   "new": "You're my Fairy Godmother, says Aurora",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +39,10 @@
     "A spindle and a sleep like death",
     "The three bumbling pixies",
     "Maleficent's kiss wakes Aurora"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

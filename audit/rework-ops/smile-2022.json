@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Smiley face potato rounds",
-   "new": "Pass it on potato smiles"
+   "new": "Pass it on potato smiles",
+   "done": true
   },
   {
    "old": "Sugar cookies iced pale yellow with a wide red smile",
-   "new": "Sugar cookies with a wide red smile, not a friendly one"
+   "new": "Sugar cookies with a wide red smile, not a friendly one",
+   "done": true
   },
   {
    "old": "Jackson's birthday party at Holly's",
-   "new": "Pork sliders, mind the gift box"
+   "new": "Pork sliders, mind the gift box",
+   "done": true
   },
   {
    "old": "the long nights she can't sleep",
-   "new": "Ramen, and Laura in the dark kitchen"
+   "new": "Ramen, and Laura in the dark kitchen",
+   "done": true
   },
   {
    "set": "cue",
-   "value": "Serve dessert when Rose smashes the lantern at her childhood home."
+   "value": "Serve dessert when Rose smashes the lantern at her childhood home.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +34,10 @@
     "Dr Madeline Northcott, the therapist",
     "The toy train, then the box",
     "The lantern at the old house"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

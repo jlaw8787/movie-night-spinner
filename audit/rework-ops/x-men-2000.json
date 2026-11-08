@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Serve the snacks when Logan arrives at the school.",
-   "new": "Serve the snacks when Logan wins the cage fight and is crowned King of the Cage."
+   "new": "Serve the snacks when Logan wins the cage fight and is crowned King of the Cage.",
+   "done": true
   },
   {
    "old": "Laughlin City maple chilli peanuts",
-   "new": "Cage fight maple chilli peanuts"
+   "new": "Cage fight maple chilli peanuts",
+   "done": true
   },
   {
    "old": "the Canadian bar where Logan fights",
-   "new": "where Logan is King of the Cage"
+   "new": "where Logan is King of the Cage",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Chess in the plastic prison",
     "Going out in these uniforms",
     "The finale at the Statue of Liberty"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

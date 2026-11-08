@@ -1,6 +1,27 @@
-{"id":"Sixteen Candles (1984)","ops":[
-{"old":"Serve dessert when Sam wakes up and the whole family forgets her birthday.","new":"Serve dessert when Jake hands Sam a cake with sixteen candles and tells her to make a wish."},
-{"old":"the geek in the gym at the school dance","new":"Ted the Geek's floppy disk bet at the dance"},
-{"old":"the house is full of grandparents","new":"Sam on the sofa, grandparents in her bed"},
-{"old":"Jake Ryan waits by the red Porsche.","new":"Jake turns up at the church for Sam."}
-]}
+{
+ "id": "Sixteen Candles (1984)",
+ "ops": [
+  {
+   "old": "Serve dessert when Sam wakes up and the whole family forgets her birthday.",
+   "new": "Serve dessert when Jake hands Sam a cake with sixteen candles and tells her to make a wish.",
+   "done": true
+  },
+  {
+   "old": "the geek in the gym at the school dance",
+   "new": "Ted the Geek's floppy disk bet at the dance",
+   "done": true
+  },
+  {
+   "old": "the house is full of grandparents",
+   "new": "Sam on the sofa, grandparents in her bed",
+   "done": true
+  },
+  {
+   "old": "Jake Ryan waits by the red Porsche.",
+   "new": "Jake turns up at the church for Sam.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

@@ -1,44 +1,57 @@
 {
- "id": "West Side Story (1961)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Doc's candy store egg cream",
-   "where": "dish-name",
-   "verdict": "ok",
-   "why": "In the film a Jet asks 'Doc's candy store?' when the war council is set for midnight, so the film itself calls it a candy store, though Wikipedia says drug store.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=west-side-story",
-   "fix": "Doc's soda counter egg cream",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "West Side Story (1961)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Doc's candy store egg cream",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "In the film a Jet asks 'Doc's candy store?' when the war council is set for midnight, so the film itself calls it a candy store, though Wikipedia says drug store.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=west-side-story",
+      "fix": "Doc's soda counter egg cream",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A good gym dance and fire escape feel with Jets and Sharks both on the menu, but the writing is a bit plain.",
+    "missing": [
+      "America on the rooftop with Anita",
+      "Gee, Officer Krupke lines",
+      "I Feel Pretty in the bridal shop",
+      "The rumble under the highway",
+      "Tony and Maria on the fire escape",
+      "The mixer where Glad Hand makes the gangs mingle"
+    ],
+    "ideas": [
+      "Swap 'Pineapple tamarind punch' note for a rooftop 'America' nod",
+      "Swap 'Officer Krupke's corned beef' note for a real Krupke song joke, not a lyric",
+      "Rename 'Bridal shop coconut flan' to 'I Feel Pretty coconut flan' (the bridal shop song)",
+      "Add a 'Rumble under the highway' ice block sweet"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "America (rooftop)",
+      "Gee, Officer Krupke",
+      "I Feel Pretty (bridal shop)",
+      "Tonight (fire escape)",
+      "The rumble",
+      "Dance at the gym"
+    ],
+    "changed": [
+      "Hot dog note now before the rumble",
+      "Pernil note now Tonight on the fire escape"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A good gym dance and fire escape feel with Jets and Sharks both on the menu, but the writing is a bit plain.",
-  "missing": [
-   "America on the rooftop with Anita",
-   "Gee, Officer Krupke lines",
-   "I Feel Pretty in the bridal shop",
-   "The rumble under the highway",
-   "Tony and Maria on the fire escape",
-   "The mixer where Glad Hand makes the gangs mingle"
-  ],
-  "ideas": [
-   "Swap 'Pineapple tamarind punch' note for a rooftop 'America' nod",
-   "Swap 'Officer Krupke's corned beef' note for a real Krupke song joke, not a lyric",
-   "Rename 'Bridal shop coconut flan' to 'I Feel Pretty coconut flan' (the bridal shop song)",
-   "Add a 'Rumble under the highway' ice block sweet"
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -3,35 +3,43 @@
  "ops": [
   {
    "old": "Church canapés",
-   "new": "Church shootout canapés"
+   "new": "Church shootout canapés",
+   "done": true
   },
   {
    "old": "Church canapés (vegetarian)",
-   "new": "Church shootout canapés (vegetarian)"
+   "new": "Church shootout canapés (vegetarian)",
+   "done": true
   },
   {
    "old": "Rye squares with smoked salmon, crème fraîche and a garnish of dill",
-   "new": "Smoked salmon and crème fraîche on rye, doves optional"
+   "new": "Smoked salmon and crème fraîche on rye, doves optional",
+   "done": true
   },
   {
    "old": "Peach slices",
-   "new": "Castor's peach slices"
+   "new": "Castor's peach slices",
+   "done": true
   },
   {
    "old": "Fresh peach wedges with honey lime syrup and mint",
-   "new": "Honey lime peach wedges. Castor eats them for hours."
+   "new": "Honey lime peach wedges. Castor eats them for hours.",
+   "done": true
   },
   {
    "old": "Erewhon cheddar, apple and chutney stacks",
-   "new": "Magnetic boot cheddar, apple and chutney stacks"
+   "new": "Magnetic boot cheddar, apple and chutney stacks",
+   "done": true
   },
   {
    "old": "the magnetic boots prison",
-   "new": "Served on a steel tray, boots on"
+   "new": "Served on a steel tray, boots on",
+   "done": true
   },
   {
    "old": "Magnetic boots stay on through dinner service.",
-   "new": "Pollux's tiramisu is off. It might come back up."
+   "new": "Pollux's tiramisu is off. It might come back up.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -39,7 +47,10 @@
     "text": "Wow! We've got something in common!",
     "by": "Castor Troy",
     "kind": "quote"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

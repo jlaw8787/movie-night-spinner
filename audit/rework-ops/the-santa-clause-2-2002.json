@@ -1,27 +1,33 @@
 {
-  "id": "The Santa Clause 2 (2002)",
-  "ops": [
-    {
-      "set": "cue",
-      "value": "Serve the cocoa when Toy Santa drinks his and feels a little buzz."
-    },
-    {
-      "old": "Elf-made peppermint hot cocoa",
-      "new": "Abby's designer bean peppermint cocoa"
-    },
-    {
-      "old": "Pumpkin, carrot and parsnip with maple and thyme, a Council favourite",
-      "new": "Maple pumpkin, carrot and parsnip for 33,000 Easter Bunny offspring."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "The Mrs. Claus Clause",
-        "Curtis and his toy Santa double",
-        "Carol Newman, the school principal",
-        "Tinsel football with the elves",
-        "Bernard, the head elf"
-      ]
-    }
-  ]
+ "id": "The Santa Clause 2 (2002)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the cocoa when Toy Santa drinks his and feels a little buzz.",
+   "done": true
+  },
+  {
+   "old": "Elf-made peppermint hot cocoa",
+   "new": "Abby's designer bean peppermint cocoa",
+   "done": true
+  },
+  {
+   "old": "Pumpkin, carrot and parsnip with maple and thyme, a Council favourite",
+   "new": "Maple pumpkin, carrot and parsnip for 33,000 Easter Bunny offspring.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Mrs. Claus Clause",
+    "Curtis and his toy Santa double",
+    "Carol Newman, the school principal",
+    "Tinsel football with the elves",
+    "Bernard, the head elf"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

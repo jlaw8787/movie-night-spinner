@@ -1,35 +1,42 @@
 {
-  "id": "Superman (2025)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Krypto! Get the toy.",
-        "by": "Superman",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "Krypto the super dog",
-      "new": "Hot damn, that's a flying dog"
-    },
-    {
-      "old": "Clark and Lois in Metropolis",
-      "new": "Lois interviews Superman"
-    },
-    {
-      "old": "Fortress crystal prawn rice paper rolls",
-      "new": "Pocket universe prawn rice paper rolls"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Krypto, and Kara Zor-El collecting him",
-        "Lex Luthor's pocket universe",
-        "Metamorpho and baby Joey",
-        "Lois Lane's interview",
-        "Guy Gardner: Make a move, Big Blue."
-      ]
-    }
-  ]
+ "id": "Superman (2025)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Krypto! Get the toy.",
+    "by": "Superman",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Krypto the super dog",
+   "new": "Hot damn, that's a flying dog",
+   "done": true
+  },
+  {
+   "old": "Clark and Lois in Metropolis",
+   "new": "Lois interviews Superman",
+   "done": true
+  },
+  {
+   "old": "Fortress crystal prawn rice paper rolls",
+   "new": "Pocket universe prawn rice paper rolls",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Krypto, and Kara Zor-El collecting him",
+    "Lex Luthor's pocket universe",
+    "Metamorpho and baby Joey",
+    "Lois Lane's interview",
+    "Guy Gardner: Make a move, Big Blue."
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

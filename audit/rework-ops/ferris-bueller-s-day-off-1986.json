@@ -1,13 +1,17 @@
 {
-  "id": "Ferris Bueller's Day Off (1986)",
-  "ops": [
-    {
-      "old": "lunch at the table Ferris bluffs his way into",
-      "new": "life moves pretty fast, so stop and look around"
-    },
-    {
-      "old": "Ordered by the Sausage King of Chicago.",
-      "new": "Bueller? Bueller? He's at lunch, not class."
-    }
-  ]
+ "id": "Ferris Bueller's Day Off (1986)",
+ "ops": [
+  {
+   "old": "lunch at the table Ferris bluffs his way into",
+   "new": "life moves pretty fast, so stop and look around",
+   "done": true
+  },
+  {
+   "old": "Ordered by the Sausage King of Chicago.",
+   "new": "Bueller? Bueller? He's at lunch, not class.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

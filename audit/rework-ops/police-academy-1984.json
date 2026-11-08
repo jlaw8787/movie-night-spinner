@@ -7,15 +7,18 @@
     "text": "Let's have lunch, shall we?",
     "by": "Commandant Lassard",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Hightower, the cadet who tips a car over by hand",
-   "new": "Crumbed chicken with tomato and cheese. Hightower was a florist once."
+   "new": "Crumbed chicken with tomato and cheese. Hightower was a florist once.",
+   "done": true
   },
   {
    "old": "Vanilla slab cake covered in buttercream, with a blue badge piped on top",
-   "new": "Vanilla slab cake with buttercream and a blue badge, for the bravery awards."
+   "new": "Vanilla slab cake with buttercream and a blue badge, for the bravery awards.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +28,10 @@
     "Fackler's apple that starts the riot",
     "Lassard's lectern and the hidden surprise",
     "Mahoney trying to get thrown out and failing"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

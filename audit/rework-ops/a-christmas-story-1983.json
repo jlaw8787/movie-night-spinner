@@ -1,26 +1,30 @@
 {
-  "id": "A Christmas Story (1983)",
-  "ops": [
-    {
-      "set": "flavour.winks",
-      "value": [
-        "The leg lamp, a major award",
-        "A tongue stuck to the flagpole",
-        "You'll shoot your eye out.",
-        "The Bumpus hounds and the turkey",
-        "Little Orphan Annie decoder pin"
-      ]
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "slip",
-        "title": "Triple Dog Dare",
-        "lines": [
-          "Flagpole. Winter. Tongue.",
-          "No backing out."
-        ]
-      }
-    }
-  ]
+ "id": "A Christmas Story (1983)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The leg lamp, a major award",
+    "A tongue stuck to the flagpole",
+    "You'll shoot your eye out.",
+    "The Bumpus hounds and the turkey",
+    "Little Orphan Annie decoder pin"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Triple Dog Dare",
+    "lines": [
+     "Flagpole. Winter. Tongue.",
+     "No backing out."
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

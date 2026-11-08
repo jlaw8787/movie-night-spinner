@@ -1,50 +1,59 @@
 {
-  "id": "Ghostbusters: Afterlife (2021)",
-  "ops": [
-    {
-      "set": "flavour.note",
-      "value": {
-        "text": "Science is giving yourself the plague and gambling on the cure.",
-        "by": "Gary Grooberson",
-        "kind": "quote"
-      }
-    },
-    {
-      "old": "Corn fritters with jalapeño ranch",
-      "new": "Muncher's corn fritters with jalapeño ranch"
-    },
-    {
-      "old": "Summerville fried okra",
-      "new": "Keymaster fried okra"
-    },
-    {
-      "old": "the dusty old farmhouse full of secrets",
-      "new": "Cornbread from Egon's farmhouse of secrets"
-    },
-    {
-      "old": "Roller diner burgers",
-      "new": "Ecto-1 roller diner burgers"
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Ecto-1 chasing Muncher through town",
-        "Mini Pufts on the loose",
-        "Podcast and Gary Grooberson's summer science class",
-        "Egon's ghost with the proton pack",
-        "Egon's field of buried ghost traps"
-      ]
-    },
-    {
-      "set": "flavour.prop",
-      "value": {
-        "kind": "slip",
-        "title": "Ghost Trap Slip",
-        "lines": [
-          "Summerville, Oklahoma",
-          "Contents: the Keymaster"
-        ]
-      }
-    }
-  ]
+ "id": "Ghostbusters: Afterlife (2021)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Science is giving yourself the plague and gambling on the cure.",
+    "by": "Gary Grooberson",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Corn fritters with jalapeño ranch",
+   "new": "Muncher's corn fritters with jalapeño ranch",
+   "done": true
+  },
+  {
+   "old": "Summerville fried okra",
+   "new": "Keymaster fried okra",
+   "done": true
+  },
+  {
+   "old": "the dusty old farmhouse full of secrets",
+   "new": "Cornbread from Egon's farmhouse of secrets",
+   "done": true
+  },
+  {
+   "old": "Roller diner burgers",
+   "new": "Ecto-1 roller diner burgers",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ecto-1 chasing Muncher through town",
+    "Mini Pufts on the loose",
+    "Podcast and Gary Grooberson's summer science class",
+    "Egon's ghost with the proton pack",
+    "Egon's field of buried ghost traps"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Ghost Trap Slip",
+    "lines": [
+     "Summerville, Oklahoma",
+     "Contents: the Keymaster"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

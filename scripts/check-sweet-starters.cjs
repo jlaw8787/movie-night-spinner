@@ -11,6 +11,7 @@ const SAV=/\b(crab|fish|potato|rice|salmon|prawn|tuna|zucchini|polenta|pancakes?
 /* American buttermilk biscuits and plain scones are bread, not sweets */
 const BREAD=/buttermilk biscuits|boarding house biscuits|Grandma's biscuits|Meeko's biscuits|Honeycomb and biscuits|country scones|buttermilk scones/i;
 const KEEP={
+ "Hop (2011)":"the Easter Bunny's candy factory: E.B. snacks on jellybeans all film (the rocky road was a starter before the 8 Nov rename)",
  "Elf (2003)":"the film's joke: Buddy eats sweets as his four main food groups",
  "Stakeout (1987)":"stakeout doughnuts, eaten in the car before supper",
  "The French Connection (1971)":"stakeout coffee and doughnuts in the car",

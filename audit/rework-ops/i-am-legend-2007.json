@@ -1,7 +1,36 @@
-{"id":"I Am Legend (2007)","ops":[
-{"old":"Sirloin seared and basted with garlic butter and thyme","new":"Garlic butter sirloin. Keep a plain piece for Sam."},
-{"old":"from the corn he grows in the park","new":"Park corn and chicken. Say hello to Fred."},
-{"old":"Neville's shelter pantry rice pudding","new":"Neville's Shrek night rice pudding"},
-{"old":"Lab bench bourbon peach smash","new":"Light up the darkness bourbon peach smash"},
-{"set":"flavour.note","value":{"text":"I can provide food, I can provide shelter, I can provide security.","by":"Robert Neville","kind":"quote"}}
-]}
+{
+ "id": "I Am Legend (2007)",
+ "ops": [
+  {
+   "old": "Sirloin seared and basted with garlic butter and thyme",
+   "new": "Garlic butter sirloin. Keep a plain piece for Sam.",
+   "done": true
+  },
+  {
+   "old": "from the corn he grows in the park",
+   "new": "Park corn and chicken. Say hello to Fred.",
+   "done": true
+  },
+  {
+   "old": "Neville's shelter pantry rice pudding",
+   "new": "Neville's Shrek night rice pudding",
+   "done": true
+  },
+  {
+   "old": "Lab bench bourbon peach smash",
+   "new": "Light up the darkness bourbon peach smash",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I can provide food, I can provide shelter, I can provide security.",
+    "by": "Robert Neville",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

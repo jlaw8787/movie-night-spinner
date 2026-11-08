@@ -1,9 +1,12 @@
 {
-  "id": "Forgetting Sarah Marshall (2008)",
-  "ops": [
-    {
-      "old": "lunch by the pool at the resort",
-      "new": "Aldous Snow is staying here too."
-    }
-  ]
+ "id": "Forgetting Sarah Marshall (2008)",
+ "ops": [
+  {
+   "old": "lunch by the pool at the resort",
+   "new": "Aldous Snow is staying here too.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -3,14 +3,18 @@
  "ops": [
   {
    "old": "Better than Max's tin of Dinki Di.",
-   "new": "Just here for the gasoline. And these."
+   "new": "Just here for the gasoline. And these.",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Pomegranate and lime cordial",
     "note": "Just walk away. Fair ration."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -1,6 +1,42 @@
-{"id":"The Chronicles of Narnia: Prince Caspian (2008)","ops":[
-{"set":"flavour.note","value":{"text":"I said I would not fight you. I didn't say I'd let you live!","by":"Reepicheep","kind":"quote"}},
-{"old":"Miraz's Telmarine castle","new":"Miraz's castle, the night raid"},
-{"set":"flavour.winks","value":["Reepicheep and his sword","Aslan waking the trees","Susan's horn calling the Pevensies back","Peter's duel with Miraz","The ruins of Cair Paravel on the beach"]},
-{"set":"flavour.labels","value":{"m":"Mains at the How","d":"Cups by the Fire","n":"Overheard in old Narnia","call":"Susan's horn"}}
-]}
+{
+ "id": "The Chronicles of Narnia: Prince Caspian (2008)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I said I would not fight you. I didn't say I'd let you live!",
+    "by": "Reepicheep",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Miraz's Telmarine castle",
+   "new": "Miraz's castle, the night raid",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Reepicheep and his sword",
+    "Aslan waking the trees",
+    "Susan's horn calling the Pevensies back",
+    "Peter's duel with Miraz",
+    "The ruins of Cair Paravel on the beach"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "m": "Mains at the How",
+    "d": "Cups by the Fire",
+    "n": "Overheard in old Narnia",
+    "call": "Susan's horn"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

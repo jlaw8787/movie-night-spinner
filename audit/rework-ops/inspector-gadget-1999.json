@@ -3,26 +3,33 @@
  "ops": [
   {
    "old": "Sanford Scolex, the Claw, in his dark lair",
-   "new": "Claw has an opera hand and a sushi hand"
+   "new": "Claw has an opera hand and a sushi hand",
+   "done": true
   },
   {
    "old": "Vanilla cupcakes with grey icing and chocolate button wheels",
-   "new": "Grey icing, button wheels. Go, Go, Gadgetmobile."
+   "new": "Grey icing, button wheels. Go, Go, Gadgetmobile.",
+   "done": true
   },
   {
    "old": "the city of Riverton",
-   "new": "Good mornin', Riverton!"
+   "new": "Good mornin', Riverton!",
+   "done": true
   },
   {
    "old": "Gadget's pizza pinwheels",
-   "new": "Helicopter hat pizza pinwheels"
+   "new": "Helicopter hat pizza pinwheels",
+   "done": true
   },
   {
    "set": "house.d",
    "value": {
     "n": "Vanilla cola",
     "note": "Who you calling car? Buckle up, baby."
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

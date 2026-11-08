@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Serve the snacks when Fred arrives at the North Pole.",
-   "new": "Serve the snacks when Fred picks a fight with DJ Donnie."
+   "new": "Serve the snacks when Fred picks a fight with DJ Donnie.",
+   "done": true
   },
   {
    "old": "Hot chocolate topped with toasted marshmallows and cinnamon",
-   "new": "Toasted marshmallow hot chocolate, for kids Fred marked nice"
+   "new": "Toasted marshmallow hot chocolate, for kids Fred marked nice",
+   "done": true
   },
   {
    "old": "Clove studded leg ham glazed with honey and Dijon mustard",
-   "new": "Honey Dijon clove ham, the dinner Nick talked him into"
+   "new": "Honey Dijon clove ham, the dinner Nick talked him into",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -20,7 +23,8 @@
     "Clyde Northcutt's three strikes",
     "Slam, Fred's mate",
     "Chirp Chirp and the birdhouse"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -31,7 +35,10 @@
      "Three strikes, then closed",
      "Inspector: Clyde Northcutt"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

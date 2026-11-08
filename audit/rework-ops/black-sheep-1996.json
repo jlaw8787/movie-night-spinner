@@ -3,15 +3,18 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when Mike and Steve can't say roads."
+   "value": "Serve the snacks when Mike and Steve can't say roads.",
+   "done": true
   },
   {
    "old": "Cinnamon Granny Smith apples under a crunchy oat crumble",
-   "new": "Cinnamon apple oat crumble. Not a pudding, Mike"
+   "new": "Cinnamon apple oat crumble. Not a pudding, Mike",
+   "done": true
   },
   {
    "old": "One more stunt and Al's campaign is finished.",
-   "new": "Mike's checkers rule: never move your back row."
+   "new": "Mike's checkers rule: never move your back row.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -20,7 +23,10 @@
     "Pudding in Mike's underpants",
     "Steve Dodds, the babysitter",
     "A campaign gone sideways"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

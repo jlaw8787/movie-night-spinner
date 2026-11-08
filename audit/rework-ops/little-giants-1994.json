@@ -1,11 +1,46 @@
 {
  "id": "Little Giants (1994)",
  "ops": [
-  {"old": "Serve the snacks when the Little Giants run the big trick play.", "new": "Serve the snacks when the Giants run the Annexation of Puerto Rico."},
-  {"old": "Danny's gas station in town", "new": "Danny's gas station, a landmark not a landfill"},
-  {"old": "Becky the Icebox, cut by the Cowboys", "new": "Baked mac and cheese. Nice pop, Icebox."},
-  {"old": "Fresh orange and lemon juice with honey and a pinch of salt, over ice", "new": "Orange and lemon juice with honey and salt, for the 21 point halftime"},
-  {"set": "flavour.note", "value": {"text": "One day our name's gonna be up there in big letters. The O'Shea brothers.", "by": "Kevin O'Shea", "kind": "quote"}},
-  {"set": "flavour.winks", "value": ["Madden and the NFL stars on the bus", "Icebox, the girl the Cowboys cut", "Cowboys versus Giants in Urbania", "The old rivalry between Kevin and Danny O'Shea"]}
- ]
+  {
+   "old": "Serve the snacks when the Little Giants run the big trick play.",
+   "new": "Serve the snacks when the Giants run the Annexation of Puerto Rico.",
+   "done": true
+  },
+  {
+   "old": "Danny's gas station in town",
+   "new": "Danny's gas station, a landmark not a landfill",
+   "done": true
+  },
+  {
+   "old": "Becky the Icebox, cut by the Cowboys",
+   "new": "Baked mac and cheese. Nice pop, Icebox.",
+   "done": true
+  },
+  {
+   "old": "Fresh orange and lemon juice with honey and a pinch of salt, over ice",
+   "new": "Orange and lemon juice with honey and salt, for the 21 point halftime",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "One day our name's gonna be up there in big letters. The O'Shea brothers.",
+    "by": "Kevin O'Shea",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Madden and the NFL stars on the bus",
+    "Icebox, the girl the Cowboys cut",
+    "Cowboys versus Giants in Urbania",
+    "The old rivalry between Kevin and Danny O'Shea"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -1,9 +1,48 @@
-{"id":"Addams Family Values (1993)","ops":[
-{"old":"Serve the mains at the camp Thanksgiving play.","new":"Serve the mains when Wednesday goes off script at the play."},
-{"old":"the Thanksgiving play that goes very wrong","new":"Roast turkey, until Wednesday burns the stage"},
-{"old":"Pumpkin pie","new":"Prettiest pilgrim pumpkin pie"},
-{"old":"Round butter cookies with a thin dark chocolate smile","new":"Butter cookies with a thin chocolate smile, as Joel screams"},
-{"old":"Grilled lobster tails with garlic lemon butter, buttered potatoes and salad","new":"Grilled lobster tails with garlic lemon butter, for the black widow's honeymoon"},
-{"old":"the camp cookout at Camp Chippewa","new":"Hot sausage in a roll, with Harmony Hut cheer"},
-{"set":"flavour.winks","value":["Debbie Jellinsky, the Black Widow","Baby Pubert","Wednesday as Pocahontas, off script","Amanda Buckman and the counsellors","Wednesday in the Harmony Hut"]}
-]}
+{
+ "id": "Addams Family Values (1993)",
+ "ops": [
+  {
+   "old": "Serve the mains at the camp Thanksgiving play.",
+   "new": "Serve the mains when Wednesday goes off script at the play.",
+   "done": true
+  },
+  {
+   "old": "the Thanksgiving play that goes very wrong",
+   "new": "Roast turkey, until Wednesday burns the stage",
+   "done": true
+  },
+  {
+   "old": "Pumpkin pie",
+   "new": "Prettiest pilgrim pumpkin pie",
+   "done": true
+  },
+  {
+   "old": "Round butter cookies with a thin dark chocolate smile",
+   "new": "Butter cookies with a thin chocolate smile, as Joel screams",
+   "done": true
+  },
+  {
+   "old": "Grilled lobster tails with garlic lemon butter, buttered potatoes and salad",
+   "new": "Grilled lobster tails with garlic lemon butter, for the black widow's honeymoon",
+   "done": true
+  },
+  {
+   "old": "the camp cookout at Camp Chippewa",
+   "new": "Hot sausage in a roll, with Harmony Hut cheer",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Debbie Jellinsky, the Black Widow",
+    "Baby Pubert",
+    "Wednesday as Pocahontas, off script",
+    "Amanda Buckman and the counsellors",
+    "Wednesday in the Harmony Hut"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

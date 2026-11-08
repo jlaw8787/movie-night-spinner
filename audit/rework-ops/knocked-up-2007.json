@@ -7,19 +7,23 @@
     "text": "With emotion?",
     "by": "Ben Stone",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the snacks when Ben and Alison find out.",
-   "new": "Serve the snacks when Alison tells Ben she's pregnant."
+   "new": "Serve the snacks when Alison tells Ben she's pregnant.",
+   "done": true
   },
   {
    "old": "Craving pickle-brined popcorn chicken",
-   "new": "Sadie's chicken pox popcorn chicken"
+   "new": "Sadie's chicken pox popcorn chicken",
+   "done": true
   },
   {
    "old": "Fantasy baseball draft nachos",
-   "new": "Pete's fantasy draft nachos"
+   "new": "Pete's fantasy draft nachos",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -29,7 +33,10 @@
     "Pete at the fantasy baseball draft, no wives",
     "Vegas mushrooms and Cirque du Soleil",
     "Dr. Howard at a bar mitzvah in San Francisco"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

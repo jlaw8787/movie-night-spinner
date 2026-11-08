@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Interceptor highway meat pie",
-   "new": "Last of the V8s meat pie"
+   "new": "Last of the V8s meat pie",
+   "done": true
   },
   {
    "old": "Jessie's ice cream",
-   "new": "Sproggo's ice cream"
+   "new": "Sproggo's ice cream",
+   "done": true
   },
   {
    "old": "the family trip up the coast",
-   "new": "Max, Jessie and Sprog, up north"
+   "new": "Max, Jessie and Sprog, up north",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,8 @@
     "Goose, 100% snafued",
     "The last of the V8s",
     "Johnny the Boy and the hacksaw"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "house.s",
@@ -29,7 +33,8 @@
     "n": "Fried dim sims with soy",
     "note": "Not hungry anymore? Give it here.",
     "meat": true
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -37,7 +42,10 @@
     "text": "It's that rat circus out there.",
     "by": "Max Rockatansky",
     "kind": "quote"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -7,11 +7,13 @@
     "text": "I am home.",
     "by": "Sue Charlton",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Serve the mains when Mick sets up his bush ambush.",
-   "new": "Serve the mains when Mick fakes Walter's death by a croc."
+   "new": "Serve the mains when Mick fakes Walter's death by a croc.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -20,23 +22,30 @@
     "Walter's faked death by crocodile",
     "Mick, the crocodile who walks like a man",
     "Rico and Mick swapping clothes"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "No crocs allowed",
-   "new": "Croc attack: faked"
+   "new": "Croc attack: faked",
+   "done": true
   },
   {
    "old": "Pavlova",
-   "new": "I am home pavlova"
+   "new": "I am home pavlova",
+   "done": true
   },
   {
    "old": "Foil-wrapped campfire whole barramundi",
-   "new": "Jaba Point foil-wrapped whole barramundi"
+   "new": "Jaba Point foil-wrapped whole barramundi",
+   "done": true
   },
   {
    "old": "the Top End",
-   "new": "Belonga Mick, the Top End"
+   "new": "Belonga Mick, the Top End",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

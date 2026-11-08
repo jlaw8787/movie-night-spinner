@@ -1,31 +1,38 @@
 {
-  "id": "Jurassic World Dominion (2022)",
-  "ops": [
-    {
-      "old": "Owen wrangling dinosaurs in the Sierra Nevada",
-      "new": "Smoky beef jerky. Owen: \"I always come back.\""
-    },
-    {
-      "old": "Charred corn, chilli lime butter",
-      "new": "Corn the locusts left alone."
-    },
-    {
-      "old": "Kayla Watts flew these in.",
-      "new": "Kayla Watts: \"You're welcome.\""
-    },
-    {
-      "old": "Fresh sweetened almond milk",
-      "new": "Almond milk. Maisie named Beta."
-    },
-    {
-      "set": "flavour.winks",
-      "value": [
-        "Giant locusts in the fields",
-        "The Malta black market",
-        "Beta, Blue's baby",
-        "Giganotosaurus, biggest carnivore ever",
-        "Kayla's plane and the Quetzalcoatlus"
-      ]
-    }
-  ]
+ "id": "Jurassic World Dominion (2022)",
+ "ops": [
+  {
+   "old": "Owen wrangling dinosaurs in the Sierra Nevada",
+   "new": "Smoky beef jerky. Owen: \"I always come back.\"",
+   "done": true
+  },
+  {
+   "old": "Charred corn, chilli lime butter",
+   "new": "Corn the locusts left alone.",
+   "done": true
+  },
+  {
+   "old": "Kayla Watts flew these in.",
+   "new": "Kayla Watts: \"You're welcome.\"",
+   "done": true
+  },
+  {
+   "old": "Fresh sweetened almond milk",
+   "new": "Almond milk. Maisie named Beta.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Giant locusts in the fields",
+    "The Malta black market",
+    "Beta, Blue's baby",
+    "Giganotosaurus, biggest carnivore ever",
+    "Kayla's plane and the Quetzalcoatlus"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

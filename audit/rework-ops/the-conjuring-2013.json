@@ -3,19 +3,25 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the mains when every clock in the house stops at 3:07."
+   "value": "Serve the mains when every clock in the house stops at 3:07.",
+   "done": true
   },
   {
    "old": "Crisp edged cornmeal griddle cakes served with butter",
-   "new": "Crisp cornmeal griddle cakes and butter. Clap three times."
+   "new": "Crisp cornmeal griddle cakes and butter. Clap three times.",
+   "done": true
   },
   {
    "old": "dinner for a family of seven in 1971",
-   "new": "Pot roast for seven. Sadie stays out."
+   "new": "Pot roast for seven. Sadie stays out.",
+   "done": true
   },
   {
    "old": "the little music box that plays by itself",
-   "new": "Jam shortbread. Twist the key and wait."
+   "new": "Jam shortbread. Twist the key and wait.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

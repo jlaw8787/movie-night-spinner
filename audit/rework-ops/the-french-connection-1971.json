@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Stakeout coffee and doughnuts",
-   "new": "Santa suit coffee and doughnuts"
+   "new": "Santa suit coffee and doughnuts",
+   "done": true
   },
   {
    "old": "Back at the precinct",
-   "new": "Out at the Copacabana"
+   "new": "Out at the Copacabana",
+   "done": true
   },
   {
    "old": "Coffee's cold. Feet too.",
-   "new": "Coffee's cold. Never trust anyone."
+   "new": "Coffee's cold. Never trust anyone.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

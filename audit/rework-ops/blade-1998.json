@@ -3,23 +3,28 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when Blade raids the blood rave."
+   "value": "Serve the snacks when Blade raids the blood rave.",
+   "done": true
   },
   {
    "old": "Garlic serum bread",
-   "new": "Whistler's garlic bread"
+   "new": "Whistler's garlic bread",
+   "done": true
   },
   {
    "old": "Garlic-heavy steak",
-   "new": "Daywalker garlic steak"
+   "new": "Daywalker garlic steak",
+   "done": true
   },
   {
    "old": "Whistler's workshop full of weapons",
-   "new": "Beef chilli, garlic kick, from Whistler's weapons den"
+   "new": "Beef chilli, garlic kick, from Whistler's weapons den",
+   "done": true
   },
   {
    "old": "Red wine, pomegranate juice and brandy with blood orange slices",
-   "new": "Red wine, pomegranate and brandy with blood orange. Is everybody thirsty?"
+   "new": "Red wine, pomegranate and brandy with blood orange. Is everybody thirsty?",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +33,10 @@
     "Is everybody thirsty?",
     "Quinn just keeps on coming",
     "Whistler's weapons workshop"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

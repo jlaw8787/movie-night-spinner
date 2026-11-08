@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Diner chicken wings",
-   "new": "Helen's fryer-on wings"
+   "new": "Helen's fryer-on wings",
+   "done": true
   },
   {
    "old": "Crisp baked wings tossed in hot sauce butter, with blue cheese dip and celery",
-   "new": "Helen turns the fryers back on. Hot sauce butter wings, blue cheese dip, celery."
+   "new": "Helen turns the fryers back on. Hot sauce butter wings, blue cheese dip, celery.",
+   "done": true
   },
   {
    "old": "the jacket rips at the seams",
-   "new": "Fat guy in a little coat."
+   "new": "Fat guy in a little coat.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Shut up, Richard!",
     "The deer in the back seat",
     "Zalinsky Auto Parts, the rival"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

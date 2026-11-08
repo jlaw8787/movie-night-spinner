@@ -1,10 +1,36 @@
 {
  "id": "Stakeout (1987)",
  "ops": [
-  {"old": "Warm cake doughnuts shaken in a bag of cinnamon sugar", "new": "Where are my donuts? Warm cake ones, cinnamon sugar"},
-  {"old": "Seattle waterfront cod and chips", "new": "Not a boating accident cod and chips"},
-  {"old": "the waterfront between shifts", "new": "from the car's movie trivia game"},
-  {"old": "the Seattle waterfront", "new": "Lecce, phone lineman"},
-  {"set": "flavour.note", "value": {"text": "To protect and to serve.", "by": "Bill Reimers", "kind": "quote"}}
- ]
+  {
+   "old": "Warm cake doughnuts shaken in a bag of cinnamon sugar",
+   "new": "Where are my donuts? Warm cake ones, cinnamon sugar",
+   "done": true
+  },
+  {
+   "old": "Seattle waterfront cod and chips",
+   "new": "Not a boating accident cod and chips",
+   "done": true
+  },
+  {
+   "old": "the waterfront between shifts",
+   "new": "from the car's movie trivia game",
+   "done": true
+  },
+  {
+   "old": "the Seattle waterfront",
+   "new": "Lecce, phone lineman",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "To protect and to serve.",
+    "by": "Bill Reimers",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

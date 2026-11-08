@@ -1,5 +1,36 @@
-{"id":"Selena (1997)","ops":[
-{"set":"flavour.note","value":{"text":"We must be more Mexican than Mexicans, more American than Americans, both at the same time!","by":"Abraham Quintanilla","kind":"quote"}},
-{"set":"house.s","value":{"n":"San Antonio puffy tacos","note":"Frijoles keep our strength up for the job.","meat":true}},
-{"set":"flavour.winks","value":["The Astrodome crowd in Houston","A sparkling purple jumpsuit","Chris Perez, who cut his hair for the job","Lake Jackson, where it all began","Abraham on the bustier: it's a bra!"]}
-]}
+{
+ "id": "Selena (1997)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "We must be more Mexican than Mexicans, more American than Americans, both at the same time!",
+    "by": "Abraham Quintanilla",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "San Antonio puffy tacos",
+    "note": "Frijoles keep our strength up for the job.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Astrodome crowd in Houston",
+    "A sparkling purple jumpsuit",
+    "Chris Perez, who cut his hair for the job",
+    "Lake Jackson, where it all began",
+    "Abraham on the bustier: it's a bra!"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

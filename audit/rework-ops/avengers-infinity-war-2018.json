@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Serve the mains when the Guardians find Thor floating in space.",
-   "new": "Serve the mains when Thor lands in Wakanda with Stormbreaker and Groot."
+   "new": "Serve the mains when Thor lands in Wakanda with Stormbreaker and Groot.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -11,7 +12,8 @@
     "text": "Mr. Stark, I don't feel so good.",
     "by": "Peter Parker",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,19 +23,25 @@
     "Stormbreaker with a Groot handle",
     "Doctor Strange and the Time Stone",
     "Titan and its broken moon"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "Pumpkin, chickpea and tomato stew with spinach, served with warm flatbread",
-   "new": "Pumpkin and chickpea stew with flatbread, for the sunrise on Thanos's farm"
+   "new": "Pumpkin and chickpea stew with flatbread, for the sunrise on Thanos's farm",
+   "done": true
   },
   {
    "old": "Wakanda, where the heroes make their stand",
-   "new": "Hold the line in Wakanda. Yibambe!"
+   "new": "Hold the line in Wakanda. Yibambe!",
+   "done": true
   },
   {
    "old": "Bruce crashing through the roof of the Sanctum",
-   "new": "Bruce falls through the Sanctum roof: Thanos is coming"
+   "new": "Bruce falls through the Sanctum roof: Thanos is coming",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

@@ -7,15 +7,18 @@
     "text": "Did you guys get a group rate or something?",
     "by": "Reuben Tishkoff",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "Paper thin fried potato chips tossed with truffle salt and parmesan",
-   "new": "Paper thin fried potato chips, truffle salt and parmesan. Take a pinch."
+   "new": "Paper thin fried potato chips, truffle salt and parmesan. Take a pinch.",
+   "done": true
   },
   {
    "old": "Saul, the old con man coaxed out of retirement",
-   "new": "Chicken soup and matzo balls. Saul makes ten."
+   "new": "Chicken soup and matzo balls. Saul makes ten.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -25,7 +28,10 @@
     "Linus the pickpocket",
     "The fake SWAT team",
     "Saul, the old pro"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

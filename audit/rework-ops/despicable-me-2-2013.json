@@ -3,23 +3,28 @@
  "ops": [
   {
    "old": "Serve the mains when Gru and Lucy break into Eduardo's Mexican restaurant in the mall.",
-   "new": "Serve the mains when Lucy tasers Gru with her lipstick."
+   "new": "Serve the mains when Lucy tasers Gru with her lipstick.",
+   "done": true
   },
   {
    "old": "Agnes's birthday party with a fairy princess",
-   "new": "Sprinkled star bread, served by Zinkerbell"
+   "new": "Sprinkled star bread, served by Zinkerbell",
+   "done": true
   },
   {
    "old": "Gru's underground lab full of minions",
-   "new": "Spaghetti, with Kevin locked in the lab"
+   "new": "Spaghetti, with Kevin locked in the lab",
+   "done": true
   },
   {
    "old": "Purple minion jelly cups",
-   "new": "Evil purple minion jelly cups"
+   "new": "Evil purple minion jelly cups",
+   "done": true
   },
   {
    "old": "Shortcrust tarts filled with homemade berry jam",
-   "new": "Berry jam tarts from Gru's jams and jellies line"
+   "new": "Berry jam tarts from Gru's jams and jellies line",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -28,7 +33,10 @@
     "Purple minions on the loose",
     "El Macho, the shark, the volcano",
     "The jelly lab under the house"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

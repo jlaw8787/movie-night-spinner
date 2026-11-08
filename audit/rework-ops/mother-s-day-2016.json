@@ -3,7 +3,8 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the brunch when Kristin proposes to Zack on Miranda's show."
+   "value": "Serve the brunch when Kristin proposes to Zack on Miranda's show.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,15 +14,20 @@
     "Sisters hiding their spouses from their mum",
     "A family arriving in an RV",
     "Atlanta suburb brunch"
-   ]
+   ],
+   "done": true
   },
   {
    "old": "Mother's Day ham and spinach frittata",
-   "new": "Park picnic ham and spinach frittata"
+   "new": "Park picnic ham and spinach frittata",
+   "done": true
   },
   {
    "old": "Sandy's ex remarried. Eat your feelings.",
-   "new": "Henry married Tina. Eat your feelings."
+   "new": "Henry married Tina. Eat your feelings.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

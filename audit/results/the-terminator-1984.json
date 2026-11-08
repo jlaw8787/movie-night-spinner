@@ -1,74 +1,86 @@
 {
- "id": "The Terminator (1984)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Sarah, stay close and keep moving. Nobody is eating in here tonight.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Kyle Reese never says this. His line to Sarah at Tech Noir is 'Come with me if you want to live.' The menu line is invented.",
-   "source": "https://filmsite.org/terminator.html",
-   "fix": "Come with me if you want to live.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Sarah, stay close and keep moving. Nobody is eating in here tonight.",
-    "by": "Kyle Reese",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Sarah's diner, ketchup bottle on every table.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Sarah is introduced as a waitress at Big Jeff's, late for work. No source mentions ketchup bottles on the tables.",
-   "source": "https://filmsite.org/terminator.html",
-   "fix": "Sarah's diner, where she is late for her shift.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "nofind": true,
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "The pie case at Sarah's diner.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Big Jeff's is Sarah's workplace, but no source shows a pie case or cherry pie.",
-   "source": "https://filmsite.org/terminator.html",
-   "fix": "Sarah's diner, where she waits tables.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "nofind": true,
-   "applied": "2026-11-08"
+  "id": "The Terminator (1984)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sarah, stay close and keep moving. Nobody is eating in here tonight.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Kyle Reese never says this. His line to Sarah at Tech Noir is 'Come with me if you want to live.' The menu line is invented.",
+      "source": "https://filmsite.org/terminator.html",
+      "fix": "Come with me if you want to live.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Sarah, stay close and keep moving. Nobody is eating in here tonight.",
+        "by": "Kyle Reese",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Sarah's diner, ketchup bottle on every table.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Sarah is introduced as a waitress at Big Jeff's, late for work. No source mentions ketchup bottles on the tables.",
+      "source": "https://filmsite.org/terminator.html",
+      "fix": "Sarah's diner, where she is late for her shift.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "nofind": true,
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "The pie case at Sarah's diner.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Big Jeff's is Sarah's workplace, but no source shows a pie case or cherry pie.",
+      "source": "https://filmsite.org/terminator.html",
+      "fix": "Sarah's diner, where she waits tables.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "nofind": true,
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Neon Tech Noir looks great and the venue is right, but the food notes lean on made up diner details and skip the big moments.",
+    "missing": [
+      "'I'll be back' at the police station desk",
+      "The car through the police station doors",
+      "Pipe bombs at the Tiki Motel",
+      "The tanker truck chase",
+      "The hydraulic press finish",
+      "The eye surgery in the hotel room"
+    ],
+    "ideas": [
+      "Swap the burger note 'Order up from the grill.' for 'I'll be back, with fries.'",
+      "Swap 'Kyle's buttermilk fried chicken bucket' note for 'Pipe bombs on the kitchenette bench at the Tiki Motel.'",
+      "Swap the cherry pie note for 'Sarah's last pie before the hydraulic press.'",
+      "Print 'Come with me if you want to live.' on the VIP card as Kyle's line."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Come with me if you want to live",
+      "I'll be back at the police station desk",
+      "The Tech Noir nightclub shootout",
+      "Three Sarah Connors in the phone book",
+      "The car through the police station doors"
+    ],
+    "changed": [
+      "Signed note is now Kyle's real line",
+      "Cue is now the I'll be back police station scene"
+    ]
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Neon Tech Noir looks great and the venue is right, but the food notes lean on made up diner details and skip the big moments.",
-  "missing": [
-   "'I'll be back' at the police station desk",
-   "The car through the police station doors",
-   "Pipe bombs at the Tiki Motel",
-   "The tanker truck chase",
-   "The hydraulic press finish",
-   "The eye surgery in the hotel room"
-  ],
-  "ideas": [
-   "Swap the burger note 'Order up from the grill.' for 'I'll be back, with fries.'",
-   "Swap 'Kyle's buttermilk fried chicken bucket' note for 'Pipe bombs on the kitchenette bench at the Tiki Motel.'",
-   "Swap the cherry pie note for 'Sarah's last pie before the hydraulic press.'",
-   "Print 'Come with me if you want to live.' on the VIP card as Kyle's line."
-  ],
-  "flat": false,
-  "done": false
- }
 }

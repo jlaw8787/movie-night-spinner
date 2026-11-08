@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "the giant Hometree where the clan lives",
-   "new": "Lemongrass fish steamed in banana leaf, for the clan under Hometree"
+   "new": "Lemongrass fish steamed in banana leaf, for the clan under Hometree",
+   "done": true
   },
   {
    "old": "flying the banshees over Pandora",
-   "new": "Prawn and pumpkin curry for the first flight that seals the bond"
+   "new": "Prawn and pumpkin curry for the first flight that seals the bond",
+   "done": true
   },
   {
    "old": "Coconut tapioca layered with mango and passionfruit, toasted coconut on top",
-   "new": "Tapioca pearls like the seeds of the sacred tree, with coconut, mango and passionfruit"
+   "new": "Tapioca pearls like the seeds of the sacred tree, with coconut, mango and passionfruit",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Unobtanium mining",
     "Seeds of the sacred tree",
     "The floating mountains"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

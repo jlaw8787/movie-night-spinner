@@ -7,11 +7,13 @@
     "text": "I haven't finished my espresso. Why don't you have some.",
     "by": "John Shaft",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "old": "They say this cat Shaft is a bad mother.",
-   "new": "Isaac Hayes on the jukebox. Theme from Shaft."
+   "new": "Isaac Hayes on the jukebox. Theme from Shaft.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +23,10 @@
     "Lt. Vic Androzzi",
     "Ben Buford and his group",
     "Right on, said Shaft"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

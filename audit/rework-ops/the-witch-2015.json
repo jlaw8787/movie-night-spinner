@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Buttermilk cornbread baked in a hot buttered cast iron pan",
-   "new": "Buttered cornbread. \"Wouldst thou like the taste of butter?\""
+   "new": "Buttered cornbread. \"Wouldst thou like the taste of butter?\"",
+   "done": true
   },
   {
    "old": "Goat or lamb braised with onion, carrot, garlic, thyme and bay",
-   "new": "Goat or lamb braised with onion and thyme. Phillip would not approve."
+   "new": "Goat or lamb braised with onion and thyme. Phillip would not approve.",
+   "done": true
   },
   {
    "old": "Apples baked with butter, brown sugar, cinnamon and dates",
-   "new": "Apples baked in butter, sugar and dates. Mother wished for one."
+   "new": "Apples baked in butter, sugar and dates. Mother wished for one.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "The twins Mercy and Jonas",
     "Baby Samuel, gone at the edge of the woods",
     "The hovel in the thicket"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

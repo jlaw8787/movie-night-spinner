@@ -1,6 +1,40 @@
-{"id":"City Slickers (1991)","ops":[
-{"old":"Chuckwagon coffee with cinnamon cream","new":"Mitch's fresh coffee with cinnamon cream"},
-{"old":"Chuckwagon chilli","new":"Cookie's chuckwagon chilli"},
-{"set":"flavour.winks","value":["Curly's finger, bacon at every meal","Norman the calf","Mitch's 39th birthday crisis","Phil and Ed on the cattle drive","Cookie's chuck wagon over the cliff"]},
-{"set":"flavour.prop","value":{"kind":"slip","title":"Chuck Wagon Slip","lines":["Trail drive, New Mexico to Colorado","No rum raisin"]}}
-]}
+{
+ "id": "City Slickers (1991)",
+ "ops": [
+  {
+   "old": "Chuckwagon coffee with cinnamon cream",
+   "new": "Mitch's fresh coffee with cinnamon cream",
+   "done": true
+  },
+  {
+   "old": "Chuckwagon chilli",
+   "new": "Cookie's chuckwagon chilli",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Curly's finger, bacon at every meal",
+    "Norman the calf",
+    "Mitch's 39th birthday crisis",
+    "Phil and Ed on the cattle drive",
+    "Cookie's chuck wagon over the cliff"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Chuck Wagon Slip",
+    "lines": [
+     "Trail drive, New Mexico to Colorado",
+     "No rum raisin"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

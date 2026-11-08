@@ -3,19 +3,23 @@
  "ops": [
   {
    "old": "the satyr who trains heroes",
-   "new": "Lamb meatballs, no fur wedgie"
+   "new": "Lamb meatballs, no fur wedgie",
+   "done": true
   },
   {
    "old": "the god of the underworld with the flaming hair",
-   "new": "Chilli prawns. Whoa, is my hair out?"
+   "new": "Chilli prawns. Whoa, is my hair out?",
+   "done": true
   },
   {
    "old": "Griddled haloumi with honey, chilli flakes, thyme and lemon",
-   "new": "Griddled haloumi, honey, chilli, thyme. Cut one, get two"
+   "new": "Griddled haloumi, honey, chilli, thyme. Cut one, get two",
+   "done": true
   },
   {
    "old": "Serve the feast when Hercules returns to Mount Olympus.",
-   "new": "Serve the feast when the Muses start Zero to Hero."
+   "new": "Serve the feast when the Muses start Zero to Hero.",
+   "done": true
   },
   {
    "set": "flavour.note",
@@ -23,7 +27,8 @@
     "text": "Ya did it, kid! Ya won by a landslide!",
     "by": "Phil",
     "kind": "quote"
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -33,7 +38,10 @@
     "Meg, it's been a real slice",
     "The Muses telling the story",
     "Is this an audience or a mosaic?"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

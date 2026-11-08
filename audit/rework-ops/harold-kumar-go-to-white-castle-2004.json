@@ -3,34 +3,41 @@
  "ops": [
   {
    "old": "Serve the sliders when Harold and Kumar finally reach the counter.",
-   "new": "Serve the sliders when Harold finally orders thirty at the counter."
+   "new": "Serve the sliders when Harold finally orders thirty at the counter.",
+   "done": true
   },
   {
    "old": "Midnight cherry vanilla cola",
-   "new": "Harold's large cherry vanilla cola"
+   "new": "Harold's large cherry vanilla cola",
+   "done": true
   },
   {
    "old": "Cherry vanilla syrup topped with cola over ice",
-   "new": "Cherry vanilla syrup and cola over ice, one of his four."
+   "new": "Cherry vanilla syrup and cola over ice, one of his four.",
+   "done": true
   },
   {
    "old": "Crinkle-cut chips with mozzarella and hot beef gravy",
-   "new": "Chips, mozzarella and hot beef gravy. Harold orders five."
+   "new": "Chips, mozzarella and hot beef gravy. Harold orders five.",
+   "done": true
   },
   {
    "old": "Thin beef patties steamed over onions with cheddar and pickles",
-   "new": "Thin beef patties steamed over itty-bitty onions, cheddar, pickles"
+   "new": "Thin beef patties steamed over itty-bitty onions, cheddar, pickles",
+   "done": true
   },
   {
    "old": "Salted caramel malt shakes",
-   "new": "Doogie's salted caramel malt shakes"
+   "new": "Doogie's salted caramel malt shakes",
+   "done": true
   },
   {
    "set": "house.s",
    "value": {
     "n": "Burger Shack onion rings with ranch",
     "note": "Even the Burger Shack guy says they don't cut it."
-   }
+   },
+   "done": true
   },
   {
    "set": "flavour.prop",
@@ -41,7 +48,10 @@
      "30 sliders",
      "5 fries, 4 colas"
     ]
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

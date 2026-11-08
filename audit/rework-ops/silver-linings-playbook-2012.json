@@ -1,7 +1,36 @@
-{"id":"Silver Linings Playbook (2012)","ops":[
-{"set":"flavour.note","value":{"text":"It can still be a date if you order Raisin Bran.","by":"Tiffany Maxwell","kind":"quote"}},
-{"old":"Hot crab toasts","new":"Dolores's crabby snacks"},
-{"old":"Pat Sr's juju: remotes lined up, hanky out.","new":"Pat Sr's juju: remotes lined up, green bandana in hand."},
-{"old":"Game day spread. Lucky hanky optional.","new":"Game day spread. Lucky bandana optional."},
-{"old":"the Eagles game on the TV in Philadelphia","new":"Eagles on the TV, with Pat Sr's bet riding on it"}
-]}
+{
+ "id": "Silver Linings Playbook (2012)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "It can still be a date if you order Raisin Bran.",
+    "by": "Tiffany Maxwell",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "old": "Hot crab toasts",
+   "new": "Dolores's crabby snacks",
+   "done": true
+  },
+  {
+   "old": "Pat Sr's juju: remotes lined up, hanky out.",
+   "new": "Pat Sr's juju: remotes lined up, green bandana in hand.",
+   "done": true
+  },
+  {
+   "old": "Game day spread. Lucky hanky optional.",
+   "new": "Game day spread. Lucky bandana optional.",
+   "done": true
+  },
+  {
+   "old": "the Eagles game on the TV in Philadelphia",
+   "new": "Eagles on the TV, with Pat Sr's bet riding on it",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

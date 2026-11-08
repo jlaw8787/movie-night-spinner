@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "the long drive across WA",
-   "new": "fuel stop before the crater"
+   "new": "fuel stop before the crater",
+   "done": true
   },
   {
    "old": "Campfire sausage and onion sandwiches",
-   "new": "Mick's camp sausage and onion sandwiches"
+   "new": "Mick's camp sausage and onion sandwiches",
+   "done": true
   },
   {
    "old": "For the long night out past the crater.",
-   "new": "For sitting through Mick's tall stories."
+   "new": "For sitting through Mick's tall stories.",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,8 @@
     "Watches that all stopped at once",
     "Mick's ute in Ben's footage",
     "A stranger offering a tow"
-   ]
+   ],
+   "done": true
   },
   {
    "set": "flavour.labels",
@@ -30,7 +34,10 @@
     "m": "From Mick's Camp",
     "d": "Billy and Bottle",
     "call": "When to serve"
-   }
+   },
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

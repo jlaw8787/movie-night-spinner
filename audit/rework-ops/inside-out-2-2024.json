@@ -1,8 +1,41 @@
-{"id":"Inside Out 2 (2024)","ops":[
-{"old":"Cheddar, water crackers, grapes, almonds, baby carrots and hummus","new":"Cheddar, crackers, grapes, almonds, carrots, hummus. A real pickle, Bloofy."},
-{"old":"Iced chamomile apple tea","new":"Oui-Oui iced chamomile apple tea"},
-{"old":"Chamomile tea with honey and apple juice, over ice","new":"Honey and apple juice over ice. Ennui says non."},
-{"old":"Fudgy dark chocolate brownies with cocoa","new":"Fudgy brownies, a team Anger can get behind"},
-{"set":"cue","value":"Serve the snacks when Anxiety arrives at Headquarters."},
-{"set":"flavour.note","value":{"text":"Nicknames! I'm gonna call you Oui-Oui.","by":"Joy","kind":"quote"}}
-]}
+{
+ "id": "Inside Out 2 (2024)",
+ "ops": [
+  {
+   "old": "Cheddar, water crackers, grapes, almonds, baby carrots and hummus",
+   "new": "Cheddar, crackers, grapes, almonds, carrots, hummus. A real pickle, Bloofy.",
+   "done": true
+  },
+  {
+   "old": "Iced chamomile apple tea",
+   "new": "Oui-Oui iced chamomile apple tea",
+   "done": true
+  },
+  {
+   "old": "Chamomile tea with honey and apple juice, over ice",
+   "new": "Honey and apple juice over ice. Ennui says non.",
+   "done": true
+  },
+  {
+   "old": "Fudgy dark chocolate brownies with cocoa",
+   "new": "Fudgy brownies, a team Anger can get behind",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the snacks when Anxiety arrives at Headquarters.",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Nicknames! I'm gonna call you Oui-Oui.",
+    "by": "Joy",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-08",
+ "misses": []
+}

@@ -3,7 +3,8 @@
  "ops": [
   {
    "old": "Fairy Godmother's blue lemonade",
-   "new": "Happily Ever After blue lemonade"
+   "new": "Happily Ever After blue lemonade",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -13,7 +14,10 @@
     "Are we there yet?",
     "King Harold and Queen Lillian",
     "Gingy and the giant Mongo"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }

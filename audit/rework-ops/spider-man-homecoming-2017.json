@@ -3,15 +3,18 @@
  "ops": [
   {
    "old": "Delmar's pressed Italian deli sandwich",
-   "new": "Delmar's number five, smushed flat"
+   "new": "Delmar's number five, smushed flat",
+   "done": true
   },
   {
    "old": "Serve the mains when Peter orders his sandwich at Delmar's.",
-   "new": "Serve the mains when Peter orders his number five at Delmar's."
+   "new": "Serve the mains when Peter orders his number five at Delmar's.",
+   "done": true
   },
   {
    "old": "Peter trying to hold the split Staten Island Ferry together",
-   "new": "Chicken parm in a hero roll, split like the ferry"
+   "new": "Chicken parm in a hero roll, split like the ferry",
+   "done": true
   },
   {
    "set": "flavour.winks",
@@ -21,7 +24,10 @@
     "Adrian Toomes, the Vulture",
     "Ferry split in two",
     "Captain America's school videos"
-   ]
+   ],
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-08",
+ "misses": []
 }
