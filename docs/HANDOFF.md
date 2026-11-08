@@ -396,3 +396,9 @@ Left to do, in order:
 2. Review 21 was started and stopped to save usage (Josh, 12:20pm: keep usage back for the deploy). Not written. Run it later.
 3. Deploy from the trimmed copy (top of this file).
 Small items the re-score noted: Crocodile Dundee II prints snags, barra and pavlova twice (older fault); Hitch Keep This tag cut ("effort is"); Goonies Sloth note cut; Mickey Blue Eyes lot note cut; Silver Linings signature clipped; Top Gun doubled logo; Wall Street, Wish, Clerks III, Despicable Me 2 empty gaps; Great Mouse Detective, Proposal, Sword in the Stone posters as white blocks.
+
+## 8 Nov, 1:25pm: deployed to Netlify
+
+- Live on Netlify from 0741870 (deploy 6aefeab7). main now holds everything (wip/store-overhaul merged, same commit).
+- GitHub Pages: account still can't run Actions or Pages builds (no runs start, even by hand, after Actions were set to "Allow all"). Josh to ask GitHub Support. Pages source is set to "GitHub Actions" with .github/workflows/pages.yml (publishes site files only); once Actions work, a push to main publishes.
+- .netlify/state.json is not in git: recreate it in /tmp/deploy with the site id before running the connector command.
