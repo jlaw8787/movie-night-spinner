@@ -866,7 +866,11 @@
     "Property of Kamar-Taj"
    ]
   },
-  "number": "177"
+  "number": "177",
+  "words": {
+   "Coin of the realm": "Coin of any realm",
+   "When the bell rings": "When the loop resets"
+  }
  },
  "Spider-Man: Homecoming (2017)": {
   "venue": "Midtown School Cafeteria",
@@ -990,7 +994,22 @@
     "Carol, come when called"
    ]
   },
-  "number": "1995"
+  "number": "1995",
+  "words": {
+   "Ship's mess": "Family table",
+   "Mess call": "Dinner call",
+   "Ration 1": "Course 1",
+   "Ration 2": "Course 2",
+   "Ration 3": "Course 3",
+   "Ration 4": "Course 4",
+   "Deck 7": "Porch",
+   "Served on the observation deck": "Served on the back porch",
+   "From the wheelhouse": "From the cockpit",
+   "Compliments of the captain.": "Compliments of Maria.",
+   "Printed by the ship's system.": "Printed in Louisiana.",
+   "Rationed": "Baked",
+   "All hands": "For two"
+  }
  },
  "Ant-Man and the Wasp (2018)": {
   "venue": "X-Con Security Office",
@@ -1806,7 +1825,15 @@
    ]
   },
   "number": "107",
-  "sport": "expo"
+  "sport": "expo",
+  "words": {
+   "Concession Scorecard": "Expo Food Hall Card",
+   "Grandstand": "Main Hall",
+   "Bleachers": "Pavilion",
+   "Box seats": "Balcony",
+   "Press box": "Stage",
+   "Seat service in every section.": "Service in every hall."
+  }
  },
  "Thunderbolts* (2025)": {
   "venue": "The Vault Mess Hall",
@@ -2033,6 +2060,14 @@
   "number": "",
   "labels": {
    "n": "Growled by Logan"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "The Wolverine (2013)": {
@@ -2832,7 +2867,7 @@
    ]
   },
   "number": "",
-  "beach": true
+  "beach": false
  },
  "The Mighty Ducks (1992)": {
   "venue": "Ducks Locker Room",
@@ -3277,7 +3312,11 @@
    ]
   },
   "number": "",
-  "sport": "race"
+  "sport": "race",
+  "words": {
+   "Scratched": "Retired",
+   "Concession Scorecard": "Pit Lane Order Card"
+  }
  },
  "Soul (2020)": {
   "venue": "Half Note Club",
@@ -3450,7 +3489,10 @@
     "Future king, still a cub"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Clear skies, a fine evening ahead": "Clear skies over Pride Rock"
+  }
  },
  "Shrek (2001)": {
   "venue": "Shrek's Swamp",
@@ -4003,6 +4045,14 @@
    "d": "Spring Drinks",
    "t": "In the Meadow",
    "call": "Thumper's call"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Cinderella (1950)": {
@@ -4117,6 +4167,14 @@
    "n": "Left on the cottage door",
    "b": "Spotted in the story",
    "call": "Fairy call"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "One Hundred and One Dalmatians (1961)": {
@@ -4167,7 +4225,17 @@
     "Raised in the jungle"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Island hopping": "Jungle trail",
+   "Main Isle": "Man Village",
+   "Snack Cay": "Banana Grove",
+   "Sweet Reef": "Monkey Temple",
+   "Pupu Platters": "Jungle Platters",
+   "Lagoon Coolers": "River Coolers",
+   "Pinned to the bamboo": "Pinned to the tree",
+   "Ring the gong": "Beat the drum"
+  }
  },
  "Robin Hood (1973)": {
   "venue": "Sherwood Forest Camp",
@@ -4192,7 +4260,15 @@
     "No exceptions"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
+  }
  },
  "Pocahontas (1995)": {
   "venue": "Powhatan Village Feast",
@@ -4227,6 +4303,14 @@
    "n": "From the Willow",
    "b": "Friends in the story",
    "call": "Drum call"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "The Hunchback of Notre Dame (1996)": {
@@ -4760,6 +4844,14 @@
    "n": "Said at the farmhouse",
    "b": "Earlier tonight",
    "call": "Newsflash"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Halloween (1978)": {
@@ -5030,7 +5122,11 @@
     "Doors at dusk"
    ]
   },
-  "number": "1932"
+  "number": "1932",
+  "words": {
+   "Cash at the door. No questions": "Coin or token at the door",
+   "Cover charge after nine": "Tokens taken at the door"
+  }
  },
  "Shutter Island (2010)": {
   "venue": "Ashecliffe Hospital Canteen",
@@ -5572,7 +5668,13 @@
     "Curtains closed"
    ]
   },
-  "number": "1945"
+  "number": "1945",
+  "words": {
+   "Room service, all hours": "Served by candlelight",
+   "From the front desk": "From the mistress",
+   "Bar service": "From the pantry",
+   "Order by 1 AM": "Curtains drawn"
+  }
  },
  "Saw (2004)": {
   "venue": "Abandoned Bathroom Cell",
@@ -6106,6 +6208,14 @@
    "n": "Whispered at the boat",
    "b": "Seen in Sitka",
    "call": "Welcome party cue"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Crazy Rich Asians (2018)": {
@@ -6372,7 +6482,13 @@
     "Sprinkle on wishing dust"
    ]
   },
-  "number": "13"
+  "number": "13",
+  "words": {
+   "Prom night, class of 2004": "Basement party, 1987",
+   "Wear your dancing shoes": "Learn the Thriller dance",
+   "Before the Dance": "Party Snacks",
+   "Last Dance Sweets": "Birthday Sweets"
+  }
  },
  "Breakfast at Tiffany's (1961)": {
   "venue": "Holly's Brownstone Party",
@@ -6518,7 +6634,10 @@
     "Score needed: 5"
    ]
   },
-  "number": "5"
+  "number": "5",
+  "words": {
+   "Stay as long as you like": "Eagles game, Sunday"
+  }
  },
  "The Big Sick (2017)": {
   "venue": "Nanjiani Family Kitchen",
@@ -6809,7 +6928,13 @@
     "Dignity. Always dignity."
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Meal voucher": "Studio pass",
+   "Briefing": "Rushes",
+   "Meetings": "Rehearsal",
+   "Home time": "Wrap"
+  }
  },
  "Barbie (2023)": {
   "venue": "Barbie Dreamhouse Kitchen",
@@ -7030,7 +7155,10 @@
     "February 14, Los Angeles"
    ]
   },
-  "number": "14"
+  "number": "14",
+  "words": {
+   "Fresh roasted, poured to order": "Fresh cut, wrapped to order"
+  }
  },
  "Mother's Day (2016)": {
   "venue": "Atlanta Backyard Brunch",
@@ -7675,7 +7803,17 @@
     "Tips: debated"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Case open": "Job on",
+   "Breakroom copy": "Diner copy",
+   "Duty roster": "The crew",
+   "Surveillance": "Lookout",
+   "Day watch": "Morning",
+   "Swing shift": "The job",
+   "Graveyard": "Aftermath",
+   "Desk duty": "Tip time"
+  }
  },
  "Top Gun (1986)": {
   "venue": "Miramar Officers' Club",
@@ -7849,7 +7987,11 @@
     "Iron Lotus attempt"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Concession Scorecard": "Judges' Scorecard",
+   "Scoreboard": "Judges' marks"
+  }
  },
  "Semi-Pro (2008)": {
   "venue": "Flint Tropics Arena",
@@ -8069,7 +8211,12 @@
     "Roy and Ishmael"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Lunch counter": "Supper table",
+   "At the bar": "To drink",
+   "Reward $96": "Prize $96"
+  }
  },
  "Black Sheep (1996)": {
   "venue": "Donnelly Campaign Truck",
@@ -8093,7 +8240,10 @@
     "Handler: Steve Dodds"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Bus 96": "Car 96"
+  }
  },
  "The Waterboy (1998)": {
   "venue": "Boucher Swamp Shack",
@@ -8126,6 +8276,14 @@
    "d": "Water Cooler",
    "n": "Taped to the fridge",
    "call": "Water break"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Major League (1989)": {
@@ -8225,7 +8383,10 @@
     "Revenge, delivered"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Special Investigations": "Revenge for Hire"
+  }
  },
  "Screwed (2000)": {
   "venue": "Chicken Hole",
@@ -8469,7 +8630,16 @@
     "Plus one for Butters"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Ship's mess": "Boat galley",
+   "Mess call": "Dinner call",
+   "Ration 1": "Course 1",
+   "Ration 2": "Course 2",
+   "Ration 3": "Course 3",
+   "Ration 4": "Course 4",
+   "Deck 9": "Dock 9"
+  }
  },
  "Beverly Hills Cop (1984)": {
   "venue": "Beverly Palms Hotel",
@@ -8668,7 +8838,10 @@
     "Likes: everything chewable"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Small and clean, perfect for learners": "Clean car, until Hooch gets in"
+  }
  },
  "Stakeout (1987)": {
   "venue": "Stakeout Car, Seattle",
@@ -9312,7 +9485,13 @@
     "Metro City State"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Lunch ticket": "Meal card",
+   "Assembly": "Lecture",
+   "Library": "Frat row",
+   "Sport": "Football"
+  }
  },
  "Stripes (1981)": {
   "venue": "Fort Arnold Mess Hall",
@@ -9386,7 +9565,18 @@
     "Saturday, 7 AM to 4 PM"
    ]
   },
-  "number": "1984"
+  "number": "1984",
+  "words": {
+   "Ration sheet": "Lunch sheet",
+   "Night shift": "Saturday",
+   "Rations": "Lunches",
+   "Hot mess continued": "Lunches continued",
+   "Hot mess": "Hot lunch",
+   "Sweet issue": "Sweet stuff",
+   "Canteen": "Vending",
+   "All areas": "Library only",
+   "Return tray to the hatch.": "Write an essay. 1,000 words."
+  }
  },
  "Ferris Bueller's Day Off (1986)": {
   "venue": "Chez Quis",
@@ -9463,7 +9653,12 @@
     "Pink dress optional"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Doors open, the floor is yours": "Records, tapes and pink lemonade",
+   "Psst, from the stage": "Psst, from the counter",
+   "On stage tonight": "On the turntable"
+  }
  },
  "Wayne's World (1992)": {
   "venue": "Stan Mikita's Donuts",
@@ -9537,7 +9732,10 @@
     "Last day of school"
    ]
   },
-  "number": "1976"
+  "number": "1976",
+  "words": {
+   "Hot coffee, homemade pie, booths by the window.": "Last day of school. Cold Cokes, hot fries."
+  }
  },
  "Napoleon Dynamite (2004)": {
   "venue": "Preston High Cafeteria",
@@ -10727,7 +10925,13 @@
    ]
   },
   "number": "500000",
-  "currency": "£"
+  "currency": "£",
+  "words": {
+   "Wanted for supper": "Tonight's menu",
+   "Reward £500000": "Debt £500,000",
+   "When the bell rings": "After the last hand",
+   "Lunch counter": "Bar snacks"
+  }
  },
  "Ocean's Eleven (2001)": {
   "venue": "The Bellagio",
@@ -11012,6 +11216,14 @@
    "t": "Highland Table",
    "n": "Said before Stirling",
    "call": "Battle cry"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Titanic (1997)": {
@@ -11268,7 +11480,7 @@
    "by": "Steve Butabi"
   },
   "winks": [
-   "The synchronized head bob",
+   "The synchronised head bob",
    "The Roxbury and its velvet rope",
    "Mr. Zadir, the club owner",
    "The family fake plant shop",
@@ -12500,7 +12712,10 @@
     "Good for one game"
    ]
   },
-  "number": "101"
+  "number": "101",
+  "words": {
+   "Stay indoors if you can": "Judgment Day: August 29, 1997"
+  }
  },
  "Predator (1987)": {
   "venue": "Val Verde Jungle Camp",
@@ -12971,7 +13186,10 @@
     "Sol count: ongoing"
    ]
   },
-  "number": "3"
+  "number": "3",
+  "words": {
+   "All areas": "Hab only"
+  }
  },
  "Gravity (2013)": {
   "venue": "Shuttle Explorer Cabin",
@@ -13467,7 +13685,12 @@
     "All riders welcome"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Reward $82": "Reward £82",
+   "Lunch counter": "Station table",
+   "At the bar": "Billy and cup"
+  }
  },
  "Gallipoli (1981)": {
   "venue": "Anzac Cove Mess",
@@ -13588,7 +13811,13 @@
     "Family only"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Dinner at seven sharp": "Dinner with the Codys",
+   "Recipe box no.": "Case file no.",
+   "Check twice": "Watch your back",
+   "Serves everyone on the couch.": "Serves the whole family."
+  }
  },
  "Wolf Creek (2005)": {
   "venue": "Wolf Creek Crater Camp",
@@ -13619,6 +13848,14 @@
    "m": "From Mick's Camp",
    "d": "Billy and Bottle",
    "call": "When to serve"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Lion (2016)": {
@@ -14276,7 +14513,19 @@
     "Cursed. Do not spend"
    ]
   },
-  "number": "882"
+  "number": "882",
+  "words": {
+   "Laser issue, fleet standard": "Pirate's share, by the code",
+   "Eat what's issued": "Take what you can",
+   "Ration 1": "Share 1",
+   "Ration 2": "Share 2",
+   "Ration 3": "Share 3",
+   "Ration 4": "Share 4",
+   "Rationed": "Plundered",
+   "Issued": "Plundered",
+   "Logged": "Poured",
+   "Mess call": "All hands"
+  }
  },
  "Romancing the Stone (1984)": {
   "venue": "Cartagena Bus Cantina",
@@ -14426,7 +14675,13 @@
     "Seven days, then the sun"
    ]
   },
-  "number": "1933"
+  "number": "1933",
+  "words": {
+   "In-room dining": "Manor dining",
+   "From the front desk": "From the study",
+   "Front desk": "Study",
+   "Bar service": "Drawing room"
+  }
  },
  "Jurassic World (2015)": {
   "venue": "Main Street Food Court",
@@ -14794,7 +15049,17 @@
     "Bat search, one only"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Island hopping": "On safari",
+   "Main Isle": "Main Camp",
+   "Snack Cay": "Snack Camp",
+   "Sweet Reef": "Sweet Camp",
+   "Pupu Platters": "Small Plates",
+   "From the Lagoon Bar": "From the Village Bar",
+   "Ring the gong": "Beat the drum",
+   "Pinned to the bamboo": "Pinned to the hut"
+  }
  },
  "The Great Outdoors (1988)": {
   "venue": "Pechoggin Cabin",
@@ -15148,6 +15413,14 @@
    "w": "Sweet Things",
    "d": "Tent Drinks",
    "t": "Inside the Tent"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
@@ -15449,6 +15722,14 @@
    "d": "Cups by the Fire",
    "n": "Overheard in old Narnia",
    "call": "Susan's horn"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
@@ -15807,7 +16088,11 @@
     "Ask Maizy first"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Ask about pie": "Ask about pancakes",
+   "The pie case": "The griddle"
+  }
  },
  "Hop (2011)": {
   "venue": "Easter Island Candy Factory",
@@ -16079,6 +16364,14 @@
    "d": "Spirit Cups",
    "t": "Salmon Run Table",
    "n": "Told at the salmon run"
+  },
+  "words": {
+   "Card no.": "Table no.",
+   "Tonight's feature": "Now showing",
+   "Form CM": "Ref.",
+   "Mess hall door": "front door",
+   "Bugle call": "Last call",
+   "Badges, maybe": "Bragging rights"
   }
  },
  "Wish (2023)": {
@@ -16129,7 +16422,14 @@
     "Use: hair, apparently"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Pupu Platters": "Shore Platters",
+   "Island hopping": "Under the sea",
+   "From the Fire Pit": "From the Castle",
+   "Lagoon Coolers": "Grotto Coolers",
+   "Ring the gong": "Ring the bell"
+  }
  },
  "The Jungle Book (2016)": {
   "venue": "Mowgli's Wolf Den",
@@ -16274,7 +16574,11 @@
     "Handle with care, or don't"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Recipe box no.": "Keepsake box no.",
+   "Serves everyone on the couch.": "Serves all. Lock the nursery."
+  }
  },
  "What We Do in the Shadows (2014)": {
   "venue": "Wellington Flat",
@@ -18174,7 +18478,13 @@
     "A mystery weekend for friends"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Pupu Platters": "Meze Platters",
+   "From the Lagoon Bar": "From the Pool Bar",
+   "From the Fire Pit": "From the Grill",
+   "Ring the gong": "Ring the bell"
+  }
  },
  "Three Amigos! (1986)": {
   "venue": "Santa Poco Cantina",
@@ -18398,7 +18708,14 @@
    ]
   },
   "number": "15",
-  "sport": "fight"
+  "sport": "fight",
+  "words": {
+   "Concession Scorecard": "Fight Night Card",
+   "Scoreboard": "Fight card",
+   "Field level": "Ringside",
+   "Mezzanine": "Floor",
+   "Bleachers": "Back rows"
+  }
  },
  "Rocky IV (1985)": {
   "venue": "Balboa House Kitchen",
@@ -19896,7 +20213,11 @@
     "Leave the key under the mat"
    ]
   },
-  "number": "5"
+  "number": "5",
+  "words": {
+   "Recipe box no.": "Cabin box no.",
+   "Serves everyone on the couch.": "Serves five. Stay out of the cellar."
+  }
  },
  "The Lost World: Jurassic Park (1997)": {
   "venue": "San Diego Waterfront Lunch Counter",
