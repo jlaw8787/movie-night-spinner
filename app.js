@@ -2310,13 +2310,13 @@ function renderMember(){
   const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
   const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
   const sinceMY=new Date(member.since).toLocaleString("en-AU",{month:"2-digit",year:"2-digit"});
-  box.innerHTML=`<div class="mc" role="group" aria-label="Your Galaxy Video member card"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><p class="mc-no foil" aria-label="Member number ${member.no}">${member.no.slice(0,3)} ${member.no.slice(3)}</p><p class="mc-since foil">Member since ${sinceMY}</p>${code39("GV"+member.no)}<span class="mc-sig" aria-hidden="true">${ESC(member.name||"")}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(member.name||"")}</span><input id="memberName" class="mc-name" type="text" maxlength="24" autocomplete="off" aria-label="Name on your member card" placeholder="Add your name" value="${ESC(member.name||"")}"></div><p class="member-meta"><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
+  box.innerHTML=`<div class="mc" role="group" aria-label="Your Galaxy Video member card"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><p class="mc-no foil" aria-label="Member number ${member.no}">${member.no.slice(0,3)} ${member.no.slice(3)}</p><p class="mc-since foil">Member since ${sinceMY}</p>${code39("GV"+member.no)}<span class="mc-sig" aria-hidden="true">${ESC(member.name||"")}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(member.name||"")}</span><input id="memberName" class="mc-name" type="text" maxlength="24" autocomplete="off" aria-label="Name on your member card" placeholder="Add your name" value="${ESC(member.name||"")}"></div><p class="member-meta"><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button><button type="button" class="sync-del" data-sync="del">Delete my online card</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}<p class="sync-priv"><a href="privacy.html">Privacy policy</a></p></div>`;
   $("memberName").addEventListener("input",e=>{const v=e.target.value;box.querySelector(".mc-name-show").textContent=v;box.querySelector(".mc-sig").textContent=v.trim()});
   $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember();renderShop()});
   box.querySelectorAll("[data-ret]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.ret);if(f)openChute(f)}));
   box.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.open);if(f)openRentalMenu(f)}));
   {const ra=box.querySelector("[data-retall]");if(ra)ra.addEventListener("click",()=>{const n=(member.out||[]).filter(r=>!watched.has(r.id)).length;member.out=[];saveMember();renderMember();renderShop();const st=$("shopCount");if(st)st.textContent=`All ${n} tapes back in the returns chute. No late fees.`;buzz(20)})}
-  box.querySelectorAll("[data-sync]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.sync;if(k==="out"){delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}else openSyncForm(k)}));
+  box.querySelectorAll("[data-sync]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.sync;if(k==="out"){delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}else if(k==="del")deleteOnlineCard(b);else openSyncForm(k)}));
 }
 function dueBack(f){
   const d=new Date();
@@ -2516,6 +2516,19 @@ function applyRemote(d){
   if(typeof d.kids==="boolean")kidsMode=d.kids;
   try{localStorage.setItem("mns-member",JSON.stringify(member));localStorage.setItem("mns-watched",JSON.stringify([...watched]));localStorage.setItem("mns-hist",JSON.stringify(hist));localStorage.setItem("mns-counter",JSON.stringify(counter));if(week)localStorage.setItem("mns-week",JSON.stringify(week));else localStorage.removeItem("mns-week");localStorage.setItem("mns-kids",kidsMode?"1":"0")}catch(e){}
   renderHist();renderWeek();setKidsUI();if(!spinning){setList();updateWatchButton()}if(!$("viewShop").hidden)renderShop();
+}
+/* delete the online copy of the member card: first tap arms the button, second tap deletes. Picks on this device stay. */
+async function deleteOnlineCard(b){
+  const note=document.getElementById("syncNote");
+  if(!b.classList.contains("arm")){b.classList.add("arm");b.textContent="Tap again to delete";setTimeout(()=>{if(b.isConnected&&b.classList.contains("arm")){b.classList.remove("arm");b.textContent="Delete my online card"}},6000);return}
+  b.disabled=true;b.textContent="Deleting";clearTimeout(syncTimer);
+  let r;try{r=await syncCall({action:"delete",no:member.no,pin:member.pin})}catch(e){r={status:"offline"}}
+  if(r.status==="deleted"||r.status==="gone"){
+    delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}
+    renderMember();const st=$("shopCount");if(st)st.textContent="Your online card is deleted. Your picks stay on this device.";return;
+  }
+  b.disabled=false;b.classList.remove("arm");b.textContent="Delete my online card";
+  if(note)note.textContent=r.status==="offline"?"Couldn't reach the card system. Nothing was deleted. Try again when you're online.":"Your PIN didn't match, so nothing was deleted. Sign out, sign in again, then delete.";
 }
 function queueSync(){
   if(!member||!member.pin)return;
@@ -4019,6 +4032,29 @@ function setSync(){$("setGuests").textContent=USUAL;$("setVeg").checked=DIET.veg
 function refreshPlan(){try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h;phoneRefresh()}}catch(e){}}
 $("setBtn").addEventListener("click",()=>{setSync();const o=$("settings");mountModal(o,"#setClose",$("setBtn"));if(!o.open)o.showModal()});
 $("setClose").addEventListener("click",()=>dismissModal($("settings")));
+/* request a movie: Netlify Forms, sent without leaving the page */
+(()=>{
+  const dlg=$("reqMovie"),form=$("reqForm"),thanks=$("reqThanks"),err=$("reqErr"),go=$("reqGo");
+  if(!dlg||!form)return;
+  const showErr=t=>{err.textContent=t;err.hidden=!t};
+  const open=trigger=>{form.reset();form.hidden=false;thanks.hidden=true;showErr("");go.disabled=false;go.textContent="Send request";mountModal(dlg,"#reqTitle",trigger);if(!dlg.open)dlg.showModal()};
+  document.querySelectorAll("[data-req]").forEach(b=>b.addEventListener("click",()=>open(b)));
+  $("reqClose").addEventListener("click",()=>dismissModal(dlg));
+  $("reqDone").addEventListener("click",()=>dismissModal(dlg));
+  dlg.addEventListener("click",e=>{if(e.target===dlg)dismissModal(dlg)});
+  const done=()=>{form.hidden=true;thanks.hidden=false;$("reqDone").focus({preventScroll:true})};
+  form.addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    if(form.elements["bot-field"].value){done();return}
+    go.disabled=true;go.textContent="Sending";showErr("");
+    try{
+      const res=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
+      if(!res.ok)throw new Error(res.status);
+      done();
+    }catch(x){go.disabled=false;go.textContent="Send request";showErr("That did not send. Check your connection and try again.")}
+  });
+})();
 $("settings").addEventListener("click",e=>{if(e.target===$("settings"))dismissModal($("settings"))});
 $("settings").querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{USUAL=Math.min(60,Math.max(1,USUAL+(b.dataset.sg==="+"?1:-1)));try{localStorage.setItem("mns-guests",USUAL)}catch(e){}setSync();$("setMsg").textContent=`New prep sheets start at ${USUAL} guest${USUAL===1?"":"s"}.`}));
 /* the menu on screen follows the diet straight away, not only the next film opened */

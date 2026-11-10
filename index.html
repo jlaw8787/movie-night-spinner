@@ -48,6 +48,26 @@
 .settings .set-chk input{width:24px;height:24px;accent-color:var(--velvet-2,#a3182f)}
 .settings .set-g{display:inline-flex;align-items:center;gap:10px}.settings .set-g output{min-width:2ch;text-align:center;font-weight:700;font-size:18px}
 .settings .set-g .pl-b{border-color:var(--velvet-2,#a3182f);color:var(--velvet-2,#a3182f)}
+.req-shop{font:600 14px var(--f-body);min-height:40px;padding:8px 14px;border-radius:99px;border:1px solid var(--brass);background:transparent;color:var(--bulb);cursor:pointer}
+.req-shop:focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
+.credit-priv{opacity:.85;margin-bottom:0;font-size:14px}.credit-priv a{display:inline-block;min-height:44px;line-height:44px;padding:0 10px}
+.member-sync .sync-del{border-color:#e5484d;color:#ff8f8a;background:transparent}.member-sync .sync-del.arm{background:#c62a2f;border-color:#c62a2f;color:#fff}
+.member-sync .sync-priv{flex-basis:100%;margin:6px 0 0;font-size:14px}.member-sync .sync-priv a{color:inherit;display:inline-block;min-height:44px;line-height:44px}
+.reqm .req-priv{margin:12px 0 0;font-size:14px}.reqm .req-priv a{color:#e7c069}
+.reqm label{display:block;font:800 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:#e2b04f;margin:14px 0 4px}
+.reqm label small{font-weight:500;letter-spacing:.04em;text-transform:none;color:rgba(241,227,196,.68)}
+.reqm input[type=text],.reqm input[type=number],.reqm textarea{display:block;width:100%;box-sizing:border-box;min-height:44px;font:400 16px var(--f-body);padding:9px 12px;border-radius:8px;border:1px solid rgba(226,176,79,.45);background:#1c080b;color:#f1e3c4}
+.reqm input:focus-visible,.reqm textarea:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+.reqm textarea{min-height:88px;resize:vertical}
+.reqm .req-row{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.reqm .req-go{margin-top:18px;width:100%;min-height:48px;border-radius:99px;border:1px solid #e2b04f;background:#e2b04f;color:#2a0c12;font:700 16px var(--f-body);cursor:pointer}
+.reqm .req-go:focus-visible,.reqm .req-thanks button:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+.reqm .req-go[disabled]{opacity:.6;cursor:default}
+.reqm .req-err{margin:10px 0 0;font-size:14px;color:#ff8f8a}
+.reqm .req-thanks{text-align:center;padding:18px 0 6px}
+.reqm .req-thanks h4{font:400 24px/1.15 var(--f-disp);letter-spacing:.01em;text-transform:none;color:#f3dfb4;margin:0 0 8px}
+.reqm .req-thanks p{margin:0 0 16px;font-size:16px;color:#f1e3c4}
+.reqm .req-thanks button{min-height:44px;padding:8px 22px;border-radius:99px;border:1px solid rgba(226,176,79,.45);background:transparent;color:#f1e3c4;font:700 15px var(--f-body);cursor:pointer}
 .settings .set-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .settings .set-acts button{min-height:44px;padding:8px 14px;border-radius:8px;border:1px solid #c9bba4;background:#fff;color:#221e19;font:600 14px var(--f-body);cursor:pointer}
 .settings .set-acts .danger{border-color:#b3261e;color:#b3261e}.settings .set-acts .danger.arm{background:#b3261e;color:#fff}
@@ -2930,6 +2950,7 @@ html,body{overflow-x:clip}
       <h2 class="shop-sign gv-head"><span class="sr-only">Galaxy Video</span><small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
       <div class="shop-tools">
         <input type="search" id="shopSearch" placeholder="Ask the counter" aria-label="Search titles">
+        <button class="req-shop" data-req type="button" aria-haspopup="dialog">Not on the shelves? Request a movie</button>
         <details class="shop-filt" id="shopFilt" open><summary>Filters<span class="sf-n" id="shopFiltN"></span></summary><div class="sf-in">
         <select id="shopDecade" aria-label="Decade"><option value="">Any decade</option></select>
         <select id="shopSvc" aria-label="Streaming on"><option value="">Any service</option></select>
@@ -2996,6 +3017,7 @@ html,body{overflow-x:clip}
         <button class="toggle df-btn" id="dfBtn" type="button">Double feature</button>
         <button class="toggle df-btn" id="mysBtn" type="button">Mystery night</button>
         <button class="toggle df-btn" id="trivBtn" type="button">Trivia spin</button>
+        <button class="toggle df-btn" data-req type="button" aria-haspopup="dialog">Request a movie</button>
         <button class="toggle set-btn" id="setBtn" type="button" aria-haspopup="dialog">Settings</button>
       </div>
       <div class="count" id="count"></div>
@@ -3069,15 +3091,16 @@ html,body{overflow-x:clip}
     </section>
   </div>
 </div>
+<p class="credit credit-priv"><a href='/privacy'>Privacy policy</a></p>
 <p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank" aria-label="TMDB, The Movie Database (opens in a new tab)"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. Cinema photo by SecretName101 via <a href="https://commons.wikimedia.org/wiki/File:Orpheum_Theatre_marquee_on_election_night_2024_IMG_2517.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC BY 4.0</a>, signs changed. Shopfront photo by Mathias Reding on <a href="https://unsplash.com/photos/0rgZp-E8iIs" rel="noopener" target="_blank">Unsplash</a>, signs changed. <button class="howlink" id="howBtn" type="button">How it works</button></p>
 
 <script src="tmdb-posters.js?v=050c5f60" defer></script>
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=303e7ecc" defer></script>
+<script src="films.js?v=af98cf64" defer></script>
 <script src="formats-core.js?v=673abc08" defer></script>
-<script src="app.js?v=94fa7045" defer></script>
+<script src="app.js?v=e3a42fbd" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
@@ -3100,5 +3123,32 @@ html,body{overflow-x:clip}
     <p class="tp" id="setMsg" role="status" aria-live="polite">Saved on this device. Reset clears stubs, saved menus, watched films, this week's film, rentals and settings.</p>
   </div>
 </dialog>
+<dialog class="trolley settings reqm" id="reqMovie" aria-label="Request a movie" data-keep>
+  <div class="trolley-in">
+    <div class="set-top"><h3>Request a movie</h3><button type="button" class="x" id="reqClose" aria-label="Close">×</button></div>
+    <form action='/' id='reqForm' method='POST' name='movie-request'>
+      <input type="hidden" name="form-name" value="movie-request">
+      <p hidden><label>Leave this empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <p class="tp">Tell us which film is missing from the wheel and we will have a look.</p>
+      <label for="reqTitle">Film title</label>
+      <input type="text" id="reqTitle" name="title" required maxlength="120" autocomplete="off">
+      <div class="req-row">
+        <div><label for="reqYear">Year</label><input type="number" id="reqYear" name="year" required min="1888" max="2100" inputmode="numeric" autocomplete="off"></div>
+        <div><label for="reqName">Your name <small>(optional)</small></label><input type="text" id="reqName" name="name" maxlength="80" autocomplete="name"></div>
+      </div>
+      <label for="reqNote">Note <small>(optional)</small></label>
+      <textarea id="reqNote" name="note" maxlength="500"></textarea>
+      <p class="tp req-priv">We only use this to pick films to add. <a href='/privacy'>Privacy policy</a></p>
+      <p class="req-err" id="reqErr" role="alert" hidden></p>
+      <button type="submit" class="req-go" id="reqGo">Send request</button>
+    </form>
+    <div class="req-thanks" id="reqThanks" role="status" aria-live="polite" hidden>
+      <h4>Thanks, request received</h4>
+      <p>We will have a look and add it if we can.</p>
+      <button type="button" id="reqDone">Close</button>
+    </div>
+  </div>
+</dialog>
 </body>
 </html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="b641e7a7-b7d1-44cc-95e1-79f0bc20acf6" data-app-host="app.netlify.com" data-account-tier="personal"></script>
