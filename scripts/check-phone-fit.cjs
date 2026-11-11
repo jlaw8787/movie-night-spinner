@@ -1,11 +1,14 @@
 /* Phone text menu at 390 wide (review 13, fix 3): no tab or line wider than its box, and no sideways scroll, on every film.
    Loads the web fonts (the wide display faces are what cut "Starters" off), so it needs the network or a proxy.
-     NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-phone-fit.cjs [N | "Film (Year)" ...] */
+     NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-phone-fit.cjs [N | "Film (Year)" ...]
+   MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path');
 const R=path.join(__dirname,'..'),A=process.argv.slice(2),N=A[0]&&/^\d+$/.test(A[0])?+A[0]:0,NAMED=A.filter(a=>!/^\d+$/.test(a)),port=4900+Math.floor(Math.random()*200);
 const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.1'],{cwd:R,stdio:'ignore'});process.on('exit',()=>server.kill());
 (async()=>{await new Promise(r=>setTimeout(r,1200));const PX=process.env.HTTPS_PROXY||process.env.https_proxy;
- const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),...(PX?{proxy:{server:PX,bypass:'127.0.0.1,localhost'}}:{}),args:['--no-sandbox']});
+ /* review 21: MNS_PROXY_HTTPS=1 sends only https through the proxy, for a proxy that Chrome still hands local http to despite the bypass */
+ const HO=!!process.env.MNS_PROXY_HTTPS;
+ const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),...(PX&&!HO?{proxy:{server:PX,bypass:'127.0.0.1,localhost'}}:{}),args:['--no-sandbox',...(PX&&HO?['--proxy-server=https='+PX.replace('http://','')]:[])]});
  const ctx=await b.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,serviceWorkers:'block',ignoreHTTPSErrors:true});
  await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||/fonts\.(googleapis|gstatic)\.com/.test(u.hostname)||u.protocol==='data:'?r.continue():r.abort()});

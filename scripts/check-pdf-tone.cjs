@@ -3,7 +3,8 @@
    then compares the two: average brightness and contrast (spread of brightness) must stay within a few per cent.
    A wash layer html2canvas cannot draw (a big blurred inset shadow, an elliptical vignette, a blurred backdrop)
    shows up as a drop in both.
-     NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-pdf-tone.cjs ["Film (Year)" ...]
+     NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-pdf-tone.cjs ["Film (Year)" ... | --per N | --all]
+   MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct.
    MNS_LIBDIR=<folder with h2c.js and jspdf.js> serves the two export libraries locally when the CDN is out of reach. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path'),fs=require('fs');
 let sharp;try{sharp=require('sharp')}catch(e){}
@@ -14,8 +15,9 @@ const SAMPLE=['Die Hard 2 (1990)','Con Air (1997)','The Hangover (2009)','John W
   /* review 13: home printed its white cards grey, tavern and lab lost their aged edges */
   'Skyfall (2012)','True Grit (2010)','The Conjuring (2013)','The Fly (1986)'];
 /* --per N: N films from every shared layout instead of the named sample */
-const A=process.argv.slice(2),PER=A[0]==='--per'?+A[1]||1:0;
-let FILMS=PER?[]:A.length?A:SAMPLE;
+const A=process.argv.slice(2),PER=A[0]==='--per'?+A[1]||1:0,ALL=A[0]==='--all';
+/* review 21: --all reads every film in films.js */
+let FILMS=PER||ALL?[]:A.length?A:SAMPLE;
 if(PER){const FM=JSON.parse(fs.readFileSync(path.join(R,'data/film-format.json'),'utf8')),n={};for(const [id,v] of Object.entries(FM)){const k=v&&v.format;if(!k)continue;n[k]=(n[k]||0)+1;if(n[k]<=PER)FILMS.push(id)}}
 /* the fault is a print darker or flatter than the screen. Brightness is in levels out of 255, so a dark paper's small shift
    does not read as a big percentage: the washed-out prints of review 12 lost 35 to 60 levels */
@@ -29,8 +31,10 @@ async function stats(buf){
   throw Error('sharp is needed (npm i -g sharp)')}
 (async()=>{await new Promise(r=>setTimeout(r,1200));
  const NET=!!process.env.MNS_NET,PX=process.env.HTTPS_PROXY||process.env.https_proxy;
+ /* review 21: MNS_PROXY_HTTPS=1 sends only https through the proxy (the export libraries, and with MNS_NET the stills) and keeps local http direct */
+ const HO=!!process.env.MNS_PROXY_HTTPS;
  /* MNS_NET=1 lets the film stills and posters load (image.tmdb.org), so photo layers are compared too */
- const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),...(NET&&PX?{proxy:{server:PX,bypass:'127.0.0.1,localhost'}}:{}),args:['--no-sandbox']});
+ const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),...(NET&&PX&&!HO?{proxy:{server:PX,bypass:'127.0.0.1,localhost'}}:{}),args:['--no-sandbox',...(PX&&HO?['--proxy-server=https='+PX.replace('http://','')]:[])]});
  const ctx=await b.newContext({viewport:{width:1440,height:900},serviceWorkers:'block',ignoreHTTPSErrors:NET});
  await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
  const LIB=process.env.MNS_LIBDIR;
@@ -38,6 +42,9 @@ async function stats(buf){
   if(u.hostname==='cdnjs.cloudflare.com'){if(LIB){const f=/html2canvas/.test(u.pathname)?'h2c.js':/jspdf/.test(u.pathname)?'jspdf.js':'';if(f)return r.fulfill({path:path.join(LIB,f),contentType:'application/javascript'})}return r.continue()}
   return u.hostname==='127.0.0.1'||NET&&u.hostname==='image.tmdb.org'||u.protocol==='data:'||u.protocol==='blob:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(180000);
+ if(ALL){await p.goto(`http://127.0.0.1:${port}/`,{waitUntil:'domcontentloaded'});await p.waitForFunction(()=>typeof FILMS!=='undefined'&&FILMS.length&&FILMS[0].id);FILMS=await p.evaluate(()=>FILMS.map(f=>f.id))}
+ /* MNS_SHARD=k/n reads every nth film from the kth, so a long run can be split over two jobs */
+ const SH=(process.env.MNS_SHARD||'').match(/^(\d+)\/(\d+)$/);if(SH)FILMS=FILMS.filter((x,i)=>i%+SH[2]===+SH[1]-1);
  const fails=[],rows=[];
  for(const id of FILMS){
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent(id),{waitUntil:'domcontentloaded'});
@@ -59,8 +66,7 @@ async function stats(buf){
   const pdf=Buffer.from(url.split(',')[1],'base64');
   const a=await stats(shot),z=await stats(pdf);
   const db=(z.mean-a.mean)/a.mean,dc=(z.sd-a.sd)/a.sd,fmt=await p.evaluate(()=>current._lib&&current._lib.fmt||'');
-  const dl=z.mean-a.mean;rows.push(`${id} (${fmt}): brightness ${dl>=0?'+':''}${dl.toFixed(1)} levels (${(db*100).toFixed(1)}%), contrast ${(dc*100).toFixed(1)}%`);
+  const dl=z.mean-a.mean;rows.push(`${id} (${fmt}): brightness ${dl>=0?'+':''}${dl.toFixed(1)} levels (${(db*100).toFixed(1)}%), contrast ${(dc*100).toFixed(1)}%`);console.log(rows[rows.length-1]);
   if(process.env.MNS_SHOTS){const d=process.env.MNS_SHOTS,s=id.replace(/[^a-z0-9]+/gi,'-');fs.writeFileSync(path.join(d,s+'-screen.png'),shot);fs.writeFileSync(path.join(d,s+'-pdf.png'),pdf)}
   if(dl<-DARKER||dc<-FLATTER||dl>LIGHTER)fails.push(rows[rows.length-1])}
- console.log(rows.join('\n'));
  await b.close();if(fails.length){console.log('FAIL:\n  '+fails.join('\n  '));process.exit(1)}console.log('PASS: Save PDF holds the screen\'s brightness and contrast');process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});
