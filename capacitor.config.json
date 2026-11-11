@@ -1,0 +1,20 @@
+{
+  "appId": "com.reeldinner.app",
+  "appName": "Reel Dinner",
+  "webDir": "www",
+  "backgroundColor": "#0d0508",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#0d0508"
+  },
+  "android": {
+    "backgroundColor": "#0d0508",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_reel",
+      "iconColor": "#e2b04f"
+    }
+  }
+}

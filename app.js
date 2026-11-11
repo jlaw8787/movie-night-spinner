@@ -291,7 +291,7 @@ function spin(){
     const p=skipReq?1:Math.min(1,(now-t0)/dur);
     rot=p<.88?start+(delta+over)*easeOut(p/.88):start+delta+over*(1-easeIO((p-.88)/.12));
     const i=indexAt(rot);
-    if(i!==last){last=i;kick=1;tick();$("now").textContent=wedges[i].title;phase++}
+    if(i!==last){last=i;kick=1;tick();if(window.REEL_NATIVE)REEL.haptic("tick");$("now").textContent=wedges[i].title;phase++}
     kick*=0.86;setPointer();draw();
     if(p<1)requestAnimationFrame(frame);
     else{
@@ -700,7 +700,8 @@ function cardHTML(f,menu,tag,usePoster=true){
   const edition=movieEdition(f);
   const lp=usePoster===true&&lobbyPoster(f);
   if(lp)return lobbyHTML(f,menu,tag,lp);
-  if(edition&&usePoster){
+  /* the app never shows the generated poster menus (docs/ARTWORK-RIGHTS.md): it falls through to the themed card */
+  if(edition&&usePoster&&!window.REEL_APP){
     const sections=[["Snacks",menu.s],["Main",menu.m],["Dessert",menu.w],["Drink",menu.d]];
     return `<img class="poster-art" src="${ESC(edition.poster)}" alt="${ESC(f.title)} (${ESC(f.year)}) movie-night menu"><div class="sr"><h2>${ESC(f.title)} movie-night menu</h2>${sections.map(([label,items])=>`<section><h3>${label}</h3>${items.map(it=>`<p><b>${ESC(it.n)}</b> ${ESC(it.note)}</p>`).join("")}</section>`).join("")}</div>`;
   }
@@ -1818,7 +1819,7 @@ async function show(f,preferSig){
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
   $("whereWheel").innerHTML=whereHTML(f);
   try{lightboxes()}catch(e){}
-  {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w500${pp}")`;amb.classList.add("on")},reduce?0:400)}
+  {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp&&!window.REEL_APP)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w500${pp}")`;amb.classList.add("on")},reduce?0:400)}
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
   {const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
@@ -1866,8 +1867,9 @@ async function show(f,preferSig){
   let ok=true;
   if(lobby)ok=await tryArt(true,"mcard L-lobby",".lb-poster");
   if(id!==renderId)return;
-  if(edition&&(!lobby||!ok)){ok=await tryArt("edition","mcard poster-edition",".poster-art");if(id!==renderId)return}
-  if(!lobby&&!edition)card.innerHTML=cardHTML(f,menu,current.tag,false);
+  const edArt=window.REEL_APP?null:edition;
+  if(edArt&&(!lobby||!ok)){ok=await tryArt("edition","mcard poster-edition",".poster-art");if(id!==renderId)return}
+  if(!lobby&&!edArt)card.innerHTML=cardHTML(f,menu,current.tag,false);
   else if(!ok){
     styleCard(card,f);card.style.transform="";card.innerHTML=cardHTML(f,menu,current.tag,false);
     $("status").textContent=unsaved||"The poster couldn't load. Your menu and prep sheet are still available.";
@@ -1949,7 +1951,7 @@ try{
   const saved=JSON.parse(localStorage.getItem("mns-week")||"null");week=normaliseWeek(saved);
   if(week&&JSON.stringify(saved)!==JSON.stringify(week))try{localStorage.setItem("mns-week",JSON.stringify(week))}catch(e){}
 }catch(e){week=null}
-const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}if(typeof queueSync==="function")queueSync()};
+const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}if(typeof queueSync==="function")queueSync();if(window.REEL_NATIVE)appRemind(false)};
 function cookDate(now=new Date()){
   const d=parseWeekDate(week.date);
   /* UTC is used only to count calendar labels, never to parse a local date. */
@@ -2025,7 +2027,8 @@ function renderMotw(){
   $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);toMenu()});
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f);lockAsk(f,$("weekSet"))});
 }
-function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();if(typeof refreshPrepTime==="function")refreshPrepTime();$("status").textContent=`${f.title} is locked in for this week.`}
+function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();if(typeof refreshPrepTime==="function")refreshPrepTime();$("status").textContent=`${f.title} is locked in for this week.`;
+  if(window.REEL_NATIVE)appRemind(true).then(r=>{if(/^set/.test(r))$("status").textContent+=" We'll remind you on this phone when it's time to start cooking and at showtime."})}
 function listText(f,groups,serves){return `${f.title} (${f.year}) shopping list, serves ${serves||(f._r2?PLAN.guests:4)}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 /* calendar reminder: review 16, Josh asked for an "Add to calendar" button on the locked-in strip and the "Your movie night" bar.
    It downloads one .ics event for the movie night with the menu link in the notes, and reminders attached to it:
@@ -2172,9 +2175,12 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
   const now=new Date();let moved=false;
   if(weekShow()<now){week.date=nextWeekDate(week.day,week.time,now);saveWeek();renderWeek();refreshPrepTime();moved=true}
   const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])],now),title=f.title+(g?" + "+g.title:"");
-  const url=location.origin+location.pathname+"?film="+encodeURIComponent(f.id),o={title,show,plan,url,now,span:g?300:150,uid:`${slug(f.id)}-${weekDateKey(show)}@movie-night-spinner`};
-  const name=`movie-night-${slug(f.title)}.ics`,href=URL.createObjectURL(new Blob([calICS(o)],{type:"text/calendar;charset=utf-8"}));
-  const a=document.createElement("a");a.href=href;a.download=name;a.hidden=true;document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),0);
+  const url=REEL.siteURL()+"?film="+encodeURIComponent(f.id),o={title,show,plan,url,now,span:g?300:150,uid:`${slug(f.id)}-${weekDateKey(show)}@movie-night-spinner`};
+  const name=`movie-night-${slug(f.title)}.ics`,ics=new Blob([calICS(o)],{type:"text/calendar;charset=utf-8"}),href=URL.createObjectURL(ics);
+  /* the app: the phone reminds you itself, and the calendar file goes out through the share sheet (an app's web view cannot download a file) */
+  let appNote="";if(window.REEL_NATIVE){const r=await appRemind(true);appNote=/^set/.test(r)?"Reminders are set on this phone for start cooking and showtime.":r==="denied"?"Notifications are off for Reel Dinner, so turn them on in Settings to get reminders on this phone.":"";
+    try{await REEL.share({title:`Movie night: ${title}`,files:[{blob:ics,name}]})}catch(e){}}
+  else{const a=document.createElement("a");a.href=href;a.download=name;a.hidden=true;document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),0)}
   /* a time on another day than the show carries its day (a 12:15am showtime starts cooking 10:45pm the day before) */
   const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)}, ${calClock(d)}`;
   const rows=[[`${calDay(show)}, ${calClock(show)}`,`Movie night: ${title}`],
@@ -2185,7 +2191,7 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
     ...(plan.late?[["Too late",calLate(plan,o).replace(/^Too late to make ahead for this night: /,"")]]:[])];
   const dlg=document.createElement("dialog");dlg.className="counter pdfpick calask";dlg.setAttribute("aria-label","Add to calendar");
   dlg.innerHTML=`<div class="rate-box"><p class="rate-k">Add to calendar</p><h3>${ESC(title)}</h3>${moved?`<p class="cal-how">Last week's showtime has passed, so this is the same film next week.</p>`:""}<ul class="cal-rows">${rows.map(([w,t])=>`<li${w==="Too late"?' class="cal-late"':""}><b>${ESC(w)}</b><span>${ESC(t)}</span></li>`).join("")}</ul>
-    <p class="cal-how">${calHow(name)} <a href="${href}" download="${ESC(name)}">Download it again</a></p>
+    ${appNote?`<p class="cal-how"><b>${ESC(appNote)}</b></p>`:""}${window.REEL_NATIVE?"":`<p class="cal-how">${calHow(name)} <a href="${href}" download="${ESC(name)}">Download it again</a></p>`}
     <p class="cal-how cal-g"><b>Google Calendar</b> drops reminders from a file, so add each one here: ${calGoogle(o).map(([k,u])=>`<a href="${ESC(u)}" target="_blank" rel="noopener">${ESC(k)}</a>`).join(" ")}</p>
     <div class="pp-opts">${plan.late?`<button type="button" data-move>Move to ${ESC(calDay(plan.late.next))}</button>`:""}<button type="button" data-done><b>Done</b></button></div></div>`;
   dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest("[data-done]"))dismissModal(dlg);
@@ -2194,6 +2200,13 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
   mountModal(dlg,"[data-done]",trigger||document.activeElement);
   $("status").textContent=`${moved?"Moved to next week. ":""}Calendar file saved: movie night ${calDay(show)} ${calClock(show)}, start cooking ${plan.startNow?"now":when(plan.start)}.${plan.late?" "+calLate(plan,o):""}`}
 /* the Prep sheet of the locked-in film shows its showtime and start time; redrawn when the time changes */
+/* the app: a notification on the phone when it's time to start cooking and at showtime for the locked-in night.
+   ask=false only updates reminders already allowed, so a change of night or showtime moves them without asking again */
+async function appRemind(ask){if(!window.REEL_NATIVE)return "";if(!week){REEL.clearReminders();return ""}
+  const f=FILMS.find(x=>x.id===week.id);if(!f)return "";const g=week.double&&FILMS.find(x=>x.id===week.double);
+  try{for(const x of [f,g])if(x)await ensureExact(x);
+    const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])],new Date()),title=f.title+(g?" + "+g.title:"");
+    return await REEL.remind({title,show,start:plan.startNow?null:plan.start,startText:`${title} at ${calClock(show)}${plan.first?`. Start with ${calMid(plan.first)}`:""}.`,ask})}catch(e){return ""}}
 function refreshPrepTime(){if(typeof current!=="undefined"&&current&&week&&(current.id===week.id||current.id===week.double)&&typeof refreshPlan==="function")refreshPlan()}
 const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
@@ -2221,7 +2234,8 @@ async function openTrolley(f,menuOverride,label){
     if(a==="done")close();
     if(a==="reset"){all.forEach(x=>tick(kf(x),false,true));if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
     if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)]&&!skip(kf(x)))]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left,serves);
-      try{if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
+      try{const nat=await REEL.share({title:`${f.title} shopping list`,text});if(nat){if(nat==="sent")o.querySelector("#tMsg").textContent="Sent."}
+        else if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
       catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
   });
   if(!own&&!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
@@ -2256,7 +2270,7 @@ const SHOP_AISLE_OF={};SHOP_AISLES.forEach(([n,ts])=>ts.forEach(t=>SHOP_AISLE_OF
 /* aisles follow the film's genre (aisles.js, from TMDB); the food theme is only the fallback */
 const aisleOf=f=>(typeof FILM_AISLE!=="undefined"&&FILM_AISLE[f.id])||SHOP_AISLE_OF[f.theme]||"";
 const TMDB_IMG_SHOP="https://image.tmdb.org/t/p/";
-const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
+const buzz=p=>{if(window.REEL_NATIVE)return REEL.haptic(p);try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 const hashN=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
 /* staff picks: a hand-picked pool of well-loved films, 12 on the shelf each week; the new release wall: the 20 newest films */
 const STAFF_POOL=["Back to the Future (1985)", "The Princess Bride (1987)", "Jaws (1975)", "Ghostbusters (1984)", "Raiders of the Lost Ark (1981)", "Die Hard (1988)", "Groundhog Day (1993)", "Paddington 2 (2017)", "My Neighbor Totoro (1988)", "Amélie (2001)", "The Castle (1997)", "Hunt for the Wilderpeople (2016)", "Toy Story (1995)", "Pulp Fiction (1994)", "Goodfellas (1990)", "The Big Lebowski (1998)", "Alien (1979)", "The Thing (1982)", "Mad Max: Fury Road (2015)", "Knives Out (2019)", "Ratatouille (2007)", "Galaxy Quest (1999)", "Hot Fuzz (2007)", "Shaun of the Dead (2004)", "Moonstruck (1987)", "When Harry Met Sally... (1989)", "Strictly Ballroom (1992)", "Muriel's Wedding (1994)", "Babe (1995)", "The Iron Giant (1999)", "Coco (2017)", "Everything Everywhere All at Once (2022)", "Get Out (2017)", "Arrival (2016)", "Casablanca (1942)", "Some Like It Hot (1959)", "Fargo (1996)", "Heat (1995)", "Big Night (1996)", "Chef (2014)", "Ferris Bueller's Day Off (1986)", "The Dish (2000)"];
@@ -2538,7 +2552,8 @@ $("dfBtn").addEventListener("click",openDouble);
 const SYNC_URL="https://skxiumrqinvpauwkljwn.supabase.co/functions/v1/mns-sync";
 var syncTimer=null,syncState="";
 async function syncCall(body){
-  const r=await fetch(SYNC_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  /* the app sends this natively: the sync function only allows reeldinner.com as a browser origin */
+  const r=window.REEL_NATIVE?await REEL.post(SYNC_URL,body,"json"):await fetch(SYNC_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
   if(!r.ok)throw new Error("sync");return r.json();
 }
 function syncPayload(){
@@ -3519,6 +3534,7 @@ function plainDownload(data,filename){
   setTimeout(()=>URL.revokeObjectURL(url),4000);
 }
 function shareable(data,filename){
+  if(window.REEL_NATIVE)return true;
   try{return matchMedia("(pointer:coarse)").matches&&!!navigator.canShare&&navigator.canShare({files:[new File([data],filename,{type:"image/jpeg"})]})}catch(e){return false}
 }
 function showOverlay(url,file){
@@ -3532,7 +3548,7 @@ function showOverlay(url,file){
   o.querySelector("[data-close]").addEventListener("click",close);
   o.addEventListener("click",e=>{if(e.target===o)close()});
   if(file)o.querySelector("[data-share]").addEventListener("click",async()=>{
-    try{await navigator.share({files:[file],title:`${current.title} menu`});close();$("status").textContent="Saved. Check your Photos."}
+    try{const nat=await REEL.share({title:`${current.title} menu`,files:[{blob:file,name:file.name}]});if(nat==="cancel")return;if(!nat)await navigator.share({files:[file],title:`${current.title} menu`});close();$("status").textContent="Saved. Check your Photos."}
     catch(e){if(!(e&&e.name==="AbortError"))o.querySelector("p").textContent="Long-press the menu and choose Save to Photos."}
   });
   mountModal(o,"button",modalTrigger);
@@ -3618,7 +3634,9 @@ async function exportMenu(kind,parts,opts){
          (landscape folds turn like a book on the short edge, portrait front-and-back on the long edge) */
       try{pdf.viewerPreferences({PrintScaling:"None",Duplex:sides>=2?(orient==="landscape"?"DuplexFlipShortEdge":"DuplexFlipLongEdge"):"Simplex"})}catch(e){}
       data=pdf.output("blob");filename=name+".pdf";
-      if(toPrint){printPdf(data,opts.win);$("status").textContent="Menu ready to print.";return}
+      if(toPrint){if(window.REEL_NATIVE&&await REEL.print(data,name)){$("status").textContent="";return}printPdf(data,opts.win);$("status").textContent="Menu ready to print.";return}
+      /* the app: saved to the phone (Files on iPhone) through the share sheet */
+      if(window.REEL_NATIVE){const r=await REEL.saveFile(data,filename);if(r){$("status").textContent=r==="cancel"?"Save cancelled.":`Saved ${filename}. ${parts==="menu"?pdfTip():"Print it at A4, actual size."}`;return}}
     }else{
       data=await new Promise(r=>canvas.toBlob(r,"image/jpeg",0.92));filename=name+".jpg";
       if(!data)data=await (await fetch(canvas.toDataURL("image/jpeg",0.92))).blob();
@@ -3670,7 +3688,8 @@ async function storyCanvas(f){
   const pw=440,ph=660,px=(W-pw)/2,py=300;
   x.fillStyle=BRASS;x.fillRect(px-12,py-12,pw+24,ph+24);x.fillStyle="#1a0409";x.fillRect(px,py,pw,ph);
   const pp=lobbyPoster(f);
-  if(pp)await new Promise(ok=>{const im=new Image();im.crossOrigin="anonymous";im.onload=()=>{try{x.drawImage(im,px,py,pw,ph)}catch(e){}ok()};im.onerror=ok;im.src=TMDB_IMG+"w500"+pp;setTimeout(ok,6000)});
+  if(pp&&window.REEL_APP){try{await document.fonts.load('80px "Limelight"');x.drawImage(REEL.posterCanvas(f,pw,ph,{font:'"Limelight", Georgia, serif',ink:CREAM,bg:"#2a070f",accent:BRASS}),px,py,pw,ph)}catch(e){}}
+  else if(pp)await new Promise(ok=>{const im=new Image();im.crossOrigin="anonymous";im.onload=()=>{try{x.drawImage(im,px,py,pw,ph)}catch(e){}ok()};im.onerror=ok;im.src=TMDB_IMG+"w500"+pp;setTimeout(ok,6000)});
   x.textAlign="center";
   let y=py+ph+110;
   let tf=88,tl;do{tl=wrap(f.title,`${tf}px "Limelight"`,940);if(tl.length<=2)break;tf-=8}while(tf>48);
@@ -3696,7 +3715,7 @@ async function storyCanvas(f){
     for(const n of its.slice(0,per)){const ls=wrap(n,'500 38px "Jost"',900);x.fillStyle=CREAM;x.font='500 38px "Jost"';x.fillText(ls[0]+(ls.length>1?"...":""),W/2,y);y+=50}
     y+=26;
   }
-  const site=(location.host+location.pathname).replace(/index\.html$/,"").replace(/\/$/,"");
+  const site=window.REEL_APP?REEL.site.replace(/^https:\/\//,""):(location.host+location.pathname).replace(/index\.html$/,"").replace(/\/$/,"");
   spaced("SPIN YOURS AT",H-130,'500 26px "Oswald"',SOFT,7);
   x.fillStyle=BRASS;x.font='600 34px "Jost"';x.fillText(site,W/2,H-80);
   return c;
@@ -3734,9 +3753,10 @@ async function exportFold(){
 $("foldPdf").addEventListener("click",exportFold);
 /* share a menu as a link: opens straight to this film's menu */
 $("shareLink").addEventListener("click",async()=>{
-  if(!current)return;const url=location.origin+location.pathname+"?film="+encodeURIComponent(current.id);
+  if(!current)return;const url=REEL.siteURL()+"?film="+encodeURIComponent(current.id);
   const title=`${current.title} movie night menu`,text=`${current.title} (${current.year}): ${current.tag||"movie night menu"}`;
-  try{if(navigator.share){await navigator.share({title,text,url});$("status").textContent="Menu link sent."}
+  try{const nat=await REEL.share({title,text,url});if(nat){if(nat==="sent")$("status").textContent="Menu link sent."}
+    else if(navigator.share){await navigator.share({title,text,url});$("status").textContent="Menu link sent."}
     else{await navigator.clipboard.writeText(url);$("status").textContent="Link copied. Anyone who opens it lands on this menu."}}
   catch(e){if(!(e&&e.name==="AbortError")){try{await navigator.clipboard.writeText(url);$("status").textContent="Link copied."}catch(err){$("status").textContent=url}}}
 });
@@ -3759,7 +3779,7 @@ function printPdf(blob,win){const url=URL.createObjectURL(blob);
   fr.onload=()=>{setTimeout(()=>{try{fr.contentWindow.focus();fr.contentWindow.print()}catch(e){window.open(url,"_blank")}},300);setTimeout(()=>{fr.remove();URL.revokeObjectURL(url)},120000)};document.body.appendChild(fr)}
 $("print").addEventListener("click",()=>{if(!current)return;
   /* the new tab has to open on the tap itself or phones block it; it shows a holding line until the PDF is ready */
-  let win=null;if(coarse()){try{win=window.open("","_blank");if(win)win.document.write('<title>Getting your menu ready</title><body style="font:18px system-ui;padding:40px;color:#333;background:#fff">Getting your menu ready to print...</body>')}catch(e){win=null}}
+  let win=null;if(coarse()&&!window.REEL_NATIVE){try{win=window.open("","_blank");if(win)win.document.write('<title>Getting your menu ready</title><body style="font:18px system-ui;padding:40px;color:#333;background:#fff">Getting your menu ready to print...</body>')}catch(e){win=null}}
   const pb=$("print"),t=pb.textContent;pb.disabled=true;pb.textContent="Getting it ready...";
   exportMenu("pdf","all",{print:true,win}).finally(()=>{pb.disabled=false;pb.textContent=t})});
 window.addEventListener("beforeprint",()=>{if(!$("printArea").children.length)fillPrint()});
@@ -4179,7 +4199,8 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
     if(navigator.onLine===false){netMarks();return}
     go.disabled=true;go.textContent="Sending";showErr("");
     try{
-      const res=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
+      /* the app posts to the website itself (docs/APP-BUILD.md); the site posts to its own address */
+      const res=window.REEL_APP?await REEL.post(REEL.site+"/",Object.fromEntries(new FormData(form)),"form"):await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
       if(!res.ok)throw new Error(res.status);
       done();
     }catch(x){go.disabled=false;go.textContent="Send request";showErr("That did not send. Check your connection and try again.")}
