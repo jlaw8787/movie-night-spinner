@@ -46,7 +46,7 @@ async function stats(buf){
  /* MNS_SHARD=k/n reads every nth film from the kth, so a long run can be split over two jobs */
  const SH=(process.env.MNS_SHARD||'').match(/^(\d+)\/(\d+)$/);if(SH)FILMS=FILMS.filter((x,i)=>i%+SH[2]===+SH[1]-1);
  const fails=[],rows=[];
- for(const id of FILMS){
+ for(const id of FILMS){try{
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent(id),{waitUntil:'domcontentloaded'});
   await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
   const ok=await p.evaluate(async id=>{const f=FILMS.find(x=>x.id===id);if(!f)return false;await ensureExact(f);await show(f,true);
@@ -68,5 +68,6 @@ async function stats(buf){
   const db=(z.mean-a.mean)/a.mean,dc=(z.sd-a.sd)/a.sd,fmt=await p.evaluate(()=>current._lib&&current._lib.fmt||'');
   const dl=z.mean-a.mean;rows.push(`${id} (${fmt}): brightness ${dl>=0?'+':''}${dl.toFixed(1)} levels (${(db*100).toFixed(1)}%), contrast ${(dc*100).toFixed(1)}%`);console.log(rows[rows.length-1]);
   if(process.env.MNS_SHOTS){const d=process.env.MNS_SHOTS,s=id.replace(/[^a-z0-9]+/gi,'-');fs.writeFileSync(path.join(d,s+'-screen.png'),shot);fs.writeFileSync(path.join(d,s+'-pdf.png'),pdf)}
-  if(dl<-DARKER||dc<-FLATTER||dl>LIGHTER)fails.push(rows[rows.length-1])}
+  if(dl<-DARKER||dc<-FLATTER||dl>LIGHTER)fails.push(rows[rows.length-1])
+  }catch(e){fails.push(id+': '+String(e.message||e).split('\n')[0]);console.log(fails[fails.length-1])}}
  await b.close();if(fails.length){console.log('FAIL:\n  '+fails.join('\n  '));process.exit(1)}console.log('PASS: Save PDF holds the screen\'s brightness and contrast');process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});
