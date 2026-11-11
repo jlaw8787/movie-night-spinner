@@ -3126,7 +3126,7 @@ html,body{overflow-x:clip}
 <dialog class="trolley settings reqm" id="reqMovie" aria-label="Request a movie" data-keep>
   <div class="trolley-in">
     <div class="set-top"><h3>Request a movie</h3><button type="button" class="x" id="reqClose" aria-label="Close">×</button></div>
-    <form action='/' id='reqForm' method='POST' name='movie-request'>
+    <form id="reqForm" name="movie-request" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="movie-request">
       <p hidden><label>Leave this empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <p class="tp">Tell us which film is missing from the wheel and we will have a look.</p>
@@ -3151,4 +3151,3 @@ html,body{overflow-x:clip}
 </dialog>
 </body>
 </html>
-<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="b641e7a7-b7d1-44cc-95e1-79f0bc20acf6" data-app-host="app.netlify.com" data-account-tier="personal"></script>
