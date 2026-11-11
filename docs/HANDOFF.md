@@ -488,7 +488,7 @@ Live on reeldinner.com from f4f4e23 (deploy 6af3e9bc, Josh, 11 Nov: deploy now),
 
 ## 11 Nov, 2:40pm: side still and one liner on all 28 bistro menus (start here in the next chat)
 
-Committed and pushed, not yet deployed.
+Live on reeldinner.com from 7ea6747 (deploy 6af3ef19, Josh, 11 Nov: deploy now). Not yet checked on a real phone.
 - Josh, 11 Nov: every bistro menu gets a still in the empty column under the logo (as Wall Street had) plus a short line under it. New per-film flavour sideLine (menu-formats/bistro.js, printed under the still, italic, two lines at most). sideStill now holds a hand-picked TMDB path on all 28: scene or place stills, never still 1 (the menu prints it elsewhere).
 - Lines are Claude's, not film quotes, and none repeat the From the house note. Kids mode runs them through dry().
 - The Princess and the Frog's still prints black and white because the menu is 1920s; that is the era look, not a fault.
