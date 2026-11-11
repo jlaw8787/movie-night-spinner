@@ -484,4 +484,13 @@ Live on reeldinner.com from f4f4e23 (deploy 6af3e9bc, Josh, 11 Nov: deploy now),
 - Beneath Hill 60 and Seabiscuit have only 3 stills, so they get a two photo strip. The Lighthorsemen uses stills 0, 2, 3.
 - Tests pass, check-print-text passes on all 56, all 56 fronts looked over in shots.
 - Eerie tone strip heading ("Stay with the group for", written for the old badge list) replaced per film in film-flavour labels.b (Josh, 11 Nov): The Jungle Book "Learned from the pack", Star Wars: The Last Jedi "Lessons on Ahch-To", Friday the 13th "Last seen at Crystal Lake". Avatar already had its own. Live from 32e9f4f (deploy 6af3eaba).
-- Next: Review 21. Open question for Josh: a still in the empty bistro column on the other 27 bistro menus, as on Wall Street?
+- Next: Review 21. 
+
+## 11 Nov, 2:40pm: side still and one liner on all 28 bistro menus (start here in the next chat)
+
+Committed and pushed, not yet deployed.
+- Josh, 11 Nov: every bistro menu gets a still in the empty column under the logo (as Wall Street had) plus a short line under it. New per-film flavour sideLine (menu-formats/bistro.js, printed under the still, italic, two lines at most). sideStill now holds a hand-picked TMDB path on all 28: scene or place stills, never still 1 (the menu prints it elsewhere).
+- Lines are Claude's, not film quotes, and none repeat the From the house note. Kids mode runs them through dry().
+- The Princess and the Frog's still prints black and white because the menu is 1920s; that is the era look, not a fault.
+- Tests pass, check-print-text passes on all 28, all 28 looked over in shots.
+- Next: Review 21.

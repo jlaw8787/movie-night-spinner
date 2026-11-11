@@ -299,11 +299,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* per-film flavour sideStill (Wall Street, 11 Nov): a film still under the logo fills the empty column beside the poster.
      The value is the still's TMDB path; true takes the third still on the film's list */
   const sideStill=(()=>{const v=ctx.flavour&&ctx.flavour.sideStill,st=(ctx.stills||[]).filter(Boolean);if(!v||!ph.isPoster)return"";const p=typeof v==="string"?v:st[2];return p?ctx.img(p,"w780"):""})();
+  /* sideLine (11 Nov, Josh): a short line from the film under the side still, only where one suits */
+  const sideLine=sideStill&&ctx.flavour&&ctx.flavour.sideLine||"";
   const hero=`<div style="position:absolute;left:30px;right:30px;top:${heroTop}px;height:${heroH}px">
     <div style="position:absolute;left:0;top:0;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:5px;border-radius:${era===3?16:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
     ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>
     <div style="position:absolute;left:${posW+30}px;right:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;gap:18px">
-      <div style="border-top:3px double ${K.acc}"></div>${lp}<div style="border-bottom:3px double ${K.acc}"></div>${sideStill?`<div style="position:relative;flex:1;min-height:0;margin:2px 6px 6px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:5px;border-radius:${era===3?16:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">${photoHTML(sideStill,"center 35%",era,t)}</div>`:""}</div></div>`;
+      <div style="border-top:3px double ${K.acc}"></div>${lp}<div style="border-bottom:3px double ${K.acc}"></div>${sideStill?`<div style="position:relative;flex:1;min-height:0;margin:2px 6px 6px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:5px;border-radius:${era===3?16:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">${photoHTML(sideStill,"center 35%",era,t)}</div>${sideLine?`<div data-box style="flex:none;max-height:44px;overflow:hidden;margin:-6px 6px 0;text-align:center"><div data-fs="13" style="font:italic 400 16px/1.25 ${B};color:${K.soft}">${esc(dry(sideLine))}</div></div>`:""}`:""}</div></div>`;
 
   /* specials board: the sweets course chalked up on a dark slate panel (set type, no chalk font) */
   const sw=(menu.w||[]).slice(0,4);
