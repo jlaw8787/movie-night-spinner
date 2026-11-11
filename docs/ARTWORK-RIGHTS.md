@@ -1,117 +1,124 @@
 # Artwork rights for the Reel Dinner app
 
-Researched 11 Nov 2026. This is a summary of what the sources say, not legal advice. Anything marked unclear should go to a lawyer before launch.
+Researched and fact checked 11 Nov 2026. A summary of what the sources say, not legal advice. Anything unclear goes to a lawyer before launch.
 
 ## Short answer
 
-- TMDB lets you use its images free in a non-commercial project with attribution, but TMDB says it does not own the images. The studios do. So neither the free terms nor a paid TMDB licence gives you the studios' permission [1].
-- Apple and Google both say you need permission for third-party copyright material, and Google names movie marketing images as a common breach [7][12].
-- Safest path for a free first version: ship the app with no studio artwork at all (no posters, stills or title logos). Keep posters on the website for now with TMDB credit.
+- TMDB lets you use its images free in a non-commercial project with attribution. TMDB also says it does not own the images, so its free terms or a paid licence probably do not include the studios' permission [1]. Confirm with TMDB and a lawyer.
+- Apple and Google both require permission for third-party trademarks and copyright, and Google names movie marketing images as a common breach [6][11].
+- Safest path for a free first version: ship the app with no studio artwork and none of the 124 generated posters. Clean up the website as well (see option E).
 
 ## What the risk actually is
 
-**1. Rejection at review (most likely).** Guideline 5.2.1 says not to use copyrighted works without permission, and apps should come from whoever owns or licensed the rights. Guideline 5.2.2 says if you display content from a third-party service you must be permitted under its terms, and "authorisation must be provided upon request" [7]. Guideline 2.3.9 also makes you responsible for rights in screenshots and previews [7]. Developers using TMDB report rejections: one was asked to verify rights to TMDB images, sent TMDB's terms as Apple staff suggested, and was still rejected several times [8]. Others on TMDB's own forum got through by arguing posters are promotional, or by using public domain film shots in screenshots, while a 2022 post reports a fresh rejection [4]. When an app was rejected over images from a data provider, Apple staff pointed the developer back to that provider's terms on logos and images [9]. A Samsung store developer was rejected for copyright even after crediting TMDB [13]. Outcomes are inconsistent. TMDB staff have said they have no document they can give developers to prove rights [4].
+**1. Rejection at review (most likely).** Guideline 5.2.1 says not to use trademarks or copyrighted works without permission. Guideline 5.2.2 says content from a third-party service must be permitted under its terms, and "authorisation must be provided upon request". Guideline 2.3.9 makes you responsible for rights in screenshots and previews [6]. One developer was asked to verify rights to TMDB images, sent TMDB's terms as Apple staff suggested, and was still rejected several times [7]; staff told another to check the provider's terms on images [8]. On TMDB's forum, some got through by arguing posters are promotional or by using public domain film shots, while a 2022 post reports a fresh rejection [3]. A Samsung store developer was rejected even after crediting TMDB [12]. In a 19 Feb 2014 post, TMDB staff said they have no document they can give developers to prove rights [3].
 
-**2. Takedown after launch.** Apple passes rights complaints to the developer through its content dispute process [10]. TV Time (30 million registered users) was pulled from the App Store for weeks in late 2024 after a company claimed copyright in cover art, told Apple the claim was "unresolved", and demanded money; Apple removes an app if the parties do not resolve it [11]. Google says it responds to clear copyright notices and may ask developers for evidence of their rights [12].
+**2. Takedown after launch.** Apple passes rights complaints to the developer [9]. TV Time (30 million registered users) was off the App Store for weeks in late 2024 after a company claimed copyright in cover art and told Apple the claim was "unresolved". Apple removes an app if the parties don't resolve it [10]. Google responds to clear copyright notices and may ask for evidence of rights [11].
 
-**3. A legal claim.** This is the least likely but the most expensive. In the TV Time case the claimant asked for a financial settlement and the company later settled [11]. Australia has no general fair use. Fair dealing covers set purposes such as criticism or review and parody or satire [22]. A themed dinner menu built around a poster is not obviously any of those. **Unclear: confirm with a lawyer.**
+**3. A copyright claim.** Least likely, most expensive. In the TV Time case the claimant demanded a financial settlement, Whip Media refused to pay, and it says it later resolved the matter [10]. Australia has no general fair use; fair dealing covers set purposes such as criticism or review and parody or satire [21]. A dinner menu built around a poster is not obviously either. **Unclear: confirm with a lawyer.**
 
-Note on the wrapper plan: loading posters online and caching them on first view keeps them out of the app file, but the app still displays them, so it does not change the rights question.
+**4. Trademarks and actor likeness.** Film title logos are trademarks, which 5.2.1 names first [6]. Google may suspend an app that uses another party's trademark in a way likely to confuse people about its source [11]. The 124 generated posters copy title logos (the ® on The Godfather, the ™ and no-ghost logo on Ghostbusters) and show AI likenesses of real actors. Australia has no specific image right, but passing off and misleading conduct under the Australian Consumer Law can apply where a well-known person appears to endorse something [25]. **Confirm with a lawyer.**
+
+Caching TMDB posters on first view keeps them out of the app file, but the app still displays them, so the rights question is the same.
 
 ## The options
 
 ### A. Keep TMDB images free, with attribution
-- **Allows:** non-commercial use only, crediting TMDB as the source of data and images, with the TMDB logo and the line "This product uses the TMDB API but is not endorsed or certified by TMDB" in About or Credits [1].
+- **Allows:** non-commercial use only, crediting TMDB with its logo and the line "This product uses the TMDB API but is not endorsed or certified by TMDB" in About or Credits [1]. Commercial use already needs a paid licence from TMDB sales [1].
 - **Cost:** $0.
-- **Effort:** none beyond the credit, which the site already has.
-- **Risk:** covers TMDB's terms (5.2.2) but not studio copyright (5.2.1). Rejection is a real chance [8][13]. TMDB has said it may charge for commercial keys in future [3].
+- **Risk:** covers TMDB's terms (5.2.2), probably not studio rights (5.2.1). Rejection is a real chance [7][12].
 - **Menus:** unchanged.
 
 ### B. TMDB commercial licence
-- **Allows:** use of the API in a project whose "primary purpose is to create revenue" [1]. Pricing is through TMDB sales, not published [1][5].
-- **Cost:** one third-party article says US$149 a month for companies under US$1 million revenue [6]. **Unconfirmed; ask TMDB.**
-- **Effort:** an email and a contract.
-- **Risk:** TMDB's business page does not mention image rights [5], and TMDB claims no ownership of the images [1]. On those sources it fixes the TMDB terms problem, not the studio one. **Ask TMDB sales to confirm in writing.**
+- **Allows:** use where the "primary purpose is to create revenue for the benefit of the owner" [1]. Pricing is through sales and not published [1][4].
+- **Cost:** one third-party article says US$149 a month under US$1 million revenue [5]. **Unconfirmed.**
+- **Risk:** TMDB's business page says the licence lets you use "our data and images" but does not say whether that includes studio copyright [4]. Ask sales to confirm in writing.
 - **Menus:** unchanged.
 
 ### C. Posters only where licensed
-- **Allows:** exactly what each studio licence says.
-- **Cost:** per studio, per use. Warner Bros, for example, takes written requests and sets fees "according to use" [21]. Agency stills (Alamy and similar) are licensed for editorial use; commercial use needs separate permission from the film's rights holder [20]. IMDb says it cannot sublicense its posters either [18].
-- **Effort:** heavy. 900 films across dozens of rights holders is not realistic for one person. A handful of hero films might be.
-- **Risk:** low for licensed films.
-- **Menus:** most films would fall back to no poster anyway.
+- **Cost:** per studio, per use. Warner Bros takes written requests and sets fees "according to use" [20]. Agency stills are editorial only; commercial use needs the rights holder [19]. IMDb cannot sublicense its posters [17].
+- **Effort:** not realistic for 900 films; maybe a few hero films.
+- **Menus:** most films get no poster.
 
 ### D. Original illustrated art
-- **Per film:** Australian Society of Authors rates for FY 2026/27 are A$247 for a small spot illustration and A$345 for a colour quarter page, before GST [23]. At 900 films that is roughly A$222,000 to A$310,000. US freelancers quote US$250 to US$400 for a standard spot, US$50 to US$100 for simple pieces [24].
-- **Per layout or genre:** 20 to 40 pieces at the same rates is about A$5,000 to A$14,000, less as a set [24].
-- **Allows:** whatever your written licence with the artist says. Get rights assigned or licensed for app, web and print.
-- **Risk:** low, as long as the art does not copy poster compositions, characters or title lettering. Google warns that modified copyrighted content can still breach its policy [12].
-- **Watch out:** the 124 older "film-inspired" posters in assets/menu-posters were briefed with "recognisable film typography" (ARTWORK_ROLLOUT.md). Treat those as derivative and keep them out of the app until a lawyer clears them.
+- **Cost per film:** A$247 (black and white quarter page) to A$345 (colour quarter page), FY 2026/7 ASA book illustration rates, ex GST [22]. Publishing rates; app, web and print rights may cost more. At 900 films, roughly A$222,000 to A$310,000. US freelancers quote US$250 to US$400 a standard spot, US$50 to US$100 for simple pieces [23].
+- **Per layout or genre:** 20 to 40 pieces is about A$5,000 to A$14,000, less as a set [23].
+- **Risk:** low if it copies no posters, logos, characters or real faces; modified copyrighted content can still breach Google's policy [11].
+- **The 124 generated posters:** they are the live fallback when TMDB fails to load (POSTER_WORKFLOW.md), they were briefed with "recognisable film typography" (ARTWORK_ROLLOUT.md), and they copy logos and actor likenesses (risk 4). Retire them. Don't plan on clearing them.
 - **Menus:** genre art replaces the poster.
 
-### E. No images in the app, posters stay on the website
-- **Allows:** the app uses titles, dishes, your writing and your own design only.
-- **Cost:** $0.
-- **Effort:** a build flag to hide posters, stills, logos and locally stored film frames (assets/menu-details holds one), plus a plain placeholder the offline plan already needs.
-- **Risk:** lowest for review and takedown. The website keeps its current exposure under TMDB's free terms.
-- **Menus:** type-led designs. Less wow on screen, still printable.
+### E. No images in the app, website cleaned up
+- **Allows:** titles, dishes, your writing and your own design only.
+- **Cost:** $0. **Effort:** a build flag and a plain placeholder, which the offline plan needs anyway.
+- **Website:** its TMDB posters fall under TMDB's free terms [1]. The 124 generated posters and the McDowell's frame do not. That frame was copied from a CinemaBlend image (assets/menu-details/SOURCES.md), so no licence covers it anywhere. Take both off the site too, or get legal advice.
+- **Menus:** type-led designs, still printable.
 
-### F. Mixed (recommended)
-E now, with a small commissioned set of genre or layout illustrations (D, per layout) added when budget allows, and licensed posters (C) only for any film where a studio partnership comes up.
+### F. Public domain posters
+Out-of-copyright posters can carry real art. TMDB forum developers used public domain film shots in screenshots that passed review [3]. Check each poster's status in Australia and the US with the lawyer. Few of the 900 films would qualify.
+
+### G. Trade through a company
+You are enrolling as an individual. Ask the lawyer whether a company would limit your personal exposure, and the cost.
+
+### H. Mixed (recommended)
+E now, a commissioned set of genre art (D) when budget allows, public domain posters (F) where they check out, licensed posters (C) only if a studio deal comes up.
 
 ## How comparable apps do it
 
-- **Trakt** takes posters, stills and fanart from TMDB, plus logos from Fanart.tv [14].
-- **Letterboxd** gets its film metadata from TMDB and sells Pro and Patron tiers [15]. Whether it holds studio licences is not public.
-- **TV Time** used TheTVDB [16], which says it claims no ownership of its images [17]. That user-uploaded art is what led to its removal [11].
-- **TVmaze** tells developers to hotlink its images so takedowns are handled on its side; self-hosting moves that responsibility to you [19].
-- **Guess the Movie**, a quiz app, uses "minimalistic posters" and says all poster art is copyright of its owners [25].
+- **Trakt** takes posters, stills and fanart from TMDB, plus logos from Fanart.tv [13].
+- **Letterboxd** gets its metadata from TMDB and sells Pro and Patron tiers [14].
+- **JustWatch** says its posters, descriptions and cast come "from TMDb and IMDb with permission" [26]. Its imprint carries the TMDB notice, says it "claims no rights or titles to the content", and credits a photo agency for actor images [27].
+- **TV Time** owned TheTVDB from 2019 and shut down in July 2026 [15]. TheTVDB claims no ownership of its images [16]. User-uploaded art led to the 2024 removal [10].
+- **TVmaze** asks developers to hotlink images so takedowns stay with it [18].
+- **Guess the Movie** uses "minimalistic posters" and says all poster art is copyright of its owners [24].
 
-So many apps ship with posters, but that looks like accepted risk, not cleared rights. Bigger players can absorb a dispute. A sole trader enrolled as an individual carries it personally.
+None states a studio licence. Shipping posters looks like accepted risk, not cleared rights.
 
 ## Recommendation
 
-**Free first version:** Option F. App build with no studio artwork, TMDB credit kept in About for the film data, store screenshots showing only your own designs. Website keeps posters with credit while it earns nothing.
+**Free first version:** Option H. App build with no studio artwork and no generated posters, TMDB credit kept in About for film data, store screenshots showing only your own designs. Website keeps TMDB posters with credit, and drops the 124 generated posters and the CinemaBlend frame.
 
-**If it charges (or adds ads or affiliate links):** it becomes commercial under TMDB's definition [1], so get the TMDB commercial licence before launch, for the app and the website. Still keep studio artwork out unless licensed (C), because the licence does not appear to cover studio rights. Budget for the genre art set at that point.
+**If it earns money:** charging is likely commercial under TMDB's test; ads or affiliate links may be [1]. Ask TMDB, and if needed get the licence before launch, for app and website. Keep studio artwork out unless licensed (C), since the licence probably does not cover studio rights. Budget for the genre art then.
 
-Film titles, character names and short quotes are generally lower risk than artwork, but they are not risk free. **Confirm with a lawyer.**
+Titles, character names and short quotes are generally lower risk than artwork, but not risk free. **Confirm with a lawyer.**
 
 ## Next steps, in order
 
-1. Email TMDB sales (give your country, as the FAQ asks [1]). Ask: is a free app with no ads non-commercial; what is the commercial price; does any licence include image rights.
-2. Add an app build flag that drops all posters, stills, title logos, local film frames and the 124 film-inspired posters, with a plain placeholder.
-3. Check every custom menu in formats.js still reads well without film imagery; adjust layouts.
-4. Get two or three illustrator quotes for 20 to 40 genre or layout pieces, with a written licence covering app, web and print.
-5. Make store screenshots from the art-free build.
-6. In App Review notes, say the app contains no studio artwork and uses TMDB for film data under its terms with attribution.
-7. Book a short session with an Australian IP lawyer: titles, character names and quotes in the app; poster use on the website; the TMDB licence wording.
-8. Then pay the Apple Developer fee (approval can take a day or two) and run the first TestFlight build.
+1. Read the TMDB API Terms of Use yourself before emailing TMDB [2]. The page could not be read automatically, so every TMDB point here rests on the FAQ and forums.
+2. Email TMDB sales, giving your country [1]. Ask: is a free app with no ads non-commercial; would ads or affiliate links change that; the commercial price; does any licence include studio image rights. Get answers in writing.
+3. Add an app build flag that drops all posters, stills, title logos, the CinemaBlend frame and the 124 generated posters, with a plain placeholder.
+4. Remove the 124 generated posters and the CinemaBlend frame from the website; use the placeholder as the fallback.
+5. Check the custom menus in formats.js without film imagery.
+6. Get two or three illustrator quotes for 20 to 40 genre pieces, with a written licence for app, web and print.
+7. Make store screenshots from the art-free build.
+8. In App Review notes, say the app has no studio artwork and credits TMDB for film data.
+9. Book an Australian IP lawyer: titles, names and quotes; website posters; the TMDB licence wording; public domain posters; individual versus company.
+10. Then pay the Apple Developer fee (approval can take a day or two) and run the first TestFlight build.
 
 ## Sources
 
 1. TMDB developer FAQ: https://developer.themoviedb.org/docs/faq
-2. TMDB API Terms of Use (blocked to automated reading on 11 Nov 2026; read it yourself before signing anything): https://www.themoviedb.org/api-terms-of-use
-3. TMDB support thread, commercial key and sales: https://www.themoviedb.org/talk/5d29d886be4b36756aa16a8a
-4. TMDB support thread, rights documents and App Store experiences: https://www.themoviedb.org/talk/530525ae9251413488038dc4
-5. TMDB API for Business: https://tmdb.org/api-for-business
-6. api.market, Best Movie APIs in 2026: https://api.market/blog/sleeyax/entertainment/best-movie-apis
-7. Apple App Review Guidelines (2.3.9, 5.2, 5.2.1, 5.2.2): https://developer.apple.com/support/downloads/terms/app-review-guidelines/App-Review-Guidelines-English-UK.pdf and https://developer.apple.com/app-store/review/guidelines/
-8. Apple Developer Forums, TMDB app rejected for copyright: https://developer.apple.com/forums/thread/649351
-9. Apple Developer Forums, 5.2.1 rejection over API logos: https://developer.apple.com/forums/thread/718427
-10. Apple App Store content dispute form: https://www.apple.com/legal/intellectual-property/dispute-forms/app-store/app-store-dispute.html
-11. TechCrunch, TV Time removed from App Store (20 Nov 2024): https://techcrunch.com/2024/11/20/tv-time-points-to-apples-significant-power-over-developers-after-being-removed-from-app-store
-12. Google Play intellectual property policy: https://support.google.com/googleplay/android-developer/answer/9888072
-13. Samsung Developers forum, TMDB app rejected: https://forum.developer.samsung.com/t/movie-list-app-copyright-tmdb-api/19608
-14. Trakt support, metadata sources: https://support.trakt.tv/support/solutions/articles/70000260936-how-does-movie-tv-show-information-metadata-get-updated-how-can-i-refresh-or-sync-trakt-to-tmdb-
-15. Wikipedia, Letterboxd: https://en.wikipedia.org/wiki/Letterboxd
-16. Wikipedia, TV Time: https://en.wikipedia.org/wiki/TV_Time
-17. TheTVDB FAQ: https://support.thetvdb.com/kb/faq.php?id=77
-18. IMDb help, using photos from IMDb: https://help.imdb.com/article/imdb/general-information/can-i-use-a-photo-from-your-site-for-my-web-site-or-publication/G7V6PHXKDLLK7AS6
-19. TVmaze forum, posters on a commercial website: https://www.tvmaze.com/threads/6552/using-posters-and-data-from-tvmaze-api-on-a-commercial-website
-20. Alamy, third-party rights and clearance: https://www.alamy.com/blog/a-guide-to-third-party-rights-in-images-and-rights-clearance
-21. Warner Bros clip and still licensing: https://www.warnerbros.com/studio/services/clip-and-still-licensing
-22. Queensland Law Handbook, exceptions to copyright infringement: https://queenslandlawhandbook.org.au/the-queensland-law-handbook/your-rights-and-responsibilities/copyright-and-moral-rights/exceptions-to-copyright-infringement/
-23. Australian Society of Authors, rates of pay: https://www.asauthors.org.au/rates-of-pay
-24. ManyPixels, custom illustration cost 2026: https://www.manypixels.co/blog/illustrations/custom-illustration-cost
-25. Guess the Movie, App Store listing: https://apps.apple.com/au/app/guess-the-movie/id375276782
+2. TMDB API Terms of Use (could not be read automatically on 11 Nov 2026; read it yourself): https://www.themoviedb.org/api-terms-of-use
+3. TMDB support thread, rights documents and App Store experiences: https://www.themoviedb.org/talk/530525ae9251413488038dc4
+4. TMDB API for Business: https://tmdb.org/api-for-business
+5. api.market, Best Movie APIs in 2026: https://api.market/blog/sleeyax/entertainment/best-movie-apis
+6. Apple App Review Guidelines (2.3.9, 5.2, 5.2.1, 5.2.2): https://developer.apple.com/app-store/review/guidelines/ and https://developer.apple.com/support/downloads/terms/app-review-guidelines/App-Review-Guidelines-English-UK.pdf
+7. Apple Developer Forums, TMDB app rejected for copyright: https://developer.apple.com/forums/thread/649351
+8. Apple Developer Forums, 5.2.1 rejection over API logos: https://developer.apple.com/forums/thread/718427
+9. Apple App Store content dispute form: https://www.apple.com/legal/intellectual-property/dispute-forms/app-store/app-store-dispute.html
+10. TechCrunch, TV Time removed from App Store (20 Nov 2024): https://techcrunch.com/2024/11/20/tv-time-points-to-apples-significant-power-over-developers-after-being-removed-from-app-store
+11. Google Play intellectual property policy (copyright and trademark): https://support.google.com/googleplay/android-developer/answer/9888072
+12. Samsung Developers forum, TMDB app rejected: https://forum.developer.samsung.com/t/movie-list-app-copyright-tmdb-api/19608
+13. Trakt support, metadata sources: https://support.trakt.tv/support/solutions/articles/70000260936-how-does-movie-tv-show-information-metadata-get-updated-how-can-i-refresh-or-sync-trakt-to-tmdb-
+14. Wikipedia, Letterboxd: https://en.wikipedia.org/wiki/Letterboxd
+15. Wikipedia, TV Time: https://en.wikipedia.org/wiki/TV_Time
+16. TheTVDB FAQ: https://support.thetvdb.com/kb/faq.php?id=77
+17. IMDb help, using photos from IMDb: https://help.imdb.com/article/imdb/general-information/can-i-use-a-photo-from-your-site-for-my-web-site-or-publication/G7V6PHXKDLLK7AS6
+18. TVmaze forum, posters on a commercial website: https://www.tvmaze.com/threads/6552/using-posters-and-data-from-tvmaze-api-on-a-commercial-website
+19. Alamy, third-party rights and clearance: https://www.alamy.com/blog/a-guide-to-third-party-rights-in-images-and-rights-clearance
+20. Warner Bros clip and still licensing: https://www.warnerbros.com/studio/services/clip-and-still-licensing
+21. Queensland Law Handbook, exceptions to copyright infringement: https://queenslandlawhandbook.org.au/the-queensland-law-handbook/your-rights-and-responsibilities/copyright-and-moral-rights/exceptions-to-copyright-infringement/
+22. Australian Society of Authors, rates of pay: https://www.asauthors.org.au/rates-of-pay
+23. ManyPixels, custom illustration cost 2026: https://www.manypixels.co/blog/illustrations/custom-illustration-cost
+24. Guess the Movie, App Store listing: https://apps.apple.com/au/app/guess-the-movie/id375276782
+25. Arts Law Centre of Australia, unauthorised use of your image: https://www.artslaw.com.au/?p=11578
+26. JustWatch, streaming service integration docs: https://apis.justwatch.com/docs/streaming_service
+27. JustWatch imprint: https://www.justwatch.com/kw/imprint
