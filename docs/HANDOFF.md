@@ -458,6 +458,14 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - Live on reeldinner.com from 21a3d30 (deploy 6af3bd3a), pushed to main. Not yet checked on a real phone.
 - Next: Josh's open menu jobs listed under "11 Nov, 10:40am".
 
+## 11 Nov: unprinted card dishes cut from three hand-built menus (branch fix21-dishes, not deployed)
+
+- Josh asked for the card dishes left on purpose above to go. Cut from data/films.json, then build-data. Warriors: Coney Island crinkle fries, Boardwalk clam strips, Hot potato knishes, Late-night chopped steak heroes, Fairy floss and toffee apples, Chocolate malted. Godfather: Sicilian orange and fennel salad, Fried calamari, Straw-bottle Chianti sangria with oranges. Harry Met Sally: Potato knish.
+- Kept: Louis' veal scaloppine. The Godfather's printed front prints it ("The Veal", Veal scaloppine 1.72, and "the veal" in the family dinner), so it was never an unprinted dish. It is still not on the phone menu, Prep sheet or picker, which read the formats.js groups. Josh to say if he wants it cooked.
+- The phone menu, Director's cut picker, Prep sheet and shopping list never showed these dishes (they read formats.js groups and recipes2). What changes is dish-names.json and dish-notes.json, so the Candy bar search and seasonal shelves no longer find these films by the cut dishes.
+- No recipes, recipes2, diet or edition entries named the cut dishes. audit/cards for the three films now list the current card dishes. poster-briefs.json and the sweep patches still name them; both are closed records the page never reads.
+- Printed PDFs pixel identical before and after; phone menu and Prep sheet text identical.
+
 ## 11 Nov, noon: known menu glitches fixed (start here in the next chat)
 
 Live on reeldinner.com from ab66182 (deploy 6af3cc50, app.js?v=8b7eb073), pushed to main (Josh, 11 Nov 11:51am: deploy). Before and after shots went to Josh in chat. Not yet checked on a real phone.
