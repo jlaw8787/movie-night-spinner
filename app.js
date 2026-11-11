@@ -3764,6 +3764,8 @@ function warmOffline(reg){
   if(window.LIB_VER)for(const k in LIB_VER)u.push("menu-formats/"+k+".js?v="+LIB_VER[k]);
   if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
   reg.active.postMessage({warm:u});
+  /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
+  ["https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js","https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"].forEach(x=>{try{fetch(x,{mode:"no-cors"}).catch(()=>{})}catch(e){}});
   /* a detached copy of each shop photo picks the same size the page would */
   document.querySelectorAll("#walkin img,#viewShop img,#viewCrave img").forEach(im=>{if(im.complete&&im.naturalWidth)return;const i=new Image();if(im.sizes)i.sizes=im.sizes;if(im.srcset)i.srcset=im.srcset;i.src=im.getAttribute("src")});
   (window.SNACKS||[]).forEach(x=>{if(x.img)new Image().src=x.img});
@@ -3775,6 +3777,9 @@ if("serviceWorker" in navigator){navigator.serviceWorker.ready.then(reg=>setTime
 function netMarks(){const off=navigator.onLine===false;document.querySelectorAll(".off-note").forEach(n=>{n.hidden=!off});
   document.querySelectorAll("[data-net]").forEach(b=>{if(off&&!b.disabled){b.disabled=true;b.dataset.offdis="1"}else if(!off&&b.dataset.offdis){b.disabled=false;delete b.dataset.offdis}})}
 addEventListener("online",netMarks);addEventListener("offline",netMarks);
+/* review 22: the sync note keeps its promise. Back online, changes saved while offline go up, and the note follows the signal */
+addEventListener("online",()=>{try{if(member&&member.pin&&syncState!=="saved")pushSync()}catch(e){}});
+["online","offline"].forEach(ev=>addEventListener(ev,()=>{try{const el=document.getElementById("syncNote");if(el)el.textContent=syncNote()}catch(e){}}));
 setKidsUI();if(kidsMode)setList();pullSync();
 try{if(!localStorage.getItem("mns-welcome"))setTimeout(()=>{const w=document.getElementById("walkin");if(w&&!w.hidden)document.addEventListener("walkin-done",()=>setTimeout(showWelcome,300),{once:true});else showWelcome()},400)}catch(e){}
 /* a shared film link always opens on its menu, whatever tab was open last */try{const v=new URLSearchParams(location.search).get("film")?"wheel":localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}

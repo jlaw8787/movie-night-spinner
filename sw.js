@@ -8,7 +8,7 @@
    Photos: saved on first view in their own store that updates never wipe, capped so it can't grow forever. Posters from TMDB are saved
    with permission headers, so a saved poster still works in Save PDF and Save image.
    Fonts and libraries: saved on first use. */
-const VERSION = 'mns-230e0862';
+const VERSION = 'mns-ab41d9ba';
 const FILMS_CACHE = 'mns-films';
 const IMAGES_CACHE = 'mns-images';
 const IMAGES_MAX = 600;
@@ -25,9 +25,10 @@ self.addEventListener('activate', e => {
       if (k === VERSION || k === FILMS_CACHE || k === IMAGES_CACHE) continue;
       /* carry saved film files over from the old store before it goes, so offline menus survive this update */
       const old = await caches.open(k);
-      for (const r of await old.keys()) if (FILM_RX.test(new URL(r.url).pathname) && !(await films.match(r, {ignoreSearch: true}))) { const res = await old.match(r); if (res) await films.put(r, res); }
+      for (const r of await old.keys()) if (FILM_RX.test(new URL(r.url).pathname) && !(await films.match(r, {ignoreSearch: true}))) { const res = await old.match(r); if (res) { try { await films.put(r, res); } catch (err) {} } }
       await caches.delete(k);
     }
+    try { await imageTrim(); } catch (err) {}
     await self.clients.claim();
   })());
 });
@@ -39,8 +40,11 @@ const filmFetch = async req => {
     const res = await fetch(req);
     if (res.ok) {
       const path = new URL(req.url).pathname;
-      for (const r of await cache.keys()) if (new URL(r.url).pathname === path) await cache.delete(r);
-      await cache.put(req, res.clone());
+      /* review 22: save the new copy first, then drop older ones, so a full store never leaves a menu with nothing */
+      try {
+        await cache.put(req, res.clone());
+        for (const r of await cache.keys()) if (new URL(r.url).pathname === path && r.url !== req.url) await cache.delete(r);
+      } catch (err) {}
     }
     return res;
   } catch (err) { return (await cache.match(req, {ignoreSearch: true})) || Response.error(); }
@@ -72,10 +76,17 @@ const cacheFirst = async req => {
    A TMDB poster is fetched with permission headers so the saved copy can be drawn into a PDF; offline with nothing saved, the page shows its placeholder */
 let imgPuts = 0;
 const imgFresh = new Set();
+/* review 22: the count restarts whenever the browser stops the worker, so the trim also runs on each start and on activate.
+   The site's own photos are few and needed for the shop, so TMDB photos go first, oldest saved first */
 const imageTrim = async cache => {
-  const keys = await cache.keys();
-  for (const r of keys.slice(0, Math.max(0, keys.length - IMAGES_MAX))) await cache.delete(r);
+  cache = cache || await caches.open(IMAGES_CACHE);
+  const keys = await cache.keys(), over = keys.length - IMAGES_MAX;
+  if (over <= 0) return;
+  const own = r => new URL(r.url).origin === self.location.origin;
+  const order = keys.filter(r => !own(r)).concat(keys.filter(own));
+  for (const r of order.slice(0, over)) await cache.delete(r);
 };
+let trimmed = false;
 const imageFetch = async (req, e) => {
   const cache = await caches.open(IMAGES_CACHE);
   const url = new URL(req.url), same = url.origin === self.location.origin;
@@ -84,9 +95,10 @@ const imageFetch = async (req, e) => {
     /* TMDB only sends permission headers when asked, so a poster the browser already holds from a plain load fails here once: ask the network again */
     const cors = how => fetch(new Request(req.url, {mode: 'cors', credentials: 'omit', cache: how}));
     const res = same ? await fetch(req) : await cors('default').catch(() => cors('reload')).catch(() => fetch(req));
-    if (res.ok && res.type !== 'opaque') {
-      await cache.put(req.url, res.clone());
-      if (++imgPuts % 50 === 0) imageTrim(cache).catch(() => {});
+    if (res.ok && res.status !== 206 && res.type !== 'opaque') {
+      /* review 22: a full store must not cost the photo it just fetched */
+      try { await cache.put(req.url, res.clone()); } catch (err) {}
+      if (!trimmed || ++imgPuts % 50 === 0) { trimmed = true; imageTrim(cache).catch(() => {}); }
     }
     return res;
   };
@@ -103,18 +115,19 @@ const warm = async urls => {
   const have = new Set(), byPath = {};
   for (const r of await cache.keys()) { have.add(r.url); const p = new URL(r.url).pathname; (byPath[p] = byPath[p] || []).push(r); }
   const todo = urls.map(u => new URL(u, self.location.href).href).filter(u => !have.has(u));
-  let i = 0, saved = 0;
+  let i = 0, saved = 0, full = false;
   const lane = async () => {
     while (i < todo.length) {
       const u = todo[i++];
       try {
         const res = await fetch(u);
         if (!res.ok) continue;
-        /* an older copy of the same file goes, as in filmFetch */
-        for (const r of byPath[new URL(u).pathname] || []) await cache.delete(r);
-        await cache.put(u, res);
+        /* review 22: save first, then the older copy of the same file goes, as in filmFetch. A full store ends the whole save */
+        try { await cache.put(u, res); } catch (err) { full = true; break; }
+        for (const r of byPath[new URL(u).pathname] || []) if (r.url !== u) await cache.delete(r);
         saved++;
       } catch (err) { if (!navigator.onLine) break; }
+      if (full) break;
     }
   };
   await Promise.all([lane(), lane(), lane(), lane()]);
