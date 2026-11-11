@@ -84,7 +84,12 @@ function fitBox(b){if(window.__fmtTrimReset)window.__fmtTrimReset(b);const tray=
   /* review 15: every canteen film lost a note or its showtime cue here, and a note clamped to two lines on screen printed in full on paper.
      Notes now show whole or not at all, and before one goes the tray takes width from the poster beside it */
   const face=b.closest(`[${A}-face]`),hero=face&&face.querySelector("[data-hero]"),tb=b.parentElement&&b.parentElement.hasAttribute("data-shift")?b.parentElement:null;
+  /* review 21: when the poster gives the tray its width it gets shorter too, and the space it leaves under it (up to 168px, Nativity!) takes a
+     film still, so the left column never ends on a bare block */
+  const under=face&&face.querySelector("[data-under]");
   const shift=d=>{if(!hero)return;const [w,h]=hero.dataset.hero.split(",").map(Number);hero.style.width=(w-d)+"px";hero.style.height=Math.round(h-d*1.5)+"px";
+    if(under){const top=parseFloat(hero.style.top)+Math.round(h-d*1.5)+16,room=+under.dataset.under-top;
+      Object.assign(under.style,room>=90?{display:"block",left:hero.style.left,top:top+"px",width:(w-d)+"px",height:room+"px"}:{display:"none"})}
     face.querySelectorAll("[data-shift]").forEach(x=>{const [l,ww]=x.dataset.shift.split(",").map(Number);x.style.left=(l-d)+"px";x.style.width=(ww+d)+"px"})};
   if(tb)shift(0);shrink();
   if(tb&&hero)for(let d=14;d<=112&&(over(b)||k<.8);d+=14){shift(d);shrink()}
@@ -192,6 +197,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const RX=colX,RR=1046,SW=172,SX=RR-SW,TW=SX-14-RX,LW=SW;
   const CX=heroPoster?SX:30,CW=heroPoster?SW:340;
   const sideFrame=gi===0?`border:2px solid ${ink};box-shadow:0 0 0 4px ${paper},0 0 0 5px ${ink};`:gi===2?`border:1px solid ${mix(ink,paper,.5)};`:"";
+  const underSrc=heroPoster&&stills[0]?ctx.img(stills[0],"w780"):"";
+  const underPic=underSrc?`<div data-under="${H-14}" style="position:absolute;left:${hL}px;top:${H}px;width:${hW}px;height:0;display:none;overflow:hidden;background:#000;box-sizing:border-box;${sideFrame}"><img crossorigin="anonymous" alt="" src="${underSrc}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${photoF}"></div>`:"";
   const sidePic=sideSrc?`<div style="position:absolute;left:${CX}px;top:430px;width:${CW}px;height:206px;overflow:hidden;background:#000;box-sizing:border-box;${sideFrame}"><img crossorigin="anonymous" alt="" src="${sideSrc}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${photoF}"></div>`:"";
 
   /* logo panel */
@@ -250,7 +257,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
-    ${hero}${heroPoster?"":sidePic}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}
+    ${hero}${heroPoster?underPic:sidePic}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}
     <div data-vig style="position:absolute;inset:0;background:${vign};pointer-events:none"></div>${xerox}</div>`;
   return {w:W,h:H,faces:[face]};
 };
