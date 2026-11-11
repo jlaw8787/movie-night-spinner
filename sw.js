@@ -3,10 +3,17 @@
    Scripts carry a ?v= stamp that changes whenever they change, so a saved copy is always safe to use.
    Film files: carry a ?v fingerprint of their content. They live in their own store that app updates never wipe,
    so saved menus survive updates; a changed film is fetched fresh, and offline the last saved copy is used.
-   Photos, fonts and libraries: saved on first use. */
-const VERSION = 'mns-e27590d1';
+   Menu layouts and the dish lists carry a ?v stamp too and live in the same store.
+   After the first visit the page sends the full list and the worker saves anything missing in the background, so every film works offline.
+   Photos: saved on first view in their own store that updates never wipe, capped so it can't grow forever. Posters from TMDB are saved
+   with permission headers, so a saved poster still works in Save PDF and Save image.
+   Fonts and libraries: saved on first use. */
+const VERSION = 'mns-bc5d6a72';
 const FILMS_CACHE = 'mns-films';
-const FILM_RX = /data\/film\/[^/]+\.json$/;
+const IMAGES_CACHE = 'mns-images';
+const IMAGES_MAX = 600;
+const FILM_RX = /data\/film\/[^/]+\.json$|data\/(dish-names|dish-notes|trivia)\.json$|(^|\/)(menu-)?formats\/[^/]+\.js$/;
+const IMG_RX = /\.(webp|jpe?g|png|gif|svg|avif)$/i;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'assets/app/icon-192.png', 'assets/app/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -15,7 +22,7 @@ self.addEventListener('activate', e => {
   e.waitUntil((async () => {
     const films = await caches.open(FILMS_CACHE);
     for (const k of await caches.keys()) {
-      if (k === VERSION || k === FILMS_CACHE) continue;
+      if (k === VERSION || k === FILMS_CACHE || k === IMAGES_CACHE) continue;
       /* carry saved film files over from the old store before it goes, so offline menus survive this update */
       const old = await caches.open(k);
       for (const r of await old.keys()) if (FILM_RX.test(new URL(r.url).pathname) && !(await films.match(r, {ignoreSearch: true}))) { const res = await old.match(r); if (res) await films.put(r, res); }
@@ -61,6 +68,63 @@ const cacheFirst = async req => {
   else if (res.type === 'opaque' && !hit) cache.put(req, res.clone());
   return res;
 };
+/* photos: saved copy first. Our own photos refresh in the background in case one was replaced; TMDB paths never change.
+   A TMDB poster is fetched with permission headers so the saved copy can be drawn into a PDF; offline with nothing saved, the page shows its placeholder */
+let imgPuts = 0;
+const imgFresh = new Set();
+const imageTrim = async cache => {
+  const keys = await cache.keys();
+  for (const r of keys.slice(0, Math.max(0, keys.length - IMAGES_MAX))) await cache.delete(r);
+};
+const imageFetch = async (req, e) => {
+  const cache = await caches.open(IMAGES_CACHE);
+  const url = new URL(req.url), same = url.origin === self.location.origin;
+  const hit = await caches.match(req.url);
+  const get = async () => {
+    /* TMDB only sends permission headers when asked, so a poster the browser already holds from a plain load fails here once: ask the network again */
+    const cors = how => fetch(new Request(req.url, {mode: 'cors', credentials: 'omit', cache: how}));
+    const res = same ? await fetch(req) : await cors('default').catch(() => cors('reload')).catch(() => fetch(req));
+    if (res.ok && res.type !== 'opaque') {
+      await cache.put(req.url, res.clone());
+      if (++imgPuts % 50 === 0) imageTrim(cache).catch(() => {});
+    }
+    return res;
+  };
+  if (hit) {
+    if (same && !imgFresh.has(req.url)) { imgFresh.add(req.url); e.waitUntil(get().catch(() => {})); }
+    return hit;
+  }
+  try { return await get(); } catch (err) { return Response.error(); }
+};
+/* the page sends every film file, layout and dish list once it's in; anything not saved yet is fetched quietly, a few at a time */
+let warming = null;
+const warm = async urls => {
+  const cache = await caches.open(FILMS_CACHE);
+  const have = new Set(), byPath = {};
+  for (const r of await cache.keys()) { have.add(r.url); const p = new URL(r.url).pathname; (byPath[p] = byPath[p] || []).push(r); }
+  const todo = urls.map(u => new URL(u, self.location.href).href).filter(u => !have.has(u));
+  let i = 0, saved = 0;
+  const lane = async () => {
+    while (i < todo.length) {
+      const u = todo[i++];
+      try {
+        const res = await fetch(u);
+        if (!res.ok) continue;
+        /* an older copy of the same file goes, as in filmFetch */
+        for (const r of byPath[new URL(u).pathname] || []) await cache.delete(r);
+        await cache.put(u, res);
+        saved++;
+      } catch (err) { if (!navigator.onLine) break; }
+    }
+  };
+  await Promise.all([lane(), lane(), lane(), lane()]);
+  for (const c of await self.clients.matchAll()) c.postMessage({warmed: saved, missing: todo.length - saved});
+};
+self.addEventListener('message', e => {
+  if (!e.data || !Array.isArray(e.data.warm)) return;
+  if (!warming) warming = warm(e.data.warm).finally(() => { warming = null; });
+  e.waitUntil(warming);
+});
 self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
@@ -70,6 +134,6 @@ self.addEventListener('fetch', e => {
   if (same && FILM_RX.test(url.pathname)) return e.respondWith(filmFetch(req));
   if (same && url.searchParams.has('v')) return e.respondWith(cacheFirst(req));
   if (same && /\.(js|json|webmanifest)$/.test(url.pathname)) return e.respondWith(staleWhileRevalidate(req, e));
-  /* posters are left to the browser: routing them through here broke saving the menu as an image */
+  if ((same && IMG_RX.test(url.pathname) && !url.searchParams.has('v')) || url.host === 'image.tmdb.org') return e.respondWith(imageFetch(req, e));
   if (same || /fonts\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com/.test(url.host)) return e.respondWith(cacheFirst(req));
 });
