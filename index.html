@@ -68,6 +68,8 @@
 .reqm .req-go:focus-visible,.reqm .req-thanks button:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
 .reqm .req-go[disabled]{opacity:.6;cursor:default}
 .reqm .req-err{margin:10px 0 0;font-size:14px;color:#ff8f8a}
+/* offline: a calm note where something needs the internet */
+.off-note{margin:10px 0 0;font-size:14px;line-height:1.4;opacity:.85}.syncbox .off-note{margin:0 0 12px}
 .reqm .req-thanks{text-align:center;padding:18px 0 6px}
 .reqm .req-thanks h4{font:400 24px/1.15 var(--f-disp);letter-spacing:.01em;text-transform:none;color:#f3dfb4;margin:0 0 8px}
 .reqm .req-thanks p{margin:0 0 16px;font-size:16px;color:#f1e3c4}
@@ -3104,7 +3106,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=a83f26f6" defer></script>
 <script src="formats-core.js?v=85828d77" defer></script>
-<script src="app.js?v=a9a03260" defer></script>
+<script src="app.js?v=646a0d51" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
@@ -3144,7 +3146,8 @@ html,body{overflow-x:clip}
       <textarea id="reqNote" name="note" maxlength="500"></textarea>
       <p class="tp req-priv">We only use this to pick films to add. <a href='/privacy'>Privacy policy</a></p>
       <p class="req-err" id="reqErr" role="alert" hidden></p>
-      <button type="submit" class="req-go" id="reqGo">Send request</button>
+      <p class="off-note" hidden>You're offline. Requests need the internet, so send it once you're back online.</p>
+      <button type="submit" class="req-go" id="reqGo" data-net>Send request</button>
     </form>
     <div class="req-thanks" id="reqThanks" role="status" aria-live="polite" hidden>
       <h4>Thanks, request received</h4>
