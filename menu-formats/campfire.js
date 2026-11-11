@@ -343,6 +343,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const picks=((SO.s||[3,4,5]).filter(i=>ph.list[i]&&i!==1).length===Math.min(3,pool.length)?(SO.s||[3,4,5]).filter(i=>ph.list[i]&&i!==1):pool.slice(0,3)).slice(0,3);
   const strip=!!SS&&hp&&picks.length>=2,sigLogo=strip&&SO.sig!=="name"?logoUrl(ctx):"",sigFull=SO.sig==="full",SV=SO.v||"row",flip=!!SO.flip;
   const lAsp=ctx.logo&&ctx.logo[1]&&ctx.logo[2]?ctx.logo[1]/ctx.logo[2]:1.6,sigW=lAsp>3?160:118;
+  /* 12 Nov, Josh's iPhone: E.T.'s signature lost the feet of its letters, since the 52px crop ends above the end of the top line.
+     sh in the strip flavour is that film's own crop height, measured from where the logo's top line ends (scripts/sig-crops.py) */
+  const sigH=SO.sh||52;
   const sigCol=C.ink;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C.ink)}
@@ -359,7 +362,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:478}px;width:180px;height:${flip?290:268}px;overflow:hidden;mix-blend-mode:multiply;display:flex;flex-direction:column">
       <div data-fs="15" data-min="13" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="15" style="margin-top:6px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
-      ${sigLogo?`<div style="margin:14px 0 0 auto;width:${sigFull?150:sigW}px;height:${sigFull?70:52}px;overflow:hidden;transform:rotate(${flip?3:-4}deg)"><img alt="${T(F.note.by)}" crossorigin="anonymous" src="${sigLogo}" style="display:block;${sigFull?"width:100%;height:100%;object-fit:contain;object-position:right center":`width:${sigW}px;height:auto`};filter:brightness(0);opacity:.82"></div>`:`<div style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};margin-top:8px;transform:rotate(-2deg)">${T(F.note.by)}</div>`}
+      ${sigLogo?`<div style="margin:14px 0 0 auto;width:${sigFull?150:sigW}px;height:${sigFull?70:sigH}px;overflow:hidden;transform:rotate(${flip?3:-4}deg)"><img alt="${T(F.note.by)}" crossorigin="anonymous" src="${sigLogo}" style="display:block;${sigFull?"width:100%;height:100%;object-fit:contain;object-position:right center":`width:${sigW}px;height:auto`};filter:brightness(0);opacity:.82"></div>`:`<div style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};margin-top:8px;transform:rotate(-2deg)">${T(F.note.by)}</div>`}
     </div>
     <div style="position:absolute;left:38px;top:770px;width:596px">
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden;width:596px">${V.b}</div></div>
