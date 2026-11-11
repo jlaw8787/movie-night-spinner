@@ -5,7 +5,7 @@
 
 ## Current film-world menu asset standard, 19 October 2026
 
-For the custom HTML/CSS menus in `formats.js`, use authentic film imagery wherever a recognisable sign, logo, prop or setting needs to match the movie. Prefer official TMDB assets or an actual film frame over a hand-drawn approximation or generated imitation. Crop and align the source image with the layout; preserve its recognisable shapes, lettering and proportions. Record the source for any locally stored detail image.
+For the custom HTML/CSS menus in `formats.js`, use film imagery only where a sign, prop or setting needs to match the movie, and only as an official TMDB asset or an actual film frame, used as supplied. Crop and align it with the layout without redrawing it. Never draw, generate or imitate a film's title lettering or logo: text the menu sets itself, the film title included, uses the menu's own fonts, as the original type posters do (see the 11 Nov 2026 update in `docs/ARTWORK-RIGHTS.md`). Record the source for any locally stored detail image.
 
 Apply this where required by each menu, rather than adding a logo to every design. Keep layouts individual to the film and check the result in both the phone view and printable menu. Preserve canonical recipes, methods and shopping lists.
 
@@ -22,7 +22,7 @@ The older poster-lane instructions below remain historical.
 
 ## Standard
 
-Each film gets an individually art-directed A4 menu poster. Use the approved Warriors print as the quality benchmark: cinematic artwork, recognisable film typography, clear food hierarchy and legible descriptions. A category recolour or clip-art substitute is not a completed film.
+Each film gets an individually art-directed A4 menu poster. Since 11 Nov 2026 that is an original type poster drawn in code (`scripts/make-type-posters.cjs`): the title and year in the menu's own display font, the menu's colours, one simple drawn motif, clear food hierarchy and legible descriptions. No film logos, imitated title lettering, characters or likenesses. A category recolour or clip-art substitute is not a completed film.
 
 ## First batch
 
