@@ -51,8 +51,9 @@
 .req-shop{font:600 14px var(--f-body);min-height:40px;padding:8px 14px;border-radius:99px;border:1px solid var(--brass);background:transparent;color:var(--bulb);cursor:pointer}
 .req-shop:focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
 /* review 21: the request button sits under the tools, not in the sticky tool bar, so it never covers the aisle signs or squeezes the search box */
-#viewShop .req-line{order:8;margin:4px 0 10px;font:400 15px var(--f-body);color:var(--gv-cream,#fbf7ea);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+#viewShop .req-line{margin:4px 0 10px;font:400 15px var(--f-body);color:var(--gv-cream,#fbf7ea);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
 #viewShop .req-line .req-shop{min-height:44px}
+@media (max-width:700px){#viewShop .req-line{order:8}}
 .credit-priv{opacity:.85;margin-bottom:0;font-size:14px}.credit-priv a{display:inline-block;min-height:44px;line-height:44px;padding:0 10px}.credit-priv .credit-sep{display:inline-block;margin:0 8px}
 .member-sync .sync-del{border-color:#e5484d;color:#ff8f8a;background:transparent}.member-sync .sync-del.arm{background:#c62a2f;border-color:#c62a2f;color:#fff}
 .member-sync .sync-priv{flex-basis:100%;margin:6px 0 0;font-size:14px}.member-sync .sync-priv a{color:inherit;display:inline-block;min-height:44px;line-height:44px}
@@ -3105,9 +3106,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=2c1f086c" defer></script>
-<script src="formats-core.js?v=012fa5c9" defer></script>
-<script src="app.js?v=00ee24a5" defer></script>
+<script src="films.js?v=33501cdd" defer></script>
+<script src="formats-core.js?v=85828d77" defer></script>
+<script src="app.js?v=0409bb54" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
