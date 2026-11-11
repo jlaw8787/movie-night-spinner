@@ -858,7 +858,7 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
     if(seen<w-1&&(seen<=0||(words<=2||seen/w<.25)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   off.forEach(e=>e.classList.add("pv-off"))}
-function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;
+function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
   if(fs.length){pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
     card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
@@ -1476,15 +1476,42 @@ function libPhotoPass(card,L,poster){
   if(IOS_SAFARI)iosBakeFilters(card);
 }
 const IOS_SAFARI=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+/* review 21: Josh still saw blurry, zoomed-in stills on his iPhone (Logan's strip and hero, 11 Nov). Two gaps in the 8 Nov fix:
+   only filtered photos were baked, but iPhone Safari also draws an object-fit: cover photo inside the scaled card as a zoomed corner;
+   and the copy for the canvas was fetched with CORS from a cache that may hold the plain (no CORS) copy, so it failed quietly and the
+   photo kept its filter. Now every cropped photo is baked to its frame, the CORS copy is fetched fresh, and if that still fails the
+   filter comes off, so the photo shows whole and sharp in plain colour rather than zoomed. */
+let iosQ=Promise.resolve();
+/* review 21: and a photo placed while the card is still settling can be painted from a stale, zoomed tile. A border nudge a moment later
+   (an outline does not do it) makes Safari paint the photo again; the border is taken straight back off */
+function iosRepaint(n){[200,900].forEach(ms=>setTimeout(()=>{if(!n.isConnected)return;n.style.border="0.5px solid transparent";requestAnimationFrame(()=>requestAnimationFrame(()=>{n.style.border=""}))},ms))}
 function iosBakeFilters(card){
-  card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.baked)return;
-    const cs=getComputedStyle(i);if(!cs.filter||cs.filter==="none")return;
-    const k=/blur\(/.test(cs.filter)?1:2,snap={filter:cs.filter,width:parseFloat(cs.width)*k+"px",height:parseFloat(cs.height)*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen; blur radii stay true at 1x */
+  card.querySelectorAll(".fx-face img").forEach(i=>{if(i._bsrc&&i._bsrc===i.src)return;
+    const cs=getComputedStyle(i),filt=cs.filter&&cs.filter!=="none",crop=/cover|contain|none|scale-down/.test(cs.objectFit);if(!filt&&!crop)return;
+    if(!i.complete||!i.naturalWidth){if(!i.dataset.bwait){i.dataset.bwait="1";i.addEventListener("load",()=>{delete i.dataset.bwait;iosBakeFilters(card)},{once:true})}return}
+    /* review 21: the real cause of Role Models' zoomed strip. A layout's own trim (campfire's __fmtLift.trim, which crops black bars by sizing
+       the photo up) ran after the bake, on the baked copy, read its pale vignette as bars and blew it up. So a photo waits for its trim to
+       finish before it is baked, and the baked copy is marked trimmed and carries no onload, so the trim never runs on it */
+    if(/__fmtLift/.test(i.getAttribute("onload")||"")&&i.dataset.trim!=="1"){setTimeout(()=>iosBakeFilters(card),500);return}
+    const fw=i.offsetWidth||parseFloat(cs.width),fh=i.offsetHeight||parseFloat(cs.height);
+    /* review 21: a face that is not laid out yet (the curtain is still shut after a spin) has no size; it is baked on the next layout, never skipped for good */
+    if(!fw||!fh||!isFinite(fw)||!isFinite(fh))return;
+    const big=fw*fh>2.5e6;if(big&&!filt)return;/* full-page textures are not cropped photos */
+    /* review 21: baked at exactly the frame size. iPhone Safari sometimes paints a photo in a turned, scaled frame at its own natural size,
+       ignoring the frame (the zoomed corner); a picture the same size as its frame looks right either way */
+    const k=1,snap={filter:filt?cs.filter:"brightness(1)",width:fw*k+"px",height:fh*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen, unless that is a very big canvas */
     const src=i.currentSrc||i.src;if(!src||/^data:/.test(src))return;
-    i.dataset.baked="1";
-    const im=new Image();im.crossOrigin="anonymous";
-    im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)return;i.src=u;i.removeAttribute("srcset");i.style.filter="none";i.style.objectFit="fill"}catch(e){}};
-    im.src=src});
+    i._bsrc=i.src;i.dataset.baked="1";
+    const give=()=>{if(filt)i.style.filter="none"};
+    /* one at a time, so a menu's photos never hold several big canvases at once */
+    iosQ=iosQ.then(()=>new Promise(done=>{const im=new Image();im.crossOrigin="anonymous";
+      im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)give();else{
+        /* review 21: Safari kept painting the old, zoomed picture when the source changed in place inside a turned frame on the scaled card
+           (Role Models' taped strip, seen in WebKit too). The baked picture goes into a fresh img that replaces the old one once it has decoded */
+        const n=i.cloneNode(false);n.removeAttribute("srcset");n.removeAttribute("onload");n.removeAttribute("onerror");n.dataset.trim="1";n.style.filter="none";n.style.objectFit="fill";n.style.objectPosition="50% 50%";n.src=u;n._bsrc=n.src;
+        const put=()=>{if(i.isConnected)i.replaceWith(n);iosRepaint(n)};(n.decode?n.decode().then(put,put):put())}}catch(e){give()}done()};
+      im.onerror=()=>{give();done()};
+      im.src=/^https?:/.test(src)&&!src.startsWith(location.origin)?src+(src.includes("?")?"&":"?")+"cors=1":src}))});
 }
 /* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
    Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */
@@ -2991,7 +3018,9 @@ function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidt
     if(br<1){x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h)}}
   /* review 13: a logo with a drop shadow (invite) is see-through around its letters, and a JPEG turned that into a black plate */
   try{let see=/drop-shadow/.test(f);if(!see){const d=x.getImageData(0,0,w,h).data;for(let i=3;i<d.length;i+=4*97)if(d[i]<250){see=true;break}}
-    return see?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.9)}catch(e){return null}}
+    /* review 21: the canvas is emptied straight after, since iPhone Safari caps the canvas memory a page may hold and a menu or two of
+       photos filled it, after which every bake came back empty ("data:,") and the photo stayed zoomed */
+    const u=see?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.9);c.width=c.height=0;return u&&u.length>32?u:null}catch(e){c.width=c.height=0;return null}}
 /* repeating stripes (laid paper, woven mats, kiosk planks) print as one flat smear: a straight-across or straight-down stripe
    becomes one drawn tile of its pattern, repeated as a picture. Slanted stripes are left as they are */
 /* review 13: html2canvas skips conic gradients, so a checker border (placemat) printed as plain paper: draw one tile in a canvas instead */

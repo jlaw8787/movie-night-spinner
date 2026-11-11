@@ -10,20 +10,25 @@
    trim: crops baked-in letterbox bars and dead flat edges off a still, then cover-fits what is left.
    logo: scores a title logo against a dark and a light panel (20th percentile contrast, so multicolour
    logos read in every part) and returns the better panel; a weak best score gets a fine halo, never a recolour. */
-if(!window.__fmtLift||window.__fmtLift.v<2)window.__fmtLift={v:2,
+if(!window.__fmtLift||window.__fmtLift.v<3)window.__fmtLift={v:3,
   px(img,w){const cv=document.createElement("canvas");cv.width=w;cv.height=Math.max(8,Math.round(w*img.naturalHeight/img.naturalWidth));
     const cx=cv.getContext("2d");cx.drawImage(img,0,0,cv.width,cv.height);return{d:cx.getImageData(0,0,cv.width,cv.height).data,w:cv.width,h:cv.height}},
   trim(img,tries){try{
     if(!img.naturalWidth||img.dataset.trim==="1")return;
     const box=img.parentElement,bw=+img.dataset.bw||box.clientWidth,bh=+img.dataset.bh||box.clientHeight;
     if(!bw||!bh){if((tries||0)<6)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),400);return}
+    /* review 21: iPhone Safari draws a photo that has not decoded yet as nothing, so the sample came back blank, every edge read as a black
+       bar, and the photo was blown up to its middle (the zoomed stills on Logan and Role Models). A blank sample waits and tries again,
+       and a crop that would throw away over half the picture is never made */
+    const smp=window.__fmtLift.px(img,160);{let op=0;for(let i=3;i<smp.d.length;i+=4*37)if(smp.d[i]>8)op++;if(op<smp.d.length/(4*37)*.5){if((tries||0)<8)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),350);return}}
     img.dataset.trim="1";
-    const{d,w,h}=window.__fmtLift.px(img,160),L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
+    const{d,w,h}=smp,L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
     const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(dk/n>.74&&m<34)||(v<30&&(m<46||m>238))};
     const col=x=>dead(h,y=>L(x,y)),row=y=>dead(w,x=>L(x,y));
     let l=0,r=w-1,t=0,b=h-1;
     while(l<w*.42&&col(l))l++;while(r>w*.58&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
     if(l<2&&w-1-r<2&&t<2&&h-1-b<2)return;
+    if((r-l+1)*(b-t+1)<w*h*.5)return;
     l=l?l+1:0;t=t?t+1:0;r=r<w-1?r-1:r;b=b<h-1?b-1:b;
     const kx=img.naturalWidth/w,ky=img.naturalHeight/h,x0=l*kx,y0=t*ky,cw=(r+1)*kx-x0,ch=(b+1)*ky-y0;
     const s=Math.max(bw/cw,bh/ch),pp=(getComputedStyle(img).objectPosition||"50% 40%").split(" ").map(v=>/%$/.test(v)?parseFloat(v)/100:v==="center"?.5:v==="top"||v==="left"?0:v==="bottom"||v==="right"?1:.5);
