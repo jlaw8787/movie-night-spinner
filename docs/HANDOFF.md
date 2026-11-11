@@ -550,3 +550,22 @@ Fix 1 request line on desktop, Ferris line "Lunch, then the Cubs, then the art."
 ### Josh's wishes queued
 1. Instagram Reel: smooth video of a spin landing on Jurassic Park (1993), menu, lock in, marquee showing the film. No sound (he adds music in Instagram). Use the virtual-time frame capture in /home/claude/ig/rec3.cjs approach (Emulation.setVirtualTimePolicy, 30 fps), not Playwright recordVideo, which stutters. Rig the spin with window.spinPool=()=>[FILMS.find(x=>x.id==="Jurassic Park (1993)")].
 2. A 3D video of the printed menu lifting off the page, turning 360 degrees and showing its folds.
+
+## 11 Nov, 9pm: Review 22 chat, everything merged on main (start here in the next chat)
+
+Not live yet: live is still deploy 6af42932 (hotfix-iphone). Main holds all of the below. GitHub push was refused from this session (Claude GitHub App not linked to the repo), so check origin/main is up to date before starting; if not, the work only exists if it was pushed later.
+
+### Merged on main, each reviewed by a separate reviewer
+- iPhone signature black box (E.T. and every campfire film signed with a logo): pdfFiltered's no-canvas-filter path darkened the whole rectangle. Darkening now draws source-atop, the saturation wash is cut back to the picture's outline. Proved in Playwright WebKit (iPhone 15 profile, no canvas filters there): all 50 logo-signed films bake as lettering only. Harness: /home/claude/harness/sig.cjs (gone with the session; easy to rebuild).
+- Round 2 fixes re-reviewed and passed: request line on desktop, Ferris line, TERMINAL BAR, check-browser reload (3 clean runs).
+- fix21-voucher: canteen voucher turns with its card on paper; also fixed Man of Steel, A Bronx Tale, Monsters University.
+- fix21-captions plus four review rounds: all 56 captions match their stills; the 5 repeats, 4 near-repeats and about 20 repeats carried from main cleared; dropped lines restored to the back where they do not repeat (some do not fit and are dropped by the back's fit); film combo names back (Gallipoli "The race against a horse", Empire "The asteroid field chase", Wet Hot "The white water rafting trip" are new).
+- fix21-offline plus follow-ups: storage-full safety, 600 photo cap enforced on start and activate (TMDB photos trimmed first), export libraries warmed so Save PDF works offline on first use, sync goes up when back online. First visit downloads about 5 MB and about 1000 requests in the background.
+- fin-posters: 124 original type posters (scripts/make-type-posters.cjs) replace the AI posters; McDowell's CinemaBlend frame replaced by a drawn sign; ARTWORK-RIGHTS.md has a dated note.
+- fin-marquee: palace hero rebuilt from the Commons photo; title 90px, colon split preferred.
+
+### Still open
+- ARTWORK_ROLLOUT.md lines 8 and 25 still ask for recognisable film typography; contradicts the posters change.
+- Two faint marks in palace.webp, darkest right column near the bottom rail (barely visible on desktop).
+- Branches not touched this session: fix21-fonts, fix21-app, fix21-checks, the 900-film print sweep.
+- Josh's queued wishes (Instagram Reel, 3D menu video) unchanged.
