@@ -8,7 +8,7 @@
    Photos: saved on first view in their own store that updates never wipe, capped so it can't grow forever. Posters from TMDB are saved
    with permission headers, so a saved poster still works in Save PDF and Save image.
    Fonts and libraries: saved on first use. */
-const VERSION = 'mns-52be34c6';
+const VERSION = 'mns-b7ce0fdb';
 const FILMS_CACHE = 'mns-films';
 const IMAGES_CACHE = 'mns-images';
 const IMAGES_MAX = 600;
