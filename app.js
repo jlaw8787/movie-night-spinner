@@ -3765,7 +3765,7 @@ function warmOffline(reg){
   if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
   reg.active.postMessage({warm:u});
   /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
-  ["https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js","https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"].forEach(x=>{try{fetch(x,{mode:"no-cors"}).catch(()=>{})}catch(e){}});
+  ["https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js","https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"].forEach(x=>{try{fetch(x,{mode:"cors",credentials:"omit"}).catch(()=>{})}catch(e){}});
   /* a detached copy of each shop photo picks the same size the page would */
   document.querySelectorAll("#walkin img,#viewShop img,#viewCrave img").forEach(im=>{if(im.complete&&im.naturalWidth)return;const i=new Image();if(im.sizes)i.sizes=im.sizes;if(im.srcset)i.srcset=im.srcset;i.src=im.getAttribute("src")});
   (window.SNACKS||[]).forEach(x=>{if(x.img)new Image().src=x.img});

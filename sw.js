@@ -8,7 +8,7 @@
    Photos: saved on first view in their own store that updates never wipe, capped so it can't grow forever. Posters from TMDB are saved
    with permission headers, so a saved poster still works in Save PDF and Save image.
    Fonts and libraries: saved on first use. */
-const VERSION = 'mns-ab41d9ba';
+const VERSION = 'mns-13108454';
 const FILMS_CACHE = 'mns-films';
 const IMAGES_CACHE = 'mns-images';
 const IMAGES_MAX = 600;
@@ -51,13 +51,13 @@ const filmFetch = async req => {
 };
 const networkFirst = async req => {
   const cache = await caches.open(VERSION);
-  try { const res = await fetch(req); if (res.ok) cache.put(req, res.clone()); return res; }
+  try { const res = await fetch(req); if (res.ok) cache.put(req, res.clone()).catch(() => {}); return res; }
   catch (e) { return (await cache.match(req, {ignoreSearch: true})) || (await cache.match('index.html')) || Response.error(); }
 };
 const staleWhileRevalidate = async (req, e) => {
   const cache = await caches.open(VERSION);
   const hit = await cache.match(req);
-  const net = fetch(req).then(res => { if (res.ok) cache.put(req, res.clone()); return res; });
+  const net = fetch(req).then(res => { if (res.ok) cache.put(req, res.clone()).catch(() => {}); return res; });
   if (hit) { e.waitUntil(net.catch(() => {})); return hit; }
   try { return await net; } catch (err) { return (await cache.match(req, {ignoreSearch: true})) || Response.error(); }
 };
@@ -68,8 +68,8 @@ const cacheFirst = async req => {
   if (hit && !(req.mode === 'cors' && hit.type === 'opaque')) return hit;
   let res;
   try { res = await fetch(req); } catch (err) { return (await cache.match(req, {ignoreSearch: true})) || Response.error(); }
-  if (res.ok && res.type !== 'opaque') cache.put(req, res.clone());
-  else if (res.type === 'opaque' && !hit) cache.put(req, res.clone());
+  if (res.ok && res.type !== 'opaque') cache.put(req, res.clone()).catch(() => {});
+  else if (res.type === 'opaque' && !hit) cache.put(req, res.clone()).catch(() => {});
   return res;
 };
 /* photos: saved copy first. Our own photos refresh in the background in case one was replaced; TMDB paths never change.
