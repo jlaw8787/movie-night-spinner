@@ -2827,7 +2827,7 @@ function fitMarquee(){if(_hang)return;const t=$("now"),mq=document.querySelector
   t.style.fontSize="";mq.classList.remove("one","two");hang(-1);t.dataset.fit=sig;
   const sp=[...txt].map((c,i)=>c===" "?i:-1).filter(i=>i>0);
   if(room<=0||t.scrollWidth<=room*(sp.length?.72:1))return;
-  if(sp.length){const cost=i=>Math.abs(i-n/2)-(/[:,]/.test(txt[i-1])?n/3:0),cut=sp.reduce((a,b)=>cost(b)<cost(a)?b:a);hang(cut);mq.classList.add("two")}else mq.classList.add("one");
+  if(sp.length){const cost=i=>Math.abs(i-n/2)-(txt[i-1]===":"?n/2:txt[i-1]===","?n/3:0),cut=sp.reduce((a,b)=>cost(b)<cost(a)?b:a);hang(cut);mq.classList.add("two")}else mq.classList.add("one");
   shrink()}
 
 /* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform.
