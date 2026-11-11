@@ -568,4 +568,6 @@ Not live yet: live is still deploy 6af42932 (hotfix-iphone). Main holds all of t
 - ARTWORK_ROLLOUT.md lines 8 and 25 still ask for recognisable film typography; contradicts the posters change.
 - Two faint marks in palace.webp, darkest right column near the bottom rail (barely visible on desktop).
 - Branches not touched this session: fix21-fonts, fix21-app, fix21-checks, the 900-film print sweep.
+- Next job (Josh, 11 Nov): dish notes sweep. About 240 notes across the 900 say where a dish is from instead of what is in it, often echoing the dish name (Con Air jerky "Lerner Airfield in the desert", cheeseburger "the stop at the abandoned airfield"). Rewrite the weak ones to describe the food, keep the ones that work, with a separate reviewer.
 - Josh's queued wishes (Instagram Reel, 3D menu video) unchanged.
+- Tests at ce1978d0: all 19 tests, check-browser (16), check-store-taps, check-print-text on all 900 (six chunks of 150), WebKit iPhone signature check: all pass.
