@@ -118,12 +118,9 @@ Food & Drink has less competition than Entertainment and matches what people act
 
 In adult mode, about 640 of the 900 menus mention alcohol somewhere (a cocktail, wine, beer or a spirit in a recipe). Counted by script across data/film. Kids mode and the family, fairytale, Christmas and wizard films switch to alcohol-free versions.
 
-Under Apple's current table, "Alcohol, Tobacco, or Drug Use or References" set to Infrequent gives 13+, and Frequent gives 18+. The honest answer for adult mode is Frequent. That puts the app at 18+, which is more than the "about 12+" in the plan.
+Under Apple's current table, "Alcohol, Tobacco, or Drug Use or References" set to Infrequent gives 13+, and Frequent gives 18+.
 
-Options for Josh to decide:
-1. Answer Frequent and accept 18+. Honest, simple, but it hides the app from family accounts.
-2. Make no alcohol the default in the app build (adults switch it off in Settings). The references are then not in the default experience, but they are still in the app, so Frequent is still the safest answer.
-3. Answer Infrequent. Not recommended, a reviewer opening a few menus will see a drink on most of them.
+Decided: the answer is Frequent, so the app is rated 18+ (recorded in docs/APP-STORE-PLAN.md on main).
 
 Confirm the rating in App Store Connect's preview before saving. Apple reworked this table in 2025 and may change it again.
 
@@ -195,7 +192,7 @@ What the app actually sends anywhere, from app.js and privacy.html:
 
 | Where | When | What |
 |---|---|---|
-| Supabase (our sync function, servers in South Korea) | Only if the user taps Put my card online, or Use my card from another device | Member number, a scrambled PIN, the optional name on the card, watched list, favourites, ratings, ticket stub history, weekly plan, rentals count, per-aisle visit counts, the last 8 films spun, candy bar picks, kids mode and skip-watched settings |
+| Supabase (our sync function, servers in South Korea) | Only if the user taps Put my card online, or Use my card from another device | Member number, a scrambled PIN, the optional name on the card, watched list, favourites, ratings, ticket stub history, weekly plan, rentals count, rentals per aisle and tapes out, the last 8 films spun, counter treats ticked when renting, kids mode and skip-watched settings |
 | Netlify Forms (our host) | Only when the user sends Request a movie | Film title, year, optional name, optional note |
 | TMDB image server | Every time a poster or still is shown | Normal image request (IP address, device details). No data from the app |
 | YouTube (youtube-nocookie.com) | Only when the user presses play on a trailer | Normal video request |
@@ -219,7 +216,7 @@ If Google Fonts or cdnjs are still loaded when the app is submitted, they stay i
 | Contact Info: Name | Optional name on the member card. Optional name on Request a movie |
 | Identifiers: User ID | The member number, when the card is put online |
 | User Content: Other User Content | Watched list, favourites, ratings, weekly plan and kids mode on the online card. Film title, year and note on a request |
-| Usage Data: Product Interaction | Optional, only on an online card: rentals count, per-aisle visit counts, the last 8 films spun and candy bar picks. Used to show the same card on another device. Linked to the member number. Not used for tracking or analytics |
+| Usage Data: Product Interaction | Optional, only on an online card: rentals count, rentals per aisle and tapes out, the last 8 films spun and counter treats ticked when renting. Used to show the same card on another device. Linked to the member number. Not used for tracking or analytics |
 
 **Data not linked to you:** None.
 
@@ -227,7 +224,7 @@ Notes:
 - Optional disclosure: Apple lets you skip declaring a data type if it is optional, rare and clearly entered by the user (like a feedback form). The request form might qualify. Declaring it anyway is simpler and safer.
 - The PIN is a sign-in credential, not a data type on Apple's list. privacy.html says it is stored scrambled; confirm that (see Open questions).
 - Tick Usage Data: Product Interaction (above) only. Do not tick Diagnostics or any other Usage Data type: nothing like that is collected.
-- The other option is to stop syncing aisle visits and candy bar picks, then Product Interaction can come off. Rentals and the last 8 spins would still count.
+- You could stop syncing rentals per aisle, tapes out and counter treats. Even then, rentals and the last 8 spins still sync, so Product Interaction stays.
 - Account deletion (guideline 5.1.1(v)): done. Galaxy Video, member card, Delete my online card.
 
 ---
@@ -251,10 +248,10 @@ Notes:
 | Personal info | Name | Yes | Yes | App functionality (name on the card, name on a request) |
 | Personal info | User IDs | Yes | Yes | App functionality (member number for sync) |
 | App activity | Other user-generated content | Yes | Yes | App functionality (watched list, favourites, ratings, plan, request notes) |
-| App activity | App interactions | Yes | Yes | App functionality only (online card only: rentals count, per-aisle visit counts, the last 8 films spun and candy bar picks, so the card looks the same on another device). Linked to the member number. Not used for tracking or analytics |
+| App activity | App interactions | Yes | Yes | App functionality only (online card only: rentals count, rentals per aisle and tapes out, the last 8 films spun and counter treats ticked when renting, so the card looks the same on another device). Linked to the member number. Not used for tracking or analytics |
 | Location, Financial info, Health, Messages, Photos, Audio, Files, Calendar, Contacts, Web history, Device IDs, Crash logs, Diagnostics | | No | | |
 
-Calendar note: Add to calendar writes a file or opens Google Calendar for the user. The app never reads the calendar, so Calendar is No.
+Calendar note: Add to calendar saves a file and offers Google Calendar links. The app never reads the calendar, so Calendar is No.
 
 **Data shared:** None.
 
@@ -321,7 +318,6 @@ Before submitting: create the test card on a spare device, write the number and 
 
 - privacy.html kids mode line: already fixed on main, leave it alone on this branch.
 - Once deployed, check https://reeldinner.com/support and https://reeldinner.com/privacy both return 200 (support is 404 until this branch goes live). Both stores check these links.
-- Decide the alcohol answer (section 6) before the age rating is saved.
 - Remove the Google Fonts and cdnjs links in the app build as planned, or leave them in the privacy list.
 - Settle the artwork rights before the screenshots are shot.
 
