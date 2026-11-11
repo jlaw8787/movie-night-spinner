@@ -3154,6 +3154,16 @@ async function pdfLiftBake(root){const k=2.5,boxes=[];
       x.fill();x.restore()}
     /* the shape itself is cut back out: a box shadow is never painted under its own box (Chrome skips the shadow of a shape drawn off the canvas, so it is drawn in place and removed) */
     {x.save();x.globalCompositeOperation="destination-out";pdfShapePath(x,P*k,P*k,w*k,h*k,rad.map(([p,q])=>[p*k,q*k]),poly&&poly.map(([a,b])=>[a*k,b*k]));x.fill();x.restore()}
+    /* review 21: on a hand-built card the wall (or sheet) is the page edge on paper, and the card's padding round it prints white. A shadow that
+       spilled past the wall into that padding stopped trimWhite and printed as a white bar with a grey edge (Ratatouille's menu panel,
+       Ghostbusters, When Harry Met Sally), so the shadow is cut back to the wall (skipped when a box between it and the wall is turned) */
+    {const paper=root.querySelector(":scope>.fx-wall,:scope>.fx-sheet");let ok=paper&&paper!==el&&paper.contains(el);
+      for(let a=el.parentElement;ok&&a&&a!==paper;a=a.parentElement)if(getComputedStyle(a).transform!=="none")ok=false;
+      if(ok){const tr=el.style.transform;el.style.transform="none";const er=el.getBoundingClientRect();el.style.transform=tr;const pr=paper.getBoundingClientRect();
+        /* a turned box: the wall's corners are taken into the box's own frame (the inverse of its turn, about its transform origin) */
+        const M=cs.transform==="none"?new DOMMatrix():new DOMMatrix(cs.transform),inv=M.inverse(),og=(cs.transformOrigin||"50% 50%").split(/\s+/).map((v,i)=>pdfLen(v,i?h:w)),ox=er.left+og[0],oy=er.top+og[1];
+        const pts=[[pr.left,pr.top],[pr.right,pr.top],[pr.right,pr.bottom],[pr.left,pr.bottom]].map(([X,Y])=>{const q=inv.transformPoint(new DOMPoint(X-ox,Y-oy));return [(q.x+og[0]+P)*k,(q.y+og[1]+P)*k]});
+        x.save();x.globalCompositeOperation="destination-in";x.fillStyle="#000";x.beginPath();pts.forEach(([a,b],n)=>n?x.lineTo(a,b):x.moveTo(a,b));x.closePath();x.fill();x.restore()}}
     const url=c.toDataURL("image/png"),im=document.createElement("img");im.alt="";im.src=url;
     /* laid in the same spot as the box, behind it: measured against a probe in the same parent, with the box's own turn left off */
     /* review 20: the shadow is laid against the box's own parent. A parent with no position of its own is made relative first (only when no
