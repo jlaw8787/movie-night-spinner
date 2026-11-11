@@ -9,7 +9,7 @@ const ID="tearoom",W=672,H=1056;
 const BASE=(window.MENU_FORMAT_BASE!=null)?window.MENU_FORMAT_BASE:(/\/wip\/genre\//.test(location.pathname)?"../../../":"");
 const GRAIN=BASE+"assets/era/_shared/paper-grain.webp";
 if(!document.getElementById("fmt-font-"+ID)){const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?family=Forum&family=Lora:ital,wght@0,400;0,600;1,400&family=Arvo:wght@700&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=Rufina:wght@700&family=Montserrat:ital,wght@0,400;0,600;1,400&family=Young+Serif&family=Karla:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap";
+  l.href=rdFontHref("family=Forum&family=Lora:ital,wght@0,400;0,600;1,400&family=Arvo:wght@700&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=Rufina:wght@700&family=Montserrat:ital,wght@0,400;0,600;1,400&family=Young+Serif&family=Karla:ital,wght@0,400;0,600;1,400&family=Great+Vibes","swap");
   document.head.appendChild(l)}
 
 /* ---------- shared bits ---------- */

@@ -143,7 +143,7 @@ function photoHTML(src,pos,era,t){
 const FONTLINKS=window.__fmtFontLinks=window.__fmtFontLinks||{};
 function loadFonts(spec){
   if(FONTLINKS[spec])return FONTLINKS[spec];
-  const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?"+spec+"&display=block";
+  const l=document.createElement("link");l.rel="stylesheet";l.href=rdFontHref(spec,"block");
   FONTLINKS[spec]=new Promise(res=>{l.onload=()=>res();l.onerror=()=>res();setTimeout(res,3000)});
   document.head.appendChild(l);return FONTLINKS[spec];
 }

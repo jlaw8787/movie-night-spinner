@@ -6,7 +6,7 @@
    photo; tone sets wear, tint, contrast and copy voice. Inline styles only; the fitter below shrinks boxes after load. */
 (function(){
 const ID="canteen",A="data-"+ID;
-const FONT_URL="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Asap+Condensed:wght@800&family=Bai+Jamjuree:ital,wght@0,700;1,700&family=Lexend:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&display=swap";
+const FONT_URL=rdFontHref("family=Zilla+Slab:wght@600;700&family=Asap+Condensed:wght@800&family=Bai+Jamjuree:ital,wght@0,700;1,700&family=Lexend:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700","swap");
 function loadFonts(){if(document.getElementById("fmt-font-"+ID))return;const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";l.href=FONT_URL;document.head.appendChild(l)}
 
 /* colour helpers */
@@ -265,6 +265,6 @@ window.MENU_FORMATS[ID]=ctx=>{
 function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
   if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
 function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
-  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+  .then(()=>Promise.all(fontSpecs(rdFontQuery(l.getAttribute("href"))).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
 loadFonts();window.MENU_FORMATS[ID].ready=fontsReady([document.getElementById("fmt-font-"+ID)]);
 })();

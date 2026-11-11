@@ -3,7 +3,7 @@
 if(window.__MNS)return;
 const M=window.__MNS={};
 const seen=new Set();
-M.font=q=>{if(!q||seen.has(q))return;seen.add(q);const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family="+q+"&display=swap";document.head.appendChild(l)};
+M.font=q=>{if(!q||seen.has(q))return;seen.add(q);const l=document.createElement("link");l.rel="stylesheet";l.href=rdFontHref("family="+q,"swap");document.head.appendChild(l)};
 M.clean=s=>String(s==null?"":s).replace(/\s*[\u2012\u2013\u2014\u2015]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/--+/g,", ").trim();
 M.esc=s=>M.clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 M.sent=s=>{s=M.clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?]$/.test(s)?s:s+"."};
@@ -213,9 +213,9 @@ window.MENU_FORMATS.home=function(ctx){
 function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
   if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
 function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
-  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+  .then(()=>Promise.all(fontSpecs(rdFontQuery(l.getAttribute("href"))).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
 {const qs=new Set([SIGQ,"Baloo+2:wght@800"]);Object.values(ERA).forEach(e=>{qs.add(e.dq);qs.add(e.bq)});qs.forEach(M.font);
-  const links=[...qs].map(q=>[...document.querySelectorAll("link[rel=stylesheet]")].find(l=>l.getAttribute("href")==="https://fonts.googleapis.com/css2?family="+q+"&display=swap"));
+  const links=[...qs].map(q=>[...document.querySelectorAll("link[rel=stylesheet]")].find(l=>l.getAttribute("href")===rdFontHref("family="+q,"swap")));
   window.MENU_FORMATS.home.ready=fontsReady(links)}
 /* fit in the same turn the faces land, so no frame shows unfitted text */
 if(!window.__fitHomeSync){window.__fitHomeSync=1;new MutationObserver(m=>{if(m.some(r=>[...r.addedNodes].some(n=>n.nodeType===1&&(n.matches("[data-fit]")||n.querySelector&&n.querySelector("[data-fit]")))))M.fitAll()}).observe(document.documentElement,{childList:true,subtree:true})}

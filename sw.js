@@ -3,10 +3,15 @@
    Scripts carry a ?v= stamp that changes whenever they change, so a saved copy is always safe to use.
    Film files: carry a ?v fingerprint of their content. They live in their own store that app updates never wipe,
    so saved menus survive updates; a changed film is fetched fresh, and offline the last saved copy is used.
-   Photos, fonts and libraries: saved on first use. */
-const VERSION = 'mns-e27590d1';
+   Fonts (assets/fonts/files) and the save tools (assets/lib): saved the first time a menu or a save needs them,
+   never all at once. Their names change whenever their content does, so they sit in their own store that app updates
+   leave alone, and a menu that worked offline once keeps working after an update.
+   Photos: saved on first use. */
+const VERSION = 'mns-1ef8bc2a';
 const FILMS_CACHE = 'mns-films';
+const STATIC_CACHE = 'mns-static';
 const FILM_RX = /data\/film\/[^/]+\.json$/;
+const STATIC_RX = /\/assets\/(fonts\/files|lib)\/[^/]+$/;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'assets/app/icon-192.png', 'assets/app/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -15,7 +20,7 @@ self.addEventListener('activate', e => {
   e.waitUntil((async () => {
     const films = await caches.open(FILMS_CACHE);
     for (const k of await caches.keys()) {
-      if (k === VERSION || k === FILMS_CACHE) continue;
+      if (k === VERSION || k === FILMS_CACHE || k === STATIC_CACHE) continue;
       /* carry saved film files over from the old store before it goes, so offline menus survive this update */
       const old = await caches.open(k);
       for (const r of await old.keys()) if (FILM_RX.test(new URL(r.url).pathname) && !(await films.match(r, {ignoreSearch: true}))) { const res = await old.match(r); if (res) await films.put(r, res); }
@@ -50,8 +55,8 @@ const staleWhileRevalidate = async (req, e) => {
   if (hit) { e.waitUntil(net.catch(() => {})); return hit; }
   try { return await net; } catch (err) { return (await cache.match(req, {ignoreSearch: true})) || Response.error(); }
 };
-const cacheFirst = async req => {
-  const cache = await caches.open(VERSION);
+const cacheFirst = async (req, store = VERSION) => {
+  const cache = await caches.open(store);
   const hit = await cache.match(req);
   /* a copy saved without permission headers can't be used to build a saved image, so skip it */
   if (hit && !(req.mode === 'cors' && hit.type === 'opaque')) return hit;
@@ -68,8 +73,9 @@ self.addEventListener('fetch', e => {
   const same = url.origin === self.location.origin;
   if (same && (req.mode === 'navigate' || /\.html$/.test(url.pathname) || url.pathname.endsWith('/'))) return e.respondWith(networkFirst(req));
   if (same && FILM_RX.test(url.pathname)) return e.respondWith(filmFetch(req));
+  if (same && STATIC_RX.test(url.pathname)) return e.respondWith(cacheFirst(req, STATIC_CACHE));
   if (same && url.searchParams.has('v')) return e.respondWith(cacheFirst(req));
   if (same && /\.(js|json|webmanifest)$/.test(url.pathname)) return e.respondWith(staleWhileRevalidate(req, e));
   /* posters are left to the browser: routing them through here broke saving the menu as an image */
-  if (same || /fonts\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com/.test(url.host)) return e.respondWith(cacheFirst(req));
+  if (same) return e.respondWith(cacheFirst(req));
 });

@@ -8,7 +8,7 @@
    sets wear, tint, stamp angle and copy voice. Inline styles only; the fitter below shrinks boxes after load. */
 (function(){
 const ID="galley",BODY="'IBM Plex Sans Condensed',sans-serif",A="data-"+ID;
-const FONT_URL="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&family=Aldrich&family=Chakra+Petch:wght@600;700&family=Oxanium:wght@600;800&family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cedarville+Cursive&display=swap";
+const FONT_URL=rdFontHref("family=Stardos+Stencil:wght@700&family=Aldrich&family=Chakra+Petch:wght@600;700&family=Oxanium:wght@600;800&family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cedarville+Cursive","swap");
 function loadFonts(){if(document.getElementById("fmt-font-"+ID))return;const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";l.href=FONT_URL;document.head.appendChild(l)}
 
 /* colour helpers */
