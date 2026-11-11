@@ -476,7 +476,7 @@ Live on reeldinner.com from ab66182 (deploy 6af3cc50, app.js?v=8b7eb073), pushed
 
 ## 11 Nov, 1:40pm: E.T. still strip on all 56 campfire menus (start here in the next chat)
 
-Committed, not yet deployed or checked on a real phone.
+Live on reeldinner.com from f4f4e23 (deploy 6af3e9bc, Josh, 11 Nov: deploy now), pushed to main. Not yet checked on a real phone.
 - Every campfire menu now has E.T.'s front: three film stills with the badge lines as captions, the pillow note beside the poster, signed with the film's logo. E.T. itself prints pixel for pixel the same.
 - Four strip styles so they don't all look alike (menu-formats/campfire.js stillStrip()): row (E.T.'s), stagger (taped photos, paper tag captions), film (dark film strip with sprocket holes), album (instant photos, caption written in the white margin). About 14 films each.
 - data/film-flavour.json stillStrip is true (E.T.) or {v, s, flip, sig}: v the style, s the three still numbers (never still 1, it prints on the back), flip swaps the pillow note and the Now showing ticket, sig "full" signs with the whole logo and "name" with the handwritten name. Set by scripts/campfire-strips.cjs, which now leaves films already set alone.
@@ -484,4 +484,4 @@ Committed, not yet deployed or checked on a real phone.
 - Beneath Hill 60 and Seabiscuit have only 3 stills, so they get a two photo strip. The Lighthorsemen uses stills 0, 2, 3.
 - Tests pass, check-print-text passes on all 56, all 56 fronts looked over in shots.
 - Left as is: the eerie tone's badge heading reads "Stay with the group for" (Friday the 13th, Star Wars: The Last Jedi, The Jungle Book and others). It was written to lead into the old badge list. Ask Josh if he wants new wording.
-- Next: deploy when Josh says, then Review 21. Open question for Josh: a still in the empty bistro column on the other 27 bistro menus, as on Wall Street?
+- Next: Review 21. Open question for Josh: a still in the empty bistro column on the other 27 bistro menus, as on Wall Street?
