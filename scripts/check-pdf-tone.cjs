@@ -4,6 +4,7 @@
    A wash layer html2canvas cannot draw (a big blurred inset shadow, an elliptical vignette, a blurred backdrop)
    shows up as a drop in both.
      NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-pdf-tone.cjs ["Film (Year)" ... | --per N | --all]
+   MNS_SHARD=k/n splits --all over jobs; MNS_TONE_SCALE=1 renders the print copy at screen size for speed.
    MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct.
    MNS_LIBDIR=<folder with h2c.js and jspdf.js> serves the two export libraries locally when the CDN is out of reach. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path'),fs=require('fs');
@@ -61,7 +62,11 @@ async function stats(buf){
   await p.evaluate(()=>Promise.all([...document.querySelectorAll('#__tone img')].map(i=>i.decode().catch(()=>{}))));await p.waitForTimeout(300);
   const shot=await p.screenshot({clip:{x:0,y:0,width:box.w,height:box.h},animations:'disabled'});
   await p.evaluate(()=>document.getElementById('__tone').remove());await p.setViewportSize({width:1440,height:900});
-  const url=await p.evaluate(async()=>{if(!await loadExportTools(false))return null;const c=await renderCanvas(card,true);return c.toDataURL('image/png')});
+  /* review 21: MNS_TONE_SCALE=1 draws the print copy at screen size instead of 2.5 times, about five times quicker for a sweep of every film.
+     Brightness and contrast are read off a 400 wide copy either way; confirm a fault at the real scale */
+  const url=await p.evaluate(async S=>{if(!await loadExportTools(false))return null;
+   if(S&&!html2canvas.__s){const h=html2canvas;window.html2canvas=(e,o)=>h(e,{...o,scale:S});html2canvas.__s=1}
+   const c=await renderCanvas(card,true);return c.toDataURL('image/png')},+process.env.MNS_TONE_SCALE||0);
   if(!url){fails.push(id+': export tools did not load');continue}
   const pdf=Buffer.from(url.split(',')[1],'base64');
   const a=await stats(shot),z=await stats(pdf);
