@@ -2,6 +2,8 @@
 
 Researched and fact checked 11 Nov 2026. A summary of what the sources say, not legal advice. Anything unclear goes to a lawyer before launch.
 
+**Update, 11 Nov 2026 (later):** the 124 generated posters have been replaced with original type posters drawn in code (scripts/make-type-posters.cjs): title, year, the menu's colours and font, one simple drawn shape, and the dishes. No title logos, trademark symbols, characters or likenesses. The CinemaBlend McDowell's frame is gone and Coming to America draws its own sign. Where this page says to remove the generated posters or the frame (risk 4, options D and E, plan steps 3 and 4), that is done. One difference from the plan: the fallback is now an original type poster, not a plain placeholder. Those posters still print film titles, so the lawyer review in step 9 should cover them.
+
 ## Short answer
 
 - TMDB lets you use its images free in a non-commercial project with attribution. TMDB also says it does not own the images, so its free terms or a paid licence probably do not include the studios' permission [1]. Confirm with TMDB and a lawyer.
