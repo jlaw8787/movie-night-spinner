@@ -515,3 +515,38 @@ Live on reeldinner.com from 7ea6747 (deploy 6af3ef19, Josh, 11 Nov: deploy now).
 - Live on reeldinner.com from hotfix-iphone 0a84e903 (7cb7451 plus the iosBakeFilters change only; deploy 6af41d1b, app.js?v=2e8495c0). The rest of today's work is on main, not live.
 - iPhone Safari drew cropped stills (Logan's strip and hero) as blurry zoomed corners. Every cropped photo on a card is now baked to its frame on iPhone, the CORS copy is fetched fresh (?cors=1), and if baking fails the filter comes off. Josh checked on his iPhone, 11 Nov 5:49pm: photos sharp now.
 - 6:45pm: second hotfix live (deploy 6af42932, from hotfix-iphone). Real cause of the zoomed photos found in WebKit (Playwright webkit, iPhone 15 profile, spin path on Role Models): the shared __fmtLift.trim in airline, cafe, bistro, campfire and motel sampled photos before Safari had decoded them, read the blank sample as black bars and blew the photo up to its middle. Trim now waits for a decoded picture and never crops over half; the iPhone bake waits for the trim and frees its canvases. __fmtLift is now v:3.
+
+## 11 Nov, 7pm: end of the Review 21 chat (start here in the next chat)
+
+Live on reeldinner.com: deploy 6af42932 from branch hotfix-iphone (7cb7451 plus the two iPhone photo fixes only). Josh checked on his iPhone: photos fine now.
+
+### Open fault Josh just saw (fix first)
+- E.T. campfire front on iPhone: the signature under "Left on your pillow" prints as a solid black box (the top line of the E.T. title logo). Likely cause, not yet proved: pdfFiltered's no-canvas-filter path (older iPhone Safari) darkens by filling the whole rectangle with black for brightness(<1), so the logo's see-through parts go black. Fix: draw those fills with globalCompositeOperation "source-atop" (same for the saturation wash), then check in Playwright WebKit with the iPhone 15 profile and on Josh's phone. Other films signed with the logo (sig "full") likely have it too.
+
+### On main, reviewed and passed, not live
+Review 21 fixes 2, 3, 5, 8 and the Nativity swipe view and drink note; support page and store listing (docs/STORE-LISTING.md); privacy page fixes; docs/ARTWORK-RIGHTS.md (fact-checked); unprinted card dishes cut (Warriors, Godfather, Harry Met Sally); canteen still under a narrowed poster (not yet reviewed); the iPhone photo fixes.
+### On main, redone after review, re-review was lost in a session restart
+Fix 1 request line on desktop, Ferris line "Lunch, then the Cubs, then the art.", TERMINAL BAR word gap, check-browser reload settle. Re-review these before deploying.
+
+### Branches with finished work waiting for review (not merged)
+- fix21-voucher 81270ad5: canteen voucher turns with its card on paper (pdfTurnLike). Author checked 6 canteen and 10 other films.
+- fix21-captions cc044511: all 56 campfire captions match their stills. Side effects: about 17 snack combo names change, about 25 old lines dropped.
+- fix21-offline 9954bbf5: offline mode (every film, layout and dish list saved after first visit, plain frame for unsaved photos, calm offline notes).
+
+### Branches stopped part way by the restart (WIP commits, not reviewed)
+- fix21-posters: 124 original type posters replacing the AI posters that copy title logos, plus removing the McDowell's CinemaBlend frame.
+- fix21-fonts: Google Fonts and the cdnjs PDF libraries moved to local files (assets/fonts about 23 MB so far).
+- fix21-app: Capacitor app groundwork and app mode with no studio artwork.
+- fix21-marquee: front page marquee rebuilt from the original Commons photo (bulbs, slat joins, wording in the rows).
+- fix21-checks 275bd561: three unrun checks (phone fit, PDF tone, Prep A4) with harness tweaks; findings not written up.
+- The 900-film print sweep produced no findings file before it stopped.
+
+### Machine notes
+- Chrome here sends local http through the proxy unless launched with '--proxy-server=https=127.0.0.1:<port>' (no bypass works). Use that flag in every harness.
+- Never run more than two browser jobs at once. Twelve parallel helpers overloaded the machine and the session restarted, killing all of them.
+- Playwright WebKit with devices['iPhone 15'] reproduces iPhone Safari faults; it found the photo trim bug.
+- Deploy: the trimmed copy (git archive, then remove audit docs sweep wip tests scripts .github .netlify) via the Netlify MCP deploy command run inside that copy. Get a fresh proxy token each time.
+
+### Josh's wishes queued
+1. Instagram Reel: smooth video of a spin landing on Jurassic Park (1993), menu, lock in, marquee showing the film. No sound (he adds music in Instagram). Use the virtual-time frame capture in /home/claude/ig/rec3.cjs approach (Emulation.setVirtualTimePolicy, 30 fps), not Playwright recordVideo, which stutters. Rig the spin with window.spinPool=()=>[FILMS.find(x=>x.id==="Jurassic Park (1993)")].
+2. A 3D video of the printed menu lifting off the page, turning 360 degrees and showing its folds.
