@@ -75,7 +75,7 @@ const ERA={
   S:{paper:"#ead49b",edge:"96,60,10",ink:"#3a2414",accent:"#4f5e1f",disp:"'Uncial Antiqua',Georgia,serif",dw:400,up:false,body:"'Alegreya',Georgia,serif",
      frame:"border:6px solid #3a2414",plate:"border:6px solid #3a2414",photo:"sepia(.18) saturate(1.05)",orn:"❧",coin:(b,c)=>b+" silver"},
   E:{paper:"#e8d3aa",edge:"80,46,20",ink:"#2a1a10",accent:"#8c2a1a",disp:"'MedievalSharp',Georgia,serif",dw:400,up:false,body:"'Crimson Pro',Georgia,serif",
-     frame:"border:2px solid #2a1a10;box-shadow:inset 0 0 0 5px transparent,inset 0 0 0 6px #2a1a10",plate:"border:2px solid #2a1a10;outline:1px solid #2a1a10;outline-offset:4px",photo:"saturate(1.08)",orn:"❖",coin:(b,c)=>b+" gp "+c},
+     frame:"border:2px solid #2a1a10;box-shadow:inset 0 0 0 6px #2a1a10",plate:"border:2px solid #2a1a10;outline:1px solid #2a1a10;outline-offset:4px",photo:"saturate(1.08)",orn:"❖",coin:(b,c)=>b+" gp "+c},
   M:{paper:"#f0e4c6",edge:"110,80,30",ink:"#231a12",accent:"#7d5e14",disp:"'Cinzel',Georgia,serif",dw:700,up:true,body:"'EB Garamond',Georgia,serif",
      frame:"border:1px solid #7d5e14;outline:1px solid #7d5e14;outline-offset:-8px",plate:"border:1px solid #7d5e14;padding:6px;background:rgba(255,255,255,.25)",photo:"",orn:"✦",coin:(b,c)=>b+"."+c+" crowns"}
 };

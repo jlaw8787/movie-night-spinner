@@ -48,7 +48,7 @@ async function closeAll(page){for(let i=0;i<6;i++){if(!await page.locator('[role
    page.off('console',onC);page.off('pageerror',onE);await closeAll(page);
    assert(!r.bad.length&&!errs.length,'menu or prep failures: '+r.bad.concat(errs).join(' | '));return {films:r.n}});
   await check('kids mode: no alcohol words on any layout',async()=>{
-   const r=await page.evaluate(async()=>{const was=kidsMode;kidsMode=true;const BAD=/\b(gin|vodka|rum|whisk(e)?y|bourbon|scotch|tequila|brandy|cognac|liqueurs?|champagne|prosecco|wines?|beers?|lagers?|ales?|stouts?|ciders?|martinis?|margaritas?|sangria|boilermakers?|must be 1[89])\b/i;
+   const r=await page.evaluate(async()=>{const was=kidsMode;kidsMode=true;const BAD=/\b(gin|vodka|rum|whisk(e)?y|bourbon|scotch(?! (fillets?|eggs?|bonnets?|broth|finger|pancakes?|pies?|mist|tape))|tequila|brandy|cognac|liqueurs?|champagne|prosecco|wines?|beers?|lagers?|ales?|stouts?|ciders?|martinis?|margaritas?|sangria|boilermakers?|must be 1[89])\b/i;
      const seen=new Set(),ids=[];for(const f of FILMS){await ensureExact(f).catch(()=>{});const k=f._lib?f._lib.fmt:(typeof FMT_INDEX!=="undefined"&&FMT_INDEX[f.id]?"hb-"+FMT_INDEX[f.id]:null);if(k&&!seen.has(k)){seen.add(k);ids.push(f.id)}if(ids.length>=45)break}
      for(const id of ['Mulan (1998)','E.T. the Extra-Terrestrial (1982)','The Holiday (2006)','Who Framed Roger Rabbit (1988)','Home Alone (1990)','Ratatouille (2007)'])if(!ids.includes(id)&&FILMS.some(x=>x.id===id))ids.push(id);
      const bad=[];for(const id of ids){const f=FILMS.find(x=>x.id===id);window.__stage=false;await show(f,true);fitLines(card);await new Promise(r=>setTimeout(r,120));

@@ -853,7 +853,10 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     /* measure the words themselves, not the box around them */
     let l=1e9,rt=-1e9;for(const n of tn){rg.selectNodeContents(n);for(const r of rg.getClientRects()){if(r.width){l=Math.min(l,r.left);rt=Math.max(rt,r.right)}}}
     if(rt<l)continue;l=(l-b.left)/k;rt=(rt-b.left)/k;const w=rt-l,seen=Math.min(rt,hi)-Math.max(l,lo);
-    if(seen<w-1&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi))off.push(e)}
+    /* review 21: only a short fragment (a word or two of a heading) steps aside. A dish name or note runs on past the edge as a peek; hiding
+       every long line left Nativity!'s main tray an empty box on the phone, since most of its names cross the fold */
+    const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
+    if(seen<w-1&&(seen<=0||(words<=2||seen/w<.25)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
@@ -1549,13 +1552,17 @@ const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1)
    [/\bmocktail(?=['\u2019] new house)/gi,()=>"Martinis"],
    /* review 15: "with Marsala wine" went through two swaps and read "with a cold drink grape juice" (The Godfather, Vegetarian with No alcohol) */
    [/\ba cold drink (grape juice)\b/gi,(m,a)=>a],
-   [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],
+   [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],
+   /* review 21: a recipe that offers root beer beside the beer read "Pour the root beer, or the root beer for anyone who prefers it" once the beer was swapped (Shaun of the Dead) */
+   [/\b((?:[A-Z][a-z]+ )?(?:root|ginger) beer),? or (?:the )?(?:root|ginger) beer(?: for anyone who prefers it)?,?/g,(m,a)=>a],
+   /* review 21: the town keeps its name, but a dish named for it keeps no whiskey on a kids' card (Unforgiven) */
+   [/\bBig (?:Butterscotch|Whiskey) bread pudding\b/gi,m=>cap(m,"saloon bread pudding")],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],
    [/\b(mocktail|syrup|grape juice|sparkling apple|root beer|ginger beer|rich|soda|sticky|crisp|slow-braised|slow-stewed|butterscotch|coconut|cucumber|lime|vanilla|fizz|punch|lemonade|juice)( \1)+\b/gi,(m,a)=>a]]})();
 /* any word a swap doubles ("lemon shandy" to "lemon lemon squash", "strawberry daiquiri slushie") folds to one; doubles the film wrote itself (huli huli, Nai Nai) stay */
 const dryFold=(out,src)=>{const had=new Set([...src.matchAll(/\b([\p{L}']+)( \1)+\b/giu)].map(m=>m[0].toLowerCase()));let x=out,prev;do{prev=x;x=x.replace(/\b([\p{L}']+)((?: \1)+)\b/giu,(m,a)=>had.has(m.toLowerCase())?m:(m.split(' ').find(w=>new RegExp('\\b'+w+'\\b','u').test(src))||a))}while(x!==prev);return x};
 /* review 20: places keep their names in kids' mode ("Big Whiskey, Wyoming", "Greely's Beer Garden" on Unforgiven): a town or a named venue
    is held aside while the word pass runs */
-const KKEEP=/\bBig Whiskey\b|\bBIG WHISKEY\b|\b[A-Z][A-Za-z]+['’][sS] (?:Beer|Whiskey|Rum|Wine|Gin|BEER|WHISKEY|RUM|WINE|GIN) (?:Garden|Hall|House|Saloon|Cellar|Room|GARDEN|HALL|HOUSE|SALOON|CELLAR|ROOM)\b/g;
+const KKEEP=/\bBig Whiskey\b(?! bread pudding)|\bBIG WHISKEY\b|\b[A-Z][A-Za-z]+['’][sS] (?:Beer|Whiskey|Rum|Wine|Gin|BEER|WHISKEY|RUM|WINE|GIN) (?:Garden|Hall|House|Saloon|Cellar|Room|GARDEN|HALL|HOUSE|SALOON|CELLAR|ROOM)\b/g;
 const dryKeep=(t,fn)=>{const kept=[];const m=String(t).replace(KKEEP,x=>{kept.push(x);return `\uE000${kept.length-1}\uE001`});return kept.length?fn(m).replace(/\uE000(\d+)\uE001/g,(x,i)=>kept[+i]):fn(t)};
 /* the zero-width space that guards malt vinegar and the like during the swaps never reaches the page (Cruella) */
 const dryText=(t,on)=>dryText0(t,on).replace(/\u200B/g,"");
@@ -3422,7 +3429,7 @@ async function renderCanvas(src,forPrint){
 }
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 
-let downloads=null;
+let downloads=null,EDGEFIX=null;
 const inClaude=!!(window.claude&&window.claude.use);
 if(inClaude){window.claude.use("downloads").then(d=>{downloads=d}).catch(()=>{})}
 else{$("print").hidden=false}
@@ -3485,12 +3492,12 @@ async function exportMenu(kind,parts,opts){
   if(!await loadExportTools(kind==="pdf")){if(opts.win)try{opts.win.close()}catch(e){}btns.forEach(b=>b.disabled=false);$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
   /* full coverage: every page is painted edge to edge in the menu's own paper colour, then the menu sits on it 4mm in,
      so a printer that cannot ink the very edge only ever loses plain colour, never words, and a borderless printer prints true full bleed */
-  const API2=window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API,orig2=API2&&API2.addImage,origURL=HTMLCanvasElement.prototype.toDataURL,EDGE=new Map();
+  EDGEFIX=null;const API2=window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API,orig2=API2&&API2.addImage,origURL=HTMLCanvasElement.prototype.toDataURL,EDGE=new Map();
   HTMLCanvasElement.prototype.toDataURL=function(...a){try{const t=trimWhite(this);const u=origURL.apply(t,a);EDGE.set(u,{col:edgeColour(t),tb:edgeColour(t,"tb"),lr:edgeColour(t,"lr"),ar:t.width/t.height});return u}catch(e){return origURL.apply(this,a)}};
   if(kind==="pdf"&&API2)API2.addImage=function(img,fmt,x,y,w,h,...rest){if(typeof w!=="number")return orig2.call(this,img,fmt,x,y,w,h,...rest);
     const PW=this.internal.pageSize.getWidth(),PH=this.internal.pageSize.getHeight(),k=Math.min((PW-8)/PW,(PH-8)/PH),inf=EDGE.get(img)||{};
     /* review 13: a menu that is not A4 shaped leaves bands, and they take the colour of the edges they touch (Minions' poster is white down one side, its top and bottom are brown) */
-    const col=inf.ar&&Math.abs(PW/PH-inf.ar)>.03?(PW/PH>inf.ar?inf.lr:inf.tb)||inf.col:inf.col;
+    const col=EDGEFIX||(inf.ar&&Math.abs(PW/PH-inf.ar)>.03?(PW/PH>inf.ar?inf.lr:inf.tb)||inf.col:inf.col);
     if(col){this.setFillColor(col[0],col[1],col[2]);this.rect(0,0,PW,PH,"F")}
     /* a trimmed image keeps its own shape, centred in the space it was given */
     if(inf.ar){if(w/h>inf.ar){const nw=h*inf.ar;x+=(w-nw)/2;w=nw}else{const nh=w/inf.ar;y+=(h-nh)/2;h=nh}}
@@ -3510,13 +3517,16 @@ async function exportMenu(kind,parts,opts){
         const k=Math.min(PW/mm[0],PH/mm[1]),dw=mm[0]*k,dh=mm[1]*k,dx=(PW-dw)/2,dy=(PH-dh)/2;
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:o});
         if(card.classList.contains("fmt-lib"))libUnclip(card);const faces=[...card.querySelectorAll(".fx-face")];
-        for(let i=0;i<faces.length;i++){
+        const cvs=[];for(let i=0;i<faces.length;i++){
           pdfStep(`Page ${i+1} of ${faces.length+(parts==="all"?1:0)}`);
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
           el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML.replace(/\s(onload|onerror)="[^"]*"/g,"");
-          const cv=await renderCanvas(el,true);if(i)pdf.addPage("a4",o);
-          pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh);
+          cvs.push(await renderCanvas(el,true));
         }
+        /* review 21: a campfire front carries the poster's white frame and the still strip near its edges, so its margin came out cream, maroon
+           or brown while the back stayed on the card's own dark surround. Both pages take the back's margin */
+        EDGEFIX=card.classList.contains("lib-campfire")&&cvs.length>1?edgeColour(trimWhite(cvs[cvs.length-1])):null;
+        cvs.forEach((cv,i)=>{if(i)pdf.addPage("a4",o);pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh)});EDGEFIX=null;
         sides=faces.length;orient=o;
       }else{
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
