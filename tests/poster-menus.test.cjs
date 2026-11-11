@@ -39,7 +39,7 @@ for(const id of ids){
  const shopping=run('shopGroups(makeMenu(FILMS.find(f=>f.id===testId),true)).flatMap(([aisle,list])=>list)');
  assert.equal(shopping.length,edition.menu.shopping.length);
 }
-assert.ok(run('shopGroups(MOVIE_MENU_EDITIONS["Ghostbusters (1984)"].menu).flatMap(([a,l])=>l).includes("4 eggs")'));
+assert.ok(run('shopGroups(MOVIE_MENU_EDITIONS["Ghostbusters (1984)"].menu).flatMap(([a,l])=>l).includes("7 eggs")'));
 assert.ok(run('shopGroups(MOVIE_MENU_EDITIONS["The Warriors (1979)"].menu).flatMap(([a,l])=>l).includes("2 limes")'));
 const normal=run('FILMS.find(f=>!MOVIE_MENU_EDITIONS[f.id])');context.normalId=normal.id;
 assert.ok(run('makeMenu(FILMS.find(f=>f.id===normalId),true).m.length>0'));

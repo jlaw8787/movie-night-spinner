@@ -445,3 +445,14 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - After that, Josh's open menu jobs: known glitches (Hitch tag, Goonies note, Mickey Blue Eyes note, Silver Linings signature, Top Gun doubled logo, empty gaps on Wall Street, Wish, Clerks III, Despicable Me 2, white poster blocks on Great Mouse Detective, Proposal, Sword in the Stone), the E.T. stills treatment for the other 55 campfire menus, Review 21.
 - Ask Josh to check on his iPhone: Crocodile Dundee II shows snags, barra and pavlova once each, and one test movie request goes through.
 - App Store: see docs/APP-STORE-PLAN.md, updated 11 Nov. Josh is holding off paying Apple until the first TestFlight build is close.
+
+## 11 Nov, 11:30am: the last five mismatched menus fixed (start here in the next chat)
+
+- Done with scripts/dedupe-handbuilt.cjs (one-off, safe to run twice), then build-data. Rule: the printed menu and the Prep sheet are the truth. Same food under two names takes the film's own name. A cooked dish the film's list never had is added to the front of its course. Nothing removed. Printed text on all five is unchanged.
+- After Hours: edition and spec key "Terminal Bar burger" now "Last Stop burger".
+- When Harry Met Sally: edition now holds what the check prints (fried pickles, chef salad, pastrami, apple pie, egg cream). The chef salad sits in the edition's starter slot because editions must be 2 starters, 1 main (poster-menus test); the menu still treats it as a main.
+- The Godfather: recipes renamed to "Connie's wedding antipasto" and "Clemenza's cannoli" (edition, recipes2, spec key). Golden arancini and Blood orange Italian soda added to films.json.
+- The Warriors: pretzel bites, street-cart corn, ice-cream sandwiches and cherry cola added to films.json.
+- Ghostbusters: edition rebuilt as the five the Prep sheet cooks (slime dip, devilled eggs, meatball sub, s'mores, slushie) from recipes2. poster-menus test now expects "7 eggs".
+- Left on purpose (Josh, 11 Nov: deploy as is): card dishes those menus never print. Warriors: crinkle fries, clam strips, knishes, steak heroes, toffee apples, chocolate malted. Godfather: orange and fennel salad, calamari, veal scaloppine, Chianti sangria. Harry Met Sally: potato knish. Cutting them is a separate job if Josh asks.
+- Next: Josh's open menu jobs listed under "11 Nov, 10:40am".
