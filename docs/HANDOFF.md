@@ -574,7 +574,7 @@ Not live yet: live is still deploy 6af42932 (hotfix-iphone). Main holds all of t
 
 ## 12 Nov, 8:45am: Review 23 chat, everything merged on main (start here in the next chat)
 
-Not live yet: live is deploy 6af4c085 (main e85c360b). GitHub push is still refused from these sessions (Claude GitHub App not linked), so main here only exists locally until it is pushed or deployed.
+Live: deploy 6af4fc29 (main df81c41a), 12 Nov 9am, files checked against the live site. GitHub push is still refused from these sessions (Claude GitHub App not linked), so origin/main on GitHub is behind: push main from a session that can.
 
 ### Merged on main, each reviewed by a separate reviewer
 - Campfire signatures (Josh's iPhone: E.T. lettering clipped at the bottom): stillStrip.sh is a per-film crop height. E.T. sh 60, Evil Dead II sh 58, IT and The Last Jedi sign with the full logo. scripts/sig-crops.py checks every logo-signed strip film. WebKit iPhone check: all 50 bake as lettering, none opaque.
