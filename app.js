@@ -1,3 +1,21 @@
+/* offline: a photo that isn't saved on this device shows a plain tinted frame in its slot, never a broken image icon.
+   The frame is a real picture drawn here, so Save PDF and Print show the same frame. Grey at low strength suits dark and light cards alike */
+const IMG_PH={};
+function imgPhSrc(r){const k=r>1.3?"wide":r<.85?"tall":"sq";if(IMG_PH[k])return IMG_PH[k];
+  const W=k==="wide"?640:400,H=k==="wide"?360:k==="tall"?600:400,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+  x.fillStyle="rgba(128,128,128,.2)";x.fillRect(0,0,W,H);x.strokeStyle="rgba(128,128,128,.32)";x.lineWidth=4;x.strokeRect(2,2,W-4,H-4);
+  /* a small strip of film in the middle */
+  const g=Math.min(W,H)*.2,fw=g*1.5,fh=g,fx=(W-fw)/2,fy=(H-fh)/2;x.fillStyle="rgba(128,128,128,.4)";x.fillRect(fx,fy,fw,fh);
+  x.globalCompositeOperation="destination-out";x.fillRect(fx+fw*.12,fy+fh*.24,fw*.76,fh*.52);const hw=fw/11;for(let i=0;i<5;i++){x.fillRect(fx+hw*(1+2*i),fy+fh*.06,hw,fh*.1);x.fillRect(fx+hw*(1+2*i),fy+fh*.84,hw,fh*.1)}
+  return IMG_PH[k]=c.toDataURL("image/png")}
+function imgRatio(im){const a=+im.getAttribute("width"),b=+im.getAttribute("height");if(a&&b)return a/b;
+  const r=im.getBoundingClientRect();if(r.width>40&&r.height>40)return r.width/r.height;
+  const s=im.getAttribute("src")||"";return /\/w(780|1280|original)\/|still|backdrop/i.test(s+im.className)?16/9:/\/w92\/|snacks\/|logo/i.test(s+im.className)?1:2/3}
+function imgPh(im){if(im.classList.contains("img-ph")&&/^data:/.test(im.src))return;const r=imgRatio(im);
+  im.removeAttribute("srcset");im.removeAttribute("sizes");if(im.parentElement&&im.parentElement.tagName==="PICTURE")im.parentElement.querySelectorAll("source").forEach(x=>x.remove());
+  im.classList.add("img-ph");if(!im.style.objectFit)im.style.objectFit="cover";im.src=imgPhSrc(r)}
+document.addEventListener("error",e=>{const t=e.target;if(t&&t.tagName==="IMG"&&(t.getAttribute("src")||"").length)imgPh(t)},true);
+document.querySelectorAll("img").forEach(im=>{if(im.complete&&!im.naturalWidth&&(im.getAttribute("src")||"").length)imgPh(im)});
 
 /* a note cut short never ends on a joining word ("with yellow mustard and."): those come off, and a lone word left after a comma goes with them */
 window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an|is|to|for|or|on|at|by|from|into|under|over|but|so|as|its|his|her|their|our|your|my)$/i;
@@ -1804,7 +1822,8 @@ async function show(f,preferSig){
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
   {const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
-  $("status").textContent="";
+  const unsaved=!f._full&&navigator.onLine===false?"You're offline and this film's full menu isn't saved on this device yet. It'll be here once you're back online.":"";
+  $("status").textContent=unsaved;
   planLoad(f);planWire(f);
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
@@ -1851,7 +1870,7 @@ async function show(f,preferSig){
   if(!lobby&&!edition)card.innerHTML=cardHTML(f,menu,current.tag,false);
   else if(!ok){
     styleCard(card,f);card.style.transform="";card.innerHTML=cardHTML(f,menu,current.tag,false);
-    $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
+    $("status").textContent=unsaved||"The poster couldn't load. Your menu and prep sheet are still available.";
   }
   card.classList.toggle("is-lazy",!!menu.lazy);
   styleCard(prep,f);prep.classList.add("pp-sheet");
@@ -2577,17 +2596,17 @@ async function pushSync(){
   try{const r=await syncCall({action:"save",no:member.no,pin:member.pin,data:syncPayload()});syncState=r.status==="ok"?"saved":r.status}catch(e){syncState="offline"}
   const el=document.getElementById("syncNote");if(el)el.textContent=syncNote();
 }
-function syncNote(){return syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
+function syncNote(){return navigator.onLine===false?"You're offline. Your changes are saved on this device and go up once you're back online.":syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
 function openSyncForm(mode){
   const modalTrigger=document.activeElement;
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
   const join=mode==="join";
   o.setAttribute("aria-label",join?"Put your card online":"Use your card from another device");
-  o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go">${join?"Save my card":"Sign in"}</button></div></form>`;
+  o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><p class="off-note" hidden>You're offline. Your card stays saved on this device. Try this again once you're back online.</p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go" data-net>${join?"Save my card":"Sign in"}</button></div></form>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o||(e.target.dataset&&e.target.dataset.a==="back"))close()});
   o.querySelector("form").addEventListener("submit",async e=>{
-    e.preventDefault();const err=o.querySelector("#sErr");err.textContent="";
+    e.preventDefault();const err=o.querySelector("#sErr");err.textContent="";if(navigator.onLine===false){netMarks();return}
     const pin=o.querySelector("#sPin").value.trim();if(!/^\d{4}$/.test(pin)){err.textContent="The PIN needs to be 4 numbers.";return}
     const btn=o.querySelector(".go");btn.disabled=true;
     try{
@@ -2607,7 +2626,7 @@ function openSyncForm(mode){
       close();renderMember();buzz(30);
     }catch(x){err.textContent="Couldn't reach the card system. Check your connection and try again.";btn.disabled=false}
   });
-  mountModal(o,"input",modalTrigger);
+  mountModal(o,"input",modalTrigger);netMarks();
 }
 async function pullSync(){
   if(!member.pin)return;
@@ -3736,6 +3755,26 @@ window.addEventListener("resize",size);
 setList();size();renderHist();scalePreview();renderWeek();renderMotw();
 try{document.documentElement.style.setProperty("--grainTile",`url("${noiseTile()}")`)}catch(e){}
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+/* offline: once the page has settled, the worker saves every film's menu, the layouts and the dish lists in the background (about 4 MB over the wire),
+   and the candy bar and Galaxy Video photos load once, so a spin works anywhere with no signal. Skipped when the phone is set to save data */
+function warmOffline(reg){
+  if(navigator.onLine===false||(navigator.connection&&navigator.connection.saveData)||!reg.active)return;
+  const u=FILMS.map(filmFile);
+  if(typeof FMT_VER!=="undefined")for(const k in FMT_VER)u.push("formats/"+k+".js?v="+FMT_VER[k]);
+  if(window.LIB_VER)for(const k in LIB_VER)u.push("menu-formats/"+k+".js?v="+LIB_VER[k]);
+  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
+  reg.active.postMessage({warm:u});
+  /* a detached copy of each shop photo picks the same size the page would */
+  document.querySelectorAll("#walkin img,#viewShop img,#viewCrave img").forEach(im=>{if(im.complete&&im.naturalWidth)return;const i=new Image();if(im.sizes)i.sizes=im.sizes;if(im.srcset)i.srcset=im.srcset;i.src=im.getAttribute("src")});
+  (window.SNACKS||[]).forEach(x=>{if(x.img)new Image().src=x.img});
+  /* plus the few pictures that layouts draw as textures (the diner's paper and laminate) and the member card */
+  ["assets/brand/member-card.webp","assets/brand/case-sticker.webp","menu-formats/assets/diner/paper-grain.webp","menu-formats/assets/diner/rain-glass.webp","menu-formats/assets/diner/laminate-wear.webp","assets/menu-art/clock-tower.png","assets/menu-details/mcdowells-film-source.jpg"].forEach(x=>{new Image().src=x});
+}
+if("serviceWorker" in navigator){navigator.serviceWorker.ready.then(reg=>setTimeout(()=>warmOffline(reg),6000)).catch(()=>{});navigator.serviceWorker.addEventListener("message",e=>{if(e.data&&"warmed" in e.data)savedScan()})}
+/* offline: a small note where something needs the internet (the request form, the member card sync), and its send button waits for the signal */
+function netMarks(){const off=navigator.onLine===false;document.querySelectorAll(".off-note").forEach(n=>{n.hidden=!off});
+  document.querySelectorAll("[data-net]").forEach(b=>{if(off&&!b.disabled){b.disabled=true;b.dataset.offdis="1"}else if(!off&&b.dataset.offdis){b.disabled=false;delete b.dataset.offdis}})}
+addEventListener("online",netMarks);addEventListener("offline",netMarks);
 setKidsUI();if(kidsMode)setList();pullSync();
 try{if(!localStorage.getItem("mns-welcome"))setTimeout(()=>{const w=document.getElementById("walkin");if(w&&!w.hidden)document.addEventListener("walkin-done",()=>setTimeout(showWelcome,300),{once:true});else showWelcome()},400)}catch(e){}
 /* a shared film link always opens on its menu, whatever tab was open last */try{const v=new URLSearchParams(location.search).get("film")?"wheel":localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
@@ -4098,7 +4137,7 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
   const dlg=$("reqMovie"),form=$("reqForm"),thanks=$("reqThanks"),err=$("reqErr"),go=$("reqGo");
   if(!dlg||!form)return;
   const showErr=t=>{err.textContent=t;err.hidden=!t};
-  const open=trigger=>{form.reset();form.hidden=false;thanks.hidden=true;showErr("");go.disabled=false;go.textContent="Send request";mountModal(dlg,"#reqTitle",trigger);if(!dlg.open)dlg.showModal()};
+  const open=trigger=>{form.reset();form.hidden=false;thanks.hidden=true;showErr("");go.disabled=false;go.textContent="Send request";mountModal(dlg,"#reqTitle",trigger);if(!dlg.open)dlg.showModal();netMarks()};
   document.querySelectorAll("[data-req]").forEach(b=>b.addEventListener("click",()=>open(b)));
   $("reqClose").addEventListener("click",()=>dismissModal(dlg));
   $("reqDone").addEventListener("click",()=>dismissModal(dlg));
@@ -4108,6 +4147,7 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
     e.preventDefault();
     if(!form.reportValidity())return;
     if(form.elements["bot-field"].value){done();return}
+    if(navigator.onLine===false){netMarks();return}
     go.disabled=true;go.textContent="Sending";showErr("");
     try{
       const res=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
