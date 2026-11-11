@@ -3234,6 +3234,10 @@ async function renderCanvas(src,forPrint){
     if(full<=h0+lh*.5)return;const cut=()=>e.scrollHeight>e.clientHeight+lh*.5;const w=e.textContent.trim().split(/\s+/);let lo=1,hi=w.length-1,best=1;
     while(lo<=hi){const mid=(lo+hi)>>1;e.textContent=w.slice(0,mid).join(" ").replace(/[,;:]$/,"")+"\u2026";if(cut())hi=mid-1;else{best=mid;lo=mid+1}}
     e.textContent=w.slice(0,best).join(" ").replace(/[,;:]$/,"")+"\u2026"})}catch(err){}
+  /* review 21: a frame laid beside a box (outline or flat ring) takes the box's turn too, pivoting on the same point. Canteen's meal voucher
+     printed its 6px paper outline square round a turned card, so the paper looked unturned with a second square edge */
+  const pdfTurnLike=(e,cs,g)=>{if(!cs.transform||cs.transform==="none")return "";const W=e.offsetWidth,H=e.offsetHeight,to=(cs.transformOrigin||"50% 50%").split(/\s+/);
+    return `transform:${cs.transform};transform-origin:${pdfLen(to[0],W)+g}px ${pdfLen(to[1]||"50%",H)+g}px;`};
   /* review 12: it also drops flat rings drawn outside a box ("0 0 0 8px bezel" round an airline window), so a framed photo printed bare.
      Each outer ring becomes a bordered frame laid behind the box, sized from where the box actually sits */
   try{clone.querySelectorAll("[style*=box-shadow]").forEach(e=>{const bs=e.style.boxShadow;if(!bs||!e.parentElement)return;
@@ -3253,7 +3257,7 @@ async function renderCanvas(src,forPrint){
     /* drawn widest first so each narrower ring sits on top, as the browser stacks them */
     rings.sort((a,b)=>b[0]-a[0]);let z=cs.zIndex==="auto"?"auto":cs.zIndex;
     for(const [w,col] of rings){const d=document.createElement("i");
-      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
+      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;${pdfTurnLike(e,cs,w)}border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
       e.parentElement.insertBefore(d,e)}})}catch(err){}
   /* and it skips outlines (a hairline keyline round a photo): the same treatment, a frame laid round the box */
   try{clone.querySelectorAll("[style*=outline]").forEach(e=>{const cs=getComputedStyle(e),w=parseFloat(cs.outlineWidth)||0;if(cs.outlineStyle==="none"||!w||!e.parentElement)return;
@@ -3263,7 +3267,7 @@ async function renderCanvas(src,forPrint){
       d.style.cssText=`position:absolute;left:${-bl-o}px;top:${-bt-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};border-radius:${rad}px;pointer-events:none`;
       e.style.outline="none";e.appendChild(d);return}
     const o=(parseFloat(cs.outlineOffset)||0)+w,d=document.createElement("i");
-    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
+    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex};${pdfTurnLike(e,cs,o)}`;
     e.style.outline="none";e.parentElement.insertBefore(d,e.nextSibling)})}catch(err){}
   try{
     await document.fonts.ready;
