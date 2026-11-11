@@ -571,3 +571,17 @@ Not live yet: live is still deploy 6af42932 (hotfix-iphone). Main holds all of t
 - Next job (Josh, 11 Nov): dish notes sweep. About 240 notes across the 900 say where a dish is from instead of what is in it, often echoing the dish name (Con Air jerky "Lerner Airfield in the desert", cheeseburger "the stop at the abandoned airfield"). Rewrite the weak ones to describe the food, keep the ones that work, with a separate reviewer.
 - Josh's queued wishes (Instagram Reel, 3D menu video) unchanged.
 - Tests at ce1978d0: all 19 tests, check-browser (16), check-store-taps, check-print-text on all 900 (six chunks of 150), WebKit iPhone signature check: all pass.
+
+## 12 Nov, 8:45am: Review 23 chat, everything merged on main (start here in the next chat)
+
+Not live yet: live is deploy 6af4c085 (main e85c360b). GitHub push is still refused from these sessions (Claude GitHub App not linked), so main here only exists locally until it is pushed or deployed.
+
+### Merged on main, each reviewed by a separate reviewer
+- Campfire signatures (Josh's iPhone: E.T. lettering clipped at the bottom): stillStrip.sh is a per-film crop height. E.T. sh 60, Evil Dead II sh 58, IT and The Last Jedi sign with the full logo. scripts/sig-crops.py checks every logo-signed strip film. WebKit iPhone check: all 50 bake as lettering, none opaque.
+- Dish notes sweep: 1504 notes that said where a dish was from now describe the food from its recipe, most with a short film nod (Josh's call), 3 kept. Three review rounds. Same wording copied into the 249 matching poster-edition dishes in movie-menus.js. Full log with old and new text: audit/dish-notes-sweep-2026-11-12.json.
+- ARTWORK_ROLLOUT.md lines 8 and 25 match the type posters (no recognisable film typography or imitated logos). Still stale, not touched: line 35 "All generated artwork is original film-inspired artwork".
+- palace.webp: the two faint marks cleaned (scripts/palace-marks.py, one-off).
+- Hero sign (Josh's iPhone, 8:26am): bulb rail carried across the gap between the crest and the right scroll, REEL DINNER letters redrawn as separate bulbs (scripts/palace-sign-fix.py, works on the current palace.webp). The earlier marquee commit e7f0a5bc was marked WIP, not reviewed.
+
+### Tests on main (before the hero sign merge, which only changed the three hero images)
+All 19 tests, check-browser (3 clean runs), check-store-taps, check-print-text on all 900 (six chunks of 150; one flake on The Avengers "We deliver" footer when two chunks ran at once, passed 3 of 3 alone and on the chunk rerun), sig-crops, WebKit signature check: all pass.
