@@ -460,7 +460,7 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 
 ## 11 Nov, noon: known menu glitches fixed (start here in the next chat)
 
-Branch fix/menu-glitches, not deployed and not on main until Josh says go. Before and after shots went to Josh in chat.
+Live on reeldinner.com from ab66182 (deploy 6af3cc50, app.js?v=8b7eb073), pushed to main (Josh, 11 Nov 11:51am: deploy). Before and after shots went to Josh in chat. Not yet checked on a real phone.
 - Hitch: the Keep This tag read as cut off but was printing in full. Line is now "Results not guaranteed. Effort is." (film-flavour).
 - The Goonies: Sloth's note printed `Sloth: "Ruth, Ruth`. Cause was in app.js, not the film: __fmtShort cut inside the quote and __fmtTrim kept the cut even though it freed no line. Now __fmtShort never cuts inside a quote, and __fmtTrim puts the full note back when a cut does not make the note shorter on the page. Applies to every layout that uses __fmtTrim.
 - Mickey Blue Eyes: the Lot 1 sticker sat on the lot note. Note is 126px wide (was 140), sticker moved 8px right (formats.js template).
@@ -471,3 +471,5 @@ Branch fix/menu-glitches, not deployed and not on main until Josh says go. Befor
 - Posters: The Great Mouse Detective and The Proposal changed in tmdb-posters.js. Every official Proposal poster is on white, so that one is a closer crop, not a coloured one. The Sword in the Stone already printed a full colour poster, nothing changed.
 - No TMDB key on this machine. Other posters for a film can be read from www.themoviedb.org/movie/<id>/images/posters through the proxy.
 - Tests pass. Checked with sweep-shot on the 12 films.
+- All 900 scanned before and after for shortened or hidden notes: 23 films changed, none hides a note. 21 print more of their notes in full (Toy Story, Toy Story 3, Mean Girls, Flubber, Con Air, Zoolander, Total Recall and others). Watchmen and Spy shorten different notes than before.
+- Next, in order: the E.T. stills treatment for the other 55 campfire menus (see "8 Nov, 6pm"; The Proposal is one of them), then Review 21. Open question for Josh: put a still in the empty bistro column on the other 27 bistro menus, as on Wall Street?
