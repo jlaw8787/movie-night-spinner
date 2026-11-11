@@ -58,7 +58,7 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  }
  if(spec.art&&!sheet){
   const imageSources=[...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m=>m[1]);
-  assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'||(id==='Coming to America (1988)'&&src==='assets/menu-details/mcdowells-film-source.jpg')),id+' imagery uses authentic film assets and paper texture');
+  assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'),id+' imagery uses authentic film assets and paper texture');
   const used=Object.entries(spec.art).filter(([,path])=>html.includes(path));
   for(const [role,path] of used){
    assert.match(path,/^\/[A-Za-z0-9]+\.(?:jpg|png|svg)$/,id+' valid '+role+' image path');

@@ -199,7 +199,8 @@ function fmtFoldPages(f,spec,menu){
 
 /* ---------- Gusteau's, Paris: the evening menu card on a linen tablecloth (Ratatouille) ---------- */
 function fmtMcdowellsMark(style=""){
-  return `<span class="mcdowells-film-sign" role="img" aria-label="The actual McDowell’s golden arcs sign from Coming to America" style="display:inline-block;position:relative;overflow:hidden;${style}"><img crossorigin="anonymous" src="assets/menu-details/mcdowells-film-source.jpg" alt="" aria-hidden="true" style="position:absolute;max-width:none;width:774.19355%;height:303.0303%;left:-411.6129%;top:-8.08081%;display:block"></span>`;
+  /* an original drawn roadside sign (crown over a plain red board on a post), drawn in code; no film frame or photo */
+  return `<span class="mcdowells-sign" role="img" aria-label="A drawn roadside restaurant sign with a gold crown" style="display:inline-block;position:relative;overflow:hidden;${style}"><svg viewBox="0 0 76 97" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="position:absolute;inset:0;display:block"><rect x="35" y="56" width="6" height="41" fill="#663220"/><rect x="25" y="92" width="26" height="5" rx="1.5" fill="#663220"/><path d="M16 22 L22 8 L30 17 L38 4 L46 17 L54 8 L60 22 Z" fill="#edbd47" stroke="#a7781c" stroke-width="1.2" stroke-linejoin="round"/><circle cx="22" cy="8" r="2.4" fill="#edbd47"/><circle cx="38" cy="4" r="2.4" fill="#edbd47"/><circle cx="54" cy="8" r="2.4" fill="#edbd47"/><rect x="6" y="24" width="64" height="34" rx="5" fill="#a72525" stroke="#edbd47" stroke-width="2.5"/><rect x="14" y="33" width="48" height="4" rx="2" fill="#f7efd9"/><rect x="18" y="41" width="40" height="3" rx="1.5" fill="#edbd47"/><rect x="22" y="48" width="32" height="3" rx="1.5" fill="#f7efd9" opacity=".8"/></svg></span>`;
 }
 
 /* which film uses which printed menu, and the version of each menu file (generated) */

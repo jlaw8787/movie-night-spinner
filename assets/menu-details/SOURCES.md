@@ -1,9 +1,7 @@
 # Menu detail images
 
-## McDowell’s film sign
+No detail images are stored here at the moment.
 
-`mcdowells-film-source.jpg` is the unaltered source image, reproduced by CinemaBlend from Coming to America (1988): https://www.cinemablend.com/news/2491714/5-things-that-dont-make-sense-about-coming-to-america
+The McDowell's film frame copied from CinemaBlend was removed on 11 Nov 2026. The Coming to America menu now draws its own roadside sign in code (`fmtMcdowellsMark` in `formats.js`): a gold crown over a plain red board on a post. It is not traced from the film.
 
-Source image: https://cdn.mos.cms.futurecdn.net/VNsP2pRDqg63UYx676qXoK.jpg
-
-`fmtMcdowellsMark` uses an HTML overflow viewport to show only the roadside sign, at x638 y16, width155 height198 in the original1200×600 image. The photographed sign is not traced, redrawn, generated or raster-edited. A direct JPEG and CSS crop also retain the sign in the canvas/PDF export.
+If a detail image is added later, record where it came from and what licence covers it here.
