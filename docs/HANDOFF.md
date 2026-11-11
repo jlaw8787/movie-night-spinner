@@ -457,3 +457,17 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - Left on purpose (Josh, 11 Nov: deploy as is): card dishes those menus never print. Warriors: crinkle fries, clam strips, knishes, steak heroes, toffee apples, chocolate malted. Godfather: orange and fennel salad, calamari, veal scaloppine, Chianti sangria. Harry Met Sally: potato knish. Cutting them is a separate job if Josh asks.
 - Live on reeldinner.com from 21a3d30 (deploy 6af3bd3a), pushed to main. Not yet checked on a real phone.
 - Next: Josh's open menu jobs listed under "11 Nov, 10:40am".
+
+## 11 Nov, noon: known menu glitches fixed (start here in the next chat)
+
+Branch fix/menu-glitches, not deployed and not on main until Josh says go. Before and after shots went to Josh in chat.
+- Hitch: the Keep This tag read as cut off but was printing in full. Line is now "Results not guaranteed. Effort is." (film-flavour).
+- The Goonies: Sloth's note printed `Sloth: "Ruth, Ruth`. Cause was in app.js, not the film: __fmtShort cut inside the quote and __fmtTrim kept the cut even though it freed no line. Now __fmtShort never cuts inside a quote, and __fmtTrim puts the full note back when a cut does not make the note shorter on the page. Applies to every layout that uses __fmtTrim.
+- Mickey Blue Eyes: the Lot 1 sticker sat on the lot note. Note is 126px wide (was 140), sticker moved 8px right (formats.js template).
+- Silver Linings Playbook: the last letter of the signature was clipped. Cafe signatures have 12px of room on the right now (all cafe menus).
+- Top Gun: logo printed twice (on the poster and on the panel right under it). New per-film flavour `logoPanel:false` for bartab: the panel under a poster reads "Now showing, year". Only Top Gun has it. The other 32 bartab menus are unchanged.
+- Wall Street: empty column beside the poster. New per-film flavour `sideStill` for bistro (a TMDB still path, or true for the third still): a still sits under the logo. Only Wall Street has it. The same column is empty on the other 27 bistro menus; Josh has not said whether to roll it out.
+- Wish, Clerks III, Despicable Me 2 (cafe, all cafe menus with a poster): the venue name box no longer holds two lines of height for a one-line name; the side column shares its spare height between its blocks; a board column that ends short spreads the spare between its dishes (--xg, 12px a gap at most, set after the fit and the column balance).
+- Posters: The Great Mouse Detective and The Proposal changed in tmdb-posters.js. Every official Proposal poster is on white, so that one is a closer crop, not a coloured one. The Sword in the Stone already printed a full colour poster, nothing changed.
+- No TMDB key on this machine. Other posters for a film can be read from www.themoviedb.org/movie/<id>/images/posters through the proxy.
+- Tests pass. Checked with sweep-shot on the 12 films.

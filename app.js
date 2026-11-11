@@ -1655,10 +1655,14 @@ window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?"
   /* a cut that ends on a verb or a joining word reads unfinished ("Choux puffs filled.", "Lemon jelly set."), so those are skipped */
   for(let k=cuts.length-1;k>=0;k--){const c=body.slice(0,cuts[k]).trim(),lw=(c.match(/(\S+)$/)||["",""])[1].toLowerCase();
     if(c.split(/\s+/).length>=3&&!/(ed|ing)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
-  for(const c of cands)if(fits(c))return c;return null};
+  /* 11 Nov: never cut inside a quote (The Goonies printed: Sloth: "Ruth, Ruth) */
+  const open=c=>(c.match(/"/g)||[]).length%2===1||(c.match(/\u201c/g)||[]).length!==(c.match(/\u201d/g)||[]).length;
+  for(const c of cands)if(!open(c)&&fits(c))return c;return null};
 /* notes from the bottom: each is first shortened at a break, and only hidden if even that will not fit. The full text is kept to put back on a refit */
 window.__fmtTrim=(ns,over)=>{for(let i=ns.length-1;i>=0&&over();i--){const n=ns[i];if(n.children.length||n.style.display==="none")continue;const full=n.dataset.full||(n.dataset.full=n.textContent);
-    let last=null;const ok=window.__fmtShort(full,c=>{n.textContent=c;last=c;return !over()});n.textContent=ok||last||full;if(ok)return}
+    /* 11 Nov: a cut that does not fit is only kept when it frees a line; one that leaves the note the same height goes back to the full text */
+    n.textContent=full;const h0=n.offsetHeight;let last=null;const ok=window.__fmtShort(full,c=>{n.textContent=c;last=c;return !over()});n.textContent=ok||last||full;if(ok)return;
+    if(last&&n.offsetHeight>=h0)n.textContent=full}
   for(let i=ns.length-1;i>=0&&over();i--)ns[i].style.display="none"};
 window.__fmtTrimReset=root=>{if(root)root.querySelectorAll("[data-full]").forEach(n=>{n.textContent=n.dataset.full})};
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;

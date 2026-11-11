@@ -78,7 +78,9 @@ const noise=(rgb,a,freq,size)=>{const[r,g,b]=hex(rgb).map(v=>(v/255).toFixed(3))
 const CHALKSOFT=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.4 0 0 0 2.5"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 const CHALKMASK=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.2 0 0 0 2.75"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 /* runtime fit: every [data-fit] box scales its type (CSS var --k) until nothing overflows; notes drop as a last resort */
-const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){f0();if(window.__fmtCafeBal2)window.__fmtCafeBal2(r,f0)}function f0(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');b.style.removeProperty('--dl');if(window.__fmtTrimReset)window.__fmtTrimReset(b);var ns=b.querySelectorAll('[data-cnote]');for(var j=0;j<ns.length;j++)ns[j].style.display='';var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(window.__fmtTrim)window.__fmtTrim(Array.prototype.slice.call(ns),o);else for(var i=ns.length-1;i>=0&&o();i--)ns[i].style.display='none';if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
+const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){var cs=r.querySelectorAll('[data-ccol]'),i;for(i=0;i<cs.length;i++)cs[i].style.removeProperty('--xg');f0();if(window.__fmtCafeBal2)window.__fmtCafeBal2(r,f0);for(i=0;i<cs.length;i++){var c=cs[i],ss=c.querySelectorAll('[data-csec]'),n=c.querySelectorAll('[data-citem]').length+ss.length;if(!ss.length)continue;var l=ss[ss.length-1],sp=c.parentNode.clientHeight-(l.offsetTop+l.offsetHeight-c.offsetTop);if(sp>12)c.style.setProperty('--xg',Math.min(12,Math.floor((sp-4)/n))+'px')}}function f0(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');b.style.removeProperty('--dl');if(window.__fmtTrimReset)window.__fmtTrimReset(b);var ns=b.querySelectorAll('[data-cnote]');for(var j=0;j<ns.length;j++)ns[j].style.display='';var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(window.__fmtTrim)window.__fmtTrim(Array.prototype.slice.call(ns),o);else for(var i=ns.length-1;i>=0&&o();i--)ns[i].style.display='none';if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
+/* 11 Nov: once the split is settled, a column that ends short of the board spreads its spare height between its dishes (--xg, 12px a gap
+   at most), so the board has no empty patch under one column (Wish, Clerks III) */
 /* review 16: the two menu columns are first split by a length guess, before anything is measured. Once the fonts are in, every split of the
    sections across the columns is tried (the first section always top left, each column in menu order), and the one that clamps no dish name, hides the fewest notes, then shortens the fewest, then keeps the
    biggest type wins. The first split wins a tie, so a menu that already fits is left alone */
@@ -224,10 +226,10 @@ window.MENU_FORMATS["cafe"]=ctx=>{
     :`${photo(ctx,still,W-2*FR,PH,`${e.photoF==="none"?"":e.photoF} ${T.f}`,"50% 35%")}
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(0,0,0,0) 45%,rgba(0,0,0,${T.vig}) 100%)"></div>
     <div style="position:absolute;left:0;right:0;top:0;height:${vlines>1?300:250}px;background:linear-gradient(180deg,rgba(0,0,0,.82),rgba(0,0,0,.5) 55%,rgba(0,0,0,0))"></div>`}
-    ${hasP?`<div style="position:absolute;left:${12+PW+12+24}px;top:22px;width:${CW}px;height:${PHP-34}px;display:flex;flex-direction:column;gap:12px">`:""}
+    ${hasP?`<div style="position:absolute;left:${12+PW+12+24}px;top:22px;width:${CW}px;height:${PHP-34}px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">`:""}
     <div style="${hasP?"flex:none":"position:absolute;left:40px;right:40px;top:30px"}">
       <div style="font-family:${bodyF};font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:${mix(ACC,"#ffffff",.15)};font-size:18px;margin-bottom:8px">${esc(T.kick)}</div>
-      <div data-fit style="height:${Math.ceil(vs*(vlines>1||hasP&&vlen>12?1.48:1.1)*Math.max(vlines,hasP&&vlen>12?2:1))+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:${vlines>1||hasP&&vlen>12?1.42:1.06};${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
+      <div data-fit style="${hasP?"max-height":"height"}:${Math.ceil(vs*(vlines>1||hasP&&vlen>12?1.48:1.1)*Math.max(vlines,hasP&&vlen>12?2:1))+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:${vlines>1||hasP&&vlen>12?1.42:1.06};${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
       <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:#f2efe6;font-size:22px;margin-top:6px;${hasP?"":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(sign)}</div>
     </div>
     ${hasP?`${logoHtml}${noteHtml}${card}</div>`:""}
@@ -243,11 +245,11 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const n=C.reduce((a,c)=>a+c.items.length,0);
   const PQ=(()=>{const P={},M={};C.forEach(c=>{M[c.k]=c.items;P[c.k]=c.items.map((it,i)=>money(era,c.k,i,f,fl))});return window.priceSense?window.priceSense(M,P):P})();
   const dish=n<=6?30:n<=9?28:26,desc=n<=6?22:21,gap=n<=6?16:n<=10?11:8;
-  const itemHtml=(c,it,i)=>`<div style="margin:0 0 ${gap}px">
+  const itemHtml=(c,it,i)=>`<div data-citem style="margin:0 0 calc(${gap}px + var(--xg,0px))">
       <div style="display:flex;align-items:baseline;gap:14px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${bodyF};font-weight:${e.bw?"700":"400"};color:${INK};line-height:1.14;${fs(dish,18)};${e.up&&era!=="1930s-40s"?"text-transform:uppercase;letter-spacing:.03em;":""}">${esc(it.n)}</div>
       <div style="font-family:${bodyF};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,18)};white-space:nowrap">${PQ[c.k][i]}</div></div>
       <div data-cnote style="display:var(--nd,block);font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${mix(INK,BOARD,.12)};line-height:1.28;${fs(desc,14)};margin-top:3px">${esc(it.note)}</div></div>`;
-  const colHtml=list=>list.map(c=>`<div data-csec="${C.indexOf(c)}" style="margin:0 0 ${gap+6}px">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
+  const colHtml=list=>list.map(c=>`<div data-csec="${C.indexOf(c)}" style="margin:0 0 calc(${gap+6}px + var(--xg,0px))">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
 
   /* loyalty card: paper, stamps are spaced type, never icons */
   const stamped=Math.min(9,Math.max(3,(String(num).replace(/\D/g,"").split("").reduce((a,d)=>a+ +d,0)%7)+3));
@@ -261,11 +263,13 @@ window.MENU_FORMATS["cafe"]=ctx=>{
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px">${boxes}</div>
     </div>`;
 
-  const noteHtml=`<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+  /* 11 Nov: beside a poster the note keeps its own height (it still gives way when the column is full), so spare height is shared
+     between the blocks of the column instead of sitting in one gap (Despicable Me 2) */
+  const noteHtml=`<div style="${hasP?"flex:0 1 auto;min-height:0":"flex:1"};min-width:0;display:flex;flex-direction:column">
       <div style="font-family:${bodyF};font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:${ACC};font-size:17px;margin-bottom:6px">${esc(T.noteH)}</div>
-      <div data-fit style="flex:1;min-height:0;overflow:hidden">
+      <div data-fit style="flex:${hasP?"0 1 auto;padding-bottom:10px":"1"};min-height:0;overflow:hidden">
         <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${INK};line-height:1.3;${fs(22,15)}">“${esc(note.t)}”</div>
-        <div style="font-family:'${e.sig}',cursive;color:${ACC};${fs(e.sig==="Pinyon Script"?40:42,22)};line-height:1.1;margin-top:4px;text-align:right">${esc(note.by)}</div>
+        <div style="font-family:'${e.sig}',cursive;color:${ACC};${fs(e.sig==="Pinyon Script"?40:42,22)};line-height:1.1;margin-top:4px;padding-right:12px;text-align:right">${esc(note.by)}</div>
       </div></div>`;
 
   const fine=[`Prices subject to change`,f.P?`Showtime: ${clean(f.P).replace(/\.$/,"")}`:"",winks[1]?`Lost and found: ${winks[1]}`:"",`Board No. ${num}`].filter(Boolean).join(". ")+".";

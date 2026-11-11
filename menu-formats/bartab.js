@@ -173,11 +173,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const course=k=>I[k].length?`<div style="margin:0 0 calc(10px*var(--k))">${label(C[k])}${I[k].map(row).join("")}</div>`:"";
   const ledger=(lab,val,strong)=>`<div style="display:flex;align-items:baseline;gap:10px;color:${ink};font:${strong?800:600} ${strong?24:19}px/1.1 ${g.body};letter-spacing:.1em;text-transform:uppercase;${strong?`border-top:3px double ${rgba(ink,.7)};padding-top:8px;`:`border-top:1px solid ${rgba(ink,.35)};padding-top:6px;`}"><span>${esc(lab)}</span><span style="flex:1"></span><span style="color:${acc};letter-spacing:.02em">${money(val,era)}</span></div>`;
 
-  /* logo panel */
+  /* logo panel. Per-film flavour logoPanel:false (Top Gun, 11 Nov): the poster already carries the same logo right above,
+     so the panel under a poster reads "Now showing, year" in the bar's own type and the logo prints once */
   const lp=g.key==="laser"?"#f2f0ea":mix(ink,"#ffffff",.3), dp=mix(board,"#000000",.45);
   const titleType=`<div ${A}-text="46" ${A}-lo="20" style="width:100%;max-height:84px;overflow:hidden;text-align:center;font:${g.dw} 46px/1.02 ${g.disp};color:${ink};text-transform:uppercase;letter-spacing:${g.dtrack}">${esc(f.title||venue)}</div>`;
   const logoPanel=`<div ${A}-panel ${A}-light="${lp}" ${A}-dark="${dp}" style="position:absolute;left:${P}px;top:${LT}px;width:${W-2*P}px;height:${heroPoster?72:104}px;box-sizing:border-box;padding:${heroPoster?"8px 18px":"12px 18px"};background:${dp};box-shadow:0 6px 18px rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;${g.key==="offset"?"border-radius:6px;":""}${t.gilt?`outline:2px solid ${acc};outline-offset:-6px;`:""}">
-    ${ctx.logo?`<img ${A}-logo crossorigin="anonymous" src="${ctx.img(ctx.logo[0],"w500")}" style="max-width:100%;max-height:${heroPoster?56:78}px;object-fit:contain">`
+    ${fl.logoPanel===false&&heroPoster?`<div style="width:100%;text-align:center;white-space:nowrap;overflow:hidden;color:${ink};font:${g.dw} 30px/1 ${g.disp};letter-spacing:.14em;text-transform:uppercase">Now showing &middot; ${esc(f.year)}</div>`
+      :ctx.logo?`<img ${A}-logo crossorigin="anonymous" src="${ctx.img(ctx.logo[0],"w500")}" style="max-width:100%;max-height:${heroPoster?56:78}px;object-fit:contain">`
       +`<div ${A}-fallback style="display:none;position:absolute;inset:10px 18px;align-items:center;justify-content:center">${titleType}</div>`
       :`<div style="position:absolute;inset:10px 18px;display:flex;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`}
   </div>`;
