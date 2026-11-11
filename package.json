@@ -1,0 +1,26 @@
+{
+  "name": "reel-dinner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reel Dinner: the website at reeldinner.com and its iPhone and Android app (Capacitor).",
+  "scripts": {
+    "build:app": "node scripts/build-app.cjs",
+    "sync": "node scripts/build-app.cjs && cap sync",
+    "android": "node scripts/build-app.cjs && cap sync android && cap open android",
+    "ios": "node scripts/build-app.cjs && cap sync ios && cap open ios",
+    "test": "for t in tests/*.test.cjs; do node \"$t\" || exit 1; done"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.6.0",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@capacitor/share": "^8.0.3",
+    "@capgo/capacitor-printer": "^8.1.9"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0"
+  }
+}

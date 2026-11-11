@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reel Dinner notification icon: a plate between a fork and a knife, drawn for the app (white on clear, as Android wants) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path android:fillColor="#FFFFFFFF" android:pathData="M12,5.5a6.5,6.5 0,1 0,0.001 0zM12,7.5a4.5,4.5 0,1 1,-0.001 0z"/>
+    <path android:fillColor="#FFFFFFFF" android:pathData="M12,9a3,3 0,1 0,0.001 0z"/>
+    <path android:fillColor="#FFFFFFFF" android:pathData="M2,3h0.8v4h0.6v-4h0.8v4h0.6v-4h0.8v5.2c0,0.7 -0.5,1.2 -1.1,1.3v10.5h-1.4v-10.5c-0.6,-0.1 -1.1,-0.6 -1.1,-1.3z"/>
+    <path android:fillColor="#FFFFFFFF" android:pathData="M20.6,3c1,0.6 1.4,2.4 1.4,5.4v3.6h-1v8h-1.4v-17z"/>
+</vector>
