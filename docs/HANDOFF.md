@@ -494,3 +494,11 @@ Live on reeldinner.com from 7ea6747 (deploy 6af3ef19, Josh, 11 Nov: deploy now).
 - The Princess and the Frog's still prints black and white because the menu is 1920s; that is the era look, not a fault.
 - Tests pass, check-print-text passes on all 28, all 28 looked over in shots.
 - Next: Review 21.
+
+## 11 Nov, 4pm: Review 21 written (start here in the next chat)
+
+- docs/review-21.md, scored 9.1 (review 20 was 9.2). Screenshots review-21-01.png to 18. Tested at 7cb7451.
+- Review 20's shadow, stripe and kids' items are fixed. Still open from it: canteen voucher, Time Bandits' frame rule, and Ratatouille's stray shadow (now a white bar at the bottom, also on Ghostbusters and When Harry Met Sally).
+- New: After Hours' TERMINAL BAR logo wraps behind "BAR AND GRILL" (since 7e8598f3); the request button breaks Galaxy Video's phone tool row and covers two aisle signs (check-store-taps fails, since 919fd90f); campfire captions often don't match their stills; campfire page 1 takes its A4 margin from the strip photos; Ferris and Hitch side lines get the film wrong; Luca and Kingsman side lines repeat a dish note.
+- check-browser fails kids' mode on Bugsy's "scotch fillet" (false positive).
+- Next: Josh picks from the review 21 fix list.
