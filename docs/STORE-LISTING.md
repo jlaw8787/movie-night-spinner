@@ -92,7 +92,7 @@ Film posters and photos come from TMDB. This product uses the TMDB API but is no
 
 ## 4. Keywords (Apple, max 100, comma separated, no spaces)
 
-Words already in the name and subtitle ("reel", "dinner", "spin", "film") are left out, Apple indexes those anyway.
+Words already in the name and subtitle ("reel", "dinner", "spin", "film") are left out, Apple indexes those anyway. This list assumes subtitle option 1. Redo the keywords once the subtitle is picked: with option 2 or 3, "spin" and "film" become free to use and "movie night" would repeat the subtitle.
 
 ```
 movie night,menu,recipes,shopping list,family,party,themed,cook,popcorn,snacks,printable,wheel
@@ -127,6 +127,8 @@ Options for Josh to decide:
 
 Confirm the rating in App Store Connect's preview before saving. Apple reworked this table in 2025 and may change it again.
 
+Devices on OS versions before 26 use Apple's older Global table instead, where Frequent gives 17+ and Infrequent gives 12+.
+
 ### Apple age rating questionnaire answers
 
 Content descriptors
@@ -136,15 +138,17 @@ Content descriptors
 | Alcohol, Tobacco, or Drug Use or References | Frequent | Drink recipes on most adult menus. A handful of tobacco and drug mentions in film descriptions |
 | Horror/Fear Themes | Infrequent | 74 horror films out of 900. Posters and one-line descriptions can be unsettling. Kids mode hides them |
 | Mature or Suggestive Themes | Infrequent | Some film descriptions (crime, war, R18+ films) touch on adult themes |
-| Profanity or Crude Humour | Infrequent | Mild words ("damn", "crap") appear in about a dozen menus |
+| Profanity or Crude Humour | Infrequent | Mild words ("damn", "crap") appear in a few menus |
 | Cartoon or Fantasy Violence | Infrequent | Posters for animated and superhero films |
 | Realistic Violence | Infrequent | Posters and stills for action, war and crime films may show weapons |
+| Guns or Other Weapons | Infrequent | Film posters and stills show guns, swords and the like. Nothing in the app is about weapons |
 | Prolonged Graphic or Sadistic Realistic Violence | None | |
 | Sexual Content or Nudity | None | Check the posters for R18+ films before submitting |
 | Graphic Sexual Content and Nudity | None | |
 | Gambling | None | No real money |
 | Simulated Gambling | None | The wheel picks a film. Nothing is staked or won |
 | Contests | None | Trivia spin has no prizes |
+| Loot Boxes | None | No purchases of any kind |
 | Medical or Treatment Information | None | |
 | Health or Wellness Topics | No | Vegetarian is a menu option, not health advice |
 
@@ -159,7 +163,7 @@ Capabilities and features
 | Advertising | No | |
 | Parental Controls | No | Kids mode is a content filter, not a locked parental control |
 | Age Assurance | No | |
-| In-app purchases or loot boxes | No | |
+| In-app purchases | No | |
 
 ### Google Play content rating (IARC questionnaire)
 
@@ -191,7 +195,7 @@ What the app actually sends anywhere, from app.js and privacy.html:
 
 | Where | When | What |
 |---|---|---|
-| Supabase (our sync function, servers in South Korea) | Only if the user taps Put my card online, or Use my card from another device | Member number, a scrambled PIN, the optional name on the card, watched list, favourites, ratings, ticket stub history, weekly plan, rental counts, kids mode and skip-watched settings |
+| Supabase (our sync function, servers in South Korea) | Only if the user taps Put my card online, or Use my card from another device | Member number, a scrambled PIN, the optional name on the card, watched list, favourites, ratings, ticket stub history, weekly plan, rentals count, per-aisle visit counts, the last 8 films spun, candy bar picks, kids mode and skip-watched settings |
 | Netlify Forms (our host) | Only when the user sends Request a movie | Film title, year, optional name, optional note |
 | TMDB image server | Every time a poster or still is shown | Normal image request (IP address, device details). No data from the app |
 | YouTube (youtube-nocookie.com) | Only when the user presses play on a trailer | Normal video request |
@@ -214,14 +218,16 @@ If Google Fonts or cdnjs are still loaded when the app is submitted, they stay i
 |---|---|
 | Contact Info: Name | Optional name on the member card. Optional name on Request a movie |
 | Identifiers: User ID | The member number, when the card is put online |
-| User Content: Other User Content | Watched list, favourites, ratings, weekly plan and settings on the online card. Film title, year and note on a request |
+| User Content: Other User Content | Watched list, favourites, ratings, weekly plan and kids mode on the online card. Film title, year and note on a request |
+| Usage Data: Product Interaction | Optional, only on an online card: rentals count, per-aisle visit counts, the last 8 films spun and candy bar picks. Used to show the same card on another device. Linked to the member number. Not used for tracking or analytics |
 
 **Data not linked to you:** None.
 
 Notes:
 - Optional disclosure: Apple lets you skip declaring a data type if it is optional, rare and clearly entered by the user (like a feedback form). The request form might qualify. Declaring it anyway is simpler and safer.
-- The PIN is stored scrambled (hashed) and is a sign-in credential, not a data type on Apple's list.
-- Do not tick Usage Data or Diagnostics: nothing like that is collected.
+- The PIN is a sign-in credential, not a data type on Apple's list. privacy.html says it is stored scrambled; confirm that (see Open questions).
+- Tick Usage Data: Product Interaction (above) only. Do not tick Diagnostics or any other Usage Data type: nothing like that is collected.
+- The other option is to stop syncing aisle visits and candy bar picks, then Product Interaction can come off. Rentals and the last 8 spins would still count.
 - Account deletion (guideline 5.1.1(v)): done. Galaxy Video, member card, Delete my online card.
 
 ---
@@ -245,7 +251,7 @@ Notes:
 | Personal info | Name | Yes | Yes | App functionality (name on the card, name on a request) |
 | Personal info | User IDs | Yes | Yes | App functionality (member number for sync) |
 | App activity | Other user-generated content | Yes | Yes | App functionality (watched list, favourites, ratings, plan, request notes) |
-| App activity | App interactions | No | | Nothing about how the app is used is collected |
+| App activity | App interactions | Yes | Yes | App functionality only (online card only: rentals count, per-aisle visit counts, the last 8 films spun and candy bar picks, so the card looks the same on another device). Linked to the member number. Not used for tracking or analytics |
 | Location, Financial info, Health, Messages, Photos, Audio, Files, Calendar, Contacts, Web history, Device IDs, Crash logs, Diagnostics | | No | | |
 
 Calendar note: Add to calendar writes a file or opens Google Calendar for the user. The app never reads the calendar, so Calendar is No.
@@ -313,7 +319,17 @@ Before submitting: create the test card on a spare device, write the number and 
 
 ## 11. Things to check before this goes in
 
-- privacy.html says "Kids mode only changes which films are shown". It also switches menus to alcohol-free, so that line should be updated to match.
+- privacy.html kids mode line: already fixed on main, leave it alone on this branch.
+- Once deployed, check https://reeldinner.com/support and https://reeldinner.com/privacy both return 200 (support is 404 until this branch goes live). Both stores check these links.
 - Decide the alcohol answer (section 6) before the age rating is saved.
 - Remove the Google Fonts and cdnjs links in the app build as planned, or leave them in the privacy list.
 - Settle the artwork rights before the screenshots are shot.
+
+---
+
+## 12. Open questions for Josh
+
+1. **Is the PIN hashed on the server?** The app sends the PIN over HTTPS on every sync, and the Supabase edge function code is not in this repo, so I cannot see whether it is stored hashed. privacy.html and the store answers say it is scrambled. Check the function before submitting. (The PIN is also kept as plain text in the device's own storage.)
+2. **Deleting a card by email.** Support and privacy say email your member number and we will delete the card. A 6-digit number alone is weak proof: anyone who knows it could get a card deleted. Ask for something more, such as the PIN or a one-off code shown in the app.
+3. **Reset everything leaves the online card.** It clears this device only. The online copy stays until Delete my online card is used. Say so in Settings or on the support page, or have Reset ask whether to delete the online card too.
+4. **Links in the native app.** The request form posts to "/" and the footer links are /privacy and /support. Inside a bundled app those point at the app's own address, not the website. In the app build they must point at https://reeldinner.com (form posts to https://reeldinner.com/, links to https://reeldinner.com/privacy and https://reeldinner.com/support).

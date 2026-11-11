@@ -53,7 +53,7 @@
 /* review 21: the request button sits under the tools, not in the sticky tool bar, so it never covers the aisle signs or squeezes the search box */
 #viewShop .req-line{order:8;margin:4px 0 10px;font:400 15px var(--f-body);color:var(--gv-cream,#fbf7ea);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
 #viewShop .req-line .req-shop{min-height:44px}
-.credit-priv{opacity:.85;margin-bottom:0;font-size:14px}.credit-priv a{display:inline-block;min-height:44px;line-height:44px;padding:0 10px}
+.credit-priv{opacity:.85;margin-bottom:0;font-size:14px}.credit-priv a{display:inline-block;min-height:44px;line-height:44px;padding:0 10px}.credit-priv .credit-sep{display:inline-block;margin:0 8px}
 .member-sync .sync-del{border-color:#e5484d;color:#ff8f8a;background:transparent}.member-sync .sync-del.arm{background:#c62a2f;border-color:#c62a2f;color:#fff}
 .member-sync .sync-priv{flex-basis:100%;margin:6px 0 0;font-size:14px}.member-sync .sync-priv a{color:inherit;display:inline-block;min-height:44px;line-height:44px}
 .reqm .req-priv{margin:12px 0 0;font-size:14px}.reqm .req-priv a{color:#e7c069}
@@ -3094,7 +3094,7 @@ html,body{overflow-x:clip}
     </section>
   </div>
 </div>
-<p class="credit credit-priv"><a href='/privacy'>Privacy policy</a> <a href='/support'>Help and support</a></p>
+<p class="credit credit-priv"><a href='/privacy'>Privacy policy</a><span class="credit-sep" aria-hidden="true">·</span><a href='/support'>Help and support</a></p>
 <p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank" aria-label="TMDB, The Movie Database (opens in a new tab)"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. Cinema photo by SecretName101 via <a href="https://commons.wikimedia.org/wiki/File:Orpheum_Theatre_marquee_on_election_night_2024_IMG_2517.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC BY 4.0</a>, signs changed. Shopfront photo by Mathias Reding on <a href="https://unsplash.com/photos/0rgZp-E8iIs" rel="noopener" target="_blank">Unsplash</a>, signs changed. <button class="howlink" id="howBtn" type="button">How it works</button></p>
 
 <script src="tmdb-posters.js?v=da0beac8" defer></script>
