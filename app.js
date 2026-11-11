@@ -1473,15 +1473,23 @@ function libPhotoPass(card,L,poster){
   if(IOS_SAFARI)iosBakeFilters(card);
 }
 const IOS_SAFARI=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+/* review 21: Josh still saw blurry, zoomed-in stills on his iPhone (Logan's strip and hero, 11 Nov). Two gaps in the 8 Nov fix:
+   only filtered photos were baked, but iPhone Safari also draws an object-fit: cover photo inside the scaled card as a zoomed corner;
+   and the copy for the canvas was fetched with CORS from a cache that may hold the plain (no CORS) copy, so it failed quietly and the
+   photo kept its filter. Now every cropped photo is baked to its frame, the CORS copy is fetched fresh, and if that still fails the
+   filter comes off, so the photo shows whole and sharp in plain colour rather than zoomed. */
 function iosBakeFilters(card){
   card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.baked)return;
-    const cs=getComputedStyle(i);if(!cs.filter||cs.filter==="none")return;
-    const k=/blur\(/.test(cs.filter)?1:2,snap={filter:cs.filter,width:parseFloat(cs.width)*k+"px",height:parseFloat(cs.height)*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen; blur radii stay true at 1x */
-    const src=i.currentSrc||i.src;if(!src||/^data:/.test(src))return;
+    const cs=getComputedStyle(i),filt=cs.filter&&cs.filter!=="none",crop=/cover|contain|none|scale-down/.test(cs.objectFit);if(!filt&&!crop)return;
+    if(!i.complete||!i.naturalWidth){i.addEventListener("load",()=>iosBakeFilters(card),{once:true});return}
+    const k=filt&&/blur\(/.test(cs.filter)?1:2,snap={filter:filt?cs.filter:"brightness(1)",width:parseFloat(cs.width)*k+"px",height:parseFloat(cs.height)*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen; blur radii stay true at 1x */
+    const src=i.currentSrc||i.src;if(!src||/^data:/.test(src)||!parseFloat(cs.width)||!parseFloat(cs.height))return;
     i.dataset.baked="1";
     const im=new Image();im.crossOrigin="anonymous";
-    im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)return;i.src=u;i.removeAttribute("srcset");i.style.filter="none";i.style.objectFit="fill"}catch(e){}};
-    im.src=src});
+    const give=()=>{if(filt)i.style.filter="none"};
+    im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)return give();i.src=u;i.removeAttribute("srcset");i.style.filter="none";i.style.objectFit="fill";i.style.objectPosition="50% 50%"}catch(e){give()}};
+    im.onerror=give;
+    im.src=/^https?:/.test(src)&&!src.startsWith(location.origin)?src+(src.includes("?")?"&":"?")+"cors=1":src});
 }
 /* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
    Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */
