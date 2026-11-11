@@ -10,11 +10,17 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  const ctx=await b.newContext({viewport:{width:1280,height:900},serviceWorkers:'block'});
  await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||u.protocol==='data:'?r.continue():r.abort()});
- const p=await ctx.newPage();p.setDefaultTimeout(7200000);
- await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
- await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
- const r=await p.evaluate(async ([N,NAMED,G])=>{PLAN.guests=G;
-  const ids=NAMED.length?NAMED:FILMS.map(f=>f.id).slice(0,N),bad=[];let pages=0,films=0;
+ /* review 21: one page held all 900 films and was killed for memory part way, which left the run waiting forever. Now a fresh page
+    reads 40 films at a time, says how far it has got, and a page that crashes is tried once more before its films are reported */
+ const open=async()=>{const p=await ctx.newPage();p.setDefaultTimeout(600000);
+  await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
+  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);return p};
+ let p=await open();const all=await p.evaluate(([N,NAMED])=>NAMED.length?NAMED:FILMS.map(f=>f.id).slice(0,N),[N,NAMED]);
+ const r={films:0,pages:0,bad:[]};
+ for(let k=0;k<all.length;k+=40){const ids=all.slice(k,k+40);let got=null;
+  for(let t=0;t<2&&!got;t++){try{if(!p||p.isClosed())p=await open();
+    got=await Promise.race([p.evaluate(async ([ids,G])=>{PLAN.guests=G;
+  const bad=[];let pages=0,films=0;
   for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f)continue;try{await ensureExact(f);await show(f,true);setTab('prep')}catch(e){continue}
    await new Promise(r=>setTimeout(r,30));if(!prep||!prep.querySelector('.pp-cols'))continue;films++;
    const parts=prepParts();
@@ -22,6 +28,9 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     const c=el.cloneNode(true);c.hidden=false;c.style.transform='none';prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);
     const i=c.querySelector('.mc-in'),cols=c.querySelector('.pp-cols'),over=i?i.scrollHeight-i.clientHeight:0,fs=cols?parseFloat(cols.style.fontSize)||16:16;st.remove();
     if(over>1||fs<PREP_MIN_FS)bad.push(`${id}: page ${k+1} of ${parts.length} ${over>1?'runs '+over+'px past A4':'shrinks to '+fs+'px'}`)})}
-  return {films,pages,bad}},[N,NAMED,G]);
+  return {films,pages,bad}},[ids,G]),new Promise((_,no)=>p.once('crash',()=>no(Error('page crashed'))))])}
+   catch(e){console.log(`films ${k+1} to ${k+ids.length}: ${e.message.split("\n")[0]}`);await p?.close().catch(()=>{});p=null}}
+  if(got){r.films+=got.films;r.pages+=got.pages;r.bad.push(...got.bad)}else r.bad.push(...ids.map(i=>`${i}: not read (page crashed twice)`));
+  await p?.close().catch(()=>{});p=null;console.log(`${Math.min(k+40,all.length)} of ${all.length} read, ${r.bad.length} faults so far`)}
  console.log(`${r.films} Prep sheets, ${r.pages} A4 pages at ${G} guests`);
  await b.close();if(r.bad.length){console.log('FAIL:\n  '+r.bad.join('\n  '));process.exit(1)}console.log('PASS: every Prep sheet page fits A4 at reading size');process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});
