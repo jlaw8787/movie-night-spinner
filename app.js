@@ -3794,7 +3794,7 @@ function warmOffline(reg){
   document.querySelectorAll("#walkin img,#viewShop img,#viewCrave img").forEach(im=>{if(im.complete&&im.naturalWidth)return;const i=new Image();if(im.sizes)i.sizes=im.sizes;if(im.srcset)i.srcset=im.srcset;i.src=im.getAttribute("src")});
   (window.SNACKS||[]).forEach(x=>{if(x.img)new Image().src=x.img});
   /* plus the few pictures that layouts draw as textures (the diner's paper and laminate) and the member card */
-  ["assets/brand/member-card.webp","assets/brand/case-sticker.webp","menu-formats/assets/diner/paper-grain.webp","menu-formats/assets/diner/rain-glass.webp","menu-formats/assets/diner/laminate-wear.webp","assets/menu-art/clock-tower.png","assets/menu-details/mcdowells-film-source.jpg"].forEach(x=>{new Image().src=x});
+  ["assets/brand/member-card.webp","assets/brand/case-sticker.webp","menu-formats/assets/diner/paper-grain.webp","menu-formats/assets/diner/rain-glass.webp","menu-formats/assets/diner/laminate-wear.webp","assets/menu-art/clock-tower.png"].forEach(x=>{new Image().src=x});
 }
 if("serviceWorker" in navigator){navigator.serviceWorker.ready.then(reg=>setTimeout(()=>warmOffline(reg),6000)).catch(()=>{});navigator.serviceWorker.addEventListener("message",e=>{if(e.data&&"warmed" in e.data)savedScan()})}
 /* offline: a small note where something needs the internet (the request form, the member card sync), and its send button waits for the signal */
