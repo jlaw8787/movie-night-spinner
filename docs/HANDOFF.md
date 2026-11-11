@@ -455,4 +455,5 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - The Warriors: pretzel bites, street-cart corn, ice-cream sandwiches and cherry cola added to films.json.
 - Ghostbusters: edition rebuilt as the five the Prep sheet cooks (slime dip, devilled eggs, meatball sub, s'mores, slushie) from recipes2. poster-menus test now expects "7 eggs".
 - Left on purpose (Josh, 11 Nov: deploy as is): card dishes those menus never print. Warriors: crinkle fries, clam strips, knishes, steak heroes, toffee apples, chocolate malted. Godfather: orange and fennel salad, calamari, veal scaloppine, Chianti sangria. Harry Met Sally: potato knish. Cutting them is a separate job if Josh asks.
+- Live on reeldinner.com from 21a3d30 (deploy 6af3bd3a), pushed to main. Not yet checked on a real phone.
 - Next: Josh's open menu jobs listed under "11 Nov, 10:40am".
