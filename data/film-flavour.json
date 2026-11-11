@@ -472,7 +472,16 @@
     "Pickup, El Paso"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1
+  }
  },
  "Wonder Woman (2017)": {
   "venue": "Themyscira Great Hall",
@@ -1083,7 +1092,16 @@
     "Valet staff only"
    ]
   },
-  "number": "10"
+  "number": "10",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1
+  }
  },
  "Eternals (2021)": {
   "venue": "Domo Ship Galley",
@@ -2068,6 +2086,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1
   }
  },
  "The Wolverine (2013)": {
@@ -2313,7 +2340,17 @@
     "Size: very small"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1,
+   "sig": "full"
+  }
  },
  "The Iron Giant (1999)": {
   "venue": "Chat 'n' Chew Diner",
@@ -2562,7 +2599,16 @@
     "Calgary 1988"
    ]
   },
-  "number": "1988"
+  "number": "1988",
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
+  }
  },
  "The Sandlot (1993)": {
   "venue": "Sandlot Snack Stand",
@@ -2767,6 +2813,15 @@
    "m": "Herd Mains",
    "w": "Snow and Acorns",
    "call": "Dodo call"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
   }
  },
  "Despicable Me (2010)": {
@@ -3517,7 +3572,16 @@
     "Trespassers get ogred"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
+  }
  },
  "The Princess Bride (1987)": {
   "venue": "Miracle Max's Hut",
@@ -3839,7 +3903,16 @@
     "Mind the vines"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1
+  }
  },
  "Hercules (1997)": {
   "venue": "Phil's Training Camp",
@@ -4054,6 +4127,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1
   }
  },
  "Cinderella (1950)": {
@@ -4134,6 +4216,15 @@
    "m": "Neverland Mains",
    "w": "Fairy Dust Treats",
    "d": "Nursery Drinks"
+  },
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    2,
+    4,
+    7
+   ],
+   "flip": 1
   }
  },
  "Sleeping Beauty (1959)": {
@@ -4176,6 +4267,16 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1,
+   "sig": "full"
   }
  },
  "One Hundred and One Dalmatians (1961)": {
@@ -4269,6 +4370,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
   }
  },
  "Pocahontas (1995)": {
@@ -4312,6 +4422,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
   }
  },
  "The Hunchback of Notre Dame (1996)": {
@@ -4412,7 +4531,16 @@
     "Mind the mist"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
+  }
  },
  "Moana 2 (2024)": {
   "venue": "Voyager Canoe Galley",
@@ -4854,7 +4982,17 @@
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
   },
-  "mono": true
+  "mono": true,
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0,
+   "sig": "full"
+  }
  },
  "Halloween (1978)": {
   "venue": "Haddonfield Corner Diner",
@@ -5099,7 +5237,16 @@
     "Quiet at all times"
    ]
   },
-  "number": "89"
+  "number": "89",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
+  }
  },
  "Sinners (2025)": {
   "venue": "Smoke and Stack's Juke Joint",
@@ -5398,7 +5545,16 @@
     "Harmony Hut regular"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "The Witches (1990)": {
   "venue": "Hotel Excelsior Banquet Hall",
@@ -5858,6 +6014,15 @@
    "w": "Red Balloon Treats",
    "d": "Sodas",
    "call": "Storm drain call"
+  },
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1
   }
  },
  "Carrie (1976)": {
@@ -6221,6 +6386,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
   }
  },
  "Crazy Rich Asians (2018)": {
@@ -8290,6 +8464,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
   }
  },
  "Major League (1989)": {
@@ -9914,7 +10097,17 @@
     "Found in a backyard"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1,
+   "sig": "name"
+  }
  },
  "Hairspray (2007)": {
   "venue": "The Corny Collins Show",
@@ -10336,7 +10529,17 @@
     "Last day of camp"
    ]
   },
-  "number": "1981"
+  "number": "1981",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1,
+   "sig": "name"
+  }
  },
  "Role Models (2008)": {
   "venue": "Sturdy Wings",
@@ -10360,7 +10563,17 @@
     "Mentors on probation"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1,
+   "sig": "name"
+  }
  },
  "Hot Tub Time Machine (2010)": {
   "venue": "Kodiak Valley Resort",
@@ -11231,6 +11444,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
   }
  },
  "Titanic (1997)": {
@@ -12746,7 +12968,16 @@
     "Rescue Team"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
+  }
  },
  "Aliens (1986)": {
   "venue": "Sulaco Mess Hall",
@@ -13043,7 +13274,16 @@
     "Parking, Hillside Lot"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1
+  }
  },
  "Gremlins 2: The New Batch (1990)": {
   "venue": "Clamp Center Cafe",
@@ -13246,7 +13486,16 @@
     "Site: Montana"
    ]
   },
-  "number": "12"
+  "number": "12",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1
+  }
  },
  "Blade Runner 2049 (2017)": {
   "venue": "Sapper's Protein Farm",
@@ -13443,7 +13692,16 @@
     "Croc attack: faked"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
+  }
  },
  "The Castle (1997)": {
   "venue": "The Kerrigan Home",
@@ -13721,7 +13979,16 @@
     "Archy Hamilton"
    ]
   },
-  "number": "1915"
+  "number": "1915",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
+  }
  },
  "The Dish (2000)": {
   "venue": "Parkes Radio Telescope",
@@ -13863,6 +14130,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
   }
  },
  "Lion (2016)": {
@@ -14200,7 +14476,16 @@
     "Water the horses first"
    ]
   },
-  "number": "1917"
+  "number": "1917",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    0,
+    2,
+    3
+   ],
+   "flip": 1
+  }
  },
  "Beneath Hill 60 (2010)": {
   "venue": "Hill 60 Tunnel Camp",
@@ -14223,7 +14508,15 @@
     "Captain Woodward"
    ]
   },
-  "number": "1917"
+  "number": "1917",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    0,
+    2
+   ],
+   "flip": 0
+  }
  },
  "Danger Close: The Battle of Long Tan (2019)": {
   "venue": "Nui Dat Mess Tent",
@@ -14395,7 +14688,17 @@
     "Lives left: 3"
    ]
   },
-  "number": "3"
+  "number": "3",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1,
+   "sig": "name"
+  }
  },
  "Jumanji (1995)": {
   "venue": "Parrish Shoe Factory",
@@ -14657,7 +14960,16 @@
     "Check out: one very old book"
    ]
   },
-  "number": "1926"
+  "number": "1926",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
+  }
  },
  "The Mummy Returns (2001)": {
   "venue": "O'Connell Manor Kitchen",
@@ -14763,7 +15075,16 @@
     "It is inside the dinosaur"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "Pirates of the Caribbean: Dead Man's Chest (2006)": {
   "venue": "Tia Dalma's Shack",
@@ -15007,7 +15328,16 @@
     "Please do not call Child Welfare"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
+  }
  },
  "How to Train Your Dragon (2010)": {
   "venue": "Berk Great Hall",
@@ -15091,7 +15421,16 @@
     "Free if you finish"
    ]
   },
-  "number": "96"
+  "number": "96",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 1
+  }
  },
  "Muppet Treasure Island (1996)": {
   "venue": "Benbow Inn Kitchen",
@@ -15428,6 +15767,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
   }
  },
  "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
@@ -15737,6 +16085,15 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
   }
  },
  "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
@@ -15881,7 +16238,16 @@
     "Paw print on the silo"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
+  }
  },
  "Despicable Me 2 (2013)": {
   "venue": "Salsa & Salsa",
@@ -16023,7 +16389,16 @@
     "Flint and steel!"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
+  }
  },
  "Happy Feet (2006)": {
   "venue": "Emperor Colony Gathering",
@@ -16243,7 +16618,17 @@
     "Swap table, don't tell"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "row",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1,
+   "sig": "name"
+  }
  },
  "Freaky Friday (2003)": {
   "venue": "Coleman Family Kitchen",
@@ -16380,6 +16765,16 @@
    "Mess hall door": "front door",
    "Bugle call": "Last call",
    "Badges, maybe": "Bragging rights"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0,
+   "sig": "full"
   }
  },
  "Wish (2023)": {
@@ -16461,7 +16856,16 @@
     "Stay with the pack"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "Jojo Rabbit (2019)": {
   "venue": "Betzler Family Kitchen",
@@ -16733,7 +17137,15 @@
     "Pimlico, 1938"
    ]
   },
-  "number": "1938"
+  "number": "1938",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    0,
+    2
+   ],
+   "flip": 0
+  }
  },
  "Spaceballs (1987)": {
   "venue": "Eagle 5 Galley",
@@ -16808,7 +17220,17 @@
     "Contents: secret"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1,
+   "sig": "full"
+  }
  },
  "Return of the Jedi (1983)": {
   "venue": "Bright Tree Village",
@@ -16868,6 +17290,15 @@
    "n": "Spoken at Hometree",
    "b": "Learned in the forest",
    "call": "Clan call"
+  },
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
   }
  },
  "Dune (2021)": {
@@ -17068,7 +17499,16 @@
     "Ahch-To Island"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "Star Wars: The Rise of Skywalker (2019)": {
   "venue": "Pasaana Festival Tent",
@@ -17193,7 +17633,16 @@
     "Fremen only"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "The Last Dragon (1985)": {
   "venue": "Sum Dum Goy Fortune Cookie Factory",
@@ -17587,7 +18036,16 @@
     "Always carry rope"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
+  }
  },
  "Back to the Future Part III (1990)": {
   "venue": "Palace Saloon",
@@ -17796,6 +18254,15 @@
    "t": "Hole in the Wall Table",
    "n": "Said at the hideout",
    "call": "Posse call"
+  },
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 1
   }
  },
  "Shanghai Noon (2000)": {
@@ -17854,6 +18321,15 @@
    "d": "Saloon Drinks",
    "n": "Said at supper",
    "call": "Dinner call"
+  },
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    2,
+    3,
+    4
+   ],
+   "flip": 0
   }
  },
  "Unforgiven (1992)": {
@@ -18374,7 +18850,17 @@
     "Actors only past this point"
    ]
   },
-  "number": ""
+  "number": "",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0,
+   "sig": "name"
+  }
  },
  "Jaws 2 (1978)": {
   "venue": "Amity Boardwalk Stand",
@@ -19516,7 +20002,16 @@
     "Valid until dawn"
    ]
   },
-  "number": "2"
+  "number": "2",
+  "stillStrip": {
+   "v": "album",
+   "s": [
+    3,
+    4,
+    5
+   ],
+   "flip": 0
+  }
  },
  "Fiddler on the Roof (1971)": {
   "venue": "Tevye's Kitchen",
@@ -19612,7 +20107,16 @@
     "Counsellors' cabin, summer 1979"
    ]
   },
-  "number": "13"
+  "number": "13",
+  "stillStrip": {
+   "v": "stagger",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 1
+  }
  },
  "Friday the 13th Part 2 (1981)": {
   "venue": "The Bar in Town, Crystal Lake",

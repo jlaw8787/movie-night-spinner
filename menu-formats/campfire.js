@@ -293,6 +293,29 @@ function menuHTML(cs,era,ty,C,tone,LBL){LBL=LBL||LABEL;
   </div>`).join("");
 }
 
+/* the campfire still strip (front, under the poster): three film stills (two when a film has only three) with the badge lines as captions.
+   y 800 to 940, x 24 to 648. row is E.T.'s look (8 Nov); stagger, film and album are the 11 Nov variations. */
+function stillStrip(v,urls,caps,o){
+  const {P,C,ty,filt,E}=o,k=urls.length,pitch=k>2?208:304;
+  const cap=(t,css,fs,mn)=>t?`<div data-box style="position:absolute;${css};overflow:hidden;box-sizing:border-box"><div data-fs="${fs||13}" data-min="${mn||12}" style="font:${ty.cw} ${fs||13}px ${ty.caps};line-height:1.1;letter-spacing:.03em;text-align:center">${T(t)}</div></div>`:"";
+  if(v==="stagger"){const Y=[804,794,806],R=[-3,2.2,-1.2];
+    return urls.map((u,n)=>{const x=26+n*pitch,w=pitch-12,h=120,y=Y[n],r=R[n];
+      return `${photo(u,{x,y,w,h,pad:6,print:P.print,rot:r,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%"})}
+      <div style="position:absolute;left:${x+w/2-34}px;top:${y-9}px;width:68px;height:20px;background:rgba(250,244,226,.62);box-shadow:0 1px 2px rgba(0,0,0,.15);transform:rotate(${-r*1.6}deg)"></div>
+      ${cap(caps[n],`left:${x+12}px;top:${y+h-28}px;width:${w-24}px;max-height:42px;padding:3px 8px;background:${P.print};color:#2a2219;box-shadow:0 3px 6px rgba(0,0,0,.28);transform:rotate(${-r*.6}deg)`,13,11)}`}).join("");}
+  if(v==="film"){const fw=k>2?192:292,fp=k>2?200:300,band=mix(hex(C.dark),BLACK,.55);
+    const holes=y=>`<div style="position:absolute;left:30px;top:${y}px;width:612px;height:8px;background-image:repeating-linear-gradient(90deg,transparent 0 6px,${rgba(mix(hex(P.bg),WHITE,.2),.85)} 6px 16px,transparent 16px 24px)"></div>`;
+    return `<div style="position:absolute;left:24px;top:794px;width:624px;height:142px;background:${rgba(band,1)};box-shadow:0 8px 16px rgba(0,0,0,.4);transform:rotate(-.6deg)">
+      <div style="position:absolute;inset:0;transform:translate(-24px,-794px)">${holes(799)}${urls.map((u,n)=>{const x=36+n*fp;
+        return `<div style="position:absolute;left:${x}px;top:812px;width:${fw}px;height:106px;overflow:hidden;background:#111"><img alt="" crossorigin="anonymous" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${u}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:${filt}"></div>
+        ${cap(caps[n],`left:${x}px;top:${918-34}px;width:${fw}px;max-height:34px;padding:3px 8px;background:rgba(10,8,6,.72);color:#fbf3e2`)}`}).join("")}${holes(922)}</div></div>`;}
+  if(v==="album"){const Y=[792,797,793],R=[-2.4,1.4,-.8];
+    return urls.map((u,n)=>{const x=24+n*pitch,w=pitch-12,h=138;
+      return photo(u,{x,y:Y[n],w,h,pad:8,print:P.print,rot:R[n],filter:filt,half:E.half,sheen:E.sheen,pos:"center 35%",
+        extra:caps[n]?`<div data-box style="position:absolute;left:-8px;right:-8px;bottom:0;height:42px;padding:4px 8px 0;box-sizing:border-box;background:${P.print};overflow:hidden"><div data-fs="14" data-min="11" style="font:${ty.bw} 14px ${ty.body};line-height:1.08;color:#2a2219;text-align:center">${T(caps[n])}</div></div>`:""})}).join("");}
+  return urls.map((u,n)=>{const r=(n-(k>2?1:.5))*1.6,x=24+n*pitch,w=pitch-8;return `${photo(u,{x,y:800,w,h:140,pad:6,print:P.print,rot:r,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%"})}${cap(caps[n],`left:${x+10}px;top:898px;width:${w-20}px;max-height:34px;padding:3px 8px;background:${C.dark};opacity:.92;color:#fbf3e2;transform:rotate(${r}deg)`)}`}).join("");
+}
+
 window.MENU_FORMATS[ID]=ctx=>{
   const era=eraOf(ctx.era),tone=toneOf(ctx.tone),E=ERA[era],TN=TONE[tone];
   const ty=TYPE[E.g],P=PAPER[E.g];
@@ -306,7 +329,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const badges=F.winks.slice(0,3),rest=F.winks.slice(3);
   /* per-film flavour stillStrip (E.T., 8 Nov, Josh): the badges become three film stills with the badge lines as captions,
      the pillow note moves up into the empty column beside the poster, signed in the film's own title lettering (the logo's top line only) */
-  const strip=!!(ctx.flavour&&ctx.flavour.stillStrip)&&hp&&ph.list.length>=6,sigLogo=strip?logoUrl(ctx):"";
+  /* 11 Nov, Josh: rolled out to every campfire menu, each placed a little differently. film-flavour stillStrip is true (E.T.'s look)
+     or {v,s,flip}: v the strip style (row, stagger, film, album), s the still numbers (never still 1, the back photo), flip swaps the
+     pillow note and the Now showing ticket in the right column. sig: "full" signs with the whole logo (stacked logos that crop badly),
+     "name" with the handwritten name (logos that print as a black block). Films with only 3 stills get a two photo strip. */
+  const SS=ctx.flavour&&ctx.flavour.stillStrip,SO=SS&&typeof SS==="object"?SS:{};
+  const pool=ph.list.length>=5?ph.list.map((u,i)=>i).filter(i=>i>=2):ph.list.map((u,i)=>i).filter(i=>i!==1);
+  const picks=((SO.s||[3,4,5]).filter(i=>ph.list[i]&&i!==1).length===Math.min(3,pool.length)?(SO.s||[3,4,5]).filter(i=>ph.list[i]&&i!==1):pool.slice(0,3)).slice(0,3);
+  const strip=!!SS&&hp&&picks.length>=2,sigLogo=strip&&SO.sig!=="name"?logoUrl(ctx):"",sigFull=SO.sig==="full",SV=SO.v||"row",flip=!!SO.flip;
+  const lAsp=ctx.logo&&ctx.logo[1]&&ctx.logo[2]?ctx.logo[1]/ctx.logo[2]:1.6,sigW=lAsp>3?160:118;
   const sigCol=C.ink;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C.ink)}
@@ -316,18 +347,18 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     ${ph.heroIsPoster?`${photo(ph.hero,{poster:1,x:14,y:104,w:440,h:650,pad:10,print:P.print,rot:TN.tilt*.5,sheen:E.sheen})}
     ${logoPanel(ctx,466,130,196,ty,C,P,year)}
-    <div style="position:absolute;left:470px;top:${strip?318:420}px;width:186px;box-sizing:border-box;padding:12px 14px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
+    <div style="position:absolute;left:470px;top:${strip?(flip?642:318):420}px;width:186px;box-sizing:border-box;padding:12px 14px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
       <div style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};line-height:1.15">Now showing</div>
       <div style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:4px">${T(F.venue)}</div></div>`:`${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:"center 35%"})}
     ${logoPanel(ctx,34,560,400,ty,C,P,year)}`}
-${strip?`    <div data-box style="position:absolute;left:474px;top:478px;width:180px;height:268px;overflow:hidden;mix-blend-mode:multiply;display:flex;flex-direction:column">
+${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:478}px;width:180px;height:${flip?290:268}px;overflow:hidden;mix-blend-mode:multiply;display:flex;flex-direction:column">
       <div data-fs="15" data-min="13" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="15" style="margin-top:6px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
-      ${sigLogo?`<div style="margin:14px 0 0 auto;width:118px;height:52px;overflow:hidden;transform:rotate(-4deg)"><img alt="${T(F.note.by)}" crossorigin="anonymous" src="${sigLogo}" style="display:block;width:118px;height:auto;filter:brightness(0);opacity:.82"></div>`:`<div style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};margin-top:8px;transform:rotate(-2deg)">${T(F.note.by)}</div>`}
+      ${sigLogo?`<div style="margin:14px 0 0 auto;width:${sigFull?150:sigW}px;height:${sigFull?70:52}px;overflow:hidden;transform:rotate(${flip?3:-4}deg)"><img alt="${T(F.note.by)}" crossorigin="anonymous" src="${sigLogo}" style="display:block;${sigFull?"width:100%;height:100%;object-fit:contain;object-position:right center":`width:${sigW}px;height:auto`};filter:brightness(0);opacity:.82"></div>`:`<div style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};margin-top:8px;transform:rotate(-2deg)">${T(F.note.by)}</div>`}
     </div>
     <div style="position:absolute;left:38px;top:770px;width:596px">
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden;width:596px">${V.b}</div></div>
-    ${[3,4,5].map((k,n)=>{const r=(n-1)*1.6;return `${photo(ph.list[k],{x:24+n*208,y:800,w:200,h:140,pad:6,print:P.print,rot:r,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%"})}${badges[n]?`<div data-box style="position:absolute;left:${34+n*208}px;top:898px;width:180px;max-height:34px;overflow:hidden;box-sizing:border-box;padding:3px 8px;background:${C.dark};opacity:.92;opacity:.92;transform:rotate(${r}deg)"><div data-fs="13" data-min="12" style="font:${ty.cw} 13px ${ty.caps};line-height:1.1;color:#fbf3e2;letter-spacing:.03em;text-align:center">${T(badges[n])}</div></div>`:""}`}).join("")}
+    ${stillStrip(SV,picks.map(k=>ph.list[k]),badges,{P,C,ty,filt,E})}
 `:`    <div data-box style="position:absolute;left:38px;top:${hp?766:708}px;width:596px;height:${hp?84:118}px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="16" style="margin-top:4px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>

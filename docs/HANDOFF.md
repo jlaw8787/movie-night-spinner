@@ -473,3 +473,15 @@ Live on reeldinner.com from ab66182 (deploy 6af3cc50, app.js?v=8b7eb073), pushed
 - Tests pass. Checked with sweep-shot on the 12 films.
 - All 900 scanned before and after for shortened or hidden notes: 23 films changed, none hides a note. 21 print more of their notes in full (Toy Story, Toy Story 3, Mean Girls, Flubber, Con Air, Zoolander, Total Recall and others). Watchmen and Spy shorten different notes than before.
 - Next, in order: the E.T. stills treatment for the other 55 campfire menus (see "8 Nov, 6pm"; The Proposal is one of them), then Review 21. Open question for Josh: put a still in the empty bistro column on the other 27 bistro menus, as on Wall Street?
+
+## 11 Nov, 1:40pm: E.T. still strip on all 56 campfire menus (start here in the next chat)
+
+Committed, not yet deployed or checked on a real phone.
+- Every campfire menu now has E.T.'s front: three film stills with the badge lines as captions, the pillow note beside the poster, signed with the film's logo. E.T. itself prints pixel for pixel the same.
+- Four strip styles so they don't all look alike (menu-formats/campfire.js stillStrip()): row (E.T.'s), stagger (taped photos, paper tag captions), film (dark film strip with sprocket holes), album (instant photos, caption written in the white margin). About 14 films each.
+- data/film-flavour.json stillStrip is true (E.T.) or {v, s, flip, sig}: v the style, s the three still numbers (never still 1, it prints on the back), flip swaps the pillow note and the Now showing ticket, sig "full" signs with the whole logo and "name" with the handwritten name. Set by scripts/campfire-strips.cjs, which now leaves films already set alone.
+- Hand picks: sig "name" for Encino Man, Tropic Thunder, The Parent Trap, Role Models, Jumanji: Welcome to the Jungle, Wet Hot American Summer (their logos print as a black block). sig "full" for Brother Bear, The Empire Strikes Back, Night of the Living Dead, Sleeping Beauty, Honey, I Shrunk the Kids (the top line crop cut them). Peter Pan stills 2, 4, 7 (still 6 is a washed out frame).
+- Beneath Hill 60 and Seabiscuit have only 3 stills, so they get a two photo strip. The Lighthorsemen uses stills 0, 2, 3.
+- Tests pass, check-print-text passes on all 56, all 56 fronts looked over in shots.
+- Left as is: the eerie tone's badge heading reads "Stay with the group for" (Friday the 13th, Star Wars: The Last Jedi, The Jungle Book and others). It was written to lead into the old badge list. Ask Josh if he wants new wording.
+- Next: deploy when Josh says, then Review 21. Open question for Josh: a still in the empty bistro column on the other 27 bistro menus, as on Wall Street?
