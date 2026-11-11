@@ -3015,8 +3015,8 @@ function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidt
     if(bl>2){const k=Math.max(1,bl/2),t=document.createElement("canvas");t.width=Math.max(1,Math.round(w/k));t.height=Math.max(1,Math.round(h/k));const tx=t.getContext("2d");tx.imageSmoothingQuality="high";tx.drawImage(im,sx,sy,sw,sh,dx/k,dy/k,dw/k,dh/k);x.imageSmoothingQuality="high";x.drawImage(t,0,0,w,h)}
     else x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);
     /* review 22: the washes cover the whole rectangle, so a see-through logo (a signature with brightness(0)) printed as a solid black box
-       on iPhone. A copy of the drawn picture is kept and its outline cut back in after the washes, so only the picture's own pixels change */
-    let m=null;if(sa<1||br<1){m=document.createElement("canvas");m.width=w;m.height=h;m.getContext("2d").drawImage(c,0,0)}
+       on iPhone. The darkening draws source-atop; the saturation wash covers everything, so a copy of the picture is kept and its outline cut back in after it */
+    let m=null;if(sa<1){m=document.createElement("canvas");m.width=w;m.height=h;m.getContext("2d").drawImage(c,0,0)}
     if(sa<1){x.globalCompositeOperation="saturation";x.fillStyle=`rgba(128,128,128,${1-sa})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
     if(br<1){x.globalCompositeOperation="source-atop";x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
     if(m){x.globalCompositeOperation="destination-in";x.drawImage(m,0,0);x.globalCompositeOperation="source-over";m.width=m.height=0}}
