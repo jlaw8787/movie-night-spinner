@@ -510,3 +510,7 @@ Live on reeldinner.com from 7ea6747 (deploy 6af3ef19, Josh, 11 Nov: deploy now).
 - New: After Hours' TERMINAL BAR logo wraps behind "BAR AND GRILL" (since 7e8598f3); the request button breaks Galaxy Video's phone tool row and covers two aisle signs (check-store-taps fails, since 919fd90f); campfire captions often don't match their stills; campfire page 1 takes its A4 margin from the strip photos; Ferris and Hitch side lines get the film wrong; Luca and Kingsman side lines repeat a dish note.
 - check-browser fails kids' mode on Bugsy's "scotch fillet" (false positive).
 - Next: Josh picks from the review 21 fix list.
+
+## 11 Nov, 5:50pm: iPhone photo hotfix live
+- Live on reeldinner.com from hotfix-iphone 0a84e903 (7cb7451 plus the iosBakeFilters change only; deploy 6af41d1b, app.js?v=2e8495c0). The rest of today's work is on main, not live.
+- iPhone Safari drew cropped stills (Logan's strip and hero) as blurry zoomed corners. Every cropped photo on a card is now baked to its frame on iPhone, the CORS copy is fetched fresh (?cors=1), and if baking fails the filter comes off. Waiting on Josh's phone check.
