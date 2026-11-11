@@ -3038,8 +3038,12 @@ function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidt
     const bl=parseFloat((f.match(/blur\(([\d.]+)px\)/)||[])[1]||0),br=parseFloat((f.match(/brightness\(([\d.]+)\)/)||[])[1]||1),sa=parseFloat((f.match(/saturate\(([\d.]+)\)/)||[])[1]||1);
     if(bl>2){const k=Math.max(1,bl/2),t=document.createElement("canvas");t.width=Math.max(1,Math.round(w/k));t.height=Math.max(1,Math.round(h/k));const tx=t.getContext("2d");tx.imageSmoothingQuality="high";tx.drawImage(im,sx,sy,sw,sh,dx/k,dy/k,dw/k,dh/k);x.imageSmoothingQuality="high";x.drawImage(t,0,0,w,h)}
     else x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);
+    /* review 22: the washes cover the whole rectangle, so a see-through logo (a signature with brightness(0)) printed as a solid black box
+       on iPhone. The darkening draws source-atop; the saturation wash covers everything, so a copy of the picture is kept and its outline cut back in after it */
+    let m=null;if(sa<1){m=document.createElement("canvas");m.width=w;m.height=h;m.getContext("2d").drawImage(c,0,0)}
     if(sa<1){x.globalCompositeOperation="saturation";x.fillStyle=`rgba(128,128,128,${1-sa})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
-    if(br<1){x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h)}}
+    if(br<1){x.globalCompositeOperation="source-atop";x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
+    if(m){x.globalCompositeOperation="destination-in";x.drawImage(m,0,0);x.globalCompositeOperation="source-over";m.width=m.height=0}}
   /* review 13: a logo with a drop shadow (invite) is see-through around its letters, and a JPEG turned that into a black plate */
   try{let see=/drop-shadow/.test(f);if(!see){const d=x.getImageData(0,0,w,h).data;for(let i=3;i<d.length;i+=4*97)if(d[i]<250){see=true;break}}
     /* review 21: the canvas is emptied straight after, since iPhone Safari caps the canvas memory a page may hold and a menu or two of
@@ -3304,6 +3308,10 @@ async function renderCanvas(src,forPrint){
     if(full<=h0+lh*.5)return;const cut=()=>e.scrollHeight>e.clientHeight+lh*.5;const w=e.textContent.trim().split(/\s+/);let lo=1,hi=w.length-1,best=1;
     while(lo<=hi){const mid=(lo+hi)>>1;e.textContent=w.slice(0,mid).join(" ").replace(/[,;:]$/,"")+"\u2026";if(cut())hi=mid-1;else{best=mid;lo=mid+1}}
     e.textContent=w.slice(0,best).join(" ").replace(/[,;:]$/,"")+"\u2026"})}catch(err){}
+  /* review 21: a frame laid beside a box (outline or flat ring) takes the box's turn too, pivoting on the same point. Canteen's meal voucher
+     printed its 6px paper outline square round a turned card, so the paper looked unturned with a second square edge */
+  const pdfTurnLike=(e,cs,g)=>{if(!cs.transform||cs.transform==="none")return "";const W=e.offsetWidth,H=e.offsetHeight,to=(cs.transformOrigin||"50% 50%").split(/\s+/);
+    return `transform:${cs.transform};transform-origin:${pdfLen(to[0],W)+g}px ${pdfLen(to[1]||"50%",H)+g}px;`};
   /* review 12: it also drops flat rings drawn outside a box ("0 0 0 8px bezel" round an airline window), so a framed photo printed bare.
      Each outer ring becomes a bordered frame laid behind the box, sized from where the box actually sits */
   try{clone.querySelectorAll("[style*=box-shadow]").forEach(e=>{const bs=e.style.boxShadow;if(!bs||!e.parentElement)return;
@@ -3323,7 +3331,7 @@ async function renderCanvas(src,forPrint){
     /* drawn widest first so each narrower ring sits on top, as the browser stacks them */
     rings.sort((a,b)=>b[0]-a[0]);let z=cs.zIndex==="auto"?"auto":cs.zIndex;
     for(const [w,col] of rings){const d=document.createElement("i");
-      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
+      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;${pdfTurnLike(e,cs,w)}border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
       e.parentElement.insertBefore(d,e)}})}catch(err){}
   /* and it skips outlines (a hairline keyline round a photo): the same treatment, a frame laid round the box */
   try{clone.querySelectorAll("[style*=outline]").forEach(e=>{const cs=getComputedStyle(e),w=parseFloat(cs.outlineWidth)||0;if(cs.outlineStyle==="none"||!w||!e.parentElement)return;
@@ -3333,7 +3341,7 @@ async function renderCanvas(src,forPrint){
       d.style.cssText=`position:absolute;left:${-bl-o}px;top:${-bt-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};border-radius:${rad}px;pointer-events:none`;
       e.style.outline="none";e.appendChild(d);return}
     const o=(parseFloat(cs.outlineOffset)||0)+w,d=document.createElement("i");
-    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
+    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex};${pdfTurnLike(e,cs,o)}`;
     e.style.outline="none";e.parentElement.insertBefore(d,e.nextSibling)})}catch(err){}
   try{
     await document.fonts.ready;
