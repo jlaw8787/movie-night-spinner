@@ -2834,32 +2834,56 @@ if(typeof window!=="undefined"&&window.addEventListener&&typeof document!=="unde
   /* only new signs need fitting; everything else is left alone so the page stays quick */
   if(!ms.some(m=>(m.target.closest&&m.target.closest(".fit"))||[...m.addedNodes].some(n=>n.nodeType===1&&(n.classList.contains("fit")||n.querySelector&&n.querySelector(".fit")))))return;
   clearTimeout(window.__fs);window.__fs=setTimeout(()=>fitSigns(),60)}).observe(document.body,{childList:true,subtree:true})}
-/* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
+/* palace marquee: the letters hang on the board's slat rows like real changeable letters.
+   A short title is two rows tall under the NOW SHOWING row. A long one is split at a space into two lines of
+   one row each, the way a marquee crew would hang it; one long word drops to a single row. Only if that still
+   does not fit do the letters shrink. Light boxes show tonight's poster and recent spins. */
 let _hang=false;
-function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`${Math.min(84,1.56*(+(document.querySelector(".mq")||{dataset:{}}).dataset.w||1000)/Math.max(n,8)).toFixed(1)}px`;
-  if(!t.querySelector("i")){_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?" ":`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.05).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false}}
+function fitMarquee(){if(_hang)return;const t=$("now"),mq=document.querySelector(".mq");if(!t||!mq)return;
+  const txt=t.textContent,n=txt.length,room=mq.clientWidth-2*MQ_ROW,sig=txt+"|"+room;if(t.dataset.fit===sig)return;
+  const hang=cut=>{_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?(i===cut?" <br>":" "):`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.03).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false};
+  const shrink=()=>{const w=t.scrollWidth;if(w>room)t.style.fontSize=`${(parseFloat(getComputedStyle(t).fontSize)*room/w*.98).toFixed(1)}px`};
+  t.style.fontSize="";mq.classList.remove("one","two");hang(-1);t.dataset.fit=sig;
+  const sp=[...txt].map((c,i)=>c===" "?i:-1).filter(i=>i>0);
+  if(room<=0||t.scrollWidth<=room*(sp.length?.72:1))return;
+  if(sp.length){const cost=i=>Math.abs(i-n/2)-(txt[i-1]===":"?n/2:txt[i-1]===","?n/3:0),cut=sp.reduce((a,b)=>cost(b)<cost(a)?b:a);hang(cut);mq.classList.add("two")}else mq.classList.add("one");
+  shrink()}
 
-/* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform */
-const BOARD_Q=[[0.1093, 0.27008], [0.77325, 0.4913], [0.77723, 0.69619], [0.10822, 0.55794]];
+/* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform.
+   BOARD_Q is the lit board's corners (top left, top right, bottom right, bottom left) as fractions of the photo,
+   BOARD_ROWS the slat lines down the board (0 is the top edge, 1 the bottom edge), BOARD_W the board's
+   width counted in slat rows. All three are measured by scripts/compose-cinema-real.py. */
+const BOARD_Q=[[0.00386,0.17577],[0.8535,0.51257],[0.86792,0.75564],[0.00388,0.57483]];
+const BOARD_ROWS=[0.0337,0.166,0.2983,0.4306,0.5628,0.6951,0.8274,0.9597];
+const BOARD_W=55.93;
+const MQ_ROW=50;/* CSS px per slat row inside .mq; .mq is three rows: NOW SHOWING, then the title over two */
 function placeMarquee(){
   const st=document.querySelector(".palace-stage"),mq=document.querySelector(".mq");if(!st||!mq)return;
   const w=st.clientWidth,h=st.clientHeight;if(!w||!h)return;
+  /* unit square on the board -> stage px */
+  const [[x0,y0],[x1,y1],[x2,y2],[x3,y3]]=BOARD_Q.map(([x,y])=>[x*w,y*h]),dx1=x1-x2,dx2=x3-x2,dy1=y1-y2,dy2=y3-y2,sx=x0-x1+x2-x3,sy=y0-y1+y2-y3;
+  const den=dx1*dy2-dx2*dy1,g=(sx*dy2-dx2*sy)/den,k=(dx1*sy-sx*dy1)/den;
+  const a=x1-x0+g*x1,b=x3-x0+k*x3,dd=y1-y0+g*y1,e=y3-y0+k*y3;
+  const P=(u,v)=>{const z=g*u+k*v+1;return[(a*u+b*v+x0)/z,(dd*u+e*v+y0)/z]};
+  const s0=BOARD_ROWS[2],s1=BOARD_ROWS[5],sm=(s0+s1)/2;
   /* phones show only the middle of the photo: keep the letters on the part of the board that is on screen */
   const sr=st.getBoundingClientRect(),pr=st.parentElement.getBoundingClientRect(),pad=.035;
-  const vx0=Math.max(0,(pr.left-sr.left)/w)+pad,vx1=Math.min(1,(pr.right-sr.left)/w)-pad;
-  const [q0,q1,q2,q3]=BOARD_Q,lx=(q0[0]+q3[0])/2,rx=(q1[0]+q2[0])/2,t0=Math.max(0,(vx0-lx)/(rx-lx)),t1=Math.min(1,(vx1-lx)/(rx-lx));
-  const L=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];
-  const Q=[L(q0,q1,t0),L(q0,q1,t1),L(q3,q2,t1),L(q3,q2,t0)];
-  const H=260,W=Math.round(1000*(t1-t0));mq.style.width=W+"px";mq.dataset.w=W;
-  const d=Q.map(([x,y])=>[x*w,y*h]);
-  const [[x0,y0],[x1,y1],[x2,y2],[x3,y3]]=d,dx1=x1-x2,dx2=x3-x2,dy1=y1-y2,dy2=y3-y2,sx=x0-x1+x2-x3,sy=y0-y1+y2-y3;
-  const den=dx1*dy2-dx2*dy1,g=(sx*dy2-dx2*sy)/den,k=(dx1*sy-sx*dy1)/den;
-  const a=x1-x0+g*x1,b=x3-x0+k*x3,c=x0,dd=y1-y0+g*y1,e=y3-y0+k*y3,f=y0;
-  const m=[a/W,dd/W,0,g/W,b/H,e/H,0,k/H,0,0,1,0,c,f,0,1];
-  mq.style.transform=`matrix3d(${m.map(v=>+v.toFixed(8)).join(",")})`;mq.classList.add("on");_hang=false;try{const t=$("now");t.textContent=t.textContent;}catch(e){}
+  const vx0=(Math.max(0,(pr.left-sr.left)/w)+pad)*w,vx1=(Math.min(1,(pr.right-sr.left)/w)-pad)*w;
+  const tAt=X=>(X*(k*sm+1)-b*sm-x0)/(a-X*g);
+  const t0=Math.max(.012,tAt(vx0)),t1=Math.min(.988,tAt(vx1));
+  const W=Math.round((t1-t0)*BOARD_W*MQ_ROW),H=3*MQ_ROW;mq.style.width=W+"px";mq.dataset.w=W;
+  const Q=[P(t0,s0),P(t1,s0),P(t1,s1),P(t0,s1)];
+  /* box (W x H) -> that part of the board */
+  const [[X0,Y0],[X1,Y1],[X2,Y2],[X3,Y3]]=Q,ex1=X1-X2,ex2=X3-X2,ey1=Y1-Y2,ey2=Y3-Y2,tx=X0-X1+X2-X3,ty=Y0-Y1+Y2-Y3;
+  const dn=ex1*ey2-ex2*ey1,G=(tx*ey2-ex2*ty)/dn,K=(ex1*ty-tx*ey1)/dn;
+  const A=X1-X0+G*X1,B=X3-X0+K*X3,D=Y1-Y0+G*Y1,E=Y3-Y0+K*Y3;
+  const m=[A/W,D/W,0,G/W,B/H,E/H,0,K/H,0,0,1,0,X0,Y0,0,1];
+  mq.style.transform=`matrix3d(${m.map(v=>+v.toFixed(8)).join(",")})`;mq.classList.add("on");_hang=false;try{fitMarquee()}catch(e){}
 }
 try{placeMarquee();addEventListener("resize",placeMarquee);if(typeof ResizeObserver!=="undefined")new ResizeObserver(placeMarquee).observe(document.querySelector(".palace-stage"))}catch(e){}
 if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
+/* Oswald may land after the first fit, and the fallback font measures differently: fit again once fonts are in */
+try{const refit=()=>{const t=$("now");if(t){t.dataset.fit="";fitMarquee()}};document.fonts.ready.then(refit);document.fonts.addEventListener("loadingdone",refit)}catch(e){}
 function lightboxes(){
   const P=typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{};
   const ids=[current&&current.id,...hist.filter(id=>!current||id!==current.id)].filter(Boolean);

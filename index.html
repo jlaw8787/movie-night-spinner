@@ -1275,13 +1275,17 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
 /* real photo hero: the crest is lit in the photo, the board gets live letters set in its perspective (placeMarquee) */
 .blade{left:0;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .lbox{display:none!important}
-.mq{left:0;top:0;width:1000px;height:260px;padding:0 20px;gap:34px;background:none;transform-origin:0 0;visibility:hidden}
+/* .mq is three slat rows tall (50px a row, see MQ_ROW in the app script): NOW SHOWING in the top row, the title hung over the next two.
+   A long title is split over two lines of one row each (.two), one long word drops to one row (.one). Oswald caps sit .045em low in their line box, so each line is lifted that much. */
+.mq{left:0;top:0;width:1000px;height:150px;padding:0 50px;gap:0;justify-content:flex-start;background:none;transform-origin:0 0;visibility:hidden}
 .mq.on{visibility:visible}
 /* slotted letters on a backlit board: not pure black, soft edged, a few hung crooked or sun-faded, the board's light shows through */
-.mq-k,.mq-t{color:#2b2627;mix-blend-mode:multiply;filter:blur(.55px);text-shadow:0 0 1px rgba(43,38,39,.5)}
+.mq-k,.mq-t{color:#2b2627;mix-blend-mode:multiply;filter:blur(1.1px);text-shadow:0 0 2px rgba(43,38,39,.5);position:relative;top:-.045em;flex:none}
 
-.mq-k{font:700 40px/1 "Oswald",Impact,sans-serif;letter-spacing:.16em;color:#151112}
-.mq-t{font:700 100px/1 "Oswald",Impact,sans-serif;letter-spacing:.05em;color:#151112;max-width:100%;overflow:visible}
+.mq-k{height:50px;font:700 43px/50px "Oswald",Impact,sans-serif;letter-spacing:.16em;color:#151112}
+.mq-t{height:100px;font:700 90px/100px "Oswald",Impact,sans-serif;letter-spacing:.05em;color:#151112;max-width:none;overflow:visible;text-align:center} /* review 22: 90px, not 101, so the capitals clear NOW SHOWING by a visible gap on the slanted board */
+.mq.one .mq-t,.mq.two .mq-t{font-size:48px;line-height:50px}
+.mq.one .mq-t{height:50px}
 /* Galaxy Video is its own shop: the cinema marquee and cinema cards step aside, the store's colours take the page */
 body.in-shop .palace,body.in-shop #motw,body.in-shop #weekPanel{display:none!important}
 body.in-shop{background:linear-gradient(rgba(27,15,48,.88),rgba(18,10,32,.94)),url("assets/hero/carpet.webp") 0 0/300px 300px,#1b0f30}
@@ -3106,7 +3110,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=a83f26f6" defer></script>
 <script src="formats-core.js?v=2fdee61f" defer></script>
-<script src="app.js?v=646a0d51" defer></script>
+<script src="app.js?v=cf8b5364" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
