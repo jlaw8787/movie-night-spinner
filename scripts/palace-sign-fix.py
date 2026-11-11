@@ -40,7 +40,24 @@ ys, xs = np.nonzero(fa); fa = fa[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
 ch, cw = fa.shape
 M = cv2.getPerspectiveTransform(np.float32([[0, 0], [cw, 0], [cw, ch], [0, ch]]), quad)
 wk = cv2.warpPerspective(fa.astype(np.uint8) * 255, M, (W, H)) > 127
-sk = skeletonize(wk); ys, xs = np.nonzero(sk)
+sk = skeletonize(wk)
+# thinning leaves short diagonal tails at sharp corners: cut any branch under about two bulbs long that runs from an end to a joint
+def deg(m, x, y): return int(m[y - 1:y + 2, x - 1:x + 2].sum()) - 1
+for _ in range(2):
+    ys, xs = np.nonzero(sk)
+    for x0, y0 in zip(xs, ys):
+        if not sk[y0, x0] or deg(sk, x0, y0) != 1: continue
+        path = [(x0, y0)]; prev = None; cur = (x0, y0)
+        while True:
+            x, y = cur
+            nxt = [(x + i, y + j) for i in (-1, 0, 1) for j in (-1, 0, 1) if (i or j) and sk[y + j, x + i] and (x + i, y + j) != prev and (x + i, y + j) not in path]
+            if len(nxt) != 1 or deg(sk, *nxt[0]) >= 3 or len(path) > 14: break
+            prev, cur = cur, nxt[0]; path.append(cur)
+        x, y = path[-1]
+        nxt = [(x + i, y + j) for i in (-1, 0, 1) for j in (-1, 0, 1) if (i or j) and sk[y + j, x + i] and (x + i, y + j) not in path]
+        if len(path) <= 14 and nxt and any(deg(sk, *n) >= 3 for n in nxt):
+            for px, py in path: sk[py, px] = False
+ys, xs = np.nonzero(sk)
 # walk each stroke from an end, so bulbs fall at even steps along it
 S = set(zip(xs.tolist(), ys.tolist()))
 nb = lambda q: [(q[0] + i, q[1] + j) for i in (-1, 0, 1) for j in (-1, 0, 1) if (i or j) and (q[0] + i, q[1] + j) in S]
@@ -72,7 +89,7 @@ out = out * (1 - hc) + np.float32([235, 250, 255]) * hc
 
 # 3. carry the bulb rail across the gap: two copies of a three-bulb run of the rail where it starts again at the right scroll
 P0, P1 = np.float32([1141, 186]), np.float32([1192, 201])     # rail centre line, three bulbs apart
-Q0, Qe = np.float32([1024, 139]), np.float32([1143, 187])     # crest's last bulb to where the rail starts again
+Q0, Qe = np.float32([1035, 144]), np.float32([1143, 187])     # just past the crest's last curl to where the rail starts again
 def nrm(a, b):
     d = (b - a) / np.linalg.norm(b - a); return np.float32([-d[1], d[0]])
 src = out.copy(); hh = 9.0
@@ -81,14 +98,15 @@ for k in range(2):
     A = cv2.getAffineTransform(np.float32([P0, P1, P0 + nrm(P0, P1) * hh]), np.float32([a, b, a + nrm(a, b) * hh]))
     wp = cv2.warpAffine(src, A, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
     n = nrm(a, b); d = (b - a) / np.linalg.norm(b - a)
-    poly = np.float32([a - d * 2 + n * 11, b + d * 2 + n * 11, b + d * 2 - n * 11, a - d * 2 - n * 11])
+    st = 0 if k == 0 else 2  # the first copy starts clean at the crest, so its curl is never painted over
+    poly = np.float32([a - d * st + n * 11, b + d * 2 + n * 11, b + d * 2 - n * 11, a - d * st - n * 11])
     m = np.zeros((H, W), np.float32); cv2.fillPoly(m, [poly.astype(np.int32)], 1.0)
     m = cv2.GaussianBlur(m, (0, 0), 1.6)[..., None]
     out = out * (1 - m) + wp * m
 
 # match the photo's softness and grain over everything touched
 touched = cv2.dilate(bm, np.ones((9, 9), np.uint8)).astype(np.float32) / 255
-cv2.fillPoly(touched, [np.int32([(1015, 120), (1150, 172), (1150, 205), (1015, 158)])], 1.0)
+cv2.fillPoly(touched, [np.int32([(1033, 128), (1150, 172), (1150, 205), (1033, 162)])], 1.0)
 tk = cv2.GaussianBlur(touched, (0, 0), 3)[..., None]
 soft = cv2.GaussianBlur(out, (0, 0), 0.6)
 out = out * (1 - tk) + soft * tk + rng.normal(0, 1.4, (H, W, 1)) * tk
