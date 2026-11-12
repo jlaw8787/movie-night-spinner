@@ -10326,8 +10326,8 @@
    "Mom's strange dinners"
   ],
   "prop": {
-   "kind": "receipt",
-   "title": "Paper Route Bill",
+   "kind": "bill",
+   "title": "Johnny's Paper Route",
    "lines": [
     "Four weeks, twenty papers",
     "Amount due: two dollars"
@@ -13122,7 +13122,8 @@
   },
   "patient": "Sarah Connor",
   "hospital": {
-   "stampYear": "1995"
+   "stampYear": "1995",
+   "noLogo": true
   }
  },
  "Predator (1987)": {

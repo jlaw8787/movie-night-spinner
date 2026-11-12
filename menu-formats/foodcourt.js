@@ -58,7 +58,8 @@ const TONE={
 };
 function money(v,ei){if(v<1&&ei<2)return "."+String(Math.round(v*100)).padStart(2,"0");if(ei>=6)return String(Math.round(v));return v.toFixed(2)}
 function prices(menu,ei,egg,mult){
-  mult=mult||{s:.55,m:1,w:.45,d:.3};const out={};let hid=false;
+  /* review 26d: modern food court drinks are not the cheapest thing on the board (a seven buck soda) */
+  mult=mult||{s:.55,m:1,w:.45,d:ei>=6?.6:.3};const out={};let hid=false;
   /* within a course: dearer dishes (seafood, steak) take the top prices, and no two dishes share a price */
   const DEAR=/\b(lobster|steak|prime rib|surf and turf|surf 'n' turf|prawns?|shrimp|scallops?|crab|oysters?|wagyu|filet|fillet mignon|t-bone|ribeye|rib eye|sirloin|short ribs?|beef ribs?|brisket)\b/i;
   const step=ei<2?.05:ei>=6?1:.5,rnd=v=>ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
