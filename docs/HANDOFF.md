@@ -585,3 +585,10 @@ Live: deploy 6af4fc29 (main df81c41a), 12 Nov 9am, files checked against the liv
 
 ### Tests on main (before the hero sign merge, which only changed the three hero images)
 All 19 tests, check-browser (3 clean runs), check-store-taps, check-print-text on all 900 (six chunks of 150; one flake on The Avengers "We deliver" footer when two chunks ran at once, passed 3 of 3 alone and on the chunk rerun), sig-crops, WebKit signature check: all pass.
+- Josh, 12 Nov 10:11am: the Instagram Reel (spin landing on Jurassic Park) and the 3D menu video were made in separate chats and are complete. Drop both from the queued wishes.
+- GitHub: the Claude GitHub App permissions were accepted 12 Nov 10:10am (all repositories); pushes from these sessions work. GitHub Pages still isn't building (last run 25 Oct); the site is on Netlify, so this only matters if Josh leaves Netlify.
+
+### Next (Josh, 12 Nov): the old branches, in this order
+1. fix21-checks (4 commits, harness tweaks for check-phone-fit, check-pdf-tone, check-prep-a4): separate reviewer, merge, then run the three checks on all 900 and report findings.
+2. fix21-fonts (WIP, never reviewed, 955 files, about 23 MB of local fonts plus local PDF libraries): report the first-visit download cost and options (for example only the fonts each menu uses) before finishing it.
+3. fix21-app (WIP, never reviewed, Capacitor app groundwork and app mode): ask Josh before starting.
