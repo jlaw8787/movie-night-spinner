@@ -520,7 +520,13 @@ function shopGroups(menu){
   /* lists put together from several dishes add up the same item: 2 garlic cloves + 5 garlic cloves = 7 garlic cloves */
   const merge=!menu.shopping,UNIT={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000],L:["ml",1000]};
   const tally={},order=[];
-  shopping.forEach(x=>{
+  /* review 24: a stored list added two packs up and put the plural on the food as well as the pack ("6 slices provolones", "2 rashers bacons").
+     When the dishes' own lines name it in the singular ("6 slices provolone"), the list line follows them */
+  const known=new Set([...(menu.s||[]),...(menu.m||[]),...(menu.w||[]),...(menu.d||[])].flatMap(it=>it.shop||[]).map(x=>String(x).split("@")[0].trim().replace(/^\d+(?:\.\d+)?\s*(kg|g|ml|L|l)?\s+/,"").toLowerCase()));
+  const packTidy=x=>{const m=!merge&&known.size&&typeof planSing==="function"&&x.match(/^(\d+(?:\.\d+)?\s+)(\S+s)( .*?)(\S+s)(@.*)?$/);if(!m||!(PL_CONT.test(m[2])||/^(litres|cups|shots)$/i.test(m[2])))return x;
+    const one=planSing(m[4]),lo=s=>s.toLowerCase(),s1=planSing(m[2]);if(one===m[4]||known.has(lo(m[2]+m[3]+m[4]))||known.has(lo(s1+m[3]+m[4])))return x;
+    return known.has(lo(m[2]+m[3]+one))||known.has(lo(s1+m[3]+one))?m[1]+m[2]+m[3]+one+(m[5]||""):x};
+  shopping.map(packTidy).forEach(x=>{
     const [name,aisle]=x.split("@");const a=AISLES.includes((aisle||"").trim())?aisle.trim():"Pantry";const n=name.trim();
     const m=merge&&n.match(/^(\d+(?:\.\d+)?)\s*(kg|g|ml|L|l)?\s+(.+)$/);
     const key=m?a+"|"+(m[2]?UNIT[m[2]][0]:"#")+"|"+m[3].toLowerCase().replace(/(es|s)$/,""):a+"|="+n;
@@ -1175,6 +1181,9 @@ const planDishes=f=>{const L=planLate(f);return planPicked(f).filter(d=>!L.has(d
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
 function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
 function planQty(q,u){
+  /* review 24: bunches and pinches keep their word ("1 bunch tarragon", never "1 tarragon"), bought and used whole; a capital L is litres */
+  if(u==="bunch"||u==="pinch"){const n=Math.max(1,Math.ceil(q-0.05));return n+" "+u+(n>1?"es":"")}
+  if(u==="L")u="l";
   if(u==="g"&&q>=1000){q/=1000;u="kg"}else if(u==="ml"&&q>=1000){q/=1000;u="l"}else if(u==="kg"&&q<1){q*=1000;u="g"}else if(u==="l"&&q<1){q*=1000;u="ml"}
   if(u==="g"||u==="ml")return (q>=50?Math.round(q/5)*5:Math.max(1,Math.round(q)))+u;
   if(u==="kg"||u==="l")return (q>=1?Math.round(q*10)/10:Math.round(q*100)/100)+(u==="l"?" L":u);
@@ -1186,7 +1195,7 @@ function planQty(q,u){
   if(u==="tsp"||u==="tbsp"){q=q<1?Math.ceil(q*4-0.01)/4:Math.ceil(q*2-0.01)/2;return fracText(q)+" "+u}
   return String(q<1?fracText(q):Math.ceil(q-0.01));
 }
-const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000]};
+const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000],L:["ml",1000]};
 const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|bunche|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|loave|fillet|piece|wedge|strip|scoop|shot|glass|glasse|cup|leaf|leave|tray|box|boxe|carton|tub|round|ball|sachet|pinch|pinche|handful|drop|dash|dashe|tube|splash|splashe|knob|dollop|cube|wheel|twist|square|ear|stem|rib|cob|sprinkle|log|disc|tablet|envelope|tray|container|pot|roll)s?$/i;
 const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|sage|tarragon|paprika|cinnamon|nutmeg|cumin|turmeric|allspice|colouring|coloring|paste|sauce|syrup|honey|vinegar|stock|yoghurt|yogurt|mayonnaise|mustard|ketchup|jam|chocolate|cocoa|spinach|garlic|ginger|salt|ice cream|custard|gravy|cordial|lemonade|chilli flakes|seasoning|spice|zest|ice)$/i;
 function planPlural(item,q){if(!(q>1))return item;if(/^cob loa(f|ves)\b/i.test(item))return String(item).replace(/^cob loa(f|ves)/i,"cob loaves");let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
@@ -1561,21 +1570,32 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
 const dryNow=f=>dietAF()||DRY_THEMES.includes(f&&f.theme);
 const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v,W="beer|stout|ale|guinness|lager|red wine|white wine|wine|cider|bourbon|whisk(?:e)?y|rum|brandy|sherry|marsala|tequila|vodka|sake|champagne|port";
   const r=(re,v)=>[re,typeof v==="function"?v:m=>cap(m,v)];
+  /* a proper name swapped mid-sentence goes lower case ("a nice grape juice", not "a nice Grape juice"); capitals and sentence starts stay */
+  const capAt=v=>(m,...a)=>{const str=a[a.length-1],off=a[a.length-2];if(/[A-Z]{2}/.test(m)&&m===m.toUpperCase())return v.toUpperCase();return typeof off==="number"&&(off===0||/[.:!?·]\s*$/.test(str.slice(0,off)))?v[0].toUpperCase()+v.slice(1):v};
   return [r(/[^.]*\bmust be (18|19|21)( or over)? to (order|drink)\b[^.]*\.?\s*/gi,""),r(/\b(18\+|over 18s?) only\.?\s*/gi,""),
    r(/\bbrandy alexanders?\b/gi,"vanilla nutmeg milk"),r(/\bhot buttered (rum|syrup|whisky|whiskey)\b/gi,"hot spiced apple"),r(/\bmulled wine\b/gi,"mulled grape punch"),
    r(/\b(brandy|bourbon|whisky|whiskey|rum) milk punch\b/gi,"vanilla milk punch"),r(/\birish coffee\b/gi,"Irish-style hot chocolate"),r(/\bmimosas?\b/gi,"orange fizz"),
    r(/\bshandy\b/gi,"lemon squash"),r(/\b(gin|vodka) and tonic\b/gi,"lime and tonic"),r(/\bmint juleps?\b/gi,"mint lemonade"),r(/\bold fashioneds?\b/gi,"orange and cherry soda"),
-   r(/\bboilermakers?\b/gi,"ginger beer float"),r(/\bmargaritas?\b/gi,"lime slushie"),r(/\bmojitos?\b/gi,"mint and lime fizz"),r(/\bmartinis?\b/gi,"mocktail"),r(/\bdaiquiris?\b/gi,"strawberry slushie"),
+   r(/\bboilermakers?\b/gi,"ginger beer float"),r(/\bmargaritas\b/gi,"lime crushes"),r(/\bmargarita\b/gi,"lime crush"),r(/\bmojitos?\b/gi,"mint and lime fizz"),r(/\bmartinis?\b/gi,"mocktail"),r(/\bdaiquiris?\b/gi,"strawberry slushie"),
    r(/\bpi[nñ]a coladas?\b/gi,"pineapple colada"),r(/\bblue lagoons?\b(?! mocktail)/gi,"blue lagoon mocktail"),r(/\bsangria\b/gi,"fruit punch"),r(/\bspritz(es)?\b/gi,"soda spritz"),r(/\bnegronis?\b/gi,"blood orange soda"),
    [/\b(red wine|white wine|rice wine|sherry|cider|champagne|malt) vinegar\b/gi,m=>m.replace(/(wine|sherry|cider|champagne|malt)/i,w=>w[0]+"\u200B"+w.slice(1))],
    r(/\b(alcohol-free|non-alcoholic) (beer|lager|stout|ale)[- ]battered\b/gi,"crisp battered"),[new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
-   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
-   r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beers?|lagers?|ales?) and lemonade\b/gi,"lemon squash"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b(?! (and (cheese|cheddar|mustard|onions?)|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
+   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?))/gi,"mocktail"),
+   /* review 24: an alcohol-free wine, beer or spirit is still a grown-up's drink, so a kids' card pours what a child drinks, the same drink the card names:
+      sparkling apple juice, grape juice, ginger beer, cucumber or blood orange juice. Wine by name goes the same way as wine */
+   r(/\b(alcohol-free|non-alcoholic) (sparkling (wine|ros[ée]|white|red)|champagne|prosecco|spumante|cava|bubbly|bubbles|sparkling)(?![\w\u00C0-\u024F])/gi,"sparkling apple juice"),r(/\b(alcohol-free|non-alcoholic) bellinis?\b|\bbellinis?\b(?! mocktail)/gi,"peach fizz"),
+   r(/\b(alcohol-free|non-alcoholic) ((red|white) )?(wines?|ros[ée])(?![\w\u00C0-\u024F])/gi,"grape juice"),r(/\b(alcohol-free|non-alcoholic) gin\b/gi,"cucumber juice"),r(/\b(alcohol-free|non-alcoholic) ((spiced|dark|white|golden) )?rum\b/gi,"coconut water"),
+   r(/\b(alcohol-free|non-alcoholic) ((bitter|red|orange) )*(aperitifs?|aperitivos?|amaro|bitters?)\b/gi,"blood orange juice"),r(/\b((bitter|red|orange) )*(aperitifs?|aperitivos?)\b/gi,"blood orange juice"),
+   [/\b(Bordeaux|claret|Chianti|Merlot|Shiraz|Pinot (Noir|Grigio|Gris)|Chardonnay|Riesling|Sauvignon Blanc|Cabernet Sauvignon|Cabernet|Rioja|Lambrusco|Beaujolais|Chablis|Moscato|Montepulciano|Malbec|Zinfandel|grappa)\b(?! vinegar)/gi,capAt("grape juice")],
+   r(/\b(anisette|sambuca|ouzo)\b/gi,"aniseed"),r(/\blimoncello\b/gi,"lemon syrup"),[/\bWhite Russians\b/gi,capAt("vanilla iced coffees")],[/\bWhite Russian\b/gi,capAt("vanilla iced coffee")],
+   r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
+   r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beers?|lagers?|ales?) and lemonade\b/gi,"lemon squash"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(alcohol-free |ginger |root )?beer onions\b/gi,"sticky onions"),r(/\b(alcohol-free |non-alcoholic )?(beer|lager|ale) (cheddar |cheese )(sauce|dip)\b/gi,(m,a,b,c,d)=>cap(m,c+d)),r(/\b(alcohol-free|non-alcoholic) (beer|lager|ale) and (mustard|cheddar|cheese)\b/gi,(m,a,b,c)=>cap(m,c)),r(/\b(alcohol-free|non-alcoholic) (beer|lager|ale) cheese\b/gi,"cheese sauce"),
+   r(/\b(cold |ice-cold |crisp )?(alcohol-free|non-alcoholic) ((pale|wheat|dark|English|Irish|craft) )?(beers?|lagers?|stouts?|ales?|pilsners?)\b(?! (and (cheese|cheddar|mustard|onions?)|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|ales?)\b/gi,"ginger beer"),r(/\b(?<!alcohol-free )(lagers?|stouts?|pilsners?|longnecks?|stubbies|tinnies|guinness)\b/gi,"ginger beer"),
    r(new RegExp("\\b(beside|with) (a |some )?(frozen |cold |ice-cold |chilled )?(shots? of )?("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>a.toLowerCase()+" a cold drink"),r(new RegExp("\\b(pour|serve|open|crack open|hand round) the ("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>cap(m,a.toLowerCase()+" the drinks")),r(new RegExp("\\ba (bottle|glass|shot|pint|jug|can|flask|round) of ("+W+"|absinthe|grog)\\b","gi"),(m,a)=>"a "+a.toLowerCase()+" of lemonade"),r(/\b(green )?absinthe\b/gi,"green cordial"),r(/\bgrog\b/gi,"fruit punch"),
    /* review 19: "Hot apple cider" read "Hot apple sparkling apple juice" (Home Alone 2): the apple is already named, and a hot one is not sparkling */
-   r(/\b(hot|warm|warmed|mulled|spiced) (spiced )?apple ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(hot|warm|mulled) ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(apple|pear) ciders?\b/gi,(m,a)=>cap(m,"sparkling "+a.toLowerCase()+" juice")),
+   r(/\b(hot|warm|warmed|mulled|spiced) (spiced )?apple ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(hot|warm|mulled) (spiced )?ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(apple|pear) ciders?\b/gi,(m,a)=>cap(m,"sparkling "+a.toLowerCase()+" juice")),
    /* review 20: a Bloody Mary keeps its name on a kids' card without the vodka (Get Shorty) */
    r(/\bBloody Marys?\b/gi,"Virgin Mary"),
    r(/\bciders?\b/gi,"sparkling apple juice"),
@@ -1592,13 +1612,15 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    before and after the shared pass, and run on every card since a layout dries PG films too */
 const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v;
   return [[/\b(goodness|heaven|pete|god|christ)((['’]s?|s['’])?) (syrup|yuzu soda)\b/gi,(m,a,b)=>a+b+" sake"],
-   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
+   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing|blinis?)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
    [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
    /* It's a Wonderful Life: the housewarming is for the Martini family, and the martini swap turned them into "Mocktail' new house" */
    [/\bmocktail(?=['\u2019] new house)/gi,()=>"Martinis"],
    /* review 15: "with Marsala wine" went through two swaps and read "with a cold drink grape juice" (The Godfather, Vegetarian with No alcohol) */
    [/\ba cold drink (grape juice)\b/gi,(m,a)=>a],
    [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],
+   /* review 24: two swaps that land on the same drink read once ("anisette or sambuca", a shandy of lager topped with ginger beer) */
+   [/\b(aniseed|grape juice|ginger beer|sparkling apple juice) or \1\b/gi,(m,a)=>a],[/\b(ginger beer) (?:topped|mixed) with (?:cold |chilled )?ginger beer\b/gi,(m,a)=>a],
    /* review 21: a recipe that offers root beer beside the beer read "Pour the root beer, or the root beer for anyone who prefers it" once the beer was swapped (Shaun of the Dead) */
    [/\b((?:[A-Z][a-z]+ )?(?:root|ginger) beer),? or (?:the )?(?:root|ginger) beer(?: for anyone who prefers it)?,?/g,(m,a)=>a],
    /* review 21: the town keeps its name, but a dish named for it keeps no whiskey on a kids' card (Unforgiven) */
@@ -2228,7 +2250,11 @@ async function openTrolley(f,menuOverride,label){
   const own=!menuOverride;
   if(!menuOverride&&f._r2&&f._r2.dishes&&f._r2.dishes.length){if(f!==current)planLoad(f);menuOverride={s:[],m:[],w:[],d:[],shopping:planShopping(f)}}
   const serves=menuOverride&&menuOverride.serves||(f._r2?PLAN.guests:4);
-  const groups=shopGroups(menuOverride||mm);if(own&&typeof extrasFor==="function"){const ex=extrasFor(f);if(ex.length)groups.push(["Your extras",ex])}const all=groups.flatMap(([,l])=>l);
+  const groups=shopGroups(menuOverride||mm);
+  /* review 24: a dry list (kids' mode, alcohol-free, family films) reads the same drink words as the card and Prep sheet ("4 x 375ml cans of ginger beer", not alcohol-free lager).
+     Only the words shown change: each line keeps its own tick key, so ticks still match the Prep sheet. The cook's own extras are left as typed */
+  const dryOn=typeof dryNow==="function"&&dryNow(f),dryL=new Set(groups.flatMap(([,l])=>l)),shown=x=>dryOn&&dryL.has(x)?dryText(x,true):x;
+  if(own&&typeof extrasFor==="function"){const ex=extrasFor(f);if(ex.length)groups.push(["Your extras",ex])}const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",label?`Shopping list: ${label}`:`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
   if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
@@ -2236,7 +2262,7 @@ async function openTrolley(f,menuOverride,label){
   const ticks=()=>own?sharedTicks(f):week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
   const skip=k=>own&&typeof pantryHas==="function"&&pantryHas(f,k);const live=()=>all.filter(x=>!skip(kf(x)));
   const tick=(k,on,quiet)=>{if(own)setTick(f,k,on,quiet);else{const t=ticks();if(on)t[k]=true;else delete t[k];if(!quiet&&week&&week.id===f.id)saveWeek()}};
-  o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(kf(x))}"${ticks()[kf(x)]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
+  o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(kf(x))}"${ticks()[kf(x)]?" checked":""}><span>${ESC(shown(x))}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
   const prog=()=>{const L=live(),n=L.filter(x=>ticks()[kf(x)]).length;o.querySelector("#tProg").textContent=`${n} of ${L.length} in the trolley. Serves ${serves}.`;o.querySelector("#tBar").style.width=(L.length?100*n/L.length:0)+"%"};
   o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;tick(k,e.target.checked);o.querySelector("#tMsg").textContent="";prog()});
   const close=()=>dismissModal(o);
@@ -2244,7 +2270,7 @@ async function openTrolley(f,menuOverride,label){
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="done")close();
     if(a==="reset"){all.forEach(x=>tick(kf(x),false,true));if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
-    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)]&&!skip(kf(x)))]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left,serves);
+    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)]&&!skip(kf(x)))]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left.map(([g,l])=>[g,l.map(shown)]),serves);
       try{const nat=typeof REEL!=="undefined"&&await REEL.share({title:`${f.title} shopping list`,text});if(nat){if(nat==="sent")o.querySelector("#tMsg").textContent="Sent."}
         else if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
       catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
@@ -3021,6 +3047,9 @@ $("shopAisles").addEventListener("click",e=>{
 
 function menuText(){
   if(!current)return"";
+  /* review 24: the copied text runs the same dry pass as the card (kids' mode read "Cold alcohol-free lager" and "margarita" here) */
+  if(dryNow(current))return dryText(menuText0(),true);return menuText0()}
+function menuText0(){
   const m=current.menu,line=it=>`- ${it.n}${it.note?`, ${it.note}`:""}${it.how?`\n  How: ${it.how}`:""}`;
   return `${current.title} (${current.year})\n${current.tag}\n${current.D}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}\n\nShowtime cue: ${movieEdition(current)?.cue||current.P}\n\nSHOPPING LIST\n${shopGroups(m).map(([a,l])=>a+"\n"+l.map(x=>"[ ] "+x).join("\n")).join("\n\n")}`;
 }

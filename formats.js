@@ -388,39 +388,39 @@ const FMT_FILMS={
     stills:[["/hAj5B7NNjd05081eZhqKujmpVdx.jpg","The soup Remy saved"],["/pFIQZaWSyn4YAdE9jGriCTnTDZB.jpg","The ratatouille, for Ego"],["/lxpv2ikF3Cdml90d1JI7hJzh6rK.jpg","Colette's bread test"]],
     groups:[
       {h:"Pour commencer",en:"To start",items:[
-        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"Linguini spilled it. Remy fixed it",p:"€12"},
-        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Toasted on the chimney by lightning",p:"€9"},
-        {k:"Paris market jambon-beurre and brie",fr:"La baguette",n:"Bread, with a proper crust",note:"Listen for the crackle",p:"€4",
+        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"Leek, potato and cream. Remy fixed it",p:"€12"},
+        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Mushroom and gruyère, by lightning",p:"€9"},
+        {k:"Paris market jambon-beurre and brie",fr:"La baguette",n:"Bread, with a proper crust",note:"Warm baguette. Hear it crackle",p:"€4",
          how:"Warm 2 good baguettes in a 200C oven for 6 minutes until the crust crackles when you squeeze it. Tear, do not slice, and serve with 100g salted butter at room temperature.",
          shop:["2 baguettes@Bakery","100g salted butter@Dairy"]}]},
       {h:"Les plats",en:"Mains",items:[
-        {k:"Ratatouille",fr:"Ratatouille",n:"Ratatouille, layered fine",note:"The dish that takes Ego straight back to his mum's kitchen",p:"€28"},
-        {k:"Sweetbreads à la Gusteau",fr:"Ris de veau à la Gusteau",n:"Sweetbreads à la Gusteau",note:"The old recipe Linguini was told to cook. Remy rewrote it",p:"€32",c:"m",
+        {k:"Ratatouille",fr:"Ratatouille",n:"Ratatouille, layered fine",note:"Zucchini, eggplant, squash, tomato. Takes Ego home",p:"€28"},
+        {k:"Sweetbreads à la Gusteau",fr:"Ris de veau à la Gusteau",n:"Sweetbreads à la Gusteau",note:"Veal sweetbreads in butter and lemon. The recipe Remy rewrote",p:"€32",c:"m",
          how:"Soak 600g veal sweetbreads in cold water for 2 hours, then simmer in salted water for 4 minutes and plunge into iced water. Peel off the membrane and press under a weighted tray for an hour. Slice into 2cm pieces, dust with flour and pan-fry in 30g butter for 3 minutes a side until golden. Deglaze with 80ml white wine and 100ml veal or chicken stock, reduce, then swirl in 20g cold butter. Serve with the sauce spooned over.",
          shop:["600g veal sweetbreads@Meat","50g butter@Dairy","2 tbsp plain flour@Pantry","80ml white wine@Bottle shop","100ml chicken stock@Pantry"]}]},
       {h:"Le dessert",en:"Sweet",left:true,items:[
-        {k:"Colette's crème brûlée",fr:"Crème brûlée",n:"Colette's crème brûlée",note:"Colette teaches, Remy tugs Linguini's hair",p:"€10"}]},
+        {k:"Colette's crème brûlée",fr:"Crème brûlée",n:"Colette's crème brûlée",note:"Custard, burnt sugar. Colette's lesson",p:"€10"}]},
       {h:"La cave",en:"The cellar",items:[
-        {k:"Anton Ego's grape spritz",fr:"Bordeaux, 1947",n:"A good Bordeaux",note:"Ego's order. Any good Bordeaux will do at home",p:"Ask the sommelier"}]}]},
+        {k:"Anton Ego's grape spritz",fr:"Bordeaux, 1947",n:"A good Bordeaux",note:"A '47 Bordeaux, or any red. Ego's order",p:"Ask the sommelier"}]}]},
   "Big Night (1996)":{fmt:"feast",over:"Cucina Italiana · Jersey Shore",brand:"Paradise",sub:"Primo in the kitchen. Secondo out front.",
     foot:"No spaghetti with the risotto. Primo: she is a Philistine.",
     note:["The big night","For the night Louis Prima was meant to come. To eat good food is to be close to God."],
     stills:[["/dohqxi6QW7SSmzEaK8Wv9dMhxcP.jpg","The customer who wanted spaghetti too"],["/dtUVvnbYSusSaI6xwPrkPK2xLeB.jpg","The long table, the big night"]],
     groups:[
       {h:"Primi",en:"First courses",items:[
-        {k:"Seafood risotto",it:"Risotto di mare",n:"Seafood risotto",note:"The one the customer wanted spaghetti with",p:"2.50",c:"s",
+        {k:"Seafood risotto",it:"Risotto di mare",n:"Seafood risotto",note:"Prawns, squid and mussels. No cheese, no spaghetti",p:"2.50",c:"s",
          how:"Warm 1.2L fish stock. Soften 1 diced onion and 2 garlic cloves in 3 tbsp olive oil, add 350g carnaroli rice and toast 2 minutes, then 125ml white wine. Add the stock a ladle at a time, stirring, for 16 minutes. Stir in 300g peeled green prawns, 200g squid rings and 500g cleaned mussels, cover for 4 minutes until the mussels open. Finish with 30g butter, parsley and lemon. No cheese.",
          shop:["1.2L fish stock@Pantry","1 onion@Produce","2 garlic cloves@Produce","350g carnaroli rice@Pantry","125ml white wine@Bottle shop","300g green prawns@Seafood","200g squid rings@Seafood","500g mussels@Seafood","30g butter@Dairy","1 bunch parsley@Produce","1 lemon@Produce"]},
-        {k:"Risotto three ways",it:"Risotto tricolore",n:"Risotto in three colours",note:"Green, white and red, side by side, at the feast",p:"3.00",
+        {k:"Risotto three ways",it:"Risotto tricolore",n:"Risotto in three colours",note:"Spinach, parmesan and tomato risottos, side by side",p:"3.00",
          how:"Make one risotto base: soften 1 onion in 40g butter, toast 400g arborio rice, add 125ml white wine, then 1.4L hot chicken stock a ladle at a time for 17 minutes. Split into three pans. Green: stir in 100g blitzed spinach and basil. White: stir in 60g parmesan and 30g butter. Red: stir in 4 tbsp tomato passata and a pinch of saffron soaked in hot water. Spoon the three side by side on each plate.",
          shop:["1 onion@Produce","70g butter@Dairy","400g arborio rice@Pantry","125ml white wine@Bottle shop","1.4L chicken stock@Pantry","100g baby spinach@Produce","1 bunch basil@Produce","60g parmesan@Dairy","4 tbsp tomato passata@Pantry","1 pinch saffron@Pantry"]}]},
       {h:"Secondi",en:"Main courses",items:[
-        {k:"Timpano",it:"Il timpano",n:"Timpano",note:"The pasta drum. One bite and the room shouts Paradise",p:"5.00"},
-        {k:"Roast suckling pig",it:"Maialino arrosto",n:"Roast pork, whole-pig style",note:"Part of the feast on the big night",p:"4.50",
+        {k:"Timpano",it:"Il timpano",n:"Timpano",note:"Ziti, ragù, egg and provolone in a pasta drum. The big night's star",p:"5.00"},
+        {k:"Roast suckling pig",it:"Maialino arrosto",n:"Roast pork, whole-pig style",note:"Pork with fennel, garlic and rosemary, for the feast",p:"4.50",
          how:"Score the skin of a 1.5kg boned pork belly, rub with 2 tsp salt, 1 tbsp fennel seeds, 4 crushed garlic cloves and rosemary on the flesh side, roll and tie. Dry uncovered in the fridge overnight. Roast at 240C for 30 minutes, then 160C for 2 hours until tender and crackling. Rest 15 minutes and carve thick.",
          shop:["1.5kg boned pork belly@Meat","1 tbsp fennel seeds@Pantry","4 garlic cloves@Produce","1 bunch rosemary@Produce"]}]},
       {h:"All'alba",en:"At dawn",items:[
-        {k:"Secondo's omelette",it:"La frittata",n:"Secondo's omelette",note:"The morning after. Cooked in silence, split three ways",p:"",c:"m",
+        {k:"Secondo's omelette",it:"La frittata",n:"Secondo's omelette",note:"Eggs, olive oil, crusty bread. The silent morning after",p:"",c:"m",
          how:"Beat 8 eggs with a pinch of salt. Heat 2 tbsp olive oil in a non-stick pan over medium heat, pour in the eggs and stir gently until just set underneath and soft on top, about 3 minutes. Fold, slide onto a plate and cut into four. Serve with torn bread.",
          shop:["8 eggs@Dairy","2 tbsp olive oil@Pantry","1 loaf crusty bread@Bakery"]}]}]},
   "Chef (2014)":{fmt:"truck",brand:"El Jefe",sub:"Cubanos",boardHead:"Today on the truck",boardSide:"Miami to LA",
@@ -430,16 +430,16 @@ const FMT_FILMS={
       {h:"The truck",items:[
         {k:"El Jefe Cubano",n:"El Jefe Cubano",note:"Roast pork, ham, swiss, pickles, mustard. Pressed hot",p:"$7"}]},
       {h:"For Percy",items:[
-        {k:"The grilled cheese for Percy",n:"Grilled cheese",note:"Made for his son. Not to be served burnt. Ever",p:"$5"}]},
+        {k:"The grilled cheese for Percy",n:"Grilled cheese",note:"Cheddar, gruyère and parmesan. Made for Percy, never burnt",p:"$5"}]},
       {h:"On the road",items:[
-        {k:"New Orleans beignets with chicory café",n:"Beignets",note:"The New Orleans stop. Icing sugar everywhere",p:"$4",
+        {k:"New Orleans beignets with chicory café",n:"Beignets",note:"Fried yeast dough under icing sugar. The New Orleans stop",p:"$4",
          how:"Mix 7g dried yeast, 1 tbsp sugar and 180ml warm milk, stand 10 minutes. Beat in 1 egg, 30g melted butter, 350g plain flour and a pinch of salt to a soft dough, knead 3 minutes, cover and rise 1 hour. Roll 5mm thick, cut into 6cm squares and fry at 175C for 1 minute a side until puffed and golden. Drain and bury in 100g icing sugar.",
          shop:["7g dried yeast@Pantry","1 tbsp caster sugar@Pantry","180ml full cream milk@Dairy","1 egg@Dairy","30g butter@Dairy","350g plain flour@Pantry","100g icing sugar@Pantry","1L vegetable oil@Pantry"]},
-        {k:"Carl's late-night aglio e olio",n:"Aglio e olio",note:"What he cooks for Molly at midnight",p:"$9",
+        {k:"Carl's late-night aglio e olio",n:"Aglio e olio",note:"Garlic, chilli and olive oil. For Molly at midnight",p:"$9",
          how:"Cook 500g spaghetti in well-salted water until just shy of al dente, keeping 1 cup of the water. Meanwhile warm 100ml olive oil with 8 thinly sliced garlic cloves and 1 tsp chilli flakes over low heat until the garlic is pale gold. Toss the pasta through with a splash of pasta water until glossy. Finish with a bunch of chopped parsley, lemon juice and parmesan.",
          shop:["500g spaghetti@Pantry","100ml extra virgin olive oil@Pantry","8 garlic cloves@Produce","1 tsp chilli flakes@Pantry","1 bunch parsley@Produce","1 lemon@Produce","40g parmesan@Dairy"]}]},
       {h:"Off the menu",items:[
-        {k:"Chocolate lava cake",n:"Chocolate lava cake",note:"The cake Riva made him serve, and the Twitter fight.",p:"$6"}]}]},
+        {k:"Chocolate lava cake",n:"Chocolate lava cake",note:"Molten dark chocolate centre. The Twitter fight cake.",p:"$6"}]}]},
   "When Harry Met Sally... (1989)":{fmt:"check",brand:"Katz's Delicatessen",place:"Katz's Delicatessen",tag:"I'll have what she's having.",
     fields:[["Table","4"],["Guests","2"],["Server","Joan"],["No.","1989"]],total:"$18.70",thanks:"Send a salami to your boy in the army",
     trip:["Chicago to New York, 1977","Chicago","New York","18 hours, can't be friends","They share the drive. They don't share the grapes."],
@@ -448,14 +448,14 @@ const FMT_FILMS={
       {h:"On the table",items:[
         {k:"Fried deli pickles with mustard mayo",n:"Fried pickles",note:"Half-sours in rye batter. Pickles come with every table",p:"1.50",q:"1"}]},
       {h:"Sally's order",items:[
-        {k:"Sally's chef salad",n:"Chef salad",mods:["oil and vinegar dressing"],note:"Exactly as she orders it",p:"5.50",q:"1",
+        {k:"Sally's chef salad",n:"Chef salad",mods:["oil and vinegar dressing"],note:"Ham, turkey, swiss and egg. Dressing on the side",p:"5.50",q:"1",
          how:"Wash and tear 2 cos lettuces. Arrange with 200g sliced leg ham, 200g sliced turkey, 150g swiss cheese strips, 4 halved hard-boiled eggs, 2 sliced tomatoes and half a sliced cucumber. Serve 60ml olive oil and 30ml red wine vinegar in two little jugs on the side.",
          shop:["2 cos lettuces@Produce","200g sliced leg ham@Deli","200g sliced turkey@Deli","150g swiss cheese@Dairy","4 eggs@Dairy","2 tomatoes@Produce","1 cucumber@Produce","60ml olive oil@Pantry","30ml red wine vinegar@Pantry"]},
-        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"On the side. All of it",p:"2.25",q:"1"}]},
+        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"Warm, strawberry ice cream on the side",p:"2.25",q:"1"}]},
       {h:"From the counter",items:[
         {k:"Pastrami on rye",note:"The Katz's classic. Hand cut, piled high, a pickle on the side",p:"6.95",q:"1"}]},
       {h:"Fountain",items:[
-        {k:"Egg cream",n:"Chocolate egg cream",c:"d",note:"The lady at the next table will have what you're having",p:"1.25",q:"2"}]}]},
+        {k:"Egg cream",n:"Chocolate egg cream",c:"d",note:"Chocolate syrup, milk and soda. I'll have what she's having",p:"1.25",q:"2"}]}]},
   "Home Alone (1990)":{fmt:"nero",order:[0,2,1],still:["/gqi0faVa8GvgcG991QL2ZrL3ECw.jpg","Kevin's dinner at the big table, all by himself"],brand:"Little Nero's",over:"Hot to your door",slogan:"No fiddlin' around!",
     tag:"Pay at the door.<br>Pass the pizza.",caption:"Tonight's movie",
     sizes:[["Small","7.50"],["Medium","9.50"],["Large","11.80"]],sizesNote:"Extra cheese 1.00 · Plain cheese always on",stamp:["Delivered hot","Knock at the front door.<br>Wait for the dog door."],
@@ -474,7 +474,7 @@ const FMT_FILMS={
          shop:["1.25L cola@Drinks","1 lemon@Produce","1 bag ice@Frozen"]}]}],
     colB:[
       {h:"Kevin's night in",items:[
-        {k:"Kevin's mac and cheese",n:"Mac and cheese dinner",d:"The TV dinner. Cheddar sauce, crumb on top",note:"Heated up all by himself",p:"3.50"},
+        {k:"Kevin's mac and cheese",n:"Mac and cheese dinner",d:"Macaroni, cheddar sauce, crumb on top",note:"Heated up all by himself",p:"3.50"},
         {k:"Kevin's sundae bar",n:"The giant sundae",c:"w",d:"Two ice creams, hot fudge, the lot",note:"Built in front of Angels with Filthy Souls",p:"2.95",
          how:"Set out 1L vanilla and 1L chocolate ice cream to soften for 10 minutes. Melt 150g chopped dark chocolate with 150ml thickened cream over low heat for hot fudge. Whip another 150ml thickened cream to soft peaks. Put 100g mini marshmallows, 80g chopped roasted peanuts, 4 tbsp sprinkles and 4 maraschino cherries in small bowls. Everyone builds their own in a big bowl.",
          shop:["1L vanilla ice cream@Frozen","1L chocolate ice cream@Frozen","150g dark chocolate@Pantry","300ml thickened cream@Dairy","100g mini marshmallows@Pantry","80g roasted peanuts@Pantry","4 tbsp sprinkles@Pantry","4 maraschino cherries@Pantry"]}]}]},
@@ -508,17 +508,17 @@ const FMT_FILMS={
     card:["From the prison kitchen","Garlic sliced razor thin.<br>Sauce on low all afternoon.<br>Steaks last, in a hot pan."],
     groups:[
       {h:"Start early",items:[
-        {k:"Razor-thin garlic bruschetta",n:"Slice the garlic, razor thin",note:"Paulie's way. Toast the bread for it",p:"6:55"},
+        {k:"Razor-thin garlic bruschetta",n:"Slice the garlic, razor thin",note:"Garlic, tomato and basil on toasted ciabatta. Paulie's way",p:"6:55"},
         {k:"Prison gravy with three-meat meatballs",n:"Sauce on, three-meat meatballs",note:"Veal, beef and pork. Go easy on the onions",p:"7:30"}]},
       {h:"Like inside",items:[
-        {k:"Crew's back booth salami and provolone",n:"Salami, prosciutto, cheese",note:"Laid out on the board, like the cell",p:"11:00",
+        {k:"Crew's back booth salami and provolone",n:"Salami, prosciutto, cheese",note:"With pepperoncini and bread, laid out like the cell",p:"11:00",
          how:"Arrange 150g sliced Genoa salami, 100g prosciutto and 200g sharp provolone cut into thick batons on a board. Add 150g pepperoncini and 150g marinated mushrooms in small bowls. Tear 1 loaf of seeded Italian bread by hand and set it beside the board.",
          shop:["150g Genoa salami@Deli","100g prosciutto@Deli","200g sharp provolone@Deli","150g pepperoncini@Deli","150g marinated mushrooms@Deli","1 loaf Italian bread@Bakery"]},
-        {k:"Johnny Dio's pan steaks",n:"Johnny Dio's pan steaks",note:"Rare or medium. Funny how? Ask Tommy.",p:"5:30",c:"m",
+        {k:"Johnny Dio's pan steaks",n:"Johnny Dio's pan steaks",note:"Rump in butter and garlic, rare or medium. Funny how?",p:"5:30",c:"m",
          how:"Take 4 rump steaks, about 250g each, out of the fridge 30 minutes early and season well with salt and pepper. Heat a heavy pan with 1 tbsp olive oil until smoking. Cook two at a time, 2 to 3 minutes each side for rare, 4 for medium. In the last minute add 30g butter and 2 smashed garlic cloves and spoon them over. Rest 5 minutes.",
          shop:["4 rump steaks, about 1kg@Meat","30g butter@Dairy","2 garlic cloves@Produce","1 tbsp olive oil@Pantry"]}]},
       {h:"Last thing",items:[
-        {k:"Red wine, opened early",n:"Red wine, opened early",note:"Short glasses. Pour it like they did inside",p:"6:00",c:"d",
+        {k:"Red wine, opened early",n:"Red wine, opened early",note:"Italian red wine in short glasses, poured like inside",p:"6:00",c:"d",
          how:"Open 2 bottles of Italian red, a Chianti or Montepulciano, an hour before dinner. Serve in short tumblers.",
          shop:["2 bottles Italian red wine@Bottle shop"]}]}]},
   "Ghostbusters (1984)":{fmt:"workorder",brand:"Hook & Ladder 8",trade:"Paranormal investigation and elimination · 24 hours",address:"14 North Moore St, NYC",
@@ -527,29 +527,29 @@ const FMT_FILMS={
     phone:"555-2368",slogan:"No job too spooky",total:"$45.00",signed:"P. Venkman, PhD",
     groups:[
       {h:"Containment",items:[
-        {k:"Slimer's slime dip",note:"Green, gooey, highly reactive",p:"6.00"},
-        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Something in the fridge. Not the eggs",p:"5.00"},
-        {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Don't cross the streams. It would be bad.",p:"4.00"}]},
+        {k:"Slimer's slime dip",note:"Spinach, artichoke, cheese. Highly reactive",p:"6.00"},
+        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Green yolks and chives. Check the fridge",p:"5.00"},
+        {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Dark chocolate dip. Don't cross the streams.",p:"4.00"}]},
       {h:"Mains",items:[
-        {k:"Firehouse meatball sub",note:"Long as Egon's Twinkie. Thirty-five feet.",p:"9.00"},
-        {k:"Chinese takeaway at the firehouse",n:"Firehouse Chinese",note:"Served out of takeaway boxes, firehouse style",p:"9.00"}]},
+        {k:"Firehouse meatball sub",note:"Meatballs, provolone. Thirty-five feet.",p:"9.00"},
+        {k:"Chinese takeaway at the firehouse",n:"Firehouse Chinese",note:"Fried rice and dumplings, in the boxes",p:"9.00"}]},
       {h:"Sweet & cold",items:[
-        {k:"Stay Puft s'mores",note:"Toasted till they melt down",p:"7.00"},
+        {k:"Stay Puft s'mores",note:"Chocolate, biscuit. Toasted till they melt",p:"7.00"},
         {k:"Ectoplasm slushie",note:"Lime, ice and very green",p:"5.00"}]}]},
   "The Big Lebowski (1998)":{fmt:"lanes",brand:"League Lanes",place:"League Lanes",address:"5227 Santa Monica Blvd · 32 lanes",
     team:"Dude, Walter, Donny",night:"League night",tag:"The Dude's drink.<br>Always a White Russian.",
     rules:"This is bowling.<br>There are rules.<br>Shoes required",rugLine:"Mind the rug",
     groups:[
       {h:"Snack bar",items:[
-        {k:"League night chilli con queso nachos",n:"Alley nachos",note:"League night with Walter and Donny",p:"2.95"},
-        {k:"Rug-pattern paprika lavash crackers",note:"Ties the room together",p:"1.95"},
-        {k:"Half-and-half whipped ricotta honey dip",note:"The Dude buys it in his dressing gown",p:"2.50"}]},
+        {k:"League night chilli con queso nachos",n:"Alley nachos",note:"Chilli con queso, jalapeños, sour cream. League night",p:"2.95"},
+        {k:"Rug-pattern paprika lavash crackers",note:"Paprika and sesame, feta dip. Ties the room together",p:"1.95"},
+        {k:"Half-and-half whipped ricotta honey dip",note:"Ricotta and honey, sourdough. Bought in a dressing gown",p:"2.50"}]},
       {h:"Grill",items:[
-        {k:"Bowling alley burgers",n:"Alley burgers",note:"Walter, Donny and the Dude between frames",p:"3.95",mark:1},
-        {k:"League night chilli dogs",n:"Drive-thru burger",note:"Eaten in the Dude's beat-up car",p:"2.49"}]},
+        {k:"Bowling alley burgers",n:"Alley burgers",note:"Cheeseburgers with pickles and fries. Between frames",p:"3.95",mark:1},
+        {k:"League night chilli dogs",n:"Drive-thru burger",note:"Chilli, cheddar and mustard. Eaten in the Dude's car",p:"2.49"}]},
       {h:"Lounge",items:[
-        {k:"Coffee liqueur ice cream cookie sandwiches",note:"For the half and half",p:"1.50"},
-        {k:"White Russian",note:"The Dude abides, with a Caucasian.",p:"3.50"}]}]},
+        {k:"Coffee liqueur ice cream cookie sandwiches",note:"Choc chip cookies, coffee-laced ice cream. For the Dude",p:"1.50"},
+        {k:"White Russian",note:"Vodka, coffee liqueur, cream on ice. The Dude abides.",p:"3.50"}]}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",sign:"assets/era/slims/slims-sign.webp",motto:"The next best thing<br>to a time machine",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",
     under:"Now playing<br>in every car booth",tag:"Five dollar shakes. Worth every cent.",
