@@ -128,9 +128,15 @@ const glow=(c,r)=>`text-shadow:0 0 ${r*.3}px #fff,0 0 ${r*.6}px ${c},0 0 ${r}px 
 window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Arcade":"Game Zone","Tokens at the change machine",{text:"Two tokens a game, and the claw machine is not rigged. Mostly.",by:"The Change Machine"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),DF=e.disp,BF=e.body,MF=e.mono;
+  /* per-film arcade flavour (data/film-flavour.json "arcade"): counter, redeem, sections[4], tokens, shelf, insert;
+     space: starfield and a ringed planet on the marquee and the tokens; claw: {title} swaps the high score table for a claw machine */
+  const A=(ctx.flavour||{}).arcade||{},AL=k=>A[k]?clean(A[k]):"";
+  const svgImg=(inner,w,h,vb,css)=>`<div style="width:${w}px;height:${h}px;background:url(&quot;data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='${vb||`0 0 ${w} ${h}`}'>${inner.replace(/"/g,"'")}</svg>`)}&quot;) center/100% 100% no-repeat;${css||""}"></div>`;
   const neon=F.pal.accent&&lum(F.pal.accent)>.18?F.pal.accent:e.neon,neon2=e.neon2;
+  const stars=A.space?svgImg(Array.from({length:90},(_,i)=>{const x=(i*373+97)%W,y=(i*211+53)%H,r=i%7?1.1:2.2;return `<circle cx="${x}" cy="${y}" r="${r}" fill="#ffffff" opacity="${i%3?.35:.7}"/>`}).join(""),W,H,0,"position:absolute;left:0;top:0"):"";
+  const planet=(sz,body,ring)=>svgImg(`<circle cx="20" cy="20" r="11" fill="${body}"/><circle cx="16" cy="16" r="3" fill="#ffffff" opacity=".25"/><ellipse cx="20" cy="21" rx="19" ry="5.5" fill="none" stroke="${ring}" stroke-width="2.6" transform="rotate(-18 20 21)"/>`,sz,sz,"0 0 40 40","flex:0 0 auto");
   const bg=`<div style="position:absolute;inset:0;background:${e.bg}"></div><div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 0%,${mix(neon,e.bg,.82)},rgba(0,0,0,0) 55%),radial-gradient(ellipse at 90% 100%,${mix(neon2,e.bg,.86)},rgba(0,0,0,0) 50%)"></div>
-    <div style="position:absolute;inset:0;background:url(${grain}) center/1000px auto;opacity:${(.08+t.wear*.4).toFixed(2)};mix-blend-mode:screen"></div>`;
+    <div style="position:absolute;inset:0;background:url(${grain}) center/1000px auto;opacity:${(.08+t.wear*.4).toFixed(2)};mix-blend-mode:screen"></div>${stars}`;
 
   /* marquee */
   const MH=122,M=28;
@@ -138,7 +144,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LGW=270;
   const marquee=`<div style="position:absolute;left:${M}px;top:${M}px;width:${W-2*M}px;height:${MH}px;background:${e.panel};border:3px solid ${mix(neon,e.panel,.4)};box-sizing:border-box;box-shadow:0 0 22px ${mix(neon,e.bg,.6)},inset 0 0 18px rgba(0,0,0,.6)">
     <div style="position:absolute;left:26px;top:0;bottom:0;right:${LGW+40}px;display:flex;flex-direction:column;justify-content:center">
-      <div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;${glow(neon,14)};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>
+      <div style="display:flex;align-items:center;gap:14px"><div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;${glow(neon,14)};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>${A.space?planet(Math.round(vS*1.25),neon,neon2):""}</div>
       <div style="font:700 17px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${neon2};margin-top:4px;${clamp(1)}">${esc(F.sign)}</div></div>
     <div data-dark="#000000" data-light="#f2f2f2" style="position:absolute;right:16px;top:14px;width:${LGW}px;height:${MH-34}px;background:#000;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,LGW-20,MH-48,BF,"#fff","700")}</div></div>`;
 
@@ -147,12 +153,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bezel=`<div style="position:absolute;left:${M}px;top:${BY}px;width:${BW}px;height:${BH}px;background:linear-gradient(180deg,${mix(e.panel,"#000000",.2)},#050505);border-radius:16px;box-shadow:inset 0 0 0 3px ${mix(neon,"#000000",.5)},0 10px 26px rgba(0,0,0,.6);overflow:hidden">
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,rgba(0,0,0,0) 2px 4px)"></div>
     <div style="position:absolute;left:${Math.round((BW-PA.w)/2)}px;top:28px;width:${PA.w}px;height:${PA.h}px;background:#000;box-shadow:0 0 0 6px #000,0 0 18px ${mix(neon,"#000000",.4)};overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div>
-    <div style="position:absolute;left:0;right:0;bottom:22px;text-align:center;font:400 ${pix?14:20}px/1.2 ${MF};color:${neon2};letter-spacing:.12em;${glow(neon2,6)}">INSERT TOKEN</div>
+    <div style="position:absolute;left:0;right:0;bottom:22px;text-align:center;font:400 ${pix?14:20}px/1.2 ${MF};color:${neon2};letter-spacing:.12em;${glow(neon2,6)}">${esc(AL("insert")||"INSERT TOKEN")}</div>
     <div style="position:absolute;left:50%;bottom:58px;margin-left:-26px;width:52px;height:14px;border-radius:7px;background:#000;box-shadow:inset 0 0 0 2px ${mix(neon2,"#000000",.4)}"></div></div>`;
 
   /* prize counter board */
   const RX=M+BW+22,RW=W-M-RX,FH=212,RH=H-M-BY-FH-18,cueH=F.cue?44:0;
-  const C=sections(ctx,F,["Quick Plays","Main Games","Bonus Round","Refills"]),items=itemsOf(ctx),pr0=prices(items,F.ei,F.egg);
+  const C=sections(ctx,F,(A.sections&&A.sections.length===4?A.sections.map(clean):["Quick Plays","Main Games","Bonus Round","Refills"])),items=itemsOf(ctx),pr0=prices(items,F.ei,F.egg);
   /* tickets, not money: a main runs a few hundred, a snack less, and the hidden number stays in the last digits */
   const pr={};for(const k in pr0)pr[k]=pr0[k].map(v=>{let x=parseFloat(String(v).replace(/^\./,"0."))/BASE[F.ei];return String(Math.max(20,Math.round(x*220/10)*10))});
   const BWd=RW-48,BHd=RH-56-cueH-22;
@@ -160,27 +166,35 @@ window.MENU_FORMATS[ID]=ctx=>{
   const head=(l,tr)=>`<div style="font:${pix?"400":"700"} ${pix?Math.round(tr.h*.62):tr.h}px/1.3 ${pix?MF:BF};color:${neon2};${pix?"":"text-transform:uppercase;letter-spacing:.08em;"}margin-bottom:8px;border-bottom:2px solid ${mix(neon2,e.panel,.55)};padding-bottom:3px">${esc(l)}</div>`;
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:neon,cw:e.cw,leader:1,lead:mix(e.soft,e.panel,.5),pp:0,price:v=>`${v}<span style="font-size:.55em;letter-spacing:.06em;margin-left:4px">TIX</span>`,cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
   const board=`<div style="position:absolute;left:${RX}px;top:${BY}px;width:${RW}px;height:${RH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon2,e.panel,.5)};box-shadow:0 10px 24px rgba(0,0,0,.5)">
-    <div style="position:absolute;left:24px;right:24px;top:14px;height:32px;display:flex;justify-content:space-between;align-items:center"><div style="font:400 ${pix?16:22}px/1 ${pix?MF:DF};color:#fff;${glow(neon,8)}">PRIZE COUNTER</div><div style="font:700 15px/1 ${BF};letter-spacing:.18em;color:${e.soft}">REDEEM TICKETS HERE</div></div>
+    <div style="position:absolute;left:24px;right:24px;top:14px;height:32px;display:flex;justify-content:space-between;align-items:center"><div style="font:400 ${pix?16:22}px/1 ${pix?MF:DF};color:#fff;${glow(neon,8)}">${esc(AL("counter")||"PRIZE COUNTER")}</div><div style="font:700 15px/1 ${BF};letter-spacing:.18em;color:${e.soft}">${esc(AL("redeem")||"REDEEM TICKETS HERE")}</div></div>
     <div style="position:absolute;left:24px;top:56px;width:${BWd}px;height:${BHd}px;display:flex;gap:28px;overflow:hidden">${R.cols.map(col=>`<div style="flex:0 0 ${R.CW}px">${col.map(s=>course(s,items,pr,R,o)).join("")}</div>`).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:24px;right:24px;bottom:12px;height:${cueH-8}px;border-top:1px solid ${mix(e.soft,e.panel,.6)};padding-top:6px">${cueLine(F,BF,e.soft,neon2,15)}</div>`:""}</div>`;
 
   /* foot: tokens, high scores, top shelf */
   const FY=H-M-FH,TW=230,HW=300,SW=RW-TW-HW-36;
   const tok=`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${TW}px;height:${FH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon,e.panel,.5)};padding:12px;overflow:hidden">
-    <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft};text-align:center">TOKENS</div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px">${[1,2,3,4].map(i=>`<div style="width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7e7a6,#c9a43b 60%,#8a6c1c);box-shadow:inset 0 0 0 4px rgba(0,0,0,.18),0 3px 6px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4a3608"><div style="font:700 26px/1 ${BF}">${i}</div><div style="font:700 11px/1.3 ${BF};letter-spacing:.14em">TOKEN</div></div>`).join("")}</div></div>`;
+    <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft};text-align:center">${esc(AL("tokens")||"TOKENS")}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px">${[1,2,3,4].map(i=>`<div style="width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7e7a6,#c9a43b 60%,#8a6c1c);box-shadow:inset 0 0 0 4px rgba(0,0,0,.18),0 3px 6px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4a3608">${A.space?planet(36,"#8a6c1c","#4a3608"):`<div style="font:700 26px/1 ${BF}">${i}</div>`}<div style="font:700 11px/1.3 ${BF};letter-spacing:.14em">TOKEN</div></div>`).join("")}</div></div>`;
   const n=F.note,ini=(n.by.replace(/[^A-Za-z ]/g,"").split(/\s+/).filter(Boolean).map(w=>w[0]).join("")+"AAA").slice(0,3).toUpperCase(),base=(+F.num||7)*1000+F.year.length*111;
   const scores=[[ini,base+87650],["CPU",base+51200],["YOU",base+990]];
   const hs=`<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};padding:12px 14px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
     <div style="font:400 ${pix?14:20}px/1 ${MF};color:${neon2};text-align:center;letter-spacing:.1em;${glow(neon2,6)}">HIGH SCORES</div>
     ${scores.map((s,i)=>`<div style="display:flex;justify-content:space-between;font:400 ${pix?14:20}px/1.2 ${MF};color:${i?"#e6e6e6":neon}"><span>${i+1}. ${esc(s[0])}</span><span>${String(s[1]).padStart(7,"0")}</span></div>`).join("")}
     <div style="font:italic 400 15px/1.3 ${BF};color:#cfd3d8;border-top:1px solid #333;padding-top:6px;${clamp(3)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div></div>`;
+  const claw=A.claw?(()=>{const ct=clean(A.claw.title||"THE CLAW"),cols=[neon,neon2,"#7dff6a","#ffffff",neon,"#7dff6a"];
+    const balls=cols.map((c,i)=>`<circle cx="${22+i*38}" cy="${i%2?92:98}" r="15" fill="${c}" opacity=".85"/><path d="M${10+i*38} ${i%2?92:98}h24" stroke="#000" stroke-width="1.5" opacity=".35"/>`).join("");
+    return `<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};padding:10px 14px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="font:400 ${pix?14:20}px/1 ${MF};color:${neon2};text-align:center;letter-spacing:.1em;${glow(neon2,6)}">${esc(ct)}</div>
+    ${svgImg(`<rect x="1" y="1" width="238" height="110" rx="6" fill="${mix(neon,"#000000",.85)}" stroke="${mix(neon2,"#000000",.3)}" stroke-width="2"/>
+      <path d="M0 6h240" stroke="${mix(neon2,"#000000",.3)}" stroke-width="3"/><path d="M120 6v34" stroke="#d9d9d9" stroke-width="3"/><rect x="108" y="38" width="24" height="10" rx="3" fill="#d9d9d9"/>
+      <path d="M110 48q-12 14-4 26M130 48q12 14 4 26M120 48v24" stroke="#d9d9d9" stroke-width="3.5" fill="none" stroke-linecap="round"/>${balls}<path d="M10 20l50 10M180 14l50 12" stroke="#ffffff" stroke-width="2" opacity=".18"/>`,HW-34,112,"0 0 240 112","margin:0 auto")}
+    <div style="font:italic 400 15px/1.3 ${BF};color:#cfd3d8;${clamp(2)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div></div>`})():"";
   const prizes=F.winks.slice(0,3);
   const shelf=`<div style="position:absolute;left:${RX+TW+HW+36}px;top:${FY}px;width:${SW}px;height:${FH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon,e.panel,.5)};padding:12px 14px;overflow:hidden">
-    <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft}">TOP SHELF</div>
+    <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft}">${esc(AL("shelf")||"TOP SHELF")}</div>
     ${(prizes.length?prizes:(F.prop?[F.prop.title]:["Mystery prize"])).map((w,i)=>`<div style="display:flex;gap:8px;justify-content:space-between;align-items:baseline;margin-top:8px;font:500 15px/1.25 ${BF};color:${e.ink}"><span style="${clamp(2)}">${esc(w)}</span><b style="flex:0 0 auto;color:${neon}">${(5+i*5)*1000}</b></div>`).join("")}
     <div style="position:absolute;left:14px;right:14px;bottom:8px;font:400 14px/1.2 ${BF};color:${e.soft};${clamp(1)}">${esc(credit(F).replace("Prices subject to change.","Prizes subject to change."))}</div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 62%,rgba(0,0,0,${(t.vig*.7).toFixed(2)}) 100%)"></div>`;
-  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${marquee}${bezel}${board}${tok}${hs}${shelf}${vig}</div>`]};
+  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${marquee}${bezel}${board}${tok}${claw||hs}${shelf}${vig}</div>`]};
 };
 })();

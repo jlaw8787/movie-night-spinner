@@ -138,12 +138,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const vS=F.venue.length>30?28:F.venue.length>20?34:40;
   const header=`<div style="position:absolute;left:${M}px;top:${M}px;width:${W-2*M-250}px;height:${HH}px;display:flex;flex-direction:column;justify-content:center">
       <div style="font:700 ${vS}px/1.2 ${DF};color:${acc};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>
-      <div style="font:700 15px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${e.soft};${clamp(1)}">${esc(F.sign)} . Meal order</div></div>
+      <div style="font:700 15px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${e.soft};${clamp(1)}">${esc(F.sign.replace(/[.\s]+$/,""))} . Meal order</div></div>
     <div data-dark="${e.ink}" data-light="#ffffff" style="position:absolute;right:${M}px;top:${M}px;width:230px;height:${HH-8}px;background:${e.ink};display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,210,HH-22,DF,"#fff","700")}</div>`;
-  const WY=M+HH+8,WBH=56,pr2=F.prop;
+  const WY=M+HH+8,WBH=56,pr2=F.prop;/* wristband name: flavour "patient" (a person in the film), else the prop title */
   const band=`<div style="position:absolute;left:0;top:${WY}px;width:${W}px;height:${WBH}px;background:${e.band};border-top:2px solid ${mix(rule,"#ffffff",.3)};border-bottom:2px solid ${mix(rule,"#ffffff",.3)};box-shadow:0 3px 6px rgba(0,0,0,.15);display:flex;align-items:center;gap:22px;padding:0 ${M+10}px;box-sizing:border-box">
     <div style="flex:0 0 190px;height:34px;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 7px,transparent 7px 9px,#111 9px 10px,transparent 10px 13px)"></div>
-    <div style="flex:1;min-width:0;font:700 17px/1.2 'Courier Prime',monospace;color:#222;white-space:nowrap;overflow:hidden">PATIENT: ${esc((pr2?pr2.title:F.title).toUpperCase())}</div>
+    <div style="flex:1;min-width:0;font:700 17px/1.2 'Courier Prime',monospace;color:#222;white-space:nowrap;overflow:hidden">PATIENT: ${esc((F.fl.patient?clean(F.fl.patient):pr2?pr2.title:F.title).toUpperCase())}</div>
     <div style="flex:0 0 auto;font:700 17px/1.2 'Courier Prime',monospace;color:#222">WARD ${esc(String.fromCharCode(65+(+F.num||0)%6))}</div>
     <div style="flex:0 0 auto;font:700 17px/1.2 'Courier Prime',monospace;color:#fff;background:${acc};padding:4px 10px">BED ${esc(F.num.slice(-2))}</div></div>`;
 

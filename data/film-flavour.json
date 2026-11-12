@@ -2424,7 +2424,7 @@
  },
  "Toy Story (1995)": {
   "venue": "Pizza Planet",
-  "sign": "Pizza Planet, Out of This World",
+  "sign": "Out of this world. Mind the claw.",
   "note": {
    "text": "I am Buzz Lightyear. I come in peace.",
    "by": "Buzz Lightyear",
@@ -2445,7 +2445,24 @@
     "Aliens inside"
    ]
   },
-  "number": ""
+  "number": "",
+  "arcade": {
+   "space": true,
+   "counter": "PIZZA PLANET PRIZES",
+   "redeem": "OUT OF THIS WORLD",
+   "sections": [
+    "Launch Pad",
+    "Main Orbit",
+    "Birthday Orbit",
+    "Refuel Station"
+   ],
+   "tokens": "PLANET TOKENS",
+   "insert": "ONE TOKEN, ONE TRY",
+   "shelf": "TOP SHELF, SPACE PORT",
+   "claw": {
+    "title": "THE CLAW"
+   }
+  }
  },
  "Toy Story 2 (1999)": {
   "venue": "Al's Toy Barn",
@@ -5355,7 +5372,8 @@
     "Visiting Ashecliffe"
    ]
   },
-  "number": "67"
+  "number": "67",
+  "patient": "Rachel Solando"
  },
  "A Nightmare on Elm Street (1984)": {
   "venue": "Springwood High Cafeteria",
@@ -6182,7 +6200,8 @@
     "Evening shift"
    ]
   },
-  "number": ""
+  "number": "",
+  "patient": "Laura Weaver"
  },
  "The Birds (1963)": {
   "lastSeenAt": "at the schoolhouse",
@@ -6632,7 +6651,7 @@
   "number": ""
  },
  "Forgetting Sarah Marshall (2008)": {
-  "venue": "Resort Beach Grill",
+  "venue": "Turtle Bay Resort Bar",
   "sign": "Aloha. Please Excuse the Heartbreak.",
   "note": {
    "text": "I came here to murder you.",
@@ -7029,8 +7048,8 @@
   "number": ""
  },
  "Ticket to Paradise (2022)": {
-  "venue": "Gede's Seaweed Farm Warung",
-  "sign": "Bali Wedding Weekend",
+  "venue": "Lily and Gede's Wedding",
+  "sign": "Bali. Wedding weekend, whether the parents like it or not.",
   "note": {
    "text": "Lily wants to marry a seaweed farmer. David and I tried to stop her. We lost, and the wedding was lovely.",
    "by": "Georgia Cotton",
@@ -7628,7 +7647,8 @@
     "Counted in a glance"
    ]
   },
-  "number": "246"
+  "number": "246",
+  "patient": "Raymond Babbitt"
  },
  "Dumb and Dumber (1994)": {
   "venue": "Mutt Cutts",
@@ -10029,8 +10049,8 @@
   "number": ""
  },
  "Stand by Me (1986)": {
-  "venue": "Castle Rock, Oregon",
-  "sign": "Welcome to Castle Rock, Oregon",
+  "venue": "Camp by the Tracks",
+  "sign": "Castle Rock, Oregon. Labor Day weekend, 1959.",
   "note": {
    "text": "I never had any friends later on like the ones I had when I was twelve.",
    "by": "Gordie Lachance",
@@ -10051,7 +10071,16 @@
     "Winner: Lardass"
    ]
   },
-  "number": "12"
+  "number": "12",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "Dirty Dancing (1987)": {
   "venue": "Kellerman's Resort",
@@ -11418,8 +11447,8 @@
   "number": ""
  },
  "Kingsman: The Secret Service (2014)": {
-  "venue": "Kingsman Tailor Shop",
-  "sign": "Kingsman, Bespoke Tailors",
+  "venue": "The Black Prince",
+  "sign": "Kennington, London. Manners maketh man.",
   "note": {
    "text": "Manners maketh man. Do you know what that means?",
    "by": "Harry Hart",
@@ -11440,9 +11469,7 @@
     "Ask for Harry"
    ]
   },
-  "number": "",
-  "sideStill": "/jqRnvgLC7mdGGNLQMwnFWQyWpQm.jpg",
-  "sideLine": "The shop out front, the agency behind it."
+  "number": ""
  },
  "Mission: Impossible (1996)": {
   "venue": "Prague Aquarium Restaurant",
@@ -13016,8 +13043,8 @@
   "number": "2029"
  },
  "Terminator 2: Judgment Day (1991)": {
-  "venue": "Enrique's Desert Camp",
-  "sign": "Salceda's place. Weapons detail, and a drink if you want one.",
+  "venue": "Pescadero State Hospital",
+  "sign": "Pescadero, California. Maximum security wing",
   "note": {
    "text": "Come with me if you want to live.",
    "by": "The Terminator",
@@ -13031,17 +13058,18 @@
    "The steel mill and the vat of molten metal"
   ],
   "prop": {
-   "kind": "stub",
-   "title": "Arcade Token Stub",
+   "kind": "card",
+   "title": "Ward Rules",
    "lines": [
-    "Galleria Arcade",
-    "Good for one game"
+    "Maximum security wing",
+    "Dr Silberman's patient"
    ]
   },
   "number": "101",
   "words": {
    "Stay indoors if you can": "Judgment Day: August 29, 1997"
-  }
+  },
+  "patient": "Sarah Connor"
  },
  "Predator (1987)": {
   "venue": "Val Verde Jungle Camp",
@@ -17176,7 +17204,8 @@
     "Quantico"
    ]
   },
-  "number": ""
+  "number": "",
+  "patient": "Hannibal Lecter"
  },
  "This Is the End (2013)": {
   "venue": "Franco's Party House",
@@ -17229,8 +17258,8 @@
   "number": ""
  },
  "Father of the Bride (1991)": {
-  "venue": "Banks Family Kitchen",
-  "sign": "Wedding Prep, Day Eleven",
+  "venue": "Banks Home Reception",
+  "sign": "Annie and Bryan. Reception at the house.",
   "note": {
    "text": "She's still my little girl. Pass the cake, and no questions about the budget.",
    "by": "George Banks"
@@ -19859,7 +19888,8 @@
     "Intern: N. Thompson"
    ]
   },
-  "number": "1428"
+  "number": "1428",
+  "patient": "Kristen Parker"
  },
  "A Star Is Born (2018)": {
   "venue": "Bleu Bleu",
@@ -20379,7 +20409,8 @@
     "Haddonfield Memorial, Ward 3"
    ]
   },
-  "number": "1978"
+  "number": "1978",
+  "patient": "Laurie Strode"
  },
  "Hocus Pocus 2 (2022)": {
   "venue": "Becca's Birthday in the Woods",
@@ -20553,8 +20584,8 @@
   "number": "130"
  },
  "My Big Fat Greek Wedding (2002)": {
-  "venue": "Dancing Zorba's",
-  "sign": "Chicago. Greek food, family owned, nobody leaves hungry.",
+  "venue": "Portokalos Wedding Reception",
+  "sign": "Toula and Ian. Nobody leaves hungry.",
   "note": {
    "text": "The lamb goes on the spit at six. Nobody touches it but me, and whoever is not Greek gets the first plate so they can learn.",
    "by": "Gus Portokalos"

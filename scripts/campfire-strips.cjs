@@ -9,7 +9,7 @@ const V=['album','stagger','film','row'];let i=0;const out=[];
 for(const key of Object.keys(fl).sort()){
   const f=path.join(R,'data/film',slug(key)+'.json');if(!fs.existsSync(f))continue;
   const j=JSON.parse(fs.readFileSync(f,'utf8'));if((j.lib||{}).fmt!=='campfire')continue;
-  if(/^E\.T\./.test(key)){fl[key].stillStrip=true;continue}
+  if(/^E\.T\./.test(key))continue;/* hand set (sh 60), never overwrite */
   const n=(j.lib.stills||[]).length,pool=n>=5?[...Array(n).keys()].filter(k=>k>=2):[...Array(n).keys()].filter(k=>k!==1);
   const at=Math.min(i%3,Math.max(0,pool.length-3));
   if(fl[key].stillStrip&&typeof fl[key].stillStrip==='object'){i++;continue}/* set already, maybe by hand */
