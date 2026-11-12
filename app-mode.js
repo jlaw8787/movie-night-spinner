@@ -487,8 +487,6 @@
     D.querySelectorAll('a[href^="/"]:not([href^="//"])').forEach(function (a) {
       a.href = SITE + a.getAttribute("href"); a.target = "_blank"; a.rel = "noopener";
     });
-    var form = D.getElementById("reqForm");
-    if (form) form.setAttribute("action", SITE + "/");
     D.querySelectorAll("p.credit").forEach(function (p) {
       var h = p.innerHTML;
       h = h.replace(/Film posters come from (<a[^>]*>TMDB<\/a>)\./, "Film details (classifications, genres, where to watch and trailer links) come from $1. No film posters or photos are used in the app.");

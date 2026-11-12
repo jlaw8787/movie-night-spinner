@@ -922,3 +922,22 @@ All node tests including dialogs, check-kids-cards (343), check-print-text on Le
 ### Left
 - Print box office ticket prints undried lines in kids' mode (on live before this change too).
 - Shared faults the review 27 reviewers in this chat found (also likely on live): browser Ctrl+P (not the Print button) shrinks 1344 wide cards and can cut the bottom row (printPage, transform:scale); Copy text shopping list does not match the Prep sheet; any diet switch drops printed-only dishes that already suit it (app.js around 1791); Christmas films skip the written alcohol-free version when Vegetarian is on (Bad Santa drink has three names).
+
+## 13 Nov, 9am: hosting move to GitHub Pages prepared (branch host/github-pages, NOT merged, domain still on Netlify)
+
+Josh asked to move reeldinner.com from Netlify back to GitHub Pages. Planned and built on host/github-pages so the other chats aren't disturbed. Nothing here is live until Josh says.
+
+- Publishing: pages.yml now runs only by hand (`gh workflow run pages.yml --ref main -R jlaw8787/movie-night-spinner`, or Actions tab, Publish site, Run workflow). Pushing to main no longer publishes. Tested 13 Nov: a chat can trigger it.
+- Request a movie form: no longer a Netlify form. It sends straight to a new Supabase project "Reel Dinner" (zpcgxupmclkxbzikdnfb, Sydney), table public.movie_requests. Anyone can insert; the public key can't read, change or delete. Josh reads requests in the Supabase table editor (no email alert yet). Tested on 390 and 1440: 201, thanks screen, no errors.
+- privacy.html: request text and host line updated to Supabase (Sydney) and GitHub Pages.
+- Not moved: the online member card still uses edge function mns-sync on the older Supabase project skxiumrqinvpauwkljwn (Korea). Separate job if wanted.
+
+Cutover steps, in order, only when Josh says and no other chat is deploying:
+1. Josh checks github.com/jlaw8787 loads in a private window (account not flagged).
+2. Export old requests from Netlify Forms.
+3. Merge host/github-pages to main (fetch and merge main first), run tests, then run Publish site by hand.
+4. Josh verifies reeldinner.com in GitHub account settings (Pages, verified domains), then sets it as the Pages custom domain.
+5. DNS at the domain host (nameserver.net.au): reeldinner.com A records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 (replacing 75.2.60.5); www CNAME jlaw8787.github.io (replacing movie-night-spinner.netlify.app).
+6. Enforce HTTPS once GitHub issues the certificate. Check live files against main, phone, form, offline.
+7. Keep the Netlify site 1 to 2 weeks as a fallback (switch the two records back), then delete.
+After cutover, "deploy" = merge to main, then run Publish site. The trimmed Netlify copy steps above no longer apply. Pages caches pages for up to 10 minutes.

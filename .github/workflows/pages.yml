@@ -1,9 +1,8 @@
 # Publishes the site to GitHub Pages: only the files the site needs (no audit, docs, sweep, wip, tests or scripts).
-# Runs on every push to main, or by hand from the Actions tab (Run workflow).
+# Runs only by hand, when Josh says deploy: the Actions tab (Publish site, Run workflow) or
+# `gh workflow run pages.yml --ref main`. Pushing to main does NOT publish.
 name: Publish site
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
