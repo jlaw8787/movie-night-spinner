@@ -1573,7 +1573,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
   /* a proper name swapped mid-sentence goes lower case ("a nice grape juice", not "a nice Grape juice"); capitals and sentence starts stay */
   const capAt=v=>(m,...a)=>{const str=a[a.length-1],off=a[a.length-2];if(/[A-Z]{2}/.test(m)&&m===m.toUpperCase())return v.toUpperCase();return typeof off==="number"&&(off===0||/[.:!?·]\s*$/.test(str.slice(0,off)))?v[0].toUpperCase()+v.slice(1):v};
   /* review 27: "alcohol free lager" (no hyphen) dried to "alcohol free ginger beer" (Old School); shop counts of stubbies kept "4 ginger beer of 375 ml" (The Castle) */
-  return [[/\b(alcohol free|non alcoholic)\b/gi,m=>m.replace(" ","-")],[/\b(\d+) (stubbies|tinnies|longnecks)(?= of\b)/gi,(m,n)=>n+" bottles"],
+  return [[/\b(alcohol free|non alcoholic)\b(?=\s+[a-z])/gi,m=>m.replace(" ","-")],[/\b(\d+) (stubbies|tinnies|longnecks)(?= of\b)/gi,(m,n)=>n+" bottles"],
    r(/[^.]*\bmust be (18|19|21)( or over)? to (order|drink)\b[^.]*\.?\s*/gi,""),r(/\b(18\+|over 18s?) only\.?\s*/gi,""),
    r(/\bbrandy alexanders?\b/gi,"vanilla nutmeg milk"),r(/\bhot buttered (rum|syrup|whisky|whiskey)\b/gi,"hot spiced apple"),r(/\bmulled wine\b/gi,"mulled grape punch"),
    r(/\b(brandy|bourbon|whisky|whiskey|rum) milk punch\b/gi,"vanilla milk punch"),r(/\birish coffee\b/gi,"Irish-style hot chocolate"),r(/\bmimosas?\b/gi,"orange fizz"),
@@ -1611,7 +1611,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bsweet vermouth and (a dash of )?bitters\b/gi,"cherry syrup and orange"),r(/(?<!lime and |lime & )\b(a dash of |dashes of )?(angostura |orange )?bitters\b/gi,"orange zest"),r(/\bvermouth\b/gi,"bitter orange"),r(/(?<!\b(goodness|heaven|pete|god|christ|old times)(['’]s?|s['’])? |\bthe )\bsake\b/gi,"yuzu soda"),
    r(/\b(port|sherry|marsala)\b(?= (and|or|,|glass|wine|by the|\.))/gi,"grape juice"),
    /* review 27: a drink swapped for a child's drink is no longer just for the grown-ups ("cucumber juice, for the grown-ups", Fantastic Beasts) */
-   [/\b(cucumber juice|grape juice|sparkling apple juice|ginger beer|coconut water|blood orange juice),? for the grown-ups\b/gi,(m,a)=>a]]})();
+   [/\b(cucumber juice|grape juice|sparkling apple juice|ginger beer|coconut water|blood orange juice), for the grown-ups\b/gi,(m,a)=>a]]})();
 /* the layouts' own family swaps run first and can over-reach ("for goodness' syrup", "root root beer", "mocktail franks"): these put the phrase back,
    before and after the shared pass, and run on every card since a layout dries PG films too */
 const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v;
@@ -1643,9 +1643,13 @@ const dryText=(t,on)=>dryText0(t,on).replace(/\u200B/g,"");
 const dryText0=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?dryKeep(v,u=>dryFold(KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),u)),u)):v};
 /* review 27: two lines that dry to the same drink ("1 L ginger beer" from the ale and again from the lager, Shaun of the Dead) read once, amounts added.
    Takes [raw, shown] pairs; returns {x, text, of} with x the first raw line and of every raw line folded into it */
-const dryJoin=ps=>{const out=[],at=new Map();for(const [x,s] of ps){const m=String(s).match(/^(\d+(?:\.\d+)?)\s?(ml|l|L|g|kg)?\s+(.+)$/),key=m?(m[2]||"").toLowerCase()+"|"+m[3]:"="+s,p=at.get(key);
-  if(p&&(!m||p.m)){p.of.push(x);if(m)p.q+=+m[1];continue}const e={x,s,m,q:m?+m[1]:0,of:[x]};at.set(key,e);out.push(e)}
-  return out.map(e=>({x:e.x,of:e.of,text:e.of.length>1&&e.m?e.s.replace(/^\d+(?:\.\d+)?/,String(Math.round(e.q*100)/100)):e.s}))};
+const dryKeyOf=s=>{const m=String(s).replace(/^\[ \] /,"").match(/^(\d+(?:\.\d+)?)\s?(ml|l|L|g|kg)?\s+(.+)$/);return m?(m[2]||"").toLowerCase()+"|"+m[3]:"="+s};
+/* only lines that drying made the same fold: two lines that were already the same item stay as they are (Ghost's two honey lines) */
+const dryJoin=ps=>{const out=[],at=new Map();for(const [x,s] of ps){const m=String(s).match(/^(\d+(?:\.\d+)?)\s?(ml|l|L|g|kg)?\s+(.+)$/),key=m?(m[2]||"").toLowerCase()+"|"+m[3]:"="+s,rk=dryKeyOf(x),p=at.get(key);
+  if(p&&(!m||p.m)&&!p.rk.has(rk)){p.of.push(x);p.rk.add(rk);if(m)p.q+=+m[1];continue}if(p){out.push({x,s,m,q:0,of:[x],rk:new Set([rk])});continue}const e={x,s,m,q:m?+m[1]:0,of:[x],rk:new Set([rk])};at.set(key,e);out.push(e)}
+  /* the sum rolls 1000ml up to litres and 1000g up to kilos, the way the rest of the list writes them */
+  return out.map(e=>{if(e.of.length<2||!e.m)return {x:e.x,of:e.of,text:e.s};let q=e.q,u=e.m[2]||"";if(/^ml$/i.test(u)&&q>=1000){q=q/1000;u="L"}else if(u==="g"&&q>=1000){q=q/1000;u="kg"}
+    return {x:e.x,of:e.of,text:e.s.replace(/^\d+(?:\.\d+)?\s?(ml|l|L|g|kg)?/,String(Math.round(q*100)/100)+(u?(/^l$/i.test(u)?" L":u):""))}})};
 function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
   /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
   const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}
@@ -2291,7 +2295,7 @@ async function openTrolley(f,menuOverride,label){
   });
   if(!own&&!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
   mountModal(o,"input,button",modalTrigger);prog();
-  if(own&&typeof initTicket==="function")initTicket(o,f,{groups,all,kf,ticks,prog,skip,serves,reopen:()=>{dismissModal(o);setTimeout(()=>openTrolley(f),60)}});
+  if(own&&typeof initTicket==="function")initTicket(o,f,{groups,all,kf,ticks,prog,skip,serves,twin,reopen:()=>{dismissModal(o);setTimeout(()=>openTrolley(f),60)}});
 }
 $("weekSet").addEventListener("click",()=>{if(current){setWeek(current);lockAsk(current,$("weekSet"))}});
 /* after locking in: Director's cut (pick the dishes) or The full feature (cook the lot); either way the Prep sheet and shopping list follow */
@@ -3063,8 +3067,9 @@ function menuText(){
   if(!current)return"";
   /* review 24: the copied text runs the same dry pass as the card (kids' mode read "Cold alcohol-free lager" and "margarita" here) */
   /* review 27: shopping lines that dry to the same drink read once, amounts added (dryJoin) */
-  if(dryNow(current)){const v=dryText(menuText0(),true),i=v.indexOf("\nSHOPPING LIST\n");if(i<0)return v;
-    return v.slice(0,i)+v.slice(i).split("\n\n").map(b=>{const L=b.split("\n"),ls=L.filter(l=>l.startsWith("[ ] ")),head=L.filter(l=>!l.startsWith("[ ] "));return head.concat(dryJoin(ls.map(l=>[l,l.slice(4)])).map(e=>"[ ] "+e.text)).join("\n")}).join("\n\n")}
+  if(dryNow(current)){const raw=menuText0(),v=dryText(raw,true),i=v.indexOf("\nSHOPPING LIST\n");if(i<0)return v;
+    const rawL=raw.slice(raw.indexOf("\nSHOPPING LIST\n")).split("\n").filter(l=>l.startsWith("[ ] "));let n=0;
+    return v.slice(0,i)+v.slice(i).split("\n\n").map(b=>{const L=b.split("\n"),ls=L.filter(l=>l.startsWith("[ ] ")),head=L.filter(l=>!l.startsWith("[ ] "));return head.concat(dryJoin(ls.map(l=>[rawL[n++]||l,l.slice(4)])).map(e=>"[ ] "+e.text)).join("\n")}).join("\n\n")}
   return menuText0()}
 function menuText0(){
   const m=current.menu,line=it=>`- ${it.n}${it.note?`, ${it.note}`:""}${it.how?`\n  How: ${it.how}`:""}`;
@@ -4659,7 +4664,7 @@ function initTicket(o,f,api){
     hint.textContent=mode==="pantry"?"Tick what's already at home. Those come off the list.":hidden?`${hidden} already in the pantry, left off this list.`:"";
     api.prog();
   };
-  o.addEventListener("change",e=>{if(mode!=="pantry")return;const k=e.target.dataset&&e.target.dataset.k;if(!k)return;e.stopImmediatePropagation();pantrySet(f,k,e.target.checked);paint()},true);
+  o.addEventListener("change",e=>{if(mode!=="pantry")return;const k=e.target.dataset&&e.target.dataset.k;if(!k)return;e.stopImmediatePropagation();(api.twin&&api.twin.get(k)||[]).forEach(y=>pantrySet(f,y,e.target.checked));pantrySet(f,k,e.target.checked);paint()},true);
   head.addEventListener("click",e=>{const b=e.target.closest("[data-m]");if(!b)return;mode=b.dataset.m;paint()});
   extra.addEventListener("submit",e=>{e.preventDefault();const v=extra.querySelector("input").value.trim();if(!v)return;const l=extrasFor(f);if(!l.includes(v))l.push(v);extrasSave(f,l);api.reopen()});
   inner.addEventListener("click",e=>{const d=e.target.closest(".tk-del");if(d){extrasSave(f,extrasFor(f).filter(x=>x!==d.dataset.del));pantrySet(f,api.kf(d.dataset.del),false);api.reopen();return}
