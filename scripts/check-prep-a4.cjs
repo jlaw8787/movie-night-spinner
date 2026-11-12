@@ -5,6 +5,11 @@
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path');
 const R=path.join(__dirname,'..'),A=process.argv.slice(2),gi=A.indexOf('--guests'),G=gi>=0?+A[gi+1]:4,rest=gi>=0?A.filter((x,i)=>i!==gi&&i!==gi+1):A;
 const N=rest[0]&&/^\d+$/.test(rest[0])?+rest[0]:1e9,NAMED=rest.filter(x=>!/^\d+$/.test(x)),port=4600+Math.floor(Math.random()*200);
+/* the app is ready once show() exists and a film is on screen. If app.js failed to load (a busy local server), 'current' never
+   exists, so wait a minute, reload once, and say what the page reported */
+const appReady=async p=>{if(!p.__err){p.__err=1;p.on('pageerror',e=>console.log('page error: '+String(e.message||e).split('\n')[0]))}
+ for(let t=0;t<2;t++){try{await p.waitForFunction(()=>{try{return typeof show==='function'&&!!current}catch(e){return false}},null,{timeout:60000});return}
+  catch(e){if(t)throw Error('app did not start after a reload');await p.reload({waitUntil:'domcontentloaded'})}}};
 const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.1'],{cwd:R,stdio:'ignore'});process.on('exit',()=>server.kill());
 (async()=>{await new Promise(r=>setTimeout(r,1200));
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),args:['--no-sandbox']});
@@ -15,7 +20,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     reads 40 films at a time, says how far it has got, and a page that crashes is tried once more before its films are reported */
  const open=async()=>{const p=await ctx.newPage();p.setDefaultTimeout(600000);
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
-  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);return p};
+  await appReady(p);return p};
  let p=await open();const all=await p.evaluate(([N,NAMED])=>NAMED.length?NAMED.filter(i=>FILMS.some(f=>f.id===i)):FILMS.map(f=>f.id).slice(0,N),[N,NAMED]);
  if(NAMED.length&&all.length<NAMED.length){console.log('FAIL: not in films.js: '+NAMED.filter(i=>!all.includes(i)).join(', '));await b.close();process.exit(1)}
  if(!all.length){console.log('FAIL: no films to check (check the film names)');await b.close();process.exit(1)}
