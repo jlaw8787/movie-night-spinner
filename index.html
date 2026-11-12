@@ -599,7 +599,9 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
   body::before,body::after,html::before,html::after{display:none!important;content:none!important}
   body>*:not(#printArea){display:none!important}
   #printArea{display:block}
-  #printArea .print-page{position:relative;width:792px;height:1118px;overflow:hidden;break-after:page;page-break-after:always;page:port}
+  /* 13 Nov: contain:strict keeps the scaled card's full-size box (1344 wide, or 960 tall on a 790 page) from counting as overflow;
+     without it Chrome's own print (Ctrl+P) shrank every page to 66 to 95 percent on 26 layouts and could cut the bottom row */
+  #printArea .print-page{position:relative;width:792px;height:1118px;overflow:hidden;contain:strict;break-after:page;page-break-after:always;page:port}
   #printArea .print-page.land{width:1120px;height:790px;page:land}
   #printArea .print-page:last-child{break-after:auto;page-break-after:auto}
   #printArea .mcard{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-shadow:none!important}
