@@ -826,7 +826,7 @@ Round 1 / 2 / 3 / final: foodcourt 7.0/8.3/8.8/8.6, bowling 7.8/8.6/9.0, clubhou
 
 ## 12 Nov, night: Review 24 done, fixes and The Big Lebowski merged on main (start here in the next chat)
 
-Live is still deploy 6af55cb9 (Wall-E and Toy Story). Main holds everything below; not deployed yet. Each branch had a separate reviewer before merge.
+Live is still deploy 6af55cb9 (Wall-E and Toy Story). Main holds everything below plus the other chat's review 26 deploy cut (29 films), merged in 48d8a7db; not deployed yet. Each branch had a separate reviewer before merge.
 
 ### Review 24
 docs/review-24.md, 9.0 out of 10, screenshots review-24-01 to 18. All Review 23 fixes held. Josh chose to fix all 8 items.
@@ -837,8 +837,8 @@ docs/review-24.md, 9.0 out of 10, screenshots review-24-01 to 18. All Review 23 
 - fix24-words (bf0427f, 8e74f57): kids' swap now reaches shopping lists and Copy text; plain beer and alcohol-free beer, lager, ale read ginger beer (was root beer), alcohol-free sparkling wine reads sparkling apple juice, non-alcoholic gin cucumber juice, margarita "lime crush", Rudy sticky onions; wine names swap to grape juice; check-kids-cards flags them and sommelier. Ratatouille (always alcohol-free) cellar now grape juice in every mode. 36 hand-built dish notes rewritten food first. Luca stew in fish stock. Shopping units: "1 bunch tarragon", "6 slices provolone" (377 lines).
 - fix24-lebowski (337bf83, bff92f1): The Big Lebowski's own Hollywood Star Lanes menu (see the section above). Reviewer fixed the Stranger caption.
 
-### Tests on merged main (bff92f1, from /tmp/wt-final)
-All 18 node tests, check-browser, dialogs, check-store-taps, check-white-bar 91 of 91: all pass.
+### Tests on merged main (48d8a7db, from /tmp/wt-final)
+All 18 node tests, check-browser, dialogs, check-white-bar 91 of 91, check-kids-cards (343), check-print-text on the 21 review 26 films plus Lebowski, Goodfellas, Back to the Future: all pass. check-store-taps passed on bff92f1.
 
 ### Left, low (from the reviewers)
 - Kids' shopping wording: The Castle "4 ginger beer of 375 ml", Blade Runner "4 ginger beer (375ml)", Shaun "1 L ginger beer" twice, Mean Streets "Ginger & ginger", Old School "alcohol free ginger beer", Fantastic Beasts "cucumber juice, for the grown-ups".
