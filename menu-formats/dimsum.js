@@ -60,7 +60,7 @@ const TONE={
  tense:{wear:.24,vig:.38,photo:"contrast(1.16) saturate(.8)",tilt:0},
  scrappy:{wear:.55,vig:.26,photo:"contrast(1.2) saturate(.85)",tilt:-3}
 };
-function money(v,ei){if(v<1&&ei<2)return "."+String(Math.round(v*100)).padStart(2,"0");if(ei>=6)return String(Math.round(v));return v.toFixed(2)}
+function money(v,ei){if(v<1&&ei<=2)return "."+String(Math.round(v*100)).padStart(2,"0");if(ei>=6)return String(Math.round(v));return v.toFixed(2)}
 function prices(menu,ei,egg,mult){
   mult=mult||{s:.55,m:1,w:.45,d:.3};const out={};let hid=false;
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=BASE[ei]*mult[k]*(1+i*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
@@ -93,6 +93,8 @@ function tidyPrices(menu,P,ei){
     out[k]=pr}
   const minM=Math.min(...(out.m||[]).map(val).filter(v=>v!=null));
   if(isFinite(minM)&&(out.w||[]).some(x=>val(x)>=minM)){let v=minM;const n=out.w.length;const ws=[];for(let i=0;i<n;i++){v=down(v);ws.push(v)}out.w=ws.map(fmt);order.w=(menu.w||[]).map((it,i)=>i)}
+  /* drinks sit under the cheapest main too (review 26c: a 1969 martini at 2.95 over a 1.95 main), still dearest first in card order */
+  if(isFinite(minM)&&(out.d||[]).some(x=>val(x)>=minM)&&order.d){let v=minM;const d=out.d.slice();order.d.forEach(i=>{if(i<d.length){v=down(v);d[i]=fmt(v)}});out.d=d}
   Object.defineProperty(out,"order",{value:order,enumerable:false});
   return out;
 }

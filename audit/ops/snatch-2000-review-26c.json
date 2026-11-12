@@ -1,0 +1,40 @@
+{
+ "id": "Snatch (2000)",
+ "ops": [
+  {
+   "set": "flavour.sign",
+   "value": "Fruit machines and fair fights",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Bet Slip",
+    "lines": [
+     "Fight: Mickey, fixed to lose",
+     "Bet: on himself"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "scores": [
+     "MIK",
+     "TUR",
+     "TOM"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Mickey's caravan",
+   "new": "Mickey's bare-knuckle",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

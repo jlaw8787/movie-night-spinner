@@ -217,7 +217,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* the still starts at the estimated spare height (90px at least) and grows into whatever the column really has left (the line
      estimate runs a little long, so the real gap is often bigger), up to 240px, so the foot of the column is never left bare */
   const dStill=(ctx.stills||[]).filter(Boolean)[F.posSrc?0:1],dH=Math.max(90,Math.min(200,Math.round(scSpare-24)));
-  const panDef=A.panel||scSpare<=100?"":dStill?`<div style="margin-top:auto;border:2px solid ${mix(neon,e.panel,.45)};border-radius:10px;overflow:hidden;background:#000;position:relative;flex:1 0 ${dH}px;max-height:240px">${photo(ctx.img(dStill,"w780"),t.photo,"center 40%")}<div style="position:absolute;left:8px;top:8px;padding:3px 8px;background:rgba(0,0,0,.72);font:400 ${pix?11:15}px/1.2 ${MF};color:${neon2};letter-spacing:.08em">${esc(F.title)}, ${esc(F.year)}</div></div>`
+  const panDef=A.panel||scSpare<=100?"":dStill?`<div style="margin-top:auto;border:2px solid ${mix(neon,e.panel,.45)};border-radius:10px;overflow:hidden;background:#000;position:relative;flex:1 0 ${dH}px;max-height:240px">${photo(ctx.img(dStill,"w780"),t.photo,"center 40%")}<div style="position:absolute;left:8px;top:8px;padding:3px 8px;background:rgba(0,0,0,.72);font:400 ${pix?11:15}px/1.2 ${MF};color:${neon2};letter-spacing:.08em">Now playing</div></div>`
     :!bzFs&&scSpare>150?qCard("Overheard",F.note.text,F.note.by,scSpare):"";
   /* what is still bare in the shorter column (no card) spreads over its own item and course gaps, capped so it never looks stretched */
   const scN=shortCol<0?0:R.cols[shortCol].reduce((x,[k])=>x+(items[k]||[]).slice(0,4).length,0),scAdd=A.panel||panDef||scN<2?0:Math.min(16,Math.floor(scSpare/(scN-1)));
