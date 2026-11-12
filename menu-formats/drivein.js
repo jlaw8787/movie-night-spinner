@@ -60,8 +60,10 @@ const TONE={
 function money(v,ei){if(v<1&&ei<2)return "."+String(Math.round(v*100)).padStart(2,"0");if(ei>=6)return String(Math.round(v));return v.toFixed(2)}
 function prices(menu,ei,egg,mult){
   mult=mult||{s:.55,m:1,w:.45,d:.3};const out={};let hid=false;
-  for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=BASE[ei]*mult[k]*(1+i*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
-    if(!hid&&egg&&k==="w"&&ei>=2&&ei<6){hid=true;v=Math.max(1,Math.floor(v))+(+egg)/100}return money(v,ei)});
+  /* count down: the first cooked dish is dearest, house lines sit under the cooked ones */
+  for(const k of ["s","m","w","d"]){const its=menu[k]||[],cooked=its.filter(x=>!x.house).length;let ci=0;
+   out[k]=its.map((it,i)=>{const r=it.house?-1:(cooked-1-ci++);let v=BASE[ei]*mult[k]*(1+Math.max(-.5,r)*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
+    if(!hid&&egg&&k==="w"&&ei>=2&&ei<6){hid=true;v=Math.max(1,Math.floor(v))+(+egg)/100}return money(v,ei)})}
   return tidyPrices(menu,window.priceSense?window.priceSense(menu,out):out);
 }
 /* after the shared pass: a dearer dish (steak, lobster, prawns, prime rib, surf and turf) never costs less than a plainer one in its course,
@@ -70,19 +72,26 @@ const DEAR=/\b(lobster|steaks?|prime rib|surf and turf|prawns?|shrimp|scallops?|
 function tidyPrices(menu,P){
   const val=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?null:n};
   const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0],post=(o.match(/[^\d.]*$/)||[""])[0];if(/^\D*\.\d\d/.test(o)&&v<1)return pre+"."+String(Math.round(v*100)).padStart(2,"0")+post;return pre+(/\./.test(o)?v.toFixed(2):String(Math.round(v)))+post};
-  const out={};
-  for(const k of ["s","m","w","d"]){const L=(P[k]||[]).slice(),its=menu[k]||[];if(!L.length){out[k]=L;continue}
+  const out={},order={};
+  for(const k of ["s","m","w","d"]){const L=(P[k]||[]).slice(),its=menu[k]||[];order[k]=its.map((_,i)=>i);if(!L.length){out[k]=L;continue}
     const v=L.map(val);if(v.some(x=>x==null)){out[k]=L;continue}
     const dec=L.some(x=>/\./.test(String(x))),step=dec?(v[0]<1?.05:.5):1;
     const isDear=i=>its[i]&&DEAR.test(its[i].n||"");
     const plainMax=Math.max(0,...v.filter((x,i)=>!isDear(i)));
     v.forEach((x,i)=>{if(isDear(i)&&x<=plainMax)v[i]=plainMax+step});
-    for(let i=0;i<v.length;i++)while(v.some((y,j)=>j!==i&&j<i&&Math.abs(y-v[i])<1e-6))v[i]+=step;
-    out[k]=v.map((x,i)=>fmt(x,L[i]))}
+    /* print order (rule 8): cooked dishes dearest first, house lines last; each line costs less than the one above it */
+    const ord=its.map((_,i)=>i).filter(i=>i<v.length&&!its[i].house).sort((a,b)=>v[b]-v[a]||a-b).concat(its.map((_,i)=>i).filter(i=>i<v.length&&its[i].house));
+    const nv=ord.map(i=>v[i]);for(let j=1;j<nv.length;j++)if(nv[j]>nv[j-1]-step/2)nv[j]=nv[j-1]-step;
+    const lo=dec?step:1;if(nv[nv.length-1]<lo-1e-6){nv[nv.length-1]=lo;for(let j=nv.length-2;j>=0;j--)nv[j]=Math.max(nv[j],nv[j+1]+step)}
+    order[k]=ord;out[k]=nv.map((x,j)=>fmt(Math.round(x*100)/100,L[ord[j]]))}
   /* sweets below mains */
   const mMin=Math.min(...(out.m||[]).map(val).filter(x=>x!=null));
-  if(isFinite(mMin)&&out.w&&out.w.length){const wv=out.w.map(val);const top=Math.max(...wv);if(top>=mMin){const sc=(mMin*.8)/top;out.w=out.w.map((x,i)=>fmt(Math.max(.05,Math.round(wv[i]*sc*2)/2),x))}}
-  return out;
+  if(isFinite(mMin)&&out.w&&out.w.length){const wv=out.w.map(val);const top=Math.max(...wv);if(top>=mMin){const sc=(mMin*.8)/top,st=mMin<1?.05:/\./.test(String(out.w[0]))?.5:1;const nw=wv.map(x=>Math.max(st,Math.round(x*sc/st)*st));
+    /* keep the order and no repeats after the scale-down */
+    for(let j=nw.length-2;j>=0;j--)if(nw[j]<nw[j+1]+st/2)nw[j]=nw[j+1]+st;out.w=out.w.map((x,i)=>fmt(Math.round(nw[i]*100)/100,x))}}
+  /* the dishes in print order, to match the prices */
+  const items={};for(const k of ["s","m","w","d"])items[k]=(order[k]||[]).map(i=>(menu[k]||[])[i]).filter(Boolean);
+  return {pr:out,items};
 }
 /* everything a format needs from the film, with safe fallbacks */
 function film(ctx,dVenue,dSign,dNote){
@@ -139,7 +148,7 @@ const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Imag
 
 const W=1344,H=960;
 const E=[
- {sky1:"#0f1b3a",sky2:"#e98b5a",card:"#fbf5e6",ink:"#2a1d16",soft:"#5e4d40",acc:"#d1342b",acc2:"#1f8a8a",disp:"'Yellowtail',cursive",dw:"400",body:"'Arvo',serif",cw:.54,cwd:.58,cols:["Starters","From the Grill","Fountain Treats","Shakes and Sodas"]},
+ {sky1:"#0f1b3a",sky2:"#e98b5a",card:"#fbf5e6",ink:"#2a1d16",soft:"#5e4d40",acc:"#d1342b",acc2:"#1f8a8a",disp:"'Yellowtail',cursive",dw:"400",body:"'Arvo',serif",cw:.54,cwd:.58,cols:["Starters","From the Kitchen","Sweets","Shakes and Sodas"]},
  {sky1:"#1a1430",sky2:"#e2773a",card:"#f8ecd2",ink:"#3a2412",soft:"#6a5038",acc:"#d4561c",acc2:"#8a5a1e",disp:"'Shrikhand',cursive",dw:"400",body:"'Barlow',sans-serif",cw:.48,cwd:.53,cols:["Starters","Grill","Sweets","Drinks"]},
  {sky1:"#120c2c",sky2:"#e2508f",card:"#fbf8f2",ink:"#1d1b33",soft:"#4b4968",acc:"#e2367a",acc2:"#1fa3b0",disp:"'Pacifico',cursive",dw:"400",body:"'Barlow Semi Condensed',sans-serif",cw:.44,cwd:.49,cols:["Starters","Grill","Sweets","Drinks"]},
  {sky1:"#0d1424",sky2:"#e07a4a",card:"#ffffff",ink:"#1a1c20",soft:"#50555c",acc:"#f0483e",acc2:"#2b6cb0",disp:"'Lobster',cursive",dw:"400",body:"'DM Sans',sans-serif",cw:.5,cwd:.55,cols:["Starters","Grill","Sweets","Drinks"]}
@@ -172,7 +181,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const CX=TX+18,CW=TW-36,CY=TY+18,CHt=TH-36;
   const HH=118,SL=176,cueH=F.cue?44:0;
   const vS=F.venue.length>26?38:F.venue.length>16?46:56;
-  const C=sections(ctx,F,e.cols),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
+  const C=sections(ctx,F,e.cols),PI=prices(itemsOf(ctx),F.ei,F.egg),items=PI.items,pr=PI.pr;
   const MW=CW-48,MH=CHt-HH-SL-cueH-30;
   /* notes always print whole: budget every line a note needs (up to 4) and only use tiers that show notes */
   const nlOf=(it,tr,w)=>tr.nl?Math.min(4,wrapLines(F.tx(it.note),tr.n,w,e.cw*1.1)):0;

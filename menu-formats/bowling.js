@@ -64,7 +64,20 @@ function prices(menu,ei,egg,mult){
   mult=mult||{s:.55,m:1,w:.45,d:.3};const out={};let hid=false;
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=BASE[ei]*mult[k]*(1+i*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
     if(!hid&&egg&&k==="w"&&ei>=2&&ei<6){hid=true;v=Math.max(1,Math.floor(v))+(+egg)/100}return money(v,ei)});
-  return window.priceSense?window.priceSense(menu,out):out;
+  const ps=window.priceSense?window.priceSense(menu,out):out;
+  /* review 25 (copied from deli for review 26): a dearer dish (lobster, steak, prawns) never sits under a plainer one in its course, and no two items in a course share a price */
+  const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?|shrimp|crab|scallops?|wagyu|oysters?|crayfish|rib ?eye|sirloin|filet|fillet mignon|t-bone|porterhouse)\b/i;
+  const val=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?0:n};
+  for(const k of ["s","m","w","d"]){const its=menu[k]||[],P=(ps[k]||[]).slice();if(P.length<2)continue;
+    const nudge=v=>{if(ei>=6)return v+1;if(ei<2)return Math.round((v+.05)*100)/100;const fl=Math.floor(v),c=Math.round((v-fl)*100);return c<50?fl+.5:c<95?fl+.95:fl+1.5};
+    const seen=new Set();P.forEach((x,i)=>{let v=val(x);while(seen.has(v.toFixed(2)))v=nudge(v);seen.add(v.toFixed(2));if(v!==val(x))P[i]=String(x).replace(/[\d.]+/,money(v,ei))});
+    const dear=its.map((it,i)=>DEAR.test((it&&it.n)||"")?i:-1).filter(i=>i>=0);
+    if(dear.length&&dear.length<P.length){const sorted=P.map((x,i)=>[val(x),x]).sort((a,b)=>b[0]-a[0]),plain=its.map((_,i)=>i).filter(i=>!dear.includes(i));
+      const top=sorted.slice(0,dear.length).map(a=>a[1]),rest=sorted.slice(dear.length).map(a=>a[1]);
+      const restInOrder=plain.map(i=>[i,val(P[i])]).sort((a,b)=>a[1]-b[1]).map(a=>a[0]);rest.sort((a,b)=>val(a)-val(b));
+      dear.forEach((i,j)=>{P[i]=top[dear.length-1-j]});restInOrder.forEach((i,j)=>{P[i]=rest[j]})}
+    ps[k]=P}
+  return ps;
 }
 /* everything a format needs from the film, with safe fallbacks */
 function film(ctx,dVenue,dSign,dNote){
@@ -119,8 +132,8 @@ const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Imag
 const W=1344,H=960;
 const E=[
  {paper:"#fbf8ef",ink:"#23302a",soft:"#52605a",rule:"#7aa38b",acc:"#b8322a",band:"#23302a",disp:"'Lobster',cursive",dw:"400",body:"'Barlow Condensed',sans-serif",cols:["Snacks","Hot Plates","Pie Case","Fountain"]},
- {paper:"#fbf3e2",ink:"#3a2414",soft:"#6a4c33",rule:"#d98b3a",acc:"#c4521c",band:"#3a2414",disp:"'Shrikhand',cursive",dw:"400",body:"'Barlow Condensed',sans-serif",cols:["Snacks","Grill","Sweets","Drinks"]},
- {paper:"#f6f8f4",ink:"#1c2240",soft:"#4b5170",rule:"#5b7fbf",acc:"#e0457b",band:"#1c2240",disp:"'Bungee',cursive",dw:"400",body:"'Barlow Condensed',sans-serif",cols:["Snacks","Grill","Sweets","Drinks"]},
+ {paper:"#fbf3e2",ink:"#3a2414",soft:"#6a4c33",rule:"#d98b3a",acc:"#c4521c",band:"#3a2414",disp:"'Shrikhand',cursive",dw:"400",body:"'Barlow Condensed',sans-serif",cols:["Snacks","Hot Plates","Sweets","Drinks"]},
+ {paper:"#f6f8f4",ink:"#1c2240",soft:"#4b5170",rule:"#5b7fbf",acc:"#e0457b",band:"#1c2240",disp:"'Bungee',cursive",dw:"400",body:"'Barlow Condensed',sans-serif",cols:["Snacks","Hot Plates","Sweets","Drinks"]},
  {paper:"#ffffff",ink:"#15181d",soft:"#4f555e",rule:"#9aa3ad",acc:"#ff4d2e",band:"#15181d",disp:"'Unbounded',sans-serif",dw:"700",body:"'Barlow Condensed',sans-serif",cols:["Small","Big","Sweet","Drinks"]}
 ];
 const PEN="'Reenie Beanie',cursive";
@@ -170,13 +183,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const GX=M+LW+18,GW=W-M-GX,GY=HH+22;
   const NH=150,GH=H-M-GY-NH-12;
   const LBL=124,STRIP=34;
-  const C0=sections(ctx,F,e.cols),items0=itemsOf(ctx),pr0=prices(items0,F.ei,F.egg);
+  /* a film can name its own course labels in film-flavour "labels" {s,m,w,d}, used only where set */
+  const LB=(F.fl.labels&&typeof F.fl.labels==="object")?F.fl.labels:{},COLS=["s","m","w","d"].map((k,i)=>LB[k]?clean(LB[k]):e.cols[i]);
+  const C0=sections(ctx,F,COLS),items0=itemsOf(ctx),pr0=prices(items0,F.ei,F.egg);
   /* a course with four dishes takes two rows (three frames is the most that read well) */
   const C=[],items={},pr={};C0.forEach(([k,l])=>{const its=items0[k];if(its.length<=3){C.push([k,l]);items[k]=its;pr[k]=pr0[k];return}
     const a=Math.ceil(its.length/2);C.push([k,l]);items[k]=its.slice(0,a);pr[k]=pr0[k].slice(0,a);C.push([k+"2",""]);items[k+"2"]=its.slice(a);pr[k+"2"]=pr0[k].slice(a)});
   /* ruled rows under the courses: the film's winks (scene nods to watch for) and the showtime cue, at print size */
   const WK=F.winks.slice(0,5),CUEF=19,cueH=F.cue?Math.round(16+2*CUEF*1.3):0;
-  const wkH=WK.length?Math.round(14+Math.ceil(WK.join("   ").length*15/(GW-LBL-24))*30):0;
+  const wkH=WK.length?Math.round(14+Math.ceil(WK.join(" /   ").length*15/(GW-LBL-24))*30):0;
   const NCW=.47;/* Barlow Condensed 500 note width per em, a touch generous so the note always gets its lines */
   const cellH=(tr,k)=>{const n=items[k].length,cw=(GW-LBL)/n;let m=0;items[k].forEach(it=>{const dl=Math.min(4,wrapLines(F.tx(it.n),tr.d,cw-26-(tr.d*2.2+14),.5));const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0;m=Math.max(m,26+dl*tr.d*1.12+(nl?6+nl*tr.n*1.25:0))});return Math.max(m,tr.d*2.4)};
   /* only tiers that print notes: every note prints in full, and spare height goes to the rows after that */
@@ -195,7 +210,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="font:700 ${tr.d}px/1.12 ${BF};color:${e.ink};text-transform:uppercase;letter-spacing:.02em;margin-right:${pb-6}px;${clamp(3)}">${esc(F.tx(it.n))}</div>
         ${nl?`<div style="font:500 ${tr.n}px/1.25 ${BF};color:${e.soft};margin-top:6px;${clamp(nl+1)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`};
   const lab=(txt,sz)=>`<div style="flex:0 0 ${LBL}px;border-right:${bline};display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px"><div style="font:400 ${sz}px/1.05 ${PEN};color:${acc};text-align:center;transform:rotate(-4deg)">${txt}</div></div>`;
-  const wkRow=WK.length?`<div style="display:flex;height:${wkH}px;border-bottom:${bline}">${lab("Watch<br>for",28)}<div style="flex:1;padding:8px 12px;box-sizing:border-box;font:400 30px/30px ${PEN};color:${e.ink};overflow:hidden">${WK.map(w=>`<span style="white-space:nowrap;margin-right:22px">${esc(cap(w))}</span>`).join(" ")}</div></div>`:"";
+  const wkRow=WK.length?`<div style="display:flex;height:${wkH}px;border-bottom:${bline}">${lab("Watch<br>for",28)}<div style="flex:1;padding:8px 12px;box-sizing:border-box;font:400 30px/30px ${PEN};color:${e.ink};overflow:hidden">${WK.map((w,i)=>`<span style="white-space:nowrap">${esc(cap(w))}${i<WK.length-1?`<span style="color:${acc};margin:0 6px 0 10px">/</span>`:""}</span>`).join(" ")}</div></div>`:"";
   const stRow=stH?`<div style="display:flex;height:${stH}px;border-bottom:${bline}">${lab("On<br>screen",28)}<div style="flex:1;position:relative;margin:8px 12px;overflow:hidden">${photo(F.stillSrc,t.photo)}<div style="position:absolute;left:0;bottom:0;padding:3px 10px;background:rgba(0,0,0,.6);color:#fff;font:500 14px/1.2 ${BF}">${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div></div></div>`:"";
   const cueRow=F.cue?`<div style="display:flex;height:${cueH}px">${lab("Notes",28)}<div style="flex:1;display:flex;align-items:center;padding:4px 12px;box-sizing:border-box">${cueLine(F,BF,e.soft,acc,CUEF)}</div></div>`:"";
   const sheet=`<div style="position:absolute;left:${GX}px;top:${GY}px;width:${GW}px;height:${GH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};overflow:hidden">${strip}${C.map(rowHTML).join("")}${stRow}${wkRow}${cueRow}</div>`;
@@ -207,7 +222,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:400 ${nS}px/1.05 ${PEN};color:${e.ink};margin-top:4px;${clamp(3)}">"${esc(n.text)}" <span style="color:${acc}">${esc(n.by)}</span></div></div>
   <div style="position:absolute;left:${GX+GW-TW}px;top:${NY}px;width:${TW}px;height:${NH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};text-align:center;display:flex;flex-direction:column;justify-content:space-between;padding:8px 6px">
     <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${e.soft}">TOTAL</div>
-    <div style="font:400 64px/1 ${PEN};color:${acc}">${esc(F.egg?String(200+(+F.egg)%100):"300")}</div>
+    <div style="font:400 64px/1 ${PEN};color:${acc}">300</div>
     <div style="font:500 13px/1.25 ${BF};color:${e.soft}">Prices subject to change.<br>${F.fam?"No alcohol served. ":""}Images: TMDB.</div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 62%,rgba(20,20,30,${(t.vig*.6).toFixed(2)}) 100%)"></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden;background:${e.paper}">${paper}${header}${pBox}${tag}${sheet}${notes}${vig}</div>`]};
