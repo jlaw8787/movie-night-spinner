@@ -1,0 +1,49 @@
+{
+ "id": "Jurassic World (2015)",
+ "ops": [
+  {
+   "set": "flavour.directory",
+   "value": "Park directory",
+   "done": true
+  },
+  {
+   "set": "flavour.level",
+   "value": "Main Street",
+   "done": true
+  },
+  {
+   "set": "flavour.here",
+   "value": "You are here: Main Street",
+   "done": true
+  },
+  {
+   "set": "flavour.spotted",
+   "value": "Spotted around the park",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jimmy Fallon's Gyrosphere video",
+    "Pterosaurs attack the resort",
+    "Lowery's $150 eBay Jurassic Park shirt",
+    "Seven bucks a soda",
+    "Claire frees the T. rex"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Fallon's Gyrosphere video",
+    "Pterosaurs flee the aviary",
+    "Lowery's $150 eBay Jurassic Park shirt",
+    "Seven bucks a soda",
+    "Claire frees the T. rex"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

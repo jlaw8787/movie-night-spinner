@@ -125,9 +125,10 @@ const E=[
  {paper:"#f6efdc",ink:"#2a2118",soft:"#5d5040",acc:"#b5452b",acc2:"#2f5d62",dark:"#1f1a14",disp:"'Fontdiner Swanky',cursive",dw:"400",body:"'Lato',sans-serif",cw:.53,cwd:.54,cols:["Snacks","Hot Plates","Desserts","Fountain"]},
  {paper:"#f3e4c4",ink:"#3b2412",soft:"#6a4d33",acc:"#d2691e",acc2:"#7a4a1c",dark:"#2b190b",disp:"'Shrikhand',cursive",dw:"400",body:"'Barlow',sans-serif",cw:.5,cwd:.52,cols:["Snacks","Hot Food","Treats","Drinks"]},
  {paper:"#f7f4ef",ink:"#1d1f3a",soft:"#4a4d6b",acc:"#e83f8c",acc2:"#14a3a5",dark:"#191a33",disp:"'Righteous',cursive",dw:"400",body:"'Barlow Semi Condensed',sans-serif",cw:.46,cwd:.48,cols:["Snacks","Combos","Sweet Stuff","Drinks"]},
- {paper:"#ffffff",ink:"#1b1b1b",soft:"#55585e",acc:"#ff5a36",acc2:"#2c3e50",dark:"#16181c",disp:"'Bricolage Grotesque',sans-serif",dw:"700",body:"'DM Sans',sans-serif",cw:.53,cwd:.51,cols:["Sides","Mains","Sweets","Drinks"]}
+ {paper:"#ffffff",ink:"#1b1b1b",soft:"#55585e",acc:"#ff5a36",acc2:"#2c3e50",dark:"#16181c",disp:"'Bricolage Grotesque',sans-serif",dw:"800",body:"'DM Sans',sans-serif",cw:.53,cwd:.51,cols:["Snacks","Mains","Sweets","Drinks"]}
 ];
-loadFonts(["Fontdiner+Swanky","Shrikhand","Righteous","Bricolage+Grotesque:wght@700","Lato:ital,wght@0,400;0,700;1,400","Barlow:ital,wght@0,500;0,700;1,500","Barlow+Semi+Condensed:ital,wght@0,500;0,700;1,500","DM+Sans:ital,wght@0,400;0,700;1,400"]);
+/* every spec here is one the local font set holds exactly (assets/fonts/fonts.js), with the cuts the card draws: body 400, 700 and italic 400 */
+loadFonts(["Fontdiner+Swanky","Shrikhand","Righteous","Bricolage+Grotesque:opsz,wght@12..96,800","Lato:ital,wght@0,400;0,700;1,400","Barlow:ital,wght@0,400;0,700;1,400","Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400","DM+Sans:ital,wght@0,400;0,700;1,400"]);
 
 window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Food Court":"The Food Court","Food Court, Level 1",{text:"Grab a tray, grab a table, and save one for whoever's late.",by:"The Counter"});
@@ -142,10 +143,12 @@ window.MENU_FORMATS[ID]=ctx=>{
       .map(r=>`<div style="position:absolute;${r};background:${acc}"></div>`).join("")}
     <div style="position:absolute;left:${B-8}px;top:${B-8}px;width:${W-2*B+16}px;height:${H-2*B+16}px;box-sizing:border-box;border:2px solid ${e.paper};opacity:.85"></div>`;
 
-  /* left: mall directory lightbox */
+  /* left: mall directory lightbox. A film not set in a mall (a theme park, say) renames the fixed strings through flavour (rule 6) */
+  const fs_=k=>clean(F.fl[k]||"").trim();
+  const dirTxt=(fs_("directory")||"Mall directory").toUpperCase(),lvlTxt=(fs_("level")||"Level 1").toUpperCase(),hereTxt=fs_("here")||"You are here: the food court",spotTxt=fs_("spotted")||"Spotted around the mall";
   const LX=B+22,LW=470,TOP=B+22;
   const dirHead=`<div style="position:absolute;left:${LX}px;top:${TOP}px;width:${LW}px;height:58px;background:${e.dark};display:flex;align-items:center;justify-content:space-between;padding:0 18px;box-sizing:border-box">
-    <div style="font:700 22px/1 ${BF};letter-spacing:.24em;color:#fff">MALL DIRECTORY</div><div style="font:700 16px/1 ${BF};letter-spacing:.14em;color:${mix(acc,"#ffffff",.5)}">LEVEL 1</div></div>`;
+    <div style="font:700 22px/1 ${BF};letter-spacing:.24em;color:#fff;white-space:nowrap">${esc(dirTxt)}</div><div style="font:700 16px/1 ${BF};letter-spacing:.14em;color:${mix(acc,"#ffffff",.5)};white-space:nowrap">${esc(lvlTxt)}</div></div>`;
   const PA=posterFit(LW-24,640);
   const pBox=`<div style="position:absolute;left:${LX}px;top:${TOP+58}px;width:${LW}px;height:${PA.h+24}px;background:${e.dark};box-sizing:border-box;padding:12px">
     <div style="position:relative;margin:0 auto;width:${PA.w}px;height:${PA.h}px;background:#fff;box-shadow:0 0 0 3px ${mix(e.dark,"#ffffff",.25)},0 0 26px rgba(255,255,240,.35)">${hero(F,PA.w,PA.h,t.photo)}</div></div>`;
@@ -155,8 +158,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const shops=[];let used=0,shorts=0;for(const w of F.winks.slice(0,5)){if(wrapLines(w,14,full,e.cw)>1)continue;const lng=wrapLines(w,14,half,e.cw)>1;const nu=(used)+(lng?1:0),ns=shorts+(lng?0:1);if(nu+Math.ceil(ns/2)>rows)continue;shops.push({w,lng});used=nu;shorts=ns}
   const here=`<div style="position:absolute;left:${LX}px;top:${YT}px;width:${LW}px;height:${YH}px;box-sizing:border-box;padding:10px 14px;background:${mix(e.paper,e.dark,.06)};border:2px solid ${e.dark};overflow:hidden">
     <div style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 26px;height:26px;border-radius:50%;background:rgba(208,40,31,.25);display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;border-radius:50%;background:#d0281f"></span></span>
-      <div style="font:700 17px/1.15 ${BF};color:${e.ink};text-transform:uppercase;letter-spacing:.08em;${clamp(1)}">You are here: the food court</div></div>
-    ${shops.length?`<div style="font:700 13px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${acc2};margin-top:6px">Spotted around the mall</div>
+      <div style="font:700 17px/1.15 ${BF};color:${e.ink};text-transform:uppercase;letter-spacing:.08em;${clamp(1)}">${esc(hereTxt)}</div></div>
+    ${shops.length?`<div style="font:700 13px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${acc2};margin-top:6px">${esc(spotTxt)}</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:row dense;column-gap:16px;margin-top:2px">${shops.map(x=>`<div style="${x.lng?"grid-column:span 2;":""}display:flex;gap:7px;align-items:baseline;margin-top:4px;font:400 14px/1.2 ${BF};color:${e.soft};min-width:0"><span style="flex:0 0 7px;height:7px;border-radius:50%;background:${acc2};transform:translateY(-2px)"></span><span style="flex:1;min-width:0;${clamp(1)}">${esc(x.w)}</span></div>`).join("")}</div>`:""}</div>`;
 
   /* right: stall fascia */
@@ -183,7 +186,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="flex:0 0 250px;box-sizing:border-box;padding:12px 16px;border-right:3px dashed ${e.soft};display:flex;flex-direction:column;justify-content:space-between">
       <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${acc2};text-transform:uppercase">${esc(pKind)}</div>
       <div style="font:${e.dw} 26px/1.05 ${DF};color:${e.ink};${clamp(2)}">${esc(pr2?pr2.title:"Free refill")}</div>
-      <div style="font:400 14px/1.25 ${BF};color:${e.soft};${clamp(2)}">${esc(pr2&&pr2.lines.length?pr2.lines.slice(0,2).reduce((t,l)=>t?t+(/[.!?]$/.test(t)?" ":". ")+l:l,""):"Show this liner at the counter")}</div></div>
+      <div>${(pr2&&pr2.lines.length?pr2.lines.slice(0,2):["Show this liner at the counter"]).map((l,i)=>i?`<div style="font:700 13px/1.25 ${BF};letter-spacing:.16em;text-transform:uppercase;color:${e.ink};margin-top:2px;white-space:nowrap;overflow:hidden">${esc(l.replace(/[.]$/,""))}</div>`:`<div style="font:400 14px/1.25 ${BF};color:${e.soft};white-space:nowrap;overflow:hidden">${esc(l)}</div>`).join("")}</div></div>
     <div style="flex:1;min-width:0;box-sizing:border-box;padding:12px 18px;display:flex;flex-direction:column;justify-content:space-between">
       <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${acc}">${isQ?`OVERHEARD AT TABLE ${esc(F.num.slice(-2))}`:"PINNED BY THE REGISTER"}</div>
       <div style="font:${isQ?"italic ":""}400 ${nS}px/1.32 ${BF};color:${e.ink};${clamp(3)}">${isQ?`"${esc(n.text)}"`:esc(n.text)}</div>
@@ -195,7 +198,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
   /* rule 8: within a course the dearest dish prints first and the house lines sit at the foot */
   {const pv=x=>{const v=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(v)?0:v};
-   for(const k of ["s","m","w","d"]){const z=(items[k]||[]).map((it,i)=>({it,p:pr[k][i],i}));z.sort((a,b)=>(!!a.it.house-!!b.it.house)||(a.it.house?a.i-b.i:pv(b.p)-pv(a.p)||a.i-b.i));items[k]=z.map(x=>x.it);pr[k]=z.map(x=>x.p)}}
+   for(const k of ["s","m","w","d"]){const z=(items[k]||[]).map((it,i)=>({it,p:pr[k][i],i}));z.sort((a,b)=>(!!a.it.house-!!b.it.house)||(a.it.house?a.i-b.i:pv(b.p)-pv(a.p)||a.i-b.i));items[k]=z.map(x=>x.it);pr[k]=z.map(x=>x.p);
+     /* a house line at the foot never prices above the cheapest dish over it, so the column steps down cleanly (no repeats either) */
+     const st=F.ei<2?.05:F.ei>=6?1:.5,fl=F.ei<2?.05:F.ei>=6?2:.25;let lo=Infinity;
+     z.forEach((x,i)=>{const v=pv(pr[k][i]);if(!x.it.house){if(v>0)lo=Math.min(lo,v);return}if(lo===Infinity||!(v>0))return;
+       if(v>=lo){const nv=+(lo-st).toFixed(2);if(nv>=fl){pr[k][i]=String(pr[k][i]).replace(/[\d.]+/,money(nv,F.ei));lo=nv}}else lo=v})}}
   /* every note gets all its lines (nlMax), and each course's 12px gap is in the budget (headX), so nothing leans on libUnclip */
   const NLX=4,R=fit({C,items,tx:F.tx,W:RW-12,H:MH,maxCols:2,gap:30,cw:e.cw,cwd:e.cwd,nlMax:NLX,headX:14+12});
   const head=(l,tr)=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="font:${e.dw} ${tr.h}px/1.3 ${DF};color:${acc}">${esc(l)}</span><span style="flex:1;height:3px;background:${acc2};opacity:.6"></span></div>`;
