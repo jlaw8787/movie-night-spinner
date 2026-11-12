@@ -6401,7 +6401,7 @@
   "venue": "Angus and Laura's Wedding",
   "sign": "Bride's Side. Groom's Side. Bar.",
   "note": {
-   "text": "A toast before we go into battle. True love... May we all in our dotage be proud to say, 'I was adored once too.'",
+   "text": "A toast before we go into battle. True love. In whatever shape or form it may come. May we all in our dotage be proud to say, 'I was adored once too.'",
    "by": "Gareth",
    "kind": "quote"
   },
@@ -6413,8 +6413,8 @@
    "Carrie and the rain on the doorstep"
   ],
   "prop": {
-   "kind": "card",
-   "title": "Wedding Invitation",
+   "kind": "invitation",
+   "title": "Glenthrist Castle",
    "lines": [
     "Carrie and Hamish request",
     "the pleasure of Charles's company"
@@ -6422,7 +6422,11 @@
   },
   "number": "4",
   "reception": {
-   "toast": true
+   "toast": true,
+   "guest": "Charles",
+   "table": "Top Table",
+   "seat": "Best man. Please try not to be late.",
+   "heading": "Angus and Laura"
   }
  },
  "Bridget Jones's Diary (2001)": {

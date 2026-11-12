@@ -146,8 +146,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx);
   /* review 26: each course reads dearest first (rule 8), even with no prices printed. Same level: a dish cooked tonight before a card extra
      (the shared priceSense never prices an extra above a cooked main), then the card's own order. The house line always sits last */
-  const DEAR=[[/\b(lobster|surf and turf|prime rib|wagyu|caviar|crayfish)\b/i,3],[/\b(steaks?|sirloin|rib ?eye|porterhouse|t-bone|fillet|veal|cutlets?|lamb rack|scallops?|crab|oysters?|board|platter|barramundi|snapper|whole fish|spit)\b/i,2],[/\b(prawns?|shrimp|salmon|duck|lamb|pork belly|ribs|brisket|roast beef|beef|fish)\b/i,1]];
-  const dear=it=>{const t=clean((it&&it.n)||"");for(const [re,v] of DEAR)if(re.test(t))return v;return 0};
+  /* review 26b: a board or platter is a serving style, not a dear cut, so it no longer outranks seafood. The name decides first; the note
+     (what is actually on the plate) breaks a tie, so salmon blinis named for a character still sit above a ploughman's */
+  const DEAR=[[/\b(lobster|surf and turf|prime rib|wagyu|caviar|crayfish)\b/i,3],[/\b(steaks?|sirloin|rib ?eye|porterhouse|t-bone|fillet|veal|cutlets?|lamb rack|scallops?|crab|oysters?|barramundi|snapper|whole fish|spit)\b/i,2],[/\b(prawns?|shrimp|salmon|duck|lamb|pork belly|ribs|brisket|roast beef|beef|fish)\b/i,1]];
+  const dearOf=t=>{t=clean(t||"");if(/\b(crackers?|chips|crisps|popcorn)\b/i.test(t))return 0;for(const [re,v] of DEAR)if(re.test(t))return v;return 0};
+  const dear=it=>it?dearOf(it.n)*10+dearOf(it.note):0;
   for(const k in items)items[k]=items[k].map((it,i)=>[it,i]).sort((a,b)=>(!!a[0].house-!!b[0].house)||dear(b[0])-dear(a[0])||(!!a[0].extra-!!b[0].extra)||a[1]-b[1]).map(z=>z[0]);
   const head0=88,cueH=F.cue?50:0,innerW=MW-90,innerH=MH-head0-cueH-70,ncw=e.cw*1.05;
   const hH=tr=>Math.round(tr.h*1.25*1.1)+6;
@@ -196,7 +199,10 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* centre: place card, seating plan (or the film's winks), the toast, then a still and the logo or title. Spare height goes into even gaps, capped */
   const RX=596,RW=318;
-  const guest=clean(RC.guest||"Our Guest"),tableLine=clean(RC.table||"Table One").toUpperCase(),seatLine=clean(RC.seat||"Please find your seat");
+  /* review 26b: with no place card set, the card names the character whose words or note sit on the toast card (they are at this
+     wedding), never a blank "Our Guest"; the house note's own "The Best Man" stays generic */
+  const byName=F.fl.note&&F.fl.note.text&&F.fl.note.by&&!/^the\s/i.test(F.fl.note.by)?clean(F.fl.note.by):"";
+  const guest=clean(RC.guest||byName||"Our Guest"),tableLine=clean(RC.table||"Table One").toUpperCase(),seatLine=clean(RC.seat||"Please find your seat");
   const PCH=140;
   const tables=(RC.tables||[]).map(clean).filter(Boolean).slice(0,5),winks=F.winks.slice(0,5),useTables=tables.length>0,useWinks=!useTables&&winks.length>0;
   const rows=useTables?tables:useWinks?winks:["Family","Friends","Work","Plus ones"];

@@ -158,11 +158,11 @@
    }
   },
   {
-   "n": "Smoked salmon oatcakes",
+   "n": "Goat's cheese oatcakes",
    "course": "s",
    "prep_min": 12,
-   "cook_min": 0,
-   "make_ahead": "Up to 2 hours, keep chilled",
+   "cook_min": 50,
+   "make_ahead": "Roast the beetroot up to 2 days ahead and keep chilled",
    "ingredients": [
     {
      "q": 1,
@@ -171,111 +171,50 @@
      "aisle": "Pantry"
     },
     {
-     "q": 250,
+     "q": 150,
      "u": "g",
-     "item": "cream cheese",
+     "item": "soft goat's cheese",
      "aisle": "Dairy"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "smoked salmon",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 1,
+     "q": 2,
      "u": "",
-     "item": "bunch dill",
+     "item": "beetroot",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "lemon",
+     "item": "bunch thyme",
      "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar honey",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Spread the oatcakes with cream cheese.",
+     "text": "Wrap the beetroot in foil and roast at 200C until tender.",
+     "min": 50
+    },
+    {
+     "text": "Cool, peel and slice the beetroot thin.",
      "min": 5
     },
     {
-     "text": "Top with folds of salmon and a sprig of dill.",
-     "min": 5
+     "text": "Spread the oatcakes with goat's cheese.",
+     "min": 4
     },
     {
-     "text": "Squeeze over a little lemon and lay on a slate.",
-     "min": 2
+     "text": "Top with beetroot and thyme leaves, drizzle with honey and lay on a slate.",
+     "min": 3
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Beetroot and dill oatcakes",
-     "prep_min": 14,
-     "cook_min": 0,
-     "make_ahead": "Up to 2 hours, keep chilled",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "",
-       "item": "packet oatcakes",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 250,
-       "u": "g",
-       "item": "cream cheese",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "cooked beetroot",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "pinch sea salt",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bunch dill",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lemon",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Slice the beetroot very thin and toss with a squeeze of lemon and the salt.",
-       "min": 3
-      },
-      {
-       "text": "Spread the oatcakes with cream cheese.",
-       "min": 5
-      },
-      {
-       "text": "Top with folds of beetroot and a sprig of dill.",
-       "min": 5
-      },
-      {
-       "text": "Squeeze over a little more lemon and lay on a slate.",
-       "min": 2
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "English wedding roast beef",
