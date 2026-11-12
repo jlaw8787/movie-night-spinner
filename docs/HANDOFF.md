@@ -774,6 +774,6 @@ Live: deploy 6af55cb9 from main 05dbb9a (Josh, 12 Nov: deploy Wall-E and Toy Sto
 Bad Santa, Jurassic World (foodcourt); Happy Gilmore, Goldfinger (clubhouse); Four Weddings, Doctor Strange (reception); Better Off Dead (skilodge; quote looks paraphrased, known line is "I want my two dollars!"); Snatch (arcade); Men in Black 3 (dimsum; trolley line signed "Agent J" is invented); Terminator 2, Shutter Island (hospital).
 
 ### Waiting on Josh
-- Drive-in: Ghostbusters: Afterlife is set "modern" so it gets the plain white card; the 1950s look suits Spinners Roller Hop better.
+- Drive-in: done, Josh chose the 1950s look for Ghostbusters: Afterlife (era 1950s in film-format.json). Side effect: prices follow the era, so the card prints 1950s prices (.15 to .60).
 - Hospital: prices kept on the patient meal card (real patient cards have none).
 - Then: venue and sign fact check and note clean-up for every film on the new layouts, mark Approved in the sheet, then a deploy cut.
