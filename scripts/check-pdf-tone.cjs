@@ -52,7 +52,8 @@ async function stats(buf){
  if(SHV&&(!SH||+SH[1]<1||+SH[1]>+SH[2])){console.log('FAIL: MNS_SHARD must be k/n with 1 <= k <= n, got "'+SHV+'"');await b.close();process.exit(1)}
  if(SH)FILMS=FILMS.filter((x,i)=>i%+SH[2]===+SH[1]-1);
  if(!FILMS.length){console.log('FAIL: no films to check');await b.close();process.exit(1)}
- const SCALE=+process.env.MNS_TONE_SCALE||0;
+ /* 2.5 is the real Save PDF scale, so only another value counts as a scaled run */
+ const SCALE=+process.env.MNS_TONE_SCALE&&+process.env.MNS_TONE_SCALE!==2.5?+process.env.MNS_TONE_SCALE:0;
  const fails=[],rows=[];
  for(const id of FILMS){try{
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent(id),{waitUntil:'domcontentloaded'});

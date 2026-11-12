@@ -16,25 +16,27 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
   await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);return p};
  let p=await open();const all=await p.evaluate(([N,NAMED])=>NAMED.length?NAMED.filter(i=>FILMS.some(f=>f.id===i)):FILMS.map(f=>f.id).slice(0,N),[N,NAMED]);
- if(NAMED.length&&all.length<NAMED.length)console.log('Not in films.js: '+NAMED.filter(i=>!all.includes(i)).join(', '));
+ if(NAMED.length&&all.length<NAMED.length){console.log('FAIL: not in films.js: '+NAMED.filter(i=>!all.includes(i)).join(', '));await b.close();process.exit(1)}
  if(!all.length){console.log('FAIL: no films to check (check the film names)');await b.close();process.exit(1)}
- const r={films:0,pages:0,bad:[]};
+ const r={films:0,pages:0,bad:[],skip:[]};
  for(let k=0;k<all.length;k+=40){const ids=all.slice(k,k+40);let got=null;
-  for(let t=0;t<2&&!got;t++){try{if(!p||p.isClosed())p=await open();
+  let last='';for(let t=0;t<2&&!got;t++){try{if(!p||p.isClosed())p=await open();
     got=await Promise.race([p.evaluate(async ([ids,G])=>{PLAN.guests=G;
-  const bad=[];let pages=0,films=0;
-  for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f)continue;try{await ensureExact(f);await show(f,true);setTab('prep')}catch(e){continue}
-   await new Promise(r=>setTimeout(r,30));if(!prep||!prep.querySelector('.pp-cols'))continue;films++;
+  const bad=[],skip=[];let pages=0,films=0;
+  for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f)continue;try{await ensureExact(f);await show(f,true);setTab('prep')}catch(e){skip.push(id+' (menu did not open)');continue}
+   await new Promise(r=>setTimeout(r,30));if(!prep||!prep.querySelector('.pp-cols')){skip.push(id+' (no Prep sheet)');continue}films++;
    const parts=prepParts();
    parts.forEach((el,k)=>{pages++;const st=document.createElement('div');st.style.cssText='position:fixed;left:-20000px;top:0;width:794px;height:1123px';
     const c=el.cloneNode(true);c.hidden=false;c.style.transform='none';prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);
     const i=c.querySelector('.mc-in'),cols=c.querySelector('.pp-cols'),over=i?i.scrollHeight-i.clientHeight:0,fs=cols?parseFloat(cols.style.fontSize)||16:16;st.remove();
     if(over>1||fs<PREP_MIN_FS)bad.push(`${id}: page ${k+1} of ${parts.length} ${over>1?'runs '+over+'px past A4':'shrinks to '+fs+'px'}`)})}
-  return {films,pages,bad}},[ids,G]),new Promise((_,no)=>p.once('crash',()=>no(Error('page crashed')))),
+  return {films,pages,bad,skip}},[ids,G]),new Promise((_,no)=>p.once('crash',()=>no(Error('page crashed')))),
     /* page.evaluate ignores the default timeout, so a stuck batch is caught here instead of hanging the run */
     new Promise((_,no)=>setTimeout(()=>no(Error('batch timed out')),+process.env.MNS_BATCH_TIMEOUT||900000))])}
-   catch(e){console.log(`films ${k+1} to ${k+ids.length}: ${e.message.split("\n")[0]}`);await p?.close().catch(()=>{});p=null}}
-  if(got){r.films+=got.films;r.pages+=got.pages;r.bad.push(...got.bad)}else r.bad.push(...ids.map(i=>`${i}: not read (page crashed twice)`));
+   catch(e){last=e.message.split("\n")[0];console.log(`films ${k+1} to ${k+ids.length}: ${last}`);await p?.close().catch(()=>{});p=null}}
+  if(got){r.films+=got.films;r.pages+=got.pages;r.bad.push(...got.bad);r.skip.push(...got.skip)}else r.bad.push(...ids.map(i=>`${i}: not read, tried twice (${last})`));
   await p?.close().catch(()=>{});p=null;console.log(`${Math.min(k+40,all.length)} of ${all.length} read, ${r.bad.length} faults so far`)}
- console.log(`${r.films} Prep sheets, ${r.pages} A4 pages at ${G} guests`);
- await b.close();if(r.bad.length){console.log('FAIL:\n  '+r.bad.join('\n  '));process.exit(1)}console.log('PASS: every Prep sheet page fits A4 at reading size');process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});
+ console.log(`${r.films} Prep sheets, ${r.pages} A4 pages at ${G} guests`);if(r.skip.length)console.log(`${r.skip.length} not checked:\n  `+r.skip.join('\n  '));
+ await b.close();if(r.bad.length){console.log('FAIL:\n  '+r.bad.join('\n  '));process.exit(1)}
+ if(!r.films){console.log('FAIL: no Prep sheet was measured');process.exit(1)}
+ if(r.skip.length){console.log(`PASS on the ${r.films} read, ${r.skip.length} not checked (see above)`);process.exit(2)}console.log('PASS: every Prep sheet page fits A4 at reading size');process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});
