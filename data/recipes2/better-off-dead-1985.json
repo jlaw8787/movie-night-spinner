@@ -206,6 +206,173 @@
    }
   },
   {
+   "n": "Pig Burgers double cheeseburger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Roll the mince into balls and mix the burger sauce up to 1 day ahead, covered in the fridge; smash and cook on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, finely diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 8 balls of 100g.",
+     "min": 5
+    },
+    {
+     "text": "Chop one pickle and mix it with the mayonnaise, tomato sauce and mustard into a burger sauce.",
+     "min": 3
+    },
+    {
+     "text": "Heat a heavy pan until smoking, add the balls, smash flat, season and cook 2 minutes.",
+     "min": 4
+    },
+    {
+     "text": "Flip, top each patty with cheese and cook 1 minute more.",
+     "min": 2
+    },
+    {
+     "text": "Toast the buns.",
+     "min": 2
+    },
+    {
+     "text": "Stack two patties per bun with sauce, sliced pickles and onion, and wrap in baking paper.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pig Burgers double veggie cheeseburger",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Mix the burger sauce up to 1 day ahead, covered in the fridge; cook the patties on the night",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "small plant-based burger patties",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion, finely diced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop one pickle and mix it with the mayonnaise, tomato sauce and mustard into a burger sauce.",
+       "min": 3
+      },
+      {
+       "text": "Heat a heavy pan, press the patties flat, season and cook 2 to 3 minutes a side.",
+       "min": 6
+      },
+      {
+       "text": "Top each patty with cheese for the last minute.",
+       "min": 1
+      },
+      {
+       "text": "Toast the buns.",
+       "min": 2
+      },
+      {
+       "text": "Stack two patties per bun with sauce, sliced pickles and onion, and wrap in baking paper.",
+       "min": 3
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Mom's chicken and mushroom rice bake",
    "course": "m",
    "prep_min": 20,
@@ -263,7 +430,7 @@
      "min": 2
     },
     {
-     "text": "Cover and bake at 180C until golden on top.",
+     "text": "Bake covered at 180C for 40 minutes, then uncovered for 10 until golden on top.",
      "min": 50
     }
    ],

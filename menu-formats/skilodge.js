@@ -1,5 +1,5 @@
 const _ROOT_skilodge=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* Format: skilodge. A ski lodge menu with a lift ticket, one landscape face 1344x960.
-   Left: the poster as the hero, whole, in a timber frame, the lift ticket on its wire wicket hanging off the corner (prop and number).
+   Left: the poster as the hero, whole, in a timber frame, a ticket prop hangs off the corner on its wire wicket; any other prop is a paper slip tacked to the timber.
    Right (signature): the lodge menu card. Courses graded like the runs: snacks green circle, mains blue square,
    sweets black diamond, drinks double black. Foot: the snow report board (the film's winks as scenes to watch for) and the lodge note
    (the overheard quote). Era sets timber, card and type; tone sets wear and photo. */
@@ -159,7 +159,7 @@ const E=[
  {wood:"#5b3b24",wood2:"#4b301c",card:"#f8f8f6",ink:"#1f2233",soft:"#4f5468",acc:"#e2367a",disp:"'Bungee',cursive",dw:"400",body:"'Barlow Semi Condensed',sans-serif",cw:.44,cwd:.49},
  {wood:"#463a30",wood2:"#3a3028",card:"#fbfbf9",ink:"#1a1c1e",soft:"#50565c",acc:"#e0582a",disp:"'Familjen Grotesk',sans-serif",dw:"700",body:"'Inter Tight',sans-serif",cw:.5,cwd:.55}
 ];
-loadFonts(["Alfa+Slab+One","Shrikhand","Bungee","Familjen+Grotesk:wght@500;700","Lora:ital,wght@0,400;0,700;1,400","Barlow:ital,wght@0,500;0,700;1,500","Barlow+Semi+Condensed:ital,wght@0,500;0,700;1,500","Inter+Tight:ital,wght@0,400;0,700;1,400","Caveat:wght@600"]);
+loadFonts(["Alfa+Slab+One","Shrikhand","Bungee","Familjen+Grotesk:wght@500;700","Lora:ital,wght@0,400;0,700;1,400","Barlow:ital,wght@0,500;0,700;1,500","Barlow+Semi+Condensed:ital,wght@0,500;0,700;1,500","Inter+Tight:ital,wght@0,400;0,700;1,400","Caveat:wght@600","Courier+Prime:wght@400;700"]);
 /* trail markers, drawn as the signs are: a green circle, a blue square, a black diamond, two black diamonds */
 const MARK={s:["#1f8a3d","circle"],m:["#1f5fb4","square"],w:["#111111","diamond"],d:["#111111","double"]};
 function marker(k,size){const [c,sh]=MARK[k]||MARK.s,s=size;
@@ -187,13 +187,28 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tTitle=pr2?pr2.title:"All Mountain",tLines=pr2&&pr2.lines.length?pr2.lines.slice(0,2).join(". "):"Valid today only";
   const tHead=!isTk&&pk?clean(pk).toUpperCase():/lift|ski pass/i.test(tTitle)?"ADMIT ONE":pk==="pass"&&pr2?"LIFT PASS":"LIFT TICKET",tNum=F.num.slice(-4),showNum=isTk&&!(tTitle+" "+tLines).includes(tNum);
   const TX=LX+Math.round((PA.w+40)/2)-20,TY=36+PA.h+40+44;
-  const ticket=`<div style="position:absolute;left:${TX}px;top:${TY-34}px;width:4px;height:44px;background:#9aa0a6;transform:rotate(4deg);transform-origin:top"></div>
+  /* review 26b: only a ticket or pass hangs on the lift wicket wire. Any other prop (a receipt, a bill, a note) is a paper slip
+     tacked to the timber: typewriter type, a torn zigzag foot (small turned squares, since the PDF export cannot draw clip-path), a dashed rule above the amount due line, and no empty band */
+  const MONO="'Courier Prime','Courier New',monospace";
+  const slipLines=pr2&&pr2.lines.length?pr2.lines.slice(0,3):[tLines];
+  const slipH=Math.min(176,58+30+slipLines.length*24+8),zz=Array.from({length:22},(_,i)=>`<span style="position:absolute;left:${i*14-3}px;bottom:-5px;width:10px;height:10px;background:#fbf8f0;transform:rotate(45deg)"></span>`).join("");
+  const ticket=isTk?`<div style="position:absolute;left:${TX}px;top:${TY-34}px;width:4px;height:44px;background:#9aa0a6;transform:rotate(4deg);transform-origin:top"></div>
     <div style="position:absolute;left:${TX-140}px;top:${TY}px;width:320px;height:176px;background:#ffffff;border-radius:8px;box-shadow:0 6px 14px rgba(0,0,0,.45);transform:rotate(${(3+t.tilt).toFixed(1)}deg);overflow:hidden;box-sizing:border-box">
       <div style="height:42px;background:${acc};display:flex;align-items:center;justify-content:center;font:700 16px/1 ${BF};letter-spacing:.26em;color:${lum(acc)>.4?"#111":"#fff"}">${tHead}</div>
       <div style="height:134px;box-sizing:border-box;padding:8px 12px;text-align:center;display:flex;flex-direction:column;justify-content:center">
         <div style="font:700 22px/1.1 ${BF};color:#15171a;text-transform:uppercase;${clamp(2)}">${esc(tTitle)}</div>
         <div style="margin-top:4px">${(pr2&&pr2.lines.length?pr2.lines.slice(0,2):[tLines]).map(l=>`<div style="font:400 15px/1.25 ${BF};color:#4a4f55">${esc(l)}</div>`).join("")}</div>
-        ${showNum?`<div style="font:700 26px/1 ${DF};color:${acc};margin-top:8px">No. ${esc(tNum)}</div>`:""}</div></div>`;
+        ${showNum?`<div style="font:700 26px/1 ${DF};color:${acc};margin-top:8px">No. ${esc(tNum)}</div>`:""}</div></div>`
+  :`<div style="position:absolute;left:${TX-130}px;top:${TY-10}px;width:300px;height:${slipH}px;transform:rotate(${(-2+t.tilt).toFixed(1)}deg);filter:drop-shadow(0 5px 8px rgba(0,0,0,.45))">
+      <div style="position:absolute;inset:0;background:#fbf8f0;box-sizing:border-box;padding:22px 20px 18px;font-family:${MONO};color:#26231f">
+        <div style="font:700 15px/1 ${MONO};letter-spacing:.3em;text-align:center">${esc(tHead)}</div>
+        <div style="border-top:1px dashed #8a8378;margin:8px 0 7px"></div>
+        <div style="font:700 18px/1.15 ${MONO};text-transform:uppercase;text-align:center;${clamp(1)}">${esc(tTitle)}</div>
+        <div style="margin-top:6px">${slipLines.map(l=>/^(amount|total|balance)\b/i.test(l)
+          ?`<div style="border-top:1px dashed #8a8378;margin-top:6px;padding-top:5px;font:700 15px/1.3 ${MONO}">${esc(l)}</div>`
+          :`<div style="font:400 15px/1.3 ${MONO}">${esc(l)}</div>`).join("")}</div></div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:0;overflow:visible">${zz}</div>
+      <div style="position:absolute;left:50%;top:6px;width:13px;height:13px;margin-left:-6px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e8e2d6,#8c8478 60%,#4a453e);box-shadow:0 2px 3px rgba(0,0,0,.5)"></div></div>`;
 
   /* right: the lodge menu card */
   const RX=LX+LW+28,RW=W-RX-36,CT=36,FH=196,CH=H-CT-36-FH-20;
@@ -240,7 +255,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly">${(rep.length?rep:["Fresh powder overnight","Groomed runs, all lifts open","Fire lit in the lodge"]).map((r,i)=>`<div style="display:flex;align-items:center;gap:10px;font:400 15px/1.25 ${BF};color:#eef4f7"><span style="flex:0 0 16px;display:flex;justify-content:center"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#eef4f7"></span></span><span>${esc(r)}</span></div>`).join("")}</div></div>`;
   const n=F.note,isQ=!!(F.fl.note&&F.fl.note.text&&F.fl.note.kind==="quote"),nS=n.text.length>140?24:n.text.length>90?27:30;
   const patrol=`<div style="position:absolute;left:${RX+SW+18}px;top:${FY}px;width:${RW-SW-18}px;height:${FH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:12px 16px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-top:8px solid ${acc}">
-    <div style="font:700 15px/1 ${BF};letter-spacing:.22em;color:${acc}">${isQ?"OVERHEARD AT THE LODGE":"FROM THE LODGE"}</div>
+    <div style="font:700 15px/1 ${BF};letter-spacing:.22em;color:${acc}">${isQ?"OVERHEARD":"FROM THE LODGE"}</div>
     <div style="font:600 ${nS}px/1.12 'Caveat',cursive;color:${e.ink};${clamp(3)}">${isQ?`"${esc(n.text)}"`:esc(n.text)}</div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:700 15px/1.2 ${BF};color:${e.soft};${clamp(1)}">${esc(n.by)}</span><span style="font:400 14px/1 ${BF};color:${e.soft};white-space:nowrap">${esc(credit(F).replace("Prices subject to change. ",""))}</span></div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(10,6,2,${(t.vig*.7).toFixed(2)}) 100%)"></div>`;
