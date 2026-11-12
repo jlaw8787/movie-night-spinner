@@ -1,8 +1,9 @@
 const _ROOT_bowling=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* Format: bowling. A bowling alley snack bar menu printed as a score sheet, one landscape face 1344x960.
    Header: the lanes' sign (venue and sign), logo panel and the lane number box.
-   Left: the poster as the hero, whole, with the shoe hire tag (prop) under it.
+   Left: the poster as the hero, whole, with the film's prop (or a shoe rental tag) under it.
    Right (signature): the score sheet. A frame number strip, then one row per course: the course is the bowler,
    each dish sits in its own frame with its price in the little ball box, all in pencil and print.
+   Under the courses: a ruled row of the film's winks and a ruled showtime row.
    Foot: lane notes (the overheard quote) and the total box. Era sets paper, ruling and type; tone sets wear and photo. */
 (function(){
 const ID="bowling",_ROOT=_ROOT_bowling;
@@ -135,11 +136,18 @@ window.MENU_FORMATS[ID]=ctx=>{
   const HH=118,M=26;
   const vS=F.venue.length>30?28:F.venue.length>22?34:F.venue.length>14?40:46;
   const LBW=150,LGW=260;
+  /* the poster beside it already carries the logo, so the header prints the title and year in the sign's type.
+     No poster: the logo sits straight on the band with a soft glow; if it cannot read on the band it gives way to the title */
+  const tS=F.title.length>22?24:F.title.length>14?30:F.title.length>8?36:42;
+  const tText=`<div data-t style="text-align:center;color:#fff"><div style="font:${e.dw} ${tS}px/1.1 ${DF};${clamp(2)}">${esc(F.title)}</div>${F.year?`<div style="font:700 15px/1 ${BF};letter-spacing:.24em;color:${mix(acc,"#ffffff",.55)};margin-top:6px">${esc(F.year)}</div>`:""}</div>`;
+  const lg=F.posSrc?null:logoImg(ctx,LGW-20,HH-40);
+  const CHK=`try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,n=0,s=0;function l(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;n++;var L=.2126*l(d[k])+.7152*l(d[k+1])+.0722*l(d[k+2]);if((L+.05)/(${lum(e.band).toFixed(4)}+.05)>=3)s++}if(n&&s<n*.5){i.style.display='none';i.nextSibling.style.display='block'}}catch(e){}`;
+  const titleBlock=lg?`<img src="${lg.src}" crossorigin="anonymous" alt="${esc(F.title)}" onload="${CHK}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(255,255,255,.35))"><div style="display:none">${tText}</div>`:tText;
   const header=`<div style="position:absolute;left:0;top:0;width:${W}px;height:${HH}px;background:${e.band}"></div>
     <div style="position:absolute;left:${M+4}px;top:16px;width:${W-M*2-LBW-LGW-40}px;height:${HH-32}px;display:flex;flex-direction:column;justify-content:center">
       <div style="font:${e.dw} ${vS}px/1.25 ${DF};color:#fff;white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>
       <div style="font:700 17px/1.2 ${BF};letter-spacing:.2em;text-transform:uppercase;color:${mix(acc,"#ffffff",.55)};margin-top:6px;${clamp(1)}">${esc(F.sign)}</div></div>
-    <div data-dark="${mix(e.band,"#000000",.3)}" data-light="#f4f2ea" style="position:absolute;left:${W-M-LBW-20-LGW}px;top:14px;width:${LGW}px;height:${HH-28}px;background:${mix(e.band,"#000000",.3)};display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,LGW-20,HH-40,DF,"#fff",e.dw)}</div>
+    <div style="position:absolute;left:${W-M-LBW-20-LGW}px;top:14px;width:${LGW}px;height:${HH-28}px;display:flex;align-items:center;justify-content:center;box-sizing:border-box">${titleBlock}</div>
     <div style="position:absolute;left:${W-M-LBW}px;top:14px;width:${LBW}px;height:${HH-28}px;background:${e.paper};border:4px solid ${acc};box-sizing:border-box;text-align:center">
       <div style="font:700 15px/1 ${BF};letter-spacing:.24em;color:${e.soft};margin-top:8px">LANE</div>
       <div style="font:400 58px/1 ${PEN};color:${e.ink};margin-top:2px">${esc(F.num.slice(-2))}</div></div>`;
@@ -148,11 +156,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LW=430,PY=HH+22;const PA=posterFit(LW-16,600);
   const pBox=`<div style="position:absolute;left:${M}px;top:${PY}px;width:${PA.w+16}px;height:${PA.h+16}px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25);transform:rotate(${(t.tilt*.4).toFixed(2)}deg)"><div style="position:absolute;left:8px;top:8px;width:${PA.w}px;height:${PA.h}px;background:#222;overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div></div>`;
   const TY=PY+PA.h+40,TH=H-M-TY;const pr2=F.prop;
-  const tag=`<div style="position:absolute;left:${M+16}px;top:${TY}px;width:${LW-40}px;height:${TH}px;box-sizing:border-box;background:${mix(acc,"#ffffff",.82)};border:2px solid ${acc};border-radius:10px 10px 10px 10px;padding:12px 16px 10px 54px;transform:rotate(${(-t.tilt*.5).toFixed(2)}deg);box-shadow:0 3px 8px rgba(0,0,0,.18);overflow:hidden">
+  const KIND={ticket:"TICKET",stub:"TICKET STUB",card:"CARD",receipt:"RECEIPT",slip:"SLIP",badge:"BADGE",tag:"TAG"};
+  const pk=pr2&&F.fl.prop?String(F.fl.prop.kind||"").toLowerCase():"";
+  const usePr=!!(pr2&&KIND[pk]);
+  const tLab=usePr?KIND[pk]:"SHOE RENTAL",tTitle=usePr?pr2.title:"Size "+(+F.num%6+7),tLines=usePr?pr2.lines.slice(0,2):["Return at the counter"];
+  const tag=`<div style="position:absolute;left:${M+16}px;top:${TY}px;width:${LW-40}px;height:${TH}px;box-sizing:border-box;background:${mix(acc,"#ffffff",.82)};border:2px solid ${acc};border-radius:10px;padding:12px 16px 10px 54px;transform:rotate(${(-t.tilt*.5).toFixed(2)}deg);box-shadow:0 3px 8px rgba(0,0,0,.18);overflow:hidden">
     <div style="position:absolute;left:16px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:${e.paper};border:2px solid ${acc}"></div>
-    <div style="font:700 15px/1 ${BF};letter-spacing:.22em;color:${acc}">SHOE HIRE</div>
-    <div style="font:700 26px/1.1 ${BF};color:${e.ink};margin-top:6px;text-transform:uppercase;${clamp(2)}">${esc(pr2?pr2.title:"Size "+(+F.num%6+7))}</div>
-    <div style="font:400 26px/1 ${PEN};color:${e.soft};margin-top:4px;${clamp(1)}">${esc(pr2&&pr2.lines[0]?pr2.lines[0]:"Return at the counter")}</div></div>`;
+    <div style="font:700 15px/1 ${BF};letter-spacing:.22em;color:${acc}">${tLab}</div>
+    <div style="font:700 ${tLines.length>1?24:26}px/1.1 ${BF};color:${e.ink};margin-top:6px;text-transform:uppercase;${clamp(tLines.length>1?1:2)}">${esc(tTitle)}</div>
+    ${tLines.map(l=>`<div style="font:400 ${tLines.length>1?25:26}px/1.05 ${PEN};color:${e.soft};margin-top:3px;${clamp(1)}">${esc(l)}</div>`).join("")}</div>`;
 
   /* right: the score sheet */
   const GX=M+LW+18,GW=W-M-GX,GY=HH+22;
@@ -162,22 +174,31 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* a course with four dishes takes two rows (three frames is the most that read well) */
   const C=[],items={},pr={};C0.forEach(([k,l])=>{const its=items0[k];if(its.length<=3){C.push([k,l]);items[k]=its;pr[k]=pr0[k];return}
     const a=Math.ceil(its.length/2);C.push([k,l]);items[k]=its.slice(0,a);pr[k]=pr0[k].slice(0,a);C.push([k+"2",""]);items[k+"2"]=its.slice(a);pr[k+"2"]=pr0[k].slice(a)});
-  const cueH=F.cue?40:0;
-  const cellH=(tr,k)=>{const n=items[k].length,cw=(GW-LBL)/n;let m=0;items[k].forEach(it=>{const dl=Math.min(4,wrapLines(F.tx(it.n),tr.d,cw-26-(tr.d*2.2+14),.5));const nl=tr.nl?Math.min(tr.nl+1,wrapLines(F.tx(it.note),tr.n,cw-24,.45)):0;m=Math.max(m,26+dl*tr.d*1.12+(nl?6+nl*tr.n*1.25:0))});return Math.max(m,tr.d*2.4)};
-  let tr=TIERS[TIERS.length-1];for(const x of TIERS){const tot=C.reduce((a,[k])=>a+cellH(x,k),0)+STRIP+cueH;if(tot<=GH){tr=x;break}}
-  const rows=C.map(([k])=>cellH(tr,k));const extra=Math.max(0,GH-STRIP-cueH-rows.reduce((a,b)=>a+b,0));const add=Math.min(60,extra/Math.max(1,C.length));
+  /* ruled rows under the courses: the film's winks (scene nods to watch for) and the showtime cue, at print size */
+  const WK=F.winks.slice(0,5),CUEF=19,cueH=F.cue?Math.round(16+2*CUEF*1.3):0;
+  const wkH=WK.length?Math.round(14+Math.ceil(WK.join("   ").length*15/(GW-LBL-24))*30):0;
+  const NCW=.47;/* Barlow Condensed 500 note width per em, a touch generous so the note always gets its lines */
+  const cellH=(tr,k)=>{const n=items[k].length,cw=(GW-LBL)/n;let m=0;items[k].forEach(it=>{const dl=Math.min(4,wrapLines(F.tx(it.n),tr.d,cw-26-(tr.d*2.2+14),.5));const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0;m=Math.max(m,26+dl*tr.d*1.12+(nl?6+nl*tr.n*1.25:0))});return Math.max(m,tr.d*2.4)};
+  /* only tiers that print notes: every note prints in full, and spare height goes to the rows after that */
+  const NT=TIERS.filter(x=>x.nl);let tr=NT[NT.length-1];for(const x of NT){const tot=C.reduce((a,[k])=>a+cellH(x,k),0)+STRIP+cueH+wkH;if(tot<=GH-4){tr=x;break}}
+  const rows=C.map(([k])=>cellH(tr,k));const extra=Math.max(0,GH-4-STRIP-cueH-wkH-rows.reduce((a,b)=>a+b,0));const add=Math.min(40,extra/Math.max(1,C.length));
+  /* still left over: a real still from the film fills it, captioned */
+  const left=Math.floor(extra-add*C.length),stH=left>100&&F.stillSrc?left:0;
   const bline=`1.5px solid ${rule}`;
   const strip=`<div style="display:flex;height:${STRIP}px;border-bottom:${bline};background:${mix(rule,e.paper,.82)}"><div style="flex:0 0 ${LBL}px;border-right:${bline};font:700 14px/${STRIP}px ${BF};letter-spacing:.2em;color:${e.soft};text-align:center">BOWLER</div>
     ${Array.from({length:10},(_,i)=>`<div style="flex:1;border-right:${i<9?bline:"0"};font:700 15px/${STRIP}px ${BF};color:${e.soft};text-align:center">${i+1}</div>`).join("")}</div>`;
   const rowHTML=([k,l],ri)=>{const its=items[k],h=Math.round(rows[ri]+add),cw=(GW-LBL)/its.length;
     return `<div style="display:flex;height:${h}px;border-bottom:${bline}">
       <div style="flex:0 0 ${LBL}px;border-right:${bline};display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px"><div style="font:400 ${l.length>9?30:36}px/1.1 ${PEN};color:${acc};text-align:center;transform:rotate(-4deg);${clamp(2)}">${esc(l)}</div></div>
-      ${its.map((it,i)=>{const nl=tr.nl?Math.min(tr.nl+1,wrapLines(F.tx(it.note),tr.n,cw-24,.43)):0,pb=Math.round(tr.d*2.2+14);return `<div style="flex:0 0 ${cw}px;position:relative;box-sizing:border-box;padding:10px 12px 8px;border-right:${i<its.length-1?bline:"0"};overflow:hidden">
+      ${its.map((it,i)=>{const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0,pb=Math.round(tr.d*2.2+14);return `<div style="flex:0 0 ${cw}px;position:relative;box-sizing:border-box;padding:10px 12px 8px;border-right:${i<its.length-1?bline:"0"};overflow:hidden">
         <div style="position:absolute;right:0;top:0;width:${pb}px;height:${Math.round(tr.d*1.5)}px;border-left:${bline};border-bottom:${bline};font:400 ${tr.d+8}px/${Math.round(tr.d*1.5)}px ${PEN};color:${e.ink};text-align:center">${pr[k][i]}</div>
         <div style="font:700 ${tr.d}px/1.12 ${BF};color:${e.ink};text-transform:uppercase;letter-spacing:.02em;margin-right:${pb-6}px;${clamp(3)}">${esc(F.tx(it.n))}</div>
-        ${nl?`<div style="font:500 ${tr.n}px/1.25 ${BF};color:${e.soft};margin-top:6px;${clamp(nl)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`};
-  const sheet=`<div style="position:absolute;left:${GX}px;top:${GY}px;width:${GW}px;height:${GH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};overflow:hidden">${strip}${C.map(rowHTML).join("")}
-    ${F.cue?`<div style="position:absolute;left:12px;right:12px;bottom:6px;height:${cueH-8}px">${cueLine(F,BF,e.soft,acc,15)}</div>`:""}</div>`;
+        ${nl?`<div style="font:500 ${tr.n}px/1.25 ${BF};color:${e.soft};margin-top:6px;${clamp(nl+1)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`};
+  const lab=(txt,sz)=>`<div style="flex:0 0 ${LBL}px;border-right:${bline};display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px"><div style="font:400 ${sz}px/1.05 ${PEN};color:${acc};text-align:center;transform:rotate(-4deg)">${txt}</div></div>`;
+  const wkRow=WK.length?`<div style="display:flex;height:${wkH}px;border-bottom:${bline}">${lab("Watch<br>for",28)}<div style="flex:1;padding:8px 12px;box-sizing:border-box;font:400 30px/30px ${PEN};color:${e.ink};overflow:hidden">${WK.map(w=>`<span style="white-space:nowrap;margin-right:22px">${esc(cap(w))}</span>`).join(" ")}</div></div>`:"";
+  const stRow=stH?`<div style="display:flex;height:${stH}px;border-bottom:${bline}">${lab("On<br>screen",28)}<div style="flex:1;position:relative;margin:8px 12px;overflow:hidden">${photo(F.stillSrc,t.photo)}<div style="position:absolute;left:0;bottom:0;padding:3px 10px;background:rgba(0,0,0,.6);color:#fff;font:500 14px/1.2 ${BF}">${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div></div></div>`:"";
+  const cueRow=F.cue?`<div style="display:flex;height:${cueH}px">${lab("Notes",28)}<div style="flex:1;display:flex;align-items:center;padding:4px 12px;box-sizing:border-box">${cueLine(F,BF,e.soft,acc,CUEF)}</div></div>`:"";
+  const sheet=`<div style="position:absolute;left:${GX}px;top:${GY}px;width:${GW}px;height:${GH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};overflow:hidden">${strip}${C.map(rowHTML).join("")}${stRow}${wkRow}${cueRow}</div>`;
 
   /* foot: lane notes and total */
   const NY=H-M-NH,n=F.note,nS=n.text.length>140?28:n.text.length>90?31:34,TW=210;
@@ -186,8 +207,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:400 ${nS}px/1.05 ${PEN};color:${e.ink};margin-top:4px;${clamp(3)}">"${esc(n.text)}" <span style="color:${acc}">${esc(n.by)}</span></div></div>
   <div style="position:absolute;left:${GX+GW-TW}px;top:${NY}px;width:${TW}px;height:${NH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};text-align:center;display:flex;flex-direction:column;justify-content:space-between;padding:8px 6px">
     <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${e.soft}">TOTAL</div>
-    <div style="font:400 64px/1 ${PEN};color:${acc}">${esc(String(200+(+F.num||0)%100))}</div>
-    <div style="font:500 14px/1.2 ${BF};color:${e.soft};${clamp(2)}">${esc(credit(F))}</div></div>`;
+    <div style="font:400 64px/1 ${PEN};color:${acc}">${esc(F.egg?String(200+(+F.egg)%100):"300")}</div>
+    <div style="font:500 13px/1.25 ${BF};color:${e.soft}">Prices subject to change.<br>${F.fam?"No alcohol served. ":""}Images: TMDB.</div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 62%,rgba(20,20,30,${(t.vig*.6).toFixed(2)}) 100%)"></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden;background:${e.paper}">${paper}${header}${pBox}${tag}${sheet}${notes}${vig}</div>`]};
 };

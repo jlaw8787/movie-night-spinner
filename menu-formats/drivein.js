@@ -62,7 +62,27 @@ function prices(menu,ei,egg,mult){
   mult=mult||{s:.55,m:1,w:.45,d:.3};const out={};let hid=false;
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=BASE[ei]*mult[k]*(1+i*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
     if(!hid&&egg&&k==="w"&&ei>=2&&ei<6){hid=true;v=Math.max(1,Math.floor(v))+(+egg)/100}return money(v,ei)});
-  return window.priceSense?window.priceSense(menu,out):out;
+  return tidyPrices(menu,window.priceSense?window.priceSense(menu,out):out);
+}
+/* after the shared pass: a dearer dish (steak, lobster, prawns, prime rib, surf and turf) never costs less than a plainer one in its course,
+   no two items in a course share a price, and every sweet sits below the cheapest main */
+const DEAR=/\b(lobster|steaks?|prime rib|surf and turf|prawns?|shrimp|scallops?|crab|rib ?eye|sirloin|t-bone|filet|fillet mignon|wagyu)\b/i;
+function tidyPrices(menu,P){
+  const val=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?null:n};
+  const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0],post=(o.match(/[^\d.]*$/)||[""])[0];if(/^\D*\.\d\d/.test(o)&&v<1)return pre+"."+String(Math.round(v*100)).padStart(2,"0")+post;return pre+(/\./.test(o)?v.toFixed(2):String(Math.round(v)))+post};
+  const out={};
+  for(const k of ["s","m","w","d"]){const L=(P[k]||[]).slice(),its=menu[k]||[];if(!L.length){out[k]=L;continue}
+    const v=L.map(val);if(v.some(x=>x==null)){out[k]=L;continue}
+    const dec=L.some(x=>/\./.test(String(x))),step=dec?(v[0]<1?.05:.5):1;
+    const isDear=i=>its[i]&&DEAR.test(its[i].n||"");
+    const plainMax=Math.max(0,...v.filter((x,i)=>!isDear(i)));
+    v.forEach((x,i)=>{if(isDear(i)&&x<=plainMax)v[i]=plainMax+step});
+    for(let i=0;i<v.length;i++)while(v.some((y,j)=>j!==i&&j<i&&Math.abs(y-v[i])<1e-6))v[i]+=step;
+    out[k]=v.map((x,i)=>fmt(x,L[i]))}
+  /* sweets below mains */
+  const mMin=Math.min(...(out.m||[]).map(val).filter(x=>x!=null));
+  if(isFinite(mMin)&&out.w&&out.w.length){const wv=out.w.map(val);const top=Math.max(...wv);if(top>=mMin){const sc=(mMin*.8)/top;out.w=out.w.map((x,i)=>fmt(Math.max(.05,Math.round(wv[i]*sc*2)/2),x))}}
+  return out;
 }
 /* everything a format needs from the film, with safe fallbacks */
 function film(ctx,dVenue,dSign,dNote){
@@ -90,21 +110,24 @@ const TIERS=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:
 /* sections into up to maxCols columns at the biggest type that fits; returns tier, column split and column width */
 function fit(o){
   const {C,items,tx,W,H,gap=24,cw=.5,cwd=.56,caps=0,maxCols=2,minCols=1,maxItems=4,headX=14}=o;const priceW=o.priceW||(d=>d*2.6+10);
-  const hh=o.headH||(tr=>tr.h*1.3+headX);let dmax=3,CW=W;
-  const cH=(tr,k)=>hh(tr)+items[k].slice(0,maxItems).reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),cwd*(caps?1.12:1)));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW-(o.indent||0),cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g+(o.itemX||0)},0);
+  const hh=o.headH||(tr=>tr.h*1.3+headX);let dmax=3,CW=W;const TL=o.tiers||TIERS;const nlOf=o.nlOf||((it,tr,w)=>tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,w,cw)):0);
+  const cH=(tr,k)=>hh(tr)+items[k].slice(0,maxItems).reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),cwd*(caps?1.12:1)));const nl=nlOf(it,tr,CW-(o.indent||0));return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g+(o.itemX||0)},0);
   const splits=n=>{if(n===1)return [[C.length]];const out=[];if(n===2)for(let a=1;a<C.length;a++)out.push([a,C.length]);if(n===3)for(let a=1;a<C.length;a++)for(let b=a+1;b<C.length;b++)out.push([a,b,C.length]);return out};
   const tryTier=(tr,n)=>{CW=(W-gap*(n-1))/n;let best=null;for(const s of splits(n)){let st=0,m=0;const cols=[];for(const e of s){const sec=C.slice(st,e);cols.push(sec);m=Math.max(m,sec.reduce((x,[k])=>x+cH(tr,k),0));st=e}if(!best||m<best.m)best={m,cols}}return best};
-  for(const tr of TIERS)for(let n=minCols;n<=Math.min(maxCols,C.length);n++){const q=tryTier(tr,n);if(q&&q.m*1.02<=H)return {tr,cols:q.cols,CW,dmax,spare:H-q.m*1.02,n}}
-  dmax=2;const tr=TIERS[TIERS.length-1],n=Math.min(maxCols,C.length),q=tryTier(tr,n);return {tr,cols:q.cols,CW,dmax,spare:0,n};
+  for(const tr of TL)for(let n=minCols;n<=Math.min(maxCols,C.length);n++){const q=tryTier(tr,n);if(q&&q.m*1.02<=H)return {tr,cols:q.cols,CW,dmax,spare:H-q.m*1.02,n}}
+  dmax=2;const tr=TL[TL.length-1],n=Math.min(maxCols,C.length),q=tryTier(tr,n);return {tr,cols:q.cols,CW,dmax,spare:0,n};
 }
-/* one course: heading plus dishes; o sets fonts, colours and the heading/row style */
+/* one course: heading plus dishes; o sets fonts, colours and the heading/row style.
+   Notes print in full (o.nlOf gives the lines they need, no clamp). A name that wraps drops its dot leader and the price sits on its last line. */
 function course(sec,items,pr,R,o){
-  const [k,label]=sec,{tr,CW,dmax}=R;
-  return `<div style="margin-bottom:${o.cgap||12}px">${o.head(label,tr,k)}${items[k].slice(0,o.maxItems||4).map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(o.tx(it.note),tr.n,CW-(o.indent||0),o.cw||.5)):0;
-    const lead=o.leader?`<span style="flex:1;min-width:16px;border-bottom:2px dotted ${o.lead||o.soft};transform:translateY(-6px)"></span>`:"";
-    return `<div style="margin-bottom:${tr.g}px;${o.indent?`padding-left:${o.indent}px;position:relative`:""}">${o.pre?o.pre(k,i,tr):""}
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="${o.leader?"flex:0 1 auto":"flex:1"};font:${o.nw||700} ${tr.d}px/1.15 ${o.nf};color:${o.ink};${o.caps?"text-transform:uppercase;letter-spacing:.04em;":""}${clamp(dmax)}">${esc(o.tx(it.n))}</span>${lead}<span style="font:${o.pw||700} ${tr.d+(o.pp||2)}px/1 ${o.pf||o.nf};color:${o.pc||o.ink};white-space:nowrap">${o.price?o.price(pr[k][i],k,i):pr[k][i]}</span></div>
-      ${nl?`<div style="font:${o.ns||"400"} ${tr.n}px/1.3 ${o.bf};color:${o.soft};margin-top:3px;${clamp(nl)}">${esc(cap(o.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
+  const [k,label]=sec,{tr,CW,dmax}=R,nlOf=o.nlOf||((it,tr,w)=>tr.nl?Math.min(tr.nl,wrapLines(o.tx(it.note),tr.n,w,o.cw||.5)):0);
+  const its=items[k].slice(0,o.maxItems||4);
+  return `<div style="margin-bottom:${o.last?0:(o.cgap||12)}px">${o.head(label,tr,k)}${its.map((it,i)=>{const nl=nlOf(it,tr,CW-(o.indent||0));
+    const wraps=wrapLines(o.tx(it.n),tr.d,CW-(o.priceW||(tr.d*2.6+10)),o.cwd||.56)>1;
+    const lead=o.leader&&!wraps?`<span style="flex:1;min-width:16px;border-bottom:2px dotted ${o.lead||o.soft};transform:translateY(-${Math.round(tr.d*.22)}px)"></span>`:"";
+    return `<div style="margin-bottom:${i===its.length-1?0:tr.g+(o.ig||0)}px;${o.indent?`padding-left:${o.indent}px;position:relative`:""}">${o.pre?o.pre(k,i,tr):""}
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><span style="${lead?"flex:0 1 auto":"flex:1"};font:${o.nw||700} ${tr.d}px/1.15 ${o.nf};color:${o.ink};${o.caps?"text-transform:uppercase;letter-spacing:.04em;":""}${clamp(dmax)}">${esc(o.tx(it.n))}</span>${lead}<span style="font:${o.pw||700} ${tr.d+(o.pp||2)}px/1.1 ${o.pf||o.nf};color:${o.pc||o.ink};white-space:nowrap">${o.price?o.price(pr[k][i],k,i):pr[k][i]}</span></div>
+      ${nl?`<div style="font:${o.ns||"400"} ${tr.n}px/1.3 ${o.bf};color:${o.soft};margin-top:3px">${esc(cap(o.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
 }
 function sections(ctx,F,labels){return [["s",labels[0]],["m",labels[1]],["w",labels[2]],["d",F.drinks||labels[3]]].filter(([k])=>(ctx.menu[k]||[]).length)}
 function itemsOf(ctx){const o={};for(const k of ["s","m","w","d"])o[k]=(ctx.menu[k]||[]).slice(0,4);return o}
@@ -132,10 +155,16 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* left: the screen on its posts */
   const SX=34,SW=470,SY=34,PA=posterFit(SW-40,H-SY-150);
+  /* the film's winks on a marquee board bolted to the posts, labelled as scenes so they never read as prizes or bay names */
+  const MQT=SY+PA.h+58,MQH=H-24-MQT,wk=F.winks.slice(0,5),wkS=wk.length>4?16:17;
+  const marquee=wk.length&&MQH>90?`<div style="position:absolute;left:${SX-10}px;top:${MQT}px;width:${SW+20}px;height:${MQH}px;box-sizing:border-box;background:#1d1916;border:3px solid ${mix(e.sky2,"#ffffff",.25)};border-radius:6px;box-shadow:0 0 18px ${mix(e.sky2,"#000000",.3)}88,inset 0 0 0 4px #1d1916,inset 0 0 0 6px ${mix(e.sky2,"#000000",.45)};padding:12px 20px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+      <div style="font:700 13px/1.2 ${BF};letter-spacing:.24em;text-transform:uppercase;color:${mix(e.sky2,"#ffffff",.35)};margin-bottom:4px">Scenes to watch for</div>
+      ${wk.map(w=>`<div style="font:500 ${wkS}px/1.3 ${BF};color:#f6efe2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(cap(w))}</div>`).join("")}</div>`
+    :`<div style="position:absolute;left:${SX-10}px;top:${SY+PA.h+70}px;width:${SW+20}px;height:12px;background:#2a2420"></div>`;
   const screen=`<div style="position:absolute;left:${SX}px;top:${SY}px;width:${SW}px;height:${PA.h+40}px;background:#f4f1ea;box-shadow:0 0 50px rgba(255,240,210,.35),0 10px 24px rgba(0,0,0,.5)">
       <div style="position:absolute;left:${Math.round((SW-PA.w)/2)}px;top:20px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div></div>
     ${[60,SW/2-8,SW-76].map(x=>`<div style="position:absolute;left:${SX+x}px;top:${SY+PA.h+40}px;width:16px;height:${H-SY-PA.h-40}px;background:linear-gradient(90deg,#2a2420,#4a4038,#2a2420)"></div>`).join("")}
-    <div style="position:absolute;left:${SX-10}px;top:${SY+PA.h+70}px;width:${SW+20}px;height:12px;background:#2a2420"></div>`;
+    ${marquee}`;
 
   /* right: tray and card */
   const TX=SX+SW+34,TW=W-TX-30,TY=24,TH=H-48;
@@ -145,23 +174,46 @@ window.MENU_FORMATS[ID]=ctx=>{
   const vS=F.venue.length>26?38:F.venue.length>16?46:56;
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
   const MW=CW-48,MH=CHt-HH-SL-cueH-30;
-  const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:2,gap:26,cw:e.cw,cwd:e.cwd});
+  /* notes always print whole: budget every line a note needs (up to 4) and only use tiers that show notes */
+  const nlOf=(it,tr,w)=>tr.nl?Math.min(4,wrapLines(F.tx(it.note),tr.n,w,e.cw*1.1)):0;
+  const NCW=e.cwd*1.1;
+  const R=fit({C,items,tx:F.tx,W:MW,H:MH-8,maxCols:2,gap:26,cw:e.cw,cwd:NCW,nlOf,tiers:TIERS.filter(t=>t.nl===2).concat([{d:19,n:15,g:5,h:22,nl:2},{d:18,n:14,g:5,h:21,nl:2},{d:17,n:14,g:4,h:20,nl:2},{d:16,n:13,g:3,h:19,nl:2},{d:15,n:12,g:3,h:18,nl:2}])});
+  /* height of one column as course() draws it: no gap after the last item or the last course */
+  const headH=tr=>Math.round(tr.h*.82)*1.2+6+8;
+  const colParts=col=>{let h=0,ni=0;col.forEach(([k])=>{h+=headH(R.tr);const its=items[k].slice(0,4);its.forEach((it,i)=>{const dl=Math.min(R.dmax,wrapLines(F.tx(it.n),R.tr.d,R.CW-(R.tr.d*2.6+10),NCW));const nl=nlOf(it,R.tr,R.CW);h+=Math.max(dl*R.tr.d*1.15,(R.tr.d+2)*1.1)+(nl?nl*R.tr.n*1.3+3:0)+(i<its.length-1?R.tr.g:0)});ni+=Math.max(0,its.length-1)});return {h,ni,nc:col.length}};
   const head=(l,tr)=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="font:700 ${Math.round(tr.h*.82)}px/1.2 ${BF};text-transform:uppercase;letter-spacing:.1em;color:#fff;background:${acc2};padding:3px 12px;border-radius:4px">${esc(l)}</span></div>`;
-  const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc,cw:e.cw,leader:1,lead:mix(e.soft,e.card,.5),cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
+  const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc,cw:e.cw,cwd:NCW,leader:1,lead:mix(e.soft,e.card,.5),nlOf};
+  /* each column spends its own spare height on its own gaps, capped so it never looks stretched; a hole over 100px left after that takes a still */
+  let stillUsed=0;const stillList=(ctx.stills||[]).map(x=>Array.isArray(x)?x[0]:x).filter(x=>x&&x!==ctx.poster);
+  const colHtml=col=>{const p=colParts(col);let spare=Math.max(0,MH-6-p.h-(p.nc-1)*12);
+    const cg=p.nc>1?Math.min(44,spare*.6/(p.nc-1)):0;spare-=cg*(p.nc-1);const ig=p.ni?Math.min(10,spare/p.ni):0;spare-=ig*p.ni;
+    let pic="";if(spare>100&&stillList[stillUsed]){const src=ctx.img(stillList[stillUsed++],"w780"),ph=Math.round(spare-34);
+      pic=`<div style="margin-top:14px;height:${ph}px;position:relative;overflow:hidden;border:4px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);box-sizing:border-box">${photo(src,t.photo,"center 40%")}</div><div style="font:italic 400 13px/1.3 ${BF};color:${e.soft};margin-top:4px;${clamp(1)}">From ${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div>`}
+    return `<div style="flex:0 0 ${R.CW}px">${col.map((sec,i)=>course(sec,items,pr,R,{...o,cgap:12+cg,ig,last:i===col.length-1})).join("")}${pic}</div>`};
+  const PK=/^(slip|ticket|receipt|card|order|stub|voucher|coupon|tag)$/i,pk=F.fl.prop&&F.fl.prop.kind;
+  const pLines=F.prop?F.prop.lines.filter(l=>!F.sign.toLowerCase().includes(l.toLowerCase())&&!F.venue.toLowerCase().includes(l.toLowerCase())):[];
+  const propHtml=F.prop&&pLines.length&&(!pk||PK.test(pk))?`<div style="font:700 11px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:${acc2};${clamp(1)}">${esc(F.prop.title)}</div><div style="font:400 14px/1.25 ${BF};color:${e.soft};margin-top:2px;${clamp(2)}">${pLines.slice(0,2).map(esc).join("<br>")}</div>`
+    :`<div style="font:400 14px/1.25 ${BF};color:${e.soft};${clamp(2)}">Flash your lights for service</div>`;
+  const lg=F.posSrc?null:logoImg(ctx,200,HH-42);
+  const tS=F.title.length>34?17:F.title.length>22?20:F.title.length>12?24:28;
+  const titleTxt=`<div data-logo-alt style="${lg?"display:none;":""}text-align:right;width:100%"><div style="font:700 ${tS}px/1.1 ${BF};color:#fff;text-transform:uppercase;letter-spacing:.04em;${clamp(3)}">${esc(F.title)}</div>${F.year?`<div style="font:700 14px/1.3 ${BF};letter-spacing:.2em;color:${mix(e.sky2,"#ffffff",.4)};margin-top:2px">${esc(F.year)}</div>`:""}</div>`;
+  /* logo check: share of solid pixels that read on the header by contrast, or by chroma for strong colours; under half and it gives way to the title */
+  const LCHK=`try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,bg=[${hex(e.sky1).join(",")}],f=function(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)},Lb=.2126*f(bg[0])+.7152*f(bg[1])+.0722*f(bg[2]),n=0,ok=0;for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;n++;var L=.2126*f(d[k])+.7152*f(d[k+1])+.0722*f(d[k+2]),r=(Math.max(L,Lb)+.05)/(Math.min(L,Lb)+.05),ch=Math.max(d[k],d[k+1],d[k+2])-Math.min(d[k],d[k+1],d[k+2]);if(r>=3||(ch>90&&r>=1.8))ok++}if(!n||ok/n<.5){i.style.display='none';i.parentNode.querySelector('[data-logo-alt]').style.display='block'}}catch(e){}`;
+  const titleBlock=lg?`<img src="${lg.src}" crossorigin="anonymous" alt="${esc(F.title)}" onload="${LCHK}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(255,255,255,.18))">${titleTxt}`:titleTxt;
   const n=F.note,nS=n.text.length>130?16:n.text.length>80?18:20;
   const card=`<div style="position:absolute;left:${CX}px;top:${CY}px;width:${CW}px;height:${CHt}px;background:${e.card};overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.25)">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.1+t.wear*.5).toFixed(2)};mix-blend-mode:multiply"></div>
     <div style="position:absolute;left:0;right:0;top:0;height:${HH}px;background:${e.sky1};display:flex;align-items:center;gap:16px;padding:0 24px;box-sizing:border-box">
       <div style="flex:1;min-width:0"><div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;text-shadow:0 0 4px #fff,0 0 12px ${acc},0 0 24px ${acc};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>
         <div style="font:700 15px/1.2 ${BF};letter-spacing:.2em;text-transform:uppercase;color:${mix(e.sky2,"#ffffff",.4)};${clamp(1)}">${esc(F.sign)}</div></div>
-      <div data-dark="rgba(0,0,0,.35)" data-light="#f4f1ea" style="flex:0 0 210px;height:${HH-30}px;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,190,HH-42,BF,"#fff","700")}</div></div>
-    <div style="position:absolute;left:24px;top:${HH+16}px;width:${MW}px;height:${MH}px;display:flex;gap:26px;overflow:hidden">${R.cols.map(col=>`<div style="flex:0 0 ${R.CW}px">${col.map(s=>course(s,items,pr,R,o)).join("")}</div>`).join("")}</div>
+      <div style="flex:0 0 210px;height:${HH-30}px;display:flex;align-items:center;justify-content:center;padding:6px 0;box-sizing:border-box;position:relative">${titleBlock}</div></div>
+    <div style="position:absolute;left:24px;top:${HH+16}px;width:${MW}px;height:${MH}px;display:flex;gap:26px;overflow:hidden">${R.cols.map(colHtml).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:24px;right:24px;top:${HH+16+MH+4}px;height:${cueH-6}px">${cueLine(F,BF,e.soft,acc,15)}</div>`:""}
     <div style="position:absolute;left:0;right:0;bottom:0;height:${SL}px;border-top:3px dashed ${mix(e.soft,e.card,.4)};display:flex">
       <div style="flex:0 0 190px;border-right:2px solid ${mix(e.soft,e.card,.6)};text-align:center;padding:14px 10px;box-sizing:border-box">
         <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${e.soft}">BAY</div>
         <div style="font:${e.dw} 72px/1.1 ${DF};color:${acc}">${esc(F.num.slice(-2))}</div>
-        <div style="font:400 14px/1.25 ${BF};color:${e.soft};${clamp(2)}">${esc(F.prop?F.prop.title:"Flash your lights for service")}</div></div>
+        ${propHtml}</div>
       <div style="flex:1;min-width:0;padding:14px 20px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
         <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${acc2}">OVER THE SPEAKER</div>
         <div style="font:italic 400 ${nS}px/1.32 ${BF};color:${e.ink};${clamp(3)}">"${esc(n.text)}"</div>

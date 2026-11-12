@@ -1,0 +1,77 @@
+{
+ "id": "Hot Tub Time Machine (2010)",
+ "ops": [
+  {
+   "old": "Kodiak Valley gruyère fondue",
+   "new": "Alpine gruyère fondue",
+   "done": true
+  },
+  {
+   "old": "Kodiak Valley lodge chicken schnitzel",
+   "new": "Lodge chicken schnitzel",
+   "done": true
+  },
+  {
+   "old": "Kodiak Valley lodge eggplant schnitzel",
+   "new": "Lodge eggplant schnitzel",
+   "done": true
+  },
+  {
+   "old": "Melted gruyère and emmental. My fondue's getting cold",
+   "new": "Gruyère and emmental melted with white wine, bread and boiled potatoes for dunking",
+   "done": true
+  },
+  {
+   "old": "Crumbed chicken. Blaine pummels Lou like it's his job",
+   "new": "Crumbed chicken breast, warm potato salad, dill cucumbers and lemon",
+   "done": true
+  },
+  {
+   "old": "Fudgy brownies, icing sugar. Watch the fork, Adam",
+   "new": "Dark chocolate fudge brownies under thick icing sugar, vanilla ice cream",
+   "done": true
+  },
+  {
+   "old": "Ginger, lemon, lime and vodka with soda. Russian Red Bull",
+   "new": "Fresh ginger syrup, lemon and lime topped with soda, vodka optional",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Loaded potato skins with sour cream",
+    "note": "Twice-baked potato skins, bacon, cheddar and sour cream",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Peppermint schnapps hot chocolate",
+    "note": "Hot chocolate with peppermint schnapps and whipped cream",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Après ski by the fire, till late",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Kodiak Valley",
+    "lines": [
+     "Day pass",
+     "All lifts, all weekend"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

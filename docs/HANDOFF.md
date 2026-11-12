@@ -751,3 +751,29 @@ Live: deploy 6af55cb9 from main 05dbb9a (Josh, 12 Nov: deploy Wall-E and Toy Sto
 - Do not run scripts/edition-sync.cjs for a film without a poster edition: it replays old ops and broke After Hours and Oliver & Company (reverted).
 - card-ops renames whole-string matches first; check alt names such as "(vegetarian)" after a rename.
 - arcade.js now has flavour options logoDark, noLogo (title and year in the marquee), panel {head,text,by} or panel {img,head,h,pos}, quote {text,by}.
+
+## 12 Nov, 6:30pm: review 25, the ten new layouts reviewed and fixed (branch wip/new-formats, not live; start here in the next chat)
+
+- One independent reviewer per layout on one film, then one fixer per layout. Write-up and fix logs: docs/review-25.md. Scores before fixes: clubhouse (Caddyshack) 8, drivein (Ghostbusters: Afterlife) 8, foodcourt (Mallrats) 7.5, bowling (Kingpin) 7.5, reception (The Wedding Singer) 7.5, skilodge (Hot Tub Time Machine) 7.5, hospital (Halloween II) 7.5, deli (Rumble in the Bronx, layout test only) 7.4, arcade (Wreck-It Ralph) 7, dimsum (Rush Hour) 6.5. Not re-graded after fixes.
+- Locked rules all ten layouts now follow: notes describe food; every note prints in full at one size (fit budgets note lines before gaps, no reliance on libUnclip); the short column spreads its own spare height, capped, and a real TMDB still fills any gap over about 100px; no logo on a box (a logo the poster beside already carries prints as title and year instead); props print under a label from prop.kind with their lines; fixed headings neutral or from flavour; winks shown (up to five) in a labelled box; prices: dearer dishes top of their course, house lines at the foot, no repeats in a course, dessert under mains (each layout has its own tidy pass after priceSense).
+- Film text for the ten films through card-ops: audit/ops/<slug>-review-25.json. Kingpin's pot roast recipe added to data/recipes/kingpin-1996.json by hand. Rush Hour's poster edition synced from its ops only (edition-sync run, then every other edition put back; it would have broken After Hours and Oliver & Company again).
+- Rumble in the Bronx was put on deli for the proof only and is back on truck. Its notes were fixed (they show on truck too). Deli still has no film.
+- Toy Story (live on main) on this branch: house line prices now 110 and 60 tickets (were 190 and 100) from the price rule; nothing else changed against a before shot.
+- Checks: check-print-text passes on all 40 films on the new layouts plus Rumble and Wall-E; all tests pass; check-browser passes.
+- New layout options (flavour): reception {guest, table, seat, heading, tables[], noLogo, still, stillCaption}; bowling prop heading from prop.kind; see each file's header comment and docs/review-25.md for the rest.
+
+### Shared code items found (not done, app.js)
+1. libMenu cuts every venue note to 100 characters (libTrim) without a warning; any longer note loses its end on every layout. Raise the limit or flag it in check-print-text.
+2. window.priceSense: its card-extra rule holds a dearer extra (lobster roll, surf and turf) under a plain cooked main and can repeat prices. The new layouts work round it; old layouts still rely on it.
+3. Phone: the "Skip to the wheel" pill shows over the top of the menu card in the phone view (seen on dimsum, arcade, clubhouse).
+4. Drive-in phone peek leaves the Showtime line blank (prints fine). Cause not found in drivein.js.
+5. scripts/card-ops.cjs: a set op added to an ops file already marked applied is marked done without running (line 63). Take "applied" out of the file, or fix the line.
+6. libUnclip may run before the web font loads (the fallback font wraps wider).
+
+### Other films on the new layouts still carrying film lines in notes (next, with the venue and sign fact check)
+Bad Santa, Jurassic World (foodcourt); Happy Gilmore, Goldfinger (clubhouse); Four Weddings, Doctor Strange (reception); Better Off Dead (skilodge; quote looks paraphrased, known line is "I want my two dollars!"); Snatch (arcade); Men in Black 3 (dimsum; trolley line signed "Agent J" is invented); Terminator 2, Shutter Island (hospital).
+
+### Waiting on Josh
+- Drive-in: Ghostbusters: Afterlife is set "modern" so it gets the plain white card; the 1950s look suits Spinners Roller Hop better.
+- Hospital: prices kept on the patient meal card (real patient cards have none).
+- Then: venue and sign fact check and note clean-up for every film on the new layouts, mark Approved in the sheet, then a deploy cut.

@@ -1,0 +1,55 @@
+{
+ "id": "Halloween II (1981)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Devilled ham on toast",
+    "note": "Spiced devilled ham spread thick on hot buttered toast, cut into triangles.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hot honey and lemon",
+    "note": "Hot water with honey, fresh lemon juice and a slice of ginger."
+   },
+   "done": true
+  },
+  {
+   "old": "toasted rolls under melted provolone, for the front desk",
+   "new": "toasted rolls under melted provolone",
+   "done": true
+  },
+  {
+   "set": "flavour.venue",
+   "value": "Haddonfield Memorial Hospital",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Night shift, October 31",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "It's time, Michael.",
+    "by": "Dr Loomis",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.hospital",
+   "value": {
+    "noLogo": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

@@ -4700,18 +4700,18 @@
  },
  "Wreck-It Ralph (2012)": {
   "venue": "Tapper's",
-  "sign": "Game Central Station. Root beer, no questions.",
+  "sign": "Root beer on tap since 1983",
   "note": {
    "text": "I'm gonna wreck it!",
    "by": "Wreck-It Ralph",
    "kind": "quote"
   },
   "winks": [
-   "Fix-It Felix Jr. and his magic hammer",
-   "The Sugar Rush candy kart race",
-   "Vanellope von Schweetz glitching",
-   "Sergeant Calhoun and her tough crew",
-   "A medal Ralph wants so badly"
+   "Felix and his magic hammer",
+   "The Sugar Rush kart race",
+   "Vanellope glitching",
+   "Calhoun and the Cy-Bugs",
+   "The medal Ralph wants so badly"
   ],
   "prop": {
    "kind": "slip",
@@ -4722,7 +4722,14 @@
    ]
   },
   "number": "30",
-  "est": "1983"
+  "est": "1983",
+  "arcade": {
+   "panel": {
+    "head": "Bad-Anon affirmation",
+    "text": "I'm bad, and that's good. I will never be good, and that's not bad. There's no one I'd rather be than me.",
+    "by": "The Bad-Anon group"
+   }
+  }
  },
  "Bolt (2008)": {
   "venue": "Bolt's Studio Trailer",
@@ -6547,26 +6554,40 @@
   "venue": "Ridgefield Reception Hall",
   "sign": "Tonight: Robbie Hart and Band",
   "note": {
-   "text": "Sir, one more outburst and I will strangle you with my microphone wire.",
+   "text": "Once again, things that could've been brought to my attention yesterday!",
    "by": "Robbie Hart",
    "kind": "quote"
   },
   "winks": [
    "Robbie getting left at the altar by Linda",
-   "Grandma Rosie's rap",
-   "Julia and her fiance Glen",
-   "A Boy George lookalike at the hotel",
+   "Rosie's rap at her anniversary party",
+   "Julia and her fiance Glenn",
+   "George and his Boy George act",
    "Robbie and Billy Idol on the plane"
   ],
   "prop": {
-   "kind": "card",
+   "kind": "business card",
    "title": "Robbie Hart Band",
    "lines": [
     "Weddings and Bar Mitzvahs",
     "Ridgefield, New Jersey"
    ]
   },
-  "number": "1985"
+  "number": "1985",
+  "reception": {
+   "guest": "Julia Sullivan",
+   "table": "Head Table",
+   "seat": "With the bride's family",
+   "heading": "Dinner Menu",
+   "noLogo": true,
+   "tables": [
+    "Linda's Empty Seat",
+    "Rosie's Rap Table",
+    "The Julia Gulia Table",
+    "The Boy George Table",
+    "The Billy Idol Table"
+   ]
+  }
  },
  "My Best Friend's Wedding (1997)": {
   "venue": "Wallace Wedding Dinner",
@@ -7763,7 +7784,7 @@
  },
  "Caddyshack (1980)": {
   "venue": "Bushwood Country Club",
-  "sign": "Bushwood, Members Only",
+  "sign": "Members only. Caddies use the rear entrance.",
   "note": {
    "text": "So I got that goin' for me, which is nice.",
    "by": "Carl Spackler",
@@ -8475,7 +8496,7 @@
   "number": ""
  },
  "Kingpin (1996)": {
-  "venue": "Reno Tournament Lanes",
+  "venue": "National Bowling Stadium",
   "sign": "Snack bar open all tournament",
   "note": {
    "text": "I took the liberty of milking your cow for you.",
@@ -8484,17 +8505,17 @@
   },
   "winks": [
    "Roy's rubber hand",
-   "Big Ern McCracken, Tanqueray and Tab",
+   "Big Ern's comb-over",
    "Ishmael's coffee: extra large, lots of cream",
    "Claudia on the road trip",
-   "Roy, the Rubber Man of Reno"
+   "Getting Munsoned"
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Reno Tournament",
+   "title": "$1 million tournament",
    "lines": [
-    "Prize: $1 million",
-    "Roy and Ishmael"
+    "Bowler: Ishmael Boorg",
+    "Manager: Roy Munson"
    ]
   },
   "number": "",
@@ -9241,10 +9262,11 @@
  },
  "Rush Hour (1998)": {
   "venue": "Foo Chow Restaurant",
-  "sign": "Chinatown, Los Angeles. Mind who you greet.",
+  "sign": "949 North Hill Street, Chinatown, Los Angeles",
   "note": {
-   "text": "Please do not touch the dumplings until everyone is seated. Detective Carter, I mean you.",
-   "by": "Chief Inspector Lee"
+   "text": "Do you understand the words that are coming out of my mouth?",
+   "by": "Detective Carter",
+   "kind": "quote"
   },
   "winks": [
    "Soo Yung, the kidnapped consul's daughter",
@@ -9257,7 +9279,7 @@
    "kind": "ticket",
    "title": "Hong Kong to Los Angeles",
    "lines": [
-    "Inspector Lee",
+    "Chief Inspector Lee",
     "Seat 1A, no talking"
    ]
   },
@@ -10529,11 +10551,11 @@
   "number": ""
  },
  "Mallrats (1995)": {
-  "venue": "Mall Food Court, New Jersey",
-  "sign": "The mall. No sailboat, just pretzels.",
+  "venue": "The Pretzel Counter",
+  "sign": "Hot pretzels, cold drinks, open till close",
   "note": {
-   "text": "The food court is downstairs. The cookie stand is upstairs.",
-   "by": "Brodie Bruce",
+   "text": "Snootchie bootchies!",
+   "by": "Jay",
    "kind": "quote"
   },
   "winks": [
@@ -10700,7 +10722,7 @@
  },
  "Hot Tub Time Machine (2010)": {
   "venue": "Kodiak Valley Resort",
-  "sign": "Kodiak Valley Ski Lodge",
+  "sign": "Après ski by the fire, till late",
   "note": {
    "text": "It must be some kind of hot tub time machine.",
    "by": "Nick",
@@ -10715,10 +10737,10 @@
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Ski Pass",
+   "title": "Kodiak Valley",
    "lines": [
-    "Kodiak Valley",
-    "Valid 1986"
+    "Day pass",
+    "All lifts, all weekend"
    ]
   },
   "number": "1986"
@@ -13465,10 +13487,10 @@
   ],
   "prop": {
    "kind": "slip",
-   "title": "Ghost Trap Slip",
+   "title": "Ghost trap slip",
    "lines": [
     "Summerville, Oklahoma",
-    "Contents: the Keymaster"
+    "Contents: Muncher"
    ]
   },
   "number": ""
@@ -18031,8 +18053,8 @@
   "venue": "Uncle Bill's Supermarket",
   "sign": "Fresh Deliveries Daily",
   "note": {
-   "text": "I came for a wedding, and now I'm fighting bikers in the aisles. Please keep my receipt.",
-   "by": "Keung",
+   "text": "Ask about the wedding tea. Bikes stay out of the aisles.",
+   "by": "The Counter",
    "kind": "note"
   },
   "winks": [
@@ -20400,11 +20422,12 @@
   "number": "40"
  },
  "Halloween II (1981)": {
-  "venue": "Haddonfield Memorial Hospital Cafeteria",
-  "sign": "Haddonfield Memorial, Night Shift",
+  "venue": "Haddonfield Memorial Hospital",
+  "sign": "Night shift, October 31",
   "note": {
-   "text": "Night shift eats at midnight, Halloween or not. Keep the corridor lights on and the doors locked.",
-   "by": "Mrs Alves"
+   "text": "It's time, Michael.",
+   "by": "Dr Loomis",
+   "kind": "quote"
   },
   "winks": [
    "The long dark hospital corridors",
@@ -20422,7 +20445,10 @@
    ]
   },
   "number": "1978",
-  "patient": "Laurie Strode"
+  "patient": "Laurie Strode",
+  "hospital": {
+   "noLogo": true
+  }
  },
  "Hocus Pocus 2 (2022)": {
   "venue": "Becca's Birthday in the Woods",

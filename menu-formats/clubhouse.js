@@ -7,7 +7,7 @@ const _ROOT_clubhouse=((document.currentScript&&document.currentScript.src)||"")
 const ID="clubhouse",_ROOT=_ROOT_clubhouse;
 
 /* ---------- shared helpers ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[–—]\s*/g,", ").replace(/\s+-\s+/g,", ");
+const clean=s=>String(s==null?"":s).replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+-\s+/g,", ");
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cap=s=>{s=clean(s).trim();return s?s.charAt(0).toUpperCase()+s.slice(1):""};
 const hex=h=>{h=String(h||"").replace("#","");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
@@ -124,58 +124,113 @@ const E=[
 const PEN="'Nothing You Could Do',cursive";
 loadFonts(["Playfair+Display+SC:wght@400;700","Coustard:wght@400;900","Cormorant+SC:wght@500;700","Fraunces:wght@700","Lora:ital,wght@0,400;0,700;1,400","Libre+Franklin:ital,wght@0,400;0,700;1,400","Inter+Tight:ital,wght@0,400;0,700;1,400","Nothing+You+Could+Do"]);
 
+/* prices (review 25): the dearer dish in a course never costs less than a plainer one (surf and turf over prime rib over a frank),
+   no two dishes in a course share a price, and a house line stays at the foot of its course. Runs after the shared priceSense. */
+const DEAR=[[/lobster|surf and turf|crayfish|caviar/i,3],[/prime rib|steak|fillet|sirloin|rib ?eye|t-bone|wagyu|prawns?|shrimp|scallops?|oysters?/i,2],[/beef|lamb|veal|duck|salmon|fish|crab|pork|ham|chicken/i,1]];
+const dearOf=it=>{const s=(it&&it.n||"")+" "+(it&&it.note||"");for(const [re,v] of DEAR)if(re.test(s))return v;return 0};
+const pval=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?null:n};
+const pfmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0],post=(o.match(/[^\d.]*$/)||[""])[0];if(!/\./.test(o))return pre+String(Math.round(v))+post;if(/^\D*\.\d\d/.test(o)&&v<1)return pre+"."+String(Math.round(v*100)).padStart(2,"0")+post;return pre+v.toFixed(2)+post};
+const bump=(v,o)=>{if(!/\./.test(String(o)))return Math.round(v)+1;if(v<1)return Math.round((v+.05)*100)/100;const f=v%1;return f<.495?Math.floor(v)+.5:f<.945?Math.floor(v)+.95:Math.floor(v)+1.5};
+function clubPrices(items,ei,egg){
+  const pr=prices(items,ei,egg,{s:.6,m:1.3,w:.45,d:.3});
+  for(const k of ["s","m","w","d"]){const its=items[k]||[],p=(pr[k]||[]).slice();if(!its.length)continue;
+    const idx=its.map((_,i)=>i).filter(i=>!its[i].house&&pval(p[i])!=null),vals=idx.map(i=>pval(p[i])).sort((a,b)=>a-b),fm=idx.map(i=>p[i]);
+    const order=idx.slice().sort((a,b)=>dearOf(its[a])-dearOf(its[b])||a-b);let prev=-1;
+    order.forEach((i,j)=>{let v=vals[j];if(v<=prev+.001)v=bump(prev,fm[0]);prev=v;p[i]=pfmt(v,fm[0])});
+    /* house lines keep their place at the foot and only move off a price already taken */
+    const seen=order.map(i=>pval(p[i]));its.forEach((_,i)=>{if(order.includes(i))return;let v=pval(p[i]);if(v==null)return;let g=0;while(seen.some(s=>Math.abs(s-v)<.001)&&g++<20)v=bump(v,p[i]);seen.push(v);p[i]=pfmt(v,p[i])});
+    pr[k]=p}
+  /* every main above every starter, the dearer main still on top */
+  {const sMax=Math.max(-1,...(pr.s||[]).map(pval).filter(v=>v!=null)),its=items.m||[],p=(pr.m||[]).slice();let cur=sMax;
+   its.map((_,i)=>i).filter(i=>pval(p[i])!=null).sort((a,b)=>pval(p[a])-pval(p[b])||a-b).forEach(i=>{let v=pval(p[i]);if(v<=cur+.001)v=bump(cur,p[i]);cur=v;p[i]=pfmt(v,p[i])});pr.m=p}
+  /* dessert always below the cheapest main */
+  const mMin=Math.min(...(pr.m||[]).map(pval).filter(v=>v!=null));if(isFinite(mMin))pr.w=(pr.w||[]).map(x=>{const v=pval(x);return v!=null&&v>=mMin?pfmt(Math.max(.05,mMin*.55),x):x});
+  return pr}
+/* a logo with no box: kept only when it reads on the club colour by contrast or chroma, else the title in the club's type shows instead */
+const LOGOREAD=c=>`try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,g=0,n=0,B=[${hex(c).join(",")}];function L(r,gg,b){var a=[r,gg,b].map(function(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*a[0]+.7152*a[1]+.0722*a[2]}var lb=L(B[0],B[1],B[2]);for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;n++;var l=L(d[k],d[k+1],d[k+2]),cr=(Math.max(l,lb)+.05)/(Math.min(l,lb)+.05),ch=Math.max(d[k],d[k+1],d[k+2])-Math.min(d[k],d[k+1],d[k+2]);if(cr>=3||(cr>=2&&ch>110))g++}if(n&&g/n<.5){i.style.display='none';var f=i.nextElementSibling;if(f)f.style.display='block'}}catch(e){}`;
+
 window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=16?t+" Country Club":"The Clubhouse","Members and guests",{text:"Replace your divots, rake the bunkers, and settle up at the bar.",by:"The Club Captain"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),DF=e.disp,BF=e.body;
   const club=F.pal.dark&&lum(F.pal.dark)<.08?F.pal.dark:e.club,gilt=e.gilt,acc=readable(F.pal.accent||"#b33a2a",e.paper,4.5,"#a3322a");
+  const giltT=mix(gilt,"#ffffff",.25),giltS=mix(gilt,club,.25);
 
-  /* left: the cover */
+  /* left: the cover. With a poster the poster carries the film's logo, so the club prints the title and year in its own type (review 25);
+     no poster: the logo with no box when it reads on the club colour, else the title. Stack spread down the whole panel, no empty band. */
   const LW=468,P=30;
-  const lgH=110,PY=P+lgH+16;
   const vS=F.venue.length>28?26:F.venue.length>18?32:38;
-  const PA=posterFit(LW-2*P-20,H-PY-150);
+  const ttl=`<div style="font:${e.dw} ${F.title.length>28?22:28}px/1.15 ${DF};color:${giltT};text-align:center;${clamp(2)}">${esc(F.title)}</div><div style="font:700 13px/1 ${BF};letter-spacing:.3em;color:${giltS};text-align:center;margin-top:6px">${esc(F.year)}</div>`;
+  let top;
+  if(F.posSrc)top=`<div style="max-width:${LW-2*P-40}px">${ttl}</div>`;
+  else{const lg=logoImg(ctx,LW-2*P-60,100);top=lg?`<div style="max-width:${LW-2*P-40}px;text-align:center"><img src="${lg.src}" crossorigin="anonymous" alt="${esc(F.title)}" onload="${LOGOREAD(club)}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(0,0,0,.35))"><div style="display:none">${ttl}</div></div>`:`<div style="max-width:${LW-2*P-40}px">${ttl}</div>`}
+  const topH=F.posSrc?(F.title.length>28?72:56):110;
+  const PA=posterFit(LW-2*P-20,H-2*P-topH-150);
   const cover=`<div style="position:absolute;left:0;top:0;width:${LW}px;height:${H}px;background:${club}">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.1+t.wear*.6).toFixed(2)};mix-blend-mode:screen"></div>
     <div style="position:absolute;inset:14px;border:2px solid ${gilt};opacity:.85"></div><div style="position:absolute;inset:20px;border:1px solid ${gilt};opacity:.5"></div>
-    <div data-dark="rgba(0,0,0,.25)" data-light="rgba(250,246,234,.92)" style="position:absolute;left:${P+10}px;top:${P+6}px;width:${LW-2*P-20}px;height:${lgH}px;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;padding:8px;box-sizing:border-box">${logoOr(ctx,F,LW-2*P-40,lgH-16,DF,gilt,e.dw)}</div>
-    <div style="position:absolute;left:${Math.round((LW-PA.w)/2)-6}px;top:${PY}px;width:${PA.w+12}px;height:${PA.h+12}px;background:${gilt}"><div style="position:absolute;left:6px;top:6px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div></div>
-    <div style="position:absolute;left:${P+10}px;right:${P+10}px;top:${PY+PA.h+26}px;text-align:center">
-      <div style="font:${e.dw} ${vS}px/1.2 ${DF};color:${mix(gilt,"#ffffff",.25)};${clamp(2)}">${esc(F.venue)}</div>
-      <div style="font:italic 400 17px/1.3 ${BF};color:${mix(gilt,club,.25)};margin-top:6px;${clamp(1)}">${esc(F.sign)}</div></div></div>`;
+    <div style="position:absolute;left:${P}px;right:${P}px;top:${P+4}px;bottom:${P+4}px;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly">
+      ${top}
+      <div style="position:relative;flex:0 0 auto;width:${PA.w+12}px;height:${PA.h+12}px;background:${gilt}"><div style="position:absolute;left:6px;top:6px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div></div>
+      <div style="width:100%;text-align:center"><div style="font:${e.dw} ${vS}px/1.2 ${DF};color:${giltT};${clamp(2)}">${esc(F.venue)}</div>
+        <div style="font:italic 400 17px/1.3 ${BF};color:${giltS};margin-top:6px;${clamp(1)}">${esc(F.sign)}</div></div></div></div>`;
 
   /* right: the scorecard */
   const RX=LW+28,RW=W-RX-28,TOP=28;
   const FH=176,cueH=F.cue?42:0,HDR=40;
-  const C=sections(ctx,F,e.cols),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
-  const HOLE=66,PAR=96;
+  const C=sections(ctx,F,e.cols),items=itemsOf(ctx),pr=clubPrices(items,F.ei,F.egg);
+  const HOLE=52,PAR=82,GAP=18,PADY=6,DMAX=3;
   const MH=H-TOP-FH-24-HDR-cueH-10;
-  const GAP=18,R=fit({C,items,tx:F.tx,itemX:14,W:RW,H:MH,maxCols:2,gap:GAP+HOLE+PAR+8,cw:e.cw,cwd:e.cwd,priceW:()=>0,headH:tr=>Math.round(tr.h*.8)+16});
-  /* two cards side by side when it needs them: front nine on the left, back nine on the right, as a real scorecard folds out */
-  const colW=R.n>1?Math.floor((RW-GAP)/2):RW;
-  const tr=R.tr,bl=`1.5px solid ${e.rule}`;
+  /* own fit (review 25): every note prints in full, so a tier is tried with each note's real line count; notes get their lines
+     before any spare height goes into gaps. The note width estimate (cw) is the era's, a touch wide of the real italic so it never overflows. */
+  const barH=tr=>Math.round(tr.h*.8)+12;
+  const dishW=cw=>cw-HOLE-PAR-24-5;
+  const rowH=(it,tr,dw)=>{const dl=Math.min(DMAX,wrapLines(F.tx(it.n),tr.d,dw,e.cwd));const nl=wrapLines(F.tx(it.note),tr.n,dw,e.cw);return dl*tr.d*1.15+(nl?nl*tr.n*1.3+2:0)+2*PADY+1.5};
+  const colH=(col,tr,cw)=>col.reduce((a,[k])=>a+barH(tr)+4+items[k].reduce((b,it)=>b+rowH(it,tr,dishW(cw)),0),0);
+  const SIZES=[];TIERS.forEach(x=>{if(!SIZES.some(y=>y.d===x.d&&y.n===x.n))SIZES.push(x)});SIZES.sort((a,b)=>b.n-a.n||b.d-a.d);
+  let R=null;
+  for(const tr of SIZES){for(let n=1;n<=Math.min(2,C.length);n++){const cw=n>1?Math.floor((RW-GAP)/2):RW;const splits=n===1?[[C]]:C.slice(1).map((_,a)=>[C.slice(0,a+1),C.slice(a+1)]);
+      let best=null;for(const cols of splits){const hs=cols.map(c=>colH(c,tr,cw)),m=Math.max(...hs),bal=m-Math.min(...hs);if(!best||m<best.m-1||(Math.abs(m-best.m)<=1&&bal<best.bal))best={m,bal,cols,hs}}
+      if(best.m<=MH){R={tr,n,cw,cols:best.cols,hs:best.hs};break}}if(R)break}
+  if(!R){const tr=SIZES[SIZES.length-1],cw=Math.floor((RW-GAP)/2),cols=C.length>1?[C.slice(0,Math.ceil(C.length/2)),C.slice(Math.ceil(C.length/2))]:[C];R={tr,n:cols.length,cw:cols.length>1?cw:RW,cols,hs:cols.map(c=>colH(c,tr,cols.length>1?cw:RW))}}
+  const tr=R.tr,colW=R.cw,bl=`1.5px solid ${e.rule}`;
   let ring=["m",0];if(F.egg&&items.w&&items.w.length)ring=["w",0];
-  let hole=0;const nIt=Math.max(...R.cols.map(col=>col.reduce((a,[k])=>a+items[k].length,0)));const pad=6+Math.max(0,Math.min(8,Math.floor(R.spare/Math.max(1,nIt)/2)));
-  const rowsOf=col=>col.map(([k,l])=>`<div style="display:flex;align-items:center;height:${Math.round(tr.h*.8)+12}px;background:${club};color:${gilt};font:700 ${Math.round(tr.h*.62)}px/1 ${BF};letter-spacing:.2em;text-transform:uppercase;padding:0 14px;margin-top:4px">${esc(l)}</div>`+
-    items[k].map((it,i)=>{hole++;const nl=tr.nl?Math.min(tr.nl,wrapLines(F.tx(it.note),tr.n,colW-HOLE-PAR-30,e.cw)):0,rg=ring[0]===k&&ring[1]===i;
-      return `<div style="display:flex;border-bottom:${bl};align-items:stretch">
+  const SUB={s:"Starters",m:"Mains",w:"Dessert",d:"Drinks"};
+  /* each column spends its own spare height: course gaps first (capped), rows then share what is left by flex (capped);
+     more than about 100px still left and the card ends at its content, with a real film still under it */
+  const plan=R.cols.map((col,ci)=>{const nb=col.length,nr=col.reduce((a,[k])=>a+items[k].length,0);let spare=MH-R.hs[ci];
+    const gapX=nb>1?Math.min(18,Math.max(0,Math.floor(spare*.3/(nb-1)))):0;spare-=gapX*(nb-1);
+    const stretch=Math.min(spare,nr*16);const left=spare-stretch;let still=0;
+    if(left>100&&F.stillSrc){still=Math.min(left+stretch-20,Math.round(colW*9/16)+34);if(still<110)still=0}
+    return {gapX,still,inner:MH-(still?still+12:0)}});
+  let hole=0;
+  const rowsOf=(col,ci)=>col.map(([k,l],bi)=>`<div style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;height:${barH(tr)}px;background:${club};color:${gilt};font:700 ${Math.round(tr.h*.62)}px/1 ${BF};letter-spacing:.2em;text-transform:uppercase;padding:0 14px;margin-top:${bi?4+plan[ci].gapX:4}px"><span>${esc(l)}</span>${SUB[k]&&clean(l).toLowerCase()!==SUB[k].toLowerCase()?`<span style="font:italic 400 ${Math.max(13,Math.round(tr.h*.55))}px/1 ${BF};letter-spacing:.04em;text-transform:none;color:${giltS}">${SUB[k]}</span>`:""}</div>`+
+    items[k].map((it,i)=>{hole++;const rg=ring[0]===k&&ring[1]===i,last=bi===col.length-1&&i===items[k].length-1;
+      return `<div style="flex:1 1 auto;display:flex;${last?"":`border-bottom:${bl};`}align-items:stretch">
         <div style="flex:0 0 ${HOLE}px;border-right:${bl};display:flex;align-items:center;justify-content:center;font:700 ${Math.round(tr.d*.9)}px/1 ${BF};color:${e.soft}">${hole}</div>
-        <div style="flex:1;min-width:0;padding:${pad}px 12px">
-          <div style="font:700 ${tr.d}px/1.15 ${BF};color:${e.ink};${clamp(R.dmax)}">${esc(F.tx(it.n))}</div>
-          ${nl?`<div style="font:italic 400 ${tr.n}px/1.3 ${BF};color:${e.soft};margin-top:2px;${clamp(nl)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>
-        <div style="flex:0 0 ${PAR}px;border-left:${bl};display:flex;align-items:center;justify-content:center;position:relative;font:700 ${tr.d}px/1 ${BF};color:${e.ink}">${pr[k][i]}${rg?`<span style="position:absolute;left:50%;top:50%;width:${PAR-18}px;height:${Math.round(tr.d*1.9)}px;margin:-${Math.round(tr.d*.95)}px 0 0 -${(PAR-18)/2}px;border:2.5px solid ${acc};border-radius:50%;transform:rotate(-8deg);opacity:.85"></span>`:""}</div></div>`}).join("")).join("");
-  const hdr=`<div style="display:flex;height:${HDR}px;background:${mix(e.rule,e.paper,.75)};border-bottom:2px solid ${club};font:700 15px/${HDR}px ${BF};letter-spacing:.16em;color:${club};text-transform:uppercase"><div style="flex:0 0 ${HOLE}px;text-align:center;border-right:${bl}">Hole</div><div style="flex:1;padding-left:12px;white-space:nowrap;overflow:hidden">At the 19th</div><div style="flex:0 0 ${PAR}px;text-align:center;border-left:${bl}">Par</div></div>`;
-  const card=R.cols.map((col,ci)=>`<div style="position:absolute;left:${RX+ci*(colW+GAP)}px;top:${TOP}px;width:${colW}px;height:${MH+HDR+(F.cue?0:0)+5}px;box-sizing:border-box;border:2.5px solid ${club};background:${e.paper};overflow:hidden">${hdr}<div style="height:${MH}px;overflow:hidden">${rowsOf(col)}</div></div>`).join("")+
+        <div style="flex:1;min-width:0;padding:${PADY}px 12px;display:flex;flex-direction:column;justify-content:center">
+          <div style="font:700 ${tr.d}px/1.15 ${BF};color:${e.ink};${clamp(DMAX)}">${esc(F.tx(it.n))}</div>
+          ${clean(it.note).trim()?`<div style="font:italic 400 ${tr.n}px/1.3 ${BF};color:${e.soft};margin-top:2px">${esc(cap(F.tx(it.note)))}</div>`:""}</div>
+        <div style="flex:0 0 ${PAR}px;border-left:${bl};display:flex;align-items:center;justify-content:center;position:relative;font:700 ${tr.d}px/1 ${BF};color:${e.ink}">${pr[k][i]}${rg?`<span style="position:absolute;left:50%;top:50%;width:${PAR-14}px;height:${Math.round(tr.d*1.9)}px;margin:-${Math.round(tr.d*.95)}px 0 0 -${(PAR-14)/2}px;border:2.5px solid ${acc};border-radius:50%;transform:rotate(-8deg);opacity:.85"></span>`:""}</div></div>`}).join("")).join("");
+  const hdr=`<div style="display:flex;height:${HDR}px;background:${mix(e.rule,e.paper,.75)};border-bottom:2px solid ${club};font:700 15px/${HDR}px ${BF};letter-spacing:.16em;color:${club};text-transform:uppercase"><div style="flex:0 0 ${HOLE}px;text-align:center;border-right:${bl}">Hole</div><div style="flex:1;padding-left:12px;white-space:nowrap;overflow:hidden">Dish</div><div style="flex:0 0 ${PAR}px;text-align:center;border-left:${bl}">Par</div></div>`;
+  const card=R.cols.map((col,ci)=>{const x=RX+ci*(colW+GAP),pl=plan[ci];
+    return `<div style="position:absolute;left:${x}px;top:${TOP}px;width:${colW}px;height:${pl.inner+HDR+5}px;box-sizing:border-box;border:2.5px solid ${club};background:${e.paper};overflow:hidden">${hdr}<div style="height:${pl.inner}px;overflow:hidden;display:flex;flex-direction:column">${rowsOf(col,ci)}</div></div>`+
+      (pl.still?`<div style="position:absolute;left:${x}px;top:${TOP+pl.inner+HDR+5+12}px;width:${colW}px;height:${pl.still-5}px;box-sizing:border-box;border:2.5px solid ${club};background:${club};overflow:hidden">
+        <div style="position:absolute;left:0;right:0;top:0;bottom:28px;overflow:hidden">${photo(F.stillSrc,t.photo,"center 40%")}</div>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:28px;display:flex;align-items:center;justify-content:center;font:italic 400 14px/1 ${BF};color:${giltT};white-space:nowrap;overflow:hidden">On the clubhouse wall: ${esc(F.title)}, ${esc(F.year)}</div></div>`:"")}).join("")+
     (F.cue?`<div style="position:absolute;left:${RX}px;width:${RW}px;top:${TOP+MH+HDR+12}px;height:${cueH-8}px">${cueLine(F,BF,e.soft,acc,15)}</div>`:"");
 
-  /* foot: local rules and the marker's line */
+  /* foot: local rules (the film's winks, up to five, as many as fit at one size) and the marker's line */
   const FY=H-28-FH,RLW=Math.round(RW*.5);
-  const rules=F.winks.slice(0,3);const n=F.note,nS=n.text.length>130?26:n.text.length>80?29:32;
+  const ruleW=RLW-12-28-22;let rules=[],rS=15;
+  for(const sz of [15,14,13]){const room=FH-20-15-24,pick=[];let used=0;for(const w of F.winks.slice(0,5)){const h=Math.min(2,wrapLines(w,sz,ruleW,.5))*sz*1.25+6;if(used+h>room)break;used+=h;pick.push(w)}
+    if(pick.length>rules.length){rules=pick;rS=sz}if(pick.length>=Math.min(5,F.winks.length))break}
+  const n=F.note,quoted=!!(F.fl.note&&F.fl.note.text&&F.fl.note.kind==="quote"),nS=n.text.length>130?26:n.text.length>80?29:32;
   const foot=`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${RLW-12}px;height:${FH}px;box-sizing:border-box;border:2px solid ${club};background:${e.paper};padding:10px 14px;overflow:hidden">
-      <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${club};text-transform:uppercase">Local Rules</div>
-      ${(rules.length?rules:["Members' bar closes at sundown"]).map((r,i)=>`<div style="display:flex;gap:8px;margin-top:7px;font:400 15px/1.25 ${BF};color:${e.ink}"><b style="flex:0 0 auto;color:${acc}">${i+1}.</b><span style="${clamp(2)}">${esc(r)}</span></div>`).join("")}<div style="position:absolute;left:14px;bottom:8px;font:400 14px/1 ${BF};color:${e.soft}">${esc(credit(F))}</div></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><span style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${club};text-transform:uppercase">Local Rules</span>${rules.length?`<span style="font:italic 400 13px/1 ${BF};color:${e.soft};white-space:nowrap">scenes to watch for</span>`:""}</div>
+      ${(rules.length?rules:["Members' bar closes at sundown"]).map((r,i)=>`<div style="display:flex;gap:8px;margin-top:6px;font:400 ${rS}px/1.25 ${BF};color:${e.ink}"><b style="flex:0 0 auto;color:${acc}">${i+1}.</b><span style="${clamp(2)}">${esc(r)}</span></div>`).join("")}<div style="position:absolute;left:14px;bottom:8px;font:400 14px/1 ${BF};color:${e.soft}">${esc(credit(F))}</div></div>
     <div style="position:absolute;left:${RX+RLW}px;top:${FY}px;width:${RW-RLW}px;height:${FH}px;box-sizing:border-box;border:2px solid ${club};background:${e.paper};padding:10px 14px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
       <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${club};text-transform:uppercase">Marker's Note</div>
-      <div style="font:400 ${nS}px/1.1 ${PEN};color:${e.ink};${clamp(3)}">"${esc(n.text)}"</div>
+      <div style="font:400 ${nS}px/1.1 ${PEN};color:${e.ink};${clamp(3)}">${quoted?`"${esc(n.text)}"`:esc(n.text)}</div>
       <div style="display:flex;align-items:flex-end;gap:10px;border-top:1px solid ${e.rule};padding-top:4px"><span style="font:700 14px/1 ${BF};letter-spacing:.14em;color:${e.soft}">SIGNED</span><span style="flex:1;font:400 26px/1.2 ${PEN};color:${acc};white-space:nowrap;overflow:hidden">${esc(n.by)}</span></div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 60% 50%,rgba(0,0,0,0) 64%,rgba(10,20,10,${(t.vig*.5).toFixed(2)}) 100%)"></div>`;
   const bg=`<div style="position:absolute;inset:0;background:${mix(e.paper,club,.08)}"></div><div style="position:absolute;inset:0;background:url(${grain}) center/1200px auto;opacity:${(.1+t.wear).toFixed(2)};mix-blend-mode:multiply"></div>`;

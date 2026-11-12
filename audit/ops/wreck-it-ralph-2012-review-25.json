@@ -1,0 +1,76 @@
+{
+ "id": "Wreck-It Ralph (2012)",
+ "ops": [
+  {
+   "old": "Hero's Duty, home of the Cy-Bugs",
+   "new": "Corn chips under spiced beef, black beans, melted cheddar and jalapeño, with salsa, guacamole and sour cream",
+   "done": true
+  },
+  {
+   "old": "thighs and mushroom in creamy thyme sauce under golden puff, while Ralph sleeps on the dump",
+   "new": "Chicken thighs, leek and mushroom in creamy thyme sauce under golden puff pastry",
+   "done": true
+  },
+  {
+   "old": "Felix's anniversary pie",
+   "new": "Nicelander window pie",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve dessert when the Nicelanders throw Felix's 30th anniversary party.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Buffalo wings with blue cheese",
+    "note": "Hot buffalo wings with celery and a blue cheese dip",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Root beer from the tap",
+    "note": "Ice-cold root beer drawn from the tap in a frosted mug"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Root beer on tap since 1983",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Felix and his magic hammer",
+    "The Sugar Rush kart race",
+    "Vanellope glitching",
+    "Calhoun and the Cy-Bugs",
+    "The medal Ralph wants so badly"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "panel": {
+     "head": "Bad-Anon affirmation",
+     "text": "I'm bad, and that's good. I will never be good, and that's not bad. There's no one I'd rather be than me.",
+     "by": "The Bad-Anon group"
+    }
+   },
+   "done": true
+  },
+  {
+   "old": "Corn chips under spiced beef, black beans, melted cheddar and jalapeño, with salsa, guacamole and sour cream",
+   "new": "Corn chips with spiced beef, black beans, cheddar, jalapeño, salsa and guacamole",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

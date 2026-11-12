@@ -1,0 +1,104 @@
+{
+ "id": "The Wedding Singer (1998)",
+ "ops": [
+  {
+   "old": "Grandma Rosie's meatballs",
+   "new": "Rosie's meatballs",
+   "done": true
+  },
+  {
+   "old": "Grandma Rosie's meatballs (vegetarian)",
+   "new": "Rosie's meatballs (vegetarian)",
+   "done": true
+  },
+  {
+   "old": "Serve over 500g spaghetti, the way Grandma Rosie pays for lessons.",
+   "new": "Serve over 500g spaghetti.",
+   "done": true
+  },
+  {
+   "old": "Rosie pays Robbie in meatballs. Beef and pork, parmesan, tomato.",
+   "new": "Beef and pork meatballs with parmesan, simmered in tomato sauce, over spaghetti",
+   "done": true
+  },
+  {
+   "old": "breast filled with spinach and ricotta, roasted, potatoes and beans, before Somebody Kill Me",
+   "new": "Chicken breast filled with spinach and ricotta, roasted, with potatoes and beans",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spinach dip in a bread bowl",
+    "note": "Warm spinach and sour cream dip baked in a hollowed bread loaf"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Fuzzy navel",
+    "note": "Peach schnapps and orange juice over ice",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when Rosie pays Robbie in meatballs.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Robbie getting left at the altar by Linda",
+    "Rosie's rap at her anniversary party",
+    "Julia and her fiance Glenn",
+    "George and his Boy George act",
+    "Robbie and Billy Idol on the plane"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Once again, things that could've been brought to my attention yesterday!",
+    "by": "Robbie Hart",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "business card",
+    "title": "Robbie Hart Band",
+    "lines": [
+     "Weddings and Bar Mitzvahs",
+     "Ridgefield, New Jersey"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.reception",
+   "value": {
+    "guest": "Julia Sullivan",
+    "table": "Head Table",
+    "seat": "With the bride's family",
+    "heading": "Dinner Menu",
+    "noLogo": true,
+    "tables": [
+     "Linda's Empty Seat",
+     "Rosie's Rap Table",
+     "The Julia Gulia Table",
+     "The Boy George Table",
+     "The Billy Idol Table"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

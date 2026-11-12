@@ -1,0 +1,43 @@
+{
+ "id": "Rumble in the Bronx (1995)",
+ "ops": [
+  {
+   "old": "Crispy pork in pineapple sweet and sour sauce. Sword sold separately.",
+   "new": "Crispy battered pork tossed with pineapple and red capsicum in sweet and sour sauce, over jasmine rice",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Jamaican beef patties",
+    "note": "Flaky golden pastry filled with spiced, curried beef",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hong Kong lemon iced tea",
+    "note": "Strong black tea over ice with fresh lemon slices and sugar syrup"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ask about the wedding tea. Bikes stay out of the aisles.",
+    "by": "The Counter",
+    "kind": "note"
+   },
+   "done": true
+  },
+  {
+   "old": "Crispy battered pork tossed with pineapple and red capsicum in sweet and sour sauce, over jasmine rice",
+   "new": "Crispy battered pork with pineapple and red capsicum in sweet and sour sauce, over jasmine rice",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}
