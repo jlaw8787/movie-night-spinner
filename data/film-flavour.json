@@ -4700,18 +4700,18 @@
  },
  "Wreck-It Ralph (2012)": {
   "venue": "Tapper's",
-  "sign": "Root beer on tap since 1983",
+  "sign": "Game Central Station. Root beer, no questions.",
   "note": {
    "text": "I'm gonna wreck it!",
    "by": "Wreck-It Ralph",
    "kind": "quote"
   },
   "winks": [
-   "Felix and his magic hammer",
-   "The Sugar Rush kart race",
-   "Vanellope glitching",
-   "Calhoun and the Cy-Bugs",
-   "The medal Ralph wants so badly"
+   "Fix-It Felix Jr. and his magic hammer",
+   "The Sugar Rush candy kart race",
+   "Vanellope von Schweetz glitching",
+   "Sergeant Calhoun and her tough crew",
+   "A medal Ralph wants so badly"
   ],
   "prop": {
    "kind": "slip",
@@ -4722,14 +4722,7 @@
    ]
   },
   "number": "30",
-  "est": "1983",
-  "arcade": {
-   "panel": {
-    "head": "Bad-Anon affirmation",
-    "text": "I'm bad, and that's good. I will never be good, and that's not bad. There's no one I'd rather be than me.",
-    "by": "The Bad-Anon group"
-   }
-  }
+  "est": "1983"
  },
  "Bolt (2008)": {
   "venue": "Bolt's Studio Trailer",
@@ -9272,11 +9265,10 @@
  },
  "Rush Hour (1998)": {
   "venue": "Foo Chow Restaurant",
-  "sign": "949 North Hill Street, Chinatown, Los Angeles",
+  "sign": "Chinatown, Los Angeles. Mind who you greet.",
   "note": {
-   "text": "Do you understand the words that are coming out of my mouth?",
-   "by": "Detective Carter",
-   "kind": "quote"
+   "text": "Please do not touch the dumplings until everyone is seated. Detective Carter, I mean you.",
+   "by": "Chief Inspector Lee"
   },
   "winks": [
    "Soo Yung, the kidnapped consul's daughter",
@@ -9289,7 +9281,7 @@
    "kind": "ticket",
    "title": "Hong Kong to Los Angeles",
    "lines": [
-    "Chief Inspector Lee",
+    "Inspector Lee",
     "Seat 1A, no talking"
    ]
   },
@@ -10311,26 +10303,26 @@
   "number": ""
  },
  "Better Off Dead (1985)": {
-  "venue": "K-12 Ski Lodge",
-  "sign": "Race day on the K-12",
+  "venue": "Lane Meyer's House",
+  "sign": "Meyer Residence, Dinner at Six",
   "note": {
-   "text": "I want my two dollars!",
+   "text": "Didn't ask for a dime. Two dollars.",
    "by": "Johnny the paperboy",
    "kind": "quote"
   },
   "winks": [
-   "The drag racer who talks like Cosell",
-   "The ski pole swordfight with Ricky",
-   "Charles snorting the snow",
-   "Monique faking she speaks no English",
+   "The paperboy chasing Lane on his bike",
+   "Lane's plan to ski the K-12 slope",
+   "Roy Stalin, the rival skier",
+   "Monique, the French exchange student",
    "Mom's strange dinners"
   ],
   "prop": {
-   "kind": "bill",
-   "title": "Johnny's Paper Route",
+   "kind": "receipt",
+   "title": "Paper Route Bill",
    "lines": [
-    "Four weeks, twenty papers",
-    "Amount due: two dollars"
+    "Amount due: two dollars",
+    "Collector: the paperboy"
    ]
   },
   "number": "2"
@@ -10561,11 +10553,11 @@
   "number": ""
  },
  "Mallrats (1995)": {
-  "venue": "The Pretzel Counter",
-  "sign": "Hot pretzels, cold drinks, open till close",
+  "venue": "Mall Food Court, New Jersey",
+  "sign": "The mall. No sailboat, just pretzels.",
   "note": {
-   "text": "Snootchie bootchies!",
-   "by": "Jay",
+   "text": "The food court is downstairs. The cookie stand is upstairs.",
+   "by": "Brodie Bruce",
    "kind": "quote"
   },
   "winks": [
@@ -10732,7 +10724,7 @@
  },
  "Hot Tub Time Machine (2010)": {
   "venue": "Kodiak Valley Resort",
-  "sign": "Après ski by the fire, till late",
+  "sign": "Kodiak Valley Ski Lodge",
   "note": {
    "text": "It must be some kind of hot tub time machine.",
    "by": "Nick",
@@ -10747,10 +10739,10 @@
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Kodiak Valley",
+   "title": "Ski Pass",
    "lines": [
-    "Day pass",
-    "All lifts, all weekend"
+    "Kodiak Valley",
+    "Valid 1986"
    ]
   },
   "number": "1986"
@@ -11256,9 +11248,9 @@
  },
  "Snatch (2000)": {
   "venue": "Turkish and Tommy's Arcade",
-  "sign": "Fruit machines and fair fights",
+  "sign": "Turkish and Tommy, Fair Fights",
   "note": {
-   "text": "Tommy kept the dog. The vet found a squeaky toy, a shoe and the diamond. Still squeaking.",
+   "text": "No more bets, boys. The dog ate the squeaky toy and the diamond, and I need a cup of tea.",
    "by": "Turkish",
    "kind": "note"
   },
@@ -11273,18 +11265,11 @@
    "kind": "slip",
    "title": "Bet Slip",
    "lines": [
-    "Fight: Mickey, fixed to lose",
-    "Bet: on himself"
+    "Fight: Mickey, round four",
+    "Odds: not good"
    ]
   },
-  "number": "86",
-  "arcade": {
-   "scores": [
-    "MIK",
-    "TUR",
-    "TOM"
-   ]
-  }
+  "number": "86"
  },
  "Lock, Stock and Two Smoking Barrels (1998)": {
   "venue": "Harry's Back Room Card Game",
@@ -12129,8 +12114,8 @@
   "winks": [
    "Turbo Man sold out everywhere",
    "Myron Larabee, the mail carrier",
-   "Ted Maltin next door",
-   "Fake Santas' warehouse",
+   "Ted Maltin, the neighbour next door",
+   "Jingle bells, Batman smells, the Santa password",
    "Turbo Man parade on Christmas Eve"
   ],
   "prop": {
@@ -12244,8 +12229,8 @@
   "number": ""
  },
  "Bad Santa (2003)": {
-  "venue": "Phoenix Mall Food Court",
-  "sign": "Next to Santa's grotto",
+  "venue": "Mall Santa Grotto",
+  "sign": "Santa's Grotto, Line Starts Here",
   "note": {
    "text": "Kid, you can make the sandwiches tonight. Just keep out of my way and don't touch my drink.",
    "by": "Willie T. Soke",
@@ -12253,7 +12238,7 @@
   },
   "winks": [
    "Thurman Merman and his pink elephant",
-   "Marcus the elf",
+   "Marcus the elf and Sue at the bar",
    "The mall Santa job as cover for a heist",
    "Willie's grumpy Santa chair"
   ],
@@ -13783,11 +13768,10 @@
  },
  "Men in Black 3 (2012)": {
   "venue": "Wu's Chinese Restaurant",
-  "sign": "Shrimp and bok choy. Ask about the fish, not the kitchen.",
+  "sign": "Chinatown. Ask about the fish, not the kitchen.",
   "note": {
-   "text": "Earth people get Earth fish. Real Earth fish.",
-   "by": "Agent J",
-   "kind": "quote"
+   "text": "K, I jumped back to 1969 for you. Now pass the food and tell me about the arc.",
+   "by": "Agent J"
   },
   "winks": [
    "Boris the Animal breaking out of Lunar Max",
@@ -13798,10 +13782,10 @@
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Jump Back to '69",
+   "title": "Time Jump Ticket",
    "lines": [
     "Destination: July 15, 1969",
-    "Return: present day"
+    "One way, then back"
    ]
   },
   "number": "1969"
@@ -15211,25 +15195,21 @@
    "kind": "quote"
   },
   "winks": [
-   "Fallon's Gyrosphere video",
-   "Pterosaurs flee the aviary",
+   "The Mosasaurus feeding show",
+   "Gyrosphere ride in the valley",
    "Lowery's $150 eBay Jurassic Park shirt",
-   "Seven bucks a soda",
-   "Claire frees the T. rex"
+   "Owen's raptor squad",
+   "Claire lets the T. rex out of its paddock"
   ],
   "prop": {
    "kind": "ticket",
    "title": "Park Admission",
    "lines": [
-    "Isla Nublar, monorail entry",
+    "Isla Nublar, Gyrosphere Valley",
     "Admit one"
    ]
   },
-  "number": "",
-  "directory": "Park directory",
-  "level": "Main Street",
-  "here": "You are here: Main Street",
-  "spotted": "Spotted around the park"
+  "number": ""
  },
  "Jurassic World: Fallen Kingdom (2018)": {
   "venue": "Lockwood Estate Kitchen",
@@ -19762,7 +19742,7 @@
   "winks": [
    "Pizza delivered right into history class",
    "Mr. Hand and his strict rules",
-   "Spicoli's tasty waves",
+   "Spicoli wanting tasty waves and a cool buzz",
    "Damone selling concert tickets",
    "Stacy working at the mall"
   ],
