@@ -657,3 +657,10 @@ Not deployed. Live is still 6af5443b. Each branch had a separate reviewer before
 ### Still open
 1. Trailers in app mode on iPhone (no referrer from capacitor://localhost, YouTube error 153). Josh to decide.
 2. Android debug build: see below.
+
+### Android debug build (12 Nov evening)
+- Built from main 13260d0 and sent to Josh: com.reeldinner.app, API 24 to 36, 53 MB, debug signed. JDK 21 was already installed. Android SDK at /home/claude/android-sdk (platform 36, build-tools 36). This machine only, not in the repo.
+- Gradle's first run failed with 429 from repo.maven.apache.org through the session proxy. Fixed on this machine with ~/.gradle/init.d/mirror.gradle, which points Maven Central at https://maven-central.storage-download.googleapis.com/maven2/. After that: npm install, build-data, build:app, cap sync, assembleDebug all clean (about 3 min the first time, 1 min after).
+
+### Trailers in app mode
+- Josh chose: test first, change nothing. Try trailers in the Android APK now, and on the first iPhone test build, then decide.
