@@ -3089,6 +3089,10 @@ function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidt
     if(sa<1){x.globalCompositeOperation="saturation";x.fillStyle=`rgba(128,128,128,${1-sa})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
     if(br<1){x.globalCompositeOperation="source-atop";x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
     if(m){x.globalCompositeOperation="destination-in";x.drawImage(m,0,0);x.globalCompositeOperation="source-over";m.width=m.height=0}}
+  /* review 24: a silhouette (brightness(0), the campfire signature) turns a logo's faint glow into a faint black haze over its whole box, and
+     on paper that showed as a box under E.T.'s letters with a line along its clipped bottom edge. The see-through glow fades out on a smooth ramp
+     (clear below a quarter, then up to full), so the haze goes and the letters stay solid with soft edges */
+  if(/brightness\(0\)/.test(f))try{const id=x.getImageData(0,0,w,h),d=id.data;for(let i=3;i<d.length;i+=4)d[i]=d[i]<64?0:Math.round((d[i]-64)*255/191);x.putImageData(id,0,0)}catch(e){}
   /* review 13: a logo with a drop shadow (invite) is see-through around its letters, and a JPEG turned that into a black plate */
   try{let see=/drop-shadow/.test(f);if(!see){const d=x.getImageData(0,0,w,h).data;for(let i=3;i<d.length;i+=4*97)if(d[i]<250){see=true;break}}
     /* review 21: the canvas is emptied straight after, since iPhone Safari caps the canvas memory a page may hold and a menu or two of
@@ -3267,12 +3271,19 @@ async function pdfLiftBake(root){const k=2.5,boxes=[];
        spilled past the wall into that padding stopped trimWhite and printed as a white bar with a grey edge (Ratatouille's menu panel,
        Ghostbusters, When Harry Met Sally), so the shadow is cut back to the wall (skipped when a box between it and the wall is turned) */
     {const paper=root.querySelector(":scope>.fx-wall,:scope>.fx-sheet");let ok=paper&&paper!==el&&paper.contains(el);
-      for(let a=el.parentElement;ok&&a&&a!==paper;a=a.parentElement)if(getComputedStyle(a).transform!=="none")ok=false;
+      let up=false;for(let a=el.parentElement;ok&&a&&a!==paper;a=a.parentElement)if(getComputedStyle(a).transform!=="none")up=true;
+      /* review 24: Goodfellas' notepad sits in a turned column, so its shadow was never cut back and printed a white bar under the gingham.
+         With a turned box above it, three marks laid at the box's own corners read where its frame lands on the page, and the wall's corners are taken back through that */
+      let pts=null;if(ok&&up&&!/^(IMG|INPUT|CANVAS|VIDEO|SVG|svg)$/.test(el.tagName)){const pr=paper.getBoundingClientRect(),ps=el.style.position,bl=el.clientLeft,bt=el.clientTop;if(cs.position==="static")el.style.position="relative";
+        const S=[[0,0],[w,0],[0,h]].map(([a,b])=>{const m=document.createElement("i");m.style.cssText=`position:absolute;left:${a-bl}px;top:${b-bt}px;width:0;height:0;margin:0;padding:0;border:0`;el.appendChild(m);const r=m.getBoundingClientRect();m.remove();return [r.left,r.top]});
+        el.style.position=ps;const ax=(S[1][0]-S[0][0])/w,ay=(S[1][1]-S[0][1])/w,bx=(S[2][0]-S[0][0])/h,by=(S[2][1]-S[0][1])/h,det=ax*by-bx*ay;
+        if(Math.abs(det)>1e-6)pts=[[pr.left,pr.top],[pr.right,pr.top],[pr.right,pr.bottom],[pr.left,pr.bottom]].map(([X,Y])=>{const dx=X-S[0][0],dy=Y-S[0][1];return [((dx*by-dy*bx)/det+P)*k,((ax*dy-ay*dx)/det+P)*k]})}
+      if(up)ok=false;
       if(ok){const tr=el.style.transform;el.style.transform="none";const er=el.getBoundingClientRect();el.style.transform=tr;const pr=paper.getBoundingClientRect();
         /* a turned box: the wall's corners are taken into the box's own frame (the inverse of its turn, about its transform origin) */
         const M=cs.transform==="none"?new DOMMatrix():new DOMMatrix(cs.transform),inv=M.inverse(),og=(cs.transformOrigin||"50% 50%").split(/\s+/).map((v,i)=>pdfLen(v,i?h:w)),ox=er.left+og[0],oy=er.top+og[1];
-        const pts=[[pr.left,pr.top],[pr.right,pr.top],[pr.right,pr.bottom],[pr.left,pr.bottom]].map(([X,Y])=>{const q=inv.transformPoint(new DOMPoint(X-ox,Y-oy));return [(q.x+og[0]+P)*k,(q.y+og[1]+P)*k]});
-        x.save();x.globalCompositeOperation="destination-in";x.fillStyle="#000";x.beginPath();pts.forEach(([a,b],n)=>n?x.lineTo(a,b):x.moveTo(a,b));x.closePath();x.fill();x.restore()}}
+        pts=[[pr.left,pr.top],[pr.right,pr.top],[pr.right,pr.bottom],[pr.left,pr.bottom]].map(([X,Y])=>{const q=inv.transformPoint(new DOMPoint(X-ox,Y-oy));return [(q.x+og[0]+P)*k,(q.y+og[1]+P)*k]})}
+      if(pts){x.save();x.globalCompositeOperation="destination-in";x.fillStyle="#000";x.beginPath();pts.forEach(([a,b],n)=>n?x.lineTo(a,b):x.moveTo(a,b));x.closePath();x.fill();x.restore()}}
     const url=c.toDataURL("image/png"),im=document.createElement("img");im.alt="";im.src=url;
     /* laid in the same spot as the box, behind it: measured against a probe in the same parent, with the box's own turn left off */
     /* review 20: the shadow is laid against the box's own parent. A parent with no position of its own is made relative first (only when no
@@ -3434,6 +3445,11 @@ async function renderCanvas(src,forPrint){
       const im=new Image();im.alt="";im.src=u;im.style.cssText=`display:block;width:${w}px;height:${h}px;position:absolute;left:0;top:0`;el.appendChild(im);keep.forEach(c=>{el.appendChild(c);if(getComputedStyle(c).position==="static")c.style.position="relative"});
       if(!el.style.height)el.style.height=h+"px";await im.decode().catch(()=>{})}catch(e){}}
     for(const el of [...clone.querySelectorAll("[data-pmaskt]")]){try{await pdfMaskBox(el)}catch(e){}el.removeAttribute("data-pmaskt")}
+    /* review 24: a picture taller than the turned box that crops it (the campfire signature, the logo's top line only) printed a thin line along
+       the box's cut edge, since html2canvas draws a turned clip with a hairline. The picture is cropped to the box instead, top kept, and the box no longer clips */
+    clone.querySelectorAll("img").forEach(im=>{try{const p=im.parentElement,cs=getComputedStyle(im),pc=p&&getComputedStyle(p);if(!p||p.children.length!==1||cs.objectFit!=="fill"||pc.overflow!=="hidden"||pc.transform==="none")return;
+      const ph=p.clientHeight,pw=p.clientWidth;if(!ph||!(im.offsetHeight>ph+1)||Math.abs(im.offsetWidth-pw)>1||im.offsetTop>0.5||im.offsetLeft>0.5)return;
+      im.style.height=ph+"px";im.style.objectFit="cover";im.style.objectPosition="50% 0%";p.style.overflow="visible"}catch(e){}});
     /* filtered photos (blur, brightness, sepia) print as the screen shows them: baked into a plain picture first */
     clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im);if(!cs.filter||cs.filter==="none")return;const u=pdfFiltered(im,cs);if(!u)return;
       const n=document.createElement("img");n.alt="";n.className=im.className;n.style.cssText=im.style.cssText;n.style.filter="none";n.style.objectFit="fill";n.style.width=cs.width;n.style.height=cs.height;n.src=u;im.replaceWith(n)}catch(e){}});
@@ -3578,7 +3594,8 @@ function edgeColour(cv,which){const x=cv.getContext("2d"),W=cv.width,H=cv.height
   const striped=lr=>line(lr,.3)&&line(lr,.7);
   const sLR=striped(true),sTB=striped(false);
   if(which==="lr"&&sLR&&!sTB)which="tb";else if(which==="tb"&&sTB&&!sLR)which="lr";else if(!which&&sLR!==sTB)which=sLR?"tb":"lr";
-  if(which!=="lr"){take(o,o,W-2*o,b);take(o,H-o-b,W-2*o,b)}if(which!=="tb"){take(o,o,b,H-2*o);take(W-o-b,o,b,H-2*o)}let best=null,tot=0;for(const c of cnt.values()){tot+=c.n;if(!best||c.n>best.n)best=c}
+  /* review 24: "b" reads the bottom strip alone (a diner page that opens with a photo along its top) */
+  if(which==="b")take(o,H-o-b,W-2*o,b);else{if(which!=="lr"){take(o,o,W-2*o,b);take(o,H-o-b,W-2*o,b)}if(which!=="tb"){take(o,o,b,H-2*o);take(W-o-b,o,b,H-2*o)}}let best=null,tot=0;for(const c of cnt.values()){tot+=c.n;if(!best||c.n>best.n)best=c}
   /* review 13: a white poster down one side outvoted a striped paper split across two shades (Minions), so white only wins while it holds more than 60 per cent of the edge */
   if(best&&best.r>235&&best.g>235&&best.b>235){let alt=null;for(const c of cnt.values())if(!(c.r>235&&c.g>235&&c.b>235)&&(!alt||c.n>alt.n))alt=c;let nw=0;for(const c of cnt.values())if(!(c.r>235&&c.g>235&&c.b>235))nw+=c.n;if(alt&&nw>=tot*.4)best=alt}
   return best?[best.r,best.g,best.b]:null}
@@ -3587,7 +3604,10 @@ function trimWhite(cv){const W=cv.width,H=cv.height,d=cv.getContext("2d").getIma
   const rowW=y=>{for(let x=0;x<W;x+=3)if(!white(x,y))return false;return true},colW=x=>{for(let y=0;y<H;y+=3)if(!white(x,y))return false;return true};
   let t=0,b=H-1,l=0,r=W-1;const mx=Math.round(H*.15),my=Math.round(W*.15);
   while(t<mx&&rowW(t))t++;while(H-1-b<mx&&rowW(b))b--;while(l<my&&colW(l))l++;while(W-1-r<my&&colW(r))r--;
-  if(t<2&&l<2&&H-1-b<2&&W-1-r<2)return cv;const o=document.createElement("canvas");o.width=r-l+1;o.height=b-t+1;o.getContext("2d").drawImage(cv,l,t,o.width,o.height,0,0,o.width,o.height);return o}
+  if(t<2&&l<2&&H-1-b<2&&W-1-r<2)return cv;
+  /* review 24: a card edge that falls between two pixels leaves one blended row or column, half card and half padding, and it printed as a pale
+     hairline round landscape menus. A side that was cut loses that one more pixel */
+  if(t)t++;if(l)l++;if(H-1-b)b--;if(W-1-r)r--;const o=document.createElement("canvas");o.width=r-l+1;o.height=b-t+1;o.getContext("2d").drawImage(cv,l,t,o.width,o.height,0,0,o.width,o.height);return o}
 async function exportMenu(kind,parts,opts){
   parts=parts||"all";opts=opts||{};const toPrint=!!opts.print;
   /* printing: every page sits on A4 with an even 5mm white margin, so home printers never clip the border (see addImage below) */let sides=0,orient="portrait";
@@ -3633,7 +3653,10 @@ async function exportMenu(kind,parts,opts){
         /* review 21: a campfire front carries the poster's white frame and the still strip near its edges, so its margin came out cream, maroon
            or brown while the back stayed on the card's own dark surround. Both pages take the back's margin */
         EDGEFIX=card.classList.contains("lib-campfire")&&cvs.length>1?edgeColour(trimWhite(cvs[cvs.length-1])):null;
-        cvs.forEach((cv,i)=>{if(i)pdf.addPage("a4",o);pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh)});EDGEFIX=null;
+        /* review 24: a diner's back and continued pages open with a photo across the top, so Men in Black printed on cream, black, then green.
+           Each diner page takes its margin from its own paper, read along the bottom edge */
+        const per=card.classList.contains("lib-diner")?cvs.map(cv=>edgeColour(trimWhite(cv),"b")):null;
+        cvs.forEach((cv,i)=>{if(i)pdf.addPage("a4",o);if(per)EDGEFIX=per[i];pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh)});EDGEFIX=null;
         sides=faces.length;orient=o;
       }else{
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
