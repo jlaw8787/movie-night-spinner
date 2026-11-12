@@ -218,7 +218,8 @@ window.MENU_FORMATS[ID]=ctx=>{
      second flex line 3000px to the right, off the card and clipped, so it never shows as a sliver (no container query, which the card did not honour) */
   const stillBox=stillUse?`<div style="flex:1 1 0;min-height:0;width:100%;min-width:0;overflow:hidden;display:flex;flex-direction:column;flex-wrap:wrap;align-content:flex-start">
     <div style="flex:none;width:3000px;height:0"></div><div style="flex:1 0 100px;width:100%;max-height:${Math.round(CW*9/16)+30}px;display:flex;flex-direction:column;box-sizing:border-box">
-    <div style="position:relative;flex:1;min-height:0;overflow:hidden;border:3px solid ${e.dark}">${photo(stillUse,t.photo,"center 35%")}</div><div style="flex:none;font:italic 400 14px/1.2 ${BF};color:${e.soft};margin-top:5px;white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?`, ${esc(F.year)}`:""}. Film still.</div></div></div>`:"";
+    <div style="position:relative;flex:1;min-height:0;aspect-ratio:16/9;max-width:100%;align-self:flex-start;box-sizing:border-box;overflow:hidden;border:3px solid ${e.dark}">${photo(stillUse,t.photo,"center 35%")}</div><div style="flex:none;font:italic 400 14px/1.2 ${BF};color:${e.soft};margin-top:5px;white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?`, ${esc(F.year)}`:""}. Film still.</div></div></div>`:"";
+  /* review 27: the photo keeps its 16:9 shape (a short box narrows it rather than cutting it to a strip) */
   /* a column with a still keeps its dish and course gaps a little tighter (12px and 14px caps) and drops its last course gap, so the blank goes to the still */
   const oS={...o,sp:`<div style="flex:1 1 0;min-height:0;max-height:12px"></div>`,spC:`<div style="flex:1 1 0;min-height:0;max-height:14px"></div>`};
   const css="";
