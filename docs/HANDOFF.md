@@ -902,3 +902,24 @@ foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum 
 ### Deployed 13 Nov, 5:50am (Josh said deploy)
 - Deploy 6af61886d56361b547d5f97c from a trimmed copy of fix/review-27-low at 45211800. Live files checked against it byte for byte: all 5,340 files (3,745 code and data, 1,595 assets). index.html differs only by Netlify's form rewrite. support.html differs only by Netlify's pretty URL rewrite (its two privacy.html links become /privacy, which loads); the file is unchanged since the last deploy, Josh said treat it as expected. .gitignore and .nojekyll are not served (normal).
 - main fast-forwarded to 45211800 and pushed. No layout changes, so no Live layout edits in the sheet.
+
+## 13 Nov, morning: shared code items fixed (branch fix/shared-code-1, NOT deployed; start here in the next chat)
+
+### What is where
+- Live: deploy 6af61886 (main 89c37435). Nothing deployed this round.
+- fix/shared-code-1: main 89c37435 plus the fixes below. Pushed. Deploy only when Josh says: trimmed copy, check live files against the branch (index.html differs by the form rewrite, support.html by Netlify's pretty URL rewrite), fast-forward main.
+
+### Fixed
+1. Notes cut at 100 characters (Josh: rewrite to fit). 5 card notes (Crocodile Dundee, Crocodile Dundee II, Ant-Man, Barbershop, Caddyshack) and 168 vegetarian and alcohol-free notes in data/diet tightened to 100. New tests/note-length.test.cjs fails on any shared layout note over 100 (card, edition, diet). libTrim itself unchanged.
+2. Skip to the wheel pill: clipped away until :focus-visible (index.html). It showed in wide element captures with nothing focused; never seen in normal phone use.
+3. Drive-in Showtime blank on the phone peek: pvMask (app.js) hid any line under 25% in view. A line of three words or more now only steps aside under 48px in view, so it peeks like the dish lines.
+4. priceSense extras (Josh: premium extras rise). Shared layout prices come from list place (arcade.js prices(): BASE*(1+i*.15)), not the film, so extras added last were always dearest before the cap. Now: a plain extra still sits under the cooked mains; a premium extra (steak, seafood, roast, surf and turf, duck, veal; regex PREM in priceSense) only steps under a premium cooked main. No two mains share a price (later one moves to the next ending; a held extra moves down, or between it and the cooked main above). 30 of 809 films change; diff list from the probe: Dumb and Dumber surf and turf, Rain Man sirloin, John Wick rib eye, The Witches roast beef rise; Turner & Hooch, Carrie, Karate Kid, West Side Story repeats split; Better Off Dead rice bake 3.25 (burger 3.50, raisins 2.95). Snatch unchanged (fry-up under the steak). Captain America extra pie 30c over the 25c stew (1940s cents, no room under).
+5. Prep sheet lone last page: prepParts balances the last two A4 pages (last page holds about half), shopping list never splits. Lone last item 576 films to 0 (all 900 measured), page counts unchanged. Typical result: page 1 header and shopping list at reading size, page 2 all recipes.
+6. Shopping aisles: the code honours aisle tags; the data disagreed. 584 data/recipes2 ingredient lines in 317 films now take the card shop line's aisle (mostly cheese and cold meats to Deli). Salt and pepper stay unmeasured on purpose ("listed so you check"). Near-duplicate merge ("dill pickle" and "slices dill pickle") not done: too fuzzy across 900 films.
+
+### Checks (on the branch)
+- npm test: all 24 pass (new note-length). check-print-text on the 30 price films plus Snatch, the 5 note films and Ghostbusters: Afterlife: pass. check-prep-a4 on 60 multi-page films (120 pages): pass. check-phone-fit on 120: pass.
+- No layout files changed, so the sheet needs no Live layout edits.
+
+### Left
+- Kids' shopping wording (ginger beer lines), Copy-text notes, Dazed beer nuts dearest starter, libNoteKind quote marks, unticked extras "As written, serves 4" on the phone (review 26 items 4 and 5).
