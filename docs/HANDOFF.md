@@ -334,7 +334,7 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 
 - Live: 911f5f3 (deploy 6aef17bc). Branch pushed.
 
-## 7 Nov, 10:30pm: Josh's decisions (start here in the next chat)
+## 7 Nov, 10:30pm: Josh's decisions 
 
 1. Hosting: decide later. Keep deploying to Netlify from the trimmed copy; don't merge to main yet.
 2. Flat menus (411): rework all, Josh approves. Apply the checkers' "ideas" and "missing" moments in batches (vibe rework is approved, no per-film sign-off needed). Every new line still follows the fact rules: real quotes only in quote marks, no song lyrics, smallest layout-safe length. Re-score after.
@@ -641,3 +641,19 @@ Live: deploy 6af5443b (main 77061873), 12 Nov late afternoon, Josh said deploy. 
 
 ### Next (suggested)
 1. The low items above, then an Android debug build (needs JDK 21 and the Android SDK installed on this machine).
+
+## 12 Nov, evening: fix21-app low items 2 to 8 merged (start here in the next chat)
+
+Not deployed. Live is still 6af5443b. Each branch had a separate reviewer before merge. All 19 tests, check-browser and dialogs pass on merged main.
+
+### Merged on main
+- fix22-reminders (ef94249, 93a454f): the calendar share on the phone reports sent, not shared or could not be shared (the website still says "Calendar file saved"), and no blob address is made in the app. Locking in only moves reminders already allowed (saveWeek(true) in setWeek, one schedule per lock-in); until notifications are allowed it suggests Add to calendar, which asks. Phone reminders now cover make-ahead and prep-ahead steps (ids 4103 to 4105, same words as the .ics alarms). Android 12+ with Alarms and reminders off: plugin 8.3.1 opened that Settings screen on every exact schedule; app-mode.js now checks checkExactNotificationSetting first and schedules inexact (isExactNotification false), and the calendar dialog says how to turn it on. APP-BUILD.md corrected.
+- fix22-boot (one commit plus 82a0b0f): index.html has a small inline `<script id="reel-boot">` switch; the website loads neither app-mode.js nor app-art.js (window.REEL undefined there, app.js already guards it). App mode (native, ?app=1, www/ build) loads app-art.js and app-mode.js, both ?v stamped. build-app.cjs puts REEL_APP_BUILD before the switch and fails if the switch is missing. Native menu image share says "Menu image shared." iPhone Save PDF cancel reports saved only if the Documents copy was written.
+
+### Left from the reviewers (low, no action)
+- When the calendar button moves a passed night to next week, reminders are scheduled twice (same ids, no doubles).
+- If checkExactNotificationSetting itself throws, exact is assumed on.
+
+### Still open
+1. Trailers in app mode on iPhone (no referrer from capacitor://localhost, YouTube error 153). Josh to decide.
+2. Android debug build: see below.
