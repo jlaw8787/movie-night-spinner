@@ -1,0 +1,34 @@
+{
+ "id": "The Farewell (2019)",
+ "ops": [
+  {
+   "old": "Pork and ginger dumplings, crisp underneath. \"Five? That's not enough.\"",
+   "new": "Pork and ginger dumplings, crisp underneath, with black vinegar and chilli oil",
+   "done": true
+  },
+  {
+   "old": "A whole fish for the banquet table, for plenty at a Chinese wedding",
+   "new": "Whole snapper steamed over ginger, soy and sizzling oil, shredded spring onion",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Cold dressed wood ear mushrooms",
+    "note": "Wood ear mushrooms dressed cold with black vinegar, garlic and chilli oil"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Baijiu for the wedding toasts",
+    "note": "Clear Chinese grain spirit, poured in small glasses for the toasts",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

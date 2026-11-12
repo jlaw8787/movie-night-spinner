@@ -1,8 +1,11 @@
 const _ROOT_reception=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* Format: reception. A wedding reception table set on linen, one landscape face 1344x960.
-   Left: the welcome sign on its easel, the poster as the hero, whole, under a "Welcome to" card.
-   Centre (signature): the menu card, letterpress on cream with a deckled edge; courses in procession, script headings, no prices.
-   Right: the place card tent (prop), the seating plan strip (tables named for the film's winks), the toast (overheard quote)
-   and the logo on the cake table card. Era sets card stock, ink and type pairing; tone sets wear and photo. */
+   Left (signature): the menu card, letterpress on cream in a double rule; courses in procession, script headings, no prices.
+     Each course runs dearest first with its house line last; spare height goes into capped gaps between dishes and courses.
+   Centre: the place card tent (flavour.reception guest/table/seat), the seating plan (flavour.reception.tables) or a Watch For card
+     of the film's winks, the toast card (note.kind: toast "From the toasts", quote "Overheard", anything else "From the head table"),
+     a TMDB still with the title and year under it, and the credit line. No logo box: the poster on the easel carries the logo.
+   Right: the "Welcome to" sign naming the venue, the poster whole on a red easel, and the prop card (prop.kind label) hung on its legs.
+   Era sets card stock, ink and type pairing; tone sets wear and photo. */
 (function(){
 const ID="reception",_ROOT=_ROOT_reception;
 
@@ -128,7 +131,7 @@ loadFonts(["Pinyon+Script","Great+Vibes","Parisienne","Allura","Cormorant+Garamo
 window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Reception":"The Reception","Dinner, dancing and speeches",{text:"Eat, drink and be kind to whoever ends up next to you on the dance floor.",by:"The Best Man"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),S=e.script,SF=e.serif,CF=e.caps;
-  /* flavour.reception {guest, table, seat, heading, tables[], noLogo, still, stillCaption}: the film's own place card, menu heading and seating plan */
+  /* flavour.reception {guest, table, seat, heading, tables[], noLogo, still, stillCaption, toast}: the film's own place card, menu heading and seating plan */
   const RC=(F.fl&&F.fl.reception)||{};
   const acc=readable(F.pal.accent&&lum(F.pal.accent)<.45?F.pal.accent:e.acc,e.card,3.2,e.acc);
   const linen=`<div style="position:absolute;inset:0;background:${e.linen}"></div>
@@ -141,28 +144,41 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* left (signature): the menu card */
   const MX=30,MW=528,MT=26,MH=H-52;
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx);
+  /* review 26: each course reads dearest first (rule 8), even with no prices printed. Same level: a dish cooked tonight before a card extra
+     (the shared priceSense never prices an extra above a cooked main), then the card's own order. The house line always sits last */
+  const DEAR=[[/\b(lobster|surf and turf|prime rib|wagyu|caviar|crayfish)\b/i,3],[/\b(steaks?|sirloin|rib ?eye|porterhouse|t-bone|fillet|veal|cutlets?|lamb rack|scallops?|crab|oysters?|board|platter|barramundi|snapper|whole fish|spit)\b/i,2],[/\b(prawns?|shrimp|salmon|duck|lamb|pork belly|ribs|brisket|roast beef|beef|fish)\b/i,1]];
+  const dear=it=>{const t=clean((it&&it.n)||"");for(const [re,v] of DEAR)if(re.test(t))return v;return 0};
+  for(const k in items)items[k]=items[k].map((it,i)=>[it,i]).sort((a,b)=>(!!a[0].house-!!b[0].house)||dear(b[0])-dear(a[0])||(!!a[0].extra-!!b[0].extra)||a[1]-b[1]).map(z=>z[0]);
   const head0=88,cueH=F.cue?50:0,innerW=MW-90,innerH=MH-head0-cueH-70,ncw=e.cw*1.05;
   const hH=tr=>Math.round(tr.h*1.25*1.1)+6;
   const R=fit({C,items,tx:F.tx,W:innerW,H:innerH,maxCols:1,cw:ncw,cwd:e.cwd*1.2,priceW:()=>0,headH:tr=>hH(tr)+19,itemX:4,fullNotes:1});
-  const tr=R.tr,gap=Math.max(0,Math.min(30,R.spare/(1.5*C.length+.5)));
-  const menuBody=C.map(([k,l])=>`<div style="margin-bottom:${Math.round(10+gap)}px"><div style="font:400 ${Math.round(tr.h*1.25)}px/1.1 ${S};color:${acc};margin-bottom:6px">${esc(l)}</div>`+
-    items[k].map(it=>{const note=cap(F.tx(it.note));return `<div style="margin-bottom:${tr.g+4}px">
+  const tr=R.tr;
+  /* review 26: spare height spreads as the browser lays the card out, not from the estimate. Every gap is a flex spacer that starts at the
+     old fixed margin, grows to a cap (courses most, dishes a little, the top and bottom bands least) and shrinks to nothing if the card is tight.
+     Only what is left past every cap centres, so no band of empty card opens above the first course or under the last */
+  const sp=(base,grow,max)=>`<div style="flex:${grow} 1 ${Math.round(base)}px;max-height:${Math.round(max)}px;min-height:0"></div>`;
+  const dg=tr.g+4;
+  const menuBody=sp(0,1,40)+C.map(([k,l])=>`<div style="flex:none;font:400 ${Math.round(tr.h*1.25)}px/1.1 ${S};color:${acc};margin-bottom:6px">${esc(l)}</div>`+
+    items[k].map(it=>{const note=cap(F.tx(it.note));return `<div style="flex:none">
       <div style="font:700 ${tr.d}px/1.15 ${CF};color:${e.ink};letter-spacing:.03em;${clamp(R.dmax)}">${esc(F.tx(it.n))}</div>
-      ${note?`<div style="font:italic 400 ${tr.n}px/1.3 ${SF};color:${e.soft};margin-top:2px">${esc(note)}</div>`:""}</div>`}).join("")+`</div>`).join(`<div style="width:60px;height:1px;background:${mix(acc,e.card,.4)};margin:0 auto ${Math.round(8+gap/2)}px"></div>`);
+      ${note?`<div style="font:italic 400 ${tr.n}px/1.3 ${SF};color:${e.soft};margin-top:2px">${esc(note)}</div>`:""}</div>`}).join(sp(dg,1,dg+22))).join(
+    sp(dg+10,3,dg+58)+`<div style="flex:none;width:60px;height:1px;background:${mix(acc,e.card,.4)};margin:0 auto"></div>`+sp(8,3,48))+sp(0,1,40);
   const heading=clean(RC.heading||"Dinner Menu").toUpperCase();
   const menuCard=`<div style="position:absolute;left:${MX}px;top:${MT}px;width:${MW}px;height:${MH}px;background:${e.card};box-shadow:${shadow};transform:rotate(${(t.tilt*.25).toFixed(2)}deg)">
     <div style="position:absolute;inset:16px;border:1px solid ${mix(acc,e.card,.35)}"></div><div style="position:absolute;inset:21px;border:1px solid ${mix(acc,e.card,.65)}"></div>
     <div style="position:absolute;left:0;right:0;top:34px;text-align:center"><div style="font:700 15px/1 ${CF};letter-spacing:.34em;color:${e.soft}">${esc(heading)}</div>
       <div style="font:italic 400 18px/1.3 ${SF};color:${e.soft};margin-top:8px;padding:0 50px;${clamp(1)}">${esc(F.sign)}</div></div>
-    <div style="position:absolute;left:45px;width:${innerW}px;top:${head0+18}px;height:${innerH}px;overflow:hidden;text-align:center;display:flex;flex-direction:column;justify-content:center"><div>${menuBody}</div></div>
+    <div style="position:absolute;left:45px;width:${innerW}px;top:${head0+18}px;height:${innerH}px;overflow:hidden;text-align:center;display:flex;flex-direction:column;justify-content:center">${menuBody}</div>
     ${F.cue?`<div style="position:absolute;left:50px;right:50px;bottom:34px;height:${cueH-10}px;text-align:center">${cueLine(F,SF,e.soft,acc,15)}</div>`:""}
     <div style="position:absolute;left:10px;right:10px;bottom:8px;border-bottom:2px dotted ${mix(acc,e.card,.5)}"></div></div>`;
 
   /* right: the welcome sign on its easel, the poster as the hero, the prop card hung on the easel legs */
   const LX=944,LW=W-LX-30,WT=34,WH=118;
+  /* review 26: a sign welcomes you to "the" Marquee Reception Tent; a name that is already a possessive or starts with The or A reads on its own */
+  const theV=!/^(the|a|an)\s/i.test(F.venue)&&!/['’]s\b/i.test(F.venue);
   const vS=Math.max(18,Math.min(34,Math.floor((LW-36)/(Math.max(1,F.venue.length)*.64))));
   const welcome=`<div style="position:absolute;left:${LX}px;top:${WT}px;width:${LW}px;height:${WH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:10px 18px;text-align:center;border:1px solid ${mix(acc,e.card,.5)}">
-    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to</div>
+    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to${theV?" the":""}</div>
     <div style="font:700 ${vS}px/1.2 ${CF};color:${e.ink};letter-spacing:.04em;white-space:nowrap;overflow:hidden">${esc(F.venue)}</div></div>`;
   const pc=F.prop,KIND={card:"Card",slip:"Slip",ticket:"Ticket",receipt:"Receipt",note:"Note",letter:"Letter",invitation:"Invitation",invite:"Invitation",tag:"Tag",label:"Label",badge:"Badge",coupon:"Coupon",flyer:"Flyer",postcard:"Postcard",program:"Programme",programme:"Programme",sign:"Sign"};
   const kindRaw=clean((F.fl.prop&&F.fl.prop.kind)||"card").toLowerCase(),kindLab=KIND[kindRaw]||kindRaw.replace(/\b\w/g,c=>c.toUpperCase());
@@ -187,7 +203,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const rowW=useTables||!useWinks?RW-32-84:RW-32-20;
   const rowLines=rows.map(r=>Math.min(2,wrapLines(r,15,rowW,.5)));
   const SH=58+rowLines.reduce((a,k)=>a+15+k*19,0);
-  const n=F.note,nk=clean((F.fl.note&&F.fl.note.kind)||(F.fl.note?"quote":"toast")).toLowerCase(),quoted=nk==="quote"||nk==="toast"&&!!F.fl.note;
+  const n=F.note,nk=clean((F.fl.note&&F.fl.note.kind)||(F.fl.note?"note":"toast")).toLowerCase(),quoted=nk==="quote"||nk==="toast"&&!!F.fl.note;
   const nS=n.text.length>150?15:n.text.length>100?16:n.text.length>60?18:19,qL=Math.min(5,wrapLines(n.text,nS,RW-36,.46));
   const TH=14+14+16+Math.round(qL*nS*1.35)+14+34+14;
   const stills=(ctx.stills||[]).map(x=>Array.isArray(x)?x[0]:x).filter(Boolean),stillPath=stills[RC.still|0]||stills[0]||"";
@@ -209,7 +225,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const seat=`<div style="position:absolute;left:${RX}px;top:${ST}px;width:${RW}px;height:${SH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:14px 16px;overflow:hidden">
     <div style="font:400 30px/1.1 ${S};color:${acc};text-align:center">${useWinks?"Watch For":"Seating Plan"}</div>
     ${rows.map((w,i)=>`<div style="display:flex;gap:10px;align-items:baseline;border-top:1px solid ${mix(acc,e.card,.7)};padding:7px 0 0;margin-top:7px">${useWinks?`<span style="flex:0 0 auto;font:700 13px/1 ${CF};color:${acc}">&#9670;</span>`:`<span style="flex:0 0 74px;font:700 14px/1 ${CF};letter-spacing:.14em;color:${acc}">TABLE ${i+1}</span>`}<span style="flex:1;font:400 15px/1.25 ${SF};color:${e.ink};${clamp(2)}">${esc(w)}</span></div>`).join("")}</div>`;
-  const toastLab=nk==="toast"?"FROM THE TOASTS":nk==="quote"?"OVERHEARD":"A WORD FROM THE HEAD TABLE";
+  /* review 26: a note with no kind is a note in the character's voice, not their words (rule 9): no quote marks, never OVERHEARD.
+     The note label is short enough to stay on one line */
+  /* a real toast (kind "quote", so the shared libNoteKind keeps its quote marks) is labelled as one when flavour.reception.toast is set */
+  const toastLab=nk==="toast"||nk==="quote"&&RC.toast?"FROM THE TOASTS":nk==="quote"?"OVERHEARD":"FROM THE HEAD TABLE";
   const toast=`<div style="position:absolute;left:${RX}px;top:${TT}px;width:${RW}px;height:${TH2}px;background:${mix(e.card,acc,.06)};box-shadow:${shadow};box-sizing:border-box;padding:14px 18px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden">
     <div style="font:700 14px/1 ${CF};letter-spacing:.28em;color:${e.soft};text-align:center">${toastLab}</div>
     <div style="font:italic 400 ${nS}px/1.35 ${SF};color:${e.ink};text-align:center;${clamp(5)}">${quoted?"“":""}${esc(n.text)}${quoted?"”":""}</div>

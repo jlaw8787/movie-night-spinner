@@ -1,0 +1,51 @@
+{
+ "id": "Four Weddings and a Funeral (1994)",
+ "ops": [
+  {
+   "set": "house.fit",
+   "value": [
+    "s",
+    "d"
+   ],
+   "done": true
+  },
+  {
+   "old": "David signing for Charles",
+   "new": "David signing at the altar",
+   "done": true
+  },
+  {
+   "old": "Charles and Scarlett oversleeping the first wedding",
+   "new": "Charles and Scarlett, late for the first wedding",
+   "done": true
+  },
+  {
+   "old": "You are invited, again",
+   "new": "Carrie and Hamish request",
+   "done": true
+  },
+  {
+   "old": "RSVP to Charles, please",
+   "new": "the pleasure of Charles's company",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "A toast before we go into battle. True love... May we all in our dotage be proud to say, 'I was adored once too.'",
+    "by": "Gareth",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.reception",
+   "value": {
+    "toast": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

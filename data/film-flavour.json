@@ -6398,26 +6398,29 @@
   "venue": "Marquee Reception Tent",
   "sign": "Bride's Side. Groom's Side. Bar.",
   "note": {
-   "text": "May we all in our dotage be proud to say, 'I was adored once too.'",
+   "text": "A toast before we go into battle. True love... May we all in our dotage be proud to say, 'I was adored once too.'",
    "by": "Gareth",
    "kind": "quote"
   },
   "winks": [
    "Matthew reading the poem at Gareth's funeral",
    "Father Gerald mixing up his words",
-   "Charles and Scarlett oversleeping the first wedding",
-   "David signing for Charles",
+   "Charles and Scarlett, late for the first wedding",
+   "David signing at the altar",
    "Carrie and the rain on the doorstep"
   ],
   "prop": {
    "kind": "card",
    "title": "Wedding Invitation",
    "lines": [
-    "You are invited, again",
-    "RSVP to Charles, please"
+    "Carrie and Hamish request",
+    "the pleasure of Charles's company"
    ]
   },
-  "number": "4"
+  "number": "4",
+  "reception": {
+   "toast": true
+  }
  },
  "Bridget Jones's Diary (2001)": {
   "venue": "Jones Family Turkey Curry Buffet",
