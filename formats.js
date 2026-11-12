@@ -547,7 +547,7 @@ const FMT_FILMS={
     poster:["Tonight at the lanes","League night"],
     zero:["/3IRvErYyT80K9RoJ4zOYR8rGPsr.jpg","“Mark it zero!” Walter, when Smokey goes over the line"],
     rug:["/qLVQfUbGvKzNRFDy8RYrOG6a3rI.jpg","Tai chi on the rug. “This aggression will not stand, man.”"],
-    stills:[["/rYIySejPHVlRKhcXCL75Omhwkag.jpg","League night at the bar: the Dude, Donny and Walter"],["/4hPrbRpbgSC4JSpjckcJHc7aF5T.jpg","The Jesus, warming up two lanes over"],["/olbS02Olqw4koy5dhKYh2DEwrpO.jpg","The Stranger at the bar, sarsaparilla in hand"]],
+    stills:[["/rYIySejPHVlRKhcXCL75Omhwkag.jpg","League night at the bar: the Dude, Donny and Walter"],["/4hPrbRpbgSC4JSpjckcJHc7aF5T.jpg","The Jesus, warming up two lanes over"],["/olbS02Olqw4koy5dhKYh2DEwrpO.jpg","The Stranger and the Dude at the bar, semi-finals night"]],
     cue:["/hKsvdTYqu85UDsfyIKVr8K1PiFl.jpg","Half-and-half at Ralphs"],
     groups:[
       {h:"Snack bar",en:"Between frames",left:true,items:[
