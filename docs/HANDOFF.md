@@ -880,3 +880,21 @@ foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum 
 
 ### Deployed 13 Nov, 4:21am (Josh said deploy)
 - Deploy 6af60367 from a trimmed copy of cut/review-27 at 7d6d2088. Live files checked against it (63 files and index.html, which differs only by Netlify's form rewrite). main fast-forwarded to the cut. Live layout set in the sheet for the 13 rows.
+
+## 13 Nov, morning: review 27 low items fixed (branch fix/review-27-low, NOT deployed; start here in the next chat)
+
+### What is where
+- Live: still deploy 6af60367 (main 82da6863). Nothing deployed this chat.
+- fix/review-27-low: main 82da6863 plus the four fixes below. Pushed. Deploy only when Josh says: trimmed copy, check live files against the branch, fast-forward main, then the sheet (no layout changes this round, so no Live layout edits).
+
+### Fixed
+1. Phone menu order and course names (shared, every venue layout). app.js libCardOrder reads the rendered card: each course lists in the card's order (dearest first, house lines last) and takes the card's own heading (Snatch: Quick Plays, Main Games, Bonus Round, Refills; Jurassic World: Snacks, Mains, Sweets, Drinks). Heading rule: the nearest short line above the course's first dish; a lower case line under a heading ("to begin", "see Snack Cay") is passed over; edge marks drop; "First Course · To Begin" keeps "First Course". A dish name printed twice (The Dark Knight's order slip) uses the copy with a price after it. No heading found: the old word stays. formats.js fmtPhoneHTML takes spec.courses. Checked on one film per layout (39) by eye, phone fit on all 900.
+2. Prep sheet time chips. A dish whose recipe says to make the whole thing ahead ("Make the day before", "Make a day ahead", optionally with a keep note) and that waits 2 hours or more is off the night: calNight gives it no night time and plans it as a night-before job (calendar too). 73 dishes in 71 films. Half-ahead wording ("Bake a day ahead, frost on the day", "Assemble a day ahead, bake fresh") stays on the night. Chips: one "longest on the night" figure; a "make ahead: <dish>" chip (or "make ahead: 2 dishes"); the "plus N waiting" chip is gone because the short wait is already inside the night figure. A long wait that starts before the night's cooking prints "start N earlier, for waiting". Snatch now: longest on the night 1 hr 24 min (the steak), make ahead: Bullet Tooth Tony's banoffee pie. Prep A4 check passed on the 71 films (140 pages).
+3. Better Off Dead croques (skilodge.js tidyPrices). The starters squeeze under the raisins gag (2.95) passed the croques under the fries. The course now keeps its end prices but hands them back in the order the dishes stood before the squeeze: croques 2.50, fondue 1.95, fries 1.50, bread 0.95. Hot Tub Time Machine unchanged.
+4. Snatch mini pie (arcade.js). A starter is held to 80 percent of the cheapest main: pie 150, starters 150, 140, 110, 100. Side effects checked: Wreck-It Ralph nachos 180 to 170, Dazed beer nuts 220 to 210, Toy Story unchanged.
+
+### Checks (on the branch)
+- npm test: all 23 pass. check-print-text on the six arcade and skilodge films: pass. check-prep-a4 on the 71 make-ahead films: pass. check-phone-fit on all 900: pass.
+
+### Left
+- Dazed and Confused: beer nuts still the dearest starter (210). Not from this round, worth a look with the data.

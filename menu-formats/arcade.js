@@ -189,6 +189,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const pr0=prices(items,F.ei,F.egg);
   /* tickets, not money: a main runs a few hundred, a snack less, and the hidden number stays in the last digits */
   const pr={};for(const k in pr0)pr[k]=pr0[k].map(v=>{let x=parseFloat(String(v).replace(/^\./,"0."))/BASE[F.ei];return Math.max(20,Math.round(x*220/10)*10)});
+  /* review 27: a starter stays well under the cheapest main (no more than 80 percent of it), so a snack never reads like a meal
+     (Snatch: the mini pie at 170 sat just under the 190 fry-up, now 150) */
+  if(pr.m&&pr.m.length&&pr.s&&pr.s.length){const cap=Math.floor(Math.min(...pr.m)*.8/10)*10;if(cap>=20){let top=cap+10;pr.s.map((v,i)=>i).filter(i=>pr.s[i]>cap&&!((items.s||[])[i]||{}).house).sort((a,b)=>pr.s[b]-pr.s[a]||a-b).forEach(i=>{pr.s[i]=Math.max(20,top-10);top=pr.s[i]})}}
   /* house standards price at the foot of their course, no two items in a course share a price, and dessert stays under the mains */
   if(pr.m&&pr.m.length&&pr.w&&pr.w.length){const mm=Math.min(...pr.m),mw=Math.max(...pr.w);if(mw>=mm){const f=(mm-20)/mw;pr.w=pr.w.map(v=>Math.max(20,Math.round(v*f/10)*10))}}
   for(const k in pr){const it=items[k]||[],L=pr[k];const own=L.filter((v,i)=>!(it[i]&&it[i].house));const lo=own.length?Math.min(...own):0;

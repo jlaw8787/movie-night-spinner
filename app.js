@@ -1017,12 +1017,47 @@ function libPhonePal(root){
     disp,name,body,price:body,title:disp,note:body};
 }
 const LIB_COURSE={s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
+/* review 27: the phone lists each course in the order the printed card does (dearest first, house lines last) and under the
+   card's own heading (Snacks, Quick Plays, To start), so a guest moving between the two finds the same menu.
+   Read off the rendered card's text: a dish sorts by where its name first prints; a course takes the nearest short line
+   above its first dish. A dish the card doesn't print (a phone-only extra) keeps its place after the card's dishes. */
+function libCardOrder(root,pm){
+  const out={courses:{}};if(!root)return out;
+  const tx=[],w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let nd;
+  while(nd=w.nextNode()){const t=nd.textContent.replace(/\s+/g," ").trim();if(t)tx.push(t)}
+  const low=tx.map(t=>t.toLowerCase());
+  /* a name can print twice (an order slip up top, then the menu): the menu copy is the one with its price just after it */
+  const priced=i=>low.slice(i+1,i+3).some(t=>/^[$£€¥]?\s?\d{1,4}([.,]\d{1,2})?(\s?[a-z]{1,4})?$/.test(t));
+  const at=lab=>{const l=String(lab||"").toLowerCase().trim();if(!l)return -1;
+    let hits=low.map((t,i)=>t===l?i:-1).filter(i=>i>=0);if(!hits.length)hits=low.map((t,i)=>t.length<l.length+12&&t.includes(l)?i:-1).filter(i=>i>=0);
+    return hits.length?(hits.find(priced)??hits[0]):-1};
+  const names=new Set();for(const c in pm)for(const it of pm[c])names.add(String(it.label).toLowerCase());
+  /* a line under the heading in small type ("to begin", "see Snack Cay") starts lower case: the heading sits above it.
+     Edge marks (✦ To begin ✦) drop; "First Course · To Begin" keeps its first part so the tab stays short */
+  const cap=s=>s.replace(/^\S/,x=>x.toUpperCase());
+  const head=i=>{let sub="";for(let j=i-1,seen=0;j>=0&&seen<8;j--,seen++){const l=low[j];
+      if(names.has(l))break;
+      if(/\d/.test(tx[j]))continue;
+      let t=tx[j].replace(/^[^\p{L}"“]+|[^\p{L}.!?:"”)]+$/gu,"").split(/\s+[·•|]\s+/)[0].trim();
+      if(t.length<3)continue;
+      const n=t.split(" ").length;if(n>5||/[.!?:"“”]$/.test(t)||/^["“]/.test(t))break;
+      if(t===t.toUpperCase())t=t.toLowerCase().replace(/(^|\s)\S/g,s=>s.toUpperCase());
+      if(/^\p{Ll}/u.test(t)){if(!sub)sub=t;continue}
+      return t}
+    return sub?cap(sub):""};
+  for(const c in pm){const pos=pm[c].map((it,k)=>[at(it.label),k,it]);
+    pos.sort((a,b)=>(a[0]<0)-(b[0]<0)||(a[0]<0?a[1]-b[1]:a[0]-b[0]||a[1]-b[1]));
+    pm[c]=pos.map(p=>p[2]);const first=pos.find(p=>p[0]>=0);if(first){const h=head(first[0]);if(h)out.courses[c]=h}}
+  /* two courses never share a tab name: keep the plain word for the later one */
+  const used=new Set();for(const c of ["s","m","w","d"]){const h=out.courses[c];if(!h)continue;if(used.has(h.toLowerCase()))delete out.courses[c];else used.add(h.toLowerCase())}
+  return out}
 function libPhoneView(f,menu,L,root){
   const fl=L.flavour||{},pm={};let any=false;
   for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,orig:it.orig,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
   if(!any){phoneView(null);return}
+  let co={courses:{}};try{co=libCardOrder(root,pm)}catch(e){}
   {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
-  phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},pm);
+  phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title,courses:co.courses},pm);
 }
 function fitPhoneTitle(){
   const t=fmtPhone.querySelector(".fp-lib .fp-title");if(!t||!t.offsetWidth)return;
@@ -1428,7 +1463,7 @@ function prepHTML2(f,menu){
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
   const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
-  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0),PWN=prepWhen(f,ds,TT);
+  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
@@ -1438,7 +1473,9 @@ function prepHTML2(f,menu){
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">${((PW,LD)=>[...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":`plus ${planDur(waitMax)} waiting`):""])(PWN,calLead(prepNight(ds,TT))).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}
+    <p class="pp-serves">${((PW,LD,ND)=>{/* review 27: a short wait is already inside "longest on the night", and a long one that fits while the longest dish cooks
+      adds nothing, so neither prints as a second total. Only a wait that starts before the night's cooking says how much earlier */
+      const XT=ND.filter(d=>!d.ahead&&d.wait>=CAL_LONG&&d.wait<600).reduce((m,d)=>Math.max(m,d.active+d.wait-LD.lead),0);return [...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":XT>0?`start ${planDur(XT)} earlier, for waiting`:""):"",aheadN.length&&!PW.length?`make ahead: ${aheadN.length>1?aheadN.length+" dishes":aheadN[0]}`:""]})(PWN,calLead(prepNight(ds,TT)),prepNight(ds,TT)).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
@@ -2171,7 +2208,13 @@ function calGoogle(o){const t=calText(o),p=o.plan,g=(text,a,b,details)=>"https:/
 /* end calendar reminder */
 /* review 16: what is left to do on the night once a dish's long wait is over. The steps after the last wait of 2 hours or more (or one the
    recipe puts overnight) carry that share of the hands-on and cooking time, plus any short wait among them. A dish with no long wait runs whole. */
+/* review 27: a recipe that says to make the whole dish ahead ("Make the day before", "Make a day ahead") is done before the night,
+   even when no single wait reaches 2 hours (Snatch's banoffee pie chills 60 then 80 minutes). It takes no time on the night and plans
+   as a night-before job. "Up to 2 days" is an option, not an instruction, so it stays on the night. */
+const AHEAD_WHOLE=/^(make|bake|set|prepare)\s+(it\s+|them\s+)?(the\s+(day|night)\s+before|a\s+day\s+ahead|\d+\s+days?\s+ahead)(\s+or\s+in\s+the\s+morning)?(,\s*(keeps?|chill|store|rests?|press|cool|serve\s+warm\s+or)\b[^.,;]*)?(\.(\s.*)?)?$/i;
+const aheadWhole=x=>AHEAD_WHOLE.test(String(x&&x.make_ahead||"").trim());
 function calNight(x,T){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let L=-1;
+  if(aheadWhole(x)&&T.wait>=CAL_LONG)return {night:0,over:true,ahead:true};
   st.forEach((t,i)=>{if(isWaitStep(t)&&((t.min||0)>=CAL_LONG||/\bovernight\b/i.test(t.text)))L=i});
   if(L<0||T.wait<CAL_LONG)return {night:T.active+T.wait,over:false};
   const mins=a=>a.reduce((s,t)=>s+(t.min||0),0),non=st.filter(t=>!isWaitStep(t)),after=st.slice(L+1);

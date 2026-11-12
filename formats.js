@@ -761,7 +761,7 @@ function fmtStepsCard(how){const t=typeof degC==="function"?degC(how):String(how
   return `${/\d/.test(st.join(" "))?`<p class="fp-asis">As written, serves 4</p>`:""}${lead?`<p class="fp-lead">${ESC(lead)}</p>`:""}${st.length>1?`<ol class="fp-steps">${st.map(x=>`<li>${ESC(x)}</li>`).join("")}</ol>`:`<p class="fp-step1">${ESC(st[0]||t)}</p>`}`}
 function fmtPhoneHTML(f,spec,menu){
   const P=FMT_PHONE[spec.fmt];
-  const secs=FMT_COURSES.map(([c,h])=>({h,items:(menu[c]||[]).filter(it=>it&&it.label)})).filter(x=>x.items.length);
+  const CH=spec.courses||{},secs=FMT_COURSES.map(([c,h])=>({h:CH[c]?ESC(CH[c]):h,items:(menu[c]||[]).filter(it=>it&&it.label)})).filter(x=>x.items.length);
   let n=0;
   const name=it=>spec.fmt==="newsroom"?ESC(it.label).replace("SCOTCH",'<mark style="background:#d5a244;color:#392c26;padding:0 2px">SCOTCH</mark>'):ESC(it.label);
   return `<div class="fp fp-${spec.fmt}" style="--fp-top:${P.top};--fp-top-ink:${P.topInk};--fp-paper:${P.paper};--fp-ink:${P.ink};--fp-soft:${P.soft};--fp-acc:${P.accent};--fp-tab:${P.tab};--fp-disp:${P.disp};--fp-name:${P.name};--fp-body:${P.body};--fp-price:${P.price};--fp-title:${P.title};--fp-note:${P.note||P.body}">

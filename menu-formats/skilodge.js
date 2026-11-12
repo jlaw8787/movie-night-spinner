@@ -80,6 +80,7 @@ function tidyPrices(menu,P,ei){
     /* no shared prices: bump the later item */
     for(let i=1;i<v.length;i++){let g=0;while(v.slice(0,i).some(x=>Math.abs(x-v[i])<.001)&&g++<20)v[i]=up(v[i])}
     V[k]=v}
+  const V0={};for(const k in V)V0[k]=V[k].slice();
   /* dessert under the cheapest main */
   if(V.m&&V.m.length&&V.w&&V.w.length){const minM=Math.min(...V.m);for(let i=0;i<V.w.length;i++){let g=0;while(V.w[i]>=minM&&g++<40)V.w[i]=down(V.w[i])}
     for(let i=1;i<V.w.length;i++){let g=0;while(V.w.slice(0,i).some(x=>Math.abs(x-V.w[i])<.001)&&g++<20)V.w[i]=down(V.w[i])}}
@@ -89,6 +90,10 @@ function tidyPrices(menu,P,ei){
   for(const k of ["s","m","w","d"]){const L=menu[k]||[],v=V[k]||[];const own=v.filter((x,i)=>!(L[i]&&L[i].house));if(!own.length)continue;const lo=Math.min(...own);
     v.forEach((x,i)=>{if(!(L[i]&&L[i].house))return;let g=0;while(v[i]>=lo&&g++<40)v[i]=down(v[i])})}
   for(const k of ["s","m","w","d"]){const v=V[k]||[];for(let i=1;i<v.length;i++){let g=0;while(v.slice(0,i).some(x=>Math.abs(x-v[i])<.001)&&g++<20)v[i]=down(v[i])}}
+  /* review 27: the squeezes above can pass one dish under another (Better Off Dead's croques went under the fries when the starters
+     dropped under the raisins gag). The course keeps the prices it ended with, handed back in the order the dishes stood before */
+  for(const k of ["s","m","w","d"]){const L=menu[k]||[],v=V[k]||[],v0=V0[k]||[];const ix=v.map((x,i)=>i).filter(i=>!(L[i]&&L[i].house));
+    const vals=ix.map(i=>v[i]).sort((a,b)=>b-a),rank=ix.slice().sort((a,b)=>v0[b]-v0[a]||a-b);rank.forEach((i,r)=>{v[i]=vals[r]})}
   for(const k of ["s","m","w","d"])out[k]=(V[k]||[]).map((v,i)=>{const o=String((P[k]||[])[i]);/* keep the hidden egg price as priceSense left it */
     return Math.abs(num(o)-v)<.001?o:money(v,ei)});
   return out;
