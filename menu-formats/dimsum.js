@@ -192,7 +192,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* right: the tick sheet */
   const SX=LX+LW+30,SW=W-SX-34,ST=26,SH=H-ST-26-FH-18;
   const TOPH=66,COLH=34,cueH=F.cue?42:0,STAMP=52,PRW=84,QTY=70;
-  const C=sections(ctx,F,["Small Plates","Kitchen Specials","Sweet","Tea and Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
+  /* the drinks heading promises tea only when a drink on the card is tea */
+  const teaOn=(ctx.menu.d||[]).some(it=>/\btea\b/i.test((it.n||"")+" "+(it.note||"")));
+  const C=sections(ctx,F,["Small Plates","Kitchen Specials","Sweet",teaOn?"Tea and Drinks":"Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
   /* rows print in price order, dearest first, house lines last (the order tidyPrices settled) */
   for(const [k] of C){const o=pr.order&&pr.order[k];if(o&&o.length===items[k].length){items[k]=o.map(i=>items[k][i]);pr[k]=o.map(i=>pr[k][i])}}
   const CRH=18,GH=SH-TOPH-COLH-cueH-CRH-14,DW=SW-24-STAMP-PRW-QTY;let NW=Math.round(DW*.4),TW2=DW-NW-24,PB=7;
