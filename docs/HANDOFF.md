@@ -722,3 +722,32 @@ Live: deploy 6af55461 (main 176899e), 12 Nov 3:50pm, Josh said deploy. Live phon
 
 ### Next (Josh, 12 Nov 4:15pm)
 Review 24: a fresh independent review of the live site, written up like docs/review-21.md, then fix what it finds. iPhone build, store prep and the small tidy-ups are on hold.
+
+## 12 Nov, 4:45pm: Wall-E and Toy Story live, new layouts still on the side branch (start here in the next chat)
+
+Live: deploy 6af55cb9 from main 05dbb9a (Josh, 12 Nov: deploy Wall-E and Toy Story only). Files checked against reeldinner.com (index.html differs only by Netlify's form rewrite and HUD script). Not yet checked on a real phone.
+
+### What is where
+- main (05dbb9a, live): everything from the app chats plus Wall-E's own Axiom Food Court menu, Toy Story on the arcade layout (Pizza Planet), and all ten new layout files. Only Wall-E and Toy Story use the new work; every other film is on its old live layout and venue.
+- wip/new-formats (81cdbfc plus this note): main merged in, plus the other 42 films moved onto new layouts. Do not merge it into main as it is: that would put the 42 live unchecked. To ship more films, repeat the deploy cut: branch from wip/new-formats, put film-format.json and film-flavour.json entries back to main's for every film not being shipped, build-data, tests, check-browser, print-check, then fast-forward main (see commit 05dbb9a for the script shape).
+- deploy/wall-e-toy-story: the cut that became main. Can be deleted.
+- Tracking sheet "Reel Dinner film layouts" (https://claude.ai/artifact/CUZSJL6Gy92dKmd2DTNxz4): Toy Story and Wall-E rows Approved, live layout set. The 42 others read "Moved on side branch".
+- Toy Story grades: 7.5, 8.5, 9, then the last three fixes (not re-graded). Wall-E: Josh "pretty good", no formal review.
+
+### The other 42 films on wip/new-formats: not ready, why
+1. None approved in the sheet for live.
+2. The ten new layouts have only had check-print-text, never an independent review. Toy Story's review found film lines printed where food should be, a logo on a grey box, uneven columns. Expect the same kind of faults on the others.
+3. The 21 pilot films were moved for proofs. Their venue and sign were never checked against the film (fact audit rule). Kingpin was flagged a layout test only (venue now "Reno Tournament Lanes").
+4. By layout: foodcourt Mallrats, Fast Times, Jingle All the Way, Bad Santa, Jurassic World, Wonder Woman 1984; bowling Kingpin; clubhouse Caddyshack, Happy Gilmore, Goldfinger; reception Four Weddings, The Wedding Singer, Wedding Crashers, Top End Wedding, Father of the Bride, My Big Fat Greek Wedding, Ticket to Paradise, Anyone But You, Doctor Strange in the Multiverse of Madness, My Best Friend's Wedding, Palm Springs, The Farewell; skilodge Hot Tub Time Machine, Better Off Dead; arcade Wreck-It Ralph, Snatch, Dazed and Confused; drivein Ghostbusters: Afterlife; dimsum Rush Hour, Men in Black 3; hospital Halloween II, A Nightmare on Elm Street 3, Terminator 2, Rain Man, Shutter Island, Smile, The Silence of the Lambs. Also moved to old layouts: The Naked Gun (stadium), Reservoir Dogs (diner), Stand by Me (campfire), Kingsman (pub), Forgetting Sarah Marshall (tiki). Deli wall board has no film on it.
+5. Suggested order: one independent review per new layout on its best film (like Toy Story), fix, then a venue and sign fact check for each film, mark Approved in the sheet, then a deploy cut.
+
+### Also queued (from the other chat on main)
+- Review 24: fresh independent review of the live site (Josh, 12 Nov 4:15pm). Now it will include Wall-E and Toy Story.
+- Trailers in app mode: test on the APK and the first iPhone build, then decide.
+
+### Machine notes from this chat
+- TMDB key: Josh gave it in chat; it is not in the repo. Put it in /home/claude/.tmdb_key on a new machine if needed (ask Josh).
+- Do not run scripts/fetch-fonts.cjs without --check unless a new spec is needed: Google now serves different bytes and it renames about 17 unrelated font files. Reuse specs already shipped.
+- Do not run scripts/edition-sync.cjs for a film without a poster edition: it replays old ops and broke After Hours and Oliver & Company (reverted).
+- card-ops renames whole-string matches first; check alt names such as "(vegetarian)" after a rename.
+- arcade.js now has flavour options logoDark, noLogo (title and year in the marquee), panel {head,text,by} or panel {img,head,h,pos}, quote {text,by}.
