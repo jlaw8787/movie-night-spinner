@@ -15,7 +15,9 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  const open=async()=>{const p=await ctx.newPage();p.setDefaultTimeout(600000);
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
   await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);return p};
- let p=await open();const all=await p.evaluate(([N,NAMED])=>NAMED.length?NAMED:FILMS.map(f=>f.id).slice(0,N),[N,NAMED]);
+ let p=await open();const all=await p.evaluate(([N,NAMED])=>NAMED.length?NAMED.filter(i=>FILMS.some(f=>f.id===i)):FILMS.map(f=>f.id).slice(0,N),[N,NAMED]);
+ if(NAMED.length&&all.length<NAMED.length)console.log('Not in films.js: '+NAMED.filter(i=>!all.includes(i)).join(', '));
+ if(!all.length){console.log('FAIL: no films to check (check the film names)');await b.close();process.exit(1)}
  const r={films:0,pages:0,bad:[]};
  for(let k=0;k<all.length;k+=40){const ids=all.slice(k,k+40);let got=null;
   for(let t=0;t<2&&!got;t++){try{if(!p||p.isClosed())p=await open();
@@ -28,7 +30,9 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     const c=el.cloneNode(true);c.hidden=false;c.style.transform='none';prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);
     const i=c.querySelector('.mc-in'),cols=c.querySelector('.pp-cols'),over=i?i.scrollHeight-i.clientHeight:0,fs=cols?parseFloat(cols.style.fontSize)||16:16;st.remove();
     if(over>1||fs<PREP_MIN_FS)bad.push(`${id}: page ${k+1} of ${parts.length} ${over>1?'runs '+over+'px past A4':'shrinks to '+fs+'px'}`)})}
-  return {films,pages,bad}},[ids,G]),new Promise((_,no)=>p.once('crash',()=>no(Error('page crashed'))))])}
+  return {films,pages,bad}},[ids,G]),new Promise((_,no)=>p.once('crash',()=>no(Error('page crashed')))),
+    /* page.evaluate ignores the default timeout, so a stuck batch is caught here instead of hanging the run */
+    new Promise((_,no)=>setTimeout(()=>no(Error('batch timed out')),+process.env.MNS_BATCH_TIMEOUT||900000))])}
    catch(e){console.log(`films ${k+1} to ${k+ids.length}: ${e.message.split("\n")[0]}`);await p?.close().catch(()=>{});p=null}}
   if(got){r.films+=got.films;r.pages+=got.pages;r.bad.push(...got.bad)}else r.bad.push(...ids.map(i=>`${i}: not read (page crashed twice)`));
   await p?.close().catch(()=>{});p=null;console.log(`${Math.min(k+40,all.length)} of ${all.length} read, ${r.bad.length} faults so far`)}
