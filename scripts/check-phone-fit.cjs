@@ -17,7 +17,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     reads 40 films at a time, says how far it has got, and a page that crashes is tried once more before its films are reported */
  const open=async()=>{const p=await ctx.newPage();p.setDefaultTimeout(600000);
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
-  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);return p};
+  await p.waitForFunction(()=>{try{return typeof show==='function'&&!!current}catch(e){return false}});return p};
  let p=await open();const all=await p.evaluate(([N,NAMED])=>NAMED.length?NAMED.filter(i=>FILMS.some(f=>f.id===i)):(N?FILMS.slice(0,N):FILMS).map(f=>f.id),[N,NAMED]);
  if(NAMED.length&&all.length<NAMED.length){console.log('FAIL: not in films.js: '+NAMED.filter(i=>!all.includes(i)).join(', '));await b.close();process.exit(1)}
  if(!all.length){console.log('FAIL: no films to check (check the film names)');await b.close();process.exit(1)}

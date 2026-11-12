@@ -57,7 +57,7 @@ async function stats(buf){
  const fails=[],rows=[];
  for(const id of FILMS){try{
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent(id),{waitUntil:'domcontentloaded'});
-  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
+  await p.waitForFunction(()=>{try{return typeof show==='function'&&!!current}catch(e){return false}});
   const ok=await timed(p.evaluate(async id=>{const f=FILMS.find(x=>x.id===id);if(!f)return false;await ensureExact(f);await show(f,true);
    await Promise.all([...card.querySelectorAll('img')].map(i=>i.decode().catch(()=>{})));await document.fonts.ready;return true},id),'loading the menu');
   if(!ok){fails.push(id+': not found');continue}
