@@ -622,3 +622,12 @@ Every new or custom menu gets the movie poster and real TMDB stills treatment. N
 ### Next chat: Wall-E custom layout (start here)
 - Josh will give a TMDB API key in that chat. Use it to pull Wall-E's full backdrops/stills set (and Toy Story's, to look for a Pizza Planet frame to swap in for still 2).
 - Build a one-off layout for Wall-E (currently airline, venue Axiom Food Court) built around the poster and real stills, per the rule above. Then print-check, shots, sheet row, deploy only when Josh says.
+
+## 12 Nov, 4:10pm: Wall-E own menu and Toy Story Pizza Planet still (branch wip/new-formats, not live)
+
+- Toy Story arcade: still 2 is now the Pizza Planet night exterior with the rocket (/dMcle4LNLkFAd8XWamn1eAKn5h2.jpg), set through data/still-pick.json (Toy Story's 8 stills with slot 2 swapped). Label "Parked out front" (was "Falling with style"). Josh asked for the exterior over the claw machine frame (/xUU287dd4KIeFlZAqI2gGIdRS9v.jpg).
+- Wall-E has its own menu: fmtAxiom in formats.js (generated formats/axiom.js), spec in FMT_FILMS. Axiom Food Court, one 1344x960 face: the Axiom in deep space as the wall (still 44 of the TMDB set), poster in a white Axiom bezel, his cockroach still, the Axiom Pass card with McCrea's line, the menu panel (Today's finds, Sweet, In a cup, Grown on Earth) with the Hello, Dolly! still beside the showtime cue, and three stills down the right (Eve and Wall-E on the Axiom, the plant in the boot, Define dancing). No prices: meals come with the Axiom Pass. Nothing drawn in place of a picture.
+- Wall-E taken out of data/film-format.json (no other own menu is listed there). Veg pair for the cob loaf line added to data/diet/wall-e-2008.json.
+- Fonts reuse specs already shipped (Michroma, Nunito 0,400;0,700;0,800;1,400;1,700, Caveat 500), so no new font files. Running fetch-fonts without --check re-downloads and renames about 17 unrelated files because Google now serves different bytes; avoid it unless a new spec is needed.
+- Checks: check-print-text passes on Wall-E and Toy Story, all tests pass, both fronts looked over in shots. Not yet checked in WebKit iPhone or on a real phone.
+- Next: Josh to look over the Wall-E proof, then deploy only when he says.
