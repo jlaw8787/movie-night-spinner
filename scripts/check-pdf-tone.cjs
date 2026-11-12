@@ -25,6 +25,11 @@ if(PER){const FM=JSON.parse(fs.readFileSync(path.join(R,'data/film-format.json')
    does not read as a big percentage: the washed-out prints of review 12 lost 35 to 60 levels */
 /* review 13: a lost edge vignette shows as +8 to +13 levels, so both limits sit at 6 */
 const DARKER=6,FLATTER=.15,LIGHTER=6;
+/* the app is ready once show() exists and a film is on screen. If app.js failed to load (a busy local server), 'current' never
+   exists, so wait a minute, reload once, and say what the page reported */
+const appReady=async p=>{if(!p.__err){p.__err=1;p.on('pageerror',e=>console.log('page error: '+String(e.message||e).split('\n')[0]))}
+ for(let t=0;t<2;t++){try{await p.waitForFunction(()=>{try{return typeof show==='function'&&!!current}catch(e){return false}},null,{timeout:60000});return}
+  catch(e){if(t)throw Error('app did not start after a reload');await p.reload({waitUntil:'domcontentloaded'})}}};
 const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.1'],{cwd:R,stdio:'ignore'});process.on('exit',()=>server.kill());
 async function stats(buf){
   if(sharp){const {data,info}=await sharp(buf).removeAlpha().resize({width:400}).raw().toBuffer({resolveWithObject:true});
@@ -57,7 +62,7 @@ async function stats(buf){
  const fails=[],rows=[];
  for(const id of FILMS){try{
   await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent(id),{waitUntil:'domcontentloaded'});
-  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
+  await appReady(p);
   const ok=await timed(p.evaluate(async id=>{const f=FILMS.find(x=>x.id===id);if(!f)return false;await ensureExact(f);await show(f,true);
    await Promise.all([...card.querySelectorAll('img')].map(i=>i.decode().catch(()=>{})));await document.fonts.ready;return true},id),'loading the menu');
   if(!ok){fails.push(id+': not found');continue}
