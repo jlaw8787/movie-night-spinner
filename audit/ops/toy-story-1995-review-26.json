@@ -1,0 +1,50 @@
+{
+ "id": "Toy Story (1995)",
+ "ops": [
+  {
+   "old": "Pineapple, lemonade and lime punch with green grape aliens on sticks",
+   "new": "Pineapple, lemonade and lime punch with green grape aliens",
+   "done": true
+  },
+  {
+   "old": "The Claw and the little green aliens",
+   "new": "The Claw and the aliens",
+   "done": true
+  },
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "space": true,
+    "counter": "PIZZA PLANET PRIZES",
+    "redeem": "TO INFINITY AND BEYOND!",
+    "sections": [
+     "Launch Pad",
+     "Main Orbit",
+     "Birthday Orbit",
+     "Refuel Station"
+    ],
+    "tokens": "PLANET TOKENS",
+    "insert": "ONE TOKEN, ONE TRY",
+    "shelf": "TOP SHELF, SPACE PORT",
+    "still": {
+     "i": 2,
+     "title": "Parked out front"
+    },
+    "noLogo": true,
+    "panel": {
+     "img": "/xUU287dd4KIeFlZAqI2gGIdRS9v.jpg",
+     "head": "THE CLAW",
+     "h": 150,
+     "pos": "center 45%"
+    },
+    "quote": {
+     "text": "Reach for the sky!",
+     "by": "Woody"
+    }
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

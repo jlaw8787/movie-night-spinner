@@ -129,7 +129,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Arcade":"Game Zone","Tokens at the change machine",{text:"Two tokens a game, and the claw machine is not rigged. Mostly.",by:"The Change Machine"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),DF=e.disp,BF=e.body,MF=e.mono;
   /* per-film arcade flavour (data/film-flavour.json "arcade"): counter, redeem, sections[4], tokens, shelf, insert;
-     space: starfield and a ringed planet on the marquee and the tokens; logoDark: keep the logo on the dark panel (a bright logo the sampler reads as dark); noLogo: no logo panel in the marquee (the poster carries it); panel: see the board; still: {i, title} swaps the high score table for a real film still */
+     space: starfield and a ringed planet on the marquee and the tokens; logoDark: keep the logo on the dark panel (a bright logo the sampler reads as dark); noLogo: no logo panel in the marquee (the poster carries it), the film title and year sit there instead; quote {text, by}: a line in the cabinet above the coin slot; panel: see the board; still: {i, title} swaps the high score table for a real film still */
   const A=(ctx.flavour||{}).arcade||{},AL=k=>A[k]?clean(A[k]):"";
   const svgImg=(inner,w,h,vb,css)=>`<div style="width:${w}px;height:${h}px;background:url(&quot;data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='${vb||`0 0 ${w} ${h}`}'>${inner.replace(/"/g,"'")}</svg>`)}&quot;) center/100% 100% no-repeat;${css||""}"></div>`;
   const neon=F.pal.accent&&lum(F.pal.accent)>.18?F.pal.accent:e.neon,neon2=e.neon2;
@@ -143,10 +143,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const pix=F.b===2;const vS=pix?(F.venue.length>24?20:F.venue.length>16?26:32):(F.venue.length>28?34:F.venue.length>18?42:52);
   const LGW=270;
   const marquee=`<div style="position:absolute;left:${M}px;top:${M}px;width:${W-2*M}px;height:${MH}px;background:${e.panel};border:3px solid ${mix(neon,e.panel,.4)};box-sizing:border-box;box-shadow:0 0 22px ${mix(neon,e.bg,.6)},inset 0 0 18px rgba(0,0,0,.6)">
-    <div style="position:absolute;left:26px;top:0;bottom:0;right:${A.noLogo?26:LGW+40}px;display:flex;flex-direction:column;justify-content:center">
+    <div style="position:absolute;left:26px;top:0;bottom:0;right:${A.noLogo?300:LGW+40}px;display:flex;flex-direction:column;justify-content:center">
       <div style="display:flex;align-items:center;gap:14px"><div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;${glow(neon,14)};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>${A.space?planet(Math.round(vS*1.25),neon,neon2):""}</div>
       <div style="font:700 17px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${neon2};margin-top:4px;${clamp(1)}">${esc(F.sign)}</div></div>
-    ${A.noLogo?"":`<div data-dark="#000000" data-light="#f2f2f2" style="position:absolute;right:16px;top:14px;width:${LGW}px;height:${MH-34}px;background:#000;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,LGW-20,MH-48,BF,"#fff","700",A.logoDark)}</div>`}</div>`;
+    ${A.noLogo?`<div style="position:absolute;right:28px;top:0;bottom:0;display:flex;align-items:center;font:700 18px/1.2 ${BF};letter-spacing:.26em;text-transform:uppercase;color:${e.soft};white-space:nowrap">${esc(F.title)}, ${esc(F.year)}</div>`:""}${A.noLogo?"":`<div data-dark="#000000" data-light="#f2f2f2" style="position:absolute;right:16px;top:14px;width:${LGW}px;height:${MH-34}px;background:#000;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,LGW-20,MH-48,BF,"#fff","700",A.logoDark)}</div>`}</div>`;
 
   /* cabinet bezel with the poster */
   const BY=M+MH+20,BW=448,BH=H-M-BY;const PA=posterFit(BW-56,BH-110);
@@ -154,6 +154,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,rgba(0,0,0,0) 2px 4px)"></div>
     <div style="position:absolute;left:${Math.round((BW-PA.w)/2)}px;top:28px;width:${PA.w}px;height:${PA.h}px;background:#000;box-shadow:0 0 0 6px #000,0 0 18px ${mix(neon,"#000000",.4)};overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div>
     <div style="position:absolute;left:0;right:0;bottom:22px;text-align:center;font:400 ${pix?14:20}px/1.2 ${MF};color:${neon2};letter-spacing:.12em;${glow(neon2,6)}">${esc(AL("insert")||"INSERT TOKEN")}</div>
+    ${A.quote&&A.quote.text?`<div style="position:absolute;left:20px;right:20px;bottom:84px;text-align:center;font:italic 400 18px/1.3 ${BF};color:#e6e6e6">"${esc(clean(A.quote.text))}" <span style="font-style:normal;color:${neon2}">${esc(clean(A.quote.by||""))}</span></div>`:""}
     <div style="position:absolute;left:50%;bottom:58px;margin-left:-26px;width:52px;height:14px;border-radius:7px;background:#000;box-shadow:inset 0 0 0 2px ${mix(neon2,"#000000",.4)}"></div></div>`;
 
   /* prize counter board */
