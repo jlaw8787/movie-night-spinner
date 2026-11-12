@@ -881,7 +881,9 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     /* review 21: only a short fragment (a word or two of a heading) steps aside. A dish name or note runs on past the edge as a peek; hiding
        every long line left Nativity!'s main tray an empty box on the phone, since most of its names cross the fold */
     const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
-    if(seen<w-1&&(seen<=0||(words<=2||seen/w<.25)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
+    /* 13 Nov: a long line (three words or more) only steps aside when under about two words of it show (48px); a share of its width hid
+       the drive-in Showtime line whole (24% in view) while the dish lines beside it ran on past the edge */
+    if(seen<w-1&&(seen<=0||(words<=2||seen<48)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
