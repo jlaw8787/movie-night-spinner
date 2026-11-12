@@ -1577,7 +1577,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(/[^.]*\bmust be (18|19|21)( or over)? to (order|drink)\b[^.]*\.?\s*/gi,""),r(/\b(18\+|over 18s?) only\.?\s*/gi,""),
    r(/\bbrandy alexanders?\b/gi,"vanilla nutmeg milk"),r(/\bhot buttered (rum|syrup|whisky|whiskey)\b/gi,"hot spiced apple"),r(/\bmulled wine\b/gi,"mulled grape punch"),
    r(/\b(brandy|bourbon|whisky|whiskey|rum) milk punch\b/gi,"vanilla milk punch"),r(/\birish coffee\b/gi,"Irish-style hot chocolate"),r(/\bmimosas?\b/gi,"orange fizz"),
-   r(/\bshandy\b/gi,"lemon squash"),r(/\b(gin|vodka) and tonic\b/gi,"lime and tonic"),r(/\bmint juleps?\b/gi,"mint lemonade"),r(/\bold fashioneds?\b/gi,"orange and cherry soda"),
+   r(/\blime shandy\b/gi,"lime squash"),r(/\bshandy\b/gi,"lemon squash"),r(/\b(gin|vodka) and tonic\b/gi,"lime and tonic"),r(/\bmint juleps?\b/gi,"mint lemonade"),r(/\bold fashioneds?\b/gi,"orange and cherry soda"),
    r(/\bboilermakers?\b/gi,"ginger beer float"),r(/\bmargaritas\b/gi,"lime crushes"),r(/\bmargarita\b/gi,"lime crush"),r(/\bmojitos?\b/gi,"mint and lime fizz"),r(/\bmartinis?\b/gi,"mocktail"),r(/\bdaiquiris?\b/gi,"strawberry slushie"),
    r(/\bpi[nñ]a coladas?\b/gi,"pineapple colada"),r(/\bblue lagoons?\b(?! mocktail)/gi,"blue lagoon mocktail"),r(/\bsangria\b/gi,"fruit punch"),r(/\bspritz(es)?\b/gi,"soda spritz"),r(/\bnegronis?\b/gi,"blood orange soda"),
    [/\b(red wine|white wine|rice wine|sherry|cider|champagne|malt) vinegar\b/gi,m=>m.replace(/(wine|sherry|cider|champagne|malt)/i,w=>w[0]+"\u200B"+w.slice(1))],
@@ -2266,13 +2266,13 @@ async function openTrolley(f,menuOverride,label){
      Only the words shown change: each line keeps its own tick key, so ticks still match the Prep sheet. The cook's own extras are left as typed */
   const dryOn=typeof dryNow==="function"&&dryNow(f),dryL=new Set(groups.flatMap(([,l])=>l)),shown=x=>dryOn&&dryL.has(x)?dryText(x,true):x;
   if(own&&typeof extrasFor==="function"){const ex=extrasFor(f);if(ex.length)groups.push(["Your extras",ex])}const all=groups.flatMap(([,l])=>l);
-  /* review 27: on a dry list, lines that now read the same drink show once with the amounts added; the folded lines tick with it */
-  const view=groups.map(([g,l])=>[g,dryOn&&g!=="Your extras"?dryJoin(l.map(x=>[x,shown(x)])):l.map(x=>({x,of:[x],text:shown(x)}))]);
-  const twin=new Map(),hid=new Set();view.forEach(([,l])=>l.forEach(e=>{if(e.of.length>1){twin.set(kf(e.x),e.of.slice(1).map(kf));e.of.slice(1).forEach(y=>hid.add(kf(y)))}}));
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",label?`Shopping list: ${label}`:`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
   if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
   const kf=own?tickKey:(x=>x);
+  /* review 27: on a dry list, lines that now read the same drink show once with the amounts added; the folded lines tick with it */
+  const view=groups.map(([g,l])=>[g,dryOn&&g!=="Your extras"?dryJoin(l.map(x=>[x,shown(x)])):l.map(x=>({x,of:[x],text:shown(x)}))]);
+  const twin=new Map(),hid=new Set();view.forEach(([,l])=>l.forEach(e=>{if(e.of.length>1){twin.set(kf(e.x),e.of.slice(1).map(kf));e.of.slice(1).forEach(y=>hid.add(kf(y)))}}));
   const ticks=()=>own?sharedTicks(f):week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
   const skip=k=>own&&typeof pantryHas==="function"&&pantryHas(f,k);const live=()=>all.filter(x=>!skip(kf(x))&&!hid.has(kf(x)));
   const tick=(k,on,quiet)=>{if(own)setTick(f,k,on,quiet);else{const t=ticks();if(on)t[k]=true;else delete t[k];if(!quiet&&week&&week.id===f.id)saveWeek()}};
