@@ -1,3 +1,21 @@
+/* offline: a photo that isn't saved on this device shows a plain tinted frame in its slot, never a broken image icon.
+   The frame is a real picture drawn here, so Save PDF and Print show the same frame. Grey at low strength suits dark and light cards alike */
+const IMG_PH={};
+function imgPhSrc(r){const k=r>1.3?"wide":r<.85?"tall":"sq";if(IMG_PH[k])return IMG_PH[k];
+  const W=k==="wide"?640:400,H=k==="wide"?360:k==="tall"?600:400,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+  x.fillStyle="rgba(128,128,128,.2)";x.fillRect(0,0,W,H);x.strokeStyle="rgba(128,128,128,.32)";x.lineWidth=4;x.strokeRect(2,2,W-4,H-4);
+  /* a small strip of film in the middle */
+  const g=Math.min(W,H)*.2,fw=g*1.5,fh=g,fx=(W-fw)/2,fy=(H-fh)/2;x.fillStyle="rgba(128,128,128,.4)";x.fillRect(fx,fy,fw,fh);
+  x.globalCompositeOperation="destination-out";x.fillRect(fx+fw*.12,fy+fh*.24,fw*.76,fh*.52);const hw=fw/11;for(let i=0;i<5;i++){x.fillRect(fx+hw*(1+2*i),fy+fh*.06,hw,fh*.1);x.fillRect(fx+hw*(1+2*i),fy+fh*.84,hw,fh*.1)}
+  return IMG_PH[k]=c.toDataURL("image/png")}
+function imgRatio(im){const a=+im.getAttribute("width"),b=+im.getAttribute("height");if(a&&b)return a/b;
+  const r=im.getBoundingClientRect();if(r.width>40&&r.height>40)return r.width/r.height;
+  const s=im.getAttribute("src")||"";return /\/w(780|1280|original)\/|still|backdrop/i.test(s+im.className)?16/9:/\/w92\/|snacks\/|logo/i.test(s+im.className)?1:2/3}
+function imgPh(im){if(im.classList.contains("img-ph")&&/^data:/.test(im.src))return;const r=imgRatio(im);
+  im.removeAttribute("srcset");im.removeAttribute("sizes");if(im.parentElement&&im.parentElement.tagName==="PICTURE")im.parentElement.querySelectorAll("source").forEach(x=>x.remove());
+  im.classList.add("img-ph");if(!im.style.objectFit)im.style.objectFit="cover";im.src=imgPhSrc(r)}
+document.addEventListener("error",e=>{const t=e.target;if(t&&t.tagName==="IMG"&&(t.getAttribute("src")||"").length)imgPh(t)},true);
+document.querySelectorAll("img").forEach(im=>{if(im.complete&&!im.naturalWidth&&(im.getAttribute("src")||"").length)imgPh(im)});
 
 /* a note cut short never ends on a joining word ("with yellow mustard and."): those come off, and a lone word left after a comma goes with them */
 window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an|is|to|for|or|on|at|by|from|into|under|over|but|so|as|its|his|her|their|our|your|my)$/i;
@@ -858,7 +876,7 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
     if(seen<w-1&&(seen<=0||(words<=2||seen/w<.25)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   off.forEach(e=>e.classList.add("pv-off"))}
-function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;
+function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
   if(fs.length){pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
     card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
@@ -1476,15 +1494,42 @@ function libPhotoPass(card,L,poster){
   if(IOS_SAFARI)iosBakeFilters(card);
 }
 const IOS_SAFARI=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+/* review 21: Josh still saw blurry, zoomed-in stills on his iPhone (Logan's strip and hero, 11 Nov). Two gaps in the 8 Nov fix:
+   only filtered photos were baked, but iPhone Safari also draws an object-fit: cover photo inside the scaled card as a zoomed corner;
+   and the copy for the canvas was fetched with CORS from a cache that may hold the plain (no CORS) copy, so it failed quietly and the
+   photo kept its filter. Now every cropped photo is baked to its frame, the CORS copy is fetched fresh, and if that still fails the
+   filter comes off, so the photo shows whole and sharp in plain colour rather than zoomed. */
+let iosQ=Promise.resolve();
+/* review 21: and a photo placed while the card is still settling can be painted from a stale, zoomed tile. A border nudge a moment later
+   (an outline does not do it) makes Safari paint the photo again; the border is taken straight back off */
+function iosRepaint(n){[200,900].forEach(ms=>setTimeout(()=>{if(!n.isConnected)return;n.style.border="0.5px solid transparent";requestAnimationFrame(()=>requestAnimationFrame(()=>{n.style.border=""}))},ms))}
 function iosBakeFilters(card){
-  card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.baked)return;
-    const cs=getComputedStyle(i);if(!cs.filter||cs.filter==="none")return;
-    const k=/blur\(/.test(cs.filter)?1:2,snap={filter:cs.filter,width:parseFloat(cs.width)*k+"px",height:parseFloat(cs.height)*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen; blur radii stay true at 1x */
+  card.querySelectorAll(".fx-face img").forEach(i=>{if(i._bsrc&&i._bsrc===i.src)return;
+    const cs=getComputedStyle(i),filt=cs.filter&&cs.filter!=="none",crop=/cover|contain|none|scale-down/.test(cs.objectFit);if(!filt&&!crop)return;
+    if(!i.complete||!i.naturalWidth){if(!i.dataset.bwait){i.dataset.bwait="1";i.addEventListener("load",()=>{delete i.dataset.bwait;iosBakeFilters(card)},{once:true})}return}
+    /* review 21: the real cause of Role Models' zoomed strip. A layout's own trim (campfire's __fmtLift.trim, which crops black bars by sizing
+       the photo up) ran after the bake, on the baked copy, read its pale vignette as bars and blew it up. So a photo waits for its trim to
+       finish before it is baked, and the baked copy is marked trimmed and carries no onload, so the trim never runs on it */
+    if(/__fmtLift/.test(i.getAttribute("onload")||"")&&i.dataset.trim!=="1"){setTimeout(()=>iosBakeFilters(card),500);return}
+    const fw=i.offsetWidth||parseFloat(cs.width),fh=i.offsetHeight||parseFloat(cs.height);
+    /* review 21: a face that is not laid out yet (the curtain is still shut after a spin) has no size; it is baked on the next layout, never skipped for good */
+    if(!fw||!fh||!isFinite(fw)||!isFinite(fh))return;
+    const big=fw*fh>2.5e6;if(big&&!filt)return;/* full-page textures are not cropped photos */
+    /* review 21: baked at exactly the frame size. iPhone Safari sometimes paints a photo in a turned, scaled frame at its own natural size,
+       ignoring the frame (the zoomed corner); a picture the same size as its frame looks right either way */
+    const k=1,snap={filter:filt?cs.filter:"brightness(1)",width:fw*k+"px",height:fh*k+"px",objectFit:cs.objectFit,objectPosition:cs.objectPosition};/* twice the frame size for a sharp phone screen, unless that is a very big canvas */
     const src=i.currentSrc||i.src;if(!src||/^data:/.test(src))return;
-    i.dataset.baked="1";
-    const im=new Image();im.crossOrigin="anonymous";
-    im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)return;i.src=u;i.removeAttribute("srcset");i.style.filter="none";i.style.objectFit="fill"}catch(e){}};
-    im.src=src});
+    i._bsrc=i.src;i.dataset.baked="1";
+    const give=()=>{if(filt)i.style.filter="none"};
+    /* one at a time, so a menu's photos never hold several big canvases at once */
+    iosQ=iosQ.then(()=>new Promise(done=>{const im=new Image();im.crossOrigin="anonymous";
+      im.onload=()=>{try{const u=pdfFiltered(im,snap);if(!u)give();else{
+        /* review 21: Safari kept painting the old, zoomed picture when the source changed in place inside a turned frame on the scaled card
+           (Role Models' taped strip, seen in WebKit too). The baked picture goes into a fresh img that replaces the old one once it has decoded */
+        const n=i.cloneNode(false);n.removeAttribute("srcset");n.removeAttribute("onload");n.removeAttribute("onerror");n.dataset.trim="1";n.style.filter="none";n.style.objectFit="fill";n.style.objectPosition="50% 50%";n.src=u;n._bsrc=n.src;
+        const put=()=>{if(i.isConnected)i.replaceWith(n);iosRepaint(n)};(n.decode?n.decode().then(put,put):put())}}catch(e){give()}done()};
+      im.onerror=()=>{give();done()};
+      im.src=/^https?:/.test(src)&&!src.startsWith(location.origin)?src+(src.includes("?")?"&":"?")+"cors=1":src}))});
 }
 /* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
    Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */
@@ -1777,7 +1822,8 @@ async function show(f,preferSig){
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
   {const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
-  $("status").textContent="";
+  const unsaved=!f._full&&navigator.onLine===false?"You're offline and this film's full menu isn't saved on this device yet. It'll be here once you're back online.":"";
+  $("status").textContent=unsaved;
   planLoad(f);planWire(f);
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
@@ -1824,7 +1870,7 @@ async function show(f,preferSig){
   if(!lobby&&!edition)card.innerHTML=cardHTML(f,menu,current.tag,false);
   else if(!ok){
     styleCard(card,f);card.style.transform="";card.innerHTML=cardHTML(f,menu,current.tag,false);
-    $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
+    $("status").textContent=unsaved||"The poster couldn't load. Your menu and prep sheet are still available.";
   }
   card.classList.toggle("is-lazy",!!menu.lazy);
   styleCard(prep,f);prep.classList.add("pp-sheet");
@@ -2550,17 +2596,17 @@ async function pushSync(){
   try{const r=await syncCall({action:"save",no:member.no,pin:member.pin,data:syncPayload()});syncState=r.status==="ok"?"saved":r.status}catch(e){syncState="offline"}
   const el=document.getElementById("syncNote");if(el)el.textContent=syncNote();
 }
-function syncNote(){return syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
+function syncNote(){return navigator.onLine===false?"You're offline. Your changes are saved on this device and go up once you're back online.":syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
 function openSyncForm(mode){
   const modalTrigger=document.activeElement;
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
   const join=mode==="join";
   o.setAttribute("aria-label",join?"Put your card online":"Use your card from another device");
-  o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go">${join?"Save my card":"Sign in"}</button></div></form>`;
+  o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><p class="off-note" hidden>You're offline. Your card stays saved on this device. Try this again once you're back online.</p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go" data-net>${join?"Save my card":"Sign in"}</button></div></form>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o||(e.target.dataset&&e.target.dataset.a==="back"))close()});
   o.querySelector("form").addEventListener("submit",async e=>{
-    e.preventDefault();const err=o.querySelector("#sErr");err.textContent="";
+    e.preventDefault();const err=o.querySelector("#sErr");err.textContent="";if(navigator.onLine===false){netMarks();return}
     const pin=o.querySelector("#sPin").value.trim();if(!/^\d{4}$/.test(pin)){err.textContent="The PIN needs to be 4 numbers.";return}
     const btn=o.querySelector(".go");btn.disabled=true;
     try{
@@ -2580,7 +2626,7 @@ function openSyncForm(mode){
       close();renderMember();buzz(30);
     }catch(x){err.textContent="Couldn't reach the card system. Check your connection and try again.";btn.disabled=false}
   });
-  mountModal(o,"input",modalTrigger);
+  mountModal(o,"input",modalTrigger);netMarks();
 }
 async function pullSync(){
   if(!member.pin)return;
@@ -2788,32 +2834,56 @@ if(typeof window!=="undefined"&&window.addEventListener&&typeof document!=="unde
   /* only new signs need fitting; everything else is left alone so the page stays quick */
   if(!ms.some(m=>(m.target.closest&&m.target.closest(".fit"))||[...m.addedNodes].some(n=>n.nodeType===1&&(n.classList.contains("fit")||n.querySelector&&n.querySelector(".fit")))))return;
   clearTimeout(window.__fs);window.__fs=setTimeout(()=>fitSigns(),60)}).observe(document.body,{childList:true,subtree:true})}
-/* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
+/* palace marquee: the letters hang on the board's slat rows like real changeable letters.
+   A short title is two rows tall under the NOW SHOWING row. A long one is split at a space into two lines of
+   one row each, the way a marquee crew would hang it; one long word drops to a single row. Only if that still
+   does not fit do the letters shrink. Light boxes show tonight's poster and recent spins. */
 let _hang=false;
-function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`${Math.min(84,1.56*(+(document.querySelector(".mq")||{dataset:{}}).dataset.w||1000)/Math.max(n,8)).toFixed(1)}px`;
-  if(!t.querySelector("i")){_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?" ":`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.05).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false}}
+function fitMarquee(){if(_hang)return;const t=$("now"),mq=document.querySelector(".mq");if(!t||!mq)return;
+  const txt=t.textContent,n=txt.length,room=mq.clientWidth-2*MQ_ROW,sig=txt+"|"+room;if(t.dataset.fit===sig)return;
+  const hang=cut=>{_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?(i===cut?" <br>":" "):`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.03).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false};
+  const shrink=()=>{const w=t.scrollWidth;if(w>room)t.style.fontSize=`${(parseFloat(getComputedStyle(t).fontSize)*room/w*.98).toFixed(1)}px`};
+  t.style.fontSize="";mq.classList.remove("one","two");hang(-1);t.dataset.fit=sig;
+  const sp=[...txt].map((c,i)=>c===" "?i:-1).filter(i=>i>0);
+  if(room<=0||t.scrollWidth<=room*(sp.length?.72:1))return;
+  if(sp.length){const cost=i=>Math.abs(i-n/2)-(txt[i-1]===":"?n/2:txt[i-1]===","?n/3:0),cut=sp.reduce((a,b)=>cost(b)<cost(a)?b:a);hang(cut);mq.classList.add("two")}else mq.classList.add("one");
+  shrink()}
 
-/* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform */
-const BOARD_Q=[[0.1093, 0.27008], [0.77325, 0.4913], [0.77723, 0.69619], [0.10822, 0.55794]];
+/* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform.
+   BOARD_Q is the lit board's corners (top left, top right, bottom right, bottom left) as fractions of the photo,
+   BOARD_ROWS the slat lines down the board (0 is the top edge, 1 the bottom edge), BOARD_W the board's
+   width counted in slat rows. All three are measured by scripts/compose-cinema-real.py. */
+const BOARD_Q=[[0.00386,0.17577],[0.8535,0.51257],[0.86792,0.75564],[0.00388,0.57483]];
+const BOARD_ROWS=[0.0337,0.166,0.2983,0.4306,0.5628,0.6951,0.8274,0.9597];
+const BOARD_W=55.93;
+const MQ_ROW=50;/* CSS px per slat row inside .mq; .mq is three rows: NOW SHOWING, then the title over two */
 function placeMarquee(){
   const st=document.querySelector(".palace-stage"),mq=document.querySelector(".mq");if(!st||!mq)return;
   const w=st.clientWidth,h=st.clientHeight;if(!w||!h)return;
+  /* unit square on the board -> stage px */
+  const [[x0,y0],[x1,y1],[x2,y2],[x3,y3]]=BOARD_Q.map(([x,y])=>[x*w,y*h]),dx1=x1-x2,dx2=x3-x2,dy1=y1-y2,dy2=y3-y2,sx=x0-x1+x2-x3,sy=y0-y1+y2-y3;
+  const den=dx1*dy2-dx2*dy1,g=(sx*dy2-dx2*sy)/den,k=(dx1*sy-sx*dy1)/den;
+  const a=x1-x0+g*x1,b=x3-x0+k*x3,dd=y1-y0+g*y1,e=y3-y0+k*y3;
+  const P=(u,v)=>{const z=g*u+k*v+1;return[(a*u+b*v+x0)/z,(dd*u+e*v+y0)/z]};
+  const s0=BOARD_ROWS[2],s1=BOARD_ROWS[5],sm=(s0+s1)/2;
   /* phones show only the middle of the photo: keep the letters on the part of the board that is on screen */
   const sr=st.getBoundingClientRect(),pr=st.parentElement.getBoundingClientRect(),pad=.035;
-  const vx0=Math.max(0,(pr.left-sr.left)/w)+pad,vx1=Math.min(1,(pr.right-sr.left)/w)-pad;
-  const [q0,q1,q2,q3]=BOARD_Q,lx=(q0[0]+q3[0])/2,rx=(q1[0]+q2[0])/2,t0=Math.max(0,(vx0-lx)/(rx-lx)),t1=Math.min(1,(vx1-lx)/(rx-lx));
-  const L=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];
-  const Q=[L(q0,q1,t0),L(q0,q1,t1),L(q3,q2,t1),L(q3,q2,t0)];
-  const H=260,W=Math.round(1000*(t1-t0));mq.style.width=W+"px";mq.dataset.w=W;
-  const d=Q.map(([x,y])=>[x*w,y*h]);
-  const [[x0,y0],[x1,y1],[x2,y2],[x3,y3]]=d,dx1=x1-x2,dx2=x3-x2,dy1=y1-y2,dy2=y3-y2,sx=x0-x1+x2-x3,sy=y0-y1+y2-y3;
-  const den=dx1*dy2-dx2*dy1,g=(sx*dy2-dx2*sy)/den,k=(dx1*sy-sx*dy1)/den;
-  const a=x1-x0+g*x1,b=x3-x0+k*x3,c=x0,dd=y1-y0+g*y1,e=y3-y0+k*y3,f=y0;
-  const m=[a/W,dd/W,0,g/W,b/H,e/H,0,k/H,0,0,1,0,c,f,0,1];
-  mq.style.transform=`matrix3d(${m.map(v=>+v.toFixed(8)).join(",")})`;mq.classList.add("on");_hang=false;try{const t=$("now");t.textContent=t.textContent;}catch(e){}
+  const vx0=(Math.max(0,(pr.left-sr.left)/w)+pad)*w,vx1=(Math.min(1,(pr.right-sr.left)/w)-pad)*w;
+  const tAt=X=>(X*(k*sm+1)-b*sm-x0)/(a-X*g);
+  const t0=Math.max(.012,tAt(vx0)),t1=Math.min(.988,tAt(vx1));
+  const W=Math.round((t1-t0)*BOARD_W*MQ_ROW),H=3*MQ_ROW;mq.style.width=W+"px";mq.dataset.w=W;
+  const Q=[P(t0,s0),P(t1,s0),P(t1,s1),P(t0,s1)];
+  /* box (W x H) -> that part of the board */
+  const [[X0,Y0],[X1,Y1],[X2,Y2],[X3,Y3]]=Q,ex1=X1-X2,ex2=X3-X2,ey1=Y1-Y2,ey2=Y3-Y2,tx=X0-X1+X2-X3,ty=Y0-Y1+Y2-Y3;
+  const dn=ex1*ey2-ex2*ey1,G=(tx*ey2-ex2*ty)/dn,K=(ex1*ty-tx*ey1)/dn;
+  const A=X1-X0+G*X1,B=X3-X0+K*X3,D=Y1-Y0+G*Y1,E=Y3-Y0+K*Y3;
+  const m=[A/W,D/W,0,G/W,B/H,E/H,0,K/H,0,0,1,0,X0,Y0,0,1];
+  mq.style.transform=`matrix3d(${m.map(v=>+v.toFixed(8)).join(",")})`;mq.classList.add("on");_hang=false;try{fitMarquee()}catch(e){}
 }
 try{placeMarquee();addEventListener("resize",placeMarquee);if(typeof ResizeObserver!=="undefined")new ResizeObserver(placeMarquee).observe(document.querySelector(".palace-stage"))}catch(e){}
 if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
+/* Oswald may land after the first fit, and the fallback font measures differently: fit again once fonts are in */
+try{const refit=()=>{const t=$("now");if(t){t.dataset.fit="";fitMarquee()}};document.fonts.ready.then(refit);document.fonts.addEventListener("loadingdone",refit)}catch(e){}
 function lightboxes(){
   const P=typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{};
   const ids=[current&&current.id,...hist.filter(id=>!current||id!==current.id)].filter(Boolean);
@@ -2987,11 +3057,17 @@ function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidt
     const bl=parseFloat((f.match(/blur\(([\d.]+)px\)/)||[])[1]||0),br=parseFloat((f.match(/brightness\(([\d.]+)\)/)||[])[1]||1),sa=parseFloat((f.match(/saturate\(([\d.]+)\)/)||[])[1]||1);
     if(bl>2){const k=Math.max(1,bl/2),t=document.createElement("canvas");t.width=Math.max(1,Math.round(w/k));t.height=Math.max(1,Math.round(h/k));const tx=t.getContext("2d");tx.imageSmoothingQuality="high";tx.drawImage(im,sx,sy,sw,sh,dx/k,dy/k,dw/k,dh/k);x.imageSmoothingQuality="high";x.drawImage(t,0,0,w,h)}
     else x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);
+    /* review 22: the washes cover the whole rectangle, so a see-through logo (a signature with brightness(0)) printed as a solid black box
+       on iPhone. The darkening draws source-atop; the saturation wash covers everything, so a copy of the picture is kept and its outline cut back in after it */
+    let m=null;if(sa<1){m=document.createElement("canvas");m.width=w;m.height=h;m.getContext("2d").drawImage(c,0,0)}
     if(sa<1){x.globalCompositeOperation="saturation";x.fillStyle=`rgba(128,128,128,${1-sa})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
-    if(br<1){x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h)}}
+    if(br<1){x.globalCompositeOperation="source-atop";x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
+    if(m){x.globalCompositeOperation="destination-in";x.drawImage(m,0,0);x.globalCompositeOperation="source-over";m.width=m.height=0}}
   /* review 13: a logo with a drop shadow (invite) is see-through around its letters, and a JPEG turned that into a black plate */
   try{let see=/drop-shadow/.test(f);if(!see){const d=x.getImageData(0,0,w,h).data;for(let i=3;i<d.length;i+=4*97)if(d[i]<250){see=true;break}}
-    return see?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.9)}catch(e){return null}}
+    /* review 21: the canvas is emptied straight after, since iPhone Safari caps the canvas memory a page may hold and a menu or two of
+       photos filled it, after which every bake came back empty ("data:,") and the photo stayed zoomed */
+    const u=see?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.9);c.width=c.height=0;return u&&u.length>32?u:null}catch(e){c.width=c.height=0;return null}}
 /* repeating stripes (laid paper, woven mats, kiosk planks) print as one flat smear: a straight-across or straight-down stripe
    becomes one drawn tile of its pattern, repeated as a picture. Slanted stripes are left as they are */
 /* review 13: html2canvas skips conic gradients, so a checker border (placemat) printed as plain paper: draw one tile in a canvas instead */
@@ -3251,6 +3327,10 @@ async function renderCanvas(src,forPrint){
     if(full<=h0+lh*.5)return;const cut=()=>e.scrollHeight>e.clientHeight+lh*.5;const w=e.textContent.trim().split(/\s+/);let lo=1,hi=w.length-1,best=1;
     while(lo<=hi){const mid=(lo+hi)>>1;e.textContent=w.slice(0,mid).join(" ").replace(/[,;:]$/,"")+"\u2026";if(cut())hi=mid-1;else{best=mid;lo=mid+1}}
     e.textContent=w.slice(0,best).join(" ").replace(/[,;:]$/,"")+"\u2026"})}catch(err){}
+  /* review 21: a frame laid beside a box (outline or flat ring) takes the box's turn too, pivoting on the same point. Canteen's meal voucher
+     printed its 6px paper outline square round a turned card, so the paper looked unturned with a second square edge */
+  const pdfTurnLike=(e,cs,g)=>{if(!cs.transform||cs.transform==="none")return "";const W=e.offsetWidth,H=e.offsetHeight,to=(cs.transformOrigin||"50% 50%").split(/\s+/);
+    return `transform:${cs.transform};transform-origin:${pdfLen(to[0],W)+g}px ${pdfLen(to[1]||"50%",H)+g}px;`};
   /* review 12: it also drops flat rings drawn outside a box ("0 0 0 8px bezel" round an airline window), so a framed photo printed bare.
      Each outer ring becomes a bordered frame laid behind the box, sized from where the box actually sits */
   try{clone.querySelectorAll("[style*=box-shadow]").forEach(e=>{const bs=e.style.boxShadow;if(!bs||!e.parentElement)return;
@@ -3270,7 +3350,7 @@ async function renderCanvas(src,forPrint){
     /* drawn widest first so each narrower ring sits on top, as the browser stacks them */
     rings.sort((a,b)=>b[0]-a[0]);let z=cs.zIndex==="auto"?"auto":cs.zIndex;
     for(const [w,col] of rings){const d=document.createElement("i");
-      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
+      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;${pdfTurnLike(e,cs,w)}border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
       e.parentElement.insertBefore(d,e)}})}catch(err){}
   /* and it skips outlines (a hairline keyline round a photo): the same treatment, a frame laid round the box */
   try{clone.querySelectorAll("[style*=outline]").forEach(e=>{const cs=getComputedStyle(e),w=parseFloat(cs.outlineWidth)||0;if(cs.outlineStyle==="none"||!w||!e.parentElement)return;
@@ -3280,7 +3360,7 @@ async function renderCanvas(src,forPrint){
       d.style.cssText=`position:absolute;left:${-bl-o}px;top:${-bt-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};border-radius:${rad}px;pointer-events:none`;
       e.style.outline="none";e.appendChild(d);return}
     const o=(parseFloat(cs.outlineOffset)||0)+w,d=document.createElement("i");
-    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
+    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex};${pdfTurnLike(e,cs,o)}`;
     e.style.outline="none";e.parentElement.insertBefore(d,e.nextSibling)})}catch(err){}
   try{
     await document.fonts.ready;
@@ -3699,6 +3779,31 @@ window.addEventListener("resize",size);
 setList();size();renderHist();scalePreview();renderWeek();renderMotw();
 try{document.documentElement.style.setProperty("--grainTile",`url("${noiseTile()}")`)}catch(e){}
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+/* offline: once the page has settled, the worker saves every film's menu, the layouts and the dish lists in the background (about 4 MB over the wire),
+   and the candy bar and Galaxy Video photos load once, so a spin works anywhere with no signal. Skipped when the phone is set to save data */
+function warmOffline(reg){
+  if(navigator.onLine===false||(navigator.connection&&navigator.connection.saveData)||!reg.active)return;
+  const u=FILMS.map(filmFile);
+  if(typeof FMT_VER!=="undefined")for(const k in FMT_VER)u.push("formats/"+k+".js?v="+FMT_VER[k]);
+  if(window.LIB_VER)for(const k in LIB_VER)u.push("menu-formats/"+k+".js?v="+LIB_VER[k]);
+  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
+  reg.active.postMessage({warm:u});
+  /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
+  ["assets/lib/html2canvas-1.4.1.min.js","assets/lib/jspdf-2.5.1.umd.min.js"].forEach(x=>{try{fetch(x).catch(()=>{})}catch(e){}});
+  /* a detached copy of each shop photo picks the same size the page would */
+  document.querySelectorAll("#walkin img,#viewShop img,#viewCrave img").forEach(im=>{if(im.complete&&im.naturalWidth)return;const i=new Image();if(im.sizes)i.sizes=im.sizes;if(im.srcset)i.srcset=im.srcset;i.src=im.getAttribute("src")});
+  (window.SNACKS||[]).forEach(x=>{if(x.img)new Image().src=x.img});
+  /* plus the few pictures that layouts draw as textures (the diner's paper and laminate) and the member card */
+  ["assets/brand/member-card.webp","assets/brand/case-sticker.webp","menu-formats/assets/diner/paper-grain.webp","menu-formats/assets/diner/rain-glass.webp","menu-formats/assets/diner/laminate-wear.webp","assets/menu-art/clock-tower.png"].forEach(x=>{new Image().src=x});
+}
+if("serviceWorker" in navigator){navigator.serviceWorker.ready.then(reg=>setTimeout(()=>warmOffline(reg),6000)).catch(()=>{});navigator.serviceWorker.addEventListener("message",e=>{if(e.data&&"warmed" in e.data)savedScan()})}
+/* offline: a small note where something needs the internet (the request form, the member card sync), and its send button waits for the signal */
+function netMarks(){const off=navigator.onLine===false;document.querySelectorAll(".off-note").forEach(n=>{n.hidden=!off});
+  document.querySelectorAll("[data-net]").forEach(b=>{if(off&&!b.disabled){b.disabled=true;b.dataset.offdis="1"}else if(!off&&b.dataset.offdis){b.disabled=false;delete b.dataset.offdis}})}
+addEventListener("online",netMarks);addEventListener("offline",netMarks);
+/* review 22: the sync note keeps its promise. Back online, changes saved while offline go up, and the note follows the signal */
+addEventListener("online",()=>{try{if(member&&member.pin&&syncState!=="saved")pushSync()}catch(e){}});
+["online","offline"].forEach(ev=>addEventListener(ev,()=>{try{const el=document.getElementById("syncNote");if(el)el.textContent=syncNote()}catch(e){}}));
 setKidsUI();if(kidsMode)setList();pullSync();
 try{if(!localStorage.getItem("mns-welcome"))setTimeout(()=>{const w=document.getElementById("walkin");if(w&&!w.hidden)document.addEventListener("walkin-done",()=>setTimeout(showWelcome,300),{once:true});else showWelcome()},400)}catch(e){}
 /* a shared film link always opens on its menu, whatever tab was open last */try{const v=new URLSearchParams(location.search).get("film")?"wheel":localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
@@ -4061,7 +4166,7 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
   const dlg=$("reqMovie"),form=$("reqForm"),thanks=$("reqThanks"),err=$("reqErr"),go=$("reqGo");
   if(!dlg||!form)return;
   const showErr=t=>{err.textContent=t;err.hidden=!t};
-  const open=trigger=>{form.reset();form.hidden=false;thanks.hidden=true;showErr("");go.disabled=false;go.textContent="Send request";mountModal(dlg,"#reqTitle",trigger);if(!dlg.open)dlg.showModal()};
+  const open=trigger=>{form.reset();form.hidden=false;thanks.hidden=true;showErr("");go.disabled=false;go.textContent="Send request";mountModal(dlg,"#reqTitle",trigger);if(!dlg.open)dlg.showModal();netMarks()};
   document.querySelectorAll("[data-req]").forEach(b=>b.addEventListener("click",()=>open(b)));
   $("reqClose").addEventListener("click",()=>dismissModal(dlg));
   $("reqDone").addEventListener("click",()=>dismissModal(dlg));
@@ -4071,6 +4176,7 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
     e.preventDefault();
     if(!form.reportValidity())return;
     if(form.elements["bot-field"].value){done();return}
+    if(navigator.onLine===false){netMarks();return}
     go.disabled=true;go.textContent="Sending";showErr("");
     try{
       const res=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});

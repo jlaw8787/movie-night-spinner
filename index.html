@@ -51,9 +51,10 @@
 .req-shop{font:600 14px var(--f-body);min-height:40px;padding:8px 14px;border-radius:99px;border:1px solid var(--brass);background:transparent;color:var(--bulb);cursor:pointer}
 .req-shop:focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
 /* review 21: the request button sits under the tools, not in the sticky tool bar, so it never covers the aisle signs or squeezes the search box */
-#viewShop .req-line{order:8;margin:4px 0 10px;font:400 15px var(--f-body);color:var(--gv-cream,#fbf7ea);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+#viewShop .req-line{margin:4px 0 10px;font:400 15px var(--f-body);color:var(--gv-cream,#fbf7ea);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
 #viewShop .req-line .req-shop{min-height:44px}
-.credit-priv{opacity:.85;margin-bottom:0;font-size:14px}.credit-priv a{display:inline-block;min-height:44px;line-height:44px;padding:0 10px}
+@media (max-width:700px){#viewShop .req-line{order:8}}
+.credit-priv{opacity:.85;margin-bottom:0;font-size:14px}.credit-priv a{display:inline-block;min-height:44px;line-height:44px;padding:0 10px}.credit-priv .credit-sep{display:inline-block;margin:0 8px}
 .member-sync .sync-del{border-color:#e5484d;color:#ff8f8a;background:transparent}.member-sync .sync-del.arm{background:#c62a2f;border-color:#c62a2f;color:#fff}
 .member-sync .sync-priv{flex-basis:100%;margin:6px 0 0;font-size:14px}.member-sync .sync-priv a{color:inherit;display:inline-block;min-height:44px;line-height:44px}
 .reqm .req-priv{margin:12px 0 0;font-size:14px}.reqm .req-priv a{color:#e7c069}
@@ -67,6 +68,8 @@
 .reqm .req-go:focus-visible,.reqm .req-thanks button:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
 .reqm .req-go[disabled]{opacity:.6;cursor:default}
 .reqm .req-err{margin:10px 0 0;font-size:14px;color:#ff8f8a}
+/* offline: a calm note where something needs the internet */
+.off-note{margin:10px 0 0;font-size:14px;line-height:1.4;opacity:.85}.syncbox .off-note{margin:0 0 12px}
 .reqm .req-thanks{text-align:center;padding:18px 0 6px}
 .reqm .req-thanks h4{font:400 24px/1.15 var(--f-disp);letter-spacing:.01em;text-transform:none;color:#f3dfb4;margin:0 0 8px}
 .reqm .req-thanks p{margin:0 0 16px;font-size:16px;color:#f1e3c4}
@@ -1270,13 +1273,17 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
 /* real photo hero: the crest is lit in the photo, the board gets live letters set in its perspective (placeMarquee) */
 .blade{left:0;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .lbox{display:none!important}
-.mq{left:0;top:0;width:1000px;height:260px;padding:0 20px;gap:34px;background:none;transform-origin:0 0;visibility:hidden}
+/* .mq is three slat rows tall (50px a row, see MQ_ROW in the app script): NOW SHOWING in the top row, the title hung over the next two.
+   A long title is split over two lines of one row each (.two), one long word drops to one row (.one). Oswald caps sit .045em low in their line box, so each line is lifted that much. */
+.mq{left:0;top:0;width:1000px;height:150px;padding:0 50px;gap:0;justify-content:flex-start;background:none;transform-origin:0 0;visibility:hidden}
 .mq.on{visibility:visible}
 /* slotted letters on a backlit board: not pure black, soft edged, a few hung crooked or sun-faded, the board's light shows through */
-.mq-k,.mq-t{color:#2b2627;mix-blend-mode:multiply;filter:blur(.55px);text-shadow:0 0 1px rgba(43,38,39,.5)}
+.mq-k,.mq-t{color:#2b2627;mix-blend-mode:multiply;filter:blur(1.1px);text-shadow:0 0 2px rgba(43,38,39,.5);position:relative;top:-.045em;flex:none}
 
-.mq-k{font:700 40px/1 "Oswald",Impact,sans-serif;letter-spacing:.16em;color:#151112}
-.mq-t{font:700 100px/1 "Oswald",Impact,sans-serif;letter-spacing:.05em;color:#151112;max-width:100%;overflow:visible}
+.mq-k{height:50px;font:700 43px/50px "Oswald",Impact,sans-serif;letter-spacing:.16em;color:#151112}
+.mq-t{height:100px;font:700 90px/100px "Oswald",Impact,sans-serif;letter-spacing:.05em;color:#151112;max-width:none;overflow:visible;text-align:center} /* review 22: 90px, not 101, so the capitals clear NOW SHOWING by a visible gap on the slanted board */
+.mq.one .mq-t,.mq.two .mq-t{font-size:48px;line-height:50px}
+.mq.one .mq-t{height:50px}
 /* Galaxy Video is its own shop: the cinema marquee and cinema cards step aside, the store's colours take the page */
 body.in-shop .palace,body.in-shop #motw,body.in-shop #weekPanel{display:none!important}
 body.in-shop{background:linear-gradient(rgba(27,15,48,.88),rgba(18,10,32,.94)),url("assets/hero/carpet.webp") 0 0/300px 300px,#1b0f30}
@@ -3092,17 +3099,17 @@ html,body{overflow-x:clip}
     </section>
   </div>
 </div>
-<p class="credit credit-priv"><a href='/privacy'>Privacy policy</a></p>
+<p class="credit credit-priv"><a href='/privacy'>Privacy policy</a><span class="credit-sep" aria-hidden="true">·</span><a href='/support'>Help and support</a></p>
 <p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank" aria-label="TMDB, The Movie Database (opens in a new tab)"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. Cinema photo by SecretName101 via <a href="https://commons.wikimedia.org/wiki/File:Orpheum_Theatre_marquee_on_election_night_2024_IMG_2517.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC BY 4.0</a>, signs changed. Shopfront photo by Mathias Reding on <a href="https://unsplash.com/photos/0rgZp-E8iIs" rel="noopener" target="_blank">Unsplash</a>, signs changed. <button class="howlink" id="howBtn" type="button">How it works</button></p>
 
 <script src="tmdb-posters.js?v=da0beac8" defer></script>
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=d09296a0" defer></script>
+<script src="films.js?v=580f7a4b" defer></script>
 <script src="assets/fonts/fonts.js?v=f5c65609" defer></script>
-<script src="formats-core.js?v=33411436" defer></script>
-<script src="app.js?v=94684161" defer></script>
+<script src="formats-core.js?v=41f596b3" defer></script>
+<script src="app.js?v=ef597cac" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
@@ -3142,7 +3149,8 @@ html,body{overflow-x:clip}
       <textarea id="reqNote" name="note" maxlength="500"></textarea>
       <p class="tp req-priv">We only use this to pick films to add. <a href='/privacy'>Privacy policy</a></p>
       <p class="req-err" id="reqErr" role="alert" hidden></p>
-      <button type="submit" class="req-go" id="reqGo">Send request</button>
+      <p class="off-note" hidden>You're offline. Requests need the internet, so send it once you're back online.</p>
+      <button type="submit" class="req-go" id="reqGo" data-net>Send request</button>
     </form>
     <div class="req-thanks" id="reqThanks" role="status" aria-live="polite" hidden>
       <h4>Thanks, request received</h4>

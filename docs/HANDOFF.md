@@ -458,6 +458,14 @@ Josh's calls (8 Nov, 2pm): 1. layouts that dropped notes or the cue get them bac
 - Live on reeldinner.com from 21a3d30 (deploy 6af3bd3a), pushed to main. Not yet checked on a real phone.
 - Next: Josh's open menu jobs listed under "11 Nov, 10:40am".
 
+## 11 Nov: unprinted card dishes cut from three hand-built menus (branch fix21-dishes, not deployed)
+
+- Josh asked for the card dishes left on purpose above to go. Cut from data/films.json, then build-data. Warriors: Coney Island crinkle fries, Boardwalk clam strips, Hot potato knishes, Late-night chopped steak heroes, Fairy floss and toffee apples, Chocolate malted. Godfather: Sicilian orange and fennel salad, Fried calamari, Straw-bottle Chianti sangria with oranges. Harry Met Sally: Potato knish.
+- Kept: Louis' veal scaloppine. The Godfather's printed front prints it ("The Veal", Veal scaloppine 1.72, and "the veal" in the family dinner), so it was never an unprinted dish. It is still not on the phone menu, Prep sheet or picker, which read the formats.js groups. Josh to say if he wants it cooked.
+- The phone menu, Director's cut picker, Prep sheet and shopping list never showed these dishes (they read formats.js groups and recipes2). What changes is dish-names.json and dish-notes.json, so the Candy bar search and seasonal shelves no longer find these films by the cut dishes.
+- No recipes, recipes2, diet or edition entries named the cut dishes. audit/cards for the three films now list the current card dishes. poster-briefs.json and the sweep patches still name them; both are closed records the page never reads.
+- Printed PDFs pixel identical before and after; phone menu and Prep sheet text identical.
+
 ## 11 Nov, noon: known menu glitches fixed (start here in the next chat)
 
 Live on reeldinner.com from ab66182 (deploy 6af3cc50, app.js?v=8b7eb073), pushed to main (Josh, 11 Nov 11:51am: deploy). Before and after shots went to Josh in chat. Not yet checked on a real phone.
@@ -502,3 +510,85 @@ Live on reeldinner.com from 7ea6747 (deploy 6af3ef19, Josh, 11 Nov: deploy now).
 - New: After Hours' TERMINAL BAR logo wraps behind "BAR AND GRILL" (since 7e8598f3); the request button breaks Galaxy Video's phone tool row and covers two aisle signs (check-store-taps fails, since 919fd90f); campfire captions often don't match their stills; campfire page 1 takes its A4 margin from the strip photos; Ferris and Hitch side lines get the film wrong; Luca and Kingsman side lines repeat a dish note.
 - check-browser fails kids' mode on Bugsy's "scotch fillet" (false positive).
 - Next: Josh picks from the review 21 fix list.
+
+## 11 Nov, 5:50pm: iPhone photo hotfix live
+- Live on reeldinner.com from hotfix-iphone 0a84e903 (7cb7451 plus the iosBakeFilters change only; deploy 6af41d1b, app.js?v=2e8495c0). The rest of today's work is on main, not live.
+- iPhone Safari drew cropped stills (Logan's strip and hero) as blurry zoomed corners. Every cropped photo on a card is now baked to its frame on iPhone, the CORS copy is fetched fresh (?cors=1), and if baking fails the filter comes off. Josh checked on his iPhone, 11 Nov 5:49pm: photos sharp now.
+- 6:45pm: second hotfix live (deploy 6af42932, from hotfix-iphone). Real cause of the zoomed photos found in WebKit (Playwright webkit, iPhone 15 profile, spin path on Role Models): the shared __fmtLift.trim in airline, cafe, bistro, campfire and motel sampled photos before Safari had decoded them, read the blank sample as black bars and blew the photo up to its middle. Trim now waits for a decoded picture and never crops over half; the iPhone bake waits for the trim and frees its canvases. __fmtLift is now v:3.
+
+## 11 Nov, 7pm: end of the Review 21 chat (start here in the next chat)
+
+Live on reeldinner.com: deploy 6af42932 from branch hotfix-iphone (7cb7451 plus the two iPhone photo fixes only). Josh checked on his iPhone: photos fine now.
+
+### Open fault Josh just saw (fix first)
+- E.T. campfire front on iPhone: the signature under "Left on your pillow" prints as a solid black box (the top line of the E.T. title logo). Likely cause, not yet proved: pdfFiltered's no-canvas-filter path (older iPhone Safari) darkens by filling the whole rectangle with black for brightness(<1), so the logo's see-through parts go black. Fix: draw those fills with globalCompositeOperation "source-atop" (same for the saturation wash), then check in Playwright WebKit with the iPhone 15 profile and on Josh's phone. Other films signed with the logo (sig "full") likely have it too.
+
+### On main, reviewed and passed, not live
+Review 21 fixes 2, 3, 5, 8 and the Nativity swipe view and drink note; support page and store listing (docs/STORE-LISTING.md); privacy page fixes; docs/ARTWORK-RIGHTS.md (fact-checked); unprinted card dishes cut (Warriors, Godfather, Harry Met Sally); canteen still under a narrowed poster (not yet reviewed); the iPhone photo fixes.
+### On main, redone after review, re-review was lost in a session restart
+Fix 1 request line on desktop, Ferris line "Lunch, then the Cubs, then the art.", TERMINAL BAR word gap, check-browser reload settle. Re-review these before deploying.
+
+### Branches with finished work waiting for review (not merged)
+- fix21-voucher 81270ad5: canteen voucher turns with its card on paper (pdfTurnLike). Author checked 6 canteen and 10 other films.
+- fix21-captions cc044511: all 56 campfire captions match their stills. Side effects: about 17 snack combo names change, about 25 old lines dropped.
+- fix21-offline 9954bbf5: offline mode (every film, layout and dish list saved after first visit, plain frame for unsaved photos, calm offline notes).
+
+### Branches stopped part way by the restart (WIP commits, not reviewed)
+- fix21-posters: 124 original type posters replacing the AI posters that copy title logos, plus removing the McDowell's CinemaBlend frame.
+- fix21-fonts: Google Fonts and the cdnjs PDF libraries moved to local files (assets/fonts about 23 MB so far).
+- fix21-app: Capacitor app groundwork and app mode with no studio artwork.
+- fix21-marquee: front page marquee rebuilt from the original Commons photo (bulbs, slat joins, wording in the rows).
+- fix21-checks 275bd561: three unrun checks (phone fit, PDF tone, Prep A4) with harness tweaks; findings not written up.
+- The 900-film print sweep produced no findings file before it stopped.
+
+### Machine notes
+- Chrome here sends local http through the proxy unless launched with '--proxy-server=https=127.0.0.1:<port>' (no bypass works). Use that flag in every harness.
+- Never run more than two browser jobs at once. Twelve parallel helpers overloaded the machine and the session restarted, killing all of them.
+- Playwright WebKit with devices['iPhone 15'] reproduces iPhone Safari faults; it found the photo trim bug.
+- Deploy: the trimmed copy (git archive, then remove audit docs sweep wip tests scripts .github .netlify) via the Netlify MCP deploy command run inside that copy. Get a fresh proxy token each time.
+
+### Josh's wishes queued
+1. Instagram Reel: smooth video of a spin landing on Jurassic Park (1993), menu, lock in, marquee showing the film. No sound (he adds music in Instagram). Use the virtual-time frame capture in /home/claude/ig/rec3.cjs approach (Emulation.setVirtualTimePolicy, 30 fps), not Playwright recordVideo, which stutters. Rig the spin with window.spinPool=()=>[FILMS.find(x=>x.id==="Jurassic Park (1993)")].
+2. A 3D video of the printed menu lifting off the page, turning 360 degrees and showing its folds.
+
+## 11 Nov, 9pm: Review 22 chat, everything merged on main (start here in the next chat)
+
+Not live yet: live is still deploy 6af42932 (hotfix-iphone). Main holds all of the below. GitHub push was refused from this session (Claude GitHub App not linked to the repo), so check origin/main is up to date before starting; if not, the work only exists if it was pushed later.
+
+### Merged on main, each reviewed by a separate reviewer
+- iPhone signature black box (E.T. and every campfire film signed with a logo): pdfFiltered's no-canvas-filter path darkened the whole rectangle. Darkening now draws source-atop, the saturation wash is cut back to the picture's outline. Proved in Playwright WebKit (iPhone 15 profile, no canvas filters there): all 50 logo-signed films bake as lettering only. Harness: /home/claude/harness/sig.cjs (gone with the session; easy to rebuild).
+- Round 2 fixes re-reviewed and passed: request line on desktop, Ferris line, TERMINAL BAR, check-browser reload (3 clean runs).
+- fix21-voucher: canteen voucher turns with its card on paper; also fixed Man of Steel, A Bronx Tale, Monsters University.
+- fix21-captions plus four review rounds: all 56 captions match their stills; the 5 repeats, 4 near-repeats and about 20 repeats carried from main cleared; dropped lines restored to the back where they do not repeat (some do not fit and are dropped by the back's fit); film combo names back (Gallipoli "The race against a horse", Empire "The asteroid field chase", Wet Hot "The white water rafting trip" are new).
+- fix21-offline plus follow-ups: storage-full safety, 600 photo cap enforced on start and activate (TMDB photos trimmed first), export libraries warmed so Save PDF works offline on first use, sync goes up when back online. First visit downloads about 5 MB and about 1000 requests in the background.
+- fin-posters: 124 original type posters (scripts/make-type-posters.cjs) replace the AI posters; McDowell's CinemaBlend frame replaced by a drawn sign; ARTWORK-RIGHTS.md has a dated note.
+- fin-marquee: palace hero rebuilt from the Commons photo; title 90px, colon split preferred.
+
+### Still open
+- ARTWORK_ROLLOUT.md lines 8 and 25 still ask for recognisable film typography; contradicts the posters change.
+- Two faint marks in palace.webp, darkest right column near the bottom rail (barely visible on desktop).
+- Branches not touched this session: fix21-fonts, fix21-app, fix21-checks, the 900-film print sweep.
+- Next job (Josh, 11 Nov): dish notes sweep. About 240 notes across the 900 say where a dish is from instead of what is in it, often echoing the dish name (Con Air jerky "Lerner Airfield in the desert", cheeseburger "the stop at the abandoned airfield"). Rewrite the weak ones to describe the food, keep the ones that work, with a separate reviewer.
+- Josh's queued wishes (Instagram Reel, 3D menu video) unchanged.
+- Tests at ce1978d0: all 19 tests, check-browser (16), check-store-taps, check-print-text on all 900 (six chunks of 150), WebKit iPhone signature check: all pass.
+
+## 12 Nov, 8:45am: Review 23 chat, everything merged on main (start here in the next chat)
+
+Live: deploy 6af4fc29 (main df81c41a), 12 Nov 9am, files checked against the live site. GitHub push is still refused from these sessions (Claude GitHub App not linked), so origin/main on GitHub is behind: push main from a session that can.
+
+### Merged on main, each reviewed by a separate reviewer
+- Campfire signatures (Josh's iPhone: E.T. lettering clipped at the bottom): stillStrip.sh is a per-film crop height. E.T. sh 60, Evil Dead II sh 58, IT and The Last Jedi sign with the full logo. scripts/sig-crops.py checks every logo-signed strip film. WebKit iPhone check: all 50 bake as lettering, none opaque.
+- Dish notes sweep: 1504 notes that said where a dish was from now describe the food from its recipe, most with a short film nod (Josh's call), 3 kept. Three review rounds. Same wording copied into the 249 matching poster-edition dishes in movie-menus.js. Full log with old and new text: audit/dish-notes-sweep-2026-11-12.json.
+- ARTWORK_ROLLOUT.md lines 8 and 25 match the type posters (no recognisable film typography or imitated logos). Still stale, not touched: line 35 "All generated artwork is original film-inspired artwork".
+- palace.webp: the two faint marks cleaned (scripts/palace-marks.py, one-off).
+- Hero sign (Josh's iPhone, 8:26am): bulb rail carried across the gap between the crest and the right scroll, REEL DINNER letters redrawn as separate bulbs (scripts/palace-sign-fix.py, works on the current palace.webp). The earlier marquee commit e7f0a5bc was marked WIP, not reviewed.
+
+### Tests on main (before the hero sign merge, which only changed the three hero images)
+All 19 tests, check-browser (3 clean runs), check-store-taps, check-print-text on all 900 (six chunks of 150; one flake on The Avengers "We deliver" footer when two chunks ran at once, passed 3 of 3 alone and on the chunk rerun), sig-crops, WebKit signature check: all pass.
+- Josh, 12 Nov 10:11am: the Instagram Reel (spin landing on Jurassic Park) and the 3D menu video were made in separate chats and are complete. Drop both from the queued wishes.
+- GitHub: the Claude GitHub App permissions were accepted 12 Nov 10:10am (all repositories); pushes from these sessions work. GitHub Pages still isn't building (last run 25 Oct); the site is on Netlify, so this only matters if Josh leaves Netlify.
+
+### Next (Josh, 12 Nov): the old branches, in this order
+1. fix21-checks (4 commits, harness tweaks for check-phone-fit, check-pdf-tone, check-prep-a4): separate reviewer, merge, then run the three checks on all 900 and report findings.
+2. fix21-fonts (WIP, never reviewed, 955 files, about 23 MB of local fonts plus local PDF libraries): report the first-visit download cost and options (for example only the fonts each menu uses) before finishing it.
+3. fix21-app (WIP, never reviewed, Capacitor app groundwork and app mode): ask Josh before starting.

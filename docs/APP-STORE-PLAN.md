@@ -50,3 +50,8 @@ Done: privacy page, in-app delete of the online member card, sync fix, privacy@r
 - Support page at reeldinner.com/support (404 today).
 - App Store Connect: free apps agreement, app record, API key for cloud builds.
 - Privacy answers, age rating answers, a test member number and PIN for the reviewer, screenshots, icon, store text.
+
+## Decisions, 11 Nov 2026, afternoon
+- Age rating: answer honestly. About 640 of the 900 menus mention alcohol, so "frequent" on Apple's form, which gives 18+.
+- Artwork rights get settled before the first TestFlight build, so the store screenshots and the app are safe from the start.
+- Store listing drafts are in docs/STORE-LISTING.md; the support page is at /support.
