@@ -619,3 +619,26 @@ App mode (?app=1) shows no film artwork and made zero TMDB requests across 7 fil
 ### Next (suggested)
 1. Fix Sixteen Candles and The Wedding Singer print tone, and make the tone check measure the card only.
 2. fix21-app fixes listed above, if Josh wants to go ahead.
+
+## 12 Nov, late afternoon: invite tone, card-only tone check, fix21-app merged (start here in the next chat)
+
+Live is still deploy 6af53819. Main 313b401e is pushed to GitHub, not deployed (ask Josh first). Each item below had a separate reviewer before merge.
+
+### Merged on main
+- fix21-invite-tone (19a690f): the 1980s pearl paper sheen and the gloss glare faded from white to CSS `transparent`, which html2canvas reads as clear black, so the sheen printed grey. Now fades to rgba(255,255,255,0). Sixteen Candles -10.1 to -1.5 levels, The Wedding Singer -0.2; all 28 invite films within about 2 levels. The same white-to-`transparent` pattern is in pub, prom, kiosk, home, campfire, diningcar, truck, newspaper and stadium; they pass the tone check today, left alone. The invite paper vignette (to rgba(70,50,20,a)) could use the same treatment, tiny effect.
+- fix21-tone-card (c4edd74): check-pdf-tone measures the card only, cropping both images to inside the card's padding (the 26px surround on landscape .fmt cards: dark page on screen, white paper in print). fx-paper and portrait cards have no padding, so their numbers are unchanged. Still catches a real fault (old Sixteen Candles fails at -10.1). Rerun with MNS_NET=1: the 13 hand-built cards all pass (worst Friday -3.2, Goodfellas +2.0, Back to the Future +0.2), all 28 invites pass.
+- fix21-app (313b401e, rebased on main): tests guarded (globalThis.REEL_APP, typeof REEL checks), stamps rebuilt, assets/app/latedoor-app.webp (shelves blurred) swapped in app mode, shopfront*.webp never copied into www/, no service worker in app mode, Android POST_NOTIFICATIONS and SCHEDULE_EXACT_ALARM, docs/APP-BUILD.md. All 19 tests, check-browser, dialogs pass. ?app=1 over 7 films and the shop: 0 TMDB requests, no poster photos; website unchanged.
+
+### fix21-app reviewer's low items (not done)
+1. Trailers may not play on iPhone (no referrer from capacitor://localhost, YouTube error 153); test on a device before Josh decides on trailers.
+2. Calendar share cancelled on the phone still says "Calendar file saved"; blob URL made and never freed there.
+3. Locking in a film asks for notification permission straight away (setWeek calls appRemind(true)); asking from the calendar button would be gentler.
+4. After sharing a menu image natively it says "Saved. Check your Photos." even if shared to a chat.
+5. SCHEDULE_EXACT_ALARM is off by default on Android 14+, so reminders are inexact there; APP-BUILD.md says "on the minute".
+6. Phone reminders cover start cooking and showtime only, not day-before steps.
+7. app-mode.js (about 30 KB) blocks first paint on the website; a small inline check that loads it only in app mode would remove that.
+8. app-art.js loaded without ?v (only affects ?app=1 in a browser); iPhone Save PDF cancel reports "saved" even if the Documents copy failed.
+
+### Next (suggested)
+1. Deploy main (Josh to say).
+2. The low items above, then an Android debug build (needs JDK 21 and the Android SDK installed on this machine).
