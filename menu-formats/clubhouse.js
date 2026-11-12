@@ -135,6 +135,8 @@ const dearOf=it=>{const s=(it&&it.n||"")+" "+(it&&it.note||"");for(const [re,v] 
 const pval=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?null:n};
 const pfmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0],post=(o.match(/[^\d.]*$/)||[""])[0];if(!/\./.test(o))return pre+String(Math.round(v))+post;if(/^\D*\.\d\d/.test(o)&&v<1)return pre+"."+String(Math.round(v*100)).padStart(2,"0")+post;return pre+v.toFixed(2)+post};
 const bump=(v,o)=>{if(!/\./.test(String(o)))return Math.round(v)+1;if(v<1)return Math.round((v+.05)*100)/100;const f=v%1;return f<.495?Math.floor(v)+.5:f<.945?Math.floor(v)+.95:Math.floor(v)+1.5};
+/* one printed price step down: a dollar, five cents under a dollar, else .95 to .50 to the dollar below's .95 */
+const down=(v,o)=>{if(!/\./.test(String(o)))return Math.max(1,Math.round(v)-1);if(v<=1)return Math.max(.05,Math.round((v-.05)*100)/100);const f=Math.round((v%1)*100);return f>50?Math.floor(v)+.5:f>0?Math.floor(v)-.05:v-.05};
 /* a price rounded the way the card prints it: whole dollars, five cents under a dollar, else .50 or .95 */
 const rnd=(v,o)=>{if(!/\./.test(String(o)))return Math.max(1,Math.round(v));if(v<1)return Math.max(.05,Math.round(v*20)/20);return Math.floor(v)+(v%1<.5?.5:.95)};
 /* walk a course from its foot up so every row costs more than the one under it */
@@ -149,8 +151,10 @@ function clubPrices(items,ei,egg){
     const idx=its.map((_,i)=>i).filter(i=>!its[i].house&&pval(p[i])!=null),vals=idx.map(i=>pval(p[i])).sort((a,b)=>b-a),fm=idx.length?p[idx[0]]:"";
     idx.forEach((i,j)=>{p[i]=pfmt(vals[j],fm)});climb(p,idx,fm);
     const order=idx;
-    /* house lines keep their place at the foot and only move off a price already taken */
-    const seen=order.map(i=>pval(p[i]));its.forEach((_,i)=>{if(order.includes(i))return;let v=pval(p[i]);if(v==null)return;let g=0;while(seen.some(s=>Math.abs(s-v)<.001)&&g++<20)v=bump(v,p[i]);seen.push(v);p[i]=pfmt(v,p[i])});
+    /* house lines sit at the foot (review 26b): cheaper than every other dish in the course, stepped down off any price already taken */
+    const seen=order.map(i=>pval(p[i])),lo=seen.length?Math.min(...seen):Infinity;
+    its.forEach((_,i)=>{if(order.includes(i))return;let v=pval(p[i]);if(v==null)return;if(v>=lo-.001)v=rnd(lo*.85,p[i]);if(v>=lo-.001)v=rnd(lo-.5,p[i]);
+      let g=0;while((seen.some(s=>Math.abs(s-v)<.001)||v>=lo-.001)&&g++<20)v=down(v,p[i]);seen.push(v);p[i]=pfmt(v,p[i])});
     pr[k]=p}
   /* every main above every starter, the dearer main still on top */
   {const sMax=Math.max(-1,...(pr.s||[]).map(pval).filter(v=>v!=null)),its=items.m||[],p=(pr.m||[]).slice();let cur=sMax;
@@ -234,8 +238,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     const stretch=Math.min(spare,nr*16);const left=spare-stretch;let still=0;
     if(left>100&&F.stillSrc){still=Math.min(left+stretch-20,Math.round(colW*9/16)+34);if(still<110)still=0}
     return {gapX,still,inner:MH-(still?still+12:0)}});
-  /* holes follow golf (review 26): Front Nine from 1, The Turn from 9, Back Nine from 10 (or after The Turn), the bar is the 19th */
-  const nm=(items.m||[]).length,holeOf=(k,i)=>k==="s"?i+1:k==="m"?9+i:k==="w"?Math.max(10,nm?9+nm:10)+i:19;
+  /* holes follow golf (review 26): Front Nine from 1, The Turn from 9, Back Nine from 10 (or after The Turn), the bar is the 19th (19A, 19B when it pours more than one) */
+  const nm=(items.m||[]).length,holeOf=(k,i)=>k==="s"?i+1:k==="m"?9+i:k==="w"?Math.max(10,nm?9+nm:10)+i:(items.d||[]).length>1?"19"+String.fromCharCode(65+i):"19";
   /* yardage is the joke: a hole's length is its par (price) times a hundred */
   const yds=x=>{const v=pval(x);return v==null?"":Math.round(v*100)};
   const rowsOf=(col,ci)=>col.map(([k,l],bi)=>`<div style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;height:${barH(tr)}px;background:${club};color:${gilt};font:700 ${Math.round(tr.h*.62)}px/1 ${BF};letter-spacing:.2em;text-transform:uppercase;padding:0 14px;margin-top:${bi?4+plan[ci].gapX:4}px"><span>${esc(l)}</span>${SUB[k]&&clean(l).toLowerCase()!==SUB[k].toLowerCase()?`<span style="font:italic 400 ${Math.max(13,Math.round(tr.h*.55))}px/1 ${BF};letter-spacing:.04em;text-transform:none;color:${giltS}">${SUB[k]}</span>`:""}</div>`+
@@ -246,11 +250,13 @@ window.MENU_FORMATS[ID]=ctx=>{
           <div style="font:700 ${tr.d}px/1.15 ${BF};color:${e.ink};${clamp(DMAX)}">${esc(F.tx(it.n))}</div>
           ${clean(it.note).trim()?`<div style="font:italic 400 ${tr.n}px/1.3 ${BF};color:${e.soft};margin-top:2px">${esc(cap(F.tx(it.note)))}</div>`:""}</div>
         ${YDS?`<div style="flex:0 0 ${YDS}px;border-left:${bl};display:flex;align-items:center;justify-content:center;font:400 ${Math.round(tr.d*.78)}px/1 ${BF};color:${e.soft}">${yds(pr[k][i])}</div>`:""}
-        <div style="flex:0 0 ${PAR}px;border-left:${bl};display:flex;align-items:center;justify-content:center;position:relative;font:700 ${tr.d}px/1 ${BF};color:${e.ink}">${pr[k][i]}${rg?`<span style="position:absolute;left:50%;top:50%;width:${PAR-14}px;height:${Math.round(tr.d*1.9)}px;margin:-${Math.round(tr.d*.95)}px 0 0 -${(PAR-14)/2}px;border:2.5px solid ${acc};border-radius:50%;transform:rotate(-8deg);opacity:.85"></span>`:""}</div></div>`}).join("")).join("");
+        <div style="flex:0 0 ${PAR}px;border-left:${bl};display:flex;align-items:center;justify-content:center;position:relative;font:700 ${tr.d}px/1 ${BF};color:${e.ink}">${pr[k][i]}${rg?`<span style="position:absolute;left:50%;top:50%;width:${PAR-14}px;height:${Math.round(tr.d*1.9)}px;margin:-${Math.round(tr.d*.95)}px 0 0 -${(PAR-14)/2}px;border:2.5px solid ${acc};border-radius:50%;transform:rotate(${(-8+(t.tilt||0)*1.5).toFixed(1)}deg);opacity:.85"></span>`:""}</div></div>`}).join("")).join("");
   const hdr=`<div style="display:flex;height:${HDR}px;background:${mix(e.rule,e.paper,.75)};border-bottom:2px solid ${club};font:700 15px/${HDR}px ${BF};letter-spacing:.16em;color:${club};text-transform:uppercase"><div style="flex:0 0 ${HOLE}px;text-align:center;border-right:${bl}">Hole</div><div style="flex:1;padding-left:12px;white-space:nowrap;overflow:hidden">Dish</div>${YDS?`<div style="flex:0 0 ${YDS}px;text-align:center;border-left:${bl}">Yds</div>`:""}<div style="flex:0 0 ${PAR}px;text-align:center;border-left:${bl}">Par</div></div>`;
   /* the scorecard's Out / In line under each column: holes played and the yards walked */
   const outRow=(col,ci)=>{if(!OUTH)return "";const n=col.reduce((a,[k])=>a+items[k].length,0),y=col.reduce((a,[k])=>a+items[k].reduce((b,_,i)=>b+(+yds(pr[k][i])||0),0),0);
-    return `<div style="display:flex;height:${OUTH}px;background:${mix(e.rule,e.paper,.75)};border-top:2px solid ${club};font:700 14px/${OUTH-2}px ${BF};letter-spacing:.14em;color:${club};text-transform:uppercase"><div style="flex:0 0 ${HOLE}px;text-align:center;border-right:${bl}">${R.cols.length>1?(ci?"In":"Out"):"Tot"}</div><div style="flex:1;padding-left:12px;white-space:nowrap;overflow:hidden;letter-spacing:.08em;text-transform:none;font-weight:400;font-style:italic">${n} ${n===1?"hole":"holes"} played</div>${YDS?`<div style="flex:0 0 ${YDS}px;text-align:center;border-left:${bl};letter-spacing:0">${y||""}</div>`:""}<div style="flex:0 0 ${PAR}px;border-left:${bl}"></div></div>`};
+    /* the par total (review 26b): the column's prices added up, printed the way the card prints a price */
+    const pfm=col.map(([k])=>(pr[k]||[]).find(x=>pval(x)!=null)).find(Boolean)||"",par=col.reduce((a,[k])=>a+(pr[k]||[]).reduce((b,x)=>b+(pval(x)||0),0),0);
+    return `<div style="display:flex;height:${OUTH}px;background:${mix(e.rule,e.paper,.75)};border-top:2px solid ${club};font:700 14px/${OUTH-2}px ${BF};letter-spacing:.14em;color:${club};text-transform:uppercase"><div style="flex:0 0 ${HOLE}px;text-align:center;border-right:${bl}">${R.cols.length>1?(ci?"In":"Out"):"Tot"}</div><div style="flex:1;padding-left:12px;white-space:nowrap;overflow:hidden;letter-spacing:.08em;text-transform:none;font-weight:400;font-style:italic">${n} ${n===1?"hole":"holes"} played</div>${YDS?`<div style="flex:0 0 ${YDS}px;text-align:center;border-left:${bl};letter-spacing:0">${y||""}</div>`:""}<div style="flex:0 0 ${PAR}px;border-left:${bl};text-align:center;letter-spacing:0;font-size:15px">${par?pfmt(Math.round(par*100)/100,pfm):""}</div></div>`};
   const card=R.cols.map((col,ci)=>{const x=RX+ci*(colW+GAP),pl=plan[ci];
     return `<div style="position:absolute;left:${x}px;top:${TOP}px;width:${colW}px;height:${pl.inner+HDR+OUTH+5}px;box-sizing:border-box;border:2.5px solid ${club};background:${e.paper};overflow:hidden">${hdr}<div style="height:${pl.inner}px;overflow:hidden;display:flex;flex-direction:column">${rowsOf(col,ci)}</div>${outRow(col,ci)}</div>`+
       (pl.still?`<div style="position:absolute;left:${x}px;top:${TOP+pl.inner+HDR+OUTH+5+12}px;width:${colW}px;height:${pl.still-5}px;box-sizing:border-box;border:2.5px solid ${club};background:${club};overflow:hidden">
@@ -267,7 +273,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const foot=`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${RLW-12}px;height:${FH}px;box-sizing:border-box;border:2px solid ${club};background:${e.paper};padding:10px 14px;overflow:hidden">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><span style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${club};text-transform:uppercase">Local Rules</span>${rules.length?`<span style="font:italic 400 13px/1 ${BF};color:${e.soft};white-space:nowrap">scenes to watch for</span>`:""}</div>
       ${(rules.length?rules:["Members' bar closes at sundown"]).map((r,i)=>`<div style="display:flex;gap:8px;margin-top:6px;font:400 ${rS}px/1.25 ${BF};color:${e.ink}"><b style="flex:0 0 auto;color:${acc}">${i+1}.</b><span style="${clamp(2)}">${esc(r)}</span></div>`).join("")}<div style="position:absolute;left:14px;bottom:8px;font:400 14px/1 ${BF};color:${e.soft}">${esc(credit(F))}</div></div>
-    <div style="position:absolute;left:${RX+RLW}px;top:${FY}px;width:${RW-RLW}px;height:${FH}px;box-sizing:border-box;border:2px solid ${club};background:${e.paper};padding:10px 14px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+    <div style="position:absolute;left:${RX+RLW}px;top:${FY}px;width:${RW-RLW}px;height:${FH}px;box-sizing:border-box;border:2px solid ${club};background:${e.paper};padding:10px 14px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;${t.tilt?`transform:rotate(${(t.tilt*.3).toFixed(2)}deg);box-shadow:2px 3px 0 ${mix(e.rule,e.paper,.5)}`:""}">
       <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${club};text-transform:uppercase">Marker's Note</div>
       <div style="font:400 ${nS}px/1.1 ${PEN};color:${e.ink};${clamp(3)}">${quoted?`"${esc(n.text)}"`:esc(n.text)}</div>
       <div style="display:flex;align-items:flex-end;gap:10px;border-top:1px solid ${e.rule};padding-top:4px"><span style="font:700 14px/1 ${BF};letter-spacing:.14em;color:${e.soft}">SIGNED</span><span style="flex:1;font:400 26px/1.2 ${PEN};color:${acc};white-space:nowrap;overflow:hidden">${esc(n.by)}</span></div></div>`;
