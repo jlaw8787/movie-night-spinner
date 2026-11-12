@@ -1457,12 +1457,13 @@ function prepWhen(f,ds,TT){if(typeof week==="undefined"||!week||(week.id!==f.id&
 const planLateText=p=>p&&p.late?`Too late to make ahead for this night: ${calList(p.late)}. ${p.late.dishes.length>1?"They're":"It's"} off the plan and on the shopping list to buy ready-made, or move movie night to ${calDay(p.late.next)} to make ${p.late.dishes.length>1?"them":"it"}.`:"";
 /* the dishes as the calendar reads them: picked, timed, with what is left on the night */
 function prepNight(ds,TT){return ds.map((x,i)=>x.extra?null:{n:x.n,active:TT[i].active,wait:TT[i].wait,...calNight(x,TT[i]),words:TT[i].wait>=CAL_LONG?waitWords(x):""}).filter(Boolean)}
+/* the Prep sheet's shopping list by aisle; Copy text lists the same (13 Nov: it used the card's own lines, unscaled and merged differently) */
+function prepShopGroups(f){const g={};for(const x of planShopping(f)){const [n,a]=x.split("@");(g[a]=g[a]||[]).push(n)}return AISLES.filter(a=>g[a]).map(a=>[a,g[a]])}
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
-  const ds=planDishes(f),groups={};
-  for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
+  const ds=planDishes(f);
   const tk=sharedTicks(f);
-  const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
+  const shop=prepShopGroups(f).map(([a,l])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${l.map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
@@ -3116,7 +3117,7 @@ function menuText(){
   return menuText0()}
 function menuText0(){
   const m=current.menu,line=it=>`- ${it.n}${it.note?`, ${it.note}`:""}${it.how?`\n  How: ${it.how}`:""}`;
-  return `${current.title} (${current.year})\n${current.tag}\n${current.D}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}\n\nShowtime cue: ${movieEdition(current)?.cue||current.P}\n\nSHOPPING LIST\n${shopGroups(m).map(([a,l])=>a+"\n"+l.map(x=>"[ ] "+x).join("\n")).join("\n\n")}`;
+  return `${current.title} (${current.year})\n${current.tag}\n${current.D}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}\n\nShowtime cue: ${movieEdition(current)?.cue||current.P}\n\nSHOPPING LIST\n${(current._r2&&current._r2.dishes&&current._r2.dishes.length?prepShopGroups(current):shopGroups(m)).map(([a,l])=>a+"\n"+l.map(x=>"[ ] "+x).join("\n")).join("\n\n")}`;
 }
 
 /* trailers load the first time someone opens a box */
