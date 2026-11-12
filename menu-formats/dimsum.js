@@ -147,15 +147,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const SX=LX+LW+30,SW=W-SX-34,ST=26,FH=170,SH=H-ST-26-FH-18;
   const TOPH=74,COLH=34,cueH=F.cue?42:0,STAMP=52,PRW=84,QTY=70;
   const C=sections(ctx,F,["Small Plates","Steamed and Fried","Sweet","Tea and Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
-  const GH=SH-TOPH-COLH-cueH-14,DW=SW-24-STAMP-PRW-QTY,NW=Math.round(DW*.42),TW2=DW-NW-24;
+  const GH=SH-TOPH-COLH-cueH-14,DW=SW-24-STAMP-PRW-QTY,NW=Math.round(DW*.4),TW2=DW-NW-24;
   /* one wide sheet: the dish on the left of its box, the note beside it, so notes never get squeezed out */
-  const rowH=(tr,it)=>{const dl=Math.min(3,wrapLines(F.tx(it.n),tr.d,NW-12,e.cwd*1.06)),nl=Math.min(3,wrapLines(F.tx(it.note),tr.n,TW2,e.cw*1.08));return Math.max(dl*tr.d*1.15,nl*tr.n*1.3)+14};
+  let NLMAX=3;const rowH=(tr,it)=>{const dl=Math.min(3,wrapLines(F.tx(it.n),tr.d,NW-24,e.cwd*1.15)),nl=Math.min(NLMAX,wrapLines(F.tx(it.note),tr.n,TW2-24,e.cw*1.2));return Math.max(dl*tr.d*1.15,nl*tr.n*1.3)+14};
   const tot=tr=>C.reduce((a,[k])=>a+Math.round(tr.h*.9)+12+items[k].reduce((x,it)=>x+rowH(tr,it),0),0);
-  let tr=TIERS.filter(x=>x.nl).slice(-1)[0];for(const x of TIERS){if(!x.nl)continue;if(tot(x)<=GH){tr=x;break}}
-  const spare=Math.max(0,GH-tot(tr)),nIt=C.reduce((a,[k])=>a+items[k].length,0),pad=6+Math.min(10,Math.floor(spare/Math.max(1,nIt)/2));
+  let tr=null;for(const m of [3,2,1]){NLMAX=m;for(const x of TIERS){if(!x.nl)continue;if(tot(x)*1.08<=GH){tr=x;break}}if(tr)break}if(!tr)tr=TIERS.filter(x=>x.nl).slice(-1)[0];
+  const spare=Math.max(0,GH-tot(tr)*1.08),nIt=C.reduce((a,[k])=>a+items[k].length,0),pad=6+Math.min(10,Math.floor(spare/Math.max(1,nIt)/2));
   const bl=`1.5px solid ${mix(red,e.paper,.55)}`;
   const rows=C.map(([k,l])=>`<div style="display:flex;height:${Math.round(tr.h*.9)+8}px;align-items:center;background:${mix(red,e.paper,.88)};border-bottom:${bl};margin-top:4px"><div style="flex:0 0 ${STAMP}px"></div><div style="flex:1;font:400 ${Math.round(tr.h*.72)}px/1 ${DF};color:${red};letter-spacing:.08em">${esc(l)}</div></div>`+
-    items[k].map((it,i)=>{const nl=Math.min(3,wrapLines(F.tx(it.note),tr.n,TW2,e.cw*1.08));
+    items[k].map((it,i)=>{const nl=Math.min(NLMAX,wrapLines(F.tx(it.note),tr.n,TW2-24,e.cw*1.2));
       return `<div style="display:flex;border-bottom:${bl};align-items:stretch">
         <div style="flex:0 0 ${STAMP}px;border-right:${bl};display:flex;align-items:center;justify-content:center;font:700 15px/1 ${BF};color:${e.soft}">${String.fromCharCode(65+"smwd".indexOf(k))}${i+1}</div>
         <div style="flex:0 0 ${NW}px;box-sizing:border-box;padding:${pad}px 12px;display:flex;align-items:center"><div style="font:700 ${tr.d}px/1.15 ${BF};color:${e.ink};${clamp(3)}">${esc(F.tx(it.n))}</div></div>

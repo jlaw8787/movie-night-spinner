@@ -592,3 +592,12 @@ All 19 tests, check-browser (3 clean runs), check-store-taps, check-print-text o
 1. fix21-checks (4 commits, harness tweaks for check-phone-fit, check-pdf-tone, check-prep-a4): separate reviewer, merge, then run the three checks on all 900 and report findings.
 2. fix21-fonts (WIP, never reviewed, 955 files, about 23 MB of local fonts plus local PDF libraries): report the first-visit download cost and options (for example only the fonts each menu uses) before finishing it.
 3. fix21-app (WIP, never reviewed, Capacitor app groundwork and app mode): ask Josh before starting.
+
+## 12 Nov, ten new shared layouts (branch wip/new-formats, not live)
+
+- Josh asked for more menu layouts. Ten new files in menu-formats/: foodcourt (mall tray liner), bowling (score sheet), clubhouse (golf scorecard), reception (wedding table), skilodge (lodge menu and lift ticket), arcade (prize counter, prices in tickets), drivein (carhop tray card), deli (letter board, take a number, stacking chart from the first main's shopping list), dimsum (yum cha tick sheet), hospital (patient meal order card). All 1344x960, one face, four looks by era, poster whole as the hero, real images only.
+- Built from /tmp sources by a small assembler (shared helpers from truck.js plus a kit: film(), fit(), course(), prices()). The files in menu-formats/ are self-contained; edit them directly from here on.
+- Pilot films moved onto them in data/film-format.json, side branch only, for proofs: Mallrats, Fast Times, Jingle All the Way (foodcourt); Kingpin, Dazed and Confused (bowling); Caddyshack, Happy Gilmore (clubhouse); Four Weddings, The Wedding Singer, Wedding Crashers (reception); Hot Tub Time Machine, Better Off Dead (skilodge); Wreck-It Ralph, Snatch (arcade); Grease, Ghostbusters: Afterlife (drivein); Rumble in the Bronx (deli); Rush Hour, Men in Black 3 (dimsum); Halloween II, A Nightmare on Elm Street 3 (hospital).
+- Kingpin, Dazed and Rumble in the Bronx are layout tests only: their flavour venues (Ishmael's Barn, The Emporium, Uncle Bill's Supermarket) do not match bowling or deli. Before going live, each film moved onto a new layout needs its venue and sign checked against the film (fact audit rules).
+- Checks: check-print-text passes on all 21 pilots at their own era and with every pilot forced to 1950s, 1970s and modern; all tests pass; check-browser passes. KIT_SIGN in app.js has the ten new ids. fetch-fonts run (all 448 specs local).
+- Waiting on Josh: approve the looks, then pick which films move to each layout.

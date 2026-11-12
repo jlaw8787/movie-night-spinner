@@ -147,7 +147,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const MX=LX+LW+34,MW=470,MT=26,MH=H-52;
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx);
   const head0=88,cueH=F.cue?50:0,innerW=MW-90,innerH=MH-head0-cueH-70;
-  const R=fit({C,items,tx:F.tx,W:innerW,H:innerH,maxCols:1,cw:e.cw,cwd:e.cwd,priceW:()=>0,headH:tr=>Math.round(tr.h*1.25)+14,itemX:4});
+  const R=fit({C,items,tx:F.tx,W:innerW,H:innerH,maxCols:1,cw:e.cw*1.05,cwd:e.cwd*1.2,priceW:()=>0,headH:tr=>Math.round(tr.h*1.25)+14,itemX:4});
   const tr=R.tr,gap=Math.min(26,R.spare/Math.max(1,C.length+1));
   const menuBody=C.map(([k,l])=>`<div style="margin-bottom:${10+gap}px"><div style="font:400 ${Math.round(tr.h*1.25)}px/1.1 ${S};color:${acc};margin-bottom:6px">${esc(l)}</div>`+
     items[k].map(it=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(F.tx(it.note),tr.n,innerW,e.cw)):0;return `<div style="margin-bottom:${tr.g+4}px">
@@ -160,7 +160,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:italic 400 18px/1.3 ${SF};color:${e.soft};margin-top:8px;padding:0 50px;${clamp(1)}">${esc(F.sign)}</div></div>
     <div style="position:absolute;left:45px;width:${innerW}px;top:${head0+18}px;height:${innerH}px;overflow:hidden;text-align:center">${menuBody}</div>
     ${F.cue?`<div style="position:absolute;left:50px;right:50px;bottom:34px;height:${cueH-10}px;text-align:center">${cueLine(F,SF,e.soft,acc,15)}</div>`:""}
-    <div style="position:absolute;left:0;right:0;bottom:-4px;height:9px;background:${deckle};transform:rotate(180deg)"></div></div>`;
+    <div style="position:absolute;left:10px;right:10px;bottom:8px;border-bottom:2px dotted ${mix(acc,e.card,.5)}"></div></div>`;
 
   /* right: place card, seating plan, toast, logo */
   const RX=MX+MW+30,RW=W-RX-30;
@@ -170,11 +170,11 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:700 14px/1 ${CF};letter-spacing:.3em;color:${e.soft}">TABLE ${esc(F.num.slice(-2))}</div>
     <div style="font:400 ${guest.length>18?30:38}px/1.25 ${S};color:${e.ink};margin-top:6px;white-space:nowrap;overflow:hidden">${esc(guest)}</div>
     <div style="font:italic 400 15px/1.3 ${SF};color:${e.soft};margin-top:20px;${clamp(2)}">${esc(pc&&pc.lines.length?pc.lines.slice(0,2).join(". "):"Seated with the bride's side")}</div></div>`;
-  const tabs=F.winks.slice(0,4),ST=210,SH=270;
+  const tabs=F.winks.slice(0,4),ST=206,SH=256;
   const seat=`<div style="position:absolute;left:${RX}px;top:${ST}px;width:${RW}px;height:${SH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:14px 16px;overflow:hidden">
     <div style="font:400 30px/1.1 ${S};color:${acc};text-align:center">Seating Plan</div>
     ${(tabs.length?tabs:["Family","Friends","Work","Plus ones"]).map((w,i)=>`<div style="display:flex;gap:10px;align-items:baseline;border-top:1px solid ${mix(acc,e.card,.7)};padding:7px 0 0;margin-top:7px"><span style="flex:0 0 auto;font:700 14px/1 ${CF};letter-spacing:.14em;color:${acc}">TABLE ${i+1}</span><span style="flex:1;font:400 15px/1.25 ${SF};color:${e.ink};${clamp(2)}">${esc(w)}</span></div>`).join("")}</div>`;
-  const n=F.note,TT=ST+SH+22,TH=230,nS=n.text.length>140?16:n.text.length>90?18:20;
+  const n=F.note,TT=ST+SH+20,TH=256,nS=n.text.length>150?15:n.text.length>100?16:n.text.length>60?18:19;
   const toast=`<div style="position:absolute;left:${RX}px;top:${TT}px;width:${RW}px;height:${TH}px;background:${mix(e.card,acc,.06)};box-shadow:${shadow};box-sizing:border-box;padding:14px 18px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
     <div style="font:700 14px/1 ${CF};letter-spacing:.28em;color:${e.soft};text-align:center">FROM THE TOASTS</div>
     <div style="font:italic 400 ${nS}px/1.35 ${SF};color:${e.ink};text-align:center;${clamp(5)}">"${esc(n.text)}"</div>

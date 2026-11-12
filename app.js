@@ -3939,7 +3939,8 @@ const kitTime=t=>{const m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";let 
 const KIT_SIGN={club:"neon",bartab:"neon",diner:"letterboard",motel:"neon",tiki:"neon",kiosk:"letterboard",candybar:"marquee",takeaway:"letterboard",stadium:"marquee",prom:"marquee",
   campfire:"board",saloon:"board",tavern:"board",pub:"board",truck:"board",cafe:"board",canteen:"board",galley:"board",
   lab:"notice",precinct:"notice",newspaper:"notice",airline:"notice",diningcar:"notice",
-  hotel:"plaque",banquet:"plaque",invite:"plaque",tearoom:"plaque",bistro:"plaque",home:"plaque",placemat:"letterboard"};
+  hotel:"plaque",banquet:"plaque",invite:"plaque",tearoom:"plaque",bistro:"plaque",home:"plaque",placemat:"letterboard",
+  foodcourt:"letterboard",deli:"letterboard",bowling:"neon",arcade:"neon",drivein:"neon",dimsum:"neon",clubhouse:"plaque",reception:"plaque",skilodge:"board",hospital:"notice"};
 const KIT_THEME_SIGN={redsauce:"plaque",uptown:"plaque",romcom:"plaque",fairytale:"plaque",xmas:"plaque",wizard:"plaque",diner:"letterboard",teen:"marquee",tiki:"neon",mex:"neon",street:"neon",pizza:"neon",cop:"notice",scifi:"terminal",galaxy:"terminal",hero:"notice",horror:"notice",western:"board",aussie:"board",adventure:"board",kids:"board",soul:"neon",deli:"neon",asian:"neon",philly:"neon"};
 const KIT_THEME_FIRST={hero:"comic",horror:"horror",xmas:"festive",fairytale:"storybook",kids:"storybook",wizard:"parchment",western:"wanted",teen:"arcade",adventure:"parchment",tiki:"tiki"};
 const KIT_FMT_NEW={campfire:"camp",home:"kitchen",tiki:"tiki",saloon:"wanted",newspaper:"newspaper",airline:"departures",diningcar:"departures",motel:"roadside"};

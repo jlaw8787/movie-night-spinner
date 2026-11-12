@@ -173,7 +173,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const MY=TOP+112+22,cueH=F.cue?44:0,MH=CY-16-MY-cueH-22;
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
   const R=fit({C,items,tx:F.tx,W:RW-12,H:MH,maxCols:2,gap:30,cw:e.cw,cwd:e.cwd});
-  const head=(l,tr)=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="font:${e.dw} ${tr.h}px/1.1 ${DF};color:${acc}">${esc(l)}</span><span style="flex:1;height:3px;background:${acc2};opacity:.6"></span></div>`;
+  const head=(l,tr)=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="font:${e.dw} ${tr.h}px/1.3 ${DF};color:${acc}">${esc(l)}</span><span style="flex:1;height:3px;background:${acc2};opacity:.6"></span></div>`;
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc2,cw:e.cw,leader:1,lead:mix(e.soft,e.paper,.4),cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
   const menu=`<div style="position:absolute;left:${RX+6}px;top:${MY}px;width:${RW-12}px;height:${MH}px;display:flex;gap:30px;overflow:hidden">${R.cols.map(col=>`<div style="flex:0 0 ${R.CW}px">${col.map(s=>course(s,items,pr,R,o)).join("")}</div>`).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:${RX+6}px;width:${RW-12}px;top:${CY-16-cueH}px;height:${cueH}px;border-top:2px solid ${mix(e.soft,e.paper,.5)};padding-top:6px;box-sizing:border-box">${cueLine(F,BF,e.soft,acc,15)}</div>`:""}`;
