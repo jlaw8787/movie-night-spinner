@@ -1,6 +1,7 @@
 /* Prep sheet on A4 (review 12, fix 5): every page of every film's Prep sheet, laid out as Save PDF and print lay it out,
    fits A4 at reading size, so the showtime cue at the foot of each page is never cut through.
-     NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-prep-a4.cjs [N | "Film (Year)" ...] [--guests 4] */
+     NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-prep-a4.cjs [N | "Film (Year)" ...] [--guests 4]
+   Exit 0 clean pass, 1 faults, 2 passed but some films could not be checked (listed). */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path');
 const R=path.join(__dirname,'..'),A=process.argv.slice(2),gi=A.indexOf('--guests'),G=gi>=0?+A[gi+1]:4,rest=gi>=0?A.filter((x,i)=>i!==gi&&i!==gi+1):A;
 const N=rest[0]&&/^\d+$/.test(rest[0])?+rest[0]:1e9,NAMED=rest.filter(x=>!/^\d+$/.test(x)),port=4600+Math.floor(Math.random()*200);

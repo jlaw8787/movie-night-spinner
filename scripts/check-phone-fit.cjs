@@ -1,7 +1,8 @@
 /* Phone text menu at 390 wide (review 13, fix 3): no tab or line wider than its box, and no sideways scroll, on every film.
    Loads the web fonts (the wide display faces are what cut "Starters" off), so it needs the network or a proxy.
      NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-phone-fit.cjs [N | "Film (Year)" ...]
-   MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct. */
+   MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct.
+   Exit 0 clean pass, 1 faults, 2 passed but some films could not be checked (listed). */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path');
 const R=path.join(__dirname,'..'),A=process.argv.slice(2),N=A[0]&&/^\d+$/.test(A[0])?+A[0]:0,NAMED=A.filter(a=>!/^\d+$/.test(a)),port=4900+Math.floor(Math.random()*200);
 const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.1'],{cwd:R,stdio:'ignore'});process.on('exit',()=>server.kill());
