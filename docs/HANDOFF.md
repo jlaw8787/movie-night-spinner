@@ -610,8 +610,15 @@ All 19 tests, check-browser (3 clean runs), check-store-taps, check-print-text o
 - Checked all 810 for a better layout, only where the film's own venue or a key scene fits. 15 put to Josh by pop-up.
 - Moved (Josh approved): The Naked Gun to stadium, Reservoir Dogs to diner, Jurassic World to foodcourt, Father of the Bride to reception (Banks Home Reception), My Big Fat Greek Wedding to reception (Portokalos Wedding Reception), Terminator 2 to hospital (Pescadero State Hospital), Stand by Me to campfire (Camp by the Tracks, Labor Day weekend 1959; strip film 4,5,6), Rain Man to hospital, Kingsman to pub (The Black Prince, bistro side still/line removed), Forgetting Sarah Marshall to tiki (Turtle Bay Resort Bar), Ticket to Paradise to reception (Lily and Gede's Wedding), Toy Story to arcade.
 - Kept: Mamma Mia! (bistro), Muriel's Wedding (cafe).
-- Toy Story (Josh: make Pizza Planet stand out and tie into the film): new per-film flavour "arcade" in arcade.js: space (starfield, ringed planet beside the venue and on the tokens), counter, redeem, sections[4], tokens, insert, shelf, claw {title} (a drawn claw machine replaces the high score table). Nothing copies the Pizza Planet logo or draws the aliens. SVGs are CSS background data URLs: html2canvas drops inline <svg> and <img> data URLs in the Save PDF copy.
+- Toy Story (Josh: make Pizza Planet stand out and tie into the film): new per-film flavour "arcade" in arcade.js: space (starfield, ringed planet beside the venue and on the tokens), counter, redeem, sections[4], tokens, insert, shelf, still {i, title} (a real TMDB film still replaces the high score table; the drawn claw machine was tried first and Josh rejected it). Nothing copies the Pizza Planet logo or draws the aliens. SVGs are CSS background data URLs: html2canvas drops inline <svg> and <img> data URLs in the Save PDF copy.
 - Hospital fix for every hospital film: the wristband printed the prop title as the patient ("PATIENT: U.S. MARSHAL", "FBI TRAINEE", "MEAL TICKET"). New flavour "patient": Rachel Solando (Shutter Island, no spoiler), Laura Weaver, Raymond Babbitt, Sarah Connor, Hannibal Lecter, Kristen Parker, Laurie Strode. Sign's trailing full stop no longer doubles before ". Meal order".
 - scripts/campfire-strips.cjs reset E.T.'s hand-set strip (sh 60) to true; restored and the script now skips E.T.
 - Checks: check-print-text passes on the 12 moved films and all 7 hospital films; all tests pass; fronts looked over in shots.
-- Next: Wall-E custom layout (Josh asked for a one-off built for the film, it stays on airline until then). Tracking sheet rows for these 12 to update.
+- Tracking sheet updated for all 12 (side branch, recommended, status, venue) and Wall-E (Own menu, Approved).
+
+### Standing rule (Josh, 12 Nov 3:21pm), locked
+Every new or custom menu gets the movie poster and real TMDB stills treatment. No drawn stand-ins for scenes or props (the SVG claw machine on Toy Story was rejected as janky and replaced by a still). Drawn decoration (stars, rules, planet glyph) is fine only as trim, never in place of a picture.
+
+### Next chat: Wall-E custom layout (start here)
+- Josh will give a TMDB API key in that chat. Use it to pull Wall-E's full backdrops/stills set (and Toy Story's, to look for a Pizza Planet frame to swap in for still 2).
+- Build a one-off layout for Wall-E (currently airline, venue Axiom Food Court) built around the poster and real stills, per the rule above. Then print-check, shots, sheet row, deploy only when Josh says.

@@ -129,7 +129,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Arcade":"Game Zone","Tokens at the change machine",{text:"Two tokens a game, and the claw machine is not rigged. Mostly.",by:"The Change Machine"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),DF=e.disp,BF=e.body,MF=e.mono;
   /* per-film arcade flavour (data/film-flavour.json "arcade"): counter, redeem, sections[4], tokens, shelf, insert;
-     space: starfield and a ringed planet on the marquee and the tokens; claw: {title} swaps the high score table for a claw machine */
+     space: starfield and a ringed planet on the marquee and the tokens; still: {i, title} swaps the high score table for a real film still */
   const A=(ctx.flavour||{}).arcade||{},AL=k=>A[k]?clean(A[k]):"";
   const svgImg=(inner,w,h,vb,css)=>`<div style="width:${w}px;height:${h}px;background:url(&quot;data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='${vb||`0 0 ${w} ${h}`}'>${inner.replace(/"/g,"'")}</svg>`)}&quot;) center/100% 100% no-repeat;${css||""}"></div>`;
   const neon=F.pal.accent&&lum(F.pal.accent)>.18?F.pal.accent:e.neon,neon2=e.neon2;
@@ -181,20 +181,18 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:400 ${pix?14:20}px/1 ${MF};color:${neon2};text-align:center;letter-spacing:.1em;${glow(neon2,6)}">HIGH SCORES</div>
     ${scores.map((s,i)=>`<div style="display:flex;justify-content:space-between;font:400 ${pix?14:20}px/1.2 ${MF};color:${i?"#e6e6e6":neon}"><span>${i+1}. ${esc(s[0])}</span><span>${String(s[1]).padStart(7,"0")}</span></div>`).join("")}
     <div style="font:italic 400 15px/1.3 ${BF};color:#cfd3d8;border-top:1px solid #333;padding-top:6px;${clamp(3)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div></div>`;
-  const claw=A.claw?(()=>{const ct=clean(A.claw.title||"THE CLAW"),cols=[neon,neon2,"#7dff6a","#ffffff",neon,"#7dff6a"];
-    const balls=cols.map((c,i)=>`<circle cx="${22+i*38}" cy="${i%2?92:98}" r="15" fill="${c}" opacity=".85"/><path d="M${10+i*38} ${i%2?92:98}h24" stroke="#000" stroke-width="1.5" opacity=".35"/>`).join("");
-    return `<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};padding:10px 14px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
-    <div style="font:400 ${pix?14:20}px/1 ${MF};color:${neon2};text-align:center;letter-spacing:.1em;${glow(neon2,6)}">${esc(ct)}</div>
-    ${svgImg(`<rect x="1" y="1" width="238" height="110" rx="6" fill="${mix(neon,"#000000",.85)}" stroke="${mix(neon2,"#000000",.3)}" stroke-width="2"/>
-      <path d="M0 6h240" stroke="${mix(neon2,"#000000",.3)}" stroke-width="3"/><path d="M120 6v34" stroke="#d9d9d9" stroke-width="3"/><rect x="108" y="38" width="24" height="10" rx="3" fill="#d9d9d9"/>
-      <path d="M110 48q-12 14-4 26M130 48q12 14 4 26M120 48v24" stroke="#d9d9d9" stroke-width="3.5" fill="none" stroke-linecap="round"/>${balls}<path d="M10 20l50 10M180 14l50 12" stroke="#ffffff" stroke-width="2" opacity=".18"/>`,HW-34,112,"0 0 240 112","margin:0 auto")}
-    <div style="font:italic 400 15px/1.3 ${BF};color:#cfd3d8;${clamp(2)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div></div>`})():"";
+  /* arcade.still {i, title}: a real film still (TMDB, by its number in the film's stills) in place of the high score table, note under it */
+  const stl=A.still&&(ctx.stills||[])[A.still.i]?ctx.img(ctx.stills[A.still.i],"w780"):"";
+  const still=stl?`<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};overflow:hidden">
+    <div style="position:absolute;left:0;right:0;top:0;height:138px;overflow:hidden">${photo(stl,t.photo,"center 40%")}</div>
+    <div style="position:absolute;left:8px;top:8px;padding:3px 8px;background:rgba(0,0,0,.72);font:400 ${pix?11:15}px/1.2 ${MF};color:${neon2};letter-spacing:.08em">${esc(clean(A.still.title||"NOW PLAYING"))}</div>
+    <div style="position:absolute;left:12px;right:12px;bottom:8px;font:italic 400 15px/1.3 ${BF};color:#cfd3d8;${clamp(2)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div></div>`:"";
   const prizes=F.winks.slice(0,3);
   const shelf=`<div style="position:absolute;left:${RX+TW+HW+36}px;top:${FY}px;width:${SW}px;height:${FH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon,e.panel,.5)};padding:12px 14px;overflow:hidden">
     <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft}">${esc(AL("shelf")||"TOP SHELF")}</div>
     ${(prizes.length?prizes:(F.prop?[F.prop.title]:["Mystery prize"])).map((w,i)=>`<div style="display:flex;gap:8px;justify-content:space-between;align-items:baseline;margin-top:8px;font:500 15px/1.25 ${BF};color:${e.ink}"><span style="${clamp(2)}">${esc(w)}</span><b style="flex:0 0 auto;color:${neon}">${(5+i*5)*1000}</b></div>`).join("")}
     <div style="position:absolute;left:14px;right:14px;bottom:8px;font:400 14px/1.2 ${BF};color:${e.soft};${clamp(1)}">${esc(credit(F).replace("Prices subject to change.","Prizes subject to change."))}</div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 62%,rgba(0,0,0,${(t.vig*.7).toFixed(2)}) 100%)"></div>`;
-  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${marquee}${bezel}${board}${tok}${claw||hs}${shelf}${vig}</div>`]};
+  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${marquee}${bezel}${board}${tok}${still||hs}${shelf}${vig}</div>`]};
 };
 })();
