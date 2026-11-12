@@ -903,10 +903,11 @@ foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum 
 - Deploy 6af61886d56361b547d5f97c from a trimmed copy of fix/review-27-low at 45211800. Live files checked against it byte for byte: all 5,340 files (3,745 code and data, 1,595 assets). index.html differs only by Netlify's form rewrite. support.html differs only by Netlify's pretty URL rewrite (its two privacy.html links become /privacy, which loads); the file is unchanged since the last deploy, Josh said treat it as expected. .gitignore and .nojekyll are not served (normal).
 - main fast-forwarded to 45211800 and pushed. No layout changes, so no Live layout edits in the sheet.
 
-## 13 Nov, morning: Review 24 leftovers merged on main (NOT deployed; start here in the next chat)
+## 13 Nov, morning: Review 24 leftovers merged on main and deployed (start here in the next chat)
 
 ### What is where
-- main 23b3c42b (plus this note): deploy 6af61886's main (89c37435) plus the Review 24 low leftovers below. Pushed. Not deployed: deploy only when Josh says, from one chat only.
+- main 23b3c42b (plus this note): deploy 6af61886's main (89c37435) plus the Review 24 low leftovers below. Pushed.
+- Deployed 13 Nov (Josh said deploy): deploy 6af62782082585ba5157664b from a trimmed copy of main at 77eee8af. app.js, formats.js, formats-core.js, formats/starlanes.js, sw.js and films.js on live match the copy byte for byte; index.html differs only by Netlify's form rewrite.
 - This chat also re-ran the review 27 job on the 13 held films without knowing another chat had already shipped them. Josh chose to drop that work. Local branches only, never pushed: review27, fix27-skidim (skilodge 9.1, dimsum 9.2, MIB3 as a modern 2012 Wu's, Better Off Dead venue "The K-12"), fix27-arcfood (arcade 8.7, foodcourt 8.4). Live keeps the other chat's versions. Reports in this session's /tmp/r27 only.
 
 ### Merged (fix27-r24low, separate reviewer: fix first, then merge after re-check)
