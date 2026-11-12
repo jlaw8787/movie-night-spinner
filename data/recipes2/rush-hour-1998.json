@@ -99,11 +99,11 @@
    "af": true
   },
   {
-   "n": "Carter's hot wings",
+   "n": "Five spice chicken wings",
    "course": "s",
    "prep_min": 10,
    "cook_min": 50,
-   "make_ahead": "Make the ranch dip up to 3 days ahead in the fridge; bake the wings and toss in the hot sauce just before serving",
+   "make_ahead": "Coat the wings and keep them covered in the fridge up to 4 hours ahead; bake and toss in the lemon butter just before serving",
    "ingredients": [
     {
      "q": 600,
@@ -126,31 +126,31 @@
     {
      "q": 35,
      "u": "ml",
-     "item": "hot sauce",
+     "item": "light soy sauce",
      "aisle": "Pantry"
     },
     {
      "q": 80,
      "u": "g",
-     "item": "sour cream",
+     "item": "egg, beaten",
      "aisle": "Dairy"
     },
     {
      "q": 20,
      "u": "g",
-     "item": "mayonnaise",
+     "item": "cornflour",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tbsp",
-     "item": "chopped chives",
+     "item": "sliced spring onion",
      "aisle": "Produce"
     },
     {
      "q": 0.25,
      "u": "tsp",
-     "item": "garlic powder",
+     "item": "Chinese five spice",
      "aisle": "Spices"
     },
     {
@@ -162,7 +162,7 @@
    ],
    "steps": [
     {
-     "text": "Pat the wings dry and season with salt.",
+     "text": "Pat the wings dry and toss with the salt, soy, five spice, beaten egg and cornflour until coated.",
      "min": 5
     },
     {
@@ -170,11 +170,11 @@
      "min": 45
     },
     {
-     "text": "Mix the sour cream, mayonnaise, chives, garlic powder and lemon juice for the ranch dip.",
+     "text": "Slice the spring onion and squeeze the lemon juice.",
      "min": 5
     },
     {
-     "text": "Melt the butter with the hot sauce and toss through the wings.",
+     "text": "Melt the butter with the lemon juice, toss through the wings and scatter with the spring onion.",
      "min": 3
     }
    ],
@@ -182,10 +182,10 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Carter's hot cauliflower wings",
+     "n": "Five spice cauliflower",
      "prep_min": 15,
      "cook_min": 40,
-     "make_ahead": "Cut the cauliflower into florets and mix the ranch dip up to 1 day ahead and keep both chilled. Roast and toss on the night.",
+     "make_ahead": "Cut the cauliflower into florets up to 1 day ahead and keep chilled. Coat, roast and toss on the night.",
      "ingredients": [
       {
        "q": 1,
@@ -214,31 +214,31 @@
       {
        "q": 35,
        "u": "ml",
-       "item": "hot sauce",
+       "item": "light soy sauce",
        "aisle": "Pantry"
       },
       {
        "q": 80,
        "u": "g",
-       "item": "sour cream",
+       "item": "egg, beaten",
        "aisle": "Dairy"
       },
       {
        "q": 20,
        "u": "g",
-       "item": "mayonnaise",
+       "item": "cornflour",
        "aisle": "Pantry"
       },
       {
        "q": 1,
        "u": "tbsp",
-       "item": "chopped chives",
+       "item": "sliced spring onion",
        "aisle": "Produce"
       },
       {
        "q": 0.25,
        "u": "tsp",
-       "item": "garlic powder",
+       "item": "Chinese five spice",
        "aisle": "Spices"
       },
       {
@@ -250,7 +250,7 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss with the olive oil and salt.",
+       "text": "Cut the cauliflower into large florets and toss with the olive oil, salt, soy, five spice, beaten egg and cornflour.",
        "min": 8
       },
       {
@@ -258,11 +258,11 @@
        "min": 35
       },
       {
-       "text": "Mix the sour cream, mayonnaise, chives, garlic powder and lemon juice for the ranch dip.",
+       "text": "Slice the spring onion and squeeze the lemon juice.",
        "min": 4
       },
       {
-       "text": "Melt the butter with the hot sauce and toss through the cauliflower.",
+       "text": "Melt the butter with the lemon juice, toss through the cauliflower and scatter with the spring onion.",
        "min": 3
       }
      ],
@@ -271,7 +271,7 @@
    }
   },
   {
-   "n": "Foo Chow noodles",
+   "n": "Beef chow fun",
    "course": "m",
    "prep_min": 10,
    "cook_min": 30,
@@ -358,7 +358,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Foo Chow noodles (vegetarian)",
+     "n": "Tofu chow fun (vegetarian)",
      "prep_min": 10,
      "cook_min": 16,
      "make_ahead": "Slice the mushrooms and tofu and toss in the soy mix up to 4 hours ahead in the fridge; stir-fry to serve",
