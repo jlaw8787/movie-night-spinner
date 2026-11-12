@@ -1,0 +1,37 @@
+{
+ "id": "Toy Story (1995)",
+ "ops": [
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "space": true,
+    "counter": "PIZZA PLANET PRIZES",
+    "redeem": "TO INFINITY AND BEYOND!",
+    "sections": [
+     "Launch Pad",
+     "Main Orbit",
+     "Birthday Orbit",
+     "Refuel Station"
+    ],
+    "tokens": "PLANET TOKENS",
+    "insert": "ONE TOKEN, ONE TRY",
+    "shelf": "TOP SHELF, SPACE PORT",
+    "still": {
+     "i": 2,
+     "title": "Parked out front"
+    },
+    "noLogo": true,
+    "panel": {
+     "img": "/xUU287dd4KIeFlZAqI2gGIdRS9v.jpg",
+     "head": "THE CLAW",
+     "text": "Buzz in the claw machine with the aliens",
+     "h": 150,
+     "pos": "center 45%"
+    }
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}
