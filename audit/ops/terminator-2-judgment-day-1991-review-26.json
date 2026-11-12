@@ -1,0 +1,29 @@
+{
+ "id": "Terminator 2: Judgment Day (1991)",
+ "ops": [
+  {
+   "set": "flavour.sign",
+   "value": "Criminally disordered retention facility",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Patient Card",
+    "lines": [
+     "High-security wing",
+     "Dr Silberman's patient"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when Sarah, John and the Terminator reach Enrique Salceda's desert camp.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

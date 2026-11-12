@@ -1,0 +1,45 @@
+{
+ "id": "Rain Man (1988)",
+ "ops": [
+  {
+   "old": "Cheddar, salami and tomato on toothpicks. Raymond forgot his.",
+   "new": "Cheddar, salami and cherry tomato on toothpicks, laid out in neat rows of ten",
+   "done": true
+  },
+  {
+   "old": "everything in neat rows, the way Raymond likes it",
+   "new": "Cheddar and cream cheese balls rolled in toasted pecans, each on a toothpick",
+   "done": true
+  },
+  {
+   "old": "thick seared steak, garlic butter, jacket spud with bacon and cheddar, after a night counting cards",
+   "new": "Thick seared sirloin with garlic butter, and a jacket spud with bacon and cheddar",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Wallbrook, Dr Bruner's patients",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Fish finger sliders with tartare",
+    "note": "Crumbed fish fingers on soft slider buns with tartare and shredded lettuce",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Vegas gin martini",
+    "note": "Gin and dry vermouth stirred ice cold, with a green olive",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

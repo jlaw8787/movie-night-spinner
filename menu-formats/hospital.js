@@ -2,7 +2,8 @@ const _ROOT_hospital=((document.currentScript&&document.currentScript.src)||"").
    Top: the patient wristband across the card (barcode, ward and bed) and the hospital's header with its logo panel.
    Left: the poster as the hero, whole, clipped to the clipboard.
    Right (signature): the meal order form. "Please tick your choices", a tick box beside every dish,
-   tonight's picks ticked in pen. Foot: the nurse's note (a real film line prints quoted under "Overheard on the ward") and the kitchen's stamp.
+   tonight's picks ticked in pen. Foot: the nurse's note (a real film line prints quoted under "Overheard on the ward") and the film's prop, pinned as a card
+   under its kind. The kitchen's stamp sits on the form's top bar.
    The film's winks sit on a slip under the poster; a column left well short takes a real film still.
    Era sets form colour and type; tone sets wear and photo. */
 (function(){
@@ -149,7 +150,8 @@ const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Imag
 
 const W=1344,H=960;
 /* cw and cwd: average glyph width per px of font for notes and bold names, measured off proofs (Libre Franklin about .43 and .45,
-   Plex Sans Condensed about .36 and .37) with a margin. Too high and the shorter column is left with a big blank */
+   Plex Sans Condensed about .36 and .37) with a margin. Too low and a column runs off the form, so they stay high; the columns are
+   flex boxes since review 26, so a high estimate no longer leaves a blank: the real leftover is spread or takes a still */
 const E=[
  {form:"#eef4ee",ink:"#1f2a24",soft:"#55635a",rule:"#8fb59b",acc:"#2f7a52",band:"#ffffff",disp:"'Libre Franklin',sans-serif",body:"'Libre Franklin',sans-serif",cw:.47,cwd:.5},
  {form:"#f3efdc",ink:"#2c2614",soft:"#62593e",rule:"#c2ad6a",acc:"#8a6a1c",band:"#fffdf3",disp:"'Libre Franklin',sans-serif",body:"'Libre Franklin',sans-serif",cw:.47,cwd:.5},
@@ -170,11 +172,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:18px;top:18px;right:18px;bottom:18px;background:${e.form};box-shadow:0 8px 20px rgba(0,0,0,.4)"></div>
     <div style="position:absolute;left:18px;top:18px;right:18px;bottom:18px;background:url(${grain}) center/1100px auto;opacity:${(.08+t.wear*.4).toFixed(2)};mix-blend-mode:multiply"></div>`;
 
-  /* top: header and wristband. The second line never repeats the venue */
+  /* top: header and wristband. The second line never repeats the venue: when the sign's first comma piece is the venue's name,
+     only that piece drops and the rest of the sign stays (review 26: T2 lost the whole second half of its sign) */
   const M=40,HH=96,PW=300;
   const vS=F.venue.length>30?28:F.venue.length>20?34:40;
-  const low=x=>x.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim(),sg0=low(F.sign.split(",")[0]);
-  const sign=(sg0&&(low(F.venue).includes(sg0)||sg0.includes(low(F.venue))))?"Patient meal service":F.sign;
+  const low=x=>x.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim(),sgP=F.sign.split(","),sg0=low(sgP[0]);
+  const sgRest=sgP.slice(1).join(",").trim();
+  const sign=(sg0&&(low(F.venue).includes(sg0)||sg0.includes(low(F.venue))))?(sgRest?cap(sgRest):"Patient meal service"):F.sign;
   const header=`<div style="position:absolute;left:${M}px;top:${M}px;width:${W-2*M-PW-20}px;height:${HH}px;display:flex;flex-direction:column;justify-content:center">
       <div style="font:700 ${vS}px/1.2 ${DF};color:${acc};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>
       <div style="font:700 15px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${e.soft};${clamp(1)}">${esc(sign.replace(/[.\s]+$/,""))} &middot; Meal order</div></div>
@@ -184,7 +188,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="flex:0 0 190px;height:34px;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 7px,transparent 7px 9px,#111 9px 10px,transparent 10px 13px)"></div>
     <div style="flex:1;min-width:0;font:700 17px/1.2 'Courier Prime',monospace;color:#222;white-space:nowrap;overflow:hidden">PATIENT: ${F.fl.patient?esc(clean(F.fl.patient).toUpperCase()):"________________"}</div>
     <div style="flex:0 0 auto;font:700 17px/1.2 'Courier Prime',monospace;color:#222">WARD ${esc(String.fromCharCode(65+(+F.num||0)%6))}</div>
-    <div style="flex:0 0 auto;font:700 17px/1.2 'Courier Prime',monospace;color:#fff;background:${acc};padding:4px 10px">BED ${esc(F.num.slice(-2))}</div></div>`;
+    <div style="flex:0 0 auto;font:700 17px/1.2 'Courier Prime',monospace;color:#fff;background:${acc};padding:4px 10px">BED ${esc(F.num.length<=4?F.num:F.num.slice(-2))}</div></div>`;
 
   /* left: clipboard with the poster, and the film's winks on a slip under it */
   const CY=WY+WBH+24,CW=420,CH=H-M-CY+10,SLW=CW-44,WK=F.winks.slice(0,5).map(F.tx);
@@ -206,28 +210,47 @@ window.MENU_FORMATS[ID]=ctx=>{
   const head=(l,tr)=>`<div style="font:700 ${Math.round(tr.h*.8)}px/1.2 ${DF};color:${acc};text-transform:uppercase;letter-spacing:.12em;border-bottom:2px solid ${rule};padding-bottom:3px;margin-bottom:8px">${esc(l)}</div>`;
   const pre=(k,i,tr)=>`<div style="position:absolute;left:0;top:2px;width:${BOX-6}px;height:${BOX-6}px;border:2.5px solid ${e.ink};background:#fff;display:flex;align-items:center;justify-content:center;font:600 ${BOX+6}px/1 ${PEN};color:#1f3fa0">${i===0?"&#10003;":""}</div>`;
   const o={head,pre,indent:BOX+12,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:e.soft,pw:400,pp:-2,cw:e.cw,leader:0,price:()=>""};
-  /* each column spends its own spare height on its own course gaps (capped), and a big patch still left takes a film still */
-  let stillUsed=false;
-  const colHtml=(col,ci)=>{const spare=Math.max(0,MH-(R.hs?R.hs[ci]:MH)*1.02-30),/* 30px held back: the height estimate runs up to about 20px either way */nIt=col.reduce((a,[k])=>a+Math.min(4,items[k].length),0),ig=Math.min(10,spare*.4/Math.max(1,nIt)),
-      gaps=col.length-1,add=gaps?Math.min(28,(spare-ig*nIt)/gaps):0,left=spare-ig*nIt-add*gaps;/* the gap after a column's last course is blank, not spacing */
-    const oc=Object.assign({},o,{cgap:12+add,ig}),ol=Object.assign({},o,{cgap:12,ig});let still="";
-    if(left+30>100&&F.stillSrc&&!stillUsed){stillUsed=true;const sh=Math.min(300,Math.round(left-4));
-      still=`<div style="margin-top:2px;height:${sh}px;box-sizing:border-box;background:#fff;padding:6px 6px 0;box-shadow:0 2px 5px rgba(0,0,0,.25);display:flex;flex-direction:column">
-        <div style="flex:1;position:relative;overflow:hidden;background:#111">${photo(F.stillSrc,t.photo,"center 35%")}</div>
-        <div style="flex:0 0 22px;font:400 13px/22px ${BF};color:${e.soft};white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?` (${esc(F.year)})`:""}, film still</div></div>`}
-    return `<div style="flex:0 0 ${R.CW}px">${col.map((s,si)=>course(s,items,pr,R,si===col.length-1?ol:oc)).join("")}${still}</div>`};
+  /* review 26: each column is a wrapping flex box the height of the form, so the real leftover on paper (not the estimate, which runs
+     high or low by film) is what gets used. Headings, dishes and the gaps between them are the column's own flex items; the gaps grow
+     into the leftover (capped). A film still follows the last dish, at least 100px tall, and when it fits it takes the leftover first
+     (it grows 1000 times faster than a gap). When less than 106px is left the still wraps into a hidden second line and the gaps spread
+     instead. A dish only wraps away if the column overflows, which the fit estimate (which runs high) keeps from happening.
+     The column with more room by the estimate gets the first still, the other one the second */
+  const est=R.cols.map((col,ci)=>MH-(R.hs?R.hs[ci]:MH));
+  const first=est.length>1&&est[1]>est[0]?1:0;
+  const colHtml=(col,ci)=>{const src=ci===first?F.stillSrc:(F.still2||"");
+    const ig=`<div style="flex:1 1 0;width:100%;max-height:10px"></div>`,cg=`<div style="flex:1 1 0;width:100%;min-height:12px;max-height:40px"></div>`;
+    const wrapI=h=>`<div style="flex:0 0 auto;width:100%">${h}</div>`;
+    const body=col.map(([k,label])=>wrapI(head(label,R.tr))+items[k].slice(0,4).map((it,i)=>wrapI(course([k,""],{[k]:[it]},{[k]:[pr[k][i]]},R,Object.assign({},o,{head:()=>"",cgap:"0",ig:0,pre:(kk,ii,tr)=>pre(k,i,tr)})))).join(ig)).join(cg);
+    /* the still is a picture with a caption, aria-hidden: when it wraps out of sight its caption is clipped, not over the next column.
+       A thin border, not a shadow, so nothing of a wrapped still bleeds back into view */
+    const still=src?`<div aria-hidden="true" style="flex:1000 1 100px;min-height:100px;width:100%;margin-top:6px;box-sizing:border-box;background:#fff;padding:6px 6px 0;border:1px solid ${mix(rule,"#000000",.15)};display:flex;flex-direction:column">
+        <div style="flex:1;position:relative;overflow:hidden;background:#111">${photo(src,t.photo,"center 35%")}</div>
+        <div style="flex:0 0 22px;font:400 13px/22px ${BF};color:${e.soft};white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?` (${esc(F.year)})`:""}, film still</div></div>`:"";
+    return `<div style="flex:0 0 ${R.CW}px;width:${R.CW}px;height:${MH}px;display:flex;flex-direction:column;flex-wrap:wrap;align-content:flex-start;column-gap:40px;overflow:hidden">${body}${still}</div>`};
+  /* the ward kitchen's stamp, inked across the middle of the form's top bar */
+  const stamp=`<span style="position:absolute;left:50%;top:-4px;margin-left:-70px;width:140px;height:38px;box-sizing:border-box;border:3px solid ${acc};border-radius:6px;transform:rotate(-5deg);display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 13px/1.1 ${BF};color:${acc};letter-spacing:.12em;opacity:.8;text-align:center">WARD KITCHEN<span style="font-size:12px">${esc(F.year||"")}</span></span>`;
   const form=`<div style="position:absolute;left:${FX}px;top:${FY0}px;width:${FW}px;height:${FHt}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)}">
-    <div style="position:absolute;left:18px;right:18px;top:12px;height:34px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid ${e.ink}"><span style="font:700 19px/1 ${DF};color:${e.ink}">Please tick your choices</span><span style="font:400 15px/1 ${BF};color:${e.soft}">${esc(HS.returnBy||"Hand to the duty nurse")}</span></div>
+    <div style="position:absolute;left:18px;right:18px;top:12px;height:34px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid ${e.ink}"><span style="font:700 19px/1 ${DF};color:${e.ink}">Please tick your choices</span>${stamp}<span style="font:400 15px/1 ${BF};color:${e.soft}">${esc(HS.returnBy||"Hand to the duty nurse")}</span></div>
     <div style="position:absolute;left:18px;top:56px;width:${MW}px;height:${MH}px;display:flex;gap:26px;overflow:hidden">${R.cols.map(colHtml).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:18px;right:18px;bottom:8px;height:${cueH-8}px;border-top:1px solid ${rule};padding-top:5px">${cueLine(F,BF,e.soft,acc,15)}</div>`:""}</div>`;
+  /* the film's prop pinned as a small card: its kind as the label, then the title and its lines (rule 5). Sizes step down until it fits */
+  const P=F.prop,PKW=230-20-24;let propCard="";
+  if(P){const kind=clean((F.fl.prop&&F.fl.prop.kind)||"card").toUpperCase(),lines=P.lines.slice(0,3).map(F.tx);
+    let ts=19,ls=14,pick=null;for(const [a,b2] of [[19,14],[17,13],[16,12],[15,11]]){const h=11+5+wrapLines(F.tx(P.title),a,PKW,e.cwd+.06)*a*1.15+4+lines.reduce((x,l)=>x+wrapLines(l,b2,PKW,e.cw+.04)*b2*1.25,0)+16;if(h<=104){pick=[a,b2];break}}
+    [ts,ls]=pick||[15,11];
+    propCard=`<div style="position:relative;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.25);padding:8px 12px;transform:rotate(1.2deg);margin-top:4px">
+        <span style="position:absolute;left:50%;top:-6px;margin-left:-6px;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff8a7a,#b8231a);box-shadow:0 1px 2px rgba(0,0,0,.4)"></span>
+        <div style="font:700 11px/1 ${BF};letter-spacing:.2em;color:${e.soft};margin-bottom:5px">${esc(kind)}</div>
+        <div style="font:700 ${ts}px/1.15 ${DF};color:${acc};margin-bottom:4px">${esc(F.tx(P.title))}</div>
+        ${lines.map(l=>`<div style="font:400 ${ls}px/1.25 ${BF};color:${e.ink}">${esc(l)}</div>`).join("")}</div>`}
   /* foot: a real line from the film prints in quote marks under "Overheard"; house copy prints plain as the nurse's note */
-  const n=F.note,isQ=!!(F.fl.note&&F.fl.note.kind==="quote"),NY=H-M-NH,nS=n.text.length>130?24:n.text.length>80?27:30,SW2=200;
+  const n=F.note,isQ=!!(F.fl.note&&F.fl.note.kind==="quote"),NY=H-M-NH,nS=n.text.length>130?24:n.text.length>80?27:30,SW2=230;
   const note=`<div style="position:absolute;left:${FX}px;top:${NY}px;width:${FW-SW2-16}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:repeating-linear-gradient(#fffef6 0 29px,${mix(rule,"#ffffff",.5)} 29px 30px);padding:8px 14px;overflow:hidden">
       <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${e.soft}">${isQ?"OVERHEARD ON THE WARD":"NURSE'S NOTE"}</div>
       <div style="font:600 ${nS}px/1.1 ${PEN};color:#1f3fa0;margin-top:4px;${clamp(3)}">${isQ?`&ldquo;${esc(n.text)}&rdquo;`:esc(n.text)} <span style="color:${acc}">${esc(n.by)}</span></div></div>
-    <div style="position:absolute;left:${FX+FW-SW2}px;top:${NY}px;width:${SW2}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)};display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px">
-      <div style="width:150px;height:76px;border:3px solid ${acc};border-radius:6px;transform:rotate(-6deg);display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 15px/1.2 ${BF};color:${acc};letter-spacing:.12em;opacity:.8;text-align:center">WARD KITCHEN<br><span style="font-size:14px">${esc(F.year||"")}</span></div>
-      <div style="font:400 14px/1.2 ${BF};color:${e.soft};text-align:center;${clamp(2)}">${esc(credit(F).replace("Prices subject to change. ",""))}</div></div>`;
+    <div style="position:absolute;left:${FX+FW-SW2}px;top:${NY}px;width:${SW2}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)};display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;padding:8px 10px 6px">${propCard}
+      <div style="font:400 12px/1.2 ${BF};color:${e.soft};text-align:center">${esc(credit(F).replace("Prices subject to change. ",""))}</div></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}</div>`]};
 };
 })();
