@@ -1,0 +1,30 @@
+{
+ "id": "Toy Story (1995)",
+ "ops": [
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "space": true,
+    "counter": "PIZZA PLANET PRIZES",
+    "redeem": "TO INFINITY AND BEYOND!",
+    "sections": [
+     "Launch Pad",
+     "Main Orbit",
+     "Birthday Orbit",
+     "Refuel Station"
+    ],
+    "tokens": "PLANET TOKENS",
+    "insert": "ONE TOKEN, ONE TRY",
+    "shelf": "TOP SHELF, SPACE PORT",
+    "still": {
+     "i": 2,
+     "title": "Parked out front"
+    },
+    "logoDark": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

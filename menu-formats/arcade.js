@@ -101,17 +101,17 @@ function fit(o){
 /* one course: heading plus dishes; o sets fonts, colours and the heading/row style */
 function course(sec,items,pr,R,o){
   const [k,label]=sec,{tr,CW,dmax}=R;
-  return `<div style="margin-bottom:${o.cgap||12}px">${o.head(label,tr,k)}${items[k].slice(0,o.maxItems||4).map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(o.tx(it.note),tr.n,CW-(o.indent||0),o.cw||.5)):0;
+  return `<div style="margin-bottom:${o.cgap||12}px;${o.spread?"flex:1 1 auto;display:flex;flex-direction:column":""}">${o.head(label,tr,k)}${o.spread?'<div style="flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-around">':""}${items[k].slice(0,o.maxItems||4).map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(o.tx(it.note),tr.n,CW-(o.indent||0),o.cw||.5)):0;
     const lead=o.leader?`<span style="flex:1;min-width:16px;border-bottom:2px dotted ${o.lead||o.soft};transform:translateY(-6px)"></span>`:"";
     return `<div style="margin-bottom:${tr.g}px;${o.indent?`padding-left:${o.indent}px;position:relative`:""}">${o.pre?o.pre(k,i,tr):""}
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="${o.leader?"flex:0 1 auto":"flex:1"};font:${o.nw||700} ${tr.d}px/1.15 ${o.nf};color:${o.ink};${o.caps?"text-transform:uppercase;letter-spacing:.04em;":""}${clamp(dmax)}">${esc(o.tx(it.n))}</span>${lead}<span style="font:${o.pw||700} ${tr.d+(o.pp||2)}px/1 ${o.pf||o.nf};color:${o.pc||o.ink};white-space:nowrap">${o.price?o.price(pr[k][i],k,i):pr[k][i]}</span></div>
-      ${nl?`<div style="font:${o.ns||"400"} ${tr.n}px/1.3 ${o.bf};color:${o.soft};margin-top:3px;${clamp(nl)}">${esc(cap(o.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
+      ${nl?`<div style="font:${o.ns||"400"} ${tr.n}px/1.3 ${o.bf};color:${o.soft};margin-top:3px;${clamp(nl)}">${esc(cap(o.tx(it.note)))}</div>`:""}</div>`}).join("")}${o.spread?"</div>":""}</div>`;
 }
 function sections(ctx,F,labels){return [["s",labels[0]],["m",labels[1]],["w",labels[2]],["d",F.drinks||labels[3]]].filter(([k])=>(ctx.menu[k]||[]).length)}
 function itemsOf(ctx){const o={};for(const k of ["s","m","w","d"])o[k]=(ctx.menu[k]||[]).slice(0,4);return o}
 function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="font:italic 400 ${size||15}px/1.3 ${bf};color:${ink};${clamp(2)}"><b style="font-style:normal;color:${acc}">Showtime:</b> ${esc(cap(F.cue))}</div>`:""}
-function logoOr(ctx,F,maxW,maxH,df,color,dw){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
-  return lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
+function logoOr(ctx,F,maxW,maxH,df,color,dw,keepDark){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
+  return lg?`<img src="${lg.src}" crossorigin="anonymous" ${keepDark?"":`onload="${SAMPLE}"`} style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
 const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
 
@@ -129,7 +129,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Arcade":"Game Zone","Tokens at the change machine",{text:"Two tokens a game, and the claw machine is not rigged. Mostly.",by:"The Change Machine"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),DF=e.disp,BF=e.body,MF=e.mono;
   /* per-film arcade flavour (data/film-flavour.json "arcade"): counter, redeem, sections[4], tokens, shelf, insert;
-     space: starfield and a ringed planet on the marquee and the tokens; still: {i, title} swaps the high score table for a real film still */
+     space: starfield and a ringed planet on the marquee and the tokens; logoDark: keep the logo on the dark panel (a bright logo the sampler reads as dark); still: {i, title} swaps the high score table for a real film still */
   const A=(ctx.flavour||{}).arcade||{},AL=k=>A[k]?clean(A[k]):"";
   const svgImg=(inner,w,h,vb,css)=>`<div style="width:${w}px;height:${h}px;background:url(&quot;data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='${vb||`0 0 ${w} ${h}`}'>${inner.replace(/"/g,"'")}</svg>`)}&quot;) center/100% 100% no-repeat;${css||""}"></div>`;
   const neon=F.pal.accent&&lum(F.pal.accent)>.18?F.pal.accent:e.neon,neon2=e.neon2;
@@ -146,7 +146,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:26px;top:0;bottom:0;right:${LGW+40}px;display:flex;flex-direction:column;justify-content:center">
       <div style="display:flex;align-items:center;gap:14px"><div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;${glow(neon,14)};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>${A.space?planet(Math.round(vS*1.25),neon,neon2):""}</div>
       <div style="font:700 17px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${neon2};margin-top:4px;${clamp(1)}">${esc(F.sign)}</div></div>
-    <div data-dark="#000000" data-light="#f2f2f2" style="position:absolute;right:16px;top:14px;width:${LGW}px;height:${MH-34}px;background:#000;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,LGW-20,MH-48,BF,"#fff","700")}</div></div>`;
+    <div data-dark="#000000" data-light="#f2f2f2" style="position:absolute;right:16px;top:14px;width:${LGW}px;height:${MH-34}px;background:#000;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${logoOr(ctx,F,LGW-20,MH-48,BF,"#fff","700",A.logoDark)}</div></div>`;
 
   /* cabinet bezel with the poster */
   const BY=M+MH+20,BW=448,BH=H-M-BY;const PA=posterFit(BW-56,BH-110);
@@ -167,7 +167,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:neon,cw:e.cw,leader:1,lead:mix(e.soft,e.panel,.5),pp:0,price:v=>`${v}<span style="font-size:.55em;letter-spacing:.06em;margin-left:4px">TIX</span>`,cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
   const board=`<div style="position:absolute;left:${RX}px;top:${BY}px;width:${RW}px;height:${RH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon2,e.panel,.5)};box-shadow:0 10px 24px rgba(0,0,0,.5)">
     <div style="position:absolute;left:24px;right:24px;top:14px;height:32px;display:flex;justify-content:space-between;align-items:center"><div style="font:400 ${pix?16:22}px/1 ${pix?MF:DF};color:#fff;${glow(neon,8)}">${esc(AL("counter")||"PRIZE COUNTER")}</div><div style="font:700 15px/1 ${BF};letter-spacing:.18em;color:${e.soft}">${esc(AL("redeem")||"REDEEM TICKETS HERE")}</div></div>
-    <div style="position:absolute;left:24px;top:56px;width:${BWd}px;height:${BHd}px;display:flex;gap:28px;overflow:hidden">${R.cols.map(col=>`<div style="flex:0 0 ${R.CW}px">${col.map(s=>course(s,items,pr,R,o)).join("")}</div>`).join("")}</div>
+    <div style="position:absolute;left:24px;top:56px;width:${BWd}px;height:${BHd}px;display:flex;gap:28px;overflow:hidden">${R.cols.map(col=>`<div style="flex:0 0 ${R.CW}px;display:flex;flex-direction:column">${col.map(s=>course(s,items,pr,R,Object.assign({},o,{spread:col.length===1&&R.n>1}))).join("")}</div>`).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:24px;right:24px;bottom:12px;height:${cueH-8}px;border-top:1px solid ${mix(e.soft,e.panel,.6)};padding-top:6px">${cueLine(F,BF,e.soft,neon2,15)}</div>`:""}</div>`;
 
   /* foot: tokens, high scores, top shelf */

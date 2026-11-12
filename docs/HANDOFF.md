@@ -631,3 +631,11 @@ Every new or custom menu gets the movie poster and real TMDB stills treatment. N
 - Fonts reuse specs already shipped (Michroma, Nunito 0,400;0,700;0,800;1,400;1,700, Caveat 500), so no new font files. Running fetch-fonts without --check re-downloads and renames about 17 unrelated files because Google now serves different bytes; avoid it unless a new spec is needed.
 - Checks: check-print-text passes on Wall-E and Toy Story, all tests pass, both fronts looked over in shots. Not yet checked in WebKit iPhone or on a real phone.
 - Next: Josh to look over the Wall-E proof, then deploy only when he says.
+
+## 12 Nov, 4:40pm: Toy Story review 24 fixes (branch wip/new-formats, not live)
+
+- Independent review of Toy Story's arcade menu: 7.5 out of 10. Josh picked fixes 1 to 9 (10, prep sheet missing the knots and grilled cheese, is by design: cook 5).
+- Done through card-ops (audit/ops/toy-story-1995-review-24*.json): grilled cheese and garlic knots lines describe the food; house lines (mozzarella sticks, cherry slushie) describe the food; "Space-themed pizza" renamed "Moon crater pepperoni pizza" everywhere; quote under the still is the aliens' "The claw chooses who will go and who will stay."; cue "Serve the pizza when Woody and Buzz hitch a ride on the Pizza Planet truck."; counter label "TO INFINITY AND BEYOND!" (was a second "Out of this world").
+- arcade.js: flavour arcade.logoDark keeps the logo on the dark panel (the sampler read Toy Story's logo as dark and put it on light grey). A column holding one course now spreads its dishes down the board (headings stay with their dishes), so a long first course no longer leaves a gap. Checked on all four arcade films.
+- Warning: scripts/edition-sync.cjs replays old audit ops and broke After Hours (burger renamed) and Oliver & Company (note repeated three times). Reverted. Only run it when the film has a poster edition, and check the movie-menus.js diff after.
+- Checks: check-print-text passes on all four arcade films, all tests pass.

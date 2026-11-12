@@ -1,0 +1,52 @@
+{
+ "id": "Toy Story (1995)",
+ "ops": [
+  {
+   "old": "Space-themed pizza",
+   "new": "Moon crater pepperoni pizza",
+   "done": true
+  },
+  {
+   "old": "Falling with style, then moving day.",
+   "new": "Sourdough toasties oozing cheddar and mozzarella, with roast tomato soup for dunking",
+   "done": true
+  },
+  {
+   "old": "dough tied and baked golden, parsley butter and parmesan, marinara, to infinity and beyond",
+   "new": "Dough tied and baked golden, parsley butter and parmesan, marinara for dipping",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Mozzarella sticks with marinara",
+    "note": "Crumbed mozzarella fried golden, warm marinara for dipping."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cherry slushie",
+    "note": "Shaved ice with sour cherry syrup and a squeeze of lime."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "The claw chooses who will go and who will stay.",
+    "by": "The aliens",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the pizza when Woody and Buzz hitch a ride on the Pizza Planet truck.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

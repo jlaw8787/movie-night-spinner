@@ -2426,8 +2426,8 @@
   "venue": "Pizza Planet",
   "sign": "Out of this world. Mind the claw.",
   "note": {
-   "text": "I am Buzz Lightyear. I come in peace.",
-   "by": "Buzz Lightyear",
+   "text": "The claw chooses who will go and who will stay.",
+   "by": "The aliens",
    "kind": "quote"
   },
   "winks": [
@@ -2449,7 +2449,7 @@
   "arcade": {
    "space": true,
    "counter": "PIZZA PLANET PRIZES",
-   "redeem": "OUT OF THIS WORLD",
+   "redeem": "TO INFINITY AND BEYOND!",
    "sections": [
     "Launch Pad",
     "Main Orbit",
@@ -2462,7 +2462,8 @@
    "still": {
     "i": 2,
     "title": "Parked out front"
-   }
+   },
+   "logoDark": true
   }
  },
  "Toy Story 2 (1999)": {
