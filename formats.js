@@ -3,6 +3,7 @@
    A film listed in FMT_FILMS gets its own landscape A4 menu (trifold or bifold look),
    plus a phone view with big type. Every other film keeps the lobby card until its format is signed off. */
 const FMT_FONTS={
+  "starlanes":"family=Yellowtail&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400",
   "axiom":"family=Michroma&family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Caveat:wght@500",
   "latenightcall":"family=Yeseva+One&family=Lora:ital,wght@0,400;0,700;1,400&family=Great+Vibes",
   "bookshopcafe":"family=Libre+Caslon+Display&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Mrs+Saint+Delafield",
@@ -97,6 +98,7 @@ const FMT_FONTS={
   casefile:"family=Limelight&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&family=Big+Shoulders+Stencil+Display:wght@800"
 };
 const FMT_FAMS={
+  "starlanes":["Yellowtail", "Barlow Condensed", "Libre Franklin"],
   "axiom":["Michroma", "Nunito", "Caveat"],
   "latenightcall":["Yeseva One", "Lora", "Great Vibes"],
   "bookshopcafe":["Libre Caslon Display", "Lora", "Mrs Saint Delafield"],
@@ -176,6 +178,7 @@ const FMT_FAMS={
 
 /* phone palette per format */
 const FMT_PHONE={
+  "starlanes":{"top":"#1b2340","topInk":"#f6eedd","paper":"#fffaf0","ink":"#1d1b18","soft":"#4c4a44","accent":"#d9572a","tab":"#f0b429","disp":"'Barlow Condensed',sans-serif","name":"'Barlow Condensed',sans-serif","body":"'Libre Franklin',sans-serif","price":"'Barlow Condensed',sans-serif","title":"'Yellowtail',cursive","note":"'Libre Franklin',sans-serif"},
   "axiom":{"top":"#0b1736","topInk":"#f4f7fb","paper":"#f4f7fb","ink":"#0b1736","soft":"#55617a","accent":"#1d6fae","tab":"#f4f7fb","disp":"'Michroma',sans-serif","name":"'Nunito',sans-serif","body":"'Nunito',sans-serif","price":"'Nunito',sans-serif","title":"'Michroma',sans-serif","note":"'Nunito',sans-serif"},
   "latenightcall":{"top":"#172c43","topInk":"#eee7d9","paper":"#eee7d9","ink":"#172c43","soft":"#475963","accent":"#77505c","tab":"#eee7d9","disp":"'Yeseva One',serif","name":"'Yeseva One',serif","body":"'Lora',serif","price":"'Yeseva One',serif","title":"'Yeseva One',serif","note":"'Lora',serif"},
   "bookshopcafe":{"top":"#29523a","topInk":"#f6eddb","paper":"#f6eddb","ink":"#23382c","soft":"#5d6253","accent":"#984729","tab":"#f6eddb","disp":"'Libre Caslon Display',serif","name":"'Libre Caslon Display',serif","body":"'Lora',serif","price":"'Libre Caslon Display',serif","title":"'Libre Caslon Display',serif","note":"'Lora',serif"},
@@ -536,20 +539,30 @@ const FMT_FILMS={
       {h:"Sweet & cold",items:[
         {k:"Stay Puft s'mores",note:"Chocolate, biscuit. Toasted till they melt",p:"7.00"},
         {k:"Ectoplasm slushie",note:"Lime, ice and very green",p:"5.00"}]}]},
-  "The Big Lebowski (1998)":{fmt:"lanes",brand:"League Lanes",place:"League Lanes",address:"5227 Santa Monica Blvd · 32 lanes",
-    team:"Dude, Walter, Donny",night:"League night",tag:"The Dude's drink.<br>Always a White Russian.",
-    rules:"This is bowling.<br>There are rules.<br>Shoes required",rugLine:"Mind the rug",
+  "The Big Lebowski (1998)":{fmt:"starlanes",brand:"Hollywood Star Lanes",phoneTitle:"The Big Lebowski",tag:"League night at the lanes. White Russians at the bar.",
+    over:"5227 Santa Monica Blvd · Hollywood, California",
+    sub:["Coffee shop & cocktail lounge","League night. Rental shoes at the front desk."],
+    menuHead:"Snack bar, grill and lounge",menuNote:"Order at the counter, we bring it to your lane",
+    foot:["Strikes and gutters, ups and downs.","The Dude abides.","Shoes to the counter after your last frame"],
+    poster:["Tonight at the lanes","League night"],
+    zero:["/3IRvErYyT80K9RoJ4zOYR8rGPsr.jpg","“Mark it zero!” Walter, when Smokey goes over the line"],
+    rug:["/qLVQfUbGvKzNRFDy8RYrOG6a3rI.jpg","Tai chi on the rug. “This aggression will not stand, man.”"],
+    stills:[["/rYIySejPHVlRKhcXCL75Omhwkag.jpg","League night at the bar: the Dude, Donny and Walter"],["/4hPrbRpbgSC4JSpjckcJHc7aF5T.jpg","The Jesus, warming up two lanes over"],["/olbS02Olqw4koy5dhKYh2DEwrpO.jpg","The Stranger at the bar, sarsaparilla in hand"]],
+    cue:["/hKsvdTYqu85UDsfyIKVr8K1PiFl.jpg","Half-and-half at Ralphs"],
     groups:[
-      {h:"Snack bar",items:[
-        {k:"League night chilli con queso nachos",n:"Alley nachos",note:"Chilli con queso, jalapeños, sour cream. League night",p:"2.95"},
-        {k:"Rug-pattern paprika lavash crackers",note:"Paprika and sesame, feta dip. Ties the room together",p:"1.95"},
-        {k:"Half-and-half whipped ricotta honey dip",note:"Ricotta and honey, sourdough. Bought in a dressing gown",p:"2.50"}]},
-      {h:"Grill",items:[
-        {k:"Bowling alley burgers",n:"Alley burgers",note:"Cheeseburgers with pickles and fries. Between frames",p:"3.95",mark:1},
-        {k:"League night chilli dogs",n:"Drive-thru burger",note:"Chilli, cheddar and mustard. Eaten in the Dude's car",p:"2.49"}]},
-      {h:"Lounge",items:[
-        {k:"Coffee liqueur ice cream cookie sandwiches",note:"Choc chip cookies, coffee-laced ice cream. For the Dude",p:"1.50"},
-        {k:"White Russian",note:"Vodka, coffee liqueur, cream on ice. The Dude abides.",p:"3.50"}]}]},
+      {h:"Snack bar",en:"Between frames",left:true,items:[
+        {k:"Persian rug flatbread",n:"Persian rug flatbread",d:"Charred yoghurt flatbread striped with za'atar, sumac and nigella, whipped feta, pomegranate, mint and dill.",note:"Laid out like the rug that really tied the room together",p:"3.95"},
+        {k:"Jesus Quintana's chorizo taquitos",n:"Jesus Quintana's chorizo taquitos",d:"Corn tortillas rolled round chorizo, potato and cheddar, fried crisp, with purple pickled onion, lime crema and salsa verde.",note:"Rolled tight and dressed in purple. Nobody messes with the Jesus",p:"4.50"},
+        {k:"Over the line gochujang wings",n:"Over the line gochujang wings",d:"Crisp oven-roasted chicken wings in a gochujang, honey and sesame glaze, spring onion, quick-pickled cucumber.",note:"“This is not 'Nam. This is bowling. There are rules.” Walter",p:"4.95"}]},
+      {h:"Grill",en:"Hot off the flat-top",items:[
+        {k:"In-N-Out double-double, animal style",n:"In-N-Out double-double, animal style",d:"Two smashed beef patties seared in mustard, American cheese, slow-cooked onion, pickles and spread on a toasted bun. Fries on the side.",note:"The drive-thru order, three in the car. “Those are good burgers, Walter.” Donny",p:"5.25"},
+        {k:"Shomer shabbos coffee brisket on challah",n:"Shomer shabbos coffee brisket on challah",d:"Brisket braised low with onions, paprika and black Folgers coffee, piled on challah with horseradish cream and pickles.",note:"Cooked on Friday so Walter is done by sundown. He does not roll on Shabbos",p:"6.95"}]},
+      {h:"Sweets",en:"From the coffee shop",left:true,items:[
+        {k:"Nihilist lingonberry Dutch baby",n:"Nihilist lingonberry Dutch baby",d:"A puffed oven pancake with lingonberry jam, whipped crème fraîche, lemon and icing sugar.",note:"What the nihilists order at the coffee shop. They believe in nothing, except pancakes",p:"3.25"},
+        {k:"Larry's homework cookies",n:"Larry's homework cookies",d:"Brown butter choc chip cookies with dark chocolate and sea salt flakes, packed warm in a zip-lock bag.",note:"Found under the car seat. “Is this your homework, Larry?”",p:"0.99"}]},
+      {h:"Cocktail lounge",en:"Careful, man",items:[
+        {k:"White Russian",n:"White Russian",d:"Vodka and coffee liqueur over ice, topped with half-and-half and stirred lazily.",note:"The Dude calls it a Caucasian. “Careful, man, there's a beverage here!”",p:"3.50"},
+        {k:"The Stranger's sarsaparilla float",n:"The Stranger's sarsaparilla float",d:"Ice-cold sarsaparilla poured over vanilla ice cream, with a curl of lemon peel.",note:"The Stranger asks the barman for a good one",p:"1.95"}]}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",sign:"assets/era/slims/slims-sign.webp",motto:"The next best thing<br>to a time machine",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",
     under:"Now playing<br>in every car booth",tag:"Five dollar shakes. Worth every cent.",
@@ -729,7 +742,7 @@ function fmtMarket(f,spec,menu,poster){
 }
 
 const fmtCue=f=>{const c=(movieEdition(f)||{}).cue||f.P;return typeof dietCue==="function"?dietCue(f,c):c};
-const FMT_RENDER={axiom:fmtAxiom,latenightcall:fmtLateNightCall,bookshopcafe:fmtBookshopCafe,dorothysupper:fmtDorothySupper,gershwinfolio:fmtGershwinFolio,annietable:fmtAnnieTable,orangefutures:fmtOrangeFutures,getawaysupper:fmtGetawaySupper,spenditall:fmtSpendItAll,mailroomexecutive:fmtMailroomExecutive,powerlunch:fmtPowerLunch,loftsupper:fmtLoftSupper,oceansupper:fmtOceanSupper,toystore:fmtToyStore,bowerybelow:fmtBoweryBelow,eventually:fmtDinnerEventually,unplanned:fmtUnplanned,sullivansupper:fmtSullivanSupper,sixteen:fmtSixteen,messenger:fmtMessenger,sohoaftermidnight:fmtSohoAfterMidnight,lasttrain:fmtLastTrain,negotiation:fmtNegotiation,leon:fmtLeon,cityrun:fmtCityrun,rooftop:fmtRooftop,plazanight:fmtPlazaNight,escape:fmtEscape,shift:fmtShift,acrossglass:fmtAcrossGlass,serpico:fmtSerpico,brooklyn:fmtBrooklyn,southbound:fmtSouthbound,nightshift:fmtNightshift,suite:fmtSuite,maytable:fmtMayTable,pizzatime:fmtPizzaTime,ooze:fmtOoze,moodslime:fmtMoodslime,perdition:fmtPerdition,southie:fmtSouthie,boatdrinks:fmtBoatdrinks,fever:fmtFever,cornerside:fmtCornerside,carmine:fmtCarmine,shorty:fmtShorty,flamingo:fmtFlamingo,highhat:fmtHighhat,village:fmtVillage,collection:fmtCollection,sobelsupper:fmtSobelSupper,prizzis:fmtPrizzis,miami:fmtMiami,afterhours:fmtAfterhours,leftys:fmtLeftys,paraiso:fmtParaiso,delancey:fmtDelancey,palermo:fmtPalermo,tangiers:fmtTangiers,bippy:fmtBippy,corleone2:fmtCorleoneII,maitland:fmtMaitland,roadtrip:fmtRoadtrip,corleone:fmtCorleone,chocolaterie:fmtChocolaterie,kitchenfolio:fmtKitchenFolio,moonlit:fmtMoonstruck,gimbels:fmtGimbels,lair:fmtLair,tonys:fmtTonys,whistle:fmtWhistle,sals:fmtSals,mcdowells:fmtMcdowells,coney:fmtConey,nakatomi:fmtNakatomi,jurassic:fmtJurassic,newsroom:fmtNewsroom,market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a),workorder:(...a)=>fmtWorkOrder(...a),nero:(...a)=>fmtNero(...a),carte:(...a)=>fmtCarte(...a),feast:(...a)=>fmtFeast(...a),truck:(...a)=>fmtTruck(...a),check:(...a)=>fmtCheck(...a),lous:(...a)=>fmtLous(...a),pad:(...a)=>fmtPad(...a)};
+const FMT_RENDER={starlanes:fmtStarLanes,axiom:fmtAxiom,latenightcall:fmtLateNightCall,bookshopcafe:fmtBookshopCafe,dorothysupper:fmtDorothySupper,gershwinfolio:fmtGershwinFolio,annietable:fmtAnnieTable,orangefutures:fmtOrangeFutures,getawaysupper:fmtGetawaySupper,spenditall:fmtSpendItAll,mailroomexecutive:fmtMailroomExecutive,powerlunch:fmtPowerLunch,loftsupper:fmtLoftSupper,oceansupper:fmtOceanSupper,toystore:fmtToyStore,bowerybelow:fmtBoweryBelow,eventually:fmtDinnerEventually,unplanned:fmtUnplanned,sullivansupper:fmtSullivanSupper,sixteen:fmtSixteen,messenger:fmtMessenger,sohoaftermidnight:fmtSohoAfterMidnight,lasttrain:fmtLastTrain,negotiation:fmtNegotiation,leon:fmtLeon,cityrun:fmtCityrun,rooftop:fmtRooftop,plazanight:fmtPlazaNight,escape:fmtEscape,shift:fmtShift,acrossglass:fmtAcrossGlass,serpico:fmtSerpico,brooklyn:fmtBrooklyn,southbound:fmtSouthbound,nightshift:fmtNightshift,suite:fmtSuite,maytable:fmtMayTable,pizzatime:fmtPizzaTime,ooze:fmtOoze,moodslime:fmtMoodslime,perdition:fmtPerdition,southie:fmtSouthie,boatdrinks:fmtBoatdrinks,fever:fmtFever,cornerside:fmtCornerside,carmine:fmtCarmine,shorty:fmtShorty,flamingo:fmtFlamingo,highhat:fmtHighhat,village:fmtVillage,collection:fmtCollection,sobelsupper:fmtSobelSupper,prizzis:fmtPrizzis,miami:fmtMiami,afterhours:fmtAfterhours,leftys:fmtLeftys,paraiso:fmtParaiso,delancey:fmtDelancey,palermo:fmtPalermo,tangiers:fmtTangiers,bippy:fmtBippy,corleone2:fmtCorleoneII,maitland:fmtMaitland,roadtrip:fmtRoadtrip,corleone:fmtCorleone,chocolaterie:fmtChocolaterie,kitchenfolio:fmtKitchenFolio,moonlit:fmtMoonstruck,gimbels:fmtGimbels,lair:fmtLair,tonys:fmtTonys,whistle:fmtWhistle,sals:fmtSals,mcdowells:fmtMcdowells,coney:fmtConey,nakatomi:fmtNakatomi,jurassic:fmtJurassic,newsroom:fmtNewsroom,market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a),workorder:(...a)=>fmtWorkOrder(...a),nero:(...a)=>fmtNero(...a),carte:(...a)=>fmtCarte(...a),feast:(...a)=>fmtFeast(...a),truck:(...a)=>fmtTruck(...a),check:(...a)=>fmtCheck(...a),lous:(...a)=>fmtLous(...a),pad:(...a)=>fmtPad(...a)};
 function fmtHTML(f,spec,menu){const h=FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f));return typeof dietHTML==="function"?dietHTML(f,h):h}
 
 /* phone view: a clean recipe index under the printed menu. Always Starters, Mains, Sweets, Drinks,
@@ -1923,6 +1936,47 @@ function fmtAxiom(f,spec,menu,poster){
       <div style="flex:1;min-height:0;display:flex;gap:24px">${left}${card}${right}</div></div></div>`],fmtAxiom.sheet);
 }
 fmtAxiom.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
+function fmtStarLanes(f,spec,menu,poster){
+  /* Hollywood Star Lanes, the alley where the Dude, Walter and Donny bowl (The Big Lebowski): one-off menu around the poster and real stills */
+  const NAVY="#1b2340",ORANGE="#d9572a",MUSTARD="#f0b429",TEAL="#1d7378",RUG="#8f2b1f",CREAM="#f6eedd",CARD="#fffaf0",INK="#1d1b18",SOFT="#4c4a44";
+  const SCRIPT="font-family:'Yellowtail',cursive;font-weight:400",COND="font-family:'Barlow Condensed',sans-serif",BODY="font-family:'Libre Franklin',sans-serif";
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
+  const img=(p,size,alt,css)=>`<img crossorigin="anonymous" src="${TMDB_IMG}${size}${ESC(p)}" alt="${ESC(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;${css||""}">`;
+  /* drawn trim only: a Googie starburst like the ones over the lanes, made of rotated bars */
+  const burst=(sz,c,dot)=>`<span aria-hidden="true" style="position:relative;display:inline-block;flex:none;width:${sz}px;height:${sz}px">${[0,22.5,45,67.5,90,112.5,135,157.5].map((a,i)=>`<span style="position:absolute;left:50%;top:50%;width:${i%2?sz*.62:sz}px;height:${Math.max(2,Math.round(sz/16))}px;margin-left:-${(i%2?sz*.62:sz)/2}px;margin-top:-${Math.max(2,Math.round(sz/16))/2}px;border-radius:2px;background:${c};transform:rotate(${a}deg)"></span>`).join("")}<span style="position:absolute;left:50%;top:50%;width:${Math.round(sz*.26)}px;height:${Math.round(sz*.26)}px;margin:-${Math.round(sz*.13)}px 0 0 -${Math.round(sz*.13)}px;border-radius:50%;background:${dot}"></span></span>`;
+  /* drawn trim only: the aiming arrows on a lane, on a strip of maple */
+  const arrows=n=>`<div aria-hidden="true" style="flex:none;height:18px;background:linear-gradient(90deg,#d9a866,#e8c08a 20%,#d6a160 45%,#e6bd86 70%,#d9a866);display:flex;justify-content:space-around;align-items:center;border-top:2px solid ${MUSTARD};border-bottom:2px solid ${ORANGE}">${Array.from({length:n},()=>`<span style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:11px solid ${NAVY}"></span>`).join("")}</div>`;
+  const photo=(s,h,cap,pos)=>`<figure style="margin:0;flex:none"><div style="background:#fff;padding:6px;box-shadow:0 0 0 2px ${NAVY},0 8px 16px rgba(27,35,64,.28)"><div style="height:${h}px;overflow:hidden;background:#222">${img(s[0],"w780",s[1]+", still from the film",pos?"object-position:"+pos:"")}</div></div><figcaption style="${BODY};font-style:italic;font-size:13.5px;line-height:1.3;color:${SOFT};margin-top:6px">${ESC(cap||s[1])}</figcaption></figure>`;
+  const dish=x=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${COND};font-weight:700;font-size:21px;line-height:1.06;color:${INK};flex:0 1 auto;min-width:0">${ESC(it.label||x.n||x.k)}</span><span aria-hidden="true" style="flex:1;min-width:14px;border-bottom:2px dotted rgba(27,35,64,.35);transform:translateY(-5px)"></span><span style="${COND};font-weight:700;font-size:21px;color:${ORANGE};flex:none">${ESC(x.p)}</span></div><div style="${BODY};font-size:13.5px;line-height:1.3;color:${SOFT};margin-top:2px">${ESC(it.desc||x.d||"")}</div><div style="${BODY};font-style:italic;font-size:13.5px;line-height:1.28;color:${TEAL};margin-top:2px">${ESC(x.note)}</div></div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:9px"><div style="display:flex;align-items:center;gap:10px;border-bottom:3px solid ${NAVY};padding-bottom:5px">${burst(22,ORANGE,MUSTARD)}<span style="${COND};font-weight:700;font-size:24px;letter-spacing:.12em;line-height:1;color:${NAVY};text-transform:uppercase;white-space:nowrap">${ESC(g.h)}</span><span style="${SCRIPT};font-size:22px;line-height:1;color:${ORANGE};margin-left:auto;white-space:nowrap">${ESC(g.en)}</span></div>${g.items.map(dish).join("")}</div>`;
+  const SP=`<div aria-hidden="true" style="flex:1 1 0;min-height:8px"></div>`;
+  const cue=`<div style="display:flex;gap:14px;align-items:center;background:${CREAM};border:2px solid ${NAVY};border-radius:10px;padding:8px 12px">
+    <div style="flex:none;width:112px;height:63px;overflow:hidden;border-radius:6px;background:#222">${img(spec.cue[0],"w780",spec.cue[1]+", still from the film")}</div>
+    <div style="min-width:0"><div style="${COND};font-weight:700;font-size:15px;letter-spacing:.16em;color:${RUG};text-transform:uppercase">Showtime cue</div><div style="${BODY};font-weight:700;font-size:15px;line-height:1.28;color:${INK};margin-top:2px">${ESC(fmtCue(f))}</div><div style="${BODY};font-style:italic;font-size:13px;line-height:1.3;color:${SOFT};margin-top:3px">${ESC(spec.cue[1])}</div></div></div>`;
+  const colA=`<div class="fx-panel" style="min-width:0;min-height:0;display:flex;flex-direction:column">${spec.groups.filter(g=>g.left).map(sect).join(SP)}</div>`;
+  const colB=`<div class="fx-panel" style="min-width:0;min-height:0;display:flex;flex-direction:column">${spec.groups.filter(g=>!g.left).map(sect).join(SP)}${SP}${cue}</div>`;
+  const card=`<div style="flex:1;min-width:0;min-height:0;background:${CARD};border:3px solid ${NAVY};border-radius:14px;padding:14px 22px 14px;box-shadow:0 10px 24px rgba(27,35,64,.25);display:flex;flex-direction:column;gap:12px">
+    <div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 30px">${colA}${colB}</div></div>`;
+  const left=`<div style="flex:none;width:232px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+    <div style="background:#fff;padding:7px;box-shadow:0 0 0 2px ${NAVY},0 10px 20px rgba(27,35,64,.3)">${fmtPosterImg(f,poster,218,327)}</div>
+    ${photo(spec.zero,112)}${photo(spec.rug,112,null,"50% 70%")}</div>`;
+  const right=`<div style="flex:none;width:232px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+    <div style="background:${NAVY};border-radius:10px;padding:10px 14px 11px;text-align:center"><div style="${COND};font-weight:600;font-size:14px;letter-spacing:.2em;color:${MUSTARD};text-transform:uppercase">${ESC(spec.poster[0])}</div><div style="${SCRIPT};font-size:34px;line-height:1.05;color:${CREAM}">${ESC(spec.poster[1])}</div><div style="${BODY};font-style:italic;font-size:13px;line-height:1.3;color:#c9cfe0;margin-top:4px">${ESC(spec.menuNote)}</div></div>
+    ${spec.stills.map(s=>photo(s,120)).join("")}</div>`;
+  const head=`<div style="flex:none;background:${NAVY};padding:14px 30px 12px;display:flex;justify-content:space-between;align-items:center;gap:24px">
+    <div style="min-width:0"><div style="${COND};font-weight:600;font-size:15px;letter-spacing:.26em;color:${MUSTARD};text-transform:uppercase">${ESC(spec.over)}</div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:2px">${burst(50,MUSTARD,ORANGE)}<div style="${SCRIPT};font-size:62px;line-height:1.08;color:${CREAM};text-shadow:3px 3px 0 ${ORANGE};white-space:nowrap;padding-right:8px">${ESC(spec.brand)}</div>${burst(30,"#7fc6c9",MUSTARD)}</div></div>
+    <div style="text-align:right;flex:none"><div style="${COND};font-weight:700;font-size:26px;letter-spacing:.08em;color:${CREAM};text-transform:uppercase">${ESC(spec.sub[0])}</div><div style="${BODY};font-size:15px;color:#c9cfe0;margin-top:4px">${ESC(spec.sub[1])}</div></div></div>`;
+  const foot=`<div style="flex:none;background:${NAVY};padding:6px 30px 7px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px">
+    <div style="${BODY};font-style:italic;font-size:14px;color:#c9cfe0">${ESC(spec.foot[0])}</div>
+    <div style="${SCRIPT};font-size:34px;line-height:1.1;color:${MUSTARD};padding:0 6px">${ESC(spec.foot[1])}</div>
+    <div style="${BODY};font-size:14px;color:#c9cfe0;text-align:right">${ESC(spec.foot[2])}</div></div>`;
+  return fmtFaces([`<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:${CREAM};overflow:hidden;color:${INK};display:flex;flex-direction:column">
+    ${head}${arrows(15)}
+    <div style="flex:1;min-height:0;display:flex;gap:22px;padding:14px 24px 12px">${left}${card}${right}</div>
+    ${arrows(15)}${foot}</div>`],fmtStarLanes.sheet);
+}
+fmtStarLanes.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
 
 function fmtLateNightCall(f,spec,menu,poster){
   return fmtFaces([

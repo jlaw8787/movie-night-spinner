@@ -751,3 +751,11 @@ Live: deploy 6af55cb9 from main 05dbb9a (Josh, 12 Nov: deploy Wall-E and Toy Sto
 - Do not run scripts/edition-sync.cjs for a film without a poster edition: it replays old ops and broke After Hours and Oliver & Company (reverted).
 - card-ops renames whole-string matches first; check alt names such as "(vegetarian)" after a rename.
 - arcade.js now has flavour options logoDark, noLogo (title and year in the marquee), panel {head,text,by} or panel {img,head,h,pos}, quote {text,by}.
+
+## 12 Nov, evening: The Big Lebowski own menu (branch fix24-lebowski, not live)
+
+- Josh chose a full one-off rebuild. fmtStarLanes in formats.js (generated formats/starlanes.js), spec in FMT_FILMS. Hollywood Star Lanes, one 1344x960 face like Wall-E: navy sign with the name in Yellowtail and drawn Googie starbursts (trim only), lane-arrow strips, poster, and six real TMDB stills from the stored set in data/film-stills.json (Mark it zero, tai chi on the rug, league night at the bar, the Jesus, the Stranger, half-and-half at Ralphs on the showtime cue). Fonts reuse shipped specs (Yellowtail, Barlow Condensed, Libre Franklin), so no new font files.
+- Nine dishes, each name the same on card, recipe and edition: Persian rug flatbread, Jesus Quintana's chorizo taquitos, Over the line gochujang wings, In-N-Out double-double animal style, Shomer shabbos coffee brisket on challah, Nihilist lingonberry Dutch baby, Larry's homework cookies, White Russian, The Stranger's sarsaparilla float. Recipes in data/recipes2 (vegetarian versions for the four meat dishes); the night cooks five (poster edition in movie-menus.js). The old "Drive-thru burger" over a chilli dog recipe is gone.
+- Kids and No alcohol: the White Russian becomes the Little Dude vanilla malt (milk, vanilla ice cream, malted milk, nutmeg) on card, cue, phone and recipe, through data/diet text pairs.
+- Table kit venue is now Hollywood Star Lanes. The fallback type poster was remade with make-type-posters for this film only. The old lanes renderer is kept but no film uses it.
+- No TMDB key on this machine: stills are stored paths only.
