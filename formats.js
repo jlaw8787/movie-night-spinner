@@ -451,7 +451,7 @@ const FMT_FILMS={
         {k:"Sally's chef salad",n:"Chef salad",mods:["oil and vinegar dressing"],note:"Ham, turkey, swiss and egg. Dressing on the side",p:"5.50",q:"1",
          how:"Wash and tear 2 cos lettuces. Arrange with 200g sliced leg ham, 200g sliced turkey, 150g swiss cheese strips, 4 halved hard-boiled eggs, 2 sliced tomatoes and half a sliced cucumber. Serve 60ml olive oil and 30ml red wine vinegar in two little jugs on the side.",
          shop:["2 cos lettuces@Produce","200g sliced leg ham@Deli","200g sliced turkey@Deli","150g swiss cheese@Dairy","4 eggs@Dairy","2 tomatoes@Produce","1 cucumber@Produce","60ml olive oil@Pantry","30ml red wine vinegar@Pantry"]},
-        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"Warm, strawberry ice cream on the side",p:"2.25",q:"1"}]},
+        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"Heated, with the ice cream on the side",p:"2.25",q:"1"}]},
       {h:"From the counter",items:[
         {k:"Pastrami on rye",note:"The Katz's classic. Hand cut, piled high, a pickle on the side",p:"6.95",q:"1"}]},
       {h:"Fountain",items:[
@@ -508,7 +508,7 @@ const FMT_FILMS={
     card:["From the prison kitchen","Garlic sliced razor thin.<br>Sauce on low all afternoon.<br>Steaks last, in a hot pan."],
     groups:[
       {h:"Start early",items:[
-        {k:"Razor-thin garlic bruschetta",n:"Slice the garlic, razor thin",note:"Garlic, tomato and basil on toasted ciabatta. Paulie's way",p:"6:55"},
+        {k:"Razor-thin garlic bruschetta",n:"Slice the garlic, razor thin",note:"Garlic and tomato on toast. Paulie's way",p:"6:55"},
         {k:"Prison gravy with three-meat meatballs",n:"Sauce on, three-meat meatballs",note:"Veal, beef and pork. Go easy on the onions",p:"7:30"}]},
       {h:"Like inside",items:[
         {k:"Crew's back booth salami and provolone",n:"Salami, prosciutto, cheese",note:"With pepperoncini and bread, laid out like the cell",p:"11:00",
@@ -518,7 +518,7 @@ const FMT_FILMS={
          how:"Take 4 rump steaks, about 250g each, out of the fridge 30 minutes early and season well with salt and pepper. Heat a heavy pan with 1 tbsp olive oil until smoking. Cook two at a time, 2 to 3 minutes each side for rare, 4 for medium. In the last minute add 30g butter and 2 smashed garlic cloves and spoon them over. Rest 5 minutes.",
          shop:["4 rump steaks, about 1kg@Meat","30g butter@Dairy","2 garlic cloves@Produce","1 tbsp olive oil@Pantry"]}]},
       {h:"Last thing",items:[
-        {k:"Red wine, opened early",n:"Red wine, opened early",note:"Italian red wine in short glasses, poured like inside",p:"6:00",c:"d",
+        {k:"Red wine, opened early",n:"Red wine, opened early",note:"Short glasses of Chianti, like inside",p:"6:00",c:"d",
          how:"Open 2 bottles of Italian red, a Chianti or Montepulciano, an hour before dinner. Serve in short tumblers.",
          shop:["2 bottles Italian red wine@Bottle shop"]}]}]},
   "Ghostbusters (1984)":{fmt:"workorder",brand:"Hook & Ladder 8",trade:"Paranormal investigation and elimination · 24 hours",address:"14 North Moore St, NYC",

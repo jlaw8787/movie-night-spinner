@@ -1619,8 +1619,10 @@ const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1)
    /* review 15: "with Marsala wine" went through two swaps and read "with a cold drink grape juice" (The Godfather, Vegetarian with No alcohol) */
    [/\ba cold drink (grape juice)\b/gi,(m,a)=>a],
    [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],
-   /* review 24: two swaps that land on the same drink read once ("anisette or sambuca", a shandy of lager topped with ginger beer) */
-   [/\b(aniseed|grape juice|ginger beer|sparkling apple juice) or \1\b/gi,(m,a)=>a],[/\b(ginger beer) (?:topped|mixed) with (?:cold |chilled )?ginger beer\b/gi,(m,a)=>a],
+   /* review 24: two swaps that land on the same drink read once ("anisette or sambuca", a shandy of lager topped with ginger beer,
+      Shaun of the Dead's "Chill the ale and lager", Lethal Weapon 2's "Pour in the lager, top with ginger beer"), and take "a" (Rocky V's "An ice-cold lager") */
+   [/\b(aniseed|grape juice|ginger beer|sparkling apple juice) (?:or|and) \1\b/gi,(m,a)=>a],[/\b(ginger beer),? (?:topped|mixed|top) with (?:cold |chilled )?ginger beer\b/gi,(m,a)=>a],
+   [/\b([Aa])n (?=(ginger beer|grape juice|sparkling apple juice|blood orange juice|cucumber juice)\b)/g,(m,a)=>a+" "],
    /* review 21: a recipe that offers root beer beside the beer read "Pour the root beer, or the root beer for anyone who prefers it" once the beer was swapped (Shaun of the Dead) */
    [/\b((?:[A-Z][a-z]+ )?(?:root|ginger) beer),? or (?:the )?(?:root|ginger) beer(?: for anyone who prefers it)?,?/g,(m,a)=>a],
    /* review 21: the town keeps its name, but a dish named for it keeps no whiskey on a kids' card (Unforgiven) */
