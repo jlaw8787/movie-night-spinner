@@ -227,13 +227,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc,cw:e.cw,leader:1,lead:mix(e.soft,e.card,.5),cgap:12};
   /* review 25: each column spends its own spare height in its course gaps (flex spacers, capped at GAPMAX so nothing looks stretched);
      a column still left with more than about 100px gets a real still from the film, sized by flex to the room left */
-  const GAPMAX=30,stl=[F.stillSrc,F.still2].filter(Boolean);let si=0;
+  const GAPMAX=22,stl=[F.stillSrc,F.still2].filter(Boolean);let si=0;
   const colHtml=col=>{const left=MH-R.colH(col)*1.02-(col.length-1)*GAPMAX,src=left>120&&stl[si]?stl[si++]:"";
     const sp=`<div style="flex:1 1 0;min-height:0;max-height:${GAPMAX}px"></div>`;
     const still=src?`<div style="flex:1 1 0;min-height:96px;margin-top:4px;position:relative;overflow:hidden;background:#111;border:3px solid ${mix(e.wood,"#000000",.2)};box-sizing:border-box">${photo(src,t.photo,"center 35%")}
       <div style="position:absolute;left:0;right:0;bottom:0;padding:5px 9px;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,0));font:italic 500 13px/1.2 ${BF};color:#fff;${clamp(1)}">From the film, ${esc(F.title)}${F.year?` (${esc(F.year)})`:""}</div></div>`:"";
-    /* no still: what the capped gaps cannot take goes a little into the gaps between dishes (up to 8px each, 20px kept back for safety) */
-    const nI=col.reduce((x,[k])=>x+Math.min(4,(items[k]||[]).length),0),xg=!src&&left>20&&nI?Math.min(8,Math.floor((left-20)/nI)):0,RC=xg?Object.assign({},R,{tr:Object.assign({},R.tr,{g:R.tr.g+xg})}):R;
+    /* no still: what the capped gaps cannot take goes a little into the gaps between dishes (up to 10px each, 20px kept back for safety) */
+    const nI=col.reduce((x,[k])=>x+Math.min(4,(items[k]||[]).length),0),xg=!src&&left>20&&nI?Math.min(10,Math.floor((left-20)/nI)):0,RC=xg?Object.assign({},R,{tr:Object.assign({},R.tr,{g:R.tr.g+xg})}):R;
     return `<div style="flex:0 0 ${R.CW}px;height:${MH}px;display:flex;flex-direction:column;min-height:0">${col.map(s=>course(s,items,pr,RC,o)).join(sp)}${src?sp+still:""}</div>`};
   const card=`<div style="position:absolute;left:${RX}px;top:${CT}px;width:${RW}px;height:${CH}px;background:${e.card};box-shadow:${shadow}">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.12+t.wear*.5).toFixed(2)};mix-blend-mode:multiply"></div>
@@ -257,8 +257,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const patrol=`<div style="position:absolute;left:${RX+SW+18}px;top:${FY}px;width:${RW-SW-18}px;height:${FH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:12px 16px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-top:8px solid ${acc}">
     <div style="font:700 15px/1 ${BF};letter-spacing:.22em;color:${acc}">${isQ?"OVERHEARD":"FROM THE LODGE"}</div>
     <div style="font:600 ${nS}px/1.12 'Caveat',cursive;color:${e.ink};${clamp(3)}">${isQ?`"${esc(n.text)}"`:esc(n.text)}</div>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:700 15px/1.2 ${BF};color:${e.soft};${clamp(1)}">${esc(n.by)}</span><span style="font:400 14px/1 ${BF};color:${e.soft};white-space:nowrap">${esc(credit(F).replace("Prices subject to change. ",""))}</span></div></div>`;
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:700 15px/1.2 ${BF};color:${e.soft};${clamp(1)}">${esc(n.by)}</span></div></div>`;
+  /* review 27: the image credit sits on the timber under the foot, not in the quote card where it read as part of the attribution */
+  const creditLine=`<div style="position:absolute;right:${W-RX-RW}px;bottom:10px;font:400 13px/1 ${BF};color:rgba(255,244,228,.72);letter-spacing:.04em;white-space:nowrap">${esc(credit(F))}</div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(10,6,2,${(t.vig*.7).toFixed(2)}) 100%)"></div>`;
-  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${wood}${frame}${ticket}${card}${report}${patrol}${vig}</div>`]};
+  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${wood}${frame}${ticket}${card}${report}${patrol}${creditLine}${vig}</div>`]};
 };
 })();

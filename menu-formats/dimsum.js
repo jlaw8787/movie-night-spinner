@@ -237,7 +237,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:290px;top:14px;width:150px;height:46px;border:3px solid ${mix(red,e.paper,.15)};border-radius:6px;transform:rotate(-6deg);opacity:.6;display:flex;align-items:center;justify-content:center;font:400 17px/1 ${DF};color:${red};letter-spacing:.08em">TROLLEY CHECKED</div></div>`;
 
   /* foot: tea tag and the trolley line */
-  const TW=290,pr2=F.prop,n=F.note,nS=n.text.length>130?16:n.text.length>80?18:20;
+  const TW=290,pr2=F.prop,n=F.note,nS=n.text.length>130?16:n.text.length>80?18:n.text.length<60?24:20;
   /* the tag's label names what it holds: the tea tag only for tea; any other prop under its own kind */
   const pk=clean(pr2&&F.fl.prop&&F.fl.prop.kind||"").toLowerCase(),PK={stub:"ticket stub"};
   const tagHead=!pr2||/tea/.test(pk)||(!pk&&/\btea\b/i.test(pr2.title))?"TEA FOR THE TABLE":(PK[pk]||pk||"on the table").toUpperCase();

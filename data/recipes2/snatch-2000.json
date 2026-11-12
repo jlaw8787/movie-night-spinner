@@ -145,59 +145,59 @@
    }
   },
   {
-   "n": "Turkish's full English fry-up",
+   "n": "Avi's New York strip steak",
    "course": "m",
    "prep_min": 15,
-   "cook_min": 25,
-   "make_ahead": "Halve the tomatoes and slice the mushrooms up to 1 day ahead in the fridge; cook everything on the night",
+   "cook_min": 70,
+   "make_ahead": "Make the horseradish cream up to 1 day ahead in the fridge; bake the potatoes and sear the steaks on the night",
    "ingredients": [
     {
-     "q": 8,
+     "q": 4,
      "u": "",
-     "item": "rashers bacon",
+     "item": "baking potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick sirloin steaks",
      "aisle": "Meat"
     },
     {
-     "q": 4,
-     "u": "",
-     "item": "pork sausages",
-     "aisle": "Meat"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "slices black pudding",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
+     "q": 400,
      "u": "g",
-     "item": "mushrooms",
+     "item": "spinach",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "tin baked beans",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "tomatoes",
+     "item": "garlic clove, crushed",
      "aisle": "Produce"
     },
     {
-     "q": 8,
-     "u": "",
-     "item": "slices white bread",
-     "aisle": "Bakery"
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
     },
     {
      "q": 40,
@@ -208,48 +208,46 @@
    ],
    "steps": [
     {
-     "text": "Grill the bacon and sausages.",
-     "min": 20
+     "text": "Bake the potatoes at 200C until soft in the middle.",
+     "min": 60
     },
     {
-     "text": "Grill the halved tomatoes alongside and warm the beans.",
-     "min": 5
+     "text": "Mix the sour cream with the horseradish cream and chill.",
+     "min": 2
     },
     {
-     "text": "Fry the black pudding and mushrooms, then the eggs.",
-     "min": 10
+     "text": "Season the sirloins well and sear in a smoking hot pan 3 to 4 minutes a side, to 54C inside for medium rare. Rest 5 minutes.",
+     "min": 13
     },
     {
-     "text": "Toast the white bread, spread with the butter and serve everything together.",
-     "min": 5
+     "text": "Wilt the spinach with the garlic, add the cream and parmesan and simmer until thick.",
+     "min": 6
+    },
+    {
+     "text": "Split the potatoes, add the butter and serve with the steak, creamed spinach and horseradish cream.",
+     "min": 3
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Turkish's full English fry-up (vegetarian)",
+     "n": "Avi's New York strip steak (vegetarian)",
      "prep_min": 15,
-     "cook_min": 25,
-     "make_ahead": "Best cooked fresh and served hot; the mushrooms can be sliced up to 1 day ahead in the fridge",
+     "cook_min": 70,
+     "make_ahead": "Make the horseradish cream up to 1 day ahead in the fridge; bake the potatoes and cook the mushrooms on the night",
      "ingredients": [
       {
        "q": 4,
        "u": "",
-       "item": "vegetarian sausages",
+       "item": "baking potatoes",
        "aisle": "Produce"
       },
       {
-       "q": 400,
-       "u": "g",
-       "item": "mushrooms",
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
        "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "smoked paprika",
-       "aisle": "Pantry"
       },
       {
        "q": 2,
@@ -258,34 +256,46 @@
        "aisle": "Pantry"
       },
       {
-       "q": 4,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
       },
       {
-       "q": 180,
+       "q": 400,
        "u": "g",
-       "item": "haloumi, in 4 slices",
-       "aisle": "Dairy"
+       "item": "spinach",
+       "aisle": "Produce"
       },
       {
        "q": 1,
        "u": "",
-       "item": "tin baked beans",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "tomatoes",
+       "item": "garlic clove, crushed",
        "aisle": "Produce"
       },
       {
-       "q": 8,
-       "u": "",
-       "item": "slices white bread",
-       "aisle": "Bakery"
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
       },
       {
        "q": 40,
@@ -296,20 +306,24 @@
      ],
      "steps": [
       {
-       "text": "Grill the vegetarian sausages.",
-       "min": 15
+       "text": "Bake the potatoes at 200C until soft in the middle.",
+       "min": 60
       },
       {
-       "text": "Grill the halved tomatoes alongside and warm the beans.",
-       "min": 5
+       "text": "Mix the sour cream with the horseradish cream and chill.",
+       "min": 2
       },
       {
-       "text": "Fry the sliced mushrooms in the oil until crisp at the edges and stir through the smoked paprika. Fry the haloumi, then the eggs.",
-       "min": 15
+       "text": "Rub the portobellos with the oil and smoked paprika, season and sear cap side down in a hot pan, pressing flat, 4 minutes a side.",
+       "min": 10
       },
       {
-       "text": "Toast the white bread, spread with the butter and serve everything together.",
-       "min": 5
+       "text": "Wilt the spinach with the garlic, add the cream and cheese and simmer until thick.",
+       "min": 6
+      },
+      {
+       "text": "Split the potatoes, add the butter and serve with the mushroom steaks, creamed spinach and horseradish cream.",
+       "min": 3
       }
      ],
      "af": true

@@ -2,116 +2,6 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Coney Island hot dogs",
-   "course": "s",
-   "prep_min": 5,
-   "cook_min": 14,
-   "make_ahead": "Warm the sauerkraut with the caraway up to 2 days ahead and reheat on the night; grill the franks fresh",
-   "ingredients": [
-    {
-     "q": 8,
-     "u": "",
-     "item": "hot dog franks",
-     "aisle": "Meat"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "hot dog buns",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 300,
-     "u": "g",
-     "item": "sauerkraut",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "pinch caraway seeds",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "jar yellow mustard",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Warm the sauerkraut with the caraway seeds.",
-     "min": 6
-    },
-    {
-     "text": "Grill the franks until they split.",
-     "min": 8
-    },
-    {
-     "text": "Tuck into buns with mustard and sauerkraut and wrap in baking paper.",
-     "min": 5
-    }
-   ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Coney Island hot dogs (vegetarian)",
-     "prep_min": 5,
-     "cook_min": 14,
-     "make_ahead": "Prepare the sauerkraut up to 2 days ahead and reheat to serve; grill the veggie sausages just before filling the buns",
-     "ingredients": [
-      {
-       "q": 8,
-       "u": "",
-       "item": "vegetarian hot dog sausages",
-       "aisle": "Deli"
-      },
-      {
-       "q": 8,
-       "u": "",
-       "item": "hot dog buns",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "sauerkraut",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "pinch caraway seeds",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "jar yellow mustard",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Warm the sauerkraut with the caraway seeds.",
-       "min": 6
-      },
-      {
-       "text": "Grill the veggie sausages until they blister.",
-       "min": 8
-      },
-      {
-       "text": "Tuck into buns with mustard and sauerkraut and wrap in baking paper.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
-  },
-  {
    "n": "Mr Wu's pork and prawn dumplings",
    "course": "s",
    "prep_min": 26,
@@ -264,96 +154,240 @@
    }
   },
   {
-   "n": "Agency meatloaf",
-   "course": "m",
-   "prep_min": 21,
-   "cook_min": 70,
-   "make_ahead": "Mix the loaf up to 1 day ahead and keep it pressed in the tin in the fridge; bake and cook the mash and peas on the night",
+   "n": "Agent K's shrimp and bok choy",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Peel and devein the prawns up to 1 day ahead in the fridge; cook the rice and wok-toss on the night",
    "ingredients": [
     {
-     "q": 800,
+     "q": 300,
      "u": "g",
-     "item": "beef mince",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "brown onion",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "cup",
-     "item": "breadcrumbs",
+     "item": "jasmine rice",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "salt",
+     "item": "cornflour",
      "aisle": "Pantry"
     },
     {
-     "q": 100,
-     "u": "ml",
-     "item": "tomato sauce",
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "thumb ginger, in matchsticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "baby bok choy, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oyster sauce",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tbsp",
-     "item": "brown sugar",
+     "item": "soy sauce",
      "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "kg",
-     "item": "potatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "frozen peas",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Grate the onion. Mix with the mince, breadcrumbs, egg and salt.",
+     "text": "Cook the jasmine rice.",
+     "min": 15
+    },
+    {
+     "text": "Peel and devein the prawns, leaving the tails on, and toss with the cornflour.",
      "min": 10
     },
     {
-     "text": "Press into a loaf tin and spread with tomato sauce mixed with brown sugar.",
-     "min": 4
+     "text": "Heat the oil in a wok until smoking and fry the prawns for 2 minutes until just pink, then lift out.",
+     "min": 3
     },
     {
-     "text": "Bake at 180C.",
-     "min": 60
+     "text": "Fry the garlic and ginger for 30 seconds, add the bok choy and a splash of water and toss for 2 minutes.",
+     "min": 3
     },
     {
-     "text": "Boil and mash the potatoes with butter, and cook the peas.",
-     "min": 5
+     "text": "Return the prawns with the oyster sauce and soy, toss and serve over the rice.",
+     "min": 1
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Agent K's shrimp and bok choy (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Press and cube the tofu up to 1 day ahead in the fridge; cook the rice and wok-toss on the night",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "thumb ginger, in matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "baby bok choy, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the jasmine rice.",
+       "min": 15
+      },
+      {
+       "text": "Toss the tofu in the cornflour and fry in 2 tbsp of the oil until crisp on all sides, then lift out.",
+       "min": 8
+      },
+      {
+       "text": "Add the rest of the oil and fry the garlic and ginger for 30 seconds, add the bok choy and a splash of water and toss for 2 minutes.",
+       "min": 3
+      },
+      {
+       "text": "Return the tofu with the mushroom oyster sauce and soy, toss and serve over the rice.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Wu's real Earth fish",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Shred the spring onions and cut the ginger up to 1 day ahead in the fridge; steam the fish on the night",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
     },
     {
-     "text": "Rest the loaf 10 minutes, then slice.",
-     "min": 10
+     "q": 4,
+     "u": "",
+     "item": "skin-on snapper fillets",
+     "aisle": "Seafood"
     },
     {
-     "text": "Serve thick slices with mash and peas.",
+     "q": 1,
+     "u": "",
+     "item": "thumb ginger, in matchsticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "light soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the jasmine rice.",
+     "min": 15
+    },
+    {
+     "text": "Lay the snapper on a heatproof plate over half the ginger and steam over a wok of simmering water until just flaking.",
+     "min": 9
+    },
+    {
+     "text": "Scatter with the spring onions and the rest of the ginger. Mix the soy with the sugar and 2 tbsp of the steaming water.",
+     "min": 2
+    },
+    {
+     "text": "Heat the oil until smoking, pour it over the fish so it sizzles, spoon over the soy and serve with the rice.",
      "min": 2
     }
    ],
@@ -361,110 +395,70 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Agency lentil and mushroom meatloaf",
-     "prep_min": 21,
-     "cook_min": 79,
-     "make_ahead": "Make the lentil and mushroom mix up to 1 day ahead and keep it chilled; shape, bake and make the mash on the night",
+     "n": "Wu's real Earth fish (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Shred the spring onions and cut the ginger up to 1 day ahead in the fridge; steam the tofu on the night",
      "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "tins brown lentils (400g each), drained",
-       "aisle": "Pantry"
-      },
       {
        "q": 300,
        "u": "g",
-       "item": "mushrooms, finely chopped",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "silken tofu, in 4 slabs",
        "aisle": "Produce"
       },
       {
        "q": 1,
        "u": "",
-       "item": "brown onion, grated",
+       "item": "thumb ginger, in matchsticks",
        "aisle": "Produce"
       },
       {
-       "q": 1,
+       "q": 4,
+       "u": "",
+       "item": "spring onions, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
        "u": "tbsp",
        "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
-       "q": 1,
-       "u": "cup",
-       "item": "breadcrumbs",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
+       "q": 3,
        "u": "tbsp",
-       "item": "soy sauce",
+       "item": "light soy sauce",
        "aisle": "Pantry"
       },
       {
        "q": 1,
        "u": "tsp",
-       "item": "salt",
+       "item": "caster sugar",
        "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "ml",
-       "item": "tomato sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "frozen peas",
-       "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Fry the onion and mushrooms in the oil until dry and cool slightly.",
-       "min": 12
+       "text": "Cook the jasmine rice.",
+       "min": 15
       },
       {
-       "text": "Roughly mash the lentils and mix with the mushrooms, breadcrumbs, eggs, soy sauce and salt.",
+       "text": "Lay the tofu on a heatproof plate over half the ginger and steam over simmering water until hot through.",
        "min": 8
       },
       {
-       "text": "Press into a lined loaf tin, spread with the tomato sauce mixed with the brown sugar and bake at 180C.",
-       "min": 50
+       "text": "Scatter with the spring onions and the rest of the ginger. Mix the soy with the sugar and 2 tbsp water.",
+       "min": 2
       },
       {
-       "text": "Boil and mash the potatoes with butter and cook the peas.",
-       "min": 20
-      },
-      {
-       "text": "Rest the loaf 10 minutes and serve thick slices with mash and peas.",
-       "min": 10
+       "text": "Heat the oil until smoking, pour it over the tofu so it sizzles, spoon over the soy and serve with the rice.",
+       "min": 2
       }
      ],
      "af": true
