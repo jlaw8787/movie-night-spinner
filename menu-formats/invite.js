@@ -203,8 +203,10 @@ window.MENU_FORMATS.invite=function(ctx){
   const bd=E.b,dd=E.d,up=E.up?"text-transform:uppercase;":"";
   /* print process: letterpress bite, embossed or debossed lift, offset flat, laser crisp */
   const press={letter:"text-shadow:0 0 .6px currentColor,0 1px 0 rgba(255,255,255,.5);",emboss:"text-shadow:0 1px 0 rgba(255,255,255,.9),0 -1px 0 rgba(0,0,0,.12);",deboss:"text-shadow:0 1px 1px rgba(255,255,255,.8),0 -1px 0 rgba(0,0,0,.18);",gloss:"",offset:"",laser:""}[E.press]||"";
+  /* white sheens fade to clear white, not "transparent": html2canvas reads that as clear black and the canvas blends through grey,
+     so the 1980s pearl paper printed about 9 levels darker and flatter than the screen (Sixteen Candles, The Wedding Singer) */
   const stock=`<div style="position:absolute;inset:0;background:${paper}"></div>
-    ${E.border==="pearl"?`<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.55),transparent 35%,rgba(255,255,255,.35) 60%,transparent 85%)"></div>`:""}
+    ${E.border==="pearl"?`<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,0) 35%,rgba(255,255,255,.35) 60%,rgba(255,255,255,0) 85%)"></div>`:""}
     <div style="position:absolute;inset:0;background-image:${M.noise(T.wear+.04)}"></div>
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 58%,rgba(70,50,20,${(T.vig*.55).toFixed(2)}) 100%)"></div>
     ${E.deckle?`<div style="position:absolute;inset:0;box-shadow:inset 0 0 0 3px rgba(255,255,255,.5),inset 0 0 18px rgba(90,70,30,.35)"></div>`:""}`;
@@ -219,7 +221,7 @@ window.MENU_FORMATS.invite=function(ctx){
     none:``}[E.border])||"";
   const photo=(src,l,t,w,h,op,o)=>{o=o||{};return `<div ${o.safe?`data-safe='${o.safe}'`:""} style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
      ${src?`<img src="${src}" alt="" crossorigin="anonymous" data-pick data-alts="${(o.alts||[]).join("|")}" data-last="${pos||""}" onload="window.__PICK&&__PICK.still(this)" onerror="window.__PICK&&__PICK.fail(this)" style="position:absolute;left:0;top:0;display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
-     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%)${E.press==="gloss"?",linear-gradient(150deg,rgba(255,255,255,.22),transparent 45%)":""}"></div>${o.extra||""}
+     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%)${E.press==="gloss"?",linear-gradient(150deg,rgba(255,255,255,.22),rgba(255,255,255,0) 45%)":""}"></div>${o.extra||""}
    </div>`};
   /* poster in a landscape slot: whole poster contained on a blurred, darkened copy of itself */
   const posterBand=(l,t,w,h)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
@@ -242,7 +244,7 @@ window.MENU_FORMATS.invite=function(ctx){
   const bdr=E.border==="round"?"14px":E.border==="dots"?"8px":"0";
   const posterFront=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PWID}px;height:${PH}px;overflow:hidden;outline:1px solid ${acc};outline-offset:4px;border-radius:${bdr}">
      <img src="${pos}" alt="" crossorigin="anonymous" style="position:absolute;left:0;top:0;width:${PWID}px;height:${PH}px;object-fit:contain;display:block">
-     <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(255,255,255,${E.press==="gloss"?.2:0}),transparent 45%)"></div>
+     <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(255,255,255,${E.press==="gloss"?.2:0}),rgba(255,255,255,0) 45%)"></div>
     </div>
     <div style="position:absolute;left:${CX}px;top:${PY}px;width:${CW}px;height:${PH}px;display:flex;flex-direction:column;gap:16px">
      <div data-lpanel data-lightink="#2a2a2a" data-dark="rgba(18,16,20,1)" data-light="rgba(253,250,244,1)" data-type="${dark}" style="box-sizing:border-box;width:${CW}px;padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:${lr?"rgba(18,16,20,1)":dark};border-radius:${E.border==="round"?"14px":"2px"}">
