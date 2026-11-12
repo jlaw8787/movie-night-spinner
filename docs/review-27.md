@@ -1,6 +1,6 @@
 # Review 27: re-grade of the four held layouts (12 Nov 2026, night)
 
-Fresh reviewer per round, no sight of earlier reviews. Brief: /tmp/r27/brief.md (copied below each round).
+Fresh reviewer each round, no sight of earlier reviews. Rounds r27 (all four), r27b (arcade, dimsum, skilodge), r27c and r27d (arcade).
 
 ---
 
@@ -176,3 +176,47 @@ Checked and fine: rule 1 (all notes are food), rule 2 (nothing clipped, one size
 
 ## What I could not check
 Wikipedia and Wikiquote were not reachable directly, so I used the Wikipedia article through search plus TV Tropes. I could not confirm a ski lodge appears on screen, the exact moment Roy and Beth arrive at Pig Burgers (the cue assumes they walk in rather than are already seated), or which scene the Camaro still and the kit's "Tonight" polaroid come from. I did not watch the film.
+
+---
+
+<!-- r27c -->
+## arcade layout review: Snatch (2000)
+**Score: 8.8 out of 10**
+A strong card. The venue is real to the film (Turkish runs a slot machine arcade, Tommy is his partner), the header prints SNATCH, 2000 in type because the poster carries the logo, every note prints in full at one size, prices step down properly in every course with house lines at the foot, and the bet slip, high scores and winks all land for a fan. Sausage Charlie is a genuine character ("What's happening with them sausages, Charlie?"), which is the best nod on the card. It falls just short of 9 on two film lines that don't hold up to checking (the three sugars and the "dags" wording) and one small chrome clash between credits and cash. Fix those three and it clears 9.
+
+## Findings
+1. **Errol's tea "three sugars" isn't from the film and runs against it.** Screen/PDF (Refills, foot) and phone. [film] The only sugar beat in Snatch is Turkish asking "You take sugar?" and Brick Top answering "No, thank you, Turkish; I'm sweet enough." Nobody asks for three sugars. Cause: data/film-house.json line 6464 to 6465 (Snatch house drink). Fix: name "Brick Top's tea, no sugar", note "Strong tea brewed in the pot with milk, no sugar at all". Same length, and it's a line fans know.
+2. **Wink "Do you like dags?" isn't how the line goes.** Screen/PDF (Watch For box). [film] Wikiquote has Mickey saying "D'ya like dags?" and "Ya like dags?". Swapping the dialect "dags" into standard "Do you" reads like a misquote. Cause: data/film-flavour.json line 11267. Fix: "D'ya like dags?"
+3. **Credits and cash don't match.** Screen/PDF (Payout Board header). [layout] Prices are in CR (credits) but the right-hand tag says CASH AT THE COUNTER. Fruit machines pay cash, so pick one. Cause: data/film-flavour.json lines 11289 to 11290 ("redeem", "unit"). Fix: keep CR and change redeem to "CREDITS AT THE COUNTER", or set unit to "£" style "QUID" and keep the cash line. I'd keep CR and change the redeem wording.
+4. **Full English priced barely above a starter.** Screen/PDF. [layout] Turkish's full English (bacon, sausage, eggs, black pudding, beans, tomato, toast) is 190 CR, only 20 above a mini pie starter at 170. Order within courses is right, but the gap looks odd to a paying guest. Fix in the price data: mini pie to 150 so starters run 150, 140, 110, 100, or lift the fry-up to 200 (still under the steak at 220, dessert 110 stays under it).
+5. **Prep sheet timing pills read oddly.** PDF page 2. [layout] "LONGEST ON THE NIGHT 2 HR 45 MIN" then a second row "PLUS 2 HR 20 MIN WAITING", while the banoffee (the long chill) is marked "Make the day before". A host can't tell whether 2 hr 45 already includes the chill. Minor, owner may already accept this format. Fix: drop the day-before dish's chill from the on-the-night figure, or label it "2 HR 45 MIN ON THE NIGHT, CHILLING DONE THE DAY BEFORE".
+
+Checked and fine: Showtime cue (Mickey does knock Gorgeous George out with one punch at the Travellers' camp); bet slip lines (Brick Top's plan was for Mickey to go down in the fourth, and Mickey secretly bet on himself); quote is verbatim on Wikiquote and is Turkish's narration, so the credit is right; Franky Four Fingers, Brick Top and his pigs, Bullet Tooth Tony, Boris the Blade are all real; Avi is the New York diamond dealer; no column gap over about 100px (left column filled by the TMDB still); no repeated prices in a course; dessert 110 under cheapest main 190; notes all describe food.
+
+## What I could not check
+- Wikiquote itself was blocked; I used the Wikiwand mirror of the Wikiquote page and of the Wikipedia article.
+- Whether Sausage Charlie cooks inside Turkish's arcade (I believe the scene is in Turkish's shop, which would make him a perfect fit, but I could not confirm the location).
+- The vet quote is unlabelled on Wikiquote; I credit it to Turkish because he narrates the film in first person ("Tommy persuaded me to keep the dog"), not from a labelled source.
+- "Pay out daily" on the sign is house flavour, not a film line. Harmless for a fruit machine arcade.
+
+---
+
+<!-- r27d -->
+## arcade layout review: Snatch (2000)
+**Score: 9.0 out of 10**
+A strong card. Turkish and Tommy's slot machine business as a neon fruit machine arcade is a fair and fun read of the film's world, the "Now playing" still is the Mickey fight, and the East End food (pie, mash and liquor, jellied eels, Sausage Charlie's sausages, Brick Top's tea with no sugar) is full of real nods a fan will catch. Every note is food, prints in full at one size, prices run in order, house lines sit at the foot, and dessert (110) sits under the cheapest main (190). The quote is real and correctly given to Turkish's closing narration, the header prints the venue with "SNATCH, 2000" in type because the poster carries the logo, and no box has a dead gap. What keeps it at 9 rather than higher: the dessert's name nod has nothing behind it and repeats a wink, and the quote credit runs straight into the closing quote mark.
+
+## Findings
+1. **Dessert name nod is empty and doubles up a wink** (screen, PDF, phone) [film]. "Bullet Tooth Tony's banoffee pie" has no tie to Tony in the film, and "Bullet Tooth Tony" is also the fourth wink, so the same name prints twice on the card. Cause: dessert name in the Snatch recipe in data/recipes/ or data/recipes2/ (the card's sweet). Fix: rename to a dish with a real hook, for example "Doug the Head's baked cheesecake" with the note "Creamy baked cheesecake on a biscuit base with a sour cream top". If you keep the banoffee, swap the wink instead: change "Bullet Tooth Tony" in data/film-flavour.json "Snatch (2000)".winks to "The caravan for Mickey's ma".
+2. **Quote credit touches the quote** (screen, PDF) [layout]. It reads `stomach."Turkish` with no visible gap, because a single space in the condensed italic face is almost nothing. Cause: menu-formats/arcade.js line 261 (and the still variant on line 265), `"${esc(n.text)}" <span ...>`. Fix: give the credit span `margin-left:6px` so the name sits clearly apart.
+3. **"Fixed: down in 4th" could not be confirmed from the sources I could reach** (screen, PDF, kit bet slips) [film]. Wikipedia and Wikiquote confirm the fight was fixed and that Mickey secretly bet on himself, but neither names the round. My memory of the film says Brick Top wants Mickey down in the fourth, so this is likely right; worth a check against the script. Cause: data/film-flavour.json "Snatch (2000)".prop.lines. If it cannot be confirmed, use "Fixed: Mickey goes down" at the same length.
+4. **Venue wording is a light stretch** (screen, PDF, kit) [film], not marked down. Wikipedia calls Turkish a "slot machine shop owner"; "Arcade" and "Fruit machines. Pay out daily" are a fair British reading of that, and Sausage Charlie cooks on the premises, so the venue holds up. No change needed.
+5. **Showtime cue comes early** (screen, PDF, Prep sheet) [film], minor. Mickey knocks out Gorgeous George in the first half hour, so starters have to be finished fast. It is true to the film, so no mark down; if you want a later cue, "Serve the mains when Mickey stays up in the fourth" (if item 3 is confirmed) lands about an hour in.
+
+## What I could not check
+- The exact round in the fixed fight (item 3); no script or Wikiquote line names it.
+- That the arcade is called an "arcade" in dialogue; Wikiquote shows no line with that word, and Wikipedia says slot machine shop.
+- The phone view as a styled screen; the sweep only gives a flat text dump with no spacing, so I read it for content only (it matches the card).
+- Print colour on paper: the card is dark with neon type, which reads well on screen; on a home printer the dark ground may come out muddy.
+
+Sources: en.wikipedia.org/wiki/Snatch_(film), Wikiquote Snatch (film) via wikiwand.com/en/quotes/Snatch_(film).

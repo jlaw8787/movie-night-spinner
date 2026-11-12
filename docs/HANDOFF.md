@@ -849,3 +849,31 @@ All 18 node tests, check-browser, dialogs, check-white-bar 91 of 91, check-kids-
 
 ### Next
 The 13 held side-branch films (review 26 section) or the iPhone build, Josh to choose.
+
+## 12 Nov, late night: review 27, the 13 held films cut on top of live main (branch cut/review-27, NOT deployed; start here in the next chat)
+
+### What is where
+- Live: still deploy 6af591c0 (main 347fbf48 content), deployed by the Review 24 chat at 8:15pm. Live files checked against main file by file (78 files plus index.html, which differs only by Netlify's form rewrite).
+- cut/review-27: main 347fbf48, then a revert of 4459196e (the review 26 hold-back), then the review 27 work merged in. All 13 held films go live on it: foodcourt (Mallrats, Fast Times, Jingle All the Way, Bad Santa, Jurassic World, Wonder Woman 1984), skilodge (Hot Tub Time Machine, Better Off Dead), arcade (Wreck-It Ralph, Snatch, Dazed and Confused), dimsum (Rush Hour, Men in Black 3). Only the 13 films' data plus the four layout files differ from main.
+- Toy Story (live, arcade) changes on the cut: prices dearest first, house lines at the foot, the token box shows its prop slip. Josh told.
+- wip/new-formats: the review 27 work before the merge. The cut supersedes it.
+- Deploy only when Josh says: trimmed copy of cut/review-27 (see the 11 Nov deploy note), Netlify site b641e7a7-b7d1-44cc-95e1-79f0bc20acf6. Then fast-forward main to the cut, check live files, set Live layout for the 13 rows in the sheet.
+- Sheet "Reel Dinner film layouts": Live layout set for the 29 review 26 rows (now live). The 13 rows marked Approved, Live layout left until the deploy. Bad Santa and Jingle venues updated.
+- GitHub: Josh's account flagged; this session's pushes were refused. Commits may be in a git bundle (see the reply in chat) if the push failed.
+
+### Grades (fresh reviewer each round, docs/review-27.md)
+foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum (Men in Black 3) 8.2 then 9.1; arcade (Snatch) 8.6, 8.7, 8.8, 9.0 (then the quote credit spaced off the closing quote mark, also on Toy Story).
+
+### Josh's calls this chat
+- Venues: Bad Santa "Saguaro Square Food Court" (the film's mall), Jingle All the Way "Mall of America Food Court", sign "Bloomington, Christmas Eve". Men in Black 3 keeps "Wu's Chinese Restaurant" (not the promo site's Wu's Diamond Garden).
+- Better Off Dead gag extra "It's got raisins in it" (Mom's line), not cooked, priced lowest in mains.
+
+### Code changes
+- foodcourt: Overheard heading from flavour (overheard), default "Overheard"; no dot leader beside a wrapped dish name; still keeps 16:9 (narrows rather than cut to a strip).
+- arcade: arcade.unit renames the TIX price tag (Snatch: CR); counter and redeem labels from flavour.
+- dimsum: short quotes print at 24px; stamp reads KITCHEN CHECKED unless the venue is a tea house or yum cha; prawn crackers are not a dear dish.
+- skilodge: GAPMAX 22, dish gaps take up to 10px; plain course word (Starters, Mains, Sweets, Drinks) at the right of each run heading; image credit on the timber under the foot.
+
+### Left (from the reviewers, low)
+- Phone menu order and course names still raw (shared item). Prep sheet time chips confusing with make-ahead dishes. Better Off Dead croques price under the fries (priceSense holds card extras under cooked dishes).
+- Snatch: mini pie 170 sits close to the 190 fry-up.

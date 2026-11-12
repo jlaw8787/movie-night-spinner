@@ -169,7 +169,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,rgba(0,0,0,0) 2px 4px)"></div>
     <div style="position:absolute;left:${Math.round((BW-PA.w)/2)}px;top:28px;width:${PA.w}px;height:${PA.h}px;background:#000;box-shadow:0 0 0 6px #000,0 0 18px ${mix(neon,"#000000",.4)};overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div>
     <div style="position:absolute;left:0;right:0;bottom:22px;text-align:center;font:400 ${pix?14:20}px/1.2 ${MF};color:${neon2};letter-spacing:.12em;${glow(neon2,6)}">${esc(AL("insert")||"INSERT TOKEN")}</div>
-    ${bzQuote?`<div style="position:absolute;left:20px;right:20px;bottom:84px;text-align:center;font:italic 400 ${bzQuote.fs}px/1.3 ${BF};color:#e6e6e6">"${esc(bzQuote.text)}" <span style="font-style:normal;color:${neon2}">${esc(bzQuote.by)}</span></div>`:""}
+    ${bzQuote?`<div style="position:absolute;left:20px;right:20px;bottom:84px;text-align:center;font:italic 400 ${bzQuote.fs}px/1.3 ${BF};color:#e6e6e6">"${esc(bzQuote.text)}" <span style="font-style:normal;margin-left:4px;color:${neon2}">${esc(bzQuote.by)}</span></div>`:""}
     <div style="position:absolute;left:50%;bottom:58px;margin-left:-26px;width:52px;height:14px;border-radius:7px;background:#000;box-shadow:inset 0 0 0 2px ${mix(neon2,"#000000",.4)}"></div></div>`;
 
   /* prize counter board */
@@ -258,11 +258,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hs=`<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};padding:12px 14px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
     <div style="font:400 ${pix?14:20}px/1 ${MF};color:${neon2};text-align:center;letter-spacing:.1em;${glow(neon2,6)}">HIGH SCORES</div>
     ${scores.map((s,i)=>`<div style="display:flex;justify-content:space-between;font:400 ${pix?14:20}px/1.2 ${MF};color:${i?"#e6e6e6":neon}"><span>${i+1}. ${esc(s[0])}</span><span>${String(s[1]).padStart(7,"0")}</span></div>`).join("")}
-    ${bzFs?"":`<div style="font:italic 400 15px/1.3 ${BF};color:#cfd3d8;border-top:1px solid #333;padding-top:6px;${clamp(3)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div>`}</div>`;
+    ${bzFs?"":`<div style="font:italic 400 15px/1.3 ${BF};color:#cfd3d8;border-top:1px solid #333;padding-top:6px;${clamp(3)}">"${esc(n.text)}" <span style="font-style:normal;margin-left:4px;color:${neon2}">${esc(n.by)}</span></div>`}</div>`;
   const still=stl?`<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};overflow:hidden">
     <div style="position:absolute;left:0;right:0;top:0;height:138px;overflow:hidden">${photo(stl,t.photo,"center 40%")}</div>
     <div style="position:absolute;left:8px;top:8px;padding:3px 8px;background:rgba(0,0,0,.72);font:400 ${pix?11:15}px/1.2 ${MF};color:${neon2};letter-spacing:.08em">${esc(clean(A.still.title||"NOW PLAYING"))}</div>
-    <div style="position:absolute;left:12px;right:12px;bottom:8px;font:italic 400 15px/1.3 ${BF};color:#cfd3d8;${clamp(2)}">"${esc(n.text)}" <span style="font-style:normal;color:${neon2}">${esc(n.by)}</span></div></div>`:"";
+    <div style="position:absolute;left:12px;right:12px;bottom:8px;font:italic 400 15px/1.3 ${BF};color:#cfd3d8;${clamp(2)}">"${esc(n.text)}" <span style="font-style:normal;margin-left:4px;color:${neon2}">${esc(n.by)}</span></div></div>`:"";
   /* the shelf: arcade.prizes (real objects you could win) priced in tickets; a film that names its own shelf (arcade.shelf) and has no prize list
      keeps its winks as the prizes, written as such; otherwise the shelf lists the film's winks (up to five) under a scene label, no prices.
      The credit sits in the flow at the foot, so nothing runs into it */
