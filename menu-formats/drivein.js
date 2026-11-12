@@ -165,10 +165,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* left: the screen on its posts */
   const SX=34,SW=470,SY=34,PA=posterFit(SW-40,H-SY-150);
   /* the film's winks on a marquee board bolted to the posts, labelled as scenes so they never read as prizes or bay names */
-  const MQT=SY+PA.h+58,MQH=H-24-MQT,wk=F.winks.slice(0,5),wkS=wk.length>4?16:17;
+  const MQT=SY+PA.h+58,MQH=H-24-MQT,wk=F.winks.slice(0,5);
+  /* winks never cut: the biggest size where every wink fits, a long one wrapping to a second line if it must (inner box 444px wide) */
+  const wkIn=MQH-30-20,wkW=444,wkLines=s=>wk.reduce((a,w)=>a+wrapLines(cap(w),s,wkW,e.cw),0);
+  let wkS=wk.length>4?16:17;while(wkS>12&&wkLines(wkS)*wkS*1.3+(wk.length-1)*4>wkIn)wkS--;
   const marquee=wk.length&&MQH>90?`<div style="position:absolute;left:${SX-10}px;top:${MQT}px;width:${SW+20}px;height:${MQH}px;box-sizing:border-box;background:#1d1916;border:3px solid ${mix(e.sky2,"#ffffff",.25)};border-radius:6px;box-shadow:0 0 18px ${mix(e.sky2,"#000000",.3)}88,inset 0 0 0 4px #1d1916,inset 0 0 0 6px ${mix(e.sky2,"#000000",.45)};padding:12px 20px;display:flex;flex-direction:column;justify-content:center;gap:4px">
       <div style="font:700 13px/1.2 ${BF};letter-spacing:.24em;text-transform:uppercase;color:${mix(e.sky2,"#ffffff",.35)};margin-bottom:4px">Scenes to watch for</div>
-      ${wk.map(w=>`<div style="font:500 ${wkS}px/1.3 ${BF};color:#f6efe2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(cap(w))}</div>`).join("")}</div>`
+      ${wk.map(w=>`<div style="font:500 ${wkS}px/1.3 ${BF};color:#f6efe2">${esc(cap(w))}</div>`).join("")}</div>`
     :`<div style="position:absolute;left:${SX-10}px;top:${SY+PA.h+70}px;width:${SW+20}px;height:12px;background:#2a2420"></div>`;
   const screen=`<div style="position:absolute;left:${SX}px;top:${SY}px;width:${SW}px;height:${PA.h+40}px;background:#f4f1ea;box-shadow:0 0 50px rgba(255,240,210,.35),0 10px 24px rgba(0,0,0,.5)">
       <div style="position:absolute;left:${Math.round((SW-PA.w)/2)}px;top:20px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div></div>
@@ -180,7 +183,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tray=`<div style="position:absolute;left:${TX}px;top:${TY}px;width:${TW}px;height:${TH}px;border-radius:18px;background:linear-gradient(135deg,#d9dde1,#9aa1a8 45%,#c9ced3);box-shadow:0 12px 28px rgba(0,0,0,.55)"></div>`;
   const CX=TX+18,CW=TW-36,CY=TY+18,CHt=TH-36;
   const HH=118,SL=176,cueH=F.cue?44:0;
-  const vS=F.venue.length>26?38:F.venue.length>16?46:56;
+  /* venue size from its width: the neon script runs about half an em a letter in the 466px beside the title */
+  const vS=Math.max(30,Math.min(56,Math.floor(466/(Math.max(1,F.venue.length)*.5))));
   const C=sections(ctx,F,e.cols),PI=prices(itemsOf(ctx),F.ei,F.egg),items=PI.items,pr=PI.pr;
   const MW=CW-48,MH=CHt-HH-SL-cueH-30;
   /* notes always print whole: budget every line a note needs (up to 4) and only use tiers that show notes */
@@ -195,13 +199,17 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* each column spends its own spare height on its own gaps, capped so it never looks stretched; a hole over 100px left after that takes a still */
   let stillUsed=0;const stillList=(ctx.stills||[]).map(x=>Array.isArray(x)?x[0]:x).filter(x=>x&&x!==ctx.poster);
   const colHtml=col=>{const p=colParts(col);let spare=Math.max(0,MH-6-p.h-(p.nc-1)*12);
-    const cg=p.nc>1?Math.min(44,spare*.6/(p.nc-1)):0;spare-=cg*(p.nc-1);const ig=p.ni?Math.min(10,spare/p.ni):0;spare-=ig*p.ni;
+    const cg=p.nc>1?Math.min(30,spare*.5/(p.nc-1)):0;spare-=cg*(p.nc-1);const ig=p.ni?Math.min(14,spare/p.ni):0;spare-=ig*p.ni;
     let pic="";if(spare>100&&stillList[stillUsed]){const src=ctx.img(stillList[stillUsed++],"w780"),ph=Math.round(spare-34);
       pic=`<div style="margin-top:14px;height:${ph}px;position:relative;overflow:hidden;border:4px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);box-sizing:border-box">${photo(src,t.photo,"center 40%")}</div><div style="font:italic 400 13px/1.3 ${BF};color:${e.soft};margin-top:4px;${clamp(1)}">From ${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div>`}
     return `<div style="flex:0 0 ${R.CW}px">${col.map((sec,i)=>course(sec,items,pr,R,{...o,cgap:12+cg,ig,last:i===col.length-1})).join("")}${pic}</div>`};
   const PK=/^(slip|ticket|receipt|card|order|stub|voucher|coupon|tag)$/i,pk=F.fl.prop&&F.fl.prop.kind;
-  const pLines=F.prop?F.prop.lines.filter(l=>!F.sign.toLowerCase().includes(l.toLowerCase())&&!F.venue.toLowerCase().includes(l.toLowerCase())):[];
-  const propHtml=F.prop&&pLines.length&&(!pk||PK.test(pk))?`<div style="font:700 11px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:${acc2};${clamp(1)}">${esc(F.prop.title)}</div><div style="font:400 14px/1.25 ${BF};color:${e.soft};margin-top:2px;${clamp(2)}">${pLines.slice(0,2).map(esc).join("<br>")}</div>`
+  /* a two-line prop prints whole; only a longer one drops a line the sign or venue already says */
+  const pLines=!F.prop?[]:F.prop.lines.length<3?F.prop.lines:F.prop.lines.filter(l=>!F.sign.toLowerCase().includes(l.toLowerCase())&&!F.venue.toLowerCase().includes(l.toLowerCase()));
+  /* the label comes from prop.kind: the title when it names the kind ("Ghost trap slip"), else the kind itself */
+  const KL={slip:"Order slip",ticket:"Ticket",receipt:"Receipt",card:"Card",order:"Order",stub:"Stub",voucher:"Voucher",coupon:"Coupon",tag:"Tag"};
+  const pLab=F.prop?(pk&&KL[String(pk).toLowerCase()]&&!new RegExp("\\b"+String(pk).toLowerCase()+"\\b").test(F.prop.title.toLowerCase())?KL[String(pk).toLowerCase()]:F.prop.title):"";
+  const propHtml=F.prop&&pLines.length&&(!pk||PK.test(pk))?`<div style="font:700 11px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:${acc2};${clamp(1)}">${esc(pLab)}</div><div style="font:400 14px/1.25 ${BF};color:${e.soft};margin-top:2px;${clamp(2)}">${pLines.slice(0,2).map(esc).join("<br>")}</div>`
     :`<div style="font:400 14px/1.25 ${BF};color:${e.soft};${clamp(2)}">Flash your lights for service</div>`;
   const lg=F.posSrc?null:logoImg(ctx,200,HH-42);
   const tS=F.title.length>34?17:F.title.length>22?20:F.title.length>12?24:28;
