@@ -145,11 +145,11 @@
  "A Nightmare on Elm Street 3: Dream Warriors (1987)": {
   "s": {
    "n": "Buttered popcorn for the TV room",
-   "note": "Jennifer's TV night. Welcome to prime time."
+   "note": "Fresh popped corn tossed in melted butter and salt"
   },
   "d": {
    "n": "Hot malted milk",
-   "note": "Skip it on Hypnocil nights. Dr Gordon's orders."
+   "note": "Warm milk whisked with malted milk powder and a little honey"
   },
   "fit": [
    "d"
@@ -492,12 +492,12 @@
  "Anyone But You (2023)": {
   "s": {
    "n": "Sausage rolls with tomato sauce",
-   "note": "Unwritten comes on, and the whole table sings.",
+   "note": "Flaky pastry rolls of seasoned pork and beef mince, with tomato sauce",
    "meat": true
   },
   "d": {
    "n": "Coopers Pale Ale",
-   "note": "Ben's fix after the huntsman incident.",
+   "note": "Cloudy South Australian pale ale, served cold in the bottle",
    "alc": true
   }
  },
@@ -1288,12 +1288,12 @@
  "Caddyshack (1980)": {
   "s": {
    "n": "Crab-stuffed mushrooms",
-   "note": "Smails's yacht christening, before Al's boat arrives.",
+   "note": "Button mushrooms filled with crab, cream cheese and spring onion, baked golden",
    "meat": true
   },
   "d": {
    "n": "Club gin and tonic with lime",
-   "note": "Judge Smails's pour for christening the Flying Wasp.",
+   "note": "Gin over ice with tonic and a squeeze of fresh lime",
    "alc": true
   }
  },
@@ -1994,15 +1994,18 @@
  "Doctor Strange in the Multiverse of Madness (2022)": {
   "s": {
    "n": "Prosciutto and melon skewers",
-   "note": "Christine's wedding, Stephen not the groom.",
+   "note": "Sweet rockmelon wrapped in thin prosciutto, threaded on skewers",
    "meat": true
   },
   "d": {
    "n": "Gin and elderflower spritz",
-   "note": "I love you, in every universe.",
+   "note": "Gin, elderflower cordial and soda over ice with a cucumber ribbon",
    "alc": true
   },
-  "fit": []
+  "fit": [
+   "s",
+   "d"
+  ]
  },
  "Dodgeball: A True Underdog Story (2004)": {
   "s": {
@@ -2404,11 +2407,11 @@
  "Father of the Bride (1991)": {
   "s": {
    "n": "Spinach and artichoke dip",
-   "note": "Welcome to the nineties, Mr Banks."
+   "note": "Warm baked dip of spinach, artichoke hearts and parmesan, with crackers"
   },
   "d": {
    "n": "Classic mimosa",
-   "note": "Poured poolside. George, mind the edge.",
+   "note": "Chilled sparkling wine topped up with fresh orange juice",
    "alc": true
   },
   "fit": [
@@ -2591,15 +2594,18 @@
  "Four Weddings and a Funeral (1994)": {
   "s": {
    "n": "Coronation chicken vol-au-vents",
-   "note": "Bugger. Charles is late again. Save him one.",
+   "note": "Puff pastry cases filled with curried coronation chicken and toasted almonds",
    "meat": true
   },
   "d": {
    "n": "Gin and tonic with cucumber",
-   "note": "Is it still raining? I hadn't noticed.",
+   "note": "Gin over ice with tonic, cucumber ribbons and a squeeze of lime",
    "alc": true
   },
-  "fit": []
+  "fit": [
+   "s",
+   "d"
+  ]
  },
  "Freaky Friday (2003)": {
   "s": {
@@ -2817,11 +2823,11 @@
  "Ghostbusters: Afterlife (2021)": {
   "s": {
    "n": "Muncher's corn fritters with jalapeño ranch",
-   "note": "Trevor's first shift, Lucky pretending not to notice."
+   "note": "Sweet corn fritters fried golden, jalapeño ranch for dipping"
   },
   "d": {
    "n": "Root beer in a frosted mug",
-   "note": "Phoebe's order, plus one bad science joke."
+   "note": "Ice-cold root beer poured into a frosted glass mug"
   }
  },
  "Ghostbusters: Frozen Empire (2024)": {
@@ -2885,12 +2891,12 @@
  "Goldfinger (1964)": {
   "s": {
    "n": "Kentucky ham biscuits with honey butter",
-   "note": "Oddjob takes your hat. Keep the biscuit.",
+   "note": "Buttermilk biscuits split and filled with country ham and honey butter",
    "meat": true
   },
   "d": {
    "n": "Vintage champagne, well chilled",
-   "note": "Below 38 degrees or don't bother, says Bond.",
+   "note": "Vintage French champagne poured well chilled into tall flutes",
    "alc": true
   }
  },
@@ -3032,12 +3038,12 @@
  "Halloween II (1981)": {
   "s": {
    "n": "Devilled ham on toast",
-   "note": "Mrs Alves runs the night shift. Eat fast.",
+   "note": "Spiced devilled ham spread thick on hot buttered toast, cut into triangles.",
    "meat": true
   },
   "d": {
    "n": "Hot honey and lemon",
-   "note": "Night shift medicine, served before Budd's hot tub."
+   "note": "Hot water with honey, fresh lemon juice and a slice of ginger."
   },
   "fit": [
    "s"
@@ -3068,12 +3074,12 @@
  "Happy Gilmore (1996)": {
   "s": {
    "n": "Bacon and egg breakfast muffins",
-   "note": "Not what Shooter eats for breakfast.",
+   "note": "Toasted English muffins with bacon, a fried egg and melted cheese",
    "meat": true
   },
   "d": {
    "n": "Cold chocolate milk",
-   "note": "From Grandma's kitchen, no IRS letters attached."
+   "note": "Full cream milk shaken with chocolate syrup, served ice cold"
   }
  },
  "Harlem Nights (1989)": {
@@ -4075,11 +4081,11 @@
  "Kingpin (1996)": {
   "s": {
    "n": "Chow chow pickle and farm cheese board",
-   "note": "Ishmael's mother's recipe, no electricity needed."
+   "note": "Sweet and sour pickled vegetable relish with farmhouse cheese and bread"
   },
   "d": {
    "n": "Fresh farm milk",
-   "note": "Milked by Roy. Turned out to be a bull."
+   "note": "Cold full cream milk poured from the jug"
   },
   "fit": []
  },
@@ -4942,12 +4948,12 @@
  "My Best Friend's Wedding (1997)": {
   "s": {
    "n": "Italian beef sliders with giardiniera",
-   "note": "Kimmy sings badly at karaoke. Eat through it.",
+   "note": "Thin-sliced Italian beef in soft rolls with hot giardiniera pickles",
    "meat": true
   },
   "d": {
    "n": "Champagne cocktail with a sugar cube",
-   "note": "George starts the song. The whole restaurant sings.",
+   "note": "Sparkling wine poured over a sugar cube soaked in bitters",
    "alc": true
   },
   "fit": []
@@ -4955,11 +4961,11 @@
  "My Big Fat Greek Wedding (2002)": {
   "s": {
    "n": "Grilled haloumi with lemon",
-   "note": "For Ian, who don't eat no meat."
+   "note": "Squeaky haloumi grilled golden, squeezed with lemon and oregano"
   },
   "d": {
    "n": "Ouzo over ice with water",
-   "note": "Ian's first round. Opa.",
+   "note": "Aniseed ouzo poured over ice, clouded with a splash of cold water",
    "alc": true
   }
  },
@@ -5347,12 +5353,12 @@
  "Palm Springs (2020)": {
   "s": {
    "n": "Queso fundido with chorizo",
-   "note": "Nyles has had it a thousand times. Still good.",
+   "note": "Baked molten cheese with spicy chorizo, warm tortillas for scooping",
    "meat": true
   },
   "d": {
    "n": "Frozen lime margarita",
-   "note": "Same day again. Same drink, still cold.",
+   "note": "Tequila, lime and triple sec blended with ice, salt on the rim",
    "alc": true
   }
  },
@@ -5664,12 +5670,12 @@
  "Rain Man (1988)": {
   "s": {
    "n": "Fish finger sliders with tartare",
-   "note": "Wednesday only. Definitely, definitely Wednesday.",
+   "note": "Crumbed fish fingers on soft slider buns with tartare and shredded lettuce",
    "meat": true
   },
   "d": {
    "n": "Vegas gin martini",
-   "note": "Charlie's at the blackjack table, 86 grand up.",
+   "note": "Gin and dry vermouth stirred ice cold, with a green olive",
    "alc": true
   }
  },
@@ -5996,12 +6002,12 @@
  "Rumble in the Bronx (1995)": {
   "s": {
    "n": "Jamaican beef patties",
-   "note": "Tony's gang trashed aisle three. Grab one anyway.",
+   "note": "Flaky golden pastry filled with spiced, curried beef",
    "meat": true
   },
   "d": {
    "n": "Hong Kong lemon iced tea",
-   "note": "Keung earned this after the big leap."
+   "note": "Strong black tea over ice with fresh lemon slices and sugar syrup"
   }
  },
  "Runaway Bride (1999)": {
@@ -6319,12 +6325,12 @@
  "Shutter Island (2010)": {
   "s": {
    "n": "Fried clams with tartare sauce",
-   "note": "Boston Harbor catch, before the storm hits.",
+   "note": "Whole clams in crisp cornmeal batter, with tartare sauce and lemon",
    "meat": true
   },
   "d": {
    "n": "Ginger ale with bitters",
-   "note": "Teddy asks Cawley for soda and ice.",
+   "note": "Dry ginger ale over ice with a few dashes of bitters",
    "alc": true
   }
  },
@@ -6431,12 +6437,12 @@
  "Smile (2022)": {
   "s": {
    "n": "Pork gyoza with chilli oil",
-   "note": "Nobody's smiling at the next table. Good sign.",
+   "note": "Pan-fried pork dumplings with chilli oil and soy for dipping",
    "meat": true
   },
   "d": {
    "n": "Iced matcha latte",
-   "note": "Keep a straight face till the shift ends."
+   "note": "Matcha whisked into cold milk over ice, lightly sweetened"
   }
  },
  "Smokey and the Bandit (1977)": {
@@ -6931,11 +6937,11 @@
  "Terminator 2: Judgment Day (1991)": {
   "s": {
    "n": "Elote with cotija and chilli",
-   "note": "Sarah asks Enrique for clothes, food and a truck."
+   "note": "Grilled corn cobs with lime mayo, crumbled cotija and chilli powder"
   },
   "d": {
    "n": "Ice cold Mexican lager with lime",
-   "note": "Hasta la vista, baby. Then another.",
+   "note": "Crisp pale lager served by the bottle with a lime wedge",
    "alc": true
   }
  },
@@ -7316,11 +7322,11 @@
  "The Farewell (2019)": {
   "s": {
    "n": "Cold dressed wood ear mushrooms",
-   "note": "Nai Nai's morning exercises: ha, ha, ha."
+   "note": "Wood ear mushrooms dressed cold with black vinegar, garlic and chilli oil"
   },
   "d": {
    "n": "Baijiu for the wedding toasts",
-   "note": "Bottoms up. Nobody tells Nai Nai a thing.",
+   "note": "Clear Chinese grain spirit, poured in small glasses for the toasts",
    "alc": true
   },
   "fit": []
@@ -8224,11 +8230,11 @@
  "The Silence of the Lambs (1991)": {
   "s": {
    "n": "Fava bean and pecorino crostini",
-   "note": "Hold the liver tonight."
+   "note": "Smashed broad beans and shaved pecorino on toasted baguette with olive oil"
   },
   "d": {
    "n": "Glass of Chianti Classico",
-   "note": "The good doctor's pick. Chilton never gets one.",
+   "note": "A glass of dry Tuscan red with cherry and spice notes",
    "alc": true
   },
   "fit": [
@@ -8341,12 +8347,12 @@
  },
  "The Wedding Singer (1998)": {
   "s": {
-   "n": "Cob loaf spinach dip",
-   "note": "Julia Gulia? Say it out loud. Then dip."
+   "n": "Spinach dip in a bread bowl",
+   "note": "Warm spinach and sour cream dip baked in a hollowed bread loaf"
   },
   "d": {
    "n": "Fuzzy navel",
-   "note": "Robbie drank heavily that night. Pour another.",
+   "note": "Peach schnapps and orange juice over ice",
    "alc": true
   }
  },
@@ -8503,11 +8509,11 @@
  "Ticket to Paradise (2022)": {
   "s": {
    "n": "Bakwan jagung corn fritters",
-   "note": "Beer pong rematch. Georgia and David, same team."
+   "note": "Crisp Balinese corn fritters with spring onion, chilli and sambal"
   },
   "d": {
    "n": "Bintang with fresh lime",
-   "note": "A dolphin bit David. This helps.",
+   "note": "Cold Indonesian lager over a squeeze of fresh lime",
    "alc": true
   },
   "fit": [
@@ -8575,12 +8581,12 @@
  "Top End Wedding (2019)": {
   "s": {
    "n": "Chilli mud crab sliders",
-   "note": "Ten days to the wedding. No time for cutlery.",
+   "note": "Soft buns of mud crab meat in chilli mayo with lime and coriander",
    "meat": true
   },
   "d": {
    "n": "Ice cold NT Draught",
-   "note": "Cold one for the Darwin heat, Ned's first.",
+   "note": "Ice cold Northern Territory lager in a frosted glass",
    "alc": true
   }
  },
@@ -8997,11 +9003,11 @@
  "Wedding Crashers (2005)": {
   "s": {
    "n": "Mini potato latkes with sour cream",
-   "note": "Mazel tov from the crashing montage."
+   "note": "Crisp grated potato pancakes with sour cream and chives"
   },
   "d": {
    "n": "Irish coffee with whipped cream",
-   "note": "A different fake name for every wedding.",
+   "note": "Hot coffee with Irish whiskey and brown sugar under a cap of cream",
    "alc": true
   },
   "fit": [

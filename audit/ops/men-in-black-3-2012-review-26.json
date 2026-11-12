@@ -1,0 +1,33 @@
+{
+ "id": "Men in Black 3 (2012)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Earth people get Earth fish. Real Earth fish.",
+    "by": "Agent J",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Time Jump Ticket",
+    "lines": [
+     "Destination: July 15, 1969",
+     "Return: present day"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Shrimp and bok choy. Ask about the fish, not the kitchen.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

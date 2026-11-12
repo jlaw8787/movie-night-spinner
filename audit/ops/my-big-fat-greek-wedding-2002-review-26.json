@@ -1,0 +1,53 @@
+{
+ "id": "My Big Fat Greek Wedding (2002)",
+ "ops": [
+  {
+   "old": "Aunt Voula has a view on your plate",
+   "new": "Crisp buttered filo filled with feta, ricotta, egg and mint",
+   "done": true
+  },
+  {
+   "old": "the family restaurant, Toula on coffee",
+   "new": "fried beef balls with mint and oregano, cool garlic cucumber yoghurt and lemon",
+   "done": true
+  },
+  {
+   "old": "the spit lamb. Any word has a Greek root.",
+   "new": "butterflied leg in lemon, garlic and oregano, charred, with roast lemon potatoes",
+   "done": true
+  },
+  {
+   "old": "the bundt cake with a pot plant",
+   "new": "nut, orange and cinnamon butter sponge soaked in sticky citrus syrup",
+   "done": true
+  },
+  {
+   "old": "Toula pouring coffee, waiting for life",
+   "new": "Instant coffee shaken to a thick foam, poured over ice and topped with cold milk",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Grilled haloumi with lemon",
+    "note": "Squeaky haloumi grilled golden, squeezed with lemon and oregano"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ouzo over ice with water",
+    "note": "Aniseed ouzo poured over ice, clouded with a splash of cold water",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": [
+  "not found: Aunt Voula has a view on your plate",
+  "not found: the family restaurant, Toula on coffee",
+  "not found: the bundt cake with a pot plant"
+ ]
+}

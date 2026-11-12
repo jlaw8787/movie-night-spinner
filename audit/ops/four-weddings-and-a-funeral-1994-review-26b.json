@@ -1,0 +1,66 @@
+{
+ "id": "Four Weddings and a Funeral (1994)",
+ "ops": [
+  {
+   "old": "Smoked salmon oatcakes",
+   "new": "Goat's cheese oatcakes",
+   "done": true
+  },
+  {
+   "old": "Oatcakes with cream cheese, smoked salmon, dill and lemon",
+   "new": "Oatcakes with goat's cheese, roast beetroot, thyme and honey",
+   "done": true
+  },
+  {
+   "old": "Oatcakes spread with cream cheese, topped with smoked salmon, dill and a squeeze of lemon. Spread oatcakes with cream cheese. Top with folds of smoked salmon and a sprig of dill. Squeeze over a little lemon and lay them out on a slate for a castle wedding in the Highlands.",
+   "new": "Oatcakes spread with soft goat's cheese, topped with roast beetroot, thyme and a drizzle of honey. Wrap 2 beetroot in foil and roast at 200C for 50 minutes, then cool, peel and slice thin. Spread oatcakes with goat's cheese. Top with beetroot, a few thyme leaves and a drizzle of honey and lay them out on a slate for a castle wedding in the Highlands.",
+   "done": true
+  },
+  {
+   "old": "250g cream cheese@Dairy",
+   "new": "150g soft goat's cheese@Dairy",
+   "done": true
+  },
+  {
+   "old": "Oatcakes with cream cheese, beetroot, dill and lemon",
+   "new": "Oatcakes with goat's cheese, roast beetroot, thyme and honey",
+   "done": true
+  },
+  {
+   "set": "flavour.reception",
+   "value": {
+    "toast": true,
+    "guest": "Charles",
+    "table": "Top Table",
+    "seat": "Best man. Please try not to be late.",
+    "heading": "Angus and Laura"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "invitation",
+    "title": "Glenthrist Castle",
+    "lines": [
+     "Carrie and Hamish request",
+     "the pleasure of Charles's company"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "A toast before we go into battle. True love. In whatever shape or form it may come. May we all in our dotage be proud to say, 'I was adored once too.'",
+    "by": "Gareth",
+    "kind": "quote"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": [
+  "not found: Oatcakes with cream cheese, beetroot, dill and lemon"
+ ]
+}

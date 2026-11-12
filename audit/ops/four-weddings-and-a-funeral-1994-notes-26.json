@@ -1,0 +1,30 @@
+{
+ "id": "Four Weddings and a Funeral (1994)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Coronation chicken vol-au-vents",
+    "note": "Puff pastry cases filled with curried coronation chicken and toasted almonds",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Gin and tonic with cucumber",
+    "note": "Gin over ice with tonic, cucumber ribbons and a squeeze of lime",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "old": ", for the kilted guests",
+   "new": "",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

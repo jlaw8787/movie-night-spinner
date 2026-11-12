@@ -1,0 +1,40 @@
+{
+ "id": "Doctor Strange in the Multiverse of Madness (2022)",
+ "ops": [
+  {
+   "old": "Mozzarella and pepperoni in dough. Pizza Poppa always gets paid.",
+   "new": "Mozzarella and pepperoni wrapped in soft dough, baked golden, tomato dip",
+   "done": true
+  },
+  {
+   "old": ", before Stephen bolts",
+   "new": "",
+   "done": true
+  },
+  {
+   "old": ", for Billy and Tommy",
+   "new": "",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Prosciutto and melon skewers",
+    "note": "Sweet rockmelon wrapped in thin prosciutto, threaded on skewers",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Gin and elderflower spritz",
+    "note": "Gin, elderflower cordial and soda over ice with a cucumber ribbon",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

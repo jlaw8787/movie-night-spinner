@@ -1,0 +1,31 @@
+{
+ "id": "Terminator 2: Judgment Day (1991)",
+ "ops": [
+  {
+   "set": "flavour.sign",
+   "value": "For the criminally insane",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "chart",
+    "title": "Patient Card",
+    "lines": [
+     "High-security wing",
+     "Dr Silberman's patient"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.hospital",
+   "value": {
+    "stampYear": "1995"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

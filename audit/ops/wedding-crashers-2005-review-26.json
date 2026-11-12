@@ -1,0 +1,29 @@
+{
+ "id": "Wedding Crashers (2005)",
+ "ops": [
+  {
+   "old": "beef and pork with a tomato sugar top, mash and gravy, yelled for from upstairs",
+   "new": "beef and pork with a sticky tomato and brown sugar glaze, buttery mash and gravy",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Mini potato latkes with sour cream",
+    "note": "Crisp grated potato pancakes with sour cream and chives"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Irish coffee with whipped cream",
+    "note": "Hot coffee with Irish whiskey and brown sugar under a cap of cream",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

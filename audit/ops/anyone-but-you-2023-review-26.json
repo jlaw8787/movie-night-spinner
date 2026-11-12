@@ -1,0 +1,25 @@
+{
+ "id": "Anyone But You (2023)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Sausage rolls with tomato sauce",
+    "note": "Flaky pastry rolls of seasoned pork and beef mince, with tomato sauce",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Coopers Pale Ale",
+    "note": "Cloudy South Australian pale ale, served cold in the bottle",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

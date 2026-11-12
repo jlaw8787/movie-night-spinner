@@ -1,0 +1,27 @@
+{
+ "id": "Halloween II (1981)",
+ "ops": [
+  {
+   "set": "flavour.hospital",
+   "value": {
+    "noLogo": true,
+    "stampYear": "1978"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Meal Ticket",
+    "lines": [
+     "Laurie Strode",
+     "One hot dinner"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

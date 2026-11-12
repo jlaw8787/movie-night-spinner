@@ -1,0 +1,24 @@
+{
+ "id": "Better Off Dead (1985)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "bill",
+    "title": "Johnny's Paper Route",
+    "lines": [
+     "Four weeks, twenty papers",
+     "Amount due: two dollars"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Monique's mini croque monsieurs",
+   "new": "Monique's mini croques-monsieur",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

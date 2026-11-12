@@ -1,0 +1,27 @@
+{
+ "id": "Happy Gilmore (1996)",
+ "ops": [
+  {
+   "old": "Shooter McGavin's gold jacket",
+   "new": "Shooter nicks the gold jacket",
+   "done": true
+  },
+  {
+   "old": "The alligator on the course",
+   "new": "The tower on the last green",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Winner gets the gold jacket",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the beer when Happy starts hustling golfers at the driving range.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

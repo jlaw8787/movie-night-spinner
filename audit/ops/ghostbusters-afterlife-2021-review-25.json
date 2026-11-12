@@ -1,0 +1,70 @@
+{
+ "id": "Ghostbusters: Afterlife (2021)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Muncher's corn fritters with jalapeño ranch",
+    "note": "Sweet corn fritters fried golden, jalapeño ranch for dipping."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Root beer in a frosted mug",
+    "note": "Ice-cold root beer poured into a frosted glass mug."
+   },
+   "done": true
+  },
+  {
+   "old": "corn and jalapeño batter in hot cast iron, flaky salt, for the dirt farm Callie inherits",
+   "new": "corn and jalapeño batter in hot cast iron, flaky salt",
+   "done": true
+  },
+  {
+   "old": "dinner in the small Oklahoma town",
+   "new": "Tenderised steak fried crisp, peppery white gravy, mash and green beans",
+   "done": true
+  },
+  {
+   "old": "Chocolate ganache in a cookie crust, topped with toasted meringue",
+   "new": "Chocolate ganache in a cookie crust, topped with a tall marshmallow meringue, torched",
+   "done": true
+  },
+  {
+   "old": "Ecto-1 roller diner burgers",
+   "new": "Ecto-1 double smash burgers",
+   "done": true
+  },
+  {
+   "old": "Roller diner mushroom and haloumi burgers",
+   "new": "Mushroom and haloumi smash burgers",
+   "done": true
+  },
+  {
+   "old": "Roller diner chocolate malt shakes",
+   "new": "Chocolate malt shakes",
+   "done": true
+  },
+  {
+   "old": "Keymaster fried okra",
+   "new": "Summerville fried okra",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Ghost trap slip",
+    "lines": [
+     "Summerville, Oklahoma",
+     "Contents: Muncher"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

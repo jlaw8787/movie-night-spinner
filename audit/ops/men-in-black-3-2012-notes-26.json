@@ -1,0 +1,30 @@
+{
+ "id": "Men in Black 3 (2012)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Crab rangoon with plum sauce",
+    "note": "Crisp wonton parcels of crab and cream cheese, with plum sauce to dip",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Champagne in a coupe",
+    "note": "French champagne poured ice cold into a wide sixties coupe",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "old": ", Andy Warhol approved",
+   "new": "",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

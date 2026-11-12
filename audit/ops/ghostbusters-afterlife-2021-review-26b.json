@@ -1,0 +1,29 @@
+{
+ "id": "Ghostbusters: Afterlife (2021)",
+ "ops": [
+  {
+   "old": "Egon's ghost with the proton pack",
+   "new": "Egon's ghost at Phoebe's side",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Ghost trap slip",
+    "lines": [
+     "Held by Summerville PD",
+     "Contents: Muncher"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Held by Summerville PD",
+   "new": "Seized by police",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

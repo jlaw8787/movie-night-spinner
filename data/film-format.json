@@ -355,7 +355,7 @@
   "tone": "glossy"
  },
  "Doctor Strange in the Multiverse of Madness (2022)": {
-  "format": "invite",
+  "format": "reception",
   "era": "modern",
   "tone": "eerie"
  },
@@ -1005,7 +1005,7 @@
   "tone": "gritty"
  },
  "Shutter Island (2010)": {
-  "format": "canteen",
+  "format": "hospital",
   "era": "1950s",
   "tone": "eerie"
  },
@@ -1165,7 +1165,7 @@
   "tone": "tense"
  },
  "Smile (2022)": {
-  "format": "canteen",
+  "format": "hospital",
   "era": "modern",
   "tone": "tense"
  },
@@ -1205,7 +1205,7 @@
   "tone": "warm"
  },
  "Four Weddings and a Funeral (1994)": {
-  "format": "invite",
+  "format": "reception",
   "era": "1990s",
   "tone": "warm"
  },
@@ -1230,12 +1230,12 @@
   "tone": "glossy"
  },
  "The Wedding Singer (1998)": {
-  "format": "invite",
+  "format": "reception",
   "era": "1980s",
   "tone": "playful"
  },
  "My Best Friend's Wedding (1997)": {
-  "format": "invite",
+  "format": "reception",
   "era": "1990s",
   "tone": "glossy"
  },
@@ -1255,7 +1255,7 @@
   "tone": "warm"
  },
  "Forgetting Sarah Marshall (2008)": {
-  "format": "kiosk",
+  "format": "tiki",
   "era": "2000s",
   "tone": "playful"
  },
@@ -1310,7 +1310,7 @@
   "tone": "warm"
  },
  "Palm Springs (2020)": {
-  "format": "kiosk",
+  "format": "reception",
   "era": "modern",
   "tone": "scrappy"
  },
@@ -1330,12 +1330,12 @@
   "tone": "playful"
  },
  "Anyone But You (2023)": {
-  "format": "invite",
+  "format": "reception",
   "era": "modern",
   "tone": "glossy"
  },
  "Ticket to Paradise (2022)": {
-  "format": "tiki",
+  "format": "reception",
   "era": "modern",
   "tone": "warm"
  },
@@ -1370,7 +1370,7 @@
   "tone": "playful"
  },
  "Top End Wedding (2019)": {
-  "format": "pub",
+  "format": "reception",
   "era": "modern",
   "tone": "warm"
  },
@@ -1450,7 +1450,7 @@
   "tone": "gritty"
  },
  "Rain Man (1988)": {
-  "format": "canteen",
+  "format": "hospital",
   "era": "1980s",
   "tone": "tender"
  },
@@ -1475,7 +1475,7 @@
   "tone": "gritty"
  },
  "Caddyshack (1980)": {
-  "format": "bistro",
+  "format": "clubhouse",
   "era": "1980s",
   "tone": "playful"
  },
@@ -1485,7 +1485,7 @@
   "tone": "scrappy"
  },
  "Happy Gilmore (1996)": {
-  "format": "stadium",
+  "format": "clubhouse",
   "era": "1990s",
   "tone": "scrappy"
  },
@@ -1535,7 +1535,7 @@
   "tone": "warm"
  },
  "Reservoir Dogs (1992)": {
-  "format": "precinct",
+  "format": "diner",
   "era": "1990s",
   "tone": "gritty"
  },
@@ -1615,7 +1615,7 @@
   "tone": "scrappy"
  },
  "Kingpin (1996)": {
-  "format": "saloon",
+  "format": "bowling",
   "era": "1990s",
   "tone": "scrappy"
  },
@@ -1775,7 +1775,7 @@
   "tone": "tense"
  },
  "The Naked Gun: From the Files of Police Squad! (1988)": {
-  "format": "precinct",
+  "format": "stadium",
   "era": "1980s",
   "tone": "playful"
  },
@@ -1920,7 +1920,7 @@
   "tone": "scrappy"
  },
  "Stand by Me (1986)": {
-  "format": "diner",
+  "format": "campfire",
   "era": "1950s",
   "tone": "tender"
  },
@@ -2100,7 +2100,7 @@
   "tone": "playful"
  },
  "Wedding Crashers (2005)": {
-  "format": "invite",
+  "format": "reception",
   "era": "2000s",
   "tone": "glossy"
  },
@@ -2170,7 +2170,7 @@
   "tone": "playful"
  },
  "Goldfinger (1964)": {
-  "format": "hotel",
+  "format": "clubhouse",
   "era": "1960s",
   "tone": "glossy"
  },
@@ -2190,7 +2190,7 @@
   "tone": "gritty"
  },
  "Kingsman: The Secret Service (2014)": {
-  "format": "bistro",
+  "format": "pub",
   "era": "modern",
   "tone": "glossy"
  },
@@ -2510,7 +2510,7 @@
   "tone": "gritty"
  },
  "Terminator 2: Judgment Day (1991)": {
-  "format": "kiosk",
+  "format": "hospital",
   "era": "1990s",
   "tone": "tense"
  },
@@ -2585,8 +2585,8 @@
   "tone": "playful"
  },
  "Ghostbusters: Afterlife (2021)": {
-  "format": "diner",
-  "era": "modern",
+  "format": "drivein",
+  "era": "1950s",
   "tone": "warm"
  },
  "Inception (2010)": {
@@ -3280,7 +3280,7 @@
   "tone": "scrappy"
  },
  "The Silence of the Lambs (1991)": {
-  "format": "precinct",
+  "format": "hospital",
   "era": "1990s",
   "tone": "gritty"
  },
@@ -3295,7 +3295,7 @@
   "tone": "glossy"
  },
  "Father of the Bride (1991)": {
-  "format": "home",
+  "format": "reception",
   "era": "1990s",
   "tone": "warm"
  },
@@ -3460,7 +3460,7 @@
   "tone": "warm"
  },
  "The Farewell (2019)": {
-  "format": "invite",
+  "format": "reception",
   "era": "modern",
   "tone": "tender"
  },
@@ -3790,7 +3790,7 @@
   "tone": "gritty"
  },
  "A Nightmare on Elm Street 3: Dream Warriors (1987)": {
-  "format": "lab",
+  "format": "hospital",
   "era": "1980s",
   "tone": "eerie"
  },
@@ -3890,7 +3890,7 @@
   "tone": "tense"
  },
  "Halloween II (1981)": {
-  "format": "canteen",
+  "format": "hospital",
   "era": "1970s",
   "tone": "eerie"
  },
@@ -3930,7 +3930,7 @@
   "tone": "tense"
  },
  "My Big Fat Greek Wedding (2002)": {
-  "format": "placemat",
+  "format": "reception",
   "era": "2000s",
   "tone": "warm"
  },

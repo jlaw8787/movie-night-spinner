@@ -1,8 +1,11 @@
 const _ROOT_reception=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* Format: reception. A wedding reception table set on linen, one landscape face 1344x960.
-   Left: the welcome sign on its easel, the poster as the hero, whole, under a "Welcome to" card.
-   Centre (signature): the menu card, letterpress on cream with a deckled edge; courses in procession, script headings, no prices.
-   Right: the place card tent (prop), the seating plan strip (tables named for the film's winks), the toast (overheard quote)
-   and the logo on the cake table card. Era sets card stock, ink and type pairing; tone sets wear and photo. */
+   Left (signature): the menu card, letterpress on cream in a double rule; courses in procession, script headings, no prices.
+     Each course runs dearest first with its house line last; spare height goes into capped gaps between dishes and courses.
+   Centre: the place card tent (flavour.reception guest/table/seat), the seating plan (flavour.reception.tables) or a Watch For card
+     of the film's winks, the toast card (note.kind: toast "From the toasts", quote "Overheard", anything else "From the head table"),
+     a TMDB still with the title and year under it, and the credit line. No logo box: the poster on the easel carries the logo.
+   Right: the "Welcome to" sign naming the venue, the poster whole on a red easel, and the prop card (prop.kind label) hung on its legs.
+   Era sets card stock, ink and type pairing; tone sets wear and photo. */
 (function(){
 const ID="reception",_ROOT=_ROOT_reception;
 
@@ -91,11 +94,13 @@ const TIERS=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:
 function fit(o){
   const {C,items,tx,W,H,gap=24,cw=.5,cwd=.56,caps=0,maxCols=2,minCols=1,maxItems=4,headX=14}=o;const priceW=o.priceW||(d=>d*2.6+10);
   const hh=o.headH||(tr=>tr.h*1.3+headX);let dmax=3,CW=W;
-  const cH=(tr,k)=>hh(tr)+items[k].slice(0,maxItems).reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),cwd*(caps?1.12:1)));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW-(o.indent||0),cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g+(o.itemX||0)},0);
+  const cH=(tr,k)=>hh(tr)+items[k].slice(0,maxItems).reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),cwd*(caps?1.12:1)));const wl=wrapLines(tx(it.note),tr.n,CW-(o.indent||0),cw),nl=o.fullNotes?wl:tr.nl?Math.min(tr.nl,wl):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g+(o.itemX||0)},0);
   const splits=n=>{if(n===1)return [[C.length]];const out=[];if(n===2)for(let a=1;a<C.length;a++)out.push([a,C.length]);if(n===3)for(let a=1;a<C.length;a++)for(let b=a+1;b<C.length;b++)out.push([a,b,C.length]);return out};
   const tryTier=(tr,n)=>{CW=(W-gap*(n-1))/n;let best=null;for(const s of splits(n)){let st=0,m=0;const cols=[];for(const e of s){const sec=C.slice(st,e);cols.push(sec);m=Math.max(m,sec.reduce((x,[k])=>x+cH(tr,k),0));st=e}if(!best||m<best.m)best={m,cols}}return best};
-  for(const tr of TIERS)for(let n=minCols;n<=Math.min(maxCols,C.length);n++){const q=tryTier(tr,n);if(q&&q.m*1.02<=H)return {tr,cols:q.cols,CW,dmax,spare:H-q.m*1.02,n}}
-  dmax=2;const tr=TIERS[TIERS.length-1],n=Math.min(maxCols,C.length),q=tryTier(tr,n);return {tr,cols:q.cols,CW,dmax,spare:0,n};
+  /* fullNotes (review 25): every note prints whole, so only tiers that print notes count and a note gets all the lines it needs before any gap */
+  const TS=o.fullNotes?TIERS.filter(t=>t.nl):TIERS;
+  for(const tr of TS)for(let n=minCols;n<=Math.min(maxCols,C.length);n++){const q=tryTier(tr,n);if(q&&q.m*1.02<=H)return {tr,cols:q.cols,CW,dmax,spare:H-q.m*1.02,n}}
+  dmax=2;const tr=TS[TS.length-1],n=Math.min(maxCols,C.length),q=tryTier(tr,n);return {tr,cols:q.cols,CW,dmax,spare:0,n};
 }
 /* one course: heading plus dishes; o sets fonts, colours and the heading/row style */
 function course(sec,items,pr,R,o){
@@ -126,62 +131,129 @@ loadFonts(["Pinyon+Script","Great+Vibes","Parisienne","Allura","Cormorant+Garamo
 window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" Reception":"The Reception","Dinner, dancing and speeches",{text:"Eat, drink and be kind to whoever ends up next to you on the dance floor.",by:"The Best Man"});
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),S=e.script,SF=e.serif,CF=e.caps;
+  /* flavour.reception {guest, table, seat, heading, tables[], noLogo, still, stillCaption, toast}: the film's own place card, menu heading and seating plan */
+  const RC=(F.fl&&F.fl.reception)||{};
   const acc=readable(F.pal.accent&&lum(F.pal.accent)<.45?F.pal.accent:e.acc,e.card,3.2,e.acc);
   const linen=`<div style="position:absolute;inset:0;background:${e.linen}"></div>
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.22) 0 2px,rgba(0,0,0,0) 2px 5px),repeating-linear-gradient(90deg,rgba(0,0,0,.025) 0 1px,rgba(0,0,0,0) 1px 4px)"></div>
     <div style="position:absolute;inset:0;background:url(${grain}) center/1200px auto;opacity:${(.08+t.wear*.6).toFixed(2)};mix-blend-mode:multiply"></div>`;
   const shadow="0 10px 24px rgba(40,30,20,.22),0 2px 4px rgba(40,30,20,.12)";
+  /* review 25: phones show this page as two views, 0 to 753 and 591 to 1344 (app.js cardFaces). The menu card sits wholly in the left view,
+     the column of small cards and the poster wholly in the right one */
 
-  /* left: the welcome sign */
-  const LX=34,LW=412,WT=34,WH=118;
-  const vS=F.venue.length>28?24:F.venue.length>18?28:34;
-  const welcome=`<div style="position:absolute;left:${LX}px;top:${WT}px;width:${LW}px;height:${WH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:10px 18px;text-align:center;border:1px solid ${mix(acc,e.card,.5)}">
-    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to</div>
-    <div style="font:700 ${vS}px/1.2 ${CF};color:${e.ink};letter-spacing:.04em;white-space:nowrap;overflow:hidden">${esc(F.venue)}</div></div>`;
-  const PY=WT+WH+20,PA=posterFit(LW-36,H-PY-60-36);
-  const frame=`<div style="position:absolute;left:${LX+Math.round((LW-PA.w-36)/2)}px;top:${PY}px;width:${PA.w+36}px;height:${PA.h+36}px;background:linear-gradient(135deg,${mix(acc,"#ffffff",.35)},${acc} 45%,${mix(acc,"#000000",.25)});box-shadow:${shadow}">
-    <div style="position:absolute;left:18px;top:18px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden;box-shadow:inset 0 0 0 2px rgba(0,0,0,.3)">${hero(F,PA.w,PA.h,t.photo)}</div></div>
-    <div style="position:absolute;left:${LX+LW/2-90}px;top:${PY+PA.h+36}px;width:180px;height:${H-PY-PA.h-36}px;background:linear-gradient(90deg,rgba(0,0,0,0) 0 40px,${mix(acc,"#000000",.35)} 40px 50px,rgba(0,0,0,0) 50px 130px,${mix(acc,"#000000",.35)} 130px 140px,rgba(0,0,0,0) 140px)"></div>`;
-
-  /* centre: the menu card */
-  const MX=LX+LW+34,MW=470,MT=26,MH=H-52;
+  /* left (signature): the menu card */
+  const MX=30,MW=528,MT=26,MH=H-52;
   const C=sections(ctx,F,e.cols),items=itemsOf(ctx);
-  const head0=88,cueH=F.cue?50:0,innerW=MW-90,innerH=MH-head0-cueH-70;
-  const R=fit({C,items,tx:F.tx,W:innerW,H:innerH,maxCols:1,cw:e.cw*1.05,cwd:e.cwd*1.2,priceW:()=>0,headH:tr=>Math.round(tr.h*1.25)+14,itemX:4});
-  const tr=R.tr,gap=Math.min(26,R.spare/Math.max(1,C.length+1));
-  const menuBody=C.map(([k,l])=>`<div style="margin-bottom:${10+gap}px"><div style="font:400 ${Math.round(tr.h*1.25)}px/1.1 ${S};color:${acc};margin-bottom:6px">${esc(l)}</div>`+
-    items[k].map(it=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(F.tx(it.note),tr.n,innerW,e.cw)):0;return `<div style="margin-bottom:${tr.g+4}px">
+  /* review 26: each course reads dearest first (rule 8), even with no prices printed. Same level: a dish cooked tonight before a card extra
+     (the shared priceSense never prices an extra above a cooked main), then the card's own order. The house line always sits last */
+  /* review 26b: a board or platter is a serving style, not a dear cut, so it no longer outranks seafood. The name decides first; the note
+     (what is actually on the plate) breaks a tie, so salmon blinis named for a character still sit above a ploughman's */
+  const DEAR=[[/\b(lobster|surf and turf|prime rib|wagyu|caviar|crayfish)\b/i,3],[/\b(steaks?|sirloin|rib ?eye|porterhouse|t-bone|fillet|veal|cutlets?|lamb rack|scallops?|crab|oysters?|barramundi|snapper|whole fish|spit)\b/i,2],[/\b(prawns?|shrimp|salmon|duck|lamb|pork belly|ribs|brisket|roast beef|beef|fish)\b/i,1]];
+  const dearOf=t=>{t=clean(t||"");if(/\b(crackers?|chips|crisps|popcorn)\b/i.test(t))return 0;for(const [re,v] of DEAR)if(re.test(t))return v;return 0};
+  const dear=it=>it?dearOf(it.n)*10+dearOf(it.note):0;
+  for(const k in items)items[k]=items[k].map((it,i)=>[it,i]).sort((a,b)=>(!!a[0].house-!!b[0].house)||dear(b[0])-dear(a[0])||(!!a[0].extra-!!b[0].extra)||a[1]-b[1]).map(z=>z[0]);
+  const head0=88,cueH=F.cue?50:0,innerW=MW-90,innerH=MH-head0-cueH-70,ncw=e.cw*1.05;
+  const hH=tr=>Math.round(tr.h*1.25*1.1)+6;
+  const R=fit({C,items,tx:F.tx,W:innerW,H:innerH,maxCols:1,cw:ncw,cwd:e.cwd*1.2,priceW:()=>0,headH:tr=>hH(tr)+19,itemX:4,fullNotes:1});
+  const tr=R.tr;
+  /* review 26: spare height spreads as the browser lays the card out, not from the estimate. Every gap is a flex spacer that starts at the
+     old fixed margin, grows to a cap (courses most, dishes a little, the top and bottom bands least) and shrinks to nothing if the card is tight.
+     Only what is left past every cap centres, so no band of empty card opens above the first course or under the last */
+  const sp=(base,grow,max)=>`<div style="flex:${grow} 1 ${Math.round(base)}px;max-height:${Math.round(max)}px;min-height:0"></div>`;
+  const dg=tr.g+4;
+  const menuBody=sp(0,1,40)+C.map(([k,l])=>`<div style="flex:none;font:400 ${Math.round(tr.h*1.25)}px/1.1 ${S};color:${acc};margin-bottom:6px">${esc(l)}</div>`+
+    items[k].map(it=>{const note=cap(F.tx(it.note));return `<div style="flex:none">
       <div style="font:700 ${tr.d}px/1.15 ${CF};color:${e.ink};letter-spacing:.03em;${clamp(R.dmax)}">${esc(F.tx(it.n))}</div>
-      ${nl?`<div style="font:italic 400 ${tr.n}px/1.3 ${SF};color:${e.soft};margin-top:2px;${clamp(nl)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>`}).join("")+`</div>`).join(`<div style="width:60px;height:1px;background:${mix(acc,e.card,.4)};margin:0 auto ${8+gap/2}px"></div>`);
-  const deckle=`radial-gradient(circle at 50% 0,rgba(0,0,0,0) 3px,${e.card} 3.5px) 0 0/9px 9px repeat-x`;
+      ${note?`<div style="font:italic 400 ${tr.n}px/1.3 ${SF};color:${e.soft};margin-top:2px">${esc(note)}</div>`:""}</div>`}).join(sp(dg,1,dg+22))).join(
+    sp(dg+10,3,dg+58)+`<div style="flex:none;width:60px;height:1px;background:${mix(acc,e.card,.4)};margin:0 auto"></div>`+sp(8,3,48))+sp(0,1,40);
+  const heading=clean(RC.heading||"Dinner Menu").toUpperCase();
   const menuCard=`<div style="position:absolute;left:${MX}px;top:${MT}px;width:${MW}px;height:${MH}px;background:${e.card};box-shadow:${shadow};transform:rotate(${(t.tilt*.25).toFixed(2)}deg)">
     <div style="position:absolute;inset:16px;border:1px solid ${mix(acc,e.card,.35)}"></div><div style="position:absolute;inset:21px;border:1px solid ${mix(acc,e.card,.65)}"></div>
-    <div style="position:absolute;left:0;right:0;top:34px;text-align:center"><div style="font:700 15px/1 ${CF};letter-spacing:.34em;color:${e.soft}">THE WEDDING BREAKFAST</div>
+    <div style="position:absolute;left:0;right:0;top:34px;text-align:center"><div style="font:700 15px/1 ${CF};letter-spacing:.34em;color:${e.soft}">${esc(heading)}</div>
       <div style="font:italic 400 18px/1.3 ${SF};color:${e.soft};margin-top:8px;padding:0 50px;${clamp(1)}">${esc(F.sign)}</div></div>
-    <div style="position:absolute;left:45px;width:${innerW}px;top:${head0+18}px;height:${innerH}px;overflow:hidden;text-align:center">${menuBody}</div>
+    <div style="position:absolute;left:45px;width:${innerW}px;top:${head0+18}px;height:${innerH}px;overflow:hidden;text-align:center;display:flex;flex-direction:column;justify-content:center">${menuBody}</div>
     ${F.cue?`<div style="position:absolute;left:50px;right:50px;bottom:34px;height:${cueH-10}px;text-align:center">${cueLine(F,SF,e.soft,acc,15)}</div>`:""}
     <div style="position:absolute;left:10px;right:10px;bottom:8px;border-bottom:2px dotted ${mix(acc,e.card,.5)}"></div></div>`;
 
-  /* right: place card, seating plan, toast, logo */
-  const RX=MX+MW+30,RW=W-RX-30;
-  const pc=F.prop,guest=pc?pc.title:F.title;
-  const place=`<div style="position:absolute;left:${RX}px;top:34px;width:${RW}px;height:150px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:16px 16px 12px;text-align:center;transform:rotate(${(-t.tilt*.6).toFixed(2)}deg)">
-    <div style="position:absolute;left:0;right:0;top:44%;border-top:1px dashed ${mix(e.soft,e.card,.6)}"></div>
-    <div style="font:700 14px/1 ${CF};letter-spacing:.3em;color:${e.soft}">TABLE ${esc(F.num.slice(-2))}</div>
-    <div style="font:400 ${guest.length>18?30:38}px/1.25 ${S};color:${e.ink};margin-top:6px;white-space:nowrap;overflow:hidden">${esc(guest)}</div>
-    <div style="font:italic 400 15px/1.3 ${SF};color:${e.soft};margin-top:20px;${clamp(2)}">${esc(pc&&pc.lines.length?pc.lines.slice(0,2).join(". "):"Seated with the bride's side")}</div></div>`;
-  const tabs=F.winks.slice(0,4),ST=206,SH=256;
+  /* right: the welcome sign on its easel, the poster as the hero, the prop card hung on the easel legs */
+  const LX=944,LW=W-LX-30,WT=34,WH=118;
+  /* review 26: a sign welcomes you to "the" Marquee Reception Tent; a name that is already a possessive or starts with The or A reads on its own */
+  const theV=!/^(the|a|an)\s/i.test(F.venue)&&!/['’]s\b/i.test(F.venue);
+  const vS=Math.max(18,Math.min(34,Math.floor((LW-36)/(Math.max(1,F.venue.length)*.64))));
+  const welcome=`<div style="position:absolute;left:${LX}px;top:${WT}px;width:${LW}px;height:${WH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:10px 18px;text-align:center;border:1px solid ${mix(acc,e.card,.5)}">
+    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to${theV?" the":""}</div>
+    <div style="font:700 ${vS}px/1.2 ${CF};color:${e.ink};letter-spacing:.04em;white-space:nowrap;overflow:hidden">${esc(F.venue)}</div></div>`;
+  const pc=F.prop,KIND={card:"Card",slip:"Slip",ticket:"Ticket",receipt:"Receipt",note:"Note",letter:"Letter",invitation:"Invitation",invite:"Invitation",tag:"Tag",label:"Label",badge:"Badge",coupon:"Coupon",flyer:"Flyer",postcard:"Postcard",program:"Programme",programme:"Programme",sign:"Sign"};
+  const kindRaw=clean((F.fl.prop&&F.fl.prop.kind)||"card").toLowerCase(),kindLab=KIND[kindRaw]||kindRaw.replace(/\b\w/g,c=>c.toUpperCase());
+  const pLines=pc?pc.lines.slice(0,3):[],propH=pc?40+30+pLines.length*21+8:0;
+  const PY=WT+WH+20,PA=posterFit(LW-36,H-PY-36-(pc?propH+46:60));
+  const PX=LX+Math.round((LW-PA.w-36)/2),legT=PY+PA.h+36;
+  const frame=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PA.w+36}px;height:${PA.h+36}px;background:linear-gradient(135deg,${mix(acc,"#ffffff",.35)},${acc} 45%,${mix(acc,"#000000",.25)});box-shadow:${shadow}">
+    <div style="position:absolute;left:18px;top:18px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden;box-shadow:inset 0 0 0 2px rgba(0,0,0,.3)">${hero(F,PA.w,PA.h,t.photo)}</div></div>
+    <div style="position:absolute;left:${LX+LW/2-90}px;top:${legT}px;width:180px;height:${H-legT}px;background:linear-gradient(90deg,rgba(0,0,0,0) 0 40px,${mix(acc,"#000000",.35)} 40px 50px,rgba(0,0,0,0) 50px 130px,${mix(acc,"#000000",.35)} 130px 140px,rgba(0,0,0,0) 140px)"></div>`;
+  const PW=Math.min(LW-40,320),propT=legT+Math.max(16,Math.round((H-legT-propH)/2)-6);
+  const propCard=pc?`<div style="position:absolute;left:${LX+Math.round((LW-PW)/2)}px;top:${propT}px;width:${PW}px;height:${propH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:12px 16px 8px;text-align:center;transform:rotate(${(t.tilt*.5).toFixed(2)}deg)">
+    <div style="font:700 12px/1 ${CF};letter-spacing:.3em;color:${e.soft}">${esc(kindLab.toUpperCase())}</div>
+    <div style="font:700 21px/1.2 ${CF};color:${e.ink};letter-spacing:.05em;margin-top:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(pc.title)}</div>
+    ${pLines.map(l=>`<div style="font:italic 400 16px/1.3 ${SF};color:${e.soft};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(l)}</div>`).join("")}</div>`:"";
+
+  /* centre: place card, seating plan (or the film's winks), the toast, then a still and the logo or title. Spare height goes into even gaps, capped */
+  const RX=596,RW=318;
+  /* review 26b: with no place card set, the card names the character whose words or note sit on the toast card (they are at this
+     wedding), never a blank "Our Guest"; the house note's own "The Best Man" stays generic */
+  const byName=F.fl.note&&F.fl.note.text&&F.fl.note.by&&!/^the\s/i.test(F.fl.note.by)?clean(F.fl.note.by):"";
+  const guest=clean(RC.guest||byName||"Our Guest"),tableLine=clean(RC.table||"Table One").toUpperCase(),seatLine=clean(RC.seat||"Please find your seat");
+  const PCH=140;
+  const tables=(RC.tables||[]).map(clean).filter(Boolean).slice(0,5),winks=F.winks.slice(0,5),useTables=tables.length>0,useWinks=!useTables&&winks.length>0;
+  const rows=useTables?tables:useWinks?winks:["Family","Friends","Work","Plus ones"];
+  const rowW=useTables||!useWinks?RW-32-84:RW-32-20;
+  const rowLines=rows.map(r=>Math.min(2,wrapLines(r,15,rowW,.5)));
+  const SH=58+rowLines.reduce((a,k)=>a+15+k*19,0);
+  const n=F.note,nk=clean((F.fl.note&&F.fl.note.kind)||(F.fl.note?"note":"toast")).toLowerCase(),quoted=nk==="quote"||nk==="toast"&&!!F.fl.note;
+  const nS=n.text.length>150?15:n.text.length>100?16:n.text.length>60?18:19,qL=Math.min(5,wrapLines(n.text,nS,RW-36,.46));
+  const TH=14+14+16+Math.round(qL*nS*1.35)+14+34+14;
+  const stills=(ctx.stills||[]).map(x=>Array.isArray(x)?x[0]:x).filter(Boolean),stillPath=stills[RC.still|0]||stills[0]||"";
+  const lg=RC.noLogo||F.posSrc?null:logoImg(ctx,RW-20,120);/* the poster on the easel already carries the logo */
+  const CRED=26,top0=34,bottom0=H-CRED-14,free0=bottom0-top0-(PCH+SH+TH);
+  /* a real still fills the column when the cards leave room; with no logo its caption carries the title and year */
+  const lgH0=lg?lg.h+20:96,avail=free0-(lg||RC.stillCaption?lgH0:0)-4*18,useStill=!!stillPath&&avail>=150;
+  const STH=useStill?Math.min(Math.round((RW-20)*.75)+50,avail):0,LGH=lg||!useStill||RC.stillCaption?lgH0:0;
+  const free=free0-LGH-STH;
+  const nGap=useStill?4:3,g=Math.max(12,Math.min(34,free/nGap));
+  let y=top0;const PT=y;y+=PCH+g;const ST=y;y+=SH+g;const TT=y;y+=TH+g;const SLT=y;if(useStill)y+=STH+g;
+  /* whatever height is left after the capped gaps goes to the toast, which centres its quote */
+  const extra=Math.max(0,bottom0-(y+LGH));const TH2=TH+Math.round(extra);const shift=Math.round(extra);
+  const place=`<div style="position:absolute;left:${RX}px;top:${PT}px;width:${RW}px;height:${PCH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:18px 16px 12px;text-align:center;transform:rotate(${(-t.tilt*.6).toFixed(2)}deg);display:flex;flex-direction:column;justify-content:center">
+    <div style="position:absolute;left:0;right:0;top:0;height:10px;background:linear-gradient(180deg,rgba(60,45,30,.14),rgba(60,45,30,0))"></div>
+    <div style="font:700 14px/1 ${CF};letter-spacing:.3em;color:${e.soft}">${esc(tableLine)}</div>
+    <div style="font:400 ${guest.length>18?30:38}px/1.25 ${S};color:${e.ink};margin-top:8px;white-space:nowrap;overflow:hidden">${esc(guest)}</div>
+    <div style="font:italic 400 15px/1.3 ${SF};color:${e.soft};margin-top:8px;${clamp(1)}">${esc(seatLine)}</div></div>`;
   const seat=`<div style="position:absolute;left:${RX}px;top:${ST}px;width:${RW}px;height:${SH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:14px 16px;overflow:hidden">
-    <div style="font:400 30px/1.1 ${S};color:${acc};text-align:center">Seating Plan</div>
-    ${(tabs.length?tabs:["Family","Friends","Work","Plus ones"]).map((w,i)=>`<div style="display:flex;gap:10px;align-items:baseline;border-top:1px solid ${mix(acc,e.card,.7)};padding:7px 0 0;margin-top:7px"><span style="flex:0 0 auto;font:700 14px/1 ${CF};letter-spacing:.14em;color:${acc}">TABLE ${i+1}</span><span style="flex:1;font:400 15px/1.25 ${SF};color:${e.ink};${clamp(2)}">${esc(w)}</span></div>`).join("")}</div>`;
-  const n=F.note,TT=ST+SH+20,TH=256,nS=n.text.length>150?15:n.text.length>100?16:n.text.length>60?18:19;
-  const toast=`<div style="position:absolute;left:${RX}px;top:${TT}px;width:${RW}px;height:${TH}px;background:${mix(e.card,acc,.06)};box-shadow:${shadow};box-sizing:border-box;padding:14px 18px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
-    <div style="font:700 14px/1 ${CF};letter-spacing:.28em;color:${e.soft};text-align:center">FROM THE TOASTS</div>
-    <div style="font:italic 400 ${nS}px/1.35 ${SF};color:${e.ink};text-align:center;${clamp(5)}">"${esc(n.text)}"</div>
+    <div style="font:400 30px/1.1 ${S};color:${acc};text-align:center">${useWinks?"Watch For":"Seating Plan"}</div>
+    ${rows.map((w,i)=>`<div style="display:flex;gap:10px;align-items:baseline;border-top:1px solid ${mix(acc,e.card,.7)};padding:7px 0 0;margin-top:7px">${useWinks?`<span style="flex:0 0 auto;font:700 13px/1 ${CF};color:${acc}">&#9670;</span>`:`<span style="flex:0 0 74px;font:700 14px/1 ${CF};letter-spacing:.14em;color:${acc}">TABLE ${i+1}</span>`}<span style="flex:1;font:400 15px/1.25 ${SF};color:${e.ink};${clamp(2)}">${esc(w)}</span></div>`).join("")}</div>`;
+  /* review 26: a note with no kind is a note in the character's voice, not their words (rule 9): no quote marks, never OVERHEARD.
+     The note label is short enough to stay on one line */
+  /* a real toast (kind "quote", so the shared libNoteKind keeps its quote marks) is labelled as one when flavour.reception.toast is set */
+  const toastLab=nk==="toast"||nk==="quote"&&RC.toast?"FROM THE TOASTS":nk==="quote"?"OVERHEARD":"FROM THE HEAD TABLE";
+  const toast=`<div style="position:absolute;left:${RX}px;top:${TT}px;width:${RW}px;height:${TH2}px;background:${mix(e.card,acc,.06)};box-shadow:${shadow};box-sizing:border-box;padding:14px 18px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden">
+    <div style="font:700 14px/1 ${CF};letter-spacing:.28em;color:${e.soft};text-align:center">${toastLab}</div>
+    <div style="font:italic 400 ${nS}px/1.35 ${SF};color:${e.ink};text-align:center;${clamp(5)}">${quoted?"“":""}${esc(n.text)}${quoted?"”":""}</div>
     <div style="font:400 28px/1.2 ${S};color:${acc};text-align:center;white-space:nowrap;overflow:hidden">${esc(n.by)}</div></div>`;
-  const LT=TT+TH+22,LH=H-30-LT;
-  const logo=`<div data-dark="${mix(e.ink,"#000000",.2)}" data-light="${e.card}" style="position:absolute;left:${RX}px;top:${LT}px;width:${RW}px;height:${LH-22}px;background:${mix(e.ink,"#000000",.2)};box-shadow:${shadow};display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box">${logoOr(ctx,F,RW-24,LH-44,CF,e.card,"700")}</div>
-    <div style="position:absolute;left:${RX}px;width:${RW}px;top:${H-44}px;font:400 14px/1.2 ${SF};color:${e.soft};text-align:center;${clamp(1)}">${esc(credit(F).replace("Prices subject to change. ",""))}</div>`;
-  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${linen}${frame}${welcome}${menuCard}${place}${seat}${toast}${logo}</div>`]};
+  const SLT2=SLT+shift,cap2=clean(RC.stillCaption||(lg?"A still from the film":F.title+", "+F.year));
+  const still=useStill?`<div style="position:absolute;left:${RX}px;top:${SLT2}px;width:${RW}px;height:${STH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:10px 10px 0">
+    <div style="position:relative;width:${RW-20}px;height:${STH-50}px;overflow:hidden;background:#222">${photo(ctx.img(stillPath,"w780"),t.photo)}</div>
+    <div style="height:50px;display:flex;align-items:center;justify-content:center"><div style="font:italic 400 ${cap2.length>20?14:16}px/1.2 ${SF};color:${e.soft};text-align:center;text-wrap:balance;${clamp(2)}">${esc(cap2)}</div></div></div>`:"";
+  /* the logo prints straight on the linen with no box; if it does not read there (judged by contrast or colour against the linen) the title prints instead */
+  const LT=bottom0-LGH,titleTxt=`${esc(F.title)}${F.year?", "+esc(F.year):""}`;
+  /* sized to its box: one line when the box is short (the logo's height), two when there is room */
+  const tLen=(F.title+(F.year?", "+F.year:"")).length,tLines=LGH>=96?2:1;
+  const tS=Math.max(16,Math.floor(Math.min(F.title.length>30?24:F.title.length>18?30:36,(LGH-8)/(1.15*tLines),tLines===1?(RW-16)/(tLen*.46):99)));
+  const titleEl=`<div data-rc-title style="${lg?"display:none;":""}font:400 ${tS}px/1.15 ${S};color:${e.ink};text-align:center;text-wrap:balance;${clamp(tLines)}">${titleTxt}</div>`;
+  const LIN=hex(e.linen);
+  const CHECK=`try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,n=0,ok=0;var f=function(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)},Lb=.2126*f(${LIN[0]})+.7152*f(${LIN[1]})+.0722*f(${LIN[2]});for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;n++;var L=.2126*f(d[k])+.7152*f(d[k+1])+.0722*f(d[k+2]),r=(Math.max(L,Lb)+.05)/(Math.min(L,Lb)+.05),ch=Math.max(d[k],d[k+1],d[k+2])-Math.min(d[k],d[k+1],d[k+2]);if(r>=2.2||ch>=110)ok++}if(!n||ok/n<.8){i.style.display='none';var s=i.parentNode.querySelector('[data-rc-title]');if(s)s.style.display=''}}catch(e){}`;
+  const logo=`<div style="position:absolute;left:${RX}px;top:${LT}px;width:${RW}px;height:${LGH}px;display:flex;align-items:center;justify-content:center">
+    ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${CHECK}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(255,255,255,.7))">`:""}${useStill&&!lg&&!RC.stillCaption?"":titleEl}</div>
+    <div style="position:absolute;left:${RX}px;width:${RW}px;top:${H-CRED-10}px;font:400 14px/1.2 ${SF};color:${e.soft};text-align:center;${clamp(1)}">${esc(credit(F).replace("Prices subject to change. ",""))}</div>`;
+  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${linen}${frame}${welcome}${propCard}${menuCard}${place}${seat}${toast}${still}${logo}</div>`]};
 };
 })();

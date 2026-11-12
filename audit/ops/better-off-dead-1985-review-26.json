@@ -1,0 +1,71 @@
+{
+ "id": "Better Off Dead (1985)",
+ "ops": [
+  {
+   "old": "Mum's chicken and mushroom rice bake",
+   "new": "Mom's chicken and mushroom rice bake",
+   "done": true
+  },
+  {
+   "old": "Mum's mushroom and white bean rice bake",
+   "new": "Mom's mushroom and white bean rice bake",
+   "done": true
+  },
+  {
+   "old": "Burger joint double cheeseburger",
+   "new": "Pig Burgers double cheeseburger",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when Roy and Beth walk into Pig Burgers.",
+   "done": true
+  },
+  {
+   "old": "Gruyere and Swiss melted in white wine, with baguette and apple to dip",
+   "new": "Gruyère and Swiss melted in white wine, with baguette and apple to dip",
+   "done": true
+  },
+  {
+   "old": "Thin crepes with lemon and sugar, or banana and melted chocolate",
+   "new": "Thin crêpes with lemon and sugar, or banana and melted chocolate",
+   "done": true
+  },
+  {
+   "old": "Roy Stalin, the rival skier",
+   "new": "Charles snorting the snow",
+   "done": true
+  },
+  {
+   "old": "Monique, the French exchange student",
+   "new": "Monique faking she speaks no English",
+   "done": true
+  },
+  {
+   "old": "The paperboy chasing Lane on his bike",
+   "new": "The paperboy chasing his two dollars",
+   "done": true
+  },
+  {
+   "old": "Collector: the paperboy",
+   "new": "Four weeks, twenty papers",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Paper Route Bill",
+    "lines": [
+     "Four weeks, twenty papers",
+     "Amount due: two dollars"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": [
+  "not found: Mum's mushroom and white bean rice bake"
+ ]
+}

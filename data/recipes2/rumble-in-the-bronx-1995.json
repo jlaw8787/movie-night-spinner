@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Elaine's supermarket Reuben bites",
+   "n": "Bronx corner-store Reuben bites",
    "course": "s",
    "prep_min": 25,
    "cook_min": 0,
@@ -24,7 +24,7 @@
      "q": 150,
      "u": "g",
      "item": "sauerkraut, drained",
-     "aisle": "Pantry"
+     "aisle": "Deli"
     },
     {
      "q": 150,
@@ -53,14 +53,8 @@
     {
      "q": 1,
      "u": "",
-     "item": "dill pickle, chopped",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "slices dill pickle, to garnish",
-     "aisle": "Pantry"
+     "item": "jar dill pickles, some chopped, some sliced",
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -110,7 +104,7 @@
        "q": 150,
        "u": "g",
        "item": "sauerkraut, drained",
-       "aisle": "Pantry"
+       "aisle": "Deli"
       },
       {
        "q": 150,
@@ -139,14 +133,8 @@
       {
        "q": 1,
        "u": "",
-       "item": "dill pickle, chopped",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "slices dill pickle, to garnish",
-       "aisle": "Pantry"
+       "item": "jar dill pickles, some chopped, some sliced",
+       "aisle": "Deli"
       }
      ],
      "steps": [
@@ -694,6 +682,173 @@
    }
   },
   {
+   "n": "Ginger and spring onion lobster noodles",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Slice the ginger and spring onion up to 1 day ahead in the fridge; cook the lobster and noodles just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails (or 800g king prawns)",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "fresh egg noodles",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "ginger, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "spring onions, cut into lengths",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Shaoxing wine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the lobster tails through the shell into chunks and dust in cornflour.",
+     "min": 10
+    },
+    {
+     "text": "Boil the egg noodles, drain well, then pan-fry in oil until crisp underneath.",
+     "min": 10
+    },
+    {
+     "text": "Fry the lobster in a hot wok for 2 minutes, then set aside.",
+     "min": 3
+    },
+    {
+     "text": "Stir-fry the ginger and spring onion, then add the lobster, oyster sauce, Shaoxing wine and stock and toss for 2 minutes.",
+     "min": 4
+    },
+    {
+     "text": "Pour over the noodles and serve.",
+     "min": 1
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ginger and spring onion lobster noodles",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Slice the ginger and spring onion up to 1 day ahead in the fridge; cook the lobster and noodles just before serving",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "lobster tails (or 800g king prawns)",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "fresh egg noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "ginger, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "spring onions, cut into lengths",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 165,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the lobster tails through the shell into chunks and dust in cornflour.",
+       "min": 10
+      },
+      {
+       "text": "Boil the egg noodles, drain well, then pan-fry in oil until crisp underneath.",
+       "min": 10
+      },
+      {
+       "text": "Fry the lobster in a hot wok for 2 minutes, then set aside.",
+       "min": 3
+      },
+      {
+       "text": "Stir-fry the ginger and spring onion, then add the lobster, oyster sauce and stock and toss for 2 minutes.",
+       "min": 4
+      },
+      {
+       "text": "Pour over the noodles and serve.",
+       "min": 1
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Golf course almond jelly",
    "course": "w",
    "prep_min": 20,
@@ -755,7 +910,7 @@
      "min": 5
     },
     {
-     "text": "Serve in bowls with lychees and mandarin segments in their syrup.",
+     "text": "Serve in bowls with lychees in their syrup and fresh mandarin segments.",
      "min": 5
     }
    ],
@@ -829,7 +984,7 @@
        "min": 5
       },
       {
-       "text": "Serve in bowls with lychees in their syrup and mandarin segments.",
+       "text": "Serve in bowls with lychees in their syrup and fresh mandarin segments.",
        "min": 5
       }
      ],

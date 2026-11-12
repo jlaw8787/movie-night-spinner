@@ -164,7 +164,7 @@
    }
   },
   {
-   "n": "Enrique's bean and cheese quesadillas",
+   "n": "Biker bar bean and cheese quesadillas",
    "course": "s",
    "prep_min": 10,
    "cook_min": 12,
@@ -191,7 +191,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "jar pickled jalapenos, sliced",
+     "item": "jar pickled jalapeños, sliced",
      "aisle": "Pantry"
     },
     {
@@ -209,7 +209,7 @@
    ],
    "steps": [
     {
-     "text": "Spread each tortilla with refried beans over half, scatter with cheddar and jalapenos and fold over.",
+     "text": "Spread each tortilla with refried beans over half, scatter with cheddar and jalapeños and fold over.",
      "min": 6
     },
     {
@@ -397,6 +397,87 @@
    }
   },
   {
+   "n": "Galleria food court double smash burger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Roll the mince balls and mix the sauce up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles, sliced",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 8 balls and season well with salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise, relish and mustard for the sauce.",
+     "min": 2
+    },
+    {
+     "text": "Heat a griddle or heavy pan until smoking, add the balls and smash flat with a spatula.",
+     "min": 3
+    },
+    {
+     "text": "Cook 2 minutes until crusty, flip and top each patty with a slice of cheese for 1 minute.",
+     "min": 4
+    },
+    {
+     "text": "Toast the buns, then stack two patties on each with sauce, lettuce and pickles. Wrap in baking paper for 2 minutes.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Enrique's camp churros",
    "course": "w",
    "prep_min": 25,
@@ -486,7 +567,7 @@
    "af": true
   },
   {
-   "n": "Liquid nitrogen frozen margarita",
+   "n": "T-1000 frozen margarita",
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
@@ -547,7 +628,7 @@
    "af": false,
    "alt": {
     "af": {
-     "n": "Liquid nitrogen frozen lime slush",
+     "n": "T-1000 frozen lime slush",
      "prep_min": 10,
      "cook_min": 15,
      "make_ahead": "Steep and chill the green tea and squeeze the limes up to 1 day ahead in the fridge; blend with ice to order",

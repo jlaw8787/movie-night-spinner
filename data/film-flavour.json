@@ -5384,7 +5384,11 @@
     "Visiting Ashecliffe"
    ]
   },
-  "number": "67"
+  "number": "67",
+  "patient": "Rachel Solando",
+  "hospital": {
+   "stampYear": "1954"
+  }
  },
  "A Nightmare on Elm Street (1984)": {
   "venue": "Springwood High Cafeteria",
@@ -6211,7 +6215,8 @@
     "Evening shift"
    ]
   },
-  "number": ""
+  "number": "",
+  "patient": "Laura Weaver"
  },
  "The Birds (1963)": {
   "lastSeenAt": "at the schoolhouse",
@@ -6386,29 +6391,36 @@
   "number": "10"
  },
  "Four Weddings and a Funeral (1994)": {
-  "venue": "Marquee Reception Tent",
+  "venue": "Angus and Laura's Wedding",
   "sign": "Bride's Side. Groom's Side. Bar.",
   "note": {
-   "text": "May we all in our dotage be proud to say, 'I was adored once too.'",
+   "text": "A toast before we go into battle. True love. In whatever shape or form it may come. May we all in our dotage be proud to say, 'I was adored once too.'",
    "by": "Gareth",
    "kind": "quote"
   },
   "winks": [
    "Matthew reading the poem at Gareth's funeral",
    "Father Gerald mixing up his words",
-   "Charles and Scarlett oversleeping the first wedding",
-   "David signing for Charles",
+   "Charles and Scarlett, late for the first wedding",
+   "David signing at the altar",
    "Carrie and the rain on the doorstep"
   ],
   "prop": {
-   "kind": "card",
-   "title": "Wedding Invitation",
+   "kind": "invitation",
+   "title": "Glenthrist Castle",
    "lines": [
-    "You are invited, again",
-    "RSVP to Charles, please"
+    "Carrie and Hamish request",
+    "the pleasure of Charles's company"
    ]
   },
-  "number": "4"
+  "number": "4",
+  "reception": {
+   "toast": true,
+   "guest": "Charles",
+   "table": "Top Table",
+   "seat": "Best man. Please try not to be late.",
+   "heading": "Angus and Laura"
+  }
  },
  "Bridget Jones's Diary (2001)": {
   "venue": "Jones Family Turkey Curry Buffet",
@@ -6545,26 +6557,40 @@
   "venue": "Ridgefield Reception Hall",
   "sign": "Tonight: Robbie Hart and Band",
   "note": {
-   "text": "Sir, one more outburst and I will strangle you with my microphone wire.",
+   "text": "Once again, things that could've been brought to my attention yesterday!",
    "by": "Robbie Hart",
    "kind": "quote"
   },
   "winks": [
    "Robbie getting left at the altar by Linda",
-   "Grandma Rosie's rap",
-   "Julia and her fiance Glen",
-   "A Boy George lookalike at the hotel",
+   "Rosie's rap at her anniversary party",
+   "Julia and her fiance Glenn",
+   "George and his Boy George act",
    "Robbie and Billy Idol on the plane"
   ],
   "prop": {
-   "kind": "card",
+   "kind": "business card",
    "title": "Robbie Hart Band",
    "lines": [
     "Weddings and Bar Mitzvahs",
     "Ridgefield, New Jersey"
    ]
   },
-  "number": "1985"
+  "number": "1985",
+  "reception": {
+   "guest": "Julia Sullivan",
+   "table": "Head Table",
+   "seat": "With the bride's family",
+   "heading": "Dinner Menu",
+   "noLogo": true,
+   "tables": [
+    "Linda's Empty Seat",
+    "Rosie's Rap Table",
+    "The Julia Gulia Table",
+    "The Boy George Table",
+    "The Billy Idol Table"
+   ]
+  }
  },
  "My Best Friend's Wedding (1997)": {
   "venue": "Wallace Wedding Dinner",
@@ -6661,7 +6687,7 @@
   "number": ""
  },
  "Forgetting Sarah Marshall (2008)": {
-  "venue": "Resort Beach Grill",
+  "venue": "Turtle Bay Resort Bar",
   "sign": "Aloha. Please Excuse the Heartbreak.",
   "note": {
    "text": "I came here to murder you.",
@@ -7058,8 +7084,8 @@
   "number": ""
  },
  "Ticket to Paradise (2022)": {
-  "venue": "Gede's Seaweed Farm Warung",
-  "sign": "Bali Wedding Weekend",
+  "venue": "Lily and Gede's Wedding",
+  "sign": "Bali. Wedding weekend, whether the parents like it or not.",
   "note": {
    "text": "Lily wants to marry a seaweed farmer. David and I tried to stop her. We lost, and the wedding was lovely.",
    "by": "Georgia Cotton",
@@ -7237,8 +7263,8 @@
   "number": ""
  },
  "Top End Wedding (2019)": {
-  "venue": "Darwin Wedding Barbecue",
-  "sign": "Welcome to the Top End",
+  "venue": "Top End Wedding Reception",
+  "sign": "Lauren and Ned, Tiwi Islands",
   "note": {
    "text": "Ten days, a wedding to plan and Mum's gone missing. At least there's barra on the barbie tonight. Typical, really.",
    "by": "Lauren"
@@ -7636,7 +7662,7 @@
  },
  "Rain Man (1988)": {
   "venue": "Wallbrook Cafeteria",
-  "sign": "Wallbrook, Meals on Schedule",
+  "sign": "Wallbrook, Dr Bruner's patients",
   "note": {
    "text": "The People's Court every day. Bed at eleven. Maple syrup with the pancakes. Definitely.",
    "by": "Raymond Babbitt",
@@ -7657,7 +7683,8 @@
     "Counted in a glance"
    ]
   },
-  "number": "246"
+  "number": "246",
+  "patient": "Raymond Babbitt"
  },
  "Dumb and Dumber (1994)": {
   "venue": "Mutt Cutts",
@@ -7760,7 +7787,7 @@
  },
  "Caddyshack (1980)": {
   "venue": "Bushwood Country Club",
-  "sign": "Bushwood, Members Only",
+  "sign": "Members only. Caddies use the rear entrance.",
   "note": {
    "text": "So I got that goin' for me, which is nice.",
    "by": "Carl Spackler",
@@ -7812,7 +7839,7 @@
  },
  "Happy Gilmore (1996)": {
   "venue": "Tour Championship Grill",
-  "sign": "Tour Championship Clubhouse",
+  "sign": "Winner gets the gold jacket",
   "note": {
    "text": "It's all in the hips.",
    "by": "Chubbs",
@@ -7821,8 +7848,8 @@
   "winks": [
    "Bob Barker, and the price that was wrong",
    "Chubbs and the gator that took his hand",
-   "The alligator on the course",
-   "Shooter McGavin's gold jacket",
+   "The tower on the last green",
+   "Shooter nicks the gold jacket",
    "Happy's hockey-style slap shot"
   ],
   "prop": {
@@ -8472,29 +8499,29 @@
   "number": ""
  },
  "Kingpin (1996)": {
-  "venue": "Ishmael's Barn",
-  "sign": "Ishmael's Barn Supper",
+  "venue": "National Bowling Stadium",
+  "sign": "Snack bar open all tournament",
   "note": {
-   "text": "I took the liberty of milking your cow for you.",
-   "by": "Roy Munson",
+   "text": "You're on a gravy train with biscuit wheels.",
+   "by": "Ernie McCracken",
    "kind": "quote"
   },
   "winks": [
    "Roy's rubber hand",
-   "Big Ern McCracken, Tanqueray and Tab",
+   "Big Ern's comb-over",
    "Ishmael's coffee: extra large, lots of cream",
-   "Claudia on the road trip",
-   "Roy, the Rubber Man of Reno"
+   "The 1979 Odor-Eaters final",
+   "Getting Munsoned"
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Reno Tournament",
+   "title": "$1 million tournament",
    "lines": [
-    "Prize: $1 million",
-    "Roy and Ishmael"
+    "Bowler: Ishmael Boorg",
+    "Manager: Roy Munson"
    ]
   },
-  "number": "",
+  "number": "17",
   "words": {
    "Lunch counter": "Supper table",
    "At the bar": "To drink",
@@ -10058,8 +10085,8 @@
   "number": ""
  },
  "Stand by Me (1986)": {
-  "venue": "Castle Rock, Oregon",
-  "sign": "Welcome to Castle Rock, Oregon",
+  "venue": "Camp by the Tracks",
+  "sign": "Castle Rock, Oregon. Labor Day weekend, 1959.",
   "note": {
    "text": "I never had any friends later on like the ones I had when I was twelve.",
    "by": "Gordie Lachance",
@@ -10080,7 +10107,16 @@
     "Winner: Lardass"
    ]
   },
-  "number": "12"
+  "number": "12",
+  "stillStrip": {
+   "v": "film",
+   "s": [
+    4,
+    5,
+    6
+   ],
+   "flip": 0
+  }
  },
  "Dirty Dancing (1987)": {
   "venue": "Kellerman's Resort",
@@ -11345,8 +11381,8 @@
   "number": "3"
  },
  "Goldfinger (1964)": {
-  "venue": "Goldfinger's Stud Farm",
-  "sign": "Auric Stud, Kentucky",
+  "venue": "St. Mark's Golf Club",
+  "sign": "Bond v Goldfinger, members and guests",
   "note": {
    "text": "No, Mr. Bond, I expect you to die!",
    "by": "Auric Goldfinger",
@@ -11447,8 +11483,8 @@
   "number": ""
  },
  "Kingsman: The Secret Service (2014)": {
-  "venue": "Kingsman Tailor Shop",
-  "sign": "Kingsman, Bespoke Tailors",
+  "venue": "The Black Prince",
+  "sign": "Kennington, London. Manners maketh man.",
   "note": {
    "text": "Manners maketh man. Do you know what that means?",
    "by": "Harry Hart",
@@ -11469,9 +11505,7 @@
     "Ask for Harry"
    ]
   },
-  "number": "",
-  "sideStill": "/jqRnvgLC7mdGGNLQMwnFWQyWpQm.jpg",
-  "sideLine": "The shop out front, the agency behind it."
+  "number": ""
  },
  "Mission: Impossible (1996)": {
   "venue": "Prague Aquarium Restaurant",
@@ -13045,8 +13079,8 @@
   "number": "2029"
  },
  "Terminator 2: Judgment Day (1991)": {
-  "venue": "Enrique's Desert Camp",
-  "sign": "Salceda's place. Weapons detail, and a drink if you want one.",
+  "venue": "Pescadero State Hospital",
+  "sign": "For the criminally insane",
   "note": {
    "text": "Come with me if you want to live.",
    "by": "The Terminator",
@@ -13060,16 +13094,21 @@
    "The steel mill and the vat of molten metal"
   ],
   "prop": {
-   "kind": "stub",
-   "title": "Arcade Token Stub",
+   "kind": "chart",
+   "title": "Patient Card",
    "lines": [
-    "Galleria Arcade",
-    "Good for one game"
+    "High-security wing",
+    "Dr Silberman's patient"
    ]
   },
   "number": "101",
   "words": {
    "Stay indoors if you can": "Judgment Day: August 29, 1997"
+  },
+  "patient": "Sarah Connor",
+  "hospital": {
+   "stampYear": "1995",
+   "noLogo": true
   }
  },
  "Predator (1987)": {
@@ -13447,17 +13486,17 @@
   },
   "winks": [
    "Ecto-1 chasing Muncher through town",
-   "Mini Pufts on the loose",
-   "Podcast and Gary Grooberson's summer science class",
-   "Egon's ghost with the proton pack",
+   "Mini-Pufts on the loose",
+   "Phoebe in Gary Grooberson's summer science class",
+   "Egon's ghost at Phoebe's side",
    "Egon's field of buried ghost traps"
   ],
   "prop": {
    "kind": "slip",
-   "title": "Ghost Trap Slip",
+   "title": "Ghost trap slip",
    "lines": [
-    "Summerville, Oklahoma",
-    "Contents: the Keymaster"
+    "Seized by police",
+    "Contents: Muncher"
    ]
   },
   "number": ""
@@ -17184,7 +17223,7 @@
  },
  "The Silence of the Lambs (1991)": {
   "venue": "State Hospital Canteen",
-  "sign": "Baltimore, Cell Block Only",
+  "sign": "Baltimore, for the criminally insane",
   "note": {
    "text": "I do wish we could chat longer, but I'm having an old friend for dinner.",
    "by": "Hannibal Lecter",
@@ -17205,7 +17244,8 @@
     "Quantico"
    ]
   },
-  "number": ""
+  "number": "",
+  "patient": "Hannibal Lecter"
  },
  "This Is the End (2013)": {
   "venue": "Franco's Party House",
@@ -17258,8 +17298,8 @@
   "number": ""
  },
  "Father of the Bride (1991)": {
-  "venue": "Banks Family Kitchen",
-  "sign": "Wedding Prep, Day Eleven",
+  "venue": "Banks Home Reception",
+  "sign": "Annie and Bryan. Reception at the house.",
   "note": {
    "text": "She's still my little girl. Pass the cake, and no questions about the budget.",
    "by": "George Banks"
@@ -18016,15 +18056,15 @@
   "sport": "fight"
  },
  "Rumble in the Bronx (1995)": {
-  "venue": "Uncle Bill's Supermarket",
+  "venue": "Elaine's Supermarket",
   "sign": "Fresh Deliveries Daily",
   "note": {
-   "text": "I came for a wedding, and now I'm fighting bikers in the aisles. Please keep my receipt.",
-   "by": "Keung",
+   "text": "Ask about the wedding tea. No bikers past the counter.",
+   "by": "Elaine",
    "kind": "note"
   },
   "winks": [
-   "Keung's hovercraft on the golf course",
+   "Keung's hovercraft hits the golf course",
    "A fight in the grocery aisles",
    "Elaine taking over the store",
    "Diamonds in Danny's wheelchair cushion",
@@ -18034,8 +18074,8 @@
    "kind": "receipt",
    "title": "Supermarket Receipt",
    "lines": [
-    "Cereal, rice, one very tall visitor",
-    "Total: ask Uncle Bill"
+    "Rice, soy sauce, bok choy",
+    "Total: ask Elaine"
    ]
   },
   "number": ""
@@ -19867,7 +19907,7 @@
  },
  "A Nightmare on Elm Street 3: Dream Warriors (1987)": {
   "venue": "Westin Hills Psychiatric Hospital",
-  "sign": "Westin Hills, Adolescent Ward, Lights Out at Ten",
+  "sign": "Westin Hills, Dr Gordon's patients",
   "note": {
    "text": "I used to live in this house.",
    "by": "Nancy Thompson",
@@ -19888,7 +19928,8 @@
     "Intern: N. Thompson"
    ]
   },
-  "number": "1428"
+  "number": "1428",
+  "patient": "Kristen Parker"
  },
  "A Star Is Born (2018)": {
   "venue": "Bleu Bleu",
@@ -20387,11 +20428,12 @@
   "number": "40"
  },
  "Halloween II (1981)": {
-  "venue": "Haddonfield Memorial Hospital Cafeteria",
-  "sign": "Haddonfield Memorial, Night Shift",
+  "venue": "Haddonfield Memorial Hospital",
+  "sign": "Night shift, October 31",
   "note": {
-   "text": "Night shift eats at midnight, Halloween or not. Keep the corridor lights on and the doors locked.",
-   "by": "Mrs Alves"
+   "text": "It's time, Michael.",
+   "by": "Dr Loomis",
+   "kind": "quote"
   },
   "winks": [
    "The long dark hospital corridors",
@@ -20404,11 +20446,16 @@
    "kind": "card",
    "title": "Meal Ticket",
    "lines": [
-    "Night shift, October 31",
-    "Haddonfield Memorial, Ward 3"
+    "Laurie Strode",
+    "One hot dinner"
    ]
   },
-  "number": "1978"
+  "number": "1978",
+  "patient": "Laurie Strode",
+  "hospital": {
+   "noLogo": true,
+   "stampYear": "1978"
+  }
  },
  "Hocus Pocus 2 (2022)": {
   "venue": "Becca's Birthday in the Woods",
@@ -20582,8 +20629,8 @@
   "number": "130"
  },
  "My Big Fat Greek Wedding (2002)": {
-  "venue": "Dancing Zorba's",
-  "sign": "Chicago. Greek food, family owned, nobody leaves hungry.",
+  "venue": "Portokalos Wedding Reception",
+  "sign": "Toula and Ian. Nobody leaves hungry.",
   "note": {
    "text": "The lamb goes on the spit at six. Nobody touches it but me, and whoever is not Greek gets the first plate so they can learn.",
    "by": "Gus Portokalos"

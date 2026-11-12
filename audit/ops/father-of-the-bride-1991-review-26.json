@@ -1,0 +1,29 @@
+{
+ "id": "Father of the Bride (1991)",
+ "ops": [
+  {
+   "old": "Carved at the reception, horseradish cream and roast shallots",
+   "new": "Roast beef fillet carved thick, horseradish cream and roast shallots",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spinach and artichoke dip",
+    "note": "Warm baked dip of spinach, artichoke hearts and parmesan, with crackers"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Classic mimosa",
+    "note": "Chilled sparkling wine topped up with fresh orange juice",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

@@ -1,0 +1,34 @@
+{
+ "id": "Fast Times at Ridgemont High (1982)",
+ "ops": [
+  {
+   "old": "Brad's job at the fish and chips shop, in the pirate hat",
+   "new": "Flathead strips in crisp batter with skin-on chips, tartare and lemon",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pepperoni calzone bites",
+    "note": "Little folded pizza pockets filled with pepperoni, mozzarella and tomato",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Frothy Orange Julius",
+    "note": "Orange juice, milk, vanilla and ice blended frothy, like the mall stand"
+   },
+   "done": true
+  },
+  {
+   "old": "Spicoli wanting tasty waves and a cool buzz",
+   "new": "Spicoli's tasty waves",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

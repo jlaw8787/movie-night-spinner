@@ -10,7 +10,7 @@
    Fonts (assets/fonts/files) and the save tools (assets/lib): saved the first time a menu or a save needs them,
    never all at once. Their names change whenever their content does, so they sit in their own store that app updates
    leave alone, and a menu that worked offline once keeps working after an update. */
-const VERSION = 'mns-971605b2';
+const VERSION = 'mns-f170ad40';
 const FILMS_CACHE = 'mns-films';
 const IMAGES_CACHE = 'mns-images';
 const STATIC_CACHE = 'mns-static';

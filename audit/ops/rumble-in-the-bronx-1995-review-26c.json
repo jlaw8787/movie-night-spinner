@@ -1,0 +1,24 @@
+{
+ "id": "Rumble in the Bronx (1995)",
+ "ops": [
+  {
+   "old": "Elaine's supermarket Reuben bites",
+   "new": "Bronx corner-store Reuben bites",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Supermarket Receipt",
+    "lines": [
+     "Rice, soy sauce, bok choy",
+     "Total: ask Elaine"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

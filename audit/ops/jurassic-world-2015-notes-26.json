@@ -1,0 +1,50 @@
+{
+ "id": "Jurassic World (2015)",
+ "ops": [
+  {
+   "old": "Cheese balls in walnuts and paprika. Hamster ball, basically.",
+   "new": "Cream cheese and cheddar balls rolled in chopped walnuts and smoked paprika",
+   "done": true
+  },
+  {
+   "old": ", before the pterosaurs swoop",
+   "new": "",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Popcorn chicken with ranch",
+    "note": "Bite-size chicken in crisp seasoned crumbs, with cold ranch for dipping",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "old": ", at the lakeside bungalow",
+   "new": "",
+   "done": true
+  },
+  {
+   "old": "Chocolate mousse. Dinosaurs are \"wow\" enough.",
+   "new": "Dark chocolate mousse set in speckled egg cups, with whipped cream",
+   "done": true
+  },
+  {
+   "old": "Slushy lemonade in big cups. Sponsored, like the Indominus rex.",
+   "new": "Fresh lemonade blended with ice till slushy, in big souvenir cups",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Frozen margarita",
+    "note": "Tequila, lime and orange liqueur blended with ice, salt on the rim",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}
