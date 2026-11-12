@@ -775,5 +775,5 @@ Bad Santa, Jurassic World (foodcourt); Happy Gilmore, Goldfinger (clubhouse); Fo
 
 ### Waiting on Josh
 - Drive-in: done, Josh chose the 1950s look for Ghostbusters: Afterlife (era 1950s in film-format.json). Side effect: prices follow the era, so the card prints 1950s prices (.15 to .60).
-- Hospital: prices kept on the patient meal card (real patient cards have none).
+- Hospital: done, Josh chose no prices on the patient meal card (no price column or leader, no "Prices subject to change" in the footer). All 7 hospital films print-checked.
 - Then: venue and sign fact check and note clean-up for every film on the new layouts, mark Approved in the sheet, then a deploy cut.

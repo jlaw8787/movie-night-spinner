@@ -201,10 +201,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const FX=M+CW+24,FW=W-M-FX,FY0=CY,NH=150,FHt=H-M-FY0-NH-16,cueH=F.cue?42:0,BOX=34;
   const C=sections(ctx,F,["Starters","Main Meal","Dessert","Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
   const MW=FW-36,MH=FHt-56-cueH-12;
-  const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:2,gap:26,cw:e.cw,cwd:e.cwd,indent:BOX+12,priceW:d=>BOX+12+d*2.6+10});
+  /* a patient meal card carries no prices (Josh, 12 Nov): no price column, no leader */
+  const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:2,gap:26,cw:e.cw,cwd:e.cwd,indent:BOX+12,priceW:()=>BOX+12});
   const head=(l,tr)=>`<div style="font:700 ${Math.round(tr.h*.8)}px/1.2 ${DF};color:${acc};text-transform:uppercase;letter-spacing:.12em;border-bottom:2px solid ${rule};padding-bottom:3px;margin-bottom:8px">${esc(l)}</div>`;
   const pre=(k,i,tr)=>`<div style="position:absolute;left:0;top:2px;width:${BOX-6}px;height:${BOX-6}px;border:2.5px solid ${e.ink};background:#fff;display:flex;align-items:center;justify-content:center;font:600 ${BOX+6}px/1 ${PEN};color:#1f3fa0">${i===0?"&#10003;":""}</div>`;
-  const o={head,pre,indent:BOX+12,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:e.soft,pw:400,pp:-2,cw:e.cw,leader:1,lead:mix(e.soft,e.form,.55)};
+  const o={head,pre,indent:BOX+12,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:e.soft,pw:400,pp:-2,cw:e.cw,leader:0,price:()=>""};
   /* each column spends its own spare height on its own course gaps (capped), and a big patch still left takes a film still */
   let stillUsed=false;
   const colHtml=(col,ci)=>{const spare=Math.max(0,MH-(R.hs?R.hs[ci]:MH)*1.02-30),/* 30px held back: the height estimate runs up to about 20px either way */nIt=col.reduce((a,[k])=>a+Math.min(4,items[k].length),0),ig=Math.min(10,spare*.4/Math.max(1,nIt)),
@@ -226,7 +227,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:600 ${nS}px/1.1 ${PEN};color:#1f3fa0;margin-top:4px;${clamp(3)}">${isQ?`&ldquo;${esc(n.text)}&rdquo;`:esc(n.text)} <span style="color:${acc}">${esc(n.by)}</span></div></div>
     <div style="position:absolute;left:${FX+FW-SW2}px;top:${NY}px;width:${SW2}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)};display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px">
       <div style="width:150px;height:76px;border:3px solid ${acc};border-radius:6px;transform:rotate(-6deg);display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 15px/1.2 ${BF};color:${acc};letter-spacing:.12em;opacity:.8;text-align:center">WARD KITCHEN<br><span style="font-size:14px">${esc(F.year||"")}</span></div>
-      <div style="font:400 14px/1.2 ${BF};color:${e.soft};text-align:center;${clamp(2)}">${esc(credit(F))}</div></div>`;
+      <div style="font:400 14px/1.2 ${BF};color:${e.soft};text-align:center;${clamp(2)}">${esc(credit(F).replace("Prices subject to change. ",""))}</div></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}</div>`]};
 };
 })();
