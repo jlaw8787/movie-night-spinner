@@ -7,7 +7,7 @@ const _ROOT_skilodge=((document.currentScript&&document.currentScript.src)||"").
 const ID="skilodge",_ROOT=_ROOT_skilodge;
 
 /* ---------- shared helpers ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[–—]\s*/g,", ").replace(/\s+-\s+/g,", ");
+const clean=s=>String(s==null?"":s).replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+-\s+/g,", ");
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cap=s=>{s=clean(s).trim();return s?s.charAt(0).toUpperCase()+s.slice(1):""};
 const hex=h=>{h=String(h||"").replace("#","");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
@@ -83,6 +83,12 @@ function tidyPrices(menu,P,ei){
   /* dessert under the cheapest main */
   if(V.m&&V.m.length&&V.w&&V.w.length){const minM=Math.min(...V.m);for(let i=0;i<V.w.length;i++){let g=0;while(V.w[i]>=minM&&g++<40)V.w[i]=down(V.w[i])}
     for(let i=1;i<V.w.length;i++){let g=0;while(V.w.slice(0,i).some(x=>Math.abs(x-V.w[i])<.001)&&g++<20)V.w[i]=down(V.w[i])}}
+  /* review 26: starters under the cheapest main too, and a house line under every cooked dish in its own course,
+     so the layout can print each course dearest first with the house line at the foot */
+  if(V.m&&V.m.length&&V.s&&V.s.length){const minM=Math.min(...V.m);for(let i=0;i<V.s.length;i++){let g=0;while(V.s[i]>=minM&&g++<40)V.s[i]=down(V.s[i])}}
+  for(const k of ["s","m","w","d"]){const L=menu[k]||[],v=V[k]||[];const own=v.filter((x,i)=>!(L[i]&&L[i].house));if(!own.length)continue;const lo=Math.min(...own);
+    v.forEach((x,i)=>{if(!(L[i]&&L[i].house))return;let g=0;while(v[i]>=lo&&g++<40)v[i]=down(v[i])})}
+  for(const k of ["s","m","w","d"]){const v=V[k]||[];for(let i=1;i<v.length;i++){let g=0;while(v.slice(0,i).some(x=>Math.abs(x-v[i])<.001)&&g++<20)v[i]=down(v[i])}}
   for(const k of ["s","m","w","d"])out[k]=(V[k]||[]).map((v,i)=>{const o=String((P[k]||[])[i]);/* keep the hidden egg price as priceSense left it */
     return Math.abs(num(o)-v)<.001?o:money(v,ei)});
   return out;
@@ -175,18 +181,18 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LX=36,LW=440,PA=posterFit(LW-40,H-72-40-236);
   const frame=`<div style="position:absolute;left:${LX}px;top:36px;width:${PA.w+40}px;height:${PA.h+40}px;background:linear-gradient(135deg,${mix(e.wood,"#ffffff",.12)},${mix(e.wood,"#000000",.35)});box-shadow:${shadow}">
     <div style="position:absolute;left:20px;top:20px;width:${PA.w}px;height:${PA.h}px;background:#111;overflow:hidden">${hero(F,PA.w,PA.h,t.photo)}</div></div>`;
-  /* review 25: a ticket or pass prints on the lift ticket; any other kind of prop does not suit the wicket, so the panel's own default.
-     The number row drops out when the number already shows in the ticket's words */
-  const pk=String((F.fl.prop&&F.fl.prop.kind)||"").toLowerCase(),pr2=F.prop&&/ticket|pass|stub|admission/.test(pk)?F.prop:null;
+  /* review 26: the film's prop always prints on the wire, under a label from its kind (a receipt reads RECEIPT, a ticket stays a lift ticket).
+     The number row shows only on a ticket or pass, and drops out when the number already shows in the ticket's words */
+  const pk=String((F.fl.prop&&F.fl.prop.kind)||"").toLowerCase(),pr2=F.prop||null,isTk=!pr2||/ticket|pass|stub|admission/.test(pk);
   const tTitle=pr2?pr2.title:"All Mountain",tLines=pr2&&pr2.lines.length?pr2.lines.slice(0,2).join(". "):"Valid today only";
-  const tHead=/lift|ski pass/i.test(tTitle)?"ADMIT ONE":pk==="pass"&&pr2?"LIFT PASS":"LIFT TICKET",tNum=F.num.slice(-4),showNum=!(tTitle+" "+tLines).includes(tNum);
+  const tHead=!isTk&&pk?clean(pk).toUpperCase():/lift|ski pass/i.test(tTitle)?"ADMIT ONE":pk==="pass"&&pr2?"LIFT PASS":"LIFT TICKET",tNum=F.num.slice(-4),showNum=isTk&&!(tTitle+" "+tLines).includes(tNum);
   const TX=LX+Math.round((PA.w+40)/2)-20,TY=36+PA.h+40+44;
   const ticket=`<div style="position:absolute;left:${TX}px;top:${TY-34}px;width:4px;height:44px;background:#9aa0a6;transform:rotate(4deg);transform-origin:top"></div>
     <div style="position:absolute;left:${TX-140}px;top:${TY}px;width:320px;height:176px;background:#ffffff;border-radius:8px;box-shadow:0 6px 14px rgba(0,0,0,.45);transform:rotate(${(3+t.tilt).toFixed(1)}deg);overflow:hidden;box-sizing:border-box">
       <div style="height:42px;background:${acc};display:flex;align-items:center;justify-content:center;font:700 16px/1 ${BF};letter-spacing:.26em;color:${lum(acc)>.4?"#111":"#fff"}">${tHead}</div>
       <div style="height:134px;box-sizing:border-box;padding:8px 12px;text-align:center;display:flex;flex-direction:column;justify-content:center">
         <div style="font:700 22px/1.1 ${BF};color:#15171a;text-transform:uppercase;${clamp(2)}">${esc(tTitle)}</div>
-        <div style="font:400 15px/1.25 ${BF};color:#4a4f55;margin-top:4px;${clamp(2)}">${esc(tLines)}</div>
+        <div style="margin-top:4px">${(pr2&&pr2.lines.length?pr2.lines.slice(0,2):[tLines]).map(l=>`<div style="font:400 15px/1.25 ${BF};color:#4a4f55">${esc(l)}</div>`).join("")}</div>
         ${showNum?`<div style="font:700 26px/1 ${DF};color:${acc};margin-top:8px">No. ${esc(tNum)}</div>`:""}</div></div>`;
 
   /* right: the lodge menu card */
@@ -194,7 +200,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const HH=104,cueH=F.cue?44:0;
   const vS=F.venue.length>28?30:F.venue.length>18?36:44;
   const C=sections(ctx,F,["Green Runs","Blue Runs","Black Runs","Double Black"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
+  /* review 26 (rule 8): each course prints dearest first, house lines at the foot */
+  for(const k of ["s","m","w","d"]){const L=items[k]||[];if(L.length<2)continue;const pv=x=>parseFloat(String(x).replace(/[^0-9.]/g,""))||0;
+    const ix=L.map((x,i)=>i).sort((a,b)=>(!!L[a].house-!!L[b].house)||(pv(pr[k][b])-pv(pr[k][a]))||a-b);items[k]=ix.map(i=>L[i]);pr[k]=ix.map(i=>pr[k][i])}
   const MW=RW-48,MH=CH-HH-cueH-34;
+  /* review 26 (rule 4): the poster on the left already carries the film's logo, so the header prints the title and year in the display face */
+  const tAv=HH-44-(F.year?18:0);let tS=26;while(tS>15&&wrapLines(F.title,tS,200,e.cwd*1.1)*tS*1.08>tAv)tS--;
+  const titleBlock=`<div style="width:200px;text-align:center"><div style="font:${e.dw} ${tS}px/1.05 ${DF};color:${acc}">${esc(F.title)}</div>${F.year?`<div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${e.soft};margin-top:4px">${esc(F.year)}</div>`:""}</div>`;
   const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:2,gap:28,cw:e.cw,cwd:e.cwd,cgap:12});
   const head=(l,tr,k)=>`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;border-bottom:2px solid ${mix(e.ink,e.card,.75)};padding-bottom:5px">${marker(k,Math.round(tr.h*.8))}<span style="font:${e.dw} ${tr.h}px/1.15 ${DF};color:${e.ink}">${esc(l)}</span></div>`;
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc,cw:e.cw,leader:1,lead:mix(e.soft,e.card,.5),cgap:12};
@@ -213,19 +225,19 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:24px;right:24px;top:18px;height:${HH-26}px;display:flex;align-items:center;gap:18px;border-bottom:4px double ${e.ink}">
       <div style="flex:1;min-width:0"><div style="font:${e.dw} ${vS}px/1.2 ${DF};color:${acc};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>
         <div style="font:700 15px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${e.soft};margin-top:3px;${clamp(1)}">${esc(F.sign)}</div></div>
-      <div style="flex:0 0 220px;height:${HH-40}px;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box;margin-bottom:8px">${logoBare(ctx,F,200,HH-52,DF,acc,e.dw,e.card)}</div></div>
+      <div style="flex:0 0 220px;height:${HH-40}px;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box;margin-bottom:8px">${F.posSrc?titleBlock:logoBare(ctx,F,200,HH-52,DF,acc,e.dw,e.card)}</div></div>
     <div style="position:absolute;left:24px;top:${HH+10}px;width:${MW}px;height:${MH}px;display:flex;gap:28px;overflow:hidden">${R.cols.map(colHtml).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:24px;right:24px;bottom:14px;height:${cueH-10}px;border-top:1px solid ${mix(e.soft,e.card,.6)};padding-top:6px">${cueLine(F,BF,e.soft,acc,15)}</div>`:""}</div>`;
 
   /* foot: snow report and ski patrol */
   const FY=H-36-FH,SW=Math.round(RW*.46);
   /* review 25: the board carries the film's winks (up to five that fit), marked with the run signs and labelled as scenes to watch for */
-  const RIN=FH-12-24-15-8-17,rW=SW-12-32-26,MK=["s","m","w","d","d"];let rep=[],used=0;
+  const RIN=FH-12-24-15-8-17,rW=SW-12-32-26;let rep=[],used=0;
   for(const wk of F.winks.slice(0,5)){const h=wrapLines(wk,15,rW,e.cw*1.08)*19+4;if(used+h>RIN)break;rep.push(wk);used+=h}
   const report=`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${SW}px;height:${FH}px;background:#1d2a33;box-shadow:${shadow};box-sizing:border-box;padding:12px 16px;overflow:hidden;border:6px solid ${mix(e.wood,"#000000",.2)};display:flex;flex-direction:column">
     <div style="font:700 15px/1 ${BF};letter-spacing:.24em;color:#9fd4ff">SNOW REPORT</div>
-    <div style="font:italic 500 14px/1.2 ${BF};color:#ffd36e;margin-top:8px">${rep.length?"Scenes to watch for tonight":"Conditions tonight"}</div>
-    <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly">${(rep.length?rep:["Fresh powder overnight","Groomed runs, all lifts open","Fire lit in the lodge"]).map((r,i)=>`<div style="display:flex;align-items:center;gap:10px;font:400 15px/1.25 ${BF};color:#eef4f7"><span style="flex:0 0 16px;display:flex;justify-content:center">${marker(MK[i],11).replace(/#111111/g,"#eef4f7")}</span><span>${esc(r)}</span></div>`).join("")}</div></div>`;
+    <div style="font:italic 500 14px/1.2 ${BF};color:#ffd36e;margin-top:8px">${rep.length?"Watch for tonight":"Conditions tonight"}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:space-evenly">${(rep.length?rep:["Fresh powder overnight","Groomed runs, all lifts open","Fire lit in the lodge"]).map((r,i)=>`<div style="display:flex;align-items:center;gap:10px;font:400 15px/1.25 ${BF};color:#eef4f7"><span style="flex:0 0 16px;display:flex;justify-content:center"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#eef4f7"></span></span><span>${esc(r)}</span></div>`).join("")}</div></div>`;
   const n=F.note,isQ=!!(F.fl.note&&F.fl.note.text&&F.fl.note.kind==="quote"),nS=n.text.length>140?24:n.text.length>90?27:30;
   const patrol=`<div style="position:absolute;left:${RX+SW+18}px;top:${FY}px;width:${RW-SW-18}px;height:${FH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:12px 16px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-top:8px solid ${acc}">
     <div style="font:700 15px/1 ${BF};letter-spacing:.22em;color:${acc}">${isQ?"OVERHEARD AT THE LODGE":"FROM THE LODGE"}</div>
