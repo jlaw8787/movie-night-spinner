@@ -902,3 +902,22 @@ foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum 
 ### Deployed 13 Nov, 5:50am (Josh said deploy)
 - Deploy 6af61886d56361b547d5f97c from a trimmed copy of fix/review-27-low at 45211800. Live files checked against it byte for byte: all 5,340 files (3,745 code and data, 1,595 assets). index.html differs only by Netlify's form rewrite. support.html differs only by Netlify's pretty URL rewrite (its two privacy.html links become /privacy, which loads); the file is unchanged since the last deploy, Josh said treat it as expected. .gitignore and .nojekyll are not served (normal).
 - main fast-forwarded to 45211800 and pushed. No layout changes, so no Live layout edits in the sheet.
+
+## 13 Nov, morning: Review 24 leftovers merged on main (NOT deployed; start here in the next chat)
+
+### What is where
+- main 23b3c42b (plus this note): deploy 6af61886's main (89c37435) plus the Review 24 low leftovers below. Pushed. Not deployed: deploy only when Josh says, from one chat only.
+- This chat also re-ran the review 27 job on the 13 held films without knowing another chat had already shipped them. Josh chose to drop that work. Local branches only, never pushed: review27, fix27-skidim (skilodge 9.1, dimsum 9.2, MIB3 as a modern 2012 Wu's, Better Off Dead venue "The K-12"), fix27-arcfood (arcade 8.7, foodcourt 8.4). Live keeps the other chat's versions. Reports in this session's /tmp/r27 only.
+
+### Merged (fix27-r24low, separate reviewer: fix first, then merge after re-check)
+- Kids' and dry shopping wording (app.js KDRY): shop counts of stubbies keep a container (The Castle "1.5 L ginger beer (4 bottles of 375 ml)"); "alcohol free" before a word swaps like "alcohol-free"; "cucumber juice, for the grown-ups" loses the tail after a swapped drink; "lime shandy" reads "lime squash".
+- dryJoin: on a dry list, lines that drying made the same read once with amounts added, in the shopping dialog and Copy text (Shaun "2 L ginger beer"; sums roll up to L and kg). Lines that were already the same item are left alone (Ghost's two honey lines). The folded line ticks and pantry-checks with the visible one. Across 900 films in kids mode only 4 Copy texts change, all drink folds.
+- The Big Lebowski: rug caption now "Tai chi on the new rug, before Maude's thugs come for it"; the Star Lanes cue keeps its last word with the one before (no "one." alone).
+- Blade Runner and Mean Streets kids' lines from the old list no longer show on main.
+
+### Tests on main 23b3c42b (from /tmp/wt-final27)
+All node tests including dialogs, check-kids-cards (343), check-print-text on Lebowski and The Castle: pass. Lebowski Save PDF checked by eye.
+
+### Left
+- Print box office ticket prints undried lines in kids' mode (on live before this change too).
+- Shared faults the review 27 reviewers in this chat found (also likely on live): browser Ctrl+P (not the Print button) shrinks 1344 wide cards and can cut the bottom row (printPage, transform:scale); Copy text shopping list does not match the Prep sheet; any diet switch drops printed-only dishes that already suit it (app.js around 1791); Christmas films skip the written alcohol-free version when Vegetarian is on (Bad Santa drink has three names).
