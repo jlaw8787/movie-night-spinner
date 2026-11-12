@@ -3549,7 +3549,7 @@ function showOverlay(url,file){
   o.querySelector("[data-close]").addEventListener("click",close);
   o.addEventListener("click",e=>{if(e.target===o)close()});
   if(file)o.querySelector("[data-share]").addEventListener("click",async()=>{
-    try{const nat=typeof REEL!=="undefined"&&await REEL.share({title:`${current.title} menu`,files:[{blob:file,name:file.name}]});if(nat==="cancel")return;if(!nat)await navigator.share({files:[file],title:`${current.title} menu`});close();$("status").textContent=nat?"Menu image shared. If you chose Save Image, it's in your Photos.":"Saved. Check your Photos."}
+    try{const nat=typeof REEL!=="undefined"&&await REEL.share({title:`${current.title} menu`,files:[{blob:file,name:file.name}]});if(nat==="cancel")return;if(!nat)await navigator.share({files:[file],title:`${current.title} menu`});close();$("status").textContent=nat?"Menu image shared.":"Saved. Check your Photos."}
     catch(e){if(!(e&&e.name==="AbortError"))o.querySelector("p").textContent="Long-press the menu and choose Save to Photos."}
   });
   mountModal(o,"button",modalTrigger);
