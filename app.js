@@ -1833,14 +1833,21 @@ function libLoad(k){
 /* a venue menu shows the whole board: tonight's five to cook, the film's other dishes, and two house lines
    written for that film's own venue (data/film-house.json). A house line that has meat or alcohol stays off
    when Vegetarian or No alcohol is on. The prep sheet still cooks only the five (planAll reads the recipe list, not this). */
+const DIET_BOOZE=/\b(rum|brandy|whiske?y|wine(?! vinegar)|beers?|liqueurs?|bourbon|vodka|tequila|gin|champagne|sherry(?! vinegar)|kahlua|baileys|amaretto|cognac|stout|lager|cider(?! vinegar)|margaritas?|daiquiris?|martinis?|spiked|boozy|cocktails?|sangria|prosecco|schnapps|mead|grog|eggnog|vermouth|ouzo|absinthe|port wine|marsala|mulled)\b/i;
+const DIET_MEAT=/\b(beef|steaks?|pork|ham|bacon|chicken|turkey|lamb|veal|sausages?|meatballs?|meat|brisket|salami|prosciutto|pepperoni|chorizo|pastrami|duck|venison|fish|tuna|salmon|anchov(y|ies)|prawns?|shrimp|lobsters?|crabs?|oysters?|clams?|mussels?|squid|calamari|ribs?|rib eyes?|burgers?|hot dogs?|jerky|gelatine?|lard|suet|worcestershire)\b/i;
 const FULL_CAP={galley:1,tearoom:1,candybar:2,canteen:1,club:1,diningcar:1,saloon:1,banquet:2,placemat:2,motel:3};
 function fullMenu(f,menu,fmt){
   if(window.LIB_FULL===false)return menu;
   const out={},seen=new Set(),adds=[];
   /* a dish shown under its alcohol-free or vegetarian name still counts as on the card, so its original never comes back as an extra */
   for(const k of ["s","m","w","d"])for(const it of menu[k]||[]){seen.add(String(it.n||"").toLowerCase());if(it.orig)seen.add(String(it.orig).toLowerCase())}
-  const src={s:f.S,m:f.M,w:f.W,d:f.K},plain=!(DIET.veg||dietAF());
-  if(plain&&f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());adds.push([k,Object.assign(it,{extra:true})])}
+  const src={s:f.S,m:f.M,w:f.W,d:f.K};
+  /* 13 Nov: a diet switch keeps the film's other dishes that already suit it and leaves off only the ones that don't (it left them all off).
+     Meat or fish, or a drop of alcohol, in the name, menu line, method or shopping (vinegars are not alcohol) means it doesn't suit */
+  const veg=DIET.veg,af=dietAF(),fits=it=>{const sh=(Array.isArray(it.shop)?it.shop:[]).map(String),txt=[it.n,it.note,it.how,...sh.map(x=>x.split("@")[0])].filter(Boolean).join(" ");
+    if(veg&&(sh.some(x=>/@\s*(Meat|Seafood)\s*$/.test(x))||DIET_MEAT.test(txt)))return false;
+    return !(af&&(sh.some(x=>/@\s*Bottle shop\s*$/.test(x))||DIET_BOOZE.test(txt)))};
+  if(f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());if(!fits(it))continue;adds.push([k,Object.assign(it,{extra:true})])}
   /* a card with one main shows the film's second main before a third starter, so a short board still reads as a dinner (Blazing Saddles: rib eyes beside the beans) */
   if((menu.m||[]).length<2)adds.sort((a,b)=>(b[0]==="m")-(a[0]==="m"));
   const hz=f._lib&&f._lib.flavour&&f._lib.flavour.house;
