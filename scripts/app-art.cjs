@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* Builds app-art.js, the list of pictures the app build leaves out (docs/ARTWORK-RIGHTS.md, option E).
-   The website never loads it. app-mode.js loads it when the page runs as the app.
+   The website never loads it. The reel-boot switch in index.html loads it, with app-mode.js, when the page runs as the app.
 
    - swap: Galaxy Video photos that show film posters (the shopfront, the aisles, the late show curtain), and the app copies made by scripts/app-hero.py.
    - block: menu pictures under assets/era that are film stills, or photos docs/image-credits.md gives

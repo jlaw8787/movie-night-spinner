@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#5a0f1f">
-<script src="app-mode.js?v=717e9504"></script>
+<script id="reel-boot">/* app mode switch (docs/APP-BUILD.md). The website never loads app-mode.js, so nothing blocks its first paint.
+   The iPhone and Android app, the www/ build and a browser opened with ?app=1 (sticks for the tab, ?app=0 turns it off) load app-art.js and app-mode.js here */
+(function(){var W=window,c=W.Capacitor,n=!!(c&&typeof c.isNativePlatform==="function"&&c.isNativePlatform()),f=false;
+try{var q=location.search.match(/[?&]app=([01])(?:&|$)/);if(q)sessionStorage.setItem("reel-app",q[1]);f=sessionStorage.getItem("reel-app")==="1"}catch(e){}
+if(n||f||W.REEL_APP_BUILD)document.write('<script src="app-art.js?v=d308a24c"><\/script><script src="app-mode.js?v=14f24333"><\/script>');else{W.REEL_APP=false;W.REEL_NATIVE=false}})();</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Reel Dinner">
@@ -3110,7 +3114,7 @@ html,body{overflow-x:clip}
 <script src="films.js?v=2068425d" defer></script>
 <script src="assets/fonts/fonts.js?v=2c8fff1c" defer></script>
 <script src="formats-core.js?v=41f596b3" defer></script>
-<script src="app.js?v=385fd0e8" defer></script>
+<script src="app.js?v=475a4546" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

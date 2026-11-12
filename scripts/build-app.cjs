@@ -58,7 +58,9 @@ for (const f of data) copy(f);
 
 /* the app build always runs in app mode, even before Capacitor reports in */
 const ix = path.join(OUT, 'index.html');
-fs.writeFileSync(ix, fs.readFileSync(ix, 'utf8').replace('<script src="app-mode.js', '<script>window.REEL_APP_BUILD=true</script>\n<script src="app-mode.js'));
+const ixHtml = fs.readFileSync(ix, 'utf8');
+if (!ixHtml.includes('<script id="reel-boot">')) { console.error('index.html has no <script id="reel-boot"> app mode switch'); process.exit(1); }
+fs.writeFileSync(ix, ixHtml.replace('<script id="reel-boot">', '<script>window.REEL_APP_BUILD=true</script>\n<script id="reel-boot">'));
 
 /* nothing studio-made may be in the folder */
 const bad = walk(OUT).map(rel).filter(p => /menu-posters|menu-details|galaxy-front\.|galaxy-front-1|hero\/aisles|hero\/latedoor|hero\/shopfront/.test(p));

@@ -1,8 +1,7 @@
-/* Reel Dinner app mode. Loaded first, in the head, by index.html.
-
-   One switch: window.REEL_APP is true inside the iPhone and Android app (Capacitor), and in a browser opened with
-   ?app=1 for testing (it sticks for the tab; ?app=0 turns it off). On the website it is false and nothing here runs
-   beyond setting up window.REEL, whose helpers then fall back to the browser.
+/* Reel Dinner app mode. Loaded first, in the head, by the small reel-boot switch in index.html, and only in app mode:
+   inside the iPhone and Android app (Capacitor), in the www/ build, and in a browser opened with ?app=1 for testing
+   (it sticks for the tab; ?app=0 turns it off). The website never loads this file: there window.REEL_APP is false,
+   window.REEL is not set, and app.js checks typeof REEL before any use outside an app branch.
 
    In app mode (docs/APP-BUILD.md, docs/ARTWORK-RIGHTS.md option E):
    - No film artwork. TMDB posters, stills and title logos, the generated posters, the film frame and the menu photos
@@ -72,10 +71,12 @@
       var F = plugin("Filesystem"), S = plugin("Share");
       if (!F || !S) return false;
       var data = await b64(blob);
-      if (IOS) { try { await F.writeFile({ path: name, data: data, directory: "DOCUMENTS" }); } catch (e) {} }
+      /* iPhone: a cancelled share sheet still counts as saved, but only if the Documents copy was written */
+      var kept = false;
+      if (IOS) { try { await F.writeFile({ path: name, data: data, directory: "DOCUMENTS" }); kept = true; } catch (e) {} }
       var r = await F.writeFile({ path: name, data: data, directory: "CACHE" });
       try { await S.share({ title: name, dialogTitle: "Save " + name, files: [r.uri] }); return "saved"; }
-      catch (e) { if (cancelled(e)) return IOS ? "saved" : "cancel"; throw e; }
+      catch (e) { if (cancelled(e)) return kept ? "saved" : "cancel"; throw e; }
     },
 
     /* the phone's own print dialog (AirPrint on iPhone, the Android print service). Returns true if handled */
@@ -172,7 +173,8 @@
   css.textContent = 'img[src*="#art:hide"]{display:none!important}.lb-credit{display:none!important}';
   (D.head || D.documentElement).appendChild(css);
 
-  /* app-art.js: the blocked list, the shop photo swaps and any per-film poster images */
+  /* app-art.js: the blocked list, the shop photo swaps and any per-film poster images. The reel-boot switch loads it
+     first with its ?v stamp; this is only a fallback if app-mode.js is loaded some other way */
   if (!W.APP_ART) { try { D.write('<script src="app-art.js"><\/script>'); } catch (e) {} }
   var ART = function () { return W.APP_ART || { swap: {}, prefix: [], block: [], posters: {} }; };
   var blockSet = null;
