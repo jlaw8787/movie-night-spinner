@@ -1,0 +1,35 @@
+{
+ "id": "Shutter Island (2010)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Fried clams with tartare sauce",
+    "note": "Whole clams in crisp cornmeal batter, with tartare sauce and lemon",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ginger ale with bitters",
+    "note": "Dry ginger ale over ice with a few dashes of bitters",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "old": ", for a seasick Teddy",
+   "new": "",
+   "done": true
+  },
+  {
+   "old": ", carved at Cawley's table",
+   "new": "",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

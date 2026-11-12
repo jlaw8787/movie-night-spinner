@@ -1,0 +1,34 @@
+{
+ "id": "Snatch (2000)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Jellied eels with malt vinegar",
+    "note": "Eel pieces set in their own cold jelly, with malt vinegar and white pepper",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "old": ", for the bare-knuckle crowd",
+   "new": "",
+   "done": true
+  },
+  {
+   "old": "Avi, who can't wait to get out of London",
+   "new": "Sirloin strip seared rare, with creamed spinach and buttered potatoes",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Builder's tea, milk and three sugars",
+    "note": "Strong black tea brewed in the pot, with milk and three sugars"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

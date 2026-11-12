@@ -1,0 +1,34 @@
+{
+ "id": "Happy Gilmore (1996)",
+ "ops": [
+  {
+   "old": "Cream cheese and cheddar balls in pecans. Just tap it in.",
+   "new": "Cream cheese and cheddar rolled into balls and coated in chopped pecans",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Bacon and egg breakfast muffins",
+    "note": "Toasted English muffins with bacon, a fried egg and melted cheese",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "old": "Happy's Subway deal. Teriyaki chicken, salad, sweet onion sauce",
+   "new": "Teriyaki chicken, lettuce, tomato and sweet onion sauce in a toasted footlong",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cold chocolate milk",
+    "note": "Full cream milk shaken with chocolate syrup, served ice cold"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

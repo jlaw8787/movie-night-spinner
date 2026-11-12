@@ -1,0 +1,29 @@
+{
+ "id": "Bad Santa (2003)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Jalapeño cheese nachos",
+    "note": "Corn chips under melted cheddar, pickled jalapeños, sour cream and salsa"
+   },
+   "done": true
+  },
+  {
+   "old": "Christmas in Phoenix, tamales on every table",
+   "new": "Pork braised in red chilli, wrapped in masa and corn husk and steamed soft",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Rye whiskey, neat",
+    "note": "Straight rye whiskey poured neat, no ice",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

@@ -1,0 +1,43 @@
+{
+ "id": "Better Off Dead (1985)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I want my two dollars!",
+    "by": "Johnny the paperboy",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Meatballs in grape jelly sauce",
+    "note": "Beef meatballs simmered in a sticky grape jelly and chilli sauce",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ski lodge hot chocolate",
+    "note": "Rich cocoa whisked into hot milk, topped with whipped cream"
+   },
+   "done": true
+  },
+  {
+   "old": ", from next door",
+   "new": "",
+   "done": true
+  },
+  {
+   "old": ", from the shift at Pig Burgers",
+   "new": "",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}
