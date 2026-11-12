@@ -1,0 +1,43 @@
+{
+ "id": "Jingle All the Way (1996)",
+ "ops": [
+  {
+   "old": "White chocolate popcorn. Dementor jumps the parade float.",
+   "new": "Popcorn tossed in white chocolate with red and green sprinkles and sea salt",
+   "done": true
+  },
+  {
+   "old": "Iced cookies. \"Put that cookie down! Now!\"",
+   "new": "Vanilla butter cookie stars and trees in smooth royal icing and cachous",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Soft pretzel with cheese sauce",
+    "note": "Warm salted soft pretzel with a pot of melted cheese sauce for dipping"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Orange whip with vanilla",
+    "note": "Orange juice, vanilla ice cream and milk whipped frothy over ice"
+   },
+   "done": true
+  },
+  {
+   "old": "Jingle bells, Batman smells, the Santa password",
+   "new": "Fake Santas' warehouse",
+   "done": true
+  },
+  {
+   "old": "Ted Maltin, the neighbour next door",
+   "new": "Ted Maltin next door",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

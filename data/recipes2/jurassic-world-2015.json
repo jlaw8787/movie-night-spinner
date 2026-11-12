@@ -179,6 +179,202 @@
    "af": true
   },
   {
+   "n": "Main Street cinnamon sugar pretzels",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Make the dough up to a day ahead and keep it in the fridge, bake fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 320,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 115,
+     "u": "g",
+     "item": "caster sugar (1 tbsp for the dough)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar caramel sauce, warmed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt, 1 tbsp sugar and warm water into a dough and knead for 8 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Cover and rest for 1 hour until puffy.",
+     "min": 60
+    },
+    {
+     "text": "Heat the oven to 220C. Roll the dough into 8 ropes and twist each into a pretzel knot.",
+     "min": 10
+    },
+    {
+     "text": "Boil 2L water with the bicarb soda and dip each knot for 30 seconds, then lift onto a lined tray.",
+     "min": 8
+    },
+    {
+     "text": "Bake for 12 minutes until deep brown.",
+     "min": 12
+    },
+    {
+     "text": "Brush with the melted butter, toss in the rest of the sugar mixed with the cinnamon and serve with warm caramel sauce.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Owen's smoky beef short ribs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 320,
+   "make_ahead": "Slow cook a day ahead, chill in the foil, glaze and roast to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 140C. Rub the short ribs all over with the smoked paprika, pepper, brown sugar and salt.",
+     "min": 10
+    },
+    {
+     "text": "Wrap tightly in foil and cook for 5 hours until the meat pulls off the bone.",
+     "min": 300
+    },
+    {
+     "text": "Turn the oven up to 220C, unwrap, brush with the barbecue sauce and roast for 15 minutes until sticky.",
+     "min": 15
+    },
+    {
+     "text": "Boil the corn for 6 minutes and butter it.",
+     "min": 8
+    },
+    {
+     "text": "Toss the cabbage and carrot with the mayonnaise and vinegar for slaw and serve with the ribs and corn.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Isla Nublar fish tacos",
    "course": "m",
    "prep_min": 30,
