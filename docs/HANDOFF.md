@@ -778,13 +778,13 @@ Bad Santa, Jurassic World (foodcourt); Happy Gilmore, Goldfinger (clubhouse); Fo
 - Hospital: done, Josh chose no prices on the patient meal card (no price column or leader, no "Prices subject to change" in the footer). All 7 hospital films print-checked.
 - Then: venue and sign fact check and note clean-up for every film on the new layouts, mark Approved in the sheet, then a deploy cut.
 
-## 12 Nov, 9:45pm: review 26 done, deploy cut on main (not pushed, not deployed; start here in the next chat)
+## 12 Nov, 9:45pm: review 26 done, deploy cut on main (pushed, not deployed; start here in the next chat)
 
 ### What is where
-- main (local 4459196e, NOT pushed): deploy cut. 29 films go live: reception 12 (Four Weddings, Wedding Singer, Wedding Crashers, Top End Wedding, Father of the Bride, Greek Wedding, Ticket to Paradise, Anyone But You, Doctor Strange MoM, My Best Friend's Wedding, Palm Springs, The Farewell), hospital 7 (Halloween II, Elm Street 3, T2, Rain Man, Shutter Island, Smile, Silence of the Lambs), clubhouse 3 (Caddyshack, Happy Gilmore, Goldfinger), bowling (Kingpin), drivein (Ghostbusters: Afterlife), plus Naked Gun (stadium), Reservoir Dogs (diner), Stand by Me (campfire), Kingsman (pub), Forgetting Sarah Marshall (tiki). Rumble in the Bronx fact fixes on truck (venue now Elaine's Supermarket).
+- main (4459196e plus this note, pushed to GitHub, NOT deployed to Netlify): deploy cut. 29 films go live: reception 12 (Four Weddings, Wedding Singer, Wedding Crashers, Top End Wedding, Father of the Bride, Greek Wedding, Ticket to Paradise, Anyone But You, Doctor Strange MoM, My Best Friend's Wedding, Palm Springs, The Farewell), hospital 7 (Halloween II, Elm Street 3, T2, Rain Man, Shutter Island, Smile, Silence of the Lambs), clubhouse 3 (Caddyshack, Happy Gilmore, Goldfinger), bowling (Kingpin), drivein (Ghostbusters: Afterlife), plus Naked Gun (stadium), Reservoir Dogs (diner), Stand by Me (campfire), Kingsman (pub), Forgetting Sarah Marshall (tiki). Rumble in the Bronx fact fixes on truck (venue now Elaine's Supermarket).
 - Held back (Josh: approve only layouts at 9.0): the 13 on foodcourt, skilodge, arcade, dimsum (Mallrats, Fast Times, Jingle, Bad Santa, Jurassic World, Wonder Woman 1984, Hot Tub, Better Off Dead, Wreck-It Ralph, Snatch, Dazed, Rush Hour, Men in Black 3). On main they are byte for byte as live (film data, recipes, stills, Rush Hour's edition in movie-menus.js); arcade.js on main is main's, so Toy Story is unchanged.
 - wip/new-formats: all review 26 work on every film, including the held 13. Next cut for those: same script as the review 26 cut, minus the hold list.
-- Push from this machine was refused (Claude GitHub App not installed for jlaw8787/movie-night-spinner). To ship: push main and wip/new-formats from a machine with access, then deploy main to Netlify when Josh says.
+- Pushed from this session. Deploy main to Netlify only when Josh says.
 - Sheet "Reel Dinner film layouts": the 29 rows are Approved; Live layout column left until the deploy.
 
 ### Grades (independent, fresh reviewer each round; docs/review-26.md)
