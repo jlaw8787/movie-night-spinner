@@ -2028,7 +2028,8 @@ function renderMotw(){
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f);lockAsk(f,$("weekSet"))});
 }
 function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();if(typeof refreshPrepTime==="function")refreshPrepTime();$("status").textContent=`${f.title} is locked in for this week.`;
-  if(globalThis.REEL_NATIVE)appRemind(true).then(r=>{if(/^set/.test(r))$("status").textContent+=" We'll remind you on this phone when it's time to start cooking and at showtime."})}
+  /* the app: locking in only updates reminders already allowed; the permission is asked from the calendar button */
+  if(globalThis.REEL_NATIVE)appRemind(false).then(r=>{if(/^set/.test(r))$("status").textContent+=" We'll remind you on this phone when each step is due.";else if(r==="ask")$("status").textContent+=" Tap Add to calendar to get reminders on this phone."})}
 function listText(f,groups,serves){return `${f.title} (${f.year}) shopping list, serves ${serves||(f._r2?PLAN.guests:4)}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 /* calendar reminder: review 16, Josh asked for an "Add to calendar" button on the locked-in strip and the "Your movie night" bar.
    It downloads one .ics event for the movie night with the menu link in the notes, and reminders attached to it:
@@ -2176,10 +2177,11 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
   if(weekShow()<now){week.date=nextWeekDate(week.day,week.time,now);saveWeek();renderWeek();refreshPrepTime();moved=true}
   const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])],now),title=f.title+(g?" + "+g.title:"");
   const url=(typeof REEL!=="undefined"?REEL.siteURL():location.origin+location.pathname)+"?film="+encodeURIComponent(f.id),o={title,show,plan,url,now,span:g?300:150,uid:`${slug(f.id)}-${weekDateKey(show)}@movie-night-spinner`};
-  const name=`movie-night-${slug(f.title)}.ics`,ics=new Blob([calICS(o)],{type:"text/calendar;charset=utf-8"}),href=URL.createObjectURL(ics);
-  /* the app: the phone reminds you itself, and the calendar file goes out through the share sheet (an app's web view cannot download a file) */
-  let appNote="";if(globalThis.REEL_NATIVE){const r=await appRemind(true);appNote=/^set/.test(r)?"Reminders are set on this phone for start cooking and showtime.":r==="denied"?"Notifications are off for Reel Dinner, so turn them on in Settings to get reminders on this phone.":"";
-    try{await REEL.share({title:`Movie night: ${title}`,files:[{blob:ics,name}]})}catch(e){}}
+  const name=`movie-night-${slug(f.title)}.ics`,ics=new Blob([calICS(o)],{type:"text/calendar;charset=utf-8"}),href=globalThis.REEL_NATIVE?"":URL.createObjectURL(ics);
+  /* the app: the phone reminds you itself, and the calendar file goes out through the share sheet (an app's web view cannot download a file).
+     No download link there, so no blob address is made. shared: "sent", "cancel", or "" if the share sheet failed */
+  let appNote="",shared="";if(globalThis.REEL_NATIVE){appNote=appRemindNote(await appRemind(true));
+    try{shared=await REEL.share({title:`Movie night: ${title}`,files:[{blob:ics,name}]})||""}catch(e){}}
   else{const a=document.createElement("a");a.href=href;a.download=name;a.hidden=true;document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),0)}
   /* a time on another day than the show carries its day (a 12:15am showtime starts cooking 10:45pm the day before) */
   const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)}, ${calClock(d)}`;
@@ -2196,9 +2198,10 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
     <div class="pp-opts">${plan.late?`<button type="button" data-move>Move to ${ESC(calDay(plan.late.next))}</button>`:""}<button type="button" data-done><b>Done</b></button></div></div>`;
   dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest("[data-done]"))dismissModal(dlg);
     if(e.target.closest("[data-move]")&&plan.late){week.date=weekDateKey(plan.late.next);saveWeek();renderWeek();refreshPrepTime();dismissModal(dlg);setTimeout(()=>calAdd(trigger),0)}});
-  dlg.addEventListener("close",()=>setTimeout(()=>URL.revokeObjectURL(href),60000));
+  if(href)dlg.addEventListener("close",()=>setTimeout(()=>URL.revokeObjectURL(href),60000));
   mountModal(dlg,"[data-done]",trigger||document.activeElement);
-  $("status").textContent=`${moved?"Moved to next week. ":""}Calendar file saved: movie night ${calDay(show)} ${calClock(show)}, start cooking ${plan.startNow?"now":when(plan.start)}.${plan.late?" "+calLate(plan,o):""}`}
+  const fileWord=!globalThis.REEL_NATIVE?"Calendar file saved":shared==="sent"?"Calendar file sent":shared==="cancel"?"Calendar file not shared":"Calendar file could not be shared";
+  $("status").textContent=`${moved?"Moved to next week. ":""}${fileWord}: movie night ${calDay(show)} ${calClock(show)}, start cooking ${plan.startNow?"now":when(plan.start)}.${plan.late?" "+calLate(plan,o):""}`}
 /* the Prep sheet of the locked-in film shows its showtime and start time; redrawn when the time changes */
 /* REEL comes from app-mode.js; uses outside a REEL_NATIVE or REEL_APP branch check it is there, so the site still works if that file fails to load */
 /* the app: a notification on the phone when it's time to start cooking and at showtime for the locked-in night.
@@ -2207,7 +2210,14 @@ async function appRemind(ask){if(!globalThis.REEL_NATIVE)return "";if(!week){REE
   const f=FILMS.find(x=>x.id===week.id);if(!f)return "";const g=week.double&&FILMS.find(x=>x.id===week.double);
   try{for(const x of [f,g])if(x)await ensureExact(x);
     const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])],new Date()),title=f.title+(g?" + "+g.title:"");
-    return await REEL.remind({title,show,start:plan.startNow?null:plan.start,startText:`${title} at ${calClock(show)}${plan.first?`. Start with ${calMid(plan.first)}`:""}.`,ask})}catch(e){return ""}}
+    /* the prep-ahead steps get a reminder too, with the same words as the calendar file's alarms */
+    const t=calText({title,show,plan,now:new Date()}),steps=[];
+    if(plan.early&&!plan.early.now)steps.push({at:plan.early.at,title:"Make ahead today",body:t.early});
+    if(plan.before&&!plan.before.now)steps.push({at:plan.before.at,title:"Prep ahead",body:t.ahead});
+    if(plan.before2&&!plan.before2.now)steps.push({at:plan.before2.at,title:"Prep ahead",body:t.ahead2});
+    return await REEL.remind({title,show,start:plan.startNow?null:plan.start,startText:`${title} at ${calClock(show)}${plan.first?`. Start with ${calMid(plan.first)}`:""}.`,steps,ask})}catch(e){return ""}}
+/* the line under the calendar rows once phone reminders are set; Android with Alarms and reminders off may run a few minutes late */
+const appRemindNote=r=>/^set/.test(r)?"Reminders are set on this phone for the times above."+(/inexact/.test(r)?" Android may send them a few minutes late. For reminders on the minute, turn on Alarms and reminders for Reel Dinner in your phone's Settings.":""):r==="denied"?"Notifications are off for Reel Dinner, so turn them on in Settings to get reminders on this phone.":"";
 function refreshPrepTime(){if(typeof current!=="undefined"&&current&&week&&(current.id===week.id||current.id===week.double)&&typeof refreshPlan==="function")refreshPlan()}
 const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
