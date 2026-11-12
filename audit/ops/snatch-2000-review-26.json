@@ -1,0 +1,35 @@
+{
+ "id": "Snatch (2000)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Tommy kept the dog. The vet found a squeaky toy, a shoe and the diamond. Still squeaking.",
+    "by": "Turkish",
+    "kind": "note"
+   },
+   "done": true
+  },
+  {
+   "old": "Spear on toothpicks and serve hot. Do you like dags?",
+   "new": "Spear on toothpicks and serve hot with extra mustard.",
+   "done": true
+  },
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "extras": false
+   },
+   "done": true
+  },
+  {
+   "old": "Fight: Mickey, round four",
+   "new": "Fight: Mickey, fixed to lose",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": [
+  "not found: Spear on toothpicks and serve hot. Do you like dags?"
+ ]
+}

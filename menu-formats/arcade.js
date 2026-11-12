@@ -8,7 +8,7 @@ const _ROOT_arcade=((document.currentScript&&document.currentScript.src)||"").re
 const ID="arcade",_ROOT=_ROOT_arcade;
 
 /* ---------- shared helpers ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[–—]\s*/g,", ").replace(/\s+-\s+/g,", ");
+const clean=s=>String(s==null?"":s).replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+-\s+/g,", ");
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cap=s=>{s=clean(s).trim();return s?s.charAt(0).toUpperCase()+s.slice(1):""};
 const hex=h=>{h=String(h||"").replace("#","");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
@@ -153,7 +153,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const ttl=`<div style="font:700 ${F.title.length>24?18:F.title.length>12?24:30}px/1.1 ${BF};letter-spacing:.08em;text-transform:uppercase;color:#fff;text-align:center;${glow(neon,8)};${clamp(2)}">${esc(F.title)}</div>`;
   const marquee=`<div style="position:absolute;left:${M}px;top:${M}px;width:${W-2*M}px;height:${MH}px;background:${e.panel};border:3px solid ${mix(neon,e.panel,.4)};box-sizing:border-box;box-shadow:0 0 22px ${mix(neon,e.bg,.6)},inset 0 0 18px rgba(0,0,0,.6)">
     <div style="position:absolute;left:26px;top:0;bottom:0;right:${noLogo?300:LGW+40}px;display:flex;flex-direction:column;justify-content:center">
-      <div style="display:flex;align-items:center;gap:14px"><div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;${glow(neon,14)};white-space:nowrap;overflow:hidden">${esc(F.venue)}</div>${A.space?planet(Math.round(vS*1.25),neon,neon2):""}</div>
+      <div style="display:flex;align-items:center;gap:14px"><div style="font:${e.dw} ${vS}px/1.3 ${DF};color:#fff;${glow(neon,14)};white-space:nowrap;overflow:hidden;padding:30px;margin:-30px;min-width:0">${esc(F.venue)}</div>${A.space?planet(Math.round(vS*1.25),neon,neon2):""}</div>
       <div style="font:700 17px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${neon2};margin-top:4px;${clamp(1)}">${esc(F.sign)}</div></div>
     ${noLogo?`<div style="position:absolute;right:28px;top:0;bottom:0;display:flex;align-items:center;font:700 18px/1.2 ${BF};letter-spacing:.26em;text-transform:uppercase;color:${e.soft};white-space:nowrap">${esc(F.title)}, ${esc(F.year)}</div>`:""}${noLogo?"":`<div style="position:absolute;right:16px;top:14px;width:${LGW}px;height:${MH-34}px;display:flex;align-items:center;justify-content:center;padding:6px 10px;box-sizing:border-box">${lg?`<img src="${lg.src}" crossorigin="anonymous" alt="" ${A.logoDark?"":`onload="${SAMPLE}"`} style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(255,255,255,.18))"><div style="display:none;width:100%">${ttl}</div>`:ttl}</div>`}</div>`;
 
@@ -174,7 +174,18 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* prize counter board */
   const RX=M+BW+22,RW=W-M-RX,FH=212,RH=H-M-BY-FH-18,cueH=F.cue?44:0;
-  const C=sections(ctx,F,(A.sections&&A.sections.length===4?A.sections.map(clean):["Quick Plays","Main Games","Bonus Round","Refills"])),items=itemsOf(ctx),pr0=prices(items,F.ei,F.egg);
+  const C=sections(ctx,F,(A.sections&&A.sections.length===4?A.sections.map(clean):["Quick Plays","Main Games","Bonus Round","Refills"])),items=itemsOf(ctx);
+  const BWd=RW-48,BHd=RH-56-cueH-22;
+  /* heading as drawn (the pixel font runs at .62 of the tier size) plus the 12px every course keeps under it, so the spread gaps never push the last line off the board */
+  const fitNow=()=>fit({C,items,tx:F.tx,W:BWd,H:BHd,maxCols:2,gap:28,cw:e.cw,cwd:e.cwd,priceW:d=>d*3.6+10,headH:tr=>(pix?Math.round(tr.h*.62):tr.h)*1.3+13+12});
+  /* notes always print: when the board only fits with notes off, card extras (dishes off the printed menu, not cooked tonight) come off
+     one at a time, last course and last dish first, never a course's only dish, until the notes fit. The card then matches the Prep sheet */
+  /* arcade.extras: false keeps every card extra off, so the board and the Prep sheet list the same dishes */
+  if(A.extras===false)for(const k in items){const L=items[k].filter(x=>!(x&&x.extra&&!x.house));if(L.length)items[k]=L}
+  let R=fitNow();
+  while(!R.tr.nl){let hit=null;for(const k of ["d","w","m","s"]){const L=items[k]||[];if(L.length<2)continue;for(let i=L.length-1;i>=0;i--)if(L[i]&&L[i].extra&&!L[i].house){hit=[k,i];break}if(hit)break}
+    if(!hit)break;items[hit[0]]=items[hit[0]].filter((x,i)=>i!==hit[1]);R=fitNow()}
+  const pr0=prices(items,F.ei,F.egg);
   /* tickets, not money: a main runs a few hundred, a snack less, and the hidden number stays in the last digits */
   const pr={};for(const k in pr0)pr[k]=pr0[k].map(v=>{let x=parseFloat(String(v).replace(/^\./,"0."))/BASE[F.ei];return Math.max(20,Math.round(x*220/10)*10)});
   /* house standards price at the foot of their course, no two items in a course share a price, and dessert stays under the mains */
@@ -183,10 +194,12 @@ window.MENU_FORMATS[ID]=ctx=>{
     if(lo)L.forEach((v,i)=>{if(it[i]&&it[i].house&&v>=lo)L[i]=Math.max(20,lo-10)});
     const used=new Set();L.forEach((v,i)=>{if(it[i]&&it[i].house)return;while(used.has(v))v+=10;used.add(v);L[i]=v});
     L.forEach((v,i)=>{if(!(it[i]&&it[i].house))return;while(used.has(v)&&v>20)v-=10;while(used.has(v))v+=10;used.add(v);L[i]=v})}
+  /* rule 8: within a course the dearest dish prints first and house lines sit at the foot. The dishes move with their prices
+     (not the prices up the list), so a card extra priced under tonight's cooked main keeps its own price */
+  for(const k in pr){const it=items[k]||[],L=pr[k];if(!it.length)continue;
+    const ord=it.map((x,i)=>i).sort((a,b)=>(it[a]&&it[a].house?1:0)-(it[b]&&it[b].house?1:0)||L[b]-L[a]||a-b);
+    items[k]=ord.map(i=>it[i]);pr[k]=ord.map(i=>L[i])}
   for(const k in pr)pr[k]=pr[k].map(String);
-  const BWd=RW-48,BHd=RH-56-cueH-22;
-  /* heading as drawn (the pixel font runs at .62 of the tier size) plus the 12px every course keeps under it, so the spread gaps never push the last line off the board */
-  const R=fit({C,items,tx:F.tx,W:BWd,H:BHd,maxCols:2,gap:28,cw:e.cw,cwd:e.cwd,priceW:d=>d*3.6+10,headH:tr=>(pix?Math.round(tr.h*.62):tr.h)*1.3+13+12});
   const head=(l,tr)=>`<div style="font:${pix?"400":"700"} ${pix?Math.round(tr.h*.62):tr.h}px/1.3 ${pix?MF:BF};color:${neon2};${pix?"":"text-transform:uppercase;letter-spacing:.08em;"}margin-bottom:8px;border-bottom:2px solid ${mix(neon2,e.panel,.55)};padding-bottom:3px">${esc(l)}</div>`;
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:neon,cw:e.cw,leader:1,lead:mix(e.soft,e.panel,.5),pp:0,price:v=>`${v}<span style="font-size:.55em;letter-spacing:.06em;margin-left:4px">TIX</span>`,cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
   /* arcade.panel {head, text, by}: a quote card at the foot of the shorter column, so a long first course leaves no bare gap */
@@ -214,11 +227,30 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* foot: tokens, high scores, top shelf */
   const FY=H-M-FH,TW=230,HW=300,SW=RW-TW-HW-36;
-  const tok=`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${TW}px;height:${FH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon,e.panel,.5)};padding:12px;overflow:hidden">
+  /* the film's prop (rule 5): a printed slip from the change machine under its kind label (BET SLIP, TICKET), title and lines in the mono face;
+     a row of small tokens sits under it when there is room */
+  const KIND={ticket:"TICKET",stub:"TICKET STUB",card:"CARD",receipt:"RECEIPT",slip:"SLIP",badge:"BADGE",tag:"TAG",token:"TOKEN",coupon:"COUPON",voucher:"VOUCHER"};
+  const pk=F.prop&&F.fl.prop?String(F.fl.prop.kind||"").toLowerCase():"",pkL=KIND[pk]||(pk?pk.toUpperCase():"");
+  /* a title that already names the object (Bet Slip, Medal Receipt, Pizza Planet Token) is the label itself */
+  const pTitleIs=F.prop&&new RegExp("\\b("+[pk,...Object.keys(KIND)].filter(Boolean).join("|")+")s?\\b","i").test(F.prop.title);
+  const pLab=F.prop?(pTitleIs?F.prop.title.toUpperCase():pkL||"PRIZE SLIP"):"",pTitle=F.prop&&!pTitleIs?F.prop.title:"",pLines=F.prop?F.prop.lines.slice(0,3):[];
+  const SM="'Share Tech Mono',monospace",slW=TW-24-24,slH=F.prop?20+(pTitle?wrapLines(pTitle,17,slW,.5)*20+4:0)+pLines.reduce((a,l)=>a+wrapLines(l,16,slW,.5)*19+3,0):0;
+  const coinRow=F.prop&&15+10+slH+10+50<=FH-24;
+  const coin=sz=>`<div style="width:${sz}px;height:${sz}px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7e7a6,#c9a43b 60%,#8a6c1c);box-shadow:inset 0 0 0 3px rgba(0,0,0,.18),0 2px 4px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center">${A.space?planet(Math.round(sz*.62),"#8a6c1c","#4a3608"):`<div style="font:700 9px/1 ${BF};letter-spacing:.12em;color:#4a3608">TOKEN</div>`}</div>`;
+  const tokProp=F.prop?`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${TW}px;height:${FH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon,e.panel,.5)};padding:12px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft};text-align:center">${esc(pLab)}</div>
+    <div style="margin-top:10px;background:#f4ecd6;color:#2a2219;border:2px dashed #b9a77c;border-radius:4px;padding:8px 10px;box-shadow:0 3px 8px rgba(0,0,0,.45);transform:rotate(${(t.tilt*.4).toFixed(2)}deg)">
+      ${pTitle?`<div style="font:700 17px/1.15 ${BF};text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px">${esc(pTitle)}</div>`:""}
+      ${pLines.map(l=>`<div style="font:400 16px/1.2 ${SM};margin-top:3px">${esc(l)}</div>`).join("")}</div>
+    ${coinRow?`<div style="margin-top:auto;display:flex;gap:10px;justify-content:center">${[1,2,3].map(()=>coin(50)).join("")}</div>`:""}</div>`:"";
+  const tok=tokProp||`<div style="position:absolute;left:${RX}px;top:${FY}px;width:${TW}px;height:${FH}px;background:${e.panel};box-sizing:border-box;border:3px solid ${mix(neon,e.panel,.5)};padding:12px;overflow:hidden">
     <div style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft};text-align:center">${esc(AL("tokens")||"TOKENS")}</div>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px">${[1,2,3,4].map(i=>`<div style="width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7e7a6,#c9a43b 60%,#8a6c1c);box-shadow:inset 0 0 0 4px rgba(0,0,0,.18),0 3px 6px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4a3608">${A.space?planet(36,"#8a6c1c","#4a3608"):`<div style="font:700 26px/1 ${BF}">${i}</div>`}<div style="font:700 11px/1.3 ${BF};letter-spacing:.14em">TOKEN</div></div>`).join("")}</div></div>`;
-  const n=F.note,ini=(n.by.replace(/[^A-Za-z ]/g,"").split(/\s+/).filter(Boolean).map(w=>w[0]).join("")+"AAA").slice(0,3).toUpperCase(),base=(+F.num||7)*1000+F.year.length*111;
-  const scores=[[ini,base+87650],["CPU",base+51200],["YOU",base+990]];
+  /* the top initials: three or more words give their initials (TCM), else the first three letters of the last word (Turkish TUR, Wreck-It Ralph RAL);
+     arcade.scores ["BRK","TOM","YOU"] lets a film name its own three players */
+  const n=F.note,wds=n.by.replace(/[^A-Za-z ]/g,"").split(/\s+/).filter(Boolean),ini=(wds.length>=3?wds.map(w=>w[0]).join(""):((wds[wds.length-1]||"")+"AAA")).slice(0,3).toUpperCase(),base=(+F.num||7)*1000+F.year.length*111;
+  const own=(A.scores||[]).map(s=>clean(s).replace(/[^A-Za-z0-9]/g,"").slice(0,3).toUpperCase()).filter(Boolean);
+  const scores=[[own[0]||ini,base+87650],[own[1]||"CPU",base+51200],[own[2]||"YOU",base+990]];
   const hs=`<div style="position:absolute;left:${RX+TW+18}px;top:${FY}px;width:${HW}px;height:${FH}px;background:#000;box-sizing:border-box;border:3px solid ${mix(neon2,"#000000",.4)};padding:12px 14px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">
     <div style="font:400 ${pix?14:20}px/1 ${MF};color:${neon2};text-align:center;letter-spacing:.1em;${glow(neon2,6)}">HIGH SCORES</div>
     ${scores.map((s,i)=>`<div style="display:flex;justify-content:space-between;font:400 ${pix?14:20}px/1.2 ${MF};color:${i?"#e6e6e6":neon}"><span>${i+1}. ${esc(s[0])}</span><span>${String(s[1]).padStart(7,"0")}</span></div>`).join("")}

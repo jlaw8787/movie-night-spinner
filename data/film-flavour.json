@@ -11248,7 +11248,7 @@
   "venue": "Turkish and Tommy's Arcade",
   "sign": "Turkish and Tommy, Fair Fights",
   "note": {
-   "text": "No more bets, boys. The dog ate the squeaky toy and the diamond, and I need a cup of tea.",
+   "text": "Tommy kept the dog. The vet found a squeaky toy, a shoe and the diamond. Still squeaking.",
    "by": "Turkish",
    "kind": "note"
   },
@@ -11263,11 +11263,14 @@
    "kind": "slip",
    "title": "Bet Slip",
    "lines": [
-    "Fight: Mickey, round four",
+    "Fight: Mickey, fixed to lose",
     "Odds: not good"
    ]
   },
-  "number": "86"
+  "number": "86",
+  "arcade": {
+   "extras": false
+  }
  },
  "Lock, Stock and Two Smoking Barrels (1998)": {
   "venue": "Harry's Back Room Card Game",
