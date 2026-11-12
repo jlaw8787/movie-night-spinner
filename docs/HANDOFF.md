@@ -826,7 +826,7 @@ Round 1 / 2 / 3 / final: foodcourt 7.0/8.3/8.8/8.6, bowling 7.8/8.6/9.0, clubhou
 
 ## 12 Nov, night: Review 24 done, fixes and The Big Lebowski merged on main (start here in the next chat)
 
-Live is still deploy 6af55cb9 (Wall-E and Toy Story). Main holds everything below plus the other chat's review 26 deploy cut (29 films), merged in 48d8a7db; not deployed yet. Each branch had a separate reviewer before merge.
+Live: deploy 6af591c0 (main cc6be7a2), 12 Nov night, Josh said deploy. Holds everything below plus the other chat's review 26 deploy cut (29 films), merged in 48d8a7db. Live files match the deploy copy; no Netlify badge script; live phone walk (Big Lebowski, Back to the Future, Kingpin) no errors, only outside host image.tmdb.org. Each branch had a separate reviewer before merge.
 
 ### Review 24
 docs/review-24.md, 9.0 out of 10, screenshots review-24-01 to 18. All Review 23 fixes held. Josh chose to fix all 8 items.
@@ -848,4 +848,4 @@ All 18 node tests, check-browser, dialogs, check-white-bar 91 of 91, check-kids-
 - Not tested: WebKit is not installed here, so no iPhone Safari run this round.
 
 ### Next
-Josh to say deploy. Then the 42 side-branch films (section above) or the iPhone build, Josh to choose.
+The 13 held side-branch films (review 26 section) or the iPhone build, Josh to choose.
