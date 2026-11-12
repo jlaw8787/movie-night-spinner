@@ -10,7 +10,7 @@ const _ROOT_dimsum=((document.currentScript&&document.currentScript.src)||"").re
 const ID="dimsum",_ROOT=_ROOT_dimsum;
 
 /* ---------- shared helpers ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[–—]\s*/g,", ").replace(/\s+-\s+/g,", ");
+const clean=s=>String(s==null?"":s).replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+-\s+/g,", ");
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const cap=s=>{s=clean(s).trim();return s?s.charAt(0).toUpperCase()+s.slice(1):""};
 const hex=h=>{h=String(h||"").replace("#","");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
@@ -73,19 +73,27 @@ const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?|shrimp|crab|scallop
 function tidyPrices(menu,P,ei){
   const val=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?null:n};
   const END=[0,.25,.5,.75,.95];
-  const up=v=>{if(ei>=6)return Math.round(v)+1;if(v<1){const n=Math.round((v+.1)*100)/100;return n<.975?n:1.25}const f=Math.round((v%1)*100)/100,i=Math.floor(v),e=END.find(x=>x>f+.001);return e!=null?i+e:i+1+.25};
   const down=v=>{if(ei>=6)return Math.max(1,Math.round(v)-1);if(v<=1)return Math.max(.05,Math.round((v-.1)*100)/100);const f=Math.round((v%1)*100)/100,i=Math.floor(v),e=[...END].reverse().find(x=>x<f-.001);return e!=null?i+e:i-1+.95};
-  const fmt=v=>money(v,ei);const out={};
+  const fmt=v=>money(v,ei);const out={},order={};
   for(const k of ["s","m","w","d"]){const its=menu[k]||[],pr=(P[k]||[]).slice();if(pr.some(x=>val(x)==null)){out[k]=pr;continue}
     /* dear dishes among the non-house rows take the highest of those rows' prices, the rest keep their order */
     const idx=its.map((it,i)=>i).filter(i=>i<pr.length&&!(its[i]&&its[i].house));
     if(idx.some(i=>DEAR.test(its[i].n||""))){const vals=idx.map(i=>val(pr[i])).sort((a,b)=>a-b),plain=idx.filter(i=>!DEAR.test(its[i].n||"")),dear=idx.filter(i=>DEAR.test(its[i].n||""));
       [...plain,...dear].forEach((i,j)=>{pr[i]=fmt(vals[j])})}
-    /* no shared prices: a repeat moves up to the next price ending */
-    const seen=[];pr.forEach((x,i)=>{let v=val(x);if(seen.some(s=>Math.abs(s-v)<.001)){while(seen.some(s=>Math.abs(s-v)<.001))v=up(v);pr[i]=fmt(v)}seen.push(v)});
+    /* rule 8: the dearest dish prints first. Rows go in price order (a tie goes to a dear dish, then a cooked dish over a card extra,
+       then menu order) and each price sits under the one above it: a repeat moves down to the next price ending, never up.
+       House lines keep the last slots and only step down off a price already used */
+    const rk=i=>(DEAR.test(its[i].n||"")?0:2)+(its[i].extra?1:0);
+    const ord=idx.slice().sort((a,b)=>val(pr[b])-val(pr[a])||rk(a)-rk(b)||a-b);let prev=null;
+    ord.forEach(i=>{let v=val(pr[i]);if(prev!=null&&v>=prev-.001)v=down(prev);pr[i]=fmt(v);prev=val(pr[i])});
+    const seen=ord.map(i=>val(pr[i])),hs=pr.map((x,i)=>i).filter(i=>!idx.includes(i));
+    /* house lines sit at the foot, so they price under the cheapest dish above them: dearest first still holds down the whole course */
+    hs.forEach(i=>{let v=val(pr[i]);if(prev!=null&&v>=prev-.001)v=down(prev);for(let g=0;g<20&&seen.some(s=>Math.abs(s-v)<.001);g++)v=down(v);pr[i]=fmt(v);seen.push(v);prev=v});
+    order[k]=[...ord,...hs,...its.map((it,i)=>i).filter(i=>i>=pr.length)];
     out[k]=pr}
   const minM=Math.min(...(out.m||[]).map(val).filter(v=>v!=null));
-  if(isFinite(minM)&&(out.w||[]).some(x=>val(x)>=minM)){let v=minM;const n=out.w.length;const ws=[];for(let i=0;i<n;i++){v=down(v);ws.unshift(v)}out.w=ws.map(fmt)}
+  if(isFinite(minM)&&(out.w||[]).some(x=>val(x)>=minM)){let v=minM;const n=out.w.length;const ws=[];for(let i=0;i<n;i++){v=down(v);ws.push(v)}out.w=ws.map(fmt);order.w=(menu.w||[]).map((it,i)=>i)}
+  Object.defineProperty(out,"order",{value:order,enumerable:false});
   return out;
 }
 /* everything a format needs from the film, with safe fallbacks */
@@ -185,7 +193,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const SX=LX+LW+30,SW=W-SX-34,ST=26,SH=H-ST-26-FH-18;
   const TOPH=66,COLH=34,cueH=F.cue?42:0,STAMP=52,PRW=84,QTY=70;
   const C=sections(ctx,F,["Small Plates","Kitchen Specials","Sweet","Tea and Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
-  const GH=SH-TOPH-COLH-cueH-14,DW=SW-24-STAMP-PRW-QTY;let NW=Math.round(DW*.4),TW2=DW-NW-24,PB=7;
+  /* rows print in price order, dearest first, house lines last (the order tidyPrices settled) */
+  for(const [k] of C){const o=pr.order&&pr.order[k];if(o&&o.length===items[k].length){items[k]=o.map(i=>items[k][i]);pr[k]=o.map(i=>pr[k][i])}}
+  const CRH=18,GH=SH-TOPH-COLH-cueH-CRH-14,DW=SW-24-STAMP-PRW-QTY;let NW=Math.round(DW*.4),TW2=DW-NW-24,PB=7;
   /* one wide sheet: the dish on the left of its box, the note beside it, so notes never get squeezed out */
   /* every note prints in full at one size: the fit only steps the type down, it never cuts note lines.
      cw is measured against the italic note face (measured: bold names run near cwd, italic notes about 15% under cw), so a full note is not overcounted */
@@ -195,28 +205,31 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* notes sit in their own column here, so every tier size is usable (the tier's nl does not apply), plus two small steps */
   const TS=TIERS.filter((x,i,a)=>a.findIndex(y=>y.d===x.d&&y.n===x.n)===i).sort((x,y)=>y.d-x.d||y.n-x.n).concat([{d:16,n:13,g:3,h:18,nl:1},{d:15,n:12,g:3,h:17,nl:1}]);
   let tr=null;for(const x of TS){for(const [r,b] of [[.4,7],[.34,7],[.34,4]]){NW=Math.round(DW*r);TW2=DW-NW-24;PB=b;if(tot(x)*1.04<=GH){tr=x;break}}if(tr)break}if(!tr)tr=TS[TS.length-1];
-  const spare=Math.max(0,GH-tot(tr)*1.04),nIt=C.reduce((a,[k])=>a+items[k].length,0),pad=PB+Math.min(12,Math.floor(spare/Math.max(1,nIt)/2));
+  const spare=Math.max(0,GH-tot(tr)*1.04),nIt=C.reduce((a,[k])=>a+items[k].length,0),pad=PB+Math.min(16,Math.floor(spare/Math.max(1,nIt)/2));
   /* what is still empty under the last row: over about 100px it takes a real still from the film with a short caption */
   const used=COLH+tot(tr)+(pad-PB)*2*nIt,left=GH+COLH-used,stillSrc=F.stillSrc||F.still2;
-  const fill=left>110&&stillSrc?`<div style="position:absolute;left:24px;right:24px;top:${TOPH+used+12}px;height:${Math.round(left-24)}px;overflow:hidden;background:#111;box-shadow:inset 0 0 0 3px ${gold}"><img src="${stillSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${t.photo}"><div style="position:absolute;left:0;bottom:0;padding:4px 10px;background:${e.paper};font:italic 400 13px/1.2 ${BF};color:${e.soft}">From ${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div></div>`:"";
+  const fill=left>100&&stillSrc?`<div style="position:absolute;left:24px;right:24px;top:${TOPH+used+12}px;height:${Math.round(left-24)}px;overflow:hidden;background:#111;box-shadow:inset 0 0 0 3px ${gold}"><img src="${stillSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${t.photo}"><div style="position:absolute;left:0;bottom:0;padding:4px 10px;background:${e.paper};font:italic 400 13px/1.2 ${BF};color:${e.soft}">From ${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div></div>`:"";
   const bl=`1.5px solid ${mix(red,e.paper,.55)}`;
-  const rows=C.map(([k,l])=>`<div style="display:flex;height:${Math.round(tr.h*.9)+8}px;align-items:center;background:${mix(red,e.paper,.88)};border-bottom:${bl};margin-top:4px"><div style="flex:0 0 ${STAMP}px"></div><div style="flex:1;font:400 ${Math.round(tr.h*.72)}px/1 ${DF};color:${red};letter-spacing:.08em">${esc(l)}</div></div>`+
+  /* no still to take the spare: the rows share what the estimate left over (the estimate runs a little high), each capped */
+  const grow=!fill;
+  const rows=C.map(([k,l])=>`<div style="display:flex;flex:0 0 auto;height:${Math.round(tr.h*.9)+8}px;align-items:center;background:${mix(red,e.paper,.88)};border-bottom:${bl};margin-top:4px"><div style="flex:0 0 ${STAMP}px"></div><div style="flex:1;font:400 ${Math.round(tr.h*.72)}px/1 ${DF};color:${red};letter-spacing:.08em">${esc(l)}</div></div>`+
     items[k].map((it,i)=>{
-      return `<div style="display:flex;border-bottom:${bl};align-items:stretch">
+      return `<div style="display:flex;border-bottom:${bl};align-items:stretch;${grow?`flex:1 0 auto;max-height:${Math.round(rowH(tr,it)+(pad-PB)*2+28)}px`:""}">
         <div style="flex:0 0 ${STAMP}px;border-right:${bl};display:flex;align-items:center;justify-content:center;font:700 15px/1 ${BF};color:${e.soft}">${String.fromCharCode(65+"smwd".indexOf(k))}${i+1}</div>
         <div style="flex:0 0 ${NW}px;box-sizing:border-box;padding:${pad}px 12px;display:flex;align-items:center"><div style="font:700 ${tr.d}px/1.15 ${BF};color:${e.ink};${clamp(3)}">${esc(F.tx(it.n))}</div></div>
         <div style="flex:1;min-width:0;padding:${pad}px 12px;display:flex;align-items:center"><div style="font:italic 400 ${tr.n}px/1.3 ${BF};color:${e.soft}">${esc(cap(F.tx(it.note)))}</div></div>
         <div style="flex:0 0 ${PRW}px;border-left:${bl};display:flex;align-items:center;justify-content:center;font:700 ${tr.d}px/1 ${BF};color:${e.ink}">${pr[k][i]}</div>
-        <div style="flex:0 0 ${QTY}px;border-left:${bl};display:flex;align-items:center;justify-content:center"><div style="width:38px;height:${Math.min(36,Math.round(tr.d*1.5))}px;border:2px solid ${mix(e.ink,e.paper,.4)};display:flex;align-items:center;justify-content:center;font:600 ${Math.round(tr.d*1.3)}px/1 ${PEN};color:#1f3fa0">${it.house?"":"&#10003;"}</div></div></div>`}).join("")).join("");
+        <div style="flex:0 0 ${QTY}px;border-left:${bl};display:flex;align-items:center;justify-content:center"><div style="width:38px;height:${Math.min(36,Math.round(tr.d*1.5))}px;border:2px solid ${mix(e.ink,e.paper,.4)};display:flex;align-items:center;justify-content:center;font:600 ${Math.round(tr.d*1.3)}px/1 ${PEN};color:#1f3fa0">${it.house||it.extra?"":"&#10003;"}</div></div></div>`}).join("")).join("");
   const colHead=`<div style="height:${COLH}px;display:flex;font:700 14px/${COLH}px ${BF};letter-spacing:.14em;color:${e.soft};border-bottom:2px solid ${red}"><div style="flex:0 0 ${STAMP}px;text-align:center">NO.</div><div style="flex:0 0 ${NW}px;padding-left:12px;box-sizing:border-box">DISH</div><div style="flex:1;padding-left:12px">FROM THE KITCHEN</div><div style="flex:0 0 ${PRW}px;text-align:center">PRICE</div><div style="flex:0 0 ${QTY}px;text-align:center">QTY</div></div>`;
-  const grid=`<div style="position:absolute;left:12px;width:${SW-24}px;top:${TOPH}px;height:${GH+COLH}px;overflow:hidden">${colHead}${rows}</div>`;
+  const grid=`<div style="position:absolute;left:12px;width:${SW-24}px;top:${TOPH}px;height:${GH+COLH}px;overflow:hidden;display:flex;flex-direction:column"><div style="flex:0 0 auto">${colHead}</div>${rows}</div>`;
   const sheet=`<div style="position:absolute;left:${SX}px;top:${ST}px;width:${SW}px;height:${SH}px;background:${e.paper};box-shadow:${shadow};overflow:hidden">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.1+t.wear*.4).toFixed(2)};mix-blend-mode:multiply"></div>
     <div style="position:absolute;left:12px;right:12px;top:10px;height:${TOPH-14}px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px double ${red}">
       <div style="font:400 30px/1.2 ${DF};color:${red};letter-spacing:.1em">ORDER SHEET</div>
       <div style="display:flex;align-items:baseline;gap:10px"><span style="font:700 15px/1 ${BF};letter-spacing:.2em;color:${e.soft}">TABLE</span><span style="font:600 44px/1 ${PEN};color:#1f3fa0;border-bottom:2px solid ${e.soft};min-width:70px;text-align:center">${esc(F.num.slice(-2))}</span></div></div>
     ${grid}${fill}
-    ${F.cue?`<div style="position:absolute;left:24px;right:24px;bottom:8px;height:${cueH-8}px">${cueLine(F,BF,e.soft,red,15)}</div>`:""}
+    <div style="position:absolute;left:24px;right:24px;bottom:6px;height:${CRH-2}px;text-align:right;font:italic 400 12px/${CRH-2}px ${BF};color:${e.soft};white-space:nowrap">${esc(credit(F))}</div>
+    ${F.cue?`<div style="position:absolute;left:24px;right:24px;bottom:${8+CRH}px;height:${cueH-8}px">${cueLine(F,BF,e.soft,red,15)}</div>`:""}
     <div style="position:absolute;left:290px;top:14px;width:150px;height:46px;border:3px solid ${mix(red,e.paper,.15)};border-radius:6px;transform:rotate(-6deg);opacity:.6;display:flex;align-items:center;justify-content:center;font:400 17px/1 ${DF};color:${red};letter-spacing:.08em">TROLLEY CHECKED</div></div>`;
 
   /* foot: tea tag and the trolley line */
@@ -227,15 +240,17 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tagT=pr2?pr2.title:"Jasmine",tagS=tagT.length>26?19:tagT.length>18?21:26;
   /* a real quote prints in quote marks as overheard; anything else is the trolley's own line, plain */
   const isQ=!!(F.fl.note&&F.fl.note.kind==="quote"&&F.fl.note.text);
+  /* a line signed by a character (not the trolley lady or the house) is heard from the next table, not the trolley */
+  const byChar=!isQ&&!!(F.fl.note&&F.fl.note.text)&&!/^(the )?(trolley lady|house)$/i.test(n.by);
   const foot=`<div style="position:absolute;left:${SX}px;top:${FY}px;width:${TW}px;height:${FH}px;background:${mix(gold,"#ffffff",.55)};box-shadow:${shadow};box-sizing:border-box;padding:14px 16px 12px 46px;border-radius:6px;transform:rotate(${(t.tilt*.6).toFixed(2)}deg);overflow:hidden">
       <div style="position:absolute;left:14px;top:50%;margin-top:-10px;width:20px;height:20px;border-radius:50%;background:${e.table}"></div>
       <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${mix(gold,"#000000",.55)}">${esc(tagHead)}</div>
       <div style="font:400 ${tagS}px/1.15 ${DF};color:${e.ink};margin-top:8px;text-wrap:balance;${clamp(2)}">${esc(tagT)}</div>
-      <div style="font:italic 400 15px/1.25 ${BF};color:${e.soft};margin-top:4px;${clamp(2)}">${esc(pr2&&pr2.lines.length?pr2.lines.slice(0,2).join(". "):"Lid off the pot for a refill")}</div></div>
+      <div style="font:italic 400 15px/1.25 ${BF};color:${e.soft};margin-top:4px">${(pr2&&pr2.lines.length?pr2.lines.slice(0,2):["Lid off the pot for a refill"]).map(l=>`<div>${esc(l)}</div>`).join("")}</div></div>
     <div style="position:absolute;left:${SX+TW+20}px;top:${FY}px;width:${SW-TW-20}px;height:${FH}px;background:${e.paper};box-shadow:${shadow};box-sizing:border-box;padding:12px 18px;border-left:8px solid ${red};display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
-      <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${red}">${isQ?"OVERHEARD":"FROM THE TROLLEY"}</div>
+      <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${red}">${isQ?"OVERHEARD":byChar?"AT THE NEXT TABLE":"FROM THE TROLLEY"}</div>
       <div style="font:italic 400 ${nS}px/1.32 ${BF};color:${e.ink};${clamp(3)}">${isQ?"&ldquo;"+esc(n.text)+"&rdquo;":esc(n.text)}</div>
-      <div style="display:flex;justify-content:space-between;gap:10px;font:400 14px/1.2 ${BF};color:${e.soft}"><b style="${clamp(1)}">${esc(n.by)}</b><span style="white-space:nowrap">${esc(credit(F))}</span></div></div>`;
+      <div style="font:700 14px/1.2 ${BF};color:${e.soft};${clamp(1)}">${esc(n.by)}</div></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${table}${head}${poster}${winks}${sheet}${foot}</div>`]};
 };
 })();
