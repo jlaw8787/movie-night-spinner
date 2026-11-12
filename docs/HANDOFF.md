@@ -592,3 +592,30 @@ All 19 tests, check-browser (3 clean runs), check-store-taps, check-print-text o
 1. fix21-checks (4 commits, harness tweaks for check-phone-fit, check-pdf-tone, check-prep-a4): separate reviewer, merge, then run the three checks on all 900 and report findings.
 2. fix21-fonts (WIP, never reviewed, 955 files, about 23 MB of local fonts plus local PDF libraries): report the first-visit download cost and options (for example only the fonts each menu uses) before finishing it.
 3. fix21-app (WIP, never reviewed, Capacitor app groundwork and app mode): ask Josh before starting.
+
+## 12 Nov, afternoon: old branches done, fonts live (start here in the next chat)
+
+Live: deploy 6af53819 (main c6c9c600), 12 Nov afternoon. Live files checked against the deploy copy (index.html differs only by Netlify's form and toolbar edits). Live phone check: Kung Fu Panda, Die Hard 2, E.T., Tombstone, Save PDF libraries load, no errors, only outside host is image.tmdb.org. GitHub push works from these sessions; main is pushed.
+
+### Merged on main, each reviewed by a separate reviewer
+- fix21-checks (two review rounds): scaled tone runs (MNS_TONE_SCALE other than 2.5) end with exit 2, not a sign-off; bad MNS_SHARD or a mistyped film fails; skipped films are listed and give exit 2; per-film and per-batch timeouts; tone check reopens a crashed page; proxy host parsed with new URL.
+- fix21-checks-tdz: start-up wait (appReady) waits 60 s, reloads once, logs page errors. Same old wait still in check-browser, audit-extract, check-prices, check-print-text, check-kids-cards, check-cut-words (not changed yet).
+- fix21-fonts (two review rounds): every font local in assets/fonts (scripts/fetch-fonts.cjs, 448 specs, 288 families, 905 files, about 20 MB on Netlify, visitors only download what a menu uses; first visit about 21 KB more than Google, for fonts.js). Save PDF libraries in assets/lib. No Google Fonts or cdnjs calls. CJK families (LXGW WenKai TC, Noto Serif TC) get a face holding only the characters the menus print; fetch-fonts --check fails a CJK family with Latin only. sw.js keeps fonts in mns-static and drops files no longer in assets/fonts/files.json on update. Rerun scripts/sweep-font-queries.cjs then fetch-fonts after adding a menu that picks fonts from data. Not done: LOOK arrays (unused airline and bistro looks) in the sweep's collect(); scripts/brand/*.html and make-type-posters.cjs still use Google (offline tools).
+
+### Findings, all 900 (main a53ff40f, before fonts)
+- Phone fit 900/900 pass. Prep A4 900/900 pass (1738 pages at 4 guests).
+- PDF tone 885/900. 13 false alarms on hand-built cards (Goodfellas, The Untouchables, Big Night, Ratatouille, Kung Fu Panda, My Cousin Vinny, Ghostbusters, When Harry Met Sally, Big Trouble in Little China, Back to the Future, The Big Lebowski, Home Alone, Friday): the check compares the dark page round the card with white paper round the print. Card only, Home Alone is 0.2 levels; Back to the Future 7.0 (borderline). Fix the check to measure the card only.
+- Real: Sixteen Candles and The Wedding Singer (invite) print about 9 levels darker and 12 to 14% flatter than the screen; the pearl paper sheen comes out greyer. Kill Bill Vol. 2 (invite) passes. Fix next.
+- On the fonts branch before merge: 19 tests, check-browser, store taps, phone fit 900/900, print text 900/900 (six chunks of 150) all pass.
+
+### fix21-app: assessed, not merged (Josh chose assess first)
+App mode (?app=1) shows no film artwork and made zero TMDB requests across 7 films and the shop; website unchanged with it off. Before merging: 3 tests fail (week, poster-menus, shopping: no window or REEL stub in the test harness); REEL used unguarded at calendar, share list, Save image, share link (app.js ~2178, 2237, 3551, 3756); stamps not rebuilt (app-mode.js?v=0); app mode misses assets/hero/latedoor.webp and shopfront*.webp (poster lookalikes); YouTube trailers still play in app mode (Josh to decide); docs/APP-BUILD.md never written; Android needs POST_NOTIFICATIONS and SCHEDULE_EXACT_ALARM; service worker should be skipped in app mode. Then Android debug build (works on Linux), iPhone needs a cloud Mac with Xcode plus Apple Developer (US$99) and Play Console (US$25). Size medium; main risk Apple guideline 4.2.
+
+### Machine notes (new)
+- Run long checks from their own worktree (git worktree add --detach /tmp/wt-run <commit>), never the folder you are editing. Switching branches mid-run tested the wrong code this session.
+- check-print-text on all 900 in one page gives no progress and risks memory; run six chunks of 150 by name.
+- tests/dialogs.test.cjs opens a browser: count it against the two-browser limit.
+
+### Next (suggested)
+1. Fix Sixteen Candles and The Wedding Singer print tone, and make the tone check measure the card only.
+2. fix21-app fixes listed above, if Josh wants to go ahead.
