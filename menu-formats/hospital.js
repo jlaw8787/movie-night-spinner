@@ -164,7 +164,7 @@ const PEN="'Caveat',cursive";
 window.MENU_FORMATS[ID]=ctx=>{
   const F=film(ctx,t=>t.length<=18?t+" General":"County General","Patient meal service",{text:"Ring the buzzer if you want the jelly, not because you're bored.",by:"Ward Nurse"});
   /* per-film hospital settings (data/film-flavour.json "hospital"): noLogo: the title and year sit in the sign panel instead of the logo;
-     returnBy: the line at the top right of the order form (default "Hand to the duty nurse") */
+     returnBy: the line at the top right of the order form (default "Hand to the duty nurse"); stampYear: the story's year on the kitchen stamp */
   const HS=F.fl.hospital||{};
   const e=E[F.b],t=F.t,grain=grainOf(ctx,_ROOT),DF=e.disp,BF=e.body;
   const acc=readable(F.pal.accent&&lum(F.pal.accent)<.35?F.pal.accent:e.acc,e.form,4.5,e.acc),rule=e.rule;
@@ -204,11 +204,22 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* right: the form */
   const FX=M+CW+24,FW=W-M-FX,FY0=CY,NH=150,FHt=H-M-FY0-NH-16,cueH=F.cue?42:0,BOX=34;
   const C=sections(ctx,F,["Starters","Main Meal","Dessert","Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
-  const MW=FW-36,MH=FHt-56-cueH-12;
+  /* review 26b: a real patient meal order says which meal and diet it is: a fixed field row under the top bar, the dishes start under it */
+  const dietW=(()=>{try{const d=typeof dietLabel==="function"?dietLabel():"";return d?d.replace(/\s*·\s*/g,", ").toUpperCase():"FULL WARD"}catch(err){return "FULL WARD"}})();
+  const FR=24,MT=56+FR,MW=FW-36,MH=FHt-MT-cueH-12;
   /* a patient meal card carries no prices (Josh, 12 Nov): no price column, no leader */
   const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:2,gap:26,cw:e.cw,cwd:e.cwd,indent:BOX+12,priceW:()=>BOX+12});
   const head=(l,tr)=>`<div style="font:700 ${Math.round(tr.h*.8)}px/1.2 ${DF};color:${acc};text-transform:uppercase;letter-spacing:.12em;border-bottom:2px solid ${rule};padding-bottom:3px;margin-bottom:8px">${esc(l)}</div>`;
-  const pre=(k,i,tr)=>`<div style="position:absolute;left:0;top:2px;width:${BOX-6}px;height:${BOX-6}px;border:2.5px solid ${e.ink};background:#fff;display:flex;align-items:center;justify-content:center;font:600 ${BOX+6}px/1 ${PEN};color:#1f3fa0">${i===0?"&#10003;":""}</div>`;
+  /* review 26b: the pen ticks are tonight's cook, the same dishes the Prep sheet cooks by default. The shared planner (planAll) names
+     them when it is there: a dish it marks spare, blocked or extra stays unticked. Without it, every dish with a tested recipe (not a
+     card extra, not a house line) is ticked, capped at five the way the planner picks: two starters, a main, a sweet, a drink, then the rest */
+  const keyOf=it=>String((it&&(it.orig||it.n))||"").toLowerCase();
+  const cooked=(()=>{try{if(typeof planAll==="function"&&F.f&&F.f._r2){const s=new Set();for(const d of planAll(F.f))if(!d.spare&&!d.blocked&&!d.extra&&!d.snack)s.add(String(d.orig||d.n).toLowerCase());
+      const onCard=["s","m","w","d"].some(k=>(items[k]||[]).some(it=>s.has(keyOf(it))));if(s.size&&onCard)return s}}catch(err){}
+    const s=new Set(),can=k=>(items[k]||[]).filter(it=>!it.extra&&!it.house);
+    for(const [k,n] of [["s",2],["m",1],["w",1],["d",1]])can(k).slice(0,n).forEach(it=>s.add(keyOf(it)));
+    for(const k of ["s","m","w","d"])for(const it of can(k))if(s.size<5)s.add(keyOf(it));return s})();
+  const pre=(k,i,tr,it)=>`<div style="position:absolute;left:0;top:2px;width:${BOX-6}px;height:${BOX-6}px;border:2.5px solid ${e.ink};background:#fff;display:flex;align-items:center;justify-content:center;font:600 ${BOX+6}px/1 ${PEN};color:#1f3fa0">${it&&!it.extra&&!it.house&&cooked.has(keyOf(it))?"&#10003;":""}</div>`;
   const o={head,pre,indent:BOX+12,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:e.soft,pw:400,pp:-2,cw:e.cw,leader:0,price:()=>""};
   /* review 26: each column is a wrapping flex box the height of the form, so the real leftover on paper (not the estimate, which runs
      high or low by film) is what gets used. Headings, dishes and the gaps between them are the column's own flex items; the gaps grow
@@ -221,18 +232,20 @@ window.MENU_FORMATS[ID]=ctx=>{
   const colHtml=(col,ci)=>{const src=ci===first?F.stillSrc:(F.still2||"");
     const ig=`<div style="flex:1 1 0;width:100%;max-height:10px"></div>`,cg=`<div style="flex:1 1 0;width:100%;min-height:12px;max-height:40px"></div>`;
     const wrapI=h=>`<div style="flex:0 0 auto;width:100%">${h}</div>`;
-    const body=col.map(([k,label])=>wrapI(head(label,R.tr))+items[k].slice(0,4).map((it,i)=>wrapI(course([k,""],{[k]:[it]},{[k]:[pr[k][i]]},R,Object.assign({},o,{head:()=>"",cgap:"0",ig:0,pre:(kk,ii,tr)=>pre(k,i,tr)})))).join(ig)).join(cg);
+    const body=col.map(([k,label])=>wrapI(head(label,R.tr))+items[k].slice(0,4).map((it,i)=>wrapI(course([k,""],{[k]:[it]},{[k]:[pr[k][i]]},R,Object.assign({},o,{head:()=>"",cgap:"0",ig:0,pre:(kk,ii,tr)=>pre(k,i,tr,it)})))).join(ig)).join(cg);
     /* the still is a picture with a caption, aria-hidden: when it wraps out of sight its caption is clipped, not over the next column.
        A thin border, not a shadow, so nothing of a wrapped still bleeds back into view */
     const still=src?`<div aria-hidden="true" style="flex:1000 1 100px;min-height:100px;width:100%;margin-top:6px;box-sizing:border-box;background:#fff;padding:6px 6px 0;border:1px solid ${mix(rule,"#000000",.15)};display:flex;flex-direction:column">
         <div style="flex:1;position:relative;overflow:hidden;background:#111">${photo(src,t.photo,"center 35%")}</div>
         <div style="flex:0 0 22px;font:400 13px/22px ${BF};color:${e.soft};white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?` (${esc(F.year)})`:""}, film still</div></div>`:"";
     return `<div style="flex:0 0 ${R.CW}px;width:${R.CW}px;height:${MH}px;display:flex;flex-direction:column;flex-wrap:wrap;align-content:flex-start;column-gap:40px;overflow:hidden">${body}${still}</div>`};
-  /* the ward kitchen's stamp, inked across the middle of the form's top bar */
-  const stamp=`<span style="position:absolute;left:50%;top:-4px;margin-left:-70px;width:140px;height:38px;box-sizing:border-box;border:3px solid ${acc};border-radius:6px;transform:rotate(-5deg);display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 13px/1.1 ${BF};color:${acc};letter-spacing:.12em;opacity:.8;text-align:center">WARD KITCHEN<span style="font-size:12px">${esc(F.year||"")}</span></span>`;
+  /* the ward kitchen's stamp, inked across the middle of the form's top bar. It reads as a date, so a film set in another year than its
+     release sets hospital.stampYear (review 26b: T2 is set in 1995, Shutter Island in 1954, Halloween II on 31 October 1978) */
+  const stamp=`<span style="position:absolute;left:50%;top:-4px;margin-left:-70px;width:140px;height:38px;box-sizing:border-box;border:3px solid ${acc};border-radius:6px;transform:rotate(-5deg);display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 13px/1.1 ${BF};color:${acc};letter-spacing:.12em;opacity:.8;text-align:center">WARD KITCHEN<span style="font-size:12px">${esc(String(HS.stampYear||F.year||""))}</span></span>`;
   const form=`<div style="position:absolute;left:${FX}px;top:${FY0}px;width:${FW}px;height:${FHt}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)}">
     <div style="position:absolute;left:18px;right:18px;top:12px;height:34px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid ${e.ink}"><span style="font:700 19px/1 ${DF};color:${e.ink}">Please tick your choices</span>${stamp}<span style="font:400 15px/1 ${BF};color:${e.soft}">${esc(HS.returnBy||"Hand to the duty nurse")}</span></div>
-    <div style="position:absolute;left:18px;top:56px;width:${MW}px;height:${MH}px;display:flex;gap:26px;overflow:hidden">${R.cols.map(colHtml).join("")}</div>
+    <div style="position:absolute;left:18px;right:18px;top:52px;height:${FR-4}px;display:flex;gap:30px;align-items:center;font:700 13px/1 'Courier Prime',monospace;color:${e.soft};letter-spacing:.06em"><span>MEAL: <b style="color:${e.ink}">DINNER</b></span><span>DIET: <b style="color:${e.ink}">${esc(dietW)}</b></span><span style="flex:1;display:flex;align-items:baseline;gap:6px">DATE:<span style="flex:1;max-width:150px;border-bottom:1.5px solid ${e.soft};height:11px"></span></span></div>
+    <div style="position:absolute;left:18px;top:${MT}px;width:${MW}px;height:${MH}px;display:flex;gap:26px;overflow:hidden">${R.cols.map(colHtml).join("")}</div>
     ${F.cue?`<div style="position:absolute;left:18px;right:18px;bottom:8px;height:${cueH-8}px;border-top:1px solid ${rule};padding-top:5px">${cueLine(F,BF,e.soft,acc,15)}</div>`:""}</div>`;
   /* the film's prop pinned as a small card: its kind as the label, then the title and its lines (rule 5). Sizes step down until it fits */
   const P=F.prop,PKW=230-20-24;let propCard="";
@@ -245,10 +258,14 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="font:700 ${ts}px/1.15 ${DF};color:${acc};margin-bottom:4px">${esc(F.tx(P.title))}</div>
         ${lines.map(l=>`<div style="font:400 ${ls}px/1.25 ${BF};color:${e.ink}">${esc(l)}</div>`).join("")}</div>`}
   /* foot: a real line from the film prints in quote marks under "Overheard"; house copy prints plain as the nurse's note */
-  const n=F.note,isQ=!!(F.fl.note&&F.fl.note.kind==="quote"),NY=H-M-NH,nS=n.text.length>130?24:n.text.length>80?27:30,SW2=230;
+  const n=F.note,isQ=!!(F.fl.note&&F.fl.note.kind==="quote"),NY=H-M-NH,SW2=230;
+  /* review 26b: the pen is as big as the note's box allows (up to 44px), so a short line fills the card instead of sitting over blank rules */
+  const nInW=FW-SW2-16-32,nTxt=n.text+(isQ?"  ":" ")+n.by;let nS=24;for(const s2 of [44,40,36,33,30,27,24])if(Math.min(3,wrapLines(nTxt,s2,nInW,.42))*s2*1.1<=NH-38&&wrapLines(nTxt,s2,nInW,.42)<=3){nS=s2;break}
+  /* a line that fits on one row signs off on the next, like a written note, instead of leaving the lower rules bare */
+  const byOwn=wrapLines(n.text,nS,nInW,.42)===1&&2*nS*1.1<=NH-38;
   const note=`<div style="position:absolute;left:${FX}px;top:${NY}px;width:${FW-SW2-16}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:repeating-linear-gradient(#fffef6 0 29px,${mix(rule,"#ffffff",.5)} 29px 30px);padding:8px 14px;overflow:hidden">
       <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${e.soft}">${isQ?"OVERHEARD ON THE WARD":"NURSE'S NOTE"}</div>
-      <div style="font:600 ${nS}px/1.1 ${PEN};color:#1f3fa0;margin-top:4px;${clamp(3)}">${isQ?`&ldquo;${esc(n.text)}&rdquo;`:esc(n.text)} <span style="color:${acc}">${esc(n.by)}</span></div></div>
+      <div style="font:600 ${nS}px/1.1 ${PEN};color:#1f3fa0;margin-top:4px;${clamp(3)}">${isQ?`&ldquo;${esc(n.text)}&rdquo;`:esc(n.text)} <span style="color:${acc}${byOwn?";display:block;text-align:right;padding-right:20px":""}">${esc(n.by)}</span></div></div>
     <div style="position:absolute;left:${FX+FW-SW2}px;top:${NY}px;width:${SW2}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)};display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;padding:8px 10px 6px">${propCard}
       <div style="font:400 12px/1.2 ${BF};color:${e.soft};text-align:center">${esc(credit(F).replace("Prices subject to change. ",""))}</div></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}</div>`]};

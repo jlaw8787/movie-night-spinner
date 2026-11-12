@@ -5392,7 +5392,10 @@
    ]
   },
   "number": "67",
-  "patient": "Rachel Solando"
+  "patient": "Rachel Solando",
+  "hospital": {
+   "stampYear": "1954"
+  }
  },
  "A Nightmare on Elm Street (1984)": {
   "venue": "Springwood High Cafeteria",
@@ -13088,7 +13091,7 @@
  },
  "Terminator 2: Judgment Day (1991)": {
   "venue": "Pescadero State Hospital",
-  "sign": "Criminally disordered retention facility",
+  "sign": "For the criminally insane",
   "note": {
    "text": "Come with me if you want to live.",
    "by": "The Terminator",
@@ -13102,7 +13105,7 @@
    "The steel mill and the vat of molten metal"
   ],
   "prop": {
-   "kind": "card",
+   "kind": "chart",
    "title": "Patient Card",
    "lines": [
     "High-security wing",
@@ -13113,7 +13116,10 @@
   "words": {
    "Stay indoors if you can": "Judgment Day: August 29, 1997"
   },
-  "patient": "Sarah Connor"
+  "patient": "Sarah Connor",
+  "hospital": {
+   "stampYear": "1995"
+  }
  },
  "Predator (1987)": {
   "venue": "Val Verde Jungle Camp",
@@ -17232,7 +17238,7 @@
  },
  "The Silence of the Lambs (1991)": {
   "venue": "State Hospital Canteen",
-  "sign": "Baltimore, Cell Block Only",
+  "sign": "Baltimore, for the criminally insane",
   "note": {
    "text": "I do wish we could chat longer, but I'm having an old friend for dinner.",
    "by": "Hannibal Lecter",
@@ -20455,14 +20461,15 @@
    "kind": "card",
    "title": "Meal Ticket",
    "lines": [
-    "Night shift, October 31",
-    "Haddonfield Memorial, Ward 3"
+    "Laurie Strode",
+    "One hot dinner"
    ]
   },
   "number": "1978",
   "patient": "Laurie Strode",
   "hospital": {
-   "noLogo": true
+   "noLogo": true,
+   "stampYear": "1978"
   }
  },
  "Hocus Pocus 2 (2022)": {
