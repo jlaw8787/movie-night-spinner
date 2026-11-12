@@ -33,9 +33,23 @@ self.addEventListener('activate', e => {
       await caches.delete(k);
     }
     try { await imageTrim(); } catch (err) {}
+    try { await staticTrim(); } catch (err) {}
     await self.clients.claim();
   })());
 });
+/* fonts and save tools are named by their content, so a new font set leaves old files behind. On each update, drop any saved
+   font that assets/fonts/files.json no longer lists, and any save tool that isn't one of the two in use. Offline, nothing is dropped */
+const LIBS = ['html2canvas-1.4.1.min.js', 'jspdf-2.5.1.umd.min.js'];
+const staticTrim = async () => {
+  const res = await fetch('assets/fonts/files.json', {cache: 'no-store'});
+  if (!res.ok) return;
+  const keep = new Set(await res.json());
+  const cache = await caches.open(STATIC_CACHE);
+  for (const r of await cache.keys()) {
+    const m = new URL(r.url).pathname.match(/\/assets\/(fonts\/files|lib)\/([^/]+)$/);
+    if (m && !(m[1] === 'lib' ? LIBS.includes(m[2]) : keep.has(m[2]))) await cache.delete(r);
+  }
+};
 const filmFetch = async req => {
   const cache = await caches.open(FILMS_CACHE);
   const hit = await cache.match(req);
