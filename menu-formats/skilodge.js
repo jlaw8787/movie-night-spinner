@@ -223,7 +223,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tAv=HH-44-(F.year?18:0);let tS=26;while(tS>15&&wrapLines(F.title,tS,200,e.cwd*1.1)*tS*1.08>tAv)tS--;
   const titleBlock=`<div style="width:200px;text-align:center"><div style="font:${e.dw} ${tS}px/1.05 ${DF};color:${acc}">${esc(F.title)}</div>${F.year?`<div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${e.soft};margin-top:4px">${esc(F.year)}</div>`:""}</div>`;
   const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:2,gap:28,cw:e.cw,cwd:e.cwd,cgap:12});
-  const head=(l,tr,k)=>`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;border-bottom:2px solid ${mix(e.ink,e.card,.75)};padding-bottom:5px">${marker(k,Math.round(tr.h*.8))}<span style="font:${e.dw} ${tr.h}px/1.15 ${DF};color:${e.ink}">${esc(l)}</span></div>`;
+  const head=(l,tr,k)=>`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;border-bottom:2px solid ${mix(e.ink,e.card,.75)};padding-bottom:5px">${marker(k,Math.round(tr.h*.8))}<span style="font:${e.dw} ${tr.h}px/1.15 ${DF};color:${e.ink}">${esc(l)}</span><span style="margin-left:auto;font:600 13px/1 ${BF};letter-spacing:.16em;text-transform:uppercase;color:${e.soft}">${({s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"})[k]||""}</span></div>`;
+  /* review 27: the run grade stays as the heading, with the plain course word at the right so a guest knows which run is dessert */
   const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc,cw:e.cw,leader:1,lead:mix(e.soft,e.card,.5),cgap:12};
   /* review 25: each column spends its own spare height in its course gaps (flex spacers, capped at GAPMAX so nothing looks stretched);
      a column still left with more than about 100px gets a real still from the film, sized by flex to the room left */

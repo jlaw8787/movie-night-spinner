@@ -69,7 +69,8 @@ function prices(menu,ei,egg,mult){
 }
 /* after the shared price pass: dearer dishes take the top prices of their course, house lines keep the last slot,
    no two items in a course share a price, and every sweet sits under the cheapest main */
-const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?|shrimp|crab|scallops?|wagyu|sirloin|rib ?eye|t-bone|fillet mignon|filet mignon|oysters?|caviar)\b/i;
+/* review 27: prawn crackers are a cheap nibble, not a dear prawn dish */
+const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?(?! crackers?)|shrimp|crab|scallops?|wagyu|sirloin|rib ?eye|t-bone|fillet mignon|filet mignon|oysters?|caviar)\b/i;
 function tidyPrices(menu,P,ei){
   const val=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?null:n};
   const END=[0,.25,.5,.75,.95];
@@ -234,7 +235,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${grid}${fill}
     <div style="position:absolute;left:24px;right:24px;bottom:6px;height:${CRH-2}px;text-align:right;font:italic 400 12px/${CRH-2}px ${BF};color:${e.soft};white-space:nowrap">${esc(credit(F))}</div>
     ${F.cue?`<div style="position:absolute;left:24px;right:24px;bottom:${8+CRH}px;height:${cueH-8}px">${cueLine(F,BF,e.soft,red,15)}</div>`:""}
-    <div style="position:absolute;left:290px;top:14px;width:150px;height:46px;border:3px solid ${mix(red,e.paper,.15)};border-radius:6px;transform:rotate(-6deg);opacity:.6;display:flex;align-items:center;justify-content:center;font:400 17px/1 ${DF};color:${red};letter-spacing:.08em">TROLLEY CHECKED</div></div>`;
+    <div style="position:absolute;left:290px;top:14px;width:150px;height:46px;border:3px solid ${mix(red,e.paper,.15)};border-radius:6px;transform:rotate(-6deg);opacity:.6;display:flex;align-items:center;justify-content:center;font:400 17px/1 ${DF};color:${red};letter-spacing:.08em">${/tea house|yum cha|dim sum|teahouse/i.test(F.venue)?"TROLLEY CHECKED":"KITCHEN CHECKED"}</div></div>`;
 
   /* foot: tea tag and the trolley line */
   const TW=290,pr2=F.prop,n=F.note,nS=n.text.length>130?16:n.text.length>80?18:n.text.length<60?24:20;

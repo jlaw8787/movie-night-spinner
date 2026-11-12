@@ -157,17 +157,11 @@
    "n": "Agent K's shrimp and bok choy",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 20,
-   "make_ahead": "Peel and devein the prawns up to 1 day ahead in the fridge; cook the rice and wok-toss on the night",
+   "cook_min": 8,
+   "make_ahead": "Peel and devein the prawns up to 1 day ahead in the fridge; wok-toss on the night",
    "ingredients": [
     {
-     "q": 300,
-     "u": "g",
-     "item": "jasmine rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
+     "q": 250,
      "u": "g",
      "item": "green prawns",
      "aisle": "Seafood"
@@ -179,13 +173,13 @@
      "aisle": "Pantry"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "tbsp",
      "item": "vegetable oil",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 2,
      "u": "",
      "item": "garlic cloves, sliced",
      "aisle": "Produce"
@@ -193,36 +187,32 @@
     {
      "q": 1,
      "u": "",
-     "item": "thumb ginger, in matchsticks",
+     "item": "small knob ginger, in matchsticks",
      "aisle": "Produce"
     },
     {
-     "q": 4,
+     "q": 2,
      "u": "",
      "item": "baby bok choy, halved",
      "aisle": "Produce"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "tbsp",
      "item": "oyster sauce",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "tbsp",
+     "u": "tsp",
      "item": "soy sauce",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Cook the jasmine rice.",
-     "min": 15
-    },
-    {
      "text": "Peel and devein the prawns, leaving the tails on, and toss with the cornflour.",
-     "min": 10
+     "min": 8
     },
     {
      "text": "Heat the oil in a wok until smoking and fry the prawns for 2 minutes until just pink, then lift out.",
@@ -233,7 +223,7 @@
      "min": 3
     },
     {
-     "text": "Return the prawns with the oyster sauce and soy, toss and serve over the rice.",
+     "text": "Return the prawns with the oyster sauce and soy, toss and serve.",
      "min": 1
     }
    ],
@@ -243,35 +233,29 @@
     "veg": {
      "n": "Agent K's shrimp and bok choy (vegetarian)",
      "prep_min": 15,
-     "cook_min": 20,
-     "make_ahead": "Press and cube the tofu up to 1 day ahead in the fridge; cook the rice and wok-toss on the night",
+     "cook_min": 10,
+     "make_ahead": "Press and cube the tofu up to 1 day ahead in the fridge; wok-toss on the night",
      "ingredients": [
       {
-       "q": 300,
-       "u": "g",
-       "item": "jasmine rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 450,
+       "q": 225,
        "u": "g",
        "item": "firm tofu, cubed",
        "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tbsp",
+       "q": 2,
+       "u": "tsp",
        "item": "cornflour",
        "aisle": "Pantry"
       },
       {
-       "q": 3,
+       "q": 2,
        "u": "tbsp",
        "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
-       "q": 3,
+       "q": 2,
        "u": "",
        "item": "garlic cloves, sliced",
        "aisle": "Produce"
@@ -279,35 +263,31 @@
       {
        "q": 1,
        "u": "",
-       "item": "thumb ginger, in matchsticks",
+       "item": "small knob ginger, in matchsticks",
        "aisle": "Produce"
       },
       {
-       "q": 4,
+       "q": 2,
        "u": "",
        "item": "baby bok choy, halved",
        "aisle": "Produce"
       },
       {
-       "q": 2,
+       "q": 1,
        "u": "tbsp",
        "item": "vegetarian mushroom oyster sauce",
        "aisle": "Pantry"
       },
       {
        "q": 1,
-       "u": "tbsp",
+       "u": "tsp",
        "item": "soy sauce",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Cook the jasmine rice.",
-       "min": 15
-      },
-      {
-       "text": "Toss the tofu in the cornflour and fry in 2 tbsp of the oil until crisp on all sides, then lift out.",
+       "text": "Toss the tofu in the cornflour and fry in most of the oil until crisp on all sides, then lift out.",
        "min": 8
       },
       {
@@ -315,7 +295,7 @@
        "min": 3
       },
       {
-       "text": "Return the tofu with the mushroom oyster sauce and soy, toss and serve over the rice.",
+       "text": "Return the tofu with the mushroom oyster sauce and soy, toss and serve.",
        "min": 1
       }
      ],
