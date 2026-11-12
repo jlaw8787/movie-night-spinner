@@ -13,7 +13,7 @@ function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;con
 const root=window;root.MENU_FORMATS=root.MENU_FORMATS||{};
 const BASE=(document.currentScript&&document.currentScript.src||"").replace(/[^/]*$/,"");
 if(!document.getElementById("fmt-newspaper-fonts")){const l=document.createElement("link");l.id="fmt-newspaper-fonts";l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter+Tight:ital,wght@0,400;0,600;0,800;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&family=UnifrakturMaguntia&family=Homemade+Apple&display=swap";
+  l.href=rdFontHref("family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter+Tight:ital,wght@0,400;0,600;0,800;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&family=UnifrakturMaguntia&family=Homemade+Apple","swap");
   document.head.appendChild(l)}
 const W=816,H=1056,PX=40,PY=30,IW=W-2*PX,G=26,CW=(IW-2*G)/3;
 const C={paper:"#f2ecde",ink:"#1b1a17",red:"#c3241a",soft:"#5d584f",head:"#1b1a17"};

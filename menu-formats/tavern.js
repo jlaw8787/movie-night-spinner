@@ -8,7 +8,7 @@ const ID="tavern",W=816,H=1056;
 const BASE=(window.MENU_FORMAT_BASE!=null)?window.MENU_FORMAT_BASE:(/\/wip\/genre\//.test(location.pathname)?"../../../":"");
 const GRAIN=BASE+"assets/era/_shared/paper-grain.webp";
 if(!document.getElementById("fmt-font-"+ID)){const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+DW+Pica:ital@0;1&family=Uncial+Antiqua&family=Alegreya:ital,wght@0,400;0,600;1,400;1,600&family=MedievalSharp&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Pinyon+Script&display=swap";
+  l.href=rdFontHref("family=UnifrakturCook:wght@700&family=IM+Fell+DW+Pica:ital@0;1&family=Uncial+Antiqua&family=Alegreya:ital,wght@0,400;0,600;1,400;1,600&family=MedievalSharp&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Pinyon+Script","swap");
   document.head.appendChild(l)}
 
 /* ---------- shared bits ---------- */

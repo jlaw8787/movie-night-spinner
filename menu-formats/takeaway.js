@@ -38,7 +38,7 @@ const readable=(fg,bg,r)=>{let a=hex(fg),b=hex(bg);const to=lum(b)>.35?[0,0,0]:[
 const eraGroup=e=>/19[345]0/.test(e)?"old":/19[67]0/.test(e)?"mid":/19[89]0/.test(e)?"late":"new";
 const NOISE="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .32  0 0 0 0 .2  0 0 0 .5 0'/></filter><rect width='300' height='300' filter='url(#n)'/></svg>");
 const BLOTCH="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.005' numOctaves='4' seed='3'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .42  0 0 0 0 .25  0 0 0 .38 0'/></filter><rect width='900' height='900' filter='url(#b)'/></svg>");
-function loadFonts(key,fams){const id="fmt-font-"+key;if(document.getElementById(id))return;const l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?"+fams.map(f=>"family="+f).join("&")+"&display=block";document.head.appendChild(l)}
+function loadFonts(key,fams){const id="fmt-font-"+key;if(document.getElementById(id))return;const l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href=rdFontHref(fams.map(f=>"family="+f).join("&"),"block");document.head.appendChild(l)}
 /* shrink-to-fit: any [data-fit] box scales its own font-size (children use em) until nothing overflows; data-min is the floor */
 if(!window.__fmtFit){
   /* review 18: only the bare [data-fit] boxes these layouts mark. It used to take every [data-fit] on the page, so once a banquet, candy bar or

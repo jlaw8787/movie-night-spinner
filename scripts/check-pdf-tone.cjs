@@ -6,8 +6,7 @@
      NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-pdf-tone.cjs ["Film (Year)" ... | --per N | --all]
    MNS_SHARD=k/n splits --all over jobs; MNS_TONE_SCALE=1 renders the print copy at screen size for speed.
    A scaled run is a screen only: the bake in app.js is tuned for 2.5, so a scaled pass ends with exit 2, not a sign-off.
-   MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct.
-   MNS_LIBDIR=<folder with h2c.js and jspdf.js> serves the two export libraries locally when the CDN is out of reach. */
+   MNS_PROXY_HTTPS=1 passes only https to the proxy and keeps local http direct. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path'),fs=require('fs');
 let sharp;try{sharp=require('sharp')}catch(e){}
 const R=path.join(__dirname,'..'),port=4700+Math.floor(Math.random()*200);
@@ -44,9 +43,7 @@ async function stats(buf){
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),...(NET&&PX&&!HO?{proxy:{server:PX,bypass:'127.0.0.1,localhost'}}:{}),args:['--no-sandbox',...(PX&&HO?['--proxy-server=https='+new URL(PX).host]:[])]});
  const ctx=await b.newContext({viewport:{width:1440,height:900},serviceWorkers:'block',ignoreHTTPSErrors:NET});
  await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
- const LIB=process.env.MNS_LIBDIR;
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());
-  if(u.hostname==='cdnjs.cloudflare.com'){if(LIB){const f=/html2canvas/.test(u.pathname)?'h2c.js':/jspdf/.test(u.pathname)?'jspdf.js':'';if(f)return r.fulfill({path:path.join(LIB,f),contentType:'application/javascript'})}return r.continue()}
   return u.hostname==='127.0.0.1'||NET&&u.hostname==='image.tmdb.org'||u.protocol==='data:'||u.protocol==='blob:'?r.continue():r.abort()});
  let p=await ctx.newPage();p.setDefaultTimeout(180000);
  /* page.evaluate ignores the default timeout, so each film's waits race a timer and a stuck film is a fault, not a hang */

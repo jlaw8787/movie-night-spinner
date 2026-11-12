@@ -83,7 +83,7 @@ fs.writeFileSync(path.join(root, 'data/dish-notes.json'), JSON.stringify(notes))
 /* stamp every local script with a content hash so phones pick up changes straight away */
 const hash = p => crypto.createHash('sha1').update(fs.readFileSync(path.join(root, p))).digest('hex').slice(0, 8);
 let html = rd('index.html');
-html = html.replace(/(src|href)="([\w.-]+\.(?:js|css))(\?v=[\w_]+)?"/g, (m, a, f) => fs.existsSync(path.join(root, f)) ? `${a}="${f}?v=${hash(f)}"` : m);
+html = html.replace(/(src|href)="((?:assets\/fonts\/)?[\w.-]+\.(?:js|css))(\?v=[\w_]+)?"/g, (m, a, f) => fs.existsSync(path.join(root, f)) ? `${a}="${f}?v=${hash(f)}"` : m);
 fs.writeFileSync(path.join(root, 'index.html'), html);
 let sw = rd('sw.js');
 const ver = crypto.createHash('sha1').update(html + rd('app.js') + rd('formats-core.js') + rd('films.js')).digest('hex').slice(0, 8);

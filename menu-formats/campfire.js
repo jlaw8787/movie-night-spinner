@@ -144,7 +144,7 @@ function loadFonts(query,fams){
   fontsReady=new Promise(res=>{
     const done=()=>Promise.all(fams.flatMap(f=>["400","700"].map(w=>document.fonts.load(`${w} 40px "${f}"`).catch(()=>0)))).then(res,res);
     let l=document.getElementById(id);
-    if(!l){l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?"+query+"&display=block";
+    if(!l){l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href=rdFontHref(query,"block");
       l.onload=done;l.onerror=res;document.head.appendChild(l)}else done();
     setTimeout(res,5000);
   });

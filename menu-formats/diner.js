@@ -14,7 +14,7 @@ let CSS_READY=Promise.resolve();
 if(!document.querySelector('link[data-fmt="diner"]')){const l=document.createElement("link");l.rel="stylesheet";l.dataset.fmt="diner";
   CSS_READY=new Promise(r=>{l.onload=r;l.onerror=r;setTimeout(r,4000)});
   CSS_READY.then(()=>FONTS.forEach(fn=>document.fonts.load(fn).catch(()=>0)));
-  l.href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Oleo+Script:wght@400;700&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;700&family=Libre+Franklin:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Homemade+Apple&display=swap";
+  l.href=rdFontHref("family=League+Gothic&family=Oleo+Script:wght@400;700&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;700&family=Libre+Franklin:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Homemade+Apple","swap");
   document.head.appendChild(l)}
 const FONTS=['400 44px "League Gothic"','400 40px "Oleo Script"','700 40px "Oleo Script"','700 36px "Barlow Condensed"','600 18px "Barlow Condensed"','700 28px "Barlow"','500 18px "Barlow"',
   '600 18px "Libre Franklin"','700 28px "Libre Franklin"','400 20px "Source Serif 4"','600 20px "Source Serif 4"','italic 400 20px "Source Serif 4"','italic 600 20px "Source Serif 4"','400 22px "Homemade Apple"'];

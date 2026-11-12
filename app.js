@@ -494,7 +494,7 @@ function ensureFonts(st){
     if(!loadedFonts.has(key)){
       loadedFonts.add(key);
       const l=document.createElement("link");l.rel="stylesheet";
-      l.href=`https://fonts.googleapis.com/css2?family=${f.replace(/ /g,"+")}${w?":"+w:""}&display=swap`;
+      l.href=rdFontHref(`family=${f.replace(/ /g,"+")}${w?":"+w:""}`,"swap");
       document.head.appendChild(l);
       reqs.push(new Promise(r=>{l.onload=r;l.onerror=r}));
     }
@@ -3001,11 +3001,11 @@ function menuText(){
 
 /* trailers load the first time someone opens a box */
 const TRAILERS_JS=(document.querySelector('link[rel="prefetch"][href^="trailers.js"]')||{}).getAttribute?.("href")||"trailers.js";
-/* export: the image and PDF tools only download when someone saves */
+/* export: the image and PDF tools only download when someone saves. Both are kept in assets/lib/ (html2canvas 1.4.1, jsPDF 2.5.1) so saving works offline and in the app */
 const _libs={};
 function loadScript(src){return _libs[src]||(_libs[src]=new Promise((ok,no)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=()=>{delete _libs[src];no()};document.head.appendChild(s)}))}
 async function loadExportTools(pdf){
-  try{await loadScript("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js");if(pdf)await loadScript("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js");return true}catch(e){return false}
+  try{await loadScript("assets/lib/html2canvas-1.4.1.min.js");if(pdf)await loadScript("assets/lib/jspdf-2.5.1.umd.min.js");return true}catch(e){return false}
 }
 /* export: render a clean copy of the card at full size */
 let _noise=null;
@@ -3789,7 +3789,7 @@ function warmOffline(reg){
   if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
   reg.active.postMessage({warm:u});
   /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
-  ["https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js","https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"].forEach(x=>{try{fetch(x,{mode:"cors",credentials:"omit"}).catch(()=>{})}catch(e){}});
+  ["assets/lib/html2canvas-1.4.1.min.js","assets/lib/jspdf-2.5.1.umd.min.js"].forEach(x=>{try{fetch(x).catch(()=>{})}catch(e){}});
   /* a detached copy of each shop photo picks the same size the page would */
   document.querySelectorAll("#walkin img,#viewShop img,#viewCrave img").forEach(im=>{if(im.complete&&im.naturalWidth)return;const i=new Image();if(im.sizes)i.sizes=im.sizes;if(im.srcset)i.srcset=im.srcset;i.src=im.getAttribute("src")});
   (window.SNACKS||[]).forEach(x=>{if(x.img)new Image().src=x.img});
@@ -3953,7 +3953,7 @@ function kitStyle(f,L,fl){
   if(f.theme==="uptown"&&h<3)return "deco";
   return "";
 }
-function kitFonts(){if(!document.getElementById("kitFonts")){const l=document.createElement("link");l.id="kitFonts";l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Rye&family=Special+Elite&family=Playfair+Display+SC:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&family=Shrikhand&family=Bangers&family=Creepster&family=Press+Start+2P&family=UnifrakturMaguntia&family=Playfair+Display:wght@700;900&family=Mountains+of+Christmas:wght@700&family=Cinzel+Decorative:wght@700&family=IM+Fell+English:ital@0;1&family=Poiret+One&family=Monoton&display=swap";document.head.appendChild(l)}
+function kitFonts(){if(!document.getElementById("kitFonts")){const l=document.createElement("link");l.id="kitFonts";l.rel="stylesheet";l.href=rdFontHref("family=Yellowtail&family=Rye&family=Special+Elite&family=Playfair+Display+SC:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&family=Shrikhand&family=Bangers&family=Creepster&family=Press+Start+2P&family=UnifrakturMaguntia&family=Playfair+Display:wght@700;900&family=Mountains+of+Christmas:wght@700&family=Cinzel+Decorative:wght@700&family=IM+Fell+English:ital@0;1&family=Poiret+One&family=Monoton","swap");document.head.appendChild(l)}
   return Promise.all(["Yellowtail","Rye","Special Elite","Playfair Display SC","Cormorant Garamond","Caveat","Courier Prime","Shrikhand","Bangers","Creepster","Press Start 2P","UnifrakturMaguntia","Playfair Display","Mountains of Christmas","Cinzel Decorative","IM Fell English","Poiret One","Monoton"].map(n=>document.fonts.load(`32px "${n}"`).catch(()=>{}))).then(()=>document.fonts.ready)}
 function kitBits(f){
   const L=f._lib||f._kit||{},fl=L.flavour||{},pal=L.palette||{},st=STY[f.theme]||{};

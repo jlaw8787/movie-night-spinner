@@ -7,13 +7,17 @@
    After the first visit the page sends the full list and the worker saves anything missing in the background, so every film works offline.
    Photos: saved on first view in their own store that updates never wipe, capped so it can't grow forever. Posters from TMDB are saved
    with permission headers, so a saved poster still works in Save PDF and Save image.
-   Fonts and libraries: saved on first use. */
-const VERSION = 'mns-b7ce0fdb';
+   Fonts (assets/fonts/files) and the save tools (assets/lib): saved the first time a menu or a save needs them,
+   never all at once. Their names change whenever their content does, so they sit in their own store that app updates
+   leave alone, and a menu that worked offline once keeps working after an update. */
+const VERSION = 'mns-05bc06af';
 const FILMS_CACHE = 'mns-films';
 const IMAGES_CACHE = 'mns-images';
+const STATIC_CACHE = 'mns-static';
 const IMAGES_MAX = 600;
 const FILM_RX = /data\/film\/[^/]+\.json$|data\/(dish-names|dish-notes|trivia)\.json$|(^|\/)(menu-)?formats\/[^/]+\.js$/;
 const IMG_RX = /\.(webp|jpe?g|png|gif|svg|avif)$/i;
+const STATIC_RX = /\/assets\/(fonts\/files|lib)\/[^/]+$/;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'assets/app/icon-192.png', 'assets/app/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -22,16 +26,30 @@ self.addEventListener('activate', e => {
   e.waitUntil((async () => {
     const films = await caches.open(FILMS_CACHE);
     for (const k of await caches.keys()) {
-      if (k === VERSION || k === FILMS_CACHE || k === IMAGES_CACHE) continue;
+      if (k === VERSION || k === FILMS_CACHE || k === IMAGES_CACHE || k === STATIC_CACHE) continue;
       /* carry saved film files over from the old store before it goes, so offline menus survive this update */
       const old = await caches.open(k);
       for (const r of await old.keys()) if (FILM_RX.test(new URL(r.url).pathname) && !(await films.match(r, {ignoreSearch: true}))) { const res = await old.match(r); if (res) { try { await films.put(r, res); } catch (err) {} } }
       await caches.delete(k);
     }
     try { await imageTrim(); } catch (err) {}
+    try { await staticTrim(); } catch (err) {}
     await self.clients.claim();
   })());
 });
+/* fonts and save tools are named by their content, so a new font set leaves old files behind. On each update, drop any saved
+   font that assets/fonts/files.json no longer lists, and any save tool that isn't one of the two in use. Offline, nothing is dropped */
+const LIBS = ['html2canvas-1.4.1.min.js', 'jspdf-2.5.1.umd.min.js'];
+const staticTrim = async () => {
+  const res = await fetch('assets/fonts/files.json', {cache: 'no-store'});
+  if (!res.ok) return;
+  const keep = new Set(await res.json());
+  const cache = await caches.open(STATIC_CACHE);
+  for (const r of await cache.keys()) {
+    const m = new URL(r.url).pathname.match(/\/assets\/(fonts\/files|lib)\/([^/]+)$/);
+    if (m && !(m[1] === 'lib' ? LIBS.includes(m[2]) : keep.has(m[2]))) await cache.delete(r);
+  }
+};
 const filmFetch = async req => {
   const cache = await caches.open(FILMS_CACHE);
   const hit = await cache.match(req);
@@ -61,8 +79,8 @@ const staleWhileRevalidate = async (req, e) => {
   if (hit) { e.waitUntil(net.catch(() => {})); return hit; }
   try { return await net; } catch (err) { return (await cache.match(req, {ignoreSearch: true})) || Response.error(); }
 };
-const cacheFirst = async req => {
-  const cache = await caches.open(VERSION);
+const cacheFirst = async (req, store = VERSION) => {
+  const cache = await caches.open(store);
   const hit = await cache.match(req);
   /* a copy saved without permission headers can't be used to build a saved image, so skip it */
   if (hit && !(req.mode === 'cors' && hit.type === 'opaque')) return hit;
@@ -145,8 +163,9 @@ self.addEventListener('fetch', e => {
   const same = url.origin === self.location.origin;
   if (same && (req.mode === 'navigate' || /\.html$/.test(url.pathname) || url.pathname.endsWith('/'))) return e.respondWith(networkFirst(req));
   if (same && FILM_RX.test(url.pathname)) return e.respondWith(filmFetch(req));
+  if (same && STATIC_RX.test(url.pathname)) return e.respondWith(cacheFirst(req, STATIC_CACHE));
   if (same && url.searchParams.has('v')) return e.respondWith(cacheFirst(req));
   if (same && /\.(js|json|webmanifest)$/.test(url.pathname)) return e.respondWith(staleWhileRevalidate(req, e));
   if ((same && IMG_RX.test(url.pathname) && !url.searchParams.has('v')) || url.host === 'image.tmdb.org') return e.respondWith(imageFetch(req, e));
-  if (same || /fonts\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com/.test(url.host)) return e.respondWith(cacheFirst(req));
+  if (same) return e.respondWith(cacheFirst(req));
 });

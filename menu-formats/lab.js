@@ -7,7 +7,7 @@ const ID="lab",W=816,H=1056,M=28;
 const BASE=(window.MENU_FORMAT_BASE!=null)?window.MENU_FORMAT_BASE:(/\/wip\/genre\//.test(location.pathname)?"../../../":"");
 const GRAIN=BASE+"assets/era/_shared/paper-grain.webp";
 if(!document.getElementById("fmt-font-"+ID)){const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@600;700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Saira+Condensed:wght@600;800&family=Saira:wght@400;600&family=Fira+Sans+Extra+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;600&family=Manrope:wght@700;800&family=Inter:wght@400;600&family=Caveat:wght@600&display=swap";
+  l.href=rdFontHref("family=Spectral+SC:wght@600;700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Saira+Condensed:wght@600;800&family=Saira:wght@400;600&family=Fira+Sans+Extra+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;600&family=Manrope:wght@700;800&family=Inter:wght@400;600&family=Caveat:wght@600","swap");
   document.head.appendChild(l)}
 
 /* ---------- shared bits ---------- */
@@ -206,7 +206,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
   if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
 function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
-  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+  .then(()=>Promise.all(fontSpecs(rdFontQuery(l.getAttribute("href"))).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
 window.MENU_FORMATS[ID].ready=fontsReady([document.getElementById("fmt-font-"+ID)]);
 /* fit in the same turn the face lands, not only when the pixel loads */
 if(!window.__fitLabSync){window.__fitLabSync=1;new MutationObserver(m=>m.forEach(r=>[...r.addedNodes].forEach(n=>{if(n.nodeType!==1||!n.querySelectorAll)return;[...(n.matches("img[data-labfit]")?[n]:[]),...n.querySelectorAll("img[data-labfit]")].forEach(i=>{if(!i.dataset.fitted){i.dataset.fitted="1";window.__fmtFitLab(i)}})}))).observe(document.documentElement,{childList:true,subtree:true})}

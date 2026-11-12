@@ -758,7 +758,7 @@ function fmtTabsFit(root){const ts=[...root.querySelectorAll(".fp-tab")];if(!ts.
 function fmtFontsReady(spec){
   const id="fmtfont-"+spec.fmt;
   if(typeof document!=="undefined"&&document.head&&!document.getElementById(id)){
-    const l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href=`https://fonts.googleapis.com/css2?${FMT_FONTS[spec.fmt]}&display=swap`;document.head.appendChild(l);
+    const l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href=rdFontHref(FMT_FONTS[spec.fmt],"swap");document.head.appendChild(l);
     return new Promise(r=>{l.onload=r;l.onerror=r;setTimeout(r,3500)}).then(()=>Promise.race([Promise.all(FMT_FAMS[spec.fmt].map(n=>document.fonts.load(`20px "${n}"`,"Aa"))),new Promise(r=>setTimeout(r,3500))])).catch(()=>{});
   }
   return Promise.resolve();

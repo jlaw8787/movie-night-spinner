@@ -196,12 +196,11 @@ What the app actually sends anywhere, from app.js and privacy.html:
 | Netlify Forms (our host) | Only when the user sends Request a movie | Film title, year, optional name, optional note |
 | TMDB image server | Every time a poster or still is shown | Normal image request (IP address, device details). No data from the app |
 | YouTube (youtube-nocookie.com) | Only when the user presses play on a trailer | Normal video request |
-| Google Fonts, cdnjs | Website today. The plan bundles both into the app build | Normal file requests |
 | Outside links (JustWatch, TMDB, streaming services) | Only when tapped, opens the browser | Nothing from the app |
 
 There are no analytics, ads, crash reporting or tracking SDKs anywhere in the code. Checked app.js, index.html and every script for gtag, Plausible, Sentry and similar: none.
 
-If Google Fonts or cdnjs are still loaded when the app is submitted, they stay in the list above and the answers below are unchanged (they are file servers, not collection by us).
+Fonts and the Save PDF libraries are served from our own files (fix21-fonts, 12 Nov 2026), so Google Fonts and cdnjs are no longer contacted.
 
 ### Answers
 
@@ -318,7 +317,6 @@ Before submitting: create the test card on a spare device, write the number and 
 
 - privacy.html kids mode line: already fixed on main, leave it alone on this branch.
 - Once deployed, check https://reeldinner.com/support and https://reeldinner.com/privacy both return 200 (support is 404 until this branch goes live). Both stores check these links.
-- Remove the Google Fonts and cdnjs links in the app build as planned, or leave them in the privacy list.
 - Settle the artwork rights before the screenshots are shot.
 
 ---

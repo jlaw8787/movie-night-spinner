@@ -6,7 +6,7 @@
    Inline styles only. A small fitter (below) shrinks text boxes after fonts and images load. */
 (function(){
 const ID="bartab",A="data-"+ID;
-const FONT_URL="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Coustard:wght@400;900&family=Cabin+Condensed:wght@600;700&family=Krona+One&family=Barlow:ital,wght@0,500;0,600;0,700;1,500&family=Caveat+Brush&display=swap";
+const FONT_URL=rdFontHref("family=Abhaya+Libre:wght@800&family=Coustard:wght@400;900&family=Cabin+Condensed:wght@600;700&family=Krona+One&family=Barlow:ital,wght@0,500;0,600;0,700;1,500&family=Caveat+Brush","swap");
 function loadFonts(){if(document.getElementById("fmt-font-"+ID))return;const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";l.href=FONT_URL;document.head.appendChild(l)}
 
 /* colour helpers */
@@ -232,6 +232,6 @@ window.MENU_FORMATS[ID]=ctx=>{
 function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
   if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
 function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
-  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+  .then(()=>Promise.all(fontSpecs(rdFontQuery(l.getAttribute("href"))).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
 loadFonts();window.MENU_FORMATS[ID].ready=fontsReady([document.getElementById("fmt-font-"+ID)]);
 })();

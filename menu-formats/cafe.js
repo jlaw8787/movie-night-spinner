@@ -77,7 +77,7 @@ const mix=(a,b,t)=>{const x=hex(a),y=hex(b);return toHex(x.map((v,i)=>v+(y[i]-v)
 const sat=c=>{const a=hex(c);if(!a)return 0;const mx=Math.max(...a),mn=Math.min(...a);return mx?(mx-mn)/mx:0};
 function readable(c,bg,min,fb){if(!hex(c)||sat(c)<.18)c=fb;if(cr(c,bg)>=min)return c;const to=lum(bg)<.3?"#ffffff":"#000000";for(let t=.08;t<.95;t+=.08){const m=mix(c,to,t);if(cr(m,bg)>=min)return m}return to}
 function loadFonts(id,fams){const k="fmt-font-"+id;if(document.getElementById(k))return;const l=document.createElement("link");l.id=k;l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?"+fams.map(f=>"family="+f.replace(/ /g,"+")).join("&")+"&display=swap";document.head.appendChild(l)}
+  l.href=rdFontHref(fams.map(f=>"family="+f.replace(/ /g,"+")).join("&"),"swap");document.head.appendChild(l)}
 const svgUrl=s=>`url('data:image/svg+xml,${encodeURIComponent(s)}')`;
 const noise=(rgb,a,freq,size)=>{const[r,g,b]=hex(rgb).map(v=>(v/255).toFixed(3));return svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="${freq}" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 ${r} 0 0 0 0 ${g} 0 0 0 0 ${b} ${(a*3).toFixed(2)} 0 0 0 ${(-a*1.2).toFixed(2)}"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>`)};
 const CHALKSOFT=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.4 0 0 0 2.5"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
