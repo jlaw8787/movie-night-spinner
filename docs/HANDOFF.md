@@ -639,3 +639,10 @@ Every new or custom menu gets the movie poster and real TMDB stills treatment. N
 - arcade.js: flavour arcade.logoDark keeps the logo on the dark panel (the sampler read Toy Story's logo as dark and put it on light grey). A column holding one course now spreads its dishes down the board (headings stay with their dishes), so a long first course no longer leaves a gap. Checked on all four arcade films.
 - Warning: scripts/edition-sync.cjs replays old audit ops and broke After Hours (burger renamed) and Oliver & Company (note repeated three times). Reverted. Only run it when the film has a poster edition, and check the movie-menus.js diff after.
 - Checks: check-print-text passes on all four arcade films, all tests pass.
+
+## 12 Nov, 5:10pm: Toy Story re-review (8.5) fixes (branch wip/new-formats, not live)
+
+- Re-grade after the first fixes: 8.5. Josh: do all remaining.
+- arcade.js: the column spread from 4:40pm is taken back out (the reviewer read it as stretched; Wreck-It Ralph and Snatch are back to before). New flavour arcade.panel {head, text, by}: a quote card at the foot of the shorter column. New arcade.noLogo drops the marquee logo panel (the poster carries the logo).
+- Toy Story: panel "Pull the string", "Reach for the sky!", Woody; noLogo; full claw line "The claw is our master. The claw chooses who will go and who will stay."; house notes lose their full stops to match the other lines; "Moving day grilled cheese and tomato soup" renamed "Moving day toastie and tomato soup"; vegetarian pizza alt renamed too (card-ops replaces whole-string matches first, so "Space-themed pizza (vegetarian)" was missed the first time; check alt names after a rename).
+- Checks: check-print-text passes on all four arcade films, all tests pass.

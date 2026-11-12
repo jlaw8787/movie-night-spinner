@@ -2426,7 +2426,7 @@
   "venue": "Pizza Planet",
   "sign": "Out of this world. Mind the claw.",
   "note": {
-   "text": "The claw chooses who will go and who will stay.",
+   "text": "The claw is our master. The claw chooses who will go and who will stay.",
    "by": "The aliens",
    "kind": "quote"
   },
@@ -2463,7 +2463,12 @@
     "i": 2,
     "title": "Parked out front"
    },
-   "logoDark": true
+   "noLogo": true,
+   "panel": {
+    "head": "Pull the string",
+    "text": "Reach for the sky!",
+    "by": "Woody"
+   }
   }
  },
  "Toy Story 2 (1999)": {
