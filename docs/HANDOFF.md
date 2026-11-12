@@ -664,3 +664,6 @@ Live: deploy 6af55461 (main 176899e), 12 Nov 3:50pm, Josh said deploy. Live phon
 
 ### Trailers in app mode
 - Josh chose: test first, change nothing. Try trailers in the Android APK now, and on the first iPhone test build, then decide.
+
+### Next (Josh, 12 Nov 4:15pm)
+Review 24: a fresh independent review of the live site, written up like docs/review-21.md, then fix what it finds. iPhone build, store prep and the small tidy-ups are on hold.
