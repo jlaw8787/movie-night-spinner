@@ -2,6 +2,87 @@
  "serves": 4,
  "dishes": [
   {
+   "n": "Slap shot cheeseburger sliders",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Shape the patties and mix the sauce up to 1 day ahead, covered in the fridge; sear and build on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into 8 thick rounds like pucks and season well.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce and smoked paprika for the burger sauce. Slice the pickles and the onion thinly.",
+     "min": 4
+    },
+    {
+     "text": "Sear the patties in a very hot pan for 3 minutes a side.",
+     "min": 6
+    },
+    {
+     "text": "Lay a half slice of cheddar on each and cover for 1 minute to melt.",
+     "min": 1
+    },
+    {
+     "text": "Toast the buns and fill with the patties, sauce, pickles and onion.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Chubbs's golf ball cheese balls",
    "course": "s",
    "prep_min": 20,
@@ -584,15 +665,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": 150,
-     "u": "ml",
-     "item": "lemon juice",
-     "aisle": "Produce"
-    },
-    {
      "q": 4,
      "u": "",
-     "item": "lemons",
+     "item": "lemons, juiced and zested",
      "aisle": "Produce"
     }
    ],
@@ -606,7 +681,7 @@
      "min": 20
     },
     {
-     "text": "Whisk the eggs, caster sugar, remaining flour, lemon juice and zest of two lemons, and pour over the hot base.",
+     "text": "Whisk the eggs, caster sugar, remaining flour and the juice and zest of the 4 lemons, and pour over the hot base.",
      "min": 8
     },
     {
