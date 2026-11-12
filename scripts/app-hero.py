@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""App-only copies of the two Galaxy Video photos that show film posters.
+"""App-only copies of the Galaxy Video photos that show film posters.
 
 galaxy-front*.webp has real posters pasted in the windows (TMDB), and aisles*.webp has
 generated covers that imitate real posters. The app build cannot carry either
@@ -10,6 +10,9 @@ generated covers that imitate real posters. The app build cannot carry either
   BE KIND REWIND and NEW RELEASES boards stay as they are.
 - aisles-app*.webp: the shelves are thrown well out of focus, so no cover reads.
   The ceiling and the blank hanging signs stay sharp.
+- latedoor-app.webp: the late show curtain. The tape shelves either side carry covers that
+  imitate real posters, so they go well out of focus; the curtain, its door frame and the
+  blank sign above it stay sharp.
 
 Run from the repo root: python3 scripts/app-hero.py
 Needs Pillow. The flyer type is Poppins Bold (SIL Open Font Licence).
@@ -94,6 +97,20 @@ def aisles():
     return Image.composite(soft, src, mask)
 
 
+def latedoor():
+    src = Image.open(os.path.join(HERO, "latedoor.webp")).convert("RGB")
+    w, h = src.size
+    soft = src.filter(ImageFilter.GaussianBlur(14))
+    soft = Image.blend(soft, Image.new("RGB", src.size, "#20160f"), 0.12)
+    # soft left of the door frame and right of it (the near shelf and the far aisle), sharp door and sign
+    mask = Image.new("L", src.size, 0)
+    md = ImageDraw.Draw(mask)
+    md.rectangle((0, 0, int(w * 0.225), h), fill=255)
+    md.rectangle((int(w * 0.8), 0, w, h), fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(10))
+    return Image.composite(soft, src, mask)
+
+
 def save(im, name, widths):
     os.makedirs(OUT, exist_ok=True)
     full_w = im.size[0]
@@ -108,3 +125,4 @@ def save(im, name, widths):
 if __name__ == "__main__":
     save(front(), "galaxy-front-app", [1774, 1400, 1000])
     save(aisles(), "aisles-app", [1774, 1400, 1000])
+    save(latedoor(), "latedoor-app", [700])

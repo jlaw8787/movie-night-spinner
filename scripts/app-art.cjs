@@ -2,7 +2,7 @@
 /* Builds app-art.js, the list of pictures the app build leaves out (docs/ARTWORK-RIGHTS.md, option E).
    The website never loads it. app-mode.js loads it when the page runs as the app.
 
-   - swap: Galaxy Video photos that show film posters, and the app copies made by scripts/app-hero.py.
+   - swap: Galaxy Video photos that show film posters (the shopfront, the aisles, the late show curtain), and the app copies made by scripts/app-hero.py.
    - block: menu pictures under assets/era that are film stills, or photos docs/image-credits.md gives
      no clear free licence for. Paper, wear and grain textures, drawn props and credited public domain
      or free licence photos stay. Anything not credited and not a plain texture or prop is blocked,
@@ -50,6 +50,8 @@ for (const [from, to] of [['galaxy-front', 'galaxy-front-app'], ['aisles', 'aisl
     const a = `assets/hero/${from}${w}.webp`, b = `assets/app/${to}${w}.webp`;
     if (fs.existsSync(path.join(ROOT, b))) swap[a] = b;
   }
+/* the late show curtain: the shelves beside it carry poster lookalike covers */
+if (fs.existsSync(path.join(ROOT, 'assets/app/latedoor-app.webp'))) swap['assets/hero/latedoor.webp'] = 'assets/app/latedoor-app.webp';
 
 /* per-film poster art made for the app, keyed by film id ("Title (Year)") */
 const films = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/films.json'), 'utf8'));

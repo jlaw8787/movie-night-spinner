@@ -6,7 +6,7 @@
    - notes and source files: *.md, formats.js (built into formats/), poster briefs and rollout lists;
    - the website-only pages (privacy and support open on reeldinner.com from the app);
    - studio artwork, per docs/ARTWORK-RIGHTS.md: the 124 generated posters, the film frame, the menu photos
-     blocked in app-art.js and the two Galaxy Video photos that show posters (the app copies go instead).
+     blocked in app-art.js and the Galaxy Video photos that show posters (the app copies go instead; the raw shopfront photo is left out).
 
    Run from the repo root: npm run build:app (then npx cap sync). */
 const fs = require('fs'), path = require('path');
@@ -37,7 +37,9 @@ const data = new Set();
 for (const m of code.matchAll(/data\/([\w-]+\.json)/g)) if (fs.existsSync(path.join(ROOT, 'data', m[1]))) data.add('data/' + m[1]);
 
 const blocked = new Set([...ART.block, ...Object.keys(ART.swap)]);
-const skip = p => blocked.has(p) || ART.prefix.some(x => p.startsWith(x)) || /\.md$/i.test(p) || /(^|\/)(_old|clean)\//.test(p) || /(^|\/)\./.test(p);
+/* shopfront*.webp is the raw photo the Galaxy Video front was composed from (poster lookalikes in the windows); the site never shows it */
+const NEVER_FILE = /^assets\/hero\/shopfront[\w-]*\.webp$/;
+const skip = p => blocked.has(p) || NEVER_FILE.test(p) || ART.prefix.some(x => p.startsWith(x)) || /\.md$/i.test(p) || /(^|\/)(_old|clean)\//.test(p) || /(^|\/)\./.test(p);
 
 fs.rmSync(OUT, {recursive: true, force: true});
 let n = 0, bytes = 0, left = 0;
@@ -59,6 +61,6 @@ const ix = path.join(OUT, 'index.html');
 fs.writeFileSync(ix, fs.readFileSync(ix, 'utf8').replace('<script src="app-mode.js', '<script>window.REEL_APP_BUILD=true</script>\n<script src="app-mode.js'));
 
 /* nothing studio-made may be in the folder */
-const bad = walk(OUT).map(rel).filter(p => /menu-posters|menu-details|galaxy-front\.|galaxy-front-1|hero\/aisles/.test(p));
+const bad = walk(OUT).map(rel).filter(p => /menu-posters|menu-details|galaxy-front\.|galaxy-front-1|hero\/aisles|hero\/latedoor|hero\/shopfront/.test(p));
 if (bad.length) { console.error('Studio artwork found in www:', bad.slice(0, 5)); process.exit(1); }
 console.log(`www/: ${n} files, ${(bytes / 1048576).toFixed(1)} MB. Left out ${left} pictures and notes. Folders: ${[...dirs].join(', ')}.`);
