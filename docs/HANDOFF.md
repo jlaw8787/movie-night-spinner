@@ -898,3 +898,7 @@ foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum 
 
 ### Left
 - Dazed and Confused: beer nuts still the dearest starter (210). Not from this round, worth a look with the data.
+
+### Deployed 13 Nov, 5:50am (Josh said deploy)
+- Deploy 6af61886d56361b547d5f97c from a trimmed copy of fix/review-27-low at 45211800. Live files checked against it byte for byte: all 5,340 files (3,745 code and data, 1,595 assets). index.html differs only by Netlify's form rewrite. support.html differs only by Netlify's pretty URL rewrite (its two privacy.html links become /privacy, which loads); the file is unchanged since the last deploy, Josh said treat it as expected. .gitignore and .nojekyll are not served (normal).
+- main fast-forwarded to 45211800 and pushed. No layout changes, so no Live layout edits in the sheet.
