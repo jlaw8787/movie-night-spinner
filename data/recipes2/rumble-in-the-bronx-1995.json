@@ -24,7 +24,7 @@
      "q": 150,
      "u": "g",
      "item": "sauerkraut, drained",
-     "aisle": "Pantry"
+     "aisle": "Deli"
     },
     {
      "q": 150,
@@ -53,14 +53,8 @@
     {
      "q": 1,
      "u": "",
-     "item": "dill pickle, chopped",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "slices dill pickle, to garnish",
-     "aisle": "Pantry"
+     "item": "jar dill pickles, some chopped, some sliced",
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -110,7 +104,7 @@
        "q": 150,
        "u": "g",
        "item": "sauerkraut, drained",
-       "aisle": "Pantry"
+       "aisle": "Deli"
       },
       {
        "q": 150,
@@ -139,14 +133,8 @@
       {
        "q": 1,
        "u": "",
-       "item": "dill pickle, chopped",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "slices dill pickle, to garnish",
-       "aisle": "Pantry"
+       "item": "jar dill pickles, some chopped, some sliced",
+       "aisle": "Deli"
       }
      ],
      "steps": [
@@ -922,7 +910,7 @@
      "min": 5
     },
     {
-     "text": "Serve in bowls with lychees and mandarin segments in their syrup.",
+     "text": "Serve in bowls with lychees in their syrup and fresh mandarin segments.",
      "min": 5
     }
    ],
@@ -996,7 +984,7 @@
        "min": 5
       },
       {
-       "text": "Serve in bowls with lychees in their syrup and mandarin segments.",
+       "text": "Serve in bowls with lychees in their syrup and fresh mandarin segments.",
        "min": 5
       }
      ],

@@ -62,7 +62,8 @@ const TONE={
 };
 /* dear dishes (lobster, steak, prawns): review 26 moves them to the top of their course and gives them a premium price */
 const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?|shrimp|crab|scallops?|wagyu|oysters?|crayfish|rib ?eye|sirloin|filet|fillet mignon|t-bone|porterhouse)\b/i;
-const DEARX={s:1.5,m:1.75};
+/* review 26b: lobster at the 1980s on reads cheap at 1.75 times a plain main, so mains get 2.6 from the 1980s */
+const dearX=ei=>({s:1.5,m:ei>=4?2.6:1.75});
 const ending=(v,ei)=>ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
 function money(v,ei){if(v<1&&ei<2)return "."+String(Math.round(v*100)).padStart(2,"0");if(ei>=6)return String(Math.round(v));return v.toFixed(2)}
 function prices(menu,ei,egg,mult){
@@ -86,7 +87,7 @@ function prices(menu,ei,egg,mult){
       dear.forEach((i,j)=>{P[i]=top[dear.length-1-j]});restInOrder.forEach((i,j)=>{P[i]=rest[j]})}
     /* review 26: lobster for under five dollars reads as a joke, so a dear dish is never cheaper than its premium price for the era.
        The first dear dish gets the most; every premium sits above the plain dishes, so no price repeats */
-    if(dear.length&&DEARX[k]){const hi=Math.max(...plainVals(its,P));dear.forEach((i,j)=>{let v=ending(BASE[ei]*mult[k]*DEARX[k]*(1+.15*(dear.length-1-j)),ei);
+    const DEARX=dearX(ei);if(dear.length&&DEARX[k]){const hi=Math.max(...plainVals(its,P));dear.forEach((i,j)=>{let v=ending(BASE[ei]*mult[k]*DEARX[k]*(1+.15*(dear.length-1-j)),ei);
       if(v<=hi)return;if(v>val(P[i]))P[i]=String(P[i]).replace(/[\d.]+/,money(v,ei))})}
     ps[k]=P}
   return ps;
@@ -184,7 +185,9 @@ window.MENU_FORMATS[ID]=ctx=>{
      anything else (a card, a tag, a letter) does not suit this board, so the ticket keeps its own "next in line" */
   const onTicket=!!pr2&&/ticket|slip|order|stub|number|token|chit|pass/.test(pk),onReceipt=!!pr2&&/receipt|bill|docket|tab\b|check|invoice/.test(pk);
   const tLabel=onTicket?(pk.match(/ticket|slip|order|stub|token|chit|pass/)||["ticket"])[0].toUpperCase():"TAKE A NUMBER";
-  const tTitle=onTicket?pr2.title:"Next in line",tLines=onTicket?pr2.lines.slice(0,2):["Please wait to be called"];
+  /* review 26b: with no ticket prop the ticket carries the film's tagline, so the red box says something about the film */
+  const tag=F.tx(String(F.f.T||"")).trim();
+  const tTitle=onTicket?pr2.title:"Next in line",tLines=onTicket?pr2.lines.slice(0,2):[tag||"Please wait to be called"];
   const tIn=RW-32,tTL=Math.min(2,wrapLines(tTitle.toUpperCase(),24,tIn,.5)),tLL=tLines.map(l=>Math.min(2,wrapLines(l,15,tIn,.52)));
   const TH=Math.round(12+34+8+tTL*27.6+tLL.reduce((a,n)=>a+n*18.75+4,0)+14);
   const ticket=`<div style="position:absolute;left:${RX}px;top:${PY}px;width:${RW}px;height:${TH}px;background:${mix(red,"#ffffff",.08)};box-sizing:border-box;padding:12px 16px;transform:rotate(${(-t.tilt*.6).toFixed(2)}deg);box-shadow:0 6px 12px rgba(0,0,0,.5);overflow:hidden">
@@ -214,7 +217,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${e.soft}">SCENES TO SPOT</div>
       ${wl.map(w=>`<div style="font:400 16px/1.25 ${NF};font-style:italic;color:${lt};margin-top:10px;padding-left:10px;border-left:3px solid ${red};${clamp(2)}">${esc(w)}</div>`).join("")}</div>`:"";
   const RY=(wl.length?WY+WH:hasStack?SY+STH:SY)+GAPR+2,RH=colBot-RY;
-  const nS=[20,19,18,17,16,15].find(fs=>rFix+noteH(fs)<=RH-6)||15;
+  const nS=[24,23,22,21,20,19,18,17,16,15].find(fs=>rFix+noteH(fs)<=RH-6)||15;
   const rs=`font:400 14px/1.3 'Courier Prime',monospace;color:#222`;
   const receipt=`<div style="position:absolute;left:${RX+10}px;top:${RY}px;width:${RW-20}px;height:${RH}px;background:#fbfaf4;box-sizing:border-box;padding:10px 14px;transform:rotate(${(t.tilt*.8).toFixed(2)}deg);box-shadow:0 6px 12px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden">
     <div style="font:700 14px/1 'Courier Prime',monospace;color:#333;letter-spacing:.1em;text-align:center;text-transform:uppercase;${clamp(2)}">${esc(rHead)}</div>
@@ -238,14 +241,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* felt board headings: red push-in capitals straight on the board, no white tab */
   const head=(l,tr)=>`<div style="font:700 ${tr.h}px/1.2 ${DF};color:${red};text-transform:uppercase;letter-spacing:.16em;margin-bottom:6px;text-shadow:0 1px 0 rgba(0,0,0,.7),0 0 1px rgba(0,0,0,.5)">${esc(l)}</div>`;
   /* the shorter column's spare goes into its own course gaps, capped so it never looks stretched */
-  const per=R.spare/Math.max(1,C.length),add=Math.min(30,per),left=R.spare-add*C.length;
+  const per=R.spare/Math.max(1,C.length),add=Math.min(40,per),left=R.spare-add*C.length;
   const o={head,tx:F.tx,nf:BF,bf:NF,ink:lt,soft:e.soft,pc:lt,cw:e.cw,caps:1,nw:500,pw:500,leader:1,lead:mix(e.soft,e.board,.5),cgap:12+add};
   /* still more than ~100px left: a real still from the film under the menu, with a short caption */
   const stSrc=F.posSrc?F.stillSrc:F.still2,stH=Math.min(Math.round(MW*9/16),Math.floor(left-30));
   const still=left>110&&stSrc&&stH>=90?`<div style="margin-top:4px;position:relative;width:${MW}px;height:${stH}px;overflow:hidden;box-shadow:0 6px 12px rgba(0,0,0,.5)">${photo(stSrc,t.photo,"center 35%")}</div><div style="font:italic 400 13px/1.3 ${NF};color:${e.soft};margin-top:4px">${esc(F.title)}${F.year?" ("+esc(F.year)+")":""}</div>`:"";
   const lgBlock=LGH?`<div style="position:absolute;left:${MX}px;width:${MW}px;top:${H-M-LGH-6}px;height:${LGH}px;display:flex;align-items:center;justify-content:center">${lgo?`<img src="${lgo.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lgo.w}px;height:${lgo.h}px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(255,255,255,.18))"><div data-title style="display:none;font:700 40px/1.05 ${DF};color:${lt};text-transform:uppercase;letter-spacing:.06em;text-align:center;${clamp(2)}">${esc(F.title)}</div>`:`<div style="font:700 40px/1.05 ${DF};color:${lt};text-transform:uppercase;letter-spacing:.06em;text-align:center;${clamp(2)}">${esc(F.title)}</div>`}</div>`:"";
-  const menu=`<div style="position:absolute;left:${MX}px;top:${MY}px;width:${MW}px;height:${MH}px;overflow:hidden">${C.map(s=>course(s,items,pr,R,o)).join("")}${still}</div>
-    ${F.cue?`<div style="position:absolute;left:${MX}px;width:${MW}px;top:${MY+MH+6}px;height:${cueH-8}px">${cueLine(F,NF,e.soft,red,15)}</div>`:""}${lgBlock}`;
+  /* review 26b: the cue sits straight under the last course (not pinned to the foot of the board), so no dead band opens above it */
+  const cueIn=F.cue?`<div style="height:${cueH-8}px;margin-bottom:${still?14:0}px">${cueLine(F,NF,e.soft,red,15)}</div>`:"";
+  const menu=`<div style="position:absolute;left:${MX}px;top:${MY}px;width:${MW}px;height:${MH+cueH+6}px;overflow:hidden">${C.map(s=>course(s,items,pr,R,o)).join("")}${cueIn}${still}</div>${lgBlock}`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,rgba(0,0,0,0) 60%,rgba(0,0,0,${(t.vig*.7).toFixed(2)}) 100%)"></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${board}${top}${poster}${menu}${ticket}${stack}${winksBox}${receipt}${vig}</div>`]};
 };
