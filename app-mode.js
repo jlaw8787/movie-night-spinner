@@ -118,11 +118,14 @@
       if (ahead(o.show))
         list.push({ id: 4102, title: "Movie night", body: o.title + " starts now. Lights down.", schedule: { at: o.show, allowWhileIdle: true } });
       if (!list.length) return "none";
-      await N.schedule({ notifications: list });
+      /* Android 12+: with Alarms and reminders off, the plugin opens that Settings screen on every exact schedule.
+         Check first and schedule inexact instead, so a lock-in or prep tick never throws the person into Settings */
       var exact = true;
       if (!IOS && typeof N.checkExactNotificationSetting === "function") {
         try { exact = (await N.checkExactNotificationSetting()).exact_alarm === "granted"; } catch (e) {}
       }
+      if (!exact) list.forEach(function (n) { n.isExactNotification = false; });
+      await N.schedule({ notifications: list });
       return "set:" + list.length + (exact ? "" : ":inexact");
     },
     clearReminders: async function () {

@@ -1951,7 +1951,7 @@ try{
   const saved=JSON.parse(localStorage.getItem("mns-week")||"null");week=normaliseWeek(saved);
   if(week&&JSON.stringify(saved)!==JSON.stringify(week))try{localStorage.setItem("mns-week",JSON.stringify(week))}catch(e){}
 }catch(e){week=null}
-const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}if(typeof queueSync==="function")queueSync();if(globalThis.REEL_NATIVE)appRemind(false)};
+const saveWeek=quiet=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}if(typeof queueSync==="function")queueSync();if(globalThis.REEL_NATIVE&&quiet!==true)appRemind(false)};
 function cookDate(now=new Date()){
   const d=parseWeekDate(week.date);
   /* UTC is used only to count calendar labels, never to parse a local date. */
@@ -2027,9 +2027,9 @@ function renderMotw(){
   $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);toMenu()});
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f);lockAsk(f,$("weekSet"))});
 }
-function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();if(typeof refreshPrepTime==="function")refreshPrepTime();$("status").textContent=`${f.title} is locked in for this week.`;
+function setWeek(f){week=newWeekPlan(f.id);saveWeek(true);renderWeek();updateWatchButton();if(typeof refreshPrepTime==="function")refreshPrepTime();$("status").textContent=`${f.title} is locked in for this week.`;
   /* the app: locking in only updates reminders already allowed; the permission is asked from the calendar button */
-  if(globalThis.REEL_NATIVE)appRemind(false).then(r=>{if(/^set/.test(r))$("status").textContent+=" We'll remind you on this phone when each step is due.";else if(r==="ask")$("status").textContent+=" Tap Add to calendar to get reminders on this phone."})}
+  if(globalThis.REEL_NATIVE)appRemind(false).then(r=>{if(/^set/.test(r))$("status").textContent+=" We'll remind you on this phone when each step is due.";else if(r==="ask"&&!calPassed())$("status").textContent+=" Tap Add to calendar to get reminders on this phone."})}
 function listText(f,groups,serves){return `${f.title} (${f.year}) shopping list, serves ${serves||(f._r2?PLAN.guests:4)}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 /* calendar reminder: review 16, Josh asked for an "Add to calendar" button on the locked-in strip and the "Your movie night" bar.
    It downloads one .ics event for the movie night with the menu link in the notes, and reminders attached to it:
@@ -2217,7 +2217,7 @@ async function appRemind(ask){if(!globalThis.REEL_NATIVE)return "";if(!week){REE
     if(plan.before2&&!plan.before2.now)steps.push({at:plan.before2.at,title:"Prep ahead",body:t.ahead2});
     return await REEL.remind({title,show,start:plan.startNow?null:plan.start,startText:`${title} at ${calClock(show)}${plan.first?`. Start with ${calMid(plan.first)}`:""}.`,steps,ask})}catch(e){return ""}}
 /* the line under the calendar rows once phone reminders are set; Android with Alarms and reminders off may run a few minutes late */
-const appRemindNote=r=>/^set/.test(r)?"Reminders are set on this phone for the times above."+(/inexact/.test(r)?" Android may send them a few minutes late. For reminders on the minute, turn on Alarms and reminders for Reel Dinner in your phone's Settings.":""):r==="denied"?"Notifications are off for Reel Dinner, so turn them on in Settings to get reminders on this phone.":"";
+const appRemindNote=r=>/^set/.test(r)?"Reminders are set on this phone for each time above that is still to come."+(/inexact/.test(r)?" Android may send them a few minutes late. For reminders on the minute, turn on Alarms and reminders for Reel Dinner in your phone's Settings.":""):r==="denied"?"Notifications are off for Reel Dinner, so turn them on in Settings to get reminders on this phone.":"";
 function refreshPrepTime(){if(typeof current!=="undefined"&&current&&week&&(current.id===week.id||current.id===week.double)&&typeof refreshPlan==="function")refreshPlan()}
 const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
