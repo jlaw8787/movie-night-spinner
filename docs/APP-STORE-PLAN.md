@@ -36,9 +36,9 @@ Done: privacy page, in-app delete of the online member card, sync fix, privacy@r
 
 ### Wrapper plan
 1. Capacitor 8.5 on branch app/ios-wrapper, bundle ID com.reeldinner.app. The whole site ships inside the app, it does not load reeldinner.com.
-2. All 900 film files, layouts, jsPDF and html2canvas bundled (the last two load from cdnjs today).
+2. All 900 film files, layouts, jsPDF and html2canvas bundled (local in assets/lib since fix21-fonts).
 3. Posters and stills stay online and are saved on first view, so no studio artwork sits in the app file.
-4. Fonts: 8 core families plus roughly 230 menu families come from Google Fonts. All open licence. Script the download to local woff2, one local font list, remove the Google links. Use the same local fonts on the website.
+4. Fonts: done in fix21-fonts. 8 core families plus the menu families are local woff2 in assets/fonts (scripts/fetch-fonts.cjs), all open licence, the same files on the website.
 
 ### Features for guideline 4.2
 1. Offline: spin, every menu, prep sheet and shopping list with no signal, plain placeholder where a poster is not saved.
