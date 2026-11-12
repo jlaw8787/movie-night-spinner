@@ -19,7 +19,7 @@ In app mode (docs/ARTWORK-RIGHTS.md, option E):
 - The Galaxy Video photos that show poster lookalikes are swapped for app copies (scripts/app-hero.py): the shopfront (flyers over the window posters), the aisles (shelves out of focus) and the late show curtain (shelves either side out of focus). The raw shopfront photo (assets/hero/shopfront*.webp) is never copied into the app.
 - The privacy and support links and the film request form go to https://reeldinner.com. The request form and the member card sync are sent through Capacitor's native HTTP, because those servers only allow reeldinner.com as a browser origin.
 - The service worker is not registered. The app carries every file, and Android serves the app from https://localhost, where a worker would cache a second copy for nothing.
-- Save PDF and Save image go out through the share sheet (Save to Files on iPhone). Print opens the phone's print dialog. The calendar button sets phone reminders (start cooking, showtime) and shares the .ics file.
+- Save PDF and Save image go out through the share sheet (Save to Files on iPhone). Print opens the phone's print dialog. The calendar button asks for notifications, sets phone reminders (any prep-ahead steps, start cooking, showtime) and shares the .ics file. Locking in a film only moves reminders already allowed; it never asks, and until notifications have been allowed it suggests the calendar button. If the person said no once, Android may offer the prompt again from the calendar button.
 
 Test app mode in a browser with `https://reeldinner.com/?app=1`, or locally with `python3 -m http.server` and `?app=1`. The native helpers fall back to the browser there.
 
@@ -55,7 +55,7 @@ After adding a Galaxy Video photo with posters in it, add it to app-hero.py and 
 Works on Linux. Needs a JDK (21) and the Android SDK.
 
 - Debug build: `cd android && ./gradlew assembleDebug`. The APK lands in android/app/build/outputs/apk/debug/.
-- Permissions in AndroidManifest.xml: INTERNET, POST_NOTIFICATIONS (the Android 13+ prompt for reminders) and SCHEDULE_EXACT_ALARM (reminders on the minute).
+- Permissions in AndroidManifest.xml: INTERNET, POST_NOTIFICATIONS (the Android 13+ prompt for reminders) and SCHEDULE_EXACT_ALARM (reminders on the minute). On Android 14 and later that one is off until the person turns on Alarms and reminders for Reel Dinner in Settings. While it is off, app-mode.js schedules the reminders as inexact (they can come a few minutes late) rather than letting the notifications plugin open that Settings screen, and the calendar dialog says how to turn it on.
 - Store: Google Play Console account (US$25 one-off), then a signed release bundle (`./gradlew bundleRelease` with an upload key).
 
 ### iPhone

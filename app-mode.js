@@ -97,29 +97,41 @@
       return true;
     },
 
-    /* movie night reminders as local notifications: start cooking, and the showtime.
-       o: {title, show: Date, start: Date, startText, ask}. Asks permission the first time, unless ask is false.
-       Returns "set" (with the count), "denied", "none" (nothing still ahead) or false (not handled) */
+    /* movie night reminders as local notifications: any prep-ahead steps, start cooking, and the showtime.
+       o: {title, show: Date, start: Date, startText, steps: [{at: Date, title, body}], ask}. Asks permission the first
+       time, unless ask is false (then "ask" comes back while the phone has not been asked yet).
+       Returns "set:N" (N reminders, ":inexact" added on Android when Alarms and reminders is off, so they may come a
+       few minutes late), "denied", "ask", "none" (nothing still ahead) or false (not handled) */
     remind: async function (o) {
       var N = plugin("LocalNotifications");
       if (!N) return false;
-      var p = await N.checkPermissions();
-      if (o.ask !== false && (p.display === "prompt" || p.display === "prompt-with-rationale")) p = await N.requestPermissions();
-      if (p.display !== "granted") return "denied";
+      var p = await N.checkPermissions(), prompt = function () { return p.display === "prompt" || p.display === "prompt-with-rationale"; };
+      if (o.ask !== false && prompt()) p = await N.requestPermissions();
+      if (p.display !== "granted") return o.ask === false && prompt() ? "ask" : "denied";
       await REEL.clearReminders();
-      var now = Date.now(), list = [];
-      if (o.start && o.start.getTime() > now + 60000)
+      var now = Date.now(), list = [], ahead = function (d) { return d && d.getTime() > now + 60000; };
+      (o.steps || []).slice(0, 3).forEach(function (s, i) {
+        if (ahead(s.at)) list.push({ id: 4103 + i, title: s.title, body: s.body, schedule: { at: s.at, allowWhileIdle: true } });
+      });
+      if (ahead(o.start))
         list.push({ id: 4101, title: "Time to start cooking", body: o.startText || ("Movie night: " + o.title), schedule: { at: o.start, allowWhileIdle: true } });
-      if (o.show && o.show.getTime() > now + 60000)
+      if (ahead(o.show))
         list.push({ id: 4102, title: "Movie night", body: o.title + " starts now. Lights down.", schedule: { at: o.show, allowWhileIdle: true } });
       if (!list.length) return "none";
+      /* Android 12+: with Alarms and reminders off, the plugin opens that Settings screen on every exact schedule.
+         Check first and schedule inexact instead, so a lock-in or prep tick never throws the person into Settings */
+      var exact = true;
+      if (!IOS && typeof N.checkExactNotificationSetting === "function") {
+        try { exact = (await N.checkExactNotificationSetting()).exact_alarm === "granted"; } catch (e) {}
+      }
+      if (!exact) list.forEach(function (n) { n.isExactNotification = false; });
       await N.schedule({ notifications: list });
-      return "set:" + list.length;
+      return "set:" + list.length + (exact ? "" : ":inexact");
     },
     clearReminders: async function () {
       var N = plugin("LocalNotifications");
       if (!N) return false;
-      try { await N.cancel({ notifications: [{ id: 4101 }, { id: 4102 }] }); } catch (e) {}
+      try { await N.cancel({ notifications: [{ id: 4101 }, { id: 4102 }, { id: 4103 }, { id: 4104 }, { id: 4105 }] }); } catch (e) {}
       return true;
     },
 
