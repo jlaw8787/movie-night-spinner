@@ -859,7 +859,7 @@ The 13 held side-branch films (review 26 section) or the iPhone build, Josh to c
 - wip/new-formats: the review 27 work before the merge. The cut supersedes it.
 - Deploy only when Josh says: trimmed copy of cut/review-27 (see the 11 Nov deploy note), Netlify site b641e7a7-b7d1-44cc-95e1-79f0bc20acf6. Then fast-forward main to the cut, check live files, set Live layout for the 13 rows in the sheet.
 - Sheet "Reel Dinner film layouts": Live layout set for the 29 review 26 rows (now live). The 13 rows marked Approved, Live layout left until the deploy. Bad Santa and Jingle venues updated.
-- GitHub: Josh's account flagged; this session's pushes were refused. Commits may be in a git bundle (see the reply in chat) if the push failed.
+- GitHub: cut/review-27 and wip/new-formats pushed from this session (pushes work despite the flag). main not touched.
 
 ### Grades (fresh reviewer each round, docs/review-27.md)
 foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum (Men in Black 3) 8.2 then 9.1; arcade (Snatch) 8.6, 8.7, 8.8, 9.0 (then the quote credit spaced off the closing quote mark, also on Toy Story).
