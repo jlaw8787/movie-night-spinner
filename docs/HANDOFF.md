@@ -644,7 +644,7 @@ Live: deploy 6af5443b (main 77061873), 12 Nov late afternoon, Josh said deploy. 
 
 ## 12 Nov, evening: fix21-app low items 2 to 8 merged (start here in the next chat)
 
-Not deployed. Live is still 6af5443b. Each branch had a separate reviewer before merge. All 19 tests, check-browser and dialogs pass on merged main.
+Live: deploy 6af55461 (main 176899e), 12 Nov 3:50pm, Josh said deploy. Live phone check (home, Home Alone, Die Hard 2): switch present, app-mode.js not loaded, no errors, only outside host image.tmdb.org. Josh has no Android phone, so the APK is untested on a device; test on the first iPhone build. Each branch had a separate reviewer before merge. All 19 tests, check-browser and dialogs pass on merged main.
 
 ### Merged on main
 - fix22-reminders (ef94249, 93a454f): the calendar share on the phone reports sent, not shared or could not be shared (the website still says "Calendar file saved"), and no blob address is made in the app. Locking in only moves reminders already allowed (saveWeek(true) in setWeek, one schedule per lock-in); until notifications are allowed it suggests Add to calendar, which asks. Phone reminders now cover make-ahead and prep-ahead steps (ids 4103 to 4105, same words as the .ics alarms). Android 12+ with Alarms and reminders off: plugin 8.3.1 opened that Settings screen on every exact schedule; app-mode.js now checks checkExactNotificationSetting first and schedules inexact (isExactNotification false), and the calendar dialog says how to turn it on. APP-BUILD.md corrected.
