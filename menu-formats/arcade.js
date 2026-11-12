@@ -183,7 +183,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* arcade.extras: false keeps every card extra off, so the board and the Prep sheet list the same dishes */
   if(A.extras===false)for(const k in items){const L=items[k].filter(x=>!(x&&x.extra&&!x.house));if(L.length)items[k]=L}
   let R=fitNow();
-  while(!R.tr.nl){let hit=null;for(const k of ["d","w","m","s"]){const L=items[k]||[];if(L.length<2)continue;for(let i=L.length-1;i>=0;i--)if(L[i]&&L[i].extra&&!L[i].house){hit=[k,i];break}if(hit)break}
+  /* the course with the most dishes gives one up first (ties: last course first), so no course is left thin while another keeps four */
+  while(!R.tr.nl){let hit=null;for(const k of ["d","w","m","s"].sort((a,b)=>(items[b]||[]).length-(items[a]||[]).length)){const L=items[k]||[];if(L.length<2)continue;for(let i=L.length-1;i>=0;i--)if(L[i]&&L[i].extra&&!L[i].house){hit=[k,i];break}if(hit)break}
     if(!hit)break;items[hit[0]]=items[hit[0]].filter((x,i)=>i!==hit[1]);R=fitNow()}
   const pr0=prices(items,F.ei,F.egg);
   /* tickets, not money: a main runs a few hundred, a snack less, and the hidden number stays in the last digits */
@@ -213,8 +214,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const qCard=(hd,tx2,by,av)=>{const lng=tx2.length>60;let fs=19;if(lng)for(fs=19;fs>15;fs--){if(60+wrapLines(`"${tx2}"`,fs,R.CW-32,.4)*fs*1.3<=av)break}
     return `<div style="margin-top:auto;border:2px solid ${mix(neon,e.panel,.45)};border-radius:10px;padding:${lng?"8px 12px 9px":"10px 14px 11px"};background:${mix(neon,e.panel,.9)}"><div style="font:700 ${lng?12:13}px/1.2 ${BF};letter-spacing:.2em;text-transform:uppercase;color:${e.soft}">${esc(hd)}</div><div style="font:${lng?`italic 500 ${fs}px/1.3 ${BF}`:`400 ${pix?16:24}px/1.25 ${pix?MF:DF}`};color:#fff;margin-top:${lng?4:6}px;${glow(neon,lng?3:6)}">"${esc(tx2)}"</div><div style="font:italic 400 ${lng?14:15}px/1.3 ${BF};color:${neon2};margin-top:${lng?2:4}px">${esc(by)}</div></div>`};
   /* no arcade.panel: a gap of more than about 100px left in the shorter column takes a real film still (TMDB) labelled with the title, else the film's quote card */
-  const dStill=(ctx.stills||[]).filter(Boolean)[F.posSrc?0:1],dH=Math.min(200,Math.round(scSpare-24));
-  const panDef=A.panel||scSpare<=100?"":dStill&&dH>=90?`<div style="margin-top:auto;border:2px solid ${mix(neon,e.panel,.45)};border-radius:10px;overflow:hidden;background:#000;position:relative;height:${dH}px">${photo(ctx.img(dStill,"w780"),t.photo,"center 40%")}<div style="position:absolute;left:8px;top:8px;padding:3px 8px;background:rgba(0,0,0,.72);font:400 ${pix?11:15}px/1.2 ${MF};color:${neon2};letter-spacing:.08em">${esc(F.title)}, ${esc(F.year)}</div></div>`
+  /* the still starts at the estimated spare height (90px at least) and grows into whatever the column really has left (the line
+     estimate runs a little long, so the real gap is often bigger), up to 240px, so the foot of the column is never left bare */
+  const dStill=(ctx.stills||[]).filter(Boolean)[F.posSrc?0:1],dH=Math.max(90,Math.min(200,Math.round(scSpare-24)));
+  const panDef=A.panel||scSpare<=100?"":dStill?`<div style="margin-top:auto;border:2px solid ${mix(neon,e.panel,.45)};border-radius:10px;overflow:hidden;background:#000;position:relative;flex:1 0 ${dH}px;max-height:240px">${photo(ctx.img(dStill,"w780"),t.photo,"center 40%")}<div style="position:absolute;left:8px;top:8px;padding:3px 8px;background:rgba(0,0,0,.72);font:400 ${pix?11:15}px/1.2 ${MF};color:${neon2};letter-spacing:.08em">${esc(F.title)}, ${esc(F.year)}</div></div>`
     :!bzFs&&scSpare>150?qCard("Overheard",F.note.text,F.note.by,scSpare):"";
   /* what is still bare in the shorter column (no card) spreads over its own item and course gaps, capped so it never looks stretched */
   const scN=shortCol<0?0:R.cols[shortCol].reduce((x,[k])=>x+(items[k]||[]).slice(0,4).length,0),scAdd=A.panel||panDef||scN<2?0:Math.min(16,Math.floor(scSpare/(scN-1)));
