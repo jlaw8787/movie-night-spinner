@@ -910,7 +910,7 @@ function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;con
   const altN=d=>Object.values(d.alt||{}).map(a=>String(a&&a.n||"").replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,"").toLowerCase()).filter(Boolean);
   const d=f._r2.dishes.find(d=>want.includes(String(d.n).toLowerCase())||(LB[d.n]&&want.includes(String(LB[d.n]).toLowerCase())))||f._r2.dishes.find(d=>altN(d).some(n=>want.includes(n)));if(!d)return null;
   /* a film that always prints dry shows the written alcohol-free method on the phone too, when there is one */
-  const only=dietMenuOnly(f);let x=dietDish(d,only||dietAF());if(x.blocked){if(!only)return null;x=d}
+  const only=dietMenuOnly(f);let x=dietMenuDish(f,d);if(x.blocked){if(!only)return null;x=d}
   const k=phoneGuests(f)/((f._r2&&f._r2.serves)||4);
   return {ing:dishIngList(x,k),steps:(x.ingredients||[]).filter(baseOf).map(i=>baseOf(i).step(baseG(i.q,i)*k,i)).concat((x.steps||[]).map(s=>degC(scaleStep(s.text,k))))}}catch(e){return null}}
 const phoneGuests=f=>typeof current!=="undefined"&&current===f?PLAN.guests:USUAL;
@@ -1091,13 +1091,16 @@ function dietKey(){const v=DIET.veg,a=dietAF();return v&&a?"veg_af":v?"veg":a?"a
    but only on the menus, so the plan, prep sheet and shopping keep the cook's own diet settings and no dish is left off */
 const DRY_THEMES=["kids","fairytale","xmas","wizard"];
 const dietMenuOnly=f=>!dietKey()&&!!f&&DRY_THEMES.includes(f.theme);
-const dietKeyF=f=>dietKey()||(dietMenuOnly(f)?"af":"");
+/* 13 Nov: with Vegetarian on, a dry film's menus read vegetarian and alcohol-free (Bad Santa printed the bourbon highball) */
+const dietKeyF=f=>{const k=dietKey(),dry=!!f&&DRY_THEMES.includes(f.theme);return k==="veg"&&dry?"veg_af":k||(dry?"af":"")};
+/* the dish a menu shows: a dry film takes the written alcohol-free version whatever the diet. One with none keeps what the cook's settings give (the dry words still swap) */
+function dietMenuDish(f,d){const dry=!!f&&DRY_THEMES.includes(f.theme);let x=dietDish(d,dry||dietAF());if(x.blocked==="alcohol"&&dry&&!dietAF())x=dietDish(d,false);return x}
 function dietWhich(d,x){const alt=d.alt||{};if(!x.tag)return "";if(x.tag==="af")return "af";return alt.veg_af&&x.n===alt.veg_af.n?"veg_af":"veg"}
 function dietShop(x){return (x.ingredients||[]).map(i=>`${i.u?planQty(i.q,i.u):planQty(i.q,"")} ${i.item}@${i.aisle||"Other"}`.trim())}
 function dietItem(f,it){
   const r2=f&&f._r2&&f._r2.dishes;if(!r2||!it||!dietKeyF(f))return it;
   const d=r2.find(z=>z.n===(it.k||it.n));if(!d)return it;
-  const only=dietMenuOnly(f),x=dietDish(d,only||dietAF());if(x.blocked)return only?it:Object.assign({},it,{blocked:x.blocked,orig:d.n});
+  const only=dietMenuOnly(f),x=dietMenuDish(f,d);if(x.blocked)return only?it:Object.assign({},it,{blocked:x.blocked,orig:d.n});
   if(!x.tag)return it;
   const v=dietWhich(d,x),N=(f._diet&&f._diet.notes&&f._diet.notes[d.n])||{};
   const note=N[v]||(v==="veg_af"?N.veg:"")||"";
