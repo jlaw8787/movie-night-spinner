@@ -877,3 +877,6 @@ foodcourt (Jurassic World) 9.0; skilodge (Better Off Dead) 8.6 then 9.1; dimsum 
 ### Left (from the reviewers, low)
 - Phone menu order and course names still raw (shared item). Prep sheet time chips confusing with make-ahead dishes. Better Off Dead croques price under the fries (priceSense holds card extras under cooked dishes).
 - Snatch: mini pie 170 sits close to the 190 fry-up.
+
+### Deployed 13 Nov, 4:21am (Josh said deploy)
+- Deploy 6af60367 from a trimmed copy of cut/review-27 at 7d6d2088. Live files checked against it (63 files and index.html, which differs only by Netlify's form rewrite). main fast-forwarded to the cut. Live layout set in the sheet for the 13 rows.
