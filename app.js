@@ -2338,7 +2338,7 @@ async function openTrolley(f,menuOverride,label){
   });
   if(!own&&!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
   mountModal(o,"input,button",modalTrigger);prog();
-  if(own&&typeof initTicket==="function")initTicket(o,f,{groups,all,kf,ticks,prog,skip,serves,twin,reopen:()=>{dismissModal(o);setTimeout(()=>openTrolley(f),60)}});
+  if(own&&typeof initTicket==="function")initTicket(o,f,{groups,view,all,kf,ticks,prog,skip,serves,twin,reopen:()=>{dismissModal(o);setTimeout(()=>openTrolley(f),60)}});
 }
 $("weekSet").addEventListener("click",()=>{if(current){setWeek(current);lockAsk(current,$("weekSet"))}});
 /* after locking in: Director's cut (pick the dishes) or The full feature (cook the lot); either way the Prep sheet and shopping list follow */
@@ -4715,7 +4715,8 @@ function initTicket(o,f,api){
   paint();
 }
 function printTicket(f,api){
-  const left=api.groups.map(([g,l])=>[g,l.filter(x=>!api.skip(api.kf(x)))]).filter(([,l])=>l.length);
+  /* 13 Nov: the ticket prints the lines as the dialog shows them (kids' mode and dry lists read the dried words, folded drinks once) */
+  const left=(api.view||api.groups.map(([g,l])=>[g,l.map(x=>({x,text:x}))])).map(([g,l])=>[g,l.filter(e=>!api.skip(api.kf(e.x))).map(e=>e.text)]).filter(([,l])=>l.length);
   const d=new Date(),date=d.toLocaleDateString("en-AU",{day:"2-digit",month:"2-digit",year:"numeric"}),time=d.toLocaleTimeString("en-AU",{hour:"2-digit",minute:"2-digit"});
   const E=x=>String(x).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
   const n=left.reduce((t,[,l])=>t+l.length,0);
