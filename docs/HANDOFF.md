@@ -545,7 +545,7 @@ Fix 1 request line on desktop, Ferris line "Lunch, then the Cubs, then the art."
 - Chrome here sends local http through the proxy unless launched with '--proxy-server=https=127.0.0.1:<port>' (no bypass works). Use that flag in every harness.
 - Never run more than two browser jobs at once. Twelve parallel helpers overloaded the machine and the session restarted, killing all of them.
 - Playwright WebKit with devices['iPhone 15'] reproduces iPhone Safari faults; it found the photo trim bug.
-- Deploy: the trimmed copy (git archive, then remove audit docs sweep wip tests scripts .github .netlify) via the Netlify MCP deploy command run inside that copy. Get a fresh proxy token each time.
+- Deploy: the trimmed copy (git archive, then remove audit docs sweep wip tests scripts .github .netlify, and now android ios package.json package-lock.json capacitor.config.json) via the Netlify MCP deploy command run inside that copy. Get a fresh proxy token each time.
 
 ### Josh's wishes queued
 1. Instagram Reel: smooth video of a spin landing on Jurassic Park (1993), menu, lock in, marquee showing the film. No sound (he adds music in Instagram). Use the virtual-time frame capture in /home/claude/ig/rec3.cjs approach (Emulation.setVirtualTimePolicy, 30 fps), not Playwright recordVideo, which stutters. Rig the spin with window.spinPool=()=>[FILMS.find(x=>x.id==="Jurassic Park (1993)")].
@@ -622,7 +622,7 @@ App mode (?app=1) shows no film artwork and made zero TMDB requests across 7 fil
 
 ## 12 Nov, late afternoon: invite tone, card-only tone check, fix21-app merged (start here in the next chat)
 
-Live is still deploy 6af53819. Main 313b401e is pushed to GitHub, not deployed (ask Josh first). Each item below had a separate reviewer before merge.
+Live: deploy 6af5443b (main 77061873), 12 Nov late afternoon, Josh said deploy. Live files match the deploy copy; live phone check (Sixteen Candles, Home Alone, Die Hard 2) no errors, only outside host image.tmdb.org. Each item below had a separate reviewer before merge.
 
 ### Merged on main
 - fix21-invite-tone (19a690f): the 1980s pearl paper sheen and the gloss glare faded from white to CSS `transparent`, which html2canvas reads as clear black, so the sheen printed grey. Now fades to rgba(255,255,255,0). Sixteen Candles -10.1 to -1.5 levels, The Wedding Singer -0.2; all 28 invite films within about 2 levels. The same white-to-`transparent` pattern is in pub, prom, kiosk, home, campfire, diningcar, truck, newspaper and stadium; they pass the tone check today, left alone. The invite paper vignette (to rgba(70,50,20,a)) could use the same treatment, tiny effect.
@@ -640,5 +640,4 @@ Live is still deploy 6af53819. Main 313b401e is pushed to GitHub, not deployed (
 8. app-art.js loaded without ?v (only affects ?app=1 in a browser); iPhone Save PDF cancel reports "saved" even if the Documents copy failed.
 
 ### Next (suggested)
-1. Deploy main (Josh to say).
-2. The low items above, then an Android debug build (needs JDK 21 and the Android SDK installed on this machine).
+1. The low items above, then an Android debug build (needs JDK 21 and the Android SDK installed on this machine).
