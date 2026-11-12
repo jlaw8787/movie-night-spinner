@@ -1,0 +1,34 @@
+{
+ "id": "Men in Black 3 (2012)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "That is an Earth fish. Very traditional in China.",
+    "by": "Mr. Wu",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Chinatown. Earth fish, very traditional.",
+   "done": true
+  },
+  {
+   "old": "Boris the Animal breaking out of Lunar Max",
+   "new": "Boris the Animal breaking out of LunarMax",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Jasmine tea by the pot",
+    "note": "Hot jasmine green tea, poured at the table for the whole party"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

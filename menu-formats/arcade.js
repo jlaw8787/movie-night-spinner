@@ -202,7 +202,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     items[k]=ord.map(i=>it[i]);pr[k]=ord.map(i=>L[i])}
   for(const k in pr)pr[k]=pr[k].map(String);
   const head=(l,tr)=>`<div style="font:${pix?"400":"700"} ${pix?Math.round(tr.h*.62):tr.h}px/1.3 ${pix?MF:BF};color:${neon2};${pix?"":"text-transform:uppercase;letter-spacing:.08em;"}margin-bottom:8px;border-bottom:2px solid ${mix(neon2,e.panel,.55)};padding-bottom:3px">${esc(l)}</div>`;
-  const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:neon,cw:e.cw,leader:1,lead:mix(e.soft,e.panel,.5),pp:0,price:v=>`${v}<span style="font-size:.55em;letter-spacing:.06em;margin-left:4px">TIX</span>`,cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
+  /* review 27: arcade.unit renames the ticket price tag for a venue that doesn't run on tickets (a fruit machine shop plays for credits) */
+  const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:neon,cw:e.cw,leader:1,lead:mix(e.soft,e.panel,.5),pp:0,price:v=>`${v}<span style="font-size:.55em;letter-spacing:.06em;margin-left:4px">${esc(AL("unit")||"TIX")}</span>`,cgap:12+Math.min(30,R.spare/Math.max(1,C.length))};
   /* arcade.panel {head, text, by}: a quote card at the foot of the shorter column, so a long first course leaves no bare gap */
   const colH=R.cols.map(col=>col.reduce((x,[k])=>x+(items[k]||[]).slice(0,4).length*2+1,0));
   const shortCol=R.cols.length<2?-1:A.panel?colH.indexOf(Math.min(...colH)):R.hs.indexOf(Math.min(...R.hs));

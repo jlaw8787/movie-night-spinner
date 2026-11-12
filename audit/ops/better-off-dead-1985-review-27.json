@@ -1,0 +1,34 @@
+{
+ "id": "Better Off Dead (1985)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "bill",
+    "title": "Johnny's Paper Route",
+    "lines": [
+     "Meyer house, Greendale",
+     "Amount due: two dollars",
+     "Plus tip"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Paperboy's paper cone fries",
+   "new": "Mom's French dinner fries",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "French bread, French dressing",
+    "note": "Warm crusty French bread with a tangy French dressing to dip",
+    "veg": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

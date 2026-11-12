@@ -1,0 +1,42 @@
+{
+ "id": "Snatch (2000)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Do you like dags?",
+    "Franky Four Fingers",
+    "Brick Top and his pigs",
+    "Bullet Tooth Tony",
+    "Boris the Blade"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.arcade",
+   "value": {
+    "scores": [
+     "MIK",
+     "TUR",
+     "TOM"
+    ],
+    "counter": "PAYOUT BOARD",
+    "redeem": "CASH AT THE COUNTER",
+    "unit": "CR"
+   },
+   "done": true
+  },
+  {
+   "old": "Caravan site sausages",
+   "new": "Sausage Charlie's chipolatas",
+   "done": true
+  },
+  {
+   "old": "Builder's tea, three sugars",
+   "new": "Errol's cup of tea, three sugars",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}

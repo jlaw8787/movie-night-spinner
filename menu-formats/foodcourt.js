@@ -108,9 +108,10 @@ function course(sec,items,pr,R,o){
   const [k,label]=sec,{tr,CW,dmax}=R;
   /* o.flat: no wrapper, so the column's flex spacers (o.sp after each dish, o.spC after the course) share its spare height */
   return `${o.flat?"":`<div style="margin-bottom:${o.cgap||12}px">`}${o.head(label,tr,k)}${items[k].slice(0,o.maxItems||4).map((it,i)=>{const nl=tr.nl?Math.min(o.nlMax||tr.nl,wrapLines(o.tx(it.note),tr.n,CW-(o.indent||0),o.cw||.5)):0;
-    const lead=o.leader?`<span style="flex:1;min-width:16px;border-bottom:2px dotted ${o.lead||o.soft};transform:translateY(-6px)"></span>`:"";
+    const wr=o.leader&&o.cwd&&wrapLines(o.tx(it.n),tr.d,CW-(o.priceW?o.priceW(tr.d):tr.d*2.6+10),o.cwd*(o.caps?1.12:1))>1;
+    const lead=o.leader&&!wr?`<span style="flex:1;min-width:16px;border-bottom:2px dotted ${o.lead||o.soft};transform:translateY(-6px)"></span>`:"";
     return `<div style="margin-bottom:${tr.g+(o.gx||0)}px;${o.indent?`padding-left:${o.indent}px;position:relative`:""}">${o.pre?o.pre(k,i,tr):""}
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="${o.leader?"flex:0 1 auto":"flex:1"};font:${o.nw||700} ${tr.d}px/1.15 ${o.nf};color:${o.ink};${o.caps?"text-transform:uppercase;letter-spacing:.04em;":""}${clamp(dmax)}">${esc(o.tx(it.n))}</span>${lead}<span style="font:${o.pw||700} ${tr.d+(o.pp||2)}px/1 ${o.pf||o.nf};color:${o.pc||o.ink};white-space:nowrap">${o.price?o.price(pr[k][i],k,i):pr[k][i]}</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="${o.leader&&!wr?"flex:0 1 auto":"flex:1"};font:${o.nw||700} ${tr.d}px/1.15 ${o.nf};color:${o.ink};${o.caps?"text-transform:uppercase;letter-spacing:.04em;":""}${clamp(dmax)}">${esc(o.tx(it.n))}</span>${lead}<span style="font:${o.pw||700} ${tr.d+(o.pp||2)}px/1 ${o.pf||o.nf};color:${o.pc||o.ink};white-space:nowrap">${o.price?o.price(pr[k][i],k,i):pr[k][i]}</span></div>
       ${nl?`<div style="font:${o.ns||"400"} ${tr.n}px/1.3 ${o.bf};color:${o.soft};margin-top:3px;${clamp(nl)}">${esc(cap(o.tx(it.note)))}</div>`:""}</div>${o.flat?o.sp:""}`}).join("")}${o.flat?`${o.cgap!==0?`<div style="flex:none;height:${o.cgap||12}px"></div>`:""}${o.spC}`:"</div>"}`;
 }
 function sections(ctx,F,labels){return [["s",labels[0]],["m",labels[1]],["w",labels[2]],["d",F.drinks||labels[3]]].filter(([k])=>(ctx.menu[k]||[]).length)}
@@ -189,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:${e.dw} 26px/1.05 ${DF};color:${e.ink};${clamp(2)}">${esc(pr2?pr2.title:"Free refill")}</div>
       <div>${(pr2&&pr2.lines.length?pr2.lines.slice(0,2):["Show this liner at the counter"]).map((l,i)=>i?`<div style="font:700 13px/1.25 ${BF};letter-spacing:.16em;text-transform:uppercase;color:${e.ink};margin-top:2px;white-space:nowrap;overflow:hidden">${esc(l.replace(/[.]$/,""))}</div>`:`<div style="font:400 14px/1.25 ${BF};color:${e.soft};white-space:nowrap;overflow:hidden">${esc(l)}</div>`).join("")}</div></div>
     <div style="flex:1;min-width:0;box-sizing:border-box;padding:12px 18px;display:flex;flex-direction:column;justify-content:space-between">
-      <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${acc}">${isQ?`OVERHEARD AT TABLE ${esc(F.num.slice(-2))}`:"PINNED BY THE REGISTER"}</div>
+      <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${acc}">${isQ?esc((fs_("overheard")||"Overheard").toUpperCase()):"PINNED BY THE REGISTER"}</div>
       <div style="font:${isQ?"italic ":""}400 ${nS}px/1.32 ${BF};color:${e.ink};${clamp(3)}">${isQ?`"${esc(n.text)}"`:esc(n.text)}</div>
       <div style="font:700 15px/1.2 ${BF};color:${e.soft};text-align:right;${clamp(1)}">${esc(n.by)}</div></div>
     ${logoCell}</div>`;
@@ -207,7 +208,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* every note gets all its lines (nlMax), and each course's 12px gap is in the budget (headX), so nothing leans on libUnclip */
   const NLX=4,R=fit({C,items,tx:F.tx,W:RW-12,H:MH,maxCols:2,gap:30,cw:e.cw,cwd:e.cwd,nlMax:NLX,headX:14+12});
   const head=(l,tr)=>`<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="font:${e.dw} ${tr.h}px/1.3 ${DF};color:${acc}">${esc(l)}</span><span style="flex:1;height:3px;background:${acc2};opacity:.6"></span></div>`;
-  const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc2,cw:e.cw,leader:1,lead:mix(e.soft,e.paper,.4),nlMax:NLX,cgap:12};
+  const o={head,tx:F.tx,nf:BF,bf:BF,ink:e.ink,soft:e.soft,pc:acc2,cw:e.cw,leader:1,cwd:e.cwd,lead:mix(e.soft,e.paper,.4),nlMax:NLX,cgap:12};
   /* each column spreads its own real spare height into its own dish and course gaps: flex spacers, each capped so nothing looks stretched.
      A still box takes a share too and only shows (container query) when it gets more than 100px: a real film still with a short caption */
   const {CW}=R,stillUse=F.posSrc?F.stillSrc:F.still2;
@@ -217,7 +218,8 @@ window.MENU_FORMATS[ID]=ctx=>{
      second flex line 3000px to the right, off the card and clipped, so it never shows as a sliver (no container query, which the card did not honour) */
   const stillBox=stillUse?`<div style="flex:1 1 0;min-height:0;width:100%;min-width:0;overflow:hidden;display:flex;flex-direction:column;flex-wrap:wrap;align-content:flex-start">
     <div style="flex:none;width:3000px;height:0"></div><div style="flex:1 0 100px;width:100%;max-height:${Math.round(CW*9/16)+30}px;display:flex;flex-direction:column;box-sizing:border-box">
-    <div style="position:relative;flex:1;min-height:0;overflow:hidden;border:3px solid ${e.dark}">${photo(stillUse,t.photo,"center 35%")}</div><div style="flex:none;font:italic 400 14px/1.2 ${BF};color:${e.soft};margin-top:5px;white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?`, ${esc(F.year)}`:""}. Film still.</div></div></div>`:"";
+    <div style="position:relative;flex:1;min-height:0;aspect-ratio:16/9;max-width:100%;align-self:flex-start;box-sizing:border-box;overflow:hidden;border:3px solid ${e.dark}">${photo(stillUse,t.photo,"center 35%")}</div><div style="flex:none;font:italic 400 14px/1.2 ${BF};color:${e.soft};margin-top:5px;white-space:nowrap;overflow:hidden">${esc(F.title)}${F.year?`, ${esc(F.year)}`:""}. Film still.</div></div></div>`:"";
+  /* review 27: the photo keeps its 16:9 shape (a short box narrows it rather than cutting it to a strip) */
   /* a column with a still keeps its dish and course gaps a little tighter (12px and 14px caps) and drops its last course gap, so the blank goes to the still */
   const oS={...o,sp:`<div style="flex:1 1 0;min-height:0;max-height:12px"></div>`,spC:`<div style="flex:1 1 0;min-height:0;max-height:14px"></div>`};
   const css="";

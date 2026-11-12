@@ -1,0 +1,27 @@
+{
+ "id": "Jurassic World (2015)",
+ "ops": [
+  {
+   "set": "flavour.here",
+   "value": "You are here: food court",
+   "done": true
+  },
+  {
+   "old": "Isla Nublar, monorail entry",
+   "new": "Ferry, then monorail entry",
+   "done": true
+  },
+  {
+   "old": "Seven bucks a soda",
+   "new": "Hoskins' seven buck soda",
+   "done": true
+  },
+  {
+   "set": "flavour.overheard",
+   "value": "Overheard in the park",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}
