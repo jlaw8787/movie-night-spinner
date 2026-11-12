@@ -777,3 +777,41 @@ Bad Santa, Jurassic World (foodcourt); Happy Gilmore, Goldfinger (clubhouse); Fo
 - Drive-in: done, Josh chose the 1950s look for Ghostbusters: Afterlife (era 1950s in film-format.json). Side effect: prices follow the era, so the card prints 1950s prices (.15 to .60).
 - Hospital: done, Josh chose no prices on the patient meal card (no price column or leader, no "Prices subject to change" in the footer). All 7 hospital films print-checked.
 - Then: venue and sign fact check and note clean-up for every film on the new layouts, mark Approved in the sheet, then a deploy cut.
+
+## 12 Nov, 9:45pm: review 26 done, deploy cut on main (not pushed, not deployed; start here in the next chat)
+
+### What is where
+- main (local 4459196e, NOT pushed): deploy cut. 29 films go live: reception 12 (Four Weddings, Wedding Singer, Wedding Crashers, Top End Wedding, Father of the Bride, Greek Wedding, Ticket to Paradise, Anyone But You, Doctor Strange MoM, My Best Friend's Wedding, Palm Springs, The Farewell), hospital 7 (Halloween II, Elm Street 3, T2, Rain Man, Shutter Island, Smile, Silence of the Lambs), clubhouse 3 (Caddyshack, Happy Gilmore, Goldfinger), bowling (Kingpin), drivein (Ghostbusters: Afterlife), plus Naked Gun (stadium), Reservoir Dogs (diner), Stand by Me (campfire), Kingsman (pub), Forgetting Sarah Marshall (tiki). Rumble in the Bronx fact fixes on truck (venue now Elaine's Supermarket).
+- Held back (Josh: approve only layouts at 9.0): the 13 on foodcourt, skilodge, arcade, dimsum (Mallrats, Fast Times, Jingle, Bad Santa, Jurassic World, Wonder Woman 1984, Hot Tub, Better Off Dead, Wreck-It Ralph, Snatch, Dazed, Rush Hour, Men in Black 3). On main they are byte for byte as live (film data, recipes, stills, Rush Hour's edition in movie-menus.js); arcade.js on main is main's, so Toy Story is unchanged.
+- wip/new-formats: all review 26 work on every film, including the held 13. Next cut for those: same script as the review 26 cut, minus the hold list.
+- Push from this machine was refused (Claude GitHub App not installed for jlaw8787/movie-night-spinner). To ship: push main and wip/new-formats from a machine with access, then deploy main to Netlify when Josh says.
+- Sheet "Reel Dinner film layouts": the 29 rows are Approved; Live layout column left until the deploy.
+
+### Grades (independent, fresh reviewer each round; docs/review-26.md)
+Round 1 / 2 / 3 / final: foodcourt 7.0/8.3/8.8/8.6, bowling 7.8/8.6/9.0, clubhouse 6.6/8.4/9.0, reception 7.6/8.5/9.0, skilodge 7.3/8.8/8.8/8.9, arcade 6.0/8.4/8.8/8.6, drivein 7.8/8.7/9.0, dimsum 7.3/8.6/8.7/8.6, hospital 7.6/8.4/8.9/9.0, deli 7.6/8.7/8.6/8.4 (no film on deli). Graders vary by about 0.3; late findings are polish.
+
+### Josh's calls this chat
+- Venues: Goldfinger "St. Mark's Golf Club" (film's name), Four Weddings "Angus and Laura's Wedding", Rumble "Elaine's Supermarket".
+- Keep "TABLE 69" on Men in Black 3 (dimsum).
+- The Prep sheet cooking five is his rule ("show all dishes, cook 5"); reviewers told so.
+
+### Shared code items found (not done, app.js and friends)
+1. Phone menu lists dishes in the film's raw order and stock course names; layouts now sort dearest first and some rename courses (Snacks, Hot Plates). Have the layout hand its order and labels back.
+2. Prep sheet: the last recipe can sit alone on a mostly empty page.
+3. Shopping list: aisle tags from recipe files are ignored for some items (cheese, sauerkraut under Dairy or Pantry); duplicate lines are not merged; salt loses its amount.
+4. libNoteKind strips quote marks for any kind but "quote" (reception wanted kind "toast"; it uses a flavour flag instead).
+5. Unticked extras with no recipe show "As written, serves 4" on the phone (Shutter Island, Smile, Rain Man, Silence of the Lambs).
+6. Still open from review 25: libTrim cuts notes at 100 chars silently; priceSense holds uncooked extras under cooked mains; Skip to the wheel pill over the phone card; card-ops set ops on applied files.
+
+### Polish left on the held layouts (from the last grades)
+- foodcourt: "Main Street" and "Isla Nublar" repeat on Jurassic World; OVERHEARD AT TABLE NN heading fixed; dot leader stub on wrapped names.
+- arcade: Snatch steak priced under the fry-up (priceSense); bet slip wording; neon arcade vs Turkish's fruit machine shop look.
+- dimsum: Men in Black 3 is mostly diner food on a yum cha sheet; cook the shrimp and bok choy instead of the hot dogs; short quote box mostly empty.
+- skilodge: gaps between courses look airy; TMDB credit inside the quote box.
+- deli: house lines priced dearest in their course; counter note too big on the receipt.
+
+### Machine notes (this chat)
+- Chrome here must proxy only https (scripts now pass --proxy-server=https=...), or the local page gets a 405 from the proxy. sweep-shot.cjs now takes PLAYWRIGHT_MODULE, MNS_BROWSER and the proxy too.
+- Env for the browser scripts: NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome PLAYWRIGHT_MODULE=$(npm root -g)/@playwright/mcp/node_modules/playwright
+- audit-extract skips films that already have a card file; use FORCE=1 to redo.
+- Stills: data/still-pick.json wins over still-block; the card's still box takes the second pick (the first is used elsewhere), so put the wanted still second.
