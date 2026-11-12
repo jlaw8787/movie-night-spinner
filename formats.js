@@ -546,7 +546,7 @@ const FMT_FILMS={
     foot:["Strikes and gutters, ups and downs.","The Dude abides.","Shoes to the counter after your last frame"],
     poster:["Tonight at the lanes","League night"],
     zero:["/3IRvErYyT80K9RoJ4zOYR8rGPsr.jpg","“Mark it zero!” Walter, when Smokey goes over the line"],
-    rug:["/qLVQfUbGvKzNRFDy8RYrOG6a3rI.jpg","Tai chi on the rug. “This aggression will not stand, man.”"],
+    rug:["/qLVQfUbGvKzNRFDy8RYrOG6a3rI.jpg","Tai chi on the new rug, before Maude's thugs come for it"],
     stills:[["/rYIySejPHVlRKhcXCL75Omhwkag.jpg","League night at the bar: the Dude, Donny and Walter"],["/4hPrbRpbgSC4JSpjckcJHc7aF5T.jpg","The Jesus, warming up two lanes over"],["/olbS02Olqw4koy5dhKYh2DEwrpO.jpg","The Stranger and the Dude at the bar, semi-finals night"]],
     cue:["/hKsvdTYqu85UDsfyIKVr8K1PiFl.jpg","Half-and-half at Ralphs"],
     groups:[
@@ -1952,7 +1952,7 @@ function fmtStarLanes(f,spec,menu,poster){
   const SP=`<div aria-hidden="true" style="flex:1 1 0;min-height:8px"></div>`;
   const cue=`<div style="display:flex;gap:14px;align-items:center;background:${CREAM};border:2px solid ${NAVY};border-radius:10px;padding:8px 12px">
     <div style="flex:none;width:112px;height:63px;overflow:hidden;border-radius:6px;background:#222">${img(spec.cue[0],"w780",spec.cue[1]+", still from the film")}</div>
-    <div style="min-width:0"><div style="${COND};font-weight:700;font-size:15px;letter-spacing:.16em;color:${RUG};text-transform:uppercase">Showtime cue</div><div style="${BODY};font-weight:700;font-size:15px;line-height:1.28;color:${INK};margin-top:2px">${ESC(fmtCue(f))}</div><div style="${BODY};font-style:italic;font-size:13px;line-height:1.3;color:${SOFT};margin-top:3px">${ESC(spec.cue[1])}</div></div></div>`;
+    <div style="min-width:0"><div style="${COND};font-weight:700;font-size:15px;letter-spacing:.16em;color:${RUG};text-transform:uppercase">Showtime cue</div><div style="${BODY};font-weight:700;font-size:15px;line-height:1.28;color:${INK};margin-top:2px">${ESC(fmtCue(f)).replace(/ (\S+)$/,"&nbsp;$1")}</div><div style="${BODY};font-style:italic;font-size:13px;line-height:1.3;color:${SOFT};margin-top:3px">${ESC(spec.cue[1])}</div></div></div>`;
   const colA=`<div class="fx-panel" style="min-width:0;min-height:0;display:flex;flex-direction:column">${spec.groups.filter(g=>g.left).map(sect).join(SP)}</div>`;
   const colB=`<div class="fx-panel" style="min-width:0;min-height:0;display:flex;flex-direction:column">${spec.groups.filter(g=>!g.left).map(sect).join(SP)}${SP}${cue}</div>`;
   const card=`<div style="flex:1;min-width:0;min-height:0;background:${CARD};border:3px solid ${NAVY};border-radius:14px;padding:14px 22px 14px;box-shadow:0 10px 24px rgba(27,35,64,.25);display:flex;flex-direction:column;gap:12px">
