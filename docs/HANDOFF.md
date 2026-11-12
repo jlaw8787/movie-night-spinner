@@ -759,3 +759,29 @@ Live: deploy 6af55cb9 from main 05dbb9a (Josh, 12 Nov: deploy Wall-E and Toy Sto
 - Kids and No alcohol: the White Russian becomes the Little Dude vanilla malt (milk, vanilla ice cream, malted milk, nutmeg) on card, cue, phone and recipe, through data/diet text pairs.
 - Table kit venue is now Hollywood Star Lanes. The fallback type poster was remade with make-type-posters for this film only. The old lanes renderer is kept but no film uses it.
 - No TMDB key on this machine: stills are stored paths only.
+
+## 12 Nov, night: Review 24 done, fixes and The Big Lebowski merged on main (start here in the next chat)
+
+Live is still deploy 6af55cb9 (Wall-E and Toy Story). Main holds everything below; not deployed yet. Each branch had a separate reviewer before merge.
+
+### Review 24
+docs/review-24.md, 9.0 out of 10, screenshots review-24-01 to 18. All Review 23 fixes held. Josh chose to fix all 8 items.
+
+### Done
+- Item 1, Netlify badge: Josh turned off Project configuration, General, Powered by Netlify badge (12 Nov 5:23pm). Live HTML no longer carries the hud script. Not a repo change.
+- fix24-print (3d4caf6): Back to the Future white bar (Lou's left column 43px too tall: poster 160x240, clock tower 100px), Goodfellas notepad shadow in a turned column trimmed, diner pages take their margin from their own paper, E.T. signature faint box gone, 1px blended edge trimmed on landscape PDFs, Galaxy Video photo signs 44px taps on the phone. New scripts/check-white-bar.cjs (91 of 91 clean, --rescan needs no browser).
+- fix24-words (bf0427f, 8e74f57): kids' swap now reaches shopping lists and Copy text; plain beer and alcohol-free beer, lager, ale read ginger beer (was root beer), alcohol-free sparkling wine reads sparkling apple juice, non-alcoholic gin cucumber juice, margarita "lime crush", Rudy sticky onions; wine names swap to grape juice; check-kids-cards flags them and sommelier. Ratatouille (always alcohol-free) cellar now grape juice in every mode. 36 hand-built dish notes rewritten food first. Luca stew in fish stock. Shopping units: "1 bunch tarragon", "6 slices provolone" (377 lines).
+- fix24-lebowski (337bf83, bff92f1): The Big Lebowski's own Hollywood Star Lanes menu (see the section above). Reviewer fixed the Stranger caption.
+
+### Tests on merged main (bff92f1, from /tmp/wt-final)
+All 18 node tests, check-browser, dialogs, check-store-taps, check-white-bar 91 of 91: all pass.
+
+### Left, low (from the reviewers)
+- Kids' shopping wording: The Castle "4 ginger beer of 375 ml", Blade Runner "4 ginger beer (375ml)", Shaun "1 L ginger beer" twice, Mean Streets "Ginger & ginger", Old School "alcohol free ginger beer", Fantastic Beasts "cucumber juice, for the grown-ups".
+- About 145 hand-built Copy-text notes (never printed) still say where the dish is in the film; other shared house notes untouched.
+- Phone store focus ring now draws round the bigger tap area. Diner PDF page copies not freed (memory on iPhone). Men in Black cover margin 227 vs 250 inside.
+- Lebowski: the tai chi caption pairs "This aggression will not stand" with the rug scene (said at the mansion); gap above Sweets about 60px; cue leaves "one." alone; fallback poster still says White Russian in kids' mode. The old lanes renderer is unused.
+- Not tested: WebKit is not installed here, so no iPhone Safari run this round.
+
+### Next
+Josh to say deploy. Then the 42 side-branch films (section above) or the iPhone build, Josh to choose.
