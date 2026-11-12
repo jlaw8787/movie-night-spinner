@@ -60,6 +60,10 @@ const TONE={
  tense:{wear:.24,vig:.38,photo:"contrast(1.16) saturate(.8)",tilt:0},
  scrappy:{wear:.55,vig:.26,photo:"contrast(1.2) saturate(.85)",tilt:-3}
 };
+/* dear dishes (lobster, steak, prawns): review 26 moves them to the top of their course and gives them a premium price */
+const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?|shrimp|crab|scallops?|wagyu|oysters?|crayfish|rib ?eye|sirloin|filet|fillet mignon|t-bone|porterhouse)\b/i;
+const DEARX={s:1.5,m:1.75};
+const ending=(v,ei)=>ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
 function money(v,ei){if(v<1&&ei<2)return "."+String(Math.round(v*100)).padStart(2,"0");if(ei>=6)return String(Math.round(v));return v.toFixed(2)}
 function prices(menu,ei,egg,mult){
   mult=mult||{s:.55,m:1,w:.45,d:.3};const out={};let hid=false;
@@ -68,8 +72,8 @@ function prices(menu,ei,egg,mult){
   const ps=window.priceSense?window.priceSense(menu,out):out;
   /* review 25: a dearer dish (lobster, steak, prawns) never sits under a plainer one in its course, and no two items in a course share a price.
      window.priceSense does not rank dishes, so deli swaps prices here: the dear dishes take the top prices of their course, house lines keep their place. */
-  const DEAR=/\b(lobster|steak|prime rib|surf and turf|prawns?|shrimp|crab|scallops?|wagyu|oysters?|crayfish|rib ?eye|sirloin|filet|fillet mignon|t-bone|porterhouse)\b/i;
   const val=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return isNaN(n)?0:n};
+  const plainVals=(its,P)=>[0,...its.map((it,i)=>DEAR.test((it&&it.n)||"")?null:val(P[i])).filter(v=>v!=null)];
   for(const k of ["s","m","w","d"]){const its=menu[k]||[],P=(ps[k]||[]).slice();if(P.length<2)continue;
     /* no shared price in one course: a repeat goes up to the next price ending, before the dear dishes are ranked */
     const nudge=v=>{if(ei>=6)return v+1;if(ei<2)return Math.round((v+.05)*100)/100;const fl=Math.floor(v),c=Math.round((v-fl)*100);return c<50?fl+.5:c<95?fl+.95:fl+1.5};
@@ -80,6 +84,10 @@ function prices(menu,ei,egg,mult){
       /* plain dishes keep their own order of prices, dear ones take the top in menu order */
       const restInOrder=plain.map(i=>[i,val(P[i])]).sort((a,b)=>a[1]-b[1]).map(a=>a[0]);rest.sort((a,b)=>val(a)-val(b));
       dear.forEach((i,j)=>{P[i]=top[dear.length-1-j]});restInOrder.forEach((i,j)=>{P[i]=rest[j]})}
+    /* review 26: lobster for under five dollars reads as a joke, so a dear dish is never cheaper than its premium price for the era.
+       The first dear dish gets the most; every premium sits above the plain dishes, so no price repeats */
+    if(dear.length&&DEARX[k]){const hi=Math.max(...plainVals(its,P));dear.forEach((i,j)=>{let v=ending(BASE[ei]*mult[k]*DEARX[k]*(1+.15*(dear.length-1-j)),ei);
+      if(v<=hi)return;if(v>val(P[i]))P[i]=String(P[i]).replace(/[\d.]+/,money(v,ei))})}
     ps[k]=P}
   return ps;
 }
@@ -222,12 +230,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* "Sandwiches" only when every main is one (bread in its name or shopping list); otherwise a neutral hot plates heading */
   const isSand=it=>it&&(BREAD.test(it.n||"")||(Array.isArray(it.shop)&&it.shop.some(s=>BREAD.test(String(s).split("@")[0]))));
   const mains=(ctx.menu.m||[]).slice(0,4),mLabel=mains.length&&mains.every(isSand)?"Sandwiches":"Hot Plates";
-  const C=sections(ctx,F,["Starters",mLabel,"From the Case","Drinks"]),items=itemsOf(ctx),pr=prices(items,F.ei,F.egg);
+  const C=sections(ctx,F,["Starters",mLabel,"From the Case","Drinks"]),items=itemsOf(ctx);
+  /* review 26: a dear dish added after tonight's five (fullMenu appends extras) still prints at the top of its course; house lines stay last */
+  for(const k of ["s","m","w","d"]){const a=items[k],isD=it=>!it.house&&DEAR.test(it.n||"");items[k]=[...a.filter(isD),...a.filter(it=>!isD(it))]}
+  const pr=prices(items,F.ei,F.egg);
   const R=fit({C,items,tx:F.tx,W:MW,H:MH,maxCols:1,cw:e.cw,cwd:e.cwd,caps:1});
   /* felt board headings: red push-in capitals straight on the board, no white tab */
   const head=(l,tr)=>`<div style="font:700 ${tr.h}px/1.2 ${DF};color:${red};text-transform:uppercase;letter-spacing:.16em;margin-bottom:6px;text-shadow:0 1px 0 rgba(0,0,0,.7),0 0 1px rgba(0,0,0,.5)">${esc(l)}</div>`;
   /* the shorter column's spare goes into its own course gaps, capped so it never looks stretched */
-  const per=R.spare/Math.max(1,C.length),add=Math.min(26,per),left=R.spare-add*C.length;
+  const per=R.spare/Math.max(1,C.length),add=Math.min(30,per),left=R.spare-add*C.length;
   const o={head,tx:F.tx,nf:BF,bf:NF,ink:lt,soft:e.soft,pc:lt,cw:e.cw,caps:1,nw:500,pw:500,leader:1,lead:mix(e.soft,e.board,.5),cgap:12+add};
   /* still more than ~100px left: a real still from the film under the menu, with a short caption */
   const stSrc=F.posSrc?F.stillSrc:F.still2,stH=Math.min(Math.round(MW*9/16),Math.floor(left-30));

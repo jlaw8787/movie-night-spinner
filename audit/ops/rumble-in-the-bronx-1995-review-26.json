@@ -1,0 +1,36 @@
+{
+ "id": "Rumble in the Bronx (1995)",
+ "ops": [
+  {
+   "old": "Cereal, rice, one very tall visitor",
+   "new": "Cereal, rice, one wedding cake order",
+   "done": true
+  },
+  {
+   "old": "Total: ask Uncle Bill",
+   "new": "Total: ask Elaine",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ask about the wedding tea. No bikers past the counter.",
+    "by": "Elaine",
+    "kind": "note"
+   },
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when the bikers trash Elaine's supermarket.",
+   "done": true
+  },
+  {
+   "old": "Keung's hovercraft on the golf course",
+   "new": "Keung's hovercraft hits the golf course",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-12",
+ "misses": []
+}
