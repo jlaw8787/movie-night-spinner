@@ -1,6 +1,6 @@
 /* Save PDF against the screen (review 12, fix 1 and 2).
    Renders each film's printed menu on screen and through the Save PDF renderer (renderCanvas in app.js, html2canvas),
-   then compares the two: average brightness and contrast (spread of brightness) must stay within a few per cent.
+   then compares the two, card only (not the surround round a landscape card): average brightness and contrast (spread of brightness) must stay within a few per cent.
    A wash layer html2canvas cannot draw (a big blurred inset shadow, an elliptical vignette, a blurred backdrop)
    shows up as a drop in both.
      NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-pdf-tone.cjs ["Film (Year)" ... | --per N | --all]
@@ -30,8 +30,12 @@ const appReady=async p=>{if(!p.__err){p.__err=1;p.on('pageerror',e=>console.log(
  for(let t=0;t<2;t++){try{await p.waitForFunction(()=>{try{return typeof show==='function'&&!!current}catch(e){return false}},null,{timeout:60000});return}
   catch(e){if(t)throw Error('app did not start after a reload');await p.reload({waitUntil:'domcontentloaded'})}}};
 const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.1'],{cwd:R,stdio:'ignore'});process.on('exit',()=>server.kill());
-async function stats(buf){
-  if(sharp){const {data,info}=await sharp(buf).removeAlpha().resize({width:400}).raw().toBuffer({resolveWithObject:true});
+/* crop: the card's own area in CSS px ({x,y,w,h}) and the image's px per CSS px, so only the card is measured */
+async function stats(buf,crop,k){
+  if(sharp){let img=sharp(buf).removeAlpha();
+    if(crop){const m=await sharp(buf).metadata(),l=Math.max(0,Math.round(crop.x*k)),t=Math.max(0,Math.round(crop.y*k));
+      img=sharp(await img.extract({left:l,top:t,width:Math.min(m.width-l,Math.round(crop.w*k)),height:Math.min(m.height-t,Math.round(crop.h*k))}).png().toBuffer())}
+    const {data,info}=await img.resize({width:400}).raw().toBuffer({resolveWithObject:true});
     let s=0,s2=0,n=info.width*info.height;for(let i=0;i<data.length;i+=3){const y=.2126*data[i]+.7152*data[i+1]+.0722*data[i+2];s+=y;s2+=y*y}
     const m=s/n;return {mean:m,sd:Math.sqrt(Math.max(0,s2/n-m*m))}}
   throw Error('sharp is needed (npm i -g sharp)')}
@@ -64,10 +68,14 @@ async function stats(buf){
    await Promise.all([...card.querySelectorAll('img')].map(i=>i.decode().catch(()=>{})));await document.fonts.ready;return true},id),'loading the menu');
   if(!ok){fails.push(id+': not found');continue}
   await p.waitForTimeout(600);
-  /* the screen copy: the card as Chrome draws it, at full size on its own layer over the page */
+  /* the screen copy: the card as Chrome draws it, at full size on its own layer over the page.
+     Fix 2 (12 Nov): only the card is measured. A landscape card sits in a 26px surround that is the dark page on screen and white paper in
+     the print copy, so the whole box read as a print 20 to 25 levels lighter on the hand-built cards (Home Alone, Goodfellas and the rest).
+     The surround is the card's padding in both copies, so both images are cropped to the inside of it */
   const box=await p.evaluate(()=>{const land=card.classList.contains('fmt'),w=+card.dataset.w||(land?1123:794),h=+card.dataset.h||(land?794:1123);
+   const cs=getComputedStyle(card),pad=k=>land?parseFloat(cs['padding'+k])||0:0,crop={x:pad('Left'),y:pad('Top')};crop.w=w-crop.x-pad('Right');crop.h=h-crop.y-pad('Bottom');
    const st=document.createElement('div');st.id='__tone';st.style.cssText=`position:fixed;left:0;top:0;width:${w}px;height:${h}px;z-index:2147483647;background:${STY[current.theme].mg}`;
-   const c=card.cloneNode(true);c.style.transform='none';c.hidden=false;st.appendChild(c);document.body.appendChild(st);return {w,h}});
+   const c=card.cloneNode(true);c.style.transform='none';c.hidden=false;st.appendChild(c);document.body.appendChild(st);return {w,h,crop}});
   await p.setViewportSize({width:Math.max(1440,Math.ceil(box.w)),height:Math.max(900,Math.ceil(box.h))});
   await timed(p.evaluate(()=>Promise.all([...document.querySelectorAll('#__tone img')].map(i=>i.decode().catch(()=>{})))),'the screen copy');await p.waitForTimeout(300);
   const shot=await p.screenshot({clip:{x:0,y:0,width:box.w,height:box.h},animations:'disabled'});
@@ -79,7 +87,7 @@ async function stats(buf){
    const c=await renderCanvas(card,true);return c.toDataURL('image/png')},SCALE),'the Save PDF render');
   if(!url){fails.push(id+': export tools did not load');continue}
   const pdf=Buffer.from(url.split(',')[1],'base64');
-  const a=await stats(shot),z=await stats(pdf);
+  const pw=sharp?(await sharp(pdf).metadata()).width:0,a=await stats(shot,box.crop,1),z=await stats(pdf,box.crop,pw/box.w);
   const db=(z.mean-a.mean)/a.mean,dc=(z.sd-a.sd)/a.sd,fmt=await p.evaluate(()=>current._lib&&current._lib.fmt||'');
   const dl=z.mean-a.mean;rows.push(`${id} (${fmt}${SCALE?', scale '+SCALE:''}): brightness ${dl>=0?'+':''}${dl.toFixed(1)} levels (${(db*100).toFixed(1)}%), contrast ${(dc*100).toFixed(1)}%`);console.log(rows[rows.length-1]);
   if(process.env.MNS_SHOTS){const d=process.env.MNS_SHOTS,s=id.replace(/[^a-z0-9]+/gi,'-');fs.writeFileSync(path.join(d,s+'-screen.png'),shot);fs.writeFileSync(path.join(d,s+'-pdf.png'),pdf)}

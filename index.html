@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#5a0f1f">
+<script id="reel-boot">/* app mode switch (docs/APP-BUILD.md). The website never loads app-mode.js, so nothing blocks its first paint.
+   The iPhone and Android app, the www/ build and a browser opened with ?app=1 (sticks for the tab, ?app=0 turns it off) load app-art.js and app-mode.js here */
+(function(){var W=window,c=W.Capacitor,n=!!(c&&typeof c.isNativePlatform==="function"&&c.isNativePlatform()),f=false;
+try{var q=location.search.match(/[?&]app=([01])(?:&|$)/);if(q)sessionStorage.setItem("reel-app",q[1]);f=sessionStorage.getItem("reel-app")==="1"}catch(e){}
+if(n||f||W.REEL_APP_BUILD)document.write('<script src="app-art.js?v=d308a24c"><\/script><script src="app-mode.js?v=14f24333"><\/script>');else{W.REEL_APP=false;W.REEL_NATIVE=false}})();</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Reel Dinner">
@@ -3106,10 +3111,10 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=50d47b42" defer></script>
+<script src="films.js?v=f6c9a4a1" defer></script>
 <script src="assets/fonts/fonts.js?v=11978182" defer></script>
 <script src="formats-core.js?v=7e267eee" defer></script>
-<script src="app.js?v=95444d71" defer></script>
+<script src="app.js?v=08696199" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

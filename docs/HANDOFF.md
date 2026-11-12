@@ -334,7 +334,7 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 
 - Live: 911f5f3 (deploy 6aef17bc). Branch pushed.
 
-## 7 Nov, 10:30pm: Josh's decisions (start here in the next chat)
+## 7 Nov, 10:30pm: Josh's decisions 
 
 1. Hosting: decide later. Keep deploying to Netlify from the trimmed copy; don't merge to main yet.
 2. Flat menus (411): rework all, Josh approves. Apply the checkers' "ideas" and "missing" moments in batches (vibe rework is approved, no per-film sign-off needed). Every new line still follows the fact rules: real quotes only in quote marks, no song lyrics, smallest layout-safe length. Re-score after.
@@ -545,7 +545,7 @@ Fix 1 request line on desktop, Ferris line "Lunch, then the Cubs, then the art."
 - Chrome here sends local http through the proxy unless launched with '--proxy-server=https=127.0.0.1:<port>' (no bypass works). Use that flag in every harness.
 - Never run more than two browser jobs at once. Twelve parallel helpers overloaded the machine and the session restarted, killing all of them.
 - Playwright WebKit with devices['iPhone 15'] reproduces iPhone Safari faults; it found the photo trim bug.
-- Deploy: the trimmed copy (git archive, then remove audit docs sweep wip tests scripts .github .netlify) via the Netlify MCP deploy command run inside that copy. Get a fresh proxy token each time.
+- Deploy: the trimmed copy (git archive, then remove audit docs sweep wip tests scripts .github .netlify, and now android ios package.json package-lock.json capacitor.config.json) via the Netlify MCP deploy command run inside that copy. Get a fresh proxy token each time.
 
 ### Josh's wishes queued
 1. Instagram Reel: smooth video of a spin landing on Jurassic Park (1993), menu, lock in, marquee showing the film. No sound (he adds music in Instagram). Use the virtual-time frame capture in /home/claude/ig/rec3.cjs approach (Emulation.setVirtualTimePolicy, 30 fps), not Playwright recordVideo, which stutters. Rig the spin with window.spinPool=()=>[FILMS.find(x=>x.id==="Jurassic Park (1993)")].
@@ -648,3 +648,77 @@ Every new or custom menu gets the movie poster and real TMDB stills treatment. N
 - Checks: check-print-text passes on all four arcade films, all tests pass.
 - 5:20pm: Josh asked for a Pizza Planet logo, box, rocket or truck. Not drawn (Pixar's design, and the real-stills rule), so the left column card now holds the real claw machine still (/xUU287dd4KIeFlZAqI2gGIdRS9v.jpg, label THE CLAW) instead of the Woody quote. arcade.panel.img takes a TMDB path, with h and pos; keep text off, the board clips a caption.
 - 5:35pm: re-grade 9/10. Last fixes (Josh: all three): arcade.noLogo now prints the film title and year on the right of the marquee; new arcade.quote {text, by} prints a line in the cabinet above the coin slot (Toy Story: "Reach for the sky!" Woody); punch line drops "on sticks", top shelf wink is "The Claw and the aliens". Checks pass on all four arcade films, all tests pass.
+## 12 Nov, afternoon: old branches done, fonts live (start here in the next chat)
+
+Live: deploy 6af53819 (main c6c9c600), 12 Nov afternoon. Live files checked against the deploy copy (index.html differs only by Netlify's form and toolbar edits). Live phone check: Kung Fu Panda, Die Hard 2, E.T., Tombstone, Save PDF libraries load, no errors, only outside host is image.tmdb.org. GitHub push works from these sessions; main is pushed.
+
+### Merged on main, each reviewed by a separate reviewer
+- fix21-checks (two review rounds): scaled tone runs (MNS_TONE_SCALE other than 2.5) end with exit 2, not a sign-off; bad MNS_SHARD or a mistyped film fails; skipped films are listed and give exit 2; per-film and per-batch timeouts; tone check reopens a crashed page; proxy host parsed with new URL.
+- fix21-checks-tdz: start-up wait (appReady) waits 60 s, reloads once, logs page errors. Same old wait still in check-browser, audit-extract, check-prices, check-print-text, check-kids-cards, check-cut-words (not changed yet).
+- fix21-fonts (two review rounds): every font local in assets/fonts (scripts/fetch-fonts.cjs, 448 specs, 288 families, 905 files, about 20 MB on Netlify, visitors only download what a menu uses; first visit about 21 KB more than Google, for fonts.js). Save PDF libraries in assets/lib. No Google Fonts or cdnjs calls. CJK families (LXGW WenKai TC, Noto Serif TC) get a face holding only the characters the menus print; fetch-fonts --check fails a CJK family with Latin only. sw.js keeps fonts in mns-static and drops files no longer in assets/fonts/files.json on update. Rerun scripts/sweep-font-queries.cjs then fetch-fonts after adding a menu that picks fonts from data. Not done: LOOK arrays (unused airline and bistro looks) in the sweep's collect(); scripts/brand/*.html and make-type-posters.cjs still use Google (offline tools).
+
+### Findings, all 900 (main a53ff40f, before fonts)
+- Phone fit 900/900 pass. Prep A4 900/900 pass (1738 pages at 4 guests).
+- PDF tone 885/900. 13 false alarms on hand-built cards (Goodfellas, The Untouchables, Big Night, Ratatouille, Kung Fu Panda, My Cousin Vinny, Ghostbusters, When Harry Met Sally, Big Trouble in Little China, Back to the Future, The Big Lebowski, Home Alone, Friday): the check compares the dark page round the card with white paper round the print. Card only, Home Alone is 0.2 levels; Back to the Future 7.0 (borderline). Fix the check to measure the card only.
+- Real: Sixteen Candles and The Wedding Singer (invite) print about 9 levels darker and 12 to 14% flatter than the screen; the pearl paper sheen comes out greyer. Kill Bill Vol. 2 (invite) passes. Fix next.
+- On the fonts branch before merge: 19 tests, check-browser, store taps, phone fit 900/900, print text 900/900 (six chunks of 150) all pass.
+
+### fix21-app: assessed, not merged (Josh chose assess first)
+App mode (?app=1) shows no film artwork and made zero TMDB requests across 7 films and the shop; website unchanged with it off. Before merging: 3 tests fail (week, poster-menus, shopping: no window or REEL stub in the test harness); REEL used unguarded at calendar, share list, Save image, share link (app.js ~2178, 2237, 3551, 3756); stamps not rebuilt (app-mode.js?v=0); app mode misses assets/hero/latedoor.webp and shopfront*.webp (poster lookalikes); YouTube trailers still play in app mode (Josh to decide); docs/APP-BUILD.md never written; Android needs POST_NOTIFICATIONS and SCHEDULE_EXACT_ALARM; service worker should be skipped in app mode. Then Android debug build (works on Linux), iPhone needs a cloud Mac with Xcode plus Apple Developer (US$99) and Play Console (US$25). Size medium; main risk Apple guideline 4.2.
+
+### Machine notes (new)
+- Run long checks from their own worktree (git worktree add --detach /tmp/wt-run <commit>), never the folder you are editing. Switching branches mid-run tested the wrong code this session.
+- check-print-text on all 900 in one page gives no progress and risks memory; run six chunks of 150 by name.
+- tests/dialogs.test.cjs opens a browser: count it against the two-browser limit.
+
+### Next (suggested)
+1. Fix Sixteen Candles and The Wedding Singer print tone, and make the tone check measure the card only.
+2. fix21-app fixes listed above, if Josh wants to go ahead.
+
+## 12 Nov, late afternoon: invite tone, card-only tone check, fix21-app merged (start here in the next chat)
+
+Live: deploy 6af5443b (main 77061873), 12 Nov late afternoon, Josh said deploy. Live files match the deploy copy; live phone check (Sixteen Candles, Home Alone, Die Hard 2) no errors, only outside host image.tmdb.org. Each item below had a separate reviewer before merge.
+
+### Merged on main
+- fix21-invite-tone (19a690f): the 1980s pearl paper sheen and the gloss glare faded from white to CSS `transparent`, which html2canvas reads as clear black, so the sheen printed grey. Now fades to rgba(255,255,255,0). Sixteen Candles -10.1 to -1.5 levels, The Wedding Singer -0.2; all 28 invite films within about 2 levels. The same white-to-`transparent` pattern is in pub, prom, kiosk, home, campfire, diningcar, truck, newspaper and stadium; they pass the tone check today, left alone. The invite paper vignette (to rgba(70,50,20,a)) could use the same treatment, tiny effect.
+- fix21-tone-card (c4edd74): check-pdf-tone measures the card only, cropping both images to inside the card's padding (the 26px surround on landscape .fmt cards: dark page on screen, white paper in print). fx-paper and portrait cards have no padding, so their numbers are unchanged. Still catches a real fault (old Sixteen Candles fails at -10.1). Rerun with MNS_NET=1: the 13 hand-built cards all pass (worst Friday -3.2, Goodfellas +2.0, Back to the Future +0.2), all 28 invites pass.
+- fix21-app (313b401e, rebased on main): tests guarded (globalThis.REEL_APP, typeof REEL checks), stamps rebuilt, assets/app/latedoor-app.webp (shelves blurred) swapped in app mode, shopfront*.webp never copied into www/, no service worker in app mode, Android POST_NOTIFICATIONS and SCHEDULE_EXACT_ALARM, docs/APP-BUILD.md. All 19 tests, check-browser, dialogs pass. ?app=1 over 7 films and the shop: 0 TMDB requests, no poster photos; website unchanged.
+
+### fix21-app reviewer's low items (not done)
+1. Trailers may not play on iPhone (no referrer from capacitor://localhost, YouTube error 153); test on a device before Josh decides on trailers.
+2. Calendar share cancelled on the phone still says "Calendar file saved"; blob URL made and never freed there.
+3. Locking in a film asks for notification permission straight away (setWeek calls appRemind(true)); asking from the calendar button would be gentler.
+4. After sharing a menu image natively it says "Saved. Check your Photos." even if shared to a chat.
+5. SCHEDULE_EXACT_ALARM is off by default on Android 14+, so reminders are inexact there; APP-BUILD.md says "on the minute".
+6. Phone reminders cover start cooking and showtime only, not day-before steps.
+7. app-mode.js (about 30 KB) blocks first paint on the website; a small inline check that loads it only in app mode would remove that.
+8. app-art.js loaded without ?v (only affects ?app=1 in a browser); iPhone Save PDF cancel reports "saved" even if the Documents copy failed.
+
+### Next (suggested)
+1. The low items above, then an Android debug build (needs JDK 21 and the Android SDK installed on this machine).
+
+## 12 Nov, evening: fix21-app low items 2 to 8 merged (start here in the next chat)
+
+Live: deploy 6af55461 (main 176899e), 12 Nov 3:50pm, Josh said deploy. Live phone check (home, Home Alone, Die Hard 2): switch present, app-mode.js not loaded, no errors, only outside host image.tmdb.org. Josh has no Android phone, so the APK is untested on a device; test on the first iPhone build. Each branch had a separate reviewer before merge. All 19 tests, check-browser and dialogs pass on merged main.
+
+### Merged on main
+- fix22-reminders (ef94249, 93a454f): the calendar share on the phone reports sent, not shared or could not be shared (the website still says "Calendar file saved"), and no blob address is made in the app. Locking in only moves reminders already allowed (saveWeek(true) in setWeek, one schedule per lock-in); until notifications are allowed it suggests Add to calendar, which asks. Phone reminders now cover make-ahead and prep-ahead steps (ids 4103 to 4105, same words as the .ics alarms). Android 12+ with Alarms and reminders off: plugin 8.3.1 opened that Settings screen on every exact schedule; app-mode.js now checks checkExactNotificationSetting first and schedules inexact (isExactNotification false), and the calendar dialog says how to turn it on. APP-BUILD.md corrected.
+- fix22-boot (one commit plus 82a0b0f): index.html has a small inline `<script id="reel-boot">` switch; the website loads neither app-mode.js nor app-art.js (window.REEL undefined there, app.js already guards it). App mode (native, ?app=1, www/ build) loads app-art.js and app-mode.js, both ?v stamped. build-app.cjs puts REEL_APP_BUILD before the switch and fails if the switch is missing. Native menu image share says "Menu image shared." iPhone Save PDF cancel reports saved only if the Documents copy was written.
+
+### Left from the reviewers (low, no action)
+- When the calendar button moves a passed night to next week, reminders are scheduled twice (same ids, no doubles).
+- If checkExactNotificationSetting itself throws, exact is assumed on.
+
+### Still open
+1. Trailers in app mode on iPhone (no referrer from capacitor://localhost, YouTube error 153). Josh to decide.
+2. Android debug build: see below.
+
+### Android debug build (12 Nov evening)
+- Built from main 13260d0 and sent to Josh: com.reeldinner.app, API 24 to 36, 53 MB, debug signed. JDK 21 was already installed. Android SDK at /home/claude/android-sdk (platform 36, build-tools 36). This machine only, not in the repo.
+- Gradle's first run failed with 429 from repo.maven.apache.org through the session proxy. Fixed on this machine with ~/.gradle/init.d/mirror.gradle, which points Maven Central at https://maven-central.storage-download.googleapis.com/maven2/. After that: npm install, build-data, build:app, cap sync, assembleDebug all clean (about 3 min the first time, 1 min after).
+
+### Trailers in app mode
+- Josh chose: test first, change nothing. Try trailers in the Android APK now, and on the first iPhone test build, then decide.
+
+### Next (Josh, 12 Nov 4:15pm)
+Review 24: a fresh independent review of the live site, written up like docs/review-21.md, then fix what it finds. iPhone build, store prep and the small tidy-ups are on hold.
