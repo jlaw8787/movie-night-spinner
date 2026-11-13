@@ -986,7 +986,7 @@ Cutover steps, in order, only when Josh says and no other chat is deploying:
 7. Keep the Netlify site 1 to 2 weeks as a fallback (switch the two records back), then delete.
 After cutover, "deploy" = merge to main, then run Publish site. The trimmed Netlify copy steps above no longer apply. Pages caches pages for up to 10 minutes.
 
-## 13 Nov, evening: domain move paused, small menu fixes (branch fix/small-menu-1, NOT published)
+## 13 Nov, evening: domain move paused, small menu fixes (merged to main a18edcac, published to github.io 7:20pm)
 
 ### Domain move (paused)
 - Not started: VentraIP needs 2FA by email and Outlook was down. No DNS or GitHub settings changed. reeldinner.com still on Netlify (main 7d8ae82c). Resume from step 1 of the 9am cutover list (TXT record _github-pages-challenge-jlaw8787).
