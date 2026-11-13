@@ -1011,3 +1011,29 @@ After cutover, "deploy" = merge to main, then run Publish site. The trimmed Netl
 - app.js SYNC_URL now the Sydney function. privacy.html says Sydney (dated 13 Nov); STORE-LISTING.md too.
 - Tested: save, load, wrong PIN (badpin), delete, load after delete (new), CORS for github.io.
 - Korea's mns-sync is still running because reeldinner.com (Netlify, older code) still calls it. After the domain move, a card saved on the Netlify site during the overlap would only be in Korea; copy any new rows across (movies.members) before deleting the Korea function. The Korea project also runs Captain Contract, so never delete the project.
+
+## 14 Nov, 6:50am to 8:15am: reeldinner.com moved to GitHub Pages (live)
+
+reeldinner.com is now served by GitHub Pages from main (7b3a0a4a, the Publish site run of 13 Nov 7:32pm). Netlify no longer serves the domain.
+
+What was changed (each one approved by Josh first):
+1. VentraIP DNS (nameserver.net.au): TXT _github-pages-challenge-jlaw8787 = a3f1bea701c0e1a4a7684be335b607 (keep it, it holds the verified domain).
+2. github.com/settings/pages: reeldinner.com verified.
+3. Repo Settings, Pages: custom domain reeldinner.com. GitHub cached the old address from the first save, so the domain was removed and saved again at 7:20am; DNS check passed just after 8am.
+4. VentraIP DNS: A records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 (75.2.60.5 edited, three added); www CNAME jlaw8787.github.io (was movie-night-spinner.netlify.app). Changed 7:02am. MX (ImprovMX), SPF, DMARC and NS left alone.
+5. Enforce HTTPS on. http forwards to https, www forwards to reeldinner.com.
+
+Checks after the move:
+- All 5,417 site files on reeldinner.com match main byte for byte.
+- Phone at 390: no sideways scroll, no failed files, no console errors.
+- Request form on the live site: thanks screen, row landed in movie_requests (source site), test row deleted. Table empty.
+- Offline: service worker mns-c8d0c0bf (same as main) at https://reeldinner.com/sw.js, 1,036 film files cached, The Castle served from cache.
+- /privacy 200. Sydney mns-sync allows https://reeldinner.com.
+
+No CNAME file in the repo: Pages publishes through Actions, so the custom domain lives in repo settings. Deploy is unchanged: merge to main, then gh workflow run pages.yml --ref main.
+
+Member cards: Korea (skxiumrqinvpauwkljwn) movies.members had no rows besides test card 999999 at 7:10am, so nothing to copy. Korea's mns-sync was not switched off by this chat.
+
+Supabase heads-up (not caused by this move): at 8:10am the Korea project and Recruitment CRM showed as paused. The free plan runs two projects at once and the active two are Reel Dinner and Moneyboard (made 5:29am 14 Nov). Captain Contract's online data won't load until Korea is restored, which means pausing Moneyboard or upgrading. Josh chose to leave it for now. When Korea comes back: check movies.members for any row updated after 13 Nov (skip 999999), copy to Sydney, then ask Josh before switching off Korea's mns-sync. Never delete the Korea project.
+
+Netlify: keep the site as a fallback until about 28 Nov (to go back, put the A record to 75.2.60.5 and www to movie-night-spinner.netlify.app, and remove the custom domain in Pages). Josh asked to cancel the Netlify subscription once the move was done.
