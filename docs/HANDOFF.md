@@ -1038,7 +1038,7 @@ Supabase heads-up (not caused by this move): at 8:10am the Korea project and Rec
 
 Netlify: keep the site as a fallback until about 28 Nov (to go back, put the A record to 75.2.60.5 and www to movie-night-spinner.netlify.app, and remove the custom domain in Pages). Netlify Personal plan (US$9 a month) downgrade to Free scheduled 14 Nov, takes effect 3 Dec 2026 (no more charges after that). The Netlify site keeps running on Free as the fallback until Josh says to delete it.
 
-## 14 Nov, 8:25am to 8:45am: small calls cleared (branch fix/small-calls-14nov, NOT deployed)
+## 14 Nov, 8:25am to 8:45am: small calls cleared (main 0e96ddd, live)
 
 Josh's calls on the leftover list:
 1. Family and Christmas films (DRY_THEMES) stay dry with no switch on: fullMenu's extras test now uses dryNow(f), not dietAF(), so a boozy printed-only extra drops like it does with No alcohol or Kids. 12 films change with no switch: Batman Returns (fish and chips off, whitebait in), Gremlins, Two Towers (pork belly and lamb off, venison sausages in), Bad Santa, Four Christmases, Hunchback (croque bites, its line says "Pour the wine"), Elemental (mirin), Deathly Hallows 1, Desolation of Smaug, It's a Wonderful Life (focaccia, its line says "bread, salt and wine"), Totoro (udon, mirin), Into the Woods.
@@ -1049,3 +1049,4 @@ Josh's calls on the leftover list:
 Checks: npm test pass. All 900 cards listed (planCard) on main and the branch with no switch, Vegetarian and No alcohol: only the 13 films above change, No alcohol unchanged, no errors. check-print-text on the 13: pass. build-data restamp (app.js ?v, sw.js VERSION).
 
 Deploy only when Josh says: fast-forward main to this branch, then gh workflow run pages.yml --ref main.
+Deployed 8:40am on Josh's go: main fast-forwarded to 0e96ddd, Publish site run 43520954532 passed. Live sw.js, index.html and app.js match main byte for byte.
