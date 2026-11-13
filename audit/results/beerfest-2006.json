@@ -42,7 +42,7 @@
    "Swap 'Landfill's beer garden Obatzda' note for 'Gil carries on for his brother'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "overall": 3.2,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,7 +66,9 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/beerfest-2006-flat-2.json"
  },
  "checked": "2026-11-07"
 }

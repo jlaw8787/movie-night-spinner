@@ -1077,3 +1077,26 @@ Deployed 9:05am on Josh's go: main fast-forwarded to ef91596, Publish site run 4
 vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored (rescore-agent-prompt). The report still counts flat by score, so it shows 204; 184 are left undone.
 
 Next: batch 2, the next 20 by vibe (3.2 and up, starting A Nightmare on Elm Street 3, Ace Ventura: When Nature Calls, Annabelle, Another 48 Hrs.).
+
+## 14 Nov, 9:10am to 9:30am: flat menu rework, batch 2 (main 637065b, live)
+
+Batch 2 is the next 20 at vibe 3.2, alphabetical: A Nightmare on Elm Street 3 to Grandma's Boy. Ops in audit/ops/<slug>-flat-2.json, applied with card-ops, same method as batch 1. Facts checked against Wikipedia plots and Wikiquote (curl raw pages). Lines removed because the sources don't back them: Ace Ventura 2 "like a glove" (from the first film), Annabelle "Somebody pop the champagne", Grandma's Boy "Sophie's" tea tin, Deck the Halls "Fries and chocolate milk". Another 48 Hrs. "A damn shame.." double stop fixed.
+
+Learnt this batch:
+- Motel prints the recipe description (data/recipes "d"), cut at the first sentence, not the dish-notes entry. Final Destination 2's ops change the description.
+- Truck and canteen fixed lines can be changed per film with flavour.words (truck window line: Black Panther "Wakanda forever.", Django "The D is silent. Cash only."; Deck the Halls "Dinner, sorted"). Canteen timetable uses winks 0 to 3, each 30 characters or fewer and not mostly capitalised words, or it falls back to Reveille and so on.
+- Diet words: "Snapper" counts as fish, so Car Wash's peanuts became "Shoeshine stand boiled peanuts". Run the planCard diet check after every rename.
+- Enchanted: a longer dessert name pushed the pancakes note off the invite, so the name was shortened to "Curtain dress pink meringues".
+- Editions: only Ghost has one. The scoped sync now also tries each op without its trailing full stop, because edition notes have none.
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and counts as main. Re-extracted cards confirm every change prints.
+
+Deployed 9:28am on Josh's go: main fast-forwarded to 637065b, Publish site run 43527276961 passed. Live sw.js, index.html, app.js, films.js, movie-menus.js, film-flavour.json, films.json, dish-names.json and two recipe files match main byte for byte.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 163 left undone.
+
+Not done, waiting for Josh: look ideas (Ghost darker blue and gold, Ultron red and blue band, Enchanted storybook look).
+
+Found by Josh, 9:18am, not fixed yet: the takeaway layout (menu-formats/takeaway.js, e.g. Kung Fu Panda 2) doesn't fold. The fold lines are at even thirds (448 and 896px), but the poster runs from 466 to 1006px across the second fold, and the right cover panel starts at 1020px (about 308px wide). The inside face lines up. One layout file fixes every takeaway film.
+
+Next: batch 3, the next 20 by vibe (3.2 and up, starting Halloween (2018), Harry Potter and the Order of the Phoenix, Hellboy, Iron Man 3).

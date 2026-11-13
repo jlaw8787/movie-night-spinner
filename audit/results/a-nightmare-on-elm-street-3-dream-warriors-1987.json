@@ -50,7 +50,7 @@
    "Print 'Welcome to prime time' under the popcorn line for the TV room, in place of the Dick Cavett note."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Welcome to prime time (Freddy to Jennifer through the TV)",
@@ -76,6 +76,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/a-nightmare-on-elm-street-3-dream-warriors-1987-flat-2.json"
  }
 }

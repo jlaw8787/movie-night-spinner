@@ -64,7 +64,7 @@
    "Swap 'Spam fritters' note for the helicopter resupply in the rain."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "11 Platoon radios artillery in close, danger close (cue)",
@@ -89,6 +89,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/danger-close-the-battle-of-long-tan-2019-flat-2.json"
  }
 }

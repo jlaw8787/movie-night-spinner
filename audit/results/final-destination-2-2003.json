@@ -49,7 +49,7 @@
    "Swap the house note on 'Frozen lemonade slushie' for 'The Gibbons family barbecue. Stay clear of the propane grill.'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Log truck pile-up on Route 23 (cue, pretzel note, house dip)",
@@ -75,6 +75,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/final-destination-2-2003-flat-2.json"
  }
 }

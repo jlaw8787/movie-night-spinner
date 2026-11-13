@@ -19,7 +19,7 @@
    "Swap the 'Read me first' heading 'Dinner, sorted' for 'Seen from space'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "I really want my house to be seen... from space!",
@@ -45,6 +45,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/deck-the-halls-2006-flat-2.json"
  }
 }
