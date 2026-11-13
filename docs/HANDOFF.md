@@ -1050,3 +1050,10 @@ Checks: npm test pass. All 900 cards listed (planCard) on main and the branch wi
 
 Deploy only when Josh says: fast-forward main to this branch, then gh workflow run pages.yml --ref main.
 Deployed 8:40am on Josh's go: main fast-forwarded to 0e96ddd, Publish site run 43520954532 passed. Live sw.js, index.html and app.js match main byte for byte.
+
+## 14 Nov, 8:50am: next job is the flat menu rework (start here in the next chat)
+
+- Audit report rebuilt from audit/results: 0 wrong and 0 unsure lines open (1,443 fixed). The old report showed 29 and 144 because it was stale.
+- Left: 204 flat menus (vibe 3.0 to 3.4, Animal Kingdom lowest at 2.8). Each result file has vibe.missing and vibe.ideas.
+- Josh's plan: batches of about 20, flattest first. Apply ideas and missing moments through card-ops (audit/ops/<slug>-flat-1.json), facts checked against the AUDIT.md sources, then a short before-and-after list for Josh to approve. Deploy only on his go (fast-forward main, gh workflow run pages.yml --ref main), then set vibe.done and rescore.
+- Supabase: Korea (Captain Contract) and Recruitment CRM still paused, Josh's choice. Korea member copy and mns-sync question still waiting.
