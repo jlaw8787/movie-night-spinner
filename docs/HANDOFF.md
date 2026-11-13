@@ -1000,3 +1000,7 @@ After cutover, "deploy" = merge to main, then run Publish site. The trimmed Netl
 ### Checks
 - npm test: all 24 pass. check-print-text on the four arcade films: pass. check-phone-fit on the five changed films: pass. check-prep-a4 on Shaun and The Castle: pass. Fold and tick tested on Shaun (No alcohol on); Ghost's two honey lines untouched.
 - Publish only when Josh says: merge to main, push, gh workflow run pages.yml --ref main. Goes to github.io only until the domain moves.
+
+### 13 Nov, 7:30pm: request form spam filter (Supabase, live for github.io and reeldinner.com once moved)
+- Trigger movie_requests_guard on public.movie_requests (SQL in docs/supabase/movie-requests-spam-filter.sql). Drops silently, sender still gets 201: anything with a link, a web address (.com, .net, .au and so on) or SEO and website-report sales talk; the same title and year again within 10 minutes; anything past 20 requests in an hour. Josh agreed a real request with a link in it is lost too.
+- Tested through the public API: two copies of the Netlify spam and a repeat dropped, one real test kept, then deleted. Table empty. Security advisor: no issues. No site code changed.
