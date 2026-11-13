@@ -4345,7 +4345,8 @@ function setSync(){$("setGuests").textContent=USUAL;$("setVeg").checked=DIET.veg
 function refreshPlan(){try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h;phoneRefresh()}}catch(e){}}
 $("setBtn").addEventListener("click",()=>{setSync();const o=$("settings");mountModal(o,"#setClose",$("setBtn"));if(!o.open)o.showModal()});
 $("setClose").addEventListener("click",()=>dismissModal($("settings")));
-/* request a movie: Netlify Forms, sent without leaving the page */
+/* request a movie: saved to the Reel Dinner Supabase project (table movie_requests, send only, nobody can read it with this key), sent without leaving the page */
+const REQ_URL="https://zpcgxupmclkxbzikdnfb.supabase.co/rest/v1/movie_requests",REQ_KEY="sb_publishable_xKYQtgzsYWRLh843SrO9bQ_CfWc30ME";
 (()=>{
   const dlg=$("reqMovie"),form=$("reqForm"),thanks=$("reqThanks"),err=$("reqErr"),go=$("reqGo");
   if(!dlg||!form)return;
@@ -4363,8 +4364,9 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
     if(navigator.onLine===false){netMarks();return}
     go.disabled=true;go.textContent="Sending";showErr("");
     try{
-      /* the app posts to the website itself (docs/APP-BUILD.md); the site posts to its own address */
-      const res=globalThis.REEL_APP?await REEL.post(REEL.site+"/",Object.fromEntries(new FormData(form)),"form"):await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
+      /* site and app both send straight to Supabase, which allows any origin */
+      const v=k=>(form.elements[k].value||"").trim()||null;
+      const res=await fetch(REQ_URL,{method:"POST",headers:{"apikey":REQ_KEY,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify({title:v("title"),year:+form.elements.year.value,name:v("name"),note:v("note"),source:globalThis.REEL_APP?"app":"site"})});
       if(!res.ok)throw new Error(res.status);
       done();
     }catch(x){go.disabled=false;go.textContent="Send request";showErr("That did not send. Check your connection and try again.")}
