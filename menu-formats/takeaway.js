@@ -167,6 +167,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     return out.join("  ")})();
   /* 14 Nov: the poster sits inside the middle panel (448 to 896) and the cover inside the right one (896 to 1344), so each fold falls between them. The whole poster, stuck on a printed bag panel in the format's own colours; the cover panel keeps the lower right free for the logo */
   /* 14 Nov (Josh): the poster leaves a band of bag above and below it, so the film's tagline goes on a sticker at the top and the fourth wink (the run panel uses the first three) on a driver's docket at the bottom */
+  /* 14 Nov (Josh): the kitchen note panel was mostly empty, so the note sets bigger and the first main (No. 20 inside) sits under it as the chef special */
+  const special=((menu.m||[])[0]||{}).n?txt(menu.m[0].n):"";
   const tagLine=String(f.T||"").trim(),driver=winks[3]?String(winks[3]).replace(/\.$/,""):"";
   const bagA=toHex(mix(pd,[0,0,0],.5)),bagB=toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
   const posterWrap=`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:repeating-linear-gradient(45deg,${bagA} 0 26px,${bagB} 26px 52px)"></div>
@@ -201,8 +203,9 @@ window.MENU_FORMATS[ID]=ctx=>{
        <div style="font:${E.dw} 30px/1.05 ${E.disp};text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">Now showing</div></div>
      <div style="flex:1 1 0;min-height:0;background:#fbfaf6;color:#222;box-shadow:0 6px 16px rgba(0,0,0,.35);padding:12px 18px 10px;box-sizing:border-box;display:flex;flex-direction:column">
        <div style="font:700 15px/1 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">A word from the kitchen</div>
-       <div data-fit data-min="14" style="flex:1;min-height:0;overflow:hidden;font-size:21px;margin-top:6px"><div style="font:500 1em/1.3 ${E.body}">${esc(sent(note.t))}</div></div>
-       <div style="font:600 32px/1 'Caveat',cursive;color:${readable(toHex(pa),"#fbfaf6",4.5)};text-align:right">${esc(note.by)}</div></div></div>
+       <div data-fit data-min="14" style="flex:1;min-height:0;overflow:hidden;font-size:31px;margin-top:8px;display:flex;flex-direction:column;justify-content:center"><div style="font:500 1em/1.3 ${E.body}">${esc(sent(note.t))}</div></div>
+       <div style="font:600 34px/1 'Caveat',cursive;color:${readable(toHex(pa),"#fbfaf6",4.5)};text-align:right;margin-top:4px">${esc(note.by)}</div>
+       ${special?`<div style="flex:none;margin-top:10px;padding-top:10px;border-top:2px dashed ${readable(toHex(pa),"#fbfaf6",3)}"><div style="font:700 14px/1 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">Chef's special, No. 20</div><div data-fit data-min="15" style="height:56px;overflow:hidden;font-size:24px;margin-top:6px"><div style="font:${E.dw} 1em/1.1 ${E.disp};text-transform:uppercase;color:#222">${esc(special)}</div></div></div>`:""}</div></div>
    `;
 
   /* ---------- inside: photo band, three panels of numbered dishes ---------- */
