@@ -48,7 +48,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "A chalkboard bar with the poster turtle, the full band line and a real signed quote, but the guitar case swap and the rest of the film stay out.",
   "missing": [
    "Guitar case swapped with Azul's case of weapons (the bar)",
@@ -63,7 +63,7 @@
    "Swap the plain chalkboard tab for a sun-bleached border town look with the road and turtle from the poster."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The guitar case swapped with Azul's case of weapons",
@@ -87,6 +87,8 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/el-mariachi-1992-flat-1.json"
  }
 }

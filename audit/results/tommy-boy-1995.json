@@ -37,7 +37,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "Helen's fryer-on wings and the timetable winks help, but the dishes are still plain and the funniest lines are gone.",
   "missing": [
    "Fat guy in a little coat (sausage roll not printed)",
@@ -52,7 +52,7 @@
    "Swap 'Strawberry milkshake' note for 'Holy schnikes. Pass the straw.'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Fat guy in a little coat",
@@ -76,6 +76,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/tommy-boy-1995-flat-1.json"
  }
 }

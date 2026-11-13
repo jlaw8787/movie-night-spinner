@@ -38,7 +38,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "A tidy prison canteen with Tango's real line, the RV cue and Kiki's cupcakes, but the Cleopatra Club and the hall of mirrors don't print and it stays generic.",
   "missing": [
    "Cash dressed as a woman at the Cleopatra Club",
@@ -52,7 +52,7 @@
    "Retitle 'Block C: Rival Cops Welcome' to 'West LA versus East LA' to match the rivalry."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Cash dressed as a woman at the Cleopatra Club",
@@ -78,6 +78,8 @@
    "look": 3,
    "overall": 2.6
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/tango-cash-1989-flat-1.json"
  }
 }

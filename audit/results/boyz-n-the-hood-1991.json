@@ -37,7 +37,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "A chalkboard corner market with the gun shop line and the welcome home Doughboy theme, but the notes and cue do not print and the writing is thin.",
   "missing": [
    "Ricky's SAT score",
@@ -51,7 +51,7 @@
    "Swap 'Buttermilk fried chicken with greens' note for 'Dinner at Furious's table.'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Furious: a gun shop on every corner",
@@ -74,6 +74,8 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/boyz-n-the-hood-1991-flat-1.json"
  }
 }

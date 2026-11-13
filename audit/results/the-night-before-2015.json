@@ -9,7 +9,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "The Nutcracker Ball hunt and Mr Green print, but the Miley, church and Home Alone gags did not make it and the toast and mains have no notes.",
   "missing": [
    "Miley was flawless",
@@ -23,7 +23,7 @@
    "Swap the 'Party at ours' heading for a Nutcracker Ball ticket stub with a Miley line."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Nutcracker Ball hunt (cue, sign, dish)",
@@ -45,6 +45,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/the-night-before-2015-flat-1.json"
  }
 }

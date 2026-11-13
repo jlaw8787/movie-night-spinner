@@ -64,9 +64,9 @@
    "Swap the 'Prom night' header for a 'Wyatt's basement lab' header with printout paper",
    "Swap 'Cocktail sausage rolls' note for 'Bras on heads. Ceremonial.'"
   ],
-  "overall": 3.0,
+  "overall": 3,
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Bras on their heads, Ceremonial (cue)",
@@ -91,6 +91,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/weird-science-1985-flat-1.json"
  }
 }

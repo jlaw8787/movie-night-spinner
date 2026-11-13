@@ -1057,3 +1057,23 @@ Deployed 8:40am on Josh's go: main fast-forwarded to 0e96ddd, Publish site run 4
 - Left: 204 flat menus (vibe 3.0 to 3.4, Animal Kingdom lowest at 2.8). Each result file has vibe.missing and vibe.ideas.
 - Josh's plan: batches of about 20, flattest first. Apply ideas and missing moments through card-ops (audit/ops/<slug>-flat-1.json), facts checked against the AUDIT.md sources, then a short before-and-after list for Josh to approve. Deploy only on his go (fast-forward main, gh workflow run pages.yml --ref main), then set vibe.done and rescore.
 - Supabase: Korea (Captain Contract) and Recruitment CRM still paused, Josh's choice. Korea member copy and mns-sync question still waiting.
+
+## 14 Nov, 8:50am to 9:10am: flat menu rework, batch 1 (main ef91596, live)
+
+Batch 1 is the 20 flattest: the 18 at 3.0 or under (Animal Kingdom to Weird Science) plus 13 Going on 30 and 22 Jump Street. Ops in audit/ops/<slug>-flat-1.json, applied with card-ops. Facts checked against Wikipedia plots and Wikiquote (curl raw pages); Smurf's kiss on the lips confirmed by Screen Daily and an NPR interview with Michôd.
+
+How it was done, for the next batch:
+- Re-extract the batch's audit cards first (FORCE=1 audit-extract). The committed cards were older than the data: an earlier pass merged food descriptions into the dish notes, so old printed strings no longer exist.
+- Truck, invite and prom layouts don't print dish notes, so the moments go in dish names, props, signs, winks and the canteen timetable (flavour.words remaps Maths, Library, Reports and so on).
+- Placemat (Mother's Day) cuts notes over about 48 characters at the first sentence; canteen cuts long notes too. Put the joke first.
+- Only rename and re-note. No dish swaps that would change the recipe or shopping (pudding for crumble, milkshake for mochi and so on): those need Josh's call.
+- Poster editions (movie-menus.js): do NOT run scripts/edition-sync.cjs as is. It replays every old op, which re-appends ", from Louie's cart" to an Oliver & Company dish on each run and undoes the After Hours revert. Use the same logic scoped to the batch's ops files, skipping any op whose new text contains its old text. Batch 1 editions: Night of the Living Dead, Tango & Cash.
+- Look changes made: Animal Kingdom flavour.mono (greyscale photos). Layout and colour ideas (prom layouts on Weird Science and 13 Going on 30, NOTLD poster, Police Academy navy, Knocked Up kiosk, MI2 header) not done, waiting for Josh.
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and counts as main (renames only). Re-extracted cards confirm every change prints.
+
+Deployed 9:05am on Josh's go: main fast-forwarded to ef91596, Publish site run 43524122923 passed. Live sw.js, index.html, app.js, films.js, movie-menus.js, film-flavour.json and three film files match main byte for byte.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored (rescore-agent-prompt). The report still counts flat by score, so it shows 204; 184 are left undone.
+
+Next: batch 2, the next 20 by vibe (3.2 and up, starting A Nightmare on Elm Street 3, Ace Ventura: When Nature Calls, Annabelle, Another 48 Hrs.).

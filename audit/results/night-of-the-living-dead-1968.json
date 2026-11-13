@@ -44,7 +44,7 @@
   "food": 3,
   "tone": 3,
   "look": 2,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "The boss line, cemetery, news bulletins and gas pump now print, but the bright pink poster and wood grain still fight the stark black and white film.",
   "missing": [
    "Barbra's car rolling into the tree",
@@ -59,7 +59,7 @@
    "Rename 'Black and white popcorn' to a bigger nod: 'Chocolate syrup blood popcorn', the film's real fake blood."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "They're coming to get you, Barbra",
@@ -82,6 +82,8 @@
    "look": 2,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/night-of-the-living-dead-1968-flat-1.json"
  }
 }

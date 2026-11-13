@@ -50,7 +50,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "The rent a date slip, the thousand dollar sundae and the riding mower print, but the notes and cue do not and it is still a generic chalkboard.",
   "missing": [
    "African Anteater Ritual (does not print)",
@@ -65,7 +65,7 @@
    "Crop the poster so the dollar bill shows without the cut off title."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "I want to rent you ($1,000 deal)",
@@ -89,6 +89,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/can-t-buy-me-love-1987-flat-1.json"
  }
 }

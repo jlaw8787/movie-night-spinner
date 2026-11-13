@@ -50,7 +50,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "The feudal village kitchen has Mikey's pizza line and Hello mustard, but the Turtles themselves barely show and the layout is a generic parchment.",
   "missing": [
    "Turtles disguised as honor guards",
@@ -65,7 +65,7 @@
    "Replace the 'Iced honey barley tea' note with Raphael: 'I told you these disguises weren't gonna work!'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Mikey: d'you think they had pizza back then? (note and cue)",
@@ -89,6 +89,8 @@
    "look": 2,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/teenage-mutant-ninja-turtles-iii-1993-flat-1.json"
  }
 }

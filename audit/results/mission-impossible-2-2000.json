@@ -46,7 +46,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "A Sydney flight with Nyah's thief line and the self-destructing sunglasses, but the barramundi and Chimera lines don't print and most of the action is missing.",
   "missing": [
    "Mission: Difficult, not Mission: Impossible",
@@ -61,7 +61,7 @@
    "Replace 'Sydney summer pavlova' note with 'Served on the beach where Ethan and Ambrose finish it'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The sunglasses message that self-destructs in five seconds (wink)",
@@ -84,6 +84,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/mission-impossible-2-2000-flat-1.json"
  }
 }

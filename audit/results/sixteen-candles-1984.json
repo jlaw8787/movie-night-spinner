@@ -9,7 +9,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "The forgotten birthday, the cake cue and Ted the Geek print, but the menu face drops every dish note, so the floppy disk bet and the sofa gag never show.",
   "missing": [
    "Ted's floppy disk bet (note dropped)",
@@ -24,7 +24,7 @@
    "Swap the birthday cake line to say it is shared with Jake at the church, the film ending."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Everyone forgot Sam's sixteenth birthday",
@@ -48,6 +48,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/sixteen-candles-1984-flat-1.json"
  }
 }

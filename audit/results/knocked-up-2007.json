@@ -22,7 +22,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "Has the With emotion line, the pregnancy cue and the fantasy draft nachos, but a kiosk with a weather strip is a loose fit and most of the film's big scenes are missing.",
   "missing": [
    "Vegas mushrooms and Cirque du Soleil",
@@ -37,7 +37,7 @@
    "Add the empty ring box as a prop in the face stamp."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "I'm pregnant. With emotion?",
@@ -62,6 +62,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/knocked-up-2007-flat-1.json"
  }
 }

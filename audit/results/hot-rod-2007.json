@@ -9,7 +9,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "A garage truck menu with cool beans, the safe word and fifteen buses, but no dish notes print so most of the jokes are lost.",
   "missing": [
    "There is no tool in this pool (the pool jump)",
@@ -24,7 +24,7 @@
    "Add the Evel Knievel 'one more than Knievel' bus count as a stamp."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Cool beans",
@@ -53,6 +53,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/hot-rod-2007-flat-1.json"
  }
 }

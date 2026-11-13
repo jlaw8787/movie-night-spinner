@@ -21,7 +21,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "Lassard's lunch line, the Blue Oyster bar and Hightower the florist print, but the school timetable look is generic and most of the film's gags are missing.",
   "missing": [
    "Jones's sound effects",
@@ -35,7 +35,7 @@
    "Replace the white poster with a dark navy background."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Blue Oyster bar (cue, dishes)",
@@ -60,6 +60,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/police-academy-1984-flat-1.json"
  }
 }
