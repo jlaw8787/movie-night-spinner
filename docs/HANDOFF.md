@@ -1037,3 +1037,15 @@ Member cards: Korea (skxiumrqinvpauwkljwn) movies.members had no rows besides te
 Supabase heads-up (not caused by this move): at 8:10am the Korea project and Recruitment CRM showed as paused. The free plan runs two projects at once and the active two are Reel Dinner and Moneyboard (made 5:29am 14 Nov). Captain Contract's online data won't load until Korea is restored, which means pausing Moneyboard or upgrading. Josh chose to leave it for now. When Korea comes back: check movies.members for any row updated after 13 Nov (skip 999999), copy to Sydney, then ask Josh before switching off Korea's mns-sync. Never delete the Korea project.
 
 Netlify: keep the site as a fallback until about 28 Nov (to go back, put the A record to 75.2.60.5 and www to movie-night-spinner.netlify.app, and remove the custom domain in Pages). Netlify Personal plan (US$9 a month) downgrade to Free scheduled 14 Nov, takes effect 3 Dec 2026 (no more charges after that). The Netlify site keeps running on Free as the fallback until Josh says to delete it.
+
+## 14 Nov, 8:25am to 8:45am: small calls cleared (branch fix/small-calls-14nov, NOT deployed)
+
+Josh's calls on the leftover list:
+1. Family and Christmas films (DRY_THEMES) stay dry with no switch on: fullMenu's extras test now uses dryNow(f), not dietAF(), so a boozy printed-only extra drops like it does with No alcohol or Kids. 12 films change with no switch: Batman Returns (fish and chips off, whitebait in), Gremlins, Two Towers (pork belly and lamb off, venison sausages in), Bad Santa, Four Christmases, Hunchback (croque bites, its line says "Pour the wine"), Elemental (mirin), Deathly Hallows 1, Desolation of Smaug, It's a Wonderful Life (focaccia, its line says "bread, salt and wine"), Totoro (udon, mirin), Into the Woods.
+2. Diet words: "cider" no longer counts when followed by doughnuts or donuts (Hocus Pocus and C.H.U.D. doughnuts); "wings" no longer counts after moth, butterfly, angel, fairy or Sturdy, or before Kong or shapes (Role Models veg chilli back on Vegetarian; Big Trouble fried rice and Silence of the Lambs crisps no longer flagged). Real cider drinks and chicken wings still drop.
+3. Dazed beer nuts: already fixed 13 Nov evening (fix/small-menu-1, live). Nothing to do.
+4. Phone menu order: already fixed 13 Nov (fix/review-27-low, live). Nothing to do.
+
+Checks: npm test pass. All 900 cards listed (planCard) on main and the branch with no switch, Vegetarian and No alcohol: only the 13 films above change, No alcohol unchanged, no errors. check-print-text on the 13: pass. build-data restamp (app.js ?v, sw.js VERSION).
+
+Deploy only when Josh says: fast-forward main to this branch, then gh workflow run pages.yml --ref main.
