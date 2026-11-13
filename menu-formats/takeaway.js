@@ -165,11 +165,11 @@ window.MENU_FORMATS[ID]=ctx=>{
     const out=[];if(num&&+num>0&&+num<100)out.push(+num);if(yy)out.push(+yy);
     while(out.length<4){h=Math.imul(h^(h>>>13),1274126177)>>>0;const v=1+h%45;if(!out.includes(v))out.push(v)}
     return out.join("  ")})();
-  /* the whole poster, stuck on a printed bag panel in the format's own colours; the cover panel keeps the lower right free for the logo */
+  /* 14 Nov: the poster sits inside the middle panel (448 to 896) and the cover inside the right one (896 to 1344), so each fold falls between them. The whole poster, stuck on a printed bag panel in the format's own colours; the cover panel keeps the lower right free for the logo */
   const bagA=toHex(mix(pd,[0,0,0],.5)),bagB=toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
   const posterWrap=`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:repeating-linear-gradient(45deg,${bagA} 0 26px,${bagB} 26px 52px)"></div>
    ${folds}
-   <div style="position:absolute;left:466px;top:6px;width:540px;height:804px;background:#fbfaf6;padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`;
+   <div style="position:absolute;left:466px;top:102px;width:412px;height:612px;background:#fbfaf6;padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`;
   const outside=`${stock}
    ${heroIsPoster?posterWrap:`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:#111">${photo(hero,"50% 40%")}</div>${folds}`}
    <div data-fit data-min="14" style="position:absolute;left:30px;top:30px;width:388px;height:24px;overflow:hidden;white-space:nowrap;font-size:18px"><div style="font:700 1em/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${SPOT}">${esc(T.run)}</div></div>
@@ -187,7 +187,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="16" style="flex:1;min-height:0;overflow:hidden;font-size:26px;display:flex;flex-direction:column;justify-content:center;text-align:center"><div style="font:italic 500 1em/1.2 ${E.body}">${esc(sent(prop.title))}</div>
        ${prop.lines.length?`<div style="font:500 .7em/1.3 ${E.body};font-size:max(15px,.7em);margin-top:.3em">${prop.lines.map(l=>esc(sent(l))).join(" ")}</div>`:""}</div>
      <div style="font:700 15px/1 ${E.body};letter-spacing:.14em;text-align:center">LUCKY NUMBERS &nbsp;${lucky}</div></div>
-   <div style="position:absolute;left:1020px;top:14px;bottom:14px;width:308px;display:flex;flex-direction:column;gap:12px">
+   <div style="position:absolute;left:914px;top:14px;bottom:14px;width:412px;display:flex;flex-direction:column;gap:12px">
      <div style="flex:none;padding:14px 18px 12px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}box-shadow:0 5px 14px rgba(0,0,0,.35)">
        ${kick("Takeaway menu")}
        <div data-fit data-min="22" style="height:92px;overflow:hidden;font-size:46px;display:flex;align-items:center;margin-top:2px"><div style="max-width:100%;font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
