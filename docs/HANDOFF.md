@@ -1097,6 +1097,15 @@ vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored.
 
 Not done, waiting for Josh: look ideas (Ghost darker blue and gold, Ultron red and blue band, Enchanted storybook look).
 
-Found by Josh, 9:18am, not fixed yet: the takeaway layout (menu-formats/takeaway.js, e.g. Kung Fu Panda 2) doesn't fold. The fold lines are at even thirds (448 and 896px), but the poster runs from 466 to 1006px across the second fold, and the right cover panel starts at 1020px (about 308px wide). The inside face lines up. One layout file fixes every takeaway film.
+Found by Josh, 9:18am (fixed below): the takeaway layout (menu-formats/takeaway.js, e.g. Kung Fu Panda 2) doesn't fold. The fold lines are at even thirds (448 and 896px), but the poster runs from 466 to 1006px across the second fold, and the right cover panel starts at 1020px (about 308px wide). The inside face lines up. One layout file fixes every takeaway film.
 
 Next: batch 3, the next 20 by vibe (3.2 and up, starting Halloween (2018), Harry Potter and the Order of the Phoenix, Hellboy, Iron Man 3).
+
+## 14 Nov, 9:30am to 10:05am: takeaway trifold fold fix (main 628d56c, live)
+
+Josh spotted that the takeaway layout (23 films, e.g. Kung Fu Panda 2) wouldn't fold. menu-formats/takeaway.js outside face:
+- Poster now sits inside the middle panel (left 466, 412 wide, 612 tall, top 102), cover column inside the right panel (left 914, 412 wide). Folds at 448 and 896 now fall between panels. Photo heroes (no poster) still wrap across panels 2 and 3 by design.
+- Bag band above the poster: the film's tagline (films.json T) on a sticker. Below: "Ask the driver about" docket with the fourth wink (the run panel uses winks 0 to 2).
+- Kitchen note panel was mostly empty (Josh): note sets at 31px (data-fit shrinks), vertically centred, and under it "Chef's special, No. 20" with the first main, which is No. 20 on the inside. Checked on all 23 that the special matches the inside main.
+
+Checks: npm test pass. check-print-text on the 23 takeaway films: pass. Deployed on Josh's go: main fast-forwarded to 628d56c, Publish site run 43529331174 passed. Live sw.js, index.html, app.js, films.js, formats.js and menu-formats/takeaway.js match main byte for byte.
