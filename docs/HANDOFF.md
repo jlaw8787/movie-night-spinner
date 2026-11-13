@@ -922,3 +922,26 @@ All node tests including dialogs, check-kids-cards (343), check-print-text on Le
 ### Left
 - Print box office ticket prints undried lines in kids' mode (on live before this change too).
 - Shared faults the review 27 reviewers in this chat found (also likely on live): browser Ctrl+P (not the Print button) shrinks 1344 wide cards and can cut the bottom row (printPage, transform:scale); Copy text shopping list does not match the Prep sheet; any diet switch drops printed-only dishes that already suit it (app.js around 1791); Christmas films skip the written alcohol-free version when Vegetarian is on (Bad Santa drink has three names).
+
+## 13 Nov, mid morning: the five shared faults fixed (branch cut/shared-faults, NOT deployed; start here in the next chat)
+
+### What is where
+- Live: still deploy 6af62782 (main 7d8ae82c). Nothing deployed this chat.
+- cut/shared-faults: main 7d8ae82c plus the five fix branches below (each reviewed by a separate reviewer before merging), GitHub main fetched and merged (no new commits), then build-data restamp (app.js ?v and sw.js VERSION only). Pushed with the fix branches.
+- Deploy only when Josh says: trimmed copy of cut/shared-faults, check live files, fast-forward main. No layout or sheet changes.
+
+### Fixed (films counted on live code before fixing)
+1. fix/print-contain: browser print (Ctrl+P). Chrome counted the scaled card's full-size box (1344 wide, or taller than the 790 page) as overflow and shrank every page, prep pages too, to 66 to 95 percent; tall faces (Die Hard's 672x1344) also lost their bottom. index.html print CSS: contain:strict on #printArea .print-page. 177 films on 26 layouts (all 1344 wide or tall shared and film layouts, plus Ghost Dog's 960 square). Rendered every layout (130) before and after: the 26 now print full size, the rest unchanged or no longer cut. Save PDF still adds its 4 mm margin in the menu's edge colour; browser print runs to white edges.
+2. fix/diet-extras: fullMenu keeps the film's printed-only dishes that suit the diet instead of dropping all of them. Off with Vegetarian: Meat or Seafood aisle, or DIET_MEAT (meat, fish, deli meats, plus what the recipes count as not vegetarian: gelatine, jelly, marshmallow, Worcestershire). Off with No alcohol or Kids: Bottle shop aisle, or DIET_BOOZE, unless the text says no alcohol, alcohol-free, non-alcoholic, mocktail or virgin (ginger beer, root beer, prawn cocktail, apple cider and vinegars are fine). No switch: unchanged. Cards change on 755 films (Vegetarian 336, No alcohol and Kids 752). On capped layouts a returned dish can push a house line off, as with no switch on.
+3. fix/copy-shop: Copy text lists the Prep sheet's own list (prepShopGroups, used by both). All 900 change (guest scaling, merging, units). In kids' mode Copy text still folds drinks that dry to the same thing (as the dialog does); the Prep sheet swaps the words but does not fold.
+4. fix/dry-veg: family and Christmas films (DRY_THEMES) with Vegetarian on take the written alcohol-free version on every menu (dietKeyF gives veg_af, new dietMenuDish). 28 films: 19 change a dish name (Bad Santa's drink is "Willie's vanilla tea and ginger" everywhere), 9 more take the written alcohol-free menu line and method instead of word swaps.
+5. fix/ticket-dry: the box office ticket prints the shopping dialog's lines (dried words, folded drinks once, pantry left off). 131 films in kids' mode. Checked on 8 films: ticket matches the dialog on all.
+
+### Checks (cut/shared-faults, from /tmp/wt-final)
+- npm test: all pass, including dialogs. check-kids-cards: pass (343). check-print-text on all 900 (run in quarters after two environment restarts): pass.
+- Menu sweep, all 900 films in five modes (none, Vegetarian, No alcohol, Kids, both): no change with no switch except Copy text's list; each fix changes only its own surface.
+
+### Left, for Josh
+- Dry films with no switch still print a boozy printed-only dish if the film has one (extras test only dietAF()). Changing it to dryNow(f) would change cards with no switch on.
+- Prep sheet does not fold dried duplicate drinks (Copy text and the dialog do).
+- "cider" and "wings" still keep a few harmless dishes off diet cards (cider doughnuts, Sturdy Wings vegetable chilli).
