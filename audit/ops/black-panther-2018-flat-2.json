@@ -1,0 +1,36 @@
+{
+ "id": "Black Panther (2018)",
+ "ops": [
+  {
+   "set": "flavour.words",
+   "value": {
+    "The finest window on the block.": "Wakanda forever."
+   },
+   "done": true
+  },
+  {
+   "old": "Vibranium in every skyline",
+   "new": "Ross flies a jet from Shuri's lab",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Kimoyo Beads",
+    "lines": [
+     "Made in Shuri's lab",
+     "Wear on the wrist"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Fried plantain with honey",
+   "new": "Dora Milaje fried plantain with honey",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-13",
+ "misses": []
+}

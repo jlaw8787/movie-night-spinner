@@ -1,0 +1,40 @@
+{
+ "id": "Car Wash (1976)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "KGYS Ticket Giveaway",
+    "lines": [
+     "T.C. gets through",
+     "Two for the concert"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Cajun spiced boiled peanuts",
+   "new": "Snapper's shoeshine boiled peanuts",
+   "done": true
+  },
+  {
+   "old": "Chilli cheese fries",
+   "new": "Mona's diner chilli cheese fries",
+   "done": true
+  },
+  {
+   "old": "Chilli cheese fries (vegetarian)",
+   "new": "Mona's diner chilli cheese fries (vegetarian)",
+   "done": true
+  },
+  {
+   "old": "Snapper's shoeshine boiled peanuts",
+   "new": "Shoeshine stand boiled peanuts",
+   "why": "Snapper reads as fish to the Vegetarian filter",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-13",
+ "misses": []
+}
