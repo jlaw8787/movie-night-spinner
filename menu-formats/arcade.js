@@ -192,6 +192,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* review 27: a starter stays well under the cheapest main (no more than 80 percent of it), so a snack never reads like a meal
      (Snatch: the mini pie at 170 sat just under the 190 fry-up, now 150) */
   if(pr.m&&pr.m.length&&pr.s&&pr.s.length){const cap=Math.floor(Math.min(...pr.m)*.8/10)*10;if(cap>=20){let top=cap+10;pr.s.map((v,i)=>i).filter(i=>pr.s[i]>cap&&!((items.s||[])[i]||{}).house).sort((a,b)=>pr.s[b]-pr.s[a]||a-b).forEach(i=>{pr.s[i]=Math.max(20,top-10);top=pr.s[i]})}}
+  /* a bar snack (nuts, chips, pretzels, popcorn) never out-prices a real starter, and a snack extra (not cooked tonight) never out-prices
+     one cooked tonight. The course keeps its prices, handed out in that order (Dazed: the beer nuts extra was the dearest starter at 210) */
+  if(pr.s&&pr.s.length>1){const it=items.s||[],SN=/\b(nuts|peanuts|pretzels?|popcorn|crisps|chips)\b/i,fish=/\bfish\b/i,idx=pr.s.map((v,i)=>i).filter(i=>!(it[i]&&it[i].house));
+    const sn=i=>!!it[i]&&SN.test(it[i].n||"")&&!fish.test(it[i].n||""),rank=i=>sn(i)?(it[i].extra?2:1):0;
+    if(new Set(idx.map(rank)).size>1){const vals=idx.map(i=>pr.s[i]).sort((a,b)=>b-a),ord=idx.slice().sort((a,b)=>rank(a)-rank(b)||pr.s[b]-pr.s[a]||a-b);ord.forEach((i,j)=>{pr.s[i]=vals[j];if(j&&pr.s[i]>=pr.s[ord[j-1]])pr.s[i]=Math.max(20,pr.s[ord[j-1]]-10)})}}
   /* house standards price at the foot of their course, no two items in a course share a price, and dessert stays under the mains */
   if(pr.m&&pr.m.length&&pr.w&&pr.w.length){const mm=Math.min(...pr.m),mw=Math.max(...pr.w);if(mw>=mm){const f=(mm-20)/mw;pr.w=pr.w.map(v=>Math.max(20,Math.round(v*f/10)*10))}}
   for(const k in pr){const it=items[k]||[],L=pr[k];const own=L.filter((v,i)=>!(it[i]&&it[i].house));const lo=own.length?Math.min(...own):0;

@@ -1074,7 +1074,7 @@ function libCardOrder(root,pm){
   return out}
 function libPhoneView(f,menu,L,root){
   const fl=L.flavour||{},pm={};let any=false;
-  for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,orig:it.orig,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
+  for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,orig:it.orig,extra:!!it.extra,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
   if(!any){phoneView(null);return}
   let co={courses:{}};try{co=libCardOrder(root,pm)}catch(e){}
   {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
@@ -1487,7 +1487,10 @@ function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f);
   const tk=sharedTicks(f);
-  const shop=prepShopGroups(f).map(([a,l])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${l.map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
+  /* a dry list folds lines that dry to the same drink into one, amounts added, as the shopping dialog and Copy text do (dryJoin).
+     Only folded lines print already dried; the rest stay raw for kidsDryDom. The folded line's tick carries the others (data-of) */
+  const dryP=typeof dryNow==="function"&&dryNow(f);
+  const shop=prepShopGroups(f).map(([a,l])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${(dryP?dryJoin(l.map(x=>[x,dryText(x,true)])):l.map(x=>({x,of:[x],text:x}))).map(e=>{const x=e.x,k=tickKey(x),on=!!tk[k],more=e.of.slice(1).map(tickKey);return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${more.length?` data-of="${ESC(more.join("\n"))}"`:""}${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(more.length?e.text:x)}</li>`}).join("")}</ul></div>`).join("");
   const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
@@ -1517,7 +1520,7 @@ function planWire(f){
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();if(f===current)dietRedraw(dk);return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
-    if(x&&(x.blocked||x.extra||x.spare)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
+    if(x&&(x.blocked||x.extra||x.spare)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo();phoneRefresh()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
 function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return noDangle(t.slice(0,i).replace(/[,;:\s]+$/,""))+"."}
@@ -4487,7 +4490,10 @@ function setTick(f,k,on,quiet){const t=prepTicks(f);if(on)t[k]=true;else delete 
   /* keep the prep sheet on screen in step */
   if(typeof prep!=="undefined"&&typeof current!=="undefined"&&current===f)prep.querySelectorAll("li[data-k]").forEach(li=>{if(li.dataset.k===k){li.classList.toggle("pp-done",on);li.setAttribute("aria-checked",on)}})}
 function prepTick(li){
-  if(!current||!li)return;const k=li.dataset.k,on=!sharedTicks(current)[k];setTick(current,k,on);
+  if(!current||!li)return;const k=li.dataset.k,on=!sharedTicks(current)[k];
+  /* a folded dry line ticks the lines folded into it too (quietly, the last setTick saves the week) */
+  if(li.dataset.of)for(const y of li.dataset.of.split("\n"))if(y&&y!==k)setTick(current,y,on,true);
+  setTick(current,k,on);
   li.classList.toggle("pp-done",on);li.setAttribute("aria-checked",on);
 }
 prep.addEventListener("click",e=>{const li=e.target.closest&&e.target.closest("li[data-k]");if(li&&prep.closest(".preview"))prepTick(li)});

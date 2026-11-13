@@ -985,3 +985,18 @@ Cutover steps, in order, only when Josh says and no other chat is deploying:
 6. Enforce HTTPS once GitHub issues the certificate. Check live files against main, phone, form, offline.
 7. Keep the Netlify site 1 to 2 weeks as a fallback (switch the two records back), then delete.
 After cutover, "deploy" = merge to main, then run Publish site. The trimmed Netlify copy steps above no longer apply. Pages caches pages for up to 10 minutes.
+
+## 13 Nov, evening: domain move paused, small menu fixes (branch fix/small-menu-1, NOT published)
+
+### Domain move (paused)
+- Not started: VentraIP needs 2FA by email and Outlook was down. No DNS or GitHub settings changed. reeldinner.com still on Netlify (main 7d8ae82c). Resume from step 1 of the 9am cutover list (TXT record _github-pages-challenge-jlaw8787).
+- Done ahead of it: Netlify Forms has no real requests to export (two tests from 10 Nov, the rest SEO spam). github.io checked against main 2a77f61d: all 5,417 site files byte for byte, phone at 390 (no sideways scroll, no failed files), request form 201 and thanks screen, offline (1,036 film files cached, The Castle opens offline), /privacy without .html loads. Supabase movie_requests is empty (all test rows deleted).
+
+### Fixed on fix/small-menu-1 (from main 2a77f61d)
+1. Phone: a printed extra with no tested recipe now reads "Not on tonight's cook" instead of "As written, serves 4" until it is ticked on the Prep sheet; ticked, it says "As written, serves 4" again. Ticking a dish refreshes the phone view. (formats.js fmtStepsCard, libPhoneView passes extra.) Shutter Island, Smile, Rain Man, Silence of the Lambs.
+2. arcade.js: a bar snack (nuts, chips, pretzels, popcorn, crisps; not fish and chips) never out-prices a real starter, and a snack extra never out-prices a snack cooked tonight. The course keeps its prices and hands them out in that order. Dazed: chips 210, pretzels 140, beer nuts 130, Frito pie (house) 120. Wreck-It Ralph: pretzel rods 150 to 130 under the lolly bark, wings (house) 130 to 120. Toy Story and Snatch unchanged.
+3. Prep sheet: on a dry list, lines that dry to the same drink fold into one with amounts added (dryJoin), as the shopping dialog and Copy text already did. The folded line ticks the lines folded into it (data-of). Shaun: "2 L ginger beer" once.
+
+### Checks
+- npm test: all 24 pass. check-print-text on the four arcade films: pass. check-phone-fit on the five changed films: pass. check-prep-a4 on Shaun and The Castle: pass. Fold and tick tested on Shaun (No alcohol on); Ghost's two honey lines untouched.
+- Publish only when Josh says: merge to main, push, gh workflow run pages.yml --ref main. Goes to github.io only until the domain moves.
