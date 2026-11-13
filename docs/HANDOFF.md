@@ -1004,3 +1004,10 @@ After cutover, "deploy" = merge to main, then run Publish site. The trimmed Netl
 ### 13 Nov, 7:30pm: request form spam filter (Supabase, live for github.io and reeldinner.com once moved)
 - Trigger movie_requests_guard on public.movie_requests (SQL in docs/supabase/movie-requests-spam-filter.sql). Drops silently, sender still gets 201: anything with a link, a web address (.com, .net, .au and so on) or SEO and website-report sales talk; the same title and year again within 10 minutes; anything past 20 requests in an hour. Josh agreed a real request with a link in it is lost too.
 - Tested through the public API: two copies of the Netlify spam and a repeat dropped, one real test kept, then deleted. Table empty. Security advisor: no issues. No site code changed.
+
+### 13 Nov, 7:35pm: member card moved to Sydney (published to github.io)
+- Reel Dinner Supabase (zpcgxupmclkxbzikdnfb, Sydney) now holds schema movies, table members and functions mns_load, mns_save, mns_delete (same code as Korea; only service_role can run them, the public key gets 401). Edge function mns-sync deployed there (verify_jwt off, same code, allows reeldinner.com, www and jlaw8787.github.io).
+- No member data moved: Korea held one row, member 999999 with {"a":1}, a setup test. Left in Korea.
+- app.js SYNC_URL now the Sydney function. privacy.html says Sydney (dated 13 Nov); STORE-LISTING.md too.
+- Tested: save, load, wrong PIN (badpin), delete, load after delete (new), CORS for github.io.
+- Korea's mns-sync is still running because reeldinner.com (Netlify, older code) still calls it. After the domain move, a card saved on the Netlify site during the overlap would only be in Korea; copy any new rows across (movies.members) before deleting the Korea function. The Korea project also runs Captain Contract, so never delete the project.

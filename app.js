@@ -2684,7 +2684,7 @@ async function openDouble(pa,pb){
 $("dfBtn").addEventListener("click",openDouble);
 
 /* sync: member number + PIN, stored in Supabase through an edge function (no keys in this page) */
-const SYNC_URL="https://skxiumrqinvpauwkljwn.supabase.co/functions/v1/mns-sync";
+const SYNC_URL="https://zpcgxupmclkxbzikdnfb.supabase.co/functions/v1/mns-sync";
 var syncTimer=null,syncState="";
 async function syncCall(body){
   /* the app sends this natively: the sync function only allows reeldinner.com as a browser origin */

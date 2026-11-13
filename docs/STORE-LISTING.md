@@ -192,7 +192,7 @@ What the app actually sends anywhere, from app.js and privacy.html:
 
 | Where | When | What |
 |---|---|---|
-| Supabase (our sync function, servers in South Korea) | Only if the user taps Put my card online, or Use my card from another device | Member number, a scrambled PIN, the optional name on the card, watched list, favourites, ratings, ticket stub history, weekly plan, rentals count, rentals per aisle and tapes out, the last 8 films spun, counter treats ticked when renting, kids mode and skip-watched settings |
+| Supabase (our sync function, servers in Sydney) | Only if the user taps Put my card online, or Use my card from another device | Member number, a scrambled PIN, the optional name on the card, watched list, favourites, ratings, ticket stub history, weekly plan, rentals count, rentals per aisle and tapes out, the last 8 films spun, counter treats ticked when renting, kids mode and skip-watched settings |
 | Netlify Forms (our host) | Only when the user sends Request a movie | Film title, year, optional name, optional note |
 | TMDB image server | Every time a poster or still is shown | Normal image request (IP address, device details). No data from the app |
 | YouTube (youtube-nocookie.com) | Only when the user presses play on a trailer | Normal video request |
