@@ -1,0 +1,39 @@
+{
+ "id": "Boyz n the Hood (1991)",
+ "ops": [
+  {
+   "old": "Sweet potato pie",
+   "new": "Ricky's 710 sweet potato pie",
+   "done": true
+  },
+  {
+   "old": "Caramelised onion dip with ridged chips",
+   "new": "Corner store onion dip with ridged chips",
+   "done": true
+  },
+  {
+   "old": "Front porch devilled eggs",
+   "new": "Doughboy's porch devilled eggs",
+   "done": true
+  },
+  {
+   "old": "Buttermilk fried chicken with greens",
+   "new": "Furious's table fried chicken and greens",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Corner Market Receipt",
+    "lines": [
+     "Increase the Peace",
+     "Welcome home, Doughboy"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-13",
+ "misses": []
+}

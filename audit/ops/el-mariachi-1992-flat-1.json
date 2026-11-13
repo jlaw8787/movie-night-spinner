@@ -1,0 +1,29 @@
+{
+ "id": "El Mariachi (1992)",
+ "ops": [
+  {
+   "old": "toasted in oil with whole garlic, lime and salt, before a keyboard man takes his gig",
+   "new": "toasted with garlic, lime and salt at Dominó's bar, where she keeps a letter-opener handy",
+   "done": true
+  },
+  {
+   "old": "Lime and cumin marinated skirt steak, sliced thin, with rice and black beans",
+   "new": "Lime and cumin skirt steak, rice and beans. Save a scrap for Dominó's pit bull",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Musician for Hire",
+    "lines": [
+     "One guitar case, guitar inside",
+     "Ask at the cantina"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-13",
+ "misses": []
+}

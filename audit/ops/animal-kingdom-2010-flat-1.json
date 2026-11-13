@@ -1,0 +1,38 @@
+{
+ "id": "Animal Kingdom (2010)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "Smurf runs the family. Work out where you fit.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Smurf's kiss on the lips for every one of her boys",
+    "J, with Deal or No Deal on the telly",
+    "Pope, Craig, Darren and Baz",
+    "Detective Leckie, asking where J fits",
+    "Smurf, Pope and Darren popping champagne after the acquittal"
+   ],
+   "done": true
+  },
+  {
+   "old": "Slow-cooked onion folded into sour cream and cream cheese with chives.",
+   "new": "Onion and sour cream dip. Smurf has a word for Leckie in the supermarket.",
+   "done": true
+  },
+  {
+   "old": "Crisp puff pastry layers with thick vanilla custard and passionfruit icing.",
+   "new": "Custard slice for the acquittal. The Codys pop the champagne.",
+   "done": true
+  },
+  {
+   "set": "flavour.mono",
+   "value": true,
+   "done": true
+  }
+ ],
+ "applied": "2026-11-13",
+ "misses": []
+}
