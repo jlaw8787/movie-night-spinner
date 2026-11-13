@@ -34,9 +34,22 @@ window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin
   const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢|\dc$/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
   const nums=k=>(out[k]||[]).map(val).filter(v=>v!=null),sw=Math.max(0,...nums("s"),...nums("w"));
   out.m=(out.m||[]).map((x,i)=>{const v=val(x);return v!=null&&sw&&v<=sw?lift(sw*(1.15+.08*i),x):x});
-  /* a card extra (no tested recipe) never prices above the mains that are cooked tonight */
-  {const ms=(menu.m||[]),cm=Math.max(0,...(out.m||[]).map((x,i)=>ms[i]&&!ms[i].extra?val(x)||0:0));
-   if(cm)out.m=(out.m||[]).map((x,i)=>{const v=val(x);if(!ms[i]||!ms[i].extra||v==null||v<cm)return x;const t=Math.max(sw*1.05,cm*(.88-.04*i));if(t>=cm)return x;let w=Math.floor(t)+(t%1<.5?.5:.95);if(w>=cm)w=Math.floor(t);return fmt(cm>=2&&w>sw?w:t,x)})}
+  /* a card extra (no tested recipe) never prices above the mains cooked tonight, unless it is a premium dish (13 Nov, Josh): steak, seafood,
+     a roast or surf and turf may sit above a plain cooked main, and only steps under a premium one. Prices here come from list place, not the
+     film, so a plain extra (pizza, dogs, a fry-up) still sits under the cooked mains; before, a lobster roll or surf and turf did too */
+  {const PREM=/\b(steaks?|sirloin|rib ?eye|ribeye|t-bone|porterhouse|new york strip|strip steak|filet|fillet steak|eye fillet|wagyu|prime rib|surf and turf|lobster|crayfish|crab|prawns?|shrimp|scallops?|oysters?|salmon|barramundi|barra|snapper|duck|lamb (rack|cutlets?|shanks?|leg)|rack of lamb|roast (beef|lamb|pork|leg)|sunday roast|beef wellington|wellington|veal|venison|chateaubriand|seafood|bourguignon)\b/i;
+   const ms=(menu.m||[]),prem=i=>!!ms[i]&&PREM.test((ms[i].n||"")+" "+(ms[i].note||""));
+   const top=pr=>Math.max(0,...(out.m||[]).map((x,i)=>ms[i]&&!ms[i].extra&&(!pr||prem(i))?val(x)||0:0));
+   const cmAll=top(false),cmPrem=top(true);
+   out.m=(out.m||[]).map((x,i)=>{const v=val(x),cm=prem(i)?cmPrem:cmAll;if(!cm||!ms[i]||!ms[i].extra||v==null||v<cm)return x;const t=Math.max(sw*1.05,cm*(.88-.04*i));if(t>=cm)return x;let w=Math.floor(t)+(t%1<.5?.5:.95);if(w>=cm)w=Math.floor(t);return fmt(cm>=2&&w>sw?w:t,x)});
+   /* two mains on one price: the later one moves to the next price ending, down for an extra held under the cooked mains (so it stays
+      under them), up otherwise */
+   for(let g=0;g<4;g++){const F=(out.m||[]).map(val);let hit=false;F.forEach((v,i)=>{if(v==null||!F.slice(0,i).includes(v))return;hit=true;
+     const held=ms[i]&&ms[i].extra&&!(prem(i)&&!cmPrem);let d=null;
+     if(held){for(const t of [v*.93,v*.86,v*.8]){const w=v>=2?Math.floor(t)+(t%1<.5?.5:.95):t,x=fmt(w>=v?Math.floor(t):w,out.m[i]),xv=val(x);if(xv!=null&&xv<v&&xv>sw&&!F.includes(xv)){d=x;break}}
+       /* no room under it (the starters sit just below): a price between it and the cooked main above, if one is free (Better Off Dead 3.25) */
+       const cm=prem(i)?cmPrem:cmAll;if(!d&&cm>v)for(let b=Math.floor(v);b<=Math.floor(cm)&&!d;b++)for(const c of [.25,.5,.75,.95]){const w=b+c;if(w>v&&w<cm&&!F.includes(w)){d=fmt(w,out.m[i]);break}}}
+     out.m[i]=d||lift(v+.01,out.m[i])});if(!hit)break}}
   const it=k=>(menu[k]||[]),isSp=i=>{const d=it("d")[i];return !!d&&SP.test((d.n||"")+" "+(d.note||""))};
   const plain=Math.max(0,...(out.d||[]).map((x,i)=>isSp(i)?0:val(x)||0),...nums("w"));
   out.d=(out.d||[]).map((x,i)=>{const v=val(x);return isSp(i)&&v!=null&&plain&&v<=plain?lift(plain*(1.2+.05*i),x):x});
@@ -825,9 +838,15 @@ function prepParts(){
     if(sh&&!hasA)sh.remove();else if(sh&&!first){const h=sh.querySelector("h3");if(h)h.textContent="Shopping list, continued"}
     if(me&&!hasS){me.remove();c.classList.add("pp-shoponly")}else if(o){const s0=Math.max(0,i-A);if(s0)o.setAttribute("start",s0+1);if(s0>0){const h=me.querySelector("h3");if(h)h.textContent="How to make it, continued"}}
     return c};
-  const out=[];let i=0,first=true;
-  while(i<N){let j=N;while(j>i+1&&!prepFit(page(i,j,first)))j--;out.push(page(i,j,first));i=j;first=false}
-  return out;
+  const cuts=[];let i=0;
+  while(i<N){let j=N;while(j>i+1&&!prepFit(page(i,j,!cuts.length)))j--;cuts.push([i,j]);i=j}
+  /* review 26: filling each page to the brim could leave the last recipe step alone on a nearly empty page. The last two pages now share
+     their items: steps move back onto the last page, while it still fits, until it holds about half */
+  if(cuts.length>1){const L=cuts.length,[p0]=cuts[L-2],half=Math.ceil((N-p0)/2);let s=cuts[L-1][0];
+    /* the shopping list never splits to make room: aisles that sat together on the page before stay there */
+    const keep=s>=A?Math.max(p0+1,A):p0+1;
+    while(s-1>=keep&&s-1>p0&&N-(s-1)<=half&&prepFit(page(s-1,N,false)))s--;cuts[L-2][1]=s;cuts[L-1][0]=s}
+  return cuts.map(([a,b],k)=>page(a,b,k===0));
 }
 async function prepCanvases(){const out=[];for(const el of prepParts()){out.push(await renderCanvas(el))}return out}
 function prepA4(){
@@ -881,7 +900,9 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     /* review 21: only a short fragment (a word or two of a heading) steps aside. A dish name or note runs on past the edge as a peek; hiding
        every long line left Nativity!'s main tray an empty box on the phone, since most of its names cross the fold */
     const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
-    if(seen<w-1&&(seen<=0||(words<=2||seen/w<.25)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
+    /* 13 Nov: a long line (three words or more) only steps aside when under about two words of it show (48px); a share of its width hid
+       the drive-in Showtime line whole (24% in view) while the dish lines beside it ran on past the edge */
+    if(seen<w-1&&(seen<=0||(words<=2||seen<48)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
