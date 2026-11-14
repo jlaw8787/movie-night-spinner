@@ -1,0 +1,33 @@
+{
+ "id": "Scrooged (1988)",
+ "ops": [
+  {
+   "old": "Blinis with crème fraîche and salmon, garlic toast with tomato and basil",
+   "new": "Salmon blinis. The props man can't glue antlers on the mouse",
+   "done": true
+  },
+  {
+   "old": "Beef chuck, carrots and potatoes braised for 3 hours, with crusty bread",
+   "new": "Braised beef, crusty bread. Frank drops in at Claire's shelter",
+   "done": true
+  },
+  {
+   "set": "flavour.words",
+   "value": {
+    "Meetings": "Chernobyl vodka",
+    "Tray up, it's lunchtime.": "Live from IBC, Christmas Eve."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.words",
+   "value": {
+    "Meetings": "Eliot Loudermilk, fired",
+    "Tray up, it's lunchtime.": "Live from IBC, Christmas Eve."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}
