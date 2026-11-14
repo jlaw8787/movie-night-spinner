@@ -39,7 +39,7 @@
    "Swap 'Crispy taro cakes' note 'I see you. Pass the plate.' for 'I see you' only, as a quiet closer."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "I see you (taro cake note)",
@@ -65,6 +65,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/avatar-2009-flat-5.json"
  }
 }

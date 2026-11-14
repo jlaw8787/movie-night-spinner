@@ -82,7 +82,7 @@
    "Swap 'Diner rice pudding' for a Meow Mix bar snack with the hockey game as its note."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Silent Bob's Amy story in the diner (cue, patty melt note, wink)",
@@ -107,6 +107,8 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/chasing-amy-1997-flat-5.json"
  }
 }

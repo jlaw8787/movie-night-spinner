@@ -48,7 +48,7 @@
    "Swap 'South Beach prawn fritters' note for 'Ether barrel fritters, handle with care' to nod to the car chase."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "overall": 3.4,
   "rework": "2026-11-08",
   "iconic": [
@@ -72,7 +72,9 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/bad-boys-1995-flat-5.json"
  },
  "checked": "2026-11-07"
 }

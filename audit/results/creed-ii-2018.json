@@ -94,7 +94,7 @@
    "Swap the 'Coffee shop, open 6 till 10' line for 'Rocky's restaurant, Philadelphia' to fit the Adrian's dish."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Rocky: when a fighter ain't got nothing to lose, he's dangerous (signed note)",
@@ -121,6 +121,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/creed-ii-2018-flat-5.json"
  }
 }

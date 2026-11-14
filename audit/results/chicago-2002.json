@@ -39,7 +39,7 @@
    "Change the layout from a jail canteen to a nightclub or speakeasy format, to match the Onyx and the jazz age."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "And that's showbiz, kid (signed note)",
@@ -67,6 +67,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/chicago-2002-flat-5.json"
  }
 }

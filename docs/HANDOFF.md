@@ -1155,3 +1155,26 @@ vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored.
 Not done, waiting for Josh: look and layout ideas (Scream 3 call sheet price column, Snowy River bush-hut lettering, The Mask yellow and green, Evil Dead rental notice cover, Turner & Hooch police canteen). Scrooged's "Lew Hayward" spelling is left: the cast lists say Hayward, the plot says Heyward.
 
 Next: batch 5, the next 20 by vibe (X-Men, X-Men Origins: Wolverine, then the 3.4s starting A Nightmare on Elm Street, Animal House, Avatar).
+
+## 14 Nov, 10:35am to 11:00am: flat menu rework, batch 5 (main dc04336, live)
+
+Batch 5 is the next 20 by vibe: X-Men and X-Men Origins: Wolverine (3.2), then the 3.4s alphabetical, A Nightmare on Elm Street to Creed II. Ops in audit/ops/<slug>-flat-5.json, applied with card-ops, same method as batches 1 to 4. Facts checked against Wikipedia plots and Wikiquote (curl raw pages). Batman & Robin needs Batman_%26_Robin_(film) in the URL, or it fetches the comics page.
+
+Left out, no source: the X-Men toad line as a quote (not on Wikiquote, used as an unquoted nod), Cinderella's teacup (Wikipedia says Gus is trapped under a bowl, used that), Collateral's coyotes, the BHC2 Board of Health bluff.
+
+Learnt this batch:
+- Diet notes files (data/diet/<slug>.json "notes") hold the Vegetarian, No alcohol and both notes per dish. Renaming the base note leaves them on the old food text, so the joke vanishes with a switch on. This batch re-noted the veg and af sides to match (extra ops in the same files). The shared-layout test fails any note over 100 characters, veg side included (Creed II chilli).
+- Chicago's veg dish name lives only in data/recipes2 ("Razzle Dazzle deep dish pizza with fennel mushroom crumble"), not as a whole string card-ops matches from the base rename: renamed by its own op.
+- A Nightmare on Elm Street's first timetable wink was "The red and green striped sweater", cut to "The red" on the canteen. Now "Tina's sleepover".
+- Editions: A Nightmare on Elm Street (cupcakes, coffee) with the scoped sync; Bad Boys croquetas note set by hand, because the edition stores it lower case with no full stop and the scoped sync didn't match it.
+- Substring spill: only Bolt's shake ("for a super bark for a super bark"), undone with an extra op.
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and counts as main. Re-extracted cards confirm every base change prints. Bolt and Cinderella (dry) have no booze words.
+
+Deployed 10:55am on Josh's go: main fast-forwarded to dc04336, Publish site run 43537131855 passed. Live sw.js, index.html, app.js, films.js, movie-menus.js, films.json, dish-names.json, dish-notes.json, film-flavour.json, film-house.json and sample recipe, recipes2, diet and film files match main byte for byte.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 103 left undone.
+
+Not done, waiting for Josh: look and layout ideas (Animal House toga bedsheet look, Avatar glow look, Infinity War purple and gold, Batman & Robin neon blue and green, Wakanda Forever teal and gold, Chicago speakeasy layout, Captain America USO bill, Clerks III empty top right panel, Collateral blurry side photo).
+
+Next: batch 6, the next 20 by vibe (3.4, starting Crocodile Dundee II, Daddy's Home, Despicable Me, Dick Tracy).

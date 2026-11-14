@@ -52,7 +52,7 @@
    "Swap the 'Call sheet' text for 'Green eyed man, no appearance fee'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Super bark",
@@ -79,6 +79,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/bolt-2008-flat-5.json"
  }
 }
