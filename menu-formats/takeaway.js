@@ -105,22 +105,25 @@ const TONE={
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{
-  const f=ctx.f||{},eg=eraGroup(ctx.era||"modern"),E=ERA[eg],T=TONE[ctx.tone]||TONE.warm,root=rootPath(ctx);
-  loadFonts(ID+"-"+eg,E.fonts.concat(["Caveat:wght@600"]));
+  /* flavour.look (per film, optional): type keys as in ERA (disp, body, fonts, dw, caps), dark true/false, and paper, ink, spot, bar, bagA, bagB colours in place of the ones worked out from the palette */
+  const LK=ctx.flavour&&ctx.flavour.look||null;
+  const f=ctx.f||{},eg=eraGroup(ctx.era||"modern"),E=LK?Object.assign({},ERA[eg],LK):ERA[eg],T=TONE[ctx.tone]||TONE.warm,root=rootPath(ctx);
+  loadFonts(ID+"-"+eg+(LK&&LK.fonts?"-"+LK.fonts.join("-"):""),E.fonts.concat(["Caveat:wght@600"]));
   const fam=isFamily(f),fl=ctx.flavour||null,menu=ctx.menu||{};
   const txt=s=>fam?dry(s):clean(s);
   if(!ctx.poster&&(typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER))ctx.poster=TMDB_POSTERS[f.id]||null;
   const pd=hex(ctx.palette&&ctx.palette.dark)||[30,20,20],pa0=hex(ctx.palette&&ctx.palette.accent);
   const pa=pa0&&Math.max(...pa0)-Math.min(...pa0)>=35?pa0:[200,40,30];
   /* stock and inks per print process */
-  const dark=eg==="new"||T.tint<-.2;
+  const dark=LK&&LK.dark!=null?LK.dark:eg==="new"||T.tint<-.2;
   let paper=E.stock?mix(E.stock,T.tint>0?mix(pa,[255,255,255],.6):[40,40,40],Math.abs(T.tint)):mix(pd,[8,8,10],.5);
   if(dark&&E.stock)paper=mix(pd,[14,14,16],.55);
+  if(LK&&LK.paper)paper=hex(LK.paper);
   const P=toHex(paper);
-  const INK=dark?"#f6f3ec":eg==="old"?readable(toHex(mix(pa,[60,10,10],.35)),P,7):eg==="mid"?readable("#4a2a14",P,8):"#141414";
-  const SPOT=readable(eg==="old"?INK:toHex(pa),P,dark?4.5:3.4);
+  const INK=LK&&LK.ink?LK.ink:dark?"#f6f3ec":eg==="old"?readable(toHex(mix(pa,[60,10,10],.35)),P,7):eg==="mid"?readable("#4a2a14",P,8):"#141414";
+  const SPOT=readable(LK&&LK.spot||(eg==="old"?INK:toHex(pa)),P,dark?4.5:3.4);
   const SOFT=toHex(mix(hex(INK),paper,.25));
-  const BAR=dark?toHex(mix(pa,[0,0,0],.15)):eg==="old"?INK:toHex(mix(pa,[0,0,0],eg==="late"?.1:.3));
+  const BAR=LK&&LK.bar?LK.bar:dark?toHex(mix(pa,[0,0,0],.15)):eg==="old"?INK:toHex(mix(pa,[0,0,0],eg==="late"?.1:.3));
   const BARINK=readable(dark?"#ffffff":toHex(paper),BAR,4.8);
   const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
   const venue=clean(fl&&fl.venue||"Golden Door Kitchen");
@@ -170,7 +173,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* 14 Nov (Josh): the kitchen note panel was mostly empty, so the note sets bigger and the first main (No. 20 inside) sits under it as the chef special */
   const special=((menu.m||[])[0]||{}).n?txt(menu.m[0].n):"";
   const tagLine=String(f.T||"").trim(),driver=winks[3]?String(winks[3]).replace(/\.$/,""):"";
-  const bagA=toHex(mix(pd,[0,0,0],.5)),bagB=toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
+  const bagA=LK&&LK.bagA||toHex(mix(pd,[0,0,0],.5)),bagB=LK&&LK.bagB||toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
   const posterWrap=`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:repeating-linear-gradient(45deg,${bagA} 0 26px,${bagB} 26px 52px)"></div>
    ${folds}
    <div style="position:absolute;left:466px;top:102px;width:412px;height:612px;background:#fbfaf6;padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>

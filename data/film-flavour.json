@@ -9000,7 +9000,19 @@
     "Charge to Rosewood"
    ]
   },
-  "number": ""
+  "number": "",
+  "look": {
+   "light": true,
+   "board": "#fde7ee",
+   "ink": "#2b1838",
+   "acc0": "#0b6f75",
+   "acc2": "#c2306a",
+   "frame": "linear-gradient(180deg,#63d2cc,#2aa3a6)",
+   "frameIn": "inset 0 0 0 3px #ffffff,inset 0 0 0 6px #e0457b",
+   "card": "#ffffff",
+   "cardInk": "#2b1838",
+   "photoF": "contrast(1.05) saturate(1.2) brightness(1.04)"
+  }
  },
  "Beverly Hills Cop II (1987)": {
   "venue": "Beverly Hills Station House",
@@ -9790,7 +9802,7 @@
    "by": "Shannon Mullins"
   },
   "winks": [
-   "Ashburn, the by the book FBI agent",
+   "Ashburn, the by-the-book FBI agent",
    "Mullins, the loud Boston cop",
    "The tracheotomy in the restaurant",
    "Mullins keeping weapons in her fridge",
@@ -9804,7 +9816,24 @@
     "Weapons stay in the fridge"
    ]
   },
-  "number": ""
+  "number": "",
+  "look": {
+   "dark": false,
+   "disp": "'Francois One',sans-serif",
+   "body": "'Archivo',sans-serif",
+   "fonts": [
+    "Francois+One",
+    "Archivo:ital,wght@0,500;0,700;1,500"
+   ],
+   "dw": 400,
+   "caps": true,
+   "paper": "#f5f0e4",
+   "ink": "#13233d",
+   "spot": "#d9601a",
+   "bar": "#13233d",
+   "bagA": "#13233d",
+   "bagB": "#22395f"
+  }
  },
  "22 Jump Street (2014)": {
   "venue": "Metro City State Cafeteria",
@@ -9861,7 +9890,18 @@
     "Fort Arnold"
    ]
   },
-  "number": "50"
+  "number": "50",
+  "look": {
+   "gi": 0,
+   "disp": "'Allerta Stencil',sans-serif",
+   "dw": 400,
+   "paper": "#e4dbbf",
+   "ink": "#2a2b1c",
+   "tray": "#7d8250",
+   "acc": "#7a2a1a",
+   "photo": "sepia(.28) saturate(.8) contrast(1.06)",
+   "print": "Run off in the orderly room"
+  }
  },
  "Fletch (1985)": {
   "venue": "Fletch's Beach Newsroom",
@@ -12241,7 +12281,25 @@
     "Whoville Town Square"
    ]
   },
-  "number": ""
+  "number": "",
+  "look": {
+   "disp": "'Grandstander',cursive",
+   "body": "'Lora',serif",
+   "fonts": [
+    "Grandstander:wght@700",
+    "Lora:ital,wght@0,400;0,600;1,400"
+   ],
+   "dw": 700,
+   "upper": false,
+   "track": "0",
+   "border": "band",
+   "paper": "#fbf8f1",
+   "ink": "#1d3a1b",
+   "gold": "#2f7a2a",
+   "acc": "#c8202f",
+   "band": "#c8202f",
+   "toast": "Around Whoville"
+  }
  },
  "The Nightmare Before Christmas (1993)": {
   "venue": "Halloween Town Square",
@@ -12340,7 +12398,26 @@
     "One year to deliver"
    ]
   },
-  "number": "6000"
+  "number": "6000",
+  "look": {
+   "disp": "'Yellowtail',cursive",
+   "board": "enamel",
+   "bbg": "#f5ecd8",
+   "btx": "#3a2516",
+   "bacc": "#b3261e",
+   "frame": "14px solid #6b4423",
+   "truck": "#efe2c6",
+   "tink": "#3a2516",
+   "acc": "#b3261e",
+   "photo": "saturate(1.04) sepia(.14) contrast(1.04)",
+   "cols": [
+    "From the stall",
+    "Hot plates",
+    "Sweets",
+    "Warm cups"
+   ],
+   "board_t": "Today's Board"
+  }
  },
  "Arthur Christmas (2011)": {
   "venue": "Mission Control Canteen",
@@ -13094,7 +13171,19 @@
     "Valid for any occasion"
    ]
   },
-  "number": "5"
+  "number": "5",
+  "look": {
+   "dark": false,
+   "disp": "Turret Road",
+   "dw": 800,
+   "body": "Barlow",
+   "paper": "#fff7ec",
+   "ink": "#1b1b22",
+   "acc": "#e8600f",
+   "caps": true,
+   "ls": ".02em",
+   "ital": false
+  }
  },
  "The Terminator (1984)": {
   "venue": "Tech Noir",
@@ -13707,6 +13796,23 @@
     0
    ],
    "flip": 1
+  },
+  "look": {
+   "paper": {
+    "bg": "#b9bcbb",
+    "fib": [
+     70,
+     74,
+     78
+    ],
+    "spk": [
+     226,
+     229,
+     230
+    ],
+    "ink": "#16191c",
+    "print": "#f1f2f1"
+   }
   }
  },
  "Blade Runner 2049 (2017)": {
@@ -14862,7 +14968,43 @@
     "Granny Wendy's, please be on time"
    ]
   },
-  "number": ""
+  "number": "",
+  "look": {
+   "paper": {
+    "bg": "#eedcb4",
+    "fib": [
+     140,
+     100,
+     55
+    ],
+    "ink": "#2a1a0c",
+    "mat": [
+     104,
+     70,
+     38
+    ],
+    "water": "#3b5a32"
+   },
+   "type": {
+    "disp": "'Alice',serif",
+    "up": 0
+   },
+   "isle": {
+    "s": "Lost Boys camp",
+    "m": "The feast table",
+    "w": "Mermaid Lagoon"
+   },
+   "label": {
+    "s": "Lost Boys snacks",
+    "m": "Hot from the feast",
+    "w": "Sweets"
+   },
+   "voice": {
+    "bar": "From the Lost Boys barrel",
+    "map": "Map of Neverland",
+    "note": "Pinned to the treehouse"
+   }
+  }
  },
  "Night at the Museum (2006)": {
   "venue": "Museum Night Cafe",

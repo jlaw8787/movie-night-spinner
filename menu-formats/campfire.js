@@ -323,7 +323,9 @@ function stillStrip(v,urls,caps,o){
 
 window.MENU_FORMATS[ID]=ctx=>{
   const era=eraOf(ctx.era),tone=toneOf(ctx.tone),E=ERA[era],TN=TONE[tone];
-  const ty=TYPE[E.g],P=PAPER[E.g];
+  /* flavour.look (per film, optional): paper (bg, fib, spk, ink, print as in PAPER) and type (as in TYPE), so a film whose camp is not a scout camp keeps the layout in its own stock */
+  const LK=ctx.flavour&&ctx.flavour.look||{};
+  const ty=Object.assign({},TYPE[E.g],LK.type),P=Object.assign({},PAPER[E.g],LK.paper);
   const C=inks(ctx.palette,P.bg,"#7a2e1c");
   const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */V=Object.assign({},VOICE[tone],LB),LBL=Object.assign({},LABEL,LB);
   const ph=heroes(ctx),year=String(ctx.f.year||"");

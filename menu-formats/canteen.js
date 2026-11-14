@@ -6,7 +6,7 @@
    photo; tone sets wear, tint, contrast and copy voice. Inline styles only; the fitter below shrinks boxes after load. */
 (function(){
 const ID="canteen",A="data-"+ID;
-const FONT_URL=rdFontHref("family=Zilla+Slab:wght@600;700&family=Asap+Condensed:wght@800&family=Bai+Jamjuree:ital,wght@0,700;1,700&family=Lexend:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700","swap");
+const FONT_URL=rdFontHref("family=Zilla+Slab:wght@600;700&family=Asap+Condensed:wght@800&family=Bai+Jamjuree:ital,wght@0,700;1,700&family=Lexend:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&family=Allerta+Stencil","swap");
 function loadFonts(){if(document.getElementById("fmt-font-"+ID))return;const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";l.href=FONT_URL;document.head.appendChild(l)}
 
 /* colour helpers */
@@ -118,8 +118,10 @@ if(!window["__fit_"+ID]){window["__fit_"+ID]=1;new MutationObserver(m=>{if(m.som
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{
   loadFonts();
-  const W=1056,H=816,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",gi=ERA_G[era],g=G[gi],t=TONE[ctx.tone]||TONE.warm;
-  const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
+  const fl=ctx.flavour||{},look=fl.look||null;
+  /* flavour.look (per film, optional): gi picks the print style (0 mimeo, 1 offset, 2 greenbar, 3 laser), the other keys override its paper, ink, tray, accent, type and photo (keys as in G) */
+  const W=1056,H=816,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",gi=look&&G[look.gi]?look.gi:ERA_G[era],g=look?Object.assign({},G[gi],look):G[gi],t=TONE[ctx.tone]||TONE.warm;
+  const fam=FAMILY.has(f.theme),yr=f.year||"";
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";

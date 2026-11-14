@@ -276,10 +276,12 @@ const NEUTRAL={venue:"Flight Kitchen",sign:"Economy and first class",by:"Your Ca
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{
-  const era=eraIndex(ctx.era),t=toneOf(ctx.tone),L=LOOK[era],P=PROCESS[era],T=TONES[t];
-  const dark=T.dark;
+  /* flavour.look (per film, optional): type and stock keys as in LOOK (disp, dw, body, paper, ink, acc, caps, ls), and dark:false/true to set a light or dark card whatever the tone */
+  const LK=ctx.flavour&&ctx.flavour.look||null;
+  const era=eraIndex(ctx.era),t=toneOf(ctx.tone),L=LK?Object.assign({},LOOK[era],LK):LOOK[era],P=PROCESS[era],T=TONES[t];
+  const dark=LK&&LK.dark!=null?LK.dark:T.dark;
   const pd=ctx.palette&&hex(ctx.palette.dark),darkBase=pd&&lum(pd)<.05?pd:hex("#11151d");
-  const paper=dark?toHex(mix(darkBase,[30,34,44],.42)):(T.copy?"#f3f2ee":L.paper);
+  const paper=dark?toHex(mix(darkBase,[30,34,44],.42)):(T.copy&&!(LK&&LK.paper)?"#f3f2ee":L.paper);
   const K=filmColours(ctx.palette,paper,dark?"#eef0f2":L.ink,L.acc,"#14213a");
   const fontsP=loadFonts(`${fam(L.disp)}:ital,wght@0,${L.dw}${L.ital?";1,"+L.dw:""}&${fam(L.body)}:ital,wght@0,400;0,700;1,400&${fam(SIG)}`);
   const D=`'${L.disp}',Arial,sans-serif`,B=`'${L.body}',Arial,sans-serif`,S=`'${SIG}',cursive`;

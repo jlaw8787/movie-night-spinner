@@ -228,9 +228,11 @@ function items(list,k,era,ty,C,big){
 
 window.MENU_FORMATS[ID]=ctx=>{
   const era=eraOf(ctx.era),tone=toneOf(ctx.tone),E=ERA[era],TN=TONE[tone];
-  const ty=TYPE[E.g],P=PAPER[E.g];
+  /* flavour.look (per film, optional): paper (bg, fib, ink, mat, water as in PAPER), type (as in TYPE), isle and label (map tags and course heads), voice (bar, map, note), so a film that is an island but not a luau keeps the layout in its own colours and words */
+  const LK=ctx.flavour&&ctx.flavour.look||{},ISLE_=Object.assign({},ISLE,LK.isle),LABEL_=Object.assign({},LABEL,LK.label);
+  const ty=Object.assign({},TYPE[E.g],LK.type),P=Object.assign({},PAPER[E.g],LK.paper);
   const C=inks(ctx.palette,P.bg,"#c2502a");
-  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),V=VOICE[tone];
+  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),V=Object.assign({},VOICE[tone],LK.voice);
   const ph=heroes(ctx),year=String(ctx.f.year||"");
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo}`;
@@ -287,11 +289,11 @@ window.MENU_FORMATS[ID]=ctx=>{
         <span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">Chart ${esc(F.number)}</span>
       </div>
       ${img(main,{mark:"data-main",contain:main===ph.poster,x:10,y:80,w:580,h:402,filter:filt,half:E.half,sheen:E.sheen,shape:"border-radius:46% 54% 42% 58% / 52% 44% 56% 48%",frame:shore,pos:"center 38%"})}
-      ${tag(ISLE.m,60,440,-3).replace("<div ","<div data-mshift ")}
+      ${tag(ISLE_.m,60,440,-3).replace("<div ","<div data-mshift ")}
       ${img(isleA,{mark:"data-mshift",contain:isleA===ph.poster,x:26,y:494,w:210,h:126,filter:filt,half:E.half,shape:"border-radius:55% 45% 50% 50% / 48% 58% 42% 52%",frame:shore,pos:"center 35%"})}
-      ${tag(ISLE.s,44,596,2).replace("<div ","<div data-mshift ")}
+      ${tag(ISLE_.s,44,596,2).replace("<div ","<div data-mshift ")}
       ${isleB?`${img(isleB,{mark:"data-mshift",contain:isleB===ph.poster,x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
-      ${tag(ISLE.w,404,596,-2).replace("<div ","<div data-mshift ")}`:""}
+      ${tag(ISLE_.w,404,596,-2).replace("<div ","<div data-mshift ")}`:""}
       ${isleC?`${img(isleC,{mark:"data-mshift",contain:isleC===ph.poster,x:250,y:500,w:104,h:110,filter:filt,half:E.half,shape:"border-radius:50% 50% 46% 54% / 54% 48% 52% 46%",frame:shore,pos:"center 35%"})}
       <div data-mshift style="position:absolute;left:302px;top:598px;transform:translateX(-50%) rotate(1deg);max-width:136px;padding:3px 8px;box-sizing:border-box;background:${P.bg};color:${P.ink};font:${ty.cw} 12px ${ty.caps};letter-spacing:.08em;line-height:1.15;text-transform:uppercase;text-align:center;box-shadow:0 3px 6px rgba(0,0,0,.35)">${T(F.prop.title)}</div>`:`<div data-box data-mshift style="position:absolute;left:242px;top:498px;width:120px;height:116px;overflow:hidden;box-sizing:border-box;padding:6px 5px;background:${P.bg};border-radius:4px;box-shadow:0 3px 6px rgba(0,0,0,.35);text-align:center;transform:rotate(${TN.tilt}deg)">
         <div data-fs="15" data-min="11" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.02em;text-transform:uppercase;color:${C.ink};line-height:1.1">${T(F.prop.title)}</div>
@@ -299,7 +301,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       </div>`}
     </div>
     <div data-box data-menu style="position:absolute;left:34px;top:660px;width:532px;height:430px;overflow:hidden">
-      ${["s","m","w"].filter(k=>cs[k].length).map(k=>`<div style="margin-bottom:10px"><div style="display:flex;align-items:baseline;gap:10px"><span data-fs="26" data-min="18" style="font:${ty.dw} 26px ${ty.disp};${up}white-space:nowrap;color:${P.ink}">${LABEL[k]}</span><span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${k==="w"?"":"see "+ISLE[k]}</span><span style="flex:1;border-top:2px solid ${C.ink};opacity:.5"></span></div>${items(cs[k],k,era,ty,C,false)}</div>`).join("")}
+      ${["s","m","w"].filter(k=>cs[k].length).map(k=>`<div style="margin-bottom:10px"><div style="display:flex;align-items:baseline;gap:10px"><span data-fs="26" data-min="18" style="font:${ty.dw} 26px ${ty.disp};${up}white-space:nowrap;color:${P.ink}">${LABEL_[k]}</span><span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${k==="w"?"":"see "+ISLE_[k]}</span><span style="flex:1;border-top:2px solid ${C.ink};opacity:.5"></span></div>${items(cs[k],k,era,ty,C,false)}</div>`).join("")}
     </div>
     <div data-box style="position:absolute;left:34px;top:1098px;width:532px;height:84px;overflow:hidden;border-top:3px double ${C.ink};padding-top:6px;box-sizing:border-box">
       <div data-fs="17" data-min="14" style="font:${ty.bw} 17px ${ty.body};line-height:1.25"><b style="font-weight:${ty.cw};color:${C.ink};letter-spacing:.1em;text-transform:uppercase">Ring the gong:</b> ${T(ctx.f.P||"Serve the mains when the torches are lit.")}</div>

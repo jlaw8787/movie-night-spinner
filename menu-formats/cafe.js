@@ -183,8 +183,10 @@ function secHead(e,era,label,ACC,INK){
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS["cafe"]=ctx=>{
-  const f=ctx.f||{},fl=ctx.flavour||null,era=eraOf(ctx.era),e=ERA[era],T=TONE[ctx.tone]||TONE.warm;
-  loadFonts("cafe-"+era,fam(e));
+  const f=ctx.f||{},fl=ctx.flavour||null,era=eraOf(ctx.era),T=TONE[ctx.tone]||TONE.warm;
+  /* flavour.look (per film, optional): overrides this era's board, ink, accents, frame, card, heads and type (light:true for a pale board: venue and sign beside the poster take the ink), so a film whose world clashes with the era look keeps the layout but wears its own colours */
+  const look=fl&&fl.look||null,e=look?Object.assign({},ERA[era],look):ERA[era];
+  loadFonts("cafe-"+era+(look?"-"+[e.disp,e.body,e.sig].join("-"):""),fam(e));
   const family=FAMILY.has(f.theme);
   const BOARD=e.board,INK=e.ink;
   const pal=ctx.palette||{};
@@ -226,7 +228,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const PHH=hasP?PHP:PH;
   const photoFn=()=>`<div style="position:absolute;left:${FR}px;top:${FR}px;width:${W-2*FR}px;height:${PHH}px;overflow:hidden;background:#222">
     ${hasP?`<div style="position:absolute;inset:0;background:${BOARD}"></div>
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 75% 50%,rgba(255,255,255,.1),rgba(0,0,0,.35) 90%)"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 75% 50%,rgba(255,255,255,${e.light?.35:.1}),rgba(0,0,0,${e.light?.06:.35}) 90%)"></div>
     <div style="position:absolute;left:12px;top:12px;width:${PW+12}px;height:${PT+12}px;background:#f4efe3;padding:6px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.65)"><img alt="" crossorigin="anonymous" src="${ctx.img(poster,"w780")}" style="display:block;width:${PW}px;height:${PT}px;object-fit:contain;background:#f4efe3"></div>`
     :`${photo(ctx,still,W-2*FR,PH,`${e.photoF==="none"?"":e.photoF} ${T.f}`,"50% 35%")}
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(0,0,0,0) 45%,rgba(0,0,0,${T.vig}) 100%)"></div>
@@ -234,8 +236,8 @@ window.MENU_FORMATS["cafe"]=ctx=>{
     ${hasP?`<div style="position:absolute;left:${12+PW+12+24}px;top:22px;width:${CW}px;height:${PHP-34}px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">`:""}
     <div style="${hasP?"flex:none":"position:absolute;left:40px;right:40px;top:30px"}">
       <div style="font-family:${bodyF};font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:${mix(ACC,"#ffffff",.15)};font-size:18px;margin-bottom:8px">${esc(T.kick)}</div>
-      <div data-fit style="${hasP?"max-height":"height"}:${Math.ceil(vs*(vlines>1||hasP&&vlen>12?1.48:1.1)*Math.max(vlines,hasP&&vlen>12?2:1))+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:${vlines>1||hasP&&vlen>12?1.42:1.06};${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
-      <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:#f2efe6;font-size:22px;margin-top:6px;${hasP?"":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(sign)}</div>
+      <div data-fit style="${hasP?"max-height":"height"}:${Math.ceil(vs*(vlines>1||hasP&&vlen>12?1.48:1.1)*Math.max(vlines,hasP&&vlen>12?2:1))+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:${e.light&&hasP?INK:"#fff"};line-height:${vlines>1||hasP&&vlen>12?1.42:1.06};${fs(vs,30)};text-shadow:${e.light&&hasP?"none":"0 3px 14px rgba(0,0,0,.6)"};${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
+      <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${e.light&&hasP?mix(INK,BOARD,.2):"#f2efe6"};font-size:22px;margin-top:6px;${hasP?"":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(sign)}</div>
     </div>
     ${hasP?`${logoHtml}${noteHtml}${card}</div>`:""}
     ${hasP?"":`    <div style="position:absolute;right:20px;bottom:18px;max-width:430px;text-align:right;font-family:${bodyF};font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);padding:6px 12px">${esc(hasP||!still?"Now showing":"Behind the counter")}, ${esc(f.year)}</div>`}

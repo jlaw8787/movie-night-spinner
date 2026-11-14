@@ -76,9 +76,10 @@ function prices(menu,e,ei,egg){
 }
 
 window.MENU_FORMATS[ID]=ctx=>{
-  const f=ctx.f||{},ei=Math.max(0,ERAS.indexOf(ctx.era)),e=E[ei],t=T[ctx.tone]||T.warm;
-  const fam=FAMILY.has(f.theme),tx=s=>fam?dry(s):clean(s);
   const fl=ctx.flavour||{};
+  /* flavour.look (per film, optional): overrides the era's board, truck paint, inks, frame, type and column heads (keys as in E) */
+  const f=ctx.f||{},ei=Math.max(0,ERAS.indexOf(ctx.era)),e=fl.look?Object.assign({},E[ei],fl.look):E[ei],t=T[ctx.tone]||T.warm;
+  const fam=FAMILY.has(f.theme),tx=s=>fam?dry(s):clean(s);
   const title=clean(f.title||"Tonight's Feature"),year=f.year||"";
   const venue=clean(fl.venue||(title.length<=20?title+" Truck":"The Lunch Truck")),sign=clean(fl.sign||"Hot food from the window");
   const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Cook"}:{text:"Everything on the board is cooked to order. Wait by the window and we'll call your number.",by:"The Cook"};

@@ -104,8 +104,11 @@ const TONE={
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{
-  const f=ctx.f||{},E=ERA[eraGroup(ctx.era||"modern")],T=TONE[ctx.tone]||TONE.grand,root=rootPath(ctx);
-  loadFonts(ID+"-"+eraGroup(ctx.era||"modern"),E.fonts.concat(["Pinyon+Script"]));
+  /* flavour.look (per film, optional): type keys as in ERA (disp, body, fonts, dw, upper, track, border), kick and toast words as in TONE,
+     and paper, ink, gold, acc, band colours that replace the ones worked out from the film palette */
+  const LK=ctx.flavour&&ctx.flavour.look||null;
+  const f=ctx.f||{},E=LK?Object.assign({},ERA[eraGroup(ctx.era||"modern")],LK):ERA[eraGroup(ctx.era||"modern")],T=LK?Object.assign({},TONE[ctx.tone]||TONE.grand,LK.kick?{kick:LK.kick}:{},LK.toast?{toast:LK.toast}:{}):TONE[ctx.tone]||TONE.grand,root=rootPath(ctx);
+  loadFonts(ID+"-"+eraGroup(ctx.era||"modern")+(LK&&LK.fonts?"-"+LK.fonts.join("-"):""),E.fonts.concat(["Pinyon+Script"]));
   const fam=isFamily(f),fl=ctx.flavour||null,menu=ctx.menu||{};
   /* the showtime cue on the front, under the toasts (8 Nov: banquet never printed it; the back is too full on some films) */
   const cueB=clean(fam?dry(f.P||""):(f.P||"")).trim();
@@ -113,12 +116,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* colours: film dark and accent, checked against the stock */
   const pd=hex(ctx.palette&&ctx.palette.dark)||[40,24,16],pa0=hex(ctx.palette&&ctx.palette.accent);
   const pa=pa0&&Math.max(...pa0)-Math.min(...pa0)>=35?pa0:[150,40,40];
-  const paper=T.paper(pd,pa),ink=T.ink||(lum(pd)<.08?pd:mix(pd,[0,0,0],.6));
+  const paper=LK&&LK.paper?hex(LK.paper):T.paper(pd,pa),ink=LK&&LK.ink?hex(LK.ink):T.ink||(lum(pd)<.08?pd:mix(pd,[0,0,0],.6));
   const P=toHex(paper),INK=toHex(ink);
-  const GOLD=T.dark?"#c9a55a":(lum(paper)>.8?"#a8832f":"#94712a");
-  const ACC=readable(toHex(pa),P,T.dark?3.2:3.6);
+  const GOLD=LK&&LK.gold||(T.dark?"#c9a55a":(lum(paper)>.8?"#a8832f":"#94712a"));
+  const ACC=readable(LK&&LK.acc||toHex(pa),P,T.dark?3.2:3.6);
   const SOFT=toHex(mix(ink,paper,.28));
-  const BAND=T.dark?toHex(mix(pa,[0,0,0],.35)):toHex(lum(pd)<.2?pd:mix(pd,[0,0,0],.5));
+  const BAND=LK&&LK.band||(T.dark?toHex(mix(pa,[0,0,0],.35)):toHex(lum(pd)<.2?pd:mix(pd,[0,0,0],.5)));
   const BANDINK=readable("#f3e7c8",BAND,5);
   const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
   const venue=clean(fl&&fl.venue||"The Great Hall");
@@ -187,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="16" style="flex:none;height:170px;overflow:hidden;font-size:20px;text-align:center;color:${SOFT}">
        <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
      <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:19px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
-       <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
+       <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(LK&&LK.toast?T.toast:fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
        ${toasts.map((t,i)=>`<div style="font:${E.bodyW} 1em/1.28 ${E.body};margin-bottom:.32em"><span style="color:${ACC};font-weight:700">${["I","II","III"][i]}.</span> ${esc(t)}</div>`).join("")}</div>
      ${cueB?`<div data-cue style="flex:none;border-top:1px solid ${GOLD};padding-top:8px;text-align:center;font:italic ${E.bodyW} 15px/1.3 ${E.body};color:${SOFT}"><div style="font:600 13px/1.2 ${E.body};font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.3em">Showtime</div>${esc(cueB)}</div>`:""}
    </div>
