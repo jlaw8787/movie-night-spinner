@@ -1,0 +1,36 @@
+{
+ "id": "MacGruber (2010)",
+ "ops": [
+  {
+   "old": "Smoked sausage and pepper skewers",
+   "new": "Homemade C-4 sausage and pepper skewers",
+   "done": true
+  },
+  {
+   "old": "Ginger beer with fresh lime",
+   "new": "Trailer step ginger beer with lime",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Van Parking",
+    "lines": [
+     "About twenty blocks away",
+     "Closer spots had meters"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.words",
+   "value": {
+    "When it's gone, it's gone.": "Backup parked twenty blocks away."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}

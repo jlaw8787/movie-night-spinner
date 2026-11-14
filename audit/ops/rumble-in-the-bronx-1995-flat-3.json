@@ -1,0 +1,29 @@
+{
+ "id": "Rumble in the Bronx (1995)",
+ "ops": [
+  {
+   "old": "Danny's chicken and shiitake bao",
+   "new": "Danny's diamond cushion bao",
+   "done": true
+  },
+  {
+   "old": "Jamaican beef patties",
+   "new": "Bronx bike race beef patties",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Supermarket Receipt",
+    "lines": [
+     "Shelves smashed by bikers",
+     "Total: ask Elaine"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}

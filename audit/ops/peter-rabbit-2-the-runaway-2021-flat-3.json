@@ -1,0 +1,51 @@
+{
+ "id": "Peter Rabbit 2: The Runaway (2021)",
+ "ops": [
+  {
+   "old": "Plant-based, so nobody has to chase anybody.",
+   "new": "Mr. Tod's new plant-based diet. Have you tried jogging?",
+   "done": true
+  },
+  {
+   "old": "Creamy chicken, leek and bacon filling under a pastry lid",
+   "new": "Chicken, leek and bacon. Maybe he really is a bad seed",
+   "done": true
+  },
+  {
+   "old": "Lamb, onion and carrot",
+   "new": "Lamb hotpot for Thomas and Bea, back from the honeymoon",
+   "done": true
+  },
+  {
+   "old": "Spiced carrot and walnut cake with cream cheese frosting",
+   "new": "Carrot and walnut. Nigel wants Peter in space next",
+   "done": true
+  },
+  {
+   "old": "Lamb hotpot for Thomas and Bea, back from the honeymoon slow-cooked",
+   "new": "Lamb, onion and carrot slow-cooked",
+   "why": "undo: old text sat inside the recipe description",
+   "done": true
+  },
+  {
+   "old": "lamb, onion and carrot under crisp potato slices, buttered peas, before Bea's book deal",
+   "new": "Back from the honeymoon. Lamb under crisp potato slices, buttered peas, before Bea's book deal",
+   "why": "the truck prints this note to the first comma",
+   "done": true
+  },
+  {
+   "old": "Back from the honeymoon. Lamb under crisp potato slices, buttered peas, before Bea's book deal",
+   "new": "Back from the honeymoon. Lamb under crisp potato slices and buttered peas, before Bea's book deal",
+   "why": "the truck cuts at the first comma",
+   "done": true
+  },
+  {
+   "old": "Back from the honeymoon. Lamb under crisp potato slices and buttered peas, before Bea's book deal",
+   "new": "Back from the honeymoon, before Bea's book deal",
+   "why": "too long for the truck note, it was cut mid-line",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}
