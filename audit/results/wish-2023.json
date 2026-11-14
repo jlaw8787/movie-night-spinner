@@ -71,7 +71,7 @@
    "Make the cue 'Serve dessert when the wishes burst out of the study ceiling'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Asha wishes on a star and Star arrives (crisps, lemonade, wink)",
@@ -97,6 +97,8 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-15",
+  "ops": "audit/ops/wish-2023-flat-11.json"
  }
 }

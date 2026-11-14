@@ -1330,3 +1330,24 @@ vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored.
 Not done, waiting for Josh: look ideas from the results (Italian Job flatter Minis graphic on the empty poster panel, Karate Kid beach party look instead of the dark kiosk, Sword in the Stone poster crop, Proposal plain lodge card, Top Gun doubled logo on the back panel, Wall Street empty gap beside the poster, True Grit hand-painted sign instead of letter magnets). Dish swaps not done: Wizard of Oz poppy seed shortbread, Bernie's sand-castle dessert, Lion King mouse-sized Scar sweet.
 
 Next: batch 11, the last 3 (Willow, Wish, Wolf Creek), then the rescore.
+
+## 15 Nov, 6:20am to 7:00am: flat menu rework, batch 11, the last 3 (main d4688b3, live)
+
+Batch 11 is the last 3 flat menus: Willow (1988), Wish (2023), Wolf Creek (2005). Ops in audit/ops/<slug>-flat-11.json, applied with card-ops, same method as batches 1 to 10. Facts checked against Wikipedia plots (curl raw pages) and Wikiquote for Willow and Wish (Bavmorda's pigs spell, love dust on Madmartigan, Raziel as possum, rook and goat then restored, Madmartigan's blackroot line; Valentino's low voice after the stardust, the study ceiling opened to free the wishes, Magnifico trapped in his staff's mirror; the fuel stop before the crater, Mick making a show of fixing the car at the old mining site, the water that knocks them out). Wikiquote has no Wolf Creek page, so no new quotes there.
+
+Changes:
+- Willow (truck, names only): Bavmorda's pig spell crackling pork, Franjean and Rool's berry tartlets, Love dust elderberry cordial (house drink, note "One pinch and Madmartigan loves Sorsha."), winks[0] footer "Raziel: possum, rook, goat, then herself" (Elora's raft moved to winks[1]), truck window line flavour.words {"Hot through the window.":"Blackroot. Puts hair on your chest."}.
+- Wish (cafe): crisps note "Stardust got the goat talking. Lower voice than expected", cookies note "Dahlia bakes for the King. These ones are iced stars", winks[1] (the cafe's lost and found line) "One king, in his staff's mirror", cue "Serve dessert when Asha's friends open the study ceiling to free the wishes."
+- Wolf Creek (campfire): nuts note (fuel stop before the crater), sandwiches note (while Mick makes a show of fixing the car; veg diet note matched), billy tea note "Billy tea with lemon myrtle and a gum leaf. Skip Mick's water".
+
+Left out: head on a stick (too grim). No editions for these 3. No substring spill. No recipes2 alt renames needed (Willow's pork and tartlets have no alts; no renamed dish on Wish or Wolf Creek).
+
+Checks: npm test pass. check-print-text on the 3: pass. planCard (/tmp/b11s/plan.cjs, not in repo, awaits fmtLoad) on the 3 with no switch, Vegetarian and No alcohol: same courses and counts as main, only the renamed and re-noted lines differ; the Wolf Creek veg sandwich carries the new note. Re-extracted cards confirm every base change prints. Willow and Wish (dry) have no booze words on the card.
+
+Deployed on Josh's go: main fast-forwarded to d4688b3, Publish site run 43639935851 passed. All 14 changed site files plus app.js match main byte for byte live.
+
+vibe.done set on the 3 result files (with reworked2 and ops). The flat menu rework is finished: 0 left undone. Not yet rescored.
+
+Not done, waiting for Josh: look ideas (Wish empty gap beside the poster, Wolf Creek darker crater entry notice look). Dish swap not done: Wolf Creek billy-boiled camp meal for the sandwiches.
+
+Next: the rescore (docs/rescore-agent-prompt.md).
