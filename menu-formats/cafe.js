@@ -209,7 +209,8 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   /* review 15: the board under a poster held about 380px, so most cafe menus (30 of 34) hid their dish notes. A longer menu now takes height
      from the poster panel: the poster shrinks in proportion and the side column keeps its width */
   const nItems=C.reduce((a,c)=>a+c.items.length,0),noteLen=C.reduce((a,c)=>a+c.items.reduce((b,it)=>b+String(it.note||"").length,0),0);
-  const PHP=nItems>=7||noteLen>420?786:nItems>=5||noteLen>300?846:906,PT=PHP-36,PW=Math.round(PT*2/3);
+  /* 14 Nov (menu scan): the poster took the top two thirds and squeezed the board; each step is 40px shorter, unless the counter note is long (80, or 40 with a long note, cut the signature beside the poster) */
+  const cut=note.t.length>=60?0:40,PHP=(nItems>=7||noteLen>420?786:nItems>=5||noteLen>300?846:906)-cut,PT=PHP-36,PW=Math.round(PT*2/3);
   const vlen=venue.length,CW=(W-2*FR)-(12+PW+12+24)-24,vw=hasP?CW:W-2*FR-80;
   let vs=Math.min(e.up?78:86,Math.floor(vw/(Math.max(vlen,6)*e.dr)));let vlines=1;
   if(hasP){for(let L=2;vs<52&&L<=3;L++){vlines=L;vs=Math.min(64,Math.floor(.9*L*vw/(vlen*e.dr)))}vs=Math.max(30,vs)}

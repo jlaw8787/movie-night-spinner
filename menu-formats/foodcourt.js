@@ -148,7 +148,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* left: mall directory lightbox. A film not set in a mall (a theme park, say) renames the fixed strings through flavour (rule 6) */
   const fs_=k=>clean(F.fl[k]||"").trim();
   const dirTxt=(fs_("directory")||"Mall directory").toUpperCase(),lvlTxt=(fs_("level")||"Level 1").toUpperCase(),hereTxt=fs_("here")||"You are here: the food court",spotTxt=fs_("spotted")||"Spotted around the mall";
-  const LX=B+22,LW=470,TOP=B+22;
+  /* 14 Nov (menu scan): the poster column took 40 per cent of the page; 400 wide hands the room to the menu */
+  const LX=B+22,LW=400,TOP=B+22;
   const dirHead=`<div style="position:absolute;left:${LX}px;top:${TOP}px;width:${LW}px;height:58px;background:${e.dark};display:flex;align-items:center;justify-content:space-between;padding:0 18px;box-sizing:border-box">
     <div style="font:700 22px/1 ${BF};letter-spacing:.24em;color:#fff;white-space:nowrap">${esc(dirTxt)}</div><div style="font:700 16px/1 ${BF};letter-spacing:.14em;color:${mix(acc,"#ffffff",.5)};white-space:nowrap">${esc(lvlTxt)}</div></div>`;
   const PA=posterFit(LW-24,640);

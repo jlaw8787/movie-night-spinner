@@ -199,6 +199,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* a course with four dishes takes two rows (three frames is the most that read well) */
   const C=[],items={},pr={};C0.forEach(([k,l])=>{const its=items0[k];if(its.length<=3){C.push([k,l]);items[k]=its;pr[k]=pr0[k];return}
     const a=Math.ceil(its.length/2);C.push([k,l]);items[k]=its.slice(0,a);pr[k]=pr0[k].slice(0,a);C.push([k+"2",""]);items[k+"2"]=its.slice(a);pr[k+"2"]=pr0[k].slice(a)});
+  /* 14 Nov (menu scan): two courses of one dish each in a row (Kingpin's Sweets and Drinks) share one row, a frame each, so neither prints half empty */
+  for(let i=0;i+1<C.length;i++){const [k1,l1]=C[i],[k2,l2]=C[i+1];if(l1&&l2&&items[k1].length===1&&items[k2].length===1){const k=k1+"+"+k2;items[k]=items[k1].concat(items[k2]);pr[k]=pr[k1].concat(pr[k2]);C.splice(i,2,[k,l1+" & "+l2])}}
   /* ruled rows under the courses: the film's winks (scene nods to watch for) and the showtime cue, at print size */
   const WK=F.winks.slice(0,5),CUEF=19,cueH=F.cue?Math.round(16+2*CUEF*1.3):0;
   const wkH=WK.length?Math.round(14+Math.ceil(WK.join(" /   ").length*12.5/(GW-LBL-24))*30):0;

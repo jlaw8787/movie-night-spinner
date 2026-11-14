@@ -128,7 +128,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bg=`background:${E.grid}radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(60,40,10,${(.10+.22*wearA).toFixed(2)}) 100%),url(${GRAIN}) center/600px,${paper};background-blend-mode:${E.grid?"normal,":""}normal,multiply`;
 
   /* hero: specimen plate. The poster is the main picture: whole, 2:3, frame hugs it, nothing over it */
-  const PY=146,PW=456,PH=684,RX=M+PW+22,RW=W-M-RX;
+  /* 14 Nov (menu scan): the poster took two thirds of the page and squeezed the menu; 392 wide gives the side column and the strip under it more room */
+  const PY=146,PW=392,PH=588,RX=M+PW+22,RW=W-M-RX;
   const heroImg=posterSrc
     ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;object-fit:contain">`
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);

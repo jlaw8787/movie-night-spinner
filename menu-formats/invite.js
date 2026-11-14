@@ -252,8 +252,12 @@ window.MENU_FORMATS.invite=function(ctx){
       <div data-ltype data-fit="14" style="display:${lr?"none":"block"};width:${CW-20}px;height:96px;overflow:hidden;text-align:center;font:${E.dw} 28px/1.08 ${dd};${up}color:#fff;font-size:28px">${x(f.title)}</div>
      </div>
      <div data-fit="14" style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:17px;color:${ink};${press}">
-      ${kick(T.k,".95em")}
+      <div style="font:700 .82em/1.3 ${bd};letter-spacing:.12em;text-transform:uppercase;color:${acc}">${x(T.k)}</div>
       <div style="margin-top:.7em;font:700 .9em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc}">Now showing</div>
+      ${fl.prop&&fl.prop.title?`<div style="margin:1.1em auto 0;width:100%;box-sizing:border-box;border:1px solid ${acc};padding:.7em .5em .6em;border-radius:${E.border==="round"?"10px":"0"}">
+       <div style="font:${E.dw} 1.15em/1.15 ${dd};${up}color:${ink}">${x(fl.prop.title)}</div>
+       ${(fl.prop.lines||[]).slice(0,3).map(l=>`<div style="margin-top:.35em;font:italic .85em/1.3 ${bd};color:${ink};opacity:.85">${x(l)}</div>`).join("")}</div>`:""}
+      ${nt.by?`<div style="margin-top:1.1em;font:700 .72em/1.3 ${bd};letter-spacing:.2em;text-transform:uppercase;color:${acc}">RSVP</div><div style="margin-top:.2em;font:italic .95em/1.3 ${bd};color:${ink}">${x(nt.by)}</div>`:""}
      </div>
     </div>`;
   /* the cover lines under a poster: the tagline is the one that steps aside when a long venue name needs two lines (Wedding Crashers), and the block never clips its first line */

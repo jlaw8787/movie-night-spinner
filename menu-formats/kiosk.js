@@ -261,7 +261,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const photoF=`${E.photo} ${T.photo}`;
 
   /* ===== surf report strip ===== */
-  const SH=84,PH=H-SH,PW=PM?593:740;
+  /* 14 Nov (menu scan): the full-height poster took 593px and left the board tiny; the poster panel is 520 wide and a still fills under the poster */
+  const SH=84,PH=H-SH,PW=PM?520:740;
   const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
   const cells=beach?[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]]
     :[["Out front",""],["Sky",ctx.tone==="eerie"?"Fog":["Fine","Clear","Cloudy","Overcast"][+num%4]],["Wind",["still","light breeze","gusty","fresh"][+num%4]],["Temp",/\bwinter\b/i.test(String(fl.sign||"")+" "+String(fl.venue||""))?`-${(+yy%9)+6} C`:`${water+4} C`],["Last orders",`${(+yy%3)+8}:${["00","15","30","45"][+num%4]}`]];
@@ -316,7 +317,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     {q:"[data-sp=tag]",c:[["l",nw+52,"b",40],["r",nw+52,"b",40],["l",40,"b",nh+46],["r",40,"b",nh+46],["r",36,"t",40],["l",36,"t",40],["r",36,"c",0],["l",36,"c",0]]}]});
   const posterPanel=`${grain(.1,dkB,.8,false)},linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.2)),${mix(E.board,dkB?"#ffffff":"#000000",dkB?.06:.3)}`;
   const photoHtml=PM?`<div style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;overflow:hidden;background:${posterPanel};box-shadow:inset -6px 0 14px rgba(0,0,0,.2)">
-    <div style="position:absolute;left:8px;top:8px;width:577px;height:860px;box-sizing:border-box;border:6px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.45);transform:rotate(${(T.tilt*.12).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain"></div></div>`
+    <div style="position:absolute;left:8px;top:8px;width:${PW-16}px;height:${Math.round((PW-28)*1.5)+12}px;box-sizing:border-box;border:6px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.45);transform:rotate(${(T.tilt*.12).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain"></div>${stills[0]?`<div style="position:absolute;left:8px;top:${Math.round((PW-28)*1.5)+32}px;width:${PW-16}px;bottom:8px;box-sizing:border-box;border:6px solid #fbf8f0;background:#222;box-shadow:0 6px 16px rgba(0,0,0,.4);overflow:hidden"><img src="${ctx.img(stills[0],"w780")}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 35%;filter:${photoF}"></div>`:""}</div>`
     :`<div data-safe='${safe}' style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;overflow:hidden">${photo(hero.src,PW,PH,{filter:photoF,poster:hero.poster,pos:"50% 40%",vig:60,alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):""})}
     ${T.bleach?`<div style="position:absolute;inset:0;background:linear-gradient(200deg,rgba(255,250,235,${T.bleach*1.4}),transparent 60%)"></div>`:""}
     <div data-sp="logo" style="position:absolute;left:28px;top:28px;max-width:${PW-56}px">${logoHtml}<br>${capHtml}</div>${noteHtml}${tagHtml}</div>`;
