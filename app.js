@@ -1818,6 +1818,36 @@ window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?"
   /* 11 Nov: never cut inside a quote (The Goonies printed: Sloth: "Ruth, Ruth) */
   const open=c=>(c.match(/"/g)||[]).length%2===1||(c.match(/\u201c/g)||[]).length!==(c.match(/\u201d/g)||[]).length;
   for(const c of cands)if(!open(c)&&fits(c))return c;return null};
+/* 15 Nov: the same, but the film's moment is kept over the plain food words. A note like "Crisp buttermilk chicken, honey to dip,
+   for Ren and Chuck's tractor game" is cut to "Crisp buttermilk chicken, for Ren and Chuck's tractor game." or "For Ren and Chuck's tractor game.",
+   not to "Crisp buttermilk chicken". A part counts as the film's when it has a quote, a possessive name, a capitalised name inside it or ends on "!".
+   Falls back to window.__fmtShort (which keeps the start) when no part names the film or none fits */
+window.__fmtShortFilm=(t,fits)=>{t=String(t||"").replace(/\s+/g," ").trim();if(!t)return null;if(fits(t))return t;
+  const OK=/^(American|French|Italian|English|British|Irish|Scotch|Scottish|Swiss|Greek|Thai|Japanese|Chinese|Korean|Mexican|Spanish|German|Indian|Cuban|Cajun|Creole|Southern|Texas|Tex|Mex|New|York|Sunday|Christmas|Parmesan|Cheddar|Brie|Dijon|Worcestershire|Tabasco|Bloody|Caesar|Waldorf|Buffalo|Philly|Boston|Chicago|Maryland|Florida|Hawaiian|Asian|Mediterranean|Anzac|Vegemite|Milo|Coke|Pepsi|I|A|The|And|With)$/;
+  const ref=s=>/["“”]/.test(s)||/!["”]?$/.test(s.trim())||/(^|\s)[A-Z][A-Za-z’'-]*[’']s\b/.test(s)||[...s.matchAll(/\s([A-Z][A-Za-z’'-]+)/g)].some(m=>!OK.test(m[1]));
+  const open=c=>(c.match(/"/g)||[]).length%2===1||(c.match(/“/g)||[]).length!==(c.match(/”/g)||[]).length;
+  const cap=c=>c.charAt(0).toUpperCase()+c.slice(1),dot=c=>/[.!?]["”]?$/.test(c)?c:c+".";
+  const sents=(t.match(/[^.!?]+[.!?]+["”]?|[^.!?]+$/g)||[t]).map(x=>x.trim()).filter(Boolean),cands=[];
+  /* the plain cuts never stop inside a "which", "who" or "that" part ("Sweet plantain, which nobody argues." read wrong) */
+  const plain=x=>window.__fmtShort?window.__fmtShort(x,c=>!/\b(which|who|whose|that|because|nobody|everyone|so)\b[^,]*$/i.test(c.replace(/[.!?]+$/,""))&&fits(c)):null;
+  if(!sents.some(ref))return plain(t);
+  /* in each sentence that names the film: the food words before the first comma joined to a film part after a later comma
+     ("Crisp buttermilk chicken, for Ren and Chuck's tractor game."), then the film part alone, longest first. A part used alone must
+     start on a joining word, a capital or a quote ("for Ren...", "Let's Hear It...", never "honey to dip, for Ren..."), and a joining
+     word inside a title ("Let's Hear It for the Boy") is not a break */
+  const J="for|where|while|when|like|as|after|before|until|from|at|in|on|with|by|just|so";
+  const lead=new RegExp("^(?:(?:"+J+")\\s|[A-Z\"\u201c])");
+  for(const s of sents.filter(ref)){const body=s.replace(/[.!?]+(["\u201d]?)$/,"$1");cands.push(dot(s));const A=[],B=[];
+    const com=[...body.matchAll(/,\s+/g)].map(m=>({i:m.index,l:m[0].length}));
+    const join=[...body.matchAll(new RegExp("\\s+(?=(?:"+J+")\\s)","g"))].map(m=>({i:m.index,l:m[0].length})).filter(c=>!/[A-Z]\S*$/.test(body.slice(0,c.i)));
+    const head=com.length?body.slice(0,com[0].i).trim():"";
+    com.forEach((c,k)=>{const tail=body.slice(c.i+c.l).trim();if(!ref(tail)||open(tail)||tail.split(/\s+/).length<3)return;
+      if(k>0&&head.split(/\s+/).length>=2&&!ref(head))A.push(dot(head+", "+tail));if(lead.test(tail))B.push(dot(cap(tail)))});
+    join.forEach(c=>{const tail=body.slice(c.i+c.l).trim();if(ref(tail)&&!open(tail)&&tail.split(/\s+/).length>=3)B.push(dot(cap(tail)))});
+    B.sort((x,y)=>y.length-x.length);cands.push(...A,...B);
+    if(head&&ref(head)&&!open(head)&&head.split(/\s+/).length>=3)cands.push(dot(head))}
+  for(const c of cands)if(!open(c)&&fits(c))return c;
+  return plain(t)};
 /* notes from the bottom: each is first shortened at a break, and only hidden if even that will not fit. The full text is kept to put back on a refit */
 window.__fmtTrim=(ns,over)=>{for(let i=ns.length-1;i>=0&&over();i--){const n=ns[i];if(n.children.length||n.style.display==="none")continue;const full=n.dataset.full||(n.dataset.full=n.textContent);
     /* 11 Nov: a cut that does not fit is only kept when it frees a line; one that leaves the note the same height goes back to the full text */
@@ -1843,6 +1873,8 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
     const was=e.style.webkitLineClamp,n=+(e.dataset.cl0||(e.dataset.cl0=cs.webkitLineClamp));e.style.webkitLineClamp=String(n+1);
     if(!hid()&&box&&box.scrollHeight<=box.clientHeight+1)return;e.style.webkitLineClamp=was}
   /* last resort for plain fine print: drop whole sentences; if it still cannot fit, hide the line rather than show half a description */
+  /* 15 Nov: notes marked data-fnote (truck) keep the film's moment when cut (window.__fmtShortFilm), before the plain cuts below */
+  if(hid()&&e.children.length===0&&e.hasAttribute("data-fnote")&&window.__fmtShortFilm){const full=e.dataset.full||(e.dataset.full=e.textContent.trim());const s2=window.__fmtShortFilm(full,c=>{e.textContent=c;return !hid()});if(s2){e.textContent=s2;return}e.textContent=full}
   if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
     /* still over: drop list items off the end at the commas, so it reads "Hummus and eggplant dip, flatbread." not "olives,..." */
     /* but never down to a stub like "Lamb.": keep at least four words, otherwise let the two-line clamp end it with an ellipsis */

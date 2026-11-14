@@ -139,14 +139,25 @@ const over=el=>el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+
    invite or precinct film opened first left this pass resetting the placemat's dish type and cutting its last drink */
 M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.]*$/.test(el.dataset.fit))return false;const c=el.closest(".fmt-lib");return !c||/\blib-(home|invite|precinct)\b/.test(c.className)}).forEach(el=>{if(!el.isConnected||!el.getClientRects().length)return;
   const base=+(el.dataset.base||(el.dataset.base=parseFloat(el.style.fontSize)||20)),min=+el.dataset.fit||14;
-  el.querySelectorAll("[data-opt],[data-item]").forEach(n=>n.style.display="");
-  const shrink=()=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>min&&g++<120){s=Math.max(min,s-.5);el.style.fontSize=s+"px"}};
-  shrink();if(!over(el))return;
-  /* still too much at the 14px floor: drop notes from the end, then whole items (first item per course stays), then grow back */
+  el.querySelectorAll("[data-opt],[data-item]").forEach(n=>n.style.display="");el.querySelectorAll("[data-full]").forEach(n=>{n.textContent=n.dataset.full});
+  /* a box marked data-grow="px" can take height from the face's [data-give] photo, moving [data-shift] lines up with it (put back on every run) */
+  const root=el.hasAttribute("data-grow")&&el.parentElement,give=root&&root.querySelector("[data-give]"),shift=root?[...root.querySelectorAll("[data-shift]")]:[];
+  if(give)[give,el,...shift].forEach(n=>{if(n.dataset.t0==null){n.dataset.t0=parseFloat(n.style.top)||0;n.dataset.h0=parseFloat(n.style.height)||0}n.style.top=n.dataset.t0+"px";if(+n.dataset.h0)n.style.height=n.dataset.h0+"px"});
+  const grow=()=>{if(!give)return;for(let c=8;over(el)&&c<=+el.dataset.grow;c+=8){give.style.height=(+give.dataset.h0-c)+"px";shift.forEach(n=>n.style.top=(+n.dataset.t0-c)+"px");el.style.top=(+el.dataset.t0-c)+"px";el.style.height=(+el.dataset.h0+c)+"px"}};
+  const shrink=lo=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>lo&&g++<160){s=Math.max(lo,s-.5);el.style.fontSize=s+"px"}};
+  shrink(min);if(!over(el))return;
+  /* 15 Nov: dish notes ([data-note]) are shortened before anything is dropped. From the bottom, each is cut at a natural break
+     (first sentence, a comma, a joining word), keeping the film's moment where it can (window.__fmtShortFilm): the first cut that fits is kept, else the shortest one if it saves a line.
+     Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
+  const dn=[...el.querySelectorAll("[data-note]")].filter(n=>!n.children.length),lo=dn.length?(+el.dataset.nlo||Math.round(min*.9)):min;
+  if(dn.length&&window.__fmtShort){for(let i=dn.length-1;i>=0&&over(el);i--){const n=dn[i],full=n.dataset.full||(n.dataset.full=n.textContent),h0=n.offsetHeight;let last=null;
+      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;last=c;return !over(el)});n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
+    if(over(el))grow();if(over(el))shrink(lo);if(!over(el))return}
+  /* still too much: drop notes from the end, then whole items (first item per course stays), then grow back */
   const opts=[...el.querySelectorAll("[data-opt]")],its=[...el.querySelectorAll("[data-item]:not([data-keep])")];
   while(over(el)&&opts.length)opts.pop().style.display="none";
   while(over(el)&&its.length)its.pop().style.display="none";
-  shrink()});
+  shrink(lo)});
 const run=()=>{cancelAnimationFrame(M.raf);M.raf=requestAnimationFrame(M.fitAll)};
 new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true});
 if(document.fonts){document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",run);document.fonts.ready.then(run)}
@@ -277,12 +288,12 @@ window.MENU_FORMATS.invite=function(ctx){
    </div>`;
 
   const course=c=>`<div style="margin-bottom:.5em">${kick(LABEL[c.k],".7em")}
-     ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="margin-top:.2em"><div style="font:${E.dw} 1em/1.15 ${dd};${up}letter-spacing:${E.up?".03em":"0"};color:${ink}">${x(it.n)}</div>${it.note?`<div data-opt style="font:italic .78em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}</div>`;
+     ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="margin-top:.2em"><div style="font:${E.dw} 1em/1.15 ${dd};${up}letter-spacing:${E.up?".03em":"0"};color:${ink}">${x(it.n)}</div>${it.note?`<div data-opt data-note style="font:italic .78em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}</div>`;
   const back=`${stock}${border}
-   ${second?photo(second,24,24,552,246,"50% 40%",{alts:st.slice(2,5).map(s=>ctx.img(s,"w1280"))}):pos?posterBand(24,24,552,246):""}
-   <div style="position:absolute;left:0;right:0;top:282px;text-align:center;font:${E.dw} 40px/1 ${dd};${up}letter-spacing:${E.up?".2em":"0"};color:${ink};${press}">Menu</div>
-   <div style="position:absolute;left:0;right:0;top:330px">${rule}</div>
-   <div data-fit="20" style="position:absolute;left:40px;top:346px;width:520px;height:398px;overflow:hidden;text-align:center;font-size:26px;${press}">
+   ${(second?photo(second,24,24,552,246,"50% 40%",{alts:st.slice(2,5).map(s=>ctx.img(s,"w1280"))}):pos?posterBand(24,24,552,246):"").replace(/^(\s*)<div /,"$1<div data-give ")}
+   <div data-shift style="position:absolute;left:0;right:0;top:282px;text-align:center;font:${E.dw} 40px/1 ${dd};${up}letter-spacing:${E.up?".2em":"0"};color:${ink};${press}">Menu</div>
+   <div data-shift style="position:absolute;left:0;right:0;top:330px">${rule}</div>
+   <div data-fit="20" data-nlo="17" data-grow="88" style="position:absolute;left:40px;top:346px;width:520px;height:398px;overflow:hidden;text-align:center;font-size:26px;${press}">
      ${C.length?C.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">The kitchen will surprise you.</div>`}
    </div>
    <div style="position:absolute;left:40px;top:756px;width:232px;height:116px;box-sizing:border-box;padding:12px 14px;background:${E.paper==="#ffffff"?"#f6f4ef":"#fffdf8"};box-shadow:0 4px 10px rgba(0,0,0,.18);text-align:center;transform:rotate(-1.5deg)">

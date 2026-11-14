@@ -136,7 +136,9 @@ DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
-const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();return p.length<=n&&p.length>=12?p:""};
+/* 15 Nov: a first clause longer than the line is shortened at a natural break, keeping the film's moment (window.__fmtShortFilm), then at a word, instead of left off */
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);if(b)return b.replace(/[.;]$/,"");
+  const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12)return p;const t=trunc(p,n);return t.split(/\s+/).length>=3?t:""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
 const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 

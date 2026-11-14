@@ -75,6 +75,9 @@ function prices(menu,e,ei,egg){
   return window.priceSense?window.priceSense(menu,out):out;
 }
 
+/* 15 Nov: runtime fit for the board. The column estimate is close but not exact, so when the menu box still runs over,
+   names, prices, notes and gaps shrink together (CSS var --k, not under 86 per cent) before any note is cut */
+const TFIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(b){if(!b)return;var k=1;b.style.setProperty('--k','1');while(b.scrollHeight>b.clientHeight+1&&k>0.87){k-=0.02;b.style.setProperty('--k',k.toFixed(2))}})(this.parentNode.querySelector('[data-tbox]'))">`;
 window.MENU_FORMATS[ID]=ctx=>{
   const fl=ctx.flavour||{};
   /* flavour.look (per film, optional): overrides the era's board, truck paint, inks, frame, type and column heads (keys as in E) */
@@ -128,13 +131,19 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* the showtime cue, a short line along the foot of the board (8 Nov: truck never printed it) */
   const cue=tx(f.P||"").trim(),cueN=cue?Math.min(2,wrapLines("Showtime: "+cue,15,CWall,e.cw)):0,cueH=cueN?cueN*15*1.3+12:0;
   const menuH=boardH-2*fw-mTop-18-cueH;
-  const tiers=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:12,h:30,nl:2},{d:24,n:18,g:10,h:27,nl:1},{d:22,n:17,g:8,h:25,nl:1},{d:20,n:15,g:6,h:22,nl:1},{d:19,n:14,g:5,h:21,nl:1},{d:18,n:14,g:4,h:20,nl:1},{d:17,n:13,g:3,h:19,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:4,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
+  const tiers=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:12,h:30,nl:2},{d:24,n:18,g:10,h:27,nl:1},{d:22,n:17,g:8,h:25,nl:1},{d:20,n:15,g:6,h:22,nl:1},{d:19,n:14,g:5,h:21,nl:1},{d:18,n:14,g:4,h:20,nl:1},{d:17,n:13,g:3,h:19,nl:1},{d:17,n:13,g:2,h:19,nl:1,sh:1},{d:16,n:13,g:2,h:18,nl:1,sh:1},{d:15,n:12.5,g:1,h:17,nl:1,sh:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:4,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*(ei>=6?1.5:2.5)+8;
   let CW=CWall;
   const cH=(tr,k)=>tr.h*1.3+14+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd*(e.caps?1.12:1)));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g},0);
   const split=tr=>{let best=null;for(let s=1;s<=C.length;s++){const a=C.slice(0,s).reduce((x,[k])=>x+cH(tr,k),0),b=C.slice(s).reduce((x,[k])=>x+cH(tr,k),0),m=Math.max(a,b);if(!best||m<best.m)best={s,m}}return best};
   let tr=tiers[tiers.length-1],sp=null,one=false;
-  for(const x of tiers){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*1.08<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
+  /* 15 Nov: short-note tiers (sh) come after the full-note tiers and before the name-only ones. The estimate runs high on this board,
+     so they fit against the menu height without the 8 per cent margin; the smallest one is kept even when the estimate says no,
+     so every dish keeps a one-line note (cut at a break on screen by libUnclip) and the name-only tiers are only for menus with no notes */
+  const anyNote=C.some(([k])=>items[k].some(it=>clean(it.note).trim()));
+  for(const x of tiers){if(x.sh){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
+      CW=(CWall-colGap)/2;const q=split(x);if(q.m<=menuH||(anyNote&&!tiers[tiers.indexOf(x)+1].sh)){tr=x;sp=q;break}continue}
+    CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*1.08<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
     CW=(CWall-colGap)/2;const q=split(x);if(q.m*1.08<=menuH){tr=x;sp=q;break}}
   if(!sp){dmax=2;CW=(CWall-colGap)/2;sp=split(tr)}
   const cgap=12+Math.min(48,Math.max(0,menuH-sp.m*1.08)/Math.max(1,C.length));
@@ -142,9 +151,9 @@ window.MENU_FORMATS[ID]=ctx=>{
     :e.board==="letter"?`<div style="font:700 ${tr.h}px/1.1 ${BF};color:${bacc};text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px">${l}</div>`
     :e.board==="chalk"?`<div style="font:700 ${tr.h}px/1.1 ${PF};color:${bacc};margin-bottom:8px;border-bottom:2px solid ${mix(bacc,e.bbg,.4)};padding-bottom:3px">${l}</div>`
     :`<div style="display:inline-block;font:700 ${tr.h-4}px/1.1 ${DF};color:${e.bbg};background:${bacc};padding:4px 12px;margin-bottom:10px;border-radius:6px">${l}</div>`;
-  const course=([k,l])=>`<div style="margin-bottom:${cgap}px">${head(l)}${items[k].map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return `<div style="margin-bottom:${tr.g}px">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="flex:1;font:700 ${tr.d}px/1.15 ${BF};color:${e.btx};${UP()}${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.pw} ${tr.d+4}px/1 ${PF};color:${e.board==="enamel"?bacc:e.btx};white-space:nowrap">${pr[k][i]}</span></div>
-      ${nl?`<div style="font:400 ${tr.n}px/1.3 ${BF};color:${bsoft};margin-top:3px;${clamp(nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
+  const course=([k,l])=>`<div style="margin-bottom:${cgap}px">${head(l)}${items[k].map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return `<div style="margin-bottom:calc(${tr.g}px*var(--k,1))">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="flex:1;font:700 calc(${tr.d}px*var(--k,1))/1.15 ${BF};color:${e.btx};${UP()}${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.pw} calc(${tr.d+4}px*var(--k,1))/1 ${PF};color:${e.board==="enamel"?bacc:e.btx};white-space:nowrap">${pr[k][i]}</span></div>
+      ${nl?`<div data-fnote style="font:400 calc(${tr.n}px*var(--k,1))/1.3 ${BF};color:${bsoft};margin-top:3px;${clamp(nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
   const colA=C.slice(0,sp.s).map(course).join(""),colB=C.slice(sp.s).map(course).join("");
   const boardTex=e.board==="letter"?`<div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 2px,rgba(0,0,0,0) 2px 10px)"></div>`
     :e.board==="chalk"?`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.08),rgba(255,255,255,0) 60%),radial-gradient(ellipse at 70% 80%,rgba(255,255,255,.06),rgba(255,255,255,0) 55%)"></div><div style="position:absolute;inset:0;background:url(${grain}) center/900px auto;opacity:.9;mix-blend-mode:screen;filter:invert(1)"></div>`
@@ -154,7 +163,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${boardTex}
     <div style="position:absolute;left:${pad}px;right:${pad}px;top:22px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:${e.board==="enamel"?`3px solid ${e.btx}`:`2px solid ${mix(e.btx,e.bbg,.6)}`};padding-bottom:10px">
       <div style="${boardTitle};color:${e.btx}">${e.board_t}</div>${kick(t.win.length>34?"Order at the window":t.win,bacc,14)}</div>
-    <div style="position:absolute;left:${pad}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>
+    <div data-tbox style="position:absolute;left:${pad}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>
+    ${TFIT}
     ${cueN?`<div data-fit="cue" style="position:absolute;left:${pad}px;width:${CWall}px;bottom:16px;border-top:1px solid ${mix(e.btx,e.bbg,.7)};padding-top:6px;font:italic 400 15px/1.3 ${BF};color:${bsoft}"><b style="font-style:normal;color:${bacc}">Showtime:</b> ${esc(cap(cue))}</div>`:""}</div>`;
 
   /* order window: note, logo panel, now serving ticket */
