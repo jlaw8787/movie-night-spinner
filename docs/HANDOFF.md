@@ -1289,3 +1289,17 @@ Josh asked (3:10pm) about Taken's "particular set of skills" line: it already pr
 Not done, waiting for Josh: look ideas (Silver Linings living room header, Soul Food photo crop, Hunchback poster block, Farewell banquet banner). Dish swaps not done: Smokey clam chowder, Superbad cop car punch, Holiday Arthur's film list supper.
 
 Next: Planes, Trains and Automobiles own hand-built menu (Josh, 3:11pm), then batch 10 (3.4, starting The Incredibles 2, The Italian Job).
+
+## 14 Nov, 3:15pm to 3:35pm: repeat spins, Planes Trains own menu, Ghostbusters rebuild (main 6c67685, live)
+
+All three on Josh's go, one deploy: Publish site run 43561965709 passed, the 12 changed site files match main byte for byte live.
+
+1. Repeat spins (Josh: "I get a lot of the same spins"). spin() picked uniformly from the list with no memory, so short filtered lists repeated fast. New spinPick(L) in app.js: skips films in localStorage "mns-spun" (last 900 landed ids, per device) until 75 per cent of the current pool has had a turn. Tested in the browser: 15 spins from a 20-film pool all different, 200 from 900 all different. Not synced across devices (local only).
+2. Planes, Trains and Automobiles: own hand-built menu, fmtBraidwood (formats/braidwood.js), "Braidwood Inn", one 1344x960 face: knotty pine wall, brown and gold motel sign, room-service card with Del's line ("You wanna hurt me? Go right ahead if it makes you feel any better.", Wikiquote; Josh wanted the whole speech, only this 13-word piece prints), Del's business card, "The long way home" itinerary (Wikipedia plot), front desk notice, stills (Braidwood sign, Del with rings, burnt car, truck, the bed), footer "Those aren't pillows!" (Neal). Off the shared motel layout (film-format, film-flavour); kit-flavour has its venue. The edition still holds the cooked menu. Dropped the jerky extra: no veg version, so it would print as beef with Vegetarian on. Hand-built descriptions now show the diet note when a switch is on (it.diet&&it.note).
+3. Ghostbusters: fmtWorkOrder rewritten at 1344x960 (fmtFaces, was the old full-bleed wall). Same seven dishes, prices, recipes; planCard same as before in all three diets. Order fields Dana Barrett / her kitchen / Zuul, a field note per dish, safety tip box (Egon "Don't cross the streams.", Peter "Important safety tip. Thanks, Egon."), containment unit reading, stills of Slimer, Stay Puft, Sedgewick lift, cue still of Ecto-1 leaving the firehouse, footer "It's the Stay Puft Marshmallow Man." (Ray). No logo drawn (trademark). Twinkie line left out (not on Wikiquote).
+
+Learnt: hand-built menu files load lazily (fmtLoad). A planCard check must await fmtLoad(f) first, or it falls back to makeMenu and looks like dishes went missing.
+
+Checks: npm test pass; check-print-text pass on Ghostbusters, Planes Trains and Hook.
+
+Next: batch 10 (3.4, starting The Incredibles 2, The Italian Job). 23 flat menus left.
