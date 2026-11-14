@@ -281,6 +281,11 @@ const SAVED=new Set();
 async function savedScan(){try{if(!("caches" in window))return;SAVED.clear();for(const k of await caches.keys()){const c=await caches.open(k);for(const r of await c.keys()){const m=new URL(r.url).pathname.match(/data\/film\/[^/]+\.json$/);if(m)SAVED.add(m[0])}}}catch(e){}}
 addEventListener("offline",savedScan);if(navigator.onLine===false)savedScan();
 function spinPool(){if(navigator.onLine!==false)return list;const ok=list.filter(f=>SAVED.has(filmPath(f)));return ok}
+/* no repeats: a spin skips films this device has landed on lately, until most of the current pool has had a turn (Josh, 14 Nov: too many of the same spins) */
+let SPUN=[];try{SPUN=JSON.parse(localStorage.getItem("mns-spun")||"[]");if(!Array.isArray(SPUN))SPUN=[]}catch(e){SPUN=[]}
+function spinPick(L){const ids=new Set(L.map(f=>f.id)),keep=Math.floor(L.length*.75);
+  const recent=new Set(SPUN.filter(id=>ids.has(id)).slice(0,keep));const fresh=L.filter(f=>!recent.has(f.id));const f=pick(fresh.length?fresh:L);
+  SPUN=[f.id,...SPUN.filter(x=>x!==f.id)].slice(0,900);try{localStorage.setItem("mns-spun",JSON.stringify(SPUN))}catch(e){}return f}
 /* tap to skip: a tap on the wheel or the curtain while it spins or counts down jumps straight to the menu */
 var skipReq=false;
 function spin(){
@@ -291,7 +296,7 @@ function spin(){
   /* refresh the wedges on the far side so every spin shows new titles, and plant the winner there */
   const far=[];for(let i=0;i<N;i++){const ang=((rot+(i+.5)*A)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);if(ang>Math.PI*.6&&ang<Math.PI*1.4)far.push(i)}
   const L=spinPool(),pool=shuffle(list);far.forEach((i,k)=>{wedges[i]=pool[k%pool.length]});
-  const w=pick(far),f=L.length?pick(L):wedges[w];wedges[w]=f;
+  const w=pick(far),f=L.length?spinPick(L):wedges[w];wedges[w]=f;
   closeCurtains();sfx.whirrStart();
   const target=-(w+0.5+(Math.random()-0.5)*0.55)*A;
   const turns=reduce?1:5+Math.floor(Math.random()*3);
