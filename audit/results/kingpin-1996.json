@@ -22,7 +22,7 @@
    "Rename \"Fresh farm milk\" note to \"Roy milked it himself. Ask who he thought it was.\""
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Roy milks the 'cow' that is a bull",
@@ -49,6 +49,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/kingpin-1996-flat-7.json"
  }
 }

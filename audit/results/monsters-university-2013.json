@@ -50,7 +50,7 @@
    "Swap 'Blue raspberry slushie' for 'Camp cabin slushie' to use the door to the human world."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The Scare Games (fries, wink)",
@@ -73,6 +73,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/monsters-university-2013-flat-7.json"
  }
 }

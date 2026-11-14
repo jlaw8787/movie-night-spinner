@@ -1214,3 +1214,27 @@ vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored.
 Not done, waiting for Josh: look ideas from the results (Dick Tracy comic strip yellow, red and blue; Footloose grain mill header; E.T. hospital tent look; Fantastic Beasts bakery order slip; Finding Dory aquarium visitor board; Gremlins 2 Microwave Marge recipe card prop; poster crops on Doctor Strange, Gladiator II, Prisoner of Azkaban). Dish swaps not done (renames only): Despicable Me dead guy pancakes, Dreamgirls chocolate cake, Fantastic Beasts Queenie's cocoa, Crocodile Dundee II hot dogs.
 
 Next: batch 7, the next 20 by vibe (3.4, starting Hocus Pocus 2, Hot Shots!, House Party, How to Lose a Guy in 10 Days).
+
+## 14 Nov, 11:30am to 2:25pm: flat menu rework, batch 7 (main 20d2924, live)
+
+Batch 7 is the next 20 by vibe, all 3.4, alphabetical: Hocus Pocus 2 to Mulan. Ops in audit/ops/<slug>-flat-7.json, applied with card-ops, same method as batches 1 to 6. Facts checked against Wikipedia plots and Wikiquote (curl raw pages), plus searches for Mary's robot vacuums (Hocus Pocus 2), the Mean Girls lines (Wednesdays pink, fetch, Glen Coco), Sykes' cruller, Emilio the goldfish (Kill Bill 2) and Franny's frog band led by Frankie (Meet the Robinsons). Mean Girls needs Mean_Girls_(2004_film) on Wikiquote, Miracle needs Miracle_on_34th_Street_(1947_film).
+
+Left out, no source: Sykes' "That's my cruller!" as a quote, Kramer's opera and sushi hands (unprinted Gadget chilli note now "Kramer built Scolex the claw"), Jesper's silk sheets (unprinted Klaus duck note now "Duck for the Postmaster General's spoilt son"), Admiral Benson's short pants, Susan's "It's silly, but I believe" (used as "Susan believes now", unquoted), the Mean Girls talent show.
+
+Learnt this batch:
+- Home layout (JW Fallen Kingdom) drops notes from the end when space is short, so re-notes there never printed. The stampede went into the dish name instead ("Isla Nublar stampede chilli lime chicken and beans", veg alt too).
+- Canteen timetable winks fall back when more than half the words are capitalised: "The Burn Book" and "Spring Fling vote" fall back, "Spring Fling crown count" and "Wear pink on Wednesdays" don't. Batch 7 set winks on How to Lose a Guy, Madagascar and Mean Girls. Mean Girls also gained the footer line "Overheard at lunch: The Burn Book." (winks[4]).
+- Prom prints the last wink in its footer, truck prints winks[0], invite's place card prints winks[1]: set flavour.winks to move a moment there (Monsters University, Klaus, Kill Bill 2).
+- Song lyrics kept out of new lines (Madagascar's "I like to move it" stays only in the old house note).
+- Editions: only I Am Legend (corn chips, peaches) with the scoped sync (/tmp/b7w/edsync.cjs, not in repo). Money Train's edition doesn't hold the hand-built template lines.
+- No substring spill (every op matched a whole string); the only longer matches were the intended "(vegetarian)" alt renames.
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses, counts and diet tags as main. Re-extracted cards confirm every change prints. Dry films (Gadget, Klaus, Madagascar, Robinsons, Miracle, Monsters University, Mulan) have no booze words on the card.
+
+Deployed 2:21pm on Josh's go: main fast-forwarded to 20d2924, Publish site run 43556193292 passed. All 62 changed site files match main byte for byte live.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 63 left undone.
+
+Not done, waiting for Josh: look and layout ideas (Hocus Pocus 2 Salem carnival ticket book instead of prom, Hot Shots fighter jet styling, I Am Legend "IMMUNE" badge, Kingpin lane stripes, Meet the Parents family table with place cards, Madagascar zoo feeding schedule, Mulan matchmaker's clipboard, Money Train cue not printed on the hand-built sheet). Dish swaps not done (renames only): Hocus Pocus 2 face mask sorbet, Kingpin biscuits and gravy, Kingpin Ishmael's coffee, Joker Carnival drink, House Party garlic bread shoes.
+
+Next: batch 8, the next 20 by vibe (3.4, starting My Best Friend's Wedding, Noelle, Ocean's Eleven, Office Christmas Party).

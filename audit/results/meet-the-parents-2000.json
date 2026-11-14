@@ -62,7 +62,7 @@
    "Swap 'Garden party devilled eggs' for a Circle of Trust cheese plate."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The Circle of Trust",
@@ -89,6 +89,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/meet-the-parents-2000-flat-7.json"
  }
 }
