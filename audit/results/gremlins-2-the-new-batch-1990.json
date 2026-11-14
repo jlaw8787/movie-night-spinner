@@ -40,7 +40,7 @@
    "Give the canteen a Microwave Marge recipe card as the prop in place of the generic badge."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Not feeding gremlins after midnight",
@@ -65,6 +65,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/gremlins-2-the-new-batch-1990-flat-6.json"
  }
 }

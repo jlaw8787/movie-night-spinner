@@ -1189,3 +1189,28 @@ From the 14 Nov menu scan (Sheet "Reel Dinner menu scan, 14 Nov", claude.ai arti
 Checks: npm test pass; check-print-text on the changed films (8 restyled, Hook, Inside Man, Bugsy) pass; check-print-text on all 123 films on lab, cafe, kiosk, foodcourt, bowling and invite: pass (cafe rerun on its 34 after the note rule).
 Left from the scan, not done: kiosk menu type is still small on long one-column menus (Vacation); Hook-style own layouts for others would be Josh's call; the other scan rows (dish ideas, quote fixes) are untouched.
 Deployed 11:25am on Josh's go: main 59831f2, Publish site run 43539778809 (first attempt failed at deploy-pages, "No artifacts named github-pages", GitHub side; the rerun passed). Live sw.js, index.html, formats/neverfeast.js, formats/negotiation.js, menu-formats/cafe.js and film-flavour.json match main byte for byte.
+
+## 14 Nov, 11:00am to 11:25am: flat menu rework, batch 6 (main d70e42e, live)
+
+Batch 6 is the next 20 by vibe, all 3.4, alphabetical: Crocodile Dundee II to Hitch. Ops in audit/ops/<slug>-flat-6.json, applied with card-ops, same method as batches 1 to 5. Facts checked against Wikipedia plots (curl raw pages), plus searches for Super Silly Fun Land (Universal's page names it as the carnival where Agnes wins the unicorn) and "Just keep swimming" in Finding Dory. Palmer's wedding in Multiverse of Madness is from Wikipedia's cast section.
+
+Left out, no source: Hitch's Ellis Island and Butcher of Cadiz lines, Dick Tracy's "When do we eat?" (left as it was, not added anywhere new), the Pizza Poppa pizza ball scene, Dreamgirls' Jimmy chocolate cake chant.
+
+Learnt this batch:
+- Do not run audit-extract with an empty film list: it redoes all 900 cards with FORCE=1. Pass the names as a bash array ("${F[@]}").
+- Veg and af dish names live in data/recipes2 "alt" (for example "Theme park corn dogs (vegetarian)", "Curtis Taylor's smothered mushroom steaks", "Las Vegas showroom sparkling cocktail"). The base rename doesn't reach them: renamed with their own ops. List alt names for every renamed dish.
+- Dick Tracy's gimlet af note was the same string as the base note, so one op changed both and the af side said gin. Set by hand in data/diet ("Lime juice and lime cordial").
+- Lab trims at the first comma or full stop when tight (Despicable Me corn dogs lost the unicorn behind a longer name; now "Win Agnes a fluffy unicorn." first). After the 11:25am layout change (lab poster smaller) the lab prints more of each note.
+- Main moved during the batch (menu scan fixes). Rebased onto it, took main's films.js, index.html and sw.js and ran build-data, then reran every check on the new layouts before deploying.
+- Editions: Crocodile Dundee II (snags), E.T. (peanut butter cups, root beer floats), Hitch (sliders, piccata) with the scoped sync (/tmp/b6w/edsync.cjs, not in repo: exact, then lower case without full stop, then substring, skipping ops whose new text holds the old).
+- No substring spill this batch (every op matched a whole string).
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses, counts and diet tags as main, before and after the rebase. Re-extracted cards confirm every base change prints. Dry films (Daddy's Home, Despicable Me, E.T., Fantastic Beasts, Finding Dory, Prisoner of Azkaban) have no new booze words.
+
+Deployed 11:24am on Josh's go: main fast-forwarded to d70e42e, Publish site run 43540337503 passed. All 69 changed site files (data sources, built files, sw.js, index.html, app.js) match main byte for byte live.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 83 left undone.
+
+Not done, waiting for Josh: look ideas from the results (Dick Tracy comic strip yellow, red and blue; Footloose grain mill header; E.T. hospital tent look; Fantastic Beasts bakery order slip; Finding Dory aquarium visitor board; Gremlins 2 Microwave Marge recipe card prop; poster crops on Doctor Strange, Gladiator II, Prisoner of Azkaban). Dish swaps not done (renames only): Despicable Me dead guy pancakes, Dreamgirls chocolate cake, Fantastic Beasts Queenie's cocoa, Crocodile Dundee II hot dogs.
+
+Next: batch 7, the next 20 by vibe (3.4, starting Hocus Pocus 2, Hot Shots!, House Party, How to Lose a Guy in 10 Days).

@@ -61,7 +61,7 @@
    "Use the primary yellow, red and blue of the comic strip for the bar and badge colours instead of gold."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Breathless singing Sooner or Later at Club Ritz",
@@ -87,6 +87,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/dick-tracy-1990-flat-6.json"
  }
 }

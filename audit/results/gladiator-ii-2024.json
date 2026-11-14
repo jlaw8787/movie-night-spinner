@@ -57,7 +57,7 @@
    "Crop the poster to fill its frame so the black bars go"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Rome will fall. I need only give it a push. (Macrinus)",
@@ -82,6 +82,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/gladiator-ii-2024-flat-6.json"
  }
 }

@@ -19,7 +19,7 @@
    "Swap the 'Don't forget' list item 2 for 'Slimer in the attic'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The brass orb and Garraka's freeze",
@@ -45,6 +45,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/ghostbusters-frozen-empire-2024-flat-6.json"
  }
 }
