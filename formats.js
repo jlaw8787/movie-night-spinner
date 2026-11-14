@@ -530,21 +530,27 @@ const FMT_FILMS={
         {k:"Red wine, opened early",n:"Red wine, opened early",note:"Short glasses of Chianti, like inside",p:"6:00",c:"d",
          how:"Open 2 bottles of Italian red, a Chianti or Montepulciano, an hour before dinner. Serve in short tumblers.",
          shop:["2 bottles Italian red wine@Bottle shop"]}]}]},
-  "Ghostbusters (1984)":{fmt:"workorder",brand:"Hook & Ladder 8",trade:"Paranormal investigation and elimination · 24 hours",address:"14 North Moore St, NYC",
-    plaque:["Hook & Ladder 8","14 North Moore St · Tribeca"],tag:"Slime included.<br>Ghosts not.",
-    fields:[["Client","Movie night crew"],["Location","Your living room"],["Problem","Class 5 snack apparition"]],
-    phone:"555-2368",slogan:"No job too spooky",total:"$45.00",signed:"P. Venkman, PhD",
+  "Ghostbusters (1984)":{fmt:"workorder",brand:"Ghostbusters",trade:"Paranormal investigation and elimination",address:"14 North Moore St, NYC",
+    over:"Formerly of Columbia University · Now in a disused firehouse",tag:"Slime included. Ghosts not.",
+    fields:[["Client","Dana Barrett, cellist"],["Location","Her kitchen. Check the fridge."],["Problem","Zuul"]],
+    phone:"555-2368",slogan:"We're open 24 hours",total:"$45.00",signed:"P. Venkman, PhD",
+    slimer:["/l7BRUn0MtZnjsiRtWS2roZZ0H5X.jpg","Slimer, eating his way through the Sedgewick"],
+    tip:[["Don't cross the streams.","Egon"],["Important safety tip. Thanks, Egon.","Peter"]],
+    gauge:["Containment unit","Egon's reading: nearly full. Do not let the EPA switch it off."],
+    stills:[["/5kM80YUaa4H9HsQUFGXbjaGjI5u.jpg","Ray picked the most harmless thing he could think of"],["/tEs0JmNVDd28LWqdEvvQlS8kBO7.jpg","Going up at the Sedgewick Hotel"]],
+    cue:["/1WqqbEW8hU5zFklJhZbZ1mnAvM7.jpg","Ecto-1 heads out"],
+    foot:"It's the Stay Puft Marshmallow Man.",footBy:"Ray",
     groups:[
       {h:"Containment",items:[
-        {k:"Slimer's slime dip",note:"Spinach, artichoke, cheese. Highly reactive",p:"6.00"},
-        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Green yolks and chives. Check the fridge",p:"5.00"},
-        {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Dark chocolate dip. Don't cross the streams.",p:"4.00"}]},
+        {k:"Slimer's slime dip",note:"Green and greedy. Caught at the Sedgewick Hotel",p:"6.00"},
+        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Open the fridge slowly. Zuul lives in there",p:"5.00"},
+        {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Ray roasted these by the fire at Camp Waconda",p:"4.00"}]},
       {h:"Mains",items:[
-        {k:"Firehouse meatball sub",note:"Meatballs, provolone. Thirty-five feet.",p:"9.00"},
-        {k:"Chinese takeaway at the firehouse",n:"Firehouse Chinese",note:"Fried rice and dumplings, in the boxes",p:"9.00"}]},
+        {k:"Firehouse meatball sub",note:"Long enough for the whole crew",p:"9.00"},
+        {k:"Chinese takeaway at the firehouse",n:"Firehouse Chinese",note:"Out of the boxes, while business is slow",p:"9.00"}]},
       {h:"Sweet & cold",items:[
-        {k:"Stay Puft s'mores",note:"Chocolate, biscuit. Toasted till they melt",p:"7.00"},
-        {k:"Ectoplasm slushie",note:"Lime, ice and very green",p:"5.00"}]}]},
+        {k:"Stay Puft s'mores",note:"Choose the form of the destructor. Toast till he melts",p:"7.00"},
+        {k:"Ectoplasm slushie",note:"Very green. Not EPA approved",p:"5.00"}]}]},
   "Hook (1991)":{fmt:"neverfeast",brand:"The Neverland Feast",phoneTitle:"Hook",tag:"Neverland dinners are pretend. This one isn't.",
     over:"The Lost Boys' hideout · Neverland",
     sub:["Imagination required","One table, every Lost Boy, one grown-up Pan"],
@@ -1106,41 +1112,67 @@ function fmtLanes(f,spec,menu,poster){
 
 /* ---------- firehouse carbon-copy work order on the brick wall (Ghostbusters) ---------- */
 function fmtWorkOrder(f,spec,menu,poster){
-  const RED="#c2272d",INK="#1e1e22",BLUE="#1f3c9e",YEL="#fff3b0",NOTE="#4c4a45";
+  /* Ghostbusters (Hook & Ladder 8): the yellow work order on the firehouse brick, rebuilt 14 Nov with real stills, Egon's safety tip,
+     the containment unit reading and Stay Puft. Drawn trim only, no logo, no clip art */
+  const RED="#c2272d",INK="#1e1e22",BLUE="#1f3c9e",YEL="#fff3b0",NOTE="#4c4a45",GREEN="#7ac943",DARK="#232327";
   const HEAD="font-family:'Oswald',sans-serif",FORM="font-family:'Archivo Narrow',sans-serif",PEN="font-family:'Caveat',cursive";
   const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
-  const GRID="grid-template-columns:44px 230px minmax(0,1fr) 74px";
-  const cell="border-right:1px solid rgba(30,30,34,.35);padding:4px 8px;display:flex;align-items:center";
-  const row=x=>{const it=pick(x.k);return `<div style="display:grid;${GRID};min-height:49px;border-bottom:1px solid rgba(30,30,34,.35)"><span style="${cell};justify-content:center;${PEN};font-weight:700;font-size:24px;color:${BLUE}">${ESC(x.q||"4")}</span><span style="${cell};${FORM};font-weight:700;font-size:17px;line-height:1.1;text-transform:uppercase">${ESC(it.label||x.n||x.k)}</span><span style="${cell};${PEN};font-weight:500;font-size:20px;line-height:1.05;color:${BLUE}">${ESC(x.note)}</span><span style="padding:4px 8px;display:flex;align-items:center;justify-content:flex-end;${PEN};font-weight:700;font-size:23px;color:${BLUE}">${ESC(x.p)}</span></div>`};
-  const field=(l,v)=>`<div style="display:flex;align-items:baseline;gap:8px;border-bottom:1px solid rgba(30,30,34,.45);padding-bottom:2px"><span style="${FORM};font-weight:700;font-size:12px;letter-spacing:.12em;color:${RED};text-transform:uppercase;flex:none">${l}</span><span style="${PEN};font-weight:500;font-size:22px;line-height:1;color:${BLUE}">${ESC(v)}</span></div>`;
-  const tabs=Array.from({length:6},()=>`<span style="flex:1;border-left:1px dashed rgba(30,30,34,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15"><span style="${FORM};font-weight:700;font-size:11px;letter-spacing:.1em;color:${RED}">CALL</span><span style="${FORM};font-weight:700;font-size:15px;letter-spacing:.04em">${ESC(spec.phone)}</span></span>`).join("");
+  const img=(p,size,alt,css)=>`<img crossorigin="anonymous" src="${TMDB_IMG}${size}${ESC(p)}" alt="${ESC(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;${css||""}">`;
+  const photo=(s,h,rot,pos)=>`<figure style="margin:0;flex:none;transform:rotate(${rot||0}deg)"><div style="background:#fff;padding:6px 6px 0;box-shadow:0 6px 14px rgba(0,0,0,.45)"><div style="height:${h}px;overflow:hidden;background:#111">${img(s[0],"w780",s[1]+", still from the film",pos?"object-position:"+pos:"")}</div><div style="${PEN};font-weight:700;font-size:17px;line-height:1.15;color:${INK};padding:3px 2px 6px">${ESC(s[1])}</div></div></figure>`;
+  const GRID="grid-template-columns:40px minmax(0,232px) minmax(0,1fr) 64px";
+  const cell="border-right:1px solid rgba(30,30,34,.35);padding:3px 8px;display:flex;align-items:center";
+  const row=x=>{const it=pick(x.k);return `<div style="display:grid;${GRID};min-height:55px;border-bottom:1px solid rgba(30,30,34,.35)"><span style="${cell};justify-content:center;${PEN};font-weight:700;font-size:23px;color:${BLUE}">${ESC(x.q||"4")}</span><span style="${cell};${FORM};font-weight:700;font-size:15.5px;line-height:1.1;text-transform:uppercase;color:${INK}">${ESC(it.label||x.n||x.k)}</span><span style="${cell};${PEN};font-size:19px;line-height:1.05;color:${BLUE}">${ESC(x.note)}</span><span style="padding:3px 8px;display:flex;align-items:center;justify-content:flex-end;${PEN};font-weight:700;font-size:22px;color:${BLUE}">${ESC(x.p)}</span></div>`};
+  const field=(l,v)=>`<div style="display:flex;align-items:baseline;gap:8px;border-bottom:1px solid rgba(30,30,34,.45);padding-bottom:2px;min-width:0"><span style="${FORM};font-weight:700;font-size:12px;letter-spacing:.12em;color:${RED};text-transform:uppercase;flex:none">${ESC(l)}</span><span style="${PEN};font-weight:700;font-size:20px;line-height:1.05;color:${BLUE};min-width:0">${ESC(v)}</span></div>`;
+  const tip=`<div style="flex:1;min-width:0;border:2px solid ${RED};background:rgba(255,255,255,.45);padding:7px 10px"><div style="${FORM};font-weight:700;font-size:12px;letter-spacing:.14em;color:${RED};text-transform:uppercase">Safety tip, read before the job</div>
+    ${spec.tip.map(([q,b])=>`<div style="display:flex;align-items:baseline;gap:8px;margin-top:3px"><span style="${HEAD};font-weight:700;font-size:19px;line-height:1.1;color:${INK}">“${ESC(q)}”</span><span style="${PEN};font-weight:700;font-size:18px;color:${RED};flex:none">${ESC(b)}</span></div>`).join("")}</div>`;
+  const cue=`<div style="flex:1;min-width:0;display:flex;gap:10px;align-items:center;border:2px solid ${RED};background:rgba(255,255,255,.45);padding:6px 8px">
+    <div style="flex:none;width:96px;height:56px;overflow:hidden;background:#111">${img(spec.cue[0],"w780",spec.cue[1]+", still from the film")}</div>
+    <div style="min-width:0"><div style="${FORM};font-weight:700;font-size:12px;letter-spacing:.14em;color:${RED};text-transform:uppercase">Dispatch, showtime cue</div><div style="${PEN};font-weight:700;font-size:19px;line-height:1.05;color:${BLUE};margin-top:1px">${ESC(fmtCue(f))}</div></div></div>`;
+  const tabs=Array.from({length:7},()=>`<span style="flex:1;border-left:1px dashed rgba(30,30,34,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15"><span style="${FORM};font-weight:700;font-size:11px;letter-spacing:.12em;color:${RED};text-transform:uppercase">Call</span><span style="${FORM};font-weight:700;font-size:15px;color:${INK}">${ESC(spec.phone)}</span></span>`).join("");
   const order=`<div style="position:relative;flex:1;min-width:0;min-height:0">
-    <div aria-hidden="true" style="position:absolute;inset:10px -8px -8px 10px;background:#f7c6d4;box-shadow:0 6px 14px rgba(0,0,0,.35);transform:rotate(1.4deg)"></div>
-    <div aria-hidden="true" style="position:absolute;inset:5px -4px -4px 5px;background:#fff;transform:rotate(.7deg)"></div>
-    <div class="fx-panel" style="position:relative;height:100%;box-sizing:border-box;background:${YEL};padding:16px 20px 0;display:flex;flex-direction:column;color:${INK};box-shadow:0 2px 6px rgba(0,0,0,.2)">
+    <div aria-hidden="true" style="position:absolute;inset:10px -8px -8px 10px;background:#f7c6d4;box-shadow:0 6px 14px rgba(0,0,0,.35);transform:rotate(1.2deg)"></div>
+    <div aria-hidden="true" style="position:absolute;inset:5px -4px -4px 5px;background:#fff;transform:rotate(.6deg)"></div>
+    <div class="fx-panel" style="position:relative;height:100%;box-sizing:border-box;background:${YEL};padding:14px 20px 0;display:flex;flex-direction:column;color:${INK};box-shadow:0 2px 6px rgba(0,0,0,.2)">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid ${RED};padding-bottom:6px">
-        <div><div style="${HEAD};font-weight:700;font-size:42px;line-height:.95;letter-spacing:.04em;color:${RED};text-transform:uppercase">${ESC(f.title)}</div><div style="${FORM};font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-top:3px">${ESC(spec.trade)}</div></div>
-        <div style="text-align:right;${FORM};font-weight:700;font-size:13px;letter-spacing:.1em;line-height:1.5;text-transform:uppercase"><div style="font-size:18px;color:${RED}">Work order</div><div>No. <span style="${PEN};font-size:22px;letter-spacing:0;color:${BLUE}">${ESC(f.year)}</span></div><div>${ESC(spec.address)}</div></div></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;padding:10px 0 10px">${spec.fields.map(([l,v])=>field(l,v)).join("")}</div>
+        <div><div style="${HEAD};font-weight:700;font-size:40px;line-height:.95;letter-spacing:.04em;color:${RED};text-transform:uppercase">Work order</div><div style="${FORM};font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px">${ESC(spec.trade)} · ${ESC(spec.slogan)}</div></div>
+        <div style="text-align:right;${FORM};font-weight:700;font-size:13px;letter-spacing:.1em;line-height:1.5;text-transform:uppercase"><div>No. <span style="${PEN};font-size:24px;letter-spacing:0;color:${BLUE}">${ESC(String(f.year))}</span></div><div>${ESC(spec.address)}</div></div></div>
+      <div style="display:grid;grid-template-columns:1fr 1.25fr .7fr;gap:14px;padding:9px 0 9px">${spec.fields.map(([l,v])=>field(l,v)).join("")}</div>
       <div style="display:grid;${GRID};background:${RED};color:#fff;${FORM};font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase"><span style="padding:4px 8px;text-align:center">Qty</span><span style="padding:4px 8px">Item</span><span style="padding:4px 8px">Field notes</span><span style="padding:4px 8px;text-align:right">Fee</span></div>
       <div style="border-left:1px solid rgba(30,30,34,.35);border-right:1px solid rgba(30,30,34,.35)">${spec.groups.flatMap(g=>g.items).map(row).join("")}</div>
       ${FX_SP}
-      <div style="display:flex;gap:16px;align-items:stretch">
-        <div style="flex:1;min-width:0;border:2px solid ${RED};padding:7px 10px;background:rgba(255,255,255,.4)"><div style="${FORM};font-weight:700;font-size:12px;letter-spacing:.14em;color:${RED};text-transform:uppercase">Dispatch, showtime cue</div><div style="${PEN};font-weight:500;font-size:22px;line-height:1.05;color:${BLUE};margin-top:2px">${ESC(fmtCue(f))}</div></div>
-        <div style="flex:none;width:210px;display:flex;flex-direction:column;justify-content:space-between"><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid ${INK}"><span style="${FORM};font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Total</span><span style="${PEN};font-weight:700;font-size:28px;color:${BLUE}">${ESC(spec.total)}</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid ${INK}"><span style="${FORM};font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase">Signed</span><span style="${PEN};font-weight:700;font-size:24px;color:${BLUE};transform:rotate(-3deg)">${ESC(spec.signed)}</span></div></div></div>
-      <div style="${HEAD};font-weight:500;font-size:16px;letter-spacing:.08em;text-transform:uppercase;text-align:center;color:${RED};margin-top:10px">${ESC(spec.slogan)}</div>
-      <div style="display:flex;margin:6px -20px 0;border-top:1px dashed rgba(30,30,34,.5);height:52px">${tabs}</div>
+      <div style="display:flex;gap:12px;align-items:stretch">${tip}</div>
+      <div style="display:flex;gap:12px;align-items:stretch;margin-top:9px">${cue}
+        <div style="flex:none;width:200px;display:flex;flex-direction:column;justify-content:space-between"><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid ${INK}"><span style="${FORM};font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Total</span><span style="${PEN};font-weight:700;font-size:28px;color:${BLUE}">${ESC(spec.total)}</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid ${INK}"><span style="${FORM};font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase">Signed</span><span style="${PEN};font-weight:700;font-size:23px;color:${BLUE}">${ESC(spec.signed)}</span></div></div></div>
+      <div style="display:flex;margin:10px -20px 0;border-top:1px dashed rgba(30,30,34,.5);height:46px">${tabs}</div>
     </div></div>`;
-  const left=`<div style="flex:none;width:286px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-    <div style="position:relative;background:#fff;padding:8px;box-shadow:0 8px 16px rgba(0,0,0,.45);transform:rotate(-2deg)">${fmtPosterImg(f,poster,248,372)}<span aria-hidden="true" style="position:absolute;left:50%;top:-10px;width:70px;height:20px;margin-left:-35px;background:rgba(255,250,235,.75);transform:rotate(-3deg)"></span></div>
-    <div style="background:linear-gradient(135deg,#d9b25a,#f3dc96 45%,#b98d35);border:2px solid #7a5a1e;padding:7px 14px;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.4)"><div style="${HEAD};font-weight:700;font-size:16px;letter-spacing:.1em;color:#3a2a0c;text-transform:uppercase">${ESC(spec.plaque[0])}</div><div style="${FORM};font-weight:700;font-size:12.5px;letter-spacing:.1em;color:#3a2a0c;text-transform:uppercase">${ESC(spec.plaque[1])}</div></div>
-    <div style="${HEAD};font-weight:500;font-size:18px;letter-spacing:.04em;color:#fff4e4;text-align:center;text-shadow:0 2px 4px rgba(0,0,0,.6)">${spec.tag}</div></div>`;
-  return `${fmtBack(poster)}<div class="fx-wall" data-tile="brick|#8e3a2c|#c9b8a4|48" style="position:relative;height:100%;box-sizing:border-box;background:repeating-linear-gradient(0deg,#c9b8a4 0 3px,#8e3a2c 3px 24px);box-shadow:0 26px 60px rgba(0,0,0,.7);display:flex;gap:28px;padding:20px 30px 22px 22px">${left}${order}</div>`;
+  const plaque=`<div style="background:linear-gradient(135deg,#d9b25a,#f3dc96 45%,#b98d35);border:2px solid #7a5a1e;padding:7px 14px;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.4)"><div style="${HEAD};font-weight:700;font-size:19px;letter-spacing:.1em;color:#3a2a0c">HOOK &amp; LADDER 8</div><div style="${FORM};font-weight:700;font-size:12px;letter-spacing:.12em;color:#3a2a0c">14 NORTH MOORE ST · TRIBECA</div></div>`;
+  const left=`<div style="flex:none;width:236px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+    <div style="position:relative;background:#fff;padding:7px;box-shadow:0 8px 16px rgba(0,0,0,.5);transform:rotate(-1.5deg)">${fmtPosterImg(f,poster,222,333)}<span aria-hidden="true" style="position:absolute;left:50%;top:-10px;width:70px;height:20px;margin-left:-35px;background:rgba(255,255,255,.55);transform:rotate(3deg)"></span></div>
+    ${photo(spec.slimer,150,1.5,"50% 35%")}${plaque}</div>`;
+  /* drawn trim only: the containment unit's reading, a bar of lamps nearly all lit */
+  const lamps=Array.from({length:10},(_,i)=>`<span style="flex:1;height:18px;border-radius:2px;background:${i<9?(i<6?GREEN:i<8?"#f2c230":RED):"#444"};box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)"></span>`).join("");
+  const gauge=`<div style="background:${DARK};border:3px solid #8a8a8f;border-radius:6px;padding:9px 11px 10px;box-shadow:0 6px 14px rgba(0,0,0,.45)">
+    <div style="${HEAD};font-weight:700;font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:#f3f3f3">${ESC(spec.gauge[0])}</div>
+    <div style="display:flex;gap:3px;margin-top:7px">${lamps}</div>
+    <div style="display:flex;justify-content:space-between;${FORM};font-weight:700;font-size:11px;letter-spacing:.1em;color:#bdbdc2;margin-top:3px"><span>EMPTY</span><span style="color:${RED}">FULL</span></div>
+    <div style="${PEN};font-weight:700;font-size:17px;line-height:1.1;color:${GREEN};margin-top:5px">${ESC(spec.gauge[1])}</div></div>`;
+  const right=`<div style="flex:none;width:236px;display:flex;flex-direction:column;justify-content:space-between;gap:10px">
+    ${gauge}${photo(spec.stills[0],170,-1.5,"50% 30%")}${photo(spec.stills[1],150,1.2,"50% 30%")}</div>`;
+  const head=`<div style="position:relative;flex:none;background:${DARK};border-bottom:5px solid ${RED};padding:10px 30px 9px;display:flex;justify-content:space-between;align-items:center;gap:24px">
+    <div style="min-width:0"><div style="${FORM};font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#bdbdc2">${ESC(spec.over)}</div>
+      <div style="${HEAD};font-weight:700;font-size:64px;line-height:1;letter-spacing:.05em;text-transform:uppercase;color:${RED};text-shadow:3px 3px 0 #000;white-space:nowrap">${ESC(spec.brand)}</div></div>
+    <div style="text-align:right;flex:none"><div style="${HEAD};font-weight:500;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:#f3f3f3">${ESC(spec.trade)}</div><div style="${HEAD};font-weight:700;font-size:34px;letter-spacing:.06em;color:${GREEN};margin-top:2px">${ESC(spec.phone)}</div></div></div>`;
+  const foot=`<div style="position:relative;flex:none;background:${DARK};border-top:5px solid ${RED};padding:6px 30px 7px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px">
+    <div style="${FORM};font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#bdbdc2">${ESC(spec.tag)}</div>
+    <div style="display:flex;align-items:baseline;gap:10px"><span style="${HEAD};font-weight:700;font-size:28px;letter-spacing:.03em;color:#fff">“${ESC(spec.foot)}”</span><span style="${PEN};font-weight:700;font-size:22px;color:${GREEN}">${ESC(spec.footBy)}</span></div>
+    <div style="${FORM};font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#bdbdc2;text-align:right">Now showing, ${ESC(String(f.year))}</div></div>`;
+  return fmtFaces([`<div class="fx-wall" data-tile="brick|#8e3a2c|#c9b8a4|48" style="position:relative;height:100%;box-sizing:border-box;background:repeating-linear-gradient(0deg,#c9b8a4 0 3px,#8e3a2c 3px 24px);overflow:hidden;color:${INK};display:flex;flex-direction:column">
+    ${head}
+    <div style="position:relative;flex:1;min-height:0;display:flex;gap:22px;padding:14px 24px 14px">${left}${order}${right}</div>
+    ${foot}</div>`],fmtWorkOrder.sheet);
 }
+fmtWorkOrder.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
 
-
-
-/* ---------- Little Nero's pizza box lid with the delivery ticket stapled on (Home Alone) ---------- */
 function fmtNero(f,spec,menu,poster){
   const RED="#b81a22",GRN="#145a2e",KRAFT="#c99a5f",INK="#1e140c",PAPER="#fffdf6",BLUE="#1f3c9e",NOTE="#4b3a2c",WHITE="#fbf8f1";
   const DISP="font-family:'Shrikhand',cursive;font-weight:400",SLAB="font-family:'Bevan',serif;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",MARK="font-family:'Permanent Marker',cursive;font-weight:400",TYPE="font-family:'Courier Prime',monospace";
