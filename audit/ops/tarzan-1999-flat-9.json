@@ -1,0 +1,34 @@
+{
+ "id": "Tarzan (1999)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Treehouse Pass",
+    "lines": [
+     "Built from the shipwreck",
+     "Mind the vines"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Banana, mango, pineapple and papaya with passionfruit and lime",
+   "new": "Jane met the baboons first. Banana, mango, pineapple, papaya.",
+   "done": true
+  },
+  {
+   "old": "Chicken thigh curry in a tomato and coconut milk sauce",
+   "new": "Porter came all this way to study gorillas. Chicken, tomato, coconut.",
+   "done": true
+  },
+  {
+   "old": "Chickpea and sweet potato curry in a tomato and coconut milk sauce",
+   "new": "Porter came all this way to study gorillas. Chickpea, sweet potato, coconut.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}

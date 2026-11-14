@@ -1,0 +1,28 @@
+{
+ "id": "Star Wars: Episode I - The Phantom Menace (1999)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Obi-Wan's bad feeling about this",
+    "Jar Jar Binks in the swamp",
+    "Darth Maul's double bladed saber",
+    "Watto the junk dealer",
+    "Queen Amidala of Naboo"
+   ],
+   "done": true
+  },
+  {
+   "old": "Mos Espa pear, nectarine and feta platter",
+   "new": "Watto's no Republic credits fruit platter",
+   "done": true
+  },
+  {
+   "old": "Grilled corn with chilli butter",
+   "new": "Jar Jar's humble servant grilled corn",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}

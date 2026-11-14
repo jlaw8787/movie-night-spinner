@@ -1,0 +1,39 @@
+{
+ "id": "Smokey and the Bandit (1977)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Haul Slip",
+    "lines": [
+     "400 cases in 28 hours",
+     "Then Boston chowder in 18"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Truck stop cayenne pork crackling",
+   "new": "Fred's cayenne pork crackling",
+   "done": true
+  },
+  {
+   "old": "Texarkana vinegar barbecue ribs",
+   "new": "28 hour Texarkana barbecue ribs",
+   "done": true
+  },
+  {
+   "old": "Georgia peach cobbler",
+   "new": "Double or nothing peach cobbler",
+   "done": true
+  },
+  {
+   "old": "Fried pickle spears with ranch",
+   "new": "Runaway bride fried pickle spears",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}
