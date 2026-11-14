@@ -77,7 +77,7 @@
    "Add a 'Beastie' berry tart to replace 'Berry ricotta brioche toasts'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Maleficent crashes the christening uninvited and curses Aurora",
@@ -104,6 +104,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/maleficent-2014-flat-3.json"
  }
 }

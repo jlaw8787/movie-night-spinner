@@ -69,7 +69,7 @@
    "Add a human shield bulletproof vest flatbread"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The old celery trick (thick end first)",
@@ -95,6 +95,8 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/macgruber-2010-flat-3.json"
  }
 }

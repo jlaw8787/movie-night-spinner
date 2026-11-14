@@ -48,7 +48,7 @@
    "Fix the orphaned mains heading in the left column."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "John Smith hands Meeko a ship's biscuit (cue, biscuits)",
@@ -72,6 +72,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/pocahontas-1995-flat-3.json"
  }
 }

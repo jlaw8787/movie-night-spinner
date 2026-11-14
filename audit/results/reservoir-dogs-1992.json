@@ -52,7 +52,7 @@
    "Move the layout to a diner or warehouse sheet so the black suits and skinny ties sit in the right place."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The diner tipping argument, I don't tip because society says I have to (cue, signed note, sign)",
@@ -76,6 +76,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/reservoir-dogs-1992-flat-3.json"
  }
 }

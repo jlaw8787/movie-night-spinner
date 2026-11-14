@@ -75,7 +75,7 @@
    "Swap the 'Red's pineapple teriyaki chicken' note for the boiled eggs Red is making."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Pineapple Express strain (tagline, dishes)",
@@ -101,6 +101,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/pineapple-express-2008-flat-3.json"
  }
 }

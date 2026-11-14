@@ -1109,3 +1109,26 @@ Josh spotted that the takeaway layout (23 films, e.g. Kung Fu Panda 2) wouldn't 
 - Kitchen note panel was mostly empty (Josh): note sets at 31px (data-fit shrinks), vertically centred, and under it "Chef's special, No. 20" with the first main, which is No. 20 on the inside. Checked on all 23 that the special matches the inside main.
 
 Checks: npm test pass. check-print-text on the 23 takeaway films: pass. Deployed on Josh's go: main fast-forwarded to 628d56c, Publish site run 43529331174 passed. Live sw.js, index.html, app.js, films.js, formats.js and menu-formats/takeaway.js match main byte for byte.
+
+## 14 Nov, 9:45am to 10:10am: flat menu rework, batch 3 (main 81a8678, live)
+
+Batch 3 is the next 20 at vibe 3.2, alphabetical: Halloween (2018) to Rumble in the Bronx. (Dumb and Dumber also shows 3.2 but is flat false from the 8 Nov rework, so it is not in the queue.) Ops in audit/ops/<slug>-flat-3.json, applied with card-ops, same method as batches 1 and 2. Facts checked against Wikipedia plots and Wikiquote (curl raw pages), plus searches for the IM3 Christmas bunny, Maleficent's "Beastie", the twins' fireworks at the OWLs and the Ewoks' spit.
+
+Corrections made on the way: Lock, Stock "Mind Barry's hatchet" (the hatchet is Harry's, footer wink too); Rain Man sirloin $86,500 to $86,000 (Wikipedia); MI Fallout pastis "Walker's order" and Rocky V "Tommy Gunn eats two" pierogi (no source, replaced).
+
+Learnt this batch:
+- card-ops falls back to substring mode when the old text isn't a whole string, and then it also changes longer strings that contain it. Peter Rabbit 2's "Lamb, onion and carrot" (a printed cut) rewrote the start of the recipe description; Hellboy, MIB2, Nativity and Red Heat got doubled tails. All undone with extra ops in the same files. After applying, scan the film's data for strings that contain a new text but are longer than it.
+- Lab trims notes to the first sentence when space is short (MIB2 calzones, doughnuts, cookies): joke first. Truck notes are cut too (PR2 hotpot): keep them short.
+- Home layout prints "From the <venue>." when a dish has no note (HP chicken). card-ops can't add a note, so that one is left.
+- Truck window line remap: flavour.words with the style's line (IM3 "Made in the truck today." to "Built in Harley's garage.", MacGruber "When it's gone, it's gone." to "Backup parked twenty blocks away.").
+- Editions: only Men in Black II has one (pizza and doughnut notes synced with the scoped sync).
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and counts as main (renames only, no diet word drops). Re-extracted cards confirm every change prints.
+
+Deployed 10:05am on Josh's go: main fast-forwarded to 81a8678, Publish site run 43532156005 passed. Live sw.js, index.html, app.js, films.js, movie-menus.js, film-flavour.json, films.json, dish-names.json, dish-notes.json and two recipe files match main byte for byte.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 143 left undone.
+
+Not done, waiting for Josh: look and layout ideas (Lock, Stock saloon lettering, Jedi Endor look, Reservoir Dogs face one panel, Rocky V poster). Rocky V's Christmas lines (eggnog, struffoli, wink) have no source found yet.
+
+Next: batch 4, the next 20 by vibe (3.2 and up, starting Scream 3, Scrooged, Spider-Man: Homecoming, Stakeout).

@@ -23,7 +23,7 @@
    "Add 'It's a trap' to a dish note."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "It's a trap, Admiral Ackbar (footer wink)",
@@ -49,6 +49,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/return-of-the-jedi-1983-flat-3.json"
  }
 }
