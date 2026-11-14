@@ -1,0 +1,39 @@
+{
+ "id": "Tremors (1990)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Walter Chang names them graboids",
+    "Val and Earl stuck on the rocks",
+    "Burt's basement full of guns",
+    "Graboids hunting by sound"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.words",
+   "value": {
+    "Follow the line.": "Tiptoe to the window."
+   },
+   "done": true
+  },
+  {
+   "old": "Val and Earl's truck eggplant jerky",
+   "new": "Val and Earl's pole vault eggplant jerky",
+   "done": true
+  },
+  {
+   "old": "Val and Earl's truck jerky",
+   "new": "Val and Earl's pole vault jerky",
+   "done": true
+  },
+  {
+   "old": "Chocolate pudding dirt cups",
+   "new": "Graboid chocolate dirt cups",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}
