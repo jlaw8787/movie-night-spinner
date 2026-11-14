@@ -45,7 +45,7 @@
    "Add a 'Medivac chopper' stamp tied to Annie's faked heart attack."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The fake engagement and the visa",
@@ -71,6 +71,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-15",
+  "ops": "audit/ops/the-proposal-2009-flat-10.json"
  }
 }

@@ -1303,3 +1303,30 @@ Learnt: hand-built menu files load lazily (fmtLoad). A planCard check must await
 Checks: npm test pass; check-print-text pass on Ghostbusters, Planes Trains and Hook.
 
 Next: batch 10 (3.4, starting The Incredibles 2, The Italian Job). 23 flat menus left.
+
+## 14 Nov, 3:35pm to 6:20am 15 Nov: flat menu rework, batch 10 (main 2a3e1de, live)
+
+Batch 10 is the next 20 by vibe, all 3.4, alphabetical: The Incredibles 2 to White Christmas. Ops in audit/ops/<slug>-flat-10.json, applied with card-ops, same method as batches 1 to 9. Facts checked against Wikipedia plots and Wikiquote (curl raw pages). Wikiquote has no page for The Sapphires, Weekend at Bernie's or White Christmas, so no new quotes there. Sword in the Stone needs The_Sword_in_the_Stone_(1963_film) and Oz needs The_Wizard_of_Oz on Wikipedia; Italian Job needs The_Italian_Job_(1969_film) on Wikiquote.
+
+Left out, no source: Bastian's packed lunch in the attic (used "skips class for the attic"), Tombstone "You're a daisy if you do" (Wikiquote only has "You're no daisy"), Andrew's coffee spill in The Proposal, Merlin's blizzard (not in the plot section), Buck's pancake shovel. Annie's "Get Low" chant (song) kept out.
+
+Learnt this batch:
+- Canteen cuts long notes at the first sentence (Italian Job hot chocolate prints "Hang on a minute, lads, I've got a great idea." only). Joke first worked.
+- Canteen timetable wink 0 "Three little cars: red, white and blue" printed as "Three little cars: red" (cut at the comma). Now "Three Minis in the getaway"; slot 3 was falling back to "Lock-up" (over 30 characters), now "Bridger runs it from prison".
+- Diet words again: Billy Idol's "chicken or fish?" in the Wedding Singer brittle note dropped the brittle off the Vegetarian menu. Reworded ("bagged for the Vegas flight where Billy Idol lends a hand"). The planCard diff caught it.
+- Truck window line remap on Tremors: flavour.words {"Follow the line.":"Tiptoe to the window."}. Truck prints names only, so the moments went into names (pole vault jerky, veg alt too; Graboid chocolate dirt cups) and winks[0] ("Walter Chang names them graboids").
+- Hotel prints winks 1 and 2 in the footer (Incredibles 2 now the Incredibile, White Christmas the 151st).
+- Dry films print the af note: Sword in the Stone's pie re-noted on all four variants (base, af, veg, veg_af).
+- Editions: only Wall Street (cheesecake, old fashioned) with the scoped sync (/tmp/b10w/edsync.cjs, not in repo: exact, then lower case without full stop, substring only reported).
+- No substring spill (every op matched a whole string). Oz's penne note was stored without a full stop; card-ops' fallback handled it.
+- Remove the main worktree (git worktree remove) before checking out main to deploy.
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and counts as main (Tremors renames only). Re-extracted cards confirm every base change prints. Dry films (Incredibles 2, Lion King, NeverEnding Story, Sword in the Stone, Wizard of Oz, Uncle Buck, White Christmas) have no booze words on the card (Lion King's ginger beer was already there).
+
+Deployed on Josh's go: main fast-forwarded to 2a3e1de, Publish site run 43636773409 passed. All 68 changed site files (plus sw.js, index.html, app.js) match main byte for byte live (one recipe file lagged on the CDN edge for a minute, then matched).
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 3 left undone.
+
+Not done, waiting for Josh: look ideas from the results (Italian Job flatter Minis graphic on the empty poster panel, Karate Kid beach party look instead of the dark kiosk, Sword in the Stone poster crop, Proposal plain lodge card, Top Gun doubled logo on the back panel, Wall Street empty gap beside the poster, True Grit hand-painted sign instead of letter magnets). Dish swaps not done: Wizard of Oz poppy seed shortbread, Bernie's sand-castle dessert, Lion King mouse-sized Scar sweet.
+
+Next: batch 11, the last 3 (Willow, Wish, Wolf Creek), then the rescore.

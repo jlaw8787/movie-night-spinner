@@ -69,7 +69,7 @@
    "Add a poppy field dessert, such as poppy seed shortbread, as a sleepy treat"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Toto, I've a feeling we're not in Kansas anymore (wink)",
@@ -98,6 +98,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-15",
+  "ops": "audit/ops/the-wizard-of-oz-1939-flat-10.json"
  }
 }
