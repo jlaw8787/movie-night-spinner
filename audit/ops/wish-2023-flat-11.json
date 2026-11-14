@@ -1,0 +1,33 @@
+{
+ "id": "Wish (2023)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Star, the little falling star",
+    "One king, in his staff's mirror",
+    "Valentino the goat",
+    "Wishes through the ceiling",
+    "Asha's one hundred year old grandfather"
+   ],
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve dessert when Asha's friends open the study ceiling to free the wishes.",
+   "done": true
+  },
+  {
+   "old": "Star, who made the animals talk",
+   "new": "Stardust got the goat talking. Lower voice than expected",
+   "done": true
+  },
+  {
+   "old": "Buttery iced stars, like the King's cookies",
+   "new": "Dahlia bakes for the King. These ones are iced stars",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-14",
+ "misses": []
+}
