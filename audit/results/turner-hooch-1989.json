@@ -51,7 +51,7 @@
    "Change the kiosk to a Cypress Beach police station canteen."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Don't eat the car! (Hooch eats the car, cue)",
@@ -77,6 +77,8 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/turner-hooch-1989-flat-4.json"
  }
 }

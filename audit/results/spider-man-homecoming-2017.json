@@ -41,7 +41,7 @@
    "Rename 'Delmar's pressed Italian deli sandwich' to 'Delmar's number five, pickles, smushed' to match his real order."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Delmar's: number five, pickles, smush it flat",
@@ -66,6 +66,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/spider-man-homecoming-2017-flat-4.json"
  }
 }

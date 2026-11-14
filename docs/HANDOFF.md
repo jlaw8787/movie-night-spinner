@@ -1132,3 +1132,26 @@ vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored.
 Not done, waiting for Josh: look and layout ideas (Lock, Stock saloon lettering, Jedi Endor look, Reservoir Dogs face one panel, Rocky V poster). Rocky V's Christmas lines (eggnog, struffoli, wink) have no source found yet.
 
 Next: batch 4, the next 20 by vibe (3.2 and up, starting Scream 3, Scrooged, Spider-Man: Homecoming, Stakeout).
+
+## 14 Nov, 10:10am to 10:35am: flat menu rework, batch 4 (main d558eea, live)
+
+Batch 4 is the next 20 at vibe 3.2, alphabetical: Scream 3 to Watchmen. Ops in audit/ops/<slug>-flat-4.json, applied with card-ops, same method as batches 1 to 3. Facts checked against Wikipedia plots and Wikiquote (curl raw pages), plus searches for The Lost City leeches and Venom's frozen tater tots; Ned's Lego Death Star from a Geek.com interview cited on Wikipedia, the TDKR stadium game from Wikipedia's filming section.
+
+Learnt this batch:
+- Christmas and family films (DRY_THEMES) run the dry pass on flavour.words as well: Scrooged's "Chernobyl vodka" timetable line printed as "Chernobyl lime". It is now "Eliot Loudermilk, fired". Keep booze words out of anything on those films.
+- card-ops marks a `set` op as done without running it when the file was already applied (the old-files rule). Scrooged's flavour.words was set directly in data/film-flavour.json. Put `set` ops in the file before the first apply, or set by hand.
+- Lab trims notes even inside the first sentence when space is tight (Martian soup: "Water made from rocket fuel. Potato." then "Watney makes water from rocket fuel."). One short line.
+- Some trucks print recipe descriptions (Scream 3, Transformers), others print names only (Stakeout, Venom): check the card first.
+- Hand-built diet files hold [printed, swap] pairs; card-ops renames the printed side, so update the swap side too if it should keep the joke (Three Men and a Baby, Vegetarian and No alcohol).
+- Substring spill undone with extra ops: Transformers brownies (doubled tail), shake and Watchmen old fashioned (old recipe tails).
+- Editions: only Stakeout (doughnut renames, scoped sync).
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and counts as main (renames only, no diet word drops). Re-extracted cards confirm every change prints.
+
+Deployed 10:30am on Josh's go: main fast-forwarded to d558eea, Publish site run 43534585663 passed. Live sw.js, index.html, app.js, films.js, movie-menus.js, formats.js, film-flavour.json, films.json, dish-names.json, dish-notes.json and three recipe files match main byte for byte.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 123 left undone.
+
+Not done, waiting for Josh: look and layout ideas (Scream 3 call sheet price column, Snowy River bush-hut lettering, The Mask yellow and green, Evil Dead rental notice cover, Turner & Hooch police canteen). Scrooged's "Lew Hayward" spelling is left: the cast lists say Hayward, the plot says Heyward.
+
+Next: batch 5, the next 20 by vibe (X-Men, X-Men Origins: Wolverine, then the 3.4s starting A Nightmare on Elm Street, Animal House, Avatar).

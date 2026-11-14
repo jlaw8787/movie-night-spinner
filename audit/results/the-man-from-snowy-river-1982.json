@@ -52,7 +52,7 @@
    "Swap the saloon fonts for plain bush-hut lettering so it reads as the high country, not the American West"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The terrible descent after the brumbies (cue)",
@@ -76,6 +76,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/the-man-from-snowy-river-1982-flat-4.json"
  }
 }
