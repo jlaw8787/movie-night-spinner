@@ -62,7 +62,7 @@
    "Swap the place card 'Seated near: Prestige Worldwide' for 'Seated near: the drum set'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "It's my fancy sauce (note)",
@@ -86,6 +86,8 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/step-brothers-2008-flat-9.json"
  }
 }

@@ -41,7 +41,7 @@
    "Add a Jar Jar swamp dish, 'Mesa stew', in place of 'Grilled corn with chilli butter'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "There's always a bigger fish (note)",
@@ -67,6 +67,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/star-wars-episode-i-the-phantom-menace-1999-flat-9.json"
  }
 }

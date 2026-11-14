@@ -88,7 +88,7 @@
    "Add an 'Airport scouting' sundae named after Peter, the scout, with a sad cherry."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "A very particular set of skills (the phone call)",
@@ -114,6 +114,8 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/taken-2008-flat-9.json"
  }
 }

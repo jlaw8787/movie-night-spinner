@@ -52,7 +52,7 @@
    "Add a printed line for 'Need input!' under the Number 5 popcorn."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Number Five is alive after the lightning strike",
@@ -76,6 +76,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/short-circuit-1986-flat-9.json"
  }
 }

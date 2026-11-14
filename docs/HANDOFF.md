@@ -1265,3 +1265,27 @@ Found, not changed (existing, not this batch): Ocean's Eleven Casino martini No 
 Not done, waiting for Josh: look ideas from the results (Old School colour photo booth, Paddington laundry ticket prop and blank strip, Paranormal camcorder tape label, Pirates parchment galley paper, Pretty in Pink Trax record sleeve, Titans seating chart, Shang-Chi jade and gold paper, Phar Lap shillings and pence). Dish swaps not done (renames only): Office Christmas Party Mary's doughnuts, Pet Sematary cold steak for Church, Rocky IV and Paranormal dessert swaps.
 
 Next: batch 9, the next 20 by vibe (3.4, starting Shanghai Noon, Short Circuit, Silver Linings Playbook, Sleeping Beauty).
+
+## 14 Nov, 3:00pm to 3:15pm: flat menu rework, batch 9 (main acdd1d2, live)
+
+Batch 9 is the next 20 by vibe, all 3.4, alphabetical: Shanghai Noon to The Hunchback of Notre Dame. Ops in audit/ops/<slug>-flat-9.json, applied with card-ops, same method as batches 1 to 8. Facts checked against Wikipedia plots and Wikiquote (curl raw pages): Wyatt Earp and the chopsticks (Shanghai Noon), Trigger, 400 cases in 28 hours and the 18-hour chowder run (Smokey), Watto's credits line and Obi-Wan's bad feeling (Phantom Menace), Carl and the paid week off (Smile), the hongbao and the bull in the corner (The Farewell), "Hasta la vista, baby" and the clothes, boots and motorcycle (T2), "I'm retired, not dead" (Taken).
+
+Left out, no source: Shanghai Noon "Chipichawa" (wink replaced), the Fly museum jar, Hunchback's pigeons. Song titles and lyrics kept out (Greatest Showman, Christmas Chronicles jailhouse song, Topsy Turvy). Smile kept away from the suicide plot.
+
+Learnt this batch:
+- House lines drop when their main word matches a card dish (headN in fullMenu). Renaming Phantom Menace's pear platter let the "Sparkling pear and ginger" house drink print (name only, no recipe, no shopping change). Josh told.
+- Dry-film diet notes: The Holiday's rarebit had three diet variants (af, veg same as base, veg_af); each needed its own op.
+- No editions in this batch. No substring spill (the only longer match is the intended Superbad veg alt).
+- Planner check rebuilt as /tmp/b9w/plan.cjs (not in repo): planCard per film under no switch, veg and af, on this tree and a worktree of main, diffed.
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses and diet tags as main (Phantom Menace plus the house drink). Re-extracted cards confirm every base change prints.
+
+Deployed 3:12pm on Josh's go: main fast-forwarded to acdd1d2, Publish site run 43560380457 passed. All changed site files match main byte for byte live.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 23 left undone.
+
+Josh asked (3:10pm) about Taken's "particular set of skills" line: it already prints on the invite front (venue note). Full speeches (Taken, Del Griffith's in Planes, Trains and Automobiles) are not printed in full, only a short line.
+
+Not done, waiting for Josh: look ideas (Silver Linings living room header, Soul Food photo crop, Hunchback poster block, Farewell banquet banner). Dish swaps not done: Smokey clam chowder, Superbad cop car punch, Holiday Arthur's film list supper.
+
+Next: Planes, Trains and Automobiles own hand-built menu (Josh, 3:11pm), then batch 10 (3.4, starting The Incredibles 2, The Italian Job).
