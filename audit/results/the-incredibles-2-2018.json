@@ -75,10 +75,10 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The raccoon fight, Edna and Math is math all print on a hotel room service layout, but the Incredibile and Jack-Jack's powers are missing.",
+  "verdict": "The raccoon fight, Edna, Math is math, the Happy Platter and the Screenslaver print on a neat room service layout, though the food is plain.",
   "missing": [
-   "The Incredibile",
-   "Jack-Jack's many powers"
+   "Elastigirl's Elasticycle (the train chase)",
+   "Bob up all night with Jack-Jack's powers"
   ],
   "ideas": [
    "Swap 'Pesto parmesan pinwheels' for 'Fiber-O's and Sugar Bombs' breakfast bites, a nod to Bob's cereal rule",
@@ -110,8 +110,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-incredibles-2-2018-flat-10.json"
+  "ops": "audit/ops/the-incredibles-2-2018-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

@@ -46,17 +46,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The rent a date slip, the thousand dollar sundae and the riding mower print, but the notes and cue do not and it is still a generic chalkboard.",
+  "overall": 3.2,
+  "verdict": "The anteater ritual, the suede, the rent a date slip, the lunch cue and the riding mower now print, but the dishes have no notes and it is still a generic chalkboard.",
   "missing": [
-   "African Anteater Ritual (does not print)",
-   "Cindy's mother's suede outfit (does not print)",
-   "Cue (Ronald and Cindy at lunch) does not print",
-   "Ronald's telescope"
+   "Ronald's telescope (the backyard)",
+   "Ronald's cafeteria speech (the ending)",
+   "Cindy's mother's suede outfit in full (only a drink name)"
   ],
   "ideas": [
    "Swap 'Party potato skins' for 'Anteater ritual nachos' with the note 'Dance not included.'",
@@ -89,8 +88,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/can-t-buy-me-love-1987-flat-1.json"
+  "ops": "audit/ops/can-t-buy-me-love-1987-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

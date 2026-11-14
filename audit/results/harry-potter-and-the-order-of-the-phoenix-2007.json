@@ -27,9 +27,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The pre-meal list covers Umbridge, the DA, fireworks, Thestrals and the prophecy, but the food and grey look are plain.",
+  "verdict": "The pre-meal list covers Umbridge, the DA, fireworks, Thestrals and the prophecy, but the food and grey look stay plain.",
   "missing": [
-   "Educational Decree (Hogwarts noticeboard)"
+   "Educational Decrees on the noticeboard",
+   "Sirius falling through the veil",
+   "Harry's Patronus in Little Whinging (Dementor attack)"
   ],
   "ideas": [
    "Swap 'Pumpkin juice' for 'Umbridge's tea in a kitten plate cup' (the pink office).",
@@ -64,8 +66,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/harry-potter-and-the-order-of-the-phoenix-2007-flat-3.json"
+  "ops": "audit/ops/harry-potter-and-the-order-of-the-phoenix-2007-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

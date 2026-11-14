@@ -51,12 +51,13 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Nice painted poster and a fish stall board with the Klaus quote and postal quota, but the dish notes dropped out so it reads as names and prices.",
+  "verdict": "A nice painted poster and fish stall board with Klaus's line and the postal quota, but the dishes have no notes so it reads as names and prices.",
   "missing": [
-   "Jesper delivers the first toy secretly",
    "Fresh out of mackerel, only herring and burbot (Alva)",
-   "Jesper misses his silk sheets",
-   "Márgu's sled"
+   "Jesper's silk sheets and his father's ultimatum",
+   "The toys in Klaus's workshop",
+   "Krum and Ellingboe feud wedding",
+   "Márgu's Sámi sled gift"
   ],
   "ideas": [
    "Swap 'Letter gingerbread envelopes' for 'Márgu's sled gingerbread', sled shapes with red icing.",
@@ -89,8 +90,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/klaus-2019-flat-7.json"
+  "ops": "audit/ops/klaus-2019-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

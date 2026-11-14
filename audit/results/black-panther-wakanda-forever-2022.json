@@ -21,15 +21,18 @@
  ],
  "checked_ok": 13,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "A dark Talokan banquet with Namor, Riri, Ramonda's line and Nakia's Haiti dish all printing, though the layout is a generic formal dinner.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A dark gold Talokan banquet with Namor, Riri, Ramonda's line, the herb, the olive branch and Nakia's Haiti fritters all printing, and the white mourning still suits it.",
   "missing": [
-   "Talokan, the underwater city (only in the hall name)"
+   "Imperius Rex (Namor)",
+   "Ramonda's death in the Talokan attack",
+   "Shuri burning her mourning robes (the ending)",
+   "T'Challa's son Toussaint (mid credits)"
   ],
   "ideas": [
    "Swap the 'Pupu Platters' heading, which is Hawaiian, for 'Talokan Tide Snacks'.",
@@ -37,7 +40,7 @@
    "Swap the plain tiki bamboo texture for deep sea teal and Wakandan gold.",
    "Swap 'Tepache' note for 'Imperius Rex. Drink the water you came from.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -65,8 +68,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/black-panther-wakanda-forever-2022-flat-5.json"
+  "ops": "audit/ops/black-panther-wakanda-forever-2022-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

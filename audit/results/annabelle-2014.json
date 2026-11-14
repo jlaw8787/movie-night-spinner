@@ -59,9 +59,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The doll, the sewing machine, the popcorn cue and the last-box champagne all print on a moody keepsake box, but the dishes read like a normal family menu.",
+  "verdict": "The doll, the sewing machine, the popcorn cue and the last box all print on a moody keepsake box, but the dishes still read like a normal family dinner.",
   "missing": [
-   "Evelyn's sacrifice at the bookshop (list item only)"
+   "The Higgins cult attack next door (opening night)",
+   "Evelyn's leap from the window (the bookshop)",
+   "The pram rolling into traffic (the street)"
   ],
   "ideas": [
    "Swap 'Chicken and rice mushroom casserole' for 'Wedding dress cupcakes with a red sugar rose'.",
@@ -96,8 +98,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/annabelle-2014-flat-2.json"
+  "ops": "audit/ops/annabelle-2014-flat-2.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

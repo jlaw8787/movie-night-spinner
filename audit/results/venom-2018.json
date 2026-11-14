@@ -37,12 +37,12 @@
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "Lobster tank cue, tab and the Fuel in the tank note land, but the corner store menu and dishes are still generic.",
+  "verdict": "Lobster tank cue, tab and Fuel in the tank land, but the truck board drops every dish note and the corner store dishes stay generic.",
   "missing": [
-   "Eyes, lungs, pancreas line (dropped, house standard)",
-   "Eddie in the lobster tank at the restaurant (only on the cue and tab)",
-   "Piles of heads line",
-   "Bike chase with Venom taking over"
+   "Piles of heads (Mrs Chen's store)",
+   "We are Venom (the finale)",
+   "Turd in the wind (Life Foundation)",
+   "Bike chase with Venom taking over (San Francisco)"
   ],
   "ideas": [
    "Swap 'Char siu pork buns' note 'So many snacks, so little time.' for a printed 'Eyes, lungs, pancreas' item name on the menu board",
@@ -74,8 +74,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/venom-2018-flat-4.json"
+  "ops": "audit/ops/venom-2018-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

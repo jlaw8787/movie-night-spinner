@@ -5,15 +5,14 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 4,
+  "moments": 5,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Amish barn setting with the milking line, gravy train and rubber hand, but stock poster art and plain dish notes keep it middling.",
+  "overall": 3.6,
+  "verdict": "The watch-for list, gravy train, Tanqueray and Tab and the bull cue make it a proper Kingpin card, though the dishes are plain and the poster is stock.",
   "missing": [
-   "Big Ern's Tanqueray and Tab (1979)",
-   "Roy Munsoned"
+   "Roy's landlady and the rent (Roy's apartment)"
   ],
   "ideas": [
    "Swap \"Farmyard vanilla malt milkshake\" for \"Ishmael's extra large coffee, lots of cream\".",
@@ -21,7 +20,7 @@
    "Swap the saloon style headings for a bowling alley look: lane stripes and a ball return.",
    "Rename \"Fresh farm milk\" note to \"Roy milked it himself. Ask who he thought it was.\""
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -49,8 +48,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/kingpin-1996-flat-7.json"
+  "ops": "audit/ops/kingpin-1996-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

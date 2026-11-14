@@ -39,11 +39,13 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "Jim's closing line, no wallaby stew, the colt reward and billy tea print on a station bill of fare, but it looks more like a wanted poster and the reward shows as 82 pounds and 100 pounds.",
+  "verdict": "Station tucker, Jim's closing line, the colt reward and Clancy's billy tea print, but the terrible descent is only a cue and the page reads like a wanted poster.",
   "missing": [
-   "The terrible descent (cue only, no scene dish)",
-   "Clancy of the Overflow",
-   "Spur's gold"
+   "The terrible descent after the brumbies",
+   "Jim's father killed by the falling tree (opening)",
+   "Jessica lost in the mountain storm",
+   "Harrison whipping Jim",
+   "Clancy of the Overflow arriving with the poem"
   ],
   "ideas": [
    "Swap the 'WANTED AT THE TABLE, REWARD $82' block for 'REWARD 100 pounds', the reward for the colt",
@@ -76,8 +78,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-man-from-snowy-river-1982-flat-4.json"
+  "ops": "audit/ops/the-man-from-snowy-river-1982-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

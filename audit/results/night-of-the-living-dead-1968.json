@@ -43,14 +43,14 @@
   "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 2,
-  "overall": 3,
-  "verdict": "The boss line, cemetery, news bulletins and gas pump now print, but the bright pink poster and wood grain still fight the stark black and white film.",
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The boss line, cemetery, news bulletins and gas pump print and the poster is now black and white, but the wood grain still sits oddly against the stark film.",
   "missing": [
-   "Barbra's car rolling into the tree",
-   "Karen with the trowel",
-   "Ben shot by the posse at dawn",
-   "The zombie eating an insect off the tree"
+   "Johnny's death at the cemetery",
+   "Karen in the cellar with the trowel",
+   "Tom and Judy at the truck fire",
+   "Ben shot by the posse at dawn"
   ],
   "ideas": [
    "Swap the colour illustrated poster for a black and white still.",
@@ -82,8 +82,16 @@
    "look": 2,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/night-of-the-living-dead-1968-flat-1.json"
+  "ops": "audit/ops/night-of-the-living-dead-1968-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 2,
+   "overall": 3
+  }
  }
 }

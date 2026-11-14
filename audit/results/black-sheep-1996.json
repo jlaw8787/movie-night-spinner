@@ -58,16 +58,16 @@
  "checked_ok": 9,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The campaign truck, cupcakes line, pudding in underpants and Drake's chilli print, but it is a plain menu with a thin photo strip and no roads or back row gags.",
+  "overall": 3.2,
+  "verdict": "Roads, the back row, Rock the Vote, the dish and the pudding all print now, but the dishes are plain and the side photo strip is a dull crop.",
   "missing": [
-   "Roads, roods (nitrous oxide car, cue only)",
-   "Never move your back row (checkers)",
-   "Rock the Vote rally"
+   "The bat in the cabin",
+   "The runaway burning car down the hill",
+   "Mike sneaking out of the cabin in the rain (hideout)"
   ],
   "ideas": [
    "Swap the venue 'Donnelly Campaign Bus' for 'Donnelly Campaign Truck'.",
@@ -101,8 +101,16 @@
    "look": 3,
    "overall": 2.6
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/black-sheep-1996-flat-1.json"
+  "ops": "audit/ops/black-sheep-1996-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

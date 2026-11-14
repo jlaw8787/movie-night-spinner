@@ -21,16 +21,16 @@
  ],
  "checked_ok": 12,
  "vibe": {
-  "world": 3,
-  "moments": 4,
+  "world": 4,
+  "moments": 5,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The syrup first cue, 246 toothpicks, Wapner and the $86,500 sirloin all print, but it's a generic cafeteria tray and the food is plain.",
+  "overall": 3.6,
+  "verdict": "A Wallbrook meal order for Bed 246 that packs in the toothpicks, syrup first, Wapner, Qantas, K-Mart, the Buick and the card counting, though the food itself is plain.",
   "missing": [
-   "Qantas never crashed",
-   "The 1949 Buick Roadmaster"
+   "I'm an excellent driver",
+   "Raymond's slow dance with Susanna in the lift"
   ],
   "ideas": [
    "Swap 'Maple syrup bourbon smash' for 'Buick Roadmaster rosebud tea'.",
@@ -38,7 +38,7 @@
    "Rename 'Vegas sirloin' to 'Caesars Palace winnings steak, $86,000'.",
    "Add a toothpick garnish line to the 'Toothpick cheese cubes'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,8 +66,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/rain-man-1988-flat-3.json"
+  "ops": "audit/ops/rain-man-1988-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

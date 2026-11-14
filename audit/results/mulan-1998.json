@@ -10,8 +10,13 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Good picks from the film, with congee, the Matchmaker's tea and Cri-Kee all printing, but the paper is still a generic Chinese takeaway.",
-  "missing": [],
+  "verdict": "Congee, the Matchmaker's tea, Cri-Kee and the grain of rice all print and the food is right, but the paper is still a generic Chinese takeaway.",
+  "missing": [
+   "I'll Make a Man Out of You (training)",
+   "Mulan cutting her hair (the night she leaves)",
+   "The avalanche and Shan Yu (the mountain)",
+   "Shan Yu's falcon and the doll"
+  ],
   "ideas": [
    "Rename 'Spring onion pancakes with chilli oil' to 'Every grain of rice' fried rice and add the camp punishment as its note.",
    "Swap 'Family temple iced jasmine lychee tea' note for 'Chien-Po's cooking tea, because a girl who cooks'.",
@@ -40,8 +45,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/mulan-1998-flat-7.json"
+  "ops": "audit/ops/mulan-1998-flat-7.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

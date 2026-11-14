@@ -22,8 +22,13 @@
   "tone": 4,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The date coach lines land well, but the layout is a generic bistro and the Keep This tag cuts off mid sentence.",
-  "missing": [],
+  "verdict": "The date doctor lines land well, with Benadryl, death on a leaf, the Q-tip dance and Sara's martini, but the layout is still a generic bistro.",
+  "missing": [
+   "Michelangelo and the Sistine Chapel (Hitch's pitch)",
+   "The 90 percent kiss lesson (Hitch and Albert)",
+   "Ellis Island ancestor ledger (the date with Sara)",
+   "Albert dropping the nuts at the gala"
+  ],
   "ideas": [
    "Rename 'Albert's meatball sliders' to 'Albert's mustard dogs' and change the note.",
    "Swap 'Seared scallops with pea purée' note for 'Skipped after the swollen face'.",
@@ -58,8 +63,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/hitch-2005-flat-6.json"
+  "ops": "audit/ops/hitch-2005-flat-6.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

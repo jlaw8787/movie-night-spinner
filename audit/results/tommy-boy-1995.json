@@ -33,17 +33,18 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Helen's fryer-on wings and the timetable winks help, but the dishes are still plain and the funniest lines are gone.",
+  "overall": 3.2,
+  "verdict": "Fat guy in a little coat, Holy schnikes, the deer, Helen's wings and the seven years line all print, but the cafeteria look and the dishes stay plain.",
   "missing": [
-   "Fat guy in a little coat (sausage roll not printed)",
-   "Holy schnikes (milkshake not on the menu)",
    "Shut up, Richard",
-   "Butcher's word on a T-bone"
+   "The brake pad box speech",
+   "Tommy and Richard on the plane",
+   "Ray Zalinsky and the Zalinsky ad",
+   "Sausage King of Chicago lies"
   ],
   "ideas": [
    "Swap 'Tommy's tight coat sausage rolls' note for 'Fat guy in a little coat.'",
@@ -76,8 +77,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/tommy-boy-1995-flat-1.json"
+  "ops": "audit/ops/tommy-boy-1995-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

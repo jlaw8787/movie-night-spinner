@@ -51,16 +51,16 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A slick Red Dragon casino with Carter's yacht line, the Lionel Richie gag and the craps cue, but the naked run, the grenade and the other big set pieces don't print.",
+  "overall": 3.6,
+  "verdict": "A slick Red Dragon casino with Carter's yacht line, the superdollars, the grenade, the craps cue and the naked run in the footer, though the food is safe.",
   "missing": [
-   "Naked run through Hong Kong after the massage parlour",
-   "Hu Li's grenade in Lee's mouth",
-   "Follow the rich white man"
+   "Lionel Richie ain't been black since the Commodores (craps table)",
+   "Follow the rich white man",
+   "Carter singing Don't Stop Til You Get Enough at the karaoke bar"
   ],
   "ideas": [
    "Swap 'Mango sago' for 'Superbill sundae'.",
@@ -68,7 +68,7 @@
    "Rename 'Red Dragon casino prime rib plate' to 'Caesars Palace winnings prime rib'.",
    "Add the zip line to the tag."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -92,8 +92,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/rush-hour-2-2001-flat-8.json"
+  "ops": "audit/ops/rush-hour-2-2001-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

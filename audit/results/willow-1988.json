@@ -26,13 +26,13 @@
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "Good Nelwyn fair look with the peck quote, wizard's test and tavern brawl stew, but the acorn and Bavmorda lines did not print.",
+  "verdict": "A good Nelwyn fair board with the peck quote, the crow's cage cue and Raziel's forms, but no dish prints a note so the acorn and pig gags are just names.",
   "missing": [
-   "Bavmorda pig line (note dropped)",
-   "Willow's acorn threat (note dropped)",
-   "Madmartigan in the crow's cage (cue not printed)",
+   "Bavmorda turning the army into pigs",
+   "Willow's acorn threat",
    "Love dust on Madmartigan",
-   "Raziel's three forms"
+   "Elora Danan found in the river",
+   "Madmartigan escaping the tavern in a dress"
   ],
   "ideas": [
    "Swap 'Tir Asleen fennel crackling pork' note for 'You're all pigs!' (Bavmorda's spell at Nockmaar)",
@@ -67,8 +67,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/willow-1988-flat-11.json"
+  "ops": "audit/ops/willow-1988-flat-11.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

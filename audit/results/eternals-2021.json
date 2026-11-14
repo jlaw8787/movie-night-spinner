@@ -27,10 +27,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The Domo galley looks the part with Kingo, Druig's mole and Phastos's beef rolls, but most gags are footnotes and Sprite and Tiamut are gone.",
+  "verdict": "The Domo galley looks the part with Kingo, Druig, Phastos and Tiamut, but two Babylon date items in a row feel thin and most gags sit in the footnote.",
   "missing": [
-   "Sprite's illusions (house drink)",
-   "Tiamut and the Emergence (wink)"
+   "Sprite's illusions",
+   "Ikaris flying into the Sun is footnote only",
+   "Thena and her sword is footnote only",
+   "Gilgamesh's cooking for Thena"
   ],
   "ideas": [
    "Swap the 'London museum tea sandwiches' note for 'Sprite promises the table is real.'",
@@ -65,8 +67,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/eternals-2021-flat-6.json"
+  "ops": "audit/ops/eternals-2021-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

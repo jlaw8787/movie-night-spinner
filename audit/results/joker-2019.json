@@ -40,16 +40,17 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Moody talk show green room with the Murray quote, happy face and you need to eat, but the stairs, Carnival and the crazier line dropped out.",
+  "overall": 3.6,
+  "verdict": "A moody Murray Franklin green room that now prints the crazier line, the stairs and red suit, the happy face and the joke notebook.",
   "missing": [
-   "Is it just me, or is it getting crazier out there?",
    "Carnival, his clown name",
-   "Long stairs and red suit"
+   "The subway shooting (the Wayne employees)",
+   "That's Life and the Murray intro",
+   "Arthur's stand up set at Pogo's"
   ],
   "ideas": [
    "Swap 'Gotham deli pickles' note for the 'Knock, knock' joke.",
@@ -57,7 +58,7 @@
    "Add a 'Carnival' clown drink in place of the plain Bourbon Manhattan description.",
    "Swap the tagline 'Clown makeup. Comfort food.' for something that uses the Smile song or the laugh condition."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -84,8 +85,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/joker-2019-flat-7.json"
+  "ops": "audit/ops/joker-2019-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

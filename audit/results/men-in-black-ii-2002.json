@@ -47,18 +47,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The Frank the pug cue and Kevin note did not print, so it is mostly pizza shop names and bare notes on a stark white lab sheet.",
+  "overall": 3.4,
+  "verdict": "Ben's pizza shop now prints Frank singing, Serleena's two slices, Kevin Brown, Scrad and Charlie and Zartha, but the dishes are plain and the lab sheet is stark.",
   "missing": [
-   "Kevin Brown, postmaster of Truro (note not printed)",
-   "Serleena asking Ben for two slices of pepperoni",
-   "Frank the pug singing in the car",
-   "Jeff the giant worm",
-   "The Light of Zartha"
+   "Jeff the giant worm (subway)",
+   "The deneuralyzer (Truro post office)",
+   "Locker aliens worshipping J's watch (the locker)"
   ],
   "ideas": [
    "Swap 'Truro post office sausage rolls' note for 'Kevin Brown, postmaster, no idea who J is'",
@@ -97,8 +95,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/men-in-black-ii-2002-flat-3.json"
+  "ops": "audit/ops/men-in-black-ii-2002-flat-3.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

@@ -27,8 +27,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Katy's breakfast cue, the bus fight, Wong, Morris and Trevor's nuncle all print, but a Ta Lo camp bunk wall is an odd home for them.",
-  "missing": [],
+  "verdict": "The bus fight, Katy's breakfast, Hotel California, Macau and Trevor's nuncle print with good food, but the campfire bunk card is a generic fit for Ta Lo.",
+  "missing": [
+   "Wong at the Macau fight club",
+   "The Great Protector dragon (the finale)",
+   "Wenwu at Jiang Li's door (the opening)"
+  ],
   "ideas": [
    "Swap 'Macau pork and prawn dumplings' note for 'Wong v Abomination, the Golden Daggers Club cage'",
    "Swap the 'Honours of the Session' bunting badges for a Ta Lo dragon scale badge and a Ten Rings badge",
@@ -59,8 +63,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/shang-chi-and-the-legend-of-the-ten-rings-2021-flat-8.json"
+  "ops": "audit/ops/shang-chi-and-the-legend-of-the-ten-rings-2021-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

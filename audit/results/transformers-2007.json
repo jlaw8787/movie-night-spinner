@@ -30,18 +30,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Garage menu board has good dish names and Sam's line, but the dish notes don't print so the jokes are gone.",
+  "overall": 3.4,
+  "verdict": "The garage menu board now prints its notes, with Autobots roll out, ladiesman217, Sector 7 and the AllSpark into Megatron, but the food is plain diner fare.",
   "missing": [
-   "Autobots, roll out (note not printed)",
-   "No sacrifice, no victory (note not printed)",
-   "AllSpark into Megatron (note not printed)",
-   "Lennox's team in Qatar (note not printed)",
-   "LadiesMan217 eBay"
+   "No sacrifice, no victory (the Witwicky motto)",
+   "Bumblebee leaking on Agent Simmons (Sector 7)",
+   "Optimus and Megatron in Mission City (the finale)"
   ],
   "ideas": [
    "Swap 'Mikaela's loaded potato wedges' note for 'Sam's first car, runs a bit odd'",
@@ -76,8 +74,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/transformers-2007-flat-4.json"
+  "ops": "audit/ops/transformers-2007-flat-4.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

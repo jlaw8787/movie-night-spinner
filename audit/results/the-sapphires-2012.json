@@ -28,7 +28,11 @@
   "look": 4,
   "overall": 3.4,
   "verdict": "Club look is sharp and the soul line and Songbirds jokes print, but the food is still plain and the rest of the film is thin.",
-  "missing": [],
+  "missing": [
+   "I Heard It Through the Grapevine (the first army show)",
+   "Gail and Kay's fight (the road)",
+   "The night Martin Luther King is shot (the base)"
+  ],
   "ideas": [
    "Swap 'Damper with golden syrup' for 'Songbirds' damper' with a Cummeragunja note.",
    "Swap 'Talent quest party pies and sauce' note for 'the contest the girls should have won'.",
@@ -59,8 +63,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-sapphires-2012-flat-10.json"
+  "ops": "audit/ops/the-sapphires-2012-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

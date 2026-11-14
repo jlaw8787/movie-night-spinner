@@ -9,12 +9,14 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The Nutcracker Ball hunt and Mr Green print, but the Miley, church and Home Alone gags did not make it and the toast and mains have no notes.",
+  "overall": 3.0,
+  "verdict": "The Nutcracker Ball hunt, Isaac's jumper and Mr Green print, but the mains, dessert and toast have no notes and the big gags are missing.",
   "missing": [
-   "Miley was flawless",
-   "Isaac at church: we did not kill Jesus",
-   "Chris Home Alone'd"
+   "Miley was flawless (Ethan's karaoke)",
+   "Isaac at Midnight Mass",
+   "Chris and the Home Alone night",
+   "Isaac's box of drugs from Betsy",
+   "Mr. Green the angel"
   ],
   "ideas": [
    "Swap 'Christmas gingerbread cake' for 'Midnight Mass cake', with a note about the church vomit.",
@@ -45,8 +47,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-night-before-2015-flat-1.json"
+  "ops": "audit/ops/the-night-before-2015-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

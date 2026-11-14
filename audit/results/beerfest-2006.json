@@ -33,8 +33,12 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "verdict": "The Wolfhouse tab, Great Gam Gam, the Das Boot radler and the keg ticket all print, but the look is a dark generic bar tab.",
-  "missing": [],
+  "verdict": "Great Gam Gam's sausage line, Das Boot, the keg ticket and Schnitzengiggle all print, but it reads as a dark generic bar tab with the logo printed twice.",
+  "missing": [
+   "The stolen family beer recipe (Great Gam Gam's secret)",
+   "Fink's lab brewing the perfect beer",
+   "Von Wolfhausen cousins' Beerfest games"
+  ],
   "ideas": [
    "Swap 'Apple strudel' for 'Schnitzengiggle beer pudding', with Po-Po the puppet in the note.",
    "Swap 'Bavarian wheat beer by the stein' note for 'Great Gam Gam sleeps better with a little sausage'.",
@@ -66,9 +70,17 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/beerfest-2006-flat-2.json"
+  "ops": "audit/ops/beerfest-2006-flat-2.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  },
  "checked": "2026-11-07"
 }

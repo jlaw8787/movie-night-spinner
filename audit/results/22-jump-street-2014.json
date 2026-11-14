@@ -22,11 +22,12 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "verdict": "Grenade line, WHY-PHY, slam poetry and Mercedes now print on a plain college canteen, but the food and writing are still ordinary.",
+  "verdict": "Grenade line, WHY-PHY, slam poetry, Mercedes and the golf cart now print on a plain college canteen, but the food and writing are still ordinary.",
   "missing": [
-   "Golf cart chase into the football game (wink does not print)",
-   "Zook",
-   "End credits sequels"
+   "Zook and the football team (campus)",
+   "Captain Dickson finding out about Maya (Dickson's office)",
+   "End credits sequels (credits)",
+   "Schmidt and Jenko's 'investigate' each other bit (therapy)"
   ],
   "ideas": [
    "Swap 'Fried pickles with ranch' for 'WHY-PHY' punch served in a cup",
@@ -62,8 +63,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/22-jump-street-2014-flat-1.json"
+  "ops": "audit/ops/22-jump-street-2014-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

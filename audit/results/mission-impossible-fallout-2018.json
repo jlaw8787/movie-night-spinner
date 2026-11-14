@@ -19,14 +19,14 @@
  "vibe": {
   "world": 3,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Luther's self-destruct note and the HALO and bathroom lines land, but it is still a grey breakroom form and the rooftop and Kashmir chase never print.",
+  "overall": 3.4,
+  "verdict": "Luther's self-destruct note, the HALO jump, the bathroom fight, the rooftop and Kashmir all print, with food tied to each city, but it is still a grey breakroom form.",
   "missing": [
-   "The London rooftop leap (broken ankle)",
-   "Kashmir helicopter chase (finale)"
+   "The motorbike chase round the Arc de Triomphe (Paris)",
+   "Walker reloading his arms in the bathroom fight (the Grand Palais)"
   ],
   "ideas": [
    "Swap 'CIA Paris Station Breakroom' for a dossier tab on the Apostles that uses the same form.",
@@ -58,8 +58,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/mission-impossible-fallout-2018-flat-3.json"
+  "ops": "audit/ops/mission-impossible-fallout-2018-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

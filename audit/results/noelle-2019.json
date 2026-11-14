@@ -18,17 +18,14 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy North Pole tea room with the sleigh cue and 'thank garland', but the snowcone letter, Gabriel's list and the yoga retreat don't print.",
+  "overall": 3.6,
+  "verdict": "A warm North Pole tea room where Snowcone, Gabriel's list, the yoga retreat and thank garland now all print.",
   "missing": [
-   "Snowcone arriving with Mrs. Claus's letter",
-   "Gabriel's 2,837 nice children",
-   "Nick at the yoga retreat and as a mall Santa",
-   "Hot chocolate, double whip and peppermint"
+   "Hot chocolate, double whip and peppermint (Noelle's order)"
   ],
   "ideas": [
    "Swap 'Gingerbread latte' for a 'Naughty or nice hot chocolate' with a note about Gabriel's list of 2,837 nice kids.",
@@ -36,7 +33,7 @@
    "Swap the printed 'Sopapillas with honey' house line for a yoga-retreat green smoothie, since Nick hides at a retreat.",
    "Add a mall Santa photo line to the cake trolley caption in place of 'Mind the cake trolley on your way in'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,8 +57,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/noelle-2019-flat-8.json"
+  "ops": "audit/ops/noelle-2019-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

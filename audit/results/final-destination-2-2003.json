@@ -35,12 +35,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The motel postcard has Death working backwards and Kimberly's note, but the log truck cue and most scene notes do not print.",
+  "verdict": "The motel postcard has Death working backwards, new life, Evan's fire escape and Kimberly's note, but no cue prints and the log truck pile-up is missing.",
   "missing": [
    "Log truck pile-up on Route 23 (the highway)",
-   "Only new life can defeat Death (the hospital)",
-   "Evan and the fire escape (the apartment)",
-   "The Gibbons barbecue and propane grill (the Gibbons house)"
+   "The Gibbons barbecue and propane grill (the Gibbons house)",
+   "Tim and the pigeons under the plate glass (the dentist)",
+   "Nora and the elevator hooks (the office)"
   ],
   "ideas": [
    "Swap the note on 'Evan's jackpot spaghetti and meatballs' for 'Day-old spaghetti, tossed out the window. Mind the fire escape.'",
@@ -75,8 +75,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/final-destination-2-2003-flat-2.json"
+  "ops": "audit/ops/final-destination-2-2003-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

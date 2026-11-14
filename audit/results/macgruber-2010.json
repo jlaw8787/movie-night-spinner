@@ -58,9 +58,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The celery trick, KFBR392, human shield and three wire guy all print on a chalkboard, but the dishes are plain and the logo panel is just text.",
+  "verdict": "The celery trick, KFBR392, the human shield and three wire guy all print on a chalkboard, but the dishes are plain and the logo panel is just text.",
   "missing": [
-   "The upper-decker in the master bathroom"
+   "The upper-decker (Cunth's bathroom)",
+   "Dieter Von Cunth and the name jokes",
+   "Vicki dressed as MacGruber at the coffee shop"
   ],
   "ideas": [
    "Swap 'Emergency celery' note to 'Distraction required, see the party'",
@@ -95,8 +97,16 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/macgruber-2010-flat-3.json"
+  "ops": "audit/ops/macgruber-2010-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

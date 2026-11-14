@@ -25,11 +25,14 @@
   "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Wakanda, Yibambe, Thanos's farm, the stones, Peter's line and the Stormbreaker cue all print on a dark ship's galley sheet.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Wakanda, Thanos's farm, the stones, Peter's line and the Stormbreaker cue all print on a dark ship's galley sheet with a strong Thanos still.",
   "missing": [
-   "Bring me Thanos"
+   "Gamora on Vormir (soul stone)",
+   "I am Groot / Thor's eye (Thor and Rocket)",
+   "Tony and Strange on Titan, one in 14 million",
+   "Thanos snaps and the heroes turn to dust"
   ],
   "ideas": [
    "Swap 'Infinity Stone fruit jelly cups' note for 'Six colours. Don't snap them.'",
@@ -37,7 +40,7 @@
    "Swap 'Wakanda pineapple ginger cooler' for 'Stormbreaker slush', blue with a bit of ginger.",
    "Swap the tan camp paper for purple and gold gauntlet colours."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -63,8 +66,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/avengers-infinity-war-2018-flat-5.json"
+  "ops": "audit/ops/avengers-infinity-war-2018-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -49,12 +49,13 @@
   "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "A magazine lunchroom with the Staten Island cue, Princess Sophia, the Knicks, the yellow gown and Andie's line.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The Composure timeline, love fern, poker night, Staten Island and the yellow gown all print in a sharp layout, though the dishes are ordinary lunch fare.",
   "missing": [
-   "The love fern (Andie's office)",
-   "Andie crashes poker night (Ben's apartment)"
+   "You're So Vain singalong (the party)",
+   "Our Little Family photo album (Ben's apartment)",
+   "Krull the Warlord King, the dog"
   ],
   "ideas": [
    "Swap 'Composure office smoked salmon bagels' for 'Love fern salad' (the dead fern).",
@@ -62,7 +63,7 @@
    "Swap 'Ham and pea arancini' for 'Princess Sophia pastry' (joke name).",
    "Add a 'How to Lose a Guy in 10 Days' column clipping as the place card."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -90,8 +91,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/how-to-lose-a-guy-in-10-days-2003-flat-7.json"
+  "ops": "audit/ops/how-to-lose-a-guy-in-10-days-2003-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

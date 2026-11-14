@@ -27,9 +27,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Rum line, Apple?, the medallion and the crew notes all print, but the plan sheet is a generic galley template and the Tortuga fritters are gone.",
+  "verdict": "Why is the rum gone, Apple?, the medallion and the crew notes all print, but the plan sheet is a generic galley template.",
   "missing": [
-   "Tortuga bouquet (fritters note)"
+   "Tortuga bouquet (fritters gone)",
+   "The day you almost caught Captain Jack Sparrow",
+   "Cursed crew turning to skeletons in the moonlight",
+   "Parley"
   ],
   "ideas": [
    "Swap the footer 'Laser issue, fleet standard' for 'Rum rationed. Savvy?'",
@@ -66,8 +69,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003-flat-8.json"
+  "ops": "audit/ops/pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

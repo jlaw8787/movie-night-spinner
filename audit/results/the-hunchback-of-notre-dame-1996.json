@@ -27,9 +27,13 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The Bell Tower tavern prints the gargoyles, Frollo, Clopin and Quasimodo's Festival line, but the layout is the same generic parchment.",
+  "verdict": "The bell tower prints the gargoyles, Frollo, Clopin, King of Fools and Quasimodo's line, but the layout is generic parchment and the dishes are plain.",
   "missing": [
-   "Topsy Turvy"
+   "Topsy Turvy at the Festival of Fools",
+   "Hellfire (Frollo)",
+   "Sanctuary! (Quasimodo at the cathedral)",
+   "The Court of Miracles",
+   "Pour the wine and cut the cheese (gargoyles)"
   ],
   "ideas": [
    "Swap 'Brie, fig jam and tomato crostini' for 'Pour the wine and cut the cheese' cheese board (Hugo)",
@@ -64,8 +68,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-hunchback-of-notre-dame-1996-flat-9.json"
+  "ops": "audit/ops/the-hunchback-of-notre-dame-1996-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

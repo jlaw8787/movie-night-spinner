@@ -6,12 +6,17 @@
  "vibe": {
   "world": 3,
   "moments": 4,
-  "food": 4,
+  "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The Firehouse kitchen has Slimer's fizz, the orb shortbread and Ray's possessed possessions line, but the recipe box template is generic.",
-  "missing": [],
+  "overall": 3.2,
+  "verdict": "The firehouse recipe box prints the Mini-Pufts, Slimer, Melody, Peck and Ray's possessed possessions line, but the villain is absent and three dishes print bare.",
+  "missing": [
+   "Garraka and the death chill freezing New York (finale)",
+   "Ecto-1 chasing the sewer dragon (opening)",
+   "Phoebe's ghost form to save Melody",
+   "The containment unit overload under the firehouse"
+  ],
   "ideas": [
    "Swap 'Frozen city chicken noodle soup' note for 'Garraka freezes things solid, so serve it hot'",
    "Swap 'Dr Brown's cream soda' note for the brass orb: 'Ray keeps the orb in a brass box'",
@@ -45,8 +50,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/ghostbusters-frozen-empire-2024-flat-6.json"
+  "ops": "audit/ops/ghostbusters-frozen-empire-2024-flat-6.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -27,10 +27,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The jail kitchen with Razzle Dazzle, Cellophane and the Cicero ice joke works, but the page is plain and the jazz club side is missing.",
+  "verdict": "The Cook County jail kitchen prints Razzle Dazzle, Mister Cellophane, the Cell Block Tango and the Cicero ice joke, but the page is plain and the jazz club side is missing.",
   "missing": [
-   "All That Jazz at the Onyx (oysters note)",
-   "Mama Morton favours (house lines)"
+   "All That Jazz at the Onyx (opening)",
+   "When You're Good to Mama (Mama Morton)",
+   "We Both Reached for the Gun (press conference puppet)",
+   "Roxie shoots Fred Casely"
   ],
   "ideas": [
    "Swap 'Deep dish pizza' (a 1940s invention) for a 1920s dish such as 'Razzle dazzle fried oysters', note 'Billy Flynn's three ring circus.'",
@@ -67,8 +69,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/chicago-2002-flat-5.json"
+  "ops": "audit/ops/chicago-2002-flat-5.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

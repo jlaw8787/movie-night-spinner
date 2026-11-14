@@ -59,14 +59,14 @@
   "world": 3,
   "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Saul's bar tab prints the Quizno's line, the cat cake and the dead battery, but the dumpster and diner breakfast don't print and the look is a plain dark menu.",
+  "overall": 3.4,
+  "verdict": "Saul's tab prints the Quizno's line, the dumpster, Red's eggs and the cat cake with a stoner deadpan, but the look is a plain dark menu and the food is just pineapple on things.",
   "missing": [
-   "Saul in the dumpster already",
-   "Breakfast at the diner",
-   "Car chase"
+   "Smoking it is like killing a unicorn (Saul on the strain)",
+   "Breakfast at the diner (after the woods)",
+   "Dinner with Angie's parents"
   ],
   "ideas": [
    "Swap 'Angie's family pineapple upside-down cake' for 'Red's cat's birthday cake'.",
@@ -101,8 +101,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/pineapple-express-2008-flat-3.json"
+  "ops": "audit/ops/pineapple-express-2008-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

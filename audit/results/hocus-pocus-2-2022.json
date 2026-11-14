@@ -46,15 +46,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 4,
+  "look": 3,
   "overall": 3.4,
-  "verdict": "Fun Halloween menu with the Winifred line, Book's eggs and the lotions note, but the prom layout is an odd fit and the Roomba and good zombie winks are gone.",
+  "verdict": "Book, the robot vacuums, the Black Flame, lotions and Walgreens all print, but the prom frame is an odd fit and the ticket text is cut off at the bottom.",
   "missing": [
-   "Mary surfing on robot vacuums",
-   "I am a good zombie (Billy)"
+   "Winnie's Amok amok amok spell",
+   "The witches' Halloween sing (One Way or Another)",
+   "The magical forest tree Mother Witch"
   ],
   "ideas": [
    "Swap 'Pumpkin spice latte' for 'Walgreens aisle 4 face mask sorbet' (the sisters eat the lotions).",
@@ -89,8 +90,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/hocus-pocus-2-2022-flat-7.json"
+  "ops": "audit/ops/hocus-pocus-2-2022-flat-7.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

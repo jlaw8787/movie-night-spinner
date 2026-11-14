@@ -10,10 +10,8 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The school canteen now carries Mr Poppy's Hollywood announcement, the helicopter cue, Oakmoor and Mr Shakespeare, but the dishes are still plain.",
-  "missing": [
-   "Coventry Cathedral ruins as the stage"
-  ],
+  "verdict": "The school canteen timetable carries Mr Poppy's Hollywood line, Oakmoor, Mr Shakespeare, the helicopter cue and the ruins, but the dishes are still plain Christmas food.",
+  "missing": [],
   "ideas": [
    "Change 'Before the Dance' to 'Before the play' and 'Last Dance Sweets' to 'After the play'.",
    "Swap 'Nativity night hot blackcurrant punch' for 'Helicopter punch' for the Hollywood arrival.",
@@ -47,8 +45,16 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/nativity-2009-flat-3.json"
+  "ops": "audit/ops/nativity-2009-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

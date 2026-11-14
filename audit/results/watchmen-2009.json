@@ -42,18 +42,16 @@
  "checked_ok": 8,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "Good 1985 mood and badge, but the beans cue and Veidt's thirty five minutes line don't print and the food is still comic book guesses.",
+  "overall": 3.4,
+  "verdict": "The beans cue, Dr Manhattan on Mars, the smiley cookies and the midnight clock now print, but Veidt's thirty five minutes line is gone and the curry and lassi are guesses.",
   "missing": [
-   "Rorschach helped himself to Dan's beans (cue not printed)",
-   "I triggered it thirty-five minutes ago (not printed)",
-   "Dr Manhattan on Mars",
-   "The Doomsday clock",
-   "You're locked in here with me"
+   "I did it thirty-five minutes ago (Veidt)",
+   "You're locked in here with me (the prison)",
+   "The Comedian through the window (the opening)"
   ],
   "ideas": [
    "Swap 'Gunga Diner onion bhajis' for 'Karnak champagne toast canapes' (Veidt's toast to the pharaohs)",
@@ -86,8 +84,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/watchmen-2009-flat-4.json"
+  "ops": "audit/ops/watchmen-2009-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

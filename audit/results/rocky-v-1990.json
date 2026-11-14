@@ -42,16 +42,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Kensington corner bar with Sue me for what and Tommy and Duke at the bar, but Mickey and the street fight don't print and the poster looks rough.",
+  "overall": 3.4,
+  "verdict": "Sue me for what, Duke's touch me and I'll sue, Mickey's gym and Paulie's power of attorney now print in a Kensington bar, but the dishes and poster look rough.",
   "missing": [
-   "Duke: Touch me and I'll sue (street fight)",
-   "Mickey's gym and the vision of Mickey",
-   "Rocky bankrupt after the accountant"
+   "The street fight with Tommy outside the bar",
+   "Mickey's cufflinks for Rocky Jr",
+   "Rocky and Rocky Jr drifting apart"
   ],
   "ideas": [
    "Swap 'Eggnog with nutmeg and rum' for 'Sue me for what? shot'.",
@@ -82,8 +82,16 @@
    "look": 2,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/rocky-v-1990-flat-3.json"
+  "ops": "audit/ops/rocky-v-1990-flat-3.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

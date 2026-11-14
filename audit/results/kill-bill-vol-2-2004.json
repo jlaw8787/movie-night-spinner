@@ -35,10 +35,10 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "A wedding chapel rehearsal dinner with the black mamba cue, Paula Schultz and Five Point Palm, but three dishes print as bare names with no note.",
+  "verdict": "A Two Pines rehearsal dinner invite with the black mamba cue, Paula Schultz and the Superman speech, but four dishes still print as bare names.",
   "missing": [
-   "Bill's Superman speech",
-   "A fish flapping on the carpet (Emilio's tuna melts note did not print)"
+   "Emilio the fish flapping on the carpet (name only, no line)",
+   "Budd pawned the Hanzo sword (no longer prints)"
   ],
   "ideas": [
    "Swap \"Hacienda grapefruit paloma\" for \"The Black Mamba\" cocktail.",
@@ -75,8 +75,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/kill-bill-vol-2-2004-flat-7.json"
+  "ops": "audit/ops/kill-bill-vol-2-2004-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

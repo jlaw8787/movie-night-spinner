@@ -19,19 +19,22 @@
  "vibe": {
   "world": 4,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The bullroarer, the faked croc death and I am home all print, but several dishes appear twice (snags, barra, pavlova) and the camp card is plain.",
-  "missing": [],
+  "overall": 3.6,
+  "verdict": "Belonga Mick, the faked croc death, the subway handoff and I am home all print with good bush tucker, but the camp card look is plain and the drinks are flat.",
+  "missing": [
+   "Mick's bullroarer call (only in the footer)",
+   "Dynamite fishing in New York harbour (the opening)"
+  ],
   "ideas": [
    "Cut 'Wally's snags in bread with onions', it is the same dish as 'Wally's Walkabout Creek snags'.",
    "Swap 'Steak sandwich' (note: The Walkabout Creek pub) for 'Subway handoff hot dogs' with a note about Rico's trap at the station.",
    "Change the 'No crocs allowed' slip to 'Walter's croc attack: faked' so the croc joke comes from the film.",
    "Add 'Belonga Mick' to the Kakadu plum salsa note, replacing 'The Top End'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -60,8 +63,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/crocodile-dundee-ii-1988-flat-6.json"
+  "ops": "audit/ops/crocodile-dundee-ii-1988-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -27,10 +27,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The cab timetable and Max's night read well, but the side photo is a dark blur and the food names are only lightly in the film.",
+  "verdict": "The cab timetable, the MTA story, Miles Davis and I do this for a living all print, but the side photo is still a dark blur and the food is only lightly from the film.",
   "missing": [
-   "Coyotes crossing the road",
-   "Max, I do this for a living"
+   "Coyotes crossing the road (the drive)",
+   "Max's Maldives postcard in the visor (the cab)",
+   "The train ending (Metro)"
   ],
   "ideas": [
    "Replace the Vincent note with 'Focus on the job. Drive.'",
@@ -65,8 +66,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/collateral-2004-flat-5.json"
+  "ops": "audit/ops/collateral-2004-flat-5.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

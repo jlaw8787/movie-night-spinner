@@ -34,10 +34,9 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The timetable strip name-checks the banya fight, the Magnum, the cleanheads and the bus chase, but the dishes and notes are Russian-Chicago filler.",
+  "verdict": "The timetable names the banya fight, the Magnum, the cleanheads and the bus chase, but the dishes and notes are Russian Chicago filler.",
   "missing": [
-   "Bus chase ended by the freight train",
-   "Dirty Harry line (only a timetable label)"
+   "Who is Dirty Harry (timetable label only)"
   ],
   "ideas": [
    "Swap 'Medovik honey cake' for 'Wristwatch cake', the airport swap.",
@@ -70,8 +69,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/red-heat-1988-flat-3.json"
+  "ops": "audit/ops/red-heat-1988-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

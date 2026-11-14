@@ -44,17 +44,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A chalkboard bar with the poster turtle, the full band line and a real signed quote, but the guitar case swap and the rest of the film stay out.",
+  "overall": 3.2,
+  "verdict": "A chalkboard cantina tab where the turtle, the coconut, the pit bull, the letter-opener and the mixed-up guitar case all print, but the dishes are standard cantina fare.",
   "missing": [
-   "Guitar case swapped with Azul's case of weapons (the bar)",
-   "Domino's pit bull riding out of town with him (the ending)",
-   "Moco striking matches off the Dragon's face (the ranch)",
-   "Domino's letter-opener at his throat (the upstairs room)"
+   "Moco striking matches off the man's face (the ranch)",
+   "The guitar case swap with Azul (only as a drink name)",
+   "Azul's real case of weapons opening at the bar (the bar shootout)"
   ],
   "ideas": [
    "Swap the 'Ceviche tostadas' note for 'The bartender hired a keyboard guy instead. Tip the mariachi.'",
@@ -87,8 +86,16 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/el-mariachi-1992-flat-1.json"
+  "ops": "audit/ops/el-mariachi-1992-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

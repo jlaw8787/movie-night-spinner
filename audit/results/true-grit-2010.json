@@ -47,10 +47,10 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Mattie's opening line, the corn dodgers cue and the 400 yard shot print and the food suits, but it is still a generic recipe box for a gritty western.",
+  "verdict": "Mattie's opening line, the corn dodgers cue, the 400 yard shot and the Stonehill haggle print and the food suits, but it is still a generic recipe box for a gritty western.",
   "missing": [
-   "Mattie horse trading with Colonel Stonehill",
-   "Mattie's snake bite and long ride"
+   "Fill your hand, Rooster's charge",
+   "Mattie's ride across the river on Little Blackie"
   ],
   "ideas": [
    "Swap 'Fort Smith buttermilk fried chicken' note for Mattie's horse trading with Stonehill",
@@ -85,8 +85,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/true-grit-2010-flat-10.json"
+  "ops": "audit/ops/true-grit-2010-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

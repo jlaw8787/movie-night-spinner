@@ -10,7 +10,7 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Drago's line, Paulie's robot, Living in America and the Moscow speech all print, but it's a generic recipe box and the mains have no notes.",
+  "verdict": "Drago's line, Paulie's robot, Living in America and the Moscow speech all print, but it is a generic recipe box and the mains have no notes.",
   "missing": [],
   "ideas": [
    "Swap 'Hot cocoa with whipped cream' for 'Rocky's mountain top hot chocolate' as a nod to the run.",
@@ -42,8 +42,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/rocky-iv-1985-flat-8.json"
+  "ops": "audit/ops/rocky-iv-1985-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

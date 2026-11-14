@@ -27,12 +27,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A good truck stop board with Snowman's Fred line, Sheriff Justice's okra and the Boston chowder haul, but every dish note is dropped, so the dishes read as a plain list.",
+  "verdict": "A good truck stop board with Snowman's Fred line, the haul slip and the Frog cue, but no dish notes print so the dishes read as a plain list.",
   "missing": [
-   "Smokey Bear CB handle (dropped note)",
-   "Frog, the runaway bride",
-   "Trigger the Trans Am",
-   "400 cases in 28 hours"
+   "Smokey Bear on the CB (no notes print)",
+   "Trigger, the black Trans Am",
+   "East Bound and Down on the CB"
   ],
   "ideas": [
    "Swap 'Georgia peach cobbler' for 'Boston clam chowder, 18 hours' for the double-or-nothing finish",
@@ -65,8 +64,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/smokey-and-the-bandit-1977-flat-9.json"
+  "ops": "audit/ops/smokey-and-the-bandit-1977-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

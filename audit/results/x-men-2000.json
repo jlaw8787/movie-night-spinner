@@ -39,11 +39,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The school timetable winks and the cage fight cue print, but the menu is plain and the cage fight peanuts are not on it.",
+  "verdict": "The timetable winks, the toad line, Liberty Island and the cage fight cue print, but the menu is plain and the cage fight peanuts are not on it.",
   "missing": [
    "Cage fight maple chilli peanuts (not on the menu)",
-   "What happens to a toad when it's struck by lightning",
-   "Statue of Liberty finale"
+   "What do they call you? Wheels? (Logan meets Xavier)",
+   "Senator Kelly in the water (the beach)"
   ],
   "ideas": [
    "Swap 'Xavier's School cereal bars' note for 'Do you know what happens to a toad?'",
@@ -75,8 +75,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/x-men-2000-flat-5.json"
+  "ops": "audit/ops/x-men-2000-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

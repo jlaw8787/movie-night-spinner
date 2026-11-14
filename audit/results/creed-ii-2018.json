@@ -82,10 +82,13 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The desert camp postcard has good Ukrainian and Philly dishes and the Rocky quote, but the Ivan stray dogs cue no longer prints.",
+  "verdict": "The desert camp postcard has good Ukrainian and Philly dishes, Rocky's line and Ivan's towel, but the stray dogs cue and Apollo's history are gone.",
   "missing": [
-   "Ivan and the stray dogs of Ukraine (cue)",
-   "Rocky meeting Logan and baby Amara (house drink)"
+   "Ivan and Viktor running past the stray dogs in Kyiv",
+   "Viktor breaking Adonis's ribs in the first fight",
+   "Ludmilla walking out of the Moscow fight",
+   "Amara's hearing test",
+   "Apollo's death in the ring (Rocky IV)"
   ],
   "ideas": [
    "Swap 'Desert camp watermelon agua fresca' note for 'Rocky and Little Duke retrain him.'",
@@ -121,8 +124,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/creed-ii-2018-flat-5.json"
+  "ops": "audit/ops/creed-ii-2018-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

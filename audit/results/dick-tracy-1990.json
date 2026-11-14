@@ -42,17 +42,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A moody Club Ritz in black and gold with Big Boy's Napoleon line, but Sooner or Later, Lips Manlis and the Blank do not print and the notes are thin.",
+  "overall": 3.6,
+  "verdict": "A moody black and gold Club Ritz with Big Boy's Napoleon line, Sooner or Later and the Lips Manlis bath printing, though the dishes are plain supper club fare.",
   "missing": [
-   "Breathless singing Sooner or Later at Club Ritz",
-   "Lips Manlis and the cement bath",
    "The Blank with no face",
-   "The Kid: When do we eat?"
+   "The Kid: When do we eat?",
+   "Tracy's wrist radio"
   ],
   "ideas": [
    "Swap the note on 'Big Boy's spaghetti' for 'Served at the mob summit where Big Boy runs the room'.",
@@ -60,7 +59,7 @@
    "Add a 'Cement bath' set pudding joke for Lips Manlis in place of 'Lemon meringue pie'.",
    "Use the primary yellow, red and blue of the comic strip for the bar and badge colours instead of gold."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -87,8 +86,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/dick-tracy-1990-flat-6.json"
+  "ops": "audit/ops/dick-tracy-1990-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

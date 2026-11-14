@@ -38,12 +38,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "McLovin ID, the shop, I love you man brownies and squad car doughnuts print, but the doughnut and pizza notes drop and it reads as a grey party menu.",
+  "verdict": "McLovin's ID, the shop counter, squad car doughnuts and I love you man brownies print, but the dish notes drop and it reads as a grey party menu.",
   "missing": [
-   "Seth's stained pants",
+   "Seth's stained pants (the party)",
    "Seth headbutting Jules",
-   "Pizza bagels at the sleepover (note does not print)",
-   "Cop car doughnuts in the car park (note does not print)"
+   "Slater and Michaels shooting the cop car (the car park)",
+   "Seth's drawings (footer only)"
   ],
   "ideas": [
    "Swap 'Cinnamon schnapps shots' for 'Cop car punch' with a note about Slater driving.",
@@ -76,8 +76,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/superbad-2007-flat-9.json"
+  "ops": "audit/ops/superbad-2007-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

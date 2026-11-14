@@ -51,9 +51,11 @@
   "tone": 4,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The Circle of Trust, grace cue, Mr Jinx, the altar tart and the cat milking joke all print, but the bistro template is generic.",
+  "verdict": "Circle of Trust, grace, Mr Jinx, the urn, the altar fire and the cat milking gag all print, but the bistro template still feels generic.",
   "missing": [
-   "The urn used as kitty litter"
+   "Jack's I'm watching you fingers",
+   "The lost luggage at the airline gate",
+   "The champagne cork that knocks over the urn"
   ],
   "ideas": [
    "Swap the bistro layout for a family dining table layout with place cards.",
@@ -89,8 +91,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/meet-the-parents-2000-flat-7.json"
+  "ops": "audit/ops/meet-the-parents-2000-flat-7.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

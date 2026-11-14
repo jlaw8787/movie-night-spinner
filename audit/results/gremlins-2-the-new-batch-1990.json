@@ -27,11 +27,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A good Clamp Center canteen with the timetable, Mohawk, Clamp's quote and Gizmo, but the midnight rule only shows in the voucher.",
+  "verdict": "A good Clamp Center canteen with Mohawk, Clamp's quote, Grandpa Fred and Gizmo, but the Brain Gremlin and Hulk Hogan gags still don't print.",
   "missing": [
-   "Brain Gremlin and the gremlins (the lab)",
    "Hulk Hogan and the Gremsters in the projection booth (the cinema)",
-   "Gizmo with a bow and headband (the lab)"
+   "Gizmo in the Rambo headband (the lab)",
+   "Brain Gremlin singing New York, New York (the lobby)",
+   "The electric gremlin (the phone lines)"
   ],
   "ideas": [
    "Swap 'Top-floor steak Diane' note for a Brain Gremlin dish, for example 'Brain Gremlin pâté on toast'.",
@@ -65,8 +66,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/gremlins-2-the-new-batch-1990-flat-6.json"
+  "ops": "audit/ops/gremlins-2-the-new-batch-1990-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

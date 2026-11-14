@@ -27,8 +27,11 @@
   "tone": 4,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The kitchen table recipe box covers the dad-off, Tumor, the Lakers shot and the Smooth Jazz drink, but it still reads as a shared template.",
-  "missing": [],
+  "verdict": "The recipe box covers the dad-off, Tumor, the Lakers shot and Smooth Jazz, but it still reads as a shared template.",
+  "missing": [
+   "Dusty building the treehouse in a day (the backyard)",
+   "Brad on the halfpipe at the house (the skateboard crash)"
+  ],
   "ideas": [
    "Swap 'Brad's rainbow rice paper rolls' note for 'Tumor, the dog Dusty picked.'",
    "Swap 'Daddy-daughter dance cupcakes' note for Megan choosing Dusty at the dance.",
@@ -62,8 +65,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/daddy-s-home-2015-flat-6.json"
+  "ops": "audit/ops/daddy-s-home-2015-flat-6.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

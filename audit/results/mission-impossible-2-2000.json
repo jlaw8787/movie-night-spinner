@@ -46,13 +46,14 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A Sydney flight with Nyah's thief line and the self-destructing sunglasses, but the barramundi and Chimera lines don't print and most of the action is missing.",
+  "overall": 3.0,
+  "verdict": "A Sydney flight with Nyah's thief line, Bare Island and the races, but Chimera, Mission Difficult and every big action scene still don't print.",
   "missing": [
-   "Mission: Difficult, not Mission: Impossible",
-   "Chimera and Bellerophon",
-   "Free climbing at Dead Horse Point",
-   "The motorbike joust"
+   "This is not Mission: Difficult (Swanbeck)",
+   "Chimera and Bellerophon (the virus)",
+   "Free climbing at Dead Horse Point (the opening)",
+   "The motorbike joust (the finale)",
+   "Face masks pulled off (the plane and the finale)"
   ],
   "ideas": [
    "Rename 'Hunter Valley semillon' to 'A Thief in the Night' and note it as Nyah's racing tip.",
@@ -84,8 +85,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/mission-impossible-2-2000-flat-1.json"
+  "ops": "audit/ops/mission-impossible-2-2000-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

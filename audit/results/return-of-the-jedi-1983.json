@@ -10,11 +10,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "C-3PO's god line, the toasts and Jabba's Bantha fodder print, but the gilded banquet look reads fancy dinner more than Star Wars and Endor.",
+  "verdict": "It's a trap, Bantha fodder, the Sarlacc and C-3PO the god all print, but the gilded banquet still reads fancy dinner more than Endor.",
   "missing": [
-   "Yub nub, the Ewok party song",
-   "Admiral Ackbar's It's a trap (tiny footer line)",
-   "Sarlacc pit (one phrase)"
+   "Yub nub, the Ewok party song (the celebration)",
+   "Luke and Vader in the throne room",
+   "Vader's mask off (the hangar)"
   ],
   "ideas": [
    "Swap the tiki lagoon bar theme for an Endor forest village layout.",
@@ -49,8 +49,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/return-of-the-jedi-1983-flat-3.json"
+  "ops": "audit/ops/return-of-the-jedi-1983-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

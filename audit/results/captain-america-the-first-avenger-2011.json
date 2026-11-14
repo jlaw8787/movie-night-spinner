@@ -39,10 +39,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A 1943 Stark Expo food hall with I can do this all day, the rain check, the dud grenade and Peggy's Stork Club pie printing, but Erskine's good man line and the flying car are gone.",
+  "verdict": "Erskine's good man and little guys lines, I can do this all day, the rain check and the dud grenade all print in a smart 1943 expo hall, but the dishes stay plain.",
   "missing": [
-   "Erskine: to the little guys, a good man not a perfect soldier",
-   "Stark Expo flying car"
+   "Stark Expo flying car (Howard's demo)",
+   "Red Skull and the Tesseract",
+   "Steve flying the plane into the ice"
   ],
   "ideas": [
    "Swap the Peggy note for Steve's rain check line.",
@@ -77,8 +78,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/captain-america-the-first-avenger-2011-flat-5.json"
+  "ops": "audit/ops/captain-america-the-first-avenger-2011-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

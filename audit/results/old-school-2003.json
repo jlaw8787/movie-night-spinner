@@ -38,8 +38,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Mitch-a-Palooza, Blue, the streaking line and the Frank chant all print now, but the dishes are mostly generic party food and the photo strip is still flat black and white.",
-  "missing": [],
+  "verdict": "Mitch a Palooza, Blue, the streaking line and the Frank chant print, but most dishes are generic party food and the photo strip is flat black and white.",
+  "missing": [
+   "Tranquilliser dart to the neck",
+   "Frank's debate win against Carville",
+   "Blue's KY wrestling and funeral (Dust in the Wind)"
+  ],
   "ideas": [
    "Swap 'Frat house sheet cake' for 'Blue's birthday cake' with a note about his big night.",
    "Swap 'Pledge week jalapeño poppers' for 'Ring of fire poppers' with a note about the mascot jump.",
@@ -71,8 +75,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/old-school-2003-flat-8.json"
+  "ops": "audit/ops/old-school-2003-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

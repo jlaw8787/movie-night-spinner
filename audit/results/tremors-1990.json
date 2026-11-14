@@ -27,12 +27,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Chalkboard market and poster suit Perfection, but only the free beer quote came through and the dishes have no notes.",
+  "verdict": "Chalkboard market and poster suit Perfection and the free beer line prints, but the dishes carry no notes.",
   "missing": [
-   "Graboids named by Walter Chang",
-   "Pole vaulting between the rocks (jerky note not printed)",
-   "Burt's bunker with five years of food (not printed)",
-   "Gummy worm graboids (dirt cups note not printed)"
+   "Broke into the wrong rec room (Burt's basement)",
+   "Gummy worm graboids (dirt cups)",
+   "Graboid running off the cliff (Val's bluff)"
   ],
   "ideas": [
    "Swap the note by Val for Burt's 'Broke into the wrong rec room' and sign it Burt.",
@@ -67,8 +66,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/tremors-1990-flat-10.json"
+  "ops": "audit/ops/tremors-1990-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

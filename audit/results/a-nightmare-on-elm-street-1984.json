@@ -34,16 +34,18 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Nancy's warning quote and the period strip nod to the film, but the food is still a school canteen and the new pretzel and cupcake notes are dropped.",
+  "overall": 3.6,
+  "verdict": "The period strip, five finger pretzels, Glen's convertible cupcakes and Nancy's warning now print, but the food itself is still school canteen fare.",
   "missing": [
+   "Freddy: I'm your boyfriend now, Nancy (phone scene)",
    "Tina's death in the sleepover bedroom",
-   "Freddy: I'm your boyfriend now, Nancy",
-   "Nancy burning her arm on the boiler room pipe"
+   "Nancy burning her arm on the boiler room pipe",
+   "Glen pulled into the bed (geyser of blood)",
+   "Nancy's booby traps around the house"
   ],
   "ideas": [
    "Swap 'Cafeteria sloppy joes' (Nancy dozes off in English class) for 'Boiler room meatballs' in a steel pan, note 'Nancy burns her arm on the pipe to wake up'.",
@@ -51,7 +53,7 @@
    "Print the skipping rhyme under the pudding: 'One, two, Freddy's coming for you. Three, four, better lock your door.'",
    "Change the 'Strong black coffee' note to 'Twenty minutes, then Glen wakes you', which is the plan Nancy gives him."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -80,8 +82,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/a-nightmare-on-elm-street-1984-flat-5.json"
+  "ops": "audit/ops/a-nightmare-on-elm-street-1984-flat-5.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

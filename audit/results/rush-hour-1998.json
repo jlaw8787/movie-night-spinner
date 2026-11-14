@@ -18,17 +18,17 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A smart tea room with Carter's wings, Chen's soul food line and the ransom cookies, but the famous words line and the radio and singing gags don't print.",
+  "overall": 3.6,
+  "verdict": "A smart Foo Chow order sheet that now prints the words line, the Beach Boys radio, the ransom and the vase, though most dish notes are plain recipes.",
   "missing": [
-   "Do you understand the words coming out of my mouth",
-   "Don't touch my radio and the Beach Boys",
-   "Lee singing War",
-   "The vase caught mid air"
+   "Lee singing War in Carter's car",
+   "Don't ever touch a black man's radio (Carter)",
+   "Carter's sting with Clive in the cells",
+   "The Hollywood car hustle with Lee on the roof"
   ],
   "ideas": [
    "Swap 'Consulate spring rolls' note for 'Ransom not included'.",
@@ -36,7 +36,7 @@
    "Rename 'Fortune cookies' to 'Ransom cookies'.",
    "Add Lee's wharf raid to the tea room tag."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,8 +61,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/rush-hour-1998-flat-8.json"
+  "ops": "audit/ops/rush-hour-1998-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

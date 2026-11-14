@@ -34,16 +34,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A neat studio trailer menu with Rhino's note, super bark and the green eyed man, but the dish notes and cue do not print.",
+  "overall": 3.6,
+  "verdict": "A tidy studio trailer menu where the super bark, Styrofoam, packing peanuts, the green eyed man and the begging cue now all print.",
   "missing": [
-   "Mittens teaches Bolt to beg (cue does not print)",
-   "The power of Styrofoam (does not print)",
-   "Packing peanuts to New York"
+   "The pigeons in New York",
+   "Bolt thinking his powers are real (the set)"
   ],
   "ideas": [
    "Swap 'Rhino's cheese balls' note for 'Action hamster approved.'",
@@ -51,7 +50,7 @@
    "Swap the 'Chocolate malt thickshake' note for 'Super bark strength.'",
    "Swap the 'Call sheet' text for 'Green eyed man, no appearance fee'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -79,8 +78,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/bolt-2008-flat-5.json"
+  "ops": "audit/ops/bolt-2008-flat-5.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

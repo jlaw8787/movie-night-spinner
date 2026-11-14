@@ -5,17 +5,16 @@
  "checked_ok": 15,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A garage truck menu with cool beans, the safe word and fifteen buses, but no dish notes print so most of the jokes are lost.",
+  "overall": 3.2,
+  "verdict": "Rod's garage menu now prints cool beans, I like to party, no tool in this pool, the whiskey safe word and the bus jump, but the food and look stay generic.",
   "missing": [
-   "There is no tool in this pool (the pool jump)",
-   "Whiskey safe word (the rooftop)",
-   "I like to party (the party)",
-   "Punch dancing (the woods)"
+   "Punch dancing (the woods)",
+   "Rod's quiet place",
+   "Frank and Rod's backyard fights"
   ],
   "ideas": [
    "Swap 'Stunt day cherry lime soda' for 'Whiskey! (root beer)' (Rod's whiskey scream before he crashes).",
@@ -53,8 +52,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/hot-rod-2007-flat-1.json"
+  "ops": "audit/ops/hot-rod-2007-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

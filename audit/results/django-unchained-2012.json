@@ -36,14 +36,15 @@
   "world": 4,
   "moments": 4,
   "food": 3,
-  "tone": 2,
+  "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The dentist wagon, two beers line, Prost and the Candyland cake print, but the dish notes dropped so the board is just names and prices.",
+  "overall": 3.4,
+  "verdict": "The dentist wagon, The D is silent, two beers and Prost print, but the truck board drops every dish note so the food is just names and prices.",
   "missing": [
-   "The D is silent",
-   "Broomhilda and Siegfried legend",
-   "Candie: We're havin' white cake (name only)"
+   "Broomhilda and Siegfried legend (campfire)",
+   "Candie's phrenology skull (Candyland dinner)",
+   "The bag-head raid (night ride)",
+   "You had my curiosity (Candyland)"
   ],
   "ideas": [
    "Replace the note with 'Two beers for two weary travelers.'",
@@ -79,8 +80,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/django-unchained-2012-flat-2.json"
+  "ops": "audit/ops/django-unchained-2012-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 2,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

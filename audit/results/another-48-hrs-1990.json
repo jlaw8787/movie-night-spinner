@@ -74,11 +74,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.2,
-  "verdict": "The counter board has the crook line, the Cadillac jerky and the blown up car, but it is thin on the film's big moments and the footer is hard to read.",
+  "verdict": "A dark counter board with the cop and crook line, the Cadillac jerky, the lighter and the blown up car, but the venue is made up and the big set pieces stay off the page.",
   "missing": [
-   "Jack spent 25 grand of Reggie's money",
-   "This is the new car (Jack's Cadillac)",
-   "Reggie out of prison and the Iceman"
+   "The Iceman reveal (the finale)",
+   "The Bird Cage bar shootout (North Beach)",
+   "Jack's shooting inquiry and his badge on the line",
+   "Reggie's prison release and his locked up money"
   ],
   "ideas": [
    "Swap the 'Second Furlough' stamp card for 'Jack's lighter', stamped each time Reggie steals it back.",
@@ -111,8 +112,16 @@
    "look": 4,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/another-48-hrs-1990-flat-2.json"
+  "ops": "audit/ops/another-48-hrs-1990-flat-2.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

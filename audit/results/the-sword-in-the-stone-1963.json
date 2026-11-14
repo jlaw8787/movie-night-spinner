@@ -51,10 +51,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The pike, the squirrel, Mim's spots and Merlin's manners all print in a decent castle kitchen, but the poster sits as a bright block on the parchment.",
+  "verdict": "The pike, the squirrel, Mim's spots, the dishes washing themselves and Merlin's manners print in a decent castle kitchen, but Archimedes and the wizard duel are absent.",
   "missing": [
-   "Pull the sword, then do the dishes (tagline)",
-   "wizard blizzard"
+   "Archimedes the owl",
+   "Higitus figitus packing song",
+   "Wizards' duel with Mim as a dragon",
+   "Wart pulling the sword in London"
   ],
   "ideas": [
    "Swap the sugar cubes line for 'Sugar? Sugar! Manners, guests first'",
@@ -89,8 +91,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-sword-in-the-stone-1963-flat-10.json"
+  "ops": "audit/ops/the-sword-in-the-stone-1963-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

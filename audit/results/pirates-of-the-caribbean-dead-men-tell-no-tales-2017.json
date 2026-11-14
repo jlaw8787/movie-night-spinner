@@ -44,11 +44,10 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A dark bar tab with Salazar's line, the compass for rum cue, ghost sharks and Carina the horologist, but the vault and Pearl in a bottle are missing.",
+  "verdict": "A dark bar tab with Salazar's line, the compass cue, the bank vault, the Pearl in a bottle and Carina the horologist, but the food is generic.",
   "missing": [
-   "Bank vault dragged through town (wink)",
-   "Black Pearl in a bottle (wink)",
-   "Where's the dosh? (wink)"
+   "Jack at the guillotine (the execution)",
+   "Barbossa learns Carina is his daughter (the finale)"
   ],
   "ideas": [
    "Swap the 'Dockside tavern' sign for 'Aboard the Dying Gull'.",
@@ -82,8 +81,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/pirates-of-the-caribbean-dead-men-tell-no-tales-2017-flat-8.json"
+  "ops": "audit/ops/pirates-of-the-caribbean-dead-men-tell-no-tales-2017-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

@@ -75,9 +75,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Laura, the toy train, Mustache, the lantern cue and the smiling cookies all print on a hospital cafeteria sheet, though the writing is mild.",
+  "verdict": "Laura, Carl, Mustache, the toy train, the lantern cue and the smiling cookies all print on a clean hospital tray, though the writing stays mild.",
   "missing": [
-   "Carl: you're going to die"
+   "Laura's broken pot shard in the office",
+   "The thing wearing Rose's mother's face at the old house",
+   "Rose's birthday gift to her nephew is the box with Mustache"
   ],
   "ideas": [
    "Swap 'Smiling cookies' for 'Toy train sugar cookies', Jackson's birthday gift",
@@ -112,8 +114,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/smile-2022-flat-9.json"
+  "ops": "audit/ops/smile-2022-flat-9.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

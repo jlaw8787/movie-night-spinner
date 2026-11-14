@@ -72,10 +72,10 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Bright chalkboard and gear look still suits it, but the gag notes on the dishes don't print, so the menu is mostly item names and the helicopter hat.",
+  "verdict": "Bright chalkboard and gear look suit it, but no dish notes print, so it is mostly item names plus the helicopter hat cue.",
   "missing": [
-   "Kramer's opera hand and sushi hand for Claw",
    "Go, Go, Gadgetmobile and the talking car",
+   "Kramer's opera hand and sushi hand for Claw",
    "Sykes: That's my cruller!"
   ],
   "ideas": [
@@ -110,8 +110,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/inspector-gadget-1999-flat-7.json"
+  "ops": "audit/ops/inspector-gadget-1999-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

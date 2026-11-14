@@ -30,16 +30,17 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A craft services truck on the Stab 3 set with Dewey's note, but the cue and the tape, voice and reveal winks don't print and the menu is a plain list.",
+  "overall": 3.4,
+  "verdict": "The Stab 3 craft truck now prints Randy's tape, the Maureen voice, Roman's party and don't answer the phone, but the dishes and the truck board are plain.",
   "missing": [
-   "Randy's videotape and the trilogy rules",
-   "Voice changer sounding like Maureen",
-   "Roman's reveal at the birthday party in Milton's mansion"
+   "Roman's reveal as Sidney's half-brother (Milton's mansion)",
+   "Jennifer Jolie playing Gale (the set)",
+   "Carrie Fisher in the studio archives",
+   "Jay and Silent Bob on the lot"
   ],
   "ideas": [
    "Swap 'California sushi rolls' for 'Randy's last tape sushi' to use the video message.",
@@ -72,8 +73,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/scream-3-2000-flat-4.json"
+  "ops": "audit/ops/scream-3-2000-flat-4.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

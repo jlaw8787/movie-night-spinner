@@ -5,16 +5,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A tidy tea room with Oda Mae's line, the pottery wheel cue and Rita Miller's pot roast, but Ditto, the penny and Molly in danger are all missing.",
+  "overall": 3.6,
+  "verdict": "Ditto, the penny, Molly you in danger and Oda Mae's dead guy line now all print in a pretty tea room, though the venue is invented and the food is plain luncheon.",
   "missing": [
-   "Ditto",
-   "Molly, you in danger, girl",
-   "The penny"
+   "Unchained Melody (the pottery wheel)",
+   "The subway ghost teaching Sam to move things (the train)",
+   "Oda Mae signing over the four million dollar cheque (the bank)"
   ],
   "ideas": [
    "Swap 'Hush puppies' for 'Rita Miller cheques' pastries with a note about the bank scene.",
@@ -22,7 +22,7 @@
    "Use a darker blue and gold look for the cake trolley column to match the poster.",
    "Add 'Ditto' to the end of the 'Warm spiced apple juice' note."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -47,8 +47,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/ghost-1990-flat-2.json"
+  "ops": "audit/ops/ghost-1990-flat-2.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

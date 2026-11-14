@@ -45,16 +45,15 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A revenge office roster with the Note to self recorder, fourteen jobs in three months and Pops's rule, but the Don Giovanni cue and the skunks do not print.",
+  "overall": 3.4,
+  "verdict": "A revenge office roster with the Note to self recorder, fourteen jobs, Pops's rule, the skunks and the brownies, but no cue prints and the barbecue chicken has no note.",
   "missing": [
-   "Ruining opening night of Don Giovanni with skunks (cue not printed)",
-   "Hallucinogenic brownies at the opera",
-   "Mitch and Sam start Dirty Work"
+   "Don Giovanni finale (cue does not print)",
+   "Travis Cole, the villain (the revenge plan)"
   ],
   "ideas": [
    "Swap the card line 'Division: Special Investigations, 1998' for 'Division: Revenge for Hire, 1998'.",
@@ -89,8 +88,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/dirty-work-1998-flat-2.json"
+  "ops": "audit/ops/dirty-work-1998-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

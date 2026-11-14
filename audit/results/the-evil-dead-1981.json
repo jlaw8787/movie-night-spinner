@@ -10,11 +10,10 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The trapdoor, tape, card trick and bridge gags all print, but the cheerful recipe box and cartoon magnets still soften a very nasty film.",
+  "verdict": "The trapdoor, tape, card trick, bridge and book burning all print, but the cheerful recipe box and EAT magnets soften a very nasty film.",
   "missing": [
-   "The trees: Join us",
-   "Cheryl pulled into the trees",
-   "Ash burning the book"
+   "Cheryl and the trees in the woods",
+   "Linda and the pencil"
   ],
   "ideas": [
    "Swap 'Deadite devil's food cake' for 'Naturom Demonto red velvet' with a book-shaped cut.",
@@ -47,8 +46,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-evil-dead-1981-flat-4.json"
+  "ops": "audit/ops/the-evil-dead-1981-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

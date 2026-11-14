@@ -39,9 +39,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "A grimy bar tab with Crazy Ralph's warning, Paul's urban legend line and the no seconds receipt, but the food is plain.",
+  "verdict": "A grimy bar tab with Crazy Ralph's warning, the sweater, the sack mask and the no seconds receipt, but the food is plain.",
   "missing": [
-   "Ginny puts on Pamela's sweater in the shack (the shack)"
+   "Pamela's head on the shack shrine (the shack)",
+   "Mark in the wheelchair on the stairs (the machete)",
+   "Jason through the window at the end (the final scare)"
   ],
   "ideas": [
    "Swap the 'Receipt' stamp for a Crazy Ralph chalkboard special: 'You're all doomed' (a quote said by Ralph in the film)",
@@ -76,8 +78,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/friday-the-13th-part-2-1981-flat-6.json"
+  "ops": "audit/ops/friday-the-13th-part-2-1981-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

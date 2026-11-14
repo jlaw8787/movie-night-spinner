@@ -27,10 +27,10 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Strong Pandora dish names and the Neytiri line, Toruk and Tree of Souls all print, but the beige wood layout feels generic for a glowing film.",
+  "verdict": "Good Pandora dish names with I see you, the Neytiri line and the Tree of Souls, but the beige wood campfire layout is wrong for a glowing film.",
   "missing": [
-   "I see you (does not print)",
-   "The floating mountains (footer only)"
+   "Toruk Makto (footer only)",
+   "The floating mountains (photo caption only)"
   ],
   "ideas": [
    "Swap 'Pandora blue lagoon' for 'Woodsprite lagoon' served glowing with tonic water under a black light.",
@@ -65,8 +65,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/avatar-2009-flat-5.json"
+  "ops": "audit/ops/avatar-2009-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -58,23 +58,22 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A dark supper club card with the bag of sugar pie, Vault hush puppies and the fight cue, though the Snake Eyes and pinky toe jokes do not print.",
+  "overall": 3.6,
+  "verdict": "A dark supper club card with the pinky toe, the vault, the bag of sugar and the fight bet now printing, though Snake Eyes is still missing.",
   "missing": [
-   "Quick threatens to shoot Vera's pinky toe (the club)",
-   "Bennie 'Snake Eyes', the nearly blind craps dealer ('something in my eye')",
-   "Cantone trapped in the bank vault (the heist)"
+   "Bennie 'Snake Eyes', the nearly blind craps dealer (the club)",
+   "Quick shoots his own pinky in the opening craps game (the prologue)"
   ],
   "ideas": [
    "Swap 'Craps table crumbed cheese dice' for 'Bag of sugar' sugar cookies, nodding to the switched money bag.",
    "Replace the 'Club champagne cocktail' note with 'Jenkins fight night bubbles'.",
    "Rename 'Harlem hush puppies' to 'Vault hush puppies' to use the Cantone gag."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -101,8 +100,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/harlem-nights-1989-flat-6.json"
+  "ops": "audit/ops/harlem-nights-1989-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

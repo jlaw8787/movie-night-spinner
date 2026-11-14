@@ -1351,3 +1351,15 @@ vibe.done set on the 3 result files (with reworked2 and ops). The flat menu rewo
 Not done, waiting for Josh: look ideas (Wish empty gap beside the poster, Wolf Creek darker crater entry notice look). Dish swap not done: Wolf Creek billy-boiled camp meal for the sandwiches.
 
 Next: the rescore (docs/rescore-agent-prompt.md).
+
+## 15 Nov, 7:00am to 7:45am: rescore after the flat menu rework (main, committed)
+
+Cards and shots re-extracted for all 203 reworked menus (FORCE=1 audit-extract with the names as a bash array; 17 cards had changed since their batch because of later layout changes). Ten agents rescored about 20 each on docs/rescore-agent-prompt.md, with two changes: the current numbers went under "before2" (the 8 Nov "before" left alone) and "rescored" is 2026-11-15.
+
+Result: average 3.38 (was about 3.3), 75 up, 4 down, 161 still under 3.5 (102 at 3.4, 51 at 3.2, 8 at 3.0: Animal Kingdom, Boyz n the Hood, Friendship, Knocked Up, MI2, Mother's Day, Sixteen Candles, The Night Before). Best: Independence Day and Black Panther: Wakanda Forever 3.8.
+
+Main reason they stay flat: the layout drops dish notes, so the renamed moments only show in names (truck, chalkboard/board and some canteen menus: Venom, Django, Smokey, Stakeout, Black Panther, Iron Man 3, Oliver, Superbad, Footloose, Dreamgirls, Can't Buy Me Love, Phantom Menace, Willow, Short Circuit, Tremors; mains with no notes on Ultron, Soul Food, The Holiday, NeverEnding Story, Boyz, Klaus, The Night Before). A layout change that prints notes would lift most of these.
+
+Shot problems the agents flagged (not checked or fixed yet): Creed II stamp cut to "NO EXCUSE"; Dreamgirls VIP header cut to "TALENT NIG..." and empty gaps; Hocus Pocus 2 ticket line cut at the bottom; 13 Going on 30 Orange Julius note runs into the cue rule; Money Train guest check covers the footer; Beerfest logo twice; Reservoir Dogs caption "window booth at The Breakfast Diner" over the warehouse still and "STILL: TMDB" over art; The Fly Veronica badge shows the Brundlefly photo; quote signed with the film logo (Avatar, Tarzan, Wolf Creek, Braveheart, Crocodile Dundee II, The Proposal, Shang-Chi); dark or blank stills (Collateral strip, Captain America SEC 104, Knocked Up, Eternals); empty gaps (Mother's Day right column, White Christmas face 1, Karate Kid, Oz page 2, Wish top right); no cue printed (Final Destination 2, Batman & Robin); lower case notes (Pirates 5 pork belly, Tango & Cash); Animal House cupcake note "The Deltas hide a Lincoln in one" reads oddly; Footloose stray footer line.
+
+Next: Josh's call on a notes-printing fix for the name-only layouts, then the shot problems above.

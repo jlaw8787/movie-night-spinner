@@ -22,17 +22,17 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The poster now fills the frame and the Wi-Fi cue, Dormammu bargain and just tea notes land, but the food is still generic.",
+  "overall": 3.6,
+  "verdict": "Kamar-Taj with the Wi-Fi cue, Dormammu's bargain, the Mirror Dimension and just tea all printing, though the dishes are still standard fare.",
   "missing": [
-   "The Cloak of Levitation grabbing Strange (the Sanctum)",
-   "Strange stealing library books by astral projection",
-   "The Mirror Dimension fight in New York",
-   "The Eye of Agamotto reversing time to save Wong (Hong Kong)"
+   "The Cloak of Levitation",
+   "Eye of Agamotto turning back the apple",
+   "Strange's car crash and his shaking hands",
+   "Wong and Beyonce"
   ],
   "ideas": [
    "Replace the Wong note with 'Well, don't stop now!'",
@@ -40,7 +40,7 @@
    "Change the 'Wong's chicken and avocado sandwiches' note to 'Late fees may involve maiming.'",
    "Swap 'Pesto parmesan puff pastry pinwheels' for 'Mirror Dimension folded pastries', note 'Layered and folded until the city bends.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -67,8 +67,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/doctor-strange-2016-flat-6.json"
+  "ops": "audit/ops/doctor-strange-2016-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

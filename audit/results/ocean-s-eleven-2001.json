@@ -22,16 +22,15 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A slick Bellagio club with Reuben's group rate line and Rusty's prawns, but the vault, the fake SWAT team and the fountains barely show.",
+  "overall": 3.6,
+  "verdict": "A slick Bellagio club with Reuben's group rate line, the pinch, the fake SWAT team and the fountains, though the vault heist still barely shows.",
   "missing": [
-   "The vault and Yen",
-   "Fake SWAT team",
-   "The fountains at the Bellagio"
+   "Yen in the cash cart and the vault (the heist)",
+   "Rusty teaching poker to the young actors (the opening)"
   ],
   "ideas": [
    "Swap 'High roller chips' for 'The pinch' with the note 'Lights out in Vegas'.",
@@ -39,7 +38,7 @@
    "Swap 'Saul's matzo ball chicken soup' note for 'Saul and the briefcase of fake jewels'.",
    "Swap the 'Crew Pass' line 'Eleven of eleven' for 'Eleven names, one vault'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -65,8 +64,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/ocean-s-eleven-2001-flat-8.json"
+  "ops": "audit/ops/ocean-s-eleven-2001-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

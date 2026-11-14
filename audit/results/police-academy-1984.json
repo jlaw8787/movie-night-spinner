@@ -17,16 +17,17 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "Lassard's lunch line, the Blue Oyster bar and Hightower the florist print, but the school timetable look is generic and most of the film's gags are missing.",
+  "overall": 3.2,
+  "verdict": "Lassard's lunch line, the Blue Oyster bar, Jones's sound effects, Fackler's apple and Hightower the florist print, but the school timetable look and food stay generic.",
   "missing": [
-   "Jones's sound effects",
-   "Hightower flips the cruiser",
-   "Fackler's apple starting the riot"
+   "Hightower flipping the cruiser (driving lesson)",
+   "The podium scene with Lassard (graduation)",
+   "Tackleberry and his gun",
+   "Mahoney and Callahan's horse (the lecture)"
   ],
   "ideas": [
    "Swap 'Graduation cake' for 'Fackler's riot apple pie'.",
@@ -60,8 +61,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/police-academy-1984-flat-1.json"
+  "ops": "audit/ops/police-academy-1984-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

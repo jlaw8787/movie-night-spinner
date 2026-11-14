@@ -62,8 +62,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Excelsior, Raisin Bran, crabby snacks and the Eagles juju all print and the food suits Philly, but the page is a plain dark menu around a half-cut poster.",
-  "missing": [],
+  "verdict": "Excelsior, Raisin Bran, crabby snacks and the Eagles juju print and the food suits Philly, but it is a plain dark menu.",
+  "missing": [
+   "The dance score of five at the competition",
+   "Pat jogging in a garbage bag"
+  ],
   "ideas": [
    "Fix the cue to Dolores and the crabby snacks, then use 'crabby snacks' as the dish name for the crab toasts.",
    "Swap 'Philly roast pork hoagie bites' note for the lucky bandana, not 'hanky'.",
@@ -96,8 +99,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/silver-linings-playbook-2012-flat-9.json"
+  "ops": "audit/ops/silver-linings-playbook-2012-flat-9.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

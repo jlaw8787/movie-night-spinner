@@ -35,10 +35,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Forty years of Sunday dinner, Uncle Pete's TV and the towel on the stove all print, but the recipe box look is generic and the second photo is a tight crop that cuts off the sisters.",
+  "verdict": "Forty years of Sunday dinner, Ahmad's money lie, Uncle Pete's TV and the towel all print, but the mains carry no notes and the second photo crops the sisters.",
   "missing": [
-   "Ahmad's lie about Big Mama's money",
-   "Big Mama's death and last word to Ahmad"
+   "Big Mama's death and last word to Ahmad (hospital)",
+   "Miles and Faith's affair (the house)",
+   "Lem's arrest (the street)"
   ],
   "ideas": [
    "Swap 'Big Mama's baked mac and cheese' note for 'The dish everyone fights over, hidden money underneath' tied to Uncle Pete's TV.",
@@ -70,8 +71,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/soul-food-1997-flat-9.json"
+  "ops": "audit/ops/soul-food-1997-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

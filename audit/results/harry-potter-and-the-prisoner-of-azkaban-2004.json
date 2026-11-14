@@ -34,23 +34,23 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The Three Broomsticks suits the film with Lupin's chocolate, the Knight Bus and the One-Eyed Witch, but Buckbeak and the Time-Turner do not print.",
+  "overall": 3.6,
+  "verdict": "The Three Broomsticks now carries Lupin's chocolate, Buckbeak, the Time-Turner and the Knight Bus, though the parchment look is safe.",
   "missing": [
-   "Buckbeak (Hagrid's lesson)",
-   "Hermione's Time-Turner (the hospital wing)",
-   "Shrieking Shack (the Whomping Willow)"
+   "Shrieking Shack (the Whomping Willow)",
+   "Expecto Patronum at the lake",
+   "Sirius Black wanted posters"
   ],
   "ideas": [
    "Swap 'Hogsmeade sweet shop coconut ice' for 'Honeydukes' secret passage toffee' to use the tunnel under the Whomping Willow.",
    "Replace 'Tea leaf reading biscuits' note with a Divination line to use Trelawney.",
    "Fill the poster frame, which has black bars top and bottom, with a still of the Knight Bus."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -78,8 +78,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/harry-potter-and-the-prisoner-of-azkaban-2004-flat-6.json"
+  "ops": "audit/ops/harry-potter-and-the-prisoner-of-azkaban-2004-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

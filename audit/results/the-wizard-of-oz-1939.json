@@ -56,11 +56,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The toasts and dish names are full of Oz, but a banquet hall is a loose fit for the film and the notes are mild.",
+  "verdict": "The toasts and dish notes are full of Oz, with the curtain, the horse of a different colour and the ruby slippers, but a palace banquet is a loose fit and there is a big gap above the courses.",
   "missing": [
-   "Pay no attention to the man behind the curtain",
-   "Horse of a different colour",
-   "Wicked Witch melting"
+   "The Wicked Witch melting",
+   "Lions and tigers and bears, oh my! (the forest)",
+   "If I Only Had a Brain (Scarecrow)",
+   "The poppy field and the flying monkeys"
   ],
   "ideas": [
    "Swap 'Pimento cheese finger sandwiches' note for the Toto curtain reveal",
@@ -98,8 +99,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-wizard-of-oz-1939-flat-10.json"
+  "ops": "audit/ops/the-wizard-of-oz-1939-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

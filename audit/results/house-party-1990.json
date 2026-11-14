@@ -34,21 +34,24 @@
  "checked_ok": 15,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Right party and good black and white stills with the dance-off and Pop's belt, but the sweets and mains notes are thin and Stab's fire is gone.",
+  "overall": 3.6,
+  "verdict": "The dance off, Dolemite, Stab's fire, Pop's high top line and the jail cell rap all print with good black and white stills.",
   "missing": [
-   "Stab tries to burn the house down"
+   "Kid's fight in the school cafeteria",
+   "Bilal's DJ table and bad breath",
+   "Kid and Sydney on the doorstep",
+   "Pop asleep in front of Dolemite"
   ],
   "ideas": [
    "Swap 'Strawberry milkshake' note for the jail cell rap, 'Cell block shake'.",
    "Rename 'Party sheet cake' to 'Stab's burnt house cake' with charred edges.",
    "Replace 'Kick step party sub' with the pair of dance shoes made of garlic bread."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -76,8 +79,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/house-party-1990-flat-7.json"
+  "ops": "audit/ops/house-party-1990-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

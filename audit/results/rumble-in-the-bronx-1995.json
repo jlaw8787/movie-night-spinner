@@ -58,16 +58,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A supermarket chalkboard with the hovercraft pork and golf course jelly, but the cue never prints and the bike race, sword and wheelchair diamonds are missing.",
+  "overall": 3.4,
+  "verdict": "The biker cue, diamond cushion bao, bike race patties and hovercraft pork print, but the chalkboard has no notes so the gags are names only.",
   "missing": [
-   "Keung jumps down to stop the bike race",
    "Sword sidesweeps the hovercraft skirt",
-   "Diamonds in Danny's wheelchair cushion"
+   "Keung's big jump between buildings"
   ],
   "ideas": [
    "Swap the 'Hong Kong lemon iced tea' note for 'Diamonds in the wheelchair cushion, ask Danny'",
@@ -101,8 +100,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/rumble-in-the-bronx-1995-flat-3.json"
+  "ops": "audit/ops/rumble-in-the-bronx-1995-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

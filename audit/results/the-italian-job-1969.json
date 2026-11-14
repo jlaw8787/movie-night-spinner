@@ -22,16 +22,15 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 4,
+  "moments": 5,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The doors line, three little cars, the bus on the cliff and Bridger's spaghetti all print, on a plain beige canteen layout.",
+  "overall": 3.6,
+  "verdict": "The doors line, great idea, Great Aunt Nellie, everybody's bent, three Minis and the bus all print, on a plain beige canteen layout.",
   "missing": [
-   "Great Aunt Nellie's funeral",
-   "Hang on a minute lads, I've got a great idea",
-   "Everybody in the world is bent"
+   "Professor Peach and the traffic computer (the planning)",
+   "The Minis on the Fiat rooftop test track (the chase)"
   ],
   "ideas": [
    "Swap 'Charlie Croker's cheese toasts' for 'Bloody doors off' toasties, with the real line in the note",
@@ -39,7 +38,7 @@
    "Rename 'Alpine coach hot chocolate and espresso' to 'Hang on a minute lads' hot chocolate",
    "Swap the poster block for a flatter graphic of the three Minis so the left panel is not half empty"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -65,8 +64,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-italian-job-1969-flat-10.json"
+  "ops": "audit/ops/the-italian-job-1969-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -27,9 +27,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Pumbaa's line, Timon's umami and Zazu's drill all print, but a kiosk with a weather strip is a thin match for the film's world.",
+  "verdict": "Slimy yet satisfying, umami and Protect everything the light touches print, but a kiosk with a weather strip is a thin match for the film's world.",
   "missing": [
-   "Protect everything the light touches"
+   "Hakuna Matata",
+   "Scar's stampede",
+   "Zazu: this is not a drill"
   ],
   "ideas": [
    "Swap 'Crispy puffed rice noodles' for 'Umami grubs' crispy noodle clusters named after Timon's joke",
@@ -62,8 +64,16 @@
    "look": 4,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-lion-king-2019-flat-10.json"
+  "ops": "audit/ops/the-lion-king-2019-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

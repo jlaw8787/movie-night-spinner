@@ -57,12 +57,13 @@
   "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Cafe look with Valentino's line, Star and Sabino's 100th is warm, but there is a big empty gap beside the poster.",
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A dark cafe with Valentino's line, Star, Sabino's 100th and Dahlia's cookies, but the venue name prints tiny, the top right still has a gap and the bread and pan con tomate are the same dish.",
   "missing": [
-   "Magnifico trapped in his mirror",
-   "Wishes freed through the study ceiling"
+   "This Wish, Asha's song on the hill",
+   "Magnifico's forbidden green magic book",
+   "Magnifico trapped in his staff's mirror is footer only"
   ],
   "ideas": [
    "Swap 'Dahlia's star cookies' note for the Star arriving scene",
@@ -97,8 +98,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/wish-2023-flat-11.json"
+  "ops": "audit/ops/wish-2023-flat-11.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

@@ -22,24 +22,22 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 4,
+  "moments": 5,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Danger Zone wings, Goose at the piano and the wingman line all print, but the food is plain and the back panel has a doubled logo.",
+  "overall": 3.8,
+  "verdict": "The O Club tab prints the need for speed, Talk to me Goose, Great Balls of Fire, the tower, I am dangerous and the wingman line, though the food is plain bar fare.",
   "missing": [
-   "I am dangerous (Maverick to Iceman)",
-   "Buzzing the control tower",
-   "Hop 31 and the flat spin",
-   "Maverick and Goose singing to Charlie, only as a song title"
+   "The flat spin (Goose's last hop)",
+   "The inverted MiG and the Polaroid (the opening)"
   ],
   "ideas": [
    "Swap 'Tequila sunrise' note for 'Maverick and Goose serenade Charlie'.",
    "Swap 'Iceman's frozen lemon lager slushie' note for 'I am dangerous'.",
    "Add the hard deck as a tab-stamp joke."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -66,8 +64,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/top-gun-1986-flat-10.json"
+  "ops": "audit/ops/top-gun-1986-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

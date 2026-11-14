@@ -22,17 +22,17 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The Midtown cafeteria and Delmar's number five fit, but the rest is generic school lunch and the Vulture and Washington Monument rescue are absent.",
+  "overall": 3.4,
+  "verdict": "Delmar's number five, the ferry, the Washington Monument, Karen and Ned's Death Star all print in a plain Midtown cafeteria.",
   "missing": [
-   "Washington Monument elevator rescue",
    "Captain America fitness videos",
-   "Ned and the Lego Death Star",
-   "Toomes the Vulture"
+   "Toomes driving Peter to the dance",
+   "Peter trapped in the Damage Control vault",
+   "Happy and the plane crash at Coney Island"
   ],
   "ideas": [
    "Swap 'Decathlon team bubble tea' for 'Lego Death Star cake pops' with a note about Ned dropping the set.",
@@ -66,8 +66,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/spider-man-homecoming-2017-flat-4.json"
+  "ops": "audit/ops/spider-man-homecoming-2017-flat-4.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

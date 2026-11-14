@@ -42,15 +42,15 @@
  "checked_ok": 9,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "A good looking market stall, but the dishes carry no notes on the menu and the Barnabas cue and fox jogging gag don't print.",
+  "overall": 3.4,
+  "verdict": "A good looking market stall with the dried fruit heist, Barnabas, the jogging fox and the bad seed, but the dishes themselves are ordinary.",
   "missing": [
-   "Barnabas names the target, the dried fruit (cue)",
-   "The fox on a plant-based diet, try jogging (juice note)"
+   "The pet shop rescue (Gloucester)",
+   "Thomas's tomatoes in the garden (the McGregor house)"
   ],
   "ideas": [
    "Swap 'Honey oat and almond crunch mix' for a 'Dried fruit heist mix: lasts forever'.",
@@ -83,8 +83,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/peter-rabbit-2-the-runaway-2021-flat-3.json"
+  "ops": "audit/ops/peter-rabbit-2-the-runaway-2021-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

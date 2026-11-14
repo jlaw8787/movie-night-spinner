@@ -50,16 +50,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Fred, Sam, Shrek night and Bob Marley are in now and the lab sheet suits the empty city, but the two corn dishes read alike.",
+  "overall": 3.6,
+  "verdict": "Fred, Sam, the noon broadcast, Shrek night and Bob Marley print on a lab sheet that suits the empty city, but the two corn dishes read alike.",
   "missing": [
-   "The radio broadcast from South Street Seaport",
-   "God didn't do this. We did.",
-   "I like Shrek recited with Anna and Ethan"
+   "God didn't do this. We did. (Neville and Anna)",
+   "I like Shrek recited with Anna and Ethan (only a pudding name)",
+   "Neville hitting golf balls off the jet on the carrier (the morning)"
   ],
   "ideas": [
    "Swap 'Pan-fried steak' note 'Cut one for Sam, the best dog in New York' for a Shrek night line: 'Say every line along with the video.'",
@@ -67,7 +67,7 @@
    "Rename 'Neville's shelter pantry rice pudding' to 'Fred's hello pudding' to use the mannequin he says hello to.",
    "Swap the printed 'ALL AREAS' badge text for 'IMMUNE' so the badge ties to his blood and the cure."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -93,8 +93,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/i-am-legend-2007-flat-7.json"
+  "ops": "audit/ops/i-am-legend-2007-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

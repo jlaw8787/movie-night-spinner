@@ -5,17 +5,17 @@
  "checked_ok": 18,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A tidy ration sheet with potatoes and Lewis's disco, but the botanist line, duct tape and Pathfinder still don't print.",
+  "overall": 3.4,
+  "verdict": "A clean Hab ration sheet with the potato crop, Pathfinder, water from rocket fuel, the Rich Purnell manoeuvre and Lewis's disco, though the botanist line and duct tape still don't print.",
   "missing": [
-   "Greatest botanist on this planet (note)",
-   "Duct tape on the Hab (wink)",
-   "Solving one problem at a time, sol logs (wink)",
-   "Pathfinder (wink)"
+   "I'm the greatest botanist on this planet",
+   "Duct tape on the Hab",
+   "Space pirate in international waters",
+   "Watney flying like Iron Man at the end"
   ],
   "ideas": [
    "Swap 'Red planet hummus' note for 'Held together with duct tape' as a Hab gag.",
@@ -48,8 +48,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-martian-2015-flat-4.json"
+  "ops": "audit/ops/the-martian-2015-flat-4.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

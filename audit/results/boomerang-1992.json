@@ -39,10 +39,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Jet magazine, Strange's merger party, Tyler and Gerard, the feet and the Star Trek reruns print in a smooth hotel menu, but the cue is missing and the look is quiet.",
+  "verdict": "A smooth hotel menu with Jet magazine, Strange's merger party, the feet rule and the Star Trek reruns, but the cue still doesn't print and the look is quiet.",
   "missing": [
-   "Cue (Thanksgiving dinner) does not print",
-   "Rooter to tooter"
+   "Thanksgiving dinner cue (Marcus's apartment)",
+   "Rooter to tooter (Thanksgiving dinner)",
+   "Lady Eloise and the Boomerang perfume ad (ad shoot)"
   ],
   "ideas": [
    "Swap 'Bowling alley black bean nachos' for 'Lost dog Kirby chilli dogs' with the note 'Missing since Tuesday.'",
@@ -76,8 +77,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/boomerang-1992-flat-5.json"
+  "ops": "audit/ops/boomerang-1992-flat-5.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

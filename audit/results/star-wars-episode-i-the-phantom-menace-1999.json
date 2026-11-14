@@ -22,17 +22,16 @@
  "checked_ok": 18,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Watto's shop sign and the bigger fish note print, but the Jar Jar and bad feeling winks are dropped and the board is just dish names.",
+  "overall": 3.6,
+  "verdict": "Watto's sign, the bigger fish note, Jar Jar and the bad feeling now print, but the dishes have no notes so the board is mostly names.",
   "missing": [
-   "Mesa your humble servant (Jar Jar)",
-   "I have a bad feeling about this (Obi-Wan)",
-   "Now this is podracing",
-   "Republic credits are no use out here"
+   "Now this is podracing (the race)",
+   "Darth Maul's double-bladed lightsaber duel (Duel of the Fates)",
+   "Yousa in big doo-doo this time (Jar Jar)"
   ],
   "ideas": [
    "Swap 'Tatooine blue milk' (first seen in Episode IV) for a Naboo pear cooler.",
@@ -40,7 +39,7 @@
    "Swap the 'Theed palace fennel pork' note for Qui-Gon: 'Be mindful of the living Force.'",
    "Add a Jar Jar swamp dish, 'Mesa stew', in place of 'Grilled corn with chilli butter'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -67,8 +66,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/star-wars-episode-i-the-phantom-menace-1999-flat-9.json"
+  "ops": "audit/ops/star-wars-episode-i-the-phantom-menace-1999-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

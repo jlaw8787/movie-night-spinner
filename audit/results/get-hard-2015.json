@@ -22,16 +22,15 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "The car wash truck and dish names carry the jokes, but no dish notes or cue print, so the prison riot and Wall Street Journal and a forty are lost.",
+  "overall": 3.6,
+  "verdict": "The notes print now, so the mock riot, the Boyz n the Hood dinner and a Wall Street Journal and a forty all land on a strong car wash truck board.",
   "missing": [
-   "Mock prison riot with the staff (James's house)",
-   "A Wall Street Journal and a forty (the last scene)",
-   "Boyz n the Hood retelling at dinner (the car wash)"
+   "Plain rice and water prison diet",
+   "The gay brunch lesson"
   ],
   "ideas": [
    "Swap 'Vintage champagne by the glass' for 'A Wall Street Journal and a forty', the perfect Sunday from the last scene",
@@ -39,7 +38,7 @@
    "Swap 'Bel Air salmon roe blinis' for 'Plain rice and water', the prison diet Darnell sets",
    "Swap the 'Fee: paid in full' stamp for 'Ankle monitor: do not cross the county line'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -69,8 +68,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/get-hard-2015-flat-2.json"
+  "ops": "audit/ops/get-hard-2015-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

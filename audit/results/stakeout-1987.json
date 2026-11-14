@@ -27,13 +27,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "Good stakeout snacks and the not a boating accident cod, but the chalkboard truck still isn't a parked car and most of the new notes don't print.",
+  "verdict": "The doughnuts, trivia snack mix and not a boating accident cod are good, but the truck layout drops every note and a chalkboard window is not a parked car.",
   "missing": [
-   "Movie trivia game (only in the cue, not on the board)",
-   "Where are my donuts? (note does not print)",
-   "Lecce as telephone lineman (note does not print)",
+   "Where are my donuts? (Reimers)",
    "Cops hiding under Maria's bed (only on the poster)",
-   "Paper mill showdown"
+   "The paper mill showdown (the finale)"
   ],
   "ideas": [
    "Swap 'Cold fried chicken drumsticks' for 'Reimers' second lunch, eaten in the dark'.",
@@ -66,8 +64,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/stakeout-1987-flat-4.json"
+  "ops": "audit/ops/stakeout-1987-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

@@ -30,18 +30,16 @@
  "checked_ok": 10,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "The hospital ration sheet is right, but the reworked notes and the cue do not print, so Freddy's lines are still missing.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The ward meal order now prints Nancy's house line, Joey's tongue and Kincaid, but Welcome to prime time and Kristen's rhyme are still missing and the food is plain hospital fare.",
   "missing": [
-   "Welcome to prime time (does not print)",
-   "Feeling tongue-tied, Joey (does not print)",
-   "Nancy: I used to live in this house (signed note does not print)",
-   "Roland: Nobody's putting me to sleep (does not print)",
-   "Kristen's rhyme, Seven eight better stay up late"
+   "Welcome to prime time (Freddy and Jennifer, the TV)",
+   "Seven, eight, better stay up late (Kristen's rhyme)",
+   "Freddy's tongue phone and Kristen's dream house pig (the dreams)"
   ],
   "ideas": [
    "Swap 'Westin Hills stay-awake iced coffee' for 'Kristen's coffee grounds and cola', after how she stays awake on the ward.",
@@ -49,7 +47,7 @@
    "Swap the 'Ration sheet. Eat with your own spoon.' line for Kristen's rhyme 'Seven, eight, better stay up late.'",
    "Print 'Welcome to prime time' under the popcorn line for the TV room, in place of the Dick Cavett note."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -76,8 +74,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/a-nightmare-on-elm-street-3-dream-warriors-1987-flat-2.json"
+  "ops": "audit/ops/a-nightmare-on-elm-street-3-dream-warriors-1987-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

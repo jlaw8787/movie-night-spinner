@@ -34,16 +34,17 @@
  "checked_ok": 16,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.2,
-  "verdict": "Fernet, the pearls and Girl's gotta eat print and the Bane photo works, but a Florence cafe and a stadium ticket on one menu pull in two directions.",
+  "overall": 3.4,
+  "verdict": "The Pit, the field collapse, the pearls, Girl's gotta eat and Robin all print with a great Bane photo, but a Florence cafe and a stadium ticket still pull two ways.",
   "missing": [
-   "The Bat hauling the bomb",
+   "The Bat hauling the bomb out to sea",
    "Bane breaking Batman's back",
-   "The Pit and the climb out as a dish"
+   "Bane: you merely adopted the dark",
+   "Deshi basara chant in the Pit"
   ],
   "ideas": [
    "Swap 'Stadium game day pretzels' for 'Pit prison bread' with a Bane line.",
@@ -77,8 +78,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-dark-knight-rises-2012-flat-4.json"
+  "ops": "audit/ops/the-dark-knight-rises-2012-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

@@ -54,16 +54,17 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A department store tea room with Fred's faith line, the Thanksgiving dinner and the courtroom letters printing, but the Gimbels, house and cane moments are missing.",
+  "overall": 3.6,
+  "verdict": "A department store tea room with Gimbels, the dead letters, the Thanksgiving dinner, the cane house and Fred's faith line all printing.",
   "missing": [
-   "Macy's Santa sending shoppers to Gimbels",
-   "Susan: It's silly, but I believe",
-   "The For Sale house and the cane"
+   "Kris speaking Dutch to the little girl",
+   "The mail sacks emptied in court",
+   "Susan: I believe, I believe, it's silly but I believe",
+   "Kris hitting Sawyer with his cane"
   ],
   "ideas": [
    "Swap 'Doris's Thanksgiving roast turkey' for 'Parade day roast turkey' and move the cue to the mailbags scene.",
@@ -71,7 +72,7 @@
    "Swap the 'Waldorf salad' house dish for a 'Gimbels lunch plate' with the note 'Macy's sends shoppers to Gimbels. Kris insists.'",
    "Swap the stamp 'Counter 34' for 'Dream house, For Sale' to tie the back page to the ending."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -96,8 +97,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/miracle-on-34th-street-1947-flat-7.json"
+  "ops": "audit/ops/miracle-on-34th-street-1947-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

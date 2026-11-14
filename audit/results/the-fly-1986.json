@@ -35,11 +35,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The steak test, vomit drop doughnuts and the Bartok party print on a dark lab sheet, but Be afraid does not print and the Veronica badge shows the Brundlefly photo.",
+  "verdict": "A sharp lab ration sheet with the steak test, vomit drop doughnuts, the Bartok party and arm wrestling, but Be afraid only sits in the footer and Veronica's badge still shows the Brundlefly.",
   "missing": [
-   "Be afraid. Be very afraid.",
-   "Brundle Museum of Natural History",
-   "I'm an insect who dreamt he was a man"
+   "Be afraid. Be very afraid. as a real note, not footer",
+   "I'm an insect who dreamt he was a man",
+   "The Brundle Museum of Natural History",
+   "The baboon that comes through inside out"
   ],
   "ideas": [
    "Swap the note on 'Sugar dusted doughnuts' for 'Dissolved first, then eaten. Ask the chef how.'",
@@ -70,8 +71,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-fly-1986-flat-9.json"
+  "ops": "audit/ops/the-fly-1986-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

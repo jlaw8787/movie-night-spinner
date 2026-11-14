@@ -73,8 +73,12 @@
   "tone": 4,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Bluntman and Chronic, the birds pudding and the inker line give it some bite, but the dark neon board feels more arcade than Jersey diner.",
-  "missing": [],
+  "verdict": "Bluntman and Chronic, the birds pudding, the hockey game and the inker line give it bite, but the dark neon board feels more arcade than Jersey diner.",
+  "missing": [
+   "You're a tracer, Banky (the comic con panel)",
+   "Alyssa's Finger Cuffs story (the bar)",
+   "Holden's threesome proposal (the end)"
+  ],
   "ideas": [
    "Swap 'Diner patty melt on rye' note for 'Where Silent Bob tells Holden about Amy.'",
    "Swap 'Jersey ham, egg and cheese sliders' note for 'Bluntman and Chronic residual pay, handed over with a side of chips.'",
@@ -107,8 +111,16 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/chasing-amy-1997-flat-5.json"
+  "ops": "audit/ops/chasing-amy-1997-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

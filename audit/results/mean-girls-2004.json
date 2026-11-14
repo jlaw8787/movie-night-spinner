@@ -22,18 +22,17 @@
  "checked_ok": 11,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Pink Wednesdays, the Plastics and You can't sit with us print, but the Glen Coco bark note did not, and several dishes have bare notes.",
+  "overall": 3.6,
+  "verdict": "A pink North Shore cafeteria with Wednesdays, butter carb, fetch, Glen Coco, the Burn Book and You can't sit with us all printing.",
   "missing": [
-   "The Burn Book",
-   "Is butter a carb?",
-   "Stop trying to make fetch happen",
-   "Four for you, Glen Coco",
-   "The Mathletes"
+   "Jingle Bell Rock (talent show)",
+   "She doesn't even go here! (gym assembly)",
+   "The limit does not exist (Mathletes final)",
+   "Regina hit by the bus"
   ],
   "ideas": [
    "Swap 'Pink cafeteria wraps' note for 'On Wednesdays we wear pink'.",
@@ -41,7 +40,7 @@
    "Add a Kalteen-style snack bar to replace 'Candy cane gram peppermint bark' note.",
    "Swap the strawberry smoothie note for 'Stop trying to make fetch happen' as a printed line."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,8 +69,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/mean-girls-2004-flat-7.json"
+  "ops": "audit/ops/mean-girls-2004-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

@@ -39,10 +39,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "Don't eat the car, the drool jokes and Scott's real line now print, but the beach kiosk and surf report still have little to do with the film.",
+  "verdict": "Don't eat the car, the drool jokes, Camille and Scott's real line print, but the beach kiosk and surf report have little to do with the film and four dishes are bare.",
   "missing": [
-   "Hooch and Camille",
-   "Scott's house wrecked"
+   "Amos Reed's murder at the boatyard (opening)",
+   "Hooch takes the bullet (finale)",
+   "Scott's house rules lecture to Hooch",
+   "Hooch in the stakeout car"
   ],
   "ideas": [
    "Swap the surf report for a stakeout log with the line 'Hooch ate the notes.'",
@@ -77,8 +79,16 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/turner-hooch-1989-flat-4.json"
+  "ops": "audit/ops/turner-hooch-1989-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

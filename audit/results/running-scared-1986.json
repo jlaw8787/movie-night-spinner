@@ -17,16 +17,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The Key West bar dream and the bulletproof vest cue print and the food is well matched, but the cargo ship, the L train and the atrium showdown are missing.",
+  "overall": 3.6,
+  "verdict": "The Key West bar dream, bar fund, cargo ship, vests and atrium showdown all print and the food fits, but the writing could be funnier.",
   "missing": [
-   "Final fight in the State of Illinois Center atrium",
    "Chicago L train chase",
-   "Cargo ship and the Uzis"
+   "Snake and the wired informant",
+   "Danny's bright yellow taxi car chase"
   ],
   "ideas": [
    "Swap 'Chicago hot dogs' note for 'Bulletproof vest optional'.",
@@ -34,7 +34,7 @@
    "Rename 'Chicago Italian beef' to 'Cargo ship Italian beef'.",
    "Add the Uzi cache to the overheard line."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -58,8 +58,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/running-scared-1986-flat-8.json"
+  "ops": "audit/ops/running-scared-1986-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

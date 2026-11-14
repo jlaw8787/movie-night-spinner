@@ -10,8 +10,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The lights from space line, Atomic Warlord meatballs and the frozen lake list are in, but the recipe box layout and plain dish copy keep it generic.",
-  "missing": [],
+  "verdict": "Seen from space, the plug cue, Atomic Warlord meatballs and the frozen lake list all print, but the recipe box layout and plain dish copy keep it generic.",
+  "missing": [
+   "Fries and chocolate milk Christmas memory",
+   "The camel and the Christmas pageant"
+  ],
   "ideas": [
    "Swap 'Christmas lights caprese skewers' note for 'The horses and the frozen lake.'",
    "Swap 'Steve Finch's perfect roast potatoes' note for the burned tree lot.",
@@ -45,8 +48,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/deck-the-halls-2006-flat-2.json"
+  "ops": "audit/ops/deck-the-halls-2006-flat-2.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

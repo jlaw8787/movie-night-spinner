@@ -63,9 +63,9 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Cue, Keep moving forward, Uncle Joe's toast, Doris and Tiny all print now, but the airline paper still doesn't feel like the Robinson house.",
+  "verdict": "Keep moving forward, the toast, Doris, Tiny and the frog band all print with a good frog photo, but the airline paper still isn't the Robinson house.",
   "missing": [
-   "Frankie and the frog band (Robinson house)"
+   "Ready, aim, FIRE at the meatball battle (no cue prints)"
   ],
   "ideas": [
    "Swap 'Science fair chicken nuggets and dips' note for 'Uncle Joe's seen the toast'",
@@ -99,8 +99,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/meet-the-robinsons-2007-flat-7.json"
+  "ops": "audit/ops/meet-the-robinsons-2007-flat-7.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -51,13 +51,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The Oriental Saloon and the huckleberry cue are right, but the Latin and O.K. Corral nods are tiny footer text and the dishes carry no wit.",
+  "verdict": "The Oriental Saloon, huckleberry cue and the defile line are right, but the Latin and O.K. Corral nods are tiny footer text and the dishes have little wit.",
   "missing": [
-   "Doc and Ringo trading Latin (only in the footer)",
-   "The O.K. Corral gunfight (only in the footer)",
-   "Curly Bill's red sash Cowboys",
-   "You're a daisy if you do (not on the menu)",
-   "Wyatt walking into the creek (riverside)"
+   "You're a daisy if you do (the saloon)",
+   "Doc and Ringo trading Latin (footer only)",
+   "Curly Bill's red sash Cowboys (the street)",
+   "Wyatt walking into the creek (the river)"
   ],
   "ideas": [
    "Swap 'Huckleberry gin fizz' note to match 'I'm your huckleberry'.",
@@ -90,8 +89,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/tombstone-1993-flat-10.json"
+  "ops": "audit/ops/tombstone-1993-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

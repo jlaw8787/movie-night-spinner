@@ -37,13 +37,14 @@
   "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Mr Pink's tipping line, Like a Virgin and K-Billy print, but the face-one sheet is a big empty note panel and the food is plain diner fare.",
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Mr Pink's tipping line, Like a Virgin, K-Billy, the Mexican standoff and the little doggie line all print on a dark diner layout.",
   "missing": [
-   "Mexican standoff",
-   "Are you gonna bark all day, little doggie",
-   "Mr. Blonde's razor (only a name-drop)"
+   "Mr. Blonde, the razor and Stuck in the Middle with You",
+   "Mr. Orange's commode story",
+   "Mr. White and Mr. Orange bleeding out in the car",
+   "Colour names argument (Mr. Pink, why am I Mr. Pink)"
   ],
   "ideas": [
    "Swap 'Fresh-squeezed grapefruit juice' for 'Mr. Blonde's straight razor lemonade' as a nod to the ear scene.",
@@ -76,8 +77,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/reservoir-dogs-1992-flat-3.json"
+  "ops": "audit/ops/reservoir-dogs-1992-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

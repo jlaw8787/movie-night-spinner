@@ -18,17 +18,16 @@
  "checked_ok": 12,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good circus museum board with Barnum's real line and This Is Me cue, but the songs and the elephant arrival are mostly missing.",
+  "overall": 3.6,
+  "verdict": "A strong Barnum museum board with This Is Me, the elephant arrival, Jenny Lind and the troupe, but two of the big songs are still missing.",
   "missing": [
    "A Million Dreams",
    "Come Alive",
-   "Rewrite the Stars trapeze duet",
-   "Barnum arriving on an elephant"
+   "Rewrite the Stars trapeze duet"
   ],
   "ideas": [
    "Swap 'Sideshow red toffee apples' for 'Elephant ears' fried dough, for Barnum's elephant arrival.",
@@ -36,7 +35,7 @@
    "Replace the 'Big top caramel popcorn' note with 'The Greatest Show' popcorn bucket.",
    "Replace 'Combo 17' with 'The Greatest Combo': one of each, under the Barnum ringmaster hat."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -63,8 +62,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-greatest-showman-2017-flat-9.json"
+  "ops": "audit/ops/the-greatest-showman-2017-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

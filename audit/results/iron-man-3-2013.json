@@ -47,12 +47,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "Harley's Garage and the Mark 42 tag set the scene, but the truck layout drops the item notes so the scratchers, bunny and turkey lines never print.",
+  "verdict": "Harley's Garage and the Mark 42 tag set the scene, but the truck layout still drops the item notes so the bunny, turkey and Christmas lines never print.",
   "missing": [
-   "Harley's dad who went out for scratchers",
-   "The big bunny: Relax about it",
-   "Christmas, and Savin asking Harley what he wants",
-   "The House Party Protocol"
+   "The big bunny: Relax about it (Christmas gift)",
+   "Savin asking Harley what he wants for Christmas",
+   "The House Party Protocol (the finale)",
+   "Tony's panic attacks (the diner)"
   ],
   "ideas": [
    "Swap 'Christmas turkey roll with sage stuffing' for 'Honey-roast ham' and use the Vice President's line about it.",
@@ -86,8 +86,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/iron-man-3-2013-flat-3.json"
+  "ops": "audit/ops/iron-man-3-2013-flat-3.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

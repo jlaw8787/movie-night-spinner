@@ -51,12 +51,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The photo booth strip and prom framing suit the film, but most of the new notes are dropped by the layout so only the grain mill line prints.",
+  "verdict": "The prom ticket, photo strip and grain mill note look right, but none of the dish notes print, so the menu is a list of names and most of the film's moments are gone.",
   "missing": [
    "Ren reading Bible verses to the council (the town hall)",
-   "Tractor game of chicken (the farm road)",
    "Ren's warehouse dance (the grain mill)",
-   "Ren's yellow car (the opening)"
+   "Let's Hear It for the Boy (Willard's lessons)",
+   "Ren's yellow Beetle (the opening)"
   ],
   "ideas": [
    "Swap the 'Hush puppies' house note for a Let's Hear It for the Boy nod.",
@@ -91,8 +91,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/footloose-1984-flat-6.json"
+  "ops": "audit/ops/footloose-1984-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

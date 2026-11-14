@@ -60,8 +60,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The sign, Church, Pascow, Jud's stonier soil line and the porch beer all print on a recipe box layout, though the food is still plain home cooking.",
-  "missing": [],
+  "verdict": "Recipe box with the sign, Church, Pascow, Jud's stonier soil line and the porch beers, but the food is plain home cooking and two mains have no note.",
+  "missing": [
+   "Zelda, Rachel's sister (the flashback)",
+   "Gage's scalpel (the finale)"
+  ],
   "ideas": [
    "Swap the tagline 'Spooky Maine cemetery. Fresh snags on the barbie.' for 'Sometimes, dead is better.'",
    "Swap 'Maine red snapper hot dogs' for a plain 'Cold steak for Church', the raw steak Louis uses on the cat.",
@@ -93,8 +96,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/pet-sematary-1989-flat-8.json"
+  "ops": "audit/ops/pet-sematary-1989-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

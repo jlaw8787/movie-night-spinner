@@ -70,15 +70,16 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 2,
-  "overall": 2.8,
-  "verdict": "The Deal or No Deal rolls and Leckie's question now print, but the grey wall and Smurf photo make it a plain family table with no menace.",
+  "overall": 3.0,
+  "verdict": "Smurf's kiss, Deal or No Deal, Leckie's question and the J needs to go cue now print, but the grey wall and pastel EAT magnets still give it no menace.",
   "missing": [
-   "Smurf, the kiss on the lips and the family hold",
-   "J needs to go (only in the cue)"
+   "Smurf's line to J after Baz is shot (the family hold)",
+   "Pope's menace towards Nicky",
+   "The shopping centre car park ambush"
   ],
   "ideas": [
    "Swap the 'Smurf cooks for her boys' tagline for Smurf's own kind of warning.",
@@ -115,8 +116,16 @@
    "look": 2,
    "overall": 2.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/animal-kingdom-2010-flat-1.json"
+  "ops": "audit/ops/animal-kingdom-2010-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 2,
+   "overall": 2.8
+  }
  }
 }

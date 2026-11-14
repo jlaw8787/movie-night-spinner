@@ -35,9 +35,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The Randwick pub with its counter meals chalkboard, the sheepdog and kangaroo line and Big Red dishes look right, but the Bobby and Tommy story doesn't print.",
+  "verdict": "The Randwick pub with its counter meals board, the sheepdog and kangaroo line and Big Red dishes look right, though the Bobby and Tommy story only gets one footer line.",
   "missing": [
-   "Bobby won't eat without Tommy (house line)"
+   "The 1930 Melbourne Cup win",
+   "The shooting attempt before the Cup",
+   "Tommy feeding Phar Lap",
+   "Phar Lap's death in California"
   ],
   "ideas": [
    "Change the 'c' prices to shillings and pence.",
@@ -68,8 +71,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/phar-lap-1983-flat-8.json"
+  "ops": "audit/ops/phar-lap-1983-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

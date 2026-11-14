@@ -37,11 +37,12 @@
   "moments": 4,
   "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "The blue face paint, Murron's thistle and the Stirling speech are in, but the freedom line itself never prints and the page is a standard campfire card.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The freedom line now prints with the face paint, Murron's thistle and Stirling, but it is still the stock campfire card and the quote is signed with the logo, not Wallace.",
   "missing": [
-   "They may take our lives, but never our freedom (Stirling speech)"
+   "Longshanks: the trouble with Scotland is it's full of Scots (only in the footer)",
+   "Wallace's last cry of Freedom (the execution)"
   ],
   "ideas": [
    "Swap the 'BUGLE CALL' label for 'Alba gu brath' with the cue.",
@@ -49,7 +50,7 @@
    "Swap 'Highland haggis bon bons' note for 'Stephen the Irishman wants seconds.'",
    "Swap the 'Chow line' heading for 'Before Stirling'."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -75,8 +76,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/braveheart-1995-flat-5.json"
+  "ops": "audit/ops/braveheart-1995-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

@@ -22,9 +22,11 @@
   "tone": 4,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The gags are in the notes now (chafing dish, Ramada's belly, enemy toast), but it is still a generic airline template with a doubled mess hall subtitle.",
+  "verdict": "The gags print well (Strogonoff, chafing dish, Ramada's belly, enemy toast) but it is still a generic airline template.",
   "missing": [
-   "Benson's pants short at the knees (only the poster shows it)"
+   "Lady and the Tramp spaghetti (date night)",
+   "Benson's war wounds (the briefing)",
+   "Topper bombing Saddam (the finale)"
   ],
   "ideas": [
    "Swap 'Airbase rib eye, corn and slaw' note for 'Admiral Benson thanks everyone for dinner nobody had'.",
@@ -59,8 +61,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/hot-shots-1991-flat-7.json"
+  "ops": "audit/ops/hot-shots-1991-flat-7.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

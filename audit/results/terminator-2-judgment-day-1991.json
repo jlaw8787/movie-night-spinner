@@ -37,13 +37,14 @@
   "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "The biker bar cue, Come with me, the Galleria and the Judgment Day forecast all print on a kiosk with a strong poster.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The Pescadero meal order with Come with me, Hasta la vista, NO FATE and the desert camp cue is a strong fit, though the food is plain.",
   "missing": [
-   "Hasta la vista, baby",
-   "NO FATE",
-   "Thumbs up into the molten steel"
+   "Thumbs up into the molten steel",
+   "The T-1000 as the hospital floor",
+   "Cyberdyne lab break-in",
+   "John teaching the Terminator to smile"
   ],
   "ideas": [
    "Swap the weather strip for a Cyberdyne style readout, 'System: Online, Model 101'.",
@@ -51,7 +52,7 @@
    "Swap 'Ice cold Mexican lager with lime' for 'Biker bar lager, borrowed along with the clothes'.",
    "Swap 'Elote with cotija and chilli' for 'Mall arcade corn dog' for the Galleria scene."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -75,8 +76,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/terminator-2-judgment-day-1991-flat-9.json"
+  "ops": "audit/ops/terminator-2-judgment-day-1991-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

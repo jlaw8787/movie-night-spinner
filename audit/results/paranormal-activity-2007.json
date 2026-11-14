@@ -10,8 +10,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Night-vision stills, the Ouija crackers, powder footprints and Katie's note all print, but it reads as a coffee shop postcard and the fish tacos note is filler.",
-  "missing": [],
+  "verdict": "Night vision stills, the Ouija crackers, powder footprints, Katie by the bed and her camera line all print, but it reads as a coffee shop postcard and the fish tacos are filler.",
+  "missing": [
+   "Katie dragged down the hall by her feet",
+   "The burnt photo found in the attic",
+   "The final lunge at the camera"
+  ],
   "ideas": [
    "Swap 'Late night takeaway pizza' for a 'Night 21 pot roast' with a cold plate left on the table.",
    "Swap 'Night-watch espresso martinis' for 'Baby powder' sweet dust dessert.",
@@ -42,8 +46,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/paranormal-activity-2007-flat-8.json"
+  "ops": "audit/ops/paranormal-activity-2007-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

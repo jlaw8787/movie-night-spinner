@@ -31,12 +31,13 @@
   "world": 4,
   "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "Sitka, the boat line, the fake heart attack and Ramone all print, but the lodge card is plain and the poster sits as a white block.",
+  "overall": 3.6,
+  "verdict": "Sitka, the boat line, Ramone, the eagle and the fake heart attack print with some dry jokes, but the poster sits as a white block on a plain lodge card.",
   "missing": [
-   "The awkward bathroom meeting"
+   "Grandma Annie's forest chant and Margaret's Get Low (the woods)",
+   "The awkward bathroom meeting (only in the footer)"
   ],
   "ideas": [
    "Swap 'Alaskan amber ale' note for Annie's 'Get Low' chant line and credit Annie.",
@@ -44,7 +45,7 @@
    "Swap the scouts 'Merit badges' for 'Ground rules for a fake fiance' to fit the film.",
    "Add a 'Medivac chopper' stamp tied to Annie's faked heart attack."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -71,8 +72,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-proposal-2009-flat-10.json"
+  "ops": "audit/ops/the-proposal-2009-flat-10.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

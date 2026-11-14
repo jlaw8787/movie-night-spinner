@@ -50,10 +50,11 @@
   "tone": 4,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The Freeze puns and Alfred notes all print in a tidy hotel menu, but the cue does not and the design is still polite and plain.",
+  "verdict": "The Freeze puns and Alfred notes all print in a tidy hotel menu, but the cue still does not and the design is polite and plain.",
   "missing": [
-   "Cue (Freeze freezes the charity auction) does not print",
-   "We're going to need a bigger cave (staff tag shows only 'A bigger cave')"
+   "Freeze freezes the charity diamond auction (cue does not print)",
+   "Alfred: we're going to need a bigger cave (staff tag shows only 'A bigger cave')",
+   "Bat-credit card in full (only a passing note on the scones)"
   ],
   "ideas": [
    "Swap 'Mr Freeze iced prawns' note for 'Everybody chill' on a block of ice.",
@@ -89,8 +90,16 @@
    "look": 2,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/batman-robin-1997-flat-5.json"
+  "ops": "audit/ops/batman-robin-1997-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

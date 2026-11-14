@@ -38,11 +38,9 @@
   "food": 3,
   "tone": 4,
   "look": 3,
-  "verdict": "Dark, deadpan lines like the knife jerky, stopped watches and the entry tag fit, but the campfire layout and food stay generic.",
+  "verdict": "Dark, deadpan lines like the knife jerky, stopped watches and Mick's tall stories fit, but the campfire layout and food stay generic.",
   "missing": [
-   "Head on a stick",
-   "Mick's tall stories as a bigger gag",
-   "Ben's camera footage of the ute at the petrol station (only a small footer line)"
+   "Head on a stick (left off on purpose)"
   ],
   "ideas": [
    "Swap 'Road trip honey soy roasted nuts' note for 'The petrol station where it began' to fix the roadhouse cue",
@@ -77,8 +75,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/wolf-creek-2005-flat-11.json"
+  "ops": "audit/ops/wolf-creek-2005-flat-11.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

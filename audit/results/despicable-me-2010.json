@@ -45,17 +45,17 @@
  "checked_ok": 14,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good Gru's lab ration sheet with the cookie robots line, the fluffy unicorn and Sleepy Kittens, though the shrink ray and Moon plot stay out of the dishes.",
+  "overall": 3.6,
+  "verdict": "Gru's lab ration sheet now prints the shrink ray, the Moon, cookie robots, the fluffy unicorn and Sleepy Kittens, though the dishes themselves stay fairly plain.",
   "missing": [
-   "Steal the Moon with the shrink ray",
-   "Light bulb gag (does not print)",
+   "Light bulb gag (the Minions)",
    "Dead guy pancakes (Edith)",
-   "Vector and his weapons"
+   "Vector stealing the pyramid",
+   "The fart gun (Dr Nefario)"
   ],
   "ideas": [
    "Swap 'Gru's lab crumbed chicken tenders' for 'Dead guy pancakes', with Edith's line as the note.",
@@ -63,7 +63,7 @@
    "Swap 'Theme park corn dogs' for 'Super Silly Fun Land corn dogs' with the fluffy unicorn prize.",
    "Swap the hot chocolate note for 'Gru reads One Big Unicorn, then bed.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -90,8 +90,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/despicable-me-2010-flat-6.json"
+  "ops": "audit/ops/despicable-me-2010-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

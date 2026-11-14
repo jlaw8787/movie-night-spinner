@@ -18,18 +18,15 @@
  "checked_ok": 11,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 4,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Cosy deli with a good Jack in Turkey line and the powdered milk can, but the doorstep note and the custard line don't print and the coffee shop is still invented.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A good looking 80s deli card where the doorstep basket, the phone in the shower, the pregnant disguise and Jack in Turkey now print, though the coffee shop is invented.",
   "missing": [
-   "The basket on the doorstep with Sylvia's note (opening)",
-   "The package in the small box (Mrs. Hathaway)",
-   "Jack disguised as a pregnant woman (the plan)",
-   "The phone in the shower (night feeds)",
-   "Soft stuff, what babies eat (custard note, not printed)"
+   "Soft stuff, what babies eat (custard)",
+   "Sylvia's note in the basket (opening)"
   ],
   "ideas": [
    "Swap the building photo for a still of the vestibule murals Michael paints.",
@@ -37,7 +34,7 @@
    "Swap 'We do not hold packages.' for 'We do not hold packages. Or babies.'",
    "Replace 'Burger Deluxe' with a 'Dealers' Special' joke about the powdered milk can."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -65,8 +62,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/three-men-and-a-baby-1987-flat-4.json"
+  "ops": "audit/ops/three-men-and-a-baby-1987-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

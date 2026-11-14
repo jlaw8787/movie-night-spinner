@@ -46,17 +46,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The feudal village kitchen has Mikey's pizza line and Hello mustard, but the Turtles themselves barely show and the layout is a generic parchment.",
+  "overall": 3.2,
+  "verdict": "Mikey's pizza line, the honour guard disguise, Hello mustard and the 60 hours print, but the parchment layout is generic and the food is ordinary.",
   "missing": [
-   "Turtles disguised as honor guards",
-   "Raphael gives Yoshi a yo-yo",
-   "Casey teaches the honor guards hockey",
-   "60 hours to get back"
+   "Raphael gives Yoshi a yo-yo (the village)",
+   "Casey teaches the honour guards hockey (the lair)",
+   "Walker the trader (the palace)"
   ],
   "ideas": [
    "Swap 'Time travel pepperoni pizza scrolls' note for Michelangelo teaching the village to make pizza.",
@@ -89,8 +88,16 @@
    "look": 2,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/teenage-mutant-ninja-turtles-iii-1993-flat-1.json"
+  "ops": "audit/ops/teenage-mutant-ninja-turtles-iii-1993-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

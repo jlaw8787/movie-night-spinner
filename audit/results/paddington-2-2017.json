@@ -39,9 +39,12 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "The marmalade sandwich, red sock sponge, hard stare line and bear pie all print, but it's a plain canteen tray with a blank strip under the poster.",
+  "verdict": "The marmalade sandwich, red sock sponge, bear pie and Knuckles's hard stare line all print on a tidy but generic canteen tray.",
   "missing": [
-   "Phoenix Buchanan in disguise (only a time slot)"
+   "If we're kind and polite, the world will be right (Aunt Lucy)",
+   "Paddington's window cleaning round",
+   "The barbershop disaster with the judge",
+   "Phoenix Buchanan's Rose's Turn finale (end credits)"
   ],
   "ideas": [
    "Swap 'Pink tea party Victoria sponge' for 'Pink uniform sponge' with the note 'One red sock in the wash. The whole yard went pink.'",
@@ -74,8 +77,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/paddington-2-2017-flat-8.json"
+  "ops": "audit/ops/paddington-2-2017-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

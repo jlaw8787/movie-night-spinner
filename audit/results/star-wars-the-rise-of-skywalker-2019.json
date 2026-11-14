@@ -38,11 +38,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.2,
-  "verdict": "The Pasaana invite carries the Lando line and a Rey Skywalker pavlova, but the menu is bare names and the winks do not print.",
+  "verdict": "The Pasaana invite carries Lando's line, Babu Frik and a Rey Skywalker pavlova, but most dishes are bare names.",
   "missing": [
-   "Palpatine fleet rising on Exegol (note dropped)",
-   "Chewie medal",
-   "I am all the Jedi"
+   "Palpatine's fleet rising on Exegol",
+   "Chewie's medal (the closing ceremony)",
+   "Somehow Palpatine returned (opening crawl)",
+   "Ben Solo and the Han memory (Kef Bir wreck)"
   ],
   "ideas": [
    "Swap 'Pomegranate and mint sharbat' note for 'Lando's last drink before he brings the whole galaxy'.",
@@ -75,8 +76,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/star-wars-the-rise-of-skywalker-2019-flat-4.json"
+  "ops": "audit/ops/star-wars-the-rise-of-skywalker-2019-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

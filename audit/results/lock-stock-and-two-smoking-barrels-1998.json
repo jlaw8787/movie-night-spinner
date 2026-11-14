@@ -69,16 +69,16 @@
  "checked_ok": 14,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Good British pub food and the tea quote, hatchet and IOU, but the wild west lettering does not suit a London crime film.",
+  "overall": 3.4,
+  "verdict": "Good British pub food with It's been emotional, the tea quote, the IOU and Bacon's ten pound pitch, but the wild west lettering does not suit a London crime film.",
   "missing": [
-   "It's been emotional (Big Chris)",
-   "Three card brag, three 3s beat three aces",
-   "Rory Breaker and the weed farm"
+   "Three card brag, three 3s beat three aces (the game)",
+   "Barry the Baptist's thrown hatchet (the wink dropped)",
+   "Rory Breaker and the weed farm (the shootout)"
   ],
   "ideas": [
    "Swap the saloon layout for a pub or card room layout, and replace 'Wanted for supper' with a debt notice from Harry.",
@@ -113,8 +113,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/lock-stock-and-two-smoking-barrels-1998-flat-3.json"
+  "ops": "audit/ops/lock-stock-and-two-smoking-barrels-1998-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

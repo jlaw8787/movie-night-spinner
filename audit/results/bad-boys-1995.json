@@ -32,14 +32,14 @@
  "checked_ok": 20,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "verdict": "Marcus as Mike and the french fry argument are in, but the Porsche cup holder joke and Julie Mott are gone and the tone is mild.",
+  "verdict": "Marcus as Mike, the french fry, Julie Mott, the cup holder and Captain Howard all print on a tidy precinct roster, though the breakroom venue is still a bit tame.",
   "missing": [
-   "No cup holder, no back seat in Mike's Porsche",
-   "Julie Mott, the witness who only talks to Mike"
+   "Whatcha gonna do, the Inner Circle theme (opening)",
+   "The stolen heroin from the evidence vault (the heist)"
   ],
   "ideas": [
    "Swap 'Fried sweet plantains' for 'Not about the french fry fries' with the Mike line in the note.",
@@ -47,9 +47,9 @@
    "Swap 'Captain Howard needs three before the briefing' for 'Do you want me to yell at you? I can do that'.",
    "Swap 'South Beach prawn fritters' note for 'Ether barrel fritters, handle with care' to nod to the car chase."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
-  "overall": 3.4,
+  "overall": 3.6,
   "rework": "2026-11-08",
   "iconic": [
    "Marcus pretending to be Mike (cue, wink, sandwich note)",
@@ -72,9 +72,17 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/bad-boys-1995-flat-5.json"
+  "ops": "audit/ops/bad-boys-1995-flat-5.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  },
  "checked": "2026-11-07"
 }

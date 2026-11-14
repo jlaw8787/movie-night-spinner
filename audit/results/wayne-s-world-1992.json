@@ -27,11 +27,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Bohemian Rhapsody, Schwing, We're not worthy and the sugar pucks all print on a clean Stan Mikita's diner layout.",
+  "verdict": "Bohemian Rhapsody, Schwing, We're not worthy, Party on and the sugar pucks all print on a clean Stan Mikita's diner layout.",
   "missing": [
-   "Party on, Wayne (only as a drink note)",
-   "Garth's Excalibur or the Mirthmobile hijack",
-   "Cassandra and the Gasworks"
+   "Garth's Dream Weaver moment (Stan Mikita's)",
+   "Shyeah, and monkeys might fly out of my butt (Wayne)",
+   "Extreme close-up (the basement show)",
+   "The Fender Stratocaster, Oh yes, it will be mine (the music shop)"
   ],
   "ideas": [
    "Swap the Spring Fling heading for 'Wayne's basement, live on cable.'",
@@ -64,8 +65,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/wayne-s-world-1992-flat-10.json"
+  "ops": "audit/ops/wayne-s-world-1992-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

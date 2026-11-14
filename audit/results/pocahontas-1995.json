@@ -39,8 +39,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "The ship's biscuit cue, Grandmother Willow, Ratcliffe's gold and the compass print, on a plain tan village menu that doesn't look like the film.",
-  "missing": [],
+  "verdict": "The ship's biscuit cue, Grandmother Willow, Ratcliffe's gold and the compass print, on a plain tan village menu.",
+  "missing": [
+   "Colors of the Wind",
+   "Percy and Meeko's feud"
+  ],
   "ideas": [
    "Swap 'Mess hall mains' and 'Bugle call' for village words such as 'Lodge Table' and 'Corn Call'.",
    "Swap 'Jamestown beef and onion pie' note for Ratcliffe digging for gold.",
@@ -72,8 +75,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/pocahontas-1995-flat-3.json"
+  "ops": "audit/ops/pocahontas-1995-flat-3.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

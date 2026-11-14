@@ -46,17 +46,14 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "verdict": "The bras cue, Lisa quote and photo booth strip work, but the prom layout is not from this film and the gags that were added got dropped.",
+  "verdict": "The bras cue, Lisa quote, mutant bikers, missile and Chet the toad print as dish names, but the prom layout is not this film's world.",
   "missing": [
-   "Pink Cadillac Eldorado",
-   "Mutant bikers crashing the party (sausage roll note dropped)",
-   "Pershing missile through the roof (wink dropped)",
-   "Chet as the toad creature",
-   "Wyatt's grandparents in the cupboard"
+   "Wyatt's grandparents in the cupboard",
+   "Gary's blues bar speech"
   ],
   "ideas": [
    "Swap 'Salt and vinegar chips with onion dip' note for a Cadillac Eldorado pink lemonade",
@@ -64,7 +61,7 @@
    "Swap the 'Prom night' header for a 'Wyatt's basement lab' header with printout paper",
    "Swap 'Cocktail sausage rolls' note for 'Bras on heads. Ceremonial.'"
   ],
-  "overall": 3,
+  "overall": 3.2,
   "flat": true,
   "done": true,
   "rework": "2026-11-08",
@@ -91,8 +88,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/weird-science-1985-flat-1.json"
+  "ops": "audit/ops/weird-science-1985-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

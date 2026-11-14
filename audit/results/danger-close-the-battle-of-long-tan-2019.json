@@ -46,16 +46,16 @@
  "checked_ok": 16,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "A Nui Dat mess tent with Little Pattie's satay and Major Smith's note, but Iroquois, rain and the roll call only appear as timetable labels and the poster leaves a blank patch below it.",
+  "overall": 3.4,
+  "verdict": "Nui Dat mess tent with the danger close cue, Smith not leaving 11 Platoon, Little Pattie and the Iroquois and roll call timetable, but the food and red look are generic.",
   "missing": [
-   "Major Smith refusing to leave 11 Platoon",
-   "Iroquois pilots flying in the ammunition resupply under fire (label only)",
-   "Roll call of the men who died (label only)"
+   "APCs arriving through the rain at the end",
+   "108 men against a regiment",
+   "Bob Buick holding 11 Platoon together"
   ],
   "ideas": [
    "Swap 'Ration pack chocolate orange pots' note for 'Danger close', the artillery call on 11 Platoon.",
@@ -89,8 +89,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/danger-close-the-battle-of-long-tan-2019-flat-2.json"
+  "ops": "audit/ops/danger-close-the-battle-of-long-tan-2019-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

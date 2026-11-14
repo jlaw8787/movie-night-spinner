@@ -69,14 +69,14 @@
  "checked_ok": 9,
  "vibe": {
   "world": 3,
-  "moments": 4,
+  "moments": 5,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "Boombox, the career speech, Keymaster and dare to be great all print, but the kiosk weather strip is odd and the pen is gone.",
+  "overall": 3.6,
+  "verdict": "Boombox, the career speech, Keymaster, dare to be great and the pen all print, but the kiosk weather strip still feels off for the film.",
   "missing": [
-   "The pen: she gave me a pen"
+   "Kickboxing, sport of the future (Lloyd)"
   ],
   "ideas": [
    "Swap 'Sweet and salty road trip snack mix' for 'Keymaster snack mix', since Lloyd holds the keys at the party",
@@ -84,7 +84,7 @@
    "Swap 'Dijon crusted salmon, crushed potatoes' for 'Jim Court's dinner salmon' (the night the IRS turns up)",
    "Swap the 'Out front' weather board for a 'Gas n' Sip' receipt, corn dog and Big Gulp style"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -110,8 +110,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/say-anything-1989-flat-8.json"
+  "ops": "audit/ops/say-anything-1989-flat-8.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

@@ -9,13 +9,13 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The forgotten birthday, the cake cue and Ted the Geek print, but the menu face drops every dish note, so the floppy disk bet and the sofa gag never show.",
+  "overall": 3.0,
+  "verdict": "The forgotten birthday, the cake cue and Ted the Geek print, but the menu face still drops most dish notes, so the gags sit in names only.",
   "missing": [
-   "Ted's floppy disk bet (note dropped)",
-   "Sam on the sofa while the grandparents take her room (note dropped)",
-   "Long Duk Dong",
-   "Jake's dad's Rolls-Royce"
+   "Long Duk Dong (the dance)",
+   "Ted's floppy disk bet (name only)",
+   "Sam's undies shown around the school",
+   "Jake's dad's Rolls-Royce (name only)"
   ],
   "ideas": [
    "Swap 'Wedding buffet chicken' for 'Rolls-Royce rice pilaf' only if Josh wants a joke, using Caroline in the car.",
@@ -48,8 +48,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/sixteen-candles-1984-flat-1.json"
+  "ops": "audit/ops/sixteen-candles-1984-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

@@ -37,12 +37,14 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "A chalkboard corner market with the gun shop line and the welcome home Doughboy theme, but the notes and cue do not print and the writing is thin.",
+  "overall": 3.0,
+  "verdict": "A chalkboard corner market with the welcome home Doughboy theme and gun shop line, but the board has no dish notes and the writing is thin.",
   "missing": [
-   "Ricky's SAT score",
-   "Furious and Tre fishing trip (note does not print)",
-   "Cue (Doughboy's barbecue) does not print"
+   "Furious and Tre fishing trip (cooking the fish)",
+   "Ricky's SAT score and the football recruiter",
+   "Doughboy: Either they don't know, don't show, or don't care",
+   "Ricky shot in the alley",
+   "Furious's gentrification speech in Compton"
   ],
   "ideas": [
    "Swap the 'Doughboy's welcome-home wings' note for 'Out and home. Plates first.'",
@@ -74,8 +76,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/boyz-n-the-hood-1991-flat-1.json"
+  "ops": "audit/ops/boyz-n-the-hood-1991-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

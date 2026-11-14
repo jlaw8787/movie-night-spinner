@@ -35,8 +35,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "A generic recipe box that now carries Malcolm's line, the volcano, Rexy and Eli Mills, Blue and the silly sausage, but the setting is a home kitchen.",
-  "missing": [],
+  "verdict": "Malcolm's line, the volcano, Blue, Rexy and Eli Mills and the silly sausage all print, but it is a home recipe box rather than the Lockwood estate.",
+  "missing": [
+   "Owen crawling from the lava, sedated",
+   "The Brachiosaurus left on the dock",
+   "The Indoraptor's claw at Maisie's window"
+  ],
   "ideas": [
    "Swap 'Isla Nublar chilli lime chicken and beans' note for 'Stampede special.'",
    "Swap 'Lockwood auction smoked salmon on rye' note for 'Sold to the highest bidder.'",
@@ -71,8 +75,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/jurassic-world-fallen-kingdom-2018-flat-7.json"
+  "ops": "audit/ops/jurassic-world-fallen-kingdom-2018-flat-7.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

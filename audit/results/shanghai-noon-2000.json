@@ -46,16 +46,15 @@
  "checked_ok": 9,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good Carson City saloon with the train ticket and noodles note, but chipichawa, the chopsticks and Roy buried in the sand don't print.",
+  "overall": 3.6,
+  "verdict": "A good Carson City saloon with John Wayne, the train ticket, Roy buried to his chin and the chopsticks, though chipichawa still does not print.",
   "missing": [
-   "Chipichawa",
-   "Chopsticks left in Roy's mouth",
-   "Roy buried up to his chin"
+   "Chipichawa (the Sioux)",
+   "Roy's cowboy lessons for Chon (the bath scene)"
   ],
   "ideas": [
    "Swap 'Chon Wang cornbread' note for 'Chon Wang? John Wayne?'",
@@ -63,7 +62,7 @@
    "Swap the 'Imperial train ticket' prop for a Sioux wedding invitation from Falling Leaves",
    "Swap 'Rye with a beer back' for 'Chipichawa rye', Roy's word for nobility"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -87,8 +86,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/shanghai-noon-2000-flat-9.json"
+  "ops": "audit/ops/shanghai-noon-2000-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

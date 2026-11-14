@@ -22,16 +22,14 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Somebody stop me and the Smokin Bongo cocktail print on a black and gold nightclub card, but the dessert has lost its sweet tooth line and nothing else is as loud as the film.",
+  "overall": 3.4,
+  "verdict": "Coco Bongo card with Somebody stop me, Smokin', Cuban Pete and the sweet tooth line, but the black and gold look is quiet for such a loud film.",
   "missing": [
-   "Cuban Pete with the cops",
-   "Daddys got a sweet tooth tonight",
-   "Balloon animals",
+   "Balloon animals (the alley)",
    "Yellow zoot suit (poster only)"
   ],
   "ideas": [
@@ -67,8 +65,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-mask-1994-flat-4.json"
+  "ops": "audit/ops/the-mask-1994-flat-4.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

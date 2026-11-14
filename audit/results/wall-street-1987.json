@@ -71,12 +71,14 @@
   "moments": 4,
   "food": 3,
   "tone": 4,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Lunch is for wimps, greed is good, the cigars and the Bluestar tip all print, but the first face has a big empty gap beside the poster.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Lunch is for wimps, greed is good, the cigars, Bluestar and Blue Horseshoe all print and both faces are now full.",
   "missing": [
-   "Money never sleeps, only as an espresso note",
-   "Bud's five minutes in Gekko's office, only in the cue"
+   "Gekko on the beach with his mobile phone",
+   "The most valuable commodity I know of is information",
+   "Bud's arrest at the office",
+   "Carl's heart attack"
   ],
   "ideas": [
    "Swap 'Cheesecake' note for 'Bud's box of Cuban cigars, on Gekko's birthday.'",
@@ -84,7 +86,7 @@
    "Rename 'Old fashioned' to 'The Teldar speech' with the note 'Greed is right. Greed works.'",
    "Swap 'Carl's cheeseburger' note for 'Carl wants Bluestar kept running.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -110,8 +112,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/wall-street-1987-flat-10.json"
+  "ops": "audit/ops/wall-street-1987-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

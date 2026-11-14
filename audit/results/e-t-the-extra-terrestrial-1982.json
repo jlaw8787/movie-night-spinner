@@ -10,9 +10,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "Phone home, the flying bikes, the geranium and the peanut butter candy trail all print, but it is still a generic camp card and the beer scene is missing.",
+  "verdict": "Phone home, the Reese's trail, the geranium, the frogs and the flying bikes all print, but it is still a generic camp card and the beer scene is missing.",
   "missing": [
-   "E.T. drinking the beer and Elliott drunk at school"
+   "E.T. drinking beer and Elliott drunk at school",
+   "E.T. dressed up in Gertie's wig and dress",
+   "I'll be right here (goodbye)"
   ],
   "ideas": [
    "Swap 'Alphabet crackers' (note: Cheddar crackers cut into little letters) for 'Phone home crackers' with a note about the household parts communicator.",
@@ -45,8 +47,16 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/e-t-the-extra-terrestrial-1982-flat-6.json"
+  "ops": "audit/ops/e-t-the-extra-terrestrial-1982-flat-6.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

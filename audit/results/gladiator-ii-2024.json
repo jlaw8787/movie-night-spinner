@@ -45,10 +45,11 @@
   "tone": 3,
   "look": 3,
   "overall": 3.4,
-  "verdict": "A Roman parchment menu with Macrinus's line, Dondus and the rhino note, but the layout is the same parchment as every other tavern.",
+  "verdict": "Macrinus's line, Dondus, the rhino and the flooded Colosseum all print on a tidy Roman parchment, but the dishes are standard Mediterranean and the look is the stock tavern sheet.",
   "missing": [
-   "The flooded Colosseum naval battle (the arena)",
-   "Baboons at Ostia (the arena)"
+   "Baboons at Ostia (the arena)",
+   "Lucius scooping arena sand (opening of the games)",
+   "Lucius quoting Virgil to Macrinus is only in the cue"
   ],
   "ideas": [
    "Swap 'Bread and circuses rosemary flatbread' note for Dondus: 'Dondus the consul gets the first slice'",
@@ -82,8 +83,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/gladiator-ii-2024-flat-6.json"
+  "ops": "audit/ops/gladiator-ii-2024-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

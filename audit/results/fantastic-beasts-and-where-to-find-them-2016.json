@@ -18,13 +18,12 @@
  "vibe": {
   "world": 3,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A good Kowalski ration sheet with the Niffler, Jacob's beast pastries, Occamy shells and the strudel cue, but the food notes are thin.",
+  "overall": 3.6,
+  "verdict": "A Kowalski bakery ration sheet with the Niffler, the beast pastries, Occamy shells, the suitcase swap and Queenie's strudel, on a lab badge layout that doesn't quite fit.",
   "missing": [
-   "The swapped suitcases (the bank)",
    "Gnarlak's Blind Pig (the speakeasy)",
    "Frank the Thunderbird over New York (the finale)"
   ],
@@ -34,7 +33,7 @@
    "Swap the note on '1926 New York beef pot roast' for 'Dougal the Demiguise is under the table. Nobody can see him.'",
    "Swap the note on 'Smoked paprika devilled eggs' for 'Occamy shells, Jacob's start-up money.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -61,8 +60,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/fantastic-beasts-and-where-to-find-them-2016-flat-6.json"
+  "ops": "audit/ops/fantastic-beasts-and-where-to-find-them-2016-flat-6.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

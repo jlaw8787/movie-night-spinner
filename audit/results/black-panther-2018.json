@@ -39,12 +39,12 @@
   "tone": 2,
   "look": 4,
   "overall": 3.2,
-  "verdict": "Good Wakanda market look with the Busan wings, herb dip and M'Baku stew, but the dish notes dropped out so the jokes about the waterfall, sandals and crossed arms never print.",
+  "verdict": "Good Wakanda market look with the Busan wings and M'Baku stew, but the truck layout still drops every dish note so the waterfall, sandals and crossed arms jokes never print.",
   "missing": [
-   "Wakanda forever (crossed arms)",
-   "What are those? Shuri's royal sandals",
-   "M'Baku yields at the waterfall (cue only)",
-   "Killmonger: bury me in the ocean"
+   "Wakanda forever crossed arms (only as a header)",
+   "What are those? Shuri's royal sandals (the lab)",
+   "Killmonger: bury me in the ocean (the ending)",
+   "Heart-shaped herb and the ancestral plane (only as a dish name)"
   ],
   "ideas": [
    "Swap the Shuri note for her real line 'I invite you to my lab and you just kick things around?!'",
@@ -81,8 +81,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/black-panther-2018-flat-2.json"
+  "ops": "audit/ops/black-panther-2018-flat-2.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 2,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

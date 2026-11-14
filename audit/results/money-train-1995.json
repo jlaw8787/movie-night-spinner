@@ -34,10 +34,11 @@
   "food": 3,
   "tone": 4,
   "look": 3,
-  "verdict": "A Cuban cafe by the subway with the 15,000 debt check and token booth nuts, but the guest check stamp overlaps the footer text.",
+  "verdict": "A Cuban cafe by the subway with the 15,000 debt, token booth nuts and New Year's Eve plans, but the guest check still covers the footer text.",
   "missing": [
-   "The Torch and the token booth fire (only a nuts note)",
-   "The New Year's Eve cue is not on the sheet"
+   "The Torch sets a token booth alight (only a nuts note)",
+   "Charlie driving the runaway money train",
+   "The brothers fighting over Grace"
   ],
   "ideas": [
    "Swap the guest check line 'Charlie: on the tab? NO.' for 'Mr. Brown: 15,000, due New Year's Day' stamped past due.",
@@ -67,8 +68,16 @@
    "look": 3,
    "overall": 2.8
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/money-train-1995-flat-7.json"
+  "ops": "audit/ops/money-train-1995-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

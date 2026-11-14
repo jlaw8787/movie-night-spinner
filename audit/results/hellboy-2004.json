@@ -94,15 +94,16 @@
  "checked_ok": 9,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.2,
-  "verdict": "Bureau break room with badge and ration sheet, and the candy, fireproof and six-a-day names land, but the plain notes and generic sliders and dogs keep it ordinary.",
+  "overall": 3.4,
+  "verdict": "Bureau break room with badge and ration sheet where the eggs, fireproof wings, no tongues and kittens all print, but the plain food and generic dogs keep it ordinary.",
   "missing": [
-   "Right Hand of Doom",
-   "Second date, no tongues"
+   "Right Hand of Doom (the fights)",
+   "Hellboy filing his horns down (his room)",
+   "Kroenen's clockwork and the gas masks (the mausoleum)"
   ],
   "ideas": [
    "Swap 'Hellboy's pancake stack' for 'Baby Ruth bars, Myers's peace offering' (Clay: 'Give him the candy').",
@@ -139,8 +140,16 @@
    "look": 3,
    "overall": 2.6
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/hellboy-2004-flat-3.json"
+  "ops": "audit/ops/hellboy-2004-flat-3.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

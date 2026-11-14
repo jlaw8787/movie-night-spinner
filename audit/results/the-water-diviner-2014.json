@@ -49,11 +49,10 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "Sepia hotel menu is handsome and the tea and coffee lines print, but it is a quiet menu for a war film.",
+  "verdict": "Sepia hotel menu is handsome and the cricket, coffee and dowsing lines print, but it stays a quiet menu for a war film.",
   "missing": [
-   "Orhan pitching the hotel at the dock",
-   "Joshua's three sons (footer only)",
-   "Cricket bat on the train (footer only)"
+   "Joshua dowsing for his sons at Gallipoli",
+   "Orhan pitching the hotel at the dock"
   ],
   "ideas": [
    "Swap 'Gallipoli Anzac biscuits' note for the cricket bat explained on the train",
@@ -88,8 +87,16 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-water-diviner-2014-flat-4.json"
+  "ops": "audit/ops/the-water-diviner-2014-flat-4.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

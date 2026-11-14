@@ -39,11 +39,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Fagin's houseboat chalkboard with Dodger's first-meeting line and Sykes's three sunrises, but the dish notes about Louie's cart and Jenny's birthday don't print.",
+  "verdict": "Fagin's houseboat chalkboard with Dodger's first line, the hot dog cart cue and Sykes's three sunrises, but the dish notes still drop out of the layout.",
   "missing": [
-   "Raiding Louie's hot dog cart (note dropped by the layout)",
-   "Jenny's birthday party",
-   "Why Should I Worry"
+   "Why Should I Worry (the street song)",
+   "Roscoe and DeSoto, Sykes's Dobermans",
+   "The subway chase finale",
+   "Georgette's Perfect Isn't Easy (the mansion)"
   ],
   "ideas": [
    "Swap the Dodger note for a safe one: 'Stick with the crew and you eat, kid.'",
@@ -76,8 +77,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/oliver-company-1988-flat-8.json"
+  "ops": "audit/ops/oliver-company-1988-flat-8.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

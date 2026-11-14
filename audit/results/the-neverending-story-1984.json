@@ -50,9 +50,9 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "Bastian's attic, Morla, Falkor, Rockbiter and Moon Child all print, but it is still a cosy recipe box with no real Fantasia feel.",
+  "verdict": "Bastian's attic, Artax, Morla, Falkor, Rockbiter and Moon Child all print, but it is still a cosy recipe box with no real Fantasia feel.",
   "missing": [
-   "Gmork in the ruins"
+   "Gmork in the ruins (Spook City)"
   ],
   "ideas": [
    "Swap 'Urgl's healing soup' note for a Morla line, 'Soup for a tired turtle who couldn't care less'.",
@@ -84,8 +84,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-15",
-  "ops": "audit/ops/the-neverending-story-1984-flat-10.json"
+  "ops": "audit/ops/the-neverending-story-1984-flat-10.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

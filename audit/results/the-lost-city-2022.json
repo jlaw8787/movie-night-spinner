@@ -22,11 +22,12 @@
   "tone": 3,
   "look": 4,
   "overall": 3.2,
-  "verdict": "The book tour invite carries the sequin line and the hammock seating, but the menu is bare dish names and the other winks do not print.",
+  "verdict": "The book tour invite and the sequin, leech and Dash lines print, but the mains, dessert and drink notes drop so the back half is bare names.",
   "missing": [
-   "Leeches",
-   "Jack Trainer mid-credits",
-   "Dash and Alan on every cover"
+   "Jack Trainer mid-credits (drink name only)",
+   "Crown of Fire is red seashells (name only)",
+   "Alan's leech check (the river)",
+   "Fairfax kidnapping Loretta (the launch)"
   ],
   "ideas": [
    "Swap the 'Chilli lime jungle fruit cups' note for a nod to the leeches, such as 'Lagoon fruit cups, leech free'.",
@@ -58,8 +59,16 @@
    "look": 4,
    "overall": 3.2
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-lost-city-2022-flat-4.json"
+  "ops": "audit/ops/the-lost-city-2022-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  }
  }
 }

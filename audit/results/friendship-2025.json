@@ -74,10 +74,11 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3,
-  "verdict": "The tunnels cue, Just ask dip and the bog line all print, but the layout is a generic invite and the soap scene is missing.",
+  "overall": 3.0,
+  "verdict": "The tunnels, Just ask dip and the bog line print and the neighbour's gift is a nice touch, but the invite and dishes are generic and the soap scene is missing.",
   "missing": [
-   "Bar of soap in the mouth at the boxing night (the boxing night)"
+   "Bar of soap in the mouth (the boxing night)",
+   "Austin's punk band gig"
   ],
   "ideas": [
    "Swap 'Supper club broccolini with whipped feta' for 'Bog mushrooms on toast', the forager nod",
@@ -110,8 +111,16 @@
    "look": 3,
    "overall": 2.6
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/friendship-2025-flat-1.json"
+  "ops": "audit/ops/friendship-2025-flat-1.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3
+  }
  }
 }

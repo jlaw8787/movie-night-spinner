@@ -30,15 +30,17 @@
  "checked_ok": 12,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "A tidy banquet invitation with the dumpling and Nai Nai lines, but the red envelope and the bull in the corner never make it onto paper.",
+  "overall": 3.6,
+  "verdict": "A clean Changchun banquet with the dumplings, the red envelope, the bull in the corner and Nai Nai's eat more line all printing.",
   "missing": [
-   "The red envelope on the wedding night",
-   "Nai Nai's bull in the corner of the room advice"
+   "Billi told to hide the diagnosis (the airport)",
+   "Visiting Grandpa's grave with offerings",
+   "The faked hospital scan report",
+   "Nai Nai waving Billi off at the end"
   ],
   "ideas": [
    "Swap the 'Banquet red bean sesame balls' note for a red envelope with a gold sticker.",
@@ -46,7 +48,7 @@
    "Add a toast to 'To Nai Nai, who is perfectly well' to the drinks note.",
    "Swap the 'Happy Union, Eat Well' sign for the banquet hall banner with the couple's names."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -70,8 +72,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/the-farewell-2019-flat-9.json"
+  "ops": "audit/ops/the-farewell-2019-flat-9.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

@@ -81,15 +81,16 @@
  "checked_ok": 13,
  "vibe": {
   "world": 4,
-  "moments": 4,
+  "moments": 3,
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.4,
-  "verdict": "The Detroit talent night has the Creamettes cue, Curtis's $500 bet and Effie's tomatoes, but the menu face has big empty gaps between sections.",
+  "overall": 3.2,
+  "verdict": "The Detroit talent night has the Creamettes cue, Curtis's $500 bet and Effie's tomatoes, but no dish notes print and the menu face has big empty gaps.",
   "missing": [
-   "Effie's And I Am Telling You I'm Not Going",
-   "Jimmy Early: You can't kill a man with soul"
+   "And I Am Telling You I'm Not Going (Effie's note does not print)",
+   "Jimmy Early: You can't kill a man with soul (note does not print)",
+   "The Dreams' Las Vegas debut in gold sequins (only a drink name)"
   ],
   "ideas": [
    "Swap house starter note 'Jimmy Early's order, eaten between costume changes.' for Jimmy's rib, steak and chocolate cake chant.",
@@ -123,8 +124,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/dreamgirls-2006-flat-6.json"
+  "ops": "audit/ops/dreamgirls-2006-flat-6.json",
+  "before2": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  }
  }
 }

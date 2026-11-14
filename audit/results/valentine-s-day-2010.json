@@ -35,9 +35,8 @@
   "tone": 3,
   "look": 3,
   "overall": 3.2,
-  "verdict": "Flower shop theme and Reed's line work, but the cover poster is mostly black and the dishes are generic.",
+  "verdict": "Flower shop with Reed's line, Kara's party, Edgar and Estelle and Edison's flowers, but the dishes are generic and the poster is mostly black.",
   "missing": [
-   "Edison's flowers for his teacher",
    "Holden and Kate on the flight (footer only)"
   ],
   "ideas": [
@@ -72,8 +71,16 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/valentine-s-day-2010-flat-4.json"
+  "ops": "audit/ops/valentine-s-day-2010-flat-4.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  }
 }

@@ -4,16 +4,16 @@
  "checked_ok": 23,
  "vibe": {
   "world": 3,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "verdict": "Good dish names and the hammer cue and Ultron place card print, but the party hall invite clashes with the farm note and most of the reworked notes drop out.",
+  "verdict": "Good dish names with the hammer test, Excelsior, Hulkbuster and the elevator joke, but the party hall clashes with the farm note and the mains carry no notes.",
   "missing": [
-   "Language wink (does not print)",
-   "Excelsior and the mead (does not print)",
-   "You're all not worthy (does not print)",
-   "Hulk versus Hulkbuster note (does not print)"
+   "Captain America: Language (Hydra base)",
+   "Thor: You're all not worthy (the party)",
+   "Ultron's Pinocchio strings (Avengers Tower)",
+   "Vision lifting the hammer (the farm)"
   ],
   "ideas": [
    "Swap 'Farmhouse roast chicken and vegetables' note for 'Laura's roast, a tractor needs fixing after'.",
@@ -23,7 +23,7 @@
   ],
   "flat": true,
   "done": true,
-  "overall": 3.2,
+  "overall": 3.4,
   "rework": "2026-11-08",
   "iconic": [
    "Everyone trying to lift Thor's hammer, You're all not worthy (cue, crostini note)",
@@ -49,9 +49,17 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/avengers-age-of-ultron-2015-flat-2.json"
+  "ops": "audit/ops/avengers-age-of-ultron-2015-flat-2.json",
+  "before2": {
+   "world": 3,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  }
  },
  "checked": "2026-11-07"
 }

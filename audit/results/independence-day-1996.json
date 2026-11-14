@@ -33,15 +33,16 @@
  "checked_ok": 17,
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The reworked burger, flag cake and lemonade notes did not print, so it is still bland dishes under an Area 51 sheet with only a few nods.",
+  "overall": 3.8,
+  "verdict": "The notes now print Welcome to Earth, the barbecue line, the speech, Who's da man and Russell, so the Area 51 sheet finally sounds like the film.",
   "missing": [
-   "Whitmore's speech, we will not go quietly into the night",
-   "I could've been at a barbecue (Hiller)"
+   "Russell: Hello boys, I'm back! (the kamikaze run)",
+   "David's virus uploaded from the laptop",
+   "The White House blown up"
   ],
   "ideas": [
    "Swap 'Longneck beer on ice' note for a Russell line: 'Picked a hell of a day to quit.'",
@@ -49,7 +50,7 @@
    "Swap 'Flag cake' for 'Independence Day speech cake' with the note 'Today we celebrate.'",
    "Swap the 'Fireworks popcorn' note for a green slime shake nod to the alien in Area 51."
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -73,8 +74,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/independence-day-1996-flat-7.json"
+  "ops": "audit/ops/independence-day-1996-flat-7.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

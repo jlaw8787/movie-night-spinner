@@ -21,16 +21,17 @@
  ],
  "checked_ok": 14,
  "vibe": {
-  "world": 3,
+  "world": 4,
   "moments": 4,
   "food": 3,
   "tone": 3,
   "look": 4,
-  "overall": 3.4,
-  "verdict": "The wedding reception invite with Pizza Poppa, the barrel line and Christine's canapes works, but the mains and dessert have no notes.",
+  "overall": 3.6,
+  "verdict": "A proper wedding reception set with Pizza Poppa, the barrel line, the Darkhold and Wanda's Westview boys, though the food is generic party catering.",
   "missing": [
    "I love you in every universe (Strange to Christine)",
-   "The Darkhold and Wanda"
+   "The music note battle (Earth-838 sanctum)",
+   "Zombie Strange (the finale)"
   ],
   "ideas": [
    "Swap 'Westview spaghetti and meatballs' for 'Apple orchard crumble', with Wanda's 'Apples, right?'",
@@ -38,7 +39,7 @@
    "Swap 'Table 838' place card line 'Seated near: America Chavez and her star portals' for 'Seated near: Pizza Poppa, who wants his money'.",
    "Swap 'Gin and elderflower spritz' note for Christine's 'It was never gonna work out between us.'"
   ],
-  "flat": true,
+  "flat": false,
   "done": true,
   "rework": "2026-11-08",
   "iconic": [
@@ -62,8 +63,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/doctor-strange-in-the-multiverse-of-madness-2022-flat-6.json"
+  "ops": "audit/ops/doctor-strange-in-the-multiverse-of-madness-2022-flat-6.json",
+  "before2": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }

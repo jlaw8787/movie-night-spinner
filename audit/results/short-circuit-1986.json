@@ -39,11 +39,11 @@
   "tone": 3,
   "look": 4,
   "overall": 3.4,
-  "verdict": "The chalkboard truck has Number 5's no disassemble line, Laser Lips and the lightning footer, but the chalkboard layout drops every dish note so most of the jokes never print.",
+  "verdict": "The truck board has No disassemble, More input, Laser Lips and the lightning footer, but the chalkboard drops every dish note so most jokes never print.",
   "missing": [
-   "Need input, more input",
-   "Your mama was a snow blower (dropped note)",
-   "The squashed grasshopper"
+   "Hey Laser Lips, your mama was a snow blower",
+   "The squashed grasshopper (Squash, dead)",
+   "Number 5 dancing to Saturday Night Fever"
   ],
   "ideas": [
    "Swap the made up Johnny 5 note for 'No disassemble!'.",
@@ -76,8 +76,16 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08",
+  "rescored": "2026-11-15",
   "reworked2": "2026-11-14",
-  "ops": "audit/ops/short-circuit-1986-flat-9.json"
+  "ops": "audit/ops/short-circuit-1986-flat-9.json",
+  "before2": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  }
  }
 }
