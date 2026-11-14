@@ -364,10 +364,12 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   const measure=FS=>{const h=domH(menuFor(FS),RW);return h==null?est(FS):h*1.04};
   let FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){
+  outer:for(const nl of [2,1,0]){for(let s=1.07;s>=(nl?.6:.55);s-=.05){
     const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(18,Math.round(26*s)),G:Math.max(4,Math.round(14*s))};
     {const FSx=Object.assign({},base,{nl});const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break outer}}
   }
+    /* 15 Nov: before any size without notes, one-line notes at 13px under 16 or 15px names (Barbie and other nine-dish menus) */
+    if(nl===1)for(const D of [16,15]){const FSx={D,N:13,S:D+1,G:3,nl:1};const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break outer}}}
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
   let dropCue=false;
   if(!FS){dropCue=!!cue;MH+=cue?20+8+cT.n*cT.z*1.3+14:0;
