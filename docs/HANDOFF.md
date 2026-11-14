@@ -1238,3 +1238,30 @@ vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored.
 Not done, waiting for Josh: look and layout ideas (Hocus Pocus 2 Salem carnival ticket book instead of prom, Hot Shots fighter jet styling, I Am Legend "IMMUNE" badge, Kingpin lane stripes, Meet the Parents family table with place cards, Madagascar zoo feeding schedule, Mulan matchmaker's clipboard, Money Train cue not printed on the hand-built sheet). Dish swaps not done (renames only): Hocus Pocus 2 face mask sorbet, Kingpin biscuits and gravy, Kingpin Ishmael's coffee, Joker Carnival drink, House Party garlic bread shoes.
 
 Next: batch 8, the next 20 by vibe (3.4, starting My Best Friend's Wedding, Noelle, Ocean's Eleven, Office Christmas Party).
+
+## 14 Nov, 2:25pm to 3:00pm: flat menu rework, batch 8 (main cb1b960, live)
+
+Batch 8 is the next 20 by vibe, all 3.4, alphabetical: My Best Friend's Wedding to Shang-Chi. Ops in audit/ops/<slug>-flat-8.json, applied with card-ops, same method as batches 1 to 7. Facts checked against Wikipedia plots and Wikiquote (curl raw pages, following redirects), plus searches for Paddington's red sock (Wikipedia, TV Tropes) and the Bellagio fountains ending in Ocean's Eleven (Wikipedia, IMDb FAQ). Wikiquote has no page for Noelle, Old School, Pet Sematary, Rush Hour or Running Scared, so no new quotes there. Old School needs Old_School_(2003_film) on Wikipedia.
+
+Left out, no source: Titans "Left side, strong side" (not on Wikiquote), Rush Hour's radio, Beach Boys and War gags and the vase (not in the plot), Running Scared's L train chase, Paddington's barbershop, the Office Christmas Party eggnog luge (dry film, kept away from it).
+
+Learnt this batch:
+- Motel (Paranormal Activity) drops notes from the end when the menu box overflows, and once a note is hidden it stays hidden on later fit passes. The martini's new note never printed, even shortened. Fixed by moving the planchette line to the Ouija crackers (one line instead of two) and giving the martini a short one ("Stay up for the night footage.").
+- Club prints winks[0] in the footer ("No discussing ... at the tables"), with low1 on The/A. Set flavour.winks to move a moment there (Ocean's fake SWAT team, Office Christmas Party drawbridge jump, Rush Hour 2 naked run).
+- flavour.words remaps any layout's fixed line (libWords runs on every face): Noelle's tearoom kick "Children's tea served with a wink." is now "Santa photos at the mall. Ask for Nick."
+- Canteen timetable: winks over 30 characters fall back (Paddington's "Pink prison uniforms after one red sock" printed "Yard"). Now "Pink uniforms, one red sock" and "Phoenix next door, disguised"; Titans slot 1 is "This is no democracy".
+- Pub (Phar Lap) prints winks[0] in the footer: "Bobby won't eat without Tommy".
+- Editions: Oliver & Company, Pretty in Pink, Running Scared, Rush Hour, with the scoped sync (/tmp/b8w/edsync.cjs, not in repo: exact, then lower case without full stop, and only reports substring matches for a hand check). None needed a hand fix.
+- No substring spill (the only longer match is the intended Rocky IV veg blini alt).
+
+Checks: npm test pass. check-print-text on the 20: pass. planCard on the 20 with no switch, Vegetarian and No alcohol: same courses, counts and diet tags as main (renames only). Re-extracted cards confirm every change prints. Dry films (Noelle, Office Christmas Party, Oliver & Company, Paddington 2) have no booze words on the card.
+
+Deployed 2:55pm on Josh's go: main fast-forwarded to cb1b960, Publish site run 43558813535 passed. All 71 changed site files (plus sw.js, index.html, app.js) match main byte for byte live.
+
+vibe.done set on the 20 result files (with reworked2 and ops). Not yet rescored. 43 left undone.
+
+Found, not changed (existing, not this batch): Ocean's Eleven Casino martini No alcohol note says "Gin and verjuice stirred ice cold" (data/diet). Rush Hour 2 wink calls the S.S. Minnow Johnson "Carter's borrowed yacht"; Wikipedia says the party is on Ricky Tan's yacht (wink not printed).
+
+Not done, waiting for Josh: look ideas from the results (Old School colour photo booth, Paddington laundry ticket prop and blank strip, Paranormal camcorder tape label, Pirates parchment galley paper, Pretty in Pink Trax record sleeve, Titans seating chart, Shang-Chi jade and gold paper, Phar Lap shillings and pence). Dish swaps not done (renames only): Office Christmas Party Mary's doughnuts, Pet Sematary cold steak for Church, Rocky IV and Paranormal dessert swaps.
+
+Next: batch 9, the next 20 by vibe (3.4, starting Shanghai Noon, Short Circuit, Silver Linings Playbook, Sleeping Beauty).

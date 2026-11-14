@@ -37,7 +37,7 @@
    "Add Lee's wharf raid to the tea room tag."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Do you understand the words that are coming out of my mouth?",
@@ -61,6 +61,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/rush-hour-1998-flat-8.json"
  }
 }

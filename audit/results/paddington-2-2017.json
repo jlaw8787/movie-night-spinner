@@ -50,7 +50,7 @@
    "Dress the cue box as a kitchen order from Knuckles: 'Oranges one at a time.'"
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "The marmalade sandwich that wins Knuckles over",
@@ -74,6 +74,8 @@
    "look": 3,
    "overall": 3.2
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/paddington-2-2017-flat-8.json"
  }
 }

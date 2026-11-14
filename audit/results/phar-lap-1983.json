@@ -46,7 +46,7 @@
    "Swap 'Agua Caliente grapefruit paloma' for a cup of tea, and keep the tequila for the Mexico house line."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Melbourne Cup (cue)",
@@ -68,6 +68,8 @@
    "look": 3,
    "overall": 3
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/phar-lap-1983-flat-8.json"
  }
 }

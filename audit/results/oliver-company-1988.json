@@ -52,7 +52,7 @@
    "Add a birthday candle to 'Kitten cookies' for Jenny's party."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "rework": "2026-11-08",
   "iconic": [
    "Dodger meeting Oliver: I don't eat cats, too much fur",
@@ -76,6 +76,8 @@
    "look": 4,
    "overall": 3.4
   },
-  "rescored": "2026-11-08"
+  "rescored": "2026-11-08",
+  "reworked2": "2026-11-14",
+  "ops": "audit/ops/oliver-company-1988-flat-8.json"
  }
 }
