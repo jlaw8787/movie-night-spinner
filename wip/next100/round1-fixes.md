@@ -29,3 +29,13 @@ The diner layout's stock wording made the two "Overheard at the counter" lines a
 - Food lines cut to stubs ("Corn chips.", "Sardines.", "Slow beef.") on Scary Movie and The 'Burbs: make the food part a sentence that stands alone.
 - Dirty Harry footer stray full stop: "do ya, punk?."
 - Robin Hood and Twins print the same poster art twice.
+
+## Checker 2 (10 films): wrong or unsure lines (NOT yet fixed; the batch 1 fixer only took Checker 1's films)
+| Film | Printed text | Fix |
+|---|---|---|
+| First Blood | "Hook and line from the knife handle" (trout note) | "Rambo lives off the land in the Hope woods". He never fishes; the knife handle holds needle and thread to stitch his arm |
+| First Blood | "Trautman says he'll eat things that would make a billy goat puke." | "Trautman says Rambo eats things that would make a billy goat puke." |
+| Memento (unsure, cue) | "Serve the steak when Leonard opens the Jaguar's trunk." | "Serve the steak when Jimmy offers Leonard the 200 grand in the car." |
+
+Under 3.5: Gone in 60 Seconds (3.2): every line true but notes thin; print Sphinx's one speech on the ribs, "You say poor Toby. I say poor us." (only an unprinted wink now).
+Smaller: The Fugitive still repeats the poster; The Last Boy Scout has a stock "Courtside" label on a football ground; The Fast and the Furious stack chart prints the bread line twice; Memento leaves out Natalie's spit-in beer.
