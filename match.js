@@ -25,8 +25,10 @@
   let M = null;
   const fresh = () => ({ step: 'setup', vibe: 'any', style: 'pass', deck: [], order: {}, at: { 1: 0, 2: 0 }, keep: { 1: [], 2: [] }, hist: { 1: [], 2: [] }, p: 1, match: null, backups: [], picks: {}, room: null, flipped: false });
   M = fresh();
-  try { const s = JSON.parse(sessionStorage.getItem('rd-match') || 'null'); if (s && s.room && s.room.code) M = Object.assign(fresh(), s) } catch (e) { }
-  const save = () => { try { if (M.room) sessionStorage.setItem('rd-match', JSON.stringify(M)); else sessionStorage.removeItem('rd-match') } catch (e) { } };
+  /* the night survives a reload (a locked phone or Safari dropping the tab at handover), Pass the phone included.
+     A saved night whose films are no longer on the site is dropped */
+  try { const s = JSON.parse(sessionStorage.getItem('rd-match') || 'null'); if (s && s.step && s.step !== 'setup' && Array.isArray(s.deck) && s.deck.length && s.deck.every(id => byId.has(id))) M = Object.assign(fresh(), s) } catch (e) { }
+  const save = () => { try { if (M.room || M.step !== 'setup') sessionStorage.setItem('rd-match', JSON.stringify(M)); else sessionStorage.removeItem('rd-match') } catch (e) { } };
   const say = t => { if (live) { live.textContent = ''; setTimeout(() => { live.textContent = t }, 30) } };
   const film = id => byId.get(id);
   const vibeName = k => (VIBES.find(v => v[0] === k) || VIBES[5])[1];
@@ -35,13 +37,25 @@
   const poster = id => typeof TMDB_POSTERS !== 'undefined' && TMDB_POSTERS[id] ? TMDB_IMG + 'w500' + TMDB_POSTERS[id] : '';
   const rpc = (fn, body) => fetch(RPC + fn, { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(r => { if (!r.ok) throw new Error(r.status); return r.json() });
 
+  /* room writes (swipes, undos, picks) queue up in order and stay queued until the room has them: a dropped
+     signal can't lose a keep, and an undo can never land before the swipe it takes back */
+  let flushing = false;
+  const send = (fn, body) => { if (!M.room) return; (M.room.q || (M.room.q = [])).push([fn, body]); save(); flush() };
+  async function flush() {
+    if (flushing || !M.room || !M.room.q || !M.room.q.length) return;
+    flushing = true;
+    try { while (M.room && M.room.q && M.room.q.length) { const [fn, b] = M.room.q[0]; await rpc(fn, b); if (M.room && M.room.q) { M.room.q.shift(); save() } } }
+    catch (e) { /* offline for now: the next room check tries again */ }
+    flushing = false;
+  }
+
   /* ---------- Spin it or Match it ---------- */
   const spinBtn = $('modeSpin'), matchBtn = $('modeMatch'), deckEl = panel.closest('.deck');
   function mode(m) {
     const on = m === 'match';
     spinBtn.setAttribute('aria-selected', String(!on)); matchBtn.setAttribute('aria-selected', String(on));
     deckEl.classList.toggle('matching', on); document.body.classList.toggle('matching', on); panel.hidden = !on;
-    if (on) { loadDeck().then(render, () => { panel.innerHTML = `<p class="mn-k">Match night needs the film list. Check your connection and try again.</p>` }); render() }
+    if (on) { loadDeck().then(render, () => { panel.innerHTML = `<p class="mn-k">Match night needs the film list. Check your connection and try again.</p>` }); render(); if (M.room) poll() }
     else stopPoll();
   }
   spinBtn.addEventListener('click', () => mode('spin'));
@@ -61,7 +75,7 @@
     M.deck = ids; M.order = { 1: ids.slice(), 2: shuffle(ids) };
     /* person two gets the same films in a different order: no peeking at what the first card was */
     if (ids.length > 2) while (M.order[2][0] === M.order[1][0]) M.order[2] = shuffle(ids);
-    M.at = { 1: 0, 2: 0 }; M.keep = { 1: [], 2: [] }; M.hist = { 1: [], 2: [] }; M.p = 1; M.match = null; M.backups = []; M.picks = {}; M.flipped = false;
+    M.at = { 1: 0, 2: 0 }; M.keep = { 1: [], 2: [] }; M.hist = { 1: [], 2: [] }; M.p = 1; M.match = null; M.backups = []; M.picks = {}; M.flipped = false; M.decided = null;
   }
 
   /* ---------- screens ---------- */
@@ -79,32 +93,38 @@
   }
 
   function setup() {
-    panel.innerHTML = `<div class="mn-head"><h2 class="mn-t">Match night</h2><p class="mn-k">Two of you swipe the same 20 films. The first one you both keep is tonight's feature, menu and all.</p></div>
-      <fieldset class="mn-set"><legend>Pick a vibe</legend><div class="mn-chips" role="radiogroup" aria-label="Vibe">${VIBES.map(([k, l]) => `<button type="button" role="radio" class="mn-chip" data-vibe="${k}" aria-checked="${M.vibe === k}">${l}<small>${k === 'any' ? Object.keys(DATA.films).length : pool(k).length}</small></button>`).join('')}</div></fieldset>
+    panel.innerHTML = `<div class="mn-head"><h2 class="mn-t">Match night</h2><p class="mn-k">Two of you swipe the same ${Math.min(DECK, pool(M.vibe).length) || DECK} films. The first one you both keep is tonight's feature, menu and all.</p></div>
+      <fieldset class="mn-set"><legend>Pick a vibe</legend><div class="mn-chips" role="radiogroup" aria-label="Vibe">${VIBES.map(([k, l]) => `<button type="button" role="radio" class="mn-chip" data-vibe="${k}" aria-checked="${M.vibe === k}">${l}<small>${pool(k).length}</small></button>`).join('')}</div></fieldset>
       <fieldset class="mn-set"><legend>How you're playing</legend><div class="mn-chips" role="radiogroup" aria-label="How you're playing">
         <button type="button" role="radio" class="mn-chip wide" data-style="pass" aria-checked="${M.style === 'pass'}">Pass the phone<small>One phone, take turns</small></button>
         <button type="button" role="radio" class="mn-chip wide" data-style="room" aria-checked="${M.style === 'room'}">Room code<small>A phone each, swipe together</small></button></div></fieldset>
       ${M.style === 'room' ? `<div class="mn-actions"><button type="button" class="mn-go" id="mnStart">Start a room</button></div>
         <form class="mn-join" id="mnJoin"><label for="mnCode">Got a code?</label><input id="mnCode" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="TACO" inputmode="text"><button type="submit" class="mn-ghost">Join</button></form>`
-        : `<div class="mn-actions"><button type="button" class="mn-go" id="mnDeal">Deal 20 films</button></div>`}
+        : `<div class="mn-actions"><button type="button" class="mn-go" id="mnDeal">Deal ${Math.min(DECK, pool(M.vibe).length) || DECK} films</button></div>`}
       <p class="mn-err" id="mnErr" role="alert"></p>`;
     panel.querySelectorAll('[data-vibe]').forEach(b => b.onclick = () => { M.vibe = b.dataset.vibe; setup() });
     panel.querySelectorAll('[data-style]').forEach(b => b.onclick = () => { M.style = b.dataset.style; setup() });
-    const d = $('mnDeal'); if (d) d.onclick = () => { deal(); if (!M.deck.length) return err('No films for that vibe right now. Try another.'); M.step = 'swipe'; say(`20 films dealt. ${who(1)} first.`); render() };
+    const d = $('mnDeal'); if (d) d.onclick = () => { deal(); if (!M.deck.length) return err('No films for that vibe right now. Try another.'); M.step = 'swipe'; save(); say(`${M.deck.length} films dealt. ${who(1)} first.`); render() };
     const st = $('mnStart'); if (st) st.onclick = startRoom;
     const j = $('mnJoin'); if (j) j.onsubmit = e => { e.preventDefault(); joinRoom($('mnCode').value) };
   }
   const err = t => { const e = $('mnErr'); if (e) e.textContent = t };
 
+  /* the teaser follows the diet toggles like the printed menu: Vegetarian shows the vegetarian versions,
+     No alcohol (and Kids mode) shows the alcohol-free versions or leaves a dish or the drink off (data/match-deck.json dx, k.an) */
+  function teaser(id) {
+    const d = DATA.films[id] || {}, veg = typeof DIET !== 'undefined' && DIET.veg, af = typeof dietAF === 'function' && dietAF();
+    const key = veg && af ? 'veg_af' : veg ? 'veg' : af ? 'af' : '';
+    return { d: (key && d.dx && d.dx[key]) || d.d || [], k: d.k ? (af && d.k.a ? d.k.an || '' : d.k.n) : '' };
+  }
   /* the card: poster on the front, the menu teaser on the back in the film's colours */
   function cardHTML(id, top) {
     const f = film(id), d = DATA.films[id] || {}, [dark, acc] = d.c || ['#2a0d0d', '#c9a227'], src = poster(id);
-    const af = typeof dietAF === 'function' && dietAF();
-    const drink = d.k && !(af && d.k.a) ? d.k.n : '';
+    const t = teaser(id), drink = t.k;
     return `<div class="mn-card${top ? ' mn-top' : ''}${top && M.flipped ? ' flip' : ''}" data-id="${ESC(id)}" ${top ? `tabindex="0" role="button" aria-label="${ESC(f.title)} (${f.year}). Tap to ${M.flipped ? 'see the poster' : 'see the menu'}"` : 'aria-hidden="true"'} style="--mn-dark:${dark};--mn-acc:${acc}">
       <div class="mn-face mn-front">${src ? `<img src="${src}" alt="" loading="${top ? 'eager' : 'lazy'}" crossorigin="anonymous" onerror="this.remove()">` : ''}<div class="mn-fb"><b>${ESC(f.title)}</b><span>${f.year}</span></div><div class="mn-cap"><b>${ESC(f.title)}</b> <span>${f.year}</span></div><i class="mn-stamp keep">Keep</i><i class="mn-stamp skip">Skip</i></div>
       <div class="mn-face mn-back"><p class="mn-tk">Tonight at</p><p class="mn-ve">${ESC(d.ve || f.title)}</p><p class="mn-fl">${ESC(f.title)} <span>${f.year}</span></p>
-        <p class="mn-tk">On the menu</p><ul class="mn-dish">${(d.d || []).map(n => `<li>${ESC(n)}</li>`).join('')}</ul>
+        <p class="mn-tk">On the menu</p><ul class="mn-dish">${t.d.map(n => `<li>${ESC(n)}</li>`).join('')}</ul>
         ${drink ? `<p class="mn-tk">House drink</p><p class="mn-dr">${ESC(drink)}</p>` : ''}<p class="mn-flipk">Tap for the poster</p><i class="mn-stamp keep">Keep</i><i class="mn-stamp skip">Skip</i></div></div>`;
   }
 
@@ -152,9 +172,9 @@
     card.addEventListener('pointerup', up); card.addEventListener('pointercancel', () => { down = false; dx = 0; card.style.transform = ''; card.classList.remove('dragging', 'to-keep', 'to-skip') });
     card.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(card) } });
   }
-  function flip(card) { M.flipped = !M.flipped; card.classList.toggle('flip', M.flipped); card.setAttribute('aria-label', card.getAttribute('aria-label').replace(/Tap to .*$/, 'Tap to ' + (M.flipped ? 'see the poster' : 'see the menu'))); if (M.flipped) say('Menu: ' + (DATA.films[card.dataset.id].d || []).join(', ')) }
+  function flip(card) { M.flipped = !M.flipped; card.classList.toggle('flip', M.flipped); card.setAttribute('aria-label', card.getAttribute('aria-label').replace(/Tap to .*$/, 'Tap to ' + (M.flipped ? 'see the poster' : 'see the menu'))); if (M.flipped) say('Menu: ' + teaser(card.dataset.id).d.join(', ')) }
   addEventListener('keydown', e => {
-    if (panel.hidden || M.step !== 'swipe' || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (panel.hidden || M.step !== 'swipe' || e.altKey || e.ctrlKey || e.metaKey || document.querySelector('.mn-reveal')) return;
     if (/input|select|textarea/i.test((e.target && e.target.tagName) || '')) return;
     if (e.key === 'ArrowRight') { e.preventDefault(); decide(true) } else if (e.key === 'ArrowLeft') { e.preventDefault(); decide(false) }
     else if ((e.key === 'z' || e.key === 'Backspace') && M.hist[M.p].length) { e.preventDefault(); undo() }
@@ -169,7 +189,7 @@
     if (card) { card.classList.add(keep ? 'to-keep' : 'to-skip', 'gone'); card.style.setProperty('--k', 1); card.style.transform = `translateX(${(keep ? 1 : -1) * (reduce ? 20 : 140)}%) rotate(${keep ? 18 : -18}deg)` }
     buzz(keep ? [20, 30, 20] : 12);
     M.hist[p].push(id); M.at[p]++; if (keep) M.keep[p].push(id); M.flipped = false;
-    if (M.room) rpc('match_swipe', { p_code: M.room.code, p_player: p, p_film: id, p_keep: keep }).catch(() => { M.room.offline = 1 });
+    if (M.room) send('match_swipe', { p_code: M.room.code, p_player: p, p_film: id, p_keep: keep });
     save();
     setTimeout(() => {
       busy = false;
@@ -184,20 +204,20 @@
     M.at[p]--; M.keep[p] = M.keep[p].filter(x => x !== id); M.backups = M.backups.filter(x => x !== id);
     if (M.match === id) M.match = null;
     M.flipped = false;
-    if (M.room) rpc('match_unswipe', { p_code: M.room.code, p_player: p, p_film: id }).catch(() => { });
+    if (M.room) send('match_unswipe', { p_code: M.room.code, p_player: p, p_film: id });
     save(); say('Back one card'); render();
   }
   function finish(p) {
     if (M.room) { M.step = 'wait'; save(); checkRoom(); return render() }
-    if (p === 1) { M.step = 'hand'; return render() }
-    M.step = M.match ? 'done' : 'nomatch'; render();
+    if (p === 1) { M.step = 'hand'; save(); return render() }
+    M.step = M.match ? 'done' : 'nomatch'; save(); render();
   }
 
   function handover() {
     const n = M.keep[1].length;
-    panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Player one is done</p><h2 class="mn-t">Pass the phone</h2><p class="mn-k">${n ? `${n} kept, and no peeking.` : 'Nothing kept yet, so it is all on player two.'} Player two gets the same 20 films in a different order.</p>
+    panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Player one is done</p><h2 class="mn-t">Pass the phone</h2><p class="mn-k">${n ? `${n} kept, and no peeking.` : 'Nothing kept yet, so it is all on player two.'} Player two gets the same ${M.deck.length} films in a different order.</p>
       <div class="mn-actions"><button type="button" class="mn-go" id="mnP2">I'm player two, deal me in</button></div><button type="button" class="mn-quit" id="mnBack">Back to my cards</button></div>`;
-    $('mnP2').onclick = () => { M.p = 2; M.step = 'swipe'; say('Player two, your turn'); render() };
+    $('mnP2').onclick = () => { M.p = 2; M.step = 'swipe'; save(); say('Player two, your turn'); render() };
     $('mnBack').onclick = () => { M.step = 'swipe'; undo() };
   }
 
@@ -267,23 +287,25 @@
     if (ready) line = picks.length === 2 && picks[0] !== picks[1] ? 'Both picked. Spin the wheel to settle it.' : `Settled: ${film(picks[0]).title}.`;
     else if (M.room && !need.includes(M.room.me)) line = 'Waiting for them to pick from your list.';
     else line = `${who(mine)}, pick one from ${M.room ? 'their' : who(other(mine)).toLowerCase() + "'s"} list.`;
-    panel.innerHTML = `<div class="mn-nm"><p class="mn-tk">No match in 20</p><h2 class="mn-t">Meet in the middle</h2><p class="mn-k" aria-live="polite">${line}</p><div class="mn-cols">${lists}</div>
+    panel.innerHTML = `<div class="mn-nm"><p class="mn-tk">No match in ${M.deck.length}</p><h2 class="mn-t">Meet in the middle</h2><p class="mn-k" aria-live="polite">${line}</p><div class="mn-cols">${lists}</div>
       ${ready ? `<div class="mn-actions"><button type="button" class="mn-go" id="mnDecide">${picks.length === 2 && picks[0] !== picks[1] ? 'Spin for it' : 'Open the menu'}</button></div>` : ''}<button type="button" class="mn-quit" id="mnQuit">Start over</button></div>`;
     panel.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => {
       M.picks[mine] = b.dataset.pick; save();
-      if (M.room) rpc('match_pick', { p_code: M.room.code, p_player: mine, p_film: b.dataset.pick }).catch(() => { });
+      if (M.room) send('match_pick', { p_code: M.room.code, p_player: mine, p_film: b.dataset.pick });
       render();
     });
-    const dc = $('mnDecide'); if (dc) dc.onclick = () => picks.length === 2 && picks[0] !== picks[1] ? decider(picks) : (M.match = picks[0], openMenu(picks[0]));
+    const dc = $('mnDecide'); if (dc) dc.onclick = () => picks.length === 2 && picks[0] !== picks[1] ? decider(picks) : (M.match = picks[0], M.decided = { pair: picks[0], win: picks[0] }, save(), openMenu(picks[0]));
     $('mnQuit').onclick = quit;
   }
   /* the two-slot spin: the real wheel with the two picks on alternate wedges. In a room both phones land on
      the same film: the winner comes from the room code and the two picks, not from chance on each phone */
   function decider(pair) {
     let win;
-    if (M.room) { let h = 0; for (const ch of M.room.code + pair.slice().sort().join('|')) h = (h * 31 + ch.charCodeAt(0)) >>> 0; win = pair.slice().sort()[h % 2] }
+    const key = pair.slice().sort().join('|');
+    if (M.decided && M.decided.pair === key) win = M.decided.win;
+    else if (M.room) { let h = 0; for (const ch of M.room.code + pair.slice().sort().join('|')) h = (h * 31 + ch.charCodeAt(0)) >>> 0; win = pair.slice().sort()[h % 2] }
     else win = pick(pair);
-    M.match = win; save();
+    M.decided = { pair: key, win }; M.match = win; save();
     mode('spin');
     const t = document.querySelector('.wheel-wrap'); if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
     window.spinForce = { pair: pair.map(film), win: film(win), done: () => reveal(win, false, true) };
@@ -316,7 +338,8 @@
     } catch (e) { err("Couldn't reach the room. Check your connection.") }
   }
   function lobby() {
-    const code = M.room.code, url = location.origin + location.pathname + '?match=' + code;
+    const app = globalThis.REEL_NATIVE || !/^https?:$/.test(location.protocol) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+    const code = M.room.code, url = (app ? 'https://reeldinner.com/' : location.origin + location.pathname) + '?match=' + code;
     panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Your room</p><p class="mn-big" aria-label="Room code ${code.split('').join(' ')}">${code}</p>
       <p class="mn-k">Text this code to the other person. They open Reel Dinner, tap Match it, then Room code, and type it in. Or send the link.</p>
       <div class="mn-actions"><button type="button" class="mn-ghost" id="mnShare">Send the code</button><button type="button" class="mn-go" id="mnGo">Start swiping</button></div>
@@ -343,6 +366,7 @@
   async function checkRoom() {
     if (!M.room || checking) return;
     checking = true;
+    await flush();
     let st = null;
     try { st = await rpc('match_state', { p_code: M.room.code }) } catch (e) { checking = false; return }
     checking = false;
@@ -364,15 +388,21 @@
     }
     const el = $('mnThem'); if (el) el.textContent = M.step === 'lobby' ? (M.room.them ? 'They are in.' : 'Waiting for them to join. You can start swiping now.') : themLine() + (M.step === 'wait' ? '. A match pops up the moment you both keep the same film.' : '');
     if (first && !M.match) { M.match = first; M.backups = both.slice(1); save(); if (M.step === 'wait') M.step = 'done'; render(); reveal(first, true); return }
-    if (M.match) { const bk = both.filter(x => x !== M.match); if (bk.join() !== M.backups.join()) { M.backups = bk; save(); if (M.step === 'swipe') render() } }
+    if (M.match && !M.decided && !both.includes(M.match)) {
+      /* someone took the match back with Undo: the next film you both kept steps up, or the night carries on */
+      M.match = both[0] || null; M.backups = both.slice(1);
+      if (!M.match && M.step === 'done') M.step = M.at[me] >= M.deck.length ? 'wait' : 'swipe';
+      save(); say(M.match ? `Tonight's feature is now ${film(M.match).title}` : 'That match was taken back'); render();
+    }
+    else if (M.match) { const bk = both.filter(x => x !== M.match); if (bk.join() !== M.backups.join()) { M.backups = bk; save(); if (M.step === 'swipe') render() } }
     const iDone = M.at[me] >= M.deck.length, theyDone = tk.length >= M.deck.length;
     if (iDone && theyDone && !M.match && M.step !== 'nomatch') { M.step = 'nomatch'; save(); render() }
     else if (M.step === 'nomatch') { const key = JSON.stringify(M.picks); if (key !== M._pk) { M._pk = key; render() } }
-    if (M.step === 'done' && M.match && iDone) stopPoll();
+    if (M.step === 'done' && M.match && iDone && theyDone && !(M.room.q && M.room.q.length)) stopPoll();
   }
 
   /* a link with ?match=TACO opens straight to the join box */
   const q = new URLSearchParams(location.search).get('match');
   if (q && /^[A-Za-z]{4}$/.test(q)) { M = fresh(); M.style = 'room'; mode('match'); loadDeck().then(() => joinRoom(q)); try { history.replaceState(null, '', location.pathname) } catch (e) { } }
-  else if (M.room && M.step !== 'setup') { mode('match'); poll() }
+  else if (M.step !== 'setup' && M.step !== 'done') { mode('match'); if (M.room) poll() }
 })();

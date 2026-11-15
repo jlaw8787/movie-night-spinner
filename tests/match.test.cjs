@@ -29,4 +29,15 @@ assert.ok(rd('films.js').includes('"match":'),'DATA_V.match stamp missing');
 assert.ok(rd('app.js').includes('window.spinForce'),'two-slot spin hook missing from spin()');
 for(const f of ['match.js','scripts/build-match.cjs','supabase/match-night.sql'])assert.ok(!rd(f).includes(String.fromCharCode(8212)),`em dash in ${f}`);
 assert.ok(!rd('match.js').includes('service_role'),'no secret keys in the page');
+// diet toggles on the card back: an alcoholic drink is flagged (fallback menu drinks included), and the
+// vegetarian / alcohol-free lists never come up short (review 15 Nov)
+for (const [id, c] of Object.entries(deck.films)) {
+  const f = films.find(x => `${x.title} (${x.year})` === id), k = (f.K || []).find(it => c.k && it[0] === c.k.n);
+  if (k && (k[3] || []).some(s => /@Bottle shop$/.test(s))) assert.ok(c.k.a, `${id}: ${c.k.n} has alcohol but isn't flagged`);
+  for (const l of Object.values(c.dx || {})) assert.ok(l.length === 3, `${id} diet teaser short`);
+}
+const mj = rd('match.js');
+assert.ok(/if \(M\.room\) poll\(\)/.test(mj.slice(mj.indexOf('function mode'), mj.indexOf('function mode') + 600)), 'coming back to Match it restarts the room check');
+assert.ok(!/rpc\('match_(swipe|unswipe|pick)'/.test(mj), 'room writes go through the retry queue');
+assert.ok(mj.includes("'https://reeldinner.com/'"), 'room link points at the website from the app');
 console.log(`match: ${n} films in Match night, ${deck.vibes.length} vibes, ok`);

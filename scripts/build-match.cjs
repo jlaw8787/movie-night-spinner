@@ -35,6 +35,33 @@ function passed(id) {
   return !!(r.vibe && r.vibe.overall >= 3.5);
 }
 const clean = s => String(s || '').replace(/\s+/g, ' ').trim();
+/* per dish: is it meat, is it a drink with alcohol, and its swapped name for each toggle ('' when the menu drops it).
+   Looks the name up in the film's recipes (data/film/<slug>.json r2), then the printed line in films.json */
+function dietOf(id, f) {
+  let fd = {}; try { fd = D(`data/film/${slug(id)}.json`) } catch (e) { }
+  const r2 = new Map(((fd.r2 || {}).dishes || []).map(x => [x.n.toLowerCase(), x]));
+  const txt = k => new Map((((fd.diet || {}).text || {})[k] || []).map(p => [String(p[0]).toLowerCase(), clean(p[1])]));
+  const tv = txt('veg'), ta = txt('af');
+  const lines = new Map(['S', 'M', 'W', 'K'].flatMap(k => (f[k] || []).map(it => [String(it[0]).toLowerCase(), it[3] || []])));
+  const aisle = (l, rx) => (lines.get(l) || []).some(s => rx.test(String(s)));
+  /* printed lines with no recipe: meat by aisle or by what the ingredient is (ham and pork sit in Deli); a dish
+     not on the printed list at all (the one-off layouts) goes by its own name */
+  const MEAT = /\b(ham|jam[oó]n|pork|beef|steak|chicken|bacon|prosciutto|salami|pepperoni|lamb|sausages?|turkey|duck|veal|mince|brisket|ribs?|chorizo|pancetta|pastrami|corned|meatballs?|burgers?|(hot |chilli |corn )?dogs|frankfurts?|wings|prawns?|shrimp|fish|tuna|salmon|anchov\w*|crab|lobster|clams?|oysters?|mussels?|squid|calamari|barra\w*|snapper|cod)\b/i;
+  const BOOZE = /\b(beer|lager|ale|stout|wine|champagne|prosecco|martini|margarita|mojito|daiquiri|negroni|spritz|whisk(e)?y|bourbon|scotch|rye|vodka|gin|rum|tequila|mezcal|brandy|cognac|liqueur|schnapps|sake|cider|sangria|punch|highball|old fashioned|manhattan|cocktail|anisette|limoncello|white russian)\b/i;
+  const meatLine = l => lines.has(l) ? aisle(l, /@(Meat|Seafood)$/) || (lines.get(l) || []).some(s => MEAT.test(String(s).split('@')[0])) : MEAT.test(l);
+  const boozeLine = l => lines.has(l) ? aisle(l, /@Bottle shop$/) : BOOZE.test(l);
+  return {
+    find(n) {
+      const l = n.toLowerCase(), r = r2.get(l), alt = (r && r.alt) || {};
+      const meat = r ? r.veg === false : meatLine(l);
+      const booze = r ? r.af === false || (r.ingredients || []).some(i => i.aisle === 'Bottle shop') : boozeLine(l);
+      const veg = tv.get(l) || (alt.veg && clean(alt.veg.n).replace(/\s*\(vegetarian\)$/i, '')) || '';
+      const af = ta.get(l) || (alt.af && clean(alt.af.n).replace(/\s*\((alcohol-free|non-alcoholic)\)$/i, '')) || '';
+      const vegAF = (alt.veg_af && clean(alt.veg_af.n).replace(/\s*\((vegetarian|alcohol-free|non-alcoholic)[^)]*\)$/i, '')) || '';
+      return { meat, booze, veg, af, vegAF };
+    }
+  };
+}
 const out = { v: '', vibes: Object.keys(VIBES), films: {} };
 let skipped = 0;
 for (const f of films) {
@@ -46,12 +73,31 @@ for (const f of films) {
   /* three headline dishes: a main, a starter and a sweet, topped up from whatever else prints */
   const pick = [by('M')[0], by('S')[0], by('W')[0]].filter(Boolean);
   for (const n of [...by('M'), ...by('S'), ...by('W')]) { if (pick.length >= 3) break; if (!pick.includes(n)) pick.push(n) }
+  /* the diet toggles: the same rules the printed menu uses (dietDish in app.js). Vegetarian swaps a meat dish
+     for its own vegetarian version and drops one that has none; No alcohol (and Kids mode) does the same for drinks */
+  const dz = dietOf(id, f);
+  /* what a dish prints as under each toggle ('' when that menu leaves it off) */
+  const as = (n, veg, af) => {
+    const x = dz.find(n);
+    if (veg && x.meat) { if (af && x.vegAF) return x.vegAF; if (!x.veg) return ''; n = x.veg; if (af && x.booze) return '' }
+    if (af && x.booze) return x.af || '';
+    return n;
+  };
+  const dx = {};
+  for (const [key, veg, af] of [['veg', 1, 0], ['af', 0, 1], ['veg_af', 1, 1]]) {
+    const l = []; for (const n of [...pick, ...by('M'), ...by('S'), ...by('W')]) { if (l.length >= 3) break; const v = as(n, veg, af); if (v && !l.includes(v)) l.push(v) }
+    if (l.join('|') !== pick.slice(0, 3).join('|')) dx[key] = l;
+  }
   const h = house[id] && house[id].d, drinks = by('K');
-  const drink = h && h.n ? { n: clean(h.n), a: h.alc ? 1 : 0 } : drinks[0] ? { n: drinks[0], a: 0 } : null;
+  const menuDrink = drinks[0] ? dz.find(drinks[0]) : null;
+  const menuAF = menuDrink ? (menuDrink.booze ? menuDrink.af : drinks[0]) : '';
+  const drink = h && h.n ? { n: clean(h.n), a: h.alc ? 1 : 0 } : drinks[0] ? { n: drinks[0], a: menuDrink.booze ? 1 : 0 } : null;
+  if (drink && drink.a && menuAF && menuAF !== drink.n) drink.an = menuAF;
   const g = genres[id] || [], a = AISLE[id] || '', fl = flav[id] || {};
   const vibes = Object.keys(VIBES).filter(k => VIBES[k](g, f, a));
   const p = pal[id] || {};
   out.films[id] = { vb: vibes, ve: clean(fl.venue), d: pick.slice(0, 3), k: drink, c: [p.dark || '#2a0d0d', p.accent || '#c9a227'] };
+  if (Object.keys(dx).length) out.films[id].dx = dx;
 }
 const body = JSON.stringify(out);
 out.v = require('crypto').createHash('sha1').update(body).digest('hex').slice(0, 8);
