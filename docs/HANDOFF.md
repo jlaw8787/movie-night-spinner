@@ -1462,3 +1462,6 @@ Next 100 films (1 of 100 written):
 - Layouts logged in Josh's sheet "Reel Dinner film layouts" (https://claude.ai/artifact/CUZSJL6Gy92dKmd2DTNxz4), Films rows 902 to 1001.
 - Pilot: Good Will Hunting (1997), pub, L Street Tavern, in films.json (901 films), self-audited 4.0. Needs an independent pass with batch 1.
 - Next: the other 99 in batches of 10, plan.json order (skip Good Will Hunting). Counts that say 900 change only when all 100 are in.
+
+15 Nov, 1:00pm: Match night deployed on Josh's go (main 7f726f8, Publish site run 43670143188 passed, live files checked). main does NOT have the next-100 work; feature/match-night does.
+Round 1 of the menus running as three writer agents (Josh chose agent teams), each in its own worktree: /home/claude/wt-r1a (next100/r1a, films 1 to 10 of plan.json skipping Good Will Hunting), wt-r1b (11 to 20), wt-r1c (21 to 30). When they finish: copy each worktree's wip/next100/src, packs and notes into feature/match-night, re-run pack.py put for all (do not merge their data files), build, check-print-text, audit-extract, then an independent checker writes audit/results. Worktrees are local to this session; if it's gone, re-run the round from plan.json.
