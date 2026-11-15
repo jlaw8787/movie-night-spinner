@@ -1410,3 +1410,22 @@ Checks: npm test pass. planCard (awaits fmtLoad, /tmp/rd/plan.cjs, not in repo) 
 Deployed on Josh's go: Publish site run 43663809115 passed (the first run, 43663645879, failed at GitHub's deploy step; re-running it fails on a duplicate artifact, so start a fresh run instead). Changed site files match main byte for byte live.
 
 Josh's queue after this: rebuild the four TMNT menus (independent review this morning: 1990 8, II 7.5, III 6.5, Mutant Mayhem 7; II needs the ooze canister and Japanese-style art from real stills), a finger-flick wheel where swipe strength sets the spin, and wider search (mafia also finds gangster, mob, crime family).
+
+## 15 Nov, 11:40am to 3:30pm: TMNT rebuild, finger-flick wheel, wider search (branch fix/tmnt-rebuild, not live)
+
+TMNT (fresh independent review first: 1990 8.0, II 7.0, III 5.5, Mutant Mayhem 5.5; re-review after the rebuild 9.0, 9.0, 9.2, 8.8, then its fixes done). Josh picked the venues: III Mitsu's village teahouse, Mutant Mayhem Superfly's ship on Staten Island. Facts from Wikipedia plots and Wikiquote (raw pages). TMDB pages (themoviedb.org/movie/<id>/images/backdrops and posters?image_language=ja) list still paths without the API key.
+- Dishes: one source, /tmp/tmnt/dishes.py (not in repo) wrote films.json, recipes2, recipes, the 1990 edition and diet notes. No repeats across the four (pinwheels only 1990, guac and kiwi slush only II, chilli crisp only 1990).
+- 1990 (lair): ticket now true to the film (122⅛, $13 tab, $10 paid, 2 min late, Mikey's "never pay full price for late pizza" line), Splinter's "I have always liked... Cowabunga" card replaces the invented April quote, Cowabunga Pie, Sensei's Burrata, White Pie, label 4 gone. Kit prop 122 1/8.
+- II (fmtOoze rewritten, 1344x960): Lucky 4 as a 1991 Japanese chirashi flyer around the real Japanese release poster (/1eE2MHRQ8ynVzFWCssPESnqwZfy.jpg), red sun, ニンジャピザ with Mikey's ninja pizza line, TGRI last canister, Vanilla Ice "Ninja Rap" club panel (no lyrics: "Go Ninja Go" is the song's hook and can't be printed), Splinter's Ninja Rap newspaper still, Keno's delivery ticket. TCRI key fixed to TGRI. New dishes: antidote doughnuts (the film's donut trick), dandelion salad, City Hall station subs, Keno's delivery pie.
+- III (new fmtTeahouse, 1344x1056): The Village Teahouse, noren, wooden menu tags with kanji and mon prices, washi bill of fare, no pizza (notice: ask again in about 400 years), Walker, Yoshi, honour guard stills. Removed from film-format, film-flavour and film-house; kit-flavour added.
+- Mutant Mayhem (new fmtShipyard, 1344x1056): Superfly's ship, tonight's spread on a TCRI crate sheet, house rules, gang stills. Same data moves as III.
+- Fonts: Noto Sans JP 900, Noto Serif JP 900, Space Grotesk bundled with fetch-fonts (it also refreshed a few other families' files and the CJK subsets).
+- Vegetarian and No alcohol: diet text pairs swap printed names and lines for meat dishes on all four (checked: no meat words on the veg cards).
+
+Finger-flick wheel (app.js after the Spin button binding): drag the wheel by hand; let go fast and it spins. Finger speed sets strength (350 px/s starts, 3000 px/s full): 2 to 10 turns, 3.4 to 8.2 seconds, either direction. Bound to .wheel-wrap (the pointer image sits on top; its native drag is blocked). touch-action pan-y, so phones still scroll on vertical swipes and spin on sideways flicks. A flick never triggers the tap-to-skip. Button and keyboard spins unchanged.
+
+Wider search: data/search-words.json (built by build-data from each film's description, tagline, aisle, genres and theme; fetched on the first search, cached offline by sw.js) plus SEARCH_GROUPS in app.js. Mafia, mob, gangster and crime family all find the same 55 films. Video store shows "Search results" (titles) then "Also about ..." (topic); quick find lists title hits first.
+
+Checks: npm test pass. check-print-text on the four: pass. planCard against a worktree of main, no switch, Vegetarian and No alcohol: identical on the other 896; only the four TMNT films differ (new dishes).
+
+Not deployed. Next: Josh's go to merge fix/tmnt-rebuild into main and run Publish site.
