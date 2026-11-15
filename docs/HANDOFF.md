@@ -1459,3 +1459,9 @@ Checks: check-print-text on the three, plain and with Vegetarian plus No alcohol
 Main moved while this branch was open: 37f6981f put a different wider film search live (search.js, data/search-index.json, data/search-terms.json) and 7f726f8e added Match night. This branch has its own earlier wider search (data/search-words.json, SEARCH_GROUPS in app.js). Merging needs a decision on which search stays before Publish site.
 
 Not deployed. Next: Josh's go, then merge and Publish site.
+
+Josh, 1:37pm: the 1990 counter still was "the most uniconic picture", and he wants enough gags and Easter eggs. Done:
+- 1990 print is now the four brothers together in the lair (a11, /afWHvJLROkw2oXKxxHhL7XCvopV.jpg), caption "Our regulars. Four pies a night, all down the same grate."
+- New gags. 1990: "Garbage truck pick-ups on Thursdays. Shredder, take note." under the hours box; fine print adds Casey's sports bag (cricket bat too) and "Not liable for skylights". II: DELIVERY ZONES strip on the front hanger (April's flat, Old City Hall station, the club after the rap), shakes "or someone cries for Mama", fine print "Splinter tells one joke per order. He made a funny." III: house rules add the honour guards in New York with Casey Jones.
+- Checks after: check-print-text plain and Vegetarian plus No alcohol pass, npm test pass. Dishes unchanged, so planCard is as above.
+- Deploy decision (Josh, 2:35pm): keep main's live search; drop this branch's older search (data/search-words.json, SEARCH_GROUPS, topicTerms and topicHit in app.js, the words step in build-data, search-words in sw.js FILM_RX) when merging. Merge conflicts: app.js (spin() needs both window.spinForce from Match night and the flick wheel's opt), index.html (stamps and the search label: keep main's), films.js, build-data.cjs, sw.js, HANDOFF. Rerun build-data after.
