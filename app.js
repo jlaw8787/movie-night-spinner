@@ -2564,6 +2564,8 @@ function code39(txt){
   for(const ch of "*"+txt+"*"){const p=C39[ch];if(!p)continue;for(let i=0;i<9;i++){const w=p[i]==="w"?3:1;if(i%2===0)r+=`<rect x="${x}" width="${w}" height="10"/>`;x+=w}x+=1}
   return `<svg class="mc-bars" viewBox="0 0 ${x-1} 10" preserveAspectRatio="none" aria-hidden="true">${r}</svg>`;
 }
+/* a guest pass until they sign in; an old number + PIN card still counts as a member */
+function guestPass(){return !isAcct()&&!member.pin}
 function renderMember(){
   const box=$("memberCard");if(!box)return;
   const since=new Date(member.since).toLocaleString("en-AU",{month:"short",year:"numeric"});
@@ -2572,13 +2574,13 @@ function renderMember(){
   const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
   const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
   const sinceMY=new Date(member.since).toLocaleString("en-AU",{month:"2-digit",year:"2-digit"});
-  box.innerHTML=`<div class="mc" role="group" aria-label="Your Galaxy Video member card"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><p class="mc-no foil" aria-label="Member number ${member.no}">${member.no.slice(0,3)} ${member.no.slice(3)}</p><p class="mc-since foil">Member since ${sinceMY}</p>${code39("GV"+member.no)}<span class="mc-sig" aria-hidden="true">${ESC(member.name||"")}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(member.name||"")}</span><input id="memberName" class="mc-name" type="text" maxlength="24" autocomplete="off" aria-label="Name on your member card" placeholder="Add your name" value="${ESC(member.name||"")}"></div><p class="member-meta"><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button><button type="button" class="sync-del" data-sync="del">Delete my online card</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}<p class="sync-priv"><a href="privacy.html">Privacy policy</a></p></div>`;
+  box.innerHTML=`<div class="mc${guestPass()?" guest":""}" role="group" aria-label="${guestPass()?"Your Galaxy Video guest pass":"Your Galaxy Video member card"}"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async">${guestPass()?'<span class="mc-guest" aria-hidden="true">Guest pass</span>':""}<p class="mc-no foil" aria-label="Member number ${member.no}">${member.no.slice(0,3)} ${member.no.slice(3)}</p><p class="mc-since foil">Member since ${sinceMY}</p>${code39("GV"+member.no)}<span class="mc-sig" aria-hidden="true">${ESC(member.name||"")}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(member.name||"")}</span><input id="memberName" class="mc-name" type="text" maxlength="24" autocomplete="off" aria-label="Name on your member card" placeholder="Add your name" value="${ESC(member.name||"")}"></div><p class="member-meta"><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${isAcct()?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="aout">Sign out</button><button type="button" class="sync-del" data-sync="adel">Delete my account</button>`:member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" class="sync-join" data-sync="ajoin">Get your member card</button><button type="button" data-sync="out">Sign out here</button><button type="button" class="sync-del" data-sync="del">Delete my online card</button><p class="sync-hint">Sign in with Google or your email and this card moves into your account. No PIN needed after that.</p>`:`<p class="sync-hint">You're on a guest pass. Everything works, saved on this device only.</p><button type="button" class="sync-join" data-sync="ajoin">Get your member card</button><button type="button" data-sync="in">I have a card number and PIN</button>`}<p class="sync-priv"><a href="privacy.html">Privacy policy</a></p></div>`;
   $("memberName").addEventListener("input",e=>{const v=e.target.value;box.querySelector(".mc-name-show").textContent=v;box.querySelector(".mc-sig").textContent=v.trim()});
   $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember();renderShop()});
   box.querySelectorAll("[data-ret]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.ret);if(f)openChute(f)}));
   box.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.open);if(f)openRentalMenu(f)}));
   {const ra=box.querySelector("[data-retall]");if(ra)ra.addEventListener("click",()=>{const n=(member.out||[]).filter(r=>!watched.has(r.id)).length;member.out=[];saveMember();renderMember();renderShop();const st=$("shopCount");if(st)st.textContent=`All ${n} tapes back in the returns chute. No late fees.`;buzz(20)})}
-  box.querySelectorAll("[data-sync]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.sync;if(k==="out"){delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}else if(k==="del")deleteOnlineCard(b);else openSyncForm(k)}));
+  box.querySelectorAll("[data-sync]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.sync;if(k==="out"){delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}else if(k==="del")deleteOnlineCard(b);else if(k==="ajoin")openJoin();else if(k==="aout")acctSignOut(b);else if(k==="adel")acctDelete(b);else openSyncForm(k)}));
 }
 function dueBack(f){
   const d=new Date();
@@ -2749,7 +2751,8 @@ async function syncCall(body){
 }
 function syncPayload(){
   const {pin,...m}=member;
-  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode,fav:typeof FAV!=="undefined"?FAV:[],rates:typeof RATES!=="undefined"?RATES:{}};
+  let solo=null;try{solo=JSON.parse(localStorage.getItem("rd-solo")||"null")}catch(e){solo=null}
+  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode,fav:typeof FAV!=="undefined"?FAV:[],rates:typeof RATES!=="undefined"?RATES:{},solo};
 }
 function applyRemote(d){
   if(!d||!d.member)return;
@@ -2777,6 +2780,8 @@ function applyRemote(d){
   counter=Object.assign({},counter,d.counter||{});
   if(d.rates&&typeof d.rates==="object"&&typeof RATES!=="undefined"){for(const [id,r] of Object.entries(d.rates)){if(r&&r.s&&(!RATES[id]||(r.t||0)>(RATES[id].t||0)))RATES[id]=r}try{localStorage.setItem("mns-rates",JSON.stringify(RATES))}catch(e){}}
   if(typeof d.kids==="boolean")kidsMode=d.kids;
+  /* Match night "Just me": shortlist and films already swiped, merged so nothing repeats on either device */
+  if(d.solo&&Array.isArray(d.solo.seen)&&Array.isArray(d.solo.keep)){try{let s=JSON.parse(localStorage.getItem("rd-solo")||"null");if(!s||!Array.isArray(s.seen)||!Array.isArray(s.keep))s={seen:[],keep:[]};const ok=id=>typeof id==="string"&&FILMS.some(f=>f.id===id);s.seen=[...new Set([...s.seen,...d.solo.seen])].filter(ok);s.keep=[...new Set([...s.keep,...d.solo.keep])].filter(ok).slice(-60);localStorage.setItem("rd-solo",JSON.stringify(Object.assign({},d.solo,s)))}catch(e){}}
   try{localStorage.setItem("mns-member",JSON.stringify(member));localStorage.setItem("mns-watched",JSON.stringify([...watched]));localStorage.setItem("mns-hist",JSON.stringify(hist));localStorage.setItem("mns-counter",JSON.stringify(counter));if(week)localStorage.setItem("mns-week",JSON.stringify(week));else localStorage.removeItem("mns-week");localStorage.setItem("mns-kids",kidsMode?"1":"0")}catch(e){}
   renderHist();renderWeek();setKidsUI();if(!spinning){setList();updateWatchButton()}if(!$("viewShop").hidden)renderShop();
 }
@@ -2793,16 +2798,24 @@ async function deleteOnlineCard(b){
   b.disabled=false;b.classList.remove("arm");b.textContent="Delete my online card";
   if(note)note.textContent=r.status==="offline"?"Couldn't reach the card system. Nothing was deleted. Try again when you're online.":"Your PIN didn't match, so nothing was deleted. Sign out, sign in again, then delete.";
 }
+/* member accounts (account.js): a signed-in member's card saves to their account; the old number + PIN path stays for cards made before accounts */
+function isAcct(){return !!(globalThis.RDAuth&&RDAuth.signedIn())}
 function queueSync(){
-  if(!member||!member.pin)return;
+  if(!member||(!member.pin&&!isAcct()))return;
   clearTimeout(syncTimer);syncTimer=setTimeout(pushSync,1500);
 }
 async function pushSync(){
-  if(!member.pin)return;
-  try{const r=await syncCall({action:"save",no:member.no,pin:member.pin,data:syncPayload()});syncState=r.status==="ok"?"saved":r.status}catch(e){syncState="offline"}
+  if(isAcct()){
+    try{const r=await RDAuth.rpc("member_save",{p_no:member.no,p_data:syncPayload()});syncState=r&&r.status==="ok"?"saved":(r&&r.status)||"offline";if(r&&r.no&&r.no!==member.no){member.no=r.no;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}}
+    catch(e){syncState=e.message==="signedout"?"signedout":"offline"}
+  }else{
+    if(!member.pin)return;
+    try{const r=await syncCall({action:"save",no:member.no,pin:member.pin,data:syncPayload()});syncState=r.status==="ok"?"saved":r.status}catch(e){syncState="offline"}
+  }
   const el=document.getElementById("syncNote");if(el)el.textContent=syncNote();
 }
-function syncNote(){return navigator.onLine===false?"You're offline. Your changes are saved on this device and go up once you're back online.":syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
+function syncNote(){if(isAcct())return navigator.onLine===false?"You're offline. Your changes are saved on this device and go up once you're back online.":syncState==="offline"?"Couldn't reach your card. Your changes are saved on this device and will go up next time.":syncState==="signedout"?"You've been signed out. Sign in again to keep your card up to date.":`Signed in as ${RDAuth.email()||"a member"}. Your card is the same on every device you sign in on.`;
+  return navigator.onLine===false?"You're offline. Your changes are saved on this device and go up once you're back online.":syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
 function openSyncForm(mode){
   const modalTrigger=document.activeElement;
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
@@ -2826,6 +2839,7 @@ function openSyncForm(mode){
         const r=await syncCall({action:"load",no,pin});
         if(r.status==="new"){err.textContent="No card with that number. Check the number on your other device.";btn.disabled=false;return}
         if(r.status==="locked"){err.textContent="Too many wrong PINs. This card is locked.";btn.disabled=false;return}
+        if(r.status==="account"){err.textContent="That card is in a member account now. Close this and tap Get your member card to sign in.";btn.disabled=false;return}
         if(r.status!=="ok"){err.textContent="That PIN doesn't match.";btn.disabled=false;return}
         member.no=no;member.pin=pin;applyRemote(r.data);saveMember();await pushSync();
       }
@@ -2835,10 +2849,101 @@ function openSyncForm(mode){
   mountModal(o,"input",modalTrigger);netMarks();
 }
 async function pullSync(){
+  if(isAcct())return acctPull();
   if(!member.pin)return;
   try{const r=await syncCall({action:"load",no:member.no,pin:member.pin});if(r.status==="ok"){applyRemote(r.data);syncState="saved";pushSync()}else syncState=r.status}catch(e){syncState="offline"}
   renderMember();
 }
+/* pull the account's card, merge it with this device (a guest's picks come across), then save the merged card back */
+async function acctPull(){
+  try{
+    const r=await RDAuth.rpc("member_load");
+    if(r&&r.status==="ok"){applyRemote(r.data);if(r.no)member.no=r.no;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}}
+    await pushSync();
+  }catch(e){syncState=e.message==="signedout"?"signedout":"offline"}
+  renderMember();
+}
+/* first sign-in on this device: an old number + PIN card here joins the account, then the usual pull and save */
+async function afterSignIn(){
+  if(member.pin){
+    try{const r=await RDAuth.rpc("member_link",{p_no:member.no,p_pin:member.pin});if(r&&r.status==="ok"){applyRemote(r.data);if(r.no)member.no=r.no}}catch(e){}
+    delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}
+  }
+  await acctPull();
+  if(typeof goatEvent==="function")goatEvent("member-signin");
+}
+/* sign out and delete both leave the phone as a guest pass: every personal pick on this device goes. Sound and the welcome stay. */
+const WIPE_KEEP=new Set(["mns-welcome","mns-sound","rd-dev"]);
+function wipeToGuest(){
+  clearTimeout(syncTimer);
+  try{for(const k of Object.keys(localStorage))if(/^(mns-|rd-)/.test(k)&&!WIPE_KEEP.has(k))localStorage.removeItem(k)}catch(e){}
+  location.replace(location.pathname+"#shop");location.reload();
+}
+async function acctSignOut(b){
+  if(!b.classList.contains("arm")){b.classList.add("arm");b.textContent="Tap again to sign out";const n=document.getElementById("syncNote");if(n)n.textContent="This phone goes back to a guest pass. Your card stays safe in your account.";setTimeout(()=>{if(b.isConnected&&b.classList.contains("arm")){b.classList.remove("arm");b.textContent="Sign out";if(n)n.textContent=syncNote()}},6000);return}
+  b.disabled=true;b.textContent="Signing out";
+  clearTimeout(syncTimer);try{await pushSync()}catch(e){}
+  await RDAuth.signOut();wipeToGuest();
+}
+async function acctDelete(b){
+  const n=document.getElementById("syncNote");
+  if(!b.classList.contains("arm")){b.classList.add("arm");b.textContent="Tap again to delete";if(n)n.textContent="This deletes your account and member card for good, on every device.";setTimeout(()=>{if(b.isConnected&&b.classList.contains("arm")){b.classList.remove("arm");b.textContent="Delete my account";if(n)n.textContent=syncNote()}},6000);return}
+  b.disabled=true;b.textContent="Deleting";clearTimeout(syncTimer);
+  let r;try{r=await RDAuth.rpc("member_delete")}catch(e){r={status:e.message}}
+  if(r&&r.status==="deleted"){RDAuth.forget();wipeToGuest();return}
+  b.disabled=false;b.classList.remove("arm");b.textContent="Delete my account";
+  if(n)n.textContent=r&&r.status==="signedout"?"You've been signed out, so nothing was deleted. Sign in again, then delete.":"Couldn't reach the card system. Nothing was deleted. Try again when you're online.";
+}
+/* the sign-in sheet: Google, or an emailed code. No password anywhere. */
+function openJoin(){
+  const modalTrigger=document.activeElement;
+  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Get your member card");
+  let email="";
+  const step1=()=>{o.innerHTML=`<form class="syncbox joinbox" novalidate><h3>Get your member card</h3><p>Free, and no password. Your card, ticks, rentals and Match night picks follow you to any phone or computer you sign in on.</p><label class="j18"><input type="checkbox" id="j18" required> I'm 18 or over</label><button type="button" class="j-google" data-a="google"><svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.97 10.72A5.4 5.4 0 0 1 3.68 9c0-.6.1-1.18.29-1.72V4.95H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg>Continue with Google</button><p class="j-or"><span>or</span></p><label for="jEmail">Email</label><input id="jEmail" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" value="${ESC(email)}"><p class="err" id="jErr" role="alert"></p><div class="acts"><button type="button" data-a="back">Not now</button><button type="submit" class="go">Email me a code</button></div><p class="j-small">Signing up means you're happy with the <a href="privacy.html">privacy policy</a>. Rather stay a guest? Everything still works, saved on this device only.</p></form>`;wire1();mountFocus("#jEmail")};
+  const step2=()=>{o.innerHTML=`<form class="syncbox joinbox" novalidate><h3>Check your email</h3><p>We sent a code to <b>${ESC(email)}</b>. Type it in here. It can take a minute, and check your junk folder.</p><label for="jCode">Code</label><input id="jCode" inputmode="numeric" autocomplete="one-time-code" maxlength="8" required><p class="err" id="jErr" role="alert"></p><div class="acts"><button type="button" data-a="restart">Different email</button><button type="submit" class="go">Sign in</button></div><p class="j-small"><button type="button" class="j-link" data-a="resend">Send the code again</button></p></form>`;wire2();mountFocus("#jCode")};
+  const mountFocus=sel=>{const el=o.querySelector(sel);if(el)setTimeout(()=>el.focus(),30)};
+  const close=()=>dismissModal(o);
+  const need18=()=>{const c=o.querySelector("#j18");if(c&&!c.checked){o.querySelector("#jErr").textContent="Reel Dinner menus include alcohol, so members need to be 18 or over.";c.focus();return false}return true};
+  function wire1(){
+    o.querySelector("form").addEventListener("submit",async e=>{
+      e.preventDefault();const err=o.querySelector("#jErr");err.textContent="";if(!need18())return;
+      email=o.querySelector("#jEmail").value.trim().toLowerCase();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent="That email doesn't look right.";return}
+      if(navigator.onLine===false){err.textContent="You're offline. Sign in once you're back online.";return}
+      const btn=o.querySelector(".go");btn.disabled=true;btn.textContent="Sending";
+      const r=await RDAuth.sendCode(email);
+      if(r.ok)step2();else{err.textContent=r.msg;btn.disabled=false;btn.textContent="Email me a code"}
+    });
+  }
+  function wire2(){
+    o.querySelector("form").addEventListener("submit",async e=>{
+      e.preventDefault();const err=o.querySelector("#jErr");err.textContent="";
+      const code=o.querySelector("#jCode").value.replace(/\D/g,"");
+      if(code.length<6){err.textContent="The code is in the email we just sent.";return}
+      const btn=o.querySelector(".go");btn.disabled=true;btn.textContent="Signing in";
+      const r=await RDAuth.verifyCode(email,code);
+      if(!r.ok){err.textContent=r.msg;btn.disabled=false;btn.textContent="Sign in";return}
+      btn.textContent="Getting your card";await afterSignIn();close();welcomeMember();
+    });
+  }
+  o.addEventListener("click",async e=>{
+    if(e.target===o)return close();const k=e.target.closest&&e.target.closest("[data-a]");if(!k)return;const a=k.dataset.a;
+    if(a==="back")close();
+    if(a==="restart")step1();
+    if(a==="google"){const err=o.querySelector("#jErr");err.textContent="";if(!need18())return;if(navigator.onLine===false){err.textContent="You're offline. Sign in once you're back online.";return}if(globalThis.REEL_NATIVE){err.textContent="Google sign-in is coming to the app soon. Use the email code for now.";return}try{localStorage.setItem("rd-join","1")}catch(x){}RDAuth.google()}
+    if(a==="resend"){const err=o.querySelector("#jErr");k.disabled=true;const r=await RDAuth.sendCode(email);err.textContent=r.ok?"Sent. Give it a minute.":r.msg;setTimeout(()=>{if(k.isConnected)k.disabled=false},30000)}
+  });
+  step1();mountModal(o,"#jEmail",modalTrigger);
+}
+/* after a sign-in: the card flips from guest pass to member card, with a line on the shop counter */
+function welcomeMember(){
+  renderMember();
+  const st=$("shopCount");if(st)st.textContent=`Welcome to Galaxy Video. Member No. ${member.no.slice(0,3)} ${member.no.slice(3)}. Your card is saved to your account.`;
+  const c=$("memberCard");if(c&&!$("viewShop").hidden)c.scrollIntoView({block:"center",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+  buzz([20,40,20]);
+}
+/* someone deleted the account or signed out elsewhere: this phone keeps its picks and goes back to a guest pass on the card */
+addEventListener("rd-auth-lost",()=>{syncState="signedout";renderMember()});
 let shopBuilt=false;
 /* the Late Show: horror rated MA15+ or R, kept behind the curtain and off the open Horror aisle */
 const isLate=f=>f.theme==="horror"&&/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||"");
@@ -4072,7 +4177,10 @@ addEventListener("online",netMarks);addEventListener("offline",netMarks);
 /* review 22: the sync note keeps its promise. Back online, changes saved while offline go up, and the note follows the signal */
 addEventListener("online",()=>{try{if(member&&member.pin&&syncState!=="saved")pushSync()}catch(e){}});
 ["online","offline"].forEach(ev=>addEventListener(ev,()=>{try{const el=document.getElementById("syncNote");if(el)el.textContent=syncNote()}catch(e){}}));
-setKidsUI();if(kidsMode)setList();pullSync();
+setKidsUI();if(kidsMode)setList();
+/* back from Google: finish the sign-in. Otherwise the usual pull for a signed-in member or an old PIN card. */
+if(globalThis.RDAuth&&RDAuth.fromGoogle()){try{localStorage.removeItem("rd-join")}catch(e){}afterSignIn().then(welcomeMember)}else pullSync();
+if(globalThis.RD_AUTH_ERROR){try{const j=localStorage.getItem("rd-join");localStorage.removeItem("rd-join");if(j){const st=$("shopCount");if(st)st.textContent="Google sign-in didn't finish. Try again, or use the email code."}}catch(e){}}
 try{if(!localStorage.getItem("mns-welcome"))setTimeout(()=>{const w=document.getElementById("walkin");if(w&&!w.hidden)document.addEventListener("walkin-done",()=>setTimeout(showWelcome,300),{once:true});else showWelcome()},400)}catch(e){}
 /* a shared film link always opens on its menu, whatever tab was open last */try{const v=new URLSearchParams(location.search).get("film")?"wheel":localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
 document.fonts.ready.then(draw);
