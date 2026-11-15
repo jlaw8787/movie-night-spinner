@@ -27,17 +27,13 @@
  "vibe": {
   "world": 4,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Punch-Out Pizzeria is the right room and the Blue Mushroom line lands, but three dish notes are moment-only stubs with no food and the 'Now showing' box repeats the poster's title art.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Punch-Out Pizzeria now has the brothers' van still, 'We don't drive on rainbows' and Luigi's phone line, with food on most dishes, though some notes are terse fragments.",
   "missing": [
-   "We don't drive on rainbows (Mario, Rainbow Road)",
-   "Told ya I'd get you a pet turtle (Mario, Bowser in the jar)",
-   "Luigi's phone 'Hello, Super Mario Brothers' and the leaky faucet call",
    "Cat Mario beating Donkey Kong ('You got the cat box!')",
-   "Bowser at the piano singing Peaches (title only)",
    "Lumalee the gloomy blue Luma"
   ],
   "ideas": [
@@ -46,8 +42,8 @@
    "Swap 'Mind the blue shells.' for 'We don't drive on rainbows.' (Mario, Wikiquote)",
    "Swap the house breadsticks note 'Brooklyn sewer to Mushroom Kingdom.' for 'Hello, Super Mario Brothers.' (Luigi answering the phone, Wikiquote)"
   ],
-  "flat": true,
-  "done": false,
+  "flat": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Logo box now shows the still of the brothers by their van (flavour panelStill); 'Now showing / 2023' kept",
@@ -57,6 +53,15 @@
    "Meatball heroes: 'Spike calls them favourite failures. Meatballs, red sauce, provolone.'",
    "Pizza: 'Their TV ad plays here. Half red, half green.' (fact fix)",
    "Notes shortened so every dish prints its food: garlic knots 'Giuseppe plays Jump Man. Garlic knots.', arancini 'Fire Peach. Mozzarella risotto balls.'"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-15"
  }
 }

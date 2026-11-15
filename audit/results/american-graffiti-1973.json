@@ -16,11 +16,10 @@
   "tone": 4,
   "look": 4,
   "overall": 4.2,
-  "verdict": "Mel's carhop menu with the Wolfman, the T-bird and Toad's Chubby Chuck is close to the real thing.",
+  "verdict": "Mel's carhop menu with the Wolfman, the T-bird, Toad's Chubby Chuck and Carol's line to Falfa reads like the real night on the strip.",
   "missing": [
    "Milner's yellow deuce coupe and the car graveyard (John and Carol)",
    "Toad's Vespa, 'almost a motorcycle' (Debbie)",
-   "'Your car's uglier than I am!' (Carol to Bob Falfa)",
    "Curt and the Pharaohs at the arcade",
    "Bob Falfa's '55 Chevy rolling and burning on Paradise Road"
   ],
@@ -30,10 +29,19 @@
    "Rename the cherry cola 'Milner's deuce coupe cherry cola' with a note on the yellow coupe."
   ],
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Onion rings note no longer repeats the tagline: 'Your car's uglier than I am!' (Carol to Bob Falfa, Wikiquote)"
-  ]
+  ],
+  "before": {
+   "world": 5,
+   "moments": 4,
+   "food": 4,
+   "tone": 4,
+   "look": 4,
+   "overall": 4.2
+  },
+  "rescored": "2026-11-15"
  }
 }

@@ -11,16 +11,14 @@
  "notes": "Wikiquote's Flashdance page returned a Wikimedia Error on every try (four tries, 20 second waits), so no quote could be checked; the note is kind note, unquoted, in Alex's voice, and its claims (mill shift, dancing at night) match Wikipedia, so it is ok. Mawby's, Richie the cook and stand-up, Jeanie the figure skater, Grunt, Hanna Long, breakdancers, the Conservatory of Dance and Repertory on Wikipedia. Lobster dinner and Tina's 'He didn't call' / 'He called' on TV Tropes. Tab sums check: 33.50 + 14.00 = 47.50.",
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Mawby's bar tab is the right room, but the food is generic Pittsburgh bar food, the lines are plain, and the poster plus a Flashdance logo strip take the front with little of the film's drama.",
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Mawby's tab now carries Johnny C., Richie, Jeanie, Nick and the water dance still, though the food is plain bar fare and some notes sit oddly on their dishes.",
   "missing": [
-   "Johnny C. and the Zanzibar club",
-   "Jeanie falls twice at the skating competition",
-   "Richie leaves for LA to try stand-up",
+   "The lobster dinner where Alex eats with her hands (Nick's restaurant)",
    "Hanna Long's ballet and her death",
    "The audition piece with breakdancing moves",
    "Nick getting her the audition behind her back"
@@ -31,8 +29,8 @@
    "Swap the sundae note 'Jeanie trains for the skating competition' for 'Jeanie falls twice and gets back up' (Wikipedia plot)",
    "Swap 'Iron City beer on tap' note for one about Nick, the mill owner who sits at the bar, e.g. 'Nick Hurley's usual. He owns the mill.'"
   ],
-  "flat": true,
-  "done": false,
+  "flat": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Note now Nick Hurley's real line: 'When you give up your dream, you die.' (kind quote, Movie Mistakes quotes page)",
@@ -41,6 +39,15 @@
    "Sundae: 'Jeanie falls twice on the ice' (Wikipedia: she is helped away, so not 'gets back up')",
    "Pierogies: 'Richie quits the grill for LA stand-up'; lobster: 'Nick grew up on hand-me-down lunches' (his line at dinner)",
    "Iron City beer note: 'For Nick Hurley. He owns the mill.'; wink 'Johnny C. and the Zanzibar' replaces the breakdancers"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-15"
  }
 }

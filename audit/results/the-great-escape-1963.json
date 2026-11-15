@@ -26,17 +26,16 @@
  "vibe": {
   "world": 4,
   "moments": 4,
-  "food": 3,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "overall": 3.6,
-  "verdict": "The camp canteen with Tom, Dick and Harry, Hilts's tag and the motorbike still feels right, but half the dish lines print with no food.",
+  "overall": 3.8,
+  "verdict": "The camp canteen with Tom, Dick and Harry, the cooler, the Swiss fence and the motorbike still now prints food on every line; only the stock count and yard slots feel generic.",
   "missing": [
    "Von Luger: 'all our rotten eggs in one basket' (arrival)",
    "Ives climbs the wire",
    "Hendley the scrounger and his black market",
-   "Danny's claustrophobia in the tunnel",
-   "The trouser bags of dirt let out in the compound"
+   "Danny's claustrophobia in the tunnel"
   ],
   "ideas": [
    "Fill the rosti line on the card: 'Hilts rides for the Swiss wire. Potato rosti with bratwurst.'",
@@ -45,11 +44,20 @@
    "Swap the stock schedule slots '0600 Count' and '0900 Yard' for 'Appell' and 'The scrounger's rounds'."
   ],
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "The three stub dish lines now print their food: 'Hilts rides for the Swiss fence. Potato rosti with bratwurst.', 'Hilts's ball in the cooler. Vanilla between choc biscuits.', 'Ashley-Pitt's dirt in plain sight. Black bean dip, garlic toasts.'",
    "Sausage rolls and moonshine keep their food on the card ('Flaky pork sausage rolls.', 'Ice-cold vodka and apple.')"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15"
  }
 }

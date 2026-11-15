@@ -49,9 +49,8 @@
   "tone": 4,
   "look": 4,
   "overall": 4.0,
-  "verdict": "A proper Twelve Oaks bill of fare with the drapes dress, the gold bid and the radish vow; it reads like the film.",
+  "verdict": "A proper Twelve Oaks bill of fare with the drapes dress, the gold bid, the radish vow and Rhett behind the sofa; it reads like the film.",
   "missing": [
-   "Mammy makes Scarlett eat before the barbecue so she won't eat like a field hand there (lacing scene)",
    "Rhett and Scarlett in the library: 'Sir, you are no gentleman.' 'And you, miss, are no lady.'",
    "Atlanta burning",
    "Rhett's green Paris hat",
@@ -63,10 +62,19 @@
    "Add a hat-box dessert: 'Paris green hat lime tart' with 'I thought it was about time to get you out of that fake mourning.'"
   ],
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Corn muffins note no longer repeats the closing line: 'Rhett heard it all from behind the sofa.' (Wikiquote, the library at Twelve Oaks)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 4,
+   "tone": 4,
+   "look": 4,
+   "overall": 4.0
+  },
+  "rescored": "2026-11-15"
  }
 }

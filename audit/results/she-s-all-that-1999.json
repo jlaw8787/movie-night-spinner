@@ -13,15 +13,13 @@
  "vibe": {
   "world": 3,
   "moments": 4,
-  "food": 2,
+  "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
-  "verdict": "The right moments are named, but the prom card is generic and every dish line prints with no food, so it reads thin.",
+  "overall": 3.2,
+  "verdict": "Every dish now names its food and the red dress and Brock Hudson print, but the notes are clipped to fragments and the prom card is still generic.",
   "missing": [
-   "Laney comes down the stairs in the red dress",
    "The prom dance number",
-   "Brock Hudson from The Real World",
    "Taylor's 'I could win this thing in fluorescent lighting...'",
    "Zack's Dartmouth letter"
   ],
@@ -32,13 +30,22 @@
    "Swap the stock 'Wear your dancing shoes' for 'Prom queen in six weeks'."
   ],
   "flat": true,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Every dish line now prints its food: each film line cut short with a short food line after it (e.g. 'Laney's falafel shift. Tahini, warm pita.')",
    "Swapped 'Mack's makeover strawberry shortcake' for 'Red dress on the stairs strawberry shortcake', 'Laney comes down the stairs. Berries, cream.' (ET Online: the slo-mo walk down the stairs in the red dress)",
    "Swapped Taylor's Spam musubi for 'Brock Hudson's Real World nachos', 'Taylor dumps Zack for Brock. Beans, cheddar.' (Wikipedia plot, Wikiquote Real World line); vapor and spam kept as a wink",
    "Stock 'Wear your dancing shoes' now prints 'Prom queen in six weeks'"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 2,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.0
+  },
+  "rescored": "2026-11-15"
  }
 }

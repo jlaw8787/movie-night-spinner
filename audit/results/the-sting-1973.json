@@ -14,14 +14,13 @@
   "moments": 4,
   "food": 3,
   "tone": 4,
-  "look": 3,
-  "overall": 3.6,
-  "verdict": "The train poker game and Lucky Dan cue are right, but the still strip shows nothing and the food is stock dining car fare.",
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The train poker game, Lucky Dan cue and Gondorff's face at the table now read right, though the food is still stock dining car fare.",
   "missing": [
    "Gondorff's drunk 'Shaw' act at the poker table",
    "The fake betting parlour, the Wire",
    "Gondorff's place above the carousel",
-   "The fake shoot-out: Hooker and Gondorff get up laughing",
    "Lonnegan's 'You follow?'"
   ],
   "ideas": [
@@ -31,11 +30,20 @@
    "Swap the Waldorf note for 'Not only are you a cheat, you're a gutless cheat as well.' cut to 'A gutless cheat as well.'"
   ],
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Still strip re-picked: Gondorff's face at the card table now shows (was a pinstripe sleeve), caption 'Gondorff, as Shaw, at Lonnegan's game.'",
    "Pie price fixed from 1.50 to .25 so it sits with the rest of the bill"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15"
  }
 }

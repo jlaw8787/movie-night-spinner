@@ -40,7 +40,7 @@
   "food": 4,
   "tone": 4,
   "look": 4,
-  "verdict": "A FedNet paper with Rasczak's beer keg, the Brain Bug and 'Would you like to know more?' is exactly the film's satire.",
+  "verdict": "A FedNet paper with Rasczak's beer keg, the Brain Bug, a warrior bug at Rico's back and 'Would you like to know more?' is the film's satire.",
   "missing": [
    "'I'm doing my part!' (the FedNet ad)",
    "'Medic!' (Zim and Ace)",
@@ -55,11 +55,20 @@
   ],
   "overall": 4.2,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Under Rasczak's signature: 'at FedNet' now 'to Rico, Buenos Aires'",
    "Page 2 caption now 'ON THE BEAT. A warrior bug at Rico's back.'"
-  ]
+  ],
+  "before": {
+   "world": 5,
+   "moments": 4,
+   "food": 4,
+   "tone": 4,
+   "look": 4,
+   "overall": 4.2
+  },
+  "rescored": "2026-11-15"
  }
 }

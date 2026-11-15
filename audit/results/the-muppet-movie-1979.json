@@ -18,9 +18,8 @@
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "The El Sleezo is a smart, real venue and the big beats print, but the house lines are stubs and the copy is plainer than the film's puns.",
+  "verdict": "The El Sleezo is a smart venue and the big beats print, but the lime cordial is still bare and the copy is plainer than the film's puns.",
   "missing": [
-   "Doc Hopper's French-fried frog legs ads (the roadside billboard and commercial)",
    "Animal grows huge on insta-grow pills (the ghost town showdown)",
    "Gonzo floating off on balloons ('About seven knots!')",
    "Dr. Teeth: 'We will have breakfast at Hollywood and vine!' (the desert)",
@@ -35,10 +34,19 @@
   ],
   "overall": 3.6,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "House chips stub 'Potatoes only.' now 'French-fried, and no frog legs, Doc.' (Hopper's French-fried frog legs, Wikipedia)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15"
  }
 }
