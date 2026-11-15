@@ -377,7 +377,8 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
     const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
   let FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0])for(let s=1.17;s>=(nl?.6:.55);s-=.05){
+  /* 15 Nov, Josh: a short menu grows to fill its board (Karate Kid left a gap under the list at the old 1.17 top size) */
+  outer:for(const nl of [2,1,0])for(let s=nl===2?1.5:1.17;s>=(nl?.6:.55);s-=.05){
     const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
       let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}

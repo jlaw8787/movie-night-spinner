@@ -1,0 +1,2 @@
+const sb=findIn('VISITORS');const cs=getComputedStyle(sb);
+add(`<div style="position:absolute;z-index:9;left:584px;top:537px;width:730px;height:46px;box-sizing:border-box;padding:0 14px;display:flex;align-items:center;gap:12px;background:#05070d;border:1px solid #333;color:#ffb347;font:600 13px/1.15 ${cs.fontFamily.replace(/"/g,"'")};letter-spacing:.06em;text-shadow:0 0 6px rgba(255,170,60,.6)"><span style="flex:none;color:#ff6b5a;letter-spacing:.14em">ON THE BIG SCREEN</span><span>${cue}</span></div>`);return 'ok'

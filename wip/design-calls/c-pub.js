@@ -1,0 +1,3 @@
+const it=findIn('A nice cold pint');const ic=getComputedStyle(it);const r=it.getBoundingClientRect(),er=el.getBoundingClientRect();
+const h=[...el.querySelectorAll('*')].find(e=>own(e).toUpperCase()==='FROM THE BAR'&&e.offsetParent);const hc=getComputedStyle(h);
+add(`<div style="position:absolute;z-index:9;left:${r.left-er.left}px;top:${r.bottom-er.top+26}px;width:${r.width+80}px"><div style="font:${hc.fontWeight} ${hc.fontSize} ${hc.fontFamily.replace(/"/g,"'")};letter-spacing:${hc.letterSpacing};color:${hc.color};text-transform:uppercase">Showtime</div><div style="margin-top:4px;font:${ic.fontWeight} ${ic.fontSize}/1.35 ${ic.fontFamily.replace(/"/g,"'")};color:${ic.color}">${cue}</div></div>`);return hc.fontSize+' '+hc.color

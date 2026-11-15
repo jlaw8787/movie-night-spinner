@@ -1,0 +1,1 @@
+return [...el.querySelectorAll('img')].map(i=>{const r=i.getBoundingClientRect();return Math.round(r.width)+'x'+Math.round(r.height)+' '+i.getAttribute('src').slice(-40)+' attrs:'+[...i.attributes].map(a=>a.name).join(',')+' parent:'+[...i.parentElement.attributes].map(a=>a.name).join(',')}).join('\n')+'\nfilm keys:'+Object.keys(f).join(',')
