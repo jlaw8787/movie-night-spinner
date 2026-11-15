@@ -1618,4 +1618,7 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 ## 15 Nov, 7:25pm: She's All That recolour (branch fix/shes-all-that-colours, not deployed)
 
 - Josh picked "poster colours" for the 3.4 Fourth of July note: fmtSeniorProm now uses the poster's purple (#6b2d86) and orange (#d4560b), gold four-point sparkles (two squashed diamonds; the PDF export ignores clip-path) in place of silver stars. Layout unchanged from his Canva design. Phone palette matches. Tests pass.
-- Still to do: independent re-score (audit/results/she-s-all-that-1999.json still says 3.4, so still out of Match night), then merge to main and deploy on Josh's go. STORE-LISTING already says 1,000. feature/match-night untouched.
+- Two wording tweaks: falafel note now 'Laney in the falafel hat' (formats.js spec, data/films.json, data/recipes), Senior Year box now ends 'Taylor could win it in fluorescent lighting' (was the foghorn, already in Drinks).
+- Independent re-score: 3.6 (world 4, moments 4, food 3, tone 3, look 4), flat false, now in the Match deck. Old 'back face prices' note no longer applies (one face, no prices on prep).
+- Prep sheet missing the meatball subs is by design (cook 5). Prep sheet is still pink and navy: it takes its colours from the film's theme ('teen' in STY), not film-palette.json, so changing it means changing the theme. Not done.
+- To do: merge to main and deploy on Josh's go. STORE-LISTING already says 1,000. feature/match-night untouched.
