@@ -13,7 +13,7 @@ FLAVOUR = {"venue": "Greek Games Concessions", "sign": "Homecoming carnival, Ada
            "prop": {"kind": "ticket", "title": "Homecoming Carnival", "lines": ["Adams College, Tucson", "Tri-Lambs and Omega Mu"]},
            "sport": "fight",
            "number": "6127",
-           "words": {"Courtside": "Sideline", "Round": "Stall", "Red corner": "On the menu", "Blue corner": "Pies left",
+           "words": {"Round": "Stall", "Red corner": "On the menu", "Blue corner": "Pies left",
                      "Hawkers in every aisle. Catch it if you can.": "Pies for charity in every aisle. Catch one if you can."}}
 HOUSE = {"s": {"n": "A spare pie for Ogre", "note": "Thanks! Get your own.", "meat": False},
          "d": {"n": "Keg beer in a plastic cup", "note": "Poured at the Alpha Beta end of the field.", "alc": True}}

@@ -27,8 +27,8 @@
     ]
    ],
    [
-    "Pat Healy's architect garlic knots",
-    "Healy tells Mary he's an architect",
+    "Pizza boy garlic knots",
+    "Tucker is really Norm, the pizza boy",
     "Cut the dough into 12 strips, roll each into a rope and tie in a loose knot. Prove on a lined tray for 10 minutes, then bake at 220C until golden. Melt the butter with the garlic for a minute and stir in the parsley. Toss the hot knots in the garlic butter and parmesan and serve with warm marinara.",
     [
      "500g ball pizza dough@Bakery",
@@ -43,7 +43,7 @@
   "M": [
    [
     "Warren's franks and beans",
-    "Ted's prom night zipper disaster",
+    "Franks and beans, yells Warren",
     "Fry the bacon and onion in an ovenproof pot until soft and golden. Stir in the beans, tomatoes, molasses, sugar, mustard, vinegar and water and bring to a simmer. Bake uncovered at 170C, stirring once, until thick and dark. Toss the slaw with the mayo, and grill the franks until blistered. Serve the franks on the beans with slaw alongside.",
     [
      "8 smoked frankfurts@Meat",
@@ -61,8 +61,8 @@
     ]
    ],
    [
-    "Puffy's body-cast chicken cordon bleu",
-    "Puffy ends up in a full body cast",
+    "Prom night chicken cordon bleu",
+    "The prom Ted never made it to",
     "Cut a deep pocket into each breast and fill with a folded slice of ham and cheese. Dust in flour, dip in egg and press into the panko. Brown in the oil on both sides, then bake at 200C until cooked through. Warm the cream with the mustard and season, and steam the beans. Slice the chicken and serve with the beans and the mustard cream.",
     [
      "4 chicken breasts@Meat",
@@ -154,11 +154,11 @@
  "dish-names": [
   [
    "Warren's baseball arancini",
-   "Pat Healy's architect garlic knots"
+   "Pizza boy garlic knots"
   ],
   [
    "Warren's franks and beans",
-   "Puffy's body-cast chicken cordon bleu"
+   "Prom night chicken cordon bleu"
   ],
   [
    "Hair gel meringues with lemon curd"
@@ -170,11 +170,11 @@
  "dish-notes": [
   [
    "Have you seen my baseball? asks Warren",
-   "Healy tells Mary he's an architect"
+   "Tucker is really Norm, the pizza boy"
   ],
   [
-   "Ted's prom night zipper disaster",
-   "Puffy ends up in a full body cast"
+   "Franks and beans, yells Warren",
+   "The prom Ted never made it to"
   ],
   [
    "Mary thinks it's hair gel"
@@ -206,8 +206,8 @@
     ]
    },
    {
-    "n": "Pat Healy's architect garlic knots",
-    "note": "Healy tells Mary he's an architect. Garlic butter knots, parmesan, marinara.",
+    "n": "Pizza boy garlic knots",
+    "note": "Tucker is really Norm, the pizza boy. Garlic butter knots, parmesan, marinara.",
     "how": "Cut the dough into 12 strips, roll each into a rope and tie in a loose knot. Prove on a lined tray for 10 minutes, then bake at 220C until golden. Melt the butter with the garlic for a minute and stir in the parsley. Toss the hot knots in the garlic butter and parmesan and serve with warm marinara.",
     "shop": [
      "500g ball pizza dough@Bakery",
@@ -222,7 +222,7 @@
   "m": [
    {
     "n": "Warren's franks and beans",
-    "note": "Ted's prom night zipper disaster. Smoky franks, molasses baked beans, slaw.",
+    "note": "Franks and beans, yells Warren. Smoky franks, molasses baked beans, slaw.",
     "how": "Fry the bacon and onion in an ovenproof pot until soft and golden. Stir in the beans, tomatoes, molasses, sugar, mustard, vinegar and water and bring to a simmer. Bake uncovered at 170C, stirring once, until thick and dark. Toss the slaw with the mayo, and grill the franks until blistered. Serve the franks on the beans with slaw alongside.",
     "shop": [
      "8 smoked frankfurts@Meat",
@@ -240,8 +240,8 @@
     ]
    },
    {
-    "n": "Puffy's body-cast chicken cordon bleu",
-    "note": "Puffy ends up in a full body cast. Ham and swiss chicken, crumbed, mustard cream.",
+    "n": "Prom night chicken cordon bleu",
+    "note": "The prom Ted never made it to. Ham and swiss chicken, crumbed, mustard cream.",
     "how": "Cut a deep pocket into each breast and fill with a folded slice of ham and cheese. Dust in flour, dip in egg and press into the panko. Brown in the oil on both sides, then bake at 200C until cooked through. Warm the cream with the mustard and season, and steam the beans. Slice the chicken and serve with the beans and the mustard cream.",
     "shop": [
      "4 chicken breasts@Meat",
@@ -465,7 +465,7 @@
     "af": true
    },
    {
-    "n": "Pat Healy's architect garlic knots",
+    "n": "Pizza boy garlic knots",
     "course": "s",
     "prep_min": 20,
     "cook_min": 15,
@@ -732,7 +732,7 @@
     }
    },
    {
-    "n": "Puffy's body-cast chicken cordon bleu",
+    "n": "Prom night chicken cordon bleu",
     "course": "m",
     "prep_min": 25,
     "cook_min": 30,
@@ -825,7 +825,7 @@
     "af": true,
     "alt": {
      "veg": {
-      "n": "Puffy's body-cast eggplant cordon bleu (vegetarian)",
+      "n": "Prom night eggplant cordon bleu (vegetarian)",
       "course": "m",
       "prep_min": 20,
       "cook_min": 22,
@@ -1105,10 +1105,10 @@
  "diet": {
   "notes": {
    "Warren's franks and beans": {
-    "veg": "Ted's prom night zipper disaster. Vegetarian franks, molasses baked beans, slaw."
+    "veg": "Franks and beans, yells Warren. Vegetarian franks, molasses baked beans, slaw."
    },
-   "Puffy's body-cast chicken cordon bleu": {
-    "veg": "Puffy ends up in a full body cast. Swiss-stuffed eggplant, crumbed, mustard cream."
+   "Prom night chicken cordon bleu": {
+    "veg": "The prom Ted never made it to. Swiss-stuffed eggplant, crumbed, mustard cream."
    },
    "Senior prom punch": {
     "af": "Mary asks Ted to the prom. Pineapple, ginger beer, lime and sorbet."
@@ -1119,7 +1119,7 @@
  "film-house": {
   "s": {
    "n": "Prom night cheese ball and crackers",
-   "note": "For the photos Ted never got.",
+   "note": "For the photos Ted never got. Rolled in pecans.",
    "meat": false
   },
   "d": {

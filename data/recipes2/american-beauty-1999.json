@@ -1,0 +1,700 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pass-the-asparagus tempura spears",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Trim the asparagus and mix the mayo up to a day ahead; batter and fry to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches asparagus, trimmed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "ice-cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise with the lemon zest and a squeeze of juice.",
+     "min": 2
+    },
+    {
+     "text": "Whisk the flour, cornflour, a pinch of salt and the soda water into a lumpy batter.",
+     "min": 2
+    },
+    {
+     "text": "Dip the spears and fry in oil at 180C in batches until pale gold and crisp.",
+     "min": 8
+    },
+    {
+     "text": "Salt and serve straight away with the lemon mayo.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Smiley sauce onion rings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Mix the sauce up to 3 days ahead; batter and fry the rings to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large brown onions, cut in thick rings",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sriracha",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sweet pickle relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, tomato sauce, sriracha and relish into Smiley sauce.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the flour, paprika, salt and lager into a smooth batter.",
+     "min": 4
+    },
+    {
+     "text": "Dust the rings in a little flour, dip in batter and fry at 180C in batches until golden.",
+     "min": 15
+    },
+    {
+     "text": "Drain, salt and serve with the sauce.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Smiley sauce onion rings (alcohol-free)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Mix the sauce up to 3 days ahead; batter and fry the rings to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large brown onions, cut in thick rings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "ice-cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sriracha",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the Smiley sauce.",
+       "min": 3
+      },
+      {
+       "text": "Whisk the flour, paprika, salt and soda water into a batter.",
+       "min": 4
+      },
+      {
+       "text": "Dip the rings and fry at 180C until golden.",
+       "min": 15
+      },
+      {
+       "text": "Drain and serve.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Mr. Smiley's fry cook cheeseburgers",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Shape the patties and make the sauce up to a day ahead; cook to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sesame burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles, sliced",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen crinkle-cut chips",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chips at 220C until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Shape the mince into 4 thin patties and season well.",
+     "min": 5
+    },
+    {
+     "text": "Griddle the patties in a very hot pan, flip, add the cheese and cover to melt.",
+     "min": 6
+    },
+    {
+     "text": "Toast the buns, spread with mayo and sauce and build with lettuce, tomato, pickles and the patties.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr. Smiley's fry cook bean burgers (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Shape the patties up to a day ahead and chill; cook to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sesame burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen crinkle-cut chips",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C.",
+       "min": 25
+      },
+      {
+       "text": "Mash the beans with the breadcrumbs, egg, paprika and salt and shape 4 patties.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the oil until crisp, adding cheese to melt.",
+       "min": 8
+      },
+      {
+       "text": "Build the burgers.",
+       "min": 4
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Thursday night popcorn prawn baskets",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Make the sauce and slaw up to a day ahead; crumb and fry the prawns to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "raw peeled prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Old Bay seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "white cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the tomato sauce and horseradish with a squeeze of lemon, and toss the cabbage with the mayo.",
+     "min": 5
+    },
+    {
+     "text": "Coat the prawns in seasoned flour, egg, then panko mixed with the Old Bay.",
+     "min": 12
+    },
+    {
+     "text": "Fry at 180C in batches until crisp and pink inside.",
+     "min": 10
+    },
+    {
+     "text": "Pile into paper-lined baskets with the slaw, sauce and lemon.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Thursday night popcorn cauliflower baskets (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Make the sauce and slaw up to a day ahead; crumb and fry to serve",
+     "ingredients": [
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "white cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make the sauce and slaw.",
+       "min": 5
+      },
+      {
+       "text": "Crumb the florets in flour, egg and panko.",
+       "min": 12
+      },
+      {
+       "text": "Fry until golden and serve in baskets.",
+       "min": 13
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Rose and raspberry soft-serve sundaes",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Make the sauce up to 3 days ahead and chill; scoop to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rosewater",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dried edible rose petals",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "pistachios, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the raspberries and sugar until jammy, then stir in the rosewater and cool.",
+     "min": 6
+    },
+    {
+     "text": "Scoop the ice cream into tall cups.",
+     "min": 4
+    },
+    {
+     "text": "Spoon over the sauce and scatter with rose petals and pistachios.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Firebird cherry thickshakes",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the glasses; blend to order",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen pitted cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cherry syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk, frozen cherries and syrup until thick.",
+     "min": 3
+    },
+    {
+     "text": "Pour into chilled glasses and top each with a cherry.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

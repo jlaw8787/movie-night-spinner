@@ -1,0 +1,692 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Garlic pizza scrolls with three cheeses",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Roast the garlic and roll the scrolls up to a day ahead; chill and bake to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the top off the garlic bulb, drizzle with oil, wrap in foil and roast at 200C until soft.",
+     "min": 15
+    },
+    {
+     "text": "Squeeze the garlic out and mash it with the butter and parsley.",
+     "min": 3
+    },
+    {
+     "text": "Spread each pastry sheet with tomato paste, then the garlic butter, oregano and cheeses.",
+     "min": 5
+    },
+    {
+     "text": "Roll up tightly, cut into 2cm rounds and lay them flat on a lined tray.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C until puffed, golden and bubbling.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Black Lagoon fish bites with tartare",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Make the tartare up to 2 days ahead; crumb and fry the fish to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "flathead fillets, cut in bite-size pieces",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gherkins, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, capers, gherkins and a squeeze of lemon into a tartare.",
+     "min": 5
+    },
+    {
+     "text": "Dip the fish in seasoned flour, beaten egg, then panko.",
+     "min": 10
+    },
+    {
+     "text": "Shallow-fry in batches in hot oil until golden and just cooked.",
+     "min": 12
+    },
+    {
+     "text": "Drain and serve with the tartare and lemon wedges.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Black Lagoon crumbed haloumi bites (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Make the tartare up to 2 days ahead; crumb the haloumi up to 6 hours ahead and fry to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 180g blocks haloumi, cut in cubes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, capers and a squeeze of lemon.",
+       "min": 5
+      },
+      {
+       "text": "Crumb the haloumi in flour, egg and panko.",
+       "min": 10
+      },
+      {
+       "text": "Shallow-fry until golden and serve with the tartare.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Wolf Man meatball subs with provolone",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Roll the meatballs and make the sauce up to 2 days ahead; simmer together and build to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "bottle tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long soft sub rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, egg, breadcrumbs, parmesan and half the garlic, then roll into 16 balls.",
+     "min": 10
+    },
+    {
+     "text": "Brown the meatballs in the oil and lift them out.",
+     "min": 8
+    },
+    {
+     "text": "Soften the onion and the rest of the garlic, add the passata and oregano, return the meatballs and simmer until cooked through.",
+     "min": 25
+    },
+    {
+     "text": "Split the rolls, fill with meatballs and sauce, lay over the provolone and grill until melted.",
+     "min": 7
+    },
+    {
+     "text": "Tear over the basil and serve.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wolf Man eggplant parmigiana subs (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Crumb and bake the eggplant up to a day ahead; warm in the sauce and build to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, sliced into rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "bottle tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long soft sub rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "basil leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dip the eggplant in egg and panko, drizzle with oil and bake at 220C until golden.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the garlic, passata and oregano for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Fill the rolls with eggplant and sauce, top with provolone and grill until melted.",
+       "min": 7
+      },
+      {
+       "text": "Finish with basil.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Scary German Guy's bratwurst and kraut",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Warm the sauerkraut with the onion up to a day ahead and reheat; grill the bratwurst to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "pork bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "jar sauerkraut, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "crusty bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "hot German mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onion slowly in the butter until soft, then add the sauerkraut and caraway and warm through.",
+     "min": 15
+    },
+    {
+     "text": "Grill the bratwurst over medium heat, turning, until browned and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Split the rolls, add the kraut and bratwurst and finish with mustard.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scary German Guy's vegetarian bratwurst with kraut",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Warm the sauerkraut with the onion up to a day ahead; grill the vegetarian sausages to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "jar sauerkraut, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "crusty bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "hot German mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion in the butter, add the sauerkraut and caraway and warm through.",
+       "min": 15
+      },
+      {
+       "text": "Grill the vegetarian sausages until browned.",
+       "min": 10
+      },
+      {
+       "text": "Build the rolls and finish with mustard.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Frankenstein's mint ice cream sandwiches",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Bake the cookies and build the sandwiches up to a week ahead; keep frozen",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "mint choc-chip ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale, then beat in the egg and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour, bicarb and choc chips, roll into 16 balls and flatten on lined trays.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C until golden at the edges, then cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Sandwich a thick scoop of ice cream between two cookies, press and freeze until firm.",
+     "min": 7
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Concentrated goodness cherry cola floats",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the cola and glasses; build to order",
+   "ingredients": [
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "cherry cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put two scoops of ice cream in each tall glass.",
+     "min": 2
+    },
+    {
+     "text": "Pour the cola slowly down the side so it foams up, then top with a cherry.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}
