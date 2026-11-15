@@ -1,0 +1,698 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Laney's falafel shift wraps",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Blend and shape the falafel up to a day ahead and chill; fry to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "x 400g tins chickpeas, drained and patted dry",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "flat-leaf parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pulse the chickpeas, onion, garlic, parsley, cumin, flour and salt to a coarse paste and roll into 16 balls.",
+     "min": 10
+    },
+    {
+     "text": "Fry in hot oil in batches until deep brown and crisp.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the tahini with lemon juice, salt and water until pourable.",
+     "min": 3
+    },
+    {
+     "text": "Warm the pita, fill with falafel and tomato and drizzle with tahini.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Taylor's vapor-and-spam musubi",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Cook and season the rice up to 4 hours ahead; sear and wrap to serve",
+   "ingredients": [
+    {
+     "q": 340,
+     "u": "g",
+     "item": "tin SPAM luncheon meat, cut in 8 slices",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "nori sheets, halved",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice and season with the vinegar, caster sugar and a pinch of salt.",
+     "min": 25
+    },
+    {
+     "text": "Sear the Spam slices until crisp, then glaze with the soy and brown sugar.",
+     "min": 8
+    },
+    {
+     "text": "Press rice into blocks the size of the Spam and lay a slice on each.",
+     "min": 10
+    },
+    {
+     "text": "Wrap each with a strip of nori and sprinkle with sesame.",
+     "min": 7
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Taylor's vapor-and-tofu musubi (vegetarian)",
+     "course": "s",
+     "prep_min": 25,
+     "cook_min": 25,
+     "make_ahead": "Cook and season the rice up to 4 hours ahead; sear and wrap to serve",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, cut in 8 slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "nori sheets, halved",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook and season the rice.",
+       "min": 25
+      },
+      {
+       "text": "Sear the tofu and glaze with soy and sugar.",
+       "min": 10
+      },
+      {
+       "text": "Build and wrap the musubi.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Hacky sack meatball subs",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Make the meatballs and sauce up to 2 days ahead; reheat and build to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "jar tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long crusty rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, crumbs, egg, parmesan, half the garlic and salt, and roll into 20 balls.",
+     "min": 10
+    },
+    {
+     "text": "Brown the meatballs in a hot pan.",
+     "min": 8
+    },
+    {
+     "text": "Add the passata, oregano and the rest of the garlic and simmer until thick.",
+     "min": 20
+    },
+    {
+     "text": "Split the rolls, fill with meatballs and sauce, top with provolone and grill until melted.",
+     "min": 15
+    },
+    {
+     "text": "Tuck in the basil and serve.",
+     "min": 7
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hacky sack eggplant parmigiana subs (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Crumb and bake the eggplant up to a day ahead; build to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, sliced into rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "jar tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long crusty rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "basil leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dip the eggplant in egg and panko and bake with oil at 220C until golden.",
+       "min": 25
+      },
+      {
+       "text": "Warm the passata.",
+       "min": 5
+      },
+      {
+       "text": "Fill the rolls with eggplant and sauce, top with provolone and grill.",
+       "min": 25
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Beach day fish tacos",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Make the slaw and chipotle cream up to 4 hours ahead; grill the fish to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "firm white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the fish with the spices, oil and salt.",
+     "min": 5
+    },
+    {
+     "text": "Toss the cabbage with the juice of 2 limes and salt, and stir the chipotle into the sour cream.",
+     "min": 5
+    },
+    {
+     "text": "Grill the fish until just flaking, then break into chunks.",
+     "min": 8
+    },
+    {
+     "text": "Warm the tortillas and fill with slaw, fish, chipotle cream, coriander and lime.",
+     "min": 12
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beach day black bean tacos (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Make the slaw and chipotle cream up to 4 hours ahead; warm the beans to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "red cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chipotle in adobo, chopped",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the beans with the spices and a splash of water, mashing a few.",
+       "min": 8
+      },
+      {
+       "text": "Make the slaw and chipotle cream.",
+       "min": 5
+      },
+      {
+       "text": "Fill warm tortillas and serve.",
+       "min": 12
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Mack's makeover strawberry shortcake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Bake the shortcakes up to a day ahead; macerate the berries and whip the cream to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar, plus 2 tbsp for the berries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the strawberries with 2 tbsp sugar and leave to go juicy.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour and 60g sugar, stir in the buttermilk and pat out 3cm thick.",
+     "min": 10
+    },
+    {
+     "text": "Cut 4 rounds and bake at 210C until golden.",
+     "min": 15
+    },
+    {
+     "text": "Whip the cream with the vanilla, split the shortcakes and fill with berries and cream.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Laney's foghorn prom punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix the juices up to a day ahead and chill; add lemonade and ice to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the pineapple and cranberry juices together in a punch bowl.",
+     "min": 3
+    },
+    {
+     "text": "Add the lime slices, frozen raspberries and ice.",
+     "min": 4
+    },
+    {
+     "text": "Top with lemonade just before serving.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

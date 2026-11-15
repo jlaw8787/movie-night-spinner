@@ -1,0 +1,56 @@
+{
+ "id": "Starship Troopers (1997)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "at FedNet",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The layout prints 'at <venue>' under the signer. Rasczak says the line to Rico at a party back in Buenos Aires (Wikiquote); he never works at FedNet, which is the news network.",
+   "source": "https://en.wikiquote.org/wiki/Starship_Troopers_(film)",
+   "fix": "to Rico, Buenos Aires",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "ON THE BEAT. Another frame from Starship Troopers.",
+   "where": "caption",
+   "verdict": "unsure",
+   "why": "Stock caption that says nothing about the still, which shows Rico shouting with a warrior bug right behind him.",
+   "source": "https://en.wikipedia.org/wiki/Starship_Troopers_(film)",
+   "fix": "ON THE BEAT. A warrior bug at Rico's back.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Starship_Troopers_(film)",
+  "https://en.wikiquote.org/wiki/Starship_Troopers_(film)"
+ ],
+ "notes": "All quotes verbatim on Wikiquote: Rasczak's freedom line and 'Here's the beer.', Rico's 'Come on you apes, you wanna live forever?!' and 'I'm from Buenos Aires', Zim's knife through Ace's hand, Dizzy's 'Mobile Infantry and Fleet don't mix.', the newsreel's 'Service guarantees citizenship.' 'Zim captures a Brain' nods to Carl's 'We've got one of their Brains now' but reads like a cut line. Wikipedia: Zim has captured the Brain Bug; Klendathu goes badly; Rico from Buenos Aires.",
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A FedNet paper with Rasczak's beer keg, the Brain Bug and 'Would you like to know more?' is exactly the film's satire.",
+  "missing": [
+   "'I'm doing my part!' (the FedNet ad)",
+   "'Medic!' (Zim and Ace)",
+   "The co-ed shower",
+   "'The only good bug is a dead bug'",
+   "Rasczak's 'Hold what you got!'"
+  ],
+  "ideas": [
+   "Swap 'at FedNet' under Rasczak for 'to Rico, Buenos Aires'",
+   "Swap the stock caption for 'A warrior bug at Rico's back.'",
+   "Swap the wink 'Zim captures a Brain' for 'Medic!' (Zim, verbatim)"
+  ],
+  "overall": 4.2,
+  "flat": false,
+  "done": false
+ }
+}

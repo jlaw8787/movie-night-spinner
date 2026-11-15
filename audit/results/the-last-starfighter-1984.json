@@ -1,0 +1,69 @@
+{
+ "id": "The Last Starfighter (1984)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "Beta, the stand in Alex",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The data says 'stand-in' but the dash was stripped on print, so it reads as if Beta is standing in Alex. Beta is the android double who covers for Alex (Wikipedia).",
+   "source": "https://en.wikipedia.org/wiki/The_Last_Starfighter",
+   "fix": "Beta, the robot Alex",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Sunny with a chance of fun",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "Kiosk layout stock in the Out front strip, with 'Last orders 8:15' and '21 C'. It claims nothing false but reads like a beach kiosk, not a desert trailer park.",
+   "source": "https://en.wikiquote.org/wiki/The_Last_Starfighter",
+   "fix": "Tumbleweeds and tarantulas",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The Last Starfighter",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "The title box on the shot runs the final 'r' of 'Starfighter' hard against the right edge, and the writer saw it crop to 'STARFIGHT'. Check at full size.",
+   "source": "",
+   "fix": "Shrink the title or widen the box so 'Starfighter' fits",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "sources": [
+  "https://en.wikipedia.org/wiki/The_Last_Starfighter",
+  "https://en.wikiquote.org/wiki/The_Last_Starfighter",
+  "https://fast-rewind.com/locations_lstarfighter.htm",
+  "https://www.mentalfloss.com/entertainment/movies/last-starfighter-movie-facts"
+ ],
+ "notes": "Writer's doubt settled enough: Fast-Rewind says the park is called the 'Starlite, Starbrite' trailer park and general store in the film, and Mental Floss names the Starlite Starbrite Trailer Court; neither confirms a sign on screen, but the name belongs to the film. All quotes verbatim on Wikiquote (Louis, Centauri's tumbleweeds, Vegas and proposition lines, 'Store's closed, mister.', Xur's green moon of Galan). Stubs: the key lime pie and root beer float print with no lines.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "The trailer park store with its Starfighter cabinet is right, but stock kiosk lines, two bare dishes and a cramped title box flatten it.",
+  "missing": [
+   "'Greetings, Starfighter' attract mode (the cabinet)",
+   "Beta's bad cover at the lake with Maggie",
+   "The Gunstar landing in the trailer park",
+   "Grig's family and 'Victory or death!'",
+   "Centauri's car taking off"
+  ],
+  "ideas": [
+   "Swap 'Sunny with a chance of fun' for 'Tumbleweeds and tarantulas'",
+   "Give the pie a line: 'When the green moon of Galan is eclipsed' (Xur, verbatim)",
+   "Give the float a line: 'Centauri's got a little proposition for you' (verbatim)",
+   "Swap 'Last orders 8:15' for 'Store's closed, mister.'"
+  ],
+  "overall": 3.4,
+  "flat": true,
+  "done": false
+ }
+}
