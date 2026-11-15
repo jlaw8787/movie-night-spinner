@@ -1526,7 +1526,7 @@ Fix: menu-formats/prom.js now sets MENU_FORMATS.prom.ready (stylesheet loaded, e
 Checks: check-print-text on Weird Science 5 runs, 5 pass (3 of 3 failed before). All 18 prom films pass. npm test pass.
 Deployed on Josh's go: fast-forward merge to main 88a5057, Publish site run 43678876572 passed. Live prom.js and films.js LIB_VER match main byte for byte.
 
-## 15 Nov, 4:10pm to 5:55pm: print faults from the morning rescore (branch fix/print-faults, not live)
+## 15 Nov, 4:10pm to 5:55pm: print faults from the morning rescore (merged into main and published)
 
 All 30 flagged films re-shot (FORCE=1 audit-extract). Already fine: 13 Going on 30 (today's prom fonts fix), Animal House cupcake note, Footloose footer, Captain America's dark still.
 Fixed:
@@ -1541,3 +1541,4 @@ Fixed:
 - "?." and "!." (Winter Soldier "get out?.", Oliver!., Man of Steel, Bill & Ted, Predator, The Menu, Flash Gordon and others): app.js libStops drops the stop.
 Not changed, design calls for Josh: logo shown twice where the poster carries the title (bartab, lab, galley, kiosk); campfire quotes signed with the film logo (the 11 Nov rollout, every campfire film); layouts that never print the showtime cue (stadium, airline, motel, precinct, pub and most of banquet, hotel, lab); empty gaps on short menus (Karate Kid, Oz page 2, Wish, Mother's Day, Collateral back).
 Checks: check-print-text on all 177 films of motel, club, prom, canteen, bartab, galley plus the hand-picked films: pass (Money Train needed one more 5px nudge, then 3 of 3 pass). npm test pass. check-browser pass.
+Deployed on Josh's go: fast-forward merge to main 213ae95, Publish site run 43686425669 passed. app.js, films.js, formats/lasttrain.js and the six changed layout files match main byte for byte live.
