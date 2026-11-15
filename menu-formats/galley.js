@@ -208,13 +208,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sideLogo=`<div ${A}-panel ${A}-light="${lp}" ${A}-dark="${dp}" style="position:absolute;left:${CX}px;top:${PY+440-cut1+16}px;width:${CW}px;height:120px;box-sizing:border-box;padding:10px 12px;background:${dp};display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.4);border:1px solid ${acc};${t.gilt?`outline:2px solid ${acc};outline-offset:3px;`:""}">
     ${ctx.logo?`<img ${A}-logo crossorigin="anonymous" src="${ctx.img(ctx.logo[0],"w500")}" style="max-width:100%;max-height:96px;object-fit:contain"><div ${A}-fallback style="display:none;position:absolute;inset:0;padding:8px 10px;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`
       :`<div style="position:absolute;inset:0;padding:8px 10px;display:flex;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`}</div>`;
-  const sideNow=`<div style="position:absolute;left:${CX}px;top:${PY+440-cut1+16+120+14}px;width:${CW}px;font:600 15px/1.25 ${BODY};letter-spacing:.14em;text-transform:uppercase;color:${acc}">Now showing, ${esc(String(yr))}</div>`;
+  const sideNow=`<div style="position:absolute;left:${CX}px;top:${PY+440-cut1+16+(fl.logoPanel===true?134:0)}px;width:${CW}px;font:600 15px/1.25 ${BODY};letter-spacing:.14em;text-transform:uppercase;color:${acc}">Now showing, ${esc(String(yr))}</div>`;
 
   /* front */
   const f0=`<div ${A}-face style="position:absolute;inset:0;${faceBg}overflow:hidden;font-family:${BODY}">
     ${frame}${gilt}${heroPoster?sideTitle:titleBlock}
     ${heroPoster?panel(heroSrc,true,PX,PY,PW,PH,""):panel(heroSrc,false,P+20,214,W-2*P-20,420,deck+", galley")}
-    ${heroPoster?sideNow+sideLogo:logoPanel}
+    ${heroPoster?(fl.logoPanel===true?sideNow+sideLogo:sideNow):logoPanel}
     <div ${A}-box style="position:absolute;left:${P+6}px;top:${716-cut1}px;width:${W-2*P-12}px;height:${278+cut1}px;overflow:hidden;--k:1;display:flex;flex-direction:column;justify-content:safe center">${course("s")}${course("m")}</div>
     <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:1004px;padding-top:6px;border-top:1px solid ${rgba(ink,.5)};display:flex;justify-content:space-between;color:${sub};font:600 15px/1.2 ${BODY};letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden"><span>${esc(voice[0])}</span><span>Turn over</span></div>
     ${over_}</div>`;
