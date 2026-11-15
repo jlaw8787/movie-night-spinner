@@ -1519,8 +1519,9 @@ Checks: npm test pass. check-browser pass. planCard against main 610c3bec, no sw
 
 Deployed on Josh's go: Publish site run 43678048475 passed. The three TMNT format files, app.js, index.html and formats-core.js match main byte for byte live.
 
-## 15 Nov, 2:50pm to 3:40pm: Weird Science print fix (branch fix/weird-science-print, not live)
+## 15 Nov, 2:50pm to 3:40pm: Weird Science print fix (merged into main and published)
 
 Cause: the prom layout sized its menu block (domH) before its web fonts had loaded. The app awaits MENU_FORMATS[fmt].ready before it renders, but prom never set one, so the fit sometimes measured fallback metrics (menu 523px) and the real faces then grew it to 656px in a 604px block, over the showtime cue. Timing, not content.
 Fix: menu-formats/prom.js now sets MENU_FORMATS.prom.ready (stylesheet loaded, every face in its href loaded, then fonts.ready), the same pattern as bartab. No design change. build-data rerun: only the films.js LIB_VER stamp, index.html and sw.js versions moved.
 Checks: check-print-text on Weird Science 5 runs, 5 pass (3 of 3 failed before). All 18 prom films pass. npm test pass.
+Deployed on Josh's go: fast-forward merge to main 88a5057, Publish site run 43678876572 passed. Live prom.js and films.js LIB_VER match main byte for byte.
