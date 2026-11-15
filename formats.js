@@ -195,7 +195,7 @@ const FMT_PHONE={
   "starlanes":{"top":"#1b2340","topInk":"#f6eedd","paper":"#fffaf0","ink":"#1d1b18","soft":"#4c4a44","accent":"#d9572a","tab":"#f0b429","disp":"'Barlow Condensed',sans-serif","name":"'Barlow Condensed',sans-serif","body":"'Libre Franklin',sans-serif","price":"'Barlow Condensed',sans-serif","title":"'Yellowtail',cursive","note":"'Libre Franklin',sans-serif"},
   "axiom":{"top":"#0b1736","topInk":"#f4f7fb","paper":"#f4f7fb","ink":"#0b1736","soft":"#55617a","accent":"#1d6fae","tab":"#f4f7fb","disp":"'Michroma',sans-serif","name":"'Nunito',sans-serif","body":"'Nunito',sans-serif","price":"'Nunito',sans-serif","title":"'Michroma',sans-serif","note":"'Nunito',sans-serif"},
   "nowshowing":{"top":"#f2357f","topInk":"#fff4dc","paper":"#fffaf0","ink":"#2b1630","soft":"#5b4a57","accent":"#0e7f78","tab":"#ffc42e","disp":"'Lilita One',sans-serif","name":"'Nunito',sans-serif","body":"'Nunito',sans-serif","price":"'Lilita One',sans-serif","title":"'Pacifico',cursive","note":"'Nunito',sans-serif"},
-  "seniorprom":{"top":"#1f3d9b","topInk":"#ffffff","paper":"#ffffff","ink":"#1b2147","soft":"#4a5070","accent":"#d0202e","tab":"#d0202e","disp":"'Racing Sans One',sans-serif","name":"'Archivo',sans-serif","body":"'Archivo',sans-serif","price":"'Archivo',sans-serif","title":"'Kaushan Script',cursive","note":"'Archivo',sans-serif"},
+  "seniorprom":{"top":"#6b2d86","topInk":"#ffffff","paper":"#ffffff","ink":"#2a1736","soft":"#5e4b6b","accent":"#d4560b","tab":"#d4560b","disp":"'Racing Sans One',sans-serif","name":"'Archivo',sans-serif","body":"'Archivo',sans-serif","price":"'Archivo',sans-serif","title":"'Kaushan Script',cursive","note":"'Archivo',sans-serif"},
   "latenightcall":{"top":"#172c43","topInk":"#eee7d9","paper":"#eee7d9","ink":"#172c43","soft":"#475963","accent":"#77505c","tab":"#eee7d9","disp":"'Yeseva One',serif","name":"'Yeseva One',serif","body":"'Lora',serif","price":"'Yeseva One',serif","title":"'Yeseva One',serif","note":"'Lora',serif"},
   "bookshopcafe":{"top":"#29523a","topInk":"#f6eddb","paper":"#f6eddb","ink":"#23382c","soft":"#5d6253","accent":"#984729","tab":"#f6eddb","disp":"'Libre Caslon Display',serif","name":"'Libre Caslon Display',serif","body":"'Lora',serif","price":"'Libre Caslon Display',serif","title":"'Libre Caslon Display',serif","note":"'Lora',serif"},
   "dorothysupper":{"top":"#8e273b","topInk":"#fff3e4","paper":"#fff3e4","ink":"#39282c","soft":"#69565a","accent":"#8e273b","tab":"#fff3e4","disp":"'Pacifico',cursive","name":"'Oswald',sans-serif","body":"'Lora',serif","price":"'Oswald',sans-serif","title":"'Pacifico',cursive","note":"'Lora',serif"},
@@ -2370,19 +2370,17 @@ function fmtNowShowing(f,spec,menu,poster){
 }
 fmtNowShowing.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
 function fmtSeniorProm(f,spec,menu,poster){
-  /* She's All That: the senior prom at Zack and Laney's Southern California high school. One-off menu after Josh's approved Canva look:
-     red, white and royal blue with silver stars, a brush-script header in a white swoosh, a white menu panel with red italic heads,
-     a quote banner and a red showtime strip, round the poster and real TMDB stills. Stars, swooshes and dots are drawn trim only */
-  const RED="#d0202e",BLUE="#1f3d9b",NAVY="#162a6e",SILV="#c3c7cf",INK="#1b2147",SOFT="#4a5070";
+  /* She's All That: the senior prom at Zack and Laney's Southern California high school. One-off menu after Josh's approved Canva layout,
+     recoloured to the film's poster (purple and orange) with gold prom sparkles, so it reads late-90s prom, not Fourth of July: a brush-script header in a white swoosh, a white menu panel with red italic heads,
+     a quote banner and a red showtime strip, round the poster and real TMDB stills. Sparkles, swooshes and dots are drawn trim only */
+  const RED="#d4560b",BLUE="#6b2d86",NAVY="#4a1c60",SILV="#efb94a",INK="#2a1736",SOFT="#5e4b6b";
   const SCRIPT="font-family:'Kaushan Script',cursive;font-weight:400",HEAD="font-family:'Racing Sans One',sans-serif;font-weight:400",BODY="font-family:'Archivo',sans-serif";
   const dry=typeof dryNow==="function"&&dryNow(f),veg=typeof DIET!=="undefined"&&DIET.veg;
   const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const img=(p,size,alt,css)=>`<img crossorigin="anonymous" src="${TMDB_IMG}${size}${ESC(p)}" alt="${ESC(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;${css||""}">`;
-  /* drawn trim only: a five-point star from three border triangles, built at 100px and scaled */
-  const star=(sz,c,css)=>{const k=sz/100;return `<span aria-hidden="true" style="position:relative;display:inline-block;flex:none;width:${sz}px;height:${sz}px;${css||""}"><span style="position:absolute;left:0;top:0;width:100px;height:100px;transform-origin:0 0;transform:scale(${k.toFixed(3)})">
-    <span style="position:absolute;left:0;top:38px;width:0;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:35px solid ${c};transform:rotate(35deg)"></span>
-    <span style="position:absolute;left:0;top:38px;width:0;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:35px solid ${c};transform:rotate(-35deg)"></span>
-    <span style="position:absolute;left:31px;top:2px;width:0;height:0;border-left:19px solid transparent;border-right:19px solid transparent;border-bottom:44px solid ${c}"></span></span></span>`};
+  /* drawn trim only: a four-point prom sparkle from two squashed diamonds (the PDF export ignores clip-path, transforms are fine) */
+  const star=(sz,c,css)=>{const d=(sz*.71).toFixed(1),arm=r=>`<span style="position:absolute;left:50%;top:50%;width:${d}px;height:${d}px;margin:-${d/2}px 0 0 -${d/2}px;background:${c};transform:rotate(${r}deg) scaleX(.34) rotate(45deg)"></span>`;
+    return `<span aria-hidden="true" style="position:relative;display:inline-block;flex:none;width:${sz}px;height:${sz}px;${css||""}">${arm(0)}${arm(90)}</span>`};
   const dots=(c,o)=>`background-image:radial-gradient(${c} 1.6px,transparent 2.1px);background-size:8px 8px;opacity:${o}`;
   const price=p=>`<span style="${BODY};font-weight:800;font-size:18px;line-height:1.1;color:${RED};flex:none">${ESC(p)}</span>`;
   const row=(name,p,film,food)=>`<div style="display:grid;grid-template-columns:minmax(0,37fr) minmax(0,63fr) auto;gap:14px;align-items:baseline;padding:3px 0 4px">
@@ -2391,9 +2389,9 @@ function fmtSeniorProm(f,spec,menu,poster){
   const dish=x=>{const it=pick(x.k);return row(it.label||x.n||x.k,x.p,x.note,it.desc||x.d||"")};
   const house=h=>!h||(h.alc&&dry)||(h.meat&&veg)?"":row(h.n,h.p,h.note,h.d);
   const rule=`<div aria-hidden="true" style="display:flex;align-items:center;gap:12px;margin:0"><span style="flex:1;height:2px;background:${BLUE}"></span>${star(18,SILV)}<span style="flex:1;height:2px;background:${BLUE}"></span></div>`;
-  const sect=g=>`<div><div style="${HEAD};font-size:28px;line-height:1.05;color:${RED};text-transform:uppercase;letter-spacing:.02em;text-shadow:2px 2px 0 rgba(22,42,110,.18)">${ESC(g.h)}</div>${g.items.map(dish).join("")}${house(g.house)}</div>`;
+  const sect=g=>`<div><div style="${HEAD};font-size:28px;line-height:1.05;color:${RED};text-transform:uppercase;letter-spacing:.02em;text-shadow:2px 2px 0 rgba(74,28,96,.18)">${ESC(g.h)}</div>${g.items.map(dish).join("")}${house(g.house)}</div>`;
   const SP=`<div aria-hidden="true" style="flex:1 1 0;min-height:4px"></div>`;
-  const panel=`<div class="fx-panel" style="flex:1;min-height:0;background:#fff;border:3px solid ${BLUE};outline:1.5px solid ${BLUE};outline-offset:-9px;border-radius:6px;padding:12px 22px 10px;display:flex;flex-direction:column;box-shadow:6px 6px 0 rgba(22,42,110,.25)">${spec.groups.map(sect).join(SP+rule+SP)}</div>`;
+  const panel=`<div class="fx-panel" style="flex:1;min-height:0;background:#fff;border:3px solid ${BLUE};outline:1.5px solid ${BLUE};outline-offset:-9px;border-radius:6px;padding:12px 22px 10px;display:flex;flex-direction:column;box-shadow:6px 6px 0 rgba(74,28,96,.25)">${spec.groups.map(sect).join(SP+rule+SP)}</div>`;
   const q=spec.quote;
   const banner=`<div style="position:relative;flex:none;background:linear-gradient(180deg,#f4f5f8,#d6d9e0 55%,#eceef2);border:3px solid ${BLUE};border-radius:6px;padding:10px 26px 9px;text-align:center;box-shadow:inset 0 0 0 3px #fff,4px 4px 0 ${RED}">
     <div aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:70px;${dots(BLUE,.35)}"></div><div aria-hidden="true" style="position:absolute;right:0;top:0;bottom:0;width:70px;${dots(RED,.35)}"></div>
@@ -2415,20 +2413,20 @@ function fmtSeniorProm(f,spec,menu,poster){
   const photo=(s,h,i)=>`<figure style="margin:0;flex:none"><div style="background:#fff;padding:5px;border:2px solid ${i%2?RED:BLUE};box-shadow:3px 3px 0 ${SILV}"><div style="height:${h}px;overflow:hidden;background:#222">${img(s[0],"w780",s[1]+", still from the film",s[2]?"object-position:"+s[2]:"")}</div></div><figcaption style="${BODY};font-weight:600;font-style:italic;font-size:13.5px;line-height:1.25;color:${NAVY};margin-top:5px;background:#fff;padding:3px 7px;border-radius:3px">${ESC(s[1])}</figcaption></figure>`;
   const right=`<div style="flex:none;width:214px;display:flex;flex-direction:column;justify-content:space-between;gap:10px">${spec.stills.map((s,i)=>photo(s,100,i)).join("")}</div>`;
   const head=`<div style="position:relative;flex:none;height:128px">
-    <div aria-hidden="true" style="position:absolute;left:280px;top:8px;width:720px;height:108px;border-radius:50%;background:#fff;border:6px solid ${BLUE};box-shadow:0 0 0 5px ${RED},6px 9px 0 5px rgba(22,42,110,.3);transform:rotate(-3deg)"></div>
+    <div aria-hidden="true" style="position:absolute;left:280px;top:8px;width:720px;height:108px;border-radius:50%;background:#fff;border:6px solid ${BLUE};box-shadow:0 0 0 5px ${RED},6px 9px 0 5px rgba(74,28,96,.3);transform:rotate(-3deg)"></div>
     <div style="position:absolute;left:280px;top:-4px;width:720px;text-align:center;transform:rotate(-3deg)">
       <div style="${SCRIPT};font-size:70px;line-height:1.25;color:${RED};text-shadow:3px 3px 0 #fff,5px 5px 0 ${NAVY}">${ESC(spec.head[0])}</div>
       <div style="${BODY};font-weight:800;font-style:italic;font-size:22px;line-height:1;color:${BLUE};margin-top:-8px">${ESC(spec.head[1])}</div></div>
     ${star(50,SILV,"position:absolute;left:226px;top:8px")}${star(36,"#fff","position:absolute;left:1030px;top:66px")}${star(56,SILV,"position:absolute;left:1046px;top:2px")}${star(28,SILV,"position:absolute;left:250px;top:88px")}
-    <div style="position:absolute;left:22px;top:22px;width:200px"><div style="${HEAD};font-size:17px;letter-spacing:.06em;color:#fff;text-transform:uppercase">Tonight only</div><div style="${BODY};font-weight:800;font-size:22px;line-height:1.15;color:#fff;margin-top:4px">${ESC(f.title)}</div><div style="${BODY};font-weight:600;font-size:15px;color:#e3e8ff">${ESC(f.year)}</div></div></div>`;
+    <div style="position:absolute;left:22px;top:22px;width:200px"><div style="${HEAD};font-size:17px;letter-spacing:.06em;color:#fff;text-transform:uppercase">Tonight only</div><div style="${BODY};font-weight:800;font-size:22px;line-height:1.15;color:#fff;margin-top:4px">${ESC(f.title)}</div><div style="${BODY};font-weight:600;font-size:15px;color:#f0e2fa">${ESC(f.year)}</div></div></div>`;
   const cue=`<div style="position:relative;flex:none;background:${RED};padding:9px 30px;display:flex;align-items:center;gap:18px;border-top:4px solid #fff;box-shadow:0 -4px 0 ${BLUE}">
     <div style="flex:none;width:112px;height:70px;border:3px solid #fff;overflow:hidden;background:#222">${img(spec.cue[0],"w780",spec.cue[1]+", still from the film",spec.cue[2]?"object-position:"+spec.cue[2]:"")}</div>
-    <div style="min-width:0;flex:1"><div style="${BODY};font-weight:700;font-size:19px;line-height:1.3;color:#fff"><span style="font-weight:800;font-style:italic">Showtime:</span> ${ESC(fmtCue(f)).replace(/ (\S+)$/,"&nbsp;$1")}</div><div style="${BODY};font-style:italic;font-size:14px;color:#ffe3e5;margin-top:2px">${ESC(spec.cue[1])}</div></div>
+    <div style="min-width:0;flex:1"><div style="${BODY};font-weight:700;font-size:19px;line-height:1.3;color:#fff"><span style="font-weight:800;font-style:italic">Showtime:</span> ${ESC(fmtCue(f)).replace(/ (\S+)$/,"&nbsp;$1")}</div><div style="${BODY};font-style:italic;font-size:14px;color:#ffe8d6;margin-top:2px">${ESC(spec.cue[1])}</div></div>
     ${star(30,"#fff")}${star(22,SILV)}${star(30,"#fff")}</div>`;
   /* a pale silver paper edge round the artwork, like the Canva proof's white border. The PDF fills the rest of the sheet from the colour it reads
      about 25px in (edgeColour), so the edge is that wide or the sheet prints red or grey round the menu */
   return fmtFaces([`<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:#f1f2f5;overflow:hidden;color:${INK};padding:26px">
-    <div style="position:relative;height:100%;overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(22,42,110,.25)">
+    <div style="position:relative;height:100%;overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(74,28,96,.25)">
     <div aria-hidden="true" style="position:absolute;left:-200px;top:-260px;width:820px;height:520px;background:${BLUE};transform:rotate(-14deg)"></div>
     <div aria-hidden="true" style="position:absolute;left:-200px;top:-260px;width:820px;height:520px;transform:rotate(-14deg);${dots("#fff",.18)}"></div>
     <div aria-hidden="true" style="position:absolute;right:-240px;bottom:-200px;width:900px;height:420px;background:${RED};transform:rotate(-14deg)"></div>
