@@ -8,14 +8,14 @@ FILM = {"id": "Thelma & Louise (1991)", "theme": "western",
 FORMAT = {"format": "diner", "era": "1990s", "tone": "gritty"}
 PALETTE = {"dark": "#1c1a17", "accent": "#2f8fa3"}
 SERIES = []
-FLAVOUR = {"venue": "Louise's Diner", "sign": "Arkansas. Louise is on shift.",
+FLAVOUR = {"venue": "The Arkansas Diner", "sign": "Arkansas. Louise is on shift.",
            "note": {"text": "You get what you settle for.", "by": "Louise Sawyer", "kind": "quote"},
            "winks": ["Darryl's gun in Thelma's purse", "Simon says everybody lay down", "A state trooper in his own trunk", "The trucker's tanker goes up", "Hal Slocumb, Arkansas State Police"],
            "prop": {"kind": "tag", "title": "1966 Thunderbird", "lines": ["Convertible, top down", "Westbound"]},
            "number": "66",
            "caption": "Thelma and Louise give J.D. a lift.",
            "words": {"Overheard at the counter": "Asking after them"}}
-HOUSE = {"s": {"n": "A bowl of salted peanuts", "note": "The roadhouse kind. For the road.", "meat": False},
+HOUSE = {"s": {"n": "A bowl of roadhouse peanuts", "note": "Salted, in the shell. For the road.", "meat": False},
          "d": {"n": "Bottomless diner coffee", "note": "Louise drinks hers and plans the getaway.", "alc": False}}
 DISHES = [
  {"n": "Fishing cabin cornmeal fish bites with tartare", "course": "s",

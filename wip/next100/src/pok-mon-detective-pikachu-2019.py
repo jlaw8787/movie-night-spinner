@@ -2,7 +2,7 @@
 # Sources: Wikipedia plot (Detective_Pikachu_(film)), Wikiquote (Detective_Pikachu_(film)), Looper "Details you missed" (Tim and Pikachu visit the
 # Hi-Hat Cafe, Noctowl neon, Jigglypuff sings a patron to sleep, a Snorlax asleep in the road, the 10th anniversary parade).
 FILM = {"id": "Pokémon Detective Pikachu (2019)", "theme": "kids",
-        "T": "Ryme City, where people and Pokémon live side by side.",
+        "T": "You feel it in your jellies, don't you?",
         "D": "A young man teams up with his missing father's coffee-loving, hat-wearing Pikachu, the only Pokémon he can understand, to find out what happened.",
         "P": "Serve the chicken and waffles when Tim and Pikachu walk into the Hi-Hat Cafe."}
 FORMAT = {"format": "cafe", "era": "modern", "tone": "playful"}
@@ -39,7 +39,7 @@ DISHES = [
                   "ing": [(0.5, "", "cauliflower, in large florets", "Produce"), (375, "ml", "buttermilk, plus 250ml for the waffles", "Dairy"), (150, "g", "plain flour, plus 200g for the waffles", "Pantry"), (1, "tsp", "sweet paprika", "Spices"), (1, "l", "vegetable oil, for frying", "Pantry"), (2, "tsp", "baking powder", "Pantry"), (2, "", "eggs", "Dairy"), (60, "g", "butter, melted, plus 60g soft", "Dairy"), (3, "tbsp", "maple syrup, plus extra to serve", "Pantry")],
                   "steps": [("Make and cook the waffles.", 15), ("Dip the florets in buttermilk, toss in seasoned flour and fry at 175C until golden and tender.", 25), ("Beat the butter with maple syrup and stack everything up.", 10)]}}},
  {"n": "Charizard's flame-grilled beef skewers with rice", "course": "m",
-  "line": "Charizard takes Pikachu's hat",
+  "line": "Pikachu takes on Charizard in the arena",
   "note": "Sticky soy beef skewers, rice, crunchy slaw.",
   "prep": 25, "cook": 20, "ahead": "Marinate the beef up to a day ahead; thread and grill to serve",
   "ing": [(600, "g", "rump steak, in cubes", "Meat"), (3, "tbsp", "soy sauce", "Pantry"), (2, "tbsp", "honey", "Pantry"), (1, "tbsp", "sesame oil", "Pantry"), (2, "", "garlic cloves, crushed", "Produce"), (1, "", "red capsicum, in chunks", "Produce"), (300, "g", "jasmine rice", "Pantry"), (0.25, "", "red cabbage, finely shredded", "Produce"), (1, "", "carrot, grated", "Produce"), (1, "", "lime", "Produce"), (8, "", "bamboo skewers, soaked", "Pantry")],

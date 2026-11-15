@@ -1,0 +1,51 @@
+{
+ "id": "Spirited Away (2001)",
+ "facts": [
+  {
+   "text": "A bathhouse for the spirits, and one human girl.",
+   "where": "tagline",
+   "verdict": "wrong",
+   "why": "Not the film's tagline. Wikiquote lists no tagline and the writer's notes say the line is their own. It prints under the bridge still as if it were the film's tagline. The words are true to the plot, so it could stay as a plain description, but it should not sit in the tagline field.",
+   "source": "https://en.wikiquote.org/wiki/Spirited_Away",
+   "fix": "If you forget your name, you'll never find your way home.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "If you completely forget your name, you'll never find your way back home."
+  }
+ ],
+ "checked_ok": 19,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Spirited_Away",
+  "https://en.wikiquote.org/wiki/Spirited_Away",
+  "https://www.tofugu.com/japan/spirited-away-food/"
+ ],
+ "notes": "Wikiquote verbatim: 'This is a high-class place I'm running here.' (Yubaba), 'It's a bathhouse for the spirits.' (sign), Kamaji's roasted newt for Lin, Zeniba's 'Sit down, I'll make some tea.' Wikipedia: Chihiro is ten, parents eat at the empty restaurant and turn into pigs, No-Face pays in gold, Yubaba takes her name, polluted river spirit, Boh into a mouse, Zeniba's hairband, Kohaku River, train tickets from Kamaji. Tofugu: Haku's onigiri after she finds her parents are still pigs, Lin feeds konpeito to the soot sprites, Lin gives Chihiro an anman that night. All alcohol-free. Bathhouse still on the bridge sits under the 'Yubaba's Bathhouse' label and is not the poster. The suggested fix is a nod to Haku's line ('If you completely forget your name, you'll never find your way back home'); print it unquoted, or quote the full line verbatim.",
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "Yubaba's room service card is a lovely fit, with Haku's onigiri, the newt bribe and Zeniba's tea, but No-Face's gold and the stink spirit's dumpling could hit harder.",
+  "missing": [
+   "The river spirit's emetic dumpling that Chihiro feeds No-Face",
+   "Haku's warning about forgetting your name",
+   "Chihiro's pink shoe in the Kohaku River",
+   "The train across the flooded sea",
+   "No-Face's 'gold' trick and his huge feast",
+   "Yubaba's final test, picking out the pigs"
+  ],
+  "ideas": [
+   "Swap the house 'Chilled melon soda' note 'A treat for the new girl on the staff.' for 'Sen, you did great! We made so much money!' (Yubaba, verbatim)",
+   "Swap the stock 'A tray charge applies to every order.' for 'Gold from No-Face not accepted.'",
+   "Swap the 'No-Face's feast sushi rolls' note 'No-Face pays the staff in gold' for 'No-Face pays in gold. It doesn't last.'",
+   "Swap the stock 'ORDER BY 3 AM' for 'ORDER BEFORE THE LANTERNS LIGHT'"
+  ],
+  "overall": 4.2,
+  "flat": false,
+  "done": false
+ },
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 2"
+}

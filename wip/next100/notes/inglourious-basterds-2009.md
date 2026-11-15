@@ -32,3 +32,8 @@ Update: added to data/still-block.json for "Inglourious Basterds (2009)" (poster
 - /bPnPsyo09tLRnTOb7AlsBsgnbhP.jpg
 - /bMJxwgLyD47CDQ6BFCT2AMMlID7.jpg
 - /hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg
+
+## Fix (15 Nov)
+- Venue 'Chez Maurice' now 'The Paris Restaurant'; sign now 'Lunch with Goebbels, Paris, June 1944'. Chez Maurice is a deleted-scene name only. Strudel kept.
+- Source: Inglourious Basterds Wiki, Chapter Three (opened via WebFetch): "Early June 1944, Paris", "In a Parisian restaurant" where Goebbels sits with his party; the Maurice restaurant is a deleted scene. https://inglouriousbasterds.fandom.com/wiki/Chapter_Three
+No new still-block or still-pick entries this fix.

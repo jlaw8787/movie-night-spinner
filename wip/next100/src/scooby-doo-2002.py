@@ -13,9 +13,10 @@ FLAVOUR = {"venue": "Spooky Hotel", "sign": "Spooky Island. All you can eat.",
            "winks": ["Old Man Smithers, unmasked", "The Daemon Ritus", "Zarkos the luchador", "Mary Jane, allergic to dogs", "The haunted house ride"],
            "prop": {"kind": "ticket", "title": "Spooky Island", "lines": ["All you can eat", "Guest of Mondavarious"]},
            "number": "2",
-           "words": {"Overheard at the bar": "Case notes"}}
+           "words": {"Overheard at the bar": "Case notes", "Unfold for the island map.": "Unfold for the clues."},
+           "look": {"isle": {"m": "Mystery Inc.", "s": "Snack Bar", "w": "Haunted Ride"}, "label": {"w": "Something Sweet"}}}
 HOUSE = {"s": {"n": "A jar of hot peppers, for the brave", "note": "Ketchup on standby.", "meat": False},
-         "d": {"n": "A jug of iced water", "note": "Grab it off the tray. Scooby did.", "alc": False}}
+         "d": {"n": "A jug of iced water", "note": "I would've gotten away with it, too.", "alc": False}}
 DISHES = [
  {"n": "Homemade Scooby Snacks", "course": "s",
   "line": "Mary Jane says they're 100% vegetarian",
@@ -48,7 +49,7 @@ DISHES = [
                   "ing": [(400, "g", "tin brown lentils, drained", "Pantry"), (100, "g", "ricotta", "Dairy"), (60, "g", "fresh breadcrumbs", "Bakery"), (1, "", "egg", "Dairy"), (30, "g", "parmesan, grated", "Dairy"), (2, "tbsp", "olive oil", "Pantry"), (700, "g", "jar tomato pasta sauce", "Pantry"), (4, "", "long soft rolls", "Bakery"), (150, "g", "mozzarella, sliced", "Dairy")],
                   "steps": [("Mash the lentils with the ricotta, crumbs, egg and parmesan and roll into balls.", 10), ("Bake the balls on an oiled tray at 200C until firm, then warm in the sauce.", 20), ("Fill the rolls, top with mozzarella and grill until melted.", 8)]}}},
  {"n": "Disco ball coconut snowballs", "course": "w",
-  "line": "Daphne's disco ball sunlight trick",
+  "line": "Daphne bounces the sun off a disco ball",
   "note": "Vanilla ice cream rolled in toasted coconut, mango sauce.",
   "prep": 20, "cook": 5, "ahead": "Roll the snowballs up to 3 days ahead and keep frozen",
   "ing": [(1, "l", "vanilla ice cream", "Frozen"), (150, "g", "shredded coconut", "Pantry"), (1, "", "ripe mango, chopped", "Produce"), (1, "tbsp", "honey", "Pantry"), (1, "", "lime", "Produce")],

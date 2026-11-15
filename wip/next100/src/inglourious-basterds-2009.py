@@ -1,4 +1,4 @@
-# Inglourious Basterds (2009). Cafe layout, Chez Maurice, the Paris restaurant of the strudel scene.
+# Inglourious Basterds (2009). Cafe layout, the unnamed Paris restaurant of the strudel scene (Chez Maurice is a deleted-scene name only).
 # Sources: Wikipedia plot (Inglourious_Basterds), Wikiquote (Inglourious_Basterds), movie-locations.com (Chez Maurice, La Louisiane),
 # Inglourious Basterds Wiki, Chapter Three (two strudels, an espresso, a glass of milk, "Wait for the cream").
 FILM = {"id": "Inglourious Basterds (2009)", "theme": "uptown",
@@ -8,7 +8,7 @@ FILM = {"id": "Inglourious Basterds (2009)", "theme": "uptown",
 FORMAT = {"format": "cafe", "era": "1930s-40s", "tone": "tense"}
 PALETTE = {"dark": "#16110f", "accent": "#a8211c"}
 SERIES = []
-FLAVOUR = {"venue": "Chez Maurice", "sign": "Chez Maurice, Paris, 1944",
+FLAVOUR = {"venue": "The Paris Restaurant", "sign": "Lunch with Goebbels, Paris, June 1944",
            "note": {"text": "Oooh, that's a bingo!", "by": "Col. Hans Landa", "kind": "quote"},
            "winks": ["Bingo, says Landa", "Bridget's shoe from La Louisiane", "Bear Jew and his baseball bat", "Kino, the plot for the premiere", "Milk for the mademoiselle"],
            "prop": {"kind": "ticket", "title": "Nation's Pride", "lines": ["Premiere, Paris, 1944", "Seats 0023 and 0024"]},

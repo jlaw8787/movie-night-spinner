@@ -1,0 +1,68 @@
+{
+ "id": "Thelma & Louise (1991)",
+ "facts": [
+  {
+   "text": "LOUISE'S DINER",
+   "full": "Louise's Diner",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The film never names the diner, and Louise only waits tables there, so 'Louise's Diner' makes up a name and says she owns it. The writer flagged the name as their own. Wikipedia says only that Louise works as a waitress; AFI says the Arkansas diner where Louise works.",
+   "source": "https://en.wikipedia.org/wiki/Thelma_%26_Louise",
+   "fix": "THE ARKANSAS DINER",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "THE ARKANSAS DINER"
+  },
+  {
+   "text": "Louise's Diner. Turn over for the cover.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "Same invented name as the venue, printed again at the foot of the second menu page.",
+   "source": "https://en.wikipedia.org/wiki/Thelma_%26_Louise",
+   "fix": "Louise's shift. Turn over for the cover.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "The Arkansas Diner. Turn over for the cover."
+  }
+ ],
+ "checked_ok": 20,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Thelma_%26_Louise",
+  "https://en.wikiquote.org/wiki/Thelma_%26_Louise",
+  "https://catalog.afi.com/Film/59064-THELMA-LOUISE"
+ ],
+ "notes": "Wikiquote verbatim: 'You get what you settle for.' (Louise), 'We'll be drinking margaritas by the sea, mamacita.', 'Simon says everybody lay down on the floor', 'throw in a couple bottles of Wild Turkey', tagline. Wikipedia: fishing cabin, Darryl's note and gun, Mexico, 1966 Thunderbird, J.D.'s lift west, New Mexico trooper in his trunk, tanker, Hal Slocumb. Caption under J.D. in the Thunderbird matches the still; the second still (the Polaroid) has no caption. House peanuts print at 4.95, the same price as the onion rings above them, which looks like a copy slip.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "verdict": "A good roadside diner with the Thunderbird, the margaritas and the Wild Turkey hold-up, but the stock diner lines and an invented name dull it, and the ending is nowhere.",
+  "missing": [
+   "'Let's keep going' and the Grand Canyon (the ending)",
+   "The Polaroid at the start of the trip",
+   "'I've had it up to my ass with sedate' (Thelma)",
+   "J.D.'s hold-up lesson that Thelma copies at the store",
+   "Jimmy and the wired life savings",
+   "The roadhouse and Harlan's drinks"
+  ],
+  "ideas": [
+   "Swap the stock 'The booth by the door is taken.' for 'Keep going.' (Thelma at the canyon, as a nod)",
+   "Swap the stock 'Coffee all night. Cash only. Est. 1991.' for 'Coffee all night. Cash only. Don't ask Darryl.'",
+   "Swap the house peanuts note 'The roadhouse kind. For the road.' for 'I've had it up to my ass with sedate.' (Thelma, verbatim)",
+   "Swap 'Fishing cabin cornmeal fish bites' note 'The weekend at the fishing cabin' for 'The fishing cabin they never reach'"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "House peanuts renamed 'A bowl of roadhouse peanuts' (note 'Salted, in the shell. For the road.'), now 3.50, no longer the same price as the onion rings"
+  ]
+ },
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 2"
+}

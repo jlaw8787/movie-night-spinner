@@ -1,0 +1,60 @@
+{
+ "id": "Critters (1986)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 2",
+ "facts": [
+  {
+   "text": "Grovers Bend, Kansas",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Wikipedia's Critters 2 plot and Moria's review spell the town 'Grover's Bend' with an apostrophe. The Critters page itself does not name the town, and I could not confirm the on-screen spelling.",
+   "source": "https://en.wikipedia.org/wiki/Critters_2:_The_Main_Course",
+   "fix": "Grover's Bend, Kansas",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Grover's Bend, Kansas"
+  }
+ ],
+ "checked_ok": 17,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Critters_(film)",
+  "https://en.wikiquote.org/wiki/Critters_(film)",
+  "https://en.wikipedia.org/wiki/Critters_2:_The_Main_Course"
+ ],
+ "notes": "Breakfast and waiting on Charlie, the half-eaten cow, the firecracker, the church and bowling alley panic, the whiskey bottle Molotov, Johnny Steele, the fillings and the eggs in the chicken's nest all in Wikipedia plot. Brad's spy probe line on Wikiquote. Three dishes print with no food line (burnt ends, pancakes, whiskey sour) and the right column has a big empty gap above the quote.",
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "The farm kitchen placemat is the right place, but half the notes are bare plot lines with no food, the right column sits half empty and the Krites themselves barely show.",
+  "missing": [
+   "The Krites rolling into balls and firing quills (the farmhouse siege)",
+   "Lee changing faces through the town (the bowling alley and church)",
+   "April and Steve in the barn hayloft",
+   "Charlie leaving with Ug and Lee as a bounty hunter (the ending)",
+   "'I think you watch too much TV.' (Jay, to Brad)"
+  ],
+  "ideas": [
+   "Swap the pancake note 'The Browns sit down to breakfast.' for 'Breakfast before Charlie turns up. Buttermilk stack, maple butter.' so the food prints",
+   "Swap the burnt ends note 'Brad and Jay find a half-eaten cow.' for 'Something ate half the cow. Sticky smoked beef.'",
+   "Fill the empty right column under the bounty notice with Jay's reply 'I think you watch too much TV.'",
+   "Swap the house coffee note 'Waiting on the mechanic since breakfast.' for 'Charlie's fillings pick up the news.'"
+  ],
+  "overall": 3.2,
+  "flat": true,
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Burnt ends note now 'Krites ate half the cow. Sticky beef ends.' so the food prints",
+   "Pancakes note now 'Breakfast before Charlie. Maple butter stack.' so the food prints (maple butter added to the recipe step)",
+   "Whiskey sour note now 'Charlie's bottle goes Molotov. Bourbon sour.' so the food prints",
+   "Chilli note now 'Bowling alley panic. Smoky beef chilli.'; wings and fritter food lines shortened so every dish prints its food",
+   "House coffee note now 'Charlie hears messages in his fillings.' (was the mechanic filler)",
+   "Bounty notice gets a third line 'Last seen: Brown farm'; fillings wink swapped for 'Charlie leaves with Ug and Lee' so the fillings line is not repeated",
+   "Sign spelled Grover's Bend, Kansas"
+  ]
+ }
+}

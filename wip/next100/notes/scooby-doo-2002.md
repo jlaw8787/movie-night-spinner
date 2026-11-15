@@ -31,3 +31,13 @@ Added to data/still-block.json for "Scooby-Doo (2002)" (poster and promo art):
 - /6aPq50Uk7EbgQwgdC5ol7yKs2l6.jpg
 - /zPDmpOafiGBbUdPg8OnlQ6kaCwo.jpg
 - /ylIjfMWA98N8jDiph4i5rr56RAv.jpg
+
+## Fix (15 Nov)
+Vibe 3.4, reworked for rescore:
+- Tiki map labels via FLAVOUR look.isle: Main Isle, Snack Cay, Sweet Reef now Mystery Inc. (on the Scooby still), Snack Bar (gang at the table), Haunted Ride (Shaggy and Scooby). Course heads read 'See Snack Bar' and 'See Mystery Inc.'. Used Mystery Inc. rather than the checker's Mystery Machine because the still is Scooby, not the van.
+- Sweets head 'Sweet Reef' now 'Something Sweet' (look.label.w).
+- House water note now 'I would've gotten away with it, too.' (Smithers, Wikiquote verbatim start of his line, used as a nod).
+- Stock 'Unfold for the island map.' now 'Unfold for the clues.'
+- Snowballs line now 'Daphne bounces the sun off a disco ball' (Wikipedia: Daphne reflects sunlight through a disco ball).
+- Sources: https://en.wikipedia.org/wiki/Scooby-Doo_(film), https://en.wikiquote.org/wiki/Scooby-Doo_(film) (raw, read 15 Nov).
+No new still-block or still-pick entries this fix.

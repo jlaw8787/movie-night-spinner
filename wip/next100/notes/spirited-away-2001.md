@@ -32,3 +32,7 @@ Added to data/still-pick.json for "Spirited Away (2001)", in this order (the sec
 - /bVggfCvAPnFalIctxgpaCRTF97z.jpg
 - /sauN5JV1mBgOgE8RwKcewd2GOPN.jpg
 - /hXd2cgvvVh1EzSxuyNysiLErjVM.jpg
+
+## Fix (15 Nov)
+- Invented tagline replaced with Haku's verbatim line, 'If you completely forget your name, you'll never find your way back home.' (Wikiquote raw, read 15 Nov). Prints under the bridge still on two lines. https://en.wikiquote.org/wiki/Spirited_Away
+No new still-block or still-pick entries this fix.

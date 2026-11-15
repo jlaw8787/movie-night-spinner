@@ -29,3 +29,7 @@ Added to data/still-block.json for "Beethoven (1992)" (poster and promo art):
 - /hPzIyx60PhAHilGkuRr2zR5qlF2.jpg
 - /upcDMFuSizE8C5BbwBHPDuHTh5l.jpg
 - /ypHKycryVn0LSwsNOmS5mxXBtuN.jpg
+
+## Fix (15 Nov)
+- Checker worth-a-look: wink 'The Padded Zebra, Saturday nights' (the babysitter's strip-club joke) now 'George falls through the skylight' (Wikipedia plot: the skylight shatters and George falls to the floor in front of Varnick). https://en.wikipedia.org/wiki/Beethoven_(film)
+No new still-block or still-pick entries this fix.

@@ -2,7 +2,7 @@
 # Sources: Wikipedia plot (Spirited_Away), Wikiquote (Spirited_Away), Tofugu "Spirited Away food" (Haku's onigiri, Lin's konpeito for the soot sprites,
 # Lin's red bean bun, No-Face's feast of sushi, stone-roasted sweet potato and ikameshi).
 FILM = {"id": "Spirited Away (2001)", "theme": "kids",
-        "T": "A bathhouse for the spirits, and one human girl.",
+        "T": "If you completely forget your name, you'll never find your way back home.",
         "D": "Ten-year-old Chihiro takes a job in a witch's bathhouse for spirits to save her parents, who ate the wrong feast and turned into pigs.",
         "P": "Bring out the rice balls when Haku gives Chihiro onigiri after she finds her parents still pigs."}
 FORMAT = {"format": "hotel", "era": "2000s", "tone": "eerie"}

@@ -35,3 +35,8 @@ Added to data/still-block.json for "Pokémon Detective Pikachu (2019)" (poster, 
 - /P9cL0BKbmgMfvXv1xVaaCMh2eE.jpg
 - /pUIMDXJJNjc8GmQHBcrHv9ThDX4.jpg
 - /6M0XsYcEivzW9TApQE1BAG7WmG0.jpg
+
+## Fix (15 Nov)
+- Charizard skewers line 'Charizard takes Pikachu's hat' now 'Pikachu takes on Charizard in the arena'. ComicBook (WebFetch): Pikachu must beat Charizard in a rematch at the underground fight club. https://comicbook.com/gaming/news/detective-pikachu-spoilers-pikachu-charizard-battle
+- Tagline field (unprinted) now Pikachu's verbatim Wikiquote line 'You feel it in your jellies, don't you?'. https://en.wikiquote.org/wiki/Detective_Pikachu_(film)
+No new still-block or still-pick entries this fix.

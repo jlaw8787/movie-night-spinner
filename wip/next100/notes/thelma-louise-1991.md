@@ -26,3 +26,9 @@ Added to data/still-block.json for "Thelma & Louise (1991)" (poster art):
 - /frT8WRHMFUxE3bBesxZbXXiWwdQ.jpg
 - /XlFM4bxwPSfAtnza39QR3J5r83.jpg
 FLAVOUR caption set for the first still (Thelma, Louise and J.D. in the Thunderbird): "Thelma and Louise give J.D. a lift."
+
+## Fix (15 Nov)
+- Venue 'Louise's Diner' (invented, implied she owns it) now 'The Arkansas Diner'; the page 2 footer follows it.
+- House peanuts renamed 'A bowl of roadhouse peanuts', note 'Salted, in the shell. For the road.'; price now 3.50, no longer a copy of the onion rings' 4.95.
+- Source: Wikipedia plot, Louise works as a waitress (raw, read 15 Nov); AFI: the Arkansas diner where Louise works.
+No new still-block or still-pick entries this fix.

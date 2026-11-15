@@ -9,7 +9,7 @@ PALETTE = {"dark": "#2a1d14", "accent": "#c4572a"}
 SERIES = []
 FLAVOUR = {"venue": "The Newton Kitchen", "sign": "The Newtons' place. Mind the dog.",
            "note": {"text": "I really don't like our dog.", "by": "George Newton", "kind": "quote"},
-           "winks": ["Dr Varnick and the fake blood", "Harvey and Vernon, dognappers", "Ryce gets a call from Mark", "The Padded Zebra, Saturday nights", "George's car air freshener firm"],
+           "winks": ["Dr Varnick and the fake blood", "Harvey and Vernon, dognappers", "Ryce gets a call from Mark", "George falls through the skylight", "George's car air freshener firm"],
            "prop": {"kind": "tag", "title": "Beethoven", "lines": ["St Bernard", "Lives with the Newtons"]},
            "number": "5",
            "words": {}}
