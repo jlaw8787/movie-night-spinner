@@ -1452,3 +1452,7 @@ Independent review of Match night (match.js, scripts/build-match.cjs, the room f
 - Rooms take two phones: match_join(code, dev) keeps the joiner's phone id (column joiner, migration match_night_two_players, applied live). The page's phone id is localStorage rd-dev.
 - Room link always points at https://reeldinner.com/ (the app's own address can't be shared).
 - The 18 one-off layout films have no recipe lines for their teaser dishes, so their vegetarian lists go by dish name.
+
+## 15 Nov, Match night: Just me
+
+Third way to play in Match it (Pass the phone, Just me, Room code). One person swipes; keeps go on the real wheel (decider takes up to 8, spinForce.pair any length) and the marquee reveal. localStorage rd-solo keeps the shortlist (kept, not yet picked, max 60) and every film swiped, so decks don't repeat until a vibe runs short, then it laps. Spin my shortlist on the start screen; the picked film leaves the shortlist. Deployed on Josh's go: main fast-forwarded to 88bc851, Publish site run 43673380451 passed, changed files match main live.
