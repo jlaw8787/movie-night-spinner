@@ -2,226 +2,204 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Lord Norinaga's samurai rice balls",
+   "n": "Honour guard yaki onigiri",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 30,
-   "make_ahead": "Grill and flake the salmon up to 1 day ahead and keep chilled; cook the rice and shape the balls on the night",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Shape up to 4 hours ahead, grill before serving",
    "ingredients": [
     {
-     "q": 400,
-     "u": "g",
-     "item": "sushi rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "salmon fillet",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "salt",
+     "q": 2,
+     "u": "cup",
+     "item": "short grain rice",
      "aisle": "Pantry"
     },
     {
      "q": 2,
-     "u": "",
-     "item": "nori sheets, cut into strips",
+     "u": "tbsp",
+     "item": "white miso",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "tbsp",
-     "item": "sesame seeds",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "pickled ginger",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Cook the rice and season lightly.",
-     "min": 20
-    },
-    {
-     "text": "Salt and grill the salmon, then flake.",
-     "min": 10
-    },
-    {
-     "text": "With wet hands, shape rice into triangles around a little salmon.",
-     "min": 15
-    },
-    {
-     "text": "Wrap the base in nori, sprinkle with sesame and serve with pickled ginger.",
-     "min": 5
-    }
-   ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Lord Norinaga's samurai rice balls (vegetarian)",
-     "prep_min": 20,
-     "cook_min": 30,
-     "make_ahead": "Cook the sticky mushroom filling up to 2 days ahead and keep chilled; cook the rice and shape the balls on the night",
-     "ingredients": [
-      {
-       "q": 400,
-       "u": "g",
-       "item": "sushi rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "fresh shiitake mushrooms, finely chopped",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "nori sheets, cut into strips",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "sesame seeds",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "pickled ginger",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cook the rice and season lightly with the salt.",
-       "min": 20
-      },
-      {
-       "text": "Fry the mushrooms in the oil, add the soy and sugar and cook until sticky.",
-       "min": 10
-      },
-      {
-       "text": "With wet hands, shape rice into triangles around a little of the mushroom.",
-       "min": 15
-      },
-      {
-       "text": "Wrap the base in nori, sprinkle with sesame and serve with pickled ginger.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
-  },
-  {
-   "n": "Time sceptre teriyaki skewers",
-   "course": "s",
-   "prep_min": 12,
-   "cook_min": 15,
-   "make_ahead": "Simmer the glaze up to 3 days ahead; thread the chicken up to 1 day ahead, chilled, and grill on the night",
-   "ingredients": [
-    {
-     "q": 4,
      "u": "tbsp",
      "item": "soy sauce",
      "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "tbsp",
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "nori sheets",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice and cool until you can handle it.",
+     "min": 25
+    },
+    {
+     "text": "With wet salted hands, press into 8 firm triangles.",
+     "min": 8
+    },
+    {
+     "text": "Mix the miso, soy and sugar.",
+     "min": 2
+    },
+    {
+     "text": "Grill the onigiri 4 minutes a side until crisp, brushing with the glaze at the end, then wrap the base in nori.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Charcoal chicken skewers with tare",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Thread up to a day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
      "item": "mirin",
      "aisle": "Pantry"
     },
     {
      "q": 2,
      "u": "tbsp",
-     "item": "sugar",
+     "item": "caster sugar",
      "aisle": "Pantry"
-    },
-    {
-     "q": 600,
-     "u": "g",
-     "item": "chicken thigh fillets, in pieces",
-     "aisle": "Meat"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "spring onions, sliced",
-     "aisle": "Produce"
     }
    ],
    "steps": [
     {
      "text": "Simmer the soy, mirin and sugar until syrupy.",
-     "min": 8
+     "min": 5
     },
     {
-     "text": "Thread the chicken onto skewers.",
-     "min": 7
-    },
-    {
-     "text": "Grill, brushing with the glaze, until sticky and charred.",
+     "text": "Cut the chicken and spring onions and thread onto soaked skewers.",
      "min": 12
     },
     {
-     "text": "Scatter with spring onion and serve hot.",
-     "min": 0
+     "text": "Grill over high heat, turning and basting with the tare at the end.",
+     "min": 10
     }
    ],
    "veg": false,
    "af": false,
    "alt": {
-    "af": {
-     "n": "Time sceptre teriyaki skewers",
-     "prep_min": 12,
+    "veg": {
+     "n": "Charcoal shiitake skewers with tare",
+     "prep_min": 20,
      "cook_min": 15,
-     "make_ahead": "Simmer the glaze up to 3 days ahead; thread the chicken up to 1 day ahead, chilled, and grill on the night",
+     "make_ahead": "Thread up to a day ahead, keep chilled",
      "ingredients": [
       {
-       "q": 4,
-       "u": "tbsp",
+       "q": 300,
+       "u": "g",
+       "item": "fresh shiitake",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
        "item": "soy sauce",
        "aisle": "Pantry"
       },
       {
-       "q": 4,
+       "q": 80,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin and sugar until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Cut the zucchini and spring onions and thread onto soaked skewers with the shiitake.",
+       "min": 12
+      },
+      {
+       "text": "Grill over high heat, turning and basting with the tare at the end.",
+       "min": 8
+      }
+     ],
+     "af": false
+    },
+    "af": {
+     "n": "Charcoal chicken skewers with tare",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Thread up to a day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "chicken thigh fillets",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
        "u": "tbsp",
        "item": "honey",
        "aisle": "Pantry"
@@ -229,366 +207,498 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 600,
-       "u": "g",
-       "item": "chicken thigh fillets, in pieces",
-       "aisle": "Meat"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "spring onions, sliced",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Simmer the soy, honey and sugar until syrupy.",
-       "min": 8
-      },
-      {
-       "text": "Thread the chicken onto skewers.",
-       "min": 7
-      },
-      {
-       "text": "Grill, brushing with the glaze, until sticky and charred.",
-       "min": 12
-      },
-      {
-       "text": "Scatter with spring onion and serve hot.",
-       "min": 0
-      }
-     ]
-    },
-    "veg": {
-     "n": "Time sceptre teriyaki mushroom skewers",
-     "prep_min": 12,
-     "cook_min": 15,
-     "make_ahead": "Simmer the glaze up to 3 days ahead; thread the mushrooms and zucchini up to 1 day ahead, chilled, and grill on the night",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "mirin",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "button mushrooms",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "zucchini, cut into chunks",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "spring onions, sliced",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Simmer the soy, mirin and sugar until syrupy.",
-       "min": 8
-      },
-      {
-       "text": "Thread the mushrooms and zucchini onto skewers.",
-       "min": 7
-      },
-      {
-       "text": "Grill, brushing with the glaze, until sticky and charred.",
-       "min": 12
-      },
-      {
-       "text": "Scatter with spring onion and serve hot.",
-       "min": 0
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Time sceptre teriyaki mushroom skewers (vegetarian, alcohol-free)",
-     "prep_min": 12,
-     "cook_min": 15,
-     "make_ahead": "Simmer the apple juice glaze up to 3 days ahead; thread the mushrooms and zucchini up to 1 day ahead, chilled, and grill on the night",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "apple juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
        "item": "rice vinegar",
        "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "button mushrooms",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "zucchini, cut into chunks",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "spring onions, sliced",
-       "aisle": "Produce"
       }
      ],
      "steps": [
       {
-       "text": "Simmer the soy, apple juice, rice vinegar and sugar until syrupy.",
-       "min": 8
+       "text": "Simmer the soy, honey and rice vinegar until syrupy.",
+       "min": 5
       },
       {
-       "text": "Thread the mushrooms and zucchini onto skewers.",
-       "min": 7
-      },
-      {
-       "text": "Grill, brushing with the glaze, until sticky and charred.",
+       "text": "Cut the chicken and spring onions and thread onto soaked skewers.",
        "min": 12
       },
       {
-       "text": "Scatter with spring onion and serve hot.",
-       "min": 0
+       "text": "Grill over high heat, turning and basting with the tare at the end.",
+       "min": 10
       }
-     ]
+     ],
+     "af": true
+    },
+    "veg_af": {
+     "n": "Charcoal shiitake skewers with tare",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Thread up to a day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "fresh shiitake",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, honey and rice vinegar until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Cut the zucchini and spring onions and thread onto soaked skewers with the shiitake.",
+       "min": 12
+      },
+      {
+       "text": "Grill over high heat, turning and basting with the tare at the end.",
+       "min": 8
+      }
+     ],
+     "af": true
     }
    }
   },
   {
-   "n": "Back home mushroom and capsicum pizza",
+   "n": "Mitsu's village hotpot",
    "course": "m",
-   "prep_min": 10,
-   "cook_min": 15,
-   "make_ahead": "Slice the mushrooms and capsicum up to 1 day ahead; stretch, top and bake the pizza on the night",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Make the dashi a day ahead",
    "ingredients": [
-    {
-     "q": 500,
-     "u": "g",
-     "item": "pizza dough",
-     "aisle": "Deli"
-    },
     {
      "q": 1,
-     "u": "tbsp",
-     "item": "plain flour, for stretching",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 125,
-     "u": "ml",
-     "item": "pizza sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "mozzarella, grated",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "mushrooms, sliced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "green capsicum, sliced",
-     "aisle": "Produce"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Stretch the dough thin on a tray dusted with the plain flour.",
-     "min": 8
-    },
-    {
-     "text": "Spread with pizza sauce and scatter with mozzarella, mushrooms and capsicum.",
-     "min": 5
-    },
-    {
-     "text": "Bake at 250C until bubbling and crisp.",
-     "min": 10
-    },
-    {
-     "text": "Cut into slices and celebrate being back home.",
-     "min": 2
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Mochi ice cream",
-   "course": "w",
-   "prep_min": 25,
-   "cook_min": 145,
-   "make_ahead": "Wrap and freeze the mochi until firm up to 1 week ahead, keep frozen; stand 5 minutes before serving",
-   "ingredients": [
-    {
-     "q": 150,
-     "u": "g",
-     "item": "glutinous rice flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "cornflour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "vanilla ice cream, scooped small and frozen",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "mango sorbet, scooped small and frozen",
-     "aisle": "Frozen"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Mix the rice flour, sugar and water and microwave in bursts, stirring, until thick and stretchy.",
-     "min": 10
-    },
-    {
-     "text": "Roll out on cornflour and cut into rounds.",
-     "min": 15
-    },
-    {
-     "text": "Wrap each around a small frozen scoop of ice cream or sorbet.",
-     "min": 25
-    },
-    {
-     "text": "Freeze until firm.",
-     "min": 120
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Iced honey barley tea with lemon",
-   "course": "d",
-   "prep_min": 5,
-   "cook_min": 180,
-   "make_ahead": "Up to 2 days, keep chilled",
-   "ingredients": [
-    {
-     "q": 4,
-     "u": "",
-     "item": "barley tea bags",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1.5,
-     "u": "l",
-     "item": "cold water",
+     "u": "piece",
+     "item": "kombu",
      "aisle": "Pantry"
     },
     {
      "q": 3,
      "u": "tbsp",
-     "item": "honey",
+     "item": "soy sauce",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 2,
      "u": "tbsp",
-     "item": "hot water",
+     "item": "mirin",
      "aisle": "Pantry"
     },
     {
      "q": 0.5,
      "u": "",
-     "item": "lemon",
+     "item": "daikon",
      "aisle": "Produce"
     },
     {
-     "q": 4,
-     "u": "",
-     "item": "lemon slices",
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fresh shiitake",
      "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "Chinese cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "firm tofu",
+     "aisle": "Deli"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "bag ice",
-     "aisle": "Frozen"
+     "u": "bunch",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "short grain rice",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Steep the tea bags in the cold water in the fridge, then remove the bags.",
-     "min": 180
+     "text": "Soak the kombu in 1.5L water, bring to a simmer and lift it out. Add the soy and mirin.",
+     "min": 30
     },
     {
-     "text": "Warm the honey with the hot water until runny and stir into the tea with lemon juice.",
-     "min": 2
+     "text": "Simmer the daikon until starting to soften.",
+     "min": 10
     },
     {
-     "text": "Pour into glasses of ice and add a lemon slice to each.",
-     "min": 3
+     "text": "Add the chicken and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Add the shiitake, cabbage and tofu, cook through and finish with spring onions. Serve at the table with rice.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "veg": {
+     "n": "Mitsu's village hotpot (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Make the dashi a day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "piece",
+       "item": "kombu",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "daikon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "fresh shiitake",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "Chinese cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the kombu in 1.5L water, bring to a simmer and lift it out. Add the soy and mirin.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the daikon until starting to soften.",
+       "min": 10
+      },
+      {
+       "text": "Add the shiitake, cabbage and tofu, cook through and finish with spring onions. Serve at the table with rice.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "af": {
+     "n": "Mitsu's village hotpot",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Make the dashi a day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "piece",
+       "item": "kombu",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "daikon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "chicken thigh fillets",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fresh shiitake",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "Chinese cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the kombu in 1.5L water, bring to a simmer and lift it out. Add the soy and honey.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the daikon until starting to soften.",
+       "min": 10
+      },
+      {
+       "text": "Add the chicken and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Add the shiitake, cabbage and tofu, cook through and finish with spring onions. Serve at the table with rice.",
+       "min": 8
+      }
+     ],
+     "af": true
+    },
+    "veg_af": {
+     "n": "Mitsu's village hotpot (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Make the dashi a day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "piece",
+       "item": "kombu",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "daikon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "fresh shiitake",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "Chinese cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the kombu in 1.5L water, bring to a simmer and lift it out. Add the soy and honey.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the daikon until starting to soften.",
+       "min": 10
+      },
+      {
+       "text": "Add the shiitake, cabbage and tofu, cook through and finish with spring onions. Serve at the table with rice.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Kinako dango with brown sugar syrup",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Make the syrup a week ahead. Cook the dango on the day",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "glutinous rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "kinako (roasted soybean flour)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the brown sugar with 80ml water until syrupy and cool.",
+     "min": 5
+    },
+    {
+     "text": "Mix the rice flour with water to a soft dough and roll into 24 dimpled balls.",
+     "min": 10
+    },
+    {
+     "text": "Boil until they float, 1 minute more, then into iced water.",
+     "min": 6
+    },
+    {
+     "text": "Roll in kinako and sugar, skewer and pour the syrup over.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cold roasted barley tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Make up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the barley in a dry pan until dark golden.",
+     "min": 8
+    },
+    {
+     "text": "Simmer in 1.5L water, cool, strain and chill.",
+     "min": 12
+    },
+    {
+     "text": "Serve over ice.",
+     "min": 1
     }
    ],
    "veg": true,

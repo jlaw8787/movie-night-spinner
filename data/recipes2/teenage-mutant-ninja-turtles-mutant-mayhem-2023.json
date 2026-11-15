@@ -2,123 +2,159 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Splinter's sewer lair pepperoni rolls",
+   "n": "Chinatown pork and chive dumplings",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 20,
-   "make_ahead": "Roll, cut and sit the rolls in the tin up to 1 day ahead, covered in the fridge; bake on the night",
+   "prep_min": 35,
+   "cook_min": 12,
+   "make_ahead": "Fold up to a day ahead, or freeze on a tray",
    "ingredients": [
     {
-     "q": 500,
+     "q": 400,
      "u": "g",
-     "item": "pizza dough",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 125,
-     "u": "ml",
-     "item": "pizza sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "mozzarella, grated",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 80,
-     "u": "g",
-     "item": "pepperoni, sliced",
+     "item": "pork mince",
      "aisle": "Meat"
     },
     {
      "q": 1,
+     "u": "bunch",
+     "item": "garlic chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "knob",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
      "u": "tbsp",
-     "item": "plain flour, for rolling",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "round dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Chinese black vinegar",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Roll the dough into a rectangle on a bench dusted with the plain flour and spread with pizza sauce.",
+     "text": "Mix the pork, chives, ginger, half the soy and the sesame oil.",
+     "min": 8
+    },
+    {
+     "text": "Fill, pleat and seal the wrappers.",
+     "min": 25
+    },
+    {
+     "text": "Fry until the bases are golden, add water, cover and steam.",
      "min": 10
     },
     {
-     "text": "Scatter with mozzarella and pepperoni and roll up from the long side.",
-     "min": 5
-    },
-    {
-     "text": "Cut into twelve rolls and sit in a lined tin.",
-     "min": 5
-    },
-    {
-     "text": "Bake at 200C until golden.",
-     "min": 20
+     "text": "Mix the rest of the soy with the black vinegar for dipping.",
+     "min": 2
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Splinter's sewer lair spinach and olive rolls",
-     "prep_min": 20,
-     "cook_min": 20,
-     "make_ahead": "Roll, cut and sit the spinach and olive rolls in the tin up to 1 day ahead, covered in the fridge; bake on the night",
+     "n": "Chinatown mushroom and chive dumplings",
+     "prep_min": 35,
+     "cook_min": 12,
+     "make_ahead": "Fold up to a day ahead, or freeze on a tray",
      "ingredients": [
       {
-       "q": 500,
+       "q": 300,
        "u": "g",
-       "item": "pizza dough",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 125,
-       "u": "ml",
-       "item": "pizza sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "mozzarella, grated",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "baby spinach, chopped",
+       "item": "fresh shiitake",
        "aisle": "Produce"
       },
       {
-       "q": 60,
+       "q": 200,
        "u": "g",
-       "item": "black olives, sliced",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "garlic chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "knob",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
        "aisle": "Pantry"
       },
       {
        "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "round dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
        "u": "tbsp",
-       "item": "plain flour, for rolling",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Chinese black vinegar",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Roll the dough into a rectangle on a bench dusted with the plain flour and spread with pizza sauce.",
+       "text": "Finely chop the shiitake and fry dry until it loses its water, then mix with the crumbled tofu, chives, ginger, half the soy and the sesame oil.",
+       "min": 12
+      },
+      {
+       "text": "Fill, pleat and seal the wrappers.",
+       "min": 25
+      },
+      {
+       "text": "Fry until the bases are golden, add water, cover and steam.",
        "min": 10
       },
       {
-       "text": "Scatter with mozzarella, spinach and olives and roll up from the long side.",
-       "min": 5
-      },
-      {
-       "text": "Cut into twelve rolls and sit in a lined tin.",
-       "min": 5
-      },
-      {
-       "text": "Bake at 200C until golden.",
-       "min": 20
+       "text": "Mix the rest of the soy with the black vinegar for dipping.",
+       "min": 2
       }
      ],
      "af": true
@@ -126,78 +162,149 @@
    }
   },
   {
-   "n": "Turtle shell guacamole",
+   "n": "Superfly's smash sliders",
    "course": "s",
-   "prep_min": 15,
-   "cook_min": 0,
-   "make_ahead": "Up to 4 hours, press cling film on the surface",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Roll the balls up to a day ahead",
    "ingredients": [
     {
-     "q": 3,
-     "u": "",
-     "item": "avocados",
-     "aisle": "Produce"
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
     },
     {
-     "q": 2,
+     "q": 8,
      "u": "",
-     "item": "limes",
-     "aisle": "Produce"
+     "item": "slices American cheese",
+     "aisle": "Dairy"
     },
     {
-     "q": 0.25,
-     "u": "cup",
-     "item": "coriander leaves, chopped",
-     "aisle": "Produce"
+     "q": 8,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "green chilli, chopped",
-     "aisle": "Produce"
-    },
-    {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "salt",
+     "u": "jar",
+     "item": "dill pickles",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "",
-     "item": "cob loaf",
-     "aisle": "Bakery"
+     "item": "brown onion",
+     "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "bag corn chips",
+     "u": "bottle",
+     "item": "tomato ketchup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bottle",
+     "item": "American mustard",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Mash the avocados with lime juice, coriander, chilli and salt.",
-     "min": 8
+     "text": "Roll the mince into 8 balls.",
+     "min": 4
     },
     {
-     "text": "Cut the top off the cob loaf and hollow it out.",
+     "text": "Smash flat in a smoking hot pan, season and cook until the edges crust.",
+     "min": 6
+    },
+    {
+     "text": "Flip, add cheese and cook 1 minute more.",
+     "min": 4
+    },
+    {
+     "text": "Serve on toasted buns with pickles, onion, mustard and ketchup.",
      "min": 5
-    },
-    {
-     "text": "Spoon the guacamole in so it looks like a turtle shell and serve with corn chips and the torn bread.",
-     "min": 2
     }
    ],
-   "veg": true,
-   "af": true
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Superfly's smash mushroom sliders",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Roll the balls up to a day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large flat mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "jar",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bottle",
+       "item": "tomato ketchup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bottle",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the mushrooms flat in a smoking hot oiled pan under a heavy pan until browned, 4 minutes a side.",
+       "min": 10
+      },
+      {
+       "text": "Add the cheese and let it melt.",
+       "min": 2
+      },
+      {
+       "text": "Serve on toasted buns with pickles, onion, mustard and ketchup.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
-   "n": "New York pepperoni fold pizza",
+   "n": "Pizza-box pepperoni pie with chilli crisp",
    "course": "m",
-   "prep_min": 10,
-   "cook_min": 15,
-   "make_ahead": "Grate the mozzarella and slice the pepperoni up to 1 day ahead; stretch, top and bake on the night",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Stretch the base up to 2 hours ahead",
    "ingredients": [
     {
      "q": 500,
@@ -206,13 +313,7 @@
      "aisle": "Bakery"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "plain flour, for stretching",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 125,
+     "q": 150,
      "u": "ml",
      "item": "pizza sauce",
      "aisle": "Pantry"
@@ -220,37 +321,43 @@
     {
      "q": 250,
      "u": "g",
-     "item": "mozzarella, grated",
+     "item": "grated mozzarella",
      "aisle": "Dairy"
     },
     {
      "q": 150,
      "u": "g",
-     "item": "pepperoni, sliced",
-     "aisle": "Meat"
+     "item": "sliced pepperoni",
+     "aisle": "Deli"
     },
     {
-     "q": 0.25,
+     "q": 1,
      "u": "tsp",
      "item": "dried oregano",
-     "aisle": "Spices"
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli crisp",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Stretch the dough thin on a tray dusted with the plain flour.",
+     "text": "Stretch the dough thin on an oiled tray and spread with the sauce.",
      "min": 8
     },
     {
-     "text": "Spread with pizza sauce and scatter with mozzarella, pepperoni and oregano.",
-     "min": 5
+     "text": "Scatter the mozzarella, pepperoni and oregano.",
+     "min": 4
     },
     {
-     "text": "Bake on a very hot tray at 250C.",
-     "min": 10
+     "text": "Bake at the oven's highest setting.",
+     "min": 12
     },
     {
-     "text": "Cut into big slices and fold each in half to eat.",
+     "text": "Spoon the chilli crisp over the hot pie and cut into big slices.",
      "min": 2
     }
    ],
@@ -258,10 +365,10 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "New York pepperoni fold pizza (vegetarian)",
-     "prep_min": 10,
-     "cook_min": 15,
-     "make_ahead": "Grate the mozzarella and slice the plant-based pepperoni up to 1 day ahead; stretch, top and bake on the night",
+     "n": "Pizza-box mushroom pie with chilli crisp",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Stretch the base up to 2 hours ahead",
      "ingredients": [
       {
        "q": 500,
@@ -270,13 +377,7 @@
        "aisle": "Bakery"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "plain flour, for stretching",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 125,
+       "q": 150,
        "u": "ml",
        "item": "pizza sauce",
        "aisle": "Pantry"
@@ -284,37 +385,43 @@
       {
        "q": 250,
        "u": "g",
-       "item": "mozzarella, grated",
+       "item": "grated mozzarella",
        "aisle": "Dairy"
       },
       {
-       "q": 150,
+       "q": 250,
        "u": "g",
-       "item": "plant-based pepperoni, sliced",
-       "aisle": "Deli"
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
       },
       {
-       "q": 0.25,
+       "q": 1,
        "u": "tsp",
        "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli crisp",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Stretch the dough thin on a tray dusted with the plain flour.",
+       "text": "Slice the mushrooms and fry hard until browned.",
        "min": 8
       },
       {
-       "text": "Spread with pizza sauce and scatter with mozzarella, plant-based pepperoni and oregano.",
-       "min": 5
+       "text": "Stretch the dough thin, spread with the sauce and top with the mozzarella, mushrooms and oregano.",
+       "min": 8
       },
       {
-       "text": "Bake on a very hot tray at 250C.",
-       "min": 10
+       "text": "Bake at the oven's highest setting.",
+       "min": 12
       },
       {
-       "text": "Cut into big slices and fold each in half to eat.",
+       "text": "Spoon the chilli crisp over the hot pie and cut into big slices.",
        "min": 2
       }
      ],
@@ -325,14 +432,14 @@
   {
    "n": "Baxter Stockman's ooze cupcakes",
    "course": "w",
-   "prep_min": 15,
-   "cook_min": 25,
-   "make_ahead": "Cakes up to 1 day, ice on the day",
+   "prep_min": 20,
+   "cook_min": 18,
+   "make_ahead": "Bake a day ahead, ice on the day",
    "ingredients": [
     {
-     "q": 125,
+     "q": 250,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
@@ -360,12 +467,6 @@
      "aisle": "Dairy"
     },
     {
-     "q": 125,
-     "u": "g",
-     "item": "butter for icing, softened",
-     "aisle": "Dairy"
-    },
-    {
      "q": 250,
      "u": "g",
      "item": "icing sugar",
@@ -373,87 +474,61 @@
     },
     {
      "q": 1,
-     "u": "tsp",
+     "u": "bottle",
      "item": "green food colouring",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Beat the butter and sugar, then the eggs, and fold in the flour and milk.",
-     "min": 10
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+     "min": 8
     },
     {
-     "text": "Fill a lined cupcake tin and bake at 175C, then cool.",
+     "text": "Divide between 12 cases and bake at 180C.",
      "min": 18
     },
     {
-     "text": "Beat the butter, icing sugar and colouring until soft.",
-     "min": 7
-    },
-    {
-     "text": "Spoon on top so it drips down the sides like ooze.",
-     "min": 5
+     "text": "Beat the butter, icing sugar and colouring until fluffy and pipe on in drips once cool.",
+     "min": 10
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Kiwi lime slushie",
+   "n": "Retro-mutagen cherry cola float",
    "course": "d",
-   "prep_min": 10,
+   "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "Best fresh",
+   "make_ahead": "Pour to order",
    "ingredients": [
     {
-     "q": 7,
-     "u": "",
-     "item": "kiwi fruit",
-     "aisle": "Produce"
+     "q": 1,
+     "u": "L",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
     },
     {
-     "q": 3,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "cold apple juice",
+     "q": 1.25,
+     "u": "L",
+     "item": "cherry cola",
      "aisle": "Drinks"
     },
     {
-     "q": 0.25,
-     "u": "cup",
-     "item": "mint leaves",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "honey",
+     "q": 1,
+     "u": "jar",
+     "item": "maraschino cherries",
      "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Blend six peeled kiwi with lime juice, apple juice, mint and honey until smooth.",
-     "min": 5
-    },
-    {
-     "text": "Add ice and blend again until thick and slushy.",
+     "text": "Scoop the ice cream into 4 tall glasses.",
      "min": 3
     },
     {
-     "text": "Pour into glasses and top each with a kiwi slice and a mint sprig.",
+     "text": "Slowly pour the cola over and top with a cherry.",
      "min": 2
     }
    ],

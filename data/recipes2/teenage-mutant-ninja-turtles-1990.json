@@ -24,7 +24,7 @@
      "q": 80,
      "u": "g",
      "item": "sliced pepperoni",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 150,
@@ -69,10 +69,10 @@
        "aisle": "Pantry"
       },
       {
-       "q": 80,
+       "q": 150,
        "u": "g",
-       "item": "plant-based pepperoni slices",
-       "aisle": "Deli"
+       "item": "button mushrooms",
+       "aisle": "Produce"
       },
       {
        "q": 150,
@@ -83,11 +83,11 @@
      ],
      "steps": [
       {
-       "text": "Roll the dough into a thin rectangle and spread with the sauce.",
-       "min": 10
+       "text": "Slice the mushrooms thinly and fry in a dry pan until golden.",
+       "min": 8
       },
       {
-       "text": "Cover with the plant-based pepperoni and mozzarella, roll up tightly from the long side, slice into 12 rounds and place cut side up on a lined tray.",
+       "text": "Roll the dough into a thin rectangle, spread with the sauce, scatter the mushrooms and mozzarella, roll up and slice into 12 rounds.",
        "min": 10
       },
       {
@@ -100,68 +100,76 @@
    }
   },
   {
-   "n": "Splinter's cheese plate",
+   "n": "Splinter's burrata with hot honey",
    "course": "s",
    "prep_min": 10,
-   "cook_min": 60,
-   "make_ahead": "Up to 4 hours ahead, keep chilled",
+   "cook_min": 8,
+   "make_ahead": "Make the hot honey up to a week ahead",
    "ingredients": [
     {
-     "q": 150,
-     "u": "g",
-     "item": "aged cheddar",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "brie",
+     "q": 2,
+     "u": "",
+     "item": "balls of burrata",
      "aisle": "Deli"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "gouda",
-     "aisle": "Deli"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "crackers",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "grapes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
+     "q": 3,
      "u": "tbsp",
      "item": "honey",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "basil",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Take the cheeses out of the fridge an hour before serving to come to room temperature.",
-     "min": 60
+     "text": "Take the burrata out of the fridge to lose its chill.",
+     "min": 5
     },
     {
-     "text": "Arrange the aged cheddar, brie and gouda on a board with the crackers and grapes, and drizzle the honey over the brie just before it goes to the table.",
-     "min": 10
+     "text": "Warm the honey with the chilli flakes until runny.",
+     "min": 3
+    },
+    {
+     "text": "Brush the sourdough with oil and char on a hot grill pan, 2 minutes a side.",
+     "min": 5
+    },
+    {
+     "text": "Tear the burrata over the toast, spoon the hot honey over, crack pepper on top and add the basil.",
+     "min": 3
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Mikey's four-pie pizza night",
+   "n": "Cowabunga hot honey pepperoni pie",
    "course": "m",
-   "prep_min": 30,
-   "cook_min": 40,
-   "make_ahead": "Toppings can be prepped a day ahead",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Stretch the bases up to 2 hours ahead",
    "ingredients": [
     {
      "q": 1,
@@ -170,62 +178,68 @@
      "aisle": "Bakery"
     },
     {
-     "q": 400,
+     "q": 300,
      "u": "ml",
      "item": "pizza sauce",
      "aisle": "Pantry"
     },
     {
-     "q": 400,
+     "q": 250,
      "u": "g",
      "item": "grated mozzarella",
      "aisle": "Dairy"
     },
     {
-     "q": 150,
+     "q": 200,
      "u": "g",
-     "item": "pepperoni",
+     "item": "thin sliced pepperoni",
      "aisle": "Deli"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "button mushrooms, sliced",
-     "aisle": "Produce"
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "capsicum, sliced",
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "basil",
      "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Slice the mushrooms and capsicum and divide the dough into 4 balls.",
+     "text": "Divide the dough in two and stretch each thin on an oiled tray.",
      "min": 10
     },
     {
-     "text": "Stretch each ball thin and top with sauce and mozzarella.",
-     "min": 10
+     "text": "Spread with the sauce, scatter the mozzarella and cover with the pepperoni.",
+     "min": 5
     },
     {
-     "text": "Top one pizza with pepperoni, one with mushrooms, one with pepperoni, mushroom and capsicum, and one with whatever is left in the fridge.",
-     "min": 10
+     "text": "Bake at the oven's highest setting until the edges char and the pepperoni curls into cups.",
+     "min": 12
     },
     {
-     "text": "Bake each pizza on a preheated tray at the oven's highest setting until golden and bubbling, one or two at a time.",
-     "min": 32
+     "text": "Warm the honey with the chilli flakes and pour over at the table with the basil.",
+     "min": 3
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Mikey's four-pie pizza night (vegetarian)",
-     "prep_min": 30,
-     "cook_min": 32,
-     "make_ahead": "Toppings can be prepped a day ahead",
+     "n": "Cowabunga hot honey mushroom pie",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Stretch the bases up to 2 hours ahead",
      "ingredients": [
       {
        "q": 1,
@@ -234,52 +248,58 @@
        "aisle": "Bakery"
       },
       {
-       "q": 400,
+       "q": 300,
        "u": "ml",
        "item": "pizza sauce",
        "aisle": "Pantry"
       },
       {
-       "q": 400,
+       "q": 250,
        "u": "g",
        "item": "grated mozzarella",
        "aisle": "Dairy"
       },
       {
-       "q": 150,
+       "q": 300,
        "u": "g",
-       "item": "plant-based pepperoni",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "button mushrooms, sliced",
+       "item": "Swiss brown mushrooms",
        "aisle": "Produce"
       },
       {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
        "q": 1,
-       "u": "",
-       "item": "capsicum, sliced",
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "basil",
        "aisle": "Produce"
       }
      ],
      "steps": [
       {
-       "text": "Slice the mushrooms and capsicum and divide the dough into 4 balls.",
+       "text": "Slice the mushrooms and fry hard in a hot pan until browned.",
+       "min": 8
+      },
+      {
+       "text": "Divide the dough in two, stretch thin, spread with the sauce and top with the mozzarella and mushrooms.",
        "min": 10
       },
       {
-       "text": "Stretch each ball thin and top with sauce and mozzarella.",
-       "min": 10
+       "text": "Bake at the oven's highest setting until the edges char.",
+       "min": 12
       },
       {
-       "text": "Top one pizza with plant-based pepperoni, one with mushrooms, one with pepperoni, mushroom and capsicum, and one with whatever vegetables are left in the fridge.",
-       "min": 10
-      },
-      {
-       "text": "Bake each pizza on a preheated tray at the oven's highest setting until golden and bubbling, one or two at a time.",
-       "min": 32
+       "text": "Warm the honey with the chilli flakes and pour over at the table with the basil.",
+       "min": 3
       }
      ],
      "af": true
@@ -290,13 +310,13 @@
    "n": "Pizza cookie",
    "course": "w",
    "prep_min": 15,
-   "cook_min": 25,
-   "make_ahead": "Up to 1 day, keep covered",
+   "cook_min": 15,
+   "make_ahead": "Bake up to a day ahead, top before serving",
    "ingredients": [
     {
      "q": 125,
      "u": "g",
-     "item": "soft butter",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
@@ -344,20 +364,16 @@
    ],
    "steps": [
     {
-     "text": "Beat the butter, sugar and egg together, then mix in the flour, bicarb and choc chips.",
-     "min": 10
+     "text": "Beat the butter, sugar and egg, then mix in the flour, bicarb and choc chips.",
+     "min": 8
     },
     {
-     "text": "Press into a greased pizza tray.",
-     "min": 5
-    },
-    {
-     "text": "Bake at 180C until golden, then cool a little.",
+     "text": "Press into a greased pizza tray and bake at 180C.",
      "min": 15
     },
     {
-     "text": "Melt the chocolate, drizzle over the cookie, scatter with lollies and cut into wedges.",
-     "min": 10
+     "text": "Drizzle with melted chocolate, scatter the lollies and cut into wedges.",
+     "min": 5
     }
    ],
    "veg": true,
@@ -368,7 +384,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "Best made fresh",
+   "make_ahead": "Juice up to 2 hours ahead",
    "ingredients": [
     {
      "q": 3,
@@ -383,32 +399,20 @@
      "aisle": "Produce"
     },
     {
-     "q": 200,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
      "q": 800,
      "u": "ml",
      "item": "soda water",
      "aisle": "Drinks"
-    },
-    {
-     "q": 2,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Blend the apples with the lime juice and water, then strain.",
-     "min": 6
+     "text": "Blend the apples with the lime juice and 200ml water, then strain.",
+     "min": 8
     },
     {
-     "text": "Divide over ice in 4 glasses and top with soda water.",
-     "min": 4
+     "text": "Pour over ice in 4 glasses and top with soda water.",
+     "min": 2
     }
    ],
    "veg": true,
