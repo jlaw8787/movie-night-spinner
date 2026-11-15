@@ -1,0 +1,876 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Vince's double cheese sliders with fries",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 20,
+   "make_ahead": "Cut and soak the fries up to a day ahead; shape the patties the morning of and griddle to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, cut in skinny fries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the potatoes at 160C until soft, drain, then fry again at 190C until crisp and salt them.",
+     "min": 15
+    },
+    {
+     "text": "Roll the mince into 16 small balls, smash thin on a hot griddle and season.",
+     "min": 4
+    },
+    {
+     "text": "Flip, top half the patties with cheese and stack a plain one on each.",
+     "min": 3
+    },
+    {
+     "text": "Build in the toasted buns with onion, pickle, sauce and mustard and serve with the fries.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vince's double cheese mushroom sliders with fries (vegetarian)",
+     "course": "s",
+     "prep_min": 7,
+     "cook_min": 20,
+     "make_ahead": "Cut and soak the fries up to a day ahead; sear the mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "small portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "white onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, cut in skinny fries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Double fry the potatoes and salt them.",
+       "min": 15
+      },
+      {
+       "text": "Sear the oiled mushrooms under a weight until dark, then melt the cheese on top.",
+       "min": 8
+      },
+      {
+       "text": "Build the sliders with onion, pickle and sauce and serve with the fries.",
+       "min": 4
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Cha Cha Cha jerk chicken skewers with mango",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Marinate the chicken overnight; thread and grill to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, cubed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bamboo skewers, soaked",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the spring onions, chilli, garlic, allspice, thyme, soy, sugar and the juice of a lime to a paste.",
+     "min": 6
+    },
+    {
+     "text": "Toss the chicken in the paste and leave for at least 10 minutes, or overnight.",
+     "min": 10
+    },
+    {
+     "text": "Thread the chicken and mango onto the skewers.",
+     "min": 4
+    },
+    {
+     "text": "Grill over high heat, turning, until charred and cooked through, and serve with lime wedges.",
+     "min": 12
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cha Cha Cha jerk haloumi skewers with mango (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 8,
+     "make_ahead": "Make the jerk paste up to 3 days ahead; thread and grill the haloumi to serve",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground allspice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "mango, cut in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "bamboo skewers, soaked",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the jerk paste.",
+       "min": 6
+      },
+      {
+       "text": "Toss the haloumi in it and thread onto skewers with the mango.",
+       "min": 14
+      },
+      {
+       "text": "Grill until charred and serve with lime.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Toretto's tuna on white, no crust",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Mix the tuna salad up to a day ahead and keep it cold; build to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "x 185g tins tuna in olive oil, drained",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "dill pickles, finely diced",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "iceberg lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flake the tuna into a bowl and mix with the celery, pickle, mayonnaise, dill, a little lemon zest and juice, salt and lots of pepper.",
+     "min": 6
+    },
+    {
+     "text": "Spread the tuna thickly over 4 slices of bread, add a lettuce leaf and close with the other slices.",
+     "min": 5
+    },
+    {
+     "text": "Press down gently, cut the crusts off with a sharp knife, then cut each sandwich in half.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Toretto's chickpea smash on white, no crust (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Mix the chickpea smash up to 2 days ahead and keep it cold; build to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices soft white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "dill pickles, finely diced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "iceberg lettuce leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roughly smash the chickpeas with a fork and mix with the celery, pickle, mayonnaise, dill, lemon, salt and pepper.",
+       "min": 7
+      },
+      {
+       "text": "Spread over 4 slices of bread, add lettuce and close.",
+       "min": 4
+      },
+      {
+       "text": "Cut off the crusts and halve.",
+       "min": 4
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Quarter-mile Cuban pressed sandwich",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 140,
+   "make_ahead": "Roast the mojo pork up to 2 days ahead and slice it cold; press the sandwiches to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "long crusty bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "boneless pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sliced leg ham",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the orange and lime juice with the garlic, cumin, oregano and 2 teaspoons of salt and rub it over the pork.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 160C until tender, then uncover for the last 20 minutes to brown, and rest.",
+     "min": 120
+    },
+    {
+     "text": "Slice the pork thinly, split the rolls and spread with mustard.",
+     "min": 5
+    },
+    {
+     "text": "Layer the ham, pork, cheese and pickles, butter the outsides and press in a hot pan under a heavy pan, turning once, until crisp and melting.",
+     "min": 10
+    },
+    {
+     "text": "Cut on the diagonal and serve.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Quarter-mile Cuban pressed sandwich with mojo mushrooms (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 22,
+     "make_ahead": "Roast the mojo mushrooms up to a day ahead; press the sandwiches to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "long crusty bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "portobello mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the oil, citrus juice, garlic, cumin and oregano and roast at 220C until dark and juicy.",
+       "min": 15
+      },
+      {
+       "text": "Split the rolls and spread with mustard.",
+       "min": 5
+      },
+      {
+       "text": "Layer the mushrooms, cheese and pickles, butter the outsides and press in a hot pan until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Cut on the diagonal and serve.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Ten-second churros with Mexican chocolate",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Make the chocolate sauce up to 2 days ahead and reheat; fry the churros to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar, plus 80g for coating",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water, butter and a tablespoon of sugar to the boil, tip in the flour and beat until it forms a ball, then cool for 5 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the eggs one at a time and spoon the dough into a piping bag with a star nozzle.",
+     "min": 5
+    },
+    {
+     "text": "Warm the milk, stir in the chocolate, half the cinnamon and the chilli until thick and smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pipe 12cm lengths into oil at 180C and fry until golden, a few at a time.",
+     "min": 12
+    },
+    {
+     "text": "Roll the hot churros in the 80g sugar mixed with the rest of the cinnamon and serve with the chocolate.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Corona with a wedge of lime",
+   "course": "d",
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "Ice the bottles in a tub for an hour before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 355ml bottles Corona Extra",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bury the bottles in a tub of ice for an hour.",
+     "min": 1
+    },
+    {
+     "text": "Open, push a lime wedge into each neck and hand them round.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Corona Cero with a wedge of lime (alcohol-free)",
+     "course": "d",
+     "prep_min": 2,
+     "cook_min": 0,
+     "make_ahead": "Ice the alcohol-free bottles in a tub for an hour before",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "x 330ml bottles Corona Cero alcohol-free",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Ice the bottles for an hour.",
+       "min": 1
+      },
+      {
+       "text": "Open and push a lime wedge into each neck.",
+       "min": 1
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
