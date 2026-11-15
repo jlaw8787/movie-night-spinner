@@ -16,7 +16,7 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "The cabin with the beehive, the wood chipper, the chamomile tea and a PBR reads true to the film, but the food is safe pub grub.",
+  "verdict": "The vacation home, wood chipper, beehive and PBR all land, and the starter board fix is fine, but the porch food is still fairly standard.",
   "missing": [
    "Tucker coaching Dale: 'Tell 'er that you got a vacation home.' (gas station)",
    "'I should have known if a guy like me talked to a girl like you, somebody would end up dead.' (Dale to Allison)",
@@ -32,11 +32,20 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "House starter now 'Porch board of beer nuts, jerky and pickles', so the dearest starter (11.50) is a sharing board, not a bowl of nuts",
    "Footer now 'Ask Dale about: Digging the outhouse hole' (Dale and Allison dig it, Wikipedia)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
  }
 }

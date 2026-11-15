@@ -11,16 +11,14 @@
  "notes": "Columbus's note is verbatim on Wikiquote (italics dropped). Rules 1, 2, 4, 17 (changed to Be a hero), 31 and 32 match Wikipedia's rules table. Riviera nine holes, Free Parking, nut up or shut up and the last Twinkies all on Wikiquote. Pacific Playland, the rides and lights, the drop tower and 'supposedly free of zombies' in Wikipedia's plot. Now playing still is the gang at Pacific Playland at night, not the poster.",
  "vibe": {
   "world": 5,
-  "moments": 4,
+  "moments": 5,
   "food": 4,
   "tone": 4,
   "look": 5,
-  "verdict": "Pacific Playland as a neon prize counter with the rules, the Twinkies and Bill Murray's nine holes is the film to a tee.",
+  "verdict": "Pacific Playland is spot on, and the Twinkie and Garfield lines now print alongside the rules and nut up or shut up.",
   "missing": [
-   "Bill Murray's last words: 'Garfield, maybe.'",
    "Buck, Tallahassee's 'puppy'",
    "The clown zombie at the park",
-   "'Where are ya, ya spongy yellow delicious bastards?!' (the fried-Twinkie stand)",
    "Little Rock: 'No Twinkies.'"
   ],
   "ideas": [
@@ -29,15 +27,24 @@
    "Swap the high score 'CPU' for 'BUCK'",
    "Add 'Any regrets? Garfield, maybe.' under the club sandwiches note"
   ],
-  "overall": 4.4,
+  "overall": 4.6,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Twinkie line now 'Ya spongy yellow delicious bastards' (Wikiquote, fried-Twinkie stand)",
    "Club sandwich line now 'Bill Murray's one regret: Garfield, maybe' (Wikiquote)",
    "Slushie house note now 'Rule 3: Beware of bathrooms.' (Wikiquote)",
    "High scores now COL, TAL, YOU (three letters max, so BUCK can't print)"
-  ]
+  ],
+  "before": {
+   "world": 5,
+   "moments": 4,
+   "food": 4,
+   "tone": 4,
+   "look": 5,
+   "overall": 4.4
+  },
+  "rescored": "2026-11-15"
  }
 }

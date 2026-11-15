@@ -15,13 +15,12 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "The farmhouse recipe box with Delbert, the Chateau and Ross's spider plea feels right, but the mains are names with plot notes and no food.",
+  "verdict": "The farmhouse, the cellar and the Chateau line land well and every dish now prints its food, but the arepas, pot pie and cioppino still read like a general country menu.",
   "missing": [
    "The spider in the slipper and under the toilet seat (the house)",
    "Ross shoots the general with a nail gun (the cellar)",
    "The earthquake back in San Francisco (the ending)",
-   "Margaret Hollins' death after the bite (Ross's first patient)",
-   "Delbert's 'a web would indicate an arachnoid presence' (the barn)"
+   "Margaret Hollins' death after the bite (Ross's first patient)"
   ],
   "ideas": [
    "Swap the pot pie note 'The old town doctor won't retire.' for one that also names the food so it prints in full",
@@ -30,13 +29,22 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Pot pie note now 'Dr Metcalf won't retire yet. Chicken and leek pie.' so the food prints",
    "Cioppino note now 'They left the city for this. Tomato seafood stew.' so the food prints",
    "Arepas and devilled eggs food lines shortened to make room",
    "Stock photo date stamp '90 10 26 remapped to '90 07 18 (US release, 18 July 1990)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
  }
 }

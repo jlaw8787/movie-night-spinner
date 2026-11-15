@@ -16,7 +16,7 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "The Maybrook cafeteria with a roll call of 17 absent and 2:17 on every line is clever, but Gladys, the film's big image, barely shows and the food is plain school lunch.",
+  "verdict": "A tense third grade cafeteria with the doorbell footage, 2:17 and Aunt Gladys, but the kids running with arms out and Gladys's clown face are still missing.",
   "missing": [
    "Gladys's orange wig and clown make-up",
    "The children running with their arms out at 2:17",
@@ -33,11 +33,20 @@
   ],
   "overall": 3.6,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Chocolate milk line now 'Water won't help me, says Gladys' (Wikiquote: 'Well, water won't help me. I'm too sick for water.')",
    "Not changed: 'Bring an object from each classmate' drops off the timetable (too long, printed 'Sport'), so Period 5 keeps 'One object from each classmate'; 'arms out' not in any opened source, pudding line kept"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15"
  }
 }

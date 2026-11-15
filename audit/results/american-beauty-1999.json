@@ -14,12 +14,10 @@
   "moments": 4,
   "food": 3,
   "tone": 4,
-  "look": 3,
-  "verdict": "Mr. Smiley's drive-thru with Smiley sauce, the asparagus and the Firebird works, but two lines lean on the Angela fantasy and the poster plus a headless header still carry the look.",
+  "look": 4,
+  "verdict": "Mr. Smiley's drive-thru now leans on Lester, the Firebird, the asparagus and Buddy Kane, with Lester's face in the header, though a couple of dish names still feel forced.",
   "missing": [
-   "'The car I've always wanted and now I have it. I rule!' (Lester and the Firebird)",
    "Ricky's 'most beautiful thing I've ever filmed' (the bag video)",
-   "Buddy Kane, the real estate king",
    "Lester blackmails his boss for almost sixty thousand dollars",
    "Ricky's catering job (his front for dealing)"
   ],
@@ -29,9 +27,9 @@
    "Swap the name badge 'Mr. Smiley's.' for 'Lester' over 'Fry cook. Smile!'",
    "Re-crop the menu header still so Carolyn's face shows, or use Lester at the window"
   ],
-  "overall": 3.6,
+  "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Prawn baskets renamed 'Real estate King popcorn prawn baskets', line 'The real estate King orders at the window' (Wikipedia: real estate 'King' Buddy Kane; the drive-thru order). Angela's Red Lobster line gone",
@@ -39,6 +37,15 @@
    "Thickshake line now 'The car I've always wanted. I rule' (Wikiquote)",
    "Name badge now 'Hello, my name is Lester!' over 'Fry cook. Smile!' (was 'Mr. Smiley's.')",
    "Menu header still now Lester's face (still-pick reordered; was a headless crop of Carolyn)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15"
  }
 }

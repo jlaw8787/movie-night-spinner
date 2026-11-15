@@ -40,7 +40,7 @@
   "food": 4,
   "tone": 3,
   "look": 4,
-  "verdict": "A good roadside diner with the Thunderbird, the margaritas and the Wild Turkey hold-up, but the stock diner lines and an invented name dull it, and the ending is nowhere.",
+  "verdict": "A strong Arkansas diner with the Thunderbird, Wild Turkey and margaritas by the sea, but the dish notes still just restate the plot.",
   "missing": [
    "'Let's keep going' and the Grand Canyon (the ending)",
    "The Polaroid at the start of the trip",
@@ -57,11 +57,20 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "House peanuts renamed 'A bowl of roadhouse peanuts' (note 'Salted, in the shell. For the road.'), now 3.50, no longer the same price as the onion rings"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 4,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
  },
  "checked": "2026-11-15",
  "by": "independent checker, next 100 round 2"

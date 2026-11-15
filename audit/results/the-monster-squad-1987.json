@@ -29,10 +29,8 @@
   "food": 3,
   "tone": 4,
   "look": 3,
-  "verdict": "The nards gag, the Gill-man and the amulet all print, but the pale pink invite and stock sub shop food feel generic for a monster-mad kids' club.",
+  "verdict": "The nards, Horace, the pie and the amulet now print, but the soft pink wedding-invite style is the wrong look for a kids' monster club treehouse.",
   "missing": [
-   "Scary German Guy serves the boys home-made pie (his house)",
-   "'My name... is Horace!' after he shoots the Gill-man",
    "Rudy makes E.J. eat Horace's smashed Snickers bar",
    "Dracula blows up the treehouse with dynamite",
    "Phoebe and Frankenstein's monster become friends"
@@ -45,13 +43,22 @@
   ],
   "overall": 3.4,
   "flat": true,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Dessert swapped: Frankenstein's mint ice cream sandwiches (wrong 'goodbye gift' line) out; 'Last-chance-for-more apple pie with cream', 'Scary German Guy serves the boys pie' (TV Tropes: the knife is for home-made pie, 'It's your last chance for more pie!')",
    "Fish bites line now 'Gill-man down. My name is Horace' (Wikiquote: 'My name...Is Horace!')",
    "Place card now 'Seated near: Scary German Guy' (was 'Seated near: The monster test')",
    "Root beer house note now 'Members only. Pass the monster test.'; Eugene's letter wink dropped to keep five winks"
-  ]
+  ],
+  "before": {
+   "world": 3,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-15"
  }
 }

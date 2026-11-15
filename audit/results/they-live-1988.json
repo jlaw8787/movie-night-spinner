@@ -17,7 +17,7 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "A soup kitchen canteen with a timetable of subliminal orders, Cable 54 and the bubble gum line feels right, though the food is plain canteen fare.",
+  "verdict": "Justiceville soup kitchen with CONSUME, bubble gum, Cable 54 and the alley fight is on point, though the food stays plain canteen.",
   "missing": [
    "'Brother, life's a bitch, and she's back in heat.' (Nada)",
    "'Well, they ain't from Cleveland.' (Nada and Frank)",
@@ -33,13 +33,22 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Soup line now 'Gilbert says the world needs a wake-up call' (Wikiquote)",
    "Coffee house note now 'He who has the gold makes the rules.' (Frank, Wikiquote)",
    "Footer now 'On every billboard: Watch TV.' (WATCH TV on Wikiquote's billboard list; 'Marry and reproduce' is too long for the footer and drops)",
    "Bread house note (unprinted) now 'Well, they ain't from Cleveland.' (Nada, Wikiquote)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
  }
 }

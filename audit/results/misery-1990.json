@@ -16,13 +16,12 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "Annie's farmhouse recipe box with the penguin, the soup and the dirty bird is a smart fit, but the hobbling is missing and two dishes print as bare plot notes.",
+  "verdict": "Annie's farmhouse with the penguin, the dirty birdie, the typing paper and the champagne ritual works, but the meatloaf and pot roast are plain and the hobbling is nowhere.",
   "missing": [
    "The sledgehammer hobbling (the bedroom)",
    "'Cockadoodie' car and Annie's other non-swears (the bedroom)",
    "Sheriff Buster and the shotgun (the basement)",
-   "Paul burns the manuscript and hits Annie with the typewriter (the ending)",
-   "Misery's Return manuscript in the typewriter missing the N"
+   "Paul burns the manuscript and hits Annie with the typewriter (the ending)"
   ],
   "ideas": [
    "Swap the pot roast note 'Annie's pet sow is called Misery.' for one that names the food so it prints, or make it a pork roast for the pig",
@@ -31,13 +30,22 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Wings note now prints 'Annie calls Paul a dirty bird. Smoky wings, ranch dip.'",
    "Pot roast note now 'Annie's sow is called Misery. Braised beef, gravy.' so the food prints",
    "Soup line now 'Annie's rant spills the soup. Cheddar toasts.' and meatloaf 'Paul's pills go into Annie's wine. Glazed meatloaf.' to make room",
    "Stock photo date stamp '90 10 26 remapped to '90 11 30 (US release, 30 November 1990)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
  }
 }

@@ -15,9 +15,8 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "Welton's dining hall with periods for each Keating lesson, the cave hall pass and O Captain pie is spot on, though the food is stock school fare.",
+  "verdict": "Welton's dining hall with the desk, the cave, O Captain and rosebuds reads well, though a few dishes are only puns with no food in the note.",
   "missing": [
-   "'Gather ye rosebuds while ye may.' (Keating's first lesson)",
    "'Suck out all the marrow of life' (Neil reads Thoreau in the cave)",
    "Charlie as Nuwanda",
    "Charlie's paddling in Nolan's office",
@@ -31,12 +30,21 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "'Golden roast chook' now 'Golden roast chicken'",
    "Footer now 'Gather ye rosebuds while ye may.' (Wikiquote, Keating's first lesson)",
    "Milk house note now 'Ding! Thank you for playing.' (Wikiquote)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
  }
 }

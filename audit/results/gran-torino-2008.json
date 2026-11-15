@@ -12,15 +12,12 @@
  "notes": "'Get off my lawn!' is Walt on Wikiquote. Out of beer, no touching heads, food piling up on the porch: GradeSaver. Vang Lor family, Ford factory, Daisy, Father Janovich, Silver Star, construction job and the will: Wikipedia. The PBR can shows in the menu still beside Walt. Stock layout flags: 'Serves everyone on the couch.' and the 'EAT' fridge magnets read like a family kitchen, not a porch next door to Walt.",
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 4,
   "tone": 3,
   "look": 3,
-  "verdict": "Hmong barbecue food with Walt's kielbasa and PBR is a smart venue, but the grey fridge layout and plain lines leave out Walt's rifle, his growl and his lighter.",
+  "verdict": "The barbecue next door, the M1, Toad and Thao and the PBR porch still all print, but the notes read like plot summary and the bright fridge magnets fight the film's mood.",
   "missing": [
-   "Walt's M1 Garand on the lawn",
-   "'It's not Toad, it's Thao.' (Thao to Walt)",
-   "The barber: 'That'll be ten bucks, Walt.'",
    "The Zippo with the 1st Cavalry insignia (the last stand)",
    "'I finish things. That's what I do.' (Walt to Thao)"
   ],
@@ -30,15 +27,24 @@
    "Swap the footer 'Serves everyone on the couch.' for 'Served on the porch next door.'",
    "Add 'That'll be ten bucks, Walt.' (Barber Martin, Wikiquote) to the Don't forget list in place of 'Thao's construction job'"
   ],
-  "overall": 3.4,
-  "flat": true,
-  "done": false,
+  "overall": 3.6,
+  "flat": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Don't forget list: 'The M1 Garand on the lawn' (Wikipedia) and 'That'll be ten bucks, Walt' (Barber Martin, Wikiquote) replace Thao's construction job and Father Janovich",
    "Prawn crackers house note now 'It's not Toad, it's Thao.' (Wikiquote)",
    "Footer now 'Served on the porch next door.' (was the stock 'Serves everyone on the couch.')",
    "Not changed: the EAT fridge magnets are drawn by the home layout and can't be remapped per film"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 4,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-15"
  }
 }
