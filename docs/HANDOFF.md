@@ -1518,3 +1518,9 @@ Josh's go at 1:43pm, keeping main's search. Merge commit on top of 610c3bec: mai
 Checks: npm test pass. check-browser pass. planCard against main 610c3bec, no switch, Vegetarian and No alcohol: only the four TMNT films differ. check-print-text on all 900: one fail, Weird Science (1985) cue overlap ("Wyatt's parents are away." over "Showtime cue"). It fails on main without this merge too and flips between pass and fail run to run, so it is already live and timing-dependent. Fix next.
 
 Deployed on Josh's go: Publish site run 43678048475 passed. The three TMNT format files, app.js, index.html and formats-core.js match main byte for byte live.
+
+## 15 Nov, 2:50pm to 3:40pm: Weird Science print fix (branch fix/weird-science-print, not live)
+
+Cause: the prom layout sized its menu block (domH) before its web fonts had loaded. The app awaits MENU_FORMATS[fmt].ready before it renders, but prom never set one, so the fit sometimes measured fallback metrics (menu 523px) and the real faces then grew it to 656px in a 604px block, over the showtime cue. Timing, not content.
+Fix: menu-formats/prom.js now sets MENU_FORMATS.prom.ready (stylesheet loaded, every face in its href loaded, then fonts.ready), the same pattern as bartab. No design change. build-data rerun: only the films.js LIB_VER stamp, index.html and sw.js versions moved.
+Checks: check-print-text on Weird Science 5 runs, 5 pass (3 of 3 failed before). All 18 prom films pass. npm test pass.

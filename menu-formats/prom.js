@@ -390,4 +390,12 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   const back=`<div style="position:absolute;inset:0;background:${bg};${fp}">${strip}${right}</div>`;
   return {w:W,h:H,faces:[front,back]};
 };
+/* 15 Nov: fonts ready. The app awaits .ready before it renders, so the menu is measured with the real faces. Without it the fit could run
+   on fallback metrics and the menu grew at the font swap, over the showtime cue (Weird Science's "Wyatt's parents are away.") */
+{const specs=url=>{const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
+  if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o};
+ const l=document.getElementById("fmt-prom-fonts");
+ window.MENU_FORMATS[ID].ready=!l||!document.fonts?Promise.resolve():new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
+  .then(()=>Promise.all(specs(typeof rdFontQuery==="function"?rdFontQuery(l.getAttribute("href")):l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0))))
+  .then(()=>document.fonts.ready).catch(()=>0)}
 })();
