@@ -561,15 +561,15 @@
   "venue": "Corner Grate Pizza",
   "sign": "We deliver above and below Manhattan. Thirty minutes or it's free.",
   "note": {
-   "text": "Four pizzas for four sons, and one cheese plate for an old rat. Training starts again after dessert, so chew properly.",
+   "text": "Pizza for four sons, and burrata for an old rat. Training starts again after dessert, so chew properly.",
    "by": "Splinter"
   },
   "prop": {
    "kind": "slip",
    "title": "Pizza Delivery",
    "lines": [
-    "4 large, no anchovies",
-    "Leave at the drain"
+    "Deliver to 122 1/8",
+    "Two minutes late, $10 of $13"
    ]
   },
   "number": "4",
@@ -1652,5 +1652,41 @@
    ]
   },
   "number": ""
+ },
+ "Teenage Mutant Ninja Turtles III (1993)": {
+  "venue": "The Village Teahouse",
+  "sign": "Tea, rice and the hearth. Japan, 1603.",
+  "note": {
+   "text": "Sixty hours until the sceptre fades. Eat, then find April.",
+   "by": "Leonardo"
+  },
+  "prop": {
+   "kind": "ticket",
+   "title": "Time Trip",
+   "lines": [
+    "New York to Japan, 1603",
+    "Back within 60 hours"
+   ]
+  },
+  "number": "1603",
+  "door": "board"
+ },
+ "Teenage Mutant Ninja Turtles: Mutant Mayhem (2023)": {
+  "venue": "Superfly's",
+  "sign": "The old ship, Staten Island. Mutants only, guests tonight.",
+  "note": {
+   "text": "Sit anywhere except Leatherhead's chair.",
+   "by": "Superfly"
+  },
+  "prop": {
+   "kind": "tag",
+   "title": "Mutant Guest",
+   "lines": [
+    "Superfly's, Staten Island",
+    "Humans by invitation only"
+   ]
+  },
+  "number": "2023",
+  "door": "board"
  }
 }

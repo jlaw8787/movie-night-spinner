@@ -289,8 +289,9 @@ function spinPick(L){const ids=new Set(L.map(f=>f.id)),keep=Math.floor(L.length*
 /* tap to skip: a tap on the wheel or the curtain while it spins or counts down jumps straight to the menu */
 var skipReq=false;
 window.spinForce=null;
-function spin(){
-  if(spinning||(!list.length&&!window.spinForce))return;
+/* opt.power (0 to 1) and opt.dir (1 or -1) come from a finger flick on the wheel: a harder flick turns more times and runs longer */
+function spin(opt){
+  if(spinning||(!list.length&&!window.spinForce))return;opt=opt||{};
   if(navigator.onLine===false&&!spinPool().length&&!window.spinForce){const st=$("status");if(st)st.textContent="You're offline and no menus are saved on this device yet. Open a few films while you're online and they'll be here next time.";savedScan();return}
   spinning=true;sel.disabled=true;$("skipWatched").disabled=true;updateWatchButton();renderWatchList();$("spin").disabled=true;winner=-1;document.body.classList.add("spinning");document.body.classList.remove("winner");
   if(soundOn&&ac()&&audio.state==="suspended")audio.resume();
@@ -302,9 +303,10 @@ function spin(){
   const fw=force?far.filter(i=>wedges[i]===force.win):[],w=fw.length?pick(fw):pick(far),f=force?force.win:L.length?spinPick(L):wedges[w];wedges[w]=f;
   closeCurtains();sfx.whirrStart();
   const target=-(w+0.5+(Math.random()-0.5)*0.55)*A;
-  const turns=reduce?1:5+Math.floor(Math.random()*3);
-  const start=rot,delta=((target-start)%(Math.PI*2)+Math.PI*2)%(Math.PI*2)+turns*Math.PI*2;
-  const over=reduce?0:A*0.45,dur=reduce?900:6200,t0=performance.now();
+  const pw=opt.power==null?null:Math.max(0,Math.min(1,opt.power)),dir=opt.dir<0?-1:1;
+  const turns=reduce?1:pw==null?5+Math.floor(Math.random()*3):2+Math.round(pw*8);
+  const start=rot,fwd=((target-start)%(Math.PI*2)+Math.PI*2)%(Math.PI*2),delta=dir>0?fwd+turns*Math.PI*2:-((Math.PI*2-fwd)%(Math.PI*2)+turns*Math.PI*2);
+  const over=reduce?0:dir*A*0.45,dur=reduce?900:pw==null?6200:Math.round(3400+pw*4800),t0=performance.now();
   const easeOut=x=>1-Math.pow(1-x,4),easeIO=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
   let last=indexAt(rot);
   skipReq=false;
@@ -3882,6 +3884,27 @@ async function exportMenu(kind,parts,opts){
 }
 
 $("spin").addEventListener("click",e=>{kbSpin=lastKey||e.detail===0;spin()});
+/* finger flick: drag the wheel round by hand, let go with some speed and it spins; the speed of the flick sets how hard.
+   Phones keep vertical swipes for scrolling the page (touch-action: pan-y on the wheel), so a sideways flick across it spins. */
+{let fl=null,flMoved=false;const WB=canvas.closest(".wheel-wrap")||canvas.parentElement;const angAt=e=>{const r=canvas.getBoundingClientRect();return Math.atan2(e.clientY-(r.top+r.height/2),e.clientX-(r.left+r.width/2))};
+ WB.style.touchAction="pan-y";WB.addEventListener("dragstart",e=>e.preventDefault());
+ WB.addEventListener("pointerdown",e=>{if(spinning||e.button||!list.length||e.target.closest("button,a,select,input"))return;fl={id:e.pointerId,a:angAt(e),x:e.clientX,y:e.clientY,pts:[{t:performance.now(),r:rot}],last:indexAt(rot)};flMoved=false});
+ WB.addEventListener("pointermove",e=>{if(!fl||e.pointerId!==fl.id||spinning)return;
+  if(!flMoved&&Math.hypot(e.clientX-fl.x,e.clientY-fl.y)<6)return;
+  if(!flMoved){flMoved=true;try{WB.setPointerCapture(e.pointerId)}catch(_){}}
+  {const r=canvas.getBoundingClientRect();fl.rad=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2))}const a=angAt(e);let d=a-fl.a;if(d>Math.PI)d-=Math.PI*2;if(d<-Math.PI)d+=Math.PI*2;fl.a=a;rot+=d;
+  const now=performance.now();fl.pts.push({t:now,r:rot});while(fl.pts.length>2&&now-fl.pts[0].t>120)fl.pts.shift();
+  const i=indexAt(rot);if(i!==fl.last){fl.last=i;kick=1;tick();if(globalThis.REEL_NATIVE)REEL.haptic("tick");$("now").textContent=wedges[i].title}
+  kick*=0.86;setPointer();draw()});
+ const end=e=>{if(!fl||e.pointerId!==fl.id)return;const pts=fl.pts,rad=fl.rad||0;fl=null;if(!flMoved)return;
+  const a=pts[0],b=pts[pts.length-1],dt=Math.max(16,b.t-a.t),w=(b.r-a.r)/dt*1000; /* radians a second */
+  kick=0;setPointer();draw();
+  /* speed at the finger in pixels a second, so a flick feels the same on a phone and a big screen: 350 starts a spin, 3000 is full strength */
+  const v=Math.abs(w)*Math.max(40,rad);
+  if(v>350&&performance.now()-b.t<140){kbSpin=false;window.__flickAt=performance.now();spin({power:(v-350)/2650,dir:w>0?1:-1})}};
+ WB.addEventListener("pointerup",end);WB.addEventListener("pointercancel",e=>{if(fl&&e.pointerId===fl.id){fl=null;kick=0;setPointer();draw()}});
+ /* a drag that turned into a spin is not also a tap */
+ WB.addEventListener("click",e=>{if(flMoved){flMoved=false;e.stopPropagation()}},true);}
 sel.addEventListener("change",setList);
 /* Save PDF asks what it's for: everything in one file, the menu on its own (ready for double-sided), or just the prep sheet for the kitchen */
 function pdfTip(){if(!current)return "";const sh=card.classList.contains("fx-paper"),fc=sh?card.querySelector(".fx-face"):card,n=sh?card.querySelectorAll(".fx-face").length:1,w=parseFloat(fc&&fc.style.width)||+card.dataset.w||794,h=parseFloat(fc&&fc.style.height)||+card.dataset.h||1123,land=w>h;
@@ -4585,7 +4608,7 @@ function prepClean(c){inkSafe(c);
   /* list numbers written as text: the PDF renderer drops the gap after list markers ("1Steak tartare") */
   c.querySelectorAll("ol").forEach(ol=>{if(ol.dataset.num)return;ol.dataset.num="1";let n=+(ol.getAttribute("start")||1);for(const li of ol.children){if(li.tagName!=="LI")continue;const sp=document.createElement("span");sp.className="pp-num";sp.textContent=(n++)+". ";li.prepend(sp)}ol.style.listStyle="none"});c.querySelectorAll(".pp-done").forEach(x=>x.classList.remove("pp-done"));c.querySelectorAll("li[data-k]").forEach(x=>{x.removeAttribute("tabindex");x.removeAttribute("role");x.removeAttribute("aria-checked")})}
 
-{const skip=e=>{if(spinning||($("theatre").classList.contains("closed")&&$("tease").classList.contains("leader"))){skipReq=true;if(e)e.stopPropagation()}};
+{const skip=e=>{if(window.__flickAt&&performance.now()-window.__flickAt<500)return;if(spinning||($("theatre").classList.contains("closed")&&$("tease").classList.contains("leader"))){skipReq=true;if(e)e.stopPropagation()}};
  const wb=document.querySelector(".wheel-box");if(wb)wb.addEventListener("click",skip,true);
  $("theatre").addEventListener("click",skip);
  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&(spinning||$("tease").classList.contains("leader")))skip()});}

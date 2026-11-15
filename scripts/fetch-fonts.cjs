@@ -118,8 +118,9 @@ ${rows.join('\n')}
 }
 /* Chinese, Japanese and Korean families by name. Google's css2 no longer labels their slices in a way we can spot
    (with our user agent it sends only the Latin and Cyrillic faces), so the name decides. "SC" alone means small caps
-   (Alegreya SC, Spectral SC), so only the Noto Simplified Chinese families count for SC */
-const isCJK = fam => /\b(TC|HK|JP|KR)$/.test(fam) || /^Noto (Sans|Serif) SC$/.test(fam) || /WenKai/.test(fam);
+   (Alegreya SC, Spectral SC), so only the Noto Simplified Chinese families count for SC. Japanese families named without JP
+   (Shippori Mincho B1, Yuji Syuku, used by TMNT III) are listed by name */
+const isCJK = fam => /\b(TC|HK|JP|KR)$/.test(fam) || /^Noto (Sans|Serif) SC$/.test(fam) || /WenKai/.test(fam) || /^(Shippori Mincho|Yuji )/.test(fam);
 const famOf = spec => spec.split(':')[0].replace(/\+/g, ' ');
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 

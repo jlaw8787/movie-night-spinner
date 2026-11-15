@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Yuji+Syuku&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1512;--ver:#b5281c;--washi:#f1e7d0}
+.card{width:1344px;height:1056px;position:relative;overflow:hidden;background:#120806}
+.hero{position:absolute;left:-90px;top:200px;width:1180px;height:664px;background:url('{c38hi}') center/cover;filter:saturate(1.1) contrast(1.05);-webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 82%,transparent)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,rgba(10,4,2,.6) 62%),linear-gradient(180deg,#120806,transparent 12%,transparent 85%,#120806)}
+.k{position:absolute;left:40px;top:40px;font:600 13px 'Cormorant Garamond';letter-spacing:.4em;color:#ffe2c4;text-shadow:0 1px 6px #000}
+.big{position:absolute;left:36px;bottom:46px;font:400 30px/1.25 'Cormorant Garamond';font-style:italic;color:#fff2df;text-shadow:0 2px 12px #000;width:440px}
+.big b{display:block;font:600 12px 'Cormorant Garamond';letter-spacing:.38em;color:#ffb48a;font-style:normal;margin-top:6px}
+.fold{position:absolute;left:520px;top:40px;width:790px;height:976px;display:grid;grid-template-columns:repeat(4,1fr);filter:drop-shadow(0 24px 30px rgba(0,0,0,.75))}
+.pn{position:relative;background:var(--washi);padding:26px 18px 18px;overflow:hidden;font-family:'Cormorant Garamond';color:var(--ink)}
+.pn:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.012 .09' numOctaves='4'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .35  0 0 0 0 .2  0 0 0 .22 0'/></filter><rect width='400' height='400' filter='url(%23n)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .25  0 0 0 0 .15  0 0 0 .14 0'/></filter><rect width='200' height='200' filter='url(%23m)'/></svg>");mix-blend-mode:multiply;z-index:8;pointer-events:none}
+.pn:nth-child(odd):after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.35),transparent 40%,rgba(0,0,0,.07));z-index:8;pointer-events:none}
+.pn:nth-child(even):after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.2),rgba(0,0,0,.05) 50%,rgba(255,255,255,.15));z-index:8;pointer-events:none}
+.pn>*{position:relative;z-index:2}
+.bd{position:absolute!important;inset:10px;border:1.5px solid var(--ver);z-index:1!important}
+.bd:after{content:"";position:absolute;inset:4px;border:.8px solid var(--ver)}
+.vt{writing-mode:vertical-rl;font:400 128px/1 'Yuji Syuku';margin:6px auto 0;display:block}
+.tt{text-align:center;font:700 30px/1 'Cormorant Garamond';margin-top:14px}
+.ts{text-align:center;font:italic 500 15px 'Cormorant Garamond';color:#5a4b3b;margin-top:6px}
+.seal{width:62px;height:62px;border:3px solid var(--ver);color:var(--ver);display:grid;place-items:center;text-align:center;font:800 19px/1.02 'Shippori Mincho B1';margin:14px auto 0;transform:rotate(-4deg);background:rgba(181,40,28,.05)}
+.sh{text-align:center;margin:8px 0 16px}
+.sh .kk{display:block;font:800 36px/1 'Shippori Mincho B1';color:var(--ver)}
+.sh h3{font:700 23px 'Cormorant Garamond';margin-top:3px}
+.sh i{display:block;font:italic 500 13.5px 'Cormorant Garamond';color:#6b5a46}
+.sh:after{content:"";display:block;width:60px;height:2px;background:var(--ink);margin:7px auto 0}
+.it{margin-bottom:18px;text-align:center}
+.it b{display:block;font:700 20px/1.1 'Cormorant Garamond'}
+.mon{display:inline-block;font:800 12.5px 'Shippori Mincho B1';color:#fff;background:var(--ver);padding:1px 7px 2px;margin:4px 0 3px;letter-spacing:.06em}
+.it p{font:500 16px/1.25 'Cormorant Garamond'}
+.it .n{font:italic 600 15px/1.25 'Cormorant Garamond';color:#8a2c18;margin-top:2px}
+.ph{height:170px;background-size:cover;background-position:center;border:2px solid var(--ink);margin:12px 0 4px;filter:sepia(.2)}
+.cap{font:italic 500 12.5px 'Cormorant Garamond';text-align:center;color:#4c3f31}
+.notice{border:1.5px solid var(--ink);padding:12px 8px;text-align:center;font:600 16px/1.3 'Cormorant Garamond';margin-top:10px;background:rgba(255,255,255,.25)}
+.notice .kk{display:block;font:800 26px 'Shippori Mincho B1';color:var(--ver);line-height:1}
+.cue{text-align:center;font:500 16px/1.3 'Cormorant Garamond';border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:8px 2px;margin-top:6px}
+.cue b{display:block;font:600 11px 'Cormorant Garamond';letter-spacing:.32em;color:var(--ver)}
+.house{font:500 15px/1.4 'Cormorant Garamond';text-align:center;color:#3b3127;margin-top:10px}
+.house b{display:block;font:600 11px 'Cormorant Garamond';letter-spacing:.3em;color:var(--ver);margin-bottom:3px}
+</style></head><body>
+<div class="card">
+ <div class="hero"></div>
+ <div class="k">JAPAN · 1603 · SIXTY HOURS · NO PIZZA</div>
+ <div class="big">“Awesome! But d'you think they had pizza back then?”<b>MICHELANGELO</b></div>
+ <div class="fold">
+  <div class="pn"><div class="bd"></div>
+   <span class="vt">茶屋</span>
+   <div class="tt">The Village<br>Teahouse</div>
+   <div class="ts">In Mitsu's village · Japan, 1603</div>
+   <div class="seal">御品<br>書</div>
+   <div class="house"><b>TEA, RICE AND THE HEARTH</b>Guests from far away welcome. Even green ones.</div>
+   <div class="ph" style="background-image:url('{c25hi}')"></div><div class="cap">Raph and young Yoshi</div>
+  </div>
+  <div class="pn"><div class="bd"></div>
+   <div class="sh"><span class="kk">焼物</span><h3>From the grill</h3><i>Over the coals</i></div>
+   <div class="it"><b>Honour guard yaki onigiri</b><span class="mon">八文 · 8 MON</span><p>Rice balls brushed with miso and soy, grilled crisp, wrapped in nori.</p><div class="n">Four guards went to New York. Four turtles came back in their armour.</div></div>
+   <div class="it"><b>Charcoal chicken skewers</b><span class="mon">十二文 · 12 MON</span><p>Chicken thigh and spring onion, basted with soy and mirin tare.</p><div class="n">“Uh, o-hi-o, wasabi.” Donatello, blending in.</div></div>
+   <div class="it"><b>Miso glazed eggplant</b><span class="mon">十文 · 10 MON</span><p>Eggplant grilled soft, sweet miso and sesame on top.</p><div class="n">Grilled while Donatello builds a second sceptre. It doesn't go well.</div></div>
+   <div class="ph" style="background-image:url('{c01hi}');height:150px"></div><div class="cap">In Lord Norinaga's honour guard armour</div>
+  </div>
+  <div class="pn"><div class="bd"></div>
+   <div class="sh"><span class="kk">煮物</span><h3>From the pot</h3><i>Simmered</i></div>
+   <div class="it"><b>Mitsu's village hotpot</b><span class="mon">三十文 · 30 MON</span><p>Chicken, daikon, shiitake, cabbage and tofu in kombu dashi, rice on the side.</p><div class="n">Sixty hours to get home. Time for one hotpot.</div></div>
+   <div class="it"><b>Kenshin's soba</b><span class="mon">十六文 · 16 MON</span><p>Buckwheat noodles in hot soy dashi, spring onion, a soft egg.</p><div class="n">Kenshin got sent the other way, to New York.</div></div>
+   <div class="cue"><b>SHOWTIME CUE</b>Serve the hotpot when the turtles follow Mitsu to her village.</div>
+   <div class="house"><b>HOUSE RULES</b>Walker's men not served. Muskets left at the gate. Please do not touch the sceptre.</div>
+   <div class="ph" style="background-image:url('{c29hi}');height:150px"></div><div class="cap">Walker and his men, selling muskets</div>
+  </div>
+  <div class="pn"><div class="bd"></div>
+   <div class="sh"><span class="kk">甘味</span><h3>Sweets</h3><i>For later</i></div>
+   <div class="it"><b>Kinako dango</b><span class="mon">四文 · 4 MON</span><p>Soft rice dumplings rolled in roasted soybean flour, dark brown sugar syrup.</p><div class="n">Save one for Splinter's Elvis at the end.</div></div>
+   <div class="sh" style="margin-top:6px"><span class="kk">茶</span><h3>Tea</h3><i>Poured cold</i></div>
+   <div class="it"><b>Cold roasted barley tea</b><span class="mon">二文 · 2 MON</span><p>Roasted barley steeped and chilled. Nutty and clean.</p><div class="n">“I told you these disguises weren't gonna work!” Raphael</div></div>
+   <div class="notice"><span class="kk">無</span>Pizza: not served. Ask again in about four hundred years.</div>
+   <div class="house">Prices in mon. Coins on a string are fine.</div>
+   <div class="ph" style="background-image:url('{c20hi}');height:104px"></div><div class="cap">Sixty hours on the sceptre, then home</div>
+  </div>
+ </div>
+</div></body></html>

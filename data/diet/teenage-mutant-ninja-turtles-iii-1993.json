@@ -1,12 +1,42 @@
 {
-  "notes": {
-    "Lord Norinaga's samurai rice balls": {
-      "veg": "Sushi rice triangles filled with soy glazed shiitake"
-    },
-    "Time sceptre teriyaki skewers": {
-      "af": "Chicken thigh skewers grilled with a sticky soy and honey glaze",
-      "veg": "Mushroom and zucchini skewers grilled with a sticky soy and mirin glaze",
-      "veg_af": "Mushroom and zucchini skewers grilled with a sticky soy and apple glaze"
-    }
+ "notes": {
+  "Charcoal chicken skewers with tare": {
+   "veg": "shiitake, zucchini and spring onion skewers grilled over coals, basted with soy and mirin tare",
+   "af": "chicken thigh and spring onion skewers grilled over coals, basted with a soy and honey tare",
+   "veg_af": "shiitake, zucchini and spring onion skewers grilled over coals, basted with a soy and honey tare"
+  },
+  "Mitsu's village hotpot": {
+   "veg": "tofu, daikon, shiitake and cabbage simmered in kombu dashi with soy, a pot in the middle of the table",
+   "af": "chicken, daikon, shiitake and cabbage simmered in kombu dashi with soy, a pot in the middle of the table",
+   "veg_af": "tofu, daikon, shiitake and cabbage simmered in kombu dashi with soy, a pot in the middle of the table"
   }
+ },
+ "text": {
+  "veg": [
+   [
+    "Charcoal chicken skewers",
+    "Charcoal shiitake skewers"
+   ],
+   [
+    "Chicken thigh and spring onion, basted with soy and mirin tare.",
+    "Shiitake, zucchini and spring onion, basted with soy and mirin tare."
+   ],
+   [
+    "Chicken, daikon, shiitake, cabbage and tofu in kombu dashi, rice on the side.",
+    "Tofu, daikon, shiitake and cabbage in kombu dashi, rice on the side."
+   ]
+  ],
+  "af": [
+   [
+    "basted with soy and mirin tare.",
+    "basted with soy and honey tare."
+   ]
+  ],
+  "veg_af": [
+   [
+    "Shiitake, zucchini and spring onion, basted with soy and mirin tare.",
+    "Shiitake, zucchini and spring onion, basted with soy and honey tare."
+   ]
+  ]
+ }
 }
