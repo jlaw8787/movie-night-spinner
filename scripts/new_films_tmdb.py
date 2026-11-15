@@ -6,7 +6,7 @@ from difflib import SequenceMatcher
 REPO = pathlib.Path(__file__).resolve().parent.parent
 KEY = os.environ.get('TMDB_KEY', '').strip()
 if not KEY: print('no TMDB key, nothing fetched'); sys.exit(0)
-want = [l.strip() for l in open(REPO / 'wip/newfilms/films-new.txt', encoding='utf-8') if l.strip() and not l.startswith('#')]
+want = [l.strip() for l in open(REPO / os.environ.get('NEWFILMS_DIR', 'wip/newfilms') / 'films-new.txt', encoding='utf-8') if l.strip() and not l.startswith('#')]
 def get(path, **params):
     params['api_key'] = KEY
     url = f'https://api.themoviedb.org/3/{path}?' + urllib.parse.urlencode(params)
@@ -74,4 +74,4 @@ for fid in want:
                 'stills': [[b['file_path'], b['width'], b['height'], b.get('iso_639_1')] for b in bd[:200]],
                 'logo': [lg[0]['file_path'], lg[0]['width'], lg[0]['height']] if lg else None, 'providers': prov}
     print(fid, '->', tid, d.get('title'), d.get('release_date'), conf, cert, 'trailer' if vids else 'no trailer', len(bd), 'stills')
-json.dump(out, open(REPO / 'wip/newfilms/tmdb.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(out, open(REPO / os.environ.get('NEWFILMS_DIR', 'wip/newfilms') / 'tmdb.json', 'w'), ensure_ascii=False, indent=1)
