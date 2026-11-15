@@ -14,9 +14,9 @@ FLAVOUR = {"venue": "Spooky Hotel", "sign": "Spooky Island. All you can eat.",
            "prop": {"kind": "ticket", "title": "Spooky Island", "lines": ["All you can eat", "Guest of Mondavarious"]},
            "number": "2",
            "words": {"Overheard at the bar": "Case notes", "Unfold for the island map.": "Unfold for the clues."},
-           "look": {"isle": {"m": "Mystery Inc.", "s": "Snack Bar", "w": "Haunted Ride"}, "label": {"w": "Something Sweet"}}}
+           "look": {"isle": {"m": "Mystery Inc.", "s": "Snack Bar", "w": "Haunted Ride"}, "label": {"s": "Zoinks! Snacks", "w": "Something Sweet"}, "see": {"s": "", "m": ""}}}
 HOUSE = {"s": {"n": "A jar of hot peppers, for the brave", "note": "Ketchup on standby.", "meat": False},
-         "d": {"n": "A jug of iced water", "note": "I would've gotten away with it, too.", "alc": False}}
+         "d": {"n": "A jug of iced water", "note": "I would've gotten away with it, too, if it weren't for you meddling kids", "alc": False}}
 DISHES = [
  {"n": "Homemade Scooby Snacks", "course": "s",
   "line": "Mary Jane says they're 100% vegetarian",
@@ -54,8 +54,8 @@ DISHES = [
   "prep": 20, "cook": 5, "ahead": "Roll the snowballs up to 3 days ahead and keep frozen",
   "ing": [(1, "l", "vanilla ice cream", "Frozen"), (150, "g", "shredded coconut", "Pantry"), (1, "", "ripe mango, chopped", "Produce"), (1, "tbsp", "honey", "Pantry"), (1, "", "lime", "Produce")],
   "steps": [("Toast the coconut in a dry pan until golden, then cool.", 5), ("Scoop 8 big balls of ice cream, roll in the coconut and freeze on a lined tray.", 12), ("Blend the mango with the honey and a squeeze of lime.", 3), ("Serve two snowballs each in a puddle of mango sauce.", 3)]},
- {"n": "Jinkies orange and pineapple punch", "course": "d",
-  "line": "Daphne snatches Velma's glasses",
+ {"n": "Jinkies Mystery Machine punch", "course": "d",
+  "line": "Scrappy gets kicked out of the van",
   "note": "Orange, pineapple, passionfruit and soda.",
   "prep": 10, "cook": 0, "ahead": "Mix the juices up to a day ahead and chill; add soda to serve",
   "ing": [(500, "ml", "orange juice", "Drinks"), (500, "ml", "pineapple juice", "Drinks"), (2, "", "passionfruit", "Produce"), (500, "ml", "lemonade, chilled", "Drinks"), (1, "", "orange, sliced", "Produce"), (2, "cup", "ice cubes", "Frozen")],

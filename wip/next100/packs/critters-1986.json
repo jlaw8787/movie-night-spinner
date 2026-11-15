@@ -24,17 +24,17 @@
     ]
    ],
    [
-    "Kansas sweet corn fritters",
-    "Brad hears the ship come down",
-    "Whisk the flour, eggs and milk, then fold in the corn, spring onions, cheddar and a pinch of salt. Fry heaped spoonfuls in the oil until golden on both sides, in batches. Stir the chives through the sour cream and serve with the fritters.",
+    "Rolling Krite corn fritter balls",
+    "Krites roll up and fire quills",
+    "Mix the corn, flour, egg, spring onions, cheddar and a pinch of salt into a stiff batter. Roll into walnut-size balls with wet hands, then roll them in the crushed corn chips so they come up spiky. Shallow-fry in batches in the hot oil, turning, until golden all over. Stir the chives through the sour cream and serve with the balls.",
     [
      "3 corn cobs, kernels cut off@Produce",
      "100g self-raising flour@Pantry",
-     "2 eggs@Dairy",
-     "80ml milk@Dairy",
+     "1 egg@Dairy",
      "3 spring onions, sliced@Produce",
-     "60g cheddar, grated@Dairy",
-     "3 tbsp vegetable oil@Pantry",
+     "80g cheddar, grated@Dairy",
+     "100g plain corn chips, crushed@Pantry",
+     "250ml vegetable oil, for frying@Pantry",
      "125g sour cream@Dairy",
      "1 small bunch chives, snipped@Produce"
     ]
@@ -117,7 +117,7 @@
   ],
   "T": "They eat so fast, you don't have time to scream.",
   "D": "Furry alien convicts crash on a Kansas farm and start eating everything, with two shape-shifting bounty hunters tearing through town after them.",
-  "P": "Bring out the pancakes when the Browns sit down to breakfast."
+  "P": "Serve the Krite fritter balls when the Krites roll up to the house firing quills."
  },
  "film-format": {
   "format": "placemat",
@@ -158,7 +158,7 @@
  "dish-names": [
   [
    "Brad's firecracker chicken wings",
-   "Kansas sweet corn fritters"
+   "Rolling Krite corn fritter balls"
   ],
   [
    "Half-eaten cow burnt ends",
@@ -174,7 +174,7 @@
  "dish-notes": [
   [
    "A Krite swallows Brad's firecracker",
-   "Brad hears the ship come down"
+   "Krites roll up and fire quills"
   ],
   [
    "Krites ate half the cow",
@@ -207,17 +207,17 @@
     ]
    },
    {
-    "n": "Kansas sweet corn fritters",
-    "note": "Brad hears the ship come down. Corn cakes, chive sour cream.",
-    "how": "Whisk the flour, eggs and milk, then fold in the corn, spring onions, cheddar and a pinch of salt. Fry heaped spoonfuls in the oil until golden on both sides, in batches. Stir the chives through the sour cream and serve with the fritters.",
+    "n": "Rolling Krite corn fritter balls",
+    "note": "Krites roll up and fire quills. Spiky corn balls, chive sour cream.",
+    "how": "Mix the corn, flour, egg, spring onions, cheddar and a pinch of salt into a stiff batter. Roll into walnut-size balls with wet hands, then roll them in the crushed corn chips so they come up spiky. Shallow-fry in batches in the hot oil, turning, until golden all over. Stir the chives through the sour cream and serve with the balls.",
     "shop": [
      "3 corn cobs, kernels cut off@Produce",
      "100g self-raising flour@Pantry",
-     "2 eggs@Dairy",
-     "80ml milk@Dairy",
+     "1 egg@Dairy",
      "3 spring onions, sliced@Produce",
-     "60g cheddar, grated@Dairy",
-     "3 tbsp vegetable oil@Pantry",
+     "80g cheddar, grated@Dairy",
+     "100g plain corn chips, crushed@Pantry",
+     "250ml vegetable oil, for frying@Pantry",
      "125g sour cream@Dairy",
      "1 small bunch chives, snipped@Produce"
     ]
@@ -311,11 +311,11 @@
    "2 celery sticks, cut in batons@Produce",
    "3 corn cobs, kernels cut off@Produce",
    "100g self-raising flour@Pantry",
-   "2 eggs@Dairy",
-   "80ml milk@Dairy",
+   "1 egg@Dairy",
    "3 spring onions, sliced@Produce",
-   "60g cheddar, grated@Dairy",
-   "3 tbsp vegetable oil@Pantry",
+   "80g cheddar, grated@Dairy",
+   "100g plain corn chips, crushed@Pantry",
+   "250ml vegetable oil, for frying@Pantry",
    "1 small bunch chives, snipped@Produce",
    "1.5kg beef brisket point@Meat",
    "2 tbsp brown sugar@Pantry",
@@ -339,6 +339,7 @@
    "400g tin kidney beans, drained@Pantry",
    "150g fine cornmeal@Pantry",
    "125g self-raising flour@Pantry",
+   "2 eggs@Dairy",
    "250ml buttermilk@Dairy",
    "80g butter, melted@Dairy",
    "100g cheddar, grated@Dairy",
@@ -534,11 +535,11 @@
     }
    },
    {
-    "n": "Kansas sweet corn fritters",
+    "n": "Rolling Krite corn fritter balls",
     "course": "s",
-    "prep_min": 15,
+    "prep_min": 20,
     "cook_min": 15,
-    "make_ahead": "Mix the batter up to 4 hours ahead and chill; fry to serve",
+    "make_ahead": "Roll the balls up to 4 hours ahead and chill; crumb in the corn chips and fry to serve",
     "ingredients": [
      {
       "q": 3,
@@ -553,15 +554,9 @@
       "aisle": "Pantry"
      },
      {
-      "q": 2,
+      "q": 1,
       "u": "",
-      "item": "eggs",
-      "aisle": "Dairy"
-     },
-     {
-      "q": 80,
-      "u": "ml",
-      "item": "milk",
+      "item": "egg",
       "aisle": "Dairy"
      },
      {
@@ -571,15 +566,21 @@
       "aisle": "Produce"
      },
      {
-      "q": 60,
+      "q": 80,
       "u": "g",
       "item": "cheddar, grated",
       "aisle": "Dairy"
      },
      {
-      "q": 3,
-      "u": "tbsp",
-      "item": "vegetable oil",
+      "q": 100,
+      "u": "g",
+      "item": "plain corn chips, crushed",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 250,
+      "u": "ml",
+      "item": "vegetable oil, for frying",
       "aisle": "Pantry"
      },
      {
@@ -597,15 +598,19 @@
     ],
     "steps": [
      {
-      "text": "Whisk the flour, eggs and milk, then fold in the corn, spring onions, cheddar and a pinch of salt.",
+      "text": "Mix the corn, flour, egg, spring onions, cheddar and a pinch of salt into a stiff batter.",
       "min": 6
      },
      {
-      "text": "Fry heaped spoonfuls in the oil until golden on both sides, in batches.",
+      "text": "Roll into walnut-size balls with wet hands, then roll them in the crushed corn chips so they come up spiky.",
+      "min": 8
+     },
+     {
+      "text": "Shallow-fry in batches in the hot oil, turning, until golden all over.",
       "min": 15
      },
      {
-      "text": "Stir the chives through the sour cream and serve with the fritters.",
+      "text": "Stir the chives through the sour cream and serve with the balls.",
       "min": 4
      }
     ],

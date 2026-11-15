@@ -41,3 +41,10 @@ Vibe 3.4, reworked for rescore:
 - Snowballs line now 'Daphne bounces the sun off a disco ball' (Wikipedia: Daphne reflects sunlight through a disco ball).
 - Sources: https://en.wikipedia.org/wiki/Scooby-Doo_(film), https://en.wikiquote.org/wiki/Scooby-Doo_(film) (raw, read 15 Nov).
 No new still-block or still-pick entries this fix.
+
+## Fix (15 Nov)
+Later pass on the rescore (vibe 3.4).
+- Course heads: the tiki layout printed "see <map tag>" beside each head, which read "SEE SNACK BAR" and "SEE MYSTERY INC.". Added an optional per-film look.see to menu-formats/tiki.js (no change for any other tiki film); Scooby-Doo sets it to "" for both, so the heads now read "Zoinks! Snacks" (look.label.s), "From the Fire Pit" and "Something Sweet". The map tags on the stills are unchanged.
+- Drink now "Jinkies Mystery Machine punch", line "Scrappy gets kicked out of the van". Wikiquote (flashback): "[gets kicked off the Mystery Machine van, rolls away]". https://en.wikiquote.org/wiki/Scooby-Doo_(film)
+- House water note now "I would've gotten away with it, too, if it weren't for you meddling kids" (Smithers, Wikiquote verbatim, cut before "and your dumb dog!"; no quote marks, used as a nod). Prints whole on the front.
+- Velma's glasses line dropped from the drink to make room for the van; "Jinkies" stays in the drink name.

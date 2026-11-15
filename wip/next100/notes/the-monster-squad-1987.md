@@ -40,3 +40,12 @@ The kit's front panel used the poster art (TMDB still 0), and four more stills a
 - Winks: "Scary German Guy" is now winks[1], so the place card reads "Seated near: Scary German Guy" (was "Seated near: The monster test"). Eugene's letter dropped to keep five winks.
 - Root beer house note: "Members only. Pass the monster test." (monster test, Wikiquote).
 - First try "Scary German Guy's knife was for the pie" printed cut to "...knife was." so it was shortened.
+
+## Fix (15 Nov)
+Later pass on the rescore (vibe 3.4). Layout stays the invite (owner lock); lifted with words only.
+- Stock invite wording remapped with FLAVOUR words so it reads as the kids' club notice: "You're invited!" to "Club notice", "Now showing" to "By order of the club leader" (sits over Sean's club leader card), "RSVP" to "Nard kicker" (over Horace), "to eat, laugh and watch a film at" to "emergency meeting, before midnight, at" (the amulet's midnight, Wikipedia), "First Course" to "Before the monster test", "Main Course" to "Club business", "To Toast" to "To the Squad", "Place card" to "Club seating", "R.S.V.P." to "Agenda", "Also on the list:" to "Also on the agenda:".
+- Sign now "No girls allowed. Sorry, Phoebe." TV Tropes: Sean wrote "No Girls Allowed" on the treehouse door (https://www.tvtropes.org/pmwiki/pmwiki.php/Film/TheMonsterSquad); Wikipedia: Phoebe desperately wants to join the club.
+- Meatball subs line now "Kick him in the nards, Horace" (Sean, Wikiquote: "Kick him in the nards!"), so the note "Wolf Man's got nards!" is not said twice.
+- winks[0] (prints in the agenda as "Also on the agenda:") now "Rudy, find some silver bullets" (Sean, Movie Mistakes quotes page: "Rudy, find some silver bullets." https://moviemistakes.com/film6329/quotes). Van Helsing's diary stays on the bratwurst line.
+- Not done: the Monster Squad password. No opened page (Wikipedia, Wikiquote, TV Tropes, Movie Mistakes, Mental Floss, several reviews) gives it, so it is left off.
+- The kit (marquee "Now showing", intermission "Top-ups at the bar") is outside the words remap; unchanged.

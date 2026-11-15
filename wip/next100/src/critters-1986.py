@@ -3,7 +3,7 @@
 FILM = {"id": "Critters (1986)", "theme": "horror",
         "T": "They eat so fast, you don't have time to scream.",
         "D": "Furry alien convicts crash on a Kansas farm and start eating everything, with two shape-shifting bounty hunters tearing through town after them.",
-        "P": "Bring out the pancakes when the Browns sit down to breakfast."}
+        "P": "Serve the Krite fritter balls when the Krites roll up to the house firing quills."}
 FORMAT = {"format": "placemat", "era": "1980s", "tone": "playful"}
 PALETTE = {"dark": "#1a1612", "accent": "#d2552a"}
 SERIES = []
@@ -25,12 +25,12 @@ DISHES = [
   "alt": {"veg": {"n": "Brad's firecracker cauliflower wings (vegetarian)", "note": "Hot honey cauliflower, blue cheese dip.", "prep": 15, "cook": 35, "ahead": "Cut the cauliflower up to a day ahead; batter, bake and glaze to serve",
                   "ing": [(1, "", "cauliflower, cut in florets", "Produce"), (100, "g", "plain flour", "Pantry"), (185, "ml", "milk", "Dairy"), (2, "tsp", "smoked paprika", "Spices"), (60, "ml", "hot sauce", "Pantry"), (3, "tbsp", "honey", "Pantry"), (30, "g", "butter", "Dairy"), (100, "g", "blue cheese, crumbled", "Dairy"), (125, "g", "sour cream", "Dairy")],
                   "steps": [("Whisk the flour, milk and paprika into a batter and coat the florets.", 8), ("Bake at 220C on a lined tray, turning once, until crisp.", 30), ("Toss in the melted butter, hot sauce and honey.", 4), ("Serve with the blue cheese dip.", 3)]}}},
- {"n": "Kansas sweet corn fritters", "course": "s",
-  "line": "Brad hears the ship come down",
-  "note": "Corn cakes, chive sour cream.",
-  "prep": 15, "cook": 15, "ahead": "Mix the batter up to 4 hours ahead and chill; fry to serve",
-  "ing": [(3, "", "corn cobs, kernels cut off", "Produce"), (100, "g", "self-raising flour", "Pantry"), (2, "", "eggs", "Dairy"), (80, "ml", "milk", "Dairy"), (3, "", "spring onions, sliced", "Produce"), (60, "g", "cheddar, grated", "Dairy"), (3, "tbsp", "vegetable oil", "Pantry"), (125, "g", "sour cream", "Dairy"), (1, "", "small bunch chives, snipped", "Produce")],
-  "steps": [("Whisk the flour, eggs and milk, then fold in the corn, spring onions, cheddar and a pinch of salt.", 6), ("Fry heaped spoonfuls in the oil until golden on both sides, in batches.", 15), ("Stir the chives through the sour cream and serve with the fritters.", 4)]},
+ {"n": "Rolling Krite corn fritter balls", "course": "s",
+  "line": "Krites roll up and fire quills",
+  "note": "Spiky corn balls, chive sour cream.",
+  "prep": 20, "cook": 15, "ahead": "Roll the balls up to 4 hours ahead and chill; crumb in the corn chips and fry to serve",
+  "ing": [(3, "", "corn cobs, kernels cut off", "Produce"), (100, "g", "self-raising flour", "Pantry"), (1, "", "egg", "Dairy"), (3, "", "spring onions, sliced", "Produce"), (80, "g", "cheddar, grated", "Dairy"), (100, "g", "plain corn chips, crushed", "Pantry"), (250, "ml", "vegetable oil, for frying", "Pantry"), (125, "g", "sour cream", "Dairy"), (1, "", "small bunch chives, snipped", "Produce")],
+  "steps": [("Mix the corn, flour, egg, spring onions, cheddar and a pinch of salt into a stiff batter.", 6), ("Roll into walnut-size balls with wet hands, then roll them in the crushed corn chips so they come up spiky.", 8), ("Shallow-fry in batches in the hot oil, turning, until golden all over.", 15), ("Stir the chives through the sour cream and serve with the balls.", 4)]},
  {"n": "Half-eaten cow burnt ends", "course": "m",
   "line": "Krites ate half the cow",
   "note": "Sticky beef ends.",

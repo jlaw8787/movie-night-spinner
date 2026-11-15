@@ -10,12 +10,12 @@ PALETTE = {"dark": "#1c2a4a", "accent": "#f2a7c3"}
 SERIES = []
 FLAVOUR = {"venue": "Senior Prom, 1985", "sign": "Cumberland, Rhode Island",
            "note": {"text": "I couldn't believe that she knew my name.", "by": "Ted Stroehmann", "kind": "quote"},
-           "winks": ["Is that hair gel?", "Franks and beans", "Magda's dog on speed", "Jonathan, the singing narrator", "Pat Healy, private eye"],
+           "winks": ["Is that hair gel?", "Dom steals shoes from Mary's flat", "Magda's dog on speed", "Jonathan, the singing narrator", "Ted picks up a hitchhiker. Bad idea"],
            "prop": {"kind": "ticket", "title": "Senior Prom 1985", "lines": ["Admit Ted and Mary", "Mind the zip"]},
            "number": "1985",
            "words": {"Spring Fling, Class of 1998": "Senior Prom, Class of 1985"}}
-HOUSE = {"s": {"n": "Prom night cheese ball and crackers", "note": "For the photos Ted never got.", "meat": False},
-         "d": {"n": "Beer. Not lite beer, beer.", "note": "Straight off Mary's wish list.", "alc": True}}
+HOUSE = {"s": {"n": "Magda's cheese ball and crackers", "note": "From next door to Mary's flat.", "meat": False},
+         "d": {"n": "Beer. Not lite beer, beer.", "note": "Mary's ad: after 36 holes of golf.", "alc": True}}
 DISHES = [
  {"n": "Warren's baseball arancini", "course": "s",
   "line": "Have you seen my baseball? asks Warren",
@@ -24,7 +24,7 @@ DISHES = [
   "ing": [(30, "g", "butter", "Dairy"), (1, "", "brown onion, finely diced", "Produce"), (300, "g", "arborio rice", "Pantry"), (1, "l", "hot vegetable stock", "Pantry"), (50, "g", "parmesan, finely grated", "Dairy"), (125, "g", "mozzarella, cut in 12 cubes", "Dairy"), (75, "g", "plain flour", "Pantry"), (2, "", "eggs, beaten", "Dairy"), (120, "g", "dry breadcrumbs", "Pantry"), (1, "l", "vegetable oil, for frying", "Pantry"), (400, "g", "jar passata", "Pantry"), (2, "", "garlic cloves, crushed", "Produce"), (1, "", "small bunch basil", "Produce")],
   "steps": [("Soften the onion in the butter, stir in the rice, then add the hot stock a ladle at a time, stirring, until creamy and just tender.", 25), ("Stir in the parmesan, season, spread on a tray and chill until firm.", 60), ("Roll into 12 balls, pushing a cube of mozzarella into the middle of each.", 15), ("Roll in flour, then egg, then breadcrumbs.", 10), ("Simmer the passata with the garlic and a few basil leaves while the oil heats.", 10), ("Fry the arancini at 180C in batches until deep golden, drain and serve with the marinara and torn basil.", 15)]},
  {"n": "Pat Healy's architect garlic knots", "course": "s",
-  "line": "Healy tells Mary he's an architect",
+  "line": "Healy spies on Mary in Miami",
   "note": "Garlic butter knots, parmesan, marinara.",
   "prep": 20, "cook": 15, "ahead": "Tie the knots up to a day ahead and chill on the tray; bake and toss in the butter to serve",
   "ing": [(500, "g", "ball pizza dough", "Bakery"), (60, "g", "butter", "Dairy"), (4, "", "garlic cloves, crushed", "Produce"), (2, "tbsp", "parsley, chopped", "Produce"), (30, "g", "parmesan, finely grated", "Dairy"), (300, "ml", "marinara sauce", "Pantry")],

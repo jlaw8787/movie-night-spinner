@@ -30,7 +30,7 @@
   ],
   "overall": 3.4,
   "flat": true,
-  "done": true,
+  "done": false,
   "reworked": "2026-11-15",
   "changed": [
    "Map labels: MAIN ISLE, SNACK CAY, SWEET REEF now MYSTERY INC. (on the Scooby still), SNACK BAR (the gang at the table), HAUNTED RIDE (Shaggy and Scooby); course heads read SEE SNACK BAR / SEE MYSTERY INC.",
@@ -47,7 +47,13 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-15"
+  "rescored": "2026-11-15",
+  "reworked4": "2026-11-15",
+  "changed4": [
+   "Course heads no longer print 'SEE SNACK BAR' / 'SEE MYSTERY INC.' (new optional look.see in the tiki layout, set empty); heads now 'Zoinks! Snacks', 'From the Fire Pit', 'Something Sweet'",
+   "Drink now 'Jinkies Mystery Machine punch', line 'Scrappy gets kicked out of the van' (Wikiquote flashback, kicked off the Mystery Machine van)",
+   "House water note now 'I would've gotten away with it, too, if it weren't for you meddling kids' (Smithers, Wikiquote verbatim, as a nod)"
+  ]
  },
  "checked": "2026-11-15",
  "by": "independent checker, next 100 round 2"

@@ -21577,10 +21577,10 @@
   },
   "winks": [
    "Is that hair gel?",
-   "Franks and beans",
+   "Dom steals shoes from Mary's flat",
    "Magda's dog on speed",
    "Jonathan, the singing narrator",
-   "Pat Healy, private eye"
+   "Ted picks up a hitchhiker. Bad idea"
   ],
   "prop": {
    "kind": "ticket",
@@ -21809,7 +21809,7 @@
  },
  "Me, Myself & Irene (2000)": {
   "venue": "Where They Left Whitey",
-  "sign": "Between Massena and Rhode Island",
+  "sign": "Out of Massena, on the run",
   "note": {
    "text": "Charlie's like origami, he folds under pressure.",
    "by": "Hank Evans",
@@ -22392,14 +22392,14 @@
  },
  "The Monster Squad (1987)": {
   "venue": "The Monster Squad Clubhouse",
-  "sign": "Treehouse meeting. Members only.",
+  "sign": "No girls allowed. Sorry, Phoebe.",
   "note": {
    "text": "Wolf Man's got nards!",
    "by": "Horace",
    "kind": "quote"
   },
   "winks": [
-   "Van Helsing's diary, in German",
+   "Rudy, find some silver bullets",
    "Scary German Guy",
    "The monster test",
    "The amulet at midnight",
@@ -22414,7 +22414,18 @@
    ]
   },
   "number": "12",
-  "words": {}
+  "words": {
+   "to eat, laugh and watch a film at": "emergency meeting, before midnight, at",
+   "Also on the list:": "Also on the agenda:",
+   "You're invited!": "Club notice",
+   "First Course": "Before the monster test",
+   "Main Course": "Club business",
+   "Now showing": "By order of the club leader",
+   "Place card": "Club seating",
+   "To Toast": "To the Squad",
+   "R.S.V.P.": "Agenda",
+   "RSVP": "Nard kicker"
+  }
  },
  "They Live (1988)": {
   "venue": "Justiceville Soup Kitchen",
@@ -22934,7 +22945,12 @@
     "w": "Haunted Ride"
    },
    "label": {
+    "s": "Zoinks! Snacks",
     "w": "Something Sweet"
+   },
+   "see": {
+    "s": "",
+    "m": ""
    }
   }
  },

@@ -230,6 +230,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const era=eraOf(ctx.era),tone=toneOf(ctx.tone),E=ERA[era],TN=TONE[tone];
   /* flavour.look (per film, optional): paper (bg, fib, ink, mat, water as in PAPER), type (as in TYPE), isle and label (map tags and course heads), voice (bar, map, note), so a film that is an island but not a luau keeps the layout in its own colours and words */
   const LK=ctx.flavour&&ctx.flavour.look||{},ISLE_=Object.assign({},ISLE,LK.isle),LABEL_=Object.assign({},LABEL,LK.label);
+  /* look.see (optional, 15 Nov): per-course text beside the course head in place of "see <map tag>" ("" hides it), for map tags that read oddly as directions (Scooby-Doo) */
+  const SEE_=LK.see||{};
   const ty=Object.assign({},TYPE[E.g],LK.type),P=Object.assign({},PAPER[E.g],LK.paper);
   const C=inks(ctx.palette,P.bg,"#c2502a");
   const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),V=Object.assign({},VOICE[tone],LK.voice);
@@ -301,7 +303,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       </div>`}
     </div>
     <div data-box data-menu style="position:absolute;left:34px;top:660px;width:532px;height:430px;overflow:hidden">
-      ${["s","m","w"].filter(k=>cs[k].length).map(k=>`<div style="margin-bottom:10px"><div style="display:flex;align-items:baseline;gap:10px"><span data-fs="26" data-min="18" style="font:${ty.dw} 26px ${ty.disp};${up}white-space:nowrap;color:${P.ink}">${LABEL_[k]}</span><span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${k==="w"?"":"see "+ISLE_[k]}</span><span style="flex:1;border-top:2px solid ${C.ink};opacity:.5"></span></div>${items(cs[k],k,era,ty,C,false)}</div>`).join("")}
+      ${["s","m","w"].filter(k=>cs[k].length).map(k=>`<div style="margin-bottom:10px"><div style="display:flex;align-items:baseline;gap:10px"><span data-fs="26" data-min="18" style="font:${ty.dw} 26px ${ty.disp};${up}white-space:nowrap;color:${P.ink}">${LABEL_[k]}</span><span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${k==="w"?"":(k in SEE_?SEE_[k]:"see "+ISLE_[k])}</span><span style="flex:1;border-top:2px solid ${C.ink};opacity:.5"></span></div>${items(cs[k],k,era,ty,C,false)}</div>`).join("")}
     </div>
     <div data-box style="position:absolute;left:34px;top:1098px;width:532px;height:84px;overflow:hidden;border-top:3px double ${C.ink};padding-top:6px;box-sizing:border-box">
       <div data-fs="17" data-min="14" style="font:${ty.bw} 17px ${ty.body};line-height:1.25"><b style="font-weight:${ty.cw};color:${C.ink};letter-spacing:.1em;text-transform:uppercase">Ring the gong:</b> ${T(ctx.f.P||"Serve the mains when the torches are lit.")}</div>

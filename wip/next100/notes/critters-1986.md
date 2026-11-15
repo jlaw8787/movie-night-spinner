@@ -38,3 +38,9 @@ From the round 2 checker (unsure sign, vibe 3.2, three dishes printing with no f
 - Bounty notice third line "Last seen: Brown farm" (the Krites besiege the farm, Wikipedia plot).
 - Not done: Jay's reply "I think you watch too much TV." (Wikiquote) has no slot; the note panel takes one speaker's quote, so the gap above the quote in the right column stays a little open.
 
+## Fix (15 Nov)
+Later pass on the rescore (vibe 3.4): the Krites' rolling and quills put on the board and made the cue.
+- Kansas sweet corn fritters out; new starter "Rolling Krite corn fritter balls", line "Krites roll up and fire quills", note "Spiky corn balls, chive sour cream." (corn and cheddar balls rolled in crushed corn chips so they come up spiky, shallow-fried).
+- Cue now "Serve the Krite fritter balls when the Krites roll up to the house firing quills." (was the pancake breakfast cue). Prints on the placemat and the prep sheets.
+- Sources: Wikipedia, Critters (franchise), read raw: Krites "roll into balls similar to hedgehogs" and "the spikes on their backs can be launched as projectiles" (https://en.wikipedia.org/wiki/Critters_(franchise)). Frame Rated review of the 1986 film: the Krites "rolling around in balls" and inching toward the porch while the family hold the house (https://www.framerated.co.uk/?p=38283). TV Tropes, Critters: in the first film "one of the Crites' poison spines slams into the wood an inch from" the father's eyes (https://tvtropes.org/pmwiki/pmwiki.php/Film/Critters).
+- Seen on the kit: the film still behind the marquee shows the town sign reading "GROVERS BEND, KANSAS" with no apostrophe. The sign line was changed to "Grover's Bend" in the last fix; left as is, flagged for the owner.

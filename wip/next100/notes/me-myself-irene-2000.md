@@ -28,3 +28,8 @@ Wikiquote (https://en.wikiquote.org/wiki/Me,_Myself_%26_Irene):
 ## Round 1 fix (15 Nov)
 - Wikiquote: Shonte Jr., "If I don't buckle down, I'm gonna get myself another B-plus." (coffee milk line); Hank, "Well looky here, it's a human Q-tip." (chowder line).
 - Poster-art stills hidden in data/still-block.json so the front and the stamp show film stills.
+
+## Fix (15 Nov)
+Stamp postmark cut the venue to "WHERE THEY". menu-formats/motel.js builds the postmark from the last comma part of the sign if it fits 14 characters in whole words, else the first two words of the venue. The sign "Between Massena and Rhode Island" had no comma and ran long, so the venue's first two words printed.
+- Sign now "Out of Massena, on the run", so the postmark prints whole: "ON THE RUN / 2000". The front reads "OUT OF MASSENA, ON THE RUN" on one line. Venue unchanged.
+- Wikipedia: Charlie and Irene flee Massena and head back to Rhode Island, stopping at the motel on the way. https://en.wikipedia.org/wiki/Me,_Myself_%26_Irene

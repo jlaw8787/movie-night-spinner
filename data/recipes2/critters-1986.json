@@ -174,11 +174,11 @@
    }
   },
   {
-   "n": "Kansas sweet corn fritters",
+   "n": "Rolling Krite corn fritter balls",
    "course": "s",
-   "prep_min": 15,
+   "prep_min": 20,
    "cook_min": 15,
-   "make_ahead": "Mix the batter up to 4 hours ahead and chill; fry to serve",
+   "make_ahead": "Roll the balls up to 4 hours ahead and chill; crumb in the corn chips and fry to serve",
    "ingredients": [
     {
      "q": 3,
@@ -193,15 +193,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 80,
-     "u": "ml",
-     "item": "milk",
+     "item": "egg",
      "aisle": "Dairy"
     },
     {
@@ -211,15 +205,21 @@
      "aisle": "Produce"
     },
     {
-     "q": 60,
+     "q": 80,
      "u": "g",
      "item": "cheddar, grated",
      "aisle": "Dairy"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "vegetable oil",
+     "q": 100,
+     "u": "g",
+     "item": "plain corn chips, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
      "aisle": "Pantry"
     },
     {
@@ -237,15 +237,19 @@
    ],
    "steps": [
     {
-     "text": "Whisk the flour, eggs and milk, then fold in the corn, spring onions, cheddar and a pinch of salt.",
+     "text": "Mix the corn, flour, egg, spring onions, cheddar and a pinch of salt into a stiff batter.",
      "min": 6
     },
     {
-     "text": "Fry heaped spoonfuls in the oil until golden on both sides, in batches.",
+     "text": "Roll into walnut-size balls with wet hands, then roll them in the crushed corn chips so they come up spiky.",
+     "min": 8
+    },
+    {
+     "text": "Shallow-fry in batches in the hot oil, turning, until golden all over.",
      "min": 15
     },
     {
-     "text": "Stir the chives through the sour cream and serve with the fritters.",
+     "text": "Stir the chives through the sour cream and serve with the balls.",
      "min": 4
     }
    ],

@@ -8,12 +8,12 @@ FILM = {"id": "The Monster Squad (1987)", "theme": "horror",
 FORMAT = {"format": "invite", "era": "1980s", "tone": "playful"}
 PALETTE = {"dark": "#15171f", "accent": "#6aa83a"}
 SERIES = []
-FLAVOUR = {"venue": "The Monster Squad Clubhouse", "sign": "Treehouse meeting. Members only.",
+FLAVOUR = {"venue": "The Monster Squad Clubhouse", "sign": "No girls allowed. Sorry, Phoebe.",
            "note": {"text": "Wolf Man's got nards!", "by": "Horace", "kind": "quote"},
-           "winks": ["Van Helsing's diary, in German", "Scary German Guy", "The monster test", "The amulet at midnight", "Wolf Man can not drive a car"],
+           "winks": ["Rudy, find some silver bullets", "Scary German Guy", "The monster test", "The amulet at midnight", "Wolf Man can not drive a car"],
            "prop": {"kind": "card", "title": "The Monster Squad", "lines": ["Sean Crenshaw", "Club leader"]},
            "number": "12",
-           "words": {}}
+           "words": {"to eat, laugh and watch a film at": "emergency meeting, before midnight, at", "Also on the list:": "Also on the agenda:", "You're invited!": "Club notice", "First Course": "Before the monster test", "Main Course": "Club business", "Now showing": "By order of the club leader", "Place card": "Club seating", "To Toast": "To the Squad", "R.S.V.P.": "Agenda", "RSVP": "Nard kicker"}}
 HOUSE = {"s": {"n": "Garlic butter knots at the door", "note": "Vampires wait outside.", "meat": False},
          "d": {"n": "Root beer from the club esky", "note": "Members only. Pass the monster test.", "alc": False}}
 DISHES = [
@@ -33,7 +33,7 @@ DISHES = [
                   "ing": [(2, "", "x 180g blocks haloumi, cut in cubes", "Dairy"), (75, "g", "plain flour", "Pantry"), (2, "", "eggs", "Dairy"), (120, "g", "panko breadcrumbs", "Pantry"), (250, "ml", "vegetable oil, for frying", "Pantry"), (125, "g", "whole-egg mayonnaise", "Pantry"), (2, "tbsp", "capers, chopped", "Pantry"), (1, "", "lemon", "Produce")],
                   "steps": [("Mix the mayonnaise, capers and a squeeze of lemon.", 5), ("Crumb the haloumi in flour, egg and panko.", 10), ("Shallow-fry until golden and serve with the tartare.", 10)]}}},
  {"n": "Wolf Man meatball subs with provolone", "course": "m",
-  "line": "Wolf Man's got nards",
+  "line": "Kick him in the nards, Horace",
   "note": "Beef meatballs in red sauce under provolone.",
   "prep": 20, "cook": 35, "ahead": "Roll the meatballs and make the sauce up to 2 days ahead; simmer together and build to serve",
   "ing": [(600, "g", "beef mince", "Meat"), (1, "", "egg", "Dairy"), (40, "g", "dried breadcrumbs", "Pantry"), (30, "g", "parmesan, finely grated", "Dairy"), (3, "", "garlic cloves, crushed", "Produce"), (1, "", "brown onion, diced", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (700, "g", "bottle tomato passata", "Pantry"), (1, "tsp", "dried oregano", "Spices"), (4, "", "long soft sub rolls", "Bakery"), (8, "", "slices provolone", "Dairy"), (0.5, "cup", "basil leaves", "Produce")],
