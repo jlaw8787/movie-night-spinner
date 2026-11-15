@@ -2,176 +2,119 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Miami Cuban sliders",
+   "n": "Warren's baseball arancini",
    "course": "s",
-   "prep_min": 15,
-   "cook_min": 15,
-   "make_ahead": "Build the sliders up to 4 hours ahead and chill; brush with butter and bake to serve",
+   "prep_min": 40,
+   "cook_min": 95,
+   "make_ahead": "Make the risotto up to 2 days ahead and chill; shape, crumb and fry to serve",
    "ingredients": [
     {
-     "q": 12,
-     "u": "",
-     "item": "soft slider rolls, in one slab",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 200,
+     "q": 30,
      "u": "g",
-     "item": "shaved leg ham",
-     "aisle": "Deli"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "sliced roast pork",
-     "aisle": "Deli"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "slices Swiss cheese",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 3,
+     "q": 1,
      "u": "",
-     "item": "dill pickles, thinly sliced",
+     "item": "brown onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "arborio rice",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "yellow mustard",
+     "q": 1,
+     "u": "l",
+     "item": "hot vegetable stock",
      "aisle": "Pantry"
     },
     {
      "q": 50,
      "u": "g",
-     "item": "butter, melted",
+     "item": "parmesan, finely grated",
      "aisle": "Dairy"
     },
     {
-     "q": 1,
+     "q": 125,
+     "u": "g",
+     "item": "mozzarella, cut in 12 cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
      "u": "",
-     "item": "garlic clove, crushed",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dry breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "jar passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
      "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "dried oregano",
-     "aisle": "Spices"
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Split the slab of rolls through the middle and spread both cut sides with mustard.",
-     "min": 4
+     "text": "Soften the onion in the butter, stir in the rice, then add the hot stock a ladle at a time, stirring, until creamy and just tender.",
+     "min": 25
     },
     {
-     "text": "Layer the ham, pork, cheese and pickles on the base and put the top back on.",
-     "min": 6
+     "text": "Stir in the parmesan, season, spread on a tray and chill until firm.",
+     "min": 60
     },
     {
-     "text": "Mix the butter with the garlic and oregano and brush over the top.",
-     "min": 2
-    },
-    {
-     "text": "Cover with baking paper, press down with a heavy tray and bake at 180C until the cheese melts and the tops are crisp.",
+     "text": "Roll into 12 balls, pushing a cube of mozzarella into the middle of each.",
      "min": 15
     },
     {
-     "text": "Cut into sliders and serve hot.",
-     "min": 3
+     "text": "Roll in flour, then egg, then breadcrumbs.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the passata with the garlic and a few basil leaves while the oil heats.",
+     "min": 10
+    },
+    {
+     "text": "Fry the arancini at 180C in batches until deep golden, drain and serve with the marinara and torn basil.",
+     "min": 15
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Miami Cuban mushroom sliders (vegetarian)",
-     "course": "s",
-     "prep_min": 15,
-     "cook_min": 20,
-     "make_ahead": "Cook the mojo mushrooms up to a day ahead; build and bake to serve",
-     "ingredients": [
-      {
-       "q": 12,
-       "u": "",
-       "item": "soft slider rolls, in one slab",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "portobello mushrooms, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "orange, juiced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lime, juiced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "ground cumin",
-       "aisle": "Spices"
-      },
-      {
-       "q": 8,
-       "u": "",
-       "item": "slices Swiss cheese",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "dill pickles, thinly sliced",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "yellow mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "butter, melted",
-       "aisle": "Dairy"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Fry the mushrooms hard in the oil with the cumin, then add the citrus juice and cook until glossy.",
-       "min": 10
-      },
-      {
-       "text": "Spread the split rolls with mustard and layer the mushrooms, cheese and pickles.",
-       "min": 6
-      },
-      {
-       "text": "Brush with butter, press under a tray and bake at 180C until melted and crisp.",
-       "min": 15
-      }
-     ]
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pizza boy garlic knots",

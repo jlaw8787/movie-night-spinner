@@ -1,5 +1,6 @@
 # There's Something About Mary (1998). Prom layout, the 1985 senior prom in Cumberland, Rhode Island, that Ted never made it to.
 # Sources: Wikipedia plot (There's_Something_About_Mary), Wikiquote (There's_Something_About_Mary).
+# Round 1 fix 15 Nov: Miami Cuban sliders out (Miami is 13 years after the prom); Warren's "Have you seen my baseball?" (Wikiquote) on arancini.
 FILM = {"id": "There's Something About Mary (1998)", "theme": "romcom",
         "T": "Love is in the hair.",
         "D": "Thirteen years after a prom night disaster, a lovesick writer hires a private eye to find the girl, and the private eye falls for her too.",
@@ -9,22 +10,19 @@ PALETTE = {"dark": "#1c2a4a", "accent": "#f2a7c3"}
 SERIES = []
 FLAVOUR = {"venue": "Senior Prom, 1985", "sign": "Cumberland, Rhode Island",
            "note": {"text": "I couldn't believe that she knew my name.", "by": "Ted Stroehmann", "kind": "quote"},
-           "winks": ["Is that hair gel?", "Franks and beans", "Magda's dog on speed", "Jonathan, the singing narrator", "Warren and his baseball"],
+           "winks": ["Is that hair gel?", "Franks and beans", "Magda's dog on speed", "Jonathan, the singing narrator", "Pat Healy, private eye"],
            "prop": {"kind": "ticket", "title": "Senior Prom 1985", "lines": ["Admit Ted and Mary", "Mind the zip"]},
            "number": "1985",
            "words": {"Spring Fling, Class of 1998": "Senior Prom, Class of 1985"}}
-HOUSE = {"s": {"n": "Prom night cheese ball and crackers", "note": "Rolled in pecans. Eat it before the photos.", "meat": False},
+HOUSE = {"s": {"n": "Prom night cheese ball and crackers", "note": "For the photos Ted never got. Rolled in pecans.", "meat": False},
          "d": {"n": "Beer. Not lite beer, beer.", "note": "Straight off Mary's wish list.", "alc": True}}
 DISHES = [
- {"n": "Miami Cuban sliders", "course": "s",
-  "line": "Pat tracks Mary down to Miami",
-  "note": "Ham, roast pork, swiss and pickles, pressed.",
-  "prep": 15, "cook": 15, "ahead": "Build the sliders up to 4 hours ahead and chill; brush with butter and bake to serve",
-  "ing": [(12, "", "soft slider rolls, in one slab", "Bakery"), (200, "g", "shaved leg ham", "Deli"), (250, "g", "sliced roast pork", "Deli"), (8, "", "slices Swiss cheese", "Dairy"), (3, "", "dill pickles, thinly sliced", "Pantry"), (3, "tbsp", "yellow mustard", "Pantry"), (50, "g", "butter, melted", "Dairy"), (1, "", "garlic clove, crushed", "Produce"), (1, "tsp", "dried oregano", "Spices")],
-  "steps": [("Split the slab of rolls through the middle and spread both cut sides with mustard.", 4), ("Layer the ham, pork, cheese and pickles on the base and put the top back on.", 6), ("Mix the butter with the garlic and oregano and brush over the top.", 2), ("Cover with baking paper, press down with a heavy tray and bake at 180C until the cheese melts and the tops are crisp.", 15), ("Cut into sliders and serve hot.", 3)],
-  "alt": {"veg": {"n": "Miami Cuban mushroom sliders (vegetarian)", "note": "Mojo mushrooms, swiss and pickles, pressed.", "prep": 15, "cook": 20, "ahead": "Cook the mojo mushrooms up to a day ahead; build and bake to serve",
-                  "ing": [(12, "", "soft slider rolls, in one slab", "Bakery"), (500, "g", "portobello mushrooms, sliced", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (1, "", "orange, juiced", "Produce"), (1, "", "lime, juiced", "Produce"), (1, "tsp", "ground cumin", "Spices"), (8, "", "slices Swiss cheese", "Dairy"), (3, "", "dill pickles, thinly sliced", "Pantry"), (3, "tbsp", "yellow mustard", "Pantry"), (50, "g", "butter, melted", "Dairy")],
-                  "steps": [("Fry the mushrooms hard in the oil with the cumin, then add the citrus juice and cook until glossy.", 10), ("Spread the split rolls with mustard and layer the mushrooms, cheese and pickles.", 6), ("Brush with butter, press under a tray and bake at 180C until melted and crisp.", 15)]}}},
+ {"n": "Warren's baseball arancini", "course": "s",
+  "line": "Have you seen my baseball? asks Warren",
+  "note": "Crumbed risotto balls, mozzarella middle, marinara.",
+  "prep": 40, "cook": 95, "ahead": "Make the risotto up to 2 days ahead and chill; shape, crumb and fry to serve",
+  "ing": [(30, "g", "butter", "Dairy"), (1, "", "brown onion, finely diced", "Produce"), (300, "g", "arborio rice", "Pantry"), (1, "l", "hot vegetable stock", "Pantry"), (50, "g", "parmesan, finely grated", "Dairy"), (125, "g", "mozzarella, cut in 12 cubes", "Dairy"), (75, "g", "plain flour", "Pantry"), (2, "", "eggs, beaten", "Dairy"), (120, "g", "dry breadcrumbs", "Pantry"), (1, "l", "vegetable oil, for frying", "Pantry"), (400, "g", "jar passata", "Pantry"), (2, "", "garlic cloves, crushed", "Produce"), (1, "", "small bunch basil", "Produce")],
+  "steps": [("Soften the onion in the butter, stir in the rice, then add the hot stock a ladle at a time, stirring, until creamy and just tender.", 25), ("Stir in the parmesan, season, spread on a tray and chill until firm.", 60), ("Roll into 12 balls, pushing a cube of mozzarella into the middle of each.", 15), ("Roll in flour, then egg, then breadcrumbs.", 10), ("Simmer the passata with the garlic and a few basil leaves while the oil heats.", 10), ("Fry the arancini at 180C in batches until deep golden, drain and serve with the marinara and torn basil.", 15)]},
  {"n": "Pizza boy garlic knots", "course": "s",
   "line": "Tucker is really Norm, the pizza boy",
   "note": "Garlic butter knots, parmesan, marinara.",

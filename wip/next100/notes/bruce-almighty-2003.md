@@ -22,3 +22,8 @@ TV Tropes (https://tvtropes.org/pmwiki/pmwiki.php/Film/BruceAlmighty):
 
 ## Unsure
 - The diner's name is mine; I found no name for it in the film.
+
+## Round 1 fix (15 Nov)
+- God's soup line is said in the white room at the end, so the note heading is now "Overheard while mopping" (checker, Wikiquote).
+- TV Tropes: Grace makes Bruce grilled cheese and he has one bite; Bruce pulls the moon closer for their romantic night; he never eats the soup. Prime rib out, soup and Grace's grilled cheese now a blue plate, half-moon pierogi for the moon date. https://tvtropes.org/pmwiki/pmwiki.php/Film/BruceAlmighty
+- "Having fun?" (God at the diner) is not on Wikiquote, so it is not used.

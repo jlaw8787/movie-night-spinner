@@ -20,3 +20,6 @@ The plan lead was a backyard barbecue on Mayfield Place. No barbecue is in the p
 ## Unsure
 - Whether the sardine is served by the Klopeks or found by Ray in their kitchen; the line only says Ray eats it at the Klopeks'.
 - The youngest Klopek beats the trash; the wink avoids naming him.
+
+## Round 1 fix (15 Nov)
+- Movie Mistakes quotes: Hans, "Sardine?" Bonnie, "I'm trying to cut back." https://moviemistakes.com/film1770/quotes (sardine line). Food lines rewritten to stand alone when cut.

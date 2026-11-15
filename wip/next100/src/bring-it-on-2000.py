@@ -1,5 +1,7 @@
 # Bring It On (2000). Stadium layout, cheer nationals, Daytona Beach.
 # Sources: Wikipedia plot and cast (Bring_It_On_(film)), Wikiquote (Bring_It_On_(film)), Business Insider on the toothbrushing scene.
+# Round 1 fix 15 Nov: the East Compton Clovers on the board (Wikipedia: Clovers first at nationals, Toros second); Big Red's cheer on the popcorn
+# (Wikiquote: "I'm sexy! I'm cute! I'm popular to boot!"); Isis's "Stay in bounds!" on the stand; avocados cut so the notes print.
 FILM = {"id": "Bring It On (2000)", "theme": "teen",
         "T": "Six titles. One stolen routine.",
         "D": "A new cheer captain finds out her squad's winning routines were stolen from a Compton team, and has to build her own before nationals.",
@@ -12,11 +14,11 @@ FLAVOUR = {"venue": "Cheer Nationals Concessions", "sign": "Cheer Nationals, Day
            "winks": ["The Spirit Stick, dropped at camp", "Spirit fingers, sold to six teams", "Big Red's videotaped routines", "Cliff's mixtape", "Brushing teeth side by side"],
            "prop": {"kind": "ticket", "title": "Cheer Nationals", "lines": ["Daytona Beach, Florida", "Stay in bounds"]},
            "number": "6",
-           "words": {}}
-HOUSE = {"s": {"n": "Red and white candy popcorn", "note": "In Toros red, even if red does not work for everyone.", "meat": False},
-         "d": {"n": "Sports drink on ice", "note": "For extra alacrity and effulgence.", "alc": False}}
+           "words": {"Hawkers in every aisle. Catch it if you can.": "Stay in bounds. Hawkers in every aisle."}}
+HOUSE = {"s": {"n": "I'm sexy, I'm cute popcorn", "note": "Popular to boot. Red and white, for the Toros.", "meat": False},
+         "d": {"n": "Clovers lime soda", "note": "East Compton's finest. The Toros came second.", "alc": False}}
 DISHES = [
- {"n": "Sparky's spirit fingers with honey mustard", "course": "s",
+ {"n": "Sparky's spirit fingers", "course": "s",
   "line": "Sparky Polastri's famous spirit fingers",
   "note": "Crumbed chicken tenders, honey mustard dip.",
   "prep": 20, "cook": 20, "ahead": "Crumb the tenders up to a day ahead and keep covered in the fridge; bake to serve",
@@ -25,7 +27,7 @@ DISHES = [
   "alt": {"veg": {"n": "Sparky's haloumi spirit fingers (vegetarian)", "note": "Crumbed haloumi fingers, honey mustard dip.", "prep": 15, "cook": 12, "ahead": "Crumb the haloumi up to 6 hours ahead and chill; fry to serve",
                   "ing": [(2, "", "x 180g blocks haloumi, cut in fingers", "Dairy"), (75, "g", "plain flour", "Pantry"), (2, "", "eggs", "Dairy"), (120, "g", "panko breadcrumbs", "Pantry"), (125, "ml", "olive oil", "Pantry"), (3, "tbsp", "Dijon mustard", "Pantry"), (3, "tbsp", "honey", "Pantry"), (3, "tbsp", "whole-egg mayonnaise", "Pantry")],
                   "steps": [("Coat the haloumi in flour, egg and panko.", 10), ("Shallow-fry in the oil, turning, until golden all over.", 12), ("Mix the dip and serve straight away.", 5)]}}},
- {"n": "Car wash fundraiser fish tacos", "course": "s",
+ {"n": "Car wash fish tacos", "course": "s",
   "line": "The Toros' car wash fundraiser",
   "note": "San Diego fish tacos, cabbage, chipotle crema.",
   "prep": 20, "cook": 15, "ahead": "Make the crema and shred the cabbage up to a day ahead; fry the fish to serve",
@@ -34,12 +36,6 @@ DISHES = [
   "alt": {"veg": {"n": "Car wash fundraiser cauliflower tacos (vegetarian)", "note": "Crisp cauliflower tacos, cabbage, chipotle crema.", "prep": 20, "cook": 15, "ahead": "Cut the cauliflower and make the crema up to a day ahead; batter and fry to serve",
                   "ing": [(0.5, "", "cauliflower, in small florets", "Produce"), (100, "g", "plain flour", "Pantry"), (150, "ml", "chilled soda water", "Drinks"), (1, "tsp", "ground cumin", "Spices"), (500, "ml", "vegetable oil, for frying", "Pantry"), (8, "", "small corn tortillas", "Bakery"), (0.25, "", "white cabbage, finely shredded", "Produce"), (125, "g", "sour cream", "Dairy"), (1, "tbsp", "chipotle in adobo, chopped", "Pantry"), (2, "", "limes", "Produce")],
                   "steps": [("Mix the chipotle crema.", 5), ("Batter the florets and fry until crisp and tender.", 15), ("Warm the tortillas, fill with cabbage and cauliflower, and top with crema and lime.", 15)]}}},
- {"n": "Sparky's cut-in-half charred avocados", "course": "s",
-  "line": "Sparky's diet: now cut that in half",
-  "note": "Grilled avocado halves, corn and lime salsa.",
-  "prep": 15, "cook": 10, "ahead": "Char the corn and mix the salsa up to a day ahead; grill the avocados to serve",
-  "ing": [(4, "", "ripe but firm avocados, halved and stoned", "Produce"), (1, "tbsp", "olive oil", "Pantry"), (2, "", "corn cobs", "Produce"), (200, "g", "cherry tomatoes, quartered", "Produce"), (0.5, "", "red onion, finely diced", "Produce"), (1, "", "long red chilli, finely chopped", "Produce"), (2, "", "limes", "Produce"), (60, "g", "feta, crumbled", "Dairy"), (2, "cup", "tortilla chips", "Pantry")],
-  "steps": [("Char the corn cobs in a hot pan or on the barbecue, then cut off the kernels.", 8), ("Toss the corn with the tomato, onion, chilli, lime juice and salt.", 5), ("Brush the avocado cut sides with oil and grill face down for 2 minutes until marked.", 4), ("Fill each half with salsa, crumble over the feta and serve with chips to scoop.", 8)]},
  {"n": "Rancho Carne carne asada plates", "course": "m",
   "line": "Home of the Rancho Carne Toros",
   "note": "Grilled skirt steak, pico de gallo, rice and beans.",
@@ -49,8 +45,8 @@ DISHES = [
   "alt": {"veg": {"n": "Rancho Carne portobello asada plates (vegetarian)", "note": "Grilled portobellos, pico de gallo, rice and beans.", "prep": 20, "cook": 30, "ahead": "Marinate the mushrooms up to 4 hours ahead; make the pico on the day",
                   "ing": [(6, "", "large portobello mushrooms", "Produce"), (3, "", "limes", "Produce"), (1, "", "orange", "Produce"), (3, "", "garlic cloves, crushed", "Produce"), (1, "tsp", "ground cumin", "Spices"), (3, "tbsp", "olive oil", "Pantry"), (300, "g", "long-grain rice", "Pantry"), (400, "g", "tin black beans, drained", "Pantry"), (3, "", "tomatoes, diced", "Produce"), (1, "cup", "coriander, chopped", "Produce"), (8, "", "small flour tortillas", "Bakery")],
                   "steps": [("Marinate the mushrooms in citrus, garlic, cumin and oil.", 5), ("Cook the rice and stir through the beans.", 20), ("Make the pico, then grill the mushrooms until tender and slice.", 15), ("Serve with tortillas.", 8)]}}},
- {"n": "Daytona nationals Cuban sandwiches", "course": "m",
-  "line": "Nationals week in Daytona Beach",
+ {"n": "Daytona Cuban sandwiches", "course": "m",
+  "line": "Daytona, where the Clovers win",
   "note": "Roast pork, ham, Swiss, pickles, pressed hot.",
   "prep": 15, "cook": 15, "ahead": "Slice the pork and build the rolls up to 4 hours ahead; press to serve",
   "ing": [(4, "", "long crusty rolls", "Bakery"), (300, "g", "roast pork, thinly sliced", "Deli"), (200, "g", "shaved leg ham", "Deli"), (8, "", "slices Swiss cheese", "Dairy"), (1, "cup", "dill pickle slices", "Pantry"), (4, "tbsp", "yellow mustard", "Pantry"), (40, "g", "soft butter", "Dairy")],
@@ -58,7 +54,7 @@ DISHES = [
   "alt": {"veg": {"n": "Daytona nationals mushroom Cubans (vegetarian)", "note": "Roast mushrooms, Swiss, pickles, pressed hot.", "prep": 15, "cook": 25, "ahead": "Roast the mushrooms up to a day ahead; build and press to serve",
                   "ing": [(4, "", "long crusty rolls", "Bakery"), (500, "g", "Swiss brown mushrooms, sliced", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (1, "tsp", "smoked paprika", "Spices"), (8, "", "slices Swiss cheese", "Dairy"), (1, "cup", "dill pickle slices", "Pantry"), (4, "tbsp", "yellow mustard", "Pantry"), (40, "g", "soft butter", "Dairy")],
                   "steps": [("Roast the mushrooms with oil, paprika and salt at 220C until dark.", 15), ("Build the rolls with mustard, mushrooms, cheese and pickles.", 7), ("Butter and press in a hot pan until crisp.", 15)]}}},
- {"n": "Spirit Stick churros with hot chocolate dip", "course": "w",
+ {"n": "Spirit Stick churros", "course": "w",
   "line": "The Spirit Stick never touches the ground",
   "note": "Cinnamon sugar churros, thick chocolate.",
   "prep": 20, "cook": 20, "ahead": "Make the chocolate dip up to 2 days ahead and rewarm; pipe and fry the churros to serve",

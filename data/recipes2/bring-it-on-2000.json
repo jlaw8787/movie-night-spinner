@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Sparky's spirit fingers with honey mustard",
+   "n": "Sparky's spirit fingers",
    "course": "s",
    "prep_min": 20,
    "cook_min": 20,
@@ -164,7 +164,7 @@
    }
   },
   {
-   "n": "Car wash fundraiser fish tacos",
+   "n": "Car wash fish tacos",
    "course": "s",
    "prep_min": 20,
    "cook_min": 15,
@@ -346,89 +346,6 @@
      ]
     }
    }
-  },
-  {
-   "n": "Sparky's cut-in-half charred avocados",
-   "course": "s",
-   "prep_min": 15,
-   "cook_min": 10,
-   "make_ahead": "Char the corn and mix the salsa up to a day ahead; grill the avocados to serve",
-   "ingredients": [
-    {
-     "q": 4,
-     "u": "",
-     "item": "ripe but firm avocados, halved and stoned",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "olive oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "corn cobs",
-     "aisle": "Produce"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "cherry tomatoes, quartered",
-     "aisle": "Produce"
-    },
-    {
-     "q": 0.5,
-     "u": "",
-     "item": "red onion, finely diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "long red chilli, finely chopped",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "feta, crumbled",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 2,
-     "u": "cup",
-     "item": "tortilla chips",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Char the corn cobs in a hot pan or on the barbecue, then cut off the kernels.",
-     "min": 8
-    },
-    {
-     "text": "Toss the corn with the tomato, onion, chilli, lime juice and salt.",
-     "min": 5
-    },
-    {
-     "text": "Brush the avocado cut sides with oil and grill face down for 2 minutes until marked.",
-     "min": 4
-    },
-    {
-     "text": "Fill each half with salsa, crumble over the feta and serve with chips to scoop.",
-     "min": 8
-    }
-   ],
-   "veg": true,
-   "af": true
   },
   {
    "n": "Rancho Carne carne asada plates",
@@ -631,7 +548,7 @@
    }
   },
   {
-   "n": "Daytona nationals Cuban sandwiches",
+   "n": "Daytona Cuban sandwiches",
    "course": "m",
    "prep_min": 15,
    "cook_min": 15,
@@ -775,7 +692,7 @@
    }
   },
   {
-   "n": "Spirit Stick churros with hot chocolate dip",
+   "n": "Spirit Stick churros",
    "course": "w",
    "prep_min": 20,
    "cook_min": 20,

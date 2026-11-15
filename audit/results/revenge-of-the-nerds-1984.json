@@ -12,7 +12,10 @@
    "source": "https://en.wikipedia.org/wiki/Revenge_of_the_Nerds",
    "fix": "Relabel the rows so they are not a score: ROUND to STALL, TRI-LAMBS to PIES SOLD, ALPHA BETAS to KISSING BOOTH",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "STALL / ON THE MENU / PIES LEFT",
+   "applied_note": "Rows relabelled ON THE MENU and PIES LEFT instead of PIES SOLD and KISSING BOOTH: no opened page says the Alpha Betas ran a kissing booth, and a zero under PIES LEFT reads as sold out, not a score."
   }
  ],
  "checked_ok": 17,
@@ -41,6 +44,11 @@
   ],
   "overall": 3.6,
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Scoreboard rows STALL / ON THE MENU / PIES LEFT",
+   "Stock hawker line now 'Pies for charity in every aisle. Catch one if you can.'"
+  ]
  }
 }

@@ -24,3 +24,7 @@ Wikiquote (https://en.wikiquote.org/wiki/Me,_Myself_%26_Irene):
 
 ## Unsure
 - Motel name is mine. Coffee milk, johnnycakes and hot wieners are Rhode Island foods, not foods shown in the film; their lines only claim Rhode Island.
+
+## Round 1 fix (15 Nov)
+- Wikiquote: Shonte Jr., "If I don't buckle down, I'm gonna get myself another B-plus." (coffee milk line); Hank, "Well looky here, it's a human Q-tip." (chowder line).
+- Poster-art stills hidden in data/still-block.json so the front and the stamp show film stills.

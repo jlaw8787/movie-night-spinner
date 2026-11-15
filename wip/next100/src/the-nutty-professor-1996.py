@@ -1,6 +1,6 @@
 # The Nutty Professor (1996). Home layout, the Klump family dinner table.
 # Sources: Wikipedia plot (The_Nutty_Professor_(1996_film)), Wikiquote (The_Nutty_Professor_(1996_film)),
-# ESL Notes film guide (chicken skin and mashed potatoes at the Klump dinner, Buddy's order, the blue formula).
+# ESL Notes film guide (chicken skin and mashed potatoes at the Klump dinner, Buddy's order). Round 1 fix 15 Nov: no source gives the formula a colour, so it is no longer called blue.
 FILM = {"id": "The Nutty Professor (1996)", "theme": "soul",
         "T": "Seconds for everybody. Thirds for Sherman.",
         "D": "A kind, heavy-set professor tests his own weight-loss formula and turns into Buddy Love, a slick, cocky alter ego who will not go away.",
@@ -10,7 +10,7 @@ PALETTE = {"dark": "#2b1a12", "accent": "#e0782a"}
 SERIES = []
 FLAVOUR = {"venue": "The Klump Family Table", "sign": "Dinner at Mama Klump's",
            "note": {"text": "Don't break gas and destroy our meal.", "by": "Mama Klump", "kind": "quote"},
-           "winks": ["Papa Klump at the dinner table", "Buddy Love heckling Reggie Warrington", "Sherman's blue formula", "Shelly the hamster in the lab", "Buddy's six T-bones at The Scream"],
+           "winks": ["Papa Klump at the dinner table", "Buddy Love heckling Reggie Warrington", "Sherman's weight-loss formula", "Shelly the hamster in the lab", "Buddy's six T-bones at The Scream"],
            "prop": {"kind": "tag", "title": "Formula: do not drink", "lines": ["Wellman College lab", "Not in a shake can"]},
            "number": "6",
            "words": {}}
@@ -56,7 +56,7 @@ DISHES = [
   "prep": 15, "cook": 5, "ahead": "Make the hot fudge up to a week ahead and warm to serve",
   "ing": [(1, "l", "chocolate ice cream", "Frozen"), (100, "g", "mini marshmallows", "Pantry"), (80, "g", "roasted peanuts, chopped", "Pantry"), (150, "ml", "thickened cream", "Dairy"), (150, "g", "dark chocolate, chopped", "Pantry"), (2, "tbsp", "golden syrup", "Pantry"), (4, "", "maraschino cherries", "Pantry")],
   "steps": [("Soften the ice cream for 10 minutes, fold in half the marshmallows and half the peanuts and refreeze.", 10), ("Heat the cream with the golden syrup until steaming and stir in the chocolate until glossy.", 5), ("Scoop the ice cream into glasses, pour over the hot fudge and finish with the rest of the marshmallows, peanuts and a cherry.", 5)]},
- {"n": "Sherman's blue formula lemonade", "course": "d",
+ {"n": "Sherman's formula lemonade", "course": "d",
   "line": "Sherman tests the formula on himself",
   "note": "Butterfly pea lemonade that changes colour.",
   "prep": 15, "cook": 5, "ahead": "Brew the blue tea and make the syrup up to 3 days ahead and chill; add the lemon at the table",

@@ -12,7 +12,7 @@ FLAVOUR = {"venue": "Prince John's Banquet", "sign": "A feast at Prince John's c
            "winks": ["Prince John's wandering mole", "Blinkin catches the arrow", "The Patriot arrow", "Make him part of the tour", "Broomhilde, lady-in-waiting"],
            "prop": {"kind": "card", "title": "Robin of Loxley", "lines": ["Merry, and in tights", "Seated by Maid Marian"]},
            "number": "8",
-           "words": {}}
+           "words": {"From the host": "From the gatecrasher"}}
 HOUSE = {"s": {"n": "A bowl of Life Savers", "note": "Latrine's cure for a sword through the middle.", "meat": False},
          "d": {"n": "Warm spiced apple juice", "note": "Poured at the Spring Festival.", "alc": False}}
 DISHES = [

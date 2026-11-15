@@ -10,7 +10,7 @@ PALETTE = {"dark": "#1e2318", "accent": "#c79a44"}
 SERIES = [{"new": "Hot Shots!"}]
 FLAVOUR = {"venue": "President Benson's State Dinner", "sign": "In honour of Prime Minister Soto",
            "note": {"text": "We'll settle this the old navy way; the first guy to die loses!", "by": "President Tug Benson", "kind": "quote"},
-           "winks": ["Saddam and his dog, refrozen as one", "The piano pushed out of the chopper", "Martin Sheen, passing by boat", "A body count beating RoboCop", "Dexter's shoelaces, tied together"],
+           "winks": ["Saddam and his dog, thawed out as one", "The piano pushed out of the chopper", "Martin Sheen, passing by boat", "A body count beating RoboCop", "Dexter's shoelaces, tied together"],
            "prop": {"kind": "card", "title": "Tug Benson", "lines": ["Commander in chief", "Head of the table"]},
            "number": "2",
            "words": {"Come one, come all, to the feast": "By order of the President"}}

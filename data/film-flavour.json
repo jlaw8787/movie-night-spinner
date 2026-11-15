@@ -21419,7 +21419,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Do I feel lucky? Well, do ya, punk?",
+   "You've got to ask yourself one question",
    "Six shots or only five",
    "The phone booth run across the city",
    "The cross on Mount Davidson",
@@ -21552,7 +21552,7 @@
   "winks": [
    "Papa Klump at the dinner table",
    "Buddy Love heckling Reggie Warrington",
-   "Sherman's blue formula",
+   "Sherman's weight-loss formula",
    "Shelly the hamster in the lab",
    "Buddy's six T-bones at The Scream"
   ],
@@ -21580,7 +21580,7 @@
    "Franks and beans",
    "Magda's dog on speed",
    "Jonathan, the singing narrator",
-   "Warren and his baseball"
+   "Pat Healy, private eye"
   ],
   "prop": {
    "kind": "ticket",
@@ -21596,8 +21596,9 @@
   }
  },
  "Twins (1988)": {
-  "venue": "Roadside Cafe",
-  "sign": "Arroyo Seco, New Mexico",
+  "venue": "Sun God Lodge",
+  "sign": "Paseo del Pueblo Sur, Taos, New Mexico",
+  "caption": "Julius and Marnie share a motel room.",
   "note": {
    "text": "We're twins. I can feel your pain.",
    "by": "Julius Benedict",
@@ -21608,19 +21609,23 @@
    "I'll be back, Dr Traven",
    "The third rule in a crisis: duck",
    "Vincent's cat, also called Julius",
-   "The fuel injector in the Cadillac boot"
+   "one fuel injector"
   ],
   "prop": {
    "kind": "receipt",
-   "title": "Cafe check",
+   "title": "Front desk",
    "lines": [
-    "Two specials, one of each",
-    "Bill to Julius"
+    "Two rooms, four guests",
+    "Vincent's in Linda's room"
    ]
   },
   "number": "35",
   "words": {
-   "Pie so good it ought to be a crime": "One order, split two ways"
+   "Pie so good it ought to be a crime": "One order, split two ways",
+   "Overheard at the counter": "In the stolen Cadillac's boot",
+   "Left on the counter": "Left at the front desk",
+   "Booth service": "Vacancy",
+   "Tip your waitress": "Check out by ten"
   }
  },
  "Austin Powers: The Spy Who Shagged Me (1999)": {
@@ -21678,7 +21683,9 @@
    ]
   },
   "number": "6",
-  "words": {}
+  "words": {
+   "Hawkers in every aisle. Catch it if you can.": "Stay in bounds. Hawkers in every aisle."
+  }
  },
  "Bruce Almighty (2003)": {
   "venue": "The Buffalo Diner",
@@ -21693,21 +21700,22 @@
    "Every prayer answered Yes",
    "Jimmy Hoffa, found on the news",
    "The Sabres win the Stanley Cup",
-   "Evan's teleprompter cha-cha"
+   "Evan's cha-cha"
   ],
   "prop": {
    "kind": "receipt",
    "title": "Diner Check",
    "lines": [
     "One tomato soup, parted",
-    "Not a magic trick"
+    "Not one spoonful eaten"
    ]
   },
-  "caption": "The booth where Bruce parts his tomato soup.",
+  "caption": "Bruce Almighty, trying out the powers.",
   "number": "",
   "words": {
    "Pie so good it ought to be a crime.": "Tomato soup worth parting.",
-   "Left on the counter": "Overheard at the booth",
+   "Left on the counter": "Overheard while mopping",
+   "Overheard at the counter": "On the TV over the counter",
    "baked today": "scooped to order"
   }
  },
@@ -21752,7 +21760,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Saddam and his dog, refrozen as one",
+   "Saddam and his dog, thawed out as one",
    "The piano pushed out of the chopper",
    "Martin Sheen, passing by boat",
    "A body count beating RoboCop",
@@ -21880,8 +21888,10 @@
   "sport": "fight",
   "number": "6127",
   "words": {
-   "Red corner": "Tri-Lambs",
-   "Blue corner": "Alpha Betas"
+   "Round": "Stall",
+   "Red corner": "On the menu",
+   "Blue corner": "Pies left",
+   "Hawkers in every aisle. Catch it if you can.": "Pies for charity in every aisle. Catch one if you can."
   }
  },
  "Robin Hood: Men in Tights (1993)": {
@@ -21908,7 +21918,9 @@
    ]
   },
   "number": "8",
-  "words": {}
+  "words": {
+   "From the host": "From the gatecrasher"
+  }
  },
  "First Blood (1982)": {
   "venue": "Search Party Mess, Hope",

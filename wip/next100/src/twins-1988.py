@@ -1,20 +1,24 @@
-# Twins (1988). Diner layout, the roadside cafe on the road trip through northern New Mexico (filmed at Arroyo Seco, near Taos).
-# Sources: Wikipedia plot (Twins_(1988_film)), Wikiquote (Twins_(1988_film)), 80s Film Locations (roadside cafe at Arroyo Seco,
-# Sun God Lodge in Taos), AFI Catalog (motel stop, Los Alamos), TV Tropes (Rambo poster, Vincent's cat called Julius).
+# Twins (1988). Diner layout, the coffee shop menu at the Sun God Lodge in Taos, the motel the twins, Linda and Marnie stay at on the
+# road trip (80s Film Locations: 919 Paseo del Pueblo Sur; AFI: the motel night, Vincent takes Linda's room so Julius and Marnie share).
+# Round 1 fix 15 Nov: the old Roadside Cafe (Arroyo Seco) was a filming location with no scene, swapped for the lodge the film shows.
+# Sources: Wikipedia plot (Twins_(1988_film)), Wikiquote (Twins_(1988_film), tagline "Only their mother can tell them apart."),
+# 80s Film Locations (Sun God Lodge, Taos), AFI Catalog (motel stop, Los Alamos), TV Tropes (Rambo poster, island upbringing).
 FILM = {"id": "Twins (1988)", "theme": "diner",
-        "T": "Only the waitress can tell them apart.",
+        "T": "Only their mother can tell them apart.",
         "D": "A gentle giant raised on a tropical island tracks down the twin brother he never knew, a short, smooth-talking small-time crook.",
         "P": "Bring out the burgers when Julius tells Traven he'll be back."}
 FORMAT = {"format": "diner", "era": "1980s", "tone": "playful"}
 PALETTE = {"dark": "#1f2d3a", "accent": "#e2532d"}
 SERIES = []
-FLAVOUR = {"venue": "Roadside Cafe", "sign": "Arroyo Seco, New Mexico",
+FLAVOUR = {"venue": "Sun God Lodge", "sign": "Paseo del Pueblo Sur, Taos, New Mexico",
+           "caption": "Julius and Marnie share a motel room.",
            "note": {"text": "We're twins. I can feel your pain.", "by": "Julius Benedict", "kind": "quote"},
-           "winks": ["Julius sizing up a Rambo poster", "I'll be back, Dr Traven", "The third rule in a crisis: duck", "Vincent's cat, also called Julius", "The fuel injector in the Cadillac boot"],
-           "prop": {"kind": "receipt", "title": "Cafe check", "lines": ["Two specials, one of each", "Bill to Julius"]},
+           "winks": ["Julius sizing up a Rambo poster", "I'll be back, Dr Traven", "The third rule in a crisis: duck", "Vincent's cat, also called Julius", "one fuel injector"],
+           "prop": {"kind": "receipt", "title": "Front desk", "lines": ["Two rooms, four guests", "Vincent's in Linda's room"]},
            "number": "35",
-           "words": {"Pie so good it ought to be a crime": "One order, split two ways"}}
-HOUSE = {"s": {"n": "Bottomless shoestring fries", "note": "One basket, two very different brothers.", "meat": False},
+           "words": {"Pie so good it ought to be a crime": "One order, split two ways", "Overheard at the counter": "In the stolen Cadillac's boot",
+                     "Left on the counter": "Left at the front desk", "Booth service": "Vacancy", "Tip your waitress": "Check out by ten"}}
+HOUSE = {"s": {"n": "Island fruit salad", "note": "Julius grew up on an island. Vincent didn't.", "meat": False},
          "d": {"n": "Bottomless diner coffee", "note": "Pour it strong. It's a long way to Houston.", "alc": False}}
 DISHES = [
  {"n": "Rambo-sized green chile queso", "course": "s",

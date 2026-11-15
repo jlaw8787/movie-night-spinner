@@ -16,3 +16,6 @@ The plan lead was "Harry's hot dog stand lunch". The real place is the Burger De
 ## Unsure
 - Filmsite says the badge goes into a "stagnant pond"; Wikipedia says "into the water". The menu says water.
 - Ghirardelli and the Irish coffee are San Francisco nods, not in the film.
+
+## Round 1 fix (15 Nov)
+- Footer wink now "You've got to ask yourself one question" (Wikiquote), as the truck layout adds a full stop after the wink.

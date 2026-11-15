@@ -26,3 +26,7 @@ Business Insider (https://businessinsider.in/entertainment/news/the-director-of-
 ## Unsure
 - The stadium scoreboard's Home row is the layout's dish count (9 to 0); it is not a cheer score.
 - The concessions face prints dish names only, so the film lines show on the phone menu, not the print.
+
+## Round 1 fix (15 Nov)
+- Wikipedia: the Clovers win nationals, the Toros come second (Clovers lime soda, Cuban line). Wikiquote: Big Red, "I'm sexy! I'm cute! I'm popular to boot!" (popcorn); Isis, "Stay in bounds!" (stand line).
+- Avocado starter cut and names shortened so the notes print.

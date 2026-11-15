@@ -10,7 +10,7 @@ PALETTE = {"dark": "#1c1c1a", "accent": "#c79a3b"}
 SERIES = []
 FLAVOUR = {"venue": "Burger Den", "sign": "Pine and Battery, San Francisco",
            "note": {"text": "The usual lunch or the usual dinner?", "by": "Jaffe, behind the counter", "kind": "quote"},
-           "winks": ["Do I feel lucky? Well, do ya, punk?", "Six shots or only five", "The phone booth run across the city", "The cross on Mount Davidson", "The badge thrown in the water"],
+           "winks": ["You've got to ask yourself one question", "Six shots or only five", "The phone booth run across the city", "The cross on Mount Davidson", "The badge thrown in the water"],
            "prop": {"kind": "receipt", "title": "Burger Den", "lines": ["Jumbo hot dog, one bite", "Call it in: 2-11"]},
            "number": "44",
            "words": {}}

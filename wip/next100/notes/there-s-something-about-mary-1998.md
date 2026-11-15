@@ -16,3 +16,6 @@ The prom Ted never got to (zip accident) is the film's opening set piece, and it
 
 ## Unsure
 - The school's name is not given on the pages, so the venue is "Senior Prom, 1985".
+
+## Round 1 fix (15 Nov)
+- Miami Cuban sliders out (Miami is 13 years after the prom). Wikiquote: Warren, "Have you seen my baseball?" (arancini).

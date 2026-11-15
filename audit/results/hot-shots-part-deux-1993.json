@@ -11,7 +11,9 @@
    "source": "https://en.wikipedia.org/wiki/Hot_Shots!_Part_Deux",
    "fix": "I. Saddam and his dog, thawed out as one.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "I. Saddam and his dog, thawed out as one."
   }
  ],
  "checked_ok": 16,
@@ -40,6 +42,10 @@
   ],
   "overall": 4.0,
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Wink I fixed to 'thawed out as one'"
+  ]
  }
 }

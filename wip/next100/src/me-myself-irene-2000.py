@@ -1,5 +1,6 @@
 # Me, Myself & Irene (2000). Motel layout, the run-down roadside motel on the run from Massena back to Rhode Island.
 # Sources: Wikipedia plot (Me,_Myself_&_Irene), Wikiquote, What's After the Movie summary ("a pit stop at a run-down motel").
+# Round 1 fix 15 Nov: Charlie's sons on the board (Wikiquote: Shonte Jr., "another B-plus"); Hank's "human Q-tip" line for Whitey on the chowder.
 FILM = {"id": "Me, Myself & Irene (2000)", "theme": "diner",
         "T": "Table for two. Make that three.",
         "D": "A pushover Rhode Island state trooper with a nasty second personality called Hank has to get a woman on the run from Massena back home.",
@@ -17,7 +18,7 @@ HOUSE = {"s": {"n": "Buttered johnnycake bites", "note": "From Rhode Island, lik
          "d": {"n": "An ice-cold beer", "note": "Come on, I'll buy you a beer. Hank's shout.", "alc": True}}
 DISHES = [
  {"n": "Rhode Island clear clam chowder", "course": "s",
-  "line": "An 18-year Rhode Island state trooper",
+  "line": "Hank meets Whitey, a human Q-tip",
   "note": "Clear broth, clams, potato and bacon.",
   "prep": 15, "cook": 30, "ahead": "Make the broth with the potatoes up to a day ahead; add the clams when you reheat",
   "ing": [(3, "", "rashers bacon, diced", "Deli"), (1, "", "brown onion, diced", "Produce"), (2, "", "celery sticks, diced", "Produce"), (500, "g", "waxy potatoes, diced", "Produce"), (2, "", "x 290g tins baby clams, juice kept", "Seafood"), (500, "ml", "fish stock", "Pantry"), (2, "", "thyme sprigs", "Produce"), (2, "tbsp", "chopped parsley", "Produce"), (1, "cup", "small salted crackers", "Pantry")],
@@ -55,9 +56,9 @@ DISHES = [
   "prep": 30, "cook": 50, "ahead": "Make and chill the pastry up to 2 days ahead; bake on the day",
   "ing": [(300, "g", "plain flour", "Pantry"), (180, "g", "cold butter, cubed", "Dairy"), (60, "g", "sharp cheddar, finely grated", "Dairy"), (4, "tbsp", "iced water", "Pantry"), (6, "", "Granny Smith apples, peeled and sliced", "Produce"), (100, "g", "brown sugar", "Pantry"), (1, "tbsp", "cornflour", "Pantry"), (1, "tsp", "ground cinnamon", "Spices"), (1, "", "egg, beaten", "Dairy"), (500, "ml", "vanilla ice cream", "Frozen")],
   "steps": [("Rub the butter into the flour, stir in the cheddar and enough iced water to bring it together, then chill.", 15), ("Toss the apples with the sugar, cornflour and cinnamon.", 5), ("Roll out two thirds of the pastry to line a 23cm pie dish, fill with apples and top with the rest.", 10), ("Brush with egg, cut steam holes and bake at 200C until golden and bubbling.", 45), ("Cool a little and serve with ice cream.", 5)]},
- {"n": "Rhode Island coffee milk", "course": "d",
-  "line": "Charlie's home state, Rhode Island",
-  "note": "Cold milk stirred with coffee syrup, over ice.",
+ {"n": "The triplets' study-night coffee milk", "course": "d",
+  "line": "Charlie's genius boys fear a B-plus",
+  "note": "Rhode Island coffee milk, over ice.",
   "prep": 10, "cook": 5, "ahead": "Make the coffee syrup up to 2 weeks ahead and keep it in the fridge",
   "ing": [(250, "ml", "strong brewed coffee", "Pantry"), (200, "g", "caster sugar", "Pantry"), (1, "l", "cold full-cream milk", "Dairy"), (2, "cup", "ice cubes", "Frozen")],
   "steps": [("Simmer the coffee and sugar until slightly thickened, then cool.", 5), ("Stir 3 tablespoons of syrup into each glass of cold milk.", 5), ("Add ice and serve.", 5)]},

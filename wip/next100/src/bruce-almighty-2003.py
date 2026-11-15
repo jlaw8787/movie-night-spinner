@@ -1,5 +1,6 @@
 # Bruce Almighty (2003). Diner layout, the Buffalo diner where Bruce parts his tomato soup.
-# Sources: Wikipedia plot (Bruce_Almighty), Wikiquote (Bruce_Almighty), TV Tropes (diner, soup, coffee, grilled cheese).
+# Sources: Wikipedia plot (Bruce_Almighty), Wikiquote (Bruce_Almighty), TV Tropes (diner, soup never eaten, coffee, Grace's grilled cheese, the moon).
+# Round 1 fix 15 Nov: prime rib out; the soup is now a main with Grace's grilled cheese; half-moon pierogi for the moon date; God's note is from the white room.
 FILM = {"id": "Bruce Almighty (2003)", "theme": "diner",
         "T": "Soup's on. Parting is extra.",
         "D": "A Buffalo TV reporter who blames God for his bad luck is handed God's powers for a while, and learns the job is harder than it looks.",
@@ -9,20 +10,20 @@ PALETTE = {"dark": "#1a1d2b", "accent": "#d9412b"}
 SERIES = []
 FLAVOUR = {"venue": "The Buffalo Diner", "sign": "Buffalo, New York",
            "note": {"text": "Parting your soup is not a miracle, Bruce, it's a magic trick.", "by": "God", "kind": "quote"},
-           "winks": ["Smite me, O mighty smiter", "Every prayer answered Yes", "Jimmy Hoffa, found on the news", "The Sabres win the Stanley Cup", "Evan's teleprompter cha-cha"],
-           "prop": {"kind": "receipt", "title": "Diner Check", "lines": ["One tomato soup, parted", "Not a magic trick"]},
-           "caption": "The booth where Bruce parts his tomato soup.",
+           "winks": ["Smite me, O mighty smiter", "Every prayer answered Yes", "Jimmy Hoffa, found on the news", "The Sabres win the Stanley Cup", "Evan's cha-cha"],
+           "prop": {"kind": "receipt", "title": "Diner Check", "lines": ["One tomato soup, parted", "Not one spoonful eaten"]},
+           "caption": "Bruce Almighty, trying out the powers.",
            "number": "",
-           "words": {"Pie so good it ought to be a crime.": "Tomato soup worth parting.", "Left on the counter": "Overheard at the booth", "baked today": "scooped to order"}}
-HOUSE = {"s": {"n": "A jar of dill pickles on the counter", "note": "Free with every miracle.", "meat": False},
+           "words": {"Pie so good it ought to be a crime.": "Tomato soup worth parting.", "Left on the counter": "Overheard while mopping", "Overheard at the counter": "On the TV over the counter", "baked today": "scooped to order"}}
+HOUSE = {"s": {"n": "A jar of dill pickles on the counter", "note": "Bruce never touched his soup. Have a pickle.", "meat": False},
          "d": {"n": "Bottomless drip coffee", "note": "Refills on the house. No prayer needed.", "alc": False}}
 DISHES = [
- {"n": "Red Sea tomato soup with grilled cheese", "course": "s",
-  "line": "Bruce parts his tomato soup",
-  "note": "Roast tomato soup, a cheddar toastie to dip.",
-  "prep": 15, "cook": 45, "ahead": "Make the soup up to 3 days ahead and reheat; toast the sandwiches to serve",
-  "ing": [(1.2, "kg", "ripe tomatoes, halved", "Produce"), (1, "", "brown onion, quartered", "Produce"), (4, "", "garlic cloves", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (500, "ml", "vegetable stock", "Pantry"), (1, "tsp", "brown sugar", "Pantry"), (100, "ml", "thickened cream", "Dairy"), (8, "", "slices white sandwich bread", "Bakery"), (160, "g", "vintage cheddar, grated", "Dairy"), (40, "g", "soft butter", "Dairy")],
-  "steps": [("Toss the tomatoes, onion and garlic with the oil and salt and roast at 200C until soft and blistered.", 35), ("Blend with the stock and sugar, then simmer, stir in the cream and season.", 10), ("Fill the bread with cheddar, butter the outsides and toast in a pan until golden and melting.", 10), ("Cut the toasties into fingers and serve with the soup, for parting or dunking.", 5)]},
+ {"n": "Pulled-closer half-moon pierogi", "course": "s",
+  "line": "Bruce pulls the moon closer for Grace",
+  "note": "Potato and cheddar pierogi, browned onion butter.",
+  "prep": 60, "cook": 38, "ahead": "Fill and shape the pierogi up to a day ahead and chill on a floured tray, or freeze; boil and fry to serve",
+  "ing": [(300, "g", "plain flour, plus extra for rolling", "Pantry"), (1, "", "egg", "Dairy"), (150, "g", "sour cream, plus extra to serve", "Dairy"), (100, "g", "butter", "Dairy"), (500, "g", "floury potatoes, peeled and chopped", "Produce"), (120, "g", "vintage cheddar, grated", "Dairy"), (2, "", "brown onions, 1 finely diced, 1 thinly sliced", "Produce"), (1, "tbsp", "chives, snipped", "Produce")],
+  "steps": [("Mix the flour, egg, 3 tbsp sour cream, 30g melted butter and half a teaspoon of salt into a soft dough, knead 3 minutes and rest under a bowl.", 30), ("Boil the potatoes until soft, mash with the cheddar, fry the diced onion in a little butter and stir it through. Season hard and cool.", 25), ("Roll the dough 2mm thick, cut 8cm rounds, fill each with a teaspoon of potato, fold into half moons and pinch the edges shut.", 25), ("Boil the pierogi in salted water until they float, then 1 minute more, and lift out.", 8), ("Fry the sliced onion in the rest of the butter until golden, add the pierogi and fry until crisp at the edges. Serve with sour cream and chives.", 10)]},
  {"n": "Stanley Cup Buffalo wings", "course": "s",
   "line": "Bruce makes the Sabres win the Cup",
   "note": "Hot sauce wings, blue cheese dip, celery.",
@@ -32,15 +33,12 @@ DISHES = [
   "alt": {"veg": {"n": "Stanley Cup Buffalo cauliflower (vegetarian)", "note": "Hot sauce cauliflower, blue cheese dip, celery.", "prep": 15, "cook": 35, "ahead": "Make the dip and cut the cauliflower up to 2 days ahead; roast and toss to serve",
                   "ing": [(1, "", "cauliflower, cut in florets", "Produce"), (75, "g", "plain flour", "Pantry"), (125, "ml", "milk", "Dairy"), (125, "ml", "Frank's RedHot sauce", "Pantry"), (60, "g", "butter", "Dairy"), (100, "g", "blue cheese, crumbled", "Dairy"), (125, "g", "sour cream", "Dairy"), (4, "", "celery sticks, cut in batons", "Produce")],
                   "steps": [("Whisk the flour and milk into a batter, coat the florets and roast at 220C until crisp.", 30), ("Mix the blue cheese dip.", 5), ("Toss the cauliflower in the melted butter and hot sauce and serve with celery.", 10)]}}},
- {"n": "Evan's prime rib roast with horseradish cream", "course": "m",
-  "line": "The Prime rib roast Minister, says Evan",
-  "note": "Slow-roast rib of beef, jus, mash, greens.",
-  "prep": 20, "cook": 140, "ahead": "Season the beef up to a day ahead and leave uncovered in the fridge; roast on the day",
-  "ing": [(2, "kg", "standing beef rib roast, 2 bones", "Meat"), (2, "tbsp", "olive oil", "Pantry"), (1, "tbsp", "cracked black pepper", "Spices"), (4, "", "garlic cloves, crushed", "Produce"), (250, "ml", "beef stock", "Pantry"), (1, "kg", "floury potatoes", "Produce"), (80, "g", "butter", "Dairy"), (150, "ml", "milk", "Dairy"), (300, "g", "green beans", "Produce"), (150, "ml", "sour cream", "Dairy"), (2, "tbsp", "grated horseradish", "Pantry")],
-  "steps": [("Rub the beef with the oil, garlic, pepper and plenty of salt and bring to room temperature.", 15), ("Roast at 230C for 15 minutes, then at 160C until it reads 54C inside for medium rare.", 90), ("Rest the beef under foil while you make the jus from the pan juices and stock.", 20), ("Meanwhile boil and mash the potatoes with the butter and milk, and steam the beans.", 10), ("Stir the horseradish into the sour cream, carve the beef and serve with everything.", 5)],
-  "alt": {"veg": {"n": "Evan's roast cauliflower with horseradish cream (vegetarian)", "note": "Whole roast cauliflower, gravy, mash, greens.", "prep": 20, "cook": 70, "ahead": "Make the mushroom gravy up to 2 days ahead; roast the cauliflower on the day",
-                  "ing": [(1, "", "whole cauliflower, leaves trimmed", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (2, "tsp", "smoked paprika", "Spices"), (250, "g", "mushrooms, finely chopped", "Produce"), (500, "ml", "vegetable stock", "Pantry"), (1, "tbsp", "plain flour", "Pantry"), (1, "kg", "floury potatoes", "Produce"), (80, "g", "butter", "Dairy"), (300, "g", "green beans", "Produce"), (150, "ml", "sour cream", "Dairy"), (2, "tbsp", "grated horseradish", "Pantry")],
-                  "steps": [("Simmer the whole cauliflower in salted water for 8 minutes, then drain well.", 15), ("Rub with the oil and paprika and roast at 200C until deep golden.", 45), ("Fry the mushrooms, stir in the flour and stock and simmer into a gravy.", 10), ("Mash the potatoes, steam the beans and serve with the horseradish cream.", 10)]}}},
+ {"n": "Red Sea tomato soup and Grace's grilled cheese", "course": "m",
+  "line": "Bruce parts his tomato soup",
+  "note": "Roast tomato soup, cheddar toastie on sourdough.",
+  "prep": 15, "cook": 45, "ahead": "Make the soup up to 3 days ahead and reheat; toast the sandwiches to serve",
+  "ing": [(1.6, "kg", "ripe tomatoes, halved", "Produce"), (1, "", "brown onion, quartered", "Produce"), (5, "", "garlic cloves", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (700, "ml", "vegetable stock", "Pantry"), (1, "tsp", "brown sugar", "Pantry"), (125, "ml", "thickened cream", "Dairy"), (1, "", "small bunch basil", "Produce"), (8, "", "thick slices sourdough", "Bakery"), (200, "g", "vintage cheddar, grated", "Dairy"), (100, "g", "mozzarella, grated", "Dairy"), (50, "g", "soft butter", "Dairy")],
+  "steps": [("Toss the tomatoes, onion and garlic with the oil and salt and roast at 200C until soft and blistered.", 35), ("Blend with the stock, sugar and half the basil, then simmer, stir in the cream and season.", 10), ("Fill the bread with both cheeses, butter the outsides and toast in a pan over medium heat until golden and melting.", 10), ("Ladle the soup into wide bowls, tear over the rest of the basil and serve each with a whole grilled cheese, cut corner to corner, for parting or dunking.", 5)]},
  {"n": "Every prayer answered Yes sundae", "course": "w",
   "line": "Bruce answers every prayer Yes",
   "note": "Every topping at once, under hot fudge.",

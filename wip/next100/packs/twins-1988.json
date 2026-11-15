@@ -106,7 +106,7 @@
     ]
    ]
   ],
-  "T": "Only the waitress can tell them apart.",
+  "T": "Only their mother can tell them apart.",
   "D": "A gentle giant raised on a tropical island tracks down the twin brother he never knew, a short, smooth-talking small-time crook.",
   "P": "Bring out the burgers when Julius tells Traven he'll be back."
  },
@@ -116,8 +116,9 @@
   "tone": "playful"
  },
  "film-flavour": {
-  "venue": "Roadside Cafe",
-  "sign": "Arroyo Seco, New Mexico",
+  "venue": "Sun God Lodge",
+  "sign": "Paseo del Pueblo Sur, Taos, New Mexico",
+  "caption": "Julius and Marnie share a motel room.",
   "note": {
    "text": "We're twins. I can feel your pain.",
    "by": "Julius Benedict",
@@ -128,19 +129,23 @@
    "I'll be back, Dr Traven",
    "The third rule in a crisis: duck",
    "Vincent's cat, also called Julius",
-   "The fuel injector in the Cadillac boot"
+   "one fuel injector"
   ],
   "prop": {
    "kind": "receipt",
-   "title": "Cafe check",
+   "title": "Front desk",
    "lines": [
-    "Two specials, one of each",
-    "Bill to Julius"
+    "Two rooms, four guests",
+    "Vincent's in Linda's room"
    ]
   },
   "number": "35",
   "words": {
-   "Pie so good it ought to be a crime": "One order, split two ways"
+   "Pie so good it ought to be a crime": "One order, split two ways",
+   "Overheard at the counter": "In the stolen Cadillac's boot",
+   "Left on the counter": "Left at the front desk",
+   "Booth service": "Vacancy",
+   "Tip your waitress": "Check out by ten"
   }
  },
  "film-palette": {
@@ -994,8 +999,8 @@
  "series": [],
  "film-house": {
   "s": {
-   "n": "Bottomless shoestring fries",
-   "note": "One basket, two very different brothers.",
+   "n": "Island fruit salad",
+   "note": "Julius grew up on an island. Vincent didn't.",
    "meat": false
   },
   "d": {

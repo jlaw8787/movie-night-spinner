@@ -11,7 +11,9 @@
    "source": "https://en.wikipedia.org/wiki/The_Nutty_Professor_(1996_film)",
    "fix": "Sherman's weight-loss formula",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Sherman's weight-loss formula (wink); drink renamed Sherman's formula lemonade"
   }
  ],
  "checked_ok": 16,
@@ -40,6 +42,10 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Formula no longer called blue (wink and drink name)"
+  ]
  }
 }

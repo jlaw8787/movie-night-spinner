@@ -17,7 +17,9 @@
     "kind": "quote"
    },
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "FROM THE GATECRASHER / Because, unlike some other Robin Hoods, I can speak with an English accent. / Robin of Loxley"
   }
  ],
  "checked_ok": 17,
@@ -47,6 +49,11 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Note heading FROM THE GATECRASHER",
+   "Poster art no longer printed twice (bottom still is now Maid Marian, beside 'Seated by Maid Marian')"
+  ]
  }
 }

@@ -11,7 +11,10 @@
    "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Twins1988",
    "fix": "Julius and Vincent, matching suits.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Julius and Marnie share a motel room.",
+   "applied_note": "The poster-art stills are now hidden (data/still-block.json), so the band above the caption is the motel-room still of Marnie and Julius; the caption describes that still. Venue changed from Roadside Cafe to the Sun God Lodge, Taos."
   },
   {
    "text": "Overheard at the counter: the fuel injector in the Cadillac boot.",
@@ -21,7 +24,9 @@
    "source": "https://en.wikipedia.org/wiki/Twins_(1988_film)",
    "fix": "In the stolen Cadillac's boot: one fuel injector.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "In the stolen Cadillac's boot: one fuel injector."
   }
  ],
  "checked_ok": 15,
@@ -53,6 +58,15 @@
   ],
   "overall": 3.0,
   "flat": true,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Venue: Sun God Lodge, Paseo del Pueblo Sur, Taos, the motel the twins, Linda and Marnie stay at (was the Roadside Cafe filming location)",
+   "Tagline now the real one: 'Only their mother can tell them apart.'",
+   "Poster art no longer printed twice; back still is the motel room (Marnie and Julius), last still the twins' hug",
+   "Front desk ticket: 'Two rooms, four guests' / 'Vincent's in Linda's room'; stock lines remapped (Left at the front desk, Vacancy, Check out by ten)",
+   "House fries swapped for 'Island fruit salad: Julius grew up on an island. Vincent didn't.'",
+   "Footer: 'In the stolen Cadillac's boot: one fuel injector.'"
+  ]
  }
 }

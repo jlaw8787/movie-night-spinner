@@ -7,7 +7,7 @@
   "hw": 1,
   "S": [
    [
-    "Sparky's spirit fingers with honey mustard",
+    "Sparky's spirit fingers",
     "Sparky Polastri's famous spirit fingers",
     "Season the flour, beat the eggs, and mix the panko with the parmesan and paprika. Dip each tender in flour, egg, then crumbs, and lay on a lined tray. Drizzle with oil and bake at 220C, turning once, until golden and cooked through. Stir the mustard, honey and mayo together and serve with the tenders.",
     [
@@ -24,7 +24,7 @@
     ]
    ],
    [
-    "Car wash fundraiser fish tacos",
+    "Car wash fish tacos",
     "The Toros' car wash fundraiser",
     "Stir the sour cream with the chipotle and a squeeze of lime. Whisk the flour, cumin, a pinch of salt and the soda water into a light batter. Dip the fish and fry in hot oil in batches until crisp and golden. Warm the tortillas in a dry pan. Fill with cabbage and fish, spoon over the crema and finish with coriander and lime.",
     [
@@ -39,22 +39,6 @@
      "1 tbsp chipotle in adobo, chopped@Pantry",
      "2 limes@Produce",
      "0.5 cup coriander leaves@Produce"
-    ]
-   ],
-   [
-    "Sparky's cut-in-half charred avocados",
-    "Sparky's diet: now cut that in half",
-    "Char the corn cobs in a hot pan or on the barbecue, then cut off the kernels. Toss the corn with the tomato, onion, chilli, lime juice and salt. Brush the avocado cut sides with oil and grill face down for 2 minutes until marked. Fill each half with salsa, crumble over the feta and serve with chips to scoop.",
-    [
-     "4 ripe but firm avocados, halved and stoned@Produce",
-     "1 tbsp olive oil@Pantry",
-     "2 corn cobs@Produce",
-     "200g cherry tomatoes, quartered@Produce",
-     "0.5 red onion, finely diced@Produce",
-     "1 long red chilli, finely chopped@Produce",
-     "2 limes@Produce",
-     "60g feta, crumbled@Dairy",
-     "2 cup tortilla chips@Pantry"
     ]
    ]
   ],
@@ -79,8 +63,8 @@
     ]
    ],
    [
-    "Daytona nationals Cuban sandwiches",
-    "Nationals week in Daytona Beach",
+    "Daytona Cuban sandwiches",
+    "Daytona, where the Clovers win",
     "Split the rolls and spread both sides with mustard. Layer the pork, ham, cheese and pickles, then close. Butter the outsides and press in a hot pan under a heavy pan, turning once, until crisp and melted. Cut on the diagonal and serve hot.",
     [
      "4 long crusty rolls@Bakery",
@@ -95,7 +79,7 @@
   ],
   "W": [
    [
-    "Spirit Stick churros with hot chocolate dip",
+    "Spirit Stick churros",
     "The Spirit Stick never touches the ground",
     "Bring the water, butter, 1 tbsp sugar and a pinch of salt to the boil, tip in the flour and beat until it leaves the pan. Cool for 5 minutes, then beat in the eggs one at a time until glossy. Heat the cream, pour over the chocolate and stir until smooth. Pipe 12cm lengths into oil at 180C and fry in batches until golden. Roll in the remaining sugar mixed with the cinnamon and serve with the dip.",
     [
@@ -159,7 +143,9 @@
    ]
   },
   "number": "6",
-  "words": {}
+  "words": {
+   "Hawkers in every aisle. Catch it if you can.": "Stay in bounds. Hawkers in every aisle."
+  }
  },
  "film-palette": {
   "dark": "#1c1418",
@@ -167,16 +153,15 @@
  },
  "dish-names": [
   [
-   "Sparky's spirit fingers with honey mustard",
-   "Car wash fundraiser fish tacos",
-   "Sparky's cut-in-half charred avocados"
+   "Sparky's spirit fingers",
+   "Car wash fish tacos"
   ],
   [
    "Rancho Carne carne asada plates",
-   "Daytona nationals Cuban sandwiches"
+   "Daytona Cuban sandwiches"
   ],
   [
-   "Spirit Stick churros with hot chocolate dip"
+   "Spirit Stick churros"
   ],
   [
    "Cliff's minty lime cooler"
@@ -185,12 +170,11 @@
  "dish-notes": [
   [
    "Sparky Polastri's famous spirit fingers",
-   "The Toros' car wash fundraiser",
-   "Sparky's diet: now cut that in half"
+   "The Toros' car wash fundraiser"
   ],
   [
    "Home of the Rancho Carne Toros",
-   "Nationals week in Daytona Beach"
+   "Daytona, where the Clovers win"
   ],
   [
    "The Spirit Stick never touches the ground"
@@ -202,7 +186,7 @@
  "recipes": {
   "s": [
    {
-    "n": "Sparky's spirit fingers with honey mustard",
+    "n": "Sparky's spirit fingers",
     "note": "Sparky Polastri's famous spirit fingers. Crumbed chicken tenders, honey mustard dip.",
     "how": "Season the flour, beat the eggs, and mix the panko with the parmesan and paprika. Dip each tender in flour, egg, then crumbs, and lay on a lined tray. Drizzle with oil and bake at 220C, turning once, until golden and cooked through. Stir the mustard, honey and mayo together and serve with the tenders.",
     "shop": [
@@ -219,7 +203,7 @@
     ]
    },
    {
-    "n": "Car wash fundraiser fish tacos",
+    "n": "Car wash fish tacos",
     "note": "The Toros' car wash fundraiser. San Diego fish tacos, cabbage, chipotle crema.",
     "how": "Stir the sour cream with the chipotle and a squeeze of lime. Whisk the flour, cumin, a pinch of salt and the soda water into a light batter. Dip the fish and fry in hot oil in batches until crisp and golden. Warm the tortillas in a dry pan. Fill with cabbage and fish, spoon over the crema and finish with coriander and lime.",
     "shop": [
@@ -234,22 +218,6 @@
      "1 tbsp chipotle in adobo, chopped@Pantry",
      "2 limes@Produce",
      "0.5 cup coriander leaves@Produce"
-    ]
-   },
-   {
-    "n": "Sparky's cut-in-half charred avocados",
-    "note": "Sparky's diet: now cut that in half. Grilled avocado halves, corn and lime salsa.",
-    "how": "Char the corn cobs in a hot pan or on the barbecue, then cut off the kernels. Toss the corn with the tomato, onion, chilli, lime juice and salt. Brush the avocado cut sides with oil and grill face down for 2 minutes until marked. Fill each half with salsa, crumble over the feta and serve with chips to scoop.",
-    "shop": [
-     "4 ripe but firm avocados, halved and stoned@Produce",
-     "1 tbsp olive oil@Pantry",
-     "2 corn cobs@Produce",
-     "200g cherry tomatoes, quartered@Produce",
-     "0.5 red onion, finely diced@Produce",
-     "1 long red chilli, finely chopped@Produce",
-     "2 limes@Produce",
-     "60g feta, crumbled@Dairy",
-     "2 cup tortilla chips@Pantry"
     ]
    }
   ],
@@ -274,8 +242,8 @@
     ]
    },
    {
-    "n": "Daytona nationals Cuban sandwiches",
-    "note": "Nationals week in Daytona Beach. Roast pork, ham, Swiss, pickles, pressed hot.",
+    "n": "Daytona Cuban sandwiches",
+    "note": "Daytona, where the Clovers win. Roast pork, ham, Swiss, pickles, pressed hot.",
     "how": "Split the rolls and spread both sides with mustard. Layer the pork, ham, cheese and pickles, then close. Butter the outsides and press in a hot pan under a heavy pan, turning once, until crisp and melted. Cut on the diagonal and serve hot.",
     "shop": [
      "4 long crusty rolls@Bakery",
@@ -290,7 +258,7 @@
   ],
   "w": [
    {
-    "n": "Spirit Stick churros with hot chocolate dip",
+    "n": "Spirit Stick churros",
     "note": "The Spirit Stick never touches the ground. Cinnamon sugar churros, thick chocolate.",
     "how": "Bring the water, butter, 1 tbsp sugar and a pinch of salt to the boil, tip in the flour and beat until it leaves the pan. Cool for 5 minutes, then beat in the eggs one at a time until glossy. Heat the cream, pour over the chocolate and stir until smooth. Pipe 12cm lengths into oil at 180C and fry in batches until golden. Roll in the remaining sugar mixed with the cinnamon and serve with the dip.",
     "shop": [
@@ -343,14 +311,6 @@
    "1 tbsp chipotle in adobo, chopped@Pantry",
    "2 limes@Produce",
    "0.5 cup coriander leaves@Produce",
-   "4 ripe but firm avocados, halved and stoned@Produce",
-   "1 tbsp olive oil@Pantry",
-   "2 corn cobs@Produce",
-   "200g cherry tomatoes, quartered@Produce",
-   "0.5 red onion, finely diced@Produce",
-   "1 long red chilli, finely chopped@Produce",
-   "60g feta, crumbled@Dairy",
-   "2 cup tortilla chips@Pantry",
    "800g skirt steak@Meat",
    "3 limes@Produce",
    "1 orange@Produce",
@@ -389,7 +349,7 @@
   "serves": 4,
   "dishes": [
    {
-    "n": "Sparky's spirit fingers with honey mustard",
+    "n": "Sparky's spirit fingers",
     "course": "s",
     "prep_min": 20,
     "cook_min": 20,
@@ -551,7 +511,7 @@
     }
    },
    {
-    "n": "Car wash fundraiser fish tacos",
+    "n": "Car wash fish tacos",
     "course": "s",
     "prep_min": 20,
     "cook_min": 15,
@@ -733,89 +693,6 @@
       ]
      }
     }
-   },
-   {
-    "n": "Sparky's cut-in-half charred avocados",
-    "course": "s",
-    "prep_min": 15,
-    "cook_min": 10,
-    "make_ahead": "Char the corn and mix the salsa up to a day ahead; grill the avocados to serve",
-    "ingredients": [
-     {
-      "q": 4,
-      "u": "",
-      "item": "ripe but firm avocados, halved and stoned",
-      "aisle": "Produce"
-     },
-     {
-      "q": 1,
-      "u": "tbsp",
-      "item": "olive oil",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 2,
-      "u": "",
-      "item": "corn cobs",
-      "aisle": "Produce"
-     },
-     {
-      "q": 200,
-      "u": "g",
-      "item": "cherry tomatoes, quartered",
-      "aisle": "Produce"
-     },
-     {
-      "q": 0.5,
-      "u": "",
-      "item": "red onion, finely diced",
-      "aisle": "Produce"
-     },
-     {
-      "q": 1,
-      "u": "",
-      "item": "long red chilli, finely chopped",
-      "aisle": "Produce"
-     },
-     {
-      "q": 2,
-      "u": "",
-      "item": "limes",
-      "aisle": "Produce"
-     },
-     {
-      "q": 60,
-      "u": "g",
-      "item": "feta, crumbled",
-      "aisle": "Dairy"
-     },
-     {
-      "q": 2,
-      "u": "cup",
-      "item": "tortilla chips",
-      "aisle": "Pantry"
-     }
-    ],
-    "steps": [
-     {
-      "text": "Char the corn cobs in a hot pan or on the barbecue, then cut off the kernels.",
-      "min": 8
-     },
-     {
-      "text": "Toss the corn with the tomato, onion, chilli, lime juice and salt.",
-      "min": 5
-     },
-     {
-      "text": "Brush the avocado cut sides with oil and grill face down for 2 minutes until marked.",
-      "min": 4
-     },
-     {
-      "text": "Fill each half with salsa, crumble over the feta and serve with chips to scoop.",
-      "min": 8
-     }
-    ],
-    "veg": true,
-    "af": true
    },
    {
     "n": "Rancho Carne carne asada plates",
@@ -1018,7 +895,7 @@
     }
    },
    {
-    "n": "Daytona nationals Cuban sandwiches",
+    "n": "Daytona Cuban sandwiches",
     "course": "m",
     "prep_min": 15,
     "cook_min": 15,
@@ -1162,7 +1039,7 @@
     }
    },
    {
-    "n": "Spirit Stick churros with hot chocolate dip",
+    "n": "Spirit Stick churros",
     "course": "w",
     "prep_min": 20,
     "cook_min": 20,
@@ -1313,30 +1190,30 @@
  },
  "diet": {
   "notes": {
-   "Sparky's spirit fingers with honey mustard": {
+   "Sparky's spirit fingers": {
     "veg": "Sparky Polastri's famous spirit fingers. Crumbed haloumi fingers, honey mustard dip."
    },
-   "Car wash fundraiser fish tacos": {
+   "Car wash fish tacos": {
     "veg": "The Toros' car wash fundraiser. Crisp cauliflower tacos, cabbage, chipotle crema."
    },
    "Rancho Carne carne asada plates": {
     "veg": "Home of the Rancho Carne Toros. Grilled portobellos, pico de gallo, rice and beans."
    },
-   "Daytona nationals Cuban sandwiches": {
-    "veg": "Nationals week in Daytona Beach. Roast mushrooms, Swiss, pickles, pressed hot."
+   "Daytona Cuban sandwiches": {
+    "veg": "Daytona, where the Clovers win. Roast mushrooms, Swiss, pickles, pressed hot."
    }
   }
  },
  "series": [],
  "film-house": {
   "s": {
-   "n": "Red and white candy popcorn",
-   "note": "In Toros red, even if red does not work for everyone.",
+   "n": "I'm sexy, I'm cute popcorn",
+   "note": "Popular to boot. Red and white, for the Toros.",
    "meat": false
   },
   "d": {
-   "n": "Sports drink on ice",
-   "note": "For extra alacrity and effulgence.",
+   "n": "Clovers lime soda",
+   "note": "East Compton's finest. The Toros came second.",
    "alc": false
   }
  }
