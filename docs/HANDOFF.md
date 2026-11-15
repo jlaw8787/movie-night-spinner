@@ -1441,3 +1441,21 @@ Josh rejected code-drawn mockups (flat, "child like") and AI-painted scene art (
 - III (1344x1056): c38 red sun riders frame, left; four-panel folding washi bill of fare, vermilion seals and mon chips. Easter eggs: "guests from far away welcome, even green ones", Walker's men not served, muskets left at the gate, do not touch the sceptre, pizza in about 400 years.
 - Same dishes, prices, notes and quotes as the current cards. No lyrics.
 Next: build the three as formats (replace lair, ooze, teahouse renders), keep diet swaps (Vegetarian, No alcohol), fit notes so check-print-text passes, then npm test and planCard against a worktree of main. Deploy only on Josh's go (includes the flick wheel and wider search already on this branch).
+
+## 15 Nov, 1:10pm to 2:30pm: TMNT 1990, II, III built from the approved mockups (branch fix/tmnt-rebuild, not live)
+
+The three mockups in wip/tmnt-redesign/ are now the real cards. Same renderer names and keys (fmtLair, fmtOoze, fmtTeahouse), so FMT_INDEX is unchanged. Each is one 1344x1056 face (355.6 x 279.4 mm); the 1990 card was two 1344x816 faces. Mutant Mayhem unchanged.
+- Spec: each film keeps brand, phoneTitle, tag and groups (the phone menu and planCard read those); everything the card prints is in spec.layout. The old per-card fields (art, jposter, can, club, tags, billHead, stills and the rest) are gone. The 1990 card's house extras (plain cheese, white pie, garlic knots, lemon ice, fountain soda, milk) and prices live in layout rows.
+- Layout rows name a dish by {k: dish key}, never by a bare string: the diet swaps rewrite every string in the spec, so "Charcoal chicken skewers with tare" became a key that matched nothing on Vegetarian.
+- Dish names print from the unswapped spec (FMT_FILMS) and the page's diet swap runs once over the finished card. Printing the swapped spec doubled the II pair ("Veggie Veggie Pizza Bagels"). Any FMT card that prints spec names after dietSpec has the same risk with a pair whose new wording contains the old.
+- Hero frames at w1280, small stills at w780 (TMDB). 1990 hero is a06 = /o791F32WIPXKaX77ULeUG3Xt4Xd.jpg (the entry above said vVDPB2..., that is a01; the mockup HTML used a06). II hero /8VGaEXbTOGeWGW7IvzOf1j2rjet.jpg, III hero /wr1DSGyCUU1yre2NZJPEf4xDa8E.jpg.
+- Ported for print: no CSS masks (the door hanger hole is a black disc, the III hero fades with gradients), no drop-shadow filters (box-shadow on the menu, hangers and fold), no writing-mode (茶屋 is two stacked lines), pseudo-elements are real elements, noise layers carry data-pblend.
+- Give-way for longer diet wording: II's menu gaps shrink (flex spacers), III's photos shrink (flex 0 1, max height as the mockup). Vegetarian plus No alcohol fits on all three.
+- Matched the mockups on two small points: Keno's note prints "Pd. in full. Keno" (no dash), and the City Hall subs note on the card is "Mikey found the old subway station." (the coupon already says "Perfect hideout"). Splinter's quote uses the narrow optical size so it stays on one line.
+- Fonts: 1990 Fraunces (SOFT 100), Archivo Narrow, Kalam; II Titan One, Archivo Narrow, Kalam, Fraunces; III Shippori Mincho B1, Cormorant Garamond, Yuji Syuku. fetch-fonts.cjs now counts Shippori Mincho and Yuji families as Japanese (they have no JP in the name, so only Latin was fetched and 茶屋 printed in a system font). Noto Sans JP and Noto Serif JP are no longer used and were dropped; a few other families' files refreshed. Phone colours follow the new cards.
+
+Checks: check-print-text on the three, plain and with Vegetarian plus No alcohol: pass. check-phone-fit on the three: pass. npm test pass. planCard against a worktree of main (7f726f8e), no switch, Vegetarian and No alcohol: identical on the other 896, only the four TMNT films differ (the dish changes from the entry before). build-data restamped index.html and sw.js.
+
+Main moved while this branch was open: 37f6981f put a different wider film search live (search.js, data/search-index.json, data/search-terms.json) and 7f726f8e added Match night. This branch has its own earlier wider search (data/search-words.json, SEARCH_GROUPS in app.js). Merging needs a decision on which search stays before Publish site.
+
+Not deployed. Next: Josh's go, then merge and Publish site.
