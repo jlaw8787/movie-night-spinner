@@ -1638,7 +1638,7 @@ Noticed, not changed: hotel, banquet and pub also print the logo twice (poster p
 Rebased onto main 9efc9a2 (the next 100 films, then Mary and She's All That, landed mid-session; those two are hand-built and untouched): 30 new films use the changed layouts. Checks: check-print-text on all 295 films of bartab, lab, galley, kiosk, campfire, stadium, airline, motel, precinct, pub, hotel: pass. npm test pass. check-browser pass. Generated files rebuilt with build-data.
 Deployed on Josh's go: fast-forward merge to main fb434e4, Publish site run 43700462314 passed. The 11 changed layout files and films.js match main byte for byte live.
 
-## 15 Nov, 7:45pm to 8:30pm: calls 5 and 6, logo twice on hotel, banquet, pub and the blank motel stamp (branch design/logo-twice-stamp, not live)
+## 15 Nov, 7:45pm to 8:30pm: calls 5 and 6, logo twice on hotel, banquet, pub and the blank motel stamp (live)
 
 From the "Noticed, not changed" line above. Before and after mockups from wip/design-calls/mock.cjs (c5-*.js, c6-stamp.js patches; call5 and call6 jpgs are what Josh approved).
 - Call 5, logo twice: approved for all three. Flavour logoPanel:true keeps the logo for a poster with no title, same as call 1.
@@ -1648,3 +1648,4 @@ From the "Noticed, not changed" line above. Before and after mockups from wip/de
 - Call 6, motel stamp: Paranormal Activity has one still, already on the front, so the no-photo-twice pass (app.js libPhotoPass step 3) hid the stamp photo. The stamp now carries a [data-nophoto] type stand-in (initials, "Air mail", house colour) and the pass shows it instead of blanking the frame. Any frame can use [data-nophoto] the same way.
 Noticed, not changed: motel's front also prints the logo plate over a poster that carries the title (Paranormal Activity), same pattern.
 Checks: check-print-text on all 97 films of hotel, banquet, pub, motel: pass. npm test pass. check-browser pass (one earlier run timed out waiting for #viewWheelBtn, two reruns passed). Generated files rebuilt with build-data. Spot check by eye: all 9 pub, 4 hotel, 4 banquet.
+Deployed on Josh's go: fast-forward merge to main 6df2578, Publish site run 43702882095 passed. hotel, banquet, pub, motel, app.js and films.js match main byte for byte live.
