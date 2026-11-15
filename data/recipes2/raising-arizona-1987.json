@@ -1,0 +1,785 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Moses' yabby and corn boil",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Mix the spice and lemon butter up to 2 days ahead; boil to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "cooked yabbies or crawfish, in the shell",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "corn cobs, cut in thirds",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, smashed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring a big pot of water to the boil with the seasoning, half a lemon and the garlic.",
+     "min": 5
+    },
+    {
+     "text": "Boil the potatoes until nearly tender, then add the corn for 5 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Add the yabbies just to heat through, then drain.",
+     "min": 3
+    },
+    {
+     "text": "Melt the butter with the remaining lemon juice and parsley, pour over and tip it all out on the table.",
+     "min": 17
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Moses' corn and mushroom boil (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Mix the spice and lemon butter up to 2 days ahead; boil to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "corn cobs, cut in thirds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "Cajun seasoning",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, smashed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes in seasoned water with lemon and garlic until nearly tender.",
+       "min": 15
+      },
+      {
+       "text": "Add the corn and mushrooms for 6 minutes, then drain.",
+       "min": 8
+      },
+      {
+       "text": "Pour over lemon butter and tip out on the table.",
+       "min": 17
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Evelle's round jalapeno cheese balls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Roll and crumb the balls up to a day ahead and chill; fry to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "pickled jalapenos, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "ranch dressing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cream cheese, cheddar and jalapenos and roll into 20 balls, then chill until firm.",
+     "min": 15
+    },
+    {
+     "text": "Roll in flour, then egg, then panko.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 180C in batches until golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain and serve with ranch.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Unpainted Arizona beef chimichangas",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 120,
+   "make_ahead": "Braise and shred the beef up to 2 days ahead; roll and fry to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, in big chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chipotle chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Monterey Jack or cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in a heavy pot, add the onion, garlic, spices and tomatoes and a cup of water.",
+     "min": 15
+    },
+    {
+     "text": "Cover and simmer gently until the beef falls apart, then shred it in the sauce.",
+     "min": 90
+    },
+    {
+     "text": "Spoon beef and cheese onto each tortilla, fold in the sides and roll up tight.",
+     "min": 10
+    },
+    {
+     "text": "Shallow-fry seam side down first, turning, until crisp and golden.",
+     "min": 20
+    },
+    {
+     "text": "Serve with salsa and sour cream.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Unpainted Arizona bean chimichangas (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the bean filling up to 3 days ahead; roll and fry to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins pinto beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chipotle chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "frozen corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Monterey Jack or cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "tomato salsa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion, add the spices, beans and corn and mash roughly.",
+       "min": 15
+      },
+      {
+       "text": "Fill and roll the tortillas with beans and cheese.",
+       "min": 10
+      },
+      {
+       "text": "Shallow-fry until crisp and serve with salsa and sour cream.",
+       "min": 25
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Lone Biker's scorched-earth chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Marinate the chicken up to a day ahead; grill to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "feta, finely crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chipotle, juice of a lime, garlic, oil and salt and coat the chicken.",
+     "min": 10
+    },
+    {
+     "text": "Grill the corn over high heat, turning, until charred all over.",
+     "min": 15
+    },
+    {
+     "text": "Grill the chicken over high heat until blackened in spots and cooked through, then rest.",
+     "min": 15
+    },
+    {
+     "text": "Brush the corn with mayo, roll in feta and dust with chilli.",
+     "min": 5
+    },
+    {
+     "text": "Slice the chicken, scatter with coriander and serve with the corn and lime wedges.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lone Biker's scorched-earth cauliflower (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Make the chipotle marinade up to 3 days ahead; roast to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, cut in thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chipotle in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "feta, finely crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the cauliflower with chipotle, lime and oil and roast at 230C until charred.",
+       "min": 30
+      },
+      {
+       "text": "Grill the corn until blackened.",
+       "min": 15
+      },
+      {
+       "text": "Dress the corn with mayo, feta and chilli and serve together.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Call-a-cop cinnamon doughnuts",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "Make the dough the night before and prove it in the fridge; fry to serve",
+   "ingredients": [
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "sachet dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar, plus 100g for rolling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dulce de leche",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, 50g sugar, milk, egg and butter into a soft dough and knead until smooth.",
+     "min": 10
+    },
+    {
+     "text": "Cover and leave until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Roll out 1.5cm thick, cut rings and leave to puff for 20 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Fry at 175C, a minute or so a side, until golden.",
+     "min": 15
+    },
+    {
+     "text": "Toss in the cinnamon sugar and serve with warmed dulce de leche.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Desert trailer prickly pear margarita",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the limes up to 4 hours ahead; shake to order",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "tequila",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 90,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "prickly pear syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the glass rims with lime and dip in salt.",
+     "min": 3
+    },
+    {
+     "text": "Shake the tequila, liqueur, syrup and lime juice hard with ice.",
+     "min": 4
+    },
+    {
+     "text": "Strain over fresh ice.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Desert trailer prickly pear cooler (alcohol-free)",
+     "course": "d",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Squeeze the limes and chill the soda up to 4 hours ahead; build to order",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "prickly pear syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the glass rims.",
+       "min": 3
+      },
+      {
+       "text": "Shake the syrup, lime and orange juice with ice.",
+       "min": 4
+      },
+      {
+       "text": "Strain over ice and top with soda.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

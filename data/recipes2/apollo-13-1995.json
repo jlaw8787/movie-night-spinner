@@ -1,0 +1,604 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Moon landing party devilled eggs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Boil and fill the eggs up to 6 hours ahead and keep covered in the fridge",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into boiling water and cook for 10 minutes, then cool in iced water.",
+     "min": 10
+    },
+    {
+     "text": "Peel and halve the eggs and mash the yolks with the mayo, mustard, vinegar and salt.",
+     "min": 8
+    },
+    {
+     "text": "Pipe or spoon back into the whites, dust with paprika and scatter with chives.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Square-peg ravioli in a round bowl",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "Make the broth up to 2 days ahead; cook the ravioli to serve",
+   "ingredients": [
+    {
+     "q": 375,
+     "u": "g",
+     "item": "fresh square ricotta and spinach ravioli",
+     "aisle": "Deli"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan rind or block, plus extra to grate",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the stock with the parmesan and garlic for 10 minutes, then fish out the rind.",
+     "min": 10
+    },
+    {
+     "text": "Drop in the ravioli and cook until they float.",
+     "min": 4
+    },
+    {
+     "text": "Ladle into round bowls, add a squeeze of lemon, oil, basil and grated parmesan.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Houston, we have a problem smoked brisket",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 300,
+   "make_ahead": "Cook the brisket up to 2 days ahead and chill in its juices; slice and reheat covered to serve",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "beef brisket",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "smoky barbecue sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the brisket all over with the pepper, salt, paprika and garlic powder.",
+     "min": 10
+    },
+    {
+     "text": "Sit it fat side up in a roasting tin, pour the stock around, cover tightly with foil and cook at 140C.",
+     "min": 240
+    },
+    {
+     "text": "Uncover and roast at 200C until the bark darkens.",
+     "min": 30
+    },
+    {
+     "text": "Rest for 20 minutes, then slice across the grain.",
+     "min": 25
+    },
+    {
+     "text": "Serve with white bread, pickles, onion and barbecue sauce.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Houston, we have a problem smoky mushroom brisket (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Score the mushrooms and mix the rub up to a day ahead; roast to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "smoky barbecue sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the mushrooms, brush with oil and rub with the pepper, paprika and salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 220C, turning once, until dark at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Slice and serve with bread, pickles and sauce.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Aquarius lifeboat chicken pot pies",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 37,
+   "make_ahead": "Make the filling up to 2 days ahead and chill; top with pastry and bake to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the butter, then add the leek and carrot and cook until soft.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the flour, then the stock and cream, and simmer until thick.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the peas, season and spoon into 4 pie dishes.",
+     "min": 5
+    },
+    {
+     "text": "Top with pastry, brush with egg and bake at 200C until puffed and golden.",
+     "min": 25
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aquarius lifeboat mushroom pot pies (vegetarian)",
+     "course": "m",
+     "prep_min": 12,
+     "cook_min": 33,
+     "make_ahead": "Make the filling up to 2 days ahead and chill; top and bake to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms and leeks in the butter until golden.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, stock and cream and simmer until thick, then add the peas.",
+       "min": 8
+      },
+      {
+       "text": "Fill 4 dishes, top with pastry and bake at 200C until golden.",
+       "min": 25
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Odyssey heat shield creme brulee",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Bake the custards up to 2 days ahead and chill; burn the sugar to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "pouring cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean, split",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar, plus 4 tbsp for the tops",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the cream with the vanilla seeds and pod until steaming, then take off the heat.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the yolks and 80g sugar, then whisk in the cream and strain into 4 ramekins.",
+     "min": 8
+    },
+    {
+     "text": "Bake in a water bath at 150C until just set with a wobble, then chill.",
+     "min": 35
+    },
+    {
+     "text": "Sprinkle each with sugar and scorch with a blowtorch or under a hot grill until dark amber.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Lovell's moon night champagne",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the sparkling well; build to order",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "brut sparkling wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Angostura bitters",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each of 4 flutes and shake a dash of bitters onto each.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with the cold sparkling and add a twist of orange peel.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lovell's moon night sparkling (alcohol-free)",
+     "course": "d",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill the sparkling well; build to order",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "sparkling apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drop a sugar cube into each flute.",
+       "min": 2
+      },
+      {
+       "text": "Top with the chilled juices and add a twist of orange.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,659 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chargrilled crab claws with garlic butter",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Make the garlic butter up to 3 days ahead; grill the crab to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "cooked crab claws, cracked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the garlic, chilli, coriander and the zest of one lime.",
+     "min": 5
+    },
+    {
+     "text": "Grill the claws over hot coals or a barbecue, turning, until smoky and hot through.",
+     "min": 10
+    },
+    {
+     "text": "Toss with the garlic butter until it melts, then serve with lime wedges.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chargrilled corn with garlic butter (vegetarian)",
+     "course": "s",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Make the garlic butter up to 3 days ahead; grill the corn to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "coriander, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with the garlic, chilli, coriander and lime zest.",
+       "min": 5
+      },
+      {
+       "text": "Grill the corn over hot coals, turning, until charred.",
+       "min": 12
+      },
+      {
+       "text": "Roll in the butter and serve with lime.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Cracked coconut and lime ceviche",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Cut the fish and vegetables up to 4 hours ahead and keep cold; dress just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sashimi-grade kingfish, diced",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag plain corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the fish with the lime juice and a good pinch of salt and chill for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Drain off half the lime juice and stir in the coconut milk, chilli, onion and cucumber.",
+     "min": 8
+    },
+    {
+     "text": "Scatter with coriander and serve in coconut shells or bowls with corn chips.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cracked coconut and lime mango ceviche (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Cut the fruit and vegetables up to 4 hours ahead; dress just before serving",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "firm mangoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "coriander leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag plain corn chips",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mango, cucumber, onion and chilli with the lime juice and salt.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the coconut milk.",
+       "min": 5
+      },
+      {
+       "text": "Finish with coriander and serve with corn chips.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Spearfished whole snapper over the coals",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Score and stuff the fish up to 4 hours ahead and keep it cold; grill to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "whole snapper, about 800g each, cleaned and scaled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "banana leaves or sheets of foil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score each fish three times on both sides, rub with oil and salt, and stuff with lemon, dill and garlic.",
+     "min": 10
+    },
+    {
+     "text": "Wrap loosely in banana leaf or foil.",
+     "min": 5
+    },
+    {
+     "text": "Cook over medium coals or a hot barbecue, turning once, until the flesh flakes at the bone.",
+     "min": 25
+    },
+    {
+     "text": "Unwrap, squeeze over lime and serve straight from the leaf.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Coal-roasted whole cauliflower with lemon and herbs (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Rub and wrap the cauliflower up to 4 hours ahead; roast to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets of foil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the cauliflower with oil and salt and tuck lemon, dill and garlic around it.",
+       "min": 5
+      },
+      {
+       "text": "Wrap in foil and roast over medium coals or in a 220C oven until tender.",
+       "min": 40
+      },
+      {
+       "text": "Unwrap, char briefly and serve.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Memphis dry-rub pork ribs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 180,
+   "make_ahead": "Rub the ribs up to a day ahead; bake slowly and finish over the coals to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "American-style pork ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "onion powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the paprika, sugar, garlic and onion powders, cayenne, thyme and 2 tsp salt, and rub all over the ribs.",
+     "min": 10
+    },
+    {
+     "text": "Wrap tightly in foil and bake at 150C until tender.",
+     "min": 150
+    },
+    {
+     "text": "Unwrap, mop with the vinegar, dust with a little more rub and finish over hot coals or under the grill until crusty.",
+     "min": 25
+    },
+    {
+     "text": "Cut between the bones and serve.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Memphis dry-rub roast pumpkin wedges (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Mix the rub up to a week ahead; roast to serve",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "Kent pumpkin, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the pumpkin with the oil, rub and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C, turning once, until crusty and tender.",
+       "min": 40
+      },
+      {
+       "text": "Splash with the vinegar and serve.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Angel wings pavlova with mango and passionfruit",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 90,
+   "make_ahead": "Bake the pavlova up to 2 days ahead and keep it airtight; top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to soft peaks, then add the sugar a spoonful at a time until thick and glossy.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the cornflour and vinegar and shape into a round on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 120C for 75 minutes, then cool in the oven with the door ajar.",
+     "min": 80
+    },
+    {
+     "text": "Whip the cream, pile it on and top with mango and passionfruit pulp.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Dr Pepper over two cups of ice",
+   "course": "d",
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "Fill the freezer with ice the day before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 355ml cans Dr Pepper",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bags ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 8 cups with ice, two for each person.",
+     "min": 1
+    },
+    {
+     "text": "Pour the Dr Pepper over and add a lime wedge.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

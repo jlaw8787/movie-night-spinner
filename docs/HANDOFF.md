@@ -1542,3 +1542,64 @@ Fixed:
 Not changed, design calls for Josh: logo shown twice where the poster carries the title (bartab, lab, galley, kiosk); campfire quotes signed with the film logo (the 11 Nov rollout, every campfire film); layouts that never print the showtime cue (stadium, airline, motel, precinct, pub and most of banquet, hotel, lab); empty gaps on short menus (Karate Kid, Oz page 2, Wish, Mother's Day, Collateral back).
 Checks: check-print-text on all 177 films of motel, club, prom, canteen, bartab, galley plus the hand-picked films: pass (Money Train needed one more 5px nudge, then 3 of 3 pass). npm test pass. check-browser pass.
 Deployed on Josh's go: fast-forward merge to main 213ae95, Publish site run 43686425669 passed. app.js, films.js, formats/lasttrain.js and the six changed layout files match main byte for byte live.
+## 15 Nov, 12:20pm to 2:00pm: Match night built, next 100 films started (branch feature/match-night, NOT deployed; start here in the next chat)
+
+Josh's plan doc: "Reel Dinner: next 100 films and Match night plan" (https://claude.ai/artifact/CLgBGTxk9QvUuQRwJ2taMi). All decisions locked there.
+
+Match night (done, tested):
+- match.js (loads after app.js, uses its globals). Spin it / Match it tabs above the wheel (#modeSpin, #modeMatch, #matchPanel). body.matching hides the wheel, controls and the sticky spin bar.
+- Vibes: Comedy, Horror, Family, Date night, Action, Surprise me. 20 cards. Tap flips poster to teaser (venue, 3 dishes, house drink, film colours). Swipe, buttons, undo, arrow keys.
+- Decks: data/match-deck.json from scripts/build-match.cjs (build-data runs it, DATA_V.match stamps it, sw.js keeps it offline). Only films with no open fact lines and vibe 3.5 or better (759 now). Dishes come from audit/cards so the teaser matches what prints. Kids mode deals kid-safe only; offline deals saved menus only.
+- Pass the phone: player two gets the same 20 in another order; first shared keep shows the marquee reveal (Open the menu, Keep swiping for a backup).
+- No match: both lists, each picks from the other's; the real wheel spins with the two picks on alternate wedges (window.spinForce hook in spin(), app.js). If one person kept nothing, they pick one from the other's list and it wins.
+- Room code: Reel Dinner Supabase (zpcgxupmclkxbzikdnfb), functions match_create, match_join, match_swipe, match_unswipe, match_pick, match_state; tables locked (RLS, no policies); rooms wipe after 12 hours (pg_cron hourly plus cleanup on create). Record in supabase/match-night.sql. Polls every 2s. Both phones get the same decider result (hash of code and picks). ?match=CODE links open the join.
+- Tests: tests/match.test.cjs. check-browser passes. Josh has not seen it live; deploy only on his go.
+
+Next 100 films (1 of 100 written):
+- wip/next100/: plan.json (the 100, with layout, era, tone, theme, venue lead), tmdb.json, BRIEF.md (how to write one; read it first), mk.py (source file to pack), pack.py (put, keeps file layouts, adds house lines and the poster rollout row), src/ and packs/.
+- TMDB ids, posters, stills, ratings, trailers, where to watch and genres merged for all 100 (scripts/new_films_tmdb.py takes NEWFILMS_DIR). TMDB key at ~/.tmdb_key and ~/.secrets/tmdb_key, never commit.
+- Layouts logged in Josh's sheet "Reel Dinner film layouts" (https://claude.ai/artifact/CUZSJL6Gy92dKmd2DTNxz4), Films rows 902 to 1001.
+- Pilot: Good Will Hunting (1997), pub, L Street Tavern, in films.json (901 films), self-audited 4.0. Needs an independent pass with batch 1.
+- Next: the other 99 in batches of 10, plan.json order (skip Good Will Hunting). Counts that say 900 change only when all 100 are in.
+
+15 Nov, 1:00pm: Match night deployed on Josh's go (main 7f726f8, Publish site run 43670143188 passed, live files checked). main does NOT have the next-100 work; feature/match-night does.
+Round 1 of the menus running as three writer agents (Josh chose agent teams), each in its own worktree: /home/claude/wt-r1a (next100/r1a, films 1 to 10 of plan.json skipping Good Will Hunting), wt-r1b (11 to 20), wt-r1c (21 to 30). When they finish: copy each worktree's wip/next100/src, packs and notes into feature/match-night, re-run pack.py put for all (do not merge their data files), build, check-print-text, audit-extract, then an independent checker writes audit/results. Worktrees are local to this session; if it's gone, re-run the round from plan.json.
+
+## 15 Nov, 3:30pm: round 1 of the next 100 done (branch feature/match-night, NOT deployed; start here in the next chat)
+
+- Josh's call: agent teams for the menus (3 writers of 10 per round, then independent checkers, then a fixer, then a rescore). Agent worktree isolation is blocked in this setup: make worktrees by hand (git worktree add -b next100/r2a /home/claude/wt-r2a feature/match-night) and point each writer at its own; merge with `bash wip/next100/merge-round.sh <worktrees>` (it rebuilds packs from source and puts them here; never merge their data files; copy any data/still-block.json entry by hand).
+- 931 films on the branch: the pilot plus plan.json films 1 to 30 (skipping Good Will Hunting). All audited by independent checkers; results in audit/results.
+- Fixed and ticked: checker 1's list (12 films, commit e8c3fde). Twins moved to Sun God Lodge, Taos. Those 12 still need a vibe RESCORE by someone who didn't fix them (vibe.reworked set; Twins 3.0, Bruce 3.2, Me Myself & Irene 3.2, Bring It On 3.4, Mary 3.4 were under 3.5).
+- NOT fixed yet: checker 2's list in wip/next100/round1-fixes.md (First Blood two lines, Memento cue, Gone in 60 Seconds under 3.5, small items).
+- Match night deck now 781 (new films join as they pass).
+- Writers' lesson (add to briefs): layouts cut a film line at the first comma, full stop or joining word when tight, so "Jr." and "Sr." get chopped; reword. Some faces print names only, so jokes must live in dish names too.
+- Next: fix checker 2's list, rescore the 13 reworked, then round 2 (plan.json films 31 to 60) the same way. Sheet rows 902 to 1001 track venues.
+
+## 15 Nov, 4:15pm: round 2 written and merged, checking under way (branch feature/match-night, NOT deployed)
+
+- Checker 2's round 1 list fixed (f41534e). The 13 reworked round 1 menus rescored twice; 28 of 30 round 1 films plus the pilot are Approved in the sheet. Gone in 60 Seconds, Mary and Twins sat at 3.4 and got a third fix pass (825df1f, vibe "changed3", done false): rescore them with round 2.
+- 960 films on the branch: round 2 (plan.json 31 to 60, 29 films) merged in three batches (9875acc, 81f7d55, ab6f0e7).
+- BUG FOUND AND FIXED (0acfa69): merge-round.sh used to copy every src file from a worktree, so stale copies overwrote fixes made in the main checkout after the worktree branched. It now copies only files the worktree changed since its merge-base. Still entries: copy with /home/claude/tools/mergestills.py <worktree> (also limited to changed films; not in the repo, recreate if the session is gone: it merges data/still-block.json and still-pick.json entries for the worktree's changed films).
+- Checking: batch B (Monster Squad to Gran Torino) checked, 1 wrong line, Monster Squad and Gran Torino at 3.4; fixer running in /home/claude/wt-f2b (branch next100/f2b), it ticks results in the main checkout. Batches A and C checkers running.
+- Round 3 (plan.json 61 to 90) writers started in /home/claude/wt-r3a, r3b, r3c and stopped at the 5-hour usage limit; resume them or rerun from plan.json.
+- Banquet layout: venue title now has word-spacing .12em (fixes "PrinceJohn's"). Logos blocked: Bruce Almighty, Nutty Professor, Critters.
+- Writer briefs: /home/claude/prompts (writer.md, checker.md, fixer.md). Lessons added: never invent venue names, family filter rewrites "Cocktail"/"Stout", themed dishes claim scenes not food, no stub food lines.
+- Usage: 7 agents at once hit the 5-hour limit at 3:45pm. Run at most 3 or 4 at a time.
+
+## 15 Nov, 6:30pm: all 100 written (1,000 films on feature/match-night, NOT deployed)
+
+- Rounds 2 and 3 written, checked, fixed and rescored. Match night 846. Round 4 (plan.json 91 to 100, The Bodyguard to Edward Scissorhands) merged at 5db436e; independent checker running; then fixer, rescore, sheet rows 992 to 1001.
+- Left under 3.5 (out of Match night by design): There's Something About Mary 3.4 (Josh chose to leave it on the prom layout), She's All That 3.4 (generic prom card after two passes).
+- Josh's call: The Flintstones venue is RocDonald's (it is in the film).
+- Counts now say 1,000 (index.html meta x3, support.html, docs/STORE-LISTING.md; alcohol 720 of 1,000 and horror 85 recounted by script).
+- Optional per-film layout settings added today (other films unchanged): banquet title word-spacing (all banquet films), tiki look.see, kiosk strip/forecast/titleMax, placemat and truck panelStill, hotel caption, flavour.year on banquet/tavern/canteen, diningcar priceEgg, home stamp.
+- Merge tools: wip/next100/merge-round.sh copies only src/notes a worktree changed since its merge-base. Layout file changes in a fix worktree are NOT merged by the script: diff menu-formats against the merge-base and copy by hand if main has not changed that file. /home/claude/tools/mergestills.py <wt> copies still-block/still-pick entries the worktree changed (session-local; recreate if gone).
+- Layouts print the release year in stamps by default; set the story year per film where it differs (year, stamp or words).
+- Sheet "Reel Dinner film layouts" updated to rev 32 (rows 902 to 991 Approved except Mary and She's All That). Live layout column stays blank until deploy.
+- Next: finish round 4 (check, fix, rescore, sheet), full tests incl. prices, then wait for Josh's "deploy".
+
+## 15 Nov, 6:45pm: next 100 finished (1,000 films, NOT deployed)
+
+- Round 4 checked: 1 wrong, 2 unsure, all fixed by the lead (Notebook summer 1947, League "Tonight at the park:", Edward stamp AVON CALLING and magnet EDWARD). All 10 pass. Match night 856.
+- 98 of the 100 Approved in the sheet (rev 33). Out of Match night: There's Something About Mary 3.4 (Josh: leave it) and She's All That 3.4.
+- All tests pass including prices. Waiting on Josh's "deploy". Deploy note: main does NOT have this work; merge feature/match-night into main, then the Publish site run. Live layout column in the sheet gets filled on deploy.

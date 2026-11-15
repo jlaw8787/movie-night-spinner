@@ -1,0 +1,787 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Carnival night boiled peanuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 90,
+   "make_ahead": "Boil up to 2 days ahead and keep them in their brine in the fridge; warm to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "raw peanuts in the shell",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Old Bay seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the peanuts and put them in a big pot with 3 litres of water, the salt, Old Bay and bay leaves.",
+     "min": 5
+    },
+    {
+     "text": "Weigh them down with a plate, bring to the boil and simmer until the shells are soft and the nuts are tender.",
+     "min": 80
+    },
+    {
+     "text": "Leave them in the brine for 10 minutes, then drain and serve warm with lemon.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Lowcountry crab cakes with remoulade",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Shape the cakes and make the remoulade up to a day ahead; fry to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "blue swimmer crab meat, picked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise, plus 125g for the remoulade",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab, egg, 3 tbsp mayo, mustard, half the panko, spring onions and half the lemon juice, then shape into 8 small cakes.",
+     "min": 10
+    },
+    {
+     "text": "Press the cakes into the rest of the panko and chill for 10 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Stir the 125g mayo with the capers, paprika and remaining lemon for the remoulade.",
+     "min": 5
+    },
+    {
+     "text": "Fry the cakes in the oil until golden on both sides and serve with the remoulade.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lowcountry sweet corn fritters with remoulade (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Make the remoulade up to a day ahead; mix the batter and fry to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "corn cobs, kernels cut off",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, egg and milk to a thick batter and fold in the corn and spring onions.",
+       "min": 8
+      },
+      {
+       "text": "Mix the mayo, capers, paprika and lemon for the remoulade.",
+       "min": 4
+      },
+      {
+       "text": "Fry spoonfuls of batter in the oil until golden on both sides and serve with the remoulade.",
+       "min": 12
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Bird for bird buttermilk fried chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Soak the chicken in the buttermilk overnight; make the slaw dressing a day ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thighs, bone in, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "green cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with a big pinch of salt, at least 2 hours or overnight.",
+     "min": 5
+    },
+    {
+     "text": "Mix the flour, paprika, garlic powder and salt, and dredge the chicken until shaggy.",
+     "min": 8
+    },
+    {
+     "text": "Fry in oil at 170C, turning, until deep gold and cooked through.",
+     "min": 22
+    },
+    {
+     "text": "Warm the honey with the chilli flakes and toss the cabbage and carrot with the mayo and vinegar.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle the chicken with hot honey and serve with the slaw.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bird for bird buttermilk fried cauliflower (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 18,
+     "make_ahead": "Make the slaw dressing a day ahead; batter and fry to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, cut in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "green cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dip the florets in the buttermilk, then the seasoned flour.",
+       "min": 8
+      },
+      {
+       "text": "Fry at 180C until golden and tender.",
+       "min": 15
+      },
+      {
+       "text": "Warm the honey with chilli, toss the cabbage with mayo and vinegar, and serve.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Windsor house shrimp and grits",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 24,
+   "make_ahead": "Cook the grits up to a day ahead and loosen with hot milk; cook the prawns to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers smoky bacon, chopped",
+     "aisle": "Deli"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "polenta or white grits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the milk and 500ml water to a simmer and whisk in the grits; cook, stirring, until thick and soft, then beat in half the butter and the cheddar.",
+     "min": 20
+    },
+    {
+     "text": "Fry the bacon until crisp, then add the garlic and the rest of the butter.",
+     "min": 5
+    },
+    {
+     "text": "Add the prawns and cayenne and cook just until pink, then squeeze over the lemon.",
+     "min": 4
+    },
+    {
+     "text": "Spoon the prawns over the grits and scatter with spring onion.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Windsor house mushroom and grits (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Cook the grits up to a day ahead and loosen with hot milk; cook the mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 180,
+       "u": "g",
+       "item": "polenta or white grits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the grits in the milk and 500ml water until thick, then beat in half the butter and the cheddar.",
+       "min": 20
+      },
+      {
+       "text": "Fry the mushrooms hard in the rest of the butter with the garlic and paprika.",
+       "min": 8
+      },
+      {
+       "text": "Spoon over the grits and scatter with spring onion.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Every day after peach cobbler",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Rub the topping together up to 2 days ahead and chill; bake to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "ripe peaches, sliced (or 2 x 825g tins, drained)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cold butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pouring cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the peaches with the brown sugar, cornflour and cinnamon and tip into a baking dish.",
+     "min": 8
+    },
+    {
+     "text": "Rub the butter into the flour and caster sugar, then stir in the buttermilk to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Drop spoonfuls over the peaches and bake at 190C until golden and bubbling.",
+     "min": 38
+    },
+    {
+     "text": "Serve warm with cold cream.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Middle of the street bourbon sweet tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Brew and sweeten the tea up to 2 days ahead and chill; build to order",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ripe peach, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in 800ml just-boiled water, then stir in the sugar and cool.",
+     "min": 8
+    },
+    {
+     "text": "Fill 4 glasses with ice, peach and lemon.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the bourbon and top with the sweet tea.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Middle of the street peach sweet tea (alcohol-free)",
+     "course": "d",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "Brew and sweeten the tea up to 2 days ahead and chill",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "ripe peaches, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea in 1 litre just-boiled water, sweeten and cool.",
+       "min": 10
+      },
+      {
+       "text": "Pour over ice with the peach and lemon.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

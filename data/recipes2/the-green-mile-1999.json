@@ -1,0 +1,636 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mrs Edgecomb's cornbread with honey butter",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Bake up to a day ahead and warm in the oven; beat the honey butter up to a week ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal (polenta)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter, plus 80g soft butter for the honey butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat a 23cm cast iron pan in a 220C oven with 20g of the butter in it.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the dry ingredients with a good pinch of salt, then whisk in the buttermilk, eggs and 100g melted butter.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the hot pan and bake until golden and a skewer comes out clean.",
+     "min": 22
+    },
+    {
+     "text": "Beat the soft butter with the honey and salt flakes and serve with the warm cornbread.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cornmeal fried okra with comeback sauce",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Mix the comeback sauce up to 3 days ahead; fry the okra to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "fresh okra, sliced thickly",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine cornmeal (polenta)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, tomato sauce, hot sauce and a squeeze of lemon into a comeback sauce.",
+     "min": 3
+    },
+    {
+     "text": "Soak the okra in the buttermilk while you mix the cornmeal, flour, paprika and salt.",
+     "min": 5
+    },
+    {
+     "text": "Toss the okra in the cornmeal mix to coat well.",
+     "min": 5
+    },
+    {
+     "text": "Fry in batches in oil at 180C until crisp and golden, then drain and salt.",
+     "min": 12
+    },
+    {
+     "text": "Serve hot with the sauce.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Mr Jingles' pimento cheese and crackers",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Make up to 3 days ahead and keep covered in the fridge",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "roasted red capsicum, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box small salted crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, cut in batons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cream cheese and mayonnaise until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Fold in the cheddar, capsicum, paprika and hot sauce and season with pepper.",
+     "min": 6
+    },
+    {
+     "text": "Pile into a bowl and serve with the crackers and celery.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Last meal meatloaf with mash and gravy",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 90,
+   "make_ahead": "Shape the meatloaf up to a day ahead and chill; bake and make the mash to serve",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef and pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated, plus 1 sliced for the gravy",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch silverbeet, shredded",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in the milk, then mix with the mince, grated onion, egg, thyme and plenty of salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Shape into a loaf on a lined tray, stir the tomato sauce, sugar and vinegar together and brush half over.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C for 1 hour, brushing on the rest of the glaze halfway, then rest it.",
+     "min": 60
+    },
+    {
+     "text": "Boil the potatoes until tender, then mash with half the butter and a splash of the milk.",
+     "min": 25
+    },
+    {
+     "text": "Fry the sliced onion in the rest of the butter until brown, stir in the flour, then whisk in the stock and simmer into gravy.",
+     "min": 12
+    },
+    {
+     "text": "Wilt the silverbeet in a hot pan, slice the meatloaf thickly and serve with the mash, gravy and greens.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Last meal lentil and mushroom loaf with mash and gravy (vegetarian)",
+     "course": "m",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Shape the loaf up to a day ahead and chill; bake and make the mash to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated, plus 1 sliced for the gravy",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and grated onion until dry, then mash half the lentils and mix everything with the crumbs, eggs and cheese.",
+       "min": 15
+      },
+      {
+       "text": "Pack into a lined loaf tin, glaze with the tomato sauce and sugar and bake at 180C until firm.",
+       "min": 45
+      },
+      {
+       "text": "Make the mash and the onion gravy as the loaf bakes.",
+       "min": 20
+      },
+      {
+       "text": "Slice and serve with the mash and gravy.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Top Hat peach cobbler with vanilla ice cream",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Mix the dry topping up to 2 days ahead; assemble and bake to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "x 825g tins sliced peaches, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the peaches with the brown sugar, cinnamon, cornflour and lemon juice in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour and caster sugar, then stir in the buttermilk to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Drop spoonfuls of dough over the peaches, leaving gaps for the juice to bubble through.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until the topping is golden and the fruit is bubbling.",
+     "min": 38
+    },
+    {
+     "text": "Rest for 5 minutes and serve warm with the ice cream.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Faded limes cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make the lime syrup up to 3 days ahead; build to order",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "raw sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "soda water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar and water with strips of lime peel until dissolved, then cool and strain.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze the limes and stir the juice into the syrup.",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice and mint in 4 glasses and top with soda.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

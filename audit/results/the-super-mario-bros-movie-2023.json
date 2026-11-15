@@ -1,0 +1,67 @@
+{
+ "id": "The Super Mario Bros. Movie (2023)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "The brothers' usual at Punch-Out. Red peppers one half and green the other.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The half red, half green pepper order comes from the tie-in website SMBPlumbing.com, not the film. Super Mario Wiki says so on its Punch-Out Pizzeria page; the film shows Spike eating a slice while the brothers watch their ad, with no order.",
+   "source": "https://www.mariowiki.com/Punch-Out_Pizzeria",
+   "fix": "Spike eats a slice and mocks the brothers. Red peppers one half and green the other.",
+   "printed": true,
+   "done": true,
+   "full": "The brothers' usual at Punch-Out. Red peppers one half and green the other.",
+   "applied": "2026-11-15",
+   "applied_text": "Their TV ad plays here. Half red, half green."
+  }
+ ],
+ "checked_ok": 17,
+ "sources": [
+  "https://en.wikipedia.org/wiki/The_Super_Mario_Bros._Movie",
+  "https://en.wikiquote.org/wiki/The_Super_Mario_Bros._Movie",
+  "https://www.mariowiki.com/Punch-Out_Pizzeria"
+ ],
+ "notes": "Punch-Out Pizzeria, the wall TV commercial, Giuseppe on the Jump Man cabinet and Spike's slice confirmed on Super Mario Wiki. 'Ha! He got the Blue Mushroom!' (Donkey Kong) and 'Brooklyn's favorite failures' (Spike) verbatim on Wikiquote. Fire Peach, Rainbow Road, blue-shelled Koopa General, Ice Flower, manhole cover and Mini Mushroom on Wikipedia and Wikiquote.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Punch-Out Pizzeria now has the brothers' van still, 'We don't drive on rainbows' and Luigi's phone line, with food on most dishes, though some notes are terse fragments.",
+  "missing": [
+   "Cat Mario beating Donkey Kong ('You got the cat box!')",
+   "Lumalee the gloomy blue Luma"
+  ],
+  "ideas": [
+   "Swap the 'NOW SHOWING / 2023' logo box for a film still, such as the brothers by their van in Brooklyn, so the title art does not repeat the poster",
+   "Give the meatball heroes and cupcakes food notes: 'Spike calls them Brooklyn's favourite failures. Beef meatballs, red sauce, provolone.' and 'Peach feeds Bowser the Mini Mushroom. Blue velvet cupcakes, vanilla frosting.'",
+   "Swap 'Mind the blue shells.' for 'We don't drive on rainbows.' (Mario, Wikiquote)",
+   "Swap the house breadsticks note 'Brooklyn sewer to Mushroom Kingdom.' for 'Hello, Super Mario Brothers.' (Luigi answering the phone, Wikiquote)"
+  ],
+  "flat": false,
+  "done": true,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Logo box now shows the still of the brothers by their van (flavour panelStill); 'Now showing / 2023' kept",
+   "Rainbow Road soda note: 'We don't drive on rainbows.' (Mario, Wikiquote)",
+   "Warp Pipe breadsticks note: 'Hello, Super Mario Brothers.' (Luigi on the phone, Wikiquote)",
+   "Cupcakes: 'Told ya I'd get you a pet turtle. Blue icing, white chocolate spots.' (Mario, Wikiquote; the old line repeated the cue)",
+   "Meatball heroes: 'Spike calls them favourite failures. Meatballs, red sauce, provolone.'",
+   "Pizza: 'Their TV ad plays here. Half red, half green.' (fact fix)",
+   "Notes shortened so every dish prints its food: garlic knots 'Giuseppe plays Jump Man. Garlic knots.', arancini 'Fire Peach. Mozzarella risotto balls.'"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-15"
+ }
+}

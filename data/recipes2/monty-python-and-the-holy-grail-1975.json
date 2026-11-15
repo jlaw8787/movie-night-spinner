@@ -1,0 +1,767 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Patsy's coconut prawns",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Crumb the prawns up to 4 hours ahead and chill; fry to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "raw king prawns, peeled with tails on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dust the prawns in seasoned flour, dip in beaten egg, then press into the coconut mixed with panko.",
+     "min": 12
+    },
+    {
+     "text": "Fry in hot oil in batches until golden, about 2 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Stir lime zest and juice into the mayo.",
+     "min": 3
+    },
+    {
+     "text": "Serve the prawns hot with the lime mayo.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Patsy's coconut haloumi (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Crumb the haloumi up to 4 hours ahead and chill; fry to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 180g blocks haloumi, cut in fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crumb the haloumi in flour, egg and the coconut panko.",
+       "min": 10
+      },
+      {
+       "text": "Fry until golden all over.",
+       "min": 10
+      },
+      {
+       "text": "Serve with lime mayo.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Unladen swallow sticky wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Marinate the wings up to a day ahead; bake to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings, tips removed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with the honey, soy, garlic and ginger.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray and bake at 200C, turning once, until sticky and dark.",
+     "min": 40
+    },
+    {
+     "text": "Scatter with sesame seeds and spring onions to serve.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Unladen swallow sticky cauliflower (vegetarian)",
+     "course": "s",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Cut the cauliflower and mix the glaze up to a day ahead; bake to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "small cauliflower, in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the florets with the oil at 220C until browned.",
+       "min": 20
+      },
+      {
+       "text": "Toss with the honey, soy and garlic and roast until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Finish with sesame seeds.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Rabbit of Caerbannog pie",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 120,
+   "make_ahead": "Braise the filling up to 2 days ahead and chill; top with pastry and bake to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "rabbit pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "smoky bacon, diced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the rabbit in seasoned flour and brown in the oil, then set aside.",
+     "min": 15
+    },
+    {
+     "text": "Fry the bacon, carrot and onion until soft.",
+     "min": 10
+    },
+    {
+     "text": "Return the rabbit with the apple juice, stock, mustard and thyme and simmer covered until tender.",
+     "min": 75
+    },
+    {
+     "text": "Pull the meat from the bones and tip the filling into a pie dish.",
+     "min": 15
+    },
+    {
+     "text": "Top with pastry, brush with egg and bake at 200C until puffed and golden.",
+     "min": 30
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rabbit of Caerbannog mushroom pie (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Cook the filling up to 2 days ahead and chill; top with pastry and bake to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms, leeks and carrots in the butter until soft.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the flour, then the apple juice, stock and mustard and simmer until thick.",
+       "min": 10
+      },
+      {
+       "text": "Top with pastry and bake at 200C until golden.",
+       "min": 30
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Feast-upon-the-lambs roast shoulder",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 240,
+   "make_ahead": "Stud and rub the lamb the night before; roast on the day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "bone-in lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mint jelly",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stab the lamb all over and push in the garlic and rosemary, then rub with oil and salt.",
+     "min": 10
+    },
+    {
+     "text": "Sit the lamb on the potatoes and onions, pour in the stock, cover and roast at 160C.",
+     "min": 180
+    },
+    {
+     "text": "Uncover and roast at 200C until the skin is crisp and the potatoes are golden.",
+     "min": 40
+    },
+    {
+     "text": "Rest, then pull the meat from the bone and serve with mint jelly.",
+     "min": 25
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Feast-upon-the-lambs roast pumpkin (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Cut the pumpkin up to a day ahead; roast on the day",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "Kent pumpkin, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "rosemary sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the pumpkin, potatoes and onions with oil, garlic and rosemary.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C, turning once, until golden and soft.",
+       "min": 55
+      },
+      {
+       "text": "Crumble over the feta to serve.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Smelt-of-elderberries apple crumble",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Make the crumble topping up to 3 days ahead and chill; bake to serve",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "Granny Smith apples, peeled and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen blackberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the apples and berries with the cordial and brown sugar in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour, oats and caster sugar until it clumps.",
+     "min": 10
+    },
+    {
+     "text": "Scatter over the fruit and bake at 180C until golden and bubbling.",
+     "min": 40
+    },
+    {
+     "text": "Serve warm with the custard.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "A shrubbery cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make the mint syrup up to 3 days ahead; build to order",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar and water until dissolved, add half the mint and cool.",
+     "min": 5
+    },
+    {
+     "text": "Fill 4 glasses with ice, cucumber, the rest of the mint and a squeeze of lime.",
+     "min": 3
+    },
+    {
+     "text": "Add the strained syrup and top with soda.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

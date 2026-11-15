@@ -123,6 +123,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const SOFT=toHex(mix(ink,paper,.28));
   const BAND=LK&&LK.band||(T.dark?toHex(mix(pa,[0,0,0],.35)):toHex(lum(pd)<.2?pd:mix(pd,[0,0,0],.5)));
   const BANDINK=readable("#f3e7c8",BAND,5);
+  /* 15 Nov: flavour.year (per film, optional) prints the story year on the covers line in place of the release year (Gone with the Wind: 1861) */
   const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
   const venue=clean(fl&&fl.venue||"The Great Hall");
   const sign=clean(fl&&fl.sign||"A feast in honour of tonight's picture");
@@ -183,7 +184,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const front=`${stock()}${border()}
    <div style="position:absolute;left:60px;right:60px;top:46px">${kick(T.kick)}</div>
    <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:74px;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:46px">
-     <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
+     <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};word-spacing:.12em;color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
    <div style="position:absolute;left:50px;top:136px;width:${PW+12}px;height:${PH+12}px;padding:6px;box-sizing:border-box;background:${frame};box-shadow:0 10px 26px rgba(0,0,0,.3)">${heroBox}</div>
    <div style="position:absolute;left:546px;top:136px;width:220px;height:${PH+12}px;display:flex;flex-direction:column;gap:16px">
      ${logoPanel}
@@ -199,7 +200,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:600 16px/1.2 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">From the host</div>
      <div style="font:italic ${E.bodyW} 1em/1.34 ${E.body}">${esc(sent(note.t))}</div>
      <div style="font:400 1.6em/1.1 'Pinyon Script',cursive;color:${ACC};text-align:right;margin-top:.1em">${esc(note.by)}</div></div>
-   <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(f.year)} &nbsp;·&nbsp; Covers laid for ${esc(num||yy||"12")}</div>`;
+   <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(fl&&fl.year||f.year)} &nbsp;·&nbsp; Covers laid for ${esc(num||yy||"12")}</div>`;
 
   /* ---------- back: courses in procession ---------- */
   const LAB=fam?{s:"To Begin",m:"The Remove",w:"Entremets",d:"The Cordials"}:{s:"To Begin",m:"The Remove",w:"Entremets",d:"From the Cellar"};

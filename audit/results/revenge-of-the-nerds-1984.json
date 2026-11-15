@@ -1,0 +1,70 @@
+{
+ "id": "Revenge of the Nerds (1984)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 1",
+ "facts": [
+  {
+   "text": "ALPHA BETAS",
+   "full": "ROUND 1 2 3 4 T / TRI-LAMBS 3 2 1 2 8 / ALPHA BETAS 0 0 0 0 0",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "The scoreboard prints the Alpha Betas scoreless in every round of the Greek Games. The nerds win overall, but the sources describe a contest the nerds win on ingenuity, not a shutout, and the numbers are really the layout's dish count. As printed it reads as a game score the film never shows.",
+   "source": "https://en.wikipedia.org/wiki/Revenge_of_the_Nerds",
+   "fix": "Relabel the rows so they are not a score: ROUND to STALL, TRI-LAMBS to PIES SOLD, ALPHA BETAS to KISSING BOOTH",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "STALL / ON THE MENU / PIES LEFT",
+   "applied_note": "Rows relabelled ON THE MENU and PIES LEFT instead of PIES SOLD and KISSING BOOTH: no opened page says the Alpha Betas ran a kissing booth, and a zero under PIES LEFT reads as sold out, not a score."
+  }
+ ],
+ "checked_ok": 17,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Revenge_of_the_Nerds",
+  "https://en.wikiquote.org/wiki/Revenge_of_the_Nerds"
+ ],
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "verdict": "Pie stall, liquid heat, the Tri-Lamb gyros and Gilbert's line give it a clear Greek Games feel, though the notes are flat and the belching contest is missing.",
+  "missing": [
+   "Booger's belching contest at the Greek Games",
+   "Lamar's javelin throw",
+   "NERDS GET OUT! on the trashed house",
+   "Twenty-seven rejection letters"
+  ],
+  "ideas": [
+   "Swap 'Sonoran hot dogs' and its filler note for a Booger belching-contest dish",
+   "Swap the stock 'Hawkers in every aisle. Catch it if you can.' for 'Eat a pie for charity!'",
+   "Rename the section map tiles (Lower bowl, Club level) to the Greek Games events: kissing booth, pie stall, tricycle race, stage show"
+  ],
+  "overall": 3.6,
+  "flat": false,
+  "done": true,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Scoreboard rows STALL / ON THE MENU / PIES LEFT",
+   "Stock hawker line now 'Pies for charity in every aisle. Catch one if you can.'"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Promo-art stills blocked; 'Courtside' now 'Sideline'. TMDB has only three real stills, so the luggage still shows twice"
+  ],
+  "reworked3": "2026-11-15",
+  "changed3": [
+   "Second luggage still blocked"
+  ]
+ }
+}

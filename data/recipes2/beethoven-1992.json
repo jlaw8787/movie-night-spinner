@@ -1,0 +1,633 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Da-da-da-dum cheese and herb scrolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Roll and cut the scrolls up to a day ahead and chill; bake to serve",
+   "ingredients": [
+    {
+     "q": 375,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tasty cheese, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour with a pinch of salt, then stir in the milk to a soft dough.",
+     "min": 5
+    },
+    {
+     "text": "Roll out to a 30 x 40cm rectangle, spread with tomato paste and scatter with cheese, chives and oregano.",
+     "min": 7
+    },
+    {
+     "text": "Roll up from the long side, cut into 12 rounds and pack into a lined tin.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 25
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Sparky's mini corn dogs with tomato sauce",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Mix the dry batter up to a day ahead; dip and fry to serve",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "mini frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine cornmeal (polenta)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "short wooden skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder and salt, then whisk in the egg and milk to a thick batter.",
+     "min": 5
+    },
+    {
+     "text": "Pat the franks dry and push a skewer into each.",
+     "min": 5
+    },
+    {
+     "text": "Pour the batter into a tall glass, dip each frank and fry at 180C until deep golden.",
+     "min": 12
+    },
+    {
+     "text": "Drain and serve with tomato sauce.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sparky's mini vegie corn dogs (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Mix the dry batter up to a day ahead; dip and fry the vegetarian franks to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages, halved",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fine cornmeal (polenta)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make the corn batter.",
+       "min": 5
+      },
+      {
+       "text": "Skewer the sausage halves, dip and fry at 180C until golden.",
+       "min": 20
+      },
+      {
+       "text": "Serve with tomato sauce.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "George's backyard barbecue cheeseburgers",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Shape the patties and mix the sauce up to a day ahead; grill to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the mince well and shape into 4 patties a little wider than the buns.",
+     "min": 8
+    },
+    {
+     "text": "Stir the mayonnaise, tomato sauce and mustard into burger sauce.",
+     "min": 2
+    },
+    {
+     "text": "Grill or barbecue the patties 3 to 4 minutes a side, laying the cheese on for the last minute.",
+     "min": 10
+    },
+    {
+     "text": "Toast the buns and build with sauce, lettuce, tomato, patty and pickles.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "George's backyard barbecue mushroom burgers (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Mix the sauce up to 3 days ahead; grill the mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lettuce leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the mushrooms with oil and grill until juicy, melting the cheese on top.",
+       "min": 12
+      },
+      {
+       "text": "Mix the burger sauce and toast the buns.",
+       "min": 5
+      },
+      {
+       "text": "Build the burgers and serve.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Brad and Brie's three-cheese mac with crunchy crumbs",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Make the cheese sauce up to a day ahead; mix with the pasta and bake to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "tasty cheese, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "brie, rind trimmed and chopped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the macaroni 2 minutes short of the packet time and drain.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter, stir in the flour, then whisk in the milk and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the cheeses until melted, then fold through the pasta and tip into a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Scatter with the panko and paprika and bake at 200C until golden and bubbling.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Late-night giant choc chip skillet cookie",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make the dough up to 2 days ahead and keep in the fridge; bake to serve",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "milk chocolate chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the melted butter with both sugars, then beat in the egg and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour, bicarb and a pinch of salt, then the chocolate chips.",
+     "min": 5
+    },
+    {
+     "text": "Press into a buttered 25cm ovenproof frying pan and bake at 180C until golden at the edges and soft in the middle.",
+     "min": 22
+    },
+    {
+     "text": "Cool for 5 minutes and serve straight from the pan with scoops of ice cream.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Backyard pool blue lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Brew and chill the tea and make the lemon syrup up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "butterfly pea flower tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes, then stir in the sugar and chill.",
+     "min": 7
+    },
+    {
+     "text": "Fill 4 glasses with ice and pour in the blue tea and the soda.",
+     "min": 2
+    },
+    {
+     "text": "Pour the lemon juice in at the table and watch it turn purple.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

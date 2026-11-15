@@ -1,0 +1,62 @@
+# Pokémon Detective Pikachu (2019). Cafe layout, the Hi-Hat Cafe, Ryme City. Family film: everything alcohol-free.
+# Sources: Wikipedia plot (Detective_Pikachu_(film)), Wikiquote (Detective_Pikachu_(film)), Looper "Details you missed" (Tim and Pikachu visit the
+# Hi-Hat Cafe, Noctowl neon, Jigglypuff sings a patron to sleep, a Snorlax asleep in the road, the 10th anniversary parade).
+FILM = {"id": "Pokémon Detective Pikachu (2019)", "theme": "kids",
+        "T": "You feel it in your jellies, don't you?",
+        "D": "A young man teams up with his missing father's coffee-loving, hat-wearing Pikachu, the only Pokémon he can understand, to find out what happened.",
+        "P": "Serve the chicken and waffles when Tim and Pikachu walk into the Hi-Hat Cafe."}
+FORMAT = {"format": "cafe", "era": "modern", "tone": "playful"}
+PALETTE = {"dark": "#1d1a24", "accent": "#f2c230"}
+SERIES = []
+FLAVOUR = {"venue": "Hi-Hat Cafe", "sign": "Hi-Hat Cafe, Ryme City",
+           "note": {"text": "Second chances are special things, kid.", "by": "Detective Pikachu", "kind": "quote"},
+           "winks": ["The deerstalker hat", "Purple R gas in Harry's office", "Lucy's Top 10 Cutest Pokémon", "Volt Tackle, Tim's pick", "A Torterra garden in the lab"],
+           "prop": {"kind": "badge", "title": "Ryme City", "lines": ["Harry Goodman's partner", "Detective Pikachu"]},
+           "number": "10",
+           "words": {}}
+HOUSE = {"s": {"n": "A bowl of salted pretzels", "note": "For the stakeout.", "meat": False},
+         "d": {"n": "Iced water with lemon", "note": "On the house, detective.", "alc": False}}
+DISHES = [
+ {"n": "Psyduck's sweet corn fritters with avocado smash", "course": "s",
+  "line": "Psyduck explodes when stressed",
+  "note": "Golden corn fritters, lime avocado smash.",
+  "prep": 15, "cook": 15, "ahead": "Mix the batter up to 4 hours ahead and chill; fry to serve",
+  "ing": [(2, "", "corn cobs, kernels cut off", "Produce"), (100, "g", "self-raising flour", "Pantry"), (2, "", "eggs", "Dairy"), (80, "ml", "milk", "Dairy"), (2, "", "spring onions, sliced", "Produce"), (50, "g", "tasty cheese, grated", "Dairy"), (3, "tbsp", "olive oil", "Pantry"), (2, "", "ripe avocados", "Produce"), (1, "", "lime", "Produce")],
+  "steps": [("Whisk the flour, eggs and milk into a thick batter, then stir in the corn, spring onion, cheese and a pinch of salt.", 5), ("Mash the avocados with the lime juice and a little salt.", 5), ("Fry heaped spoonfuls in the oil until golden, about 2 minutes a side.", 15), ("Drain and serve with the avocado smash.", 3)]},
+ {"n": "Mr Mime's grilled cheese with tomato soup shots", "course": "s",
+  "line": "Mr Mime is silent but annoying",
+  "note": "Toasted cheese fingers, little cups of tomato soup.",
+  "prep": 10, "cook": 25, "ahead": "Make the soup up to 2 days ahead and reheat; toast the sandwiches to serve",
+  "ing": [(1, "", "brown onion, chopped", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (2, "", "x 400g tins crushed tomatoes", "Pantry"), (250, "ml", "vegetable stock", "Pantry"), (1, "tsp", "caster sugar", "Pantry"), (60, "ml", "pouring cream", "Dairy"), (8, "", "slices white sandwich bread", "Bakery"), (150, "g", "tasty cheese, grated", "Dairy"), (40, "g", "soft butter", "Dairy")],
+  "steps": [("Soften the onion in the oil, add the tomatoes, stock and sugar and simmer for 15 minutes.", 18), ("Blend until smooth, stir in the cream and season.", 3), ("Fill the bread with cheese, butter the outsides and toast in a pan until golden and melted.", 8), ("Cut into fingers and serve with small cups of soup for dipping.", 3)]},
+ {"n": "Hi-Hat Cafe fried chicken and waffles with maple butter", "course": "m",
+  "line": "Jigglypuff sings a customer to sleep",
+  "note": "Buttermilk fried chicken, waffles, maple butter.",
+  "prep": 15, "cook": 30, "ahead": "Soak the chicken in buttermilk overnight; make the waffle batter up to 4 hours ahead",
+  "ing": [(8, "", "chicken tenderloins", "Meat"), (375, "ml", "buttermilk, plus 250ml for the waffles", "Dairy"), (150, "g", "plain flour, plus 200g for the waffles", "Pantry"), (1, "tsp", "sweet paprika", "Spices"), (1, "tsp", "garlic powder", "Spices"), (1, "l", "vegetable oil, for frying", "Pantry"), (2, "tsp", "baking powder", "Pantry"), (2, "", "eggs", "Dairy"), (60, "g", "butter, melted, plus 60g soft", "Dairy"), (3, "tbsp", "maple syrup, plus extra to serve", "Pantry")],
+  "steps": [("Soak the chicken in 375ml buttermilk with a pinch of salt for at least 20 minutes.", 5), ("Whisk the waffle flour, baking powder, eggs, 250ml buttermilk and melted butter and cook in a hot waffle iron until crisp.", 15), ("Toss the chicken in the flour mixed with paprika, garlic powder and salt, and fry at 175C until golden and cooked through.", 15), ("Beat the soft butter with the maple syrup.", 3), ("Stack the chicken on the waffles, top with maple butter and pour over extra syrup.", 5)],
+  "alt": {"veg": {"n": "Hi-Hat Cafe fried cauliflower and waffles with maple butter (vegetarian)", "note": "Buttermilk fried cauliflower, waffles, maple butter.", "prep": 20, "cook": 30, "ahead": "Cut the cauliflower and make the waffle batter up to 4 hours ahead; fry to serve",
+                  "ing": [(0.5, "", "cauliflower, in large florets", "Produce"), (375, "ml", "buttermilk, plus 250ml for the waffles", "Dairy"), (150, "g", "plain flour, plus 200g for the waffles", "Pantry"), (1, "tsp", "sweet paprika", "Spices"), (1, "l", "vegetable oil, for frying", "Pantry"), (2, "tsp", "baking powder", "Pantry"), (2, "", "eggs", "Dairy"), (60, "g", "butter, melted, plus 60g soft", "Dairy"), (3, "tbsp", "maple syrup, plus extra to serve", "Pantry")],
+                  "steps": [("Make and cook the waffles.", 15), ("Dip the florets in buttermilk, toss in seasoned flour and fry at 175C until golden and tender.", 25), ("Beat the butter with maple syrup and stack everything up.", 10)]}}},
+ {"n": "Charizard's flame-grilled beef skewers with rice", "course": "m",
+  "line": "Pikachu takes on Charizard in the arena",
+  "note": "Sticky soy beef skewers, rice, crunchy slaw.",
+  "prep": 25, "cook": 20, "ahead": "Marinate the beef up to a day ahead; thread and grill to serve",
+  "ing": [(600, "g", "rump steak, in cubes", "Meat"), (3, "tbsp", "soy sauce", "Pantry"), (2, "tbsp", "honey", "Pantry"), (1, "tbsp", "sesame oil", "Pantry"), (2, "", "garlic cloves, crushed", "Produce"), (1, "", "red capsicum, in chunks", "Produce"), (300, "g", "jasmine rice", "Pantry"), (0.25, "", "red cabbage, finely shredded", "Produce"), (1, "", "carrot, grated", "Produce"), (1, "", "lime", "Produce"), (8, "", "bamboo skewers, soaked", "Pantry")],
+  "steps": [("Mix the soy, honey, sesame oil and garlic, toss with the beef and leave for 15 minutes.", 5), ("Cook the rice.", 15), ("Thread the beef and capsicum onto the skewers.", 8), ("Grill on a hot barbecue or grill pan, turning, until charred and sticky, brushing with the leftover marinade.", 8), ("Toss the cabbage and carrot with lime juice and serve with the skewers and rice.", 5)],
+  "alt": {"veg": {"n": "Charizard's flame-grilled tofu skewers with rice (vegetarian)", "note": "Sticky soy tofu skewers, rice, crunchy slaw.", "prep": 10, "cook": 20, "ahead": "Marinate the tofu up to a day ahead; thread and grill to serve",
+                  "ing": [(450, "g", "firm tofu, in cubes", "Produce"), (3, "tbsp", "soy sauce", "Pantry"), (2, "tbsp", "honey", "Pantry"), (1, "tbsp", "sesame oil", "Pantry"), (1, "", "red capsicum, in chunks", "Produce"), (300, "g", "jasmine rice", "Pantry"), (0.25, "", "red cabbage, finely shredded", "Produce"), (1, "", "lime", "Produce"), (8, "", "bamboo skewers, soaked", "Pantry")],
+                  "steps": [("Marinate the tofu and cook the rice.", 15), ("Thread and grill the skewers until charred.", 10), ("Dress the slaw with lime and serve.", 5)]}}},
+ {"n": "Sweet Mother of Arceus lemon sundae", "course": "w",
+  "line": "Sweet Mother of Arceus",
+  "note": "Vanilla ice cream, lemon curd, honeycomb bolts.",
+  "prep": 15, "cook": 0, "ahead": "Build to order; everything keeps in the pantry and freezer",
+  "ing": [(1, "l", "vanilla ice cream", "Frozen"), (250, "g", "lemon curd", "Pantry"), (100, "g", "honeycomb, broken into shards", "Pantry"), (300, "ml", "thickened cream", "Dairy"), (8, "", "plain sweet biscuits, crushed", "Pantry")],
+  "steps": [("Whip the cream to soft peaks.", 5), ("Layer crushed biscuits, ice cream and lemon curd in 4 tall glasses.", 6), ("Top with cream and stick in shards of honeycomb like lightning bolts.", 4)]},
+ {"n": "Pikachu's piping hot mocha", "course": "d",
+  "line": "Pikachu slurps a piping hot coffee",
+  "note": "Espresso, hot chocolate, steamed milk. Kids skip the coffee.",
+  "prep": 5, "cook": 5, "ahead": "Make to order",
+  "ing": [(4, "", "shots espresso, or 4 tsp instant coffee", "Pantry"), (4, "tbsp", "drinking chocolate", "Pantry"), (750, "ml", "milk", "Dairy"), (4, "tbsp", "whipped cream", "Dairy"), (1, "tsp", "cocoa powder", "Pantry")],
+  "steps": [("Heat the milk until steaming and whisk in the drinking chocolate.", 5), ("Pour a shot of espresso into each grown-up mug, top up with the chocolate milk and finish with cream and a dusting of cocoa.", 3)]},
+]

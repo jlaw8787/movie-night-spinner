@@ -1,0 +1,599 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Homemade Scooby Snacks",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Bake up to 5 days ahead and keep in an airtight tin",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pulse the flour, oats, butter, cheese and paprika in a food processor until it looks like breadcrumbs.",
+     "min": 3
+    },
+    {
+     "text": "Add the yolk and water and pulse until it comes together, then wrap and chill for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Roll out 5mm thick and cut into bone shapes.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a lined tray at 180C until golden, then cool on the tray.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Hot pepper challenge pizza bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Make the sauce up to 3 days ahead; top and bake to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "small pita breads or pizza bases",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cherry tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mild pickled banana peppers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the passata with the oregano and a pinch of salt.",
+     "min": 2
+    },
+    {
+     "text": "Spread over the bases and top with mozzarella and tomatoes.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until bubbling and crisp, then cut into wedges.",
+     "min": 12
+    },
+    {
+     "text": "Scatter with basil and serve the peppers in a jar on the side for the brave.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "All-you-can-eat huli huli chicken with pineapple rice",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Marinate the chicken up to a day ahead; grill to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 270,
+     "u": "ml",
+     "item": "tin coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "tin pineapple pieces, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the pineapple juice, soy, tomato sauce, sugar, ginger and garlic, keep a third aside and marinate the chicken in the rest for 15 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cook the rice in the coconut milk topped up with water until fluffy, then fold through the pineapple.",
+     "min": 20
+    },
+    {
+     "text": "Grill the chicken over medium heat, turning and basting with the kept sauce, until sticky and cooked through.",
+     "min": 18
+    },
+    {
+     "text": "Slice and serve over the rice with spring onions.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "All-you-can-eat huli huli tofu with pineapple rice (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Marinate the tofu up to a day ahead; grill to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 270,
+       "u": "ml",
+       "item": "tin coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 225,
+       "u": "g",
+       "item": "tin pineapple pieces, drained",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the tofu in the pineapple and soy sauce.",
+       "min": 5
+      },
+      {
+       "text": "Cook the coconut rice and fold through the pineapple.",
+       "min": 20
+      },
+      {
+       "text": "Grill the tofu, basting, until sticky, and serve on the rice.",
+       "min": 12
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Unmasked Scrappy-Doo meatball subs",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 25,
+   "make_ahead": "Roll and simmer the meatballs up to 2 days ahead; reheat and build to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "jar tomato pasta sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, crumbs, egg, parmesan, oregano and salt and roll into 16 balls.",
+     "min": 8
+    },
+    {
+     "text": "Brown the meatballs in the oil, then pour in the sauce and simmer until cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Split the rolls, fill with meatballs and sauce and lay the mozzarella on top.",
+     "min": 5
+    },
+    {
+     "text": "Grill until the cheese melts and serve hot.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Unmasked Scrappy-Doo lentil ball subs (vegetarian)",
+     "course": "m",
+     "prep_min": 13,
+     "cook_min": 25,
+     "make_ahead": "Roll the lentil balls up to a day ahead; bake and build to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "jar tomato pasta sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, sliced",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the lentils with the ricotta, crumbs, egg and parmesan and roll into balls.",
+       "min": 10
+      },
+      {
+       "text": "Bake the balls on an oiled tray at 200C until firm, then warm in the sauce.",
+       "min": 20
+      },
+      {
+       "text": "Fill the rolls, top with mozzarella and grill until melted.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Disco ball coconut snowballs",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Roll the snowballs up to 3 days ahead and keep frozen",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ripe mango, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the coconut in a dry pan until golden, then cool.",
+     "min": 5
+    },
+    {
+     "text": "Scoop 8 big balls of ice cream, roll in the coconut and freeze on a lined tray.",
+     "min": 12
+    },
+    {
+     "text": "Blend the mango with the honey and a squeeze of lime.",
+     "min": 3
+    },
+    {
+     "text": "Serve two snowballs each in a puddle of mango sauce.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Jinkies Mystery Machine punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix the juices up to a day ahead and chill; add soda to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemonade, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the orange and pineapple juice with the passionfruit pulp in a big jug.",
+     "min": 4
+    },
+    {
+     "text": "Add the ice and orange slices and top with lemonade just before serving.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

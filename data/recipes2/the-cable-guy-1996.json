@@ -1,0 +1,573 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Roast tomato bisque, drunk from the bowl",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Make the soup up to 3 days ahead and reheat; make the basil oil on the day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "ripe tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, unpeeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the tomatoes, onion and garlic with the olive oil and salt and roast at 220C until soft and charred at the edges.",
+     "min": 35
+    },
+    {
+     "text": "Squeeze the garlic from its skins and blend everything with the stock and sugar until smooth.",
+     "min": 6
+    },
+    {
+     "text": "Warm through, stir in the cream and season.",
+     "min": 6
+    },
+    {
+     "text": "Blitz the basil with the extra virgin oil and a pinch of salt, and swirl over the soup in mugs.",
+     "min": 8
+    },
+    {
+     "text": "Hand it over in mugs or bowls you can drink from. No spoons.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Hello Clarice chicken skin crackling",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Bake the crackling up to a day ahead and keep airtight; warm and drizzle to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken skin, from the butcher",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Scrape any fat from the skin, lay it flat between 2 sheets of baking paper on a tray and weigh it down with a second tray.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until golden and crisp right through, then drain on paper towel.",
+     "min": 22
+    },
+    {
+     "text": "Rub the salt with the lemon zest and paprika, and warm the honey with the chilli.",
+     "min": 3
+    },
+    {
+     "text": "Break into shards, drizzle with hot honey and sprinkle with the lemon salt.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hello Clarice rice paper crackling (vegetarian)",
+     "course": "s",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Fry up to a day ahead and keep airtight",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "rice paper sheets, quartered",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oil to 180C and fry the rice paper a few pieces at a time until puffed, a few seconds each.",
+       "min": 10
+      },
+      {
+       "text": "Rub the salt with the lemon zest and warm the honey with the chilli.",
+       "min": 4
+      },
+      {
+       "text": "Drizzle and sprinkle to serve.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Tournament roast chicken with buttered corn",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Rub the chicken with the herb butter up to a day ahead and chill uncovered; roast to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole chicken, about 1.8kg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "thyme and rosemary, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "small potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash 50g butter with the garlic, herbs and lemon zest and push it under and over the chicken skin. Put the halved lemon inside.",
+     "min": 12
+    },
+    {
+     "text": "Toss the potatoes with the oil and salt around the chicken in a big roasting tin.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C, basting with the pan juices twice, until the juices run clear and the potatoes are golden.",
+     "min": 65
+    },
+    {
+     "text": "Boil the corn for 6 minutes, then roll in the rest of the butter with the paprika and salt.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tournament roast cauliflower with buttered corn (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Make the herb butter up to 3 days ahead; roast on the day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole cauliflower, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "thyme and rosemary, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "small potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the whole cauliflower for 8 minutes and drain well.",
+       "min": 12
+      },
+      {
+       "text": "Spread with 50g herb, garlic and lemon butter and roast at 200C with the oiled potatoes, basting twice, until deep golden.",
+       "min": 50
+      },
+      {
+       "text": "Boil the corn and roll in the rest of the butter with paprika.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Pastry of the castle",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Cook the apple filling up to 2 days ahead; fill and bake to serve",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "Granny Smith apples, peeled and diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "raw sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the apples in the butter with the brown sugar, half the cinnamon and the lemon juice until soft and sticky, then cool.",
+     "min": 12
+    },
+    {
+     "text": "Cut each pastry sheet into 4 squares, spoon apple onto each, fold into triangles and press the edges with a fork.",
+     "min": 8
+    },
+    {
+     "text": "Brush with egg, sprinkle with raw sugar and the rest of the cinnamon and bake at 200C until puffed and golden.",
+     "min": 20
+    },
+    {
+     "text": "Whip the cream softly and serve with the warm turnovers.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "A mug of ale for me and me mate",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make the honey syrup up to a week ahead; chill the ale and juice well",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 375ml cans pale ale",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the honey into the hot water and let it cool.",
+     "min": 4
+    },
+    {
+     "text": "Divide the apple juice and honey syrup between 4 big mugs or tankards.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with the cold ale and squeeze in a lemon wedge.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "A mug of ale for me and me mate (alcohol-free)",
+     "course": "d",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make the honey syrup ahead; chill the alcohol-free ale well",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "x 330ml bottles alcohol-free pale ale",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut in wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the honey in the hot water and cool.",
+       "min": 4
+      },
+      {
+       "text": "Divide the juice and syrup between 4 mugs.",
+       "min": 2
+      },
+      {
+       "text": "Top with the alcohol-free ale and a squeeze of lemon.",
+       "min": 4
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

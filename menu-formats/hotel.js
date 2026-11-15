@@ -277,7 +277,8 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div data-fs="14" style="font:700 14px/1.3 ${B};margin-top:4px;letter-spacing:.06em">GUESTS &nbsp;${box}1 &nbsp;${box}2</div></div></div></div>`;
   const front=face(crest+header+hero+note+hanger);
 
-  /* ---- back: second still full bleed, the film's prop, the menu, fine print ---- */
+  /* ---- back: second still full bleed, the film's prop, the menu, fine print. 15 Nov: per-film flavour caption labels the still in place of the
+     venue name when the still is not set in the venue (Almost Famous: Penny's suite is not the Hyatt) ---- */
   const secH=400;
   const pr=F.prop,pk=pr.kind;
   const prop=`<div style="position:absolute;right:34px;top:${secH-82}px;width:226px;transform:rotate(${(-T.rot*.7+1.5).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
@@ -287,7 +288,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${pr.lines.map(l=>`<div data-fs="14" style="font:700 15px/1.3 ${B};color:#2a2420">${esc(dry(l))}</div>`).join("")}</div></div>`;
   const second=`<div style="position:absolute;left:0;right:0;top:0;height:${secH}px;overflow:hidden;background:${K.deep}">
     ${ph.secondPoster?posterHTML(ph.second,true,"",era,t):photoHTML(ph.second,ph.secondPos,era,t)}
-    <div style="position:absolute;left:30px;bottom:18px;background:${rgba("#fffaf0",.92)};padding:7px 12px;font:700 14px/1.2 ${B};letter-spacing:.14em;text-transform:uppercase;color:#1c1712">${esc(F.venue)}</div></div>
+    <div style="position:absolute;left:30px;bottom:18px;background:${rgba("#fffaf0",.92)};padding:7px 12px;font:700 14px/1.2 ${B};letter-spacing:.14em;text-transform:uppercase;color:#1c1712">${esc(ctx.flavour&&ctx.flavour.caption?clean(ctx.flavour.caption):F.venue)}</div></div>
     <div style="position:absolute;left:0;right:0;top:${secH}px;height:8px;background:${rule}"></div>`;
   const labels=era<2?["Appetisers","From the grill","Desserts",fm?"Fountain service":"Bar service"]:["To begin","From the kitchen","Something sweet",fm?"From the fountain":"From the bar"];
   const keys=["s","m","w","d"];

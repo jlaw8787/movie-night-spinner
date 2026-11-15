@@ -1,0 +1,88 @@
+{
+ "id": "Twins (1988)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 1",
+ "facts": [
+  {
+   "text": "The window booth at Roadside Cafe.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The still above the caption is the twins in matching suits against the sky (the poster art), not a cafe booth. No source shows the twins at this cafe at all: Arroyo Seco is a filming location for the road trip and no page says what happens there.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Twins1988",
+   "fix": "Julius and Vincent, matching suits.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Julius and Marnie share a motel room.",
+   "applied_note": "The poster-art stills are now hidden (data/still-block.json), so the band above the caption is the motel-room still of Marnie and Julius; the caption describes that still. Venue changed from Roadside Cafe to the Sun God Lodge, Taos."
+  },
+  {
+   "text": "Overheard at the counter: the fuel injector in the Cadillac boot.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "Vincent finds the prototype fuel injector in the boot of the Cadillac he steals in Los Angeles. Nobody talks about it at a cafe counter; the stock 'Overheard at the counter' frame turns a prop into dialogue in the wrong place.",
+   "source": "https://en.wikipedia.org/wiki/Twins_(1988_film)",
+   "fix": "In the stolen Cadillac's boot: one fuel injector.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "In the stolen Cadillac's boot: one fuel injector."
+  }
+ ],
+ "checked_ok": 15,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Twins_(1988_film)",
+  "https://en.wikiquote.org/wiki/Twins_(1988_film)",
+  "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Twins1988",
+  "https://www.sites.google.com/site/80sfilmlocations/Film-List/twins-1988"
+ ],
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "verdict": "The real Sun God Lodge, the six fathers and the milkshake line give it a proper Twins motel, but the Taos food is regional rather than from the film and the notes are plain.",
+  "missing": [
+   "Julius bailing Vincent out of jail in LA",
+   "Whispering Pines, the art colony where they find their mother",
+   "The Klane brothers' loan sharks",
+   "Webster and the $5 million showdown in Houston"
+  ],
+  "ideas": [
+   "Replace the invented Roadside Cafe with a place the film actually shows on the road trip or in LA, keeping the diner layout",
+   "Swap the second hero still for a different TMDB still so the poster does not print twice",
+   "Swap the front's 'Only the waitress can tell them apart.' for the real tagline nod 'Only their mother can tell them apart.'",
+   "Swap 'Bottomless shoestring fries' for something from Julius's island upbringing"
+  ],
+  "overall": 3.6,
+  "flat": false,
+  "done": true,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Venue: Sun God Lodge, Paseo del Pueblo Sur, Taos, the motel the twins, Linda and Marnie stay at (was the Roadside Cafe filming location)",
+   "Tagline now the real one: 'Only their mother can tell them apart.'",
+   "Poster art no longer printed twice; back still is the motel room (Marnie and Julius), last still the twins' hug",
+   "Front desk ticket: 'Two rooms, four guests' / 'Vincent's in Linda's room'; stock lines remapped (Left at the front desk, Vacancy, Check out by ten)",
+   "House fries swapped for 'Island fruit salad: Julius grew up on an island. Vincent didn't.'",
+   "Footer: 'In the stolen Cadillac's boot: one fuel injector.'"
+  ],
+  "before": {
+   "world": 2,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.0
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Stock 'Ask about pie' card now reads 'Next stop, Houston'"
+  ],
+  "reworked3": "2026-11-15",
+  "changed3": [
+   "Stock 'Open all night, daily' now 'Their mother is at an art colony' (Wikipedia)"
+  ]
+ }
+}

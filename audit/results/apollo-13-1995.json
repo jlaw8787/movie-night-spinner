@@ -1,0 +1,61 @@
+{
+ "id": "Apollo 13 (1995)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "CREW QUARTERS",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The galley layout's stock label sits on the face 2 still, which is an exterior shot of the spacecraft rounding the moon with Earth behind. It is not crew quarters.",
+   "source": "https://en.wikiquote.org/wiki/Apollo_13_(film)",
+   "fix": "Rounding the moon",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "ROUNDING THE MOON"
+  }
+ ],
+ "checked_ok": 21,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Apollo_13_(film)",
+  "https://en.wikiquote.org/wiki/Apollo_13_(film)"
+ ],
+ "notes": "Lovell's champagne line is said to Marilyn in the backyard after the moon landing party (Wikiquote). The toaster line is Swigert's and the rhinoceros line is Haise's. Kranz's 'Failure is not an option!' and Lovell's 'Houston, we have a problem.' verbatim.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "verdict": "The flight-plan ration sheet and the moon still suit the lifeboat, but the food is still generic and the coffee line is a stub.",
+  "missing": [
+   "Haise: 'I could eat the ass off a dead rhinoceros.'",
+   "Marilyn's wedding ring down the shower drain",
+   "Mattingly in the simulator finding the power-up sequence",
+   "'Gentlemen, I want you to forget the flight plan' (Kranz)",
+   "The networks dropping the TV broadcast"
+  ],
+  "ideas": [
+   "Swap the stock 'Crew quarters' label on the moon still for 'Rounding the moon'",
+   "Swap the chicken pot pie note 'Freezing cold in the lifeboat' for 'Haise could eat a dead rhinoceros'",
+   "Swap 'Mission Control coffee: One pot, kept on all night.' for 'Barely enough to run this coffeepot for 9 hours.' (John Aaron, verbatim)"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": true,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Face 2 still label 'Crew quarters' now 'Rounding the moon' (flavour words)"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "id": "Gone with the Wind (1939)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "After all, tomorrow is another day!",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Wikiquote gives the closing line as 'After all...tomorrow...is another day!'. The comma version smooths it into a different line; quotes must be verbatim (the writer flagged this).",
+   "source": "https://en.wikiquote.org/wiki/Gone_with_the_Wind_(film)",
+   "fix": "After all... tomorrow... is another day!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "After all... tomorrow... is another day!",
+    "by": "Scarlett O'Hara",
+    "kind": "quote"
+   },
+   "applied": "2026-11-15",
+   "applied_text": "After all... tomorrow... is another day!"
+  },
+  {
+   "text": "1939 · COVERS LAID FOR 12",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "The year stamp on the banquet card is the release year. The card is the Twelve Oaks barbecue, which the sign itself dates 1861.",
+   "source": "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)",
+   "fix": "1861 · COVERS LAID FOR 12",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "1861 · COVERS LAID FOR 12"
+  }
+ ],
+ "checked_ok": 18,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)",
+  "https://en.wikiquote.org/wiki/Gone_with_the_Wind_(film)",
+  "https://www.filmsite.org/gone.html",
+  "https://www.filmsite.org/gone2.html",
+  "https://www.filmsite.org/gone3.html"
+ ],
+ "notes": "Filmsite confirms Mammy laces Scarlett as she holds the bedpost of her white tester bed before the barbecue (the still and caption match), carriages drawing up at Twelve Oaks (cue), Rhett's $150 'in gold' for the opening dance at the Monster Bazaar (eggs, place card), the radish at dawn and the green velvet drapes. 'Fiddle-dee-dee' war talk, the vow and 'Frankly, my dear' on Wikiquote; Rhett walks into the early morning fog (Wikipedia).",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.0,
+  "verdict": "A proper Twelve Oaks bill of fare that reads like the film, now with a clean Tara silhouette under the place card.",
+  "missing": [
+   "Rhett and Scarlett in the library: 'Sir, you are no gentleman.'",
+   "Atlanta burning",
+   "Rhett's green Paris hat",
+   "'I'll think about that tomorrow.'"
+  ],
+  "ideas": [
+   "Swap the corn muffins note 'Tomorrow is another day.' (repeats the note) for 'Mammy makes Scarlett eat first.'",
+   "Swap the iced tea note for 'Sir, you are no gentleman.' (Scarlett, the library at Twelve Oaks).",
+   "Add a hat-box dessert: 'Paris green hat lime tart' with 'I thought it was about time to get you out of that fake mourning.'"
+  ],
+  "flat": false,
+  "done": true,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Corn muffins note no longer repeats the closing line: 'Rhett heard it all from behind the sofa.' (Wikiquote, the library at Twelve Oaks)"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 4,
+   "tone": 4,
+   "look": 4,
+   "overall": 4.0
+  },
+  "rescored": "2026-11-15d",
+  "reworked5": "2026-11-15",
+  "changed5": [
+   "Bill of fare still is now Tara at sunset (Scarlett and Gerald under the tree), so the place card covers only branches and sky, no face",
+   "Caption now 'Scarlett and her father under the tree at Tara' (Filmsite)"
+  ]
+ }
+}

@@ -142,7 +142,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cAcc=pickAccent(acc,cell,4.5,g.acc);
   const sub=mix(cellInk,cell,.3);
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* a 2000 film reads "No. 2000", never "No. 00" (review 12) */
-  const price=priceFor(era,yr,fl.number);
+  const price=priceFor(era,yr,fl.number);/* 15 Nov: flavour.year (per film, optional) prints the story year on the form in place of the release year (The Great Escape: 1944); prices still go by the release year */
   const C=school?{s:"Starters",m:"Main tray",w:"Pudding",d:"Drinks"}:{s:"Starters",m:"Hot line",w:"Sweets",d:"Drinks"};
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
   const PR={},rnd=v=>Math.max(.05,Math.round(v*20)/20),SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
@@ -256,7 +256,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const head=`<div ${A}-text="17" ${A}-lo="14" ${heroPoster?`data-shift="${RX+6},${SX-14-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?88:84}px;height:24px;overflow:hidden;white-space:nowrap;color:${acc};font:700 17px/24px ${g.body};letter-spacing:.2em;text-transform:uppercase">${esc(sign)}</div>
     <div ${A}-text="44" ${A}-lo="20" ${heroPoster?`data-shift="${RX+6},${SX-14-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?114:110}px;height:${heroPoster?80:82}px;overflow:hidden;display:flex;align-items:center;color:${ink};font:${g.dw} 44px/1 ${g.disp};${gi===2?"font-style:italic;":""}">${esc(venue)}</div>`;
   const fine=`<div ${A}-box ${A}-min=".93" ${heroPoster?`data-shift="${RX+6},${RR-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?RR-RX-6:396}px;top:764px;height:44px;overflow:hidden;--k:1;color:${mix(ink,paper,.3)};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
+    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(fl.year||yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
     ${hero}${heroPoster?underPic:sidePic}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}

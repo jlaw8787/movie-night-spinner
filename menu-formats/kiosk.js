@@ -267,9 +267,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
   const cells=beach?[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]]
     :[["Out front",""],["Sky",ctx.tone==="eerie"?"Fog":["Fine","Clear","Cloudy","Overcast"][+num%4]],["Wind",["still","light breeze","gusty","fresh"][+num%4]],["Temp",/\bwinter\b/i.test(String(fl.sign||"")+" "+String(fl.venue||""))?`-${(+yy%9)+6} C`:`${water+4} C`],["Last orders",`${(+yy%3)+8}:${["00","15","30","45"][+num%4]}`]];
+  /* 15 Nov: optional per film, flavour strip ([[head,""],[label,value],...]) and forecast replace the stock "Out front" cells away from the beach (The Last Starfighter) */
+  if(!beach&&Array.isArray(fl.strip)&&fl.strip.length){cells.length=0;fl.strip.forEach(c=>cells.push([C(c[0]),C(c[1]||"")]))}
   const cw=c=>c[1]?Math.max(c[0].length*15*.78,c[1].length*20*(E.bcw+.06))+36:c[0].length*24*(E.dcw+.04)+36;
   const room=W-48-cells.reduce((a,c)=>a+cw(c),0)-4;
-  const tail=[[beach?"Conditions":"Forecast",TK.cond]];if(winks[0]&&room>=560)tail.push(["Spotted",trunc(winks[0],44)]);
+  const tail=[[beach?"Conditions":"Forecast",!beach&&fl.forecast?C(fl.forecast):TK.cond]];if(winks[0]&&room>=560)tail.push(["Spotted",trunc(winks[0],44)]);
   const tailW=tail.length===2?[room*.5,room*.5]:[room];
   const tailZ=tail.map((c,i)=>fitType(c[1],tailW[i]-40,46,E.bcw+.06,20,15,1.15,2));
   const NT=cells.length;cells.push(...tail);
@@ -279,13 +281,15 @@ window.MENU_FORMATS[ID]=ctx=>{
         `<div style="${caps(15,"rgba(255,255,255,.78)",.16)};white-space:nowrap">${esc(c[0])}</div><div style="font:800 ${i>=NT?tailZ[i-NT].z:20}px/1.15 ${body};color:#ffffff;${i>=NT?"":"white-space:nowrap"}">${esc(c[1])}</div>`}</div>`).join("")}</div>`;
 
   /* ===== beach photo ===== */
+  /* 15 Nov: optional per film, flavour titleMax caps the typed title size where one long word runs past its panel (The Last Starfighter) */
+  const TMX=+fl.titleMax||0;
   let logoHtml,logoH;const LG=ctx.logo;
   if(LG&&LG[0]&&LG[1]&&LG[2]){
     const a=LG[1]/LG[2];const LA=PM?20000:30000,LX=PM?260:400;let lh=Math.min(140,Math.sqrt(LA/a)),lw=lh*a;if(lw>LX){lw=LX;lh=lw/a}logoH=lh+32;
-    const tT=fitType(title,PM?260:360,170,E.dcw,52,24,1.05,3);
+    const tT=fitType(title,PM?260:360,170,E.dcw,TMX?Math.min(TMX,52):52,24,1.05,3);
     logoHtml=`<div data-lpanel data-dark="${rgba(DARK,.82)}" data-light="rgba(252,250,244,.94)" data-type="${rgba(DARK,.82)}" style="display:inline-block;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;box-shadow:0 4px 16px rgba(0,0,0,.35)"><span data-lmax="${LX},140" data-larea="${LA}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></span><div data-ltype style="display:none;width:${PM?260:360}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div></div>`;
   }else{
-    const tT=fitType(title,PM?260:360,170,E.dcw,PM?44:58,24,1.05,4);logoH=tT.n*tT.z*1.05+32;
+    const tT=fitType(title,PM?260:360,170,E.dcw,TMX?Math.min(TMX,PM?44:58):PM?44:58,24,1.05,4);logoH=tT.n*tT.z*1.05+32;
     logoHtml=`<div style="width:${PM?300:360}px;box-sizing:border-box;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
   /* pinned note card and a hire tag on the photo's lower edge */

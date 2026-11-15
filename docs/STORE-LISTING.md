@@ -22,8 +22,8 @@ Google: app name max 30, short description max 80.
 ### Top three
 
 1. Name `Reel Dinner` (11). Subtitle `Spin a film, get the dinner` (27)
-2. Name `Reel Dinner` (11). Subtitle `Movie night menus, 900 films` (28)
-3. Name `Reel Dinner: Movie Night` (24). Subtitle `Themed menus for 900 films` (26)
+2. Name `Reel Dinner` (11). Subtitle `Movie night menus, 1,000 films` (30)
+3. Name `Reel Dinner: Movie Night` (24). Subtitle `Themed menus for 1,000 films` (28)
 
 ### Other subtitle options
 
@@ -33,10 +33,10 @@ Google: app name max 30, short description max 80.
 
 ### Google short description options
 
-- `Spin a wheel of 900 films and get a themed dinner menu, recipes and shopping list.` (82, too long, use the next one)
+- `Spin a wheel of 1,000 films and get a themed dinner menu, recipes and shopping list.` (84, too long, use the next one)
 - `Spin for a film and get a themed dinner menu, recipes and a shopping list.` (74)
 - `Pick a film, get the dinner: themed menus, recipes and shopping lists.` (70)
-- `900 films, each with its own dinner menu, prep sheet and shopping list.` (71)
+- `1,000 films, each with its own dinner menu, prep sheet and shopping list.` (73)
 
 ---
 
@@ -45,7 +45,7 @@ Google: app name max 30, short description max 80.
 Can be changed any time without a new build.
 
 ```
-Can't pick a film? Spin the wheel. Every one of the 900 films comes with its own dinner menu, recipes, timings and a shopping list. Free, with no account needed.
+Can't pick a film? Spin the wheel. Every one of the 1,000 films comes with its own dinner menu, recipes, timings and a shopping list. Free, with no account needed.
 ```
 (161)
 
@@ -116,7 +116,7 @@ Food & Drink has less competition than Entertainment and matches what people act
 
 ### The main question: alcohol
 
-In adult mode, about 640 of the 900 menus mention alcohol somewhere (a cocktail, wine, beer or a spirit in a recipe). Counted by script across data/film. Kids mode and the family, fairytale, Christmas and wizard films switch to alcohol-free versions.
+In adult mode, about 720 of the 1,000 menus mention alcohol somewhere (a cocktail, wine, beer or a spirit in a recipe). Counted by script across data/film. Kids mode and the family, fairytale, Christmas and wizard films switch to alcohol-free versions.
 
 Under Apple's current table, "Alcohol, Tobacco, or Drug Use or References" set to Infrequent gives 13+, and Frequent gives 18+.
 
@@ -133,7 +133,7 @@ Content descriptors
 | Question | Answer | Reason |
 |---|---|---|
 | Alcohol, Tobacco, or Drug Use or References | Frequent | Drink recipes on most adult menus. A handful of tobacco and drug mentions in film descriptions |
-| Horror/Fear Themes | Infrequent | 74 horror films out of 900. Posters and one-line descriptions can be unsettling. Kids mode hides them |
+| Horror/Fear Themes | Infrequent | 85 horror films out of 1,000. Posters and one-line descriptions can be unsettling. Kids mode hides them |
 | Mature or Suggestive Themes | Infrequent | Some film descriptions (crime, war, R18+ films) touch on adult themes |
 | Profanity or Crude Humour | Infrequent | Mild words ("damn", "crap") appear in a few menus |
 | Cartoon or Fantasy Violence | Infrequent | Posters for animated and superhero films |
@@ -268,7 +268,7 @@ Shoot in this order (the first three show on the search results page):
 2. **A finished menu** for a well known film, full screen. Caption: "Every film gets its own dinner menu"
 3. **Prep sheet** with the guest count and timeline showing. Caption: "Recipes and timings, worked back from showtime"
 4. **Shopping list** with a few items ticked. Caption: "One shopping list, scaled to your guests"
-5. **Galaxy Video shelves.** Caption: "Browse 900 films in a 1990s video store"
+5. **Galaxy Video shelves.** Caption: "Browse 1,000 films in a 1990s video store"
 6. **This week's film panel** with cook night, showtime and Add to calendar. Caption: "Lock it in and get reminders"
 7. **Candy bar.** Caption: "Or start from what you're craving"
 8. **Kids mode on**, a family film menu. Caption: "Kids mode: G and PG films, no alcohol"

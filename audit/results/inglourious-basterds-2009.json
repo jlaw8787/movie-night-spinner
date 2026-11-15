@@ -1,0 +1,67 @@
+{
+ "id": "Inglourious Basterds (2009)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 2",
+ "facts": [
+  {
+   "text": "CHEZ MAURICE",
+   "full": "Chez Maurice",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The restaurant where Landa orders the strudel is never named in the Wikipedia plot. The fan wiki says the 'Maurice restaurant' name comes from a deleted scene, and the synopsis calls it only 'a Parisian restaurant'. Movie-locations.com uses the name but does not say it is on screen. Writer flagged the same doubt.",
+   "source": "https://inglouriousbasterds.fandom.com/wiki/Chapter_Three",
+   "fix": "Le Restaurant",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "THE PARIS RESTAURANT"
+  },
+  {
+   "text": "Chez Maurice, Paris, 1944",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Same as the venue: the name is only confirmed for a deleted scene. The strudel lunch is in June 1944.",
+   "source": "https://inglouriousbasterds.fandom.com/wiki/Chapter_Three",
+   "fix": "A Paris restaurant, June 1944",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Lunch with Goebbels, Paris, June 1944"
+  }
+ ],
+ "checked_ok": 21,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Inglourious_Basterds",
+  "https://en.wikiquote.org/wiki/Inglourious_Basterds",
+  "https://inglouriousbasterds.fandom.com/wiki/Chapter_Three",
+  "https://movie-locations.com/movies/i/Inglourious-Basterds.php",
+  "https://mashed.com/592427/the-truth-about-the-strudel-scene-in-inglourious-basterds",
+  "https://lotswife.com.au/classic-film-review-inglorious-basterds-2009/"
+ ],
+ "notes": "Wikiquote verbatim: 'Oooh, that's a bingo!', 'I thank you for the milk', 'wiener schnitzel lickin' finger', 'don't wanna fight in a basement', 'Bon-jorno', 'Gorlomi?', 'no more German than that scotch', seats 0023 and 0024, 100 Nazi scalps, tagline. Milk for the mademoiselle confirmed (Lot's Wife headline quotes 'for the mademoiselle... a glass of milk'); cream insistence on Mashed and the fan wiki. Shoe and napkin at the tavern on Wikipedia. Only the poster prints as an image, no repeated still.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "verdict": "Sharp, quote-rich wartime Paris cafe with the strudel, milk and bingo all in, let down by a poster-only face, a loyalty-card ticket and US cents for prices.",
+  "missing": [
+   "Au revoir, Shosanna! (LaPadite farm)",
+   "The three-finger glasses order that gives Hicox away (La Louisiane)",
+   "Say auf Wiedersehen to your Nazi balls (Stiglitz, La Louisiane)",
+   "Landa pours the Chianti to make his deal (the premiere)",
+   "The swastika: 'this just might be my masterpiece' (the ending)",
+   "Shosanna's nitrate film and the burning screen"
+  ],
+  "ideas": [
+   "Swap the house 'Salted almonds and Paris butter radishes' note 'On the bar while Goebbels holds court.' for 'Three glasses. Mind your fingers.' (the La Louisiane gesture)",
+   "Swap the footer 'Prices subject to change.' for 'Au revoir, Shosanna!'",
+   "Swap the house 'A short black, Landa's way' for 'A glass of milk, LaPadite's' with 'I thank you for the milk.'",
+   "Add a premiere Chianti to Glasses with Landa's deal: 'Let's discuss the prospect of ending the war tonight.'"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,690 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mean man spiced peanuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Roast up to 3 days ahead and keep airtight",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "raw shelled peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "peanut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the peanuts with the oil and spread on a tray.",
+     "min": 2
+    },
+    {
+     "text": "Roast at 180C, shaking once, until golden.",
+     "min": 12
+    },
+    {
+     "text": "Toss hot with the paprika, cayenne, sugar and salt, then cool a little.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Dyess farm biscuits and sausage gravy",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 22,
+   "make_ahead": "Cut the biscuits up to a day ahead and chill on the tray; bake and make the gravy to serve",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour with a pinch of salt, then stir in the buttermilk to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Pat out 3cm thick, cut 8 rounds and bake at 220C until risen and golden.",
+     "min": 15
+    },
+    {
+     "text": "Brown the sausage mince, breaking it up, then stir in the plain flour.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the milk and simmer until thick, then season with plenty of pepper.",
+     "min": 6
+    },
+    {
+     "text": "Split the biscuits and ladle over the gravy.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dyess farm biscuits and mushroom gravy (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Cut the biscuits up to a day ahead and chill; make the mushroom gravy up to a day ahead and reheat",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 90,
+       "u": "g",
+       "item": "cold butter, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make and bake the biscuits at 220C.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms in butter until browned, stir in the flour, whisk in the milk and simmer until thick.",
+       "min": 20
+      },
+      {
+       "text": "Season with pepper and serve over the split biscuits.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Hendersonville Thanksgiving turkey",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 90,
+   "make_ahead": "Make the cornbread stuffing up to a day ahead and chill; roast the turkey on the day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sage leaves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "day-old cornbread, crumbled",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock, plus 250ml for the gravy",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the turkey with half the butter, the sage and salt, and roast at 180C until the juices run clear.",
+     "min": 75
+    },
+    {
+     "text": "Soften the onion and celery in the rest of the butter, then mix with the cornbread, egg and 250ml stock.",
+     "min": 10
+    },
+    {
+     "text": "Bake the stuffing in a dish alongside the turkey for the last 35 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Rest the turkey, stir the flour into the pan juices, whisk in the rest of the stock and simmer to a gravy.",
+     "min": 10
+    },
+    {
+     "text": "Slice and serve with the stuffing, gravy and cranberry sauce.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hendersonville Thanksgiving roast pumpkin (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Make the stuffing up to a day ahead and chill; roast the pumpkin on the day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "butternut pumpkin, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "day-old cornbread, crumbled",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the pumpkin in the oil at 200C until golden.",
+       "min": 40
+      },
+      {
+       "text": "Mix the softened onion and celery with the cornbread, egg and 250ml stock and bake alongside.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms, stir in the flour and the rest of the stock and simmer to a gravy.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Sun Records Memphis dry-rub ribs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 150,
+   "make_ahead": "Rub the ribs up to a day ahead and chill; slow cook on the day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "American-style pork ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "onion powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "white cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the sugar, spices and 2 tsp salt and rub all over the ribs.",
+     "min": 10
+    },
+    {
+     "text": "Wrap in foil with a splash of the vinegar and bake at 150C until tender.",
+     "min": 120
+    },
+    {
+     "text": "Unwrap, sprinkle with a little more rub and roast at 220C until crusted.",
+     "min": 15
+    },
+    {
+     "text": "Toss the cabbage with the mayo and the rest of the vinegar.",
+     "min": 5
+    },
+    {
+     "text": "Cut the ribs and serve with the slaw.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sun Records Memphis dry-rub cauliflower (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 50,
+     "make_ahead": "Mix the rub up to a week ahead; roast on the day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole cauliflower, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "white cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the cauliflower with oil and the spice mix.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C until tender and crusted.",
+       "min": 45
+      },
+      {
+       "text": "Toss the slaw and serve the cauliflower in wedges.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Ring of Fire cinnamon bundt cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Bake up to 2 days ahead and keep airtight; glaze to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and brown sugar until pale, then beat in the eggs one at a time.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour and half the cinnamon, alternating with the buttermilk.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into a greased bundt tin and bake at 170C until a skewer comes out clean.",
+     "min": 45
+    },
+    {
+     "text": "Whisk the icing sugar, milk, the rest of the cinnamon and the cayenne, and pour over the cooled ring.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Folsom yellow water lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Make up to 3 days ahead and chill",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the barley in the water with the lemon peel.",
+     "min": 15
+    },
+    {
+     "text": "Strain, stir in the sugar to dissolve and cool.",
+     "min": 5
+    },
+    {
+     "text": "Add the lemon juice and pour over ice.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

@@ -1,0 +1,622 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fist my bump arancini",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Make the risotto up to 2 days ahead and chill; roll, crumb and fry to serve",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "hot vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, cut in small cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion in the butter, stir in the rice, then add the stock a ladle at a time until creamy and tender.",
+     "min": 20
+    },
+    {
+     "text": "Stir in the parmesan and peas, spread on a tray and chill until firm.",
+     "min": 5
+    },
+    {
+     "text": "Roll into 12 balls around a cube of mozzarella, dip in egg and roll in panko.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C until golden and hot in the middle.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Astrophage black bean dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Make the dip up to 2 days ahead and keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "x 400g tins black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "bag plain corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the spices in the oil for a minute.",
+     "min": 2
+    },
+    {
+     "text": "Blend the beans, garlic, spiced oil and lime juice with a splash of water until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Spread in a bowl, scatter with feta and serve with corn chips.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Time go fishing salt-baked snapper",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Stuff and crust the fish up to 2 hours ahead and chill; bake to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "whole snapper, cleaned and scaled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "coarse cooking salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt with the egg whites until it feels like wet sand.",
+     "min": 5
+    },
+    {
+     "text": "Stuff the fish with lemon slices and thyme, lay it on a bed of salt and pack the rest over it.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C, with the potatoes boiling alongside.",
+     "min": 30
+    },
+    {
+     "text": "Melt the butter with lemon juice, crack the crust at the table and serve with the potatoes.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Time go fishing salt-baked celeriac (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 75,
+     "make_ahead": "Crust the celeriac up to 2 hours ahead; bake to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac, scrubbed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "coarse cooking salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and egg whites and pack around the celeriac with the thyme.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until a skewer slides in.",
+       "min": 75
+      },
+      {
+       "text": "Crack open and serve in wedges with lemon butter.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Amaze amaze amaze five-spice pork belly",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Score and dry the pork overnight in the fridge; roast on the day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork belly, skin scored",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Chinese five-spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches bok choy, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the flesh side of the pork with the five-spice, soy and honey, keeping the skin dry, then rub salt into the skin.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 160C, then turn up to 240C until the skin crackles.",
+     "min": 100
+    },
+    {
+     "text": "Cook the rice and steam the bok choy, then dress it with sesame oil.",
+     "min": 15
+    },
+    {
+     "text": "Rest the pork, chop into thick pieces and serve with the rice and greens.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Amaze amaze amaze five-spice tofu (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Press the tofu up to a day ahead; fry to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, pressed and cubed",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Chinese five-spice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches bok choy, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu in cornflour and five-spice and fry until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Glaze with the soy and honey.",
+       "min": 3
+      },
+      {
+       "text": "Serve with rice and steamed bok choy.",
+       "min": 20
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Small-to-medium whoop pavlova",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 90,
+   "make_ahead": "Bake the meringue up to 2 days ahead and keep airtight; top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to soft peaks, then add the sugar a spoon at a time until thick and glossy.",
+     "min": 12
+    },
+    {
+     "text": "Fold in the cornflour and vinegar and spread into a 20cm round on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 120C, then turn off the oven and leave it inside to cool.",
+     "min": 80
+    },
+    {
+     "text": "Whip the cream, pile it on and top with strawberries and passionfruit.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Petrova line infrared spritz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill everything well; build to order",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "Aperol",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "prosecco",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "blood orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 wine glasses with ice and add 60ml Aperol to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with prosecco and a splash of soda and tuck in a slice of blood orange.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Petrova line infrared spritz (alcohol-free)",
+     "course": "d",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill everything well; build to order",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "blood orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pink grapefruit juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "blood orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill 4 glasses with ice and add the juices.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda and a slice of blood orange.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

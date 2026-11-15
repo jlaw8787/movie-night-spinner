@@ -1,0 +1,62 @@
+# The Muppet Movie (1979). Placemat layout, the El Sleezo Cafe, on Kermit's road to Hollywood.
+# Sources: Wikipedia plot and cast (The_Muppet_Movie), Wikiquote (The_Muppet_Movie), Looper (Steve Martin's sparkling muscatel line), TV Tropes (Hopper's $500 offer).
+# Venue changed from the lead: Doc Hopper's restaurants are only pitched and advertised, never shown. The El Sleezo Cafe is named on screen (Wikiquote).
+FILM = {"id": "The Muppet Movie (1979)", "theme": "kids",
+        "T": "More entertaining than humanly possible.",
+        "D": "A banjo-playing frog leaves his Florida swamp for Hollywood and picks up a bear, a pig, a whatever and a rock band on the way, with a frog legs tycoon on his tail.",
+        "P": "Bring out the chilli when the gang sits round the campfire in the desert."}
+FORMAT = {"format": "placemat", "era": "1970s", "tone": "playful"}
+PALETTE = {"dark": "#16301c", "accent": "#e2a21b"}
+SERIES = []
+FLAVOUR = {"venue": "El Sleezo Cafe", "sign": "El Sleezo Cafe, on the road to Hollywood",
+           "note": {"text": "That's the toughest, meanest, filthiest pest hole on the face of the earth!", "by": "El Sleezo owner", "kind": "quote"},
+           "winks": ["Insta-grow pills", "Bear left. Right frog.", "Gonzo going about seven knots", "Fozzie's 1951 Studebaker", "A standard rich and famous contract"],
+           "prop": {"kind": "tag", "title": "World Wide Studios", "lines": ["Open auditions for frogs", "2pm tomorrow"]},
+           "number": "79",
+           "words": {}}
+HOUSE = {"s": {"n": "Hot salted chips", "note": "French-fried, and no frog legs, Doc.", "meat": False},
+         "d": {"n": "Swamp-green lime cordial", "note": "", "alc": False}}
+DISHES = [
+ {"n": "Fozzie's wocka wocka nachos", "course": "s",
+  "line": "Fozzie bombs at the El Sleezo",
+  "note": "Hot cheddar nachos.",
+  "prep": 15, "cook": 12, "ahead": "Make the beans and the salsa up to a day ahead; build and bake to serve",
+  "ing": [(230, "g", "bag plain corn chips", "Pantry"), (400, "g", "tin black beans, drained", "Pantry"), (1, "tsp", "ground cumin", "Spices"), (150, "g", "cheddar, grated", "Dairy"), (2, "", "tomatoes, diced", "Produce"), (0.5, "", "red onion, finely diced", "Produce"), (1, "", "lime", "Produce"), (125, "g", "sour cream", "Dairy"), (1, "", "avocado", "Produce")],
+  "steps": [("Warm the beans with the cumin and a splash of water, mashing a few.", 5), ("Mix the tomato and onion with half the lime juice and a pinch of salt.", 4), ("Layer the chips, beans and cheese twice in a baking dish and bake at 200C until the cheese bubbles.", 10), ("Mash the avocado with the rest of the lime and top the nachos with salsa, avocado and sour cream.", 8)]},
+ {"n": "Bogen County Fair corn cobs", "course": "s",
+  "line": "Piggy wins the pageant",
+  "note": "Honey butter corn.",
+  "prep": 10, "cook": 15, "ahead": "Mix the butter up to 3 days ahead and keep it in the fridge; grill the corn to serve",
+  "ing": [(4, "", "corn cobs, husks off, halved", "Produce"), (80, "g", "butter, softened", "Dairy"), (1, "tbsp", "honey", "Pantry"), (0.5, "tsp", "mild chilli flakes", "Spices"), (1, "", "lime, cut in wedges", "Produce"), (30, "g", "parmesan, finely grated", "Dairy")],
+  "steps": [("Mash the butter with the honey, chilli and a pinch of salt.", 3), ("Boil the corn for 4 minutes, then drain.", 6), ("Grill or pan-char the cobs, turning, until spotted brown all over.", 8), ("Brush with the honey butter, scatter with parmesan and serve with lime.", 3)]},
+ {"n": "Not-frog-legs fried chicken", "course": "m",
+  "line": "Kermit turns Hopper down",
+  "note": "Buttermilk chicken.",
+  "prep": 20, "cook": 35, "ahead": "Soak the chicken in the buttermilk up to a day ahead; dredge and fry to serve",
+  "ing": [(8, "", "chicken drumsticks", "Meat"), (500, "ml", "buttermilk", "Dairy"), (200, "g", "plain flour", "Pantry"), (2, "tsp", "smoked paprika", "Spices"), (1, "tsp", "garlic powder", "Spices"), (1, "l", "vegetable oil, for frying", "Pantry"), (0.25, "", "white cabbage, finely shredded", "Produce"), (1, "", "carrot, grated", "Produce"), (4, "tbsp", "whole-egg mayonnaise", "Pantry"), (1, "tbsp", "cider vinegar", "Pantry"), (2, "tbsp", "mild hot sauce", "Pantry")],
+  "steps": [("Soak the drumsticks in the buttermilk with a big pinch of salt for at least an hour.", 5), ("Mix the flour with the paprika, garlic powder and salt, and dredge the drumsticks well.", 10), ("Fry in oil at 160C in batches, turning, until deep golden and cooked through.", 25), ("Toss the cabbage and carrot with the mayo and vinegar.", 5), ("Drain the chicken and serve with the slaw and hot sauce.", 3)],
+  "alt": {"veg": {"n": "Not-frog-legs fried cauliflower", "note": "Buttermilk cauliflower.", "prep": 10, "cook": 20, "ahead": "Make the slaw dressing up to a day ahead; dredge and fry the cauliflower to serve",
+                  "ing": [(1, "", "cauliflower, in large florets", "Produce"), (500, "ml", "buttermilk", "Dairy"), (200, "g", "plain flour", "Pantry"), (2, "tsp", "smoked paprika", "Spices"), (1, "l", "vegetable oil, for frying", "Pantry"), (0.25, "", "white cabbage, finely shredded", "Produce"), (4, "tbsp", "whole-egg mayonnaise", "Pantry"), (2, "tbsp", "mild hot sauce", "Pantry")],
+                  "steps": [("Dip the florets in buttermilk, then the seasoned flour, twice.", 10), ("Fry at 170C in batches until crisp and tender.", 15), ("Toss the cabbage with the mayo and serve with the hot sauce.", 5)]}}},
+ {"n": "Desert campfire chilli", "course": "m",
+  "line": "Stuck at a desert campfire",
+  "note": "Smoky beef chilli.",
+  "prep": 20, "cook": 90, "ahead": "Make the chilli up to 2 days ahead and reheat; bake the cornbread on the day",
+  "ing": [(750, "g", "beef mince", "Meat"), (1, "", "brown onion, diced", "Produce"), (2, "", "garlic cloves, crushed", "Produce"), (2, "tsp", "ground cumin", "Spices"), (2, "tsp", "sweet paprika", "Spices"), (800, "g", "tinned crushed tomatoes", "Pantry"), (400, "g", "tin kidney beans, drained", "Pantry"), (250, "ml", "beef stock", "Pantry"), (150, "g", "fine polenta", "Pantry"), (150, "g", "self-raising flour", "Pantry"), (250, "ml", "milk", "Dairy"), (2, "", "eggs", "Dairy"), (80, "g", "butter, melted", "Dairy")],
+  "steps": [("Brown the mince in batches, then soften the onion and garlic in the same pan.", 15), ("Stir in the spices, tomatoes, beans and stock and simmer gently, stirring now and then.", 75), ("Whisk the polenta, flour, milk, eggs, butter and a pinch of salt into a batter.", 5), ("Pour into a hot greased skillet and bake at 200C until golden and springy.", 25), ("Serve the chilli in bowls with wedges of cornbread.", 5)],
+  "alt": {"veg": {"n": "Desert campfire three-bean chilli (vegetarian)", "note": "Three-bean chilli and skillet cornbread.", "prep": 20, "cook": 45, "ahead": "Make the bean chilli up to 3 days ahead and reheat; bake the cornbread on the day",
+                  "ing": [(1, "", "brown onion, diced", "Produce"), (2, "", "red capsicums, diced", "Produce"), (2, "tsp", "ground cumin", "Spices"), (800, "g", "tinned crushed tomatoes", "Pantry"), (3, "", "x 400g tins mixed beans, drained", "Pantry"), (250, "ml", "vegetable stock", "Pantry"), (150, "g", "fine polenta", "Pantry"), (150, "g", "self-raising flour", "Pantry"), (250, "ml", "milk", "Dairy"), (2, "", "eggs", "Dairy"), (80, "g", "butter, melted", "Dairy")],
+                  "steps": [("Soften the onion and capsicum, add the cumin, tomatoes, beans and stock and simmer.", 35), ("Mix the cornbread batter and bake in a hot skillet at 200C.", 25), ("Serve the chilli with the cornbread.", 5)]}}},
+ {"n": "Rainbow Connection sundaes", "course": "w",
+  "line": "Kermit's banjo in the swamp",
+  "note": "Hot fudge sundaes.",
+  "prep": 15, "cook": 5, "ahead": "Make the fudge sauce up to 3 days ahead and rewarm",
+  "ing": [(1, "l", "vanilla ice cream", "Frozen"), (100, "g", "dark chocolate, chopped", "Pantry"), (125, "ml", "thickened cream", "Dairy"), (1, "tbsp", "golden syrup", "Pantry"), (250, "g", "strawberries, sliced", "Produce"), (2, "", "bananas, sliced", "Produce"), (3, "tbsp", "rainbow sprinkles", "Pantry"), (4, "", "glace cherries", "Pantry")],
+  "steps": [("Heat the cream and golden syrup, pour over the chocolate and stir until glossy.", 5), ("Scoop the ice cream into 4 tall glasses with the strawberries and banana.", 5), ("Pour over the warm fudge sauce, shower with sprinkles and top each with a cherry.", 5)]},
+ {"n": "Idaho sparkling grape fizz", "course": "d",
+  "line": "The waiter's Idaho fizz",
+  "note": "Frozen grapes on ice.",
+  "prep": 5, "cook": 0, "ahead": "Freeze the grapes and chill the juice the day before; pour to order",
+  "ing": [(750, "ml", "sparkling white grape juice", "Drinks"), (250, "ml", "soda water", "Drinks"), (1, "cup", "green grapes, frozen", "Produce"), (1, "", "lemon", "Produce")],
+  "steps": [("Drop a few frozen grapes into 4 chilled glasses.", 1), ("Fill two thirds with the grape juice, top with soda and add a twist of lemon.", 3)]},
+]

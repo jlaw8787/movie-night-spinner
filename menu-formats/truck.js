@@ -167,7 +167,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${TFIT}
     ${cueN?`<div data-fit="cue" style="position:absolute;left:${pad}px;width:${CWall}px;bottom:16px;border-top:1px solid ${mix(e.btx,e.bbg,.7)};padding-top:6px;font:italic 400 15px/1.3 ${BF};color:${bsoft}"><b style="font-style:normal;color:${bacc}">Showtime:</b> ${esc(cap(cue))}</div>`:""}</div>`;
 
-  /* order window: note, logo panel, now serving ticket */
+  /* order window: note, logo panel, now serving ticket. 15 Nov: per-film flavour panelStill (a TMDB still path, optional panelPos as
+     a CSS object-position) fills the logo panel with that still when the poster is the hero and already carries the title (Straight Outta Compton) */
   const WY=BH+boardH,WH=H-WY;
   const nLen=clean(note.text).length,nSize=nLen>150?16:nLen>110?17:nLen>80?18:19;
   const CWD=280,C2X=RX+20+CWD+16,C2W=RW-20-CWD-16-20,LH=96,TH=WH-40-LH-14;
@@ -175,7 +176,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div>${kick("Overheard at the window",acc,14)}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
     <div style="font:400 ${ei<2?36:32}px/1 ${SF};color:${acc};text-align:right">${esc(note.by)}</div></div>`;
   const logoPanel=`<div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:${C2X}px;top:${WY+20}px;width:${C2W}px;height:${LH}px;padding:10px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
-      ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`
+      ${fl.panelStill&&posSrc?`<img src="${ctx.img(fl.panelStill,"w780")}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${fl.panelPos||"center 40%"};filter:${pf}">`
+         :lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`
          :`<div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;${clamp(3)}">${esc(title)}</div>`}</div>`;
   const tick=`<div style="position:absolute;left:${C2X}px;top:${WY+20+LH+14}px;width:${C2W}px;height:${TH}px;box-sizing:border-box;padding:10px 14px;background:${darkTruck?"#f3f0e6":"#ffffff"};border-top:8px solid ${acc};box-shadow:0 4px 12px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
     <div style="display:flex;gap:12px;align-items:flex-start;justify-content:space-between">

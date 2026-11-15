@@ -1,0 +1,64 @@
+{
+ "id": "Almost Famous (2000)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "IN YOUR SUITE 2000",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Stock year field prints the release year on a 1973 hotel card, right under the sign 'Sunset Strip, Los Angeles, 1973', so it reads as the hotel's year. The story is set in 1973.",
+   "source": "https://en.wikipedia.org/wiki/Almost_Famous",
+   "fix": "IN YOUR SUITE 1973",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "IN YOUR SUITE 1973"
+  },
+  {
+   "text": "CONTINENTAL HYATT HOUSE",
+   "where": "caption",
+   "verdict": "unsure",
+   "why": "The label sits on the still of Penny alone in a hotel suite with a bottle. Movie-locations places William's LA stay at the Hyatt and Penny's overdose at the Plaza in New York; no source I opened says this Penny scene is at the Hyatt, so the label may name the wrong hotel. The writer had the same doubt.",
+   "source": "https://www.movie-locations.com/movies/a/Almost-Famous.php",
+   "fix": "PENNY LANE, 1973",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "PENNY LANE, 1973"
+  }
+ ],
+ "checked_ok": 24,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Almost_Famous",
+  "https://en.wikiquote.org/wiki/Almost_Famous",
+  "https://www.movie-locations.com/movies/a/Almost-Famous.php",
+  "https://www.shmoop.com/study-guides/almost-famous/scene-18-summary.html"
+ ],
+ "notes": "'Don't take drugs!', soy cutlets, Anita's banned-food list, 'friendship is the booze they feed you', Band Aids, 'Rockstars have kidnapped my son', 'I am the enemy' all on Wikiquote. Golden god at the Topeka party house, $35 assignment, Black Sabbath, poker game, plane storm, Morocco on Wikipedia. '50 bucks and a case of beer' and 'What kind of beer?' on Shmoop. Continental Hyatt House (Riot House) as William's LA hotel on movie-locations.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "The Riot House card with Elaine's 'Don't take drugs!', golden god burgers and Penny's case of beer feels like the tour, but the front is the poster plus a second title block, and the footer is stuffed with winks that read like a list.",
+  "missing": [
+   "It's all happening (Dick Roswell)",
+   "The only true currency in this bankrupt world is what we share with someone else when we're uncool (Lester, on the phone)",
+   "Tiny Dancer on the bus (song title only)",
+   "Russell's 'Looks Good' T-shirt fight over the band photo",
+   "Elaine on the phone to Russell",
+   "Penny dancing alone in the empty arena"
+  ],
+  "ideas": [
+   "Swap the bourbon note for 'I'm always home. I'm uncool.' (Lester Bangs, Wikiquote)",
+   "Swap the footer winks 'Penny traded in a poker game. The storm on the charter plane.' for 'It's all happening.' (Dick Roswell, Wikiquote)",
+   "Swap the 'ALMOST FAMOUS' title block under the poster for the backstage pass or a still of William and Lester at the diner",
+   "Swap the steak Diane note for 'Lester tells William they are uncool' and move it to a diner dish, since the still of the two at the diner exists"
+  ],
+  "flat": false,
+  "done": false
+ }
+}
