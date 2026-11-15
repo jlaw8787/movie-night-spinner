@@ -276,8 +276,13 @@ window.MENU_FORMATS["motel"]=ctx=>{
         ${it.note?`<div data-n style="display:var(--nd,block);font-family:${BODY};color:${mix(e.ink,e.paper,.3)};line-height:1.25;${fs(desc,14)}">${esc(it.note)}</div>`:""}</div>`).join("")}</div>`).join("");
 
   const stillStamp=s1||s0;
+  /* 15 Nov, Josh (call 6): a film with no spare still (Paranormal Activity has one, already on the front) lost its stamp photo to the
+     no-photo-twice pass and printed a blank stamp. The pass now shows this type stamp instead: initials and "Air mail" in the house colour. */
+  const sw=clean(f.title||"").replace(/[^A-Za-z0-9 ]/g," ").split(/\s+/).filter(w=>w&&!/^(the|a|an|of|and)$/i.test(w));
+  const ini=((sw[0]||"R").charAt(0)+((sw[1]||"").charAt(0)||"")).toUpperCase();
+  const stampType=`<div data-nophoto style="position:absolute;inset:0;display:${stillStamp?"none":"flex"};flex-direction:column;align-items:center;justify-content:center;background:${ACC};color:#fbf8f0"><div style="position:absolute;inset:6px;border:1.5px solid rgba(251,248,240,.7)"></div><div style="font-family:${BODY};font-weight:800;font-size:46px;line-height:1;letter-spacing:.04em">${esc(ini)}</div><div style="font-family:${BODY};font-weight:700;font-size:11px;line-height:1.2;letter-spacing:.2em;margin-top:6px">AIR MAIL</div></div>`;
   const stamp=`<div style="position:absolute;right:20px;top:18px;width:132px;height:160px;padding:8px;box-sizing:border-box;background:radial-gradient(circle,transparent 3px,#fbf8f0 3.5px) -5px -5px/10px 10px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))"><div style="position:absolute;inset:5px;background:#fbf8f0"></div>
-      <div style="position:relative;width:116px;height:116px;overflow:hidden">${photo(ctx,stillStamp,116,118,filt,"50% 30%")}</div>
+      <div style="position:relative;width:116px;height:116px;overflow:hidden">${photo(ctx,stillStamp,116,118,filt,"50% 30%")}${stampType}</div>
       <div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;font-family:${BODY};font-weight:800;color:${ACC};font-size:15px;margin-top:4px;white-space:nowrap;overflow:hidden"><span>${esc(e.P&&e.cents?yy(f)+"¢":"POST")}</span><span style="font-size:14px">${esc(String(f.year||""))}</span></div></div>`;
   /* postmark: a short town line, whole words only, kept off the menu column and over the stamp corner */
   const fit14=t=>{const w=clean(t).toUpperCase().replace(/[^A-Z0-9 .'&-]/g,"").split(/\s+/).filter(Boolean);let o="";for(const x of w){if((o+" "+x).trim().length>14)return null;o=(o+" "+x).trim()}return o||null};

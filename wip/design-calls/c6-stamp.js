@@ -1,0 +1,4 @@
+const st=[...el.querySelectorAll('div')].find(d=>d.style.width==='132px'&&d.style.height==='160px');
+const box=st.children[1];const acc=getComputedStyle(st.children[2]).color;
+const words=f.title.split(/\s+/).filter(w=>!/^(the|a|an|of|and)$/i.test(w));const ini=(words[0][0]+(words[1]?words[1][0]:'')).toUpperCase();
+box.style.visibility='visible';box.innerHTML=`<div style="position:absolute;inset:0;background:${acc};display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fbf8f0"><div style="position:absolute;inset:6px;border:1.5px solid rgba(251,248,240,.7)"></div><div style="font:800 46px/1 ${getComputedStyle(st.children[2]).fontFamily};letter-spacing:.04em">${ini}</div><div style="font:700 11px/1.2 ${getComputedStyle(st.children[2]).fontFamily};letter-spacing:.2em;margin-top:6px">AIR MAIL</div></div>`;return 'ok '+ini

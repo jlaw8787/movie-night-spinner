@@ -177,6 +177,9 @@ window.MENU_FORMATS[ID]=ctx=>{
    </div>`;
 
   /* ---------- front ---------- */
+  /* 15 Nov, Josh (call 5): under a poster (which carries the title) the logo panel goes; "Now showing, year" heads the side column
+     and the toasts get the room. Flavour logoPanel:true keeps the panel for a poster with no title. */
+  const noPanel=heroIsPoster&&!(fl&&fl.logoPanel===true);
   const PW=462,PH=693;
   const heroBox=heroIsPoster
     ?`<img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain">`
@@ -187,10 +190,10 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};word-spacing:.12em;color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
    <div style="position:absolute;left:50px;top:136px;width:${PW+12}px;height:${PH+12}px;padding:6px;box-sizing:border-box;background:${frame};box-shadow:0 10px 26px rgba(0,0,0,.3)">${heroBox}</div>
    <div style="position:absolute;left:546px;top:136px;width:220px;height:${PH+12}px;display:flex;flex-direction:column;gap:16px">
-     ${logoPanel}
+     ${noPanel?`<div style="flex:none;font:600 16px/1.25 ${E.body};letter-spacing:.16em;white-space:nowrap;text-transform:uppercase;color:${ACC};text-align:center;border-bottom:1px solid ${GOLD};padding-bottom:12px">Now showing, ${esc(fl&&fl.year||f.year)}</div>`:logoPanel}
      <div data-fit data-min="16" style="flex:none;height:170px;overflow:hidden;font-size:20px;text-align:center;color:${SOFT}">
        <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
-     <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:19px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
+     <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:${noPanel?24:19}px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
        <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(LK&&LK.toast?T.toast:fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
        ${toasts.map((t,i)=>`<div style="font:${E.bodyW} 1em/1.28 ${E.body};margin-bottom:.32em"><span style="color:${ACC};font-weight:700">${["I","II","III"][i]}.</span> ${esc(t)}</div>`).join("")}</div>
      ${cueB?`<div data-cue style="flex:none;border-top:1px solid ${GOLD};padding-top:8px;text-align:center;font:italic ${E.bodyW} 15px/1.3 ${E.body};color:${SOFT}"><div style="font:600 13px/1.2 ${E.body};font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.3em">Showtime</div>${esc(cueB)}</div>`:""}

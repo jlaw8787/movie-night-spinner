@@ -254,10 +254,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lp=logoPanel(ctx,{maxW:colW-36,maxH:74,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
     titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your suite ${esc(ctx.f.year)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
     style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
+  /* 15 Nov, Josh (call 5): under a poster (which carries the title) the logo plaque goes and the front desk note moves up into its place,
+     headed "In your suite, year". Flavour logoPanel:true keeps the plaque for a poster with no title. */
+  const noPlaque=ph.isPoster&&!(ctx.flavour&&ctx.flavour.logoPanel===true);
   const hero=`<div style="position:absolute;left:96px;top:${heroTop}px;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
-    ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${lp}`;
+    ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${noPlaque?"":lp}`;
   /* 15 Nov, Josh: the showtime cue reads "Wake-up call" under the front desk note and takes the place of the Dial 0 line, so it fits more often */
-  const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:1130px;height:196px;box-sizing:border-box;padding-bottom:4px;overflow:hidden;display:flex;flex-direction:column">
+  const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:${noPlaque?1004:1130}px;height:${noPlaque?322:196}px;box-sizing:border-box;padding-bottom:4px;overflow:hidden;display:flex;flex-direction:column">
+    ${noPlaque?`<div data-fs="13" style="flex:none;font:700 16px/1.15 ${B};letter-spacing:.24em;text-transform:uppercase;color:${K.acc};opacity:.75;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid ${rgba(K.acc,.6)}">In your suite, ${esc(ctx.f.year)}</div>`:""}
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>

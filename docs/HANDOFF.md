@@ -1637,3 +1637,14 @@ Josh went through the four "design calls for Josh" one at a time from before and
 Noticed, not changed: hotel, banquet and pub also print the logo twice (poster plus plaque), same pattern as call 1. Paranormal Activity's motel stamp prints blank.
 Rebased onto main 9efc9a2 (the next 100 films, then Mary and She's All That, landed mid-session; those two are hand-built and untouched): 30 new films use the changed layouts. Checks: check-print-text on all 295 films of bartab, lab, galley, kiosk, campfire, stadium, airline, motel, precinct, pub, hotel: pass. npm test pass. check-browser pass. Generated files rebuilt with build-data.
 Deployed on Josh's go: fast-forward merge to main fb434e4, Publish site run 43700462314 passed. The 11 changed layout files and films.js match main byte for byte live.
+
+## 15 Nov, 7:45pm to 8:30pm: calls 5 and 6, logo twice on hotel, banquet, pub and the blank motel stamp (branch design/logo-twice-stamp, not live)
+
+From the "Noticed, not changed" line above. Before and after mockups from wip/design-calls/mock.cjs (c5-*.js, c6-stamp.js patches; call5 and call6 jpgs are what Josh approved).
+- Call 5, logo twice: approved for all three. Flavour logoPanel:true keeps the logo for a poster with no title, same as call 1.
+  - hotel: under a poster the logo plaque goes; the front desk note moves up to 1004 (322 tall, was 196) headed "In your suite, year".
+  - banquet: under a poster the logo panel goes; "Now showing, year" heads the side column and the toasts start at 24px (fit shrinks them).
+  - pub: in poster mode the logo plate goes and the raffle ticket (Bush Tour Pass etc.) moves under the poster in its place, when it fits above the fine print; the pinned note gets the right column to itself and the board's grow-down test no longer reserves the ticket's 170px. All 9 pub films put the ticket under the poster. Hot Fuzz now keeps its showtime line.
+- Call 6, motel stamp: Paranormal Activity has one still, already on the front, so the no-photo-twice pass (app.js libPhotoPass step 3) hid the stamp photo. The stamp now carries a [data-nophoto] type stand-in (initials, "Air mail", house colour) and the pass shows it instead of blanking the frame. Any frame can use [data-nophoto] the same way.
+Noticed, not changed: motel's front also prints the logo plate over a poster that carries the title (Paranormal Activity), same pattern.
+Checks: check-print-text on all 97 films of hotel, banquet, pub, motel: pass. npm test pass. check-browser pass (one earlier run timed out waiting for #viewWheelBtn, two reruns passed). Generated files rebuilt with build-data. Spot check by eye: all 9 pub, 4 hotel, 4 banquet.

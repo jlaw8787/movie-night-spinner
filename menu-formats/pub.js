@@ -161,9 +161,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* 15 Nov: the film's notes before the poster's size. A long board (Phar Lap's nine dishes) printed names only beside the 590px poster,
      so the poster steps down to 550 then 510 (still whole at 2:3) to widen the board, and notes only drop if even 510 cannot hold them */
   /* then the house lines leave (HD, Josh's rule: house lines drop before any film note), then the cue; if nothing holds the notes the last pass is today's board */
+  /* 15 Nov, Josh (call 5): under a poster (which carries the title) the logo plate goes and the raffle ticket moves under the poster
+     in its place, when it fits above the fine print; the pinned note then has the right column to itself and the board may grow into it.
+     Flavour logoPanel:true keeps the plate for a poster with no title. */
+  const noLogo=PM&&fl.logoPanel!==true,RRW=470;
+  const rT0=fitType(prop.title,RRW-80,64,.6,30,18,1.05,2),rH0=14+18+6+rT0.n*rT0.z*1.05+6+prop.lines.length*20.8+14;
+  var under=false;
   geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,2,1],[510,700,2,1],[510,760,2,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
   /* the board may also grow down (and last of all the kitchen cue gives its room, NC) into the pinned note's spare room, but only while the note still holds its quote at the smallest size */
-  if(BHT>640){const bw=W-24-(24+PIWT+16+22),nq=Math.ceil(String(note.text).length*16*E.bcw/(bw-44))+1;if(H-74-(FH+26+BHT+20)-170-(90+nq*21.8+30)<0)continue}
+  under=noLogo&&FH+26+Math.round(PIWT*1.5)+16+22+38+rH0<=H-70;
+  if(BHT>640){const bw=W-24-(24+PIWT+16+22),nq=Math.ceil(String(note.text).length*16*E.bcw/(bw-44))+1;if(H-74-(FH+26+BHT+20)-(under?0:170)-(90+nq*21.8+30)<0)continue}
   var PX=24,PY=FH+26,PIW=PIWT,PIH=Math.round(PIWT*1.5),PB=8,PFW=PIW+2*PB,PFH=PIH+2*PB;
   var photoHtml=PM?`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PFW}px;height:${PFH}px;box-sizing:border-box;border:${PB}px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.3).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">
         <div style="position:absolute;left:50%;top:-${PB+6}px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.5)"></div></div>`
@@ -240,17 +247,18 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
 
   /* ===== right of the board: raffle ticket and pinned note ===== */
   const RX=BX,RW=BW;
-  const rT=fitType(prop.title,RW-80,64,.6,30,18,1.05,2);
-  const raffle=`<div style="position:relative;flex:none;width:${RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
+  const rT=under?rT0:fitType(prop.title,RW-80,64,.6,30,18,1.05,2);
+  if(noLogo)logoHtml="";
+  const raffle=`<div style="position:${under?`absolute;left:${PX+4}px;top:${ZY+38}px`:"relative"};flex:none;width:${under?RRW:RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
       <div style="width:62px;border-right:2px dashed rgba(33,26,18,.45);display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);white-space:nowrap;font:800 18px/1 ${body};letter-spacing:.1em">No. ${esc(num.padStart(4,"0"))}</div></div>
       <div style="flex:1;padding:14px 16px 14px;min-width:0">
         <div style="${caps(15,"#4a3a24",.16)}">${esc(fl.prop&&fl.prop.title?"Keep this":fam?"Friday raffle":T.raffle)}</div>
         <div style="font:${E.dw}${rT.z}px/1.05 ${disp};color:#1b150e;margin:6px 0">${esc(up(prop.title))}</div>
         ${prop.lines.map(l=>`<div style="font:500 16px/1.3 ${body};color:#3a2f22">${esc(trunc(l,28))}</div>`).join("")}
         </div></div>`;
-  const nh=NB-(BY+BH+20)-150-20;
+  const nh=NB-(BY+BH+20)-(under?0:150+20);
   const nT=fitType(note.text,RW-44,nh-90,E.bcw,21,16,1.36,9);
-  const noteHtml=`<div style="position:relative;flex:1;margin-top:22px;width:${RW}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
+  const noteHtml=`<div style="position:relative;flex:1;margin-top:${under?0:22}px;width:${RW}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
       <div style="position:absolute;left:50%;top:-8px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.4)"></div>
       <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
@@ -259,7 +267,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
   const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
 
-  const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;height:${NB-(BY+BH+20)}px;display:flex;flex-direction:column">${raffle}${noteHtml}</div>${fineHtml}</div>`;
+  const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}${under?raffle:""}<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;height:${NB-(BY+BH+20)}px;display:flex;flex-direction:column">${under?"":raffle}${noteHtml}</div>${fineHtml}</div>`;
   return {w:W,h:H,faces:[face]};
 };
 })();

@@ -1563,6 +1563,8 @@ function libPhotoPass(card,L,poster){
     const nx=spare.find(x=>!used.has(x));
     if(nx){used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx}
     /* the frame goes, never the text around it (takeaway's third panel held the drinks and went with its photo tile: Screwed) */
+    /* a frame with its own type stand-in (motel's stamp, call 6) shows that instead of going blank */
+    else if(i.parentElement&&i.parentElement.querySelector(":scope>[data-nophoto]")){i.style.visibility="hidden";i.parentElement.querySelector(":scope>[data-nophoto]").style.display="flex"}
     else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1&&!(e.parentElement.textContent||"").trim())e=e.parentElement;e.style.visibility="hidden"}});
   /* 4. a very thin frame (a window strip, a booth strip) shows only a sliver of a wide still, so a face there is always cut in half:
      give it an unused still with no faces in it (a place, not a person) */
