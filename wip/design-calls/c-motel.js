@@ -1,0 +1,2 @@
+const st=findIn('Bates Motel: Cabin');const r=st.getBoundingClientRect(),er=el.getBoundingClientRect();
+add(`<div style="position:absolute;z-index:9;left:${r.left-er.left}px;top:${r.bottom-er.top+22}px;width:${r.width}px"><div style="font:600 13px 'Archivo Narrow',${getComputedStyle(st).fontFamily.replace(/"/g,"'")};letter-spacing:.2em;color:#8a6a52;text-transform:uppercase">Note from the desk</div><div style="margin-top:5px;font:italic 400 15px/1.35 ${getComputedStyle(st).fontFamily.replace(/"/g,"'")};color:#2e2a26">${cue}</div></div>`);return 'ok'
