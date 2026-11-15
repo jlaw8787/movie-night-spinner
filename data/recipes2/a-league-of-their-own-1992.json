@@ -1,0 +1,711 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Oregon dairy grilled cheese bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Build the sandwiches up to 4 hours ahead and chill; toast to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread with mustard and pile the cheddar on half the slices, then close.",
+     "min": 5
+    },
+    {
+     "text": "Butter the outsides and toast in a pan over medium heat until golden and melting.",
+     "min": 8
+    },
+    {
+     "text": "Cut into fingers and serve with the relish.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Betty Spaghetti meatball sliders",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Make the meatballs and sauce up to 2 days ahead; reheat and build to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft slider rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix both minces with the breadcrumbs, egg, parmesan, half the garlic and salt, and roll into 16 balls.",
+     "min": 10
+    },
+    {
+     "text": "Brown the meatballs in the oil, then add the passata, oregano and remaining garlic.",
+     "min": 8
+    },
+    {
+     "text": "Simmer gently until the meatballs are cooked through and the sauce thickens.",
+     "min": 22
+    },
+    {
+     "text": "Tuck two meatballs and sauce into each roll with half a slice of provolone.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Betty Spaghetti lentil ball sliders (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Roll the balls up to a day ahead; bake and simmer to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "parmesan, finely grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft slider rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the lentils with the ricotta, breadcrumbs, parmesan and half the garlic, then roll into 16 balls.",
+       "min": 10
+      },
+      {
+       "text": "Bake on an oiled tray at 200C until firm.",
+       "min": 15
+      },
+      {
+       "text": "Warm the passata with the oregano and remaining garlic and roll the balls through it.",
+       "min": 10
+      },
+      {
+       "text": "Build the sliders with the provolone.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Splits catch ballpark franks",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Cook the onions up to 2 days ahead and reheat; grill the franks to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "split-top bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet pickle relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions slowly in the butter with a pinch of salt until soft and golden.",
+     "min": 20
+    },
+    {
+     "text": "Grill the franks, turning, until blistered and hot through.",
+     "min": 8
+    },
+    {
+     "text": "Toast the rolls in the pan.",
+     "min": 4
+    },
+    {
+     "text": "Fill and top with onions, mustard and relish.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Splits catch vegetarian franks",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Cook the onions up to 2 days ahead; grill the vegetarian sausages to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "split-top bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sweet pickle relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions slowly in the butter until soft and golden.",
+       "min": 20
+      },
+      {
+       "text": "Grill the vegetarian sausages until browned.",
+       "min": 8
+      },
+      {
+       "text": "Toast the rolls, fill and top.",
+       "min": 6
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Roadhouse night pulled pork rolls",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 240,
+   "make_ahead": "Cook the pork up to 2 days ahead and chill in its juices; reheat and pull to serve",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork shoulder, boneless",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "smoky barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft white rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "green cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple, cut in matchsticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the pork with the sugar, paprika, garlic powder and salt and sit it in a lidded pot with the apple juice.",
+     "min": 10
+    },
+    {
+     "text": "Cover and cook at 160C until it pulls apart easily.",
+     "min": 220
+    },
+    {
+     "text": "Shred the pork with two forks and stir through the barbecue sauce and some pan juices.",
+     "min": 10
+    },
+    {
+     "text": "Toss the cabbage and apple with the mayo, then fill the rolls with pork, slaw and pickles.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roadhouse night pulled jackfruit rolls (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Cook the jackfruit up to 2 days ahead; reheat and build to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins young jackfruit in brine, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "smoky barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft white rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "green cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple, cut in matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the jackfruit in the oil with the paprika and sugar, pressing it to shred.",
+       "min": 10
+      },
+      {
+       "text": "Add the barbecue sauce and a splash of water and simmer until sticky.",
+       "min": 20
+      },
+      {
+       "text": "Toss the slaw and fill the rolls with jackfruit, slaw and pickles.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "No crying in baseball candy bar slice",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Make up to 4 days ahead and keep in the fridge; slice cold",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain sweet biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "tin sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "salted roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the biscuit crumbs with half the butter and press into a lined slice tin.",
+     "min": 8
+    },
+    {
+     "text": "Stir the condensed milk, golden syrup, sugar and remaining butter over low heat until thick and golden.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the peanuts, pour over the base and bake at 170C for 10 minutes, then cool.",
+     "min": 12
+    },
+    {
+     "text": "Melt the chocolate with the oil, pour over and chill until set, then slice.",
+     "min": 13
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Don't tell Jimmy peach shandy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the beer and nectar well; pour to order",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 375ml bottles lager",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "peach nectar, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Half fill 4 chilled glasses with the peach nectar.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with the lager and add a squeeze of lemon.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Don't tell Jimmy peach lemonade (alcohol-free)",
+     "course": "d",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill the nectar and soda well; pour to order",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "peach nectar, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "lemonade, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Half fill 4 glasses of ice with the peach nectar.",
+       "min": 2
+      },
+      {
+       "text": "Top with lemonade and a squeeze of lemon.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
