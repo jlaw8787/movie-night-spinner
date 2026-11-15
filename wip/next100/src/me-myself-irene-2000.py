@@ -8,7 +8,7 @@ FILM = {"id": "Me, Myself & Irene (2000)", "theme": "diner",
 FORMAT = {"format": "motel", "era": "2000s", "tone": "playful"}
 PALETTE = {"dark": "#1b2430", "accent": "#e0552e"}
 SERIES = []
-FLAVOUR = {"venue": "The Motel Where They Left Whitey", "sign": "Between Massena and Rhode Island",
+FLAVOUR = {"venue": "Where They Left Whitey", "sign": "Between Massena and Rhode Island",
            "note": {"text": "Charlie's like origami, he folds under pressure.", "by": "Hank Evans", "kind": "quote"},
            "winks": ["Hank, Charlie's other half", "Six bullets, one lucky cow", "Whitey and the lawn dart", "The triplets in a police helicopter", "A thumb, eaten by a fish"],
            "prop": {"kind": "card", "title": "Room Key", "lines": ["Charlie and Irene", "a pill every six hours"]},
