@@ -69,7 +69,7 @@
   ],
   "overall": 3.6,
   "flat": false,
-  "done": true,
+  "done": false,
   "reworked": "2026-11-15",
   "changed": [
    "Bottom strip: stock 'Out front / Sky / Wind / Temp / Last orders' now 'Greetings, Starfighter' and 'Last orders: Store's closed, mister'",
@@ -88,6 +88,10 @@
    "look": 3,
    "overall": 3.4
   },
-  "rescored": "2026-11-15"
+  "rescored": "2026-11-15",
+  "reworked5": "2026-11-15",
+  "changed5": [
+   "Still strip under the poster now picks from four wide stills with no faces (trailer in viewfinder, Gunstar lasers, mothership, Rylan launch pad); render shows the launch pad"
+  ]
  }
 }

@@ -13,7 +13,7 @@ FLAVOUR = {"venue": "The Twelve Oaks Barbecue", "sign": "The Wilkes barbecue, Ge
            "winks": ["Laced in before the barbecue", "Rhett's bid in gold", "A dress from the green drapes", "Ashley and Melanie, just engaged", "Frankly, my dear"],
            "prop": {"kind": "ticket", "title": "The Monster Bazaar", "lines": ["Atlanta, opening reel", "Bid: $150 in gold"]},
            "number": "12", "year": "1861",
-           "words": {"From the host": "From a guest", "The Twelve Oaks Barbecue, laid for tonight": "Laced in before the barbecue at Twelve Oaks"}}
+           "words": {"From the host": "From a guest", "The Twelve Oaks Barbecue, laid for tonight": "Scarlett and her father under the tree at Tara"}}
 HOUSE = {"s": {"n": "Hot corn muffins with honey butter", "note": "Rhett heard it all from behind the sofa.", "meat": False},
          "d": {"n": "Iced tea with peach and mint", "note": "For a long afternoon on the Twelve Oaks lawn.", "alc": False}}
 DISHES = [

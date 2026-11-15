@@ -38,3 +38,11 @@ Not changed: venue stays "Compton, 1986" (the checker's verdict, not one of its 
 
 ## Stills
 No new still-block or still-pick entries; panelStill uses a still already picked.
+
+## Fix (15 Nov, round 4)
+- Venue "Compton, 1986" (a place) now "Doo To's", the Compton club where Dre and Yella's World Class Wreckin' Cru play and Cube first takes the stage. Truck layout kept (the truck works the club night out front).
+  Sign now "Compton club night, Dre and Yella on the decks".
+  Sources: Universal's production notes (press kit .doc, opened): "Ice Cube taking the stage with Dr. Dre and DJ Yella's World Class Wreckin' Cru at Compton club Doo To's" and "stages at venues such as Doo To's and Skateland".
+  https://www.cinemart.cz/wp-content/uploads/download-manager-files/STRAIGHT%20OUTTA%20COMPTON%20Production%20Notes_APPROVED.doc
+  Wikipedia (accuracy section): Cube and Dre's first show "takes place at local club. Dre is DJing there with Yella"; cast: Lonzo Williams, club owner. https://en.wikipedia.org/wiki/Straight_Outta_Compton_(film)
+- No still changes.

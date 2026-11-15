@@ -36,3 +36,10 @@ No still-pick entries.
 - Swapped Taylor's Spam musubi for "Brock Hudson's Real World nachos" (vegetarian, new recipe). Wikipedia: Taylor cheated on Zack with reality TV star Brock Hudson and broke up with him; Wikiquote: Brock is from The Real World. https://en.wikipedia.org/wiki/She%27s_All_That https://en.wikiquote.org/wiki/She%27s_All_That
 - "Vapor and spam" kept as wink one ("Taylor calls Laney vapor and spam", Wikiquote), in place of "Prom queen in six weeks", which now prints on the front in place of the stock "Wear your dancing shoes" (FLAVOUR words).
 - Veg alt notes shortened to match ("Crumbed eggplant, provolone.", "Black beans, chipotle slaw.").
+
+## Fix (15 Nov, round 4)
+- Every dish note now prints a full short food line after a shorter film line, all within the prom card's one-line cut (checked on the render and in check-print-text):
+  "Laney's falafel job. Falafel in pita with tahini.", "Taylor dumps Zack. Black bean and cheddar nachos.", "The hacky sack act. Meatball and provolone rolls.",
+  "Laney says yes to the beach. Grilled fish tacos.", "Laney on the stairs. Berry shortcake with cream.", "Foghorn for Dean. Pineapple and cranberry punch."
+- Veg alt notes made full lines too: "Crumbed eggplant and provolone rolls.", "Black bean tacos with slaw."
+- No new facts; scenes as before (Wikipedia, Wikiquote, ET Online). No still changes.

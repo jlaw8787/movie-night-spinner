@@ -1,4 +1,5 @@
-# Straight Outta Compton (2015). Truck layout, a street kitchen in Compton, 1986 (the film's starting point, named plainly).
+# Straight Outta Compton (2015). Truck layout, a truck outside Doo To's, the Compton club where Dre and Yella DJ and Cube first takes the stage
+# (club named in Universal's production notes; Wikipedia: Cube and Dre's first show is at a local club where Dre DJs with Yella, Lonzo Williams the owner).
 # Sources: Wikipedia plot (Straight_Outta_Compton_(film)), Wikiquote (Straight_Outta_Compton_(film)): "Speak a little truth and people lose their minds",
 # Cube's "You they bread and butter", "We N.W.A. They Ruthless.", Eazy liking Afterschool Specials.
 FILM = {"id": "Straight Outta Compton (2015)", "theme": "street",
@@ -8,7 +9,7 @@ FILM = {"id": "Straight Outta Compton (2015)", "theme": "street",
 FORMAT = {"format": "truck", "era": "1980s", "tone": "gritty"}
 PALETTE = {"dark": "#141414", "accent": "#c9a227"}
 SERIES = []
-FLAVOUR = {"venue": "Compton, 1986", "sign": "Compton, California. Where N.W.A started",
+FLAVOUR = {"venue": "Doo To's", "sign": "Compton club night, Dre and Yella on the decks",
            "note": {"text": "Speak a little truth and people lose their minds.", "by": "Ice Cube", "kind": "quote"},
            "winks": ["Eazy dodging the 1986 police raid", "Jerry Heller's management deal", "Cube's diss track No Vaseline", "Suge Knight and Death Row", "Dre making The Chronic"],
            "prop": {"kind": "slip", "title": "Ruthless Records", "lines": ["Contract: not signed", "Get a lawyer first"]},

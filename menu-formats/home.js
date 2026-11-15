@@ -117,7 +117,7 @@ window.MENU_FORMATS.home=function(ctx){
   const fl=ctx.flavour||{},nt=fl.note&&fl.note.text?fl.note:{text:"Dinner is on the table at seven. Plates in the sink before the film starts, and no talking in the good bits.",by:"The cook"};
   const venue=fl.venue||"Family Kitchen",sign=fl.sign||"Home cooking, film night";
   const winks=(fl.winks&&fl.winks.length?fl.winks:["Popcorn after mains","Napkins by the couch","Phones off when the lights go down"]).slice(0,5).map(w=>M.dry(w,fam));
-  const num=M.num(fl.number,f.year),/* 7 Nov: a film whose number is its story year (Selena, 1995) stamps that year, not the release year */sy=/^(19|20)\d\d$/.test(String(fl.number||""))&&Math.abs(+fl.number-(+f.year||0))<=5?String(fl.number):String(f.year||""),yy=sy.slice(-2);
+  const num=M.num(fl.number,f.year),/* 7 Nov: a film whose number is its story year (Selena, 1995) stamps that year, not the release year */sy=/^(19|20)\d\d$/.test(String(fl.number||""))&&Math.abs(+fl.number-(+f.year||0))<=5?String(fl.number):String(f.year||""),yy=sy.slice(-2);/* 15 Nov: optional per film, flavour.stamp prints a story-true stamp on the TV still and the recipe card in place of the year (The Truman Show: DAY 10,909) */
   const ink=E.ink,acc=M.accent(ctx.palette,E.card,E.acc,3.4),dark=M.darkOf(ctx.palette,"#15161a");
   const st=ctx.stills||[],pos=M.poster(ctx)?ctx.img(M.poster(ctx),"w780"):"";
   const st0=st[0]?ctx.img(st[0],"w1280"):"",hero=pos||st0,heroIsPoster=!!pos,second=st[1]?ctx.img(st[1],"w1280"):(st0||pos),secIsPoster=!st[1]&&!st0&&!!pos;
@@ -135,7 +135,7 @@ window.MENU_FORMATS.home=function(ctx){
      <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:${E.pr.ir};background:#222">
       ${src&&isP?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(16px) brightness(.55)"><img src="${src}" crossorigin="anonymous" alt="" style="position:relative;display:block;width:100%;height:100%;object-fit:contain">`:src?`<img src="${src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
       <div style="position:absolute;inset:0;background:${isP?`linear-gradient(160deg,rgba(255,255,255,.1),transparent 30%)`:`radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%),linear-gradient(160deg,rgba(255,255,255,${E.stamp?.16:.05}),transparent 40%)`}"></div>
-      ${E.stamp&&!isP?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">'${x(yy)} 10 26</div>`:""}
+      ${E.stamp&&!isP?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">${fl.stamp?x(fl.stamp):`'${x(yy)} 10 26`}</div>`:""}
      </div>
      ${cap&&E.cap?`<div style="position:absolute;left:0;right:0;bottom:2px;text-align:right;padding-right:26px;font:30px/1.1 ${SIG};color:#3a3326">${x(cap)}</div>`:""}
    </div>`;
@@ -217,7 +217,7 @@ window.MENU_FORMATS.home=function(ctx){
    </div>
    ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
    ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
-   ${rcard(cardB,420,548,T.rot*.5,sy,`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
+   ${rcard(cardB,420,548,T.rot*.5,fl.stamp||sy,`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };
 /* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */

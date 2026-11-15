@@ -30,7 +30,7 @@
    "Swap the stock 'Wear your dancing shoes' for 'Prom queen in six weeks'."
   ],
   "flat": true,
-  "done": true,
+  "done": false,
   "reworked": "2026-11-15",
   "changed": [
    "Every dish line now prints its food: each film line cut short with a short food line after it (e.g. 'Laney's falafel shift. Tahini, warm pita.')",
@@ -46,6 +46,10 @@
    "look": 3,
    "overall": 3.0
   },
-  "rescored": "2026-11-15"
+  "rescored": "2026-11-15",
+  "reworked5": "2026-11-15",
+  "changed5": [
+   "Every dish note now prints a full short food line that fits the card: 'Laney's falafel job. Falafel in pita with tahini.', 'Taylor dumps Zack. Black bean and cheddar nachos.', 'The hacky sack act. Meatball and provolone rolls.', 'Laney says yes to the beach. Grilled fish tacos.', 'Laney on the stairs. Berry shortcake with cream.', 'Foghorn for Dean. Pineapple and cranberry punch.'"
+  ]
  }
 }

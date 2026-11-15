@@ -32,3 +32,13 @@ Sources: Wikiquote raw (https://en.wikiquote.org/wiki/The_Last_Starfighter), Wik
 
 ## Stills
 No still-block or still-pick entries added.
+
+## Fix (15 Nov, round 4)
+- The still strip under the poster cropped a sliver of an alien face. still-pick now holds only wide stills that read in a thin strip, no faces. The render shows the Rylan launch pad.
+
+## Stills
+Added to data/still-pick.json "The Last Starfighter (1984)":
+- /ovuyCUpUZlMKWFusppmbbR2HUyu.jpg (the trailer in a green viewfinder)
+- /oez55ZGVrRjMYQt0TNfzCIRndqm.jpg (Gunstar firing red lasers)
+- /3VckXnpkvVvtnc65n4D47FdvfhK.jpg (the Ko-Dan mothership)
+- /AfcFbcV4BROcYAAQ7kFKWpc9QuZ.jpg (the Rylan launch pad at night)

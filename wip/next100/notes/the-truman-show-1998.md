@@ -43,3 +43,7 @@ No still-pick entries.
 - Pizza line "The guards watching want another slice" now "A guard offers another slice at the end" (Wikiquote last lines: one guard offers, the other says "No, I'm OK."). https://en.wikiquote.org/wiki/The_Truman_Show
 - TV still date stamp "'98 10 26" (release year) now prints "DAY 10,909" through FLAVOUR words (the home layout has no year override; words remap is per film). Day count from the film's own screen, Wikipedia poster description. https://en.wikipedia.org/wiki/The_Truman_Show
 - Not changed: the recipe card label still prints 1998 (not flagged); macaroni and fish pie notes still print short (vibe 3.8, not in scope).
+
+## Fix (15 Nov, round 4)
+- The recipe card head printed the release year 1998. New optional per-film flavour "stamp" in menu-formats/home.js prints a story-true stamp on the TV still and the recipe card; Truman's is "DAY 10,909" (day count on the film's own screen, Wikipedia). The old words remap for "'98 10 26" is gone, since the stamp covers it.
+- No still changes. Not changed: the macaroni and fish pie notes still print short (vibe 3.8, not flat).
