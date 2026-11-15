@@ -55,7 +55,7 @@
    ],
    [
     "Riviera club sandwiches with fries",
-    "Bill Murray just played nine holes",
+    "Bill Murray's one regret: Garfield, maybe",
     "Bake the fries at 220C until crisp. Fry the bacon until crisp. Toast the bread and spread each slice with mayonnaise. Layer turkey, lettuce, bacon and tomato over three slices per sandwich. Pin with toothpicks, cut into triangles and serve with the fries.",
     [
      "12 slices white sandwich bread@Bakery",
@@ -72,7 +72,7 @@
   "W": [
    [
     "Deep-fried Twinkies with vanilla ice cream",
-    "The last Twinkies in the universe",
+    "Ya spongy yellow delicious bastards",
     "Whisk the flour, egg and milk into a smooth batter. Skewer the frozen Twinkies and dip them in the batter. Fry at 180C for 2 to 3 minutes until golden, then drain. Dust with icing sugar and serve with ice cream.",
     [
      "8 Hostess Twinkies, frozen@Pantry",
@@ -133,7 +133,14 @@
    ]
   },
   "number": "32",
-  "words": {}
+  "words": {},
+  "arcade": {
+   "scores": [
+    "COL",
+    "TAL",
+    "YOU"
+   ]
+  }
  },
  "film-palette": {
   "dark": "#141414",
@@ -162,10 +169,10 @@
   ],
   [
    "It all started with mad cow disease",
-   "Bill Murray just played nine holes"
+   "Bill Murray's one regret: Garfield, maybe"
   ],
   [
-   "The last Twinkies in the universe"
+   "Ya spongy yellow delicious bastards"
   ],
   [
    "Time to nut up or shut up"
@@ -222,7 +229,7 @@
    },
    {
     "n": "Riviera club sandwiches with fries",
-    "note": "Bill Murray just played nine holes. Turkey, bacon and tomato in toasted triple decks.",
+    "note": "Bill Murray's one regret: Garfield, maybe. Turkey, bacon and tomato in toasted triple decks.",
     "how": "Bake the fries at 220C until crisp. Fry the bacon until crisp. Toast the bread and spread each slice with mayonnaise. Layer turkey, lettuce, bacon and tomato over three slices per sandwich. Pin with toothpicks, cut into triangles and serve with the fries.",
     "shop": [
      "12 slices white sandwich bread@Bakery",
@@ -239,7 +246,7 @@
   "w": [
    {
     "n": "Deep-fried Twinkies with vanilla ice cream",
-    "note": "The last Twinkies in the universe. Battered hot and dusted with icing sugar.",
+    "note": "Ya spongy yellow delicious bastards. Battered hot and dusted with icing sugar.",
     "how": "Whisk the flour, egg and milk into a smooth batter. Skewer the frozen Twinkies and dip them in the batter. Fry at 180C for 2 to 3 minutes until golden, then drain. Dust with icing sugar and serve with ice cream.",
     "shop": [
      "8 Hostess Twinkies, frozen@Pantry",
@@ -1067,7 +1074,7 @@
     "veg": "It all started with mad cow disease. Two field mushroom stacks and American cheese."
    },
    "Riviera club sandwiches with fries": {
-    "veg": "Bill Murray just played nine holes. Egg salad and tomato in toasted triple decks."
+    "veg": "Bill Murray's one regret: Garfield, maybe. Egg salad and tomato in toasted triple decks."
    }
   }
  },
@@ -1080,7 +1087,7 @@
   },
   "d": {
    "n": "Pacific Playland blue slushies",
-   "note": "Every machine switched on.",
+   "note": "Rule 3: Beware of bathrooms.",
    "alc": false
   }
  }

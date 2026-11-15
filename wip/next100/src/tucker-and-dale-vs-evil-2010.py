@@ -13,8 +13,8 @@ FLAVOUR = {"venue": "Tucker and Dale's Vacation Home", "sign": "Lakefront cabin,
            "winks": ["The Memorial Day Massacre", "Jangers the dog", "His bowling fingers", "Digging the outhouse hole", "The loose beam"],
            "prop": {"kind": "tag", "title": "Vacation home", "lines": ["Lakefront cabin", "Just a little dusty"]},
            "number": "20",
-           "words": {"Session of": "Fishing season", "Now showing": "Welcome to", "Scribbled on the bunk wall": "Told to the officer", "Badges up for grabs": "Talk around the fire", "Mess hall mains": "Cabin mains", "Canteen drinks": "From the esky", "Trail snacks": "Porch snacks", "Bugle call": "Dinner bell", "Ask the cook about": "Ask Tucker about"}}
-HOUSE = {"s": {"n": "Beer nuts by the fire", "note": "The cabin's just a little dusty.", "meat": False},
+           "words": {"Session of": "Fishing season", "Now showing": "Welcome to", "Scribbled on the bunk wall": "Told to the officer", "Badges up for grabs": "Talk around the fire", "Mess hall mains": "Cabin mains", "Canteen drinks": "From the esky", "Trail snacks": "Porch snacks", "Bugle call": "Dinner bell", "Ask the cook about": "Ask Dale about"}}
+HOUSE = {"s": {"n": "Porch board of beer nuts, jerky and pickles", "note": "The cabin's just a little dusty.", "meat": True},
          "d": {"n": "Sweet iced tea by the jar", "note": "Sipped slow on the porch.", "alc": False}}
 DISHES = [
  {"n": "Lake catfish bites with comeback sauce", "course": "s",

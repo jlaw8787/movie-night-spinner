@@ -10,15 +10,15 @@ PALETTE = {"dark": "#121212", "accent": "#b5302a"}
 SERIES = []
 FLAVOUR = {"venue": "Justiceville Soup Kitchen", "sign": "Soup at the church. Everyone eats.",
            "note": {"text": "I have come here to chew bubble gum and kick ass... and I'm all out of bubble gum.", "by": "Nada", "kind": "quote"},
-           "winks": ["Work 8 hours", "Signs that say obey", "Dollars say this is your god", "Sleep 8 hours", "Stay asleep"],
+           "winks": ["Work 8 hours", "Signs that say obey", "Dollars say this is your god", "Sleep 8 hours", "Watch TV"],
            "prop": {"kind": "Resistance note", "title": "Cable 54", "lines": ["Transmitter on the roof", "Shut off the signal"]},
            "number": "54",
            "words": {"Overheard at lunch": "On every billboard"}}
-HOUSE = {"s": {"n": "Day-old bread from the church", "note": "Free with every bowl.", "meat": False},
-         "d": {"n": "Black coffee in a tin mug", "note": "Refills while the pot lasts.", "alc": False}}
+HOUSE = {"s": {"n": "Day-old bread from the church", "note": "Well, they ain't from Cleveland.", "meat": False},
+         "d": {"n": "Black coffee in a tin mug", "note": "He who has the gold makes the rules.", "alc": False}}
 DISHES = [
  {"n": "Soup kitchen beef and barley soup with crusty bread", "course": "s",
-  "line": "Supper at the church soup kitchen",
+  "line": "Gilbert says the world needs a wake-up call",
   "note": "Beef chuck slow-cooked with pearl barley.",
   "prep": 20, "cook": 100, "ahead": "Make the soup up to 3 days ahead; it thickens, so loosen with stock when you reheat",
   "ing": [(600, "g", "beef chuck, cut in 2cm pieces", "Meat"), (2, "tbsp", "olive oil", "Pantry"), (1, "", "brown onion, diced", "Produce"), (2, "", "carrots, diced", "Produce"), (2, "", "celery sticks, diced", "Produce"), (2, "", "garlic cloves, crushed", "Produce"), (2, "tbsp", "tomato paste", "Pantry"), (150, "g", "pearl barley, rinsed", "Pantry"), (1.5, "l", "beef stock", "Pantry"), (2, "", "bay leaves", "Spices"), (1, "", "crusty loaf", "Bakery")],

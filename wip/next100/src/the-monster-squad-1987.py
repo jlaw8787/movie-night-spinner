@@ -10,12 +10,12 @@ PALETTE = {"dark": "#15171f", "accent": "#6aa83a"}
 SERIES = []
 FLAVOUR = {"venue": "The Monster Squad Clubhouse", "sign": "Treehouse meeting. Members only.",
            "note": {"text": "Wolf Man's got nards!", "by": "Horace", "kind": "quote"},
-           "winks": ["Van Helsing's diary, in German", "The monster test", "The amulet at midnight", "Eugene's letter to the Army", "Wolf Man can not drive a car"],
+           "winks": ["Van Helsing's diary, in German", "Scary German Guy", "The monster test", "The amulet at midnight", "Wolf Man can not drive a car"],
            "prop": {"kind": "card", "title": "The Monster Squad", "lines": ["Sean Crenshaw", "Club leader"]},
            "number": "12",
            "words": {}}
 HOUSE = {"s": {"n": "Garlic butter knots at the door", "note": "Vampires wait outside.", "meat": False},
-         "d": {"n": "Root beer from the club esky", "note": "Members only. Ask Sean.", "alc": False}}
+         "d": {"n": "Root beer from the club esky", "note": "Members only. Pass the monster test.", "alc": False}}
 DISHES = [
  {"n": "Garlic pizza scrolls with three cheeses", "course": "s",
   "line": "Garlic pizza straight to a vampire's face",
@@ -24,7 +24,7 @@ DISHES = [
   "ing": [(1, "", "whole garlic bulb", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (2, "", "sheets frozen puff pastry, thawed", "Frozen"), (60, "g", "butter, softened", "Dairy"), (3, "tbsp", "tomato paste", "Pantry"), (1, "tsp", "dried oregano", "Spices"), (150, "g", "mozzarella, grated", "Dairy"), (40, "g", "parmesan, finely grated", "Dairy"), (0.5, "cup", "flat-leaf parsley, chopped", "Produce")],
   "steps": [("Cut the top off the garlic bulb, drizzle with oil, wrap in foil and roast at 200C until soft.", 15), ("Squeeze the garlic out and mash it with the butter and parsley.", 3), ("Spread each pastry sheet with tomato paste, then the garlic butter, oregano and cheeses.", 5), ("Roll up tightly, cut into 2cm rounds and lay them flat on a lined tray.", 7), ("Bake at 200C until puffed, golden and bubbling.", 15)]},
  {"n": "Black Lagoon fish bites with tartare", "course": "s",
-  "line": "Horace takes down the Gill-man",
+  "line": "Gill-man down. My name is Horace",
   "note": "Crisp flathead with tartare and lemon.",
   "prep": 15, "cook": 15, "ahead": "Make the tartare up to 2 days ahead; crumb and fry the fish to serve",
   "ing": [(500, "g", "flathead fillets, cut in bite-size pieces", "Seafood"), (75, "g", "plain flour", "Pantry"), (2, "", "eggs", "Dairy"), (120, "g", "panko breadcrumbs", "Pantry"), (250, "ml", "vegetable oil, for frying", "Pantry"), (125, "g", "whole-egg mayonnaise", "Pantry"), (2, "tbsp", "capers, chopped", "Pantry"), (2, "tbsp", "gherkins, chopped", "Pantry"), (1, "", "lemon", "Produce")],
@@ -50,12 +50,12 @@ DISHES = [
   "alt": {"veg": {"n": "Scary German Guy's vegetarian bratwurst with kraut", "note": "Vegetarian bratwurst with kraut and hot mustard.", "prep": 10, "cook": 25, "ahead": "Warm the sauerkraut with the onion up to a day ahead; grill the vegetarian sausages to serve",
                   "ing": [(8, "", "vegetarian sausages", "Frozen"), (1, "", "brown onion, sliced", "Produce"), (20, "g", "butter", "Dairy"), (500, "g", "jar sauerkraut, drained", "Pantry"), (1, "tsp", "caraway seeds", "Spices"), (8, "", "crusty bread rolls", "Bakery"), (4, "tbsp", "hot German mustard", "Pantry")],
                   "steps": [("Soften the onion in the butter, add the sauerkraut and caraway and warm through.", 15), ("Grill the vegetarian sausages until browned.", 10), ("Build the rolls and finish with mustard.", 5)]}}},
- {"n": "Frankenstein's mint ice cream sandwiches", "course": "w",
-  "line": "Phoebe's goodbye gift to Frankenstein",
-  "note": "Mint ice cream between choc-chip cookies.",
-  "prep": 20, "cook": 15, "ahead": "Bake the cookies and build the sandwiches up to a week ahead; keep frozen",
-  "ing": [(125, "g", "butter, softened", "Dairy"), (150, "g", "brown sugar", "Pantry"), (1, "", "egg", "Dairy"), (1, "tsp", "vanilla extract", "Pantry"), (200, "g", "plain flour", "Pantry"), (0.5, "tsp", "bicarbonate of soda", "Pantry"), (150, "g", "dark choc chips", "Pantry"), (1, "l", "mint choc-chip ice cream", "Frozen")],
-  "steps": [("Beat the butter and sugar until pale, then beat in the egg and vanilla.", 5), ("Stir in the flour, bicarb and choc chips, roll into 16 balls and flatten on lined trays.", 8), ("Bake at 180C until golden at the edges, then cool completely.", 15), ("Sandwich a thick scoop of ice cream between two cookies, press and freeze until firm.", 7)]},
+ {"n": "Last-chance-for-more apple pie with cream", "course": "w",
+  "line": "Scary German Guy serves the boys pie",
+  "note": "Cinnamon apple pie with thick cream.",
+  "prep": 30, "cook": 50, "ahead": "Bake the pie up to a day ahead; warm through and serve with the cream",
+  "ing": [(2, "", "sheets frozen shortcrust pastry, thawed", "Frozen"), (6, "", "granny smith apples, peeled and sliced", "Produce"), (100, "g", "caster sugar", "Pantry"), (1, "tsp", "ground cinnamon", "Spices"), (1, "tbsp", "cornflour", "Pantry"), (1, "", "lemon, juiced", "Produce"), (30, "g", "butter", "Dairy"), (1, "", "egg, beaten", "Dairy"), (300, "ml", "thick cream", "Dairy")],
+  "steps": [("Cook the apples with the sugar, cinnamon, lemon juice and butter until just tender, then stir in the cornflour and cool.", 15), ("Line a 23cm pie dish with one pastry sheet and fill with the apples.", 5), ("Lay over the second sheet, crimp the edges, cut steam holes and brush with egg.", 5), ("Bake at 200C until deep golden and bubbling, then rest 15 minutes.", 45), ("Cut big wedges and serve with thick cream.", 3)]},
  {"n": "Concentrated goodness cherry cola floats", "course": "d",
   "line": "The amulet of concentrated goodness",
   "note": "Cherry cola over vanilla ice cream.",

@@ -27,3 +27,9 @@ Wikiquote (https://en.wikiquote.org/wiki/Zombieland):
 The arcade's "Now playing" still and the kit's front panel were both the poster group shot. Added:
 - data/still-block.json "Zombieland (2009)": /oihWVx3imvRKujnGmSDYhfG1gI5.jpg, /oY25KMBlYlcgACBwGta3HUwX5Qq.jpg, /mtpohJTC6CbNYL0Ltqq7oxayqjv.jpg, /xlZlSylzQYzKS0CzxjJaF7YxvX5.jpg, /oD6mFTHUIBIJlXoc72ZRSLDpMv3.jpg, /bnCE0Tj5l4fVYJqXtjbBRE15Zq8.jpg, /rn7tltSgqTksxPF2Rd05BXpgIz3.jpg, /e4Bq8WDuFYwQVvD8ueZHzajrgmJ.jpg (all the poster's four-shot with the chainsaw and the ferris wheel).
 - data/still-pick.json "Zombieland (2009)": /qQ93XZ5lqOyMd1MrqFftCJGsG1A.jpg (the four at Pacific Playland at night, the "Now playing" still), /dxytfkVx2p0Q3YUdki20oTbQXn3.jpg (Tallahassee and Bill Murray at the house), /v3qJV7GwFrhSbRu6FuyQXLxMaYB.jpg (Little Rock at the park), /5ysGQkMluC1cfctPo58ArrgEelK.jpg (Bill Murray in zombie make-up), /xvlFnRXMEXLnyc9VlETmOkZoKcr.jpg (Columbus and Tallahassee in a shop), /aoSpIvujFibJPtNMcZnLlHYUhhu.jpg (a zombie chase).
+
+## Fix (15 Nov)
+- Twinkie line: "Ya spongy yellow delicious bastards". Wikiquote, Tallahassee at the fried-Twinkie stand: "Where are ya, ya spongy yellow delicious bastards?!" https://en.wikiquote.org/wiki/Zombieland
+- Club sandwich line: "Bill Murray's one regret: Garfield, maybe". Wikiquote: Little Rock asks about regrets; Bill Murray: "Garfield, maybe."
+- Slushie house note: "Rule 3: Beware of bathrooms." Wikiquote, Columbus voiceover.
+- High scores: FLAVOUR["arcade"]["scores"] = COL, TAL, YOU (was COL, CPU, YOU). The arcade takes three letters, so BUCK could not print.

@@ -12,9 +12,10 @@ FLAVOUR = {"venue": "Pacific Playland", "sign": "Rides on. Lights on. Los Angele
            "winks": ["Rule 1: Cardio", "Rule 2: Double tap", "Rule 4: Seatbelts", "Rule 17: Be a hero", "Rule 31: Check the back seat"],
            "prop": {"kind": "ticket", "title": "Pacific Playland", "lines": ["Supposedly zombie free", "Drop tower this way"]},
            "number": "32",
-           "words": {}}
+           "words": {},
+           "arcade": {"scores": ["COL", "TAL", "YOU"]}}
 HOUSE = {"s": {"n": "Free Parking buttered popcorn", "note": "The best thing about Zombieland.", "meat": False},
-         "d": {"n": "Pacific Playland blue slushies", "note": "Every machine switched on.", "alc": False}}
+         "d": {"n": "Pacific Playland blue slushies", "note": "Rule 3: Beware of bathrooms.", "alc": False}}
 DISHES = [
  {"n": "Enjoy the little things mini corn dogs", "course": "s",
   "line": "Rule 32 is enjoy the little things",
@@ -44,7 +45,7 @@ DISHES = [
                   "ing": [(8, "", "large field mushrooms", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (8, "", "slices American cheese", "Dairy"), (4, "", "soft potato buns", "Bakery"), (4, "", "dill pickles, sliced", "Pantry"), (4, "tbsp", "whole-egg mayonnaise", "Pantry"), (2, "tbsp", "tomato sauce", "Pantry")],
                   "steps": [("Mix the mayonnaise and tomato sauce.", 3), ("Press the mushrooms flat in a hot oiled pan and cook until browned on both sides.", 10), ("Melt cheese on top, stack two per bun and add pickles and sauce.", 7)]}}},
  {"n": "Riviera club sandwiches with fries", "course": "m",
-  "line": "Bill Murray just played nine holes",
+  "line": "Bill Murray's one regret: Garfield, maybe",
   "note": "Turkey, bacon and tomato in toasted triple decks.",
   "prep": 20, "cook": 30, "ahead": "Cook the bacon and slice the fillings up to 4 hours ahead; toast and build to serve",
   "ing": [(12, "", "slices white sandwich bread", "Bakery"), (300, "g", "shaved roast turkey", "Deli"), (8, "", "rashers bacon", "Deli"), (2, "", "tomatoes, sliced", "Produce"), (1, "", "baby cos lettuce", "Produce"), (6, "tbsp", "whole-egg mayonnaise", "Pantry"), (1, "kg", "frozen shoestring fries", "Frozen"), (16, "", "toothpicks", "Pantry")],
@@ -53,7 +54,7 @@ DISHES = [
                   "ing": [(12, "", "slices white sandwich bread", "Bakery"), (6, "", "eggs", "Dairy"), (6, "tbsp", "whole-egg mayonnaise", "Pantry"), (2, "tbsp", "chives, chopped", "Produce"), (2, "", "tomatoes, sliced", "Produce"), (1, "", "baby cos lettuce", "Produce"), (1, "kg", "frozen shoestring fries", "Frozen"), (16, "", "toothpicks", "Pantry")],
                   "steps": [("Bake the fries at 220C.", 25), ("Boil the eggs for 9 minutes, cool and mash with mayonnaise and chives.", 12), ("Toast the bread and build the triple decks with egg salad, lettuce and tomato.", 10), ("Pin, cut and serve.", 3)]}}},
  {"n": "Deep-fried Twinkies with vanilla ice cream", "course": "w",
-  "line": "The last Twinkies in the universe",
+  "line": "Ya spongy yellow delicious bastards",
   "note": "Battered hot and dusted with icing sugar.",
   "prep": 10, "cook": 10, "ahead": "Freeze the Twinkies for at least 2 hours ahead; batter and fry to serve",
   "ing": [(8, "", "Hostess Twinkies, frozen", "Pantry"), (8, "", "short bamboo skewers", "Pantry"), (150, "g", "self-raising flour", "Pantry"), (1, "", "egg", "Dairy"), (200, "ml", "milk", "Dairy"), (1, "l", "vegetable oil, for frying", "Pantry"), (2, "tbsp", "icing sugar", "Pantry"), (500, "ml", "vanilla ice cream", "Frozen")],

@@ -31,3 +31,9 @@ Wikipedia (https://en.wikipedia.org/wiki/Gran_Torino, plot read raw):
 Five TMDB stills are the poster's dark Walt-and-car art. Added:
 - data/still-block.json "Gran Torino (2008)": /5w0EJM2XT6w0aZtNR3ga6W9IDva.jpg, /sP4vNXFhPviUJevrD7X8fJV1OD1.jpg, /jPVUumfPFQYFfEcvdulytP96qBs.jpg, /s7WYJDBWdjyVH6AsVyD0oJZx2Fx.jpg, /c7vJGWliajNshvGTDkPBEv0vWGJ.jpg (poster art).
 - data/still-pick.json "Gran Torino (2008)": /ArqV9diuIfxOBrWepxGv16zJfBC.jpg (Walt with his rifle on the lawn), /sO2coXOiWWZL0sr6RsWTS3tu0J9.jpg (Walt on the porch with a beer, menu photo), /bTx7mlAjHjDS18SNCV0qwNgFY8g.jpg (the Happy Birthday Dad cake), /ewrZkI4BG033TjzPUYqmgaKzyrd.jpg (Walt driving), /1yZrfQEnHVIZXtSvVcHUpauMmtm.jpg (the rifle, another angle), /uJWbT8FQZ2xxnYdyhI8aNWJo3IL.jpg (Walt driving, another angle).
+
+## Fix (15 Nov)
+- Winks (Don't forget list): "The M1 Garand on the lawn" (Wikipedia: Walt scares off the gang with his M1 Garand; Wikiquote: "Get off my lawn!" aiming it) and "That'll be ten bucks, Walt" (Wikiquote, Barber Martin) replace "Thao's construction job" and "Father Janovich". https://en.wikipedia.org/wiki/Gran_Torino https://en.wikiquote.org/wiki/Gran_Torino
+- Prawn crackers house note: "It's not Toad, it's Thao." Wikiquote, Thao.
+- Words: "Serves everyone on the couch." now "Served on the porch next door."
+- Not done: the EAT fridge magnets are drawn letter by letter in the home layout and the words map can't reach them.

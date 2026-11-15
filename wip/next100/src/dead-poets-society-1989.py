@@ -13,9 +13,9 @@ FLAVOUR = {"venue": "Welton Academy Dining Hall", "sign": "Vermont, autumn 1959"
            "winks": ["Rip out the introduction", "Stand on the desk", "Walks in the courtyard", "A phone call from God", "Thank you for playing"],
            "prop": {"kind": "Hall pass", "title": "Dead Poets Society", "lines": ["Off campus, to the cave", "Signed, N. Perry"]},
            "number": "1959",
-           "words": {}}
+           "words": {"Save a seat for a friend.": "Gather ye rosebuds while ye may."}}
 HOUSE = {"s": {"n": "Bread and butter on every table", "note": "Pass it down the long tables.", "meat": False},
-         "d": {"n": "A cold glass of Vermont milk", "note": "Served at the long tables.", "alc": False}}
+         "d": {"n": "A cold glass of Vermont milk", "note": "Ding! Thank you for playing.", "alc": False}}
 DISHES = [
  {"n": "Carpe diem Welsh rarebit on toast", "course": "s",
   "line": "Keating teaches them carpe diem",
@@ -34,7 +34,7 @@ DISHES = [
                   "steps": [("Soften the vegetables in the oil with the paprika.", 10), ("Add the peas and stock and simmer until they collapse.", 70), ("Season and serve with bread.", 10)]}}},
  {"n": "Opening night roast chicken with bread sauce", "course": "m",
   "line": "Neil plays Puck at Henley Hall",
-  "note": "Golden roast chook with buttered peas.",
+  "note": "Golden roast chicken with buttered peas.",
   "prep": 20, "cook": 90, "ahead": "Make the bread sauce up to a day ahead and reheat with a splash of milk; roast the chicken on the day",
   "ing": [(1.8, "kg", "whole chicken", "Meat"), (40, "g", "butter, softened", "Dairy"), (1, "", "lemon, halved", "Produce"), (4, "", "thyme sprigs", "Produce"), (800, "g", "small potatoes, halved", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (500, "ml", "milk", "Dairy"), (1, "", "brown onion, studded with 4 cloves", "Produce"), (100, "g", "fresh white breadcrumbs", "Bakery"), (2, "cup", "frozen peas", "Frozen")],
   "steps": [("Rub the chicken with butter and salt, stuff with lemon and thyme, and roast at 200C with the oiled potatoes around it.", 75), ("Warm the milk with the clove-studded onion and leave to infuse.", 5), ("Lift out the onion, stir in the breadcrumbs and a knob of butter and cook until thick.", 5), ("Rest the chicken, boil the peas and serve everything with the bread sauce.", 15)],

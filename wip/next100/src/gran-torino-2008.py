@@ -10,11 +10,11 @@ PALETTE = {"dark": "#1a1c1f", "accent": "#2e7a3b"}
 SERIES = []
 FLAVOUR = {"venue": "The Vang Lor Family Barbecue", "sign": "Next door to Walt's, Detroit",
            "note": {"text": "Get off my lawn!", "by": "Walt Kowalski", "kind": "quote"},
-           "winks": ["The 1972 Gran Torino", "Daisy the Labrador", "Thao's construction job", "The Silver Star", "Father Janovich"],
+           "winks": ["The 1972 Gran Torino", "The M1 Garand on the lawn", "Daisy the Labrador", "The Silver Star", "That'll be ten bucks, Walt"],
            "prop": {"kind": "tag", "title": "Gran Torino, 1972", "lines": ["Left to Thao", "No changes allowed"]},
            "number": "1972",
-           "words": {}}
-HOUSE = {"s": {"n": "Prawn crackers by the bowlful", "note": "Comes with everything.", "meat": True},
+           "words": {"Serves everyone on the couch.": "Served on the porch next door."}}
+HOUSE = {"s": {"n": "Prawn crackers by the bowlful", "note": "It's not Toad, it's Thao.", "meat": True},
          "d": {"n": "Hot jasmine tea", "note": "For anyone not on Walt's beer.", "alc": False}}
 DISHES = [
  {"n": "Grilled Hmong pork sausage with chilli dip", "course": "s",

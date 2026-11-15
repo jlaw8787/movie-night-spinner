@@ -32,3 +32,9 @@ Wikipedia (https://en.wikipedia.org/wiki/Dead_Poets_Society, plot read raw):
 The poster is the boys carrying Keating in red jerseys; TMDB has crops of it and two more shots of the same moment, plus promo cut-outs. Added:
 - data/still-block.json "Dead Poets Society (1989)": /rSzDfniDjqh2TIP9uH7rwi2iRy3.jpg, /hnE0HPZJMaQgHXeSplumX2nDYgI.jpg (poster crops), /spPwYKBjeVNzBeGQAzwJbzIxQKv.jpg, /nWmBXOJLd99UaIlLRnAaukDcpR1.jpg (promo cut-outs), /tJRToZBfb52NhF6SMGAe0bWQc6z.jpg, /8Lt9ljQ5IruNXtci03Hm7VcDZKe.jpg (the poster's red jersey moment).
 - data/still-pick.json "Dead Poets Society (1989)": /hpzQHv8cA7j2Dn2CphOFYmllXzj.jpg (Keating reading to the class), /yYvBNN96Ym3wtPxGCFl7F888WwB.jpg (the boys standing on their desks), /aG0K3uaajv0YgbEjqZGGV9skDta.jpg (the Dead Poets in the cave), /mefznk6Gfwzy0G9Lt3olVofNbv9.jpg (Neil as Puck), /sjlCSGYxHKXHalrgeZMW9JTHGrD.jpg (Neil and Todd in their room), /lFIXZpwwlF9hg8NM3RazaIJDuaj.jpg (on the desks, another angle).
+
+## Fix (15 Nov)
+- Roast chicken note: "Golden roast chicken with buttered peas." (was "chook", Australian slang on a 1959 Vermont menu).
+- Footer remap: "Save a seat for a friend." now "Gather ye rosebuds while ye may." Wikiquote, Keating: "Seize the day. Gather ye rosebuds while ye may." https://en.wikiquote.org/wiki/Dead_Poets_Society
+- Milk house note: "Ding! Thank you for playing." Wikiquote: "No. Ding! Thank you for playing anyway."
+- Not done: the bone marrow dish (a new recipe); the shepherd's pie stays.

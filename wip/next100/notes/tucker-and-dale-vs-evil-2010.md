@@ -30,3 +30,8 @@ Tropedia (https://tropedia.fandom.com/wiki/Tucker_and_Dale_vs._Evil):
 The menu-page still was a crop of the poster art, and three more TMDB stills are promo art. Added:
 - data/still-block.json "Tucker and Dale vs. Evil (2010)": /4NMy3cuzEDsq6SES7yLboSziynL.jpg (poster art), /9WRhl49xB7NkdL7tdMR9CLMf5FQ.jpg, /Aa1Z4BYYwnxT2lqFnUIGPycSDoB.jpg, /2rDC2CEZktwMlGCWSasFRZQD2xD.jpg (chainsaw promo art).
 - data/still-pick.json "Tucker and Dale vs. Evil (2010)": /phv4nTeSViYfabikRB6oVjceIbG.jpg (Tucker and Dale in the woods), /drUgiqUfxmCCNZ9i0eeTEPqeDF.jpg (the wood chipper, used on the menu face), /vYofk37BdFrbRJtXJuK4VjDlpb9.jpg (in the boat on the lake), /nby4zH63CxsFk4eRH8swNWGNzUf.jpg (Dale and Allison in the cabin), /o3y5pHPjQN7x7yB8CQHF8AdsTgT.jpg, /oUGSSIu4cojZ2b9qTDcWwtfiOBQ.jpg (the pair at the cabin).
+
+## Fix (15 Nov)
+- House starter renamed "Porch board of beer nuts, jerky and pickles" (meat flag on). House lines always take the last and dearest price on the campfire card (11.50), so a sharing board fits that price; a bowl of beer nuts did not.
+- Footer remap "Ask the cook about" now "Ask Dale about": Wikipedia says Allison and Dale dig the outhouse hole. https://en.wikipedia.org/wiki/Tucker_%26_Dale_vs._Evil
+- Not done: "This vacation sucks" is not on Tropedia or Wikipedia (no Wikiquote page), so the iced tea note stays.

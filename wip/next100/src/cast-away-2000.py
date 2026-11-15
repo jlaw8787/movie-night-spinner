@@ -3,7 +3,7 @@
 FILM = {"id": "Cast Away (2000)", "theme": "adventure",
         "T": "At the edge of the world, his journey begins.",
         "D": "A FedEx troubleshooter survives a crash in the Pacific and spends four years alone on an island with a volleyball called Wilson.",
-        "P": "Serve the crab when Chuck finally gets his fire going."}
+        "P": "Serve the crab when Chuck shouts I have made fire."}
 FORMAT = {"format": "campfire", "era": "2000s", "tone": "tender"}
 PALETTE = {"dark": "#13202a", "accent": "#e2681f"}
 SERIES = []
@@ -12,8 +12,8 @@ FLAVOUR = {"venue": "Chuck and Wilson's Island Camp", "sign": "South Pacific, fa
            "winks": ["The angel wings package", "An ice skate blade", "A Wilson volleyball", "Rope made from videotape", "Kelly's pocket watch"],
            "prop": {"kind": "tag", "title": "FedEx package", "lines": ["Angel wings on the box", "Never opened"]},
            "number": "88",
-           "words": {"Session of": "Tonight's feature,", "Now showing": "Welcome to", "Scribbled on the bunk wall": "Said to Wilson", "Left on your pillow": "Said to Wilson", "Badges worth keeping": "Washed up on the beach", "Badges up for grabs": "Washed up on the beach", "Mess hall mains": "Island mains", "Canteen drinks": "To drink", "Trail snacks": "Off the reef", "Bugle call": "On Memphis time", "Ask the cook about": "Ask Wilson about"}}
-HOUSE = {"s": {"n": "Fresh coconut milk on the side", "note": "A natural laxative, says Chuck.", "meat": False},
+           "words": {"Tonight's feature, 2000": "Wilson", "Session of": "Tonight's feature,", "Now showing": "Welcome to", "Scribbled on the bunk wall": "Said to Wilson", "Left on your pillow": "Said to Wilson", "Badges worth keeping": "Washed up on the beach", "Badges up for grabs": "Washed up on the beach", "Mess hall mains": "Island mains", "Canteen drinks": "To drink", "Trail snacks": "Off the reef", "Bugle call": "On Memphis time", "Ask the cook about": "Ask Wilson about"}}
+HOUSE = {"s": {"n": "Whole green coconuts to share", "note": "Coconut milk is a natural laxative, says Chuck.", "meat": False},
          "d": {"n": "A 1992 full-bodied grape juice", "note": "Just grape juice, says Stan. Not for the pilot.", "alc": True}}
 DISHES = [
  {"n": "Chargrilled crab claws with garlic butter", "course": "s",
@@ -59,7 +59,7 @@ DISHES = [
   "ing": [(4, "", "egg whites", "Dairy"), (220, "g", "caster sugar", "Pantry"), (2, "tsp", "cornflour", "Pantry"), (1, "tsp", "white vinegar", "Pantry"), (300, "ml", "thickened cream", "Dairy"), (2, "", "mangoes, sliced", "Produce"), (4, "", "passionfruit", "Produce")],
   "steps": [("Whisk the egg whites to soft peaks, then add the sugar a spoonful at a time until thick and glossy.", 10), ("Fold in the cornflour and vinegar and shape into a round on a lined tray.", 5), ("Bake at 120C for 75 minutes, then cool in the oven with the door ajar.", 80), ("Whip the cream, pile it on and top with mango and passionfruit pulp.", 10)]},
  {"n": "Dr Pepper over two cups of ice", "course": "d",
-  "line": "One Dr. Pepper and two cups of ice",
+  "line": "One Dr Pepper and two cups of ice",
   "note": "Chuck likes ice now.",
   "prep": 2, "cook": 0, "ahead": "Fill the freezer with ice the day before",
   "ing": [(4, "", "x 355ml cans Dr Pepper", "Drinks"), (2, "", "bags ice", "Frozen"), (1, "", "lime, cut in wedges", "Produce")],

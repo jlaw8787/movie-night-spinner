@@ -57,7 +57,7 @@ DISHES = [
   "ing": [(600, "ml", "milk", "Dairy"), (100, "g", "caster sugar", "Pantry"), (30, "g", "cornflour", "Pantry"), (25, "g", "cocoa powder", "Pantry"), (2, "", "egg yolks", "Dairy"), (100, "g", "dark chocolate, chopped", "Pantry"), (1, "tsp", "vanilla extract", "Pantry"), (200, "ml", "thickened cream, whipped", "Dairy"), (4, "", "chocolate wafer biscuits, crushed", "Pantry")],
   "steps": [("Whisk the sugar, cornflour, cocoa and yolks with a little of the milk until smooth.", 5), ("Heat the rest of the milk, whisk it in and stir over medium heat until thick and bubbling.", 10), ("Take off the heat, stir in the chocolate and vanilla and pour into 4 cups.", 5), ("Chill until set, then top with cream and crushed wafers.", 10)]},
  {"n": "Chocolate milk in the carton", "course": "d",
-  "line": "Alex is the only one at school",
+  "line": "Water won't help me, says Gladys",
   "note": "Ice-cold and drunk through a straw.",
   "prep": 2, "cook": 0, "ahead": "Chill well",
   "ing": [(4, "", "x 300ml cartons chocolate milk", "Dairy"), (4, "", "paper straws", "Pantry")],

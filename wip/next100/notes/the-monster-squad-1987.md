@@ -33,3 +33,10 @@ IMDb plot summary (https://www.imdb.com/title/tt0093560/plotsummary):
 The kit's front panel used the poster art (TMDB still 0), and four more stills are painted or promo art. Added:
 - data/still-block.json "The Monster Squad (1987)": /qZ7FgN21pCAiY1PfHPDRqqrHUDj.jpg (the poster art), /thYgTJfMO2HG7OJTVIAbbuHCx2D.jpg (promo shot), /svOojEuxVbgGRKJ6pVJGpiDqR1s.jpg (painted art), /9r0EYEc6qxhV35T8V0Ihgr1UC3A.jpg (poster monster heads), /vMAEcRyh7DqsxQrvNee5wfwaPq.jpg (painted art).
 - data/still-pick.json "The Monster Squad (1987)": /6p9Mvwvt1KtzM9OlMntqu7Iefxr.jpg (Wolf Man, Gill-man, Mummy and Dracula, menu page header), /jCh6VOXldYjZw2aOeWiukfLzH7i.jpg (the boys reading the diary), /jKgbhsr89Sr8oPgwNQFrqX5eEXY.jpg (the Squad at sunset), /pTcibMM13yR1ak9VjAcjvhZRSxU.jpg (a boy and Frankenstein's monster), /zCO2yRMuHGkbTG5QjYin9Tmw7F5.jpg (the Wolf Man in the street), /h5l19GN6v9qA3lnQGGJyzUv1eJX.jpg (Scary German Guy with the diary).
+
+## Fix (15 Nov)
+- Dessert: Frankenstein's mint ice cream sandwiches out (the checker's wrong line, "Phoebe's goodbye gift to Frankenstein", read as if the sandwiches were her gift; Wikipedia says it is a stuffed animal). New dessert "Last-chance-for-more apple pie with cream", line "Scary German Guy serves the boys pie". TV Tropes (Bait-and-Switch, Stab the Salad): he brandishes a carving knife, then "It's your last chance for more pie!" https://www.tvtropes.org/pmwiki/pmwiki.php/Film/TheMonsterSquad
+- Fish bites line: "Gill-man down. My name is Horace". Wikiquote: "My name...Is Horace!" after he shoots the Gill-man. https://en.wikiquote.org/wiki/The_Monster_Squad
+- Winks: "Scary German Guy" is now winks[1], so the place card reads "Seated near: Scary German Guy" (was "Seated near: The monster test"). Eugene's letter dropped to keep five winks.
+- Root beer house note: "Members only. Pass the monster test." (monster test, Wikiquote).
+- First try "Scary German Guy's knife was for the pie" printed cut to "...knife was." so it was shortened.

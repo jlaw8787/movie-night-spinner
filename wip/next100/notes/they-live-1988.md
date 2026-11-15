@@ -29,3 +29,9 @@ Wikiquote (https://en.wikiquote.org/wiki/They_Live):
 The first still was the poster's sunglasses art, and most of the first 16 TMDB stills are artwork. Added:
 - data/still-block.json "They Live (1988)": /bwyLycDaQdS3rS4crpbYssYLJRy.jpg, /7GbGvD1KGvHrMzoIxyCnxCIZFSi.jpg, /fJK2dK6ZtFX3KmmZ6teDGQabu4w.jpg, /5DpVDZeM4x2s33IAJSBywuMDJ5m.jpg, /rVz6V1SdOpmMKI7Q9im9lrUngyt.jpg (all the poster's sunglasses art).
 - data/still-pick.json "They Live (1988)": /7etdo1fU94dJSzNYEXcgWMEeglk.jpg (Nada under the THEY LIVE WE SLEEP graffiti), /flj6paUbKLOenWWrV0o0OIcRFCi.jpg (Frank and Nada in sunglasses), /kLCe154WND0woacDFGv7LvYYcAm.jpg (Nada lowers the glasses), /AjmvMmMxMzNZfTblBnUmD8S4JYy.jpg (aliens at the restaurant), /yiSNKgWG2x3HHFTVHZiuqyQTAo3.jpg (Nada and Frank in the alley), /mq37KmVnHaB6MpAx1uiKBrVDrxG.jpg (Nada at the job board).
+
+## Fix (15 Nov)
+- Soup line: "Gilbert says the world needs a wake-up call". Wikiquote, Gilbert: "The world needs a wake-up call. We're going to phone it in." https://en.wikiquote.org/wiki/They_Live
+- Coffee house note: "He who has the gold makes the rules." Wikiquote, Frank: "The golden rule: he who has the gold makes the rules."
+- Bread house note (not printed): "Well, they ain't from Cleveland." Wikiquote, Nada.
+- winks[4] "Stay asleep" now "Watch TV" (WATCH TV is on Wikiquote's billboard list), so the footer prints "On every billboard: Watch TV." The checker's "Marry and reproduce" is too long; the canteen footer drops any wink past about 14 characters here.

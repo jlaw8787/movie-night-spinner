@@ -573,77 +573,87 @@
    }
   },
   {
-   "n": "Frankenstein's mint ice cream sandwiches",
+   "n": "Last-chance-for-more apple pie with cream",
    "course": "w",
-   "prep_min": 20,
-   "cook_min": 15,
-   "make_ahead": "Bake the cookies and build the sandwiches up to a week ahead; keep frozen",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Bake the pie up to a day ahead; warm through and serve with the cream",
    "ingredients": [
     {
-     "q": 125,
-     "u": "g",
-     "item": "butter, softened",
-     "aisle": "Dairy"
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen shortcrust pastry, thawed",
+     "aisle": "Frozen"
     },
     {
-     "q": 150,
+     "q": 6,
+     "u": "",
+     "item": "granny smith apples, peeled and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
      "u": "g",
-     "item": "brown sugar",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "",
-     "item": "egg",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "vanilla extract",
-     "aisle": "Pantry"
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "bicarbonate of soda",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "dark choc chips",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "mint choc-chip ice cream",
-     "aisle": "Frozen"
+     "q": 300,
+     "u": "ml",
+     "item": "thick cream",
+     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Beat the butter and sugar until pale, then beat in the egg and vanilla.",
-     "min": 5
-    },
-    {
-     "text": "Stir in the flour, bicarb and choc chips, roll into 16 balls and flatten on lined trays.",
-     "min": 8
-    },
-    {
-     "text": "Bake at 180C until golden at the edges, then cool completely.",
+     "text": "Cook the apples with the sugar, cinnamon, lemon juice and butter until just tender, then stir in the cornflour and cool.",
      "min": 15
     },
     {
-     "text": "Sandwich a thick scoop of ice cream between two cookies, press and freeze until firm.",
-     "min": 7
+     "text": "Line a 23cm pie dish with one pastry sheet and fill with the apples.",
+     "min": 5
+    },
+    {
+     "text": "Lay over the second sheet, crimp the edges, cut steam holes and brush with egg.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until deep golden and bubbling, then rest 15 minutes.",
+     "min": 45
+    },
+    {
+     "text": "Cut big wedges and serve with thick cream.",
+     "min": 3
     }
    ],
    "veg": true,
