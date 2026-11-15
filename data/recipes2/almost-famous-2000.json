@@ -1,0 +1,861 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Elaine's soy cutlets",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Press and crumb the tofu up to a day ahead and chill; fry to serve",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "firm tofu, pressed and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dill, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the tofu slices with the soy sauce.",
+     "min": 3
+    },
+    {
+     "text": "Coat in flour, egg, then panko.",
+     "min": 10
+    },
+    {
+     "text": "Shallow-fry in the oil, turning, until crisp and golden.",
+     "min": 12
+    },
+    {
+     "text": "Stir the dill and a squeeze of lemon into the mayo and serve with lemon wedges.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Everything Elaine banned club sandwich",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Cook the bacon up to 4 hours ahead and keep at room temperature; fry the eggs and build to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Deli"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "iceberg lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices tasty cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp, then fry the eggs in the fat until just set.",
+     "min": 12
+    },
+    {
+     "text": "Toast and butter the bread.",
+     "min": 5
+    },
+    {
+     "text": "Layer toast, mayo, lettuce, tomato and bacon, then toast, cheese and egg, then a final slice.",
+     "min": 8
+    },
+    {
+     "text": "Pin with toothpicks and cut into triangles.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Everything Elaine banned haloumi club (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Slice the haloumi up to a day ahead; fry and build to serve",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "g",
+       "item": "haloumi, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "iceberg lettuce leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the haloumi and eggs in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Toast and butter the bread.",
+       "min": 5
+      },
+      {
+       "text": "Layer and pin the sandwiches, then cut into triangles.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Golden god cheeseburgers",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Shape the patties up to a day ahead and chill; cook the fries and grill to serve",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "frozen shoestring fries",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the fries at 220C until crisp.",
+     "min": 30
+    },
+    {
+     "text": "Shape the mince into 8 thin patties and season well.",
+     "min": 5
+    },
+    {
+     "text": "Sear the patties on a very hot grill, 2 minutes a side, laying cheese on each after the flip.",
+     "min": 6
+    },
+    {
+     "text": "Toast the buns and stack 2 patties in each with onion, pickles, sauce and mustard.",
+     "min": 4
+    },
+    {
+     "text": "Serve with the fries.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Golden god mushroom cheeseburgers (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "Marinate the mushrooms up to 4 hours ahead; cook the fries and grill to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "frozen shoestring fries",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Grill the oiled mushrooms until tender and melt the cheese on top.",
+       "min": 10
+      },
+      {
+       "text": "Build the burgers with pickles and sauce and serve with fries.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Riot House room service steak Diane",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Slice the mushrooms up to a day ahead; cook the chips and steaks to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks, about 220g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "button mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "frozen thick-cut chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chips at 220C until golden.",
+     "min": 30
+    },
+    {
+     "text": "Sear the seasoned steaks in half the butter, 3 minutes a side, then rest.",
+     "min": 8
+    },
+    {
+     "text": "Fry the mushrooms and garlic in the rest of the butter, then add the brandy and let it bubble off.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the Worcestershire, mustard and cream and simmer until glossy.",
+     "min": 4
+    },
+    {
+     "text": "Spoon the sauce over the steaks, scatter with parsley and serve with chips.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "veg": {
+     "n": "Riot House room service mushroom Diane (vegetarian)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 40,
+     "make_ahead": "Make the sauce base up to a day ahead; cook the chips and mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "frozen thick-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C until golden.",
+       "min": 30
+      },
+      {
+       "text": "Sear the mushrooms in the butter until tender.",
+       "min": 8
+      },
+      {
+       "text": "Add garlic and brandy, then the mustard and cream, and simmer.",
+       "min": 7
+      },
+      {
+       "text": "Serve with chips and parsley.",
+       "min": 5
+      }
+     ]
+    },
+    "af": {
+     "n": "Riot House room service steak Diane (alcohol-free)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 40,
+     "make_ahead": "Slice the mushrooms up to a day ahead; cook the chips and steaks to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks, about 220g each",
+       "aisle": "Meat"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "frozen thick-cut chips",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips until golden.",
+       "min": 30
+      },
+      {
+       "text": "Sear and rest the steaks.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms and garlic, add the stock, Worcestershire and cream and simmer.",
+       "min": 7
+      },
+      {
+       "text": "Serve the steaks with the sauce and chips.",
+       "min": 5
+      }
+     ]
+    },
+    "veg_af": {
+     "n": "Riot House room service mushroom Diane (vegetarian, alcohol-free)",
+     "course": "m",
+     "prep_min": 10,
+     "cook_min": 40,
+     "make_ahead": "Slice the garlic and parsley up to a day ahead; cook the chips and mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "frozen thick-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips until golden.",
+       "min": 30
+      },
+      {
+       "text": "Sear the mushrooms in the butter until tender.",
+       "min": 8
+      },
+      {
+       "text": "Add the garlic, stock, mustard and cream and simmer until glossy.",
+       "min": 7
+      },
+      {
+       "text": "Serve with chips and parsley.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Penny Lane's Morocco orange cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Bake up to 3 days ahead; it gets better in a tin",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pistachios, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the whole oranges in water until very soft, then cool and blitz to a puree, skins and all.",
+     "min": 75
+    },
+    {
+     "text": "Beat the eggs and sugar until thick, then fold in the almond meal, baking powder and orange puree.",
+     "min": 8
+    },
+    {
+     "text": "Pour into a lined 22cm tin and bake at 170C until set.",
+     "min": 50
+    },
+    {
+     "text": "Stir the honey through the yoghurt and serve with the cake and pistachios.",
+     "min": 7
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Fifty bucks and a case of beer",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the beer at least 4 hours ahead; ice the bucket to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "x 330ml bottles lager",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill a bucket with ice and bury the bottles in it.",
+     "min": 3
+    },
+    {
+     "text": "Serve with lime wedges on the side.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fifty bucks and a case of alcohol-free lager",
+     "course": "d",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill the bottles at least 4 hours ahead; ice the bucket to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "x 330ml bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "kg",
+       "item": "bag of ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill a bucket with ice and bury the bottles.",
+       "min": 3
+      },
+      {
+       "text": "Serve with lime wedges.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

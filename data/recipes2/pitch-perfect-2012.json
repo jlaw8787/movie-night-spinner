@@ -1,0 +1,739 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Egg breath devilled eggs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Boil and fill the eggs up to a day ahead and keep covered in the fridge",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the eggs for 9 minutes, then cool them in iced water and peel.",
+     "min": 12
+    },
+    {
+     "text": "Halve the eggs and mash the yolks with the mayo, mustard and lemon juice.",
+     "min": 5
+    },
+    {
+     "text": "Pipe or spoon the filling back into the whites.",
+     "min": 5
+    },
+    {
+     "text": "Dust with paprika and scatter with chives.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cups audition popcorn chicken",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Crumb the chicken up to 6 hours ahead and chill; fry to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken thigh fillets, cut in small pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sriracha",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with a pinch of salt.",
+     "min": 5
+    },
+    {
+     "text": "Mix the flours, garlic powder and paprika and toss the chicken through until coated.",
+     "min": 10
+    },
+    {
+     "text": "Fry in batches in oil at 180C until golden and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Stir the sriracha into the mayo and serve the chicken in paper cups with the dip.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cups audition popcorn cauliflower (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Cut the cauliflower up to a day ahead; coat and fry to serve",
+     "ingredients": [
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sriracha",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dip the florets in buttermilk, then the seasoned flours.",
+       "min": 15
+      },
+      {
+       "text": "Fry until golden and tender.",
+       "min": 12
+      },
+      {
+       "text": "Serve in cups with the sriracha mayo.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Sabotage burritos",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Cook the beef and rice up to 2 days ahead; reheat and roll to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long-grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Brown the mince and onion with the spices, then stir in the beans and a splash of water and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Warm the tortillas and fill each with rice, beef, cheese, sour cream and salsa.",
+     "min": 8
+    },
+    {
+     "text": "Roll up tightly, tucking in the ends, and toast seam side down in a hot pan.",
+     "min": 7
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sabotage bean burritos (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Cook the beans and rice up to 2 days ahead; reheat and roll to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "long-grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "tomato salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Soften the onion with the spices and warm the beans through.",
+       "min": 10
+      },
+      {
+       "text": "Fill, roll and toast the burritos.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Ladies of the '80s pulled pork sliders",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 240,
+   "make_ahead": "Slow-cook the pork up to 2 days ahead and reheat with its juices; make the slaw on the day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "smoky barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "soft slider rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the pork with the sugar, paprika, garlic powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Put it in a lidded pot with the apple juice and half the sauce and bake at 150C until it pulls apart.",
+     "min": 220
+    },
+    {
+     "text": "Shred the pork and toss with the rest of the sauce.",
+     "min": 10
+    },
+    {
+     "text": "Mix the cabbage with the mayo.",
+     "min": 5
+    },
+    {
+     "text": "Fill the rolls with pork, slaw and pickles.",
+     "min": 20
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ladies of the '80s jackfruit sliders (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Cook the jackfruit up to 2 days ahead and reheat; make the slaw on the day",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins young jackfruit, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "smoky barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "soft slider rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "red cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the jackfruit in the oil with the paprika, shredding it as it softens.",
+       "min": 10
+      },
+      {
+       "text": "Add the sauce and simmer until sticky.",
+       "min": 20
+      },
+      {
+       "text": "Fill the rolls with jackfruit, slaw and pickles.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Finish-him-like-a-cheesecake cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Bake up to 2 days ahead and chill; warm the sauce to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen mixed berries",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with the butter and press into a lined 22cm springform tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese and 170g sugar until smooth, then beat in the eggs, sour cream, vanilla and zest.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the base and bake at 150C until just wobbly in the middle, then cool in the oven with the door ajar.",
+     "min": 65
+    },
+    {
+     "text": "Simmer the berries with the rest of the sugar until saucy and serve warm over slices.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Pitch-slapped red cup punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix the cranberry and lime up to a day ahead; add the vodka and soda to serve",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the vodka, cranberry and lime juice in a jug.",
+     "min": 5
+    },
+    {
+     "text": "Pour over ice in red cups and top with soda.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pitch-slapped red cup punch (alcohol-free)",
+     "course": "d",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Mix the cranberry and lime up to a day ahead; add the soda to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the cranberry and lime juice in a jug.",
+       "min": 5
+      },
+      {
+       "text": "Pour over ice in red cups and top with soda.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,670 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dino's rare steak sliders",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Cook the onions up to 2 days ahead and reheat; sear the steak to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft slider rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "baby rocket",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions slowly in the butter with a pinch of salt until soft and golden.",
+     "min": 20
+    },
+    {
+     "text": "Rub the steak with oil and salt and sear in a very hot pan for 2 to 3 minutes a side, then rest it.",
+     "min": 8
+    },
+    {
+     "text": "Slice the steak thinly across the grain.",
+     "min": 3
+    },
+    {
+     "text": "Split the rolls and fill with rocket, steak, onions and a spoon of relish.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dino's portobello sliders (vegetarian)",
+     "course": "s",
+     "prep_min": 8,
+     "cook_min": 25,
+     "make_ahead": "Cook the onions up to 2 days ahead; sear the mushrooms just before serving",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft slider rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "baby rocket",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions slowly in the butter until soft and golden.",
+       "min": 20
+      },
+      {
+       "text": "Sear the mushrooms in the oil until dark and tender, then slice.",
+       "min": 8
+      },
+      {
+       "text": "Fill the rolls with rocket, mushrooms, onions and relish.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Number 2 chisel cheese straws",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Twist the straws up to a day ahead and chill on the tray; bake to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the pastry with egg and scatter with the parmesan and paprika.",
+     "min": 5
+    },
+    {
+     "text": "Cut into 2cm strips and twist each one like a chisel handle.",
+     "min": 8
+    },
+    {
+     "text": "Bake on a lined tray at 200C until puffed and golden.",
+     "min": 14
+    },
+    {
+     "text": "Warm the passata with the garlic and oil for a dip.",
+     "min": 6
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Bronto ribs at the Bedrock Drive-In",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Braise the ribs up to 2 days ahead and chill in their liquid; glaze and grill to serve",
+   "ingredients": [
+    {
+     "q": 1.6,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "smoky barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the ribs and brown them all over in a heavy pot.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion and stock, cover and bake at 160C until the meat almost falls off the bone.",
+     "min": 150
+    },
+    {
+     "text": "Simmer the barbecue sauce with the sugar and half the vinegar until sticky.",
+     "min": 8
+    },
+    {
+     "text": "Brush the ribs with the glaze and grill until charred at the edges.",
+     "min": 10
+    },
+    {
+     "text": "Toss the cabbage and carrot with the mayo and the rest of the vinegar and serve with the ribs.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bronto cauliflower steaks at the Drive-In (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Make the slaw dressing up to a day ahead; roast the cauliflower to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut in thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "smoky barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "red cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the cauliflower with oil and roast at 220C until tender and browned.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the sauce with the sugar and half the vinegar until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Glaze the cauliflower and grill until charred.",
+       "min": 6
+      },
+      {
+       "text": "Toss the slaw and serve alongside.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Ripe old age of 38 T-bones",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Mix the garlic butter up to 3 days ahead and chill; bake the potatoes and grill the steaks to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "T-bone steaks, about 350g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Prick the potatoes, rub with oil and salt and bake at 200C until the skins are crisp.",
+     "min": 60
+    },
+    {
+     "text": "Mash the butter with the garlic and parsley.",
+     "min": 5
+    },
+    {
+     "text": "Grill the T-bones over high heat, 4 to 5 minutes a side, then rest them.",
+     "min": 15
+    },
+    {
+     "text": "Split the potatoes and top with sour cream and chives.",
+     "min": 3
+    },
+    {
+     "text": "Serve each steak with a slice of garlic butter melting on top.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ripe old age of 38 haloumi steaks (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Mix the garlic butter up to 3 days ahead; bake the potatoes and grill the haloumi to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 180g blocks haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the oiled potatoes at 200C until crisp.",
+       "min": 60
+      },
+      {
+       "text": "Mash the butter with the garlic and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Grill the haloumi and mushrooms until charred.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the potatoes, sour cream and garlic butter.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Concretia's chocolate concrete slab",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Bake up to 2 days ahead and keep in a tin; add the rubble to serve",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "chocolate sandwich cookies, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and butter together, then stir in the sugar.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the eggs, then fold in the flour, cocoa and milk.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a lined 20cm square tin and bake at 160C until just set.",
+     "min": 45
+    },
+    {
+     "text": "Cool, cut into slabs and top with cream and crushed cookie rubble.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Barney's lava juice",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix the juices up to a day ahead and chill; top with ginger beer to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "blood orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "mango nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the blood orange juice, mango nectar and lime juice together in a jug.",
+     "min": 3
+    },
+    {
+     "text": "Fill 4 glasses with ice, pour in the juice and top with ginger beer.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}
