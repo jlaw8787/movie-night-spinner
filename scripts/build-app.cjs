@@ -39,7 +39,8 @@ for (const m of code.matchAll(/data\/([\w-]+\.json)/g)) if (fs.existsSync(path.j
 const blocked = new Set([...ART.block, ...Object.keys(ART.swap)]);
 /* shopfront*.webp is the raw photo the Galaxy Video front was composed from (poster lookalikes in the windows); the site never shows it */
 const NEVER_FILE = /^assets\/hero\/shopfront[\w-]*\.webp$/;
-const skip = p => blocked.has(p) || NEVER_FILE.test(p) || ART.prefix.some(x => p.startsWith(x)) || /\.md$/i.test(p) || /(^|\/)(_old|clean)\//.test(p) || /(^|\/)\./.test(p);
+/* the film page previews (menu/<slug>/) are for the website and Google only, and carry film art */
+const skip = p => blocked.has(p) || p.startsWith('assets/menu-previews/') || NEVER_FILE.test(p) || ART.prefix.some(x => p.startsWith(x)) || /\.md$/i.test(p) || /(^|\/)(_old|clean)\//.test(p) || /(^|\/)\./.test(p);
 
 fs.rmSync(OUT, {recursive: true, force: true});
 let n = 0, bytes = 0, left = 0;

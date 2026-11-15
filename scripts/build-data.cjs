@@ -94,3 +94,6 @@ const ver = crypto.createHash('sha1').update(html + rd('app.js') + rd('formats-c
 sw = sw.replace(/const VERSION = '[^']*'/, `const VERSION = 'mns-${ver}'`);
 fs.writeFileSync(path.join(root, 'sw.js'), sw);
 console.log(`films ${lite.length}, editions ${lite.filter(f => f.e).length}, missing recipes ${missing}`);
+
+/* static film pages, sitemap.xml and robots.txt for Google (menu/<slug>/) */
+require('./build-seo.cjs');

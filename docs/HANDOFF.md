@@ -1649,3 +1649,12 @@ From the "Noticed, not changed" line above. Before and after mockups from wip/de
 Noticed, not changed: motel's front also prints the logo plate over a poster that carries the title (Paranormal Activity), same pattern.
 Checks: check-print-text on all 97 films of hotel, banquet, pub, motel: pass. npm test pass. check-browser pass (one earlier run timed out waiting for #viewWheelBtn, two reruns passed). Generated files rebuilt with build-data. Spot check by eye: all 9 pub, 4 hotel, 4 banquet.
 Deployed on Josh's go: fast-forward merge to main 6df2578, Publish site run 43702882095 passed. hotel, banquet, pub, motel, app.js and films.js match main byte for byte live.
+## 15 Nov, 8:40pm: Google film pages built on feat/seo-film-pages (not deployed)
+
+- Branch feat/seo-film-pages (off main 9efc9a2), pushed. Waiting on Josh's deploy word: fast-forward into main, then `gh workflow run pages.yml --ref main`.
+- scripts/build-seo.cjs (runs at the end of build-data.cjs) writes menu/<slug>/index.html for every film, menu/index.html (A to Z, theme and genre chips), menu/theme/<theme>/ (25), menu/genre/<genre>/ (17), sitemap.xml (1,044 URLs) and robots.txt. Pages for films that leave films.json are removed.
+- Each film page: title "<Film> (<year>) movie night dinner menu | Reel Dinner", meta description under 160, TMDB poster, the printed menu preview, the r2 cook set as text (note, prep and cook times, make ahead, ingredients and steps for 4 in a details block), serve cue, 8 same-theme films, genre links, JSON-LD (WebPage, Movie, BreadcrumbList, ItemList of Recipe). Button goes to /?film=<id>.
+- scripts/render-previews.cjs renders assets/menu-previews/<slug>.jpg from the real app (about 28 min for all 1,000 at WORKERS=5; 64 MB). Run it for new films: `node scripts/render-previews.cjs` does only the missing ones, then build-data. `--wide` redoes spreads and strips. Previews are left out of the phone app build (build-app.cjs).
+- index.html footer: "All 1,000 film menus" link to /menu/, hidden in app mode (.reel-app).
+- tests/seo-pages.test.cjs checks every page, sitemap entry, index link, canonical, description, button, Recipe data and no em dashes. All tests and check-browser pass.
+- Next: deploy on Josh's word, then Google Search Console (Domain property via a DNS TXT record at VentraIP, then submit https://reeldinner.com/sitemap.xml).
