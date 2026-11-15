@@ -1442,3 +1442,23 @@ Not covered: cast and directors (no cast data). Within a tier, order is strength
 Josh's queue after this: deploy on his go, then the four TMNT menu rebuilds and the finger-flick wheel.
 
 Deployed on Josh's go: Publish site run 43667340200 passed. Runs 43666590568, 43666652973 and 43666869659 failed at GitHub's deploy step ("No artifacts named github-pages"; the upload itself worked, GitHub status all green). Waiting 5 minutes and starting a fresh run fixed it. search.js, the index, app.js, index.html, films.js and sw.js match main byte for byte live.
+
+## 15 Nov, 12:20pm to 2:00pm: Match night built, next 100 films started (branch feature/match-night, NOT deployed; start here in the next chat)
+
+Josh's plan doc: "Reel Dinner: next 100 films and Match night plan" (https://claude.ai/artifact/CLgBGTxk9QvUuQRwJ2taMi). All decisions locked there.
+
+Match night (done, tested):
+- match.js (loads after app.js, uses its globals). Spin it / Match it tabs above the wheel (#modeSpin, #modeMatch, #matchPanel). body.matching hides the wheel, controls and the sticky spin bar.
+- Vibes: Comedy, Horror, Family, Date night, Action, Surprise me. 20 cards. Tap flips poster to teaser (venue, 3 dishes, house drink, film colours). Swipe, buttons, undo, arrow keys.
+- Decks: data/match-deck.json from scripts/build-match.cjs (build-data runs it, DATA_V.match stamps it, sw.js keeps it offline). Only films with no open fact lines and vibe 3.5 or better (759 now). Dishes come from audit/cards so the teaser matches what prints. Kids mode deals kid-safe only; offline deals saved menus only.
+- Pass the phone: player two gets the same 20 in another order; first shared keep shows the marquee reveal (Open the menu, Keep swiping for a backup).
+- No match: both lists, each picks from the other's; the real wheel spins with the two picks on alternate wedges (window.spinForce hook in spin(), app.js). If one person kept nothing, they pick one from the other's list and it wins.
+- Room code: Reel Dinner Supabase (zpcgxupmclkxbzikdnfb), functions match_create, match_join, match_swipe, match_unswipe, match_pick, match_state; tables locked (RLS, no policies); rooms wipe after 12 hours (pg_cron hourly plus cleanup on create). Record in supabase/match-night.sql. Polls every 2s. Both phones get the same decider result (hash of code and picks). ?match=CODE links open the join.
+- Tests: tests/match.test.cjs. check-browser passes. Josh has not seen it live; deploy only on his go.
+
+Next 100 films (1 of 100 written):
+- wip/next100/: plan.json (the 100, with layout, era, tone, theme, venue lead), tmdb.json, BRIEF.md (how to write one; read it first), mk.py (source file to pack), pack.py (put, keeps file layouts, adds house lines and the poster rollout row), src/ and packs/.
+- TMDB ids, posters, stills, ratings, trailers, where to watch and genres merged for all 100 (scripts/new_films_tmdb.py takes NEWFILMS_DIR). TMDB key at ~/.tmdb_key and ~/.secrets/tmdb_key, never commit.
+- Layouts logged in Josh's sheet "Reel Dinner film layouts" (https://claude.ai/artifact/CUZSJL6Gy92dKmd2DTNxz4), Films rows 902 to 1001.
+- Pilot: Good Will Hunting (1997), pub, L Street Tavern, in films.json (901 films), self-audited 4.0. Needs an independent pass with batch 1.
+- Next: the other 99 in batches of 10, plan.json order (skip Good Will Hunting). Counts that say 900 change only when all 100 are in.
