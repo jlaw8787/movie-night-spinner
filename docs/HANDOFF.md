@@ -1658,3 +1658,9 @@ Deployed on Josh's go: fast-forward merge to main 6df2578, Publish site run 4370
 - index.html footer: "All 1,000 film menus" link to /menu/, hidden in app mode (.reel-app).
 - tests/seo-pages.test.cjs checks every page, sitemap entry, index link, canonical, description, button, Recipe data and no em dashes. All tests and check-browser pass.
 - Next: deploy on Josh's word, then Google Search Console (Domain property via a DNS TXT record at VentraIP, then submit https://reeldinner.com/sitemap.xml).
+
+## 15 Nov, 9:20pm: film pages merged with main, previews re-rendered (not deployed)
+
+- main had moved on (design calls 1 to 6 live), so feat/seo-film-pages now carries a merge of main 56e0b82 (only HANDOFF clashed, both sections kept). Deploy is still a fast-forward of main to this branch.
+- Josh picked "re-render all, then deploy": all 1,000 previews redone with `--all` (24 min at WORKERS=6) so they show the new hotel, banquet, pub, kiosk, campfire, motel and showtime layouts. build-data rerun: 1,044 URLs, 1,000 with a preview. Bruce Almighty is now a three-page strip.
+- npm test and check-browser pass. Spot checked Hot Fuzz, Karate Kid, E.T., Paranormal Activity, Bruce Almighty by eye.
