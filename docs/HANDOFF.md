@@ -1429,3 +1429,5 @@ Wider search: data/search-words.json (built by build-data from each film's descr
 Checks: npm test pass. check-print-text on the four: pass. planCard against a worktree of main, no switch, Vegetarian and No alcohol: identical on the other 896; only the four TMNT films differ (new dishes).
 
 Not deployed. Next: Josh's go to merge fix/tmnt-rebuild into main and run Publish site.
+
+Josh's verdict, 15 Nov 12:30pm: the 1990, II and III menu cards score 4 to 5 out of 10 on quality and design. He doesn't like the II card at all, and none of the redo ideas offered (Japanese poster, old Lucky 4 card fixed, pizza box lid, club flyer) were good enough. Mutant Mayhem was not called out. Keep the dish and recipe data, the facts and the venues. Redesign the three cards to a far higher standard (benchmark: the Jurassic Park menu he set as the standard, The Big Lebowski Star Lanes). Show him design mockups before building. The review agent's 9.0 scores did not match his eye, so judge against his benchmark, not the agent.
