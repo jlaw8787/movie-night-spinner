@@ -1,0 +1,898 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fishing cabin cornmeal fish bites with tartare",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Make the tartare up to 2 days ahead; crumb and fry the fish to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "flathead or basa fillets, in chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "fine cornmeal (polenta)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gherkins, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, gherkins, capers and a squeeze of lemon into a tartare.",
+     "min": 5
+    },
+    {
+     "text": "Soak the fish in the buttermilk while you mix the cornmeal, flour, Cajun seasoning and salt.",
+     "min": 7
+    },
+    {
+     "text": "Roll the fish in the cornmeal mix to coat well.",
+     "min": 8
+    },
+    {
+     "text": "Fry in batches at 180C until golden and cooked through, then drain and serve with the tartare and lemon.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fishing cabin cornmeal zucchini bites with tartare (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Make the tartare up to 2 days ahead; crumb and fry the zucchini to serve",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "zucchini, cut in thick batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "fine cornmeal (polenta)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Cajun seasoning",
+       "aisle": "Spices"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "gherkins, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tartare.",
+       "min": 5
+      },
+      {
+       "text": "Dip the zucchini in buttermilk, then the cornmeal mix.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 180C until golden and serve with the tartare.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Thunderbird onion rings with comeback sauce",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Mix the sauce up to 3 days ahead; batter and fry the rings to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large white onions, in thick rings",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chilled soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, tomato sauce and hot sauce into a comeback sauce.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the flour, cornflour, paprika and salt with the soda water into a light batter.",
+     "min": 4
+    },
+    {
+     "text": "Dip the rings and fry in batches at 180C until crisp and golden.",
+     "min": 15
+    },
+    {
+     "text": "Drain, salt well and serve hot with the sauce.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Leave-Darryl-a-note chicken-fried steak",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Pound and crumb the steaks up to 4 hours ahead and chill; fry to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "thin beef minute steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender and mash with a knob of butter and a splash of milk; keep warm.",
+     "min": 20
+    },
+    {
+     "text": "Season 100g flour with the garlic powder and salt, and whisk the eggs with the buttermilk.",
+     "min": 3
+    },
+    {
+     "text": "Dredge the steaks in flour, then egg, then flour again, and fry in the hot oil until crisp, 3 minutes a side.",
+     "min": 8
+    },
+    {
+     "text": "Pour off all but 2 tbsp of the fat, stir in the butter and remaining flour, then whisk in the milk and pepper and simmer into gravy.",
+     "min": 6
+    },
+    {
+     "text": "Blanch the beans and serve with the steaks, mash and gravy.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Leave-Darryl-a-note chicken-fried cauliflower steak (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Cut and par-boil the cauliflower up to a day ahead; crumb and fry to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut in 4 thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the cauliflower steaks for 4 minutes and drain, and make the mash.",
+       "min": 20
+      },
+      {
+       "text": "Dredge in flour, egg and flour and fry until golden.",
+       "min": 10
+      },
+      {
+       "text": "Make the pepper gravy in the pan and serve with the mash and beans.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Mexico-bound pork carnitas tacos",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "Braise the pork up to 2 days ahead; crisp it in a hot pan to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder, in large chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, smashed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomatillo salsa verde",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the pork well and put it in a heavy pot with the orange juice, garlic, cumin, oregano, bay and enough water to just cover.",
+     "min": 10
+    },
+    {
+     "text": "Simmer, covered, until the pork falls apart, then uncover and boil until the liquid is gone and the fat sizzles.",
+     "min": 130
+    },
+    {
+     "text": "Toss the onion with the juice of 2 limes and a pinch of salt and leave to pickle.",
+     "min": 5
+    },
+    {
+     "text": "Shred the pork and crisp it in its own fat in a hot pan.",
+     "min": 10
+    },
+    {
+     "text": "Warm the tortillas and fill with pork, pickled onion, salsa verde and coriander.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mexico-bound jackfruit carnitas tacos (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Braise the jackfruit up to 2 days ahead; crisp it to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins young jackfruit, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, smashed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tomatillo salsa verde",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the jackfruit with the orange juice, garlic and spices until the liquid is gone, then shred.",
+       "min": 30
+      },
+      {
+       "text": "Pickle the onion in lime juice and salt.",
+       "min": 5
+      },
+      {
+       "text": "Crisp the jackfruit in the oil and fill the warm tortillas.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Wild Turkey pecan pie with vanilla ice cream",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Bake up to 2 days ahead and keep in the fridge; warm a slice to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "23cm shortcrust pie case, blind baked",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Kentucky straight bourbon",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the pecans at 180C for 6 minutes, then scatter them in the pie case.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, sugar, golden syrup, butter, bourbon, vanilla and a pinch of salt.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the pecans and bake at 170C until just set with a slight wobble.",
+     "min": 45
+    },
+    {
+     "text": "Cool until warm and serve in wedges with the ice cream.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Diner pecan pie with vanilla ice cream (alcohol-free)",
+     "course": "w",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Bake up to 2 days ahead and keep in the fridge; warm slices in a low oven to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "23cm shortcrust pie case, blind baked",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "golden syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vanilla ice cream",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the pecans and scatter in the case.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the filling, pour over and bake at 170C until just set.",
+       "min": 50
+      },
+      {
+       "text": "Serve warm with ice cream.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "By the sea margaritas",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the limes up to 4 hours ahead and chill; shake to order",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "blanco tequila",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 90,
+     "u": "ml",
+     "item": "triple sec",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "fresh lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Run a lime wedge round 4 glasses and dip the rims in salt.",
+     "min": 3
+    },
+    {
+     "text": "Shake the tequila, triple sec, lime juice and syrup hard with ice.",
+     "min": 4
+    },
+    {
+     "text": "Strain over fresh ice and serve.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "By the sea lime and orange fizz (alcohol-free)",
+     "course": "d",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Squeeze the citrus up to 4 hours ahead and chill",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "fresh lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the rims of 4 glasses.",
+       "min": 3
+      },
+      {
+       "text": "Shake the juices and agave with ice, strain over fresh ice and top with soda.",
+       "min": 7
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
