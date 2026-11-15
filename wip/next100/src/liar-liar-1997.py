@@ -1,0 +1,58 @@
+# Liar Liar (1997). Invite layout, Max's fifth birthday party, Los Angeles.
+# Sources: Wikipedia plot (Liar_Liar), Wikiquote (Liar_Liar), Spoilertown recap (the pen is blue, the missed party, the mobile stairway).
+FILM = {"id": "Liar Liar (1997)", "theme": "uptown",
+        "T": "Trust me. The cake is chocolate.",
+        "D": "A Los Angeles lawyer who lies for a living misses his son's birthday, and the boy's wish leaves him unable to tell a lie for 24 hours.",
+        "P": "Cut the cake when Max blows out his candles and makes his wish."}
+FORMAT = {"format": "invite", "era": "1990s", "tone": "playful"}
+PALETTE = {"dark": "#16233b", "accent": "#e8b93a"}
+SERIES = []
+FLAVOUR = {"venue": "Max's Fifth Birthday Party", "sign": "Max turns five, Los Angeles",
+           "note": {"text": "I hold myself in contempt! Why should you be any different?", "by": "Fletcher Reede", "kind": "quote"},
+           "winks": ["The blue pen test", "Mr. Allen, who loves a good roast", "Every parking ticket, confessed", "A mobile stairway on the runway", "I'm Jose Canseco!"],
+           "prop": {"kind": "tag", "title": "Birthday Wish", "lines": ["Dad can't lie", "For one whole day"]},
+           "number": "5",
+           "words": {}}
+HOUSE = {"s": {"n": "Party bags for the kids", "note": "Dad promised he'd be here.", "meat": False},
+         "d": {"n": "Sparkling grape juice", "note": "A year on, Max only wishes for rollerblades.", "alc": False}}
+DISHES = [
+ {"n": "Blue cheese, pear and walnut crostini", "course": "s",
+  "line": "The pen is blue, says Fletcher",
+  "note": "Blue cheese, pear and honeyed walnuts.",
+  "prep": 15, "cook": 10, "ahead": "Toast the crostini and candy the walnuts up to 2 days ahead; top to serve",
+  "ing": [(1, "", "baguette, sliced thinly on an angle", "Bakery"), (2, "tbsp", "olive oil", "Pantry"), (150, "g", "creamy blue cheese", "Dairy"), (100, "g", "cream cheese", "Dairy"), (2, "", "ripe pears, thinly sliced", "Produce"), (60, "g", "walnuts", "Pantry"), (2, "tbsp", "honey", "Pantry"), (2, "", "thyme sprigs", "Produce")],
+  "steps": [("Brush the bread with oil and bake at 190C until crisp.", 8), ("Toss the walnuts with half the honey in a hot pan until sticky, then cool.", 4), ("Beat the blue cheese with the cream cheese until spreadable.", 3), ("Spread on the toasts, top with pear and walnuts, drizzle with the remaining honey and scatter with thyme.", 10)]},
+ {"n": "Max's birthday party pigs in blankets", "course": "s",
+  "line": "Max turns five. Dad never shows",
+  "note": "Mini franks in puff pastry, honey mustard.",
+  "prep": 15, "cook": 20, "ahead": "Wrap the franks up to a day ahead and chill on the tray; bake to serve",
+  "ing": [(24, "", "cocktail frankfurts", "Meat"), (2, "", "sheets frozen puff pastry, thawed", "Frozen"), (1, "", "egg, beaten", "Dairy"), (2, "tsp", "sesame seeds", "Pantry"), (3, "tbsp", "Dijon mustard", "Pantry"), (2, "tbsp", "honey", "Pantry"), (3, "tbsp", "tomato sauce", "Pantry")],
+  "steps": [("Cut each pastry sheet into 12 strips.", 5), ("Roll a strip around each frankfurt, seam side down on a lined tray.", 10), ("Brush with egg, scatter with sesame and bake at 200C until puffed and golden.", 20)],
+  "alt": {"veg": {"n": "Max's birthday party mushroom rolls (vegetarian)", "note": "Mushroom and cheese puff rolls, honey mustard.", "prep": 20, "cook": 25, "ahead": "Make the filling and roll the logs up to a day ahead; slice and bake to serve",
+                  "ing": [(400, "g", "mushrooms, finely chopped", "Produce"), (1, "", "brown onion, finely chopped", "Produce"), (100, "g", "cheddar, grated", "Dairy"), (50, "g", "dried breadcrumbs", "Pantry"), (2, "", "sheets frozen puff pastry, thawed", "Frozen"), (1, "", "egg, beaten", "Dairy"), (3, "tbsp", "Dijon mustard", "Pantry"), (2, "tbsp", "honey", "Pantry")],
+                  "steps": [("Cook the mushrooms and onion until dry, then cool and mix with the cheese and crumbs.", 15), ("Spoon along each halved pastry sheet, roll up and cut into bites.", 5), ("Brush with egg and bake at 200C until golden.", 25)]}}},
+ {"n": "Mr. Allen's good roast lamb", "course": "m",
+  "line": "Mr. Allen loves a good roast",
+  "note": "Garlic and rosemary lamb, crisp potatoes, mint salsa verde.",
+  "prep": 20, "cook": 110, "ahead": "Stud and rub the lamb up to a day ahead and keep it covered in the fridge; roast on the day",
+  "ing": [(2, "kg", "lamb leg, bone in", "Meat"), (4, "", "garlic cloves, sliced", "Produce"), (4, "", "rosemary sprigs", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (1.2, "kg", "potatoes, cut in chunks", "Produce"), (1, "cup", "mint leaves", "Produce"), (1, "cup", "parsley leaves", "Produce"), (1, "tbsp", "capers", "Pantry"), (1, "", "lemon", "Produce"), (100, "ml", "extra virgin olive oil", "Pantry")],
+  "steps": [("Cut small slits all over the lamb and push in garlic slices and rosemary sprigs, then rub with oil and salt.", 15), ("Roast at 180C for about 1 hour 20 minutes for pink, then rest under foil.", 80), ("Parboil the potatoes, rough them up and roast in oil around the lamb for the last hour.", 10), ("Chop the mint, parsley and capers and stir in the lemon juice and olive oil.", 5), ("Carve the lamb and serve with the potatoes and salsa verde.", 10)],
+  "alt": {"veg": {"n": "Mr. Allen's good roast pumpkin (vegetarian)", "note": "Garlic and rosemary pumpkin, crisp potatoes, mint salsa verde.", "prep": 15, "cook": 50, "ahead": "Make the salsa verde up to a day ahead; roast the pumpkin on the day",
+                  "ing": [(1.2, "kg", "Kent pumpkin, cut in wedges", "Produce"), (4, "", "garlic cloves, sliced", "Produce"), (4, "", "rosemary sprigs", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (1, "kg", "potatoes, cut in chunks", "Produce"), (150, "g", "feta", "Dairy"), (1, "cup", "mint leaves", "Produce"), (1, "cup", "parsley leaves", "Produce"), (1, "", "lemon", "Produce"), (100, "ml", "extra virgin olive oil", "Pantry")],
+                  "steps": [("Toss the pumpkin with garlic, rosemary, oil and salt and roast at 200C with the parboiled potatoes until golden.", 50), ("Blitz the mint, parsley, lemon and olive oil into a salsa verde.", 5), ("Serve the pumpkin with feta crumbled over and the salsa verde.", 5)]}}},
+ {"n": "Max's birthday wish chocolate cake", "course": "w",
+  "line": "Max wishes Dad can't lie for a day",
+  "note": "Chocolate layer cake, fudge icing, candles.",
+  "prep": 30, "cook": 35, "ahead": "Bake the cakes up to 2 days ahead and keep wrapped; ice on the day",
+  "ing": [(225, "g", "plain flour", "Pantry"), (60, "g", "cocoa powder, plus 40g for the icing", "Pantry"), (300, "g", "caster sugar", "Pantry"), (2, "tsp", "baking powder", "Pantry"), (2, "", "eggs", "Dairy"), (250, "ml", "milk", "Dairy"), (125, "ml", "vegetable oil", "Pantry"), (250, "ml", "hot coffee or water", "Pantry"), (150, "g", "soft butter", "Dairy"), (300, "g", "icing sugar", "Pantry"), (5, "", "birthday candles", "Pantry")],
+  "steps": [("Whisk the flour, 60g cocoa, sugar and baking powder, then beat in the eggs, milk and oil, and finally the hot coffee.", 10), ("Divide between two lined 20cm tins and bake at 180C until a skewer comes out clean.", 35), ("Beat the butter, icing sugar and 40g cocoa with a splash of milk until fluffy.", 10), ("Sandwich and cover the cooled cakes with the icing.", 10), ("Push in five candles, light them and make a wish.", 5)]},
+ {"n": "Fletcher's truth serum", "course": "d",
+  "line": "24 hours of nothing but the truth",
+  "note": "Gin, lemon, honey and soda, tall.",
+  "prep": 10, "cook": 0, "ahead": "Make the honey syrup up to a week ahead; build to order",
+  "ing": [(240, "ml", "gin", "Bottle shop"), (3, "", "lemons", "Produce"), (4, "tbsp", "honey", "Pantry"), (4, "tbsp", "warm water", "Pantry"), (600, "ml", "soda water", "Drinks"), (2, "cup", "ice cubes", "Frozen")],
+  "steps": [("Stir the honey into the warm water to make a syrup.", 3), ("Shake the gin, lemon juice and syrup with ice and strain into 4 tall glasses of ice.", 5), ("Top with soda and a lemon slice.", 2)],
+  "alt": {"af": {"n": "Fletcher's truth serum (alcohol-free)", "note": "Lemon, honey, cucumber and soda, tall.", "prep": 10, "cook": 0, "ahead": "Make the honey syrup and slice the cucumber up to a day ahead; build to order",
+                 "ing": [(3, "", "lemons", "Produce"), (4, "tbsp", "honey", "Pantry"), (4, "tbsp", "warm water", "Pantry"), (0.5, "", "Lebanese cucumber, thinly sliced", "Produce"), (750, "ml", "soda water", "Drinks"), (2, "cup", "ice cubes", "Frozen")],
+                 "steps": [("Make the honey syrup.", 3), ("Shake the lemon juice and syrup with ice and cucumber, then pour into 4 tall glasses.", 5), ("Top with soda.", 2)]}}},
+]

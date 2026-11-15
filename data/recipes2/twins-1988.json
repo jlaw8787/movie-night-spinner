@@ -1,0 +1,647 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rambo-sized green chile queso",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Make the queso up to 2 days ahead and reheat gently with a splash of milk",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "brown onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "jar roasted green chiles, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tasty cheese, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Monterey Jack or mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "bag corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and garlic in the butter.",
+     "min": 5
+    },
+    {
+     "text": "Toss the cheeses with the cornflour.",
+     "min": 2
+    },
+    {
+     "text": "Add the evaporated milk and cumin to the pan, bring to a simmer, then stir in the cheese a handful at a time until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Stir through the green chiles, season and serve hot with the chips, warmed in the oven.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Split-in-two loaded potato skins",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Bake and scoop the potatoes up to a day ahead; fill and crisp to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "medium potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled jalapeños, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the potatoes at 200C until soft, then cool a little.",
+     "min": 50
+    },
+    {
+     "text": "Halve them and scoop out most of the flesh, leaving a thin wall. Keep the flesh for another day.",
+     "min": 5
+    },
+    {
+     "text": "Brush inside and out with oil, season with salt and paprika and bake until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Fill with cheddar and bake until bubbling, then top with sour cream, spring onion and jalapeños.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Green chile cheeseburgers",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Shape the patties up to a day ahead and chill between baking paper; griddle to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince, 20 per cent fat",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "jar roasted green chiles, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "iceberg lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tomato, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onion slowly in the butter until soft and golden, then push to the side of the griddle.",
+     "min": 10
+    },
+    {
+     "text": "Shape the mince into 4 thin patties and season hard.",
+     "min": 4
+    },
+    {
+     "text": "Griddle on high for 3 minutes, flip, pile on the green chile and cheese and cook until melted.",
+     "min": 6
+    },
+    {
+     "text": "Toast the buns, spread with mayo and build with lettuce, tomato, patty and onions.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Green chile mushroom burgers (vegetarian)",
+     "course": "m",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "Cook the onions up to 2 days ahead; grill the mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "jar roasted green chiles, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "iceberg lettuce leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onion slowly in half the oil until golden.",
+       "min": 10
+      },
+      {
+       "text": "Griddle the oiled mushrooms until juicy, then top with chile and cheese to melt.",
+       "min": 8
+      },
+      {
+       "text": "Build the burgers with mayo, lettuce and onions.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Thanksgiving hot turkey plate",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Make the gravy and the mash up to a day ahead and reheat; warm the turkey in the gravy to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "roast turkey breast, sliced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until soft, then mash with 50g butter and the hot milk.",
+     "min": 25
+    },
+    {
+     "text": "Cook the rest of the butter with the flour, whisk in the stock and thyme and simmer to a gravy.",
+     "min": 8
+    },
+    {
+     "text": "Warm the turkey slices gently in the gravy.",
+     "min": 5
+    },
+    {
+     "text": "Cook the peas and toast the bread.",
+     "min": 5
+    },
+    {
+     "text": "Lay turkey on the toast, smother with gravy and serve with mash, peas and cranberry.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Thanksgiving hot mushroom plate (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Make the gravy and the mash up to a day ahead and reheat; fry the mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thick slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil and mash the potatoes with butter and milk.",
+       "min": 25
+      },
+      {
+       "text": "Fry the mushrooms hard in the oil with the thyme.",
+       "min": 10
+      },
+      {
+       "text": "Make the gravy with the butter, flour and stock.",
+       "min": 8
+      },
+      {
+       "text": "Pile mushrooms on toast, smother with gravy and serve with mash and cranberry.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Six-father sopaipillas",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Make the dough up to a day ahead and chill; roll and fry to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter, plus 60g softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub 1 tbsp butter into the flour, baking powder and salt, then mix in the water to a soft dough and rest 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Roll out 5mm thick and cut into 12 squares.",
+     "min": 6
+    },
+    {
+     "text": "Fry a few at a time at 190C, spooning oil over until they puff, then flip and drain.",
+     "min": 12
+    },
+    {
+     "text": "Whip the softened butter with the honey, toss the sopaipillas in cinnamon sugar and serve with the honey butter.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Where they made the milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Chill the glasses in the freezer; blend to order",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "big scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk, malt powder and vanilla until thick and smooth.",
+     "min": 4
+    },
+    {
+     "text": "Pour into 4 frosted glasses.",
+     "min": 2
+    },
+    {
+     "text": "Top with whipped cream and a cherry and serve with long spoons and straws.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

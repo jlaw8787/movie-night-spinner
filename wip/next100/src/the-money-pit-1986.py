@@ -1,0 +1,56 @@
+# The Money Pit (1986). Home layout, the kitchen of Walter and Anna's falling-down mansion.
+# Sources: Wikipedia plot (The_Money_Pit), Wikiquote (The_Money_Pit), MovieMistakes plot (the turkey shoots out of the oven,
+# the tub falls through the floor as Walter pours the water).
+FILM = {"id": "The Money Pit (1986)", "theme": "uptown",
+        "T": "Dinner's ready. The kitchen isn't.",
+        "D": "A couple buy a mansion at a bargain price and watch it fall apart around them, one room at a time.",
+        "P": "Serve the turkey the moment it shoots out of the oven."}
+FORMAT = {"format": "home", "era": "1980s", "tone": "playful"}
+PALETTE = {"dark": "#2a2420", "accent": "#b8862b"}
+SERIES = []
+FLAVOUR = {"venue": "The Money Pit Kitchen", "sign": "Bought for $200,000. Two weeks, tops.",
+           "note": {"text": "Two weeks.", "by": "Curly, the contractor", "kind": "quote"},
+           "winks": ["The front door frame comes away in Walter's hands", "The staircase collapses", "The bathtub goes through the floor", "Walter's laugh", "Montgomery Shrapp tears up the permits"],
+           "prop": {"kind": "receipt", "title": "Shirk Bros. Contractors", "lines": ["Down payment: $5,000", "Done in two weeks"]},
+           "number": "5000",
+           "words": {}}
+HOUSE = {"s": {"n": "Warm bread and salted butter", "note": "Eat it now, before the ceiling comes in.", "meat": False},
+         "d": {"n": "Champagne for the new owners", "note": "Toast the house before the door frame goes.", "alc": True}}
+DISHES = [
+ {"n": "Candlelit gruyere gougeres", "course": "s",
+  "line": "Estelle shows the house by candlelight",
+  "note": "Warm gruyere puffs, black pepper, thyme.",
+  "prep": 20, "cook": 25, "ahead": "Pipe the gougeres and freeze them on the tray up to a week ahead; bake from frozen, 5 minutes longer",
+  "ing": [(125, "ml", "water", "Pantry"), (125, "ml", "milk", "Dairy"), (100, "g", "butter, diced", "Dairy"), (140, "g", "plain flour", "Pantry"), (4, "", "eggs", "Dairy"), (120, "g", "gruyere, finely grated", "Dairy"), (1, "tsp", "Dijon mustard", "Pantry"), (1, "tsp", "thyme leaves", "Produce")],
+  "steps": [("Bring the water, milk, butter and a pinch of salt to the boil, tip in the flour and beat over the heat until it forms a smooth ball.", 6), ("Cool for 5 minutes, then beat in the eggs one at a time until glossy.", 8), ("Beat in 100g of the gruyere, the mustard, thyme and plenty of pepper.", 2), ("Pipe walnut-sized balls onto lined trays and top with the rest of the cheese.", 6), ("Bake at 200C until puffed, deep golden and crisp, and serve warm.", 23)]},
+ {"n": "Short-line farm vegetables with green goddess", "course": "s",
+  "line": "Anna was on the short line once",
+  "note": "Baby vegetables, whipped ricotta, herb dressing.",
+  "prep": 25, "cook": 5, "ahead": "Make the dressing and whip the ricotta up to 2 days ahead; prep the vegetables the morning of",
+  "ing": [(1, "", "bunch baby carrots", "Produce"), (1, "", "bunch radishes", "Produce"), (150, "g", "sugar snap peas", "Produce"), (1, "", "bunch asparagus", "Produce"), (1, "", "baby cos lettuce", "Produce"), (250, "g", "fresh ricotta", "Dairy"), (1, "", "lemon", "Produce"), (125, "g", "whole-egg mayonnaise", "Pantry"), (125, "g", "sour cream", "Dairy"), (1, "cup", "mixed soft herbs (parsley, tarragon, chives)", "Produce"), (1, "tbsp", "white wine vinegar", "Pantry")],
+  "steps": [("Blanch the asparagus and snap peas for 1 minute, then plunge into iced water.", 5), ("Trim and halve the carrots and radishes, and split the cos into spears.", 8), ("Whip the ricotta with lemon zest, a pinch of salt and a splash of oil until smooth.", 4), ("Blitz the mayo, sour cream, herbs and vinegar until pale green.", 5), ("Spread the ricotta on a board, pile on the vegetables and serve the dressing alongside.", 8)]},
+ {"n": "Flying herb-butter roast turkey", "course": "m",
+  "line": "The turkey shoots out of the oven",
+  "note": "Turkey breast, sourdough stuffing, gravy.",
+  "prep": 30, "cook": 90, "ahead": "Make the stuffing up to a day ahead and chill; roast the turkey and make the gravy to serve",
+  "ing": [(1.5, "kg", "turkey breast roast, skin on", "Meat"), (80, "g", "butter, softened", "Dairy"), (2, "tbsp", "sage and thyme, chopped", "Produce"), (1, "", "lemon, zested", "Produce"), (300, "g", "sourdough, torn and dried", "Bakery"), (1, "", "brown onion, diced", "Produce"), (2, "", "celery sticks, diced", "Produce"), (60, "g", "dried cranberries", "Pantry"), (500, "ml", "chicken stock", "Pantry"), (1, "", "egg", "Dairy"), (2, "tbsp", "plain flour", "Pantry")],
+  "steps": [("Mash half the butter with the herbs and lemon zest and push it under the turkey skin. Season well.", 10), ("Roast at 180C, basting twice, until the thickest part reaches 70C, then rest under foil.", 75), ("Meanwhile soften the onion and celery in the rest of the butter, toss with the bread, cranberries, egg and 200ml stock, and bake in a dish alongside the turkey for 40 minutes.", 15), ("Stir the flour into the pan juices over the heat, whisk in the rest of the stock and simmer to a gravy.", 8), ("Slice the turkey and serve with the stuffing and gravy.", 7)],
+  "alt": {"veg": {"n": "Flying herb-butter roast pumpkin (vegetarian)", "note": "Stuffed roast pumpkin, sourdough stuffing, gravy.", "prep": 25, "cook": 60, "ahead": "Make the stuffing and the gravy up to a day ahead; roast the pumpkin to serve",
+                  "ing": [(1, "", "small Kent pumpkin, halved and seeded", "Produce"), (80, "g", "butter, softened", "Dairy"), (2, "tbsp", "sage and thyme, chopped", "Produce"), (300, "g", "sourdough, torn and dried", "Bakery"), (1, "", "brown onion, diced", "Produce"), (2, "", "celery sticks, diced", "Produce"), (60, "g", "dried cranberries", "Pantry"), (600, "ml", "vegetable stock", "Pantry"), (1, "", "egg", "Dairy"), (2, "tbsp", "plain flour", "Pantry"), (1, "tbsp", "soy sauce", "Pantry")],
+                  "steps": [("Brush the pumpkin halves with half the herb butter and roast cut side up at 190C for 30 minutes.", 32), ("Soften the onion and celery, toss with the bread, cranberries, egg and 200ml stock and pile into the pumpkin.", 15), ("Roast 30 minutes more until the stuffing is crisp.", 30), ("Cook the flour in the rest of the butter, whisk in the stock and soy and simmer to a gravy.", 8)]}}},
+ {"n": "Collapsing staircase chocolate cake", "course": "w",
+  "line": "The staircase comes down under Walter",
+  "note": "Fallen flourless chocolate cake, cream, raspberries.",
+  "prep": 20, "cook": 40, "ahead": "Bake up to 2 days ahead and keep covered; it gets fudgier",
+  "ing": [(250, "g", "dark chocolate, chopped", "Pantry"), (150, "g", "butter", "Dairy"), (5, "", "eggs, separated", "Dairy"), (180, "g", "caster sugar", "Pantry"), (30, "g", "cocoa powder", "Pantry"), (300, "ml", "thickened cream", "Dairy"), (125, "g", "raspberries", "Produce"), (1, "tbsp", "icing sugar", "Pantry")],
+  "steps": [("Melt the chocolate and butter together and cool slightly.", 6), ("Beat the yolks with half the sugar until pale, then stir in the chocolate and the cocoa.", 5), ("Whisk the whites to soft peaks, whisk in the rest of the sugar, then fold into the chocolate.", 6), ("Bake in a lined 22cm springform at 170C until risen and just set. It will crack and sink as it cools.", 38), ("Fill the crater with whipped cream, scatter raspberries and dust with icing sugar.", 5)]},
+ {"n": "Bathtub gin fizz", "course": "d",
+  "line": "The bathtub goes through the floor",
+  "note": "Gin, lemon, sugar and soda, poured tall.",
+  "prep": 10, "cook": 0, "ahead": "Make the sugar syrup up to 2 weeks ahead; squeeze the lemons on the day",
+  "ing": [(180, "ml", "gin", "Bottle shop"), (120, "ml", "lemon juice", "Produce"), (60, "g", "caster sugar", "Pantry"), (60, "ml", "hot water", "Pantry"), (500, "ml", "soda water", "Drinks"), (1, "", "lemon, sliced", "Produce"), (1, "", "tray ice", "Frozen")],
+  "steps": [("Dissolve the sugar in the hot water and cool.", 4), ("Shake the gin, lemon juice and syrup hard with ice.", 3), ("Strain into 4 tall glasses of ice, top with soda and add a lemon slice.", 3)],
+  "alt": {"af": {"n": "Bathtub lemon fizz (alcohol-free)", "note": "Lemon, sugar, cucumber and soda, poured tall.", "prep": 10, "cook": 0, "ahead": "Make the syrup up to 2 weeks ahead; slice the cucumber on the day",
+                 "ing": [(120, "ml", "lemon juice", "Produce"), (60, "g", "caster sugar", "Pantry"), (60, "ml", "hot water", "Pantry"), (0.5, "", "Lebanese cucumber, sliced", "Produce"), (700, "ml", "soda water", "Drinks"), (1, "", "tray ice", "Frozen")],
+                 "steps": [("Dissolve the sugar in the hot water and cool.", 4), ("Muddle the cucumber with the lemon juice and syrup.", 3), ("Strain over ice and top with soda.", 3)]}}},
+]

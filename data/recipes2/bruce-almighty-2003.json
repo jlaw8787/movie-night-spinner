@@ -1,0 +1,584 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Red Sea tomato soup with grilled cheese",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Make the soup up to 3 days ahead and reheat; toast the sandwiches to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "ripe tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white sandwich bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the tomatoes, onion and garlic with the oil and salt and roast at 200C until soft and blistered.",
+     "min": 35
+    },
+    {
+     "text": "Blend with the stock and sugar, then simmer, stir in the cream and season.",
+     "min": 10
+    },
+    {
+     "text": "Fill the bread with cheddar, butter the outsides and toast in a pan until golden and melting.",
+     "min": 10
+    },
+    {
+     "text": "Cut the toasties into fingers and serve with the soup, for parting or dunking.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Stanley Cup Buffalo wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Make the blue cheese dip up to 2 days ahead; bake the wings to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings, tips off, split",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "Frank's RedHot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks, cut in batons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and toss with the baking powder and a teaspoon of salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a rack at 220C, turning once, until crisp and golden.",
+     "min": 45
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream, mayo and a squeeze of lemon.",
+     "min": 5
+    },
+    {
+     "text": "Melt the butter into the hot sauce and toss the wings through it.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stanley Cup Buffalo cauliflower (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Make the dip and cut the cauliflower up to 2 days ahead; roast and toss to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, cut in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "Frank's RedHot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks, cut in batons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour and milk into a batter, coat the florets and roast at 220C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Mix the blue cheese dip.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cauliflower in the melted butter and hot sauce and serve with celery.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Evan's prime rib roast with horseradish cream",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 140,
+   "make_ahead": "Season the beef up to a day ahead and leave uncovered in the fridge; roast on the day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "standing beef rib roast, 2 bones",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "grated horseradish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with the oil, garlic, pepper and plenty of salt and bring to room temperature.",
+     "min": 15
+    },
+    {
+     "text": "Roast at 230C for 15 minutes, then at 160C until it reads 54C inside for medium rare.",
+     "min": 90
+    },
+    {
+     "text": "Rest the beef under foil while you make the jus from the pan juices and stock.",
+     "min": 20
+    },
+    {
+     "text": "Meanwhile boil and mash the potatoes with the butter and milk, and steam the beans.",
+     "min": 10
+    },
+    {
+     "text": "Stir the horseradish into the sour cream, carve the beef and serve with everything.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Evan's roast cauliflower with horseradish cream (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "Make the mushroom gravy up to 2 days ahead; roast the cauliflower on the day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole cauliflower, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "grated horseradish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the whole cauliflower in salted water for 8 minutes, then drain well.",
+       "min": 15
+      },
+      {
+       "text": "Rub with the oil and paprika and roast at 200C until deep golden.",
+       "min": 45
+      },
+      {
+       "text": "Fry the mushrooms, stir in the flour and stock and simmer into a gravy.",
+       "min": 10
+      },
+      {
+       "text": "Mash the potatoes, steam the beans and serve with the horseradish cream.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Every prayer answered Yes sundae",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Make the hot fudge up to a week ahead and rewarm; build the sundaes to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "salted peanuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rainbow sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream and golden syrup, pour over the chocolate and stir into a glossy fudge.",
+     "min": 10
+    },
+    {
+     "text": "Layer banana, strawberries and scoops of ice cream in 4 tall glasses.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the hot fudge, then add the cream, peanuts, sprinkles and a cherry each.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Juan Valdez iced coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Steep the cold brew overnight in the fridge; pour to order",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "Colombian coffee, coarsely ground",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the coffee into the cold water and leave in the fridge for 12 hours, then strain.",
+     "min": 4
+    },
+    {
+     "text": "Spoon condensed milk into 4 glasses and fill with ice.",
+     "min": 3
+    },
+    {
+     "text": "Pour over the cold brew and top with milk, then stir.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

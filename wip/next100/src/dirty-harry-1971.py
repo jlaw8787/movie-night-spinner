@@ -1,0 +1,56 @@
+# Dirty Harry (1971). Truck layout, the Burger Den, the corner snack bar where Harry orders his jumbo hot dog before the bank job.
+# Sources: Wikipedia plot (Dirty_Harry), Wikiquote (Dirty_Harry), Reel SF (Burger Den, Pine and Battery street signs, hot dog at the counter),
+# Filmsite (jumbo hot dog meal, one bite, still chewing as he walks out).
+FILM = {"id": "Dirty Harry (1971)", "theme": "cop",
+        "T": "One bite in. Then the alarm.",
+        "D": "A San Francisco inspector with a .44 Magnum and no time for the rule book hunts a sniper who calls himself Scorpio.",
+        "P": "Serve the hot dogs when Harry orders the usual and clocks the tan Ford outside the bank."}
+FORMAT = {"format": "truck", "era": "1970s", "tone": "gritty"}
+PALETTE = {"dark": "#1c1c1a", "accent": "#c79a3b"}
+SERIES = []
+FLAVOUR = {"venue": "Burger Den", "sign": "Pine and Battery, San Francisco",
+           "note": {"text": "The usual lunch or the usual dinner?", "by": "Jaffe, behind the counter", "kind": "quote"},
+           "winks": ["Do I feel lucky? Well, do ya, punk?", "Six shots or only five", "The phone booth run across the city", "The cross on Mount Davidson", "The badge thrown in the water"],
+           "prop": {"kind": "receipt", "title": "Burger Den", "lines": ["Jumbo hot dog, one bite", "Call it in: 2-11"]},
+           "number": "44",
+           "words": {}}
+HOUSE = {"s": {"n": "Sourdough and salted butter", "note": "San Francisco sourdough. Eat it before the alarm goes.", "meat": False},
+         "d": {"n": "Black coffee to go", "note": "Harry won't be sitting down for long.", "alc": False}}
+DISHES = [
+ {"n": "Six shots or five jalapeño poppers", "course": "s",
+  "line": "Did he fire six shots or only five",
+  "note": "Crumbed cheese-stuffed jalapeños, ranch.",
+  "prep": 25, "cook": 15, "ahead": "Stuff and crumb the poppers up to a day ahead and chill on a tray; fry to serve",
+  "ing": [(12, "", "large jalapeños, halved and seeded", "Produce"), (200, "g", "cream cheese, softened", "Dairy"), (80, "g", "cheddar, grated", "Dairy"), (2, "", "spring onions, finely sliced", "Produce"), (50, "g", "plain flour", "Pantry"), (2, "", "eggs, beaten", "Dairy"), (100, "g", "panko breadcrumbs", "Pantry"), (1, "l", "vegetable oil, for frying", "Pantry"), (125, "g", "sour cream", "Dairy"), (2, "tbsp", "whole-egg mayonnaise", "Pantry"), (1, "tbsp", "chives and dill, chopped", "Produce")],
+  "steps": [("Mix the cream cheese, cheddar and spring onion and fill each jalapeño half.", 10), ("Dust in flour, dip in egg and press into the panko. Chill for 10 minutes.", 12), ("Fry at 180C in batches until golden, about 3 minutes, and drain.", 12), ("Stir the sour cream, mayo and herbs for a quick ranch and serve alongside.", 5)]},
+ {"n": "Kezar Stadium soft pretzels", "course": "s",
+  "line": "Harry finds Scorpio at Kezar Stadium",
+  "note": "Soft pretzels, cheddar sauce, hot mustard.",
+  "prep": 30, "cook": 20, "ahead": "Shape the pretzels up to a day ahead and chill; boil and bake to serve",
+  "ing": [(500, "g", "ball pizza dough", "Bakery"), (2, "l", "water", "Pantry"), (60, "g", "bicarbonate of soda", "Pantry"), (1, "", "egg, beaten", "Dairy"), (1, "tbsp", "pretzel or sea salt", "Pantry"), (20, "g", "butter", "Dairy"), (1, "tbsp", "plain flour", "Pantry"), (200, "ml", "milk", "Dairy"), (120, "g", "sharp cheddar, grated", "Dairy"), (3, "tbsp", "hot English mustard", "Pantry")],
+  "steps": [("Cut the dough into 8, roll into long ropes and twist into pretzel shapes.", 12), ("Bring the water and bicarb to the boil and dip each pretzel for 30 seconds, then lift onto a lined tray.", 8), ("Brush with egg, sprinkle with salt and bake at 220C until deep brown.", 15), ("Cook the butter and flour, whisk in the milk until thick, then melt in the cheddar.", 7), ("Serve the pretzels warm with the cheese sauce and mustard.", 3)]},
+ {"n": "Burger Den jumbo hot dogs", "course": "m",
+  "line": "Harry gets one bite of lunch",
+  "note": "Jumbo franks, chilli, onions, mustard.",
+  "prep": 15, "cook": 40, "ahead": "Make the chilli up to 3 days ahead and reheat; grill the franks to serve",
+  "ing": [(8, "", "jumbo beef frankfurts", "Meat"), (8, "", "long split-top bread rolls", "Bakery"), (300, "g", "beef mince", "Meat"), (2, "", "brown onions, finely diced", "Produce"), (2, "", "garlic cloves, crushed", "Produce"), (2, "tsp", "chilli powder", "Spices"), (1, "tsp", "ground cumin", "Spices"), (2, "tbsp", "tomato paste", "Pantry"), (250, "ml", "water", "Pantry"), (4, "tbsp", "yellow mustard", "Pantry"), (100, "g", "cheddar, grated", "Dairy")],
+  "steps": [("Brown the mince with one of the onions and the garlic, breaking it up very fine.", 10), ("Stir in the chilli powder, cumin and tomato paste, add the water and simmer until thick.", 25), ("Grill the franks until blistered and warm the rolls.", 8), ("Load each roll with a frank, a ladle of chilli, mustard, the rest of the raw onion and cheddar.", 5)],
+  "alt": {"veg": {"n": "Burger Den vegetarian jumbo dogs", "note": "Vegetarian franks, bean chilli, onions, mustard.", "prep": 15, "cook": 30, "ahead": "Make the bean chilli up to 3 days ahead and reheat; grill the sausages to serve",
+                  "ing": [(8, "", "vegetarian sausages", "Frozen"), (8, "", "long split-top bread rolls", "Bakery"), (400, "g", "tin kidney beans, drained and mashed", "Pantry"), (2, "", "brown onions, finely diced", "Produce"), (2, "", "garlic cloves, crushed", "Produce"), (2, "tsp", "chilli powder", "Spices"), (1, "tsp", "ground cumin", "Spices"), (2, "tbsp", "tomato paste", "Pantry"), (2, "tbsp", "olive oil", "Pantry"), (4, "tbsp", "yellow mustard", "Pantry"), (100, "g", "cheddar, grated", "Dairy")],
+                  "steps": [("Soften one onion and the garlic in the oil, then add the spices and tomato paste.", 8), ("Add the beans and a splash of water and simmer until thick.", 20), ("Grill the vegetarian sausages and warm the rolls.", 8), ("Load with chilli, mustard, raw onion and cheddar.", 5)]}}},
+ {"n": "Ghirardelli hot fudge sundaes", "course": "w",
+  "line": "Harry throws his badge in the water",
+  "note": "Ghirardelli hot fudge, vanilla, toasted almonds.",
+  "prep": 10, "cook": 10, "ahead": "Make the hot fudge up to a week ahead and warm to serve",
+  "ing": [(1, "l", "vanilla ice cream", "Frozen"), (150, "g", "Ghirardelli dark chocolate, chopped", "Pantry"), (150, "ml", "thickened cream", "Dairy"), (2, "tbsp", "golden syrup", "Pantry"), (20, "g", "butter", "Dairy"), (50, "g", "flaked almonds, toasted", "Pantry"), (150, "ml", "thickened cream, whipped", "Dairy"), (4, "", "maraschino cherries", "Pantry")],
+  "steps": [("Heat the cream, golden syrup and butter until steaming, then stir in the chocolate until glossy.", 8), ("Toast the almonds in a dry pan.", 4), ("Scoop the ice cream into glasses, pour over the hot fudge and top with whipped cream, almonds and a cherry.", 8)]},
+ {"n": "Feeling lucky Irish coffee", "course": "d",
+  "line": "Harry asks the punk if he feels lucky",
+  "note": "Irish whiskey, hot coffee, brown sugar, cream.",
+  "prep": 10, "cook": 0, "ahead": "Lightly whip the cream up to an hour ahead and keep it cold; brew the coffee to serve",
+  "ing": [(160, "ml", "Irish whiskey", "Bottle shop"), (600, "ml", "hot strong coffee", "Drinks"), (4, "tsp", "brown sugar", "Pantry"), (150, "ml", "thickened cream", "Dairy")],
+  "steps": [("Warm 4 heatproof glasses with hot water, then tip it out.", 2), ("Stir a teaspoon of sugar and 40ml whiskey into each, then fill with hot coffee.", 4), ("Whip the cream until just thick and float it over the back of a spoon.", 4)],
+  "alt": {"af": {"n": "Feeling lucky coffee (alcohol-free)", "note": "Hot coffee, brown sugar, vanilla, cream.", "prep": 10, "cook": 0, "ahead": "Lightly whip the cream up to an hour ahead; brew the coffee to serve",
+                 "ing": [(700, "ml", "hot strong coffee", "Drinks"), (4, "tsp", "brown sugar", "Pantry"), (1, "tsp", "vanilla extract", "Pantry"), (150, "ml", "thickened cream", "Dairy")],
+                 "steps": [("Warm the glasses with hot water.", 2), ("Stir sugar and a drop of vanilla into each and fill with coffee.", 4), ("Float the lightly whipped cream on top.", 4)]}}},
+]

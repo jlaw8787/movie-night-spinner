@@ -1,0 +1,926 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sparky's spirit fingers with honey mustard",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Crumb the tenders up to a day ahead and keep covered in the fridge; bake to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken tenderloins",
+     "aisle": "Meat"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the flour, beat the eggs, and mix the panko with the parmesan and paprika.",
+     "min": 5
+    },
+    {
+     "text": "Dip each tender in flour, egg, then crumbs, and lay on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Drizzle with oil and bake at 220C, turning once, until golden and cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Stir the mustard, honey and mayo together and serve with the tenders.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sparky's haloumi spirit fingers (vegetarian)",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Crumb the haloumi up to 6 hours ahead and chill; fry to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 180g blocks haloumi, cut in fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Coat the haloumi in flour, egg and panko.",
+       "min": 10
+      },
+      {
+       "text": "Shallow-fry in the oil, turning, until golden all over.",
+       "min": 12
+      },
+      {
+       "text": "Mix the dip and serve straight away.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Car wash fundraiser fish tacos",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Make the crema and shred the cabbage up to a day ahead; fry the fish to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "firm white fish fillets, cut in strips",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "chilled soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "white cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sour cream with the chipotle and a squeeze of lime.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the flour, cumin, a pinch of salt and the soda water into a light batter.",
+     "min": 5
+    },
+    {
+     "text": "Dip the fish and fry in hot oil in batches until crisp and golden.",
+     "min": 12
+    },
+    {
+     "text": "Warm the tortillas in a dry pan.",
+     "min": 3
+    },
+    {
+     "text": "Fill with cabbage and fish, spoon over the crema and finish with coriander and lime.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Car wash fundraiser cauliflower tacos (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Cut the cauliflower and make the crema up to a day ahead; batter and fry to serve",
+     "ingredients": [
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "chilled soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "white cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chipotle in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the chipotle crema.",
+       "min": 5
+      },
+      {
+       "text": "Batter the florets and fry until crisp and tender.",
+       "min": 15
+      },
+      {
+       "text": "Warm the tortillas, fill with cabbage and cauliflower, and top with crema and lime.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Sparky's cut-in-half charred avocados",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Char the corn and mix the salsa up to a day ahead; grill the avocados to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe but firm avocados, halved and stoned",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cherry tomatoes, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "long red chilli, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "tortilla chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the corn cobs in a hot pan or on the barbecue, then cut off the kernels.",
+     "min": 8
+    },
+    {
+     "text": "Toss the corn with the tomato, onion, chilli, lime juice and salt.",
+     "min": 5
+    },
+    {
+     "text": "Brush the avocado cut sides with oil and grill face down for 2 minutes until marked.",
+     "min": 4
+    },
+    {
+     "text": "Fill each half with salsa, crumble over the feta and serve with chips to scoop.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Rancho Carne carne asada plates",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Marinate the steak up to a day ahead; make the pico on the day",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "skirt steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long-grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small flour tortillas",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the steak in the juice of 2 limes and the orange, the garlic, cumin, oil and salt for at least 20 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cook the rice, then stir through the warmed beans and a squeeze of lime.",
+     "min": 20
+    },
+    {
+     "text": "Mix the tomato, onion, coriander and remaining lime juice into a pico de gallo.",
+     "min": 5
+    },
+    {
+     "text": "Grill the steak over high heat, 3 minutes a side, rest it, then slice thinly across the grain.",
+     "min": 12
+    },
+    {
+     "text": "Serve with the rice and beans, pico and warm tortillas.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rancho Carne portobello asada plates (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Marinate the mushrooms up to 4 hours ahead; make the pico on the day",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long-grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "coriander, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the mushrooms in citrus, garlic, cumin and oil.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice and stir through the beans.",
+       "min": 20
+      },
+      {
+       "text": "Make the pico, then grill the mushrooms until tender and slice.",
+       "min": 15
+      },
+      {
+       "text": "Serve with tortillas.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Daytona nationals Cuban sandwiches",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Slice the pork and build the rolls up to 4 hours ahead; press to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "long crusty rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "roast pork, thinly sliced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "shaved leg ham",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and spread both sides with mustard.",
+     "min": 3
+    },
+    {
+     "text": "Layer the pork, ham, cheese and pickles, then close.",
+     "min": 7
+    },
+    {
+     "text": "Butter the outsides and press in a hot pan under a heavy pan, turning once, until crisp and melted.",
+     "min": 15
+    },
+    {
+     "text": "Cut on the diagonal and serve hot.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Daytona nationals mushroom Cubans (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Roast the mushrooms up to a day ahead; build and press to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "long crusty rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the mushrooms with oil, paprika and salt at 220C until dark.",
+       "min": 15
+      },
+      {
+       "text": "Build the rolls with mustard, mushrooms, cheese and pickles.",
+       "min": 7
+      },
+      {
+       "text": "Butter and press in a hot pan until crisp.",
+       "min": 15
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Spirit Stick churros with hot chocolate dip",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Make the chocolate dip up to 2 days ahead and rewarm; pipe and fry the churros to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar, plus 100g for rolling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water, butter, 1 tbsp sugar and a pinch of salt to the boil, tip in the flour and beat until it leaves the pan.",
+     "min": 5
+    },
+    {
+     "text": "Cool for 5 minutes, then beat in the eggs one at a time until glossy.",
+     "min": 8
+    },
+    {
+     "text": "Heat the cream, pour over the chocolate and stir until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pipe 12cm lengths into oil at 180C and fry in batches until golden.",
+     "min": 15
+    },
+    {
+     "text": "Roll in the remaining sugar mixed with the cinnamon and serve with the dip.",
+     "min": 7
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cliff's minty lime cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make the mint syrup up to 3 days ahead; build to order",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar and water until dissolved, add half the mint and cool.",
+     "min": 5
+    },
+    {
+     "text": "Muddle the remaining mint with lime juice in 4 glasses.",
+     "min": 3
+    },
+    {
+     "text": "Add the strained syrup and ice and top with soda.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

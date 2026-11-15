@@ -1,0 +1,788 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hartley's ten million dollar crab cakes",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Shape the crab cakes up to a day ahead and chill them on a tray; fry to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cooked crab meat, picked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "fresh breadcrumbs, plus 60g panko for coating",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole-egg mayonnaise, plus 125g for the remoulade",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Old Bay or Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Creole or Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab, breadcrumbs, 3 tbsp mayo, egg, spring onion and seasoning gently, and shape into 8 cakes.",
+     "min": 10
+    },
+    {
+     "text": "Coat in the panko and chill for 15 minutes so they hold.",
+     "min": 8
+    },
+    {
+     "text": "Stir the 125g mayo with the capers, mustard, hot sauce and a squeeze of lemon for the remoulade.",
+     "min": 4
+    },
+    {
+     "text": "Shallow fry the cakes until deep golden on both sides, about 3 minutes a side.",
+     "min": 12
+    },
+    {
+     "text": "Drain and serve with the remoulade and lemon wedges.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hartley's ten million dollar corn cakes (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Make the remoulade up to 2 days ahead; fry the cakes to serve",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "corn cobs, kernels cut off",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Cajun seasoning",
+       "aisle": "Spices"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, baking powder, eggs and milk, then fold in the corn, spring onion and seasoning.",
+       "min": 8
+      },
+      {
+       "text": "Mix the mayo, capers and lemon for the remoulade.",
+       "min": 4
+      },
+      {
+       "text": "Fry spoonfuls in the oil until golden on both sides.",
+       "min": 15
+      },
+      {
+       "text": "Drain and serve with the remoulade.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Ernie Junior's honey butter cornbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Whip the honey butter up to a week ahead; bake the cornbread on the day",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal (polenta)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted, plus 80g softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat a 25cm cast-iron pan in the oven at 200C.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the dry ingredients, then stir in the eggs, buttermilk and melted butter until just combined.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the hot greased pan and bake until golden and springy.",
+     "min": 22
+    },
+    {
+     "text": "Whip the softened butter with the honey and a pinch of salt and serve with the cornbread in wedges.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Mama Klump's fried chicken with mash",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Marinate the chicken in the buttermilk overnight; make the mash up to a day ahead and reheat",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken thighs and drumsticks, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour, plus 2 tbsp for the gravy",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk and hot sauce for at least 2 hours, or overnight.",
+     "min": 5
+    },
+    {
+     "text": "Mix the flour with the paprika, garlic powder, cayenne and 2 tsp salt, and dredge the chicken twice, pressing it on.",
+     "min": 10
+    },
+    {
+     "text": "Fry in 170C oil in batches, turning, until deep golden and cooked through, about 14 minutes. Drain on a rack.",
+     "min": 30
+    },
+    {
+     "text": "Boil the potatoes until soft, then mash with 60g butter and the hot milk.",
+     "min": 20
+    },
+    {
+     "text": "Cook the remaining butter and 2 tbsp flour, whisk in the stock and simmer to a peppery gravy.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mama Klump's fried cauliflower with mash (vegetarian)",
+     "course": "m",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Make the mash and the gravy up to a day ahead and reheat; fry to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour, plus 2 tbsp for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dip the florets in the buttermilk and hot sauce, then dredge twice in the seasoned flour.",
+       "min": 12
+      },
+      {
+       "text": "Fry at 175C in batches until golden and tender.",
+       "min": 20
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Make a peppery gravy with the butter, flour and stock.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Buddy Love's T-bone with baked potato",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Bake the potatoes up to a day ahead and reheat; make the creamed spinach on the day",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "T-bone steaks, about 400g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the potatoes with oil and salt and bake at 200C until crisp outside and soft inside.",
+     "min": 60
+    },
+    {
+     "text": "Bring the steaks to room temperature, season well and grill on a very hot barbecue or pan to medium-rare, about 5 minutes a side.",
+     "min": 12
+    },
+    {
+     "text": "Rest the steaks while you wilt the spinach with the butter and garlic, then simmer with the cream and parmesan until thick.",
+     "min": 8
+    },
+    {
+     "text": "Split the potatoes and fill with sour cream and chives, and serve with the steak and spinach.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Buddy Love's haloumi steak with baked potato (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 65,
+     "make_ahead": "Bake the potatoes up to a day ahead and reheat; grill the haloumi to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chives, snipped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the oiled, salted potatoes at 200C until crisp.",
+       "min": 60
+      },
+      {
+       "text": "Grill the haloumi until golden on both sides and squeeze over lemon.",
+       "min": 6
+      },
+      {
+       "text": "Wilt the spinach in the butter, simmer with the cream and serve everything together.",
+       "min": 8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Rocky Road hot fudge sundaes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Make the hot fudge up to a week ahead and warm to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mini marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "roasted peanuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the ice cream for 10 minutes, fold in half the marshmallows and half the peanuts and refreeze.",
+     "min": 10
+    },
+    {
+     "text": "Heat the cream with the golden syrup until steaming and stir in the chocolate until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Scoop the ice cream into glasses, pour over the hot fudge and finish with the rest of the marshmallows, peanuts and a cherry.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Sherman's blue formula lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Brew the blue tea and make the syrup up to 3 days ahead and chill; add the lemon at the table",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dried butterfly pea flowers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the butterfly pea flowers in the boiling water until deep blue, then strain and chill.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the sugar and 100ml water until dissolved and cool.",
+     "min": 5
+    },
+    {
+     "text": "Fill 4 glasses with ice, the blue tea and syrup, then top with soda.",
+     "min": 4
+    },
+    {
+     "text": "Pour in the lemon juice at the table and watch it turn purple.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

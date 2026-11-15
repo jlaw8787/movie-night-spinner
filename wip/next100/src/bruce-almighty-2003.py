@@ -1,0 +1,56 @@
+# Bruce Almighty (2003). Diner layout, the Buffalo diner where Bruce parts his tomato soup.
+# Sources: Wikipedia plot (Bruce_Almighty), Wikiquote (Bruce_Almighty), TV Tropes (diner, soup, coffee, grilled cheese).
+FILM = {"id": "Bruce Almighty (2003)", "theme": "diner",
+        "T": "Soup's on. Parting is extra.",
+        "D": "A Buffalo TV reporter who blames God for his bad luck is handed God's powers for a while, and learns the job is harder than it looks.",
+        "P": "Serve the tomato soup when Bruce parts his own bowl at the diner."}
+FORMAT = {"format": "diner", "era": "2000s", "tone": "playful"}
+PALETTE = {"dark": "#1a1d2b", "accent": "#d9412b"}
+SERIES = []
+FLAVOUR = {"venue": "The Buffalo Diner", "sign": "Buffalo, New York",
+           "note": {"text": "Parting your soup is not a miracle, Bruce, it's a magic trick.", "by": "God", "kind": "quote"},
+           "winks": ["Smite me, O mighty smiter", "Every prayer answered Yes", "Jimmy Hoffa, found on the news", "The Sabres win the Stanley Cup", "Evan's teleprompter cha-cha"],
+           "prop": {"kind": "receipt", "title": "Diner Check", "lines": ["One tomato soup, parted", "Not a magic trick"]},
+           "caption": "The booth where Bruce parts his tomato soup.",
+           "number": "",
+           "words": {"Pie so good it ought to be a crime.": "Tomato soup worth parting.", "Left on the counter": "Overheard at the booth", "baked today": "scooped to order"}}
+HOUSE = {"s": {"n": "A jar of dill pickles on the counter", "note": "Free with every miracle.", "meat": False},
+         "d": {"n": "Bottomless drip coffee", "note": "Refills on the house. No prayer needed.", "alc": False}}
+DISHES = [
+ {"n": "Red Sea tomato soup with grilled cheese", "course": "s",
+  "line": "Bruce parts his tomato soup",
+  "note": "Roast tomato soup, a cheddar toastie to dip.",
+  "prep": 15, "cook": 45, "ahead": "Make the soup up to 3 days ahead and reheat; toast the sandwiches to serve",
+  "ing": [(1.2, "kg", "ripe tomatoes, halved", "Produce"), (1, "", "brown onion, quartered", "Produce"), (4, "", "garlic cloves", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (500, "ml", "vegetable stock", "Pantry"), (1, "tsp", "brown sugar", "Pantry"), (100, "ml", "thickened cream", "Dairy"), (8, "", "slices white sandwich bread", "Bakery"), (160, "g", "vintage cheddar, grated", "Dairy"), (40, "g", "soft butter", "Dairy")],
+  "steps": [("Toss the tomatoes, onion and garlic with the oil and salt and roast at 200C until soft and blistered.", 35), ("Blend with the stock and sugar, then simmer, stir in the cream and season.", 10), ("Fill the bread with cheddar, butter the outsides and toast in a pan until golden and melting.", 10), ("Cut the toasties into fingers and serve with the soup, for parting or dunking.", 5)]},
+ {"n": "Stanley Cup Buffalo wings", "course": "s",
+  "line": "Bruce makes the Sabres win the Cup",
+  "note": "Hot sauce wings, blue cheese dip, celery.",
+  "prep": 15, "cook": 45, "ahead": "Make the blue cheese dip up to 2 days ahead; bake the wings to serve",
+  "ing": [(1.2, "kg", "chicken wings, tips off, split", "Meat"), (1, "tbsp", "baking powder", "Pantry"), (125, "ml", "Frank's RedHot sauce", "Pantry"), (60, "g", "butter", "Dairy"), (100, "g", "blue cheese, crumbled", "Dairy"), (125, "g", "sour cream", "Dairy"), (2, "tbsp", "whole-egg mayonnaise", "Pantry"), (1, "", "lemon", "Produce"), (4, "", "celery sticks, cut in batons", "Produce")],
+  "steps": [("Pat the wings dry and toss with the baking powder and a teaspoon of salt.", 5), ("Bake on a rack at 220C, turning once, until crisp and golden.", 45), ("Mash the blue cheese into the sour cream, mayo and a squeeze of lemon.", 5), ("Melt the butter into the hot sauce and toss the wings through it.", 5)],
+  "alt": {"veg": {"n": "Stanley Cup Buffalo cauliflower (vegetarian)", "note": "Hot sauce cauliflower, blue cheese dip, celery.", "prep": 15, "cook": 35, "ahead": "Make the dip and cut the cauliflower up to 2 days ahead; roast and toss to serve",
+                  "ing": [(1, "", "cauliflower, cut in florets", "Produce"), (75, "g", "plain flour", "Pantry"), (125, "ml", "milk", "Dairy"), (125, "ml", "Frank's RedHot sauce", "Pantry"), (60, "g", "butter", "Dairy"), (100, "g", "blue cheese, crumbled", "Dairy"), (125, "g", "sour cream", "Dairy"), (4, "", "celery sticks, cut in batons", "Produce")],
+                  "steps": [("Whisk the flour and milk into a batter, coat the florets and roast at 220C until crisp.", 30), ("Mix the blue cheese dip.", 5), ("Toss the cauliflower in the melted butter and hot sauce and serve with celery.", 10)]}}},
+ {"n": "Evan's prime rib roast with horseradish cream", "course": "m",
+  "line": "The Prime rib roast Minister, says Evan",
+  "note": "Slow-roast rib of beef, jus, mash, greens.",
+  "prep": 20, "cook": 140, "ahead": "Season the beef up to a day ahead and leave uncovered in the fridge; roast on the day",
+  "ing": [(2, "kg", "standing beef rib roast, 2 bones", "Meat"), (2, "tbsp", "olive oil", "Pantry"), (1, "tbsp", "cracked black pepper", "Spices"), (4, "", "garlic cloves, crushed", "Produce"), (250, "ml", "beef stock", "Pantry"), (1, "kg", "floury potatoes", "Produce"), (80, "g", "butter", "Dairy"), (150, "ml", "milk", "Dairy"), (300, "g", "green beans", "Produce"), (150, "ml", "sour cream", "Dairy"), (2, "tbsp", "grated horseradish", "Pantry")],
+  "steps": [("Rub the beef with the oil, garlic, pepper and plenty of salt and bring to room temperature.", 15), ("Roast at 230C for 15 minutes, then at 160C until it reads 54C inside for medium rare.", 90), ("Rest the beef under foil while you make the jus from the pan juices and stock.", 20), ("Meanwhile boil and mash the potatoes with the butter and milk, and steam the beans.", 10), ("Stir the horseradish into the sour cream, carve the beef and serve with everything.", 5)],
+  "alt": {"veg": {"n": "Evan's roast cauliflower with horseradish cream (vegetarian)", "note": "Whole roast cauliflower, gravy, mash, greens.", "prep": 20, "cook": 70, "ahead": "Make the mushroom gravy up to 2 days ahead; roast the cauliflower on the day",
+                  "ing": [(1, "", "whole cauliflower, leaves trimmed", "Produce"), (3, "tbsp", "olive oil", "Pantry"), (2, "tsp", "smoked paprika", "Spices"), (250, "g", "mushrooms, finely chopped", "Produce"), (500, "ml", "vegetable stock", "Pantry"), (1, "tbsp", "plain flour", "Pantry"), (1, "kg", "floury potatoes", "Produce"), (80, "g", "butter", "Dairy"), (300, "g", "green beans", "Produce"), (150, "ml", "sour cream", "Dairy"), (2, "tbsp", "grated horseradish", "Pantry")],
+                  "steps": [("Simmer the whole cauliflower in salted water for 8 minutes, then drain well.", 15), ("Rub with the oil and paprika and roast at 200C until deep golden.", 45), ("Fry the mushrooms, stir in the flour and stock and simmer into a gravy.", 10), ("Mash the potatoes, steam the beans and serve with the horseradish cream.", 10)]}}},
+ {"n": "Every prayer answered Yes sundae", "course": "w",
+  "line": "Bruce answers every prayer Yes",
+  "note": "Every topping at once, under hot fudge.",
+  "prep": 20, "cook": 10, "ahead": "Make the hot fudge up to a week ahead and rewarm; build the sundaes to serve",
+  "ing": [(1, "l", "vanilla ice cream", "Frozen"), (150, "g", "dark chocolate, chopped", "Pantry"), (150, "ml", "thickened cream", "Dairy"), (2, "tbsp", "golden syrup", "Pantry"), (2, "", "bananas, sliced", "Produce"), (250, "g", "strawberries, halved", "Produce"), (60, "g", "salted peanuts, chopped", "Pantry"), (300, "ml", "whipped cream", "Dairy"), (4, "", "maraschino cherries", "Pantry"), (2, "tbsp", "rainbow sprinkles", "Pantry")],
+  "steps": [("Heat the cream and golden syrup, pour over the chocolate and stir into a glossy fudge.", 10), ("Layer banana, strawberries and scoops of ice cream in 4 tall glasses.", 10), ("Pour over the hot fudge, then add the cream, peanuts, sprinkles and a cherry each.", 10)]},
+ {"n": "Juan Valdez iced coffee", "course": "d",
+  "line": "Bruce manifests himself some coffee",
+  "note": "Colombian cold brew, condensed milk, ice.",
+  "prep": 10, "cook": 0, "ahead": "Steep the cold brew overnight in the fridge; pour to order",
+  "ing": [(80, "g", "Colombian coffee, coarsely ground", "Pantry"), (800, "ml", "cold water", "Pantry"), (120, "ml", "sweetened condensed milk", "Pantry"), (200, "ml", "milk", "Dairy"), (2, "cup", "ice cubes", "Frozen")],
+  "steps": [("Stir the coffee into the cold water and leave in the fridge for 12 hours, then strain.", 4), ("Spoon condensed milk into 4 glasses and fill with ice.", 3), ("Pour over the cold brew and top with milk, then stir.", 3)]},
+]
