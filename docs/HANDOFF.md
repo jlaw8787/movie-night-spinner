@@ -1385,7 +1385,7 @@ Other layouts that still drop notes on a few films (not touched): motel (Creed I
 
 Next: Josh's call on the bad cuts above (most are fixable by rewording the note joke first, or a cut rule that won't end on a dangling word), then the other layouts, then the shot problems from the morning rescore.
 
-## 15 Nov, 9:20am to 11:00am: bad cuts and the other layouts' notes (main, committed, not deployed)
+## 15 Nov, 9:20am to 11:40am: bad cuts and the other layouts' notes (main 8f81263, live)
 
 Cut rules (app.js window.__fmtShort and window.__fmtShortFilm, used by 15 layouts):
 - A last sentence with no full stop counts as a sentence, so a sentence drop is tried (Venom printed "Eddie climbs into the tank. Grilled tails").
@@ -1407,6 +1407,6 @@ Layouts:
 
 Checks: npm test pass. planCard (awaits fmtLoad, /tmp/rd/plan.cjs, not in repo) against a worktree of main, no switch, Vegetarian and No alcohol: identical on all 900. check-print-text on all 900 (two halves in parallel; three at once crashed the browser): pass.
 
-Not deployed: waiting on Josh's go (gh workflow run pages.yml --ref main).
+Deployed on Josh's go: Publish site run 43663809115 passed (the first run, 43663645879, failed at GitHub's deploy step; re-running it fails on a duplicate artifact, so start a fresh run instead). Changed site files match main byte for byte live.
 
 Josh's queue after this: rebuild the four TMNT menus (independent review this morning: 1990 8, II 7.5, III 6.5, Mutant Mayhem 7; II needs the ooze canister and Japanese-style art from real stills), a finger-flick wheel where swipe strength sets the spin, and wider search (mafia also finds gangster, mob, crime family).
