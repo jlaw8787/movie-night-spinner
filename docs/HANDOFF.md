@@ -1442,3 +1442,13 @@ Not covered: cast and directors (no cast data). Within a tier, order is strength
 Josh's queue after this: deploy on his go, then the four TMNT menu rebuilds and the finger-flick wheel.
 
 Deployed on Josh's go: Publish site run 43667340200 passed. Runs 43666590568, 43666652973 and 43666869659 failed at GitHub's deploy step ("No artifacts named github-pages"; the upload itself worked, GitHub status all green). Waiting 5 minutes and starting a fresh run fixed it. search.js, the index, app.js, index.html, films.js and sw.js match main byte for byte live.
+
+## 15 Nov, Match night review
+
+Independent review of Match night (match.js, scripts/build-match.cjs, the room functions), all 14 findings fixed on fix/match-review and deployed on Josh's go: main fast-forwarded to 693479b, Publish site run 43672673482 passed, match.js, app.js, data/match-deck.json, index.html and sw.js match main byte for byte live.
+- Room writes (swipe, undo, pick) go through a queue that keeps order and retries until they land. Coming back to Match it restarts the room check; checks pause while the page is hidden.
+- Card backs follow Vegetarian, No alcohol and Kids mode: deck entries carry dx (veg, af, veg_af dish lists) and k.an (alcohol-free drink), built with the same rules as dietDish. Fallback menu drinks are now flagged for alcohol.
+- Pass the phone is saved in sessionStorage (rd-match) and survives a reload; a finished night doesn't reopen Match it.
+- Rooms take two phones: match_join(code, dev) keeps the joiner's phone id (column joiner, migration match_night_two_players, applied live). The page's phone id is localStorage rd-dev.
+- Room link always points at https://reeldinner.com/ (the app's own address can't be shared).
+- The 18 one-off layout films have no recipe lines for their teaser dishes, so their vegetarian lists go by dish name.
