@@ -56,5 +56,5 @@ const ms=Number(process.hrtime.bigint()-t)/1e6/5;assert.ok(ms<120,`search too sl
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert.ok(html.indexOf('src="search.js')>0&&html.indexOf('src="search.js')<html.indexOf('src="app.js'),'search.js loads before app.js');
 assert.ok(/search-index/.test(fs.readFileSync(path.join(root,'sw.js'),'utf8').match(/const FILM_RX[^\n]*/)[0]),'worker keeps the search index offline');
-for(const f of ['search.js','data/search-terms.json','scripts/build-search.cjs'])assert.ok(!fs.readFileSync(path.join(root,f),'utf8').includes('—'),`em dash in ${f}`);
+for(const f of ['search.js','data/search-terms.json','scripts/build-search.cjs'])assert.ok(!fs.readFileSync(path.join(root,f),'utf8').includes(String.fromCharCode(8212)),`em dash in ${f}`);
 console.log(`PASS: wider search over ${H.films.length} films, ${ix.groups.length} term groups, ${ms.toFixed(0)}ms a query.`);
