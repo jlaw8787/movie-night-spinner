@@ -38,3 +38,8 @@ Added to data/still-pick.json for "Citizen Kane (1941)" (Kane at the Inquirer ci
 - /cx0MI8FNf17wTDd8mtMd9Nhzj2U.jpg
 - /iDm3ZcS3lrFpsv42PSg006oHlaE.jpg
 - /apbg31SYrIx7dsTJNrAhQWsWdEM.jpg
+
+## Fix (15 Nov)
+- Note place line "at the Inquirer welcome dinner" now "to Carter, on his first day" (FLAVOUR words). Kane says the headline line to Carter over the Silverstone story on his first day at the Inquirer (Filmsite page 3; Wikiquote has the Carter exchange). https://www.filmsite.org/citi3.html
+- Badge title "New York Inquirer" now "The Inquirer". Leland moved to the Chicago paper before he was fired (Filmsite page 4); Wikipedia says Kane fired him "from the Inquirer". No opened page names the Chicago paper as "Chicago Inquirer", so the badge uses the name both pages support. https://www.filmsite.org/citi4.html https://en.wikipedia.org/wiki/Citizen_Kane
+- Stock caption "ON THE BEAT. Another frame from Citizen Kane." now "ROSEBUD. The snow globe in Kane's hand." (FLAVOUR words; the still is the hand with the snow globe; Wikipedia plot: the snow globe and "Rosebud").

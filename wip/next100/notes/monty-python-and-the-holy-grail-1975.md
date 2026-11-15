@@ -35,3 +35,6 @@ Added to data/still-block.json for "Monty Python and the Holy Grail (1975)" (pos
 - /nE3wR3UeVaAOmipANbA1fJqIZ29.jpg
 - /oYhBGsxUM1dk90ClvTP0VJ4F0wQ.jpg
 No still-pick entries.
+
+## Fix (15 Nov)
+- Bill footer "Bill No. 3, 1975." now "Bill No. 3, AD 932." through new FLAVOUR "year": "AD 932" (tavern layout now takes an optional flavour.year). The film is set in "England 932 A.D." (Wikipedia; matches the sign line). https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail

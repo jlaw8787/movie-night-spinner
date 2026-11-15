@@ -30,3 +30,6 @@ Added to data/still-block.json for "American Graffiti (1973)" (poster and promo 
 - /wM15JpkC1MzMwQrEkbZhkXCtRw7.jpg
 - /6kzYm1u9DOVhKZ2DyqZNUZ9yLdy.jpg
 No still-pick entries.
+
+## Fix (15 Nov)
+- No fact lines open. Repeated line cleared: onion rings note "Where were you in '62?" (same as the tagline) now "Your car's uglier than I am!" (Carol to Bob Falfa, Wikiquote). https://en.wikiquote.org/wiki/American_Graffiti

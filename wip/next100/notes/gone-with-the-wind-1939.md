@@ -38,3 +38,8 @@ Added to data/still-block.json for "Gone with the Wind (1939)" (poster and promo
 Added to data/still-pick.json for "Gone with the Wind (1939)" (Tara at dusk, then Scarlett laced in before the barbecue, which the card's still box takes and the caption describes):
 - /AfK1tyoO0i47mzKhA9BJVNGq1vg.jpg
 - /ft8WRF2xqEwwGWa59naDUybKTAx.jpg
+
+## Fix (15 Nov)
+- Note quote now verbatim: "After all... tomorrow... is another day!" (Wikiquote: "After all...tomorrow...is another day!"). https://en.wikiquote.org/wiki/Gone_with_the_Wind_(film)
+- Covers line "1939 · COVERS LAID FOR 12" now "1861 · COVERS LAID FOR 12" through new FLAVOUR "year": "1861" (banquet layout now takes an optional flavour.year). Wikipedia plot: "In 1861, on the eve of the American Civil War". https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)
+- Repeated line cleared: corn muffins note "Tomorrow is another day." (repeated the note) now "Rhett heard it all from behind the sofa." (Wikiquote, the library: Rhett rises from behind the sofa after Scarlett and Ashley's scene).

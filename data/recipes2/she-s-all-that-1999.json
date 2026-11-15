@@ -97,142 +97,93 @@
    "af": true
   },
   {
-   "n": "Taylor's vapor-and-spam musubi",
+   "n": "Brock Hudson's Real World nachos",
    "course": "s",
-   "prep_min": 25,
-   "cook_min": 25,
-   "make_ahead": "Cook and season the rice up to 4 hours ahead; sear and wrap to serve",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Season the beans and make the guacamole up to 4 hours ahead; layer and bake to serve",
    "ingredients": [
     {
-     "q": 340,
+     "q": 230,
      "u": "g",
-     "item": "tin SPAM luncheon meat, cut in 8 slices",
-     "aisle": "Meat"
+     "item": "plain corn chips",
+     "aisle": "Pantry"
     },
     {
-     "q": 300,
+     "q": 400,
      "u": "g",
-     "item": "sushi rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "rice vinegar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "soy sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "nori sheets, halved",
+     "item": "tin black beans, drained",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "sesame seeds",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sliced pickled jalapenos",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Cook the rice and season with the vinegar, caster sugar and a pinch of salt.",
-     "min": 25
+     "text": "Warm the beans with the paprika, cumin, a splash of water and salt, crushing a few.",
+     "min": 5
     },
     {
-     "text": "Sear the Spam slices until crisp, then glaze with the soy and brown sugar.",
-     "min": 8
+     "text": "Mash the avocados with the lime juice and salt.",
+     "min": 5
     },
     {
-     "text": "Press rice into blocks the size of the Spam and lay a slice on each.",
+     "text": "Layer the chips, beans and cheddar on a tray and bake at 200C until the cheese melts.",
      "min": 10
     },
     {
-     "text": "Wrap each with a strip of nori and sprinkle with sesame.",
-     "min": 7
+     "text": "Top with salsa, guacamole, sour cream and jalapenos and serve straight away.",
+     "min": 5
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Taylor's vapor-and-tofu musubi (vegetarian)",
-     "course": "s",
-     "prep_min": 25,
-     "cook_min": 25,
-     "make_ahead": "Cook and season the rice up to 4 hours ahead; sear and wrap to serve",
-     "ingredients": [
-      {
-       "q": 450,
-       "u": "g",
-       "item": "firm tofu, cut in 8 slices",
-       "aisle": "Produce"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "sushi rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "rice vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "nori sheets, halved",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cook and season the rice.",
-       "min": 25
-      },
-      {
-       "text": "Sear the tofu and glaze with soy and sugar.",
-       "min": 10
-      },
-      {
-       "text": "Build and wrap the musubi.",
-       "min": 15
-      }
-     ]
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hacky sack meatball subs",
@@ -563,7 +514,7 @@
    }
   },
   {
-   "n": "Mack's makeover strawberry shortcake",
+   "n": "Red dress on the stairs strawberry shortcake",
    "course": "w",
    "prep_min": 25,
    "cook_min": 15,

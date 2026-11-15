@@ -39,3 +39,11 @@ Added to data/still-block.json for "The Sting (1973)" (the poster illustration a
 Added to data/still-pick.json for "The Sting (1973)" (a card game, then the train poker game with Lonnegan and Gondorff, which the card's still box takes):
 - /1r9lH3DaSWKGyvZaoo6BF5STOk5.jpg
 - /uX3hw8pnCWoFMXnmsEpAssu9FIX.jpg
+15 Nov fix: still-pick for "The Sting (1973)" changed so the back strip shows a face (the old second pick cropped to a pinstripe sleeve in the narrow strip):
+- /1r9lH3DaSWKGyvZaoo6BF5STOk5.jpg (kept first)
+- /9Ks2LZiwdbCD6kDFHUVuJuSnYvI.jpg (new second: Gondorff with his cigar at the card table, face centred; replaces /uX3hw8pnCWoFMXnmsEpAssu9FIX.jpg)
+
+## Fix (15 Nov)
+- No fact lines open. Worth-a-look items cleared:
+- Pie price 1.50 now .25: the dining car layout put the film number (1936) into the dessert cents. New optional FLAVOUR "priceEgg": false turns that off for this film (diningcar layout change, optional per film).
+- Back strip still re-picked (see Stills): Gondorff's face now shows in the narrow strip. Caption via FLAVOUR words now "Gondorff, as Shaw, at Lonnegan's game." (Wikipedia: Gondorff poses as Chicago bookie "Shaw" at Lonnegan's train poker game). https://en.wikipedia.org/wiki/The_Sting

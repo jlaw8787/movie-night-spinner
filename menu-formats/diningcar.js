@@ -97,7 +97,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:R0?R0.seat:"Dining Car Seat",lines:[R0?R0.show:"Present to the steward","One seat, one sitting"]};
   const num=String(fl.number||"").replace(/\D/g,"")||(String(year).slice(-2)==="00"?String(year):String(year).slice(-2))||"7";
-  const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
+  /* 15 Nov: flavour.priceEgg false (per film, optional) leaves the film number out of the dessert price, for a number that reads wrong as cents (The Sting: 1936 made the pie 1.50 beside .15 to .60) */
+  const egg=fl.priceEgg===false?"":String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   /* paper and colours */
   let paper=t.paperTo?mix(e.paper,t.paperTo,t.pt):e.paper;
   const pal=ctx.palette||{};

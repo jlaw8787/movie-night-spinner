@@ -13,7 +13,7 @@ FLAVOUR = {"venue": "Chicago Sun-Times Newsroom", "sign": "Chicago Sun-Times, co
            "winks": ["Josie Grossie, back at school", "The Denominators", "Rosalind and Orlando at prom", "The whole office watching her camera", "The countdown at the ball field"],
            "prop": {"kind": "badge", "title": "Chicago Sun-Times", "lines": ["Copy editor: J. Geller", "Undercover at South Glen"]},
            "number": "25",
-           "words": {"The lunch counter menu": "The copy desk menu", "at Chicago Sun-Times Newsroom": "at the Sun-Times newsroom"}}
+           "words": {"The lunch counter menu": "The copy desk menu", "at Chicago Sun-Times Newsroom": "to Josie, on starting over", "ON THE BEAT.": "TEACHER'S PET.", "Another frame from Never Been Kissed.": "Josie and Mr. Coulson."}}
 HOUSE = {"s": {"n": "Denominators' salted pretzels", "note": "Aldys saves Josie a seat.", "meat": False},
          "d": {"n": "Newsroom drip coffee", "note": "It took Sam forever to get here.", "alc": False}}
 DISHES = [

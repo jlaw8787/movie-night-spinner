@@ -13,12 +13,12 @@ FLAVOUR = {"venue": "Truman and Meryl's Kitchen", "sign": "Seahaven Island",
            "winks": ["The studio light that fell from the sky", "Rain over one man only", "Dad pushed onto a bus", "How's it going to end?", "The door in the painted sky"],
            "prop": {"kind": "badge", "title": "Lauren's Button", "lines": ["How's it going to end?", "Free Truman"]},
            "number": "30",
-           "words": {"From the Truman and Meryl's Kitchen.": "From Truman and Meryl's kitchen."}}
+           "words": {"From the Truman and Meryl's Kitchen.": "From Truman and Meryl's kitchen.", "'98 10 26": "DAY 10,909"}}
 HOUSE = {"s": {"n": "Good morning blueberry muffins", "note": "And in case I don't see ya.", "meat": False},
          "d": {"n": "Cue the sun orange juice", "note": "Christof decides when morning starts.", "alc": False}}
 DISHES = [
  {"n": "Another-slice pepperoni pizza squares", "course": "s",
-  "line": "The guards watching want another slice",
+  "line": "A guard offers another slice at the end",
   "note": "Crisp tray pizza with pepperoni and mozzarella.",
   "prep": 15, "cook": 15, "ahead": "Make the dough the night before and keep it in the fridge; top and bake to serve",
   "ing": [(400, "g", "pizza dough", "Bakery"), (200, "g", "passata", "Pantry"), (1, "tsp", "dried oregano", "Spices"), (200, "g", "mozzarella, grated", "Dairy"), (100, "g", "sliced pepperoni salami", "Deli"), (30, "g", "parmesan, finely grated", "Dairy"), (2, "tbsp", "olive oil", "Pantry")],

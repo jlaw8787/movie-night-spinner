@@ -11,8 +11,10 @@
    "source": "https://en.wikipedia.org/wiki/The_Great_Escape_(film)",
    "fix": "Form CF-76. 1944.",
    "printed": true,
-   "done": false,
-   "full": "Eat fast, keep your head down. Prices subject to change. Form CF-76. 1963."
+   "done": true,
+   "full": "Eat fast, keep your head down. Prices subject to change. Form CF-76. 1963.",
+   "applied": "2026-11-15",
+   "applied_text": "Eat fast, keep your head down. Prices subject to change. Form CF-76. 1944."
   }
  ],
  "checked_ok": 20,
@@ -43,6 +45,11 @@
    "Swap the stock schedule slots '0600 Count' and '0900 Yard' for 'Appell' and 'The scrounger's rounds'."
   ],
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "The three stub dish lines now print their food: 'Hilts rides for the Swiss fence. Potato rosti with bratwurst.', 'Hilts's ball in the cooler. Vanilla between choc biscuits.', 'Ashley-Pitt's dirt in plain sight. Black bean dip, garlic toasts.'",
+   "Sausage rolls and moonshine keep their food on the card ('Flaky pork sausage rolls.', 'Ice-cold vodka and apple.')"
+  ]
  }
 }

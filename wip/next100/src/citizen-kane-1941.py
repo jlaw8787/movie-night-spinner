@@ -11,9 +11,9 @@ SERIES = []
 FLAVOUR = {"venue": "Inquirer Welcome Dinner", "sign": "New York Inquirer, 684,132 sold",
            "note": {"text": "If the headline is big enough, it makes the news big enough.", "by": "Charles Foster Kane", "kind": "quote"},
            "winks": ["The sled in the Colorado snow", "Love nest with quote, singer, unquote", "Leland's review, finished by Kane", "Forty-nine thousand acres of scenery", "Another Venus, still in its crate"],
-           "prop": {"kind": "badge", "title": "New York Inquirer", "lines": ["Drama critic: J. Leland", "Fired by Kane"]},
+           "prop": {"kind": "badge", "title": "The Inquirer", "lines": ["Drama critic: J. Leland", "Fired by Kane"]},
            "number": "1941",
-           "words": {"at Inquirer Welcome Dinner": "at the Inquirer welcome dinner", "Clear skies.": "Snow in Colorado.", "Look up.": "Bring the sled.", "The lunch counter menu": "The welcome dinner menu"}}
+           "words": {"at Inquirer Welcome Dinner": "to Carter, on his first day", "ON THE BEAT.": "ROSEBUD.", "Another frame from Citizen Kane.": "The snow globe in Kane's hand.", "Clear skies.": "Snow in Colorado.", "Look up.": "Bring the sled.", "The lunch counter menu": "The welcome dinner menu"}}
 HOUSE = {"s": {"n": "A bag of hot salted peanuts", "note": "Somebody will write a song about it.", "meat": False},
          "d": {"n": "Iced champagne for the new staff", "note": "For the men who came over from the Chronicle.", "alc": True}}
 DISHES = [

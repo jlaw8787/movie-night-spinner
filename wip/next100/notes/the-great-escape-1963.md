@@ -36,3 +36,8 @@ Added to data/still-block.json for "The Great Escape (1963)" (poster art cut-out
 - /70KkUApszdgFQ7ANAGkzCDAzMI8.jpg
 - /xQfBywk4HK5AMuimIy9zRHzY9Ja.jpg
 No still-pick entries.
+
+## Fix (15 Nov)
+- Form footer "Form CF-76. 1963." now "Form CF-76. 1944." through new FLAVOUR "year": "1944" (canteen layout now takes an optional flavour.year; prices still go by release year). Wikipedia: the film is the 1944 mass escape from Stalag Luft III (lead, "Films set in 1944"). https://en.wikipedia.org/wiki/The_Great_Escape_(film)
+- Stub dish lines now print their food: rosti "Hilts rides for the Swiss fence. Potato rosti with bratwurst." (Wikipedia: he rides for the Swiss border and fails to jump the frontier fence); ice cream "Hilts's ball in the cooler. Vanilla between choc biscuits."; bean dip "Ashley-Pitt's dirt in plain sight. Black bean dip, garlic toasts."
+- Sausage rolls note cut to "Flaky pork sausage rolls." and moonshine to "Ice-cold vodka and apple." so both keep their food on the card; veg rosti and alcohol-free fizz notes shortened to match.

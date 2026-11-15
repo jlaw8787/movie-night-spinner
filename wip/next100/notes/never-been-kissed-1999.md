@@ -32,3 +32,7 @@ Added to data/still-block.json for "Never Been Kissed (1999)" (poster art and ca
 - /vNdulTZXaL11xFs7FWCnxEE7wqR.jpg
 - /odCzK7olVUGtXuQS6tFEr0GCmJZ.jpg
 No still-pick entries.
+
+## Fix (15 Nov)
+- Note place line "at the Sun-Times newsroom" now "to Josie, on starting over" (FLAVOUR words). Wikipedia: Josie confides in Rob, who urges her to let go of her old self and start anew; quote verbatim on Wikiquote. https://en.wikipedia.org/wiki/Never_Been_Kissed
+- Stock caption "ON THE BEAT. Another frame from Never Been Kissed." now "TEACHER'S PET. Josie and Mr. Coulson." (FLAVOUR words; the still shows Josie and Sam Coulson; "after class" left off as no page places the shot).

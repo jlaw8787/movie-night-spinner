@@ -12,8 +12,8 @@ FLAVOUR = {"venue": "The 20th Century Limited", "sign": "Lonnegan's private game
            "note": {"text": "No sense being a grifter if it's the same as bein' a citizen.", "by": "Henry Gondorff", "kind": "quote"},
            "winks": ["The wallet lifted before the game", "Kid Twist at Western Union", "Place means second", "The man in black gloves", "Fake bullets, real cheers"],
            "prop": {"kind": "ticket", "title": "20th Century Limited", "lines": ["Private poker game", "Mr. Shaw, running late"]},
-           "number": "1936",
-           "words": {"Out the window, first class all the way.": "Lonnegan at his private game."}}
+           "number": "1936", "priceEgg": False,
+           "words": {"Out the window, first class all the way.": "Gondorff, as Shaw, at Lonnegan's game."}}
 HOUSE = {"s": {"n": "Salted cashews at the card table", "note": "For Mr. Shaw, who is late again.", "meat": False},
          "d": {"n": "Black coffee for Mr. Lonnegan", "note": "The name's Lonnegan. Doyle Lonnegan.", "alc": False}}
 DISHES = [

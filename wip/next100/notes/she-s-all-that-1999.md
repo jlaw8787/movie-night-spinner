@@ -28,3 +28,11 @@ Added to data/still-block.json for "She's All That (1999)" (poster art in three 
 - /anxcsuJ6OHM6NIDz7s1pWhRaEh.jpg
 - /1b7VhhcX13EGz1h2rWXHXHjUU58.jpg
 No still-pick entries.
+
+## Fix (15 Nov)
+- Lifted from 3.0: every dish line now prints its food (the prom card fits about 48 characters a note, so each line is short with a short food line after it):
+  "Laney's falafel shift. Tahini, warm pita.", "Taylor dumps Zack for Brock. Beans, cheddar.", "Zack's hacky sack act. Meatballs, provolone.", "Laney says yes to the beach. Chipotle slaw.", "Laney comes down the stairs. Berries, cream.", "Laney's foghorn sees off Dean. Pineapple fizz."
+- Swapped "Mack's makeover strawberry shortcake" for "Red dress on the stairs strawberry shortcake". ET Online (Rachael Leigh Cook): Laney's "slo-mo walk down the stairs" and "come down the stairs in the red dress". https://www.etonline.com/the-shes-all-that-scene-rachael-leigh-cook-felt-really-self-conscious-about-exclusive-118302
+- Swapped Taylor's Spam musubi for "Brock Hudson's Real World nachos" (vegetarian, new recipe). Wikipedia: Taylor cheated on Zack with reality TV star Brock Hudson and broke up with him; Wikiquote: Brock is from The Real World. https://en.wikipedia.org/wiki/She%27s_All_That https://en.wikiquote.org/wiki/She%27s_All_That
+- "Vapor and spam" kept as wink one ("Taylor calls Laney vapor and spam", Wikiquote), in place of "Prom queen in six weeks", which now prints on the front in place of the stock "Wear your dancing shoes" (FLAVOUR words).
+- Veg alt notes shortened to match ("Crumbed eggplant, provolone.", "Black beans, chipotle slaw.").

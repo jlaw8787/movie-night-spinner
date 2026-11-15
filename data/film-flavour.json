@@ -23750,7 +23750,7 @@
   ],
   "prop": {
    "kind": "badge",
-   "title": "New York Inquirer",
+   "title": "The Inquirer",
    "lines": [
     "Drama critic: J. Leland",
     "Fired by Kane"
@@ -23758,7 +23758,9 @@
   },
   "number": "1941",
   "words": {
-   "at Inquirer Welcome Dinner": "at the Inquirer welcome dinner",
+   "at Inquirer Welcome Dinner": "to Carter, on his first day",
+   "ON THE BEAT.": "ROSEBUD.",
+   "Another frame from Citizen Kane.": "The snow globe in Kane's hand.",
    "Clear skies.": "Snow in Colorado.",
    "Look up.": "Bring the sled.",
    "The lunch counter menu": "The welcome dinner menu"
@@ -23768,7 +23770,7 @@
   "venue": "The Twelve Oaks Barbecue",
   "sign": "The Wilkes barbecue, Georgia, 1861",
   "note": {
-   "text": "After all, tomorrow is another day!",
+   "text": "After all... tomorrow... is another day!",
    "by": "Scarlett O'Hara",
    "kind": "quote"
   },
@@ -23788,6 +23790,7 @@
    ]
   },
   "number": "12",
+  "year": "1861",
   "words": {
    "From the host": "From a guest",
    "The Twelve Oaks Barbecue, laid for tonight": "Laced in before the barbecue at Twelve Oaks"
@@ -23817,6 +23820,7 @@
    ]
   },
   "number": "3",
+  "year": "AD 932",
   "words": {}
  },
  "Never Been Kissed (1999)": {
@@ -23845,7 +23849,9 @@
   "number": "25",
   "words": {
    "The lunch counter menu": "The copy desk menu",
-   "at Chicago Sun-Times Newsroom": "at the Sun-Times newsroom"
+   "at Chicago Sun-Times Newsroom": "to Josie, on starting over",
+   "ON THE BEAT.": "TEACHER'S PET.",
+   "Another frame from Never Been Kissed.": "Josie and Mr. Coulson."
   }
  },
  "She's All That (1999)": {
@@ -23857,7 +23863,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Prom queen in six weeks",
+   "Taylor calls Laney vapor and spam",
    "Hacky sack, live on stage",
    "Mack's makeover",
    "Laney's foghorn",
@@ -23873,12 +23879,13 @@
   },
   "number": "6",
   "words": {
-   "Spring Fling, Class of 1999": "Senior Prom, Class of 1999"
+   "Spring Fling, Class of 1999": "Senior Prom, Class of 1999",
+   "Wear your dancing shoes": "Prom queen in six weeks"
   }
  },
  "The Graduate (1967)": {
   "venue": "The Taft Hotel",
-  "sign": "Rooms by the night, no questions",
+  "sign": "Front desk open all night",
   "note": {
    "text": "Mrs. Robinson, you're trying to seduce me... aren't you?",
    "by": "Benjamin Braddock",
@@ -23926,6 +23933,7 @@
    ]
   },
   "number": "76",
+  "year": "1944",
   "words": {}
  },
  "The Sting (1973)": {
@@ -23952,8 +23960,9 @@
    ]
   },
   "number": "1936",
+  "priceEgg": false,
   "words": {
-   "Out the window, first class all the way.": "Lonnegan at his private game."
+   "Out the window, first class all the way.": "Gondorff, as Shaw, at Lonnegan's game."
   }
  },
  "The Truman Show (1998)": {
@@ -23981,7 +23990,8 @@
   },
   "number": "30",
   "words": {
-   "From the Truman and Meryl's Kitchen.": "From Truman and Meryl's kitchen."
+   "From the Truman and Meryl's Kitchen.": "From Truman and Meryl's kitchen.",
+   "'98 10 26": "DAY 10,909"
   }
  }
 }

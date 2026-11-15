@@ -8,7 +8,7 @@ FILM = {"id": "The Graduate (1967)", "theme": "uptown",
 FORMAT = {"format": "hotel", "era": "1960s", "tone": "glossy"}
 PALETTE = {"dark": "#1a2230", "accent": "#d2a24c"}
 SERIES = []
-FLAVOUR = {"venue": "The Taft Hotel", "sign": "Rooms by the night, no questions",
+FLAVOUR = {"venue": "The Taft Hotel", "sign": "Front desk open all night",
            "note": {"text": "Mrs. Robinson, you're trying to seduce me... aren't you?", "by": "Benjamin Braddock", "kind": "quote"},
            "winks": ["One word: plastics", "Drifting in the pool all summer", "The Taft staff know Mr. Gladstone", "Over 300 miles to Santa Barbara", "The bus with Elaine still in white"],
            "prop": {"kind": "card", "title": "Taft Hotel Register", "lines": ["Guest: Mr. Gladstone", "Late check-in"]},

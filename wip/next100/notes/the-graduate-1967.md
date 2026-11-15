@@ -35,3 +35,6 @@ Added to data/still-block.json for "The Graduate (1967)" (the poster's leg shot,
 Added to data/still-pick.json for "The Graduate (1967)" (the pool, then Ben and Mrs. Robinson, which the card's still box takes):
 - /qQfuqziVwjE1VVxSIALB3LkfIPI.jpg
 - /rQEhJmR9SJ2yJUKjD8RDTagVBHy.jpg
+
+## Fix (15 Nov)
+- Sign "Rooms by the night, no questions" (read as a no-questions motel) now "Front desk open all night", a plain hotel line that claims nothing about the plot (checker's fix). The Taft staff come to know Ben as Mr. Gladstone (Wikipedia). https://en.wikipedia.org/wiki/The_Graduate

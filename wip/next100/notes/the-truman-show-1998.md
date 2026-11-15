@@ -38,3 +38,8 @@ Added to data/still-block.json for "The Truman Show (1998)" (poster mosaic, post
 - /1xWHfZH4Fapu6Yrkv4oOk2rEUTx.jpg
 - /9san7sXIWABYIrNPkX7jbyKhhax.jpg
 No still-pick entries.
+
+## Fix (15 Nov)
+- Pizza line "The guards watching want another slice" now "A guard offers another slice at the end" (Wikiquote last lines: one guard offers, the other says "No, I'm OK."). https://en.wikiquote.org/wiki/The_Truman_Show
+- TV still date stamp "'98 10 26" (release year) now prints "DAY 10,909" through FLAVOUR words (the home layout has no year override; words remap is per film). Day count from the film's own screen, Wikipedia poster description. https://en.wikipedia.org/wiki/The_Truman_Show
+- Not changed: the recipe card label still prints 1998 (not flagged); macaroni and fish pie notes still print short (vibe 3.8, not in scope).

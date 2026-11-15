@@ -14,7 +14,7 @@ FLAVOUR = {"venue": "Mel's Drive-In", "sign": "Modesto, California. Last night o
            "prop": {"kind": "slip", "title": "Carhop Slip", "lines": ["Double Chubby Chuck", "Call for Curt"]},
            "number": "62",
            "words": {}}
-HOUSE = {"s": {"n": "Onion rings for the whole car", "note": "Where were you in '62?", "meat": False},
+HOUSE = {"s": {"n": "Onion rings for the whole car", "note": "Your car's uglier than I am!", "meat": False},
          "d": {"n": "Cherry cola on crushed ice", "note": "Sunday, 2 September 1962. Cruising till dawn.", "alc": False}}
 DISHES = [
  {"n": "Knuckle sandwich ham hock sliders", "course": "s",

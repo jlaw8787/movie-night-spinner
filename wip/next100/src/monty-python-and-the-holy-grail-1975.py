@@ -12,7 +12,7 @@ FLAVOUR = {"venue": "Camelot", "sign": "Castle of Camelot, Britain, AD 932",
            "note": {"text": "On second thought, let's not go to Camelot. It is a silly place.", "by": "King Arthur", "kind": "quote"},
            "winks": ["'Tis but a scratch", "The Trojan Rabbit", "Brother Maynard's Book of Armaments", "The Bridge of Death", "Tim the Enchanter"],
            "prop": {"kind": "tag", "title": "Holy Hand Grenade", "lines": ["Count to three", "Not five"]},
-           "number": "3",
+           "number": "3", "year": "AD 932",
            "words": {}}
 HOUSE = {"s": {"n": "Peasant's bread and dripping", "note": "Help, help, I'm being repressed!", "meat": True},
          "d": {"n": "Blue lemonade, or yellow", "note": "Galahad never could decide.", "alc": False}}
