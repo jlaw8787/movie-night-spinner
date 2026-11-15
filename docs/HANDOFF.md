@@ -1656,7 +1656,7 @@ Josh approved from call7-motel.jpg (mock.cjs with a-hide.js). motel posterFront:
 Checks: check-print-text on all 15 motel films: pass. npm test pass. check-browser pass. Generated files rebuilt with build-data.
 Deployed on Josh's go: fast-forward merge to main 77eb584, Publish site run 43704302735 passed. motel.js and films.js match main byte for byte live.
 
-## 15 Nov, 8:40pm: GoatCounter visit counter (branch feature/goatcounter, NOT deployed)
+## 15 Nov, 8:40pm: GoatCounter visit counter (live)
 
 Josh asked how he'd know if he's getting traffic. GitHub Pages has no visitor stats and the site had no counter. He signed up at GoatCounter (account reeldinner, dashboard reeldinner.goatcounter.com).
 - index.html: the reel-boot script's website branch (not the app, not ?app=1) loads gc.zgo.at/count.js with data-goatcounter https://reeldinner.goatcounter.com/count, only when the hostname is reeldinner.com, so local test runs and the app never count.
