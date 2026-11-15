@@ -1384,3 +1384,29 @@ Cuts that read wrong (agents' flags, not fixed): NeverEnding Story "Whole bird u
 Other layouts that still drop notes on a few films (not touched): motel (Creed II, Final Destination 2), airline (Mission: Impossible 2), hospital (Nightmare on Elm Street 3), pub (Phar Lap), club (Dreamgirls), bartab (Rocky V, Friday the 13th Part 2), kiosk (Turner & Hooch).
 
 Next: Josh's call on the bad cuts above (most are fixable by rewording the note joke first, or a cut rule that won't end on a dangling word), then the other layouts, then the shot problems from the morning rescore.
+
+## 15 Nov, 9:20am to 11:00am: bad cuts and the other layouts' notes (main, committed, not deployed)
+
+Cut rules (app.js window.__fmtShort and window.__fmtShortFilm, used by 15 layouts):
+- A last sentence with no full stop counts as a sentence, so a sentence drop is tried (Venom printed "Eddie climbs into the tank. Grilled tails").
+- No "and" cut inside a pair that names one dish thing: two or more words after "and" ending on a dish word ("onion and bacon dressing", "beef and pork dumplings"; not "espresso and ice cream").
+- Tried and taken out again: no comma cut before a short "X and Y" list, and no "and" that closes a list. Both hid notes on Skyfall and The Fifth Element (they lost "Crisp oatcakes topped with crème fraîche." and "Gin, dry vermouth."). The notes they were for are reworded instead.
+- No cut inside a short lead sentence of 6 words or fewer, so a quote stays whole ("If he dies, he dies.").
+- A part used alone must start on for, where, while, when, like, as, after, before, until, a capital or a quote; never at, so, with ("At the North Pole.", "So Lisa takes charge."). A lone sentence needs 3 words (no lone "Yield!").
+- Cuts never end on shaken, frozen, beaten, poured, dipped and similar ("Chilled cranberry juice shaken.").
+- prom footer: a year-like card number stands alone ("Form PD 1962.", was "Form PD 1962. 1978.").
+
+Reworded notes, joke first (audit/ops/*-cuts-1.json and -cuts-2.json, diet copies included, editions synced by hand): Ghostbusters Frozen Empire pizza, Weird Science pizza and bourbon smash, Iron Man 3 turkey roll, Django white cake ("We're havin' white cake." first), Black Panther jollof, Inspector Gadget spaghetti, Sixteen Candles canapés, Willow tartlets, Phantom Menace tart, Rocky IV pelmeni, Annabelle straws, NeverEnding Story chicken, Christmas Chronicles dip, Hocus Pocus 2 mac and cheese, 13 Going on 30 cake, Animal House cupcakes, and for pub: Phar Lap, Crocodile Dundee, Hot Fuzz, Shaun of the Dead, Strange Brew, Eurovision.
+Note: scripts/edition-sync.cjs also pulls in two older unsynced ops (After Hours "Terminal Bar burger", an Oliver & Company note). Left out on purpose this time; decide before running it again.
+
+Layouts:
+- pub: printed no dish notes on any film. Its clip() left off any note whose first sentence was too long; now it cuts with __fmtShortFilm. The fit now steps: poster 590, 550, 510 wide (whole at 2:3) and board 640, 700, 760 tall (only while the pinned quote still fits), then house lines leave, then the kitchen cue, notes down to the type floor with 6px gaps; if nothing holds the notes, the last pass is the old board. 7 of 8 print every note, Strange Brew 4 of 5.
+- kiosk: same clip() bug. 173 of 206 notes print (was 89 of 155 on the cards); the rest are plain lists with no clean break, or dishes the layout leaves off.
+- club and motel: the runtime fit hid notes (club all at once with --nd) without trying a cut. Now notes are cut at a clean break from the bottom up first (data-cnote in club, data-n in motel, full text kept in data-cfull). Dreamgirls 6 of 6, Creed II, Black Widow, Scream, The Ring all full.
+- airline, hospital, bartab: Mission: Impossible 2, Nightmare 3, Rocky V, Friday the 13th Part 2 already print every note (the earlier count missed reworded notes). Wall-E is hand-built.
+
+Checks: npm test pass. planCard (awaits fmtLoad, /tmp/rd/plan.cjs, not in repo) against a worktree of main, no switch, Vegetarian and No alcohol: identical on all 900. check-print-text on all 900 (two halves in parallel; three at once crashed the browser): pass.
+
+Not deployed: waiting on Josh's go (gh workflow run pages.yml --ref main).
+
+Josh's queue after this: rebuild the four TMNT menus (independent review this morning: 1990 8, II 7.5, III 6.5, Mutant Mayhem 7; II needs the ooze canister and Japanese-style art from real stills), a finger-flick wheel where swipe strength sets the spin, and wider search (mafia also finds gangster, mob, crime family).

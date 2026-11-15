@@ -347,7 +347,7 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   const cue=sentence(C(f.P));
   const cT=fitType(cue,RW,100,E.bcw,19,15,1.3,5);
   const fineW=winks.length>1?[winks[winks.length-1]]:[];
-  const backFine=`${fineW.map(s=>trunc(s,46)).join(". ")}${fineW.length?". ":""}Prices subject to change. Form PD ${num}${num===year?"":". "+year}.`;
+  const backFine=`${fineW.map(s=>trunc(s,46)).join(". ")}${fineW.length?". ":""}Prices subject to change. Form PD ${num}${num===year||/^(18|19|20)\d\d$/.test(num)?"":". "+year}.`;/* 15 Nov: a year-like number stands alone (Animal House printed "Form PD 1962. 1978.") */
   const fT=fitType(backFine,RW,64,.52,15,14,1.3,4);
   const footH=(cue?20+8+cT.n*cT.z*1.3+14:0)+fT.n*fT.z*1.3;
   let MH=H-24-headH-18-footH-24;

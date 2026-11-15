@@ -43,7 +43,8 @@ DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
-const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();return p.length<=n&&p.length>=12?p:""};
+/* 15 Nov: a one-sentence note that runs long is cut at a break that keeps the film's part (window.__fmtShortFilm), not left off (every pub film printed names only) */
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
 const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 
@@ -157,63 +158,70 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
       <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
   /* ===== the poster: the main picture, about 37 percent of the face, whole at 2:3, pinned straight to the wall ===== */
-  const PX=24,PY=FH+26,PIW=590,PIH=885,PB=8,PFW=PIW+2*PB,PFH=PIH+2*PB;
-  const photoHtml=PM?`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PFW}px;height:${PFH}px;box-sizing:border-box;border:${PB}px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.3).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">
+  /* 15 Nov: the film's notes before the poster's size. A long board (Phar Lap's nine dishes) printed names only beside the 590px poster,
+     so the poster steps down to 550 then 510 (still whole at 2:3) to widen the board, and notes only drop if even 510 cannot hold them */
+  /* then the house lines leave (HD, Josh's rule: house lines drop before any film note), then the cue; if nothing holds the notes the last pass is today's board */
+  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
+  /* the board may also grow down (and last of all the kitchen cue gives its room, NC) into the pinned note's spare room, but only while the note still holds its quote at the smallest size */
+  if(BHT>640){const bw=W-24-(24+PIWT+16+22),nq=Math.ceil(String(note.text).length*16*E.bcw/(bw-44))+1;if(H-74-(FH+26+BHT+20)-170-(90+nq*21.8+30)<0)continue}
+  var PX=24,PY=FH+26,PIW=PIWT,PIH=Math.round(PIWT*1.5),PB=8,PFW=PIW+2*PB,PFH=PIH+2*PB;
+  var photoHtml=PM?`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PFW}px;height:${PFH}px;box-sizing:border-box;border:${PB}px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.3).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">
         <div style="position:absolute;left:50%;top:-${PB+6}px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.5)"></div></div>`
     :`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PFW}px;height:${PFH}px;box-shadow:0 8px 22px rgba(0,0,0,.5)">${photo(hero.src,PFW,PFH,{filter:`${E.photo} ${T.photo}`,poster:false,pos:"50% 40%",vig:70})}</div>`;
-  const ZY=PY+PFH+22; /* strip under the poster: tag, then the film logo */
-  let logoHtml;const LG=ctx.logo;
+  var ZY=PY+PFH+22; /* strip under the poster: tag, then the film logo */
+  var logoHtml;const LG=ctx.logo;
   if(LG&&LG[0]&&LG[1]&&LG[2]){
-    const a=LG[1]/LG[2];let lw=Math.min(PFW-44,104*a),lh=lw/a;if(lh>104){lh=104;lw=lh*a}
+    var a=LG[1]/LG[2];let lw=Math.min(PFW-44,104*a),lh=lw/a;if(lh>104){lh=104;lw=lh*a}
     logoHtml=`<div style="position:absolute;left:${PX}px;top:${ZY+38}px;padding:17px 22px;background:${rgba(DARK,.82)};box-shadow:0 4px 16px rgba(0,0,0,.35)"><img src="${img(LG[0],"w500")}" alt="${esc(title)}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></div>`;
   }else{
-    const tT=fitType(title,PFW-44,104,E.dcw,56,26,1.05,2);
+    var tT=fitType(title,PFW-44,104,E.dcw,56,26,1.05,2);
     logoHtml=`<div style="position:absolute;left:${PX}px;top:${ZY+38}px;max-width:${PFW}px;box-sizing:border-box;padding:17px 22px;background:${rgba(DARK,.82)};font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
-  const capTxt=PM?`Now showing, ${year}`:sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
-  const capHtml=`<div style="position:absolute;left:${PX}px;top:${ZY}px;max-width:${PFW}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
+  var capTxt=PM?`Now showing, ${year}`:sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
+  var capHtml=`<div style="position:absolute;left:${PX}px;top:${ZY}px;max-width:${PFW}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
 
   /* ===== blackboard ===== */
-  const BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=640,NB=H-74;
-  const IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
-  const head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
-  const headH=76;
-  const cue=sentence(C(f.P));
-  const cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);
-  const footH=cue?(20+6+cT.n*cT.z*1.3+6):0;
-  let MH=IH-headH-footH-16;
-  const m=ctx.menu||{};
-  const numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */
-const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
-  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0)?numCents(periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7)),num):periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7))}))})).filter(c=>c.items.length);
-  const total=courses.reduce((a,c)=>a+c.items.length,0);
-  const cols=1,GAP=24,colW=cols===2?(IW-GAP)/2:IW;
-  let splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];
-  let colsArr=splits[0];
-  const dcw=E.bcw+.05;
-  const colHtml=(cs,FS)=>cs.map((c,i)=>`<div style="margin-top:${i?FS.G+6:0}px">
+  var BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=BHT,NB=H-74;
+  var IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
+  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
+  var headH=76;
+  var cue=sentence(C(f.P));
+  var cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);
+  var footH=cue?(20+6+cT.n*cT.z*1.3+6):0;
+  var MH=IH-headH-(NC?0:footH)-16;
+  var m=ctx.menu||{};
+  var numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */
+var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
+  var courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n&&!(HD&&i.house)).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0)?numCents(periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7)),num):periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7))}))})).filter(c=>c.items.length);
+  var total=courses.reduce((a,c)=>a+c.items.length,0);
+  var cols=1,GAP=24,colW=cols===2?(IW-GAP)/2:IW;
+  var splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];
+  var colsArr=splits[0];
+  var dcw=E.bcw+.05;
+  var colHtml=(cs,FS)=>cs.map((c,i)=>`<div style="margin-top:${i?FS.G+6:0}px">
       <div style="${caps(FS.S,CA,.12)};line-height:1.15;margin-bottom:6px;${chalk}">${esc(sec[c.k])}</div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
         <span style="font:700 ${FS.D}px/1.12 ${body};color:${CHALK};${chalk}">${esc(it.n)}</span><span style="font:${E.dw}${Math.round(FS.D*1.08)}px/1 ${disp};color:${CA};white-space:nowrap;${chalk}">$${esc(it.p)}</span></div>
         ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${rgba(CHALK,.78)};margin-top:2px;${chalk}">${esc(sentence(clip(it.note,Math.floor(FS.nl*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
-  const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+6+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.7,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
-  const measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
-  let FS=null;
+  var est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+6+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.7,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
+  var measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
+  var FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){
-    const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
+  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.39:.55);s-=.05){/* 15 Nov: with notes, down to the type floor with gaps of 6px */
+    var base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
-      let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
+      var best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
-  let dropCue=false;
-  if(!FS){dropCue=!!cue;MH+=footH;
+  var dropCue=!!(NC&&cue);
+  if(!FS){dropCue=!!cue;if(!NC)MH+=footH;
     for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
       splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
       for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
         if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break}}
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
+  if(FS&&FS.nl)break geo}
 
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];

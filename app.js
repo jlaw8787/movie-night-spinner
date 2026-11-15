@@ -1810,11 +1810,19 @@ function foldClear(card){
 /* review 15: shorten a note at a natural break before a fit pass gives up on it, so "Garlic rosemary lamb shoulder roasted 5 hours until it pulls apart"
    reads "Garlic rosemary lamb shoulder roasted 5 hours" instead of vanishing. Breaks: sentences, then commas, then joining words; never under three words */
 window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?".":"",body=t.replace(/[.!?]+$/,""),cands=[];
-  const sent=t.match(/[^.!?]+[.!?]+/g);if(sent&&sent.length>1)for(let k=sent.length-1;k>=1;k--)cands.push(sent.slice(0,k).join("").trim());
-  const rx=/,\s+|\s+(?:with|and|over|in|on|under|topped with|served|until|for|from|plus|then|or)\s+/gi;let m;const cuts=[];while((m=rx.exec(body)))cuts.push(m.index);
-  /* a cut that ends on a verb or a joining word reads unfinished ("Choux puffs filled.", "Lemon jelly set."), so those are skipped */
-  for(let k=cuts.length-1;k>=0;k--){const c=body.slice(0,cuts[k]).trim(),lw=(c.match(/(\S+)$/)||["",""])[1].toLowerCase();
-    if(c.split(/\s+/).length>=3&&!/(ed|ing)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
+  /* 15 Nov: a last sentence with no full stop is still a sentence (Venom printed "Eddie climbs into the tank. Grilled tails") */
+  const sent=t.match(/[^.!?]+(?:[.!?]+|$)/g);if(sent&&sent.length>1)for(let k=sent.length-1;k>=1;k--)cands.push(sent.slice(0,k).join("").trim());
+  const rx=/,\s+|\s+(?:with|and|over|in|on|under|topped with|served|until|for|from|plus|then|or)\s+/gi;let m;const cuts=[];while((m=rx.exec(body)))cuts.push({i:m.index,w:m[0].trim().toLowerCase(),e:m.index+m[0].length});
+  /* a cut that ends on a verb or a joining word reads unfinished ("Choux puffs filled.", "Lemon jelly set."), so those are skipped.
+     15 Nov: nor an "and" inside a pair that names one dish thing ("Breast rolled round onion." of "onion and bacon dressing") */
+  /* and never inside the lead sentence when there is more than one ("If he dies." of "If he dies, he dies. Beef and pork dumplings") */
+  const lead0=sent&&sent.length>1&&sent[0].trim().split(/\s+/).length<=6?sent[0].length:0;/* a short lead: a quote or a joke, kept whole */
+  for(let k=cuts.length-1;k>=0;k--){const {i,w,e}=cuts[k],c=body.slice(0,i).trim(),lw=(c.match(/(\S+)$/)||["",""])[1].toLowerCase();if(i<lead0)continue;
+    if(w==="and"){const seg=c.split(",").pop().trim().split(/\s+/);
+      /* the words after "and" up to a verb, a comma or a joining word: two or more ending on a dish word means the pair names a thing ("onion and bacon dressing", "beef and pork dumplings"), not "espresso and ice cream" */
+      const after=[];for(const x of body.slice(e).split(/\s+/)){const y=x.toLowerCase().replace(/[,.;]$/,"");if(/(ed|ing|en)$/.test(y)||/^(with|and|over|in|on|under|served|until|for|from|plus|then|or)$/.test(y))break;after.push(y);if(/,$/.test(x))break}
+      if((after.length>=2&&!/^(the|a|an|his|her|their|its|my|your)$/.test(after[0])&&/^(dressing|dumplings?|stuffing|sauce|gravy|pies?|rolls?|buns?|cakes?|tarts?|soup|salad|mayo|glaze|crust|filling|batter|crumb|dip|relish|salsa|slaw|skewers?|patties|fritters?|parcels?|bites|balls?)$/.test(after[after.length-1])))continue}
+    if(c.split(/\s+/).length>=3&&!/(ed|ing)$/.test(lw)&&!/^(shaken|beaten|frozen|stolen|taken|given|broken|chosen|hidden|drawn|sewn|blown|grown|thrown|torn|worn|spun|stirred|split|poured|kept|left|built|dipped)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
   /* 11 Nov: never cut inside a quote (The Goonies printed: Sloth: "Ruth, Ruth) */
   const open=c=>(c.match(/"/g)||[]).length%2===1||(c.match(/\u201c/g)||[]).length!==(c.match(/\u201d/g)||[]).length;
   for(const c of cands)if(!open(c)&&fits(c))return c;return null};
@@ -1836,14 +1844,16 @@ window.__fmtShortFilm=(t,fits)=>{t=String(t||"").replace(/\s+/g," ").trim();if(!
      start on a joining word, a capital or a quote ("for Ren...", "Let's Hear It...", never "honey to dip, for Ren..."), and a joining
      word inside a title ("Let's Hear It for the Boy") is not a break */
   const J="for|where|while|when|like|as|after|before|until|from|at|in|on|with|by|just|so";
-  const lead=new RegExp("^(?:(?:"+J+")\\s|[A-Z\"\u201c])");
-  for(const s of sents.filter(ref)){const body=s.replace(/[.!?]+(["\u201d]?)$/,"$1");cands.push(dot(s));const A=[],B=[];
+  /* 15 Nov: a part used alone starts on a word that carries its own sense ("For Ren...", "When Teddy..."); one starting "at", "so" or
+     "with" leans on what was cut ("At the North Pole.", "So Lisa takes charge.") */
+  const lead=new RegExp("^(?:(?:for|where|while|when|like|as|after|before|until)\\s|[A-Z\"\u201c])");
+  for(const s of sents.filter(ref)){const body=s.replace(/[.!?]+(["\u201d]?)$/,"$1");if(s.split(/\s+/).length>=3)cands.push(dot(s));/* 15 Nov: never a lone "Yield!" */const A=[],B=[];
     const com=[...body.matchAll(/,\s+/g)].map(m=>({i:m.index,l:m[0].length}));
     const join=[...body.matchAll(new RegExp("\\s+(?=(?:"+J+")\\s)","g"))].map(m=>({i:m.index,l:m[0].length})).filter(c=>!/[A-Z]\S*$/.test(body.slice(0,c.i)));
     const head=com.length?body.slice(0,com[0].i).trim():"";
     com.forEach((c,k)=>{const tail=body.slice(c.i+c.l).trim();if(!ref(tail)||open(tail)||tail.split(/\s+/).length<3)return;
       if(k>0&&head.split(/\s+/).length>=2&&!ref(head))A.push(dot(head+", "+tail));if(lead.test(tail))B.push(dot(cap(tail)))});
-    join.forEach(c=>{const tail=body.slice(c.i+c.l).trim();if(ref(tail)&&!open(tail)&&tail.split(/\s+/).length>=3)B.push(dot(cap(tail)))});
+    join.forEach(c=>{const tail=body.slice(c.i+c.l).trim();if(ref(tail)&&!open(tail)&&lead.test(tail)&&tail.split(/\s+/).length>=3)B.push(dot(cap(tail)))});
     B.sort((x,y)=>y.length-x.length);cands.push(...A,...B);
     if(head&&ref(head)&&!open(head)&&head.split(/\s+/).length>=3)cands.push(dot(head))}
   for(const c of cands)if(!open(c)&&fits(c))return c;
