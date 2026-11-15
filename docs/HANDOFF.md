@@ -1516,3 +1516,5 @@ Josh, 1:37pm: the 1990 counter still was "the most uniconic picture", and he wan
 
 Josh's go at 1:43pm, keeping main's search. Merge commit on top of 610c3bec: main's search.js and search-index.json stay; data/search-words.json, SEARCH_GROUPS, topicTerms and topicHit dropped. spin(opt) takes the flick's power and direction and still honours window.spinForce (Match night); a forced spin lands on its film. fetch-fonts and build-data rerun on the merged tree.
 Checks: npm test pass. check-browser pass. planCard against main 610c3bec, no switch, Vegetarian and No alcohol: only the four TMNT films differ. check-print-text on all 900: one fail, Weird Science (1985) cue overlap ("Wyatt's parents are away." over "Showtime cue"). It fails on main without this merge too and flips between pass and fail run to run, so it is already live and timing-dependent. Fix next.
+
+Deployed on Josh's go: Publish site run 43678048475 passed. The three TMNT format files, app.js, index.html and formats-core.js match main byte for byte live.
