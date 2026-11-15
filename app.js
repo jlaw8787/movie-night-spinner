@@ -297,9 +297,9 @@ function spin(){
   /* refresh the wedges on the far side so every spin shows new titles, and plant the winner there */
   const far=[];for(let i=0;i<N;i++){const ang=((rot+(i+.5)*A)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);if(ang>Math.PI*.6&&ang<Math.PI*1.4)far.push(i)}
   const L=spinPool(),pool=shuffle(list);far.forEach((i,k)=>{wedges[i]=pool[k%pool.length]});
-  /* Match night decider: a two-slot wheel (the two picks on alternate wedges), landing on the film already drawn */
-  const force=window.spinForce;if(force)for(let i=0;i<N;i++)wedges[i]=force.pair[i%2];
-  const w=force?pick(far.filter(i=>wedges[i]===force.win)):pick(far),f=force?force.win:L.length?spinPick(L):wedges[w];wedges[w]=f;
+  /* Match night decider: the picks (two, or up to 8 for Just me) take turns round the wedges, landing on the film already drawn */
+  const force=window.spinForce;if(force)for(let i=0;i<N;i++)wedges[i]=force.pair[i%force.pair.length];
+  const fw=force?far.filter(i=>wedges[i]===force.win):[],w=fw.length?pick(fw):pick(far),f=force?force.win:L.length?spinPick(L):wedges[w];wedges[w]=f;
   closeCurtains();sfx.whirrStart();
   const target=-(w+0.5+(Math.random()-0.5)*0.55)*A;
   const turns=reduce?1:5+Math.floor(Math.random()*3);

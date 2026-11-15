@@ -40,4 +40,6 @@ const mj = rd('match.js');
 assert.ok(/if \(M\.room\) poll\(\)/.test(mj.slice(mj.indexOf('function mode'), mj.indexOf('function mode') + 600)), 'coming back to Match it restarts the room check');
 assert.ok(!/rpc\('match_(swipe|unswipe|pick)'/.test(mj), 'room writes go through the retry queue');
 assert.ok(mj.includes("'https://reeldinner.com/'"), 'room link points at the website from the app');
+assert.ok(mj.includes('data-style="solo"') && mj.includes("'rd-solo'"), 'Just me mode and its saved shortlist');
+assert.ok(rd('app.js').includes('force.pair[i%force.pair.length]'), 'decider wheel takes more than two films');
 console.log(`match: ${n} films in Match night, ${deck.vibes.length} vibes, ok`);

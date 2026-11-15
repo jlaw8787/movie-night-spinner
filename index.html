@@ -2943,6 +2943,11 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
 .mn-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .mn-chip{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:96px;min-height:48px;padding:8px 14px;border-radius:12px;border:1px solid rgba(217,164,65,.4);background:rgba(90,15,31,.5);color:var(--screen);font:600 15px var(--f-body);cursor:pointer}
 .mn-chip.wide{min-width:180px}
+.mn-styles .mn-chip.wide{flex:1 1 0;min-width:0;padding:8px 8px;text-align:center}
+.mn-solo{grid-template-columns:1fr}
+.mn-solo li{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mn-x{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(217,164,65,.35);background:transparent;color:var(--screen);cursor:pointer}
+.mn-x svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.4;fill:none}
 .mn-chip small{font:500 12px var(--f-body);color:var(--muted)}
 .mn-chip[aria-checked="true"]{background:linear-gradient(#8c1d33,#5a0f1f);border-color:var(--brass);box-shadow:0 0 0 2px rgba(217,164,65,.5),0 0 16px rgba(255,200,90,.25)}
 .mn-chip[aria-checked="true"] small{color:var(--bulb)}
@@ -3229,8 +3234,8 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
 <script src="assets/fonts/fonts.js?v=11978182" defer></script>
 <script src="formats-core.js?v=0a170225" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
-<script src="app.js?v=c32974de" defer></script>
-<script src="match.js?v=db318a1c" defer></script>
+<script src="app.js?v=e1cc2cee" defer></script>
+<script src="match.js?v=1484d36a" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
