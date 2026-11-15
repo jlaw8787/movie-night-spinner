@@ -161,7 +161,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* 15 Nov: the film's notes before the poster's size. A long board (Phar Lap's nine dishes) printed names only beside the 590px poster,
      so the poster steps down to 550 then 510 (still whole at 2:3) to widen the board, and notes only drop if even 510 cannot hold them */
   /* then the house lines leave (HD, Josh's rule: house lines drop before any film note), then the cue; if nothing holds the notes the last pass is today's board */
-  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
+  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,2,1],[510,700,2,1],[510,760,2,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
   /* the board may also grow down (and last of all the kitchen cue gives its room, NC) into the pinned note's spare room, but only while the note still holds its quote at the smallest size */
   if(BHT>640){const bw=W-24-(24+PIWT+16+22),nq=Math.ceil(String(note.text).length*16*E.bcw/(bw-44))+1;if(H-74-(FH+26+BHT+20)-170-(90+nq*21.8+30)<0)continue}
   var PX=24,PY=FH+26,PIW=PIWT,PIH=Math.round(PIWT*1.5),PB=8,PFW=PIW+2*PB,PFH=PIH+2*PB;
@@ -187,8 +187,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   var headH=76;
   var cue=sentence(C(f.P));
   var cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);
-  var footH=cue?(20+6+cT.n*cT.z*1.3+6):0;
-  var MH=IH-headH-(NC?0:footH)-16;
+  /* 15 Nov, Josh: before the cue gives its room (NC 1) it tries a compact form (NC 2): the label runs into the line, smallest type */
+  var cT2=fitType("Showtime: "+cue,IW,48,E.bcw,15,15,1.3,3);
+  var footH=cue?(NC===2?(10+cT2.n*15*1.3+4):(20+6+cT.n*cT.z*1.3+6)):0;var cueMode=NC;
+  var MH=IH-headH-(NC===1?0:footH)-16;
   var m=ctx.menu||{};
   var numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */
 var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
@@ -213,8 +215,8 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       var best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
-  var dropCue=!!(NC&&cue);
-  if(!FS){dropCue=!!cue;if(!NC)MH+=footH;
+  var dropCue=!!(NC===1&&cue);
+  if(!FS){dropCue=!!cue;if(NC!==1)MH+=footH;
     for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
       splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
       for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
@@ -233,7 +235,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
         <div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>
         ${also.length?`<div style="margin-top:auto;margin-bottom:8px;border-top:2px solid ${rgba(CHALK,.4)};padding-top:10px"><div style="${caps(15,CA,.2)};margin-bottom:4px;${chalk}">Overheard at the bar</div>${also.map(w=>`<div style="font:500 18px/1.3 ${body};color:${CHALK};margin-top:3px;${chalk}">${esc(sentence(trunc(w,56)))}</div>`).join("")}</div>`:""}
       </div>
-      ${cue&&!dropCue?`<div style="margin-top:auto;border-top:2px solid ${rgba(CHALK,.4)};padding-top:8px"><div style="${caps(15,CA,.2)};${chalk}">From the kitchen</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${CHALK};margin-top:4px;${chalk}">${esc(cue)}</div></div>`:""}
+      ${cue&&!dropCue&&cueMode===2?`<div data-cue style="margin-top:auto;border-top:2px solid ${rgba(CHALK,.4)};padding-top:6px;font:500 15px/1.3 ${body};color:${CHALK};${chalk}"><span style="${caps(15,CA,.2)}">Showtime:</span> ${esc(cue)}</div>`:""}${cue&&!dropCue&&cueMode!==2?`<div style="margin-top:auto;border-top:2px solid ${rgba(CHALK,.4)};padding-top:8px"><div style="${caps(15,CA,.2)};${chalk}">From the kitchen</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${CHALK};margin-top:4px;${chalk}">${esc(cue)}</div></div>`:""}
     </div>`;
 
   /* ===== right of the board: raffle ticket and pinned note ===== */

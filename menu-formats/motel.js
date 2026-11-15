@@ -287,6 +287,8 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const pmT=town||"ROUTE "+room,pmR=Math.max(118,Math.min(134,Math.round(296-(Math.max(pmT.length,String(f.year||"").length)*10.4+25))));
   const postmark=`<div style="position:absolute;z-index:3;right:${pmR}px;top:118px;transform:rotate(-14deg);border:2.5px solid ${T.ink}aa;border-radius:6px;padding:3px 10px;font-family:${BODY};font-weight:700;font-size:14px;letter-spacing:.14em;color:${T.ink}bb;text-align:center;line-height:1.25;white-space:nowrap;opacity:${(.65+T.wear*.3).toFixed(2)}">${esc(town||"ROUTE "+room)}<br>${esc(String(f.year||""))}</div>`;
 
+  /* the showtime cue (15 Nov, Josh: motel never printed it): a note from the desk at the foot of the message side */
+  const cueTxt=clean(f.P||"").replace(/\s+/g," ").trim();
   /* key tag: shape by era, type only */
   const tagCol=mix(ACC,"#000000",.1),tagTxt=lum(tagCol)<.35?"#ffffff":"#111111";
   const tagInner=`<div style="font-family:${BODY};font-weight:800;font-size:14px;letter-spacing:.16em;text-transform:uppercase;opacity:.9">Room</div><div style="font-family:${DISP};font-weight:${e.dw||400};font-size:${room.length>2?40:52}px;line-height:.95">${esc(room)}</div><div style="font-family:${BODY};font-weight:600;font-size:14px;line-height:1.15;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div>`;
@@ -312,11 +314,12 @@ window.MENU_FORMATS["motel"]=ctx=>{
     </div>
     <div style="position:absolute;left:${LW+46}px;top:26px;bottom:26px;width:2px;background:${mix(e.ink,e.paper,.55)}"></div>
     ${stamp}${postmark}
-    <div style="position:absolute;left:${LW+64}px;right:24px;top:190px;height:${e.tag==="card"?186:204}px;display:flex;flex-direction:column" data-fit>
+    <div style="position:absolute;left:${LW+64}px;right:24px;top:190px;height:${(e.tag==="card"?186:204)+(cueTxt?24:0)}px;display:flex;flex-direction:column" data-fit>
       <div style="font-family:'Caveat',cursive;font-weight:700;color:${T.ink};${fs(25,15)};line-height:1.05">${esc(T.msgH)}</div>
       <div style="font-family:'Caveat',cursive;font-weight:500;color:${T.ink};${fs(23,15)};line-height:1.1;margin-top:2px">${esc(note.t)}</div>
       <div style="font-family:'${sigF}',cursive;color:${T.ink};${fs(sigF==="Mr Dafoe"?34:30,18)};line-height:1.1;text-align:right;margin-top:2px">${esc(note.by)}</div>
       ${prop?`<div style="font-family:${BODY};${fs(14,14)};color:${e.ink};border-top:1px solid ${mix(e.ink,e.paper,.6)};padding-top:3px;margin-top:4px;line-height:1.2">${esc(prop.title)}: ${esc((prop.lines||[]).join(", "))}</div>`:""}
+      ${cueTxt?`<div data-cue style="margin-top:10px"><div style="font-family:${BODY};font-weight:700;${fs(13,12)};letter-spacing:.2em;text-transform:uppercase;color:${mix(ACC,e.ink,.2)}">Note from the desk</div><div style="font-family:${BODY};font-style:italic;${fs(15,13)};line-height:1.3;color:${e.ink};margin-top:3px">${esc(cueTxt)}</div></div>`:""}
     </div>
     ${tag}${FIT}</div>`;
   return{w:W,h:H,faces:[front0,back]};
