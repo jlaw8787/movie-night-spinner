@@ -10,12 +10,12 @@
    Fonts (assets/fonts/files) and the save tools (assets/lib): saved the first time a menu or a save needs them,
    never all at once. Their names change whenever their content does, so they sit in their own store that app updates
    leave alone, and a menu that worked offline once keeps working after an update. */
-const VERSION = 'mns-b6d43d69';
+const VERSION = 'mns-7464e0e2';
 const FILMS_CACHE = 'mns-films';
 const IMAGES_CACHE = 'mns-images';
 const STATIC_CACHE = 'mns-static';
 const IMAGES_MAX = 600;
-const FILM_RX = /data\/film\/[^/]+\.json$|data\/(dish-names|dish-notes|trivia)\.json$|(^|\/)(menu-)?formats\/[^/]+\.js$/;
+const FILM_RX = /data\/film\/[^/]+\.json$|data\/(dish-names|dish-notes|trivia|search-words)\.json$|(^|\/)(menu-)?formats\/[^/]+\.js$/;
 const IMG_RX = /\.(webp|jpe?g|png|gif|svg|avif)$/i;
 const STATIC_RX = /\/assets\/(fonts\/files|lib)\/[^/]+$/;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'assets/app/icon-192.png', 'assets/app/icon-512.png'];

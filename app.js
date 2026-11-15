@@ -2876,7 +2876,9 @@ function renderShop(){
   shelfRest=[];
   if(!dishesReady)ensureDishes().then(()=>{if(!$("viewShop").hidden)renderShop()});
   const q=$("shopSearch").value.trim().toLowerCase(),dec=$("shopDecade").value,unseen=$("shopUnwatched").checked;
-  const ok=f=>(!q||filmScore(q,f)>=0)&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))&&onSvc(f,svc);
+  const terms=q?topicTerms(q):null;if(terms&&!SW)ensureSearchWords().then(()=>{if(!$("viewShop").hidden&&$("shopSearch").value.trim().toLowerCase()===q)renderShop()});
+  const byTitle=new Set(q?FILMS.filter(f=>filmScore(q,f)>=0).map(f=>f.id):[]);
+  const ok=f=>(!q||byTitle.has(f.id)||topicHit(f,terms))&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))&&onSvc(f,svc);
   const list=FILMS.filter(ok);
   const rows=[];
   const fresh=list.filter(isNew).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));
@@ -2888,7 +2890,8 @@ function renderShop(){
   const top=!q?topShelf(list):[];if(top.length)rows.push([member.name?`${member.name}'s shelf`:"Your top shelf",top,"Everything you gave 4 or 5 stars."]);
   if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
-  if(q&&list.length)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
+  if(q&&list.length){const t=list.filter(f=>byTitle.has(f.id)),o=list.filter(f=>!byTitle.has(f.id)),az=a=>a.slice().sort((x,y)=>x.title.localeCompare(y.title));
+    if(t.length)rows.push(["Search results",az(t)]);if(o.length)rows.push([t.length?`Also about “${$("shopSearch").value.trim()}”`:`Films about “${$("shopSearch").value.trim()}”`,az(o)])}
   else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>aisleOf(f)===n&&(kidsMode||!isLate(f))).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
   if(!q&&!kidsMode){const ls=list.filter(isLate).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. The proper scares, grown-ups only.","lateshow"])}
   if(!q&&peekSeason){const c=cal.find(c=>c.s.id===peekSeason&&!c.on&&c.next);if(c)rows.unshift(...seasonRows(c.s,list,c.next).map(r=>{r[2]=(r[2]||"").replace(/^Back on /,"Sneak look. Back on ");return r}))}
@@ -4082,6 +4085,39 @@ function wordHit(w,toks){const r=ROMAN[w]||w;let fuzzy=false;for(const t of toks
 function filmScore(q,f){const Q=searchNorm(q);if(!Q)return 0;const T=searchNorm(f.title+" "+f.year),toks=T.split(" ");
   if(searchNorm(f.title)===Q||T===Q)return 0;if(T.startsWith(Q))return 0.5;if((" "+T).includes(" "+Q))return 1;if(Q.length>=2&&!Q.includes(" ")&&T.replace(/ /g,"").startsWith(Q))return 1;
   let worst=1,any=0;for(const w of Q.split(" ")){const h=wordHit(w,toks);if(!h){if(SEARCH_STOP.has(w))continue;return -1}any++;worst=Math.max(worst,h+1)}return any?worst:-1}
+/* wider search (Josh, 15 Nov): a topic word also finds films about it, through words that mean the same thing
+   ("mafia" finds gangster, mob and crime family films). Matched against each film's description, tagline, aisle, genres
+   and theme (data/search-words.json, built by build-data and fetched the first time someone searches). */
+const SEARCH_GROUPS=[
+ ["mafia","mob","mobs","mobster","mobsters","gangster","gangsters","mafioso","mafiosi","godfather","wiseguy","wiseguys","racketeer","racket","underworld","crime family","crime boss","crime lord","organised crime","organized crime","cosa nostra","hitman","hit man","hitmen","crime and mob"],
+ ["cop","cops","police","policeman","policemen","detective","detectives","lapd","nypd","fbi","agent","undercover","precinct","sheriff","action and cops"],
+ ["heist","heists","robbery","robberies","rob","robs","robber","robbers","bank job","thief","thieves","burglar","burglars","con man","con artist","crook","crooks","steal","steals","stolen"],
+ ["space","alien","aliens","outer space","spaceship","starship","planet","planets","galaxy","astronaut","astronauts","sci fi","scifi","science fiction"],
+ ["christmas","xmas","santa","north pole","elf","elves","holiday"],
+ ["horror","scary","slasher","ghost","ghosts","haunted","haunting","monster","monsters","zombie","zombies","vampire","vampires","demon","demons","killer"],
+ ["western","westerns","cowboy","cowboys","outlaw","outlaws","gunslinger","wild west","frontier"],
+ ["romance","romantic","romcom","rom com","love story","falls in love","fall in love","wedding","weddings","date"],
+ ["superhero","superheroes","super hero","hero","heroes","comic book","marvel","superheroes"],
+ ["kids","kid","children","family","animated","animation","cartoon","cartoons"],
+ ["musical","musicals","singing","singer","dance","dancing","dancer","song","songs","music","band"],
+ ["sport","sports","boxing","boxer","football","baseball","basketball","hockey","soccer","racing","race","coach","team"],
+ ["war","soldier","soldiers","army","marine","marines","battle","military"],
+ ["dinosaur","dinosaurs","dino","t rex","jurassic"],
+ ["food","cooking","cook","chef","chefs","restaurant","kitchen","diner","pizza","bakery"],
+ ["school","high school","college","teen","teens","teenager","teenagers","prom","student","students"],
+ ["magic","wizard","wizards","witch","witches","spell","spells","sorcerer","fairytale","fairy tale","princess"],
+ ["australia","australian","aussie","outback","sydney","melbourne"],
+ ["time travel","time machine","back in time","the past","the future"]];
+const SEARCH_FILLER=new Set(["movie","movies","film","films","flick","flicks","about","with","story","stories"]);
+let SW=null,_sw=null;
+const ensureSearchWords=()=>_sw||(_sw=fetch("data/search-words.json"+(window.DATA_V&&DATA_V.words?"?v="+DATA_V.words:"")).then(r=>r.json()).then(j=>{SW=j;return j}).catch(()=>{_sw=null;return null}));
+/* the words a query stands for, or null when it is not a topic: the whole query or any one word of it in a group brings
+   in the whole group; a single word of 4 letters or more is also looked for on its own (plain and plural) */
+function topicTerms(q){const Q=searchNorm(q);if(!Q)return null;const ws=Q.split(" ").filter(w=>!SEARCH_FILLER.has(w)&&!SEARCH_STOP.has(w)),core=ws.join(" ");if(!core)return null;
+  const out=new Set(),whole=SEARCH_GROUPS.filter(g=>g.includes(core));for(const g of whole.length?whole:SEARCH_GROUPS.filter(g=>ws.some(w=>w.length>=3&&g.includes(w))))g.forEach(t=>out.add(t));
+  if(ws.length===1&&core.length>=4){out.add(core);out.add(core.endsWith("s")?core.slice(0,-1):core+"s")}
+  return out.size?[...out]:null}
+function topicHit(f,terms){if(!SW||!terms)return false;const t=" "+(SW[f.id]||"")+" ";return terms.some(w=>t.includes(" "+w+" "))}
 /* ================= ease of use: quick find, saved menus, settings, clear and reset ================= */
 /* open any film straight from its title, the way a stub does */
 function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()}
@@ -4092,7 +4128,8 @@ function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="m
  const draw=()=>{box.innerHTML=hits.length?hits.map((f,i)=>`<button type="button" role="option" data-i="${i}" aria-selected="${i===at}"><span>${ESC(f.title)}</span><small>${ESC(f.year)}</small></button>`).join(""):'<p class="none">No film by that name. Try fewer letters.</p>';box.hidden=false;inp.setAttribute("aria-expanded","true")};
  inp.addEventListener("input",()=>{const q=norm(inp.value);if(q.length<2){close();return}
    const scored=[];
-   for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;const sc=filmScore(inp.value,f);if(sc>=0)scored.push([sc,f])}
+   const terms=topicTerms(inp.value);if(terms&&!SW){const v=inp.value;ensureSearchWords().then(()=>{if(inp.value===v)inp.dispatchEvent(new Event("input"))})}
+   for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;const sc=filmScore(inp.value,f);if(sc>=0)scored.push([sc,f]);else if(topicHit(f,terms))scored.push([9,f])}
    scored.sort((a,b)=>a[0]-b[0]||(+a[1].year)-(+b[1].year)||a[1].title.localeCompare(b[1].title));hits=scored.slice(0,7).map(x=>x[1]);at=hits.length?0:-1;draw()});
  inp.addEventListener("keydown",e=>{if(box.hidden)return;
    if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(!hits.length)return;at=(at+(e.key==="ArrowDown"?1:-1)+hits.length)%hits.length;draw()}

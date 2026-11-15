@@ -300,7 +300,7 @@
    }
   },
   {
-   "n": "Pizza-box pepperoni pie with chilli crisp",
+   "n": "Pizza-box pepperoni pie with jalapeño ranch",
    "course": "m",
    "prep_min": 15,
    "cook_min": 12,
@@ -337,9 +337,15 @@
      "aisle": "Pantry"
     },
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "chilli crisp",
+     "q": 50,
+     "u": "g",
+     "item": "pickled jalapeños",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "ranch dressing",
      "aisle": "Pantry"
     }
    ],
@@ -357,7 +363,7 @@
      "min": 12
     },
     {
-     "text": "Spoon the chilli crisp over the hot pie and cut into big slices.",
+     "text": "Scatter the jalapeños over the hot pie, drizzle with ranch and cut into big slices.",
      "min": 2
     }
    ],
@@ -365,7 +371,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Pizza-box mushroom pie with chilli crisp",
+     "n": "Pizza-box mushroom pie with jalapeño ranch",
      "prep_min": 15,
      "cook_min": 12,
      "make_ahead": "Stretch the base up to 2 hours ahead",
@@ -401,9 +407,15 @@
        "aisle": "Pantry"
       },
       {
-       "q": 2,
-       "u": "tbsp",
-       "item": "chilli crisp",
+       "q": 50,
+       "u": "g",
+       "item": "pickled jalapeños",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "ranch dressing",
        "aisle": "Pantry"
       }
      ],
@@ -421,7 +433,7 @@
        "min": 12
       },
       {
-       "text": "Spoon the chilli crisp over the hot pie and cut into big slices.",
+       "text": "Scatter the jalapeños over the hot pie, drizzle with ranch and cut into big slices.",
        "min": 2
       }
      ],
