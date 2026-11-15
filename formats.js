@@ -659,13 +659,13 @@ const FMT_FILMS={
   "She's All That (1999)":{fmt:"seniorprom",brand:"The Senior Prom",phoneTitle:"She's All That",tag:"Prom queen in six weeks.",
     head:["The Senior Prom","Southern California, prom night"],
     ballot:["Prom Queen Ballot","Prom queen in six weeks","Laney Boggs","Taylor Vaughan","Vote for one"],
-    year:["Senior year so far","Taylor calls Laney vapor and spam","Hacky sack, live on stage","Laney's foghorn"],
+    year:["Senior year so far","Taylor calls Laney vapor and spam","Hacky sack, live on stage","Taylor could win it in fluorescent lighting"],
     quote:["Sometimes when you open up to people, you let the bad in with the good.","Zack Siler"],
     stills:[["/dzuAbWv4zWoCKTY0cer48LsjHPo.jpg","Mack's makeover","60% 30%"],["/aiwW8pUErcFN0XH8UmQv6chcEjE.jpg","Laney paints, Zack watches","50% 40%"],["/gSv4z7FZ0TuiH8dwi1qNiFJBaCd.jpg","Zack and Dean at the beach","60% 35%"],["/yRukbmAGUuCTCIH4Phw2hQpG0tw.jpg","Graduation in a cap and a soccer ball","50% 25%"]],
     cue:["/675B5ALS1WMXkhptLhRWgKckBcp.jpg","Laney and Zack at the beach","60% 40%"],
     groups:[
       {h:"Starters",items:[
-        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"Falafel in pita with tahini.",note:"Laney's falafel job",p:"4.50"},
+        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"Falafel in pita with tahini.",note:"Laney in the falafel hat",p:"4.50"},
         {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"Black bean and cheddar nachos.",note:"Taylor dumps Zack",p:"5.25"}],
         house:{n:"Simon's breakfast muffins",d:"Warm blueberry muffins.",note:"Laney has his breakfast ready. Get up, Simon.",p:"1.50"}},
       {h:"Mains",items:[
