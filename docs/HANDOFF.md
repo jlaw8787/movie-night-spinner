@@ -1486,3 +1486,15 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 - Banquet layout: venue title now has word-spacing .12em (fixes "PrinceJohn's"). Logos blocked: Bruce Almighty, Nutty Professor, Critters.
 - Writer briefs: /home/claude/prompts (writer.md, checker.md, fixer.md). Lessons added: never invent venue names, family filter rewrites "Cocktail"/"Stout", themed dishes claim scenes not food, no stub food lines.
 - Usage: 7 agents at once hit the 5-hour limit at 3:45pm. Run at most 3 or 4 at a time.
+
+## 15 Nov, 6:30pm: all 100 written (1,000 films on feature/match-night, NOT deployed)
+
+- Rounds 2 and 3 written, checked, fixed and rescored. Match night 846. Round 4 (plan.json 91 to 100, The Bodyguard to Edward Scissorhands) merged at 5db436e; independent checker running; then fixer, rescore, sheet rows 992 to 1001.
+- Left under 3.5 (out of Match night by design): There's Something About Mary 3.4 (Josh chose to leave it on the prom layout), She's All That 3.4 (generic prom card after two passes).
+- Josh's call: The Flintstones venue is RocDonald's (it is in the film).
+- Counts now say 1,000 (index.html meta x3, support.html, docs/STORE-LISTING.md; alcohol 720 of 1,000 and horror 85 recounted by script).
+- Optional per-film layout settings added today (other films unchanged): banquet title word-spacing (all banquet films), tiki look.see, kiosk strip/forecast/titleMax, placemat and truck panelStill, hotel caption, flavour.year on banquet/tavern/canteen, diningcar priceEgg, home stamp.
+- Merge tools: wip/next100/merge-round.sh copies only src/notes a worktree changed since its merge-base. Layout file changes in a fix worktree are NOT merged by the script: diff menu-formats against the merge-base and copy by hand if main has not changed that file. /home/claude/tools/mergestills.py <wt> copies still-block/still-pick entries the worktree changed (session-local; recreate if gone).
+- Layouts print the release year in stamps by default; set the story year per film where it differs (year, stamp or words).
+- Sheet "Reel Dinner film layouts" updated to rev 32 (rows 902 to 991 Approved except Mary and She's All That). Live layout column stays blank until deploy.
+- Next: finish round 4 (check, fix, rescore, sheet), full tests incl. prices, then wait for Josh's "deploy".
