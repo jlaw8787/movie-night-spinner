@@ -33,11 +33,10 @@
   "moments": 4,
   "food": 4,
   "tone": 4,
-  "look": 3,
-  "verdict": "A proper Mel Brooks feast (toll rolls, Loxley and Bagel lox, the wild pig, Latrine's eyeball omelette, sacramental juice), let down a little by the same poster art printed twice and a stock price.",
+  "look": 4,
+  "verdict": "A proper Mel Brooks feast (toll rolls, Loxley and Bagel, the wild pig, Latrine's eyeball omelette) and the poster no longer prints twice, with Marian now beside her place card.",
   "missing": [
    "That's a wild bore! (the punchline, pointing at Prince John)",
-   "Latrine: it used to be Shithouse (kept off for a family menu, but her name joke is the gag)",
    "Maid Marian's Everlast chastity belt",
    "Ahchoo: it worked in Blazing Saddles",
    "I have a mole? (Prince John)"
@@ -47,13 +46,26 @@
    "Swap the bottom still for a different TMDB still so the poster art does not print twice",
    "Swap the place card line 'Seated by Maid Marian' for 'Key to Marian's Everlast lock, held'"
   ],
-  "overall": 3.8,
+  "overall": 4.0,
   "flat": false,
   "done": false,
   "reworked": "2026-11-15",
   "changed": [
    "Note heading FROM THE GATECRASHER",
    "Poster art no longer printed twice (bottom still is now Maid Marian, beside 'Seated by Maid Marian')"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 4,
+   "tone": 4,
+   "look": 3,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Banquet layout title gets word spacing, so 'Prince John's' prints with its space"
   ]
  }
 }

@@ -29,11 +29,11 @@
   "food": 3,
   "tone": 3,
   "look": 4,
-  "verdict": "The Homecoming carnival stand works and the lines are real (Ogre's stolen pie, two sevens beats a frush, Gilbert's speech), but the hot stand is filler and the stock stadium copy (section map, hawkers) has nothing to do with Adams College.",
+  "verdict": "The Homecoming carnival stand and the pie scoreboard work and the lines are real, but the section map is still stock stadium copy and the same poster art fills two of its four photos.",
   "missing": [
    "Booger's belching contest at the Greek Games",
    "Lamar's javelin throw",
-   "The Tri-Lambs' stage show, 'Lambda Lambda Lambda!'",
+   "The Tri-Lambs' stage show (only a wink)",
    "NERDS GET OUT! on the trashed house",
    "Twenty-seven rejection letters (only a wink)"
   ],
@@ -49,6 +49,19 @@
   "changed": [
    "Scoreboard rows STALL / ON THE MENU / PIES LEFT",
    "Stock hawker line now 'Pies for charity in every aisle. Catch one if you can.'"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.6
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Promo-art stills blocked; 'Courtside' now 'Sideline'. TMDB has only three real stills, so the luggage still shows twice"
   ]
  }
 }

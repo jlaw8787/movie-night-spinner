@@ -12,7 +12,7 @@ FLAVOUR = {"venue": "Otto's Garage", "sign": "50 cars, 72 hours, one night",
            "winks": ["The list in blacklight paint", "Car 50, the 1967 Shelby GT500", "The car crusher at Calitri's yard", "Sphinx finally speaks", "The keys Otto's dog swallowed"],
            "prop": {"kind": "ticket", "title": "Car 50: Eleanor", "lines": ["1967 Shelby GT500", "Saved for last"]},
            "number": "50",
-           "look": {"cols": ["Starters", "Off the Grill", "Sweet", "Sway's Bar"], "board_t": "Heist Night"},
+           "look": {"cols": ["Starters", "Off the Grill", "Sweet", "Sway's Bar"], "board_t": "Cue Up Low Rider"},
            "words": {"Cash only. No change given.": "Eleanor goes last.", "Overheard at the window": "Overheard in the garage", "Now serving": "On the list", "Prices subject to change.": "All 50 to the docks by morning."}}
 HOUSE = {"s": {"n": "Salted peanuts in the shell", "note": "On the bar, where Sway works nights.", "meat": False},
          "d": {"n": "Ice-cold Corona with a wedge of lime", "note": "I'm a little tired, I'm a little wired. (Memphis)", "alc": True}}

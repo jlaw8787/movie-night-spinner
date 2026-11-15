@@ -10,17 +10,16 @@
  ],
  "vibe": {
   "world": 4,
-  "moments": 3,
+  "moments": 4,
   "food": 3,
-  "tone": 3,
+  "tone": 4,
   "look": 4,
-  "verdict": "Every line is true and the nationals concession stand fits, but the print shows dish names only, the East Compton Clovers are missing from the words, and the scoreboard and section map are stock stadium filler.",
+  "verdict": "The nationals concession stand now names the Clovers, Big Red's cheer and Cliff's toothbrushing and every note prints, though the scoreboard still reads Home and Guests and the food is stock stadium fare.",
   "missing": [
-   "The East Compton Clovers and Isis (the whole second half of the plot)",
-   "I'm sexy! I'm cute! I'm popular to boot! (Big Red's opening cheer)",
-   "The Clovers raising the nationals money through the talk show host",
+   "The scoreboard still Home and Guests, not Toros and Clovers (nationals)",
+   "Big Red's videotaped routines (only an unprinted wink)",
    "Courtney and Whitney's sniping",
-   "The final scores at nationals (Clovers first, Toros second)"
+   "Isis named on the board (the Clovers' captain)"
   ],
   "ideas": [
    "Swap 'Sports drink on ice' for an East Compton Clovers drink, so the rival squad is on the board",
@@ -28,8 +27,8 @@
    "Swap 'Red and white candy popcorn' for 'I'm sexy, I'm cute caramel popcorn' (Big Red's cheer)",
    "Swap the stock 'Hawkers in every aisle. Catch it if you can.' for 'Stay in bounds. Hawkers in every aisle.'"
   ],
-  "overall": 3.4,
-  "flat": true,
+  "overall": 3.8,
+  "flat": false,
   "done": false,
   "reworked": "2026-11-15",
   "changed": [
@@ -38,6 +37,19 @@
    "Stock hawker line now 'Stay in bounds. Hawkers in every aisle.' (Isis)",
    "Avocado starter cut and dish names shortened so every dish note now prints (it was names only)",
    "Cuban sandwich line now 'Daytona, where the Clovers win'"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.4
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Promo-art stills blocked from the section map"
   ]
  }
 }

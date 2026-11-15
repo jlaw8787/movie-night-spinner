@@ -17,7 +17,7 @@ FLAVOUR = {"venue": "Sun God Lodge", "sign": "Paseo del Pueblo Sur, Taos, New Me
            "prop": {"kind": "receipt", "title": "Front desk", "lines": ["Two rooms, four guests", "Vincent's in Linda's room"]},
            "number": "35",
            "words": {"Pie so good it ought to be a crime": "One order, split two ways", "Overheard at the counter": "In the stolen Cadillac's boot",
-                     "Left on the counter": "Left at the front desk", "Booth service": "Vacancy", "Tip your waitress": "Check out by ten"}}
+                     "Left on the counter": "Left at the front desk", "Booth service": "Vacancy", "Tip your waitress": "Check out by ten", "Ask about pie": "Next stop, Houston"}}
 HOUSE = {"s": {"n": "Island fruit salad", "note": "Julius grew up on an island. Vincent didn't.", "meat": False},
          "d": {"n": "Bottomless diner coffee", "note": "Pour it strong. It's a long way to Houston.", "alc": False}}
 DISHES = [

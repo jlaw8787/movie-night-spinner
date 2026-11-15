@@ -37,17 +37,16 @@
   "https://www.sites.google.com/site/80sfilmlocations/Film-List/twins-1988"
  ],
  "vibe": {
-  "world": 2,
+  "world": 3,
   "moments": 4,
   "food": 3,
   "tone": 3,
-  "look": 3,
-  "verdict": "The quotes are real and well used (six fathers, the milkshake lab, I'll be back, Thanksgiving dinner), but the venue is an unnamed cafe from a location list with no scene in the film, and the same poster art prints on two faces.",
+  "look": 4,
+  "verdict": "The Sun God Lodge, the real tagline and fresh stills fix the worst of it and the quotes are well used, but the stock diner furniture (pie case, open all night) and missing Houston plot keep it middling.",
   "missing": [
    "Julius bailing Vincent out of jail in LA",
-   "Linda and Marnie, and Julius's first date",
    "Whispering Pines, the art colony where they find their mother",
-   "Julius protecting Vincent from the Klane brothers' loan sharks",
+   "The Klane brothers' loan sharks",
    "Webster and the $5 million showdown in Houston"
   ],
   "ideas": [
@@ -56,7 +55,7 @@
    "Swap the front's 'Only the waitress can tell them apart.' for the real tagline nod 'Only their mother can tell them apart.'",
    "Swap 'Bottomless shoestring fries' for something from Julius's island upbringing"
   ],
-  "overall": 3.0,
+  "overall": 3.4,
   "flat": true,
   "done": false,
   "reworked": "2026-11-15",
@@ -67,6 +66,19 @@
    "Front desk ticket: 'Two rooms, four guests' / 'Vincent's in Linda's room'; stock lines remapped (Left at the front desk, Vacancy, Check out by ten)",
    "House fries swapped for 'Island fruit salad: Julius grew up on an island. Vincent didn't.'",
    "Footer: 'In the stolen Cadillac's boot: one fuel injector.'"
+  ],
+  "before": {
+   "world": 2,
+   "moments": 4,
+   "food": 3,
+   "tone": 3,
+   "look": 3,
+   "overall": 3.0
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Stock 'Ask about pie' card now reads 'Next stop, Houston'"
   ]
  }
 }

@@ -55,18 +55,16 @@
  ],
  "vibe": {
   "world": 3,
-  "moments": 3,
-  "food": 3,
+  "moments": 4,
+  "food": 4,
   "tone": 3,
   "look": 4,
-  "verdict": "The soup parting and the Sabres land, but the diner is an invented name, the prime rib hangs on one teleprompter word, and the house pickles print a 5.95 price under 'Free with every miracle'.",
+  "verdict": "The soup parting, the moon pulled closer, the Sabres and every prayer answered Yes all print now, but it is still a stock diner and the notes mostly just say what Bruce did.",
   "missing": [
-   "Bruce pulling the moon closer for Grace (the lake date)",
-   "Bruce's dog Sam using the toilet",
-   "Grace's grilled cheese he leaves after one bite",
    "Smite me, O mighty smiter (only an unprinted wink)",
-   "God sitting across the diner booth: 'Having fun?'",
-   "The prayers coming in as emails, all answered Yes"
+   "Bruce's dog Sam using the toilet",
+   "God across the booth: 'Having fun?'",
+   "Jimmy Hoffa found on the news (only an unprinted wink)"
   ],
   "ideas": [
    "Swap 'Evan's prime rib roast with horseradish cream' for Grace's grilled cheese with the tomato soup as a blue plate, and move the soup starter to something tied to the moon date",
@@ -74,8 +72,8 @@
    "Swap the diner check line 'Not a magic trick' for 'Having fun? (God, across the booth)'",
    "Swap the footer 'Cash only.' for 'Smite me, O mighty smiter.'"
   ],
-  "overall": 3.2,
-  "flat": true,
+  "overall": 3.6,
+  "flat": false,
   "done": false,
   "reworked": "2026-11-15",
   "changed": [
@@ -84,6 +82,19 @@
    "House pickles note now 'Bruce never touched his soup. Have a pickle.' (no more 'Free' over a price)",
    "Diner check line 'Not a magic trick' now 'Not one spoonful eaten'",
    "God's note heading now OVERHEARD WHILE MOPPING; footer 'On the TV over the counter: Evan's cha-cha.'; caption matches the still"
+  ],
+  "before": {
+   "world": 3,
+   "moments": 3,
+   "food": 3,
+   "tone": 3,
+   "look": 4,
+   "overall": 3.2
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "White TMDB logo blocked (washed out on cream); title prints as type"
   ]
  }
 }

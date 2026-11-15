@@ -183,7 +183,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const front=`${stock()}${border()}
    <div style="position:absolute;left:60px;right:60px;top:46px">${kick(T.kick)}</div>
    <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:74px;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:46px">
-     <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
+     <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};word-spacing:.12em;color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
    <div style="position:absolute;left:50px;top:136px;width:${PW+12}px;height:${PH+12}px;padding:6px;box-sizing:border-box;background:${frame};box-shadow:0 10px 26px rgba(0,0,0,.3)">${heroBox}</div>
    <div style="position:absolute;left:546px;top:136px;width:220px;height:${PH+12}px;display:flex;flex-direction:column;gap:16px">
      ${logoPanel}

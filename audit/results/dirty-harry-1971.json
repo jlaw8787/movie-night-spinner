@@ -16,13 +16,12 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "The real Burger Den at Pine and Battery, Jaffe's 'usual lunch or usual dinner', the one-bite hot dog and the 2-11 receipt make this a fan's menu; the poppers, pretzels and Ghirardelli are San Francisco filler.",
+  "verdict": "The real Burger Den, Jaffe's 'usual lunch or usual dinner', the one-bite hot dog and the 2-11 receipt make this a fan's menu; the poppers, pretzels and Ghirardelli are still San Francisco filler.",
   "missing": [
    "The wounded robber's reply: 'I gots to know' (bank steps)",
    "The phone booth run across the city (only a wink)",
    "The cross on Mount Davidson (only a wink)",
-   "Scorpio hijacking the school bus",
-   "Harry still chewing the hot dog as he walks out into the robbery"
+   "Scorpio hijacking the school bus"
   ],
   "ideas": [
    "Fix the footer typo 'do ya, punk?.' (stray full stop after the question mark)",
@@ -31,10 +30,19 @@
   ],
   "overall": 4.0,
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Footer wink now 'You've got to ask yourself one question.' (no more 'punk?.')"
-  ]
+  ],
+  "before": {
+   "world": 5,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 4.0
+  },
+  "rescored": "2026-11-15"
  }
 }

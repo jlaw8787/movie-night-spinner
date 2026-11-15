@@ -18,9 +18,8 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "verdict": "A clever pick of the Klopek welcome visit with true details (sardines, Hans's coffee in Ray's lap, the brownies through the porch, Ricky's pizza dude), though several food lines are cut to stubs like 'Sardines.' and 'Slow beef.'",
+  "verdict": "The Klopek welcome visit with true details (Bonnie cutting back on sardines, Hans's coffee, the porch brownies, the pizza dude), and the food lines now read whole.",
   "missing": [
-   "Hans: 'Sardine?' Bonnie: 'I'm trying to cut back.' (the welcome visit)",
    "Now they know that we know that they know that we know (Art)",
    "Satan is good, Satan is our pal (only a wink)",
    "The skull in the Klopeks' furnace at the end",
@@ -38,6 +37,19 @@
   "changed": [
    "Sardine line now 'Sardine? Bonnie's trying to cut back' (Hans and Bonnie at the welcome visit)",
    "Food lines rewritten to stand alone: Sardine toasts, Roast bone marrow on toast, Slow-cooked beef goulash, Cold brew coffee floats, Fudgy walnut brownies"
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15",
+  "reworked2": "2026-11-15",
+  "changed2": [
+   "Promo-art stills blocked; banner is now a film still"
   ]
  }
 }
