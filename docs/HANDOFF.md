@@ -1603,3 +1603,10 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 - Round 4 checked: 1 wrong, 2 unsure, all fixed by the lead (Notebook summer 1947, League "Tonight at the park:", Edward stamp AVON CALLING and magnet EDWARD). All 10 pass. Match night 856.
 - 98 of the 100 Approved in the sheet (rev 33). Out of Match night: There's Something About Mary 3.4 (Josh: leave it) and She's All That 3.4.
 - All tests pass including prices. Waiting on Josh's "deploy". Deploy note: main does NOT have this work; merge feature/match-night into main, then the Publish site run. Live layout column in the sheet gets filled on deploy.
+
+## 15 Nov, 6:55pm: next 100 deployed, 998 live (main 4b2ad1af, Publish site run 43696485013 passed)
+
+- Josh said deploy the rest. feature/match-night merged into main (main had moved: TMNT cards, Just me, print faults; conflicts were generated files plus films/dish-names/dish-notes/still-pick, merged per film three ways, no clashes).
+- Held back on main only: There's Something About Mary (1998) and She's All That (1999), removed from the live data (films, keyed data, stills, series, rollout, per-film files). Copy says 998 films (index.html meta x3, support.html). docs/STORE-LISTING.md still says 1,000.
+- Both are being rebuilt as own menus from Josh's approved Canva redesigns (Canva designs DAHa-Dj2qqU and DAHa-JbZm8g; PNGs in wip/next100/canva/) in worktree next100/own. When they pass: merge into feature/match-night, then into main, put both films back (merging restores them; check the removal commit doesn't win), set copy back to 1,000, deploy on Josh's go.
+- Live checked: index says 998 films, search index 998 films, The Flintstones card data live with RocDonald's. Sheet rev 34: Live layout filled for rows 902 to 1001 except 917 and 991.
