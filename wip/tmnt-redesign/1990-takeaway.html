@@ -1,0 +1,113 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,700..900,100&family=Archivo+Narrow:ital,wght@0,500;0,600;0,700;1,500&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#c4161c;--grn:#1d6b3a;--ink:#1d1a16;--paper:#f6f0e1}
+.card{width:1344px;height:1056px;position:relative;overflow:hidden;background:#0b0d12}
+.hero{position:absolute;left:0;top:-118px;width:1344px;height:756px;background:url('{a06hi}') center/cover;filter:saturate(1.12) contrast(1.06)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),transparent 30%,transparent 80%,rgba(5,6,10,.8) 92%,#07080c 100%)}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,transparent 50%,rgba(0,0,0,.55))}
+.sky{position:absolute;left:36px;top:30px;font:600 13px 'Archivo Narrow';letter-spacing:.34em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px #000}
+.sky.r{left:auto;right:36px}
+.menu{position:absolute;left:38px;top:478px;width:1268px;height:552px;display:grid;grid-template-columns:400px 444px 424px;filter:drop-shadow(0 22px 26px rgba(0,0,0,.75)) drop-shadow(0 2px 2px rgba(0,0,0,.6));transform:rotate(-.6deg)}
+.pn{position:relative;background:var(--paper);padding:20px 28px 16px;color:var(--ink);font-family:'Archivo Narrow',sans-serif;overflow:hidden}
+.pn:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .28  0 0 0 0 .18  0 0 0 .22 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");opacity:.55;mix-blend-mode:multiply;pointer-events:none;z-index:4}
+.p1:after{content:"";position:absolute;top:0;bottom:0;right:0;width:40px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.10));z-index:4}
+.p2:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.35),transparent 6%,transparent 92%,rgba(0,0,0,.08));z-index:4}
+.p3:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.06),transparent 10%),linear-gradient(200deg,rgba(255,255,255,.4),transparent 30%);z-index:4}
+.pn>*{position:relative;z-index:2}
+.est{font:700 12px 'Archivo Narrow';letter-spacing:.3em;color:var(--grn);text-align:center}
+.logo{text-align:left;margin:6px 0 2px;line-height:.82}
+.logo .c{font:900 58px/0.84 Fraunces;font-variation-settings:'SOFT' 100,'opsz' 144;color:var(--red);letter-spacing:-.02em;display:block}
+.logo .p{font:900 40px Fraunces;font-variation-settings:'SOFT' 100;color:var(--grn);letter-spacing:.12em;display:block;margin-top:6px}
+.rule{height:8px;margin:9px auto 7px;width:100%;background:linear-gradient(90deg,var(--grn) 33.3%,var(--paper) 33.3% 66.6%,var(--red) 66.6%);border:1.5px solid var(--ink)}
+.slog{text-align:center;font:italic 500 17px 'Archivo Narrow';color:#4a4239}
+.phone{text-align:center;font:900 26px Fraunces;color:var(--ink);margin:4px 0 2px;letter-spacing:.02em}
+.stamp{position:absolute;left:22px;bottom:30px;width:104px;height:104px;border-radius:50%;border:4px solid var(--red);color:var(--red);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);font:800 13px/1.05 'Archivo Narrow';letter-spacing:.06em;mix-blend-mode:multiply;opacity:.92}
+.stamp b{display:block;font:900 38px/0.9 Fraunces}
+.tk{position:absolute;right:14px;bottom:12px;width:222px;background:#fffef7;border:1px solid #d9d0bd;padding:9px 11px 8px;transform:rotate(-3deg);box-shadow:0 3px 6px rgba(0,0,0,.25);font-size:12px;z-index:3}
+.tk:before{content:"";position:absolute;top:-6px;left:96px;width:40px;height:10px;border:2px solid #9a9a9a;border-bottom:0;background:transparent}
+.tk .t{display:flex;justify-content:space-between;font:700 12.5px 'Archivo Narrow';letter-spacing:.14em;color:var(--red);border-bottom:1.5px solid var(--ink);padding-bottom:3px;margin-bottom:4px}
+.tk .l{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed #cfc5b0;padding:1px 0}
+.tk .l span:first-child{font:700 9.5px 'Archivo Narrow';letter-spacing:.16em;color:#777}
+.tk .k{font:700 14px Kalam;color:#213e93}
+.tk .late{font:700 18px Kalam;color:var(--red);margin-top:2px;display:flex;justify-content:space-between}
+.tk q{display:block;font:italic 500 10.5px/1.25 'Archivo Narrow';color:#555;quotes:"“" "”"}
+.h{display:flex;align-items:center;gap:10px;margin:0 0 7px}
+.h b{font:900 30px Fraunces;font-variation-settings:'SOFT' 100;color:var(--red);letter-spacing:.02em}
+.h.g b{color:var(--grn)}
+.h:after{content:"";flex:1;height:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding-top:2px}
+.h i{order:3;font:italic 500 13px 'Archivo Narrow';color:#6b6155;margin-left:4px}
+.it{margin:0 0 7px}
+.it .r{display:flex;align-items:baseline;gap:6px}
+.it .r b{font:700 17px 'Archivo Narrow';text-transform:uppercase;letter-spacing:.03em}
+.it .r s{flex:1;text-decoration:none;border-bottom:2px dotted #a99c84;transform:translateY(-4px)}
+.it .r em{font:900 19px Fraunces;font-style:normal;color:var(--ink)}
+.it p{font:500 14px/1.25 'Archivo Narrow';color:#463f36}
+.photo{position:absolute;left:58px;top:236px;width:236px;height:150px;z-index:3;transform:rotate(-4deg);background:url('{a37hi}') 40% 45%/cover;border:6px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.3);transform:rotate(1.2deg)}
+.photo i{position:absolute;left:-6px;right:-6px;bottom:-40px;line-height:1.2;background:#fff;font:italic 500 12px 'Archivo Narrow';color:#444;padding:2px 8px 5px}
+.fine{font:500 11px/1.35 'Archivo Narrow';color:#7a7064;border-top:1px solid #cfc5b0;padding-top:7px;margin-top:4px}
+.quote{position:absolute;right:46px;top:250px;text-align:right;font:italic 600 20px 'Archivo Narrow';color:#fff;text-shadow:0 2px 10px #000,0 0 2px #000}
+.quote b{display:block;font:700 12px 'Archivo Narrow';letter-spacing:.3em;color:#9fe0a8;font-style:normal;margin-top:2px}
+
+.chk{position:absolute;left:0;right:0;top:0;height:14px;background:conic-gradient(var(--red) 25%,#fff 0 50%,var(--red) 0 75%,#fff 0) 0 0/14px 14px;z-index:3}
+.pn{padding-top:30px!important}
+.burst{position:absolute;right:6px;top:30px;width:124px;height:124px;transform:rotate(12deg);z-index:5;filter:drop-shadow(0 3px 0 rgba(0,0,0,.25))}
+.burst svg{position:absolute;inset:0}
+.burst div{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:900 17px/0.95 Fraunces;color:#fff;letter-spacing:.02em}
+.burst div b{display:block;font:900 18px Fraunces;color:#ffe14d}
+.hours{border:2px solid var(--ink);text-align:center;font:700 12px/1.45 'Archivo Narrow';letter-spacing:.18em;padding:5px 6px;margin:8px 22px 0;background:#fff8e6}
+.cp{border:2.5px dashed var(--ink);padding:8px 10px 7px;position:relative;background:#fffbef;margin-top:8px}
+.cp:before{content:"✂";position:absolute;top:-14px;left:10px;font-size:17px;background:var(--paper);padding:0 3px;color:var(--ink)}
+.cp b{display:block;font:900 19px/1 Fraunces;color:var(--red)}
+.cp b.g{color:var(--grn)}
+.cp span{display:block;font:600 12px/1.25 'Archivo Narrow';color:#3e372f}
+.cp small{display:block;font:700 9.5px 'Archivo Narrow';letter-spacing:.18em;color:#888;margin-top:3px}
+.cps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+</style></head><body>
+<div class="card">
+ <div class="hero"></div><div class="vig"></div>
+ <div class="sky">NEW YORK · FREE DELIVERY ABOVE AND BELOW</div>
+ <div class="sky r">KEEP THIS MENU BY THE PHONE</div>
+ <div class="photo"><i>Pick-up at the counter. Regulars come in all sizes.</i></div>
+ <div class="menu">
+  <div class="pn p1"><div class="chk"></div><div class="burst"><svg viewBox="0 0 132 132"><polygon points="132.0,66.0 117.0,76.1 127.0,91.3 109.2,94.9 112.7,112.7 94.9,109.2 91.3,127.0 76.1,117.0 66.0,132.0 55.9,117.0 40.7,127.0 37.1,109.2 19.3,112.7 22.8,94.9 5.0,91.3 15.0,76.1 0.0,66.0 15.0,55.9 5.0,40.7 22.8,37.1 19.3,19.3 37.1,22.8 40.7,5.0 55.9,15.0 66.0,0.0 76.1,15.0 91.3,5.0 94.9,22.8 112.7,19.3 109.2,37.1 127.0,40.7 117.0,55.9" fill="#c4161c" stroke="#1d1a16" stroke-width="2.5"/></svg><div><span>FREE<b>DELIVERY</b>above &amp;<br>below</span></div></div>
+   <div class="est" style="text-align:left">EST. 1984 · NEW YORK</div>
+   <div class="logo"><span class="c">Corner<br>Grate</span><span class="p">PIZZA</span></div>
+   <div class="rule"></div>
+   <div class="slog">We deliver anywhere. Yes, even there.</div>
+   <div class="phone">☎ 555-1990</div>
+   <div class="hours">OPEN TILL LATE · SEVEN NIGHTS<br>WE DO NOT DELIVER TO THE FOOT CLAN</div>
+   <div class="stamp"><div><b>30</b>MINUTES<br>OR IT'S FREE</div></div>
+   <div class="tk"><div class="t"><span>DELIVERY</span><span>No. 0419</span></div>
+    <div class="l"><span>DELIVER TO</span><span class="k">122⅛, the grate</span></div>
+    <div class="l"><span>TAB</span><span class="k">$13.00</span></div>
+    <div class="l"><span>PAID</span><span class="k">$10, down the grate</span></div>
+    <div class="late"><span>2 min late!</span><span>10.00</span></div>
+    </div>
+  </div>
+  <div class="pn p2"><div class="chk"></div>
+   <div class="h"><b>PIES</b><i>Hand-tossed, thin crust</i></div>
+   <div class="it"><div class="r"><b>Plain cheese pie</b><s></s><em>7.50</em></div><p>Hand-tossed thin crust, red sauce, whole milk mozzarella. Slice 1.25.</p></div>
+   <div class="it"><div class="r"><b>Cowabunga pie</b><s></s><em>9.50</em></div><p>Cup-and-char pepperoni, mozzarella, red sauce. Hot honey poured at the table.</p></div>
+   <div class="it"><div class="r"><b>White pie</b><s></s><em>9.25</em></div><p>Ricotta, mozzarella, roast garlic and oregano. No red sauce.</p></div>
+   <div class="h g" style="margin-top:8px"><b>SIDES</b><i>Out of the oven</i></div>
+   <div class="it"><div class="r"><b>Pizza rolls</b><s></s><em>3.25</em></div><p>A dozen pinwheels: dough, red sauce, pepperoni, mozzarella. Baked golden.</p></div>
+   <div class="it"><div class="r"><b>Garlic knots</b><s></s><em>1.84</em></div><p>Six tied knots tossed in garlic, parm and chilli crisp butter.</p></div>
+   <div class="it"><div class="r"><b>Sensei's burrata</b><s></s><em>5.50</em></div><p>Burrata torn over charred sourdough, hot honey, basil.</p></div>
+   <div class="cps" style="margin-top:10px"><div class="cp"><b class="g">PRESS PASS</b><span>Channel 3 News crews: show your card at the counter. April O'Neil, field reporter.</span></div><div class="cp"><b>LOST &amp; FOUND</b><span>One sai, left in the subway. Ask at the counter.</span></div></div>
+  </div>
+  <div class="pn p3"><div class="chk"></div>
+   <div class="h"><b>SWEETS</b></div>
+   <div class="it"><div class="r"><b>Cookie pizza</b><s></s><em>3.50</em></div><p>Chocolate chip dough baked in a pie tin, chocolate drizzle, candy.</p></div>
+   <div class="it"><div class="r"><b>Lemon ice</b><s></s><em>1.00</em></div><p>Shaved Italian ice, fresh lemon and sugar, in a paper cup.</p></div>
+   <div class="h g" style="margin-top:8px"><b>COOLER</b><i>Ice cold, every order</i></div>
+   <div class="it"><div class="r"><b>Green apple fizz</b><s></s><em>.95</em></div><p>Fresh-pressed Granny Smiths, lime juice, club soda, over ice.</p></div>
+   <div class="it"><div class="r"><b>Fountain soda</b><s></s><em>.75</em></div><p>Cola, lemon-lime or root beer, on crushed ice.</p></div>
+   <div class="it"><div class="r"><b>Milk</b><s></s><em>.60</em></div><p>Half-pint carton of whole milk, ice cold.</p></div>
+   <div style="margin:6px 0 6px;font:900 20px/1.1 Fraunces;color:var(--grn);text-align:center">“I have always liked… Cowabunga.”<div style="font:700 12px 'Archivo Narrow';letter-spacing:.3em;color:var(--red);margin-top:4px">SPLINTER</div></div>
+   <div class="cp"><b>LATE PIZZA COUPON</b><span>Two minutes late? Pay $10 on a $13 tab. “Forgiveness is divine, but never pay full price for late pizza.”</span><small>VALID AT 122⅛ ONLY</small></div>
+   <div class="fine">Prices subject to change. No hockey masks at the counter. Cheese shredded by hand, no relation. Tips for the driver: down the grate is fine. Form 4-1990.</div>
+  </div>
+ </div>
+</div></body></html>
