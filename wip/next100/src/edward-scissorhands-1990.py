@@ -11,7 +11,7 @@ FLAVOUR = {"venue": "The Boggs House", "sign": "The pastel street below the cast
            "note": {"text": "Sometimes, you can still catch me dancing in it.", "by": "Kim", "kind": "quote"},
            "winks": ["Edward and the waterbed", "Hedges cut into animals", "Snow from the ice shavings", "Peg's Avon samples", "The castle on the hill"],
            "prop": {"kind": "slip", "title": "Avon order slip", "lines": ["Rep: Peg Boggs", "Blending is the secret"]},
-           "number": "1990",
+           "number": "EDWARD", "stamp": "AVON CALLING",
            "words": {}}
 HOUSE = {"s": {"n": "Sugar cookies, fresh off the line", "note": "Edward began as part of a cookie machine.", "meat": False},
          "d": {"n": "Cold milk for the cookies", "note": "You can't buy the necessities of life with cookies.", "alc": False}}

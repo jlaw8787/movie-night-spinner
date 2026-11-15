@@ -9,12 +9,12 @@ FILM = {"id": "The Notebook (2004)", "theme": "romcom",
 FORMAT = {"format": "invite", "era": "1930s-40s", "tone": "tender"}
 PALETTE = {"dark": "#24302a", "accent": "#c98a5a"}
 SERIES = []
-FLAVOUR = {"venue": "Windsor Plantation", "sign": "Seabrook, South Carolina. Summer, 1940.",
+FLAVOUR = {"venue": "Windsor Plantation", "sign": "Seabrook, South Carolina. Summer, 1947.",
            "note": {"text": "It wasn't over. It still isn't over.", "by": "Noah Calhoun", "kind": "quote"},
            "winks": ["365 letters, one a day for a year", "Noah hanging off the Ferris wheel", "Lying down in the middle of the street", "Walt Whitman, read aloud", "Duke reads from the notebook"],
            "prop": {"kind": "slip", "title": "My Dearest Allie", "lines": ["Letter 365 of 365", "One a day for a year"]},
            "number": "365",
-           "words": {"2004": "1940"}}
+           "words": {"2004": "1947"}}
 HOUSE = {"s": {"n": "Pimento cheese and saltines", "note": "On the porch, before the light goes.", "meat": False},
          "d": {"n": "Ice-cold Coca-Cola in the bottle", "note": "Summer in Seabrook, 1940.", "alc": False}}
 DISHES = [

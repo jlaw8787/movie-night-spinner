@@ -13,7 +13,7 @@ FLAVOUR = {"venue": "Rockford Peaches Concessions", "sign": "Rockford Peaches ho
            "winks": ["Dottie's catch in the splits", "Evelyn's team song", "Stillwell and Miss Cuthburt on the bus", "The hard is what makes it great", "Kit runs through the stop sign"],
            "prop": {"kind": "ticket", "title": "World Series, Game 7", "lines": ["Peaches v Racine Belles", "Winner takes the series"]},
            "number": "7",
-           "words": {"A League of Their Own, 1992": "Rockford Peaches, 1943", "A League of Their Own, 1943": "Rockford Peaches, 1943", "1992": "1943"}}
+           "words": {"A League of Their Own, 1992": "Rockford Peaches, 1943", "A League of Their Own, 1943": "Rockford Peaches, 1943", "1992": "1943", "On the big screen tonight:": "Tonight at the park:"}}
 HOUSE = {"s": {"n": "Salted peanuts by the bag", "note": "Thrown up to the bleachers, all nine innings.", "meat": False},
          "d": {"n": "Cold milk from the Oregon dairy", "note": "75 dollars a week beats 30 at the dairy.", "alc": False}}
 DISHES = [

@@ -1498,3 +1498,9 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 - Layouts print the release year in stamps by default; set the story year per film where it differs (year, stamp or words).
 - Sheet "Reel Dinner film layouts" updated to rev 32 (rows 902 to 991 Approved except Mary and She's All That). Live layout column stays blank until deploy.
 - Next: finish round 4 (check, fix, rescore, sheet), full tests incl. prices, then wait for Josh's "deploy".
+
+## 15 Nov, 6:45pm: next 100 finished (1,000 films, NOT deployed)
+
+- Round 4 checked: 1 wrong, 2 unsure, all fixed by the lead (Notebook summer 1947, League "Tonight at the park:", Edward stamp AVON CALLING and magnet EDWARD). All 10 pass. Match night 856.
+- 98 of the 100 Approved in the sheet (rev 33). Out of Match night: There's Something About Mary 3.4 (Josh: leave it) and She's All That 3.4.
+- All tests pass including prices. Waiting on Josh's "deploy". Deploy note: main does NOT have this work; merge feature/match-night into main, then the Publish site run. Live layout column in the sheet gets filled on deploy.
