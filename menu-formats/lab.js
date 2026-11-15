@@ -192,7 +192,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   }
   const MY=PY+PH+16,MH=H-MY-46;
   const menu=`<div data-fit="27" data-foot style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
-  const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${logo.html}${stamp}${plateTab}${cueTag}<div data-fit="24" data-side style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
+  const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${posterSrc&&!(fl&&fl.logoPanel===true)?"":logo.html}${stamp}${plateTab}${cueTag}<div data-fit="24" data-side style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
   const foot=`<div style="position:absolute;left:${M}px;right:${M}px;bottom:14px;border-top:1px solid ${ink};padding-top:5px;display:flex;justify-content:space-between;gap:16px;font:400 14px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">
     <span style="overflow:hidden;text-overflow:clip">Form ${esc(ID.toUpperCase())}${esc(num)}, rev. ${esc(f.year||"")}. Return tray to the hatch. Rations subject to supply.</span><span>Sheet 1 of 1. Images: TMDB</span></div>`;
 

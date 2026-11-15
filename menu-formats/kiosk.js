@@ -292,6 +292,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     const tT=fitType(title,PM?260:360,170,E.dcw,TMX?Math.min(TMX,PM?44:58):PM?44:58,24,1.05,4);logoH=tT.n*tT.z*1.05+32;
     logoHtml=`<div style="width:${PM?300:360}px;box-sizing:border-box;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
+  /* poster mode: the poster already carries the title, so the board drops its logo plate (15 Nov); flavour logoPanel:true keeps it */
+  if(PM&&fl.logoPanel!==true){logoHtml="";logoH=0}
   /* pinned note card and a hire tag on the photo's lower edge */
   const nw=PM?252:360,nT=fitType(note.text,nw-44,PM?330:140,.5,PM?20:21,16,1.35,PM?12:6);
   const nh=Math.round(30+20+nT.n*nT.z*1.35+56+26);
@@ -333,7 +335,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const kickN=PM?lines(KICK+", since "+year,17,leftW,.8):1;
   const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(KICK)}, since ${esc(year)}</div>
      <div style="font:${E.dw}${sT.z}px/1.0 ${disp};color:${ink};margin-top:8px;${glow}">${esc(sign)}</div>`;
-  const hdr=PM?`<div style="display:flex;align-items:flex-start;gap:20px"><div style="flex:1;min-width:0">${hdrL}</div><div style="flex:none">${logoHtml}<br>${capHtml}</div></div>`:hdrL;
+  const hdr=PM?`<div style="display:flex;align-items:flex-start;gap:20px"><div style="flex:1;min-width:0">${hdrL}</div><div style="flex:none">${logoHtml}${logoHtml?"<br>":""}${capHtml}</div></div>`:hdrL;
   /* measured when the page can, since the estimate ran 40px over on three-line signs and left a gap under the menu (Terminator 2) */
   const hdrE=PM?Math.max(kickN*21+8+sT.n*sT.z*1.0+16,logoH+54):22+8+sT.n*sT.z*1.0+16,hdrM=domH(`<div style="font-size:16px;line-height:1.3">${hdr}</div>`,IW);
   const hdrH=hdrM>40&&hdrM<=hdrE+20?Math.ceil(hdrM)+4:hdrE;
