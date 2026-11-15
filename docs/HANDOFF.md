@@ -1475,3 +1475,14 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 - Match night deck now 781 (new films join as they pass).
 - Writers' lesson (add to briefs): layouts cut a film line at the first comma, full stop or joining word when tight, so "Jr." and "Sr." get chopped; reword. Some faces print names only, so jokes must live in dish names too.
 - Next: fix checker 2's list, rescore the 13 reworked, then round 2 (plan.json films 31 to 60) the same way. Sheet rows 902 to 1001 track venues.
+
+## 15 Nov, 4:15pm: round 2 written and merged, checking under way (branch feature/match-night, NOT deployed)
+
+- Checker 2's round 1 list fixed (f41534e). The 13 reworked round 1 menus rescored twice; 28 of 30 round 1 films plus the pilot are Approved in the sheet. Gone in 60 Seconds, Mary and Twins sat at 3.4 and got a third fix pass (825df1f, vibe "changed3", done false): rescore them with round 2.
+- 960 films on the branch: round 2 (plan.json 31 to 60, 29 films) merged in three batches (9875acc, 81f7d55, ab6f0e7).
+- BUG FOUND AND FIXED (0acfa69): merge-round.sh used to copy every src file from a worktree, so stale copies overwrote fixes made in the main checkout after the worktree branched. It now copies only files the worktree changed since its merge-base. Still entries: copy with /home/claude/tools/mergestills.py <worktree> (also limited to changed films; not in the repo, recreate if the session is gone: it merges data/still-block.json and still-pick.json entries for the worktree's changed films).
+- Checking: batch B (Monster Squad to Gran Torino) checked, 1 wrong line, Monster Squad and Gran Torino at 3.4; fixer running in /home/claude/wt-f2b (branch next100/f2b), it ticks results in the main checkout. Batches A and C checkers running.
+- Round 3 (plan.json 61 to 90) writers started in /home/claude/wt-r3a, r3b, r3c and stopped at the 5-hour usage limit; resume them or rerun from plan.json.
+- Banquet layout: venue title now has word-spacing .12em (fixes "PrinceJohn's"). Logos blocked: Bruce Almighty, Nutty Professor, Critters.
+- Writer briefs: /home/claude/prompts (writer.md, checker.md, fixer.md). Lessons added: never invent venue names, family filter rewrites "Cocktail"/"Stout", themed dishes claim scenes not food, no stub food lines.
+- Usage: 7 agents at once hit the 5-hour limit at 3:45pm. Run at most 3 or 4 at a time.
