@@ -1,4 +1,4 @@
-# The Flintstones (1994). Drive-in layout, the Bedrock Drive-In. Family film: everything alcohol-free.
+# The Flintstones (1994). Drive-in layout, RocDonald's (Josh's pick 15 Nov; Flintstones Fandom lists it as a film location, Encyclopedia.com: Fred gives up RocDonald's for Cavern on the Green). Family film: everything alcohol-free.
 # Sources: Wikipedia plot (The_Flintstones_(film)), Wikiquote (The_Flintstones_(film)): Dino and Barney's steak, red meat and the ripe old age of 38,
 # Barney's "Lava juice!" toast, Concretia. MeTV and the Flintstones fandom wiki: the film opens and ends at the Bedrock Drive-In, Tar Wars on the screen.
 FILM = {"id": "The Flintstones (1994)", "theme": "kids",
@@ -8,13 +8,13 @@ FILM = {"id": "The Flintstones (1994)", "theme": "kids",
 FORMAT = {"format": "drivein", "era": "1990s", "tone": "playful"}
 PALETTE = {"dark": "#2a1a12", "accent": "#e8732a"}
 SERIES = []
-FLAVOUR = {"venue": "Bedrock Drive-In", "sign": "Bedrock Drive-In. Now showing: Tar Wars",
+FLAVOUR = {"venue": "RocDonald's", "sign": "RocDonald's, Bedrock",
            "note": {"text": "Yabba-dabba-doo!", "by": "Fred Flintstone", "kind": "quote"},
            "winks": ["The Dictabird remembers everything", "Bamm-Bamm and his super strength", "Cliff's one ticket to Rockapulco", "Cliff set solid in the slurry", "The BC-52s on stage"],
            "prop": {"kind": "ticket", "title": "Bedrock Drive-In", "lines": ["Now showing: Tar Wars", "One car of Flintstones"]},
            "number": "38",
            "words": {}}
-HOUSE = {"s": {"n": "Greatest bowler on Earth pretzels", "note": "The Dictabird says so. Fred told it to.", "meat": False},
+HOUSE = {"s": {"n": "RocDonald's brontosaurus fries", "note": "Fred eats here before Cavern on the Green.", "meat": False},
          "d": {"n": "Barney's ice cream truck spider", "note": "Lemonade poured over vanilla ice cream.", "alc": False}}
 DISHES = [
  {"n": "Dino's rare steak sliders", "course": "s",
