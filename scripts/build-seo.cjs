@@ -35,6 +35,8 @@ const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
 const ing = i => { const q = frac(i.q), u = i.u || ''; const tight = /^(g|kg|ml|l)$/.test(u); return clean([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' ')); };
 const cap = t => { t = clean(t); return t.charAt(0).toUpperCase() + t.slice(1); };
+/* width and height of a jpeg, read from its frame header */
+const jpgSize = f => { const b = fs.readFileSync(f); let i = 2; while (i < b.length) { const m = b[i + 1], L = b.readUInt16BE(i + 2); if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) }; i += 2 + L; } return { w: 600, h: 849 }; };
 const iso = m => 'PT' + Math.max(0, Math.round(m || 0)) + 'M';
 
 /* every film's page facts, built once */
@@ -47,7 +49,7 @@ const ALL = films.map((f, i) => {
   const dishes = ((d.r2 && d.r2.dishes) || []).map(x => ({ ...x, note: notes[String(x.n).toLowerCase()] || '' }));
   if (!dishes.length) for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: [], steps: [] });
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
-    preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) };
+    preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
 });
 const BY_THEME = {}; for (const x of ALL) (BY_THEME[x.theme] = BY_THEME[x.theme] || []).push(x);
 const BY_GENRE = {}; for (const x of ALL) for (const g of x.genres) (BY_GENRE[g] = BY_GENRE[g] || []).push(x);
@@ -155,7 +157,7 @@ ${x.venue ? `<p>The menu comes from <strong>${esc(x.venue)}</strong>, straight o
 </div>
 </div>
 ${x.preview ? `<h2>The printed menu</h2>
-<figure class="preview"><img src="/assets/menu-previews/${s}.jpg" width="600" alt="Printed movie night menu for ${esc(shown)} (${f.year})" loading="lazy"><figcaption>Open it in Reel Dinner to print it full size.</figcaption></figure>` : ''}
+<figure class="preview"><img src="/assets/menu-previews/${s}.jpg" width="${x.preview.w}" height="${x.preview.h}" alt="Printed movie night menu for ${esc(shown)} (${f.year})" loading="lazy"><figcaption>Open it in Reel Dinner to print it full size.</figcaption></figure>` : ''}
 ${courses}
 ${d.P ? `<h2>When to serve</h2>\n<p>${esc(d.P)}</p>` : ''}
 <p><a class="btn" href="${open}">Cook the ${esc(shown)} menu</a></p>

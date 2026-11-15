@@ -2,7 +2,8 @@
      node scripts/render-previews.cjs                 every film missing a preview
      node scripts/render-previews.cjs --all           redo every film
      node scripts/render-previews.cjs "Jaws (1975)"   just these films
-   Output: assets/menu-previews/<slug>.jpg, 600 wide, about 50 to 70 KB each.
+   Output: assets/menu-previews/<slug>.jpg, about 35 to 90 KB each: 600 wide, 800 for two-page spreads, 1000 for three-page strips.
+     node scripts/render-previews.cjs --wide          redo the spreads and strips (wider than 1.5 to 1)
    Opens the real app (index.html?film=...) on a local server, waits for the menu card, and snaps it at full A4 size. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const {spawn,execFileSync}=require('child_process');
@@ -15,7 +16,8 @@ const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const films=JSON.parse(fs.readFileSync(path.join(ROOT,'data/films.json'),'utf8')).map(f=>f.title+' ('+f.year+')');
 const args=process.argv.slice(2),all=args.includes('--all'),named=args.filter(a=>!a.startsWith('--'));
 fs.mkdirSync(OUT,{recursive:true});
-const todo=(named.length?named:films).filter(id=>all||named.length||!fs.existsSync(path.join(OUT,slug(id)+'.jpg')));
+const wide=args.includes('--wide')?new Set(execFileSync('python3',['-c',"import os,sys\nfrom PIL import Image\nfor f in os.listdir(sys.argv[1]):\n w,h=Image.open(os.path.join(sys.argv[1],f)).size\n if w/h>=1.5: print(f[:-4])",OUT]).toString().split('\n').filter(Boolean)):null;
+const todo=(named.length?named:films).filter(id=>wide?wide.has(slug(id)):all||named.length||!fs.existsSync(path.join(OUT,slug(id)+'.jpg')));
 const server=spawn('python3',['-m','http.server',PORT,'--bind','127.0.0.1'],{cwd:ROOT,stdio:'ignore'});
 process.on('exit',()=>server.kill());
 const ready=async()=>{for(let i=0;i<60;i++){const ok=await new Promise(r=>{http.get(ORIGIN+'/index.html',res=>{res.resume();r(res.statusCode===200)}).on('error',()=>r(false))});if(ok)return;await new Promise(r=>setTimeout(r,250))}throw Error('server did not start')};
@@ -48,7 +50,9 @@ async function snap(page,id){
         execFileSync('python3',['-c',`import sys
 from PIL import Image
 im=Image.open(sys.argv[1]).convert('RGB')
-w=600;im=im.resize((w,round(im.height*w/im.width)),Image.LANCZOS)
+r=im.width/im.height
+w=1000 if r>=2 else 800 if r>=1.5 else 600
+im=im.resize((w,round(im.height*w/im.width)),Image.LANCZOS)
 im.save(sys.argv[2],'JPEG',quality=72,optimize=True,progressive=True)`,tmp,path.join(OUT,slug(id)+'.jpg')]);
         fs.unlinkSync(tmp);
       }catch(e){fail.push(id+': '+String(e.message||e).split('\n')[0])}

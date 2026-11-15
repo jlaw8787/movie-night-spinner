@@ -26,11 +26,11 @@ for(const f of films){
   assert.ok(desc.length>50&&desc.length<=160,`${id}: description length ${desc.length}`);
   assert.ok(h.includes('href="/?film='+encodeURIComponent(id)+'"'),`${id}: open-in-app button`);
   assert.ok((h.match(/<article class="dish">/g)||[]).length>=4,`${id}: dishes as text`);
-  assert.ok(!/[—]/.test(h),`${id}: em dash on the page`);
+  assert.ok(!/\u2014/.test(h),`${id}: em dash on the page`);
   const ld=JSON.parse(h.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   const list=ld['@graph'].find(x=>x['@type']==='ItemList');
   assert.ok(list&&list.itemListElement.length,`${id}: ItemList`);
   for(const it of list.itemListElement){const r=it.item;assert.equal(r['@type'],'Recipe');assert.ok(r.name&&r.image&&r.image.length&&r.recipeIngredient.length&&r.recipeInstructions.length,`${id}: ${r.name} recipe data`);recipes++}
 }
-for(const f of ['menu/index.html','sitemap.xml','robots.txt'])assert.ok(!/—/.test(fs.readFileSync(path.join(root,f),'utf8')),`${f}: em dash`);
+for(const f of ['menu/index.html','sitemap.xml','robots.txt'])assert.ok(!/\u2014/.test(fs.readFileSync(path.join(root,f),'utf8')),`${f}: em dash`);
 console.log(`PASS: ${films.length} film pages, ${locs.size} sitemap URLs, ${recipes} recipes with structured data, no em dashes.`);
