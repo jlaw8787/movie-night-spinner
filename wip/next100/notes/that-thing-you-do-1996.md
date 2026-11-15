@@ -28,3 +28,7 @@ I Am Not A Stalker (link above): "spaghetti place out by the airport" (spaghetti
 Poster and promo art (white-background cast poses, logo frames) blocked:
 - data/still-block.json "That Thing You Do! (1996)": /vxhnRV7jGncAZmf0FFHMs6rFHWn.jpg, /y4RxxwdCmUePXBUAmmxLEM6LTOv.jpg, /Eq5PVx77ayU0PkY1o1TkCefQX2.jpg, /sVTYoRoEUVbsQHGTN90aHIcaSiT.jpg, /gj78rdfYpWrFvAi7RKiV0JcqAQl.jpg, /5VRGYgqhqgl5cKuPIAfsmZXsd5P.jpg, /ka8JjfZKMH6nbXfG73CHIFFbZGh.jpg, /lr2bbP4Ubnohj1AJxvImACHmA6x.jpg, /hl2c9D29mIIr5dJjLuZM28rDCiZ.jpg, /Amu2htjZv9DDKiuHomRKuYFLAPh.jpg
 - data/still-pick.json "That Thing You Do! (1996)": /7LETmp7bjznm28OBffm9Z69GdCZ.jpg (the band playing in front of red curtains, front card), /yI8kBA3kGx9jCfpMG6Fn3Q2kDA1.jpg (the band on stage, menu photo and intermission card), /yqX05mjc9f9BRNWxGMWyVFtyxUC.jpg (the band and Faye at the tour bus, second menu page), /g6GgX8lmiLDuKX7NUMkvlqFLpHF.jpg (Faye and Jimmy close up), /3LwVoGBWVRMZOmgQ5lskc5k7XHe.jpg (the band in red jackets at the Play-Tone Galaxy of Stars sign).
+
+## Fix (15 Nov)
+Checker round 3: one wrong line.
+- The year under "Now showing above the counter" printed the release year 1996; it now prints 1964, the story year, via flavour words {"1996": "1964"} (the diner prints f.year in its own text span; no layout change). Wikipedia: the film is set in 1964. https://en.wikipedia.org/wiki/That_Thing_You_Do!

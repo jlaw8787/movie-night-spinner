@@ -13,7 +13,7 @@ FLAVOUR = {"venue": "Villapiano's", "sign": "Villapiano's, Erie, Pennsylvania. L
            "winks": ["The talent show win", "Mr White's Play-Tone contract", "The state fair tour", "Careful, girls, he's engaged", "Del Paxton in the studio"],
            "prop": {"kind": "slip", "title": "Villapiano's", "lines": ["Table: The Oneders", "Bonus paid at the bar"]},
            "number": "1964", "caption": "The band on stage, guitars up.",
-           "words": {"Hot coffee, homemade pie, booths by the window.": "Red booths, spaghetti and a band on the little stage.", "Est. 1956.": "Erie, 1964.", "with a cup of coffee and a slice from the pie case": "with garlic bread on the side", "Open all night, daily": "Red booths, Erie", "Overheard at the counter": "Coming up", "Refills on the coffee.": "Breadsticks are free.", "The Pie Case": "Dolci", "baked today": "made today", "The Fountain": "The Bar"}}
+           "words": {"1996": "1964", "Hot coffee, homemade pie, booths by the window.": "Red booths, spaghetti and a band on the little stage.", "Est. 1956.": "Erie, 1964.", "with a cup of coffee and a slice from the pie case": "with garlic bread on the side", "Open all night, daily": "Red booths, Erie", "Overheard at the counter": "Coming up", "Refills on the coffee.": "Breadsticks are free.", "The Pie Case": "Dolci", "baked today": "made today", "The Fountain": "The Bar"}}
 HOUSE = {"s": {"n": "Erie's lone beatnik breadsticks", "note": "That's Guy, according to Chad.", "meat": False},
          "d": {"n": "Shades' iced coffee", "note": "Sunglasses stay on indoors.", "alc": False}}
 DISHES = [

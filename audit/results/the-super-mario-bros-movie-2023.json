@@ -11,8 +11,10 @@
    "source": "https://www.mariowiki.com/Punch-Out_Pizzeria",
    "fix": "Spike eats a slice and mocks the brothers. Red peppers one half and green the other.",
    "printed": true,
-   "done": false,
-   "full": "The brothers' usual at Punch-Out. Red peppers one half and green the other."
+   "done": true,
+   "full": "The brothers' usual at Punch-Out. Red peppers one half and green the other.",
+   "applied": "2026-11-15",
+   "applied_text": "Their TV ad plays here. Half red, half green."
   }
  ],
  "checked_ok": 17,
@@ -45,6 +47,16 @@
    "Swap the house breadsticks note 'Brooklyn sewer to Mushroom Kingdom.' for 'Hello, Super Mario Brothers.' (Luigi answering the phone, Wikiquote)"
   ],
   "flat": true,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Logo box now shows the still of the brothers by their van (flavour panelStill); 'Now showing / 2023' kept",
+   "Rainbow Road soda note: 'We don't drive on rainbows.' (Mario, Wikiquote)",
+   "Warp Pipe breadsticks note: 'Hello, Super Mario Brothers.' (Luigi on the phone, Wikiquote)",
+   "Cupcakes: 'Told ya I'd get you a pet turtle. Blue icing, white chocolate spots.' (Mario, Wikiquote; the old line repeated the cue)",
+   "Meatball heroes: 'Spike calls them favourite failures. Meatballs, red sauce, provolone.'",
+   "Pizza: 'Their TV ad plays here. Half red, half green.' (fact fix)",
+   "Notes shortened so every dish prints its food: garlic knots 'Giuseppe plays Jump Man. Garlic knots.', arancini 'Fire Peach. Mozzarella risotto balls.'"
+  ]
  }
 }

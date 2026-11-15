@@ -9,16 +9,16 @@ FORMAT = {"format": "bartab", "era": "1980s", "tone": "glossy"}
 PALETTE = {"dark": "#1a1418", "accent": "#e0457b"}
 SERIES = []
 FLAVOUR = {"venue": "Mawby's", "sign": "Mawby's Bar and Grill, Pittsburgh",
-           "note": {"text": "Shift's done at the mill. Grab a stool, I'm dancing tonight.", "by": "Alex Owens", "kind": "note"},
-           "winks": ["Grunt the pit bull at home", "Hanna Long, the retired ballerina", "Breakdancers on the Pittsburgh streets", "Alex's welding mask at the mill", "Jeanie at the skating competition"],
+           "note": {"text": "When you give up your dream, you die.", "by": "Nick Hurley", "kind": "quote"},
+           "winks": ["Grunt the pit bull at home", "Hanna Long, the retired ballerina", "Johnny C. and the Zanzibar", "Alex's welding mask at the mill", "Jeanie at the skating competition"],
            "prop": {"kind": "slip", "title": "Pittsburgh Conservatory", "lines": ["Audition: Alex Owens", "Dance and Repertory"]},
-           "number": "18",
+           "number": "18", "logoPanel": False,
            "words": {}}
 HOUSE = {"s": {"n": "Salted pretzels on the bar", "note": "He didn't call. Then he called.", "meat": False},
-         "d": {"n": "Iron City beer on tap", "note": "Pittsburgh's own, poured cold.", "alc": True}}
+         "d": {"n": "Iron City beer on tap", "note": "For Nick Hurley. He owns the mill.", "alc": True}}
 DISHES = [
  {"n": "Richie's open mic pierogies", "course": "s",
-  "line": "Richie the cook dreams of stand-up",
+  "line": "Richie quits the grill for LA stand-up",
   "note": "Potato and cheese pierogies with fried onions.",
   "prep": 40, "cook": 20, "ahead": "Fill and shape the pierogies up to a day ahead and chill on a floured tray, or freeze; boil and fry to serve",
   "ing": [(300, "g", "plain flour", "Pantry"), (1, "", "egg", "Dairy"), (125, "g", "sour cream, plus extra to serve", "Dairy"), (60, "g", "butter", "Dairy"), (500, "g", "floury potatoes, boiled and mashed", "Produce"), (100, "g", "cheddar, grated", "Dairy"), (2, "", "brown onions, sliced", "Produce"), (2, "tbsp", "chives, chopped", "Produce")],
@@ -33,7 +33,7 @@ DISHES = [
                   "ing": [(1, "", "cauliflower, in large florets", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (80, "ml", "hot sauce", "Pantry"), (40, "g", "butter", "Dairy"), (100, "g", "blue cheese, crumbled", "Dairy"), (125, "g", "sour cream", "Dairy"), (3, "", "celery sticks, cut in batons", "Produce")],
                   "steps": [("Roast the oiled florets at 220C until browned.", 25), ("Toss in the melted butter and hot sauce and roast a little more.", 10), ("Mix the dip and serve with celery.", 10)]}}},
  {"n": "Lobster dinner date tails", "course": "m",
-  "line": "Alex and Nick's lobster dinner",
+  "line": "Nick grew up on hand-me-down lunches",
   "note": "Grilled lobster tails, garlic butter and shoestring fries.",
   "prep": 15, "cook": 30, "ahead": "Mix the garlic butter up to 3 days ahead and chill; split and grill the tails to serve",
   "ing": [(4, "", "raw lobster tails", "Seafood"), (100, "g", "soft butter", "Dairy"), (3, "", "garlic cloves, crushed", "Produce"), (2, "tbsp", "parsley, chopped", "Produce"), (1, "", "lemon", "Produce"), (750, "g", "frozen shoestring fries", "Frozen")],
@@ -42,7 +42,7 @@ DISHES = [
                   "ing": [(4, "", "corn cobs", "Produce"), (2, "", "x 180g blocks haloumi, thickly sliced", "Dairy"), (100, "g", "soft butter", "Dairy"), (3, "", "garlic cloves, crushed", "Produce"), (1, "", "lemon", "Produce"), (750, "g", "frozen shoestring fries", "Frozen")],
                   "steps": [("Bake the fries at 220C until crisp.", 25), ("Grill the corn and haloumi until charred.", 12), ("Brush with the garlic butter and serve with lemon and fries.", 3)]}}},
  {"n": "Steel town fries-inside steak sandwich", "course": "m",
-  "line": "Last orders at Mawby's bar and grill",
+  "line": "Johnny C. wants her at the Zanzibar",
   "note": "Steak, provolone, vinegar slaw and chips, all in the bread.",
   "prep": 10, "cook": 30, "ahead": "Make the slaw up to a day ahead; cook the chips and steak to serve",
   "ing": [(500, "g", "minute steaks", "Meat"), (8, "", "thick slices Italian bread", "Bakery"), (8, "", "slices provolone", "Dairy"), (0.25, "", "white cabbage, finely shredded", "Produce"), (2, "tbsp", "white wine vinegar", "Pantry"), (1, "tbsp", "olive oil", "Pantry"), (1, "tsp", "caster sugar", "Pantry"), (2, "", "tomatoes, sliced", "Produce"), (500, "g", "frozen thick-cut chips", "Frozen")],
@@ -51,7 +51,7 @@ DISHES = [
                   "ing": [(4, "", "large portobello mushrooms, sliced", "Produce"), (2, "tbsp", "olive oil", "Pantry"), (8, "", "thick slices Italian bread", "Bakery"), (8, "", "slices provolone", "Dairy"), (0.25, "", "white cabbage, finely shredded", "Produce"), (2, "tbsp", "white wine vinegar", "Pantry"), (500, "g", "frozen thick-cut chips", "Frozen")],
                   "steps": [("Bake the chips until golden.", 25), ("Make the slaw and fry the mushrooms in the oil, melting the cheese on top.", 10), ("Pile everything between the bread and press.", 5)]}}},
  {"n": "Jeanie's figure skater sundae", "course": "w",
-  "line": "Jeanie trains for the skating competition",
+  "line": "Jeanie falls twice on the ice",
   "note": "Vanilla ice cream, hot fudge and toasted almonds.",
   "prep": 10, "cook": 5, "ahead": "Make the fudge sauce up to 5 days ahead and rewarm; scoop to serve",
   "ing": [(1, "l", "vanilla ice cream", "Frozen"), (150, "g", "dark chocolate, chopped", "Pantry"), (150, "ml", "thickened cream", "Dairy"), (1, "tbsp", "golden syrup", "Pantry"), (50, "g", "flaked almonds, toasted", "Pantry"), (4, "", "maraschino cherries", "Pantry")],

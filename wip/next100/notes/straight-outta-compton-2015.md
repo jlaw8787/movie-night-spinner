@@ -25,3 +25,16 @@ Wikipedia (link above, plot read raw):
 Poster art (the five walking, logo frames) and posed promo shots blocked:
 - data/still-block.json "Straight Outta Compton (2015)": /cpqWIjNrAzLIBUHhRWB79LJ39lr.jpg, /pvGuQ5wmkENGEvnKQRYv0eS8sOx.jpg, /8r9RoGfwGmn1pn0G3sbvHHemSWF.jpg, /ghlk3zMmk6HpiesjwuujsjKWz86.jpg, /s5h2Mn8TiJgL6jTTl5i565qgRpd.jpg, /83ugj4iBJQEUaqeqcDaHMeRgtBr.jpg, /ely5pFIblMdqgSYaFGLk3QqPOqL.jpg, /wKmG0Fuasb9HUD3jgwQamGb5sAq.jpg, /lM40xQYLDjrihfyYMPeOxM2V3Ci.jpg, /7tGVKZLgyzcw82V7mYs72KeNk8M.jpg, /aXcepMyCdweM6poS2RLYwYehpO1.jpg, /gLH9V9Bw8CFkY1S9Yv553aJafIe.jpg, /42DZjLV04rcy3NFIv0rm3xN21tZ.jpg, /swAaai2wihJoGOb1rIT2ImiBf02.jpg, /d3ZObTatEBQ7LzkSPvFo4qFvDjT.jpg
 - data/still-pick.json "Straight Outta Compton (2015)": /sxyiPMXeh911luIrRgLJGy7YV9y.jpg (Ice Cube walking in his Compton street, front card), /64S241by0OQGHDMOrup43D4aln6.jpg (Ice Cube performing to the crowd, intermission card), /k3NrUQyyRidiShM1wJ30gwVLoVw.jpg (police stopping the group on the street), /lSe7AtPpDkRdJLcGyCWdPvNt5yQ.jpg (Dre at the turntables), /aHI0xMQ9WkxiQBHLHbPR8zQPrQE.jpg (Ice Cube rapping in an N.W.A cap).
+
+## Fix (15 Nov)
+Checker round 3: vibe 3.0, no wrong lines.
+- Chilli fries line now "We N.W.A. They Ruthless" (Ice Cube to Dre, Wikiquote, verbatim, unmarked nod). https://en.wikiquote.org/wiki/Straight_Outta_Compton_(film)
+- House corn chips (renamed "Studio corn chips and hot salsa") note "Raw talent. Swagger. Bravado." (Jerry Heller, Wikiquote: "a lot of raw talent. Swagger. Bravado.").
+- Tacos line "Eazy raps Boyz-n-the-Hood" (Wikipedia plot: the song is rejected by a New York group and Dre convinces Eazy to perform it). https://en.wikipedia.org/wiki/Straight_Outta_Compton_(film)
+- Coney dogs line "Detroit bans the song" (Wikipedia plot: Detroit police forbid it, they play it anyway).
+- Food lines shortened so every dish prints its food on the board (tacos, coney dogs and sliders were stubs).
+- The logo panel (repeated the poster's title) now shows the still of police stopping the group, flavour "panelStill" /k3NrUQyyRidiShM1wJ30gwVLoVw.jpg (already in still-pick).
+Not changed: venue stays "Compton, 1986" (the checker's verdict, not one of its ideas; a venue change is Josh's call).
+
+## Stills
+No new still-block or still-pick entries; panelStill uses a still already picked.

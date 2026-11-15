@@ -13,8 +13,8 @@ FLAVOUR = {"venue": "Continental Hyatt House", "sign": "Sunset Strip, Los Angele
            "note": {"text": "Don't take drugs!", "by": "Elaine Miller", "kind": "quote"},
            "winks": ["Lester Bangs and the $35 assignment", "Penny traded in a poker game", "The storm on the charter plane", "William, the enemy", "Rock stars have kidnapped my son"],
            "prop": {"kind": "badge", "title": "Backstage pass", "lines": ["Stillwater, 1973", "Opening for Black Sabbath"]},
-           "number": "15",
-           "words": {}}
+           "number": "15", "caption": "Penny Lane, 1973",
+           "words": {"In your suite 2000": "In your suite 1973"}}
 HOUSE = {"s": {"n": "A bowl of salted peanuts for the Band Aids", "note": "Not groupies. Here for the music.", "meat": False},
          "d": {"n": "Lester's bourbon on the rocks", "note": "Friendship is the booze they feed you.", "alc": True}}
 DISHES = [

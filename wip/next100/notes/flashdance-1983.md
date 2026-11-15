@@ -26,3 +26,14 @@ TV Tropes (https://tvtropes.org/pmwiki/pmwiki.php/Film/FlashDance):
 Poster art (sweatshirt pose, chair silhouette key art, logo frames) blocked:
 - data/still-block.json "Flashdance (1983)": /q28iXmR2NPqUfixAtvmWKyw2Dja.jpg, /igBrzHhiXvGFQwdVVeEM3NAQrPv.jpg, /79Ae6AnYvDQJdDcAd0JyYxIeHmU.jpg, /e45QeRfSPrVXlBTI8jwJXUK8D5Z.jpg, /bcWOVZ8cuVUbHmRYFd1L8HbBbs3.jpg, /wrNLBSxH1toJyTtIDgep9MrGZP5.jpg, /mwBmh8HUzZaqsEBm0BqvjW4pP08.jpg, /s2f7HGUWA1uLFc2laWNFsNZmrOE.jpg, /2GBnLdYWrst9fAvwc70QPipfwlE.jpg, /hy2MfQrv0AI5zoDwuzaJoaNCFwv.jpg, /7gfZ7bIYTY6cglwVbiuBQT7ABP1.jpg, /c588thGbRZsm4wNeCE5MuePmh1h.jpg
 - data/still-pick.json "Flashdance (1983)": /k6BDdDhWeTlj0LVUL5eADZtR0cz.jpg (the water dance on the chair, front card), /djBp0W1FhphQoP7GESDdjkybd0b.jpg (Alex welding in her mask, intermission card), /tDTQAbE7Dna64xKIVKjnUDMPBpc.jpg (the water dance, another angle), /4taRyneJlNDhuEkfX5QU6CG6Vbh.jpg (the water dance in silhouette, menu photo), /vcxVZZJnij2xWsk5BMv1gaoTWao.jpg (Nick with roses for Alex).
+
+## Fix (15 Nov)
+Checker round 3: vibe 3.2, no wrong lines.
+- Note now a real quote: "When you give up your dream, you die." (Nick Hurley, kind quote), read on Movie Mistakes' Flashdance quotes page https://moviemistakes.com/film2600/quotes (Wikiquote still returns a Wikimedia Error after three tries with 20 second waits).
+- Logo strip under the poster removed with flavour logoPanel false (bartab prints "Now showing · 1983" instead, as on Top Gun). The welding still is already on the intermission card.
+- Steak sandwich line "Johnny C. wants her at the Zanzibar"; sundae line "Jeanie falls twice on the ice"; pierogies line "Richie quits the grill for LA stand-up"; Iron City note "For Nick Hurley. He owns the mill."; wink "Johnny C. and the Zanzibar" replaces the breakdancers wink. All from the Wikipedia plot. https://en.wikipedia.org/wiki/Flashdance
+- Lobster line "Nick grew up on hand-me-down lunches" (Nick at the dinner: "I was so poor I had hand-me-down lunches", Movie Mistakes quotes page above).
+- The checker's "Jeanie falls twice and gets back up" was not used: Wikipedia says she sits defeated and is helped away.
+
+## Stills
+No new still-block or still-pick entries.
