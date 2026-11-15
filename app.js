@@ -1968,7 +1968,7 @@ function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.inclu
 function libWords(html,fl){const W=fl&&fl.words;if(!W)return html;const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   return String(html).replace(/>([^<]+)</g,(m,t)=>{for(const k in W){const ks=[...new Set([k,esc(k),esc(k).replace(/'/g,"&#39;"),k.replace(/'/g,"\u2019")])];for(const kk of ks){const re=new RegExp(kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"gi");t=t.replace(re,x=>{const n=esc(W[k]);return x===x.toUpperCase()&&x!==x.toLowerCase()?n.toUpperCase():n})}}return ">"+t+"<"})}
 /* 8 Nov: a quote that ends a note keeps its own stop: layouts that add a full stop leave "There goes my milk!". as "There goes my milk!" (text only) */
-function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2")+"<")}
+function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */+"<")}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){

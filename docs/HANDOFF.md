@@ -1525,3 +1525,19 @@ Cause: the prom layout sized its menu block (domH) before its web fonts had load
 Fix: menu-formats/prom.js now sets MENU_FORMATS.prom.ready (stylesheet loaded, every face in its href loaded, then fonts.ready), the same pattern as bartab. No design change. build-data rerun: only the films.js LIB_VER stamp, index.html and sw.js versions moved.
 Checks: check-print-text on Weird Science 5 runs, 5 pass (3 of 3 failed before). All 18 prom films pass. npm test pass.
 Deployed on Josh's go: fast-forward merge to main 88a5057, Publish site run 43678876572 passed. Live prom.js and films.js LIB_VER match main byte for byte.
+
+## 15 Nov, 4:10pm to 5:55pm: print faults from the morning rescore (branch fix/print-faults, not live)
+
+All 30 flagged films re-shot (FORCE=1 audit-extract). Already fine: 13 Going on 30 (today's prom fonts fix), Animal House cupcake note, Footloose footer, Captain America's dark still.
+Fixed:
+- Creed II stamp read "NO EXCUSE": motel postmark letters sat on the stamp photo and vanished on a dark one. The postmark moves left until its letters clear the photo (right 134), never past 296 from the edge (menu column).
+- Dreamgirls VIP pass "DETROIT THEATRE TALENT NIG...": club venue line tightens its letter spacing, then takes two lines, instead of an ellipsis.
+- Hocus Pocus 2 ticket cut at "sunrise": prom ticket now measured with domH (real fonts, border-box sizes): closing line goes, then prop lines 14px, then title down to 16px.
+- Money Train guest check and caption over the footer (hand-built lasttrain in formats.js): check 118px tall at top 337, tighter rows, stamp moved; photo 96px tall.
+- Reservoir Dogs: page 2 caption now film-flavour "caption" ("The warehouse, while they wait for Joe."); page 3 illustrated art swapped for a real still (still-pick).
+- The Fly: Veronica's badge photo was the Brundlefly. still-pick puts a Veronica still second (lab's ID photo is stills[1]).
+- Dark photos: still-pick swaps the frame's still for Collateral (strip, slot 6), Knocked Up (strip, slot 5) and Eternals (back photo, slot 3).
+- Notes starting lower case (Tango & Cash, Pirates 5, Eternals): canteen, bartab and galley capitalise a note's first letter.
+- "?." and "!." (Winter Soldier "get out?.", Oliver!., Man of Steel, Bill & Ted, Predator, The Menu, Flash Gordon and others): app.js libStops drops the stop.
+Not changed, design calls for Josh: logo shown twice where the poster carries the title (bartab, lab, galley, kiosk); campfire quotes signed with the film logo (the 11 Nov rollout, every campfire film); layouts that never print the showtime cue (stadium, airline, motel, precinct, pub and most of banquet, hotel, lab); empty gaps on short menus (Karate Kid, Oz page 2, Wish, Mother's Day, Collateral back).
+Checks: check-print-text on all 177 films of motel, club, prom, canteen, bartab, galley plus the hand-picked films: pass (Money Train needed one more 5px nudge, then 3 of 3 pass). npm test pass. check-browser pass.

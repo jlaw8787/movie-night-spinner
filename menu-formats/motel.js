@@ -282,7 +282,10 @@ window.MENU_FORMATS["motel"]=ctx=>{
   /* postmark: a short town line, whole words only, kept off the menu column and over the stamp corner */
   const fit14=t=>{const w=clean(t).toUpperCase().replace(/[^A-Z0-9 .'&-]/g,"").split(/\s+/).filter(Boolean);let o="";for(const x of w){if((o+" "+x).trim().length>14)return null;o=(o+" "+x).trim()}return o||null};
   const town=fit14(sign.split(",").slice(-1)[0])||fit14(vshort.split(/\s+/).slice(0,2).join(" "))||fit14(vshort.split(/\s+/)[0]);
-  const postmark=`<div style="position:absolute;z-index:3;right:118px;top:118px;transform:rotate(-14deg);border:2.5px solid ${T.ink}aa;border-radius:6px;padding:3px 10px;font-family:${BODY};font-weight:700;font-size:14px;letter-spacing:.14em;color:${T.ink}bb;text-align:center;line-height:1.25;white-space:nowrap;opacity:${(.65+T.wear*.3).toFixed(2)}">${esc(town||"ROUTE "+room)}<br>${esc(String(f.year||""))}</div>`;
+  /* 15 Nov: the town's last letters sat on the stamp photo and vanished on a dark one (Creed II printed "NO EXCUSE"): the postmark moves
+     left until its letters clear the photo (right 134), but never past 296 from the right edge, so it stays off the menu column */
+  const pmT=town||"ROUTE "+room,pmR=Math.max(118,Math.min(134,Math.round(296-(Math.max(pmT.length,String(f.year||"").length)*10.4+25))));
+  const postmark=`<div style="position:absolute;z-index:3;right:${pmR}px;top:118px;transform:rotate(-14deg);border:2.5px solid ${T.ink}aa;border-radius:6px;padding:3px 10px;font-family:${BODY};font-weight:700;font-size:14px;letter-spacing:.14em;color:${T.ink}bb;text-align:center;line-height:1.25;white-space:nowrap;opacity:${(.65+T.wear*.3).toFixed(2)}">${esc(town||"ROUTE "+room)}<br>${esc(String(f.year||""))}</div>`;
 
   /* key tag: shape by era, type only */
   const tagCol=mix(ACC,"#000000",.1),tagTxt=lum(tagCol)<.35?"#ffffff":"#111111";

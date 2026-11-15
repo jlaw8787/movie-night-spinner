@@ -162,7 +162,9 @@ window.MENU_FORMATS["club"]=ctx=>{
   const ci=e.cardInk;
   const card=`<div style="position:absolute;left:${(W-300)/2}px;top:${cardTop}px;width:300px;height:${cardH}px;border-radius:14px;background:${e.card};transform:rotate(${T.tilt}deg);box-shadow:0 14px 30px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.35);padding:14px 18px;box-sizing:border-box;color:${ci};display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
       <div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.22) 45%,rgba(255,255,255,0) 55%)"></div>
-      <div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:8px"><div style="font-family:${BODY};font-weight:700;font-size:14px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div></div>
+      <div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:8px">${(()=>{/* 15 Nov: a long venue tightens its spacing, then takes two lines, instead of ending in "..." (Dreamgirls "DETROIT THEATRE TALENT NIG...") */
+        const n=clean(venue).length,ls=Math.max(.04,Math.min(.18,260/(14*Math.max(1,n))-.66)),two=n*(.66+.04)*14>260;
+        return `<div style="font-family:${BODY};font-weight:700;font-size:14px;line-height:1.2;letter-spacing:${two?".1":ls.toFixed(3)}em;text-transform:uppercase;${two?"display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(venue)}</div>`})()}</div>
       <div style="position:relative;font-family:${DISP};font-weight:${dispW};${e.ital?"font-style:italic;":""}font-size:${P0?44:58}px;line-height:.9;letter-spacing:.06em;${e.border==="neon"?`text-shadow:0 0 8px ${ACC2},0 0 20px ${ACC2};`:""}">VIP</div>
       <div style="position:relative;font-family:${BODY};font-size:14px;line-height:1.25">
         <div style="font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(prop?prop.title:"Members and guests")}</div>

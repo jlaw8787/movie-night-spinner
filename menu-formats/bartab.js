@@ -122,7 +122,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
   /* every price lands on a price ending before the tab adds up, so the totals stay true (the film number on the first main only when it reads like a price) */
   if(window.priceEnd)for(const k of ["s","m","w","d"])PR[k]=PR[k].map(v=>window.priceEnd(v));
-  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i],house:!!x.house}));
+  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:PR[k][i],house:!!x.house}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   /* the photo gives way to the dishes: estimate the height the front's names and notes need at a slightly shrunk size,
      and take it off the poster or still first, so names, prices and the film's own notes still show (Blade, An American Werewolf) */

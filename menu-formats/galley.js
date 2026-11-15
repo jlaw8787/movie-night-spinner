@@ -130,7 +130,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const price=priceFor(era,yr,fl.number,space);
   const C={s:["Ration 1","Starters"],m:["Ration 2","Mains"],w:["Ration 3","Sweets"],d:[fam?"Fresh water":"Ration 4","Drinks"]};
   const STAMP={s:"Issued",m:space?"Crew only":"All hands",w:"Rationed",d:"Logged"};
-  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:price(k,i)}));
+  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:price(k,i)}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   /* the shared price check: mains over starters and sweets, spirits over plain drinks (Solo's 12 cr pork knuckle was the cheapest thing on the card) */
   if(window.priceSense){const P={},M={};for(const k in I){M[k]=I[k];P[k]=I[k].map(x=>money(x.p,era,space))}const Q=window.priceSense(M,P);for(const k in I)I[k].forEach((x,i)=>{x.ps=Q[k][i]})}
