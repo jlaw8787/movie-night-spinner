@@ -1,0 +1,835 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Truffled Gruyere gougeres",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Pipe the gougeres and freeze them raw up to a week ahead; bake from frozen with 5 extra minutes",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Gruyere, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "truffle oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the milk, water, butter and a pinch of salt to the boil, tip in the flour and beat over the heat until the dough leaves the sides.",
+     "min": 6
+    },
+    {
+     "text": "Cool for 5 minutes, then beat in the eggs one at a time until glossy.",
+     "min": 8
+    },
+    {
+     "text": "Beat in most of the Gruyere with the mustard and nutmeg, pipe walnut-sized balls onto lined trays and top with the rest of the cheese.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 200C until puffed and deep golden, without opening the oven.",
+     "min": 25
+    },
+    {
+     "text": "Brush the hot puffs with the truffle oil and scatter with sea salt.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Florida Keys prawn cocktail",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Make the sauce up to 2 days ahead; build the glasses to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked king prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "baby cos lettuces, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole-egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, tomato sauce, hot sauce and the juice of 1 lime into a pink sauce.",
+     "min": 5
+    },
+    {
+     "text": "Toss the avocado with a squeeze of lime so it stays green.",
+     "min": 3
+    },
+    {
+     "text": "Layer the lettuce and avocado in 4 glasses and pile the prawns on top.",
+     "min": 7
+    },
+    {
+     "text": "Spoon over the sauce, dust with paprika, scatter chives and hang a lime wedge on each glass.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Florida Keys heart of palm cocktail (vegetarian)",
+     "course": "s",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Make the sauce and slice the palm hearts up to a day ahead; build to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 400g tins hearts of palm, drained and sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baby cos lettuces, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole-egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives, snipped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, tomato sauce, hot sauce and lime juice.",
+       "min": 5
+      },
+      {
+       "text": "Toss the palm hearts and avocado with lime.",
+       "min": 5
+      },
+      {
+       "text": "Layer with the lettuce in 4 glasses.",
+       "min": 5
+      },
+      {
+       "text": "Spoon over the sauce and finish with chives and lime.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Code name Doris chicken Kiev",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 40,
+   "make_ahead": "Crumb the Kievs up to a day ahead and chill; fry and bake to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the garlic and parsley, roll into a log and freeze until firm.",
+     "min": 15
+    },
+    {
+     "text": "Cut a deep pocket in each breast, push in a slice of the butter and press closed.",
+     "min": 10
+    },
+    {
+     "text": "Dip in flour, egg and panko, then egg and panko again, and chill for 10 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Fry in hot oil until golden all over, then finish in the oven at 200C until cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Meanwhile boil the potatoes and mash with a knob of butter and the milk, and steam the beans.",
+     "min": 20
+    },
+    {
+     "text": "Rest the Kievs for 2 minutes and serve with the mash and beans.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Code name Doris mushroom Kiev (vegetarian)",
+     "course": "m",
+     "prep_min": 30,
+     "cook_min": 30,
+     "make_ahead": "Stuff and crumb the mushrooms up to a day ahead and chill; bake to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large flat mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with the garlic and parsley and spread over 4 mushrooms, add the mozzarella and press the other 4 on top.",
+       "min": 10
+      },
+      {
+       "text": "Coat in flour, egg and panko.",
+       "min": 10
+      },
+      {
+       "text": "Drizzle with oil and bake at 200C until golden and bubbling.",
+       "min": 25
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and milk and serve.",
+       "min": 20
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Seven Mile Bridge snapper",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Make the salsa up to 4 hours ahead and chill; cook the rice and fish to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 180g snapper fillets, skin on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "tin coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "long red chilli, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the rice with the coconut milk, 250ml water and a pinch of salt, covered, until tender.",
+     "min": 20
+    },
+    {
+     "text": "Mix the mango, onion, chilli, coriander and the juice of 1 lime for the salsa.",
+     "min": 12
+    },
+    {
+     "text": "Rub the snapper with oil, allspice and salt and cook skin down in a hot pan until crisp, then turn for a minute.",
+     "min": 8
+    },
+    {
+     "text": "Serve the fish on the rice with the salsa piled on top and lime wedges.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Seven Mile Bridge haloumi (vegetarian)",
+     "course": "m",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Make the salsa up to 4 hours ahead; grill the haloumi to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "x 180g blocks haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground allspice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "tin coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "mango, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "long red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the rice in the coconut milk and water until tender.",
+       "min": 18
+      },
+      {
+       "text": "Mix the salsa with lime juice.",
+       "min": 8
+      },
+      {
+       "text": "Dust the haloumi with allspice and chargrill in the oil until golden.",
+       "min": 6
+      },
+      {
+       "text": "Serve on the rice with the salsa and lime.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Missed birthday chocolate layer cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Bake the sponges up to 2 days ahead and keep wrapped; ice on the day",
+   "ingredients": [
+    {
+     "q": 225,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cocoa powder, plus 30g for the icing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "hot strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "birthday candles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, sugar, 60g cocoa and bicarb, then whisk in the eggs, buttermilk, oil and hot coffee to a thin batter.",
+     "min": 10
+    },
+    {
+     "text": "Divide between two lined 20cm tins and bake at 180C until a skewer comes out clean.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate, beat the butter with the icing sugar and remaining cocoa, then beat in the chocolate.",
+     "min": 10
+    },
+    {
+     "text": "Sandwich and cover the cakes with the icing and stand the candles on top.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Juno Skinner's champagne cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the champagne and glasses well; build to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "x 750ml bottle brut champagne",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cognac",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Angostura bitters",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, for peel",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube soaked with a few drops of bitters into each chilled flute.",
+     "min": 2
+    },
+    {
+     "text": "Add 15ml cognac, top slowly with champagne and twist a strip of orange peel over each.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Juno Skinner's sparkling cocktail (alcohol-free)",
+     "course": "d",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill the sparkling and glasses; build to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "x 750ml bottle alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, for peel",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drop a sugar cube into each chilled flute and add 15ml orange juice.",
+       "min": 2
+      },
+      {
+       "text": "Top with the alcohol-free sparkling and twist orange peel over each.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,660 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Burnt toast soldiers with soft eggs",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Brown the butter up to 3 days ahead and keep it in the fridge; boil the eggs and toast to serve",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick slices white sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter and cook until it smells nutty and turns golden brown, then pour into a bowl.",
+     "min": 4
+    },
+    {
+     "text": "Lower the eggs into boiling water and cook for 6 minutes for runny yolks.",
+     "min": 6
+    },
+    {
+     "text": "Toast the bread dark at the edges, brush heavily with the brown butter and cut into soldiers.",
+     "min": 4
+    },
+    {
+     "text": "Sit the eggs in cups, take the tops off and scatter salt and chives over the toast.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Chicago-style hot dogs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Chop the toppings up to a day ahead and keep cold; cook the franks to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "all-beef frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "poppy seed split-top bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "bright green sweet relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle spears",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "pickled sport peppers or pepperoncini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "celery salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks in water until hot through, about 6 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Steam or warm the rolls so they stay soft.",
+     "min": 3
+    },
+    {
+     "text": "Tuck in the franks and add mustard, relish and onion.",
+     "min": 6
+    },
+    {
+     "text": "Add tomato wedges, a pickle spear and two peppers to each, and finish with celery salt.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chicago-style vegetarian dogs",
+     "course": "s",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Chop the toppings up to a day ahead; cook the vegetarian sausages to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "poppy seed split-top bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "bright green sweet relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle spears",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "celery salt",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pan-fry the vegetarian sausages until browned.",
+       "min": 8
+      },
+      {
+       "text": "Warm the rolls.",
+       "min": 3
+      },
+      {
+       "text": "Fill and top with mustard, relish, onion, tomato and pickle.",
+       "min": 8
+      },
+      {
+       "text": "Finish with celery salt.",
+       "min": 1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Damballa Haitian griot with pikliz",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 105,
+   "make_ahead": "Braise the pork and make the pikliz up to 2 days ahead; fry the pork to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder, cut in 4cm pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "habanero chilli, pierced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "white cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "white rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin red kidney beans, drained",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the pork with the orange and lime juice, garlic, onion, thyme, chilli and salt and leave for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Tip into a pot with water to just cover and simmer until tender and most of the liquid has gone.",
+     "min": 75
+    },
+    {
+     "text": "Mix the cabbage and carrot with the vinegar, a pinch of chilli and salt for the pikliz.",
+     "min": 5
+    },
+    {
+     "text": "Cook the rice with the beans and a pinch of salt.",
+     "min": 20
+    },
+    {
+     "text": "Fry the drained pork in hot oil until crisp at the edges and serve with the rice and pikliz.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Damballa Haitian fried plantain with pikliz (vegetarian)",
+     "course": "m",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the pikliz up to 2 days ahead; fry the plantain to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "green plantains, peeled and cut in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "white cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "habanero chilli, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "white rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin red kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cabbage, carrot, chilli and vinegar for the pikliz.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice with the beans and garlic.",
+       "min": 20
+      },
+      {
+       "text": "Fry the plantain until soft, squash flat, then fry again until crisp.",
+       "min": 15
+      },
+      {
+       "text": "Salt and serve with the rice, pikliz and lime.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Good Guy macaroni cheese",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Make the sauce and cook the pasta up to a day ahead; bake to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the macaroni until just short of tender and drain.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter, stir in the flour, then whisk in the milk and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the mustard, cheddar and Gruyere, fold through the pasta and tip into a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Scatter the panko and parmesan over and bake at 200C until golden and bubbling.",
+     "min": 20
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Good Guys birthday sprinkle cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Bake the sponges up to 2 days ahead and keep wrapped; ice on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened, plus 200g for the icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 185,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "rainbow sprinkles, plus more to finish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "birthday candles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat 250g butter with the sugar until pale, then beat in the eggs and vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour, milk and sprinkles and divide between two lined 20cm tins.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C until a skewer comes out clean, then cool.",
+     "min": 32
+    },
+    {
+     "text": "Beat 200g butter with the icing sugar and a splash of milk until fluffy.",
+     "min": 6
+    },
+    {
+     "text": "Sandwich and cover the cakes, shower with sprinkles and add 6 candles.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Birthday breakfast mimosa",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the juice up to a day ahead and chill the wine well",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "fresh orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "x 750ml bottle sparkling wine",
+     "aisle": "Bottle shop"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour 100ml orange juice into each of 4 chilled flutes.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with the sparkling wine.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Birthday breakfast orange fizz (alcohol-free)",
+     "course": "d",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Squeeze the juice up to a day ahead and keep cold",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the orange juice into 4 glasses.",
+       "min": 2
+      },
+      {
+       "text": "Top with cold lemonade.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
