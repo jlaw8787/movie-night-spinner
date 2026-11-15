@@ -1649,3 +1649,8 @@ From the "Noticed, not changed" line above. Before and after mockups from wip/de
 Noticed, not changed: motel's front also prints the logo plate over a poster that carries the title (Paranormal Activity), same pattern.
 Checks: check-print-text on all 97 films of hotel, banquet, pub, motel: pass. npm test pass. check-browser pass (one earlier run timed out waiting for #viewWheelBtn, two reruns passed). Generated files rebuilt with build-data. Spot check by eye: all 9 pub, 4 hotel, 4 banquet.
 Deployed on Josh's go: fast-forward merge to main 6df2578, Publish site run 43702882095 passed. hotel, banquet, pub, motel, app.js and films.js match main byte for byte live.
+
+## 15 Nov, 8:20pm: call 7, motel logo twice (branch design/motel-logo, not live)
+
+Josh approved from call7-motel.jpg (mock.cjs with a-hide.js). motel posterFront: the logo plate goes (both the flow plate and the multi layout's plate over the still strip); the name panel moves up and the scene snapshot grows into the room. Flavour logoPanel:true keeps the plate for a poster with no title. All 15 motel posters checked by eye: every one carries its title.
+Checks: check-print-text on all 15 motel films: pass. npm test pass. check-browser pass. Generated files rebuilt with build-data.
