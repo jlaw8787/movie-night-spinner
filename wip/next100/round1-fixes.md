@@ -30,7 +30,7 @@ The diner layout's stock wording made the two "Overheard at the counter" lines a
 - Dirty Harry footer stray full stop: "do ya, punk?."
 - Robin Hood and Twins print the same poster art twice.
 
-## Checker 2 (10 films): wrong or unsure lines (NOT yet fixed; the batch 1 fixer only took Checker 1's films)
+## Checker 2 (10 films): wrong or unsure lines (FIXED 15 Nov afternoon, ticked in audit/results)
 | Film | Printed text | Fix |
 |---|---|---|
 | First Blood | "Hook and line from the knife handle" (trout note) | "Rambo lives off the land in the Hope woods". He never fishes; the knife handle holds needle and thread to stitch his arm |
@@ -39,3 +39,7 @@ The diner layout's stock wording made the two "Overheard at the counter" lines a
 
 Under 3.5: Gone in 60 Seconds (3.2): every line true but notes thin; print Sphinx's one speech on the ribs, "You say poor Toby. I say poor us." (only an unprinted wink now).
 Smaller: The Fugitive still repeats the poster; The Last Boy Scout has a stock "Courtside" label on a football ground; The Fast and the Furious stack chart prints the bread line twice; Memento leaves out Natalie's spit-in beer.
+
+Checker 2 fixes done 15 Nov (afternoon chat): First Blood trout line and dish name, Trautman house note; Memento cue and Natalie's spit-in beer on the boilermaker;
+Gone in 60 Seconds reworked (Sphinx, Calitri, Memphis lines, needs rescore); The Fugitive poster-like stills blocked (meal order still is the dam tunnel);
+The Last Boy Scout "Courtside" now "Sideline". Not changed: the deli layout's stack chart prints the bread on top and bottom by design (all deli films), left as is.

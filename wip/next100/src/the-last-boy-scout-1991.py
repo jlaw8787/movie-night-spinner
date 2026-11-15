@@ -12,7 +12,7 @@ FLAVOUR = {"venue": "Stallions Stadium Concessions", "sign": "Los Angeles Stalli
            "winks": ["Billy Cole's halftime phone call", "Joe's middle name, Cornelius", "Darian's Jimmy Dix trading card", "Six million in a briefcase", "Milo up on the light tower"],
            "prop": {"kind": "ticket", "title": "LA Stallions", "lines": ["Home game, gates open early", "Light towers off limits"]},
            "number": "91",
-           "words": {"Cash at the stand. No refunds after the first whistle.": "You have to say something cool first."}}
+           "words": {"Cash at the stand. No refunds after the first whistle.": "You have to say something cool first.", "Courtside": "Sideline"}}
 HOUSE = {"s": {"n": "Peanuts in the shell", "note": "Thrown up to the cheap seats.", "meat": False},
          "d": {"n": "Stadium cup of cold lager", "note": "Sold in the stands, all four quarters.", "alc": True}}
 DISHES = [

@@ -3,7 +3,7 @@
 FILM = {"id": "Memento (2000)", "theme": "cop",
         "T": "Some memories are best forgotten.",
         "D": "A man who can't make new memories hunts his wife's killer with Polaroids, notes and tattoos, and the story runs backwards.",
-        "P": "Serve the steak when Leonard opens the Jaguar's trunk."}
+        "P": "Serve the steak when Jimmy offers Leonard the 200 grand in the car."}
 FORMAT = {"format": "motel", "era": "2000s", "tone": "tense"}
 PALETTE = {"dark": "#121417", "accent": "#2f6f96"}
 SERIES = []
@@ -50,7 +50,7 @@ DISHES = [
   "ing": [(60, "g", "butter, melted, plus 125g softened", "Dairy"), (100, "g", "brown sugar", "Pantry"), (440, "g", "tin pineapple rings, drained", "Pantry"), (8, "", "glace cherries", "Pantry"), (150, "g", "caster sugar", "Pantry"), (2, "", "eggs", "Dairy"), (1, "tsp", "vanilla extract", "Pantry"), (185, "g", "self-raising flour", "Pantry"), (125, "ml", "milk", "Dairy"), (200, "ml", "thickened cream, whipped", "Dairy")],
   "steps": [("Pour the melted butter into a 22cm cake tin, scatter over the brown sugar and lay the pineapple rings on top with a cherry in each hole.", 6), ("Beat the softened butter and caster sugar until pale, then beat in the eggs and vanilla.", 6), ("Fold in the flour and milk and spread the batter over the fruit.", 4), ("Bake at 180C until a skewer comes out clean.", 42), ("Rest for 5 minutes, turn out upside down and serve warm with the cream.", 7)]},
  {"n": "Bourbon-back boilermaker", "course": "d",
-  "line": "Natalie tends bar at Ferdy's",
+  "line": "He drinks it even after Natalie spits in it",
   "note": "Cold lager with a bourbon back.",
   "prep": 3, "cook": 0, "ahead": "Chill the beer and glasses; pour to serve",
   "ing": [(4, "", "x 355ml bottles American lager", "Bottle shop"), (120, "ml", "bourbon", "Bottle shop")],

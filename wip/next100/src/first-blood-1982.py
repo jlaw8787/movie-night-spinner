@@ -15,11 +15,11 @@ FLAVOUR = {"venue": "Search Party Mess, Hope", "sign": "Hope, Washington. Comman
            "stillStrip": {"v": "stagger", "s": [2, 5, 0]},
            "labels": {"t": "Chow Line", "n": "Over the radio, to Trautman", "b": "Out here it's me", "call": "Come first light", "s": "Off the Land", "m": "Mess Tent Mains", "w": "After the Blackout", "d": "From the Thermos"},
            "words": {}}
-HOUSE = {"s": {"n": "Smoked beef jerky and trail mix in a mess tin", "note": "Trautman says he'll eat things that would make a billy goat puke.", "meat": True},
+HOUSE = {"s": {"n": "Smoked beef jerky and trail mix in a mess tin", "note": "Trautman says Rambo eats things that would make a billy goat puke.", "meat": True},
          "d": {"n": "Ice-cold cans of Rainier beer", "note": "For the deputies, once the search is called off.", "alc": True}}
 DISHES = [
- {"n": "Hook-and-line pan trout with brown butter and almonds", "course": "s",
-  "line": "Hook and line from the knife handle",
+ {"n": "Hope woods pan trout with brown butter and almonds", "course": "s",
+  "line": "Rambo lives off the land in the Hope woods",
   "note": "Crisp-skinned trout, burnt butter, lemon.",
   "prep": 10, "cook": 12, "ahead": "Toast the almonds up to 2 days ahead; cook the trout to serve",
   "ing": [(4, "", "small rainbow trout fillets, skin on", "Seafood"), (2, "tbsp", "plain flour", "Pantry"), (1, "tbsp", "olive oil", "Pantry"), (60, "g", "butter", "Dairy"), (40, "g", "flaked almonds", "Pantry"), (1, "", "lemon, halved", "Produce"), (2, "tbsp", "chopped parsley", "Produce")],
