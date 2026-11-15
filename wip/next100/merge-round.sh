@@ -7,8 +7,11 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 for wt in "$@"; do
   mkdir -p wip/next100/src wip/next100/packs wip/next100/notes
-  for d in src notes; do [ -d "$wt/wip/next100/$d" ] && cp -n "$wt"/wip/next100/$d/* wip/next100/$d/ 2>/dev/null || true; done
-  for s in "$wt"/wip/next100/src/*.py; do
+  # only the files this worktree added or changed since it branched (never older copies of films fixed here since)
+  base=$(git -C "$wt" merge-base HEAD feature/match-night)
+  changed=$( { git -C "$wt" diff --name-only "$base" -- wip/next100/src wip/next100/notes; git -C "$wt" ls-files --others --exclude-standard -- wip/next100/src wip/next100/notes; } | sort -u)
+  for f in $changed; do case $f in wip/next100/notes/*) [ -f "$wt/$f" ] && cp "$wt/$f" "$f";; esac; done
+  for f in $changed; do case $f in wip/next100/src/*.py) ;; *) continue;; esac; s="$wt/$f"; [ -f "$s" ] || continue
     b=$(basename "$s" .py); [ "$b" = good-will-hunting-1997 ] && continue
     cp "$s" wip/next100/src/
     [ -f "$wt/wip/next100/notes/$b.md" ] && cp "$wt/wip/next100/notes/$b.md" wip/next100/notes/

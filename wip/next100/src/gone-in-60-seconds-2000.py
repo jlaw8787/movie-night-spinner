@@ -8,11 +8,11 @@ FORMAT = {"format": "truck", "era": "2000s", "tone": "gritty"}
 PALETTE = {"dark": "#121315", "accent": "#e08a1e"}
 SERIES = []
 FLAVOUR = {"venue": "Otto's Garage", "sign": "50 cars, 72 hours, one night",
-           "note": {"text": "Eleanor is Memphis' unicorn.", "by": "Donny Astricky", "kind": "quote"},
+           "note": {"text": "I am a baaaad man.", "by": "Memphis Raines", "kind": "quote"},
            "winks": ["The list in blacklight paint", "Car 50, the 1967 Shelby GT500", "The car crusher at Calitri's yard", "Sphinx finally speaks", "The keys Otto's dog swallowed"],
            "prop": {"kind": "ticket", "title": "Car 50: Eleanor", "lines": ["1967 Shelby GT500", "Saved for last"]},
            "number": "50",
-           "look": {"cols": ["Starters", "Off the Grill", "Sweet", "Sway's Bar"], "board_t": "Heist Night"},
+           "look": {"cols": ["Starters", "Off the Grill", "Sweet", "Sway's Bar"], "board_t": "Cue Up Low Rider"},
            "words": {"Cash only. No change given.": "Eleanor goes last.", "Overheard at the window": "Overheard in the garage", "Now serving": "On the list", "Prices subject to change.": "All 50 to the docks by morning."}}
 HOUSE = {"s": {"n": "Salted peanuts in the shell", "note": "On the bar, where Sway works nights.", "meat": False},
          "d": {"n": "Ice-cold Corona with a wedge of lime", "note": "I'm a little tired, I'm a little wired. (Memphis)", "alc": True}}
@@ -54,7 +54,7 @@ DISHES = [
                   "ing": [(2, "", "x 400g tins young green jackfruit, drained", "Pantry"), (2, "tbsp", "olive oil", "Pantry"), (2, "tbsp", "brown sugar", "Pantry"), (1, "tbsp", "smoked paprika", "Spices"), (250, "ml", "smoky barbecue sauce", "Pantry"), (2, "tbsp", "apple cider vinegar", "Pantry"), (8, "", "soft white rolls", "Bakery"), (0.25, "", "green cabbage, finely shredded", "Produce"), (2, "", "carrots, grated", "Produce"), (125, "ml", "buttermilk", "Dairy"), (3, "tbsp", "whole-egg mayonnaise", "Pantry")],
                   "steps": [("Fry the jackfruit in the oil with the sugar and paprika until it catches, pulling it apart with forks.", 15), ("Add the barbecue sauce, half the vinegar and a splash of water and simmer until sticky.", 20), ("Make the slaw with the buttermilk, mayonnaise, the rest of the vinegar, cabbage and carrot.", 8), ("Pile the jackfruit into the rolls and serve with the slaw.", 5)]}}},
  {"n": "Sixty-second chocolate mug cakes with salted caramel", "course": "w",
-  "line": "Memphis saves Eleanor for last",
+  "line": "Eleanor is the unicorn says Donny",
   "note": "Molten middle, caramel, vanilla ice cream.",
   "prep": 10, "cook": 5, "ahead": "Weigh out the dry mix up to a week ahead; mix and microwave to serve",
   "ing": [(8, "tbsp", "self-raising flour", "Pantry"), (8, "tbsp", "caster sugar", "Pantry"), (4, "tbsp", "cocoa powder", "Pantry"), (2, "", "eggs", "Dairy"), (8, "tbsp", "milk", "Dairy"), (6, "tbsp", "vegetable oil", "Pantry"), (8, "", "squares dark chocolate", "Pantry"), (4, "tbsp", "salted caramel sauce", "Pantry"), (4, "", "scoops vanilla ice cream", "Frozen")],
