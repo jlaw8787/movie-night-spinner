@@ -1614,3 +1614,8 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 ## 15 Nov, 7:20pm: all 1,000 live (own menus for There's Something About Mary and She's All That)
 
 - Josh: "Deploy when ready". Own menus (fmtNowShowing, fmtSeniorProm in formats.js, from his Canva redesigns) merged into main; the two held-back films put back; copy back to 1,000. Independent check: no fact issues; Mary 3.6 (in Match night), She's All That 3.4 (live, not in Match night; checker felt the stars and stripes read a bit Fourth of July).
+
+## 15 Nov, 7:25pm: She's All That recolour (branch fix/shes-all-that-colours, not deployed)
+
+- Josh picked "poster colours" for the 3.4 Fourth of July note: fmtSeniorProm now uses the poster's purple (#6b2d86) and orange (#d4560b), gold four-point sparkles (two squashed diamonds; the PDF export ignores clip-path) in place of silver stars. Layout unchanged from his Canva design. Phone palette matches. Tests pass.
+- Still to do: independent re-score (audit/results/she-s-all-that-1999.json still says 3.4, so still out of Match night), then merge to main and deploy on Josh's go. STORE-LISTING already says 1,000. feature/match-night untouched.
