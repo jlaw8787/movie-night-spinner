@@ -34,3 +34,10 @@ Added to data/still-block.json for "Arachnophobia (1990)" (poster-art moon and s
 - /3kpjEsNji3tTF3dzlPOGmtaOXJJ.jpg
 - /ekh8wX6t8UFEQL4JEcRDsMEKlHc.jpg
 The card's still box now shows Ross in the barn with a shovel (/AilzFyGx2YzShgy4W3xuUJ7cptK.jpg). No still-pick entry.
+
+## Fix (15 Nov)
+From the round 2 checker (two mains printing with no food line, stock date stamp).
+- Pot pie: "Dr Metcalf won't retire yet. Chicken and leek pie." (Wikipedia plot: Sam Metcalf, the elderly town doctor, hesitates about retiring).
+- Cioppino: "They left the city for this. Tomato seafood stew." Arepas and devilled eggs food lines shortened ("Corn cakes, black beans, queso fresco.", "Paprika yolks, crisp shallots.") so both mains print in full. Veg notes matched.
+- Photo date stamp: FLAVOUR words {"90 10 26": "90 07 18"}, the US release date, 18 July 1990 (Wikipedia infobox and release section, read raw).
+

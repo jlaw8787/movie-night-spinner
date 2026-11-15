@@ -29,3 +29,12 @@ None added (the placemat face prints the poster only).
 
 ## Logo
 Added "Critters (1986)": true to data/logo-block.json. The TMDB logo is 4210 by 366 and the placemat's logo box cropped it to read "CRITTER"; with the block the box sets the title in type.
+
+## Fix (15 Nov)
+From the round 2 checker (unsure sign, vibe 3.2, three dishes printing with no food line).
+- Sign now "Grover's Bend, Kansas". Wikipedia's Critters 2 plot spells it "Grover's Bend" (https://en.wikipedia.org/wiki/Critters_2:_The_Main_Course, read raw); Moria agrees.
+- Every dish now prints its food line on the placemat (checked on the render): wings "Hot honey wings, blue cheese dip.", fritters "Corn cakes, chive sour cream.", burnt ends "Krites ate half the cow. Sticky beef ends.", chilli "Bowling alley panic. Smoky beef chilli.", pancakes "Breakfast before Charlie. Maple butter stack." (recipe step now beats maple into the butter), whiskey sour "Charlie's bottle goes Molotov. Bourbon sour." Veg and alcohol-free notes shortened to match.
+- House coffee note: "Charlie hears messages in his fillings." (Wikipedia plot: claims of alien abductions foretold by messages through his fillings). The fillings wink is swapped for "Charlie leaves with Ug and Lee" (Wikipedia plot) so it is not said twice.
+- Bounty notice third line "Last seen: Brown farm" (the Krites besiege the farm, Wikipedia plot).
+- Not done: Jay's reply "I think you watch too much TV." (Wikiquote) has no slot; the note panel takes one speaker's quote, so the gap above the quote in the right column stays a little open.
+

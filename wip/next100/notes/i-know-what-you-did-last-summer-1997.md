@@ -30,3 +30,6 @@ Added to data/still-block.json for "I Know What You Did Last Summer (1997)" (the
 - /tU5CdvDGQRGMfjDIfWmeUKh3ZKk.jpg
 - /6wpIPoE1H7N5yCuFsfcYoGBhFlP.jpg
 The takeaway's menu header now shows Helen crowned at the pageant. No still-pick entry.
+
+## Fix (15 Nov)
+- Banana pudding line now "Barry and Helen at the Fourth of July parade" (was "ride in the parade"). Wikipedia plot says they "participate in the 4th of July parade" and does not say Barry rides (https://en.wikipedia.org/wiki/I_Know_What_You_Did_Last_Summer, read raw).

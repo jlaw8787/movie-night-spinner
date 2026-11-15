@@ -41,3 +41,6 @@ Added to data/still-pick.json for "From Dusk Till Dawn (1996)" (the bartab's pho
 - /n4zagLQAGDqMPXVFTooSUxnU3LZ.jpg
 - /nPFgYl8OTegzbNDGqn6ZvO2Ek3t.jpg
 - /yFtc1wgKeo4kPYHGlgmVIsGXFCa.jpg
+
+## Fix (15 Nov)
+- House drink renamed "Tequila by the bottle" to "Seth's bottle and a shot glass". Wikiquote has Seth slamming a shot glass and "I'm gonna sit here and I'm gonna finish this bottle" but never names the spirit (https://en.wikiquote.org/wiki/From_Dusk_till_Dawn, read raw). Note unchanged.

@@ -14,7 +14,7 @@ FLAVOUR = {"venue": "Titty Twister", "sign": "Bikers and truckers only",
            "number": "1",
            "words": {}}
 HOUSE = {"s": {"n": "Totopos and salsa roja", "note": "On the bar until the sun comes up.", "meat": False},
-         "d": {"n": "Tequila by the bottle", "note": "I'm gonna sit here and I'm gonna finish this bottle.", "alc": True}}
+         "d": {"n": "Seth's bottle and a shot glass", "note": "I'm gonna sit here and I'm gonna finish this bottle.", "alc": True}}
 DISHES = [
  {"n": "Big Kahuna pineapple sliders", "course": "s",
   "line": "Seth's burger run back to the motel",

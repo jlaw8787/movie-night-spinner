@@ -50,7 +50,7 @@ DISHES = [
                   "ing": [(500, "g", "mixed mushrooms, sliced", "Produce"), (180, "g", "polenta or quick grits", "Pantry"), (750, "ml", "milk", "Dairy"), (100, "g", "cheddar, grated", "Dairy"), (60, "g", "butter", "Dairy"), (3, "", "garlic cloves, sliced", "Produce"), (1, "tsp", "smoked paprika", "Spices"), (3, "", "spring onions, sliced", "Produce"), (1, "", "lemon", "Produce")],
                   "steps": [("Cook the grits in the milk and water until thick.", 15), ("Stir in the cheese and half the butter.", 2), ("Fry the garlic and mushrooms in the rest of the butter with paprika until golden.", 10), ("Serve the mushrooms over the grits with spring onions and lemon.", 3)]}}},
  {"n": "Fourth of July banana pudding cups", "course": "w",
-  "line": "Barry and Helen ride in the parade",
+  "line": "Barry and Helen at the Fourth of July parade",
   "note": "Vanilla custard, banana and wafer layers.",
   "prep": 25, "cook": 10, "ahead": "Layer the cups up to a day ahead so the biscuits soften; top with cream to serve",
   "ing": [(500, "ml", "milk", "Dairy"), (3, "", "egg yolks", "Dairy"), (80, "g", "caster sugar", "Pantry"), (2, "tbsp", "cornflour", "Pantry"), (1, "tsp", "vanilla extract", "Pantry"), (3, "", "ripe bananas, sliced", "Produce"), (150, "g", "vanilla wafer biscuits", "Pantry"), (200, "ml", "thickened cream, whipped", "Dairy")],

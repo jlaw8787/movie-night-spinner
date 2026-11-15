@@ -28,3 +28,10 @@ Stephen King Wiki (https://stephenking.fandom.com/wiki/Misery_(film), read with 
 
 ## Stills
 None added (the home card's still is Annie with a revolver, not the poster art).
+
+## Fix (15 Nov)
+From the round 2 checker (two dishes printing with no food line, stock date stamp).
+- Wings now print "Annie calls Paul a dirty bird. Smoky wings, ranch dip."; pot roast "Annie's sow is called Misery. Braised beef, gravy."
+- To make room: soup "Annie's rant spills the soup. Cheddar toasts." and meatloaf "Paul's pills go into Annie's wine. Glazed meatloaf." Veg notes matched.
+- Photo date stamp: FLAVOUR words {"90 10 26": "90 11 30"}, the US release date, 30 November 1990 (Wikipedia infobox and lead, read raw).
+
