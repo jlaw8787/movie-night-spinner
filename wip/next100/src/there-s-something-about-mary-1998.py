@@ -5,7 +5,8 @@ FILM = {"id": "There's Something About Mary (1998)", "theme": "romcom",
         "T": "Love is in the hair.",
         "D": "Thirteen years after a prom night disaster, a lovesick writer hires a private eye to find the girl, and the private eye falls for her too.",
         "P": "Bring out the franks and beans when Warren starts yelling it outside the bathroom."}
-FORMAT = {"format": "prom", "era": "1990s", "tone": "playful"}
+# Own menu 15 Nov: hand-built "nowshowing" in formats.js (Josh's approved Canva look), so the film comes off the shared prom layout.
+FORMAT = {"format": "prom", "era": "1990s", "tone": "playful", "own": "nowshowing"}
 PALETTE = {"dark": "#1c2a4a", "accent": "#f2a7c3"}
 SERIES = []
 FLAVOUR = {"venue": "Senior Prom, 1985", "sign": "Cumberland, Rhode Island",
@@ -14,6 +15,11 @@ FLAVOUR = {"venue": "Senior Prom, 1985", "sign": "Cumberland, Rhode Island",
            "prop": {"kind": "ticket", "title": "Senior Prom 1985", "lines": ["Admit Ted and Mary", "Mind the zip"]},
            "number": "1985",
            "words": {"Spring Fling, Class of 1998": "Senior Prom, Class of 1985"}}
+# word swaps for the hand-built menu's food lines (dietSpec, dietHTML)
+DIET_TEXT = {"veg": [["Warren's franks and beans", "Warren's vegetarian franks and beans"],
+                     ["Smoky franks, molasses baked beans, slaw.", "Vegetarian franks, molasses baked beans, slaw."],
+                     ["Ham and swiss chicken, crumbed, mustard cream.", "Swiss-stuffed eggplant, crumbed, mustard cream."]],
+             "af": [["Pineapple, ginger beer, rum and lime sorbet.", "Pineapple, ginger beer, lime and sorbet."]]}
 HOUSE = {"s": {"n": "Magda's cheese ball and crackers", "note": "From next door to Mary's flat.", "meat": False},
          "d": {"n": "Beer. Not lite beer, beer.", "note": "Mary's ad: after 36 holes of golf.", "alc": True}}
 DISHES = [
