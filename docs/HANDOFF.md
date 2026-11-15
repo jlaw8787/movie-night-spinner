@@ -1465,3 +1465,13 @@ Next 100 films (1 of 100 written):
 
 15 Nov, 1:00pm: Match night deployed on Josh's go (main 7f726f8, Publish site run 43670143188 passed, live files checked). main does NOT have the next-100 work; feature/match-night does.
 Round 1 of the menus running as three writer agents (Josh chose agent teams), each in its own worktree: /home/claude/wt-r1a (next100/r1a, films 1 to 10 of plan.json skipping Good Will Hunting), wt-r1b (11 to 20), wt-r1c (21 to 30). When they finish: copy each worktree's wip/next100/src, packs and notes into feature/match-night, re-run pack.py put for all (do not merge their data files), build, check-print-text, audit-extract, then an independent checker writes audit/results. Worktrees are local to this session; if it's gone, re-run the round from plan.json.
+
+## 15 Nov, 3:30pm: round 1 of the next 100 done (branch feature/match-night, NOT deployed; start here in the next chat)
+
+- Josh's call: agent teams for the menus (3 writers of 10 per round, then independent checkers, then a fixer, then a rescore). Agent worktree isolation is blocked in this setup: make worktrees by hand (git worktree add -b next100/r2a /home/claude/wt-r2a feature/match-night) and point each writer at its own; merge with `bash wip/next100/merge-round.sh <worktrees>` (it rebuilds packs from source and puts them here; never merge their data files; copy any data/still-block.json entry by hand).
+- 931 films on the branch: the pilot plus plan.json films 1 to 30 (skipping Good Will Hunting). All audited by independent checkers; results in audit/results.
+- Fixed and ticked: checker 1's list (12 films, commit e8c3fde). Twins moved to Sun God Lodge, Taos. Those 12 still need a vibe RESCORE by someone who didn't fix them (vibe.reworked set; Twins 3.0, Bruce 3.2, Me Myself & Irene 3.2, Bring It On 3.4, Mary 3.4 were under 3.5).
+- NOT fixed yet: checker 2's list in wip/next100/round1-fixes.md (First Blood two lines, Memento cue, Gone in 60 Seconds under 3.5, small items).
+- Match night deck now 781 (new films join as they pass).
+- Writers' lesson (add to briefs): layouts cut a film line at the first comma, full stop or joining word when tight, so "Jr." and "Sr." get chopped; reword. Some faces print names only, so jokes must live in dish names too.
+- Next: fix checker 2's list, rescore the 13 reworked, then round 2 (plan.json films 31 to 60) the same way. Sheet rows 902 to 1001 track venues.
