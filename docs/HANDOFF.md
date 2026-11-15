@@ -1622,3 +1622,7 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 - Independent re-score: 3.6 (world 4, moments 4, food 3, tone 3, look 4), flat false, now in the Match deck. Old 'back face prices' note no longer applies (one face, no prices on prep).
 - Prep sheet missing the meatball subs is by design (cook 5). Prep sheet is still pink and navy: it takes its colours from the film's theme ('teen' in STY), not film-palette.json, so changing it means changing the theme. Not done.
 - To do: merge to main and deploy on Josh's go. STORE-LISTING already says 1,000. feature/match-night untouched.
+
+## 15 Nov, 7:32pm: She's All That recolour deployed (main 7969495, Publish site run 43699648457 passed)
+
+- Josh said deploy. fix/shes-all-that-colours fast-forwarded into main. Live check: formats/seniorprom.js serves the purple palette, match-deck.json includes She's All That. Prep sheet still pink and navy ('teen' theme), left as is.
