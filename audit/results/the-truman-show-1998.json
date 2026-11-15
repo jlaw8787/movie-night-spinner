@@ -43,12 +43,12 @@
   "tone": 4,
   "look": 4,
   "overall": 3.8,
-  "verdict": "Truman and Meryl's kitchen with Mococoa, Marlon's beer and Cue the sun feels right, but the food is mostly plain and some big moments are missing.",
+  "verdict": "Truman and Meryl's kitchen with Mococoa, Marlon's beer and the Day 10,909 stamp feels right, but the mains are plain and big lines are still missing.",
   "missing": [
-   "Meryl's kitchen gadget: 'What are you gonna do? Slice me, dice me or peel me?' (the knife fight)",
-   "'Somebody help me, I'm being spontaneous!' (Truman tries to leave)",
-   "Marlon on the bridge: 'the last thing I would ever do is lie to you' (fed lines by Christof)",
-   "Christof: 'He was born in front of a live audience.' (the storm)",
+   "Meryl's kitchen gadget: 'Slice me, dice me or peel me?'",
+   "'Somebody help me, I'm being spontaneous!'",
+   "Marlon on the bridge: 'the last thing I would ever do is lie to you'",
+   "Christof: 'He was born in front of a live audience.'",
    "Truman's bow at the exit door"
   ],
   "ideas": [
@@ -58,10 +58,19 @@
    "Give the fish pie its food line on the card ('Snapper pie under buttery mash' prints cut to 'Snapper pie.')."
   ],
   "flat": false,
-  "done": false,
+  "done": true,
   "reworked": "2026-11-15",
   "changed": [
    "Recipe card head now prints 'DAY 10,909' in place of 1998 (new optional flavour stamp, also drives the TV still stamp)"
-  ]
+  ],
+  "before": {
+   "world": 4,
+   "moments": 4,
+   "food": 3,
+   "tone": 4,
+   "look": 4,
+   "overall": 3.8
+  },
+  "rescored": "2026-11-15d"
  }
 }

@@ -12,7 +12,7 @@ FLAVOUR = {"venue": "Truman and Meryl's Kitchen", "sign": "Seahaven Island",
            "note": {"text": "Good morning, and in case I don't see ya: Good afternoon, good evening, and good night!", "by": "Truman Burbank", "kind": "quote"},
            "winks": ["The studio light that fell from the sky", "Rain over one man only", "Dad pushed onto a bus", "How's it going to end?", "The door in the painted sky"],
            "prop": {"kind": "badge", "title": "Lauren's Button", "lines": ["How's it going to end?", "Free Truman"]},
-           "number": "30", "stamp": "DAY 10,909",
+           "number": "30", "stamp": "LIVE ON AIR",
            "words": {"From the Truman and Meryl's Kitchen.": "From Truman and Meryl's kitchen."}}
 HOUSE = {"s": {"n": "Good morning blueberry muffins", "note": "And in case I don't see ya.", "meat": False},
          "d": {"n": "Cue the sun orange juice", "note": "Christof decides when morning starts.", "alc": False}}
