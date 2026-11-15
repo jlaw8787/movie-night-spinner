@@ -170,6 +170,9 @@ window.MENU_FORMATS["motel"]=ctx=>{
   let front="";
   const PO=posterOf(ctx),hasP=!!PO;
   /* poster postcard: the whole 2:3 poster sits on the card stock beside the lettering; stills stay for the small photos only */
+  /* 15 Nov, Josh (call 7): the poster carries the title, so the logo plate goes; the name panel moves up and the snapshot grows.
+     Flavour logoPanel:true keeps the plate for a poster with no title. */
+  const noPlate=!(ctx.flavour&&ctx.flavour.logoPanel===true);
   function posterFront(){
     const below=false,multi=e.cap==="multi",SHb=e.cap==="strip"?96:92;
     const ix=multi?0:B,iy=multi?0:B,iw=multi?556:W-2*B,ih=multi?H:below?H-B-SHb:H-2*B;
@@ -181,11 +184,11 @@ window.MENU_FORMATS["motel"]=ctx=>{
       return `<div style="position:absolute;inset:0;background:${DARK}"></div>${panel}${posterEl}
       <div style="position:absolute;left:562px;top:0;width:254px;height:${H/2-3}px;overflow:hidden">${photo(ctx,s2,254,H/2-3,filt)}</div>
       <div style="position:absolute;left:562px;top:${H/2+3}px;width:254px;height:${H/2-3}px;overflow:hidden">${photo(ctx,s3,254,H/2-3,filt)}</div>
-      ${lp(574,14,"left",LBm)}
+      ${noPlate?"":lp(574,14,"left",LBm)}
       <div data-fit style="position:absolute;left:570px;bottom:14px;width:240px;height:150px;overflow:hidden;padding:10px 14px;box-sizing:border-box;background:linear-gradient(90deg,${ACC},${mix(ACC,"#3a1060",.45)});color:#fff;display:flex;flex-direction:column;justify-content:center">
         <div style="font-family:${BODY};font-weight:700;${fs(14,14)};letter-spacing:.16em;text-transform:uppercase">${esc(T.kick)}</div>
         <div style="font-family:${DISP};${fs(28,16)};line-height:1.1;text-transform:uppercase">${esc(venue)}</div></div>`}
-    const zx=ix+24,zw=px-zx-26,zy=iy+22,zh=ih-44,lbh=LB?LB.h+24:60;
+    const zx=ix+24,zw=px-zx-26,zy=iy+22,zh=ih-44,lbh=noPlate?0:LB?LB.h+24:60;
     let mid="";
     if(!below){
       const box={band:`background:${mix(ACC,"#000000",.15)};color:#fff;padding:14px 20px;box-shadow:0 0 0 4px ${e.paper},0 0 0 6px ${mix(ACC,"#000000",.15)}`,
@@ -200,7 +203,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
     /* a framed scene snapshot takes the spare card space between the name panel and the footer, so the front never sits half empty */
     const snapP=!below&&ctx.stills&&ctx.stills.find(x=>x&&x!==PO);
     const snap=snapP?`<div style="flex:1 1 0;min-height:118px;width:${Math.min(zw,420)}px;max-height:300px;margin:18px 0 14px 6px;padding:7px 7px 7px;box-sizing:border-box;background:#ffffff;box-shadow:0 6px 16px rgba(40,30,10,.35);transform:rotate(${(-T.tilt*.35).toFixed(1)}deg)"><img alt="" crossorigin="anonymous" src="${ctx.img(snapP,"w780")}" style="display:block;width:100%;height:100%;object-fit:cover${filt.trim()?`;filter:${filt.trim()}`:""}"></div>`:"";
-    const zone=`<div style="position:absolute;left:${zx}px;top:${zy}px;width:${zw}px;height:${zh}px;display:flex;flex-direction:column;justify-content:${below?"center":"space-between"};gap:${below?22:0}px;align-items:flex-start">${lp(0,0,"flow")}${snap?`<div style="height:18px;flex:none"></div>`:""}${mid}${snap}${foot}</div>`;
+    const zone=`<div style="position:absolute;left:${zx}px;top:${zy}px;width:${zw}px;height:${zh}px;display:flex;flex-direction:column;justify-content:${below?"center":"space-between"};gap:${below?22:0}px;align-items:flex-start">${noPlate?"":lp(0,0,"flow")}${snap?`<div style="height:18px;flex:none"></div>`:""}${mid}${snap}${foot}</div>`;
     const cap=below?(e.cap==="strip"?`<div data-fit style="position:absolute;left:${B+10}px;right:${B+10}px;bottom:8px;height:${SHb-12}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
         <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};${fs(era==="1950s"?46:36,18)};line-height:1.05;white-space:nowrap">${esc(venue)}</div>
         <div style="font-family:${BODY};font-weight:600;color:${e.ink};${fs(17,14)};letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">${esc(sign)}</div></div>`
