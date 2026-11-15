@@ -1,0 +1,10 @@
+-- Match night room codes, Reel Dinner Supabase project (zpcgxupmclkxbzikdnfb). Applied 15 Nov 2026 as two
+-- migrations: match_night_rooms and match_night_picks. Kept here for the record; the live database is the source.
+-- Tables have RLS on and no policies, so the page cannot read them directly. It only calls the functions:
+--   match_create(vibe, deck)            -> 4-letter code (also deletes rooms older than 12 hours)
+--   match_join(code)                    -> {vibe, deck} or null, marks the room as two players
+--   match_swipe(code, player, film, keep), match_unswipe(code, player, film)
+--   match_pick(code, player, film)      -> the no-match decider pick
+--   match_state(code)                   -> {players, picks, swipes:[{p,f,k}]} in swipe order
+-- pg_cron job "match-rooms-cleanup" deletes rooms older than 12 hours, hourly at :17.
+-- The Supabase security advisor warns these functions run for guests: that is on purpose (guest-only, no sign-ins).

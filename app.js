@@ -288,15 +288,18 @@ function spinPick(L){const ids=new Set(L.map(f=>f.id)),keep=Math.floor(L.length*
   SPUN=[f.id,...SPUN.filter(x=>x!==f.id)].slice(0,900);try{localStorage.setItem("mns-spun",JSON.stringify(SPUN))}catch(e){}return f}
 /* tap to skip: a tap on the wheel or the curtain while it spins or counts down jumps straight to the menu */
 var skipReq=false;
+window.spinForce=null;
 function spin(){
-  if(spinning||!list.length)return;
+  if(spinning||(!list.length&&!window.spinForce))return;
   if(navigator.onLine===false&&!spinPool().length){const st=$("status");if(st)st.textContent="You're offline and no menus are saved on this device yet. Open a few films while you're online and they'll be here next time.";savedScan();return}
   spinning=true;sel.disabled=true;$("skipWatched").disabled=true;updateWatchButton();renderWatchList();$("spin").disabled=true;winner=-1;document.body.classList.add("spinning");document.body.classList.remove("winner");
   if(soundOn&&ac()&&audio.state==="suspended")audio.resume();
   /* refresh the wedges on the far side so every spin shows new titles, and plant the winner there */
   const far=[];for(let i=0;i<N;i++){const ang=((rot+(i+.5)*A)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);if(ang>Math.PI*.6&&ang<Math.PI*1.4)far.push(i)}
   const L=spinPool(),pool=shuffle(list);far.forEach((i,k)=>{wedges[i]=pool[k%pool.length]});
-  const w=pick(far),f=L.length?spinPick(L):wedges[w];wedges[w]=f;
+  /* Match night decider: a two-slot wheel (the two picks on alternate wedges), landing on the film already drawn */
+  const force=window.spinForce;if(force)for(let i=0;i<N;i++)wedges[i]=force.pair[i%2];
+  const w=force?pick(far.filter(i=>wedges[i]===force.win)):pick(far),f=force?force.win:L.length?spinPick(L):wedges[w];wedges[w]=f;
   closeCurtains();sfx.whirrStart();
   const target=-(w+0.5+(Math.random()-0.5)*0.55)*A;
   const turns=reduce?1:5+Math.floor(Math.random()*3);
@@ -319,6 +322,7 @@ function spin(){
       const hubOn=()=>{$("spin").disabled=false};
       const win=wedges[winner];
       $("now").textContent=win.title;
+      if(force){window.spinForce=null;if(force.done)setTimeout(()=>force.done(win),reduce?0:900)}
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
       sfx.whirrStop();fanfare();
       buzz([30,50,90]);show(win,true).then(()=>{announceFilm(win,kbSpin);leader(()=>{openCurtains();hubOn()})},hubOn);setTimeout(hubOn,8000);addHistory(win);
@@ -4025,7 +4029,7 @@ function warmOffline(reg){
   const u=FILMS.map(filmFile);
   if(typeof FMT_VER!=="undefined")for(const k in FMT_VER)u.push("formats/"+k+".js?v="+FMT_VER[k]);
   if(window.LIB_VER)for(const k in LIB_VER)u.push("menu-formats/"+k+".js?v="+LIB_VER[k]);
-  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.search)u.push("data/search-index.json?v="+DATA_V.search);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
+  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.search)u.push("data/search-index.json?v="+DATA_V.search);if(DATA_V.match)u.push("data/match-deck.json?v="+DATA_V.match);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
   reg.active.postMessage({warm:u});
   /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
   ["assets/lib/html2canvas-1.4.1.min.js","assets/lib/jspdf-2.5.1.umd.min.js"].forEach(x=>{try{fetch(x).catch(()=>{})}catch(e){}});
