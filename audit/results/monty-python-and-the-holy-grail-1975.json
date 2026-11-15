@@ -1,0 +1,48 @@
+{
+ "id": "Monty Python and the Holy Grail (1975)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "Bill No. 3, 1975.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "The year on the bill is the release year. The story is set in AD 932, which the sign line already prints.",
+   "source": "https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail",
+   "fix": "Bill No. 3, AD 932.",
+   "printed": true,
+   "done": false,
+   "full": "Coin of the realm only. Bill No. 3, 1975. Images: TMDB"
+  }
+ ],
+ "checked_ok": 20,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail",
+  "https://en.wikiquote.org/wiki/Monty_Python_and_the_Holy_Grail"
+ ],
+ "notes": "All dish and house lines match Wikiquote and Wikipedia: Patsy's coconut halves, the bridgekeeper's unladen swallow, the Rabbit kills Bors, Gawain and Ector, 'And the people did feast upon the lambs', elderberries, the shrubbery, Dennis being repressed, Galahad's 'Blue... no!'. Arthur's Camelot line verbatim. No alcohol in any dish or recipe (rabbit braises in apple juice). Winks (scratch, Trojan Rabbit, Book of Armaments, Bridge of Death, Tim) are data only, not printed; all true.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "The right jokes are all here, but the card is one poster on parchment with no stills, and the Black Knight and the Holy Hand Grenade never make it onto the paper.",
+  "missing": [
+   "The Black Knight: ''Tis but a scratch.' (the bridge duel)",
+   "The Holy Hand Grenade: 'Five is right out.' (the Rabbit's cave)",
+   "'Bring out jer dead!' (the plague village)",
+   "Castle Anthrax and the grail-shaped beacon",
+   "Brave Sir Robin running away"
+  ],
+  "ideas": [
+   "Swap the lamb name to 'Holy Hand Grenade lamb shoulder' and keep 'And the people did feast upon the lambs' as the note; add a prop 'Count to three. Five is right out.'",
+   "Swap the bread note 'Help, help, I'm being repressed!' onto a Black Knight dish: 'Flesh-wound hot wings' with ''Tis but a scratch.'",
+   "Swap the footer 'Coin of the realm only.' for 'Bring out jer dead! Nine pence.'",
+   "Unblock one real still (the Black Knight or the Rabbit) so the card is not poster only."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

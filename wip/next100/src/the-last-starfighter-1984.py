@@ -10,12 +10,15 @@ PALETTE = {"dark": "#0c1424", "accent": "#f2b134"}
 SERIES = []
 FLAVOUR = {"venue": "Starlite Starbrite Trailer Court", "sign": "The park store and its Starfighter game",
            "note": {"text": "Woohoo! All right; we're being invaded! This is great!!", "by": "Louis Rogan", "kind": "quote"},
-           "winks": ["Beta, the stand-in Alex", "A gung-ho iguana called Grig", "Victory or death!", "A Zando-Zan in the trailer park", "Louis takes his turn on the game"],
+           "winks": ["Beta, the robot Alex", "A gung-ho iguana called Grig", "Victory or death!", "A Zando-Zan in the trailer park", "Louis takes his turn on the game"],
            "prop": {"kind": "ticket", "title": "Starfighter", "lines": ["High score: Alex Rogan", "Recruited by the Star League"]},
            "number": "1",
+           "strip": [["Greetings, Starfighter", ""], ["Last orders", "Store's closed, mister"]],
+           "forecast": "Clear, one Gunstar inbound",
+           "titleMax": 30,
            "words": {"Bar and grill, since 1984": "Starlite Starbrite Trailer Court", "Sticky fingers welcome": "Heard in the park", "Spot prize for the loudest cheer": "Ask Alex about the high score"}}
 HOUSE = {"s": {"n": "Bubble gum from the counter jar", "note": "Centauri isn't here for bubble gum.", "meat": False},
-         "d": {"n": "Ice-cold cola from the store fridge", "note": "Store's closed, mister. The fridge isn't.", "alc": False}}
+         "d": {"n": "Ice-cold cola from the store fridge", "note": "Kept cold for the queue at the Starfighter game.", "alc": False}}
 DISHES = [
  {"n": "High score loaded hot dogs", "course": "s",
   "line": "Alex breaks the Starfighter record",
@@ -51,14 +54,14 @@ DISHES = [
                   "ing": [(4, "", "large portobello mushrooms, sliced", "Produce"), (2, "", "brown onions, sliced", "Produce"), (30, "g", "butter", "Dairy"), (4, "", "long crusty rolls", "Bakery"), (8, "", "slices provolone", "Deli"), (2, "tbsp", "Dijon mustard", "Pantry")],
                   "steps": [("Cook the onions slowly in butter.", 15), ("Sear the mushrooms until juicy.", 8), ("Build the rolls with mustard, mushrooms, onions and cheese.", 7)]}}},
  {"n": "Green moon of Galan key lime pie", "course": "w",
-  "line": "Xur's invasion waits on the green moon",
-  "note": "Tangy lime custard on a biscuit base.",
+  "line": "When the green moon of Galan is eclipsed",
+  "note": "Sharp lime custard.",
   "prep": 18, "cook": 15, "ahead": "Bake the pie up to a day ahead and chill; top with cream to serve",
   "ing": [(250, "g", "plain sweet biscuits", "Pantry"), (100, "g", "butter, melted", "Dairy"), (395, "g", "tin sweetened condensed milk", "Pantry"), (4, "", "egg yolks", "Dairy"), (5, "", "limes", "Produce"), (300, "ml", "thickened cream", "Dairy")],
   "steps": [("Crush the biscuits, mix with the butter and press into a 22cm pie tin.", 8), ("Whisk the condensed milk, yolks, lime zest and 125ml lime juice until thick.", 5), ("Pour into the base and bake at 160C until just set, then chill.", 15), ("Whip the cream and spoon on top with more zest.", 5)]},
  {"n": "Centauri's proposition root beer float", "course": "d",
-  "line": "Centauri has a little proposition",
-  "note": "Root beer over vanilla ice cream.",
+  "line": "Centauri's got a little proposition for you",
+  "note": "Two scoops.",
   "prep": 5, "cook": 0, "ahead": "Chill the root beer; scoop to order",
   "ing": [(1, "l", "root beer", "Drinks"), (500, "ml", "vanilla ice cream", "Frozen")],
   "steps": [("Put two scoops of ice cream in each of 4 tall glasses.", 2), ("Pour the root beer slowly down the side so it foams up.", 3)]},

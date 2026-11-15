@@ -1,0 +1,48 @@
+{
+ "id": "The Great Escape (1963)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 3",
+ "facts": [
+  {
+   "text": "Form CF-76. 1963.",
+   "where": "footer",
+   "verdict": "unsure",
+   "why": "The year on the form is the release year. The camp is in wartime Germany, with the Fourth of July in camp and the escape after it; the real Stalag Luft III escape was March 1944. The film pages I read give no year, so the exact story year is unsure, but 1963 is not it.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Escape_(film)",
+   "fix": "Form CF-76. 1944.",
+   "printed": true,
+   "done": false,
+   "full": "Eat fast, keep your head down. Prices subject to change. Form CF-76. 1963."
+  }
+ ],
+ "checked_ok": 20,
+ "sources": [
+  "https://en.wikipedia.org/wiki/The_Great_Escape_(film)",
+  "https://en.wikiquote.org/wiki/The_Great_Escape_(film)"
+ ],
+ "notes": "Lines match: 250 men, Tom, Dick and Harry, Ashley-Pitt's dirt, Blythe's papers, Cavendish's choir, potato moonshine on the Fourth of July, 20 feet short, 76 out, the Swiss fence and the ball in the cooler (Wikipedia); 'Seventeen escape attempts.' 'Eighteen, sir.', 'It's shattering!' and Hilts's Berlin line verbatim (Wikiquote). Print problems, not fact errors: three printed dish lines are stubs with no food at all ('Hilts rides hard for the Swiss border.', 'Hilts throws his ball.', 'Ashley-Pitt hides the tunnel dirt.'). The house eggs line (rotten eggs in one basket) is in the data but not printed.",
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The camp canteen with Tom, Dick and Harry, Hilts's tag and the motorbike still feels right, but half the dish lines print with no food.",
+  "missing": [
+   "Von Luger: 'all our rotten eggs in one basket' (arrival)",
+   "Ives climbs the wire",
+   "Hendley the scrounger and his black market",
+   "Danny's claustrophobia in the tunnel",
+   "The trouser bags of dirt let out in the compound"
+  ],
+  "ideas": [
+   "Fill the rosti line on the card: 'Hilts rides for the Swiss wire. Potato rosti with bratwurst.'",
+   "Fill the ice cream line: 'Hilts throws his ball in the cooler. Vanilla between choc biscuits.'",
+   "Print the house eggs line in place of the bean dip stub: 'Devilled eggs, all in one basket' with 'Von Luger's rotten eggs, watched carefully.'",
+   "Swap the stock schedule slots '0600 Count' and '0900 Yard' for 'Appell' and 'The scrounger's rounds'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

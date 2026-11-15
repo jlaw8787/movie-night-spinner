@@ -20,3 +20,9 @@ Wikiquote (https://en.wikiquote.org/wiki/Starship_Troopers_(film)):
 Added to data/still-block.json for "Starship Troopers (1997)" (poster crop, promo art):
 - /7PR2yMwXuXelAcp3qpJ3isZCdd0.jpg
 - /7iEfnj3rfyunky6BzvnlwqfoEF0.jpg
+
+## Fix (15 Nov)
+- Checker: newspaper prints "at FedNet" under Rasczak's signature. Rasczak says the freedom line to Rico at a party (Wikiquote, https://en.wikiquote.org/wiki/Starship_Troopers_(film)); he is Rico's former high school teacher (Wikipedia). Now "to Rico, Buenos Aires" via FLAVOUR words {"at FedNet": ...}.
+- Checker: page 2 stock caption "Another frame from Starship Troopers." Now "A warrior bug at Rico's back." via FLAVOUR words (the still shows Rico shouting with a Warrior bug behind him; Warrior bugs named in Wikipedia's production section).
+- No layout change. Both seen on the render (p-1, p-2).
+- Stills: no still-block or still-pick entries added.

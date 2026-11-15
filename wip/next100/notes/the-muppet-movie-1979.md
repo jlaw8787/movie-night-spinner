@@ -26,3 +26,8 @@ Filmonpaper (https://filmonpaper.com/posters/the-muppet-movie-one-sheet-gonewith
 
 ## Stills
 No still-block or still-pick entries added.
+
+## Fix (15 Nov)
+- Checker stub: house chips note "Potatoes only." read cut short. Now "French-fried, and no frog legs, Doc." (Doc Hopper's French-fried frog legs franchise, Wikipedia https://en.wikipedia.org/wiki/The_Muppet_Movie). Prints.
+- Tried giving the house cordial a line (Dr. Teeth, "We will have breakfast at Hollywood and vine!", Wikiquote), but the placemat hides that note (check-print-text fails), so the cordial stays with no note.
+- Stills: no still-block or still-pick entries added.

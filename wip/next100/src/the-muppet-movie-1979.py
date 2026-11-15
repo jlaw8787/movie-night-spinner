@@ -14,7 +14,7 @@ FLAVOUR = {"venue": "El Sleezo Cafe", "sign": "El Sleezo Cafe, on the road to Ho
            "prop": {"kind": "tag", "title": "World Wide Studios", "lines": ["Open auditions for frogs", "2pm tomorrow"]},
            "number": "79",
            "words": {}}
-HOUSE = {"s": {"n": "Hot salted chips", "note": "Potatoes only.", "meat": False},
+HOUSE = {"s": {"n": "Hot salted chips", "note": "French-fried, and no frog legs, Doc.", "meat": False},
          "d": {"n": "Swamp-green lime cordial", "note": "", "alc": False}}
 DISHES = [
  {"n": "Fozzie's wocka wocka nachos", "course": "s",

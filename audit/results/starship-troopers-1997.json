@@ -11,7 +11,9 @@
    "source": "https://en.wikiquote.org/wiki/Starship_Troopers_(film)",
    "fix": "to Rico, Buenos Aires",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "to Rico, Buenos Aires"
   },
   {
    "text": "ON THE BEAT. Another frame from Starship Troopers.",
@@ -21,7 +23,9 @@
    "source": "https://en.wikipedia.org/wiki/Starship_Troopers_(film)",
    "fix": "ON THE BEAT. A warrior bug at Rico's back.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "ON THE BEAT. A warrior bug at Rico's back."
   }
  ],
  "checked_ok": 20,
@@ -51,6 +55,11 @@
   ],
   "overall": 4.2,
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Under Rasczak's signature: 'at FedNet' now 'to Rico, Buenos Aires'",
+   "Page 2 caption now 'ON THE BEAT. A warrior bug at Rico's back.'"
+  ]
  }
 }

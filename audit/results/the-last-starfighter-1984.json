@@ -11,7 +11,9 @@
    "source": "https://en.wikipedia.org/wiki/The_Last_Starfighter",
    "fix": "Beta, the robot Alex",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Beta, the robot Alex"
   },
   {
    "text": "Sunny with a chance of fun",
@@ -21,7 +23,9 @@
    "source": "https://en.wikiquote.org/wiki/The_Last_Starfighter",
    "fix": "Tumbleweeds and tarantulas",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "Clear, one Gunstar inbound"
   },
   {
    "text": "The Last Starfighter",
@@ -31,7 +35,9 @@
    "source": "",
    "fix": "Shrink the title or widen the box so 'Starfighter' fits",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "The Last Starfighter"
   }
  ],
  "checked_ok": 20,
@@ -64,6 +70,16 @@
   ],
   "overall": 3.4,
   "flat": true,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Bottom strip: stock 'Out front / Sky / Wind / Temp / Last orders' now 'Greetings, Starfighter' and 'Last orders: Store's closed, mister'",
+   "Forecast 'Sunny with a chance of fun' now 'Clear, one Gunstar inbound'",
+   "Spotted wink 'Beta, the stand in Alex' now 'Beta, the robot Alex'",
+   "Key lime pie now prints 'When the green moon of Galan is eclipsed. Sharp lime custard.' (Xur, Wikiquote)",
+   "Root beer float now prints 'Centauri's got a little proposition for you. Two scoops.' (Centauri, Wikiquote)",
+   "Title box typed title shrunk so 'Starfighter' fits",
+   "House cola note no longer repeats 'Store's closed, mister' (not printed); bubble gum note no longer prints (room went to the pie and float)"
+  ]
  }
 }

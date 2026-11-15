@@ -13,7 +13,7 @@ FLAVOUR = {"venue": "FedNet", "sign": "FedNet. Would you like to know more?",
            "winks": ["The FedNet bulletins", "I'm from Buenos Aires", "A knife through Ace's hand", "Zim captures a Brain", "Mobile Infantry and Fleet don't mix"],
            "prop": {"kind": "badge", "title": "Mobile Infantry", "lines": ["Rico, the Roughnecks", "Service guarantees citizenship"]},
            "number": "1",
-           "words": {"The lunch counter menu": "The mess hall menu"}}
+           "words": {"The lunch counter menu": "The mess hall menu", "at FedNet": "to Rico, Buenos Aires", "Another frame from Starship Troopers.": "A warrior bug at Rico's back."}}
 HOUSE = {"s": {"n": "Salted potato chips", "note": "Would you like to know more? Ask for a refill.", "meat": False},
          "d": {"n": "Iced yerba mate", "note": "A taste of Rico's Buenos Aires.", "alc": False}}
 DISHES = [

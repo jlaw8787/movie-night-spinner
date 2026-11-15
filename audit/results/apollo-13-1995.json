@@ -11,7 +11,9 @@
    "source": "https://en.wikiquote.org/wiki/Apollo_13_(film)",
    "fix": "Rounding the moon",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-15",
+   "applied_text": "ROUNDING THE MOON"
   }
  ],
  "checked_ok": 21,
@@ -42,6 +44,10 @@
   ],
   "overall": 3.8,
   "flat": false,
-  "done": false
+  "done": false,
+  "reworked": "2026-11-15",
+  "changed": [
+   "Face 2 still label 'Crew quarters' now 'Rounding the moon' (flavour words)"
+  ]
  }
 }

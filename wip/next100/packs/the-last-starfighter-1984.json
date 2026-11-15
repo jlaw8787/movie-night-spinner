@@ -69,7 +69,7 @@
   "W": [
    [
     "Green moon of Galan key lime pie",
-    "Xur's invasion waits on the green moon",
+    "When the green moon of Galan is eclipsed",
     "Crush the biscuits, mix with the butter and press into a 22cm pie tin. Whisk the condensed milk, yolks, lime zest and 125ml lime juice until thick. Pour into the base and bake at 160C until just set, then chill. Whip the cream and spoon on top with more zest.",
     [
      "250g plain sweet biscuits@Pantry",
@@ -84,7 +84,7 @@
   "K": [
    [
     "Centauri's proposition root beer float",
-    "Centauri has a little proposition",
+    "Centauri's got a little proposition for you",
     "Put two scoops of ice cream in each of 4 tall glasses. Pour the root beer slowly down the side so it foams up.",
     [
      "1l root beer@Drinks",
@@ -110,7 +110,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Beta, the stand-in Alex",
+   "Beta, the robot Alex",
    "A gung-ho iguana called Grig",
    "Victory or death!",
    "A Zando-Zan in the trailer park",
@@ -125,6 +125,18 @@
    ]
   },
   "number": "1",
+  "strip": [
+   [
+    "Greetings, Starfighter",
+    ""
+   ],
+   [
+    "Last orders",
+    "Store's closed, mister"
+   ]
+  ],
+  "forecast": "Clear, one Gunstar inbound",
+  "titleMax": 30,
   "words": {
    "Bar and grill, since 1984": "Starlite Starbrite Trailer Court",
    "Sticky fingers welcome": "Heard in the park",
@@ -161,10 +173,10 @@
    "The game was meant to go to Vegas"
   ],
   [
-   "Xur's invasion waits on the green moon"
+   "When the green moon of Galan is eclipsed"
   ],
   [
-   "Centauri has a little proposition"
+   "Centauri's got a little proposition for you"
   ]
  ],
  "recipes": {
@@ -232,7 +244,7 @@
   "w": [
    {
     "n": "Green moon of Galan key lime pie",
-    "note": "Xur's invasion waits on the green moon. Tangy lime custard on a biscuit base.",
+    "note": "When the green moon of Galan is eclipsed. Sharp lime custard.",
     "how": "Crush the biscuits, mix with the butter and press into a 22cm pie tin. Whisk the condensed milk, yolks, lime zest and 125ml lime juice until thick. Pour into the base and bake at 160C until just set, then chill. Whip the cream and spoon on top with more zest.",
     "shop": [
      "250g plain sweet biscuits@Pantry",
@@ -247,7 +259,7 @@
   "d": [
    {
     "n": "Centauri's proposition root beer float",
-    "note": "Centauri has a little proposition. Root beer over vanilla ice cream.",
+    "note": "Centauri's got a little proposition for you. Two scoops.",
     "how": "Put two scoops of ice cream in each of 4 tall glasses. Pour the root beer slowly down the side so it foams up.",
     "shop": [
      "1l root beer@Drinks",
@@ -877,7 +889,7 @@
   },
   "d": {
    "n": "Ice-cold cola from the store fridge",
-   "note": "Store's closed, mister. The fridge isn't.",
+   "note": "Kept cold for the queue at the Starfighter game.",
    "alc": false
   }
  }

@@ -12,7 +12,7 @@ FLAVOUR = {"venue": "Aquarius, the Lifeboat", "sign": "Apollo 13, April 1970. Ho
            "winks": ["A square filter in a round hole", "Swigert stirs the tanks", "Sir Isaac Newton in the driver's seat", "Mattingly never got the measles", "A toaster through a car wash"],
            "prop": {"kind": "tag", "title": "CO2 filter", "lines": ["Square, from Odyssey", "Made to fit Aquarius"]},
            "number": "13",
-           "words": {"From the bridge": "From Mission Control", "Deck 5": "Lunar Module", "paid in ship's credit": "paid on splashdown"}}
+           "words": {"From the bridge": "From Mission Control", "Deck 5": "Lunar Module", "paid in ship's credit": "paid on splashdown", "Crew quarters": "Rounding the moon"}}
 HOUSE = {"s": {"n": "Freeze-dried strawberries", "note": "Space food for the long way home.", "meat": False},
          "d": {"n": "Mission Control coffee", "note": "One pot, kept on all night.", "alc": False}}
 DISHES = [
