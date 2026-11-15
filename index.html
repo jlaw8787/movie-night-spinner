@@ -8,7 +8,7 @@
    The iPhone and Android app, the www/ build and a browser opened with ?app=1 (sticks for the tab, ?app=0 turns it off) load app-art.js and app-mode.js here */
 (function(){var W=window,c=W.Capacitor,n=!!(c&&typeof c.isNativePlatform==="function"&&c.isNativePlatform()),f=false;
 try{var q=location.search.match(/[?&]app=([01])(?:&|$)/);if(q)sessionStorage.setItem("reel-app",q[1]);f=sessionStorage.getItem("reel-app")==="1"}catch(e){}
-if(n||f||W.REEL_APP_BUILD)document.write('<script src="app-art.js?v=d308a24c"><\/script><script src="app-mode.js?v=c60ea5a0"><\/script>');else{W.REEL_APP=false;W.REEL_NATIVE=false}})();</script>
+if(n||f||W.REEL_APP_BUILD)document.write('<script src="app-art.js?v=d308a24c"><\/script><script src="app-mode.js?v=c60ea5a0"><\/script>');else{W.REEL_APP=false;W.REEL_NATIVE=false;if(/(^|\.)reeldinner\.com$/.test(location.hostname)){var g=document.createElement("script");g.async=true;g.src="https://gc.zgo.at/count.js";g.setAttribute("data-goatcounter","https://reeldinner.goatcounter.com/count");document.head.appendChild(g)}}})();</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Reel Dinner">

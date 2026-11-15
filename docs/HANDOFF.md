@@ -1655,3 +1655,11 @@ Deployed on Josh's go: fast-forward merge to main 6df2578, Publish site run 4370
 Josh approved from call7-motel.jpg (mock.cjs with a-hide.js). motel posterFront: the logo plate goes (both the flow plate and the multi layout's plate over the still strip); the name panel moves up and the scene snapshot grows into the room. Flavour logoPanel:true keeps the plate for a poster with no title. All 15 motel posters checked by eye: every one carries its title.
 Checks: check-print-text on all 15 motel films: pass. npm test pass. check-browser pass. Generated files rebuilt with build-data.
 Deployed on Josh's go: fast-forward merge to main 77eb584, Publish site run 43704302735 passed. motel.js and films.js match main byte for byte live.
+
+## 15 Nov, 8:40pm: GoatCounter visit counter (branch feature/goatcounter, NOT deployed)
+
+Josh asked how he'd know if he's getting traffic. GitHub Pages has no visitor stats and the site had no counter. He signed up at GoatCounter (account reeldinner, dashboard reeldinner.goatcounter.com).
+- index.html: the reel-boot script's website branch (not the app, not ?app=1) loads gc.zgo.at/count.js with data-goatcounter https://reeldinner.goatcounter.com/count, only when the hostname is reeldinner.com, so local test runs and the app never count.
+- privacy.html: the short version no longer says "no analytics"; GoatCounter is listed under Other services (no cookies, no IP kept, app does not use it). Last updated 15 November 2026.
+No layout changes, so check-print-text was not needed. npm test pass. check-browser pass.
+Deploy on Josh's go: fast-forward merge to main.
