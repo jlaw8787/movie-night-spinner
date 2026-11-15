@@ -238,6 +238,9 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[1])}${["s","m","w","d"].map((k,i)=>cell(SCR?SCR.home[i]:cnt(k))).join("")}${cell(SCR?SCR.home.reduce((a,v)=>a+v,0):total,60)}</div>
     <div style="display:flex;gap:6px;align-items:center">${lab(SB[2])}${[0,1,2,3].map(i=>cell(SCR?SCR.guests[i]:0)).join("")}${cell(SCR?SCR.guests.reduce((a,v)=>a+v,0):0,60)}</div>
     <div style="display:flex;justify-content:space-between;margin-top:9px;font:700 15px/1.2 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase"><span>${SB[4]} ${esc(num.slice(0,6))}</span><span>Now serving: ${esc(C[0]?C[0][1]:"Snacks")}</span></div></div>`;
+  /* the showtime cue (15 Nov, Josh: stadium never printed it): a ticker under the scoreboard, in the board's own lights */
+  const cueTxt=clean(f.P||"").trim();
+  const cueTick=cueTxt?`<div data-cue style="margin-top:8px;display:flex;align-items:center;gap:12px;padding:7px 14px;background:${cellBg};border:2px solid ${e.board==="manual"?"#1a3022":"#2a2a2a"};box-shadow:0 3px 10px rgba(0,0,0,.3)"><span style="flex:none;font:700 14px/1.2 ${BF};letter-spacing:.14em;color:${e.board==="manual"?B.lab:acc};text-transform:uppercase">On the big screen</span><span style="flex:1;min-width:0;font:600 15px/1.25 ${BF};color:${B.dig};text-shadow:${B.glow};${clamp(2)}">${esc(cueTxt)}</span></div>`:"";
   /* ticket */
   const sec=(num+"101").slice(0,3),row=(title.replace(/[^A-Z]/gi,"").charAt(0)||"A").toUpperCase(),seat=String(total||1);
   const ticket=`<div style="display:flex;transform:rotate(${t.tilt*.5}deg);background:${darkPaper?"#f2efe6":mix(paper,"#ffffff",.55)};box-shadow:0 3px 10px rgba(0,0,0,.3);border-top:6px solid ${acc};flex:none">
@@ -249,7 +252,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${[["Sec",sec],["Row",row],["Seat",seat]].map(([a,b])=>`<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:700 14px/1 ${BF};letter-spacing:.14em;color:#5a5d66;text-transform:uppercase">${a}</span><span style="font:${e.dw} 24px/1 ${DF};color:#15171c">${esc(b)}</span></div>`).join("")}</div></div>`;
   const right=`<div style="position:absolute;left:${HX+30}px;width:${RW}px;top:26px;bottom:22px;display:flex;flex-direction:column;justify-content:space-between">
     <div>${kick(sign,acc,15)}<div style="font:${e.dw} ${vSize}px/1.05 ${DF};color:${ink};margin-top:6px;text-transform:uppercase;${clamp(2)}">${esc(venue)}</div></div>
-    ${logo}${board}${ticket}
+    ${logo}<div style="flex:none">${board}${cueTick}</div>${ticket}
     <div style="display:flex;justify-content:space-between;font:400 15px/1.2 ${BF};color:${soft}"><span>Concession Scorecard</span><span>Form SC-${esc(num.slice(-4))}</span></div></div>`;
   const front=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${hero}${right}</div>`;
 

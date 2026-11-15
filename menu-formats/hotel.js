@@ -256,12 +256,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
   const hero=`<div style="position:absolute;left:96px;top:${heroTop}px;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
     ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${lp}`;
+  /* 15 Nov, Josh: the showtime cue reads "Wake-up call" under the front desk note and takes the place of the Dial 0 line, so it fits more often */
   const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:1130px;height:196px;box-sizing:border-box;padding-bottom:4px;overflow:hidden;display:flex;flex-direction:column">
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
-    ${ctx.f.P?`<div data-drop data-fs="14" style="margin-top:auto;padding-top:14px;font:400 18px/1.32 ${B};color:${K.ink}"><span style="font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:${K.acc};display:block;margin-bottom:4px">Ring down when</span>${esc(sentence(dry(ctx.f.P)))}</div>`:""}
-    <div data-drop data-fs="14" style="margin-top:${ctx.f.P?10:0}px;padding-top:10px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div></div>`;
+    ${ctx.f.P?`<div data-drop data-cue data-fs="14" style="margin-top:auto;padding-top:12px;font:italic 400 17px/1.3 ${B};color:${K.ink}"><span style="font-style:normal;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:${K.acc};display:block;margin-bottom:4px">Wake-up call</span>${esc(sentence(dry(ctx.f.P)))}</div>`:""}
+    ${ctx.f.P?"":`<div data-drop data-fs="14" style="padding-top:10px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div>`}</div>`;
   /* door hanger: a die-cut card with a hole, type only */
   const hg=mix(hex(K.acc),[0,0,0],dark?0:.08),hgc=contrast(hg,[255,255,255])>=4.5?"#fffaf0":"#161412";
   const box=`<span style="display:inline-block;width:15px;height:15px;border:2px solid ${hgc};margin-right:9px;vertical-align:-2px;flex:none"></span>`;
