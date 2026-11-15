@@ -1411,7 +1411,7 @@ Deployed on Josh's go: Publish site run 43663809115 passed (the first run, 43663
 
 Josh's queue after this: rebuild the four TMNT menus (independent review this morning: 1990 8, II 7.5, III 6.5, Mutant Mayhem 7; II needs the ooze canister and Japanese-style art from real stills), a finger-flick wheel where swipe strength sets the spin, and wider search (mafia also finds gangster, mob, crime family).
 
-## 15 Nov, 11:40am to 1:30pm: wider film search (main, NOT deployed; waiting on Josh's go)
+## 15 Nov, 11:40am to 12:20pm: wider film search (main a57b6e0, live)
 
 Before: the finder ("Find a film") and the video store box only matched title and year; the candy bar box matches dish names; the checklist is plain title text. Nothing searched genre, aisle, venue, quote, story or dishes.
 
@@ -1440,3 +1440,5 @@ Checks: npm test pass (new tests/search.test.cjs, 24 ms a query). check-browser 
 Not covered: cast and directors (no cast data). Within a tier, order is strength then A to Z (no popularity data), so date night starts with 13 Going on 30.
 
 Josh's queue after this: deploy on his go, then the four TMNT menu rebuilds and the finger-flick wheel.
+
+Deployed on Josh's go: Publish site run 43667340200 passed. Runs 43666590568, 43666652973 and 43666869659 failed at GitHub's deploy step ("No artifacts named github-pages"; the upload itself worked, GitHub status all green). Waiting 5 minutes and starting a fresh run fixed it. search.js, the index, app.js, index.html, films.js and sw.js match main byte for byte live.
