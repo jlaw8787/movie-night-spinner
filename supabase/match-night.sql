@@ -2,7 +2,10 @@
 -- migrations: match_night_rooms and match_night_picks. Kept here for the record; the live database is the source.
 -- Tables have RLS on and no policies, so the page cannot read them directly. It only calls the functions:
 --   match_create(vibe, deck)            -> 4-letter code (also deletes rooms older than 12 hours)
---   match_join(code)                    -> {vibe, deck} or null, marks the room as two players
+--   match_join(code, dev)               -> {vibe, deck}, {full:true} when a different phone already joined, or null.
+--                                          Marks the room as two players and keeps the joiner's phone id (column joiner),
+--                                          so player two gets back in after a reload and a third phone is kept out.
+--                                          (migration match_night_two_players, 15 Nov 2026)
 --   match_swipe(code, player, film, keep), match_unswipe(code, player, film)
 --   match_pick(code, player, film)      -> the no-match decider pick
 --   match_state(code)                   -> {players, picks, swipes:[{p,f,k}]} in swipe order

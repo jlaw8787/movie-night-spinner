@@ -291,7 +291,7 @@ var skipReq=false;
 window.spinForce=null;
 function spin(){
   if(spinning||(!list.length&&!window.spinForce))return;
-  if(navigator.onLine===false&&!spinPool().length){const st=$("status");if(st)st.textContent="You're offline and no menus are saved on this device yet. Open a few films while you're online and they'll be here next time.";savedScan();return}
+  if(navigator.onLine===false&&!spinPool().length&&!window.spinForce){const st=$("status");if(st)st.textContent="You're offline and no menus are saved on this device yet. Open a few films while you're online and they'll be here next time.";savedScan();return}
   spinning=true;sel.disabled=true;$("skipWatched").disabled=true;updateWatchButton();renderWatchList();$("spin").disabled=true;winner=-1;document.body.classList.add("spinning");document.body.classList.remove("winner");
   if(soundOn&&ac()&&audio.state==="suspended")audio.resume();
   /* refresh the wedges on the far side so every spin shows new titles, and plant the winner there */

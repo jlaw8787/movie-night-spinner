@@ -35,6 +35,8 @@
   const who = p => M.room ? (p === M.room.me ? 'You' : 'Them') : p === 1 ? 'Player one' : 'Player two';
   const other = p => p === 1 ? 2 : 1;
   const poster = id => typeof TMDB_POSTERS !== 'undefined' && TMDB_POSTERS[id] ? TMDB_IMG + 'w500' + TMDB_POSTERS[id] : '';
+  /* this phone's id for the room: lets the second player back in after a reload, and keeps a third phone out */
+  const DEV = (() => { try { let d = localStorage.getItem('rd-dev'); if (!d) { d = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); localStorage.setItem('rd-dev', d) } return d } catch (e) { return '' } })();
   const rpc = (fn, body) => fetch(RPC + fn, { method: 'POST', headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(r => { if (!r.ok) throw new Error(r.status); return r.json() });
 
   /* room writes (swipes, undos, picks) queue up in order and stay queued until the room has them: a dropped
@@ -328,7 +330,8 @@
     if (code.length !== 4) return err('Codes are four letters, like TACO.');
     err('');
     try {
-      const r = await rpc('match_join', { p_code: code });
+      const r = await rpc('match_join', DEV ? { p_code: code, p_dev: DEV } : { p_code: code });
+      if (r && r.full) return err('That room already has two people swiping. Start your own room instead.');
       if (!r || !r.deck) return err("That room isn't open. Check the code, rooms close after 12 hours.");
       const ids = r.deck.filter(id => byId.has(id));
       if (!ids.length) return err("That room's films aren't on this version of the site. Refresh and try again.");
@@ -359,8 +362,13 @@
     $('mnBack').onclick = () => { M.step = 'swipe'; undo() };
     $('mnQuit').onclick = quit;
   }
-  let timer = 0;
-  function poll() { stopPoll(); if (!M.room) return; timer = setInterval(checkRoom, POLL); checkRoom() }
+  let timer = 0, paused = false;
+  function poll() { stopPoll(); paused = false; if (!M.room) return; if (document.hidden) { paused = true; return } timer = setInterval(checkRoom, POLL); checkRoom() }
+  /* no checking every 2 seconds while the phone is locked or the tab is hidden; pick straight back up on return */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { if (timer) { stopPoll(); paused = true } }
+    else if (paused && M.room && !panel.hidden) poll();
+  });
   function stopPoll() { if (timer) clearInterval(timer); timer = 0 }
   let checking = false;
   async function checkRoom() {
@@ -403,6 +411,10 @@
 
   /* a link with ?match=TACO opens straight to the join box */
   const q = new URLSearchParams(location.search).get('match');
-  if (q && /^[A-Za-z]{4}$/.test(q)) { M = fresh(); M.style = 'room'; mode('match'); loadDeck().then(() => joinRoom(q)); try { history.replaceState(null, '', location.pathname) } catch (e) { } }
+  if (q && /^[A-Za-z]{4}$/.test(q)) {
+    try { history.replaceState(null, '', location.pathname) } catch (e) { }
+    if (M.room && M.room.code === q.toUpperCase()) { mode('match'); poll() }
+    else { M = fresh(); M.style = 'room'; mode('match'); loadDeck().then(() => joinRoom(q)) }
+  }
   else if (M.step !== 'setup' && M.step !== 'done') { mode('match'); if (M.room) poll() }
 })();
