@@ -1,5 +1,6 @@
 """Build a pack from a short source file: python3 wip/next100/mk.py wip/next100/src/<slug>.py
 The source defines FILM (id, theme, T, D, P), DISHES (list of dish dicts), FORMAT, FLAVOUR, PALETTE, HOUSE, SERIES.
+Optional DIET_TEXT {veg|af|veg_af: [[from, to], ...]}: word swaps for a hand-built menu. FORMAT "own": the fmt key in formats.js (film comes off film-format).
 Each dish: n, course (s/m/w/d), line (film line), note (menu description), prep, cook, ahead, ing [(q,u,item,aisle)], steps [(text,min)],
 optional alt {veg|af|veg_af: dish-like dict with n, note, prep, cook, ing, steps}. veg/af flags are worked out by the checker rules."""
 import json, re, sys, pathlib, importlib.util
@@ -48,7 +49,7 @@ rec["shopping"] = allshop
 fid = S.FILM["id"]
 p = {"id": fid, "film": F, "film-format": S.FORMAT, "film-flavour": S.FLAVOUR, "film-palette": S.PALETTE,
      "dish-names": [[x[0] for x in F[k]] for k in "SMWK"], "dish-notes": [[x[1] for x in F[k]] for k in "SMWK"],
-     "recipes": rec, "recipes2": {"serves": 4, "dishes": r2}, "diet": {"notes": notes}, "series": S.SERIES, "film-house": S.HOUSE}
+     "recipes": rec, "recipes2": {"serves": 4, "dishes": r2}, "diet": dict({"notes": notes}, **({"text": S.DIET_TEXT} if getattr(S, "DIET_TEXT", None) else {})), "series": S.SERIES, "film-house": S.HOUSE}
 out = R / "wip/next100/packs" / f"{slug(fid)}.json"
 json.dump(p, open(out, "w"), ensure_ascii=False, indent=1)
 print(out)

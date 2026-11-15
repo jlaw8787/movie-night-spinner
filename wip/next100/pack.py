@@ -24,7 +24,10 @@ def put(paths):
         p = json.load(open(path)); fid = p["id"]; f = p["film"]; assert f"{f['title']} ({f['year']})" == fid, fid
         films = [x for x in films if f"{x['title']} ({x['year']})" != fid] + [f]
         for k in KEYED:
-            if k in p: keyed[k][fid] = p[k]
+            if k not in p: continue
+            # a film with its own hand-built menu in formats.js (FORMAT "own") comes off the shared layouts
+            if k == "film-format" and (p[k] or {}).get("own"): keyed[k].pop(fid, None)
+            else: keyed[k][fid] = p[k]
         s = slug(fid)
         for sub in ("recipes", "recipes2", "diet"):
             if sub in p:

@@ -43,3 +43,14 @@ No still-pick entries.
   "Laney says yes to the beach. Grilled fish tacos.", "Laney on the stairs. Berry shortcake with cream.", "Foghorn for Dean. Pineapple and cranberry punch."
 - Veg alt notes made full lines too: "Crumbed eggplant and provolone rolls.", "Black bean tacos with slaw."
 - No new facts; scenes as before (Wikipedia, Wikiquote, ET Online). No still changes.
+
+## Own menu (15 Nov)
+Off the shared prom layout (Josh called the prom designs trash) onto its own hand-built menu, fmtSeniorProm in formats.js (generated formats/seniorprom.js), after Josh's approved Canva proof (wip/next100/canva/shes-canva-fixed.png). One 1344x960 face.
+- Look: red, white and royal blue with silver stars and halftone dots. "The Senior Prom" in Kaushan Script inside a white swoosh, "Southern California, prom night" under it; white menu panel with double blue border, Racing Sans One heads in red italic, star rules between courses; silver quote banner; red showtime strip. Stars (CSS border triangles), swooshes and dots are drawn trim only. A 26px pale silver paper edge runs round the face: the Save PDF fills the rest of the sheet from the colour about 25px in, and without it the sheet printed grey, then red, round the menu.
+- Fonts: all specs already shipped (Kaushan Script, Racing Sans One, Archivo ital,wght 0,400 to 0,800 and 1,400;1,600). No new font files.
+- Dishes, names, film lines, food lines, recipes, quote and cue unchanged. Prices added (4.50, 5.25, 5.95, 6.50, 3.75, 2.25). House lines print: Simon's breakfast muffins (1.50) and Sparkling water by the pool (1.00).
+- Winks: the Prom Queen Ballot prop (Laney Boggs, Taylor Vaughan, "Prom queen in six weeks"); "Senior year so far" (vapor and spam, hacky sack, foghorn); "Mack's makeover" and "Graduation in a cap and a soccer ball" as still captions.
+- Stills (TMDB, from data/film-stills.json; not the three blocked poster crops or the title-art frames): /dzuAbWv4zWoCKTY0cer48LsjHPo.jpg Laney in the red dress ("Mack's makeover"); /aiwW8pUErcFN0XH8UmQv6chcEjE.jpg Laney at her painting with Zack ("Laney paints, Zack watches"); /gSv4z7FZ0TuiH8dwi1qNiFJBaCd.jpg Zack and Dean at the beach; /yRukbmAGUuCTCIH4Phw2hQpG0tw.jpg graduation in a cap; cue still /675B5ALS1WMXkhptLhRWgKckBcp.jpg Laney and Zack at the beach. Facts from Wikipedia plot (beach trip with his friends, Mack's makeover, graduation, Dean) and Wikiquote (Zack's line).
+- Diet: data/diet text pairs (DIET_TEXT in the src file) put the eggplant parmigiana subs and black bean tacos names and food lines on the card with Vegetarian on. No alcohol on this menu.
+- Tools: FORMAT carries "own": "seniorprom" so pack.py put keeps it off data/film-format.json.
+- Checks: check-print-text pass, sweep shots and Save PDF looked over, audit-extract run, all tests pass.

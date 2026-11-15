@@ -7,6 +7,8 @@ const FMT_FONTS={
   "braidwood":"family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400;700",
   "starlanes":"family=Yellowtail&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400",
   "axiom":"family=Michroma&family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Caveat:wght@500",
+  "nowshowing":"family=Lilita+One&family=Pacifico&family=Tilt+Neon&family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700",
+  "seniorprom":"family=Kaushan+Script&family=Racing+Sans+One&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600",
   "latenightcall":"family=Yeseva+One&family=Lora:ital,wght@0,400;0,700;1,400&family=Great+Vibes",
   "bookshopcafe":"family=Libre+Caslon+Display&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Mrs+Saint+Delafield",
   "dorothysupper":"family=Pacifico&family=Oswald:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400",
@@ -106,6 +108,8 @@ const FMT_FAMS={
   "braidwood":["Alfa Slab One", "Arvo", "Courier Prime", "Kalam"],
   "starlanes":["Yellowtail", "Barlow Condensed", "Libre Franklin"],
   "axiom":["Michroma", "Nunito", "Caveat"],
+  "nowshowing":["Lilita One", "Pacifico", "Tilt Neon", "Nunito"],
+  "seniorprom":["Kaushan Script", "Racing Sans One", "Archivo"],
   "latenightcall":["Yeseva One", "Lora", "Great Vibes"],
   "bookshopcafe":["Libre Caslon Display", "Lora", "Mrs Saint Delafield"],
   "dorothysupper":["Pacifico", "Oswald", "Lora"],
@@ -190,6 +194,8 @@ const FMT_PHONE={
   "braidwood":{"top":"#3b2414","topInk":"#f4ead2","paper":"#f4ead2","ink":"#2b1d12","soft":"#5e4a36","accent":"#b5452a","tab":"#e2ad35","disp":"'Alfa Slab One',serif","name":"'Arvo',serif","body":"'Arvo',serif","price":"'Arvo',serif","title":"'Alfa Slab One',serif","note":"'Kalam',cursive"},
   "starlanes":{"top":"#1b2340","topInk":"#f6eedd","paper":"#fffaf0","ink":"#1d1b18","soft":"#4c4a44","accent":"#d9572a","tab":"#f0b429","disp":"'Barlow Condensed',sans-serif","name":"'Barlow Condensed',sans-serif","body":"'Libre Franklin',sans-serif","price":"'Barlow Condensed',sans-serif","title":"'Yellowtail',cursive","note":"'Libre Franklin',sans-serif"},
   "axiom":{"top":"#0b1736","topInk":"#f4f7fb","paper":"#f4f7fb","ink":"#0b1736","soft":"#55617a","accent":"#1d6fae","tab":"#f4f7fb","disp":"'Michroma',sans-serif","name":"'Nunito',sans-serif","body":"'Nunito',sans-serif","price":"'Nunito',sans-serif","title":"'Michroma',sans-serif","note":"'Nunito',sans-serif"},
+  "nowshowing":{"top":"#f2357f","topInk":"#fff4dc","paper":"#fffaf0","ink":"#2b1630","soft":"#5b4a57","accent":"#0e7f78","tab":"#ffc42e","disp":"'Lilita One',sans-serif","name":"'Nunito',sans-serif","body":"'Nunito',sans-serif","price":"'Lilita One',sans-serif","title":"'Pacifico',cursive","note":"'Nunito',sans-serif"},
+  "seniorprom":{"top":"#1f3d9b","topInk":"#ffffff","paper":"#ffffff","ink":"#1b2147","soft":"#4a5070","accent":"#d0202e","tab":"#d0202e","disp":"'Racing Sans One',sans-serif","name":"'Archivo',sans-serif","body":"'Archivo',sans-serif","price":"'Archivo',sans-serif","title":"'Kaushan Script',cursive","note":"'Archivo',sans-serif"},
   "latenightcall":{"top":"#172c43","topInk":"#eee7d9","paper":"#eee7d9","ink":"#172c43","soft":"#475963","accent":"#77505c","tab":"#eee7d9","disp":"'Yeseva One',serif","name":"'Yeseva One',serif","body":"'Lora',serif","price":"'Yeseva One',serif","title":"'Yeseva One',serif","note":"'Lora',serif"},
   "bookshopcafe":{"top":"#29523a","topInk":"#f6eddb","paper":"#f6eddb","ink":"#23382c","soft":"#5d6253","accent":"#984729","tab":"#f6eddb","disp":"'Libre Caslon Display',serif","name":"'Libre Caslon Display',serif","body":"'Lora',serif","price":"'Libre Caslon Display',serif","title":"'Libre Caslon Display',serif","note":"'Lora',serif"},
   "dorothysupper":{"top":"#8e273b","topInk":"#fff3e4","paper":"#fff3e4","ink":"#39282c","soft":"#69565a","accent":"#8e273b","tab":"#fff3e4","disp":"'Pacifico',cursive","name":"'Oswald',sans-serif","body":"'Lora',serif","price":"'Oswald',sans-serif","title":"'Pacifico',cursive","note":"'Lora',serif"},
@@ -628,6 +634,48 @@ const FMT_FILMS={
       {h:"Cocktail lounge",en:"Careful, man",items:[
         {k:"White Russian",n:"White Russian",d:"Vodka and coffee liqueur over ice, topped with half-and-half and stirred lazily.",note:"The Dude calls it a Caucasian. “Careful, man, there's a beverage here!”",p:"3.50"},
         {k:"The Stranger's sarsaparilla float",n:"The Stranger's sarsaparilla float",d:"Ice-cold sarsaparilla poured over vanilla ice cream, with a curl of lemon peel.",note:"The Stranger asks the barman for a good one",p:"1.95"}]}]},
+  "There's Something About Mary (1998)":{fmt:"nowshowing",brand:"Senior Prom, 1985",phoneTitle:"There's Something About Mary",tag:"Love is in the hair.",
+    head:["Senior Prom, 1985","Miami, 1998"],tagline:"Love is in the hair.",
+    over:["Cumberland, Rhode Island","Miami, Florida"],
+    neon:["Now showing","Tonight at yours"],
+    board:["Coming up","Magda's dog on speed","Jonathan, the singing narrator","Ted picks up a hitchhiker. Bad idea"],
+    ticket:["Senior Prom 1985","Admit Ted and Mary","Mind the zip"],
+    quote:["I couldn't believe that she knew my name.","Ted Stroehmann"],
+    stills:[["/siIpNYkGwD0VYl1vGTuvKVJko5t.jpg","Is that hair gel?","50% 30%"],["/koJa7oZNpxXGXNspVllW9MdqFTY.jpg","Healy spies on Mary in Miami","50% 40%"],["/vGryShor1iOIT4TuP3AlghYSFwI.jpg","Ted in 1985, braces and all","62% 30%"]],
+    cue:["/51hHkBv4hj31bnaECQcXR0RYkGX.jpg","Prom night, 1985: off to hospital, not the prom","0% 45%"],
+    groups:[
+      {h:"Starters",c:"pink",left:true,items:[
+        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Crumbed risotto balls, mozzarella middle, marinara.",note:"Have you seen my baseball? asks Warren",p:"6.50"},
+        {k:"Pat Healy's architect garlic knots",n:"Pat Healy's architect garlic knots",d:"Garlic butter knots, parmesan, marinara.",note:"Healy spies on Mary in Miami",p:"4.25"}],
+        house:{n:"Magda's cheese ball and crackers",d:"Cheddar and cream cheese rolled in chopped nuts, with crackers.",note:"From next door to Mary's flat.",p:"3.95"}},
+      {h:"Mains",c:"yellow",left:true,items:[
+        {k:"Warren's franks and beans",n:"Warren's franks and beans",d:"Smoky franks, molasses baked beans, slaw.",note:"Ted's prom night zipper disaster",p:"8.95"},
+        {k:"Puffy's body-cast chicken cordon bleu",n:"Puffy's body-cast chicken cordon bleu",d:"Ham and swiss chicken, crumbed, mustard cream.",note:"Puffy ends up in a full body cast",p:"12.95"}]},
+      {h:"Dessert",c:"aqua",items:[
+        {k:"Hair gel meringues with lemon curd",n:"Hair gel meringues with lemon curd",d:"Vanilla meringues, whipped cream, lemon curd.",note:"Mary thinks it's hair gel",p:"5.50"}]},
+      {h:"Drinks",c:"pink",items:[
+        {k:"Senior prom punch",n:"Senior prom punch",d:"Pineapple, ginger beer, rum and lime sorbet.",note:"Mary asks Ted to the prom",p:"4.50"}],
+        house:{n:"Beer. Not lite beer, beer.",d:"Ice cold, by the bottle.",note:"Mary's ad: after 36 holes of golf.",p:"2.75",alc:true}}]},
+  "She's All That (1999)":{fmt:"seniorprom",brand:"The Senior Prom",phoneTitle:"She's All That",tag:"Prom queen in six weeks.",
+    head:["The Senior Prom","Southern California, prom night"],
+    ballot:["Prom Queen Ballot","Prom queen in six weeks","Laney Boggs","Taylor Vaughan","Vote for one"],
+    year:["Senior year so far","Taylor calls Laney vapor and spam","Hacky sack, live on stage","Laney's foghorn"],
+    quote:["Sometimes when you open up to people, you let the bad in with the good.","Zack Siler"],
+    stills:[["/dzuAbWv4zWoCKTY0cer48LsjHPo.jpg","Mack's makeover","60% 30%"],["/aiwW8pUErcFN0XH8UmQv6chcEjE.jpg","Laney paints, Zack watches","50% 40%"],["/gSv4z7FZ0TuiH8dwi1qNiFJBaCd.jpg","Zack and Dean at the beach","60% 35%"],["/yRukbmAGUuCTCIH4Phw2hQpG0tw.jpg","Graduation in a cap and a soccer ball","50% 25%"]],
+    cue:["/675B5ALS1WMXkhptLhRWgKckBcp.jpg","Laney and Zack at the beach","60% 40%"],
+    groups:[
+      {h:"Starters",items:[
+        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"Falafel in pita with tahini.",note:"Laney's falafel job",p:"4.50"},
+        {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"Black bean and cheddar nachos.",note:"Taylor dumps Zack",p:"5.25"}],
+        house:{n:"Simon's breakfast muffins",d:"Warm blueberry muffins.",note:"Laney has his breakfast ready. Get up, Simon.",p:"1.50"}},
+      {h:"Mains",items:[
+        {k:"Hacky sack meatball subs",n:"Hacky sack meatball subs",d:"Meatball and provolone rolls.",note:"The hacky sack act",p:"5.95"},
+        {k:"Beach day fish tacos",n:"Beach day fish tacos",d:"Grilled fish tacos.",note:"Laney says yes to the beach",p:"6.50"}]},
+      {h:"Dessert",items:[
+        {k:"Red dress on the stairs strawberry shortcake",n:"Red dress on the stairs strawberry shortcake",d:"Berry shortcake with cream.",note:"Laney on the stairs",p:"3.75"}]},
+      {h:"Drinks",items:[
+        {k:"Laney's foghorn prom punch",n:"Laney's foghorn prom punch",d:"Pineapple and cranberry punch.",note:"Foghorn for Dean",p:"2.25"}],
+        house:{n:"Sparkling water by the pool",d:"Chilled, with lime.",note:"Not the last dance. The first.",p:"1.00"}}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",sign:"assets/era/slims/slims-sign.webp",motto:"The next best thing<br>to a time machine",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",
     under:"Now playing<br>in every car booth",tag:"Five dollar shakes. Worth every cent.",
@@ -807,7 +855,7 @@ function fmtMarket(f,spec,menu,poster){
 }
 
 const fmtCue=f=>{const c=(movieEdition(f)||{}).cue||f.P;return typeof dietCue==="function"?dietCue(f,c):c};
-const FMT_RENDER={starlanes:fmtStarLanes,neverfeast:fmtNeverFeast,braidwood:fmtBraidwood,axiom:fmtAxiom,latenightcall:fmtLateNightCall,bookshopcafe:fmtBookshopCafe,dorothysupper:fmtDorothySupper,gershwinfolio:fmtGershwinFolio,annietable:fmtAnnieTable,orangefutures:fmtOrangeFutures,getawaysupper:fmtGetawaySupper,spenditall:fmtSpendItAll,mailroomexecutive:fmtMailroomExecutive,powerlunch:fmtPowerLunch,loftsupper:fmtLoftSupper,oceansupper:fmtOceanSupper,toystore:fmtToyStore,bowerybelow:fmtBoweryBelow,eventually:fmtDinnerEventually,unplanned:fmtUnplanned,sullivansupper:fmtSullivanSupper,sixteen:fmtSixteen,messenger:fmtMessenger,sohoaftermidnight:fmtSohoAfterMidnight,lasttrain:fmtLastTrain,negotiation:fmtNegotiation,leon:fmtLeon,cityrun:fmtCityrun,rooftop:fmtRooftop,plazanight:fmtPlazaNight,escape:fmtEscape,shift:fmtShift,acrossglass:fmtAcrossGlass,serpico:fmtSerpico,brooklyn:fmtBrooklyn,southbound:fmtSouthbound,nightshift:fmtNightshift,suite:fmtSuite,maytable:fmtMayTable,pizzatime:fmtPizzaTime,ooze:fmtOoze,teahouse:fmtTeahouse,shipyard:fmtShipyard,moodslime:fmtMoodslime,perdition:fmtPerdition,southie:fmtSouthie,boatdrinks:fmtBoatdrinks,fever:fmtFever,cornerside:fmtCornerside,carmine:fmtCarmine,shorty:fmtShorty,flamingo:fmtFlamingo,highhat:fmtHighhat,village:fmtVillage,collection:fmtCollection,sobelsupper:fmtSobelSupper,prizzis:fmtPrizzis,miami:fmtMiami,afterhours:fmtAfterhours,leftys:fmtLeftys,paraiso:fmtParaiso,delancey:fmtDelancey,palermo:fmtPalermo,tangiers:fmtTangiers,bippy:fmtBippy,corleone2:fmtCorleoneII,maitland:fmtMaitland,roadtrip:fmtRoadtrip,corleone:fmtCorleone,chocolaterie:fmtChocolaterie,kitchenfolio:fmtKitchenFolio,moonlit:fmtMoonstruck,gimbels:fmtGimbels,lair:fmtLair,tonys:fmtTonys,whistle:fmtWhistle,sals:fmtSals,mcdowells:fmtMcdowells,coney:fmtConey,nakatomi:fmtNakatomi,jurassic:fmtJurassic,newsroom:fmtNewsroom,market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a),workorder:(...a)=>fmtWorkOrder(...a),nero:(...a)=>fmtNero(...a),carte:(...a)=>fmtCarte(...a),feast:(...a)=>fmtFeast(...a),truck:(...a)=>fmtTruck(...a),check:(...a)=>fmtCheck(...a),lous:(...a)=>fmtLous(...a),pad:(...a)=>fmtPad(...a)};
+const FMT_RENDER={nowshowing:fmtNowShowing,seniorprom:fmtSeniorProm,starlanes:fmtStarLanes,neverfeast:fmtNeverFeast,braidwood:fmtBraidwood,axiom:fmtAxiom,latenightcall:fmtLateNightCall,bookshopcafe:fmtBookshopCafe,dorothysupper:fmtDorothySupper,gershwinfolio:fmtGershwinFolio,annietable:fmtAnnieTable,orangefutures:fmtOrangeFutures,getawaysupper:fmtGetawaySupper,spenditall:fmtSpendItAll,mailroomexecutive:fmtMailroomExecutive,powerlunch:fmtPowerLunch,loftsupper:fmtLoftSupper,oceansupper:fmtOceanSupper,toystore:fmtToyStore,bowerybelow:fmtBoweryBelow,eventually:fmtDinnerEventually,unplanned:fmtUnplanned,sullivansupper:fmtSullivanSupper,sixteen:fmtSixteen,messenger:fmtMessenger,sohoaftermidnight:fmtSohoAfterMidnight,lasttrain:fmtLastTrain,negotiation:fmtNegotiation,leon:fmtLeon,cityrun:fmtCityrun,rooftop:fmtRooftop,plazanight:fmtPlazaNight,escape:fmtEscape,shift:fmtShift,acrossglass:fmtAcrossGlass,serpico:fmtSerpico,brooklyn:fmtBrooklyn,southbound:fmtSouthbound,nightshift:fmtNightshift,suite:fmtSuite,maytable:fmtMayTable,pizzatime:fmtPizzaTime,ooze:fmtOoze,teahouse:fmtTeahouse,shipyard:fmtShipyard,moodslime:fmtMoodslime,perdition:fmtPerdition,southie:fmtSouthie,boatdrinks:fmtBoatdrinks,fever:fmtFever,cornerside:fmtCornerside,carmine:fmtCarmine,shorty:fmtShorty,flamingo:fmtFlamingo,highhat:fmtHighhat,village:fmtVillage,collection:fmtCollection,sobelsupper:fmtSobelSupper,prizzis:fmtPrizzis,miami:fmtMiami,afterhours:fmtAfterhours,leftys:fmtLeftys,paraiso:fmtParaiso,delancey:fmtDelancey,palermo:fmtPalermo,tangiers:fmtTangiers,bippy:fmtBippy,corleone2:fmtCorleoneII,maitland:fmtMaitland,roadtrip:fmtRoadtrip,corleone:fmtCorleone,chocolaterie:fmtChocolaterie,kitchenfolio:fmtKitchenFolio,moonlit:fmtMoonstruck,gimbels:fmtGimbels,lair:fmtLair,tonys:fmtTonys,whistle:fmtWhistle,sals:fmtSals,mcdowells:fmtMcdowells,coney:fmtConey,nakatomi:fmtNakatomi,jurassic:fmtJurassic,newsroom:fmtNewsroom,market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a),workorder:(...a)=>fmtWorkOrder(...a),nero:(...a)=>fmtNero(...a),carte:(...a)=>fmtCarte(...a),feast:(...a)=>fmtFeast(...a),truck:(...a)=>fmtTruck(...a),check:(...a)=>fmtCheck(...a),lous:(...a)=>fmtLous(...a),pad:(...a)=>fmtPad(...a)};
 function fmtHTML(f,spec,menu){const h=FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f));return typeof dietHTML==="function"?dietHTML(f,h):h}
 
 /* phone view: a clean recipe index under the printed menu. Always Starters, Mains, Sweets, Drinks,
@@ -2251,6 +2299,146 @@ function fmtStarLanes(f,spec,menu,poster){
     ${arrows(15)}${foot}</div>`],fmtStarLanes.sheet);
 }
 fmtStarLanes.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
+function fmtNowShowing(f,spec,menu,poster){
+  /* There's Something About Mary: the 1985 prom Ted never got to, and Miami in 1998 where he finds Mary again.
+     One-off menu after Josh's approved Canva look: hot pink, sunshine yellow and aqua on cream, a neon Now showing sign round the poster,
+     a zig-zag quote card, real TMDB stills. Palm, sun, bulbs and sparkles are drawn trim only */
+  const PINK="#f2357f",YEL="#ffc42e",AQUA="#17b3a6",DEEP="#0c7a73",CREAM="#fff4dc",CARD="#fffaf0",INK="#2b1630",SOFT="#5b4a57",PLUM="#7a1d4a";
+  const DISP="font-family:'Lilita One',sans-serif;font-weight:400",SCRIPT="font-family:'Pacifico',cursive;font-weight:400",NEON="font-family:'Tilt Neon',sans-serif;font-weight:400",BODY="font-family:'Nunito',sans-serif";
+  const COL={pink:PINK,yellow:YEL,aqua:AQUA};
+  const dry=typeof dryNow==="function"&&dryNow(f),veg=typeof DIET!=="undefined"&&DIET.veg;
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
+  const img=(p,size,alt,css)=>`<img crossorigin="anonymous" src="${TMDB_IMG}${size}${ESC(p)}" alt="${ESC(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;${css||""}">`;
+  /* drawn trim only: a four-point sparkle, two crossed lozenges */
+  const spark=(sz,c,css)=>`<span aria-hidden="true" style="position:relative;display:inline-block;flex:none;width:${sz}px;height:${sz}px;${css||""}">${[0,90].map(a=>`<span style="position:absolute;left:50%;top:0;width:${Math.round(sz*.3)}px;height:${sz}px;margin-left:-${Math.round(sz*.15)}px;border-radius:50%;background:${c};transform:rotate(${a}deg)"></span>`).join("")}</span>`;
+  /* drawn trim only: a row of marquee bulbs */
+  const bulbs=(n,c)=>`<div aria-hidden="true" style="display:flex;justify-content:space-between;padding:0 10px">${Array.from({length:n},()=>`<span style="width:11px;height:11px;border-radius:50%;background:${c};box-shadow:0 0 6px ${c}"></span>`).join("")}</div>`;
+  const price=p=>`<span style="${DISP};font-size:20px;line-height:1;color:${PINK};flex:none">${ESC(p)}</span>`;
+  const row=(name,p,film,food)=>`<div style="padding:7px 0 8px;border-top:2px dashed rgba(23,179,166,.45)"><div style="display:flex;align-items:baseline;gap:8px"><span style="${BODY};font-weight:800;font-size:18px;line-height:1.12;color:${INK};flex:0 1 auto;min-width:0">${ESC(name)}</span><span aria-hidden="true" style="flex:1;min-width:12px;border-bottom:2px dotted rgba(43,22,48,.3);transform:translateY(-4px)"></span>${price(p)}</div><div style="${BODY};font-weight:700;font-style:italic;font-size:15px;line-height:1.28;color:${DEEP};margin-top:3px">${ESC(film)}</div><div style="${BODY};font-size:15px;line-height:1.28;color:${SOFT};margin-top:1px">${ESC(food)}</div></div>`;
+  const dish=x=>{const it=pick(x.k);return row(it.label||x.n||x.k,x.p,x.note,it.desc||x.d||"")};
+  const house=h=>!h||(h.alc&&dry)||(h.meat&&veg)?"":row(h.n,h.p,h.note,h.d);
+  const tab=g=>{const c=COL[g.c]||PINK,ink=g.c==="yellow"?INK:"#fff";return `<div style="display:flex;align-items:center;margin-bottom:2px"><span style="${DISP};font-size:25px;line-height:1;letter-spacing:.05em;text-transform:uppercase;color:${ink};background:${c};padding:6px 16px 5px;border-radius:4px;box-shadow:3px 3px 0 ${PLUM};white-space:nowrap">${ESC(g.h)}</span><span aria-hidden="true" style="flex:1;height:4px;margin-left:12px;border-radius:2px;background:${c}"></span></div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column">${tab(g)}${g.items.map(dish).join("")}${house(g.house)}</div>`;
+  const SP=`<div aria-hidden="true" style="flex:1 1 0;min-height:10px"></div>`;
+  const t=spec.ticket;
+  const ticket=`<div style="position:relative;display:flex;background:#fff;border:2px solid ${PINK};border-radius:8px;box-shadow:3px 3px 0 ${YEL};transform:rotate(-1.5deg);margin:4px 6px 2px 4px">
+    <div style="flex:1;min-width:0;padding:9px 14px 9px 16px"><div style="${DISP};font-size:22px;line-height:1.05;color:${PINK}">${ESC(t[0])}</div><div style="${BODY};font-weight:800;font-size:15px;line-height:1.3;color:${INK};margin-top:3px">${ESC(t[1])}</div><div style="${BODY};font-weight:700;font-style:italic;font-size:14px;line-height:1.3;color:${DEEP}">${ESC(t[2])}</div></div>
+    <div style="flex:none;width:74px;border-left:2px dashed ${PINK};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px"><span style="${DISP};font-size:13px;letter-spacing:.12em;color:${SOFT}">ADMIT</span><span style="${DISP};font-size:30px;line-height:1;color:${AQUA}">2</span></div></div>`;
+  const board=`<div style="background:#fff;border:3px solid ${AQUA};border-radius:10px;padding:9px 12px 10px;box-shadow:4px 4px 0 ${YEL}">
+      <div style="${DISP};font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:${PINK}">${ESC(spec.board[0])}</div>
+      ${spec.board.slice(1).map(w=>`<div style="${DISP};font-size:15px;line-height:1.25;letter-spacing:.05em;text-transform:uppercase;color:${INK};border-top:1px solid rgba(43,22,48,.18);padding-top:4px;margin-top:4px">${ESC(w)}</div>`).join("")}</div>`;
+  const colA=`<div class="fx-panel" style="min-width:0;min-height:0;display:flex;flex-direction:column">${spec.groups.filter(g=>g.left).map(sect).join(SP)}</div>`;
+  const colB=`<div class="fx-panel" style="min-width:0;min-height:0;display:flex;flex-direction:column">${spec.groups.filter(g=>!g.left).map(sect).join(SP)}${SP}${board}${SP}${ticket}</div>`;
+  const card=`<div style="flex:1;min-width:0;min-height:0;background:${CARD};border:3px solid ${PINK};border-radius:18px;padding:16px 22px 16px;box-shadow:7px 7px 0 ${AQUA};display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 28px">${colA}${colB}</div>`;
+  /* the neon sign: the poster in a pink marquee with bulbs, a sun and a palm behind it */
+  const palm=`<div aria-hidden="true" style="position:absolute;left:0;top:0;width:300px;height:200px">
+    <span style="position:absolute;left:24px;top:30px;width:140px;height:140px;border-radius:50%;background:${YEL}"></span>
+    ${[[186,58,10],[182,90,7],[177,122,4]].map(([x,y,r])=>`<span style="position:absolute;left:${x}px;top:${y}px;width:20px;height:40px;border-radius:8px;background:${DEEP};transform:rotate(${r}deg)"></span>`).join("")}
+    ${[[200,84],[168,104],[140,96],[-92,62],[-40,96],[-12,104],[18,84]].map(([a,w],i)=>`<span style="position:absolute;left:198px;top:50px;width:${w}px;height:22px;margin-top:-11px;border-radius:50% 60% 60% 50%/50% 50% 50% 50%;background:${i%2?AQUA:"#12a395"};transform-origin:0 50%;transform:rotate(${a}deg)"></span>`).join("")}
+    <span style="position:absolute;left:189px;top:42px;width:18px;height:18px;border-radius:50%;background:${DEEP}"></span></div>`;
+  const neon=`<div style="position:relative;flex:none;width:300px;display:flex;flex-direction:column;gap:16px">${palm}
+    <div style="position:relative;margin-top:118px;background:${PINK};border-radius:22px;padding:10px 12px 12px;box-shadow:0 0 0 4px #fff,0 0 0 7px ${PINK},0 0 24px rgba(242,53,127,.55)">
+      ${bulbs(10,YEL)}
+      <div style="${NEON};font-size:34px;line-height:1.1;text-align:center;color:#fff;text-shadow:0 0 8px #fff,0 0 16px ${YEL};margin:6px 0 8px">${ESC(spec.neon[0])}</div>
+      <div style="background:#fff;padding:6px;border-radius:6px">${fmtPosterImg(f,poster,240,360,"border-radius:3px;margin:0 auto")}</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:9px 0 6px">${spark(16,YEL)}<span style="${SCRIPT};font-size:22px;line-height:1.3;color:#fff">${ESC(spec.neon[1])}</span>${spark(16,YEL)}</div>
+      ${bulbs(10,YEL)}</div></div>`;
+  /* the quote on a zig-zag card: pink teeth round a white card */
+  const teeth=(side,n)=>{const h=side==="top"||side==="bottom";return `<div aria-hidden="true" style="position:absolute;${side}:-7px;${h?"left:6px;right:6px;height:14px":"top:6px;bottom:6px;width:14px"};display:flex;flex-direction:${h?"row":"column"};justify-content:space-between">${Array.from({length:n},()=>`<span style="flex:none;width:14px;height:14px;background:${PINK};transform:rotate(45deg)"></span>`).join("")}</div>`};
+  const q=spec.quote;
+  const quote=`<div style="position:relative;flex:none;margin:8px 8px 6px">
+    ${teeth("top",11)}${teeth("bottom",11)}${teeth("left",8)}${teeth("right",8)}
+    <div style="position:relative;background:#fff;border:4px solid ${PINK};padding:12px 16px 10px;text-align:center">
+      <div style="${DISP};font-size:44px;line-height:.6;color:${AQUA};text-align:left;height:20px">&ldquo;</div>
+      <div style="${DISP};font-size:25px;line-height:1.15;color:${PINK}">${ESC(q[0])}</div>
+      <div style="${SCRIPT};font-size:20px;line-height:1.5;color:${DEEP};margin-top:6px">${ESC(q[1])}</div></div>
+    ${spark(26,YEL,"position:absolute;left:-12px;top:-14px")}${spark(22,PINK,"position:absolute;right:-10px;bottom:-12px")}</div>`;
+  const photo=(s,h,i)=>`<figure style="margin:0;flex:none"><div style="background:#fff;padding:5px;border-radius:4px;box-shadow:4px 4px 0 ${[PINK,YEL,AQUA][i%3]}"><div style="height:${h}px;overflow:hidden;background:#222;border-radius:2px">${img(s[0],"w780",s[1]+", still from the film",s[2]?"object-position:"+s[2]:"")}</div></div><figcaption style="${BODY};font-weight:700;font-style:italic;font-size:14px;line-height:1.25;color:${INK};margin-top:6px">${ESC(s[1])}</figcaption></figure>`;
+  const right=`<div style="flex:none;width:228px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">${spec.stills.map((s,i)=>photo(s,120,i)).join("")}${quote}</div>`;
+  const head=`<div style="flex:none;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:22px 30px 4px">
+    <div style="min-width:0"><div style="${DISP};font-size:62px;line-height:1;color:${PINK};text-shadow:4px 4px 0 ${YEL};white-space:nowrap">${ESC(spec.head[0])} <span style="color:${AQUA};text-shadow:4px 4px 0 ${YEL}">/</span> ${ESC(spec.head[1])}</div>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:6px"><span style="${SCRIPT};font-size:36px;line-height:1.35;color:${AQUA}">${ESC(spec.tagline)}</span>${spark(22,PINK)}${spark(15,YEL)}</div></div>
+    <div style="flex:none;text-align:right;padding-bottom:12px">${spec.over.map((o,i)=>`<div style="${DISP};font-size:${i?22:18}px;letter-spacing:.08em;text-transform:uppercase;color:${i?PINK:DEEP};line-height:1.25">${ESC(o)}</div>`).join("")}<div style="${BODY};font-weight:800;font-size:15px;color:${SOFT};margin-top:3px">${ESC(f.title)} (${ESC(f.year)})</div></div></div>`;
+  const cue=`<div style="flex:none;background:${AQUA};padding:10px 30px;display:flex;align-items:center;gap:18px;border-top:4px solid ${YEL}">
+    <div style="flex:none;width:118px;height:76px;border:3px solid #fff;border-radius:6px;overflow:hidden;background:#222">${img(spec.cue[0],"w780",spec.cue[1]+", still from the film",spec.cue[2]?"object-position:"+spec.cue[2]:"")}</div>
+    <div style="min-width:0;flex:1"><div style="${BODY};font-weight:800;font-size:19px;line-height:1.3;color:#fff"><span style="${DISP};font-weight:400;color:${YEL};letter-spacing:.04em">Showtime:</span> ${ESC(fmtCue(f)).replace(/ (\S+)$/,"&nbsp;$1")}</div><div style="${BODY};font-style:italic;font-weight:700;font-size:14px;color:#e6fffb;margin-top:3px">${ESC(spec.cue[1])}</div></div>
+    ${spark(26,YEL)}${spark(18,"#fff")}${spark(26,PINK)}</div>`;
+  return fmtFaces([`<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:${CREAM};overflow:hidden;color:${INK};display:flex;flex-direction:column">
+    ${head}
+    <div style="flex:1;min-height:0;display:flex;gap:22px;padding:14px 26px 18px">${card}${neon}${right}</div>
+    ${cue}</div>`],fmtNowShowing.sheet);
+}
+fmtNowShowing.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
+function fmtSeniorProm(f,spec,menu,poster){
+  /* She's All That: the senior prom at Zack and Laney's Southern California high school. One-off menu after Josh's approved Canva look:
+     red, white and royal blue with silver stars, a brush-script header in a white swoosh, a white menu panel with red italic heads,
+     a quote banner and a red showtime strip, round the poster and real TMDB stills. Stars, swooshes and dots are drawn trim only */
+  const RED="#d0202e",BLUE="#1f3d9b",NAVY="#162a6e",SILV="#c3c7cf",INK="#1b2147",SOFT="#4a5070";
+  const SCRIPT="font-family:'Kaushan Script',cursive;font-weight:400",HEAD="font-family:'Racing Sans One',sans-serif;font-weight:400",BODY="font-family:'Archivo',sans-serif";
+  const dry=typeof dryNow==="function"&&dryNow(f),veg=typeof DIET!=="undefined"&&DIET.veg;
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
+  const img=(p,size,alt,css)=>`<img crossorigin="anonymous" src="${TMDB_IMG}${size}${ESC(p)}" alt="${ESC(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;${css||""}">`;
+  /* drawn trim only: a five-point star from three border triangles, built at 100px and scaled */
+  const star=(sz,c,css)=>{const k=sz/100;return `<span aria-hidden="true" style="position:relative;display:inline-block;flex:none;width:${sz}px;height:${sz}px;${css||""}"><span style="position:absolute;left:0;top:0;width:100px;height:100px;transform-origin:0 0;transform:scale(${k.toFixed(3)})">
+    <span style="position:absolute;left:0;top:38px;width:0;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:35px solid ${c};transform:rotate(35deg)"></span>
+    <span style="position:absolute;left:0;top:38px;width:0;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:35px solid ${c};transform:rotate(-35deg)"></span>
+    <span style="position:absolute;left:31px;top:2px;width:0;height:0;border-left:19px solid transparent;border-right:19px solid transparent;border-bottom:44px solid ${c}"></span></span></span>`};
+  const dots=(c,o)=>`background-image:radial-gradient(${c} 1.6px,transparent 2.1px);background-size:8px 8px;opacity:${o}`;
+  const price=p=>`<span style="${BODY};font-weight:800;font-size:18px;line-height:1.1;color:${RED};flex:none">${ESC(p)}</span>`;
+  const row=(name,p,film,food)=>`<div style="display:grid;grid-template-columns:minmax(0,37fr) minmax(0,63fr) auto;gap:14px;align-items:baseline;padding:3px 0 4px">
+    <span style="${BODY};font-weight:800;font-size:17.5px;line-height:1.15;color:${BLUE};min-width:0">${ESC(name)}</span>
+    <div style="${BODY};font-size:15.5px;line-height:1.28;color:${INK}"><span style="font-weight:600;font-style:italic;color:${RED}">${ESC(String(film).replace(/[.!?]?$/,"."))}</span> ${ESC(food)}</div>${price(p)}</div>`;
+  const dish=x=>{const it=pick(x.k);return row(it.label||x.n||x.k,x.p,x.note,it.desc||x.d||"")};
+  const house=h=>!h||(h.alc&&dry)||(h.meat&&veg)?"":row(h.n,h.p,h.note,h.d);
+  const rule=`<div aria-hidden="true" style="display:flex;align-items:center;gap:12px;margin:0"><span style="flex:1;height:2px;background:${BLUE}"></span>${star(18,SILV)}<span style="flex:1;height:2px;background:${BLUE}"></span></div>`;
+  const sect=g=>`<div><div style="${HEAD};font-size:28px;line-height:1.05;color:${RED};text-transform:uppercase;letter-spacing:.02em;text-shadow:2px 2px 0 rgba(22,42,110,.18)">${ESC(g.h)}</div>${g.items.map(dish).join("")}${house(g.house)}</div>`;
+  const SP=`<div aria-hidden="true" style="flex:1 1 0;min-height:4px"></div>`;
+  const panel=`<div class="fx-panel" style="flex:1;min-height:0;background:#fff;border:3px solid ${BLUE};outline:1.5px solid ${BLUE};outline-offset:-9px;border-radius:6px;padding:12px 22px 10px;display:flex;flex-direction:column;box-shadow:6px 6px 0 rgba(22,42,110,.25)">${spec.groups.map(sect).join(SP+rule+SP)}</div>`;
+  const q=spec.quote;
+  const banner=`<div style="position:relative;flex:none;background:linear-gradient(180deg,#f4f5f8,#d6d9e0 55%,#eceef2);border:3px solid ${BLUE};border-radius:6px;padding:10px 26px 9px;text-align:center;box-shadow:inset 0 0 0 3px #fff,4px 4px 0 ${RED}">
+    <div aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:70px;${dots(BLUE,.35)}"></div><div aria-hidden="true" style="position:absolute;right:0;top:0;bottom:0;width:70px;${dots(RED,.35)}"></div>
+    <div style="position:relative;${BODY};font-weight:600;font-style:italic;font-size:20px;line-height:1.3;color:${NAVY}">&ldquo;${ESC(q[0])}&rdquo;</div>
+    <div style="position:relative;${SCRIPT};font-size:24px;line-height:1.3;color:${RED}">${ESC(q[1])}</div></div>`;
+  const centre=`<div style="flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;gap:14px">${panel}${banner}</div>`;
+  const b=spec.ballot,box=`<span aria-hidden="true" style="flex:none;width:17px;height:17px;border:2px solid ${BLUE};border-radius:2px;background:#fff"></span>`;
+  const ballot=`<div style="background:#fff;border:2px solid ${RED};border-radius:4px;padding:9px 13px 10px;box-shadow:4px 4px 0 ${BLUE}">
+    <div style="${HEAD};font-size:20px;line-height:1.05;color:${RED};text-transform:uppercase">${ESC(b[0])}</div>
+    <div style="${BODY};font-weight:700;font-style:italic;font-size:14px;color:${BLUE};margin-top:2px">${ESC(b[1])}</div>
+    ${[b[2],b[3]].map(n=>`<div style="display:flex;align-items:center;gap:9px;margin-top:7px">${box}<span style="${BODY};font-weight:800;font-size:16px;color:${INK}">${ESC(n)}</span></div>`).join("")}
+    <div style="${BODY};font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:${SOFT};margin-top:7px">${ESC(b[4])}</div></div>`;
+  const y=spec.year;
+  const year=`<div style="background:${BLUE};border-radius:4px;padding:9px 13px 10px;color:#fff">
+    <div style="display:flex;align-items:center;gap:8px">${star(18,SILV)}<span style="${HEAD};font-size:18px;line-height:1.1;text-transform:uppercase">${ESC(y[0])}</span></div>
+    ${y.slice(1).map(w=>`<div style="${BODY};font-weight:600;font-size:14.5px;line-height:1.3;border-top:1px solid rgba(255,255,255,.3);padding-top:5px;margin-top:5px">${ESC(w)}</div>`).join("")}</div>`;
+  const left=`<div style="flex:none;width:234px;display:flex;flex-direction:column;justify-content:space-between;gap:14px">
+    <div style="background:#fff;padding:7px;border:3px solid ${BLUE};box-shadow:5px 5px 0 ${RED}">${fmtPosterImg(f,poster,214,321)}</div>${ballot}${year}</div>`;
+  const photo=(s,h,i)=>`<figure style="margin:0;flex:none"><div style="background:#fff;padding:5px;border:2px solid ${i%2?RED:BLUE};box-shadow:3px 3px 0 ${SILV}"><div style="height:${h}px;overflow:hidden;background:#222">${img(s[0],"w780",s[1]+", still from the film",s[2]?"object-position:"+s[2]:"")}</div></div><figcaption style="${BODY};font-weight:600;font-style:italic;font-size:13.5px;line-height:1.25;color:${NAVY};margin-top:5px;background:#fff;padding:3px 7px;border-radius:3px">${ESC(s[1])}</figcaption></figure>`;
+  const right=`<div style="flex:none;width:214px;display:flex;flex-direction:column;justify-content:space-between;gap:10px">${spec.stills.map((s,i)=>photo(s,100,i)).join("")}</div>`;
+  const head=`<div style="position:relative;flex:none;height:128px">
+    <div aria-hidden="true" style="position:absolute;left:280px;top:8px;width:720px;height:108px;border-radius:50%;background:#fff;border:6px solid ${BLUE};box-shadow:0 0 0 5px ${RED},6px 9px 0 5px rgba(22,42,110,.3);transform:rotate(-3deg)"></div>
+    <div style="position:absolute;left:280px;top:-4px;width:720px;text-align:center;transform:rotate(-3deg)">
+      <div style="${SCRIPT};font-size:70px;line-height:1.25;color:${RED};text-shadow:3px 3px 0 #fff,5px 5px 0 ${NAVY}">${ESC(spec.head[0])}</div>
+      <div style="${BODY};font-weight:800;font-style:italic;font-size:22px;line-height:1;color:${BLUE};margin-top:-8px">${ESC(spec.head[1])}</div></div>
+    ${star(50,SILV,"position:absolute;left:226px;top:8px")}${star(36,"#fff","position:absolute;left:1030px;top:66px")}${star(56,SILV,"position:absolute;left:1046px;top:2px")}${star(28,SILV,"position:absolute;left:250px;top:88px")}
+    <div style="position:absolute;left:22px;top:22px;width:200px"><div style="${HEAD};font-size:17px;letter-spacing:.06em;color:#fff;text-transform:uppercase">Tonight only</div><div style="${BODY};font-weight:800;font-size:22px;line-height:1.15;color:#fff;margin-top:4px">${ESC(f.title)}</div><div style="${BODY};font-weight:600;font-size:15px;color:#e3e8ff">${ESC(f.year)}</div></div></div>`;
+  const cue=`<div style="position:relative;flex:none;background:${RED};padding:9px 30px;display:flex;align-items:center;gap:18px;border-top:4px solid #fff;box-shadow:0 -4px 0 ${BLUE}">
+    <div style="flex:none;width:112px;height:70px;border:3px solid #fff;overflow:hidden;background:#222">${img(spec.cue[0],"w780",spec.cue[1]+", still from the film",spec.cue[2]?"object-position:"+spec.cue[2]:"")}</div>
+    <div style="min-width:0;flex:1"><div style="${BODY};font-weight:700;font-size:19px;line-height:1.3;color:#fff"><span style="font-weight:800;font-style:italic">Showtime:</span> ${ESC(fmtCue(f)).replace(/ (\S+)$/,"&nbsp;$1")}</div><div style="${BODY};font-style:italic;font-size:14px;color:#ffe3e5;margin-top:2px">${ESC(spec.cue[1])}</div></div>
+    ${star(30,"#fff")}${star(22,SILV)}${star(30,"#fff")}</div>`;
+  /* a pale silver paper edge round the artwork, like the Canva proof's white border. The PDF fills the rest of the sheet from the colour it reads
+     about 25px in (edgeColour), so the edge is that wide or the sheet prints red or grey round the menu */
+  return fmtFaces([`<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:#f1f2f5;overflow:hidden;color:${INK};padding:26px">
+    <div style="position:relative;height:100%;overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(22,42,110,.25)">
+    <div aria-hidden="true" style="position:absolute;left:-200px;top:-260px;width:820px;height:520px;background:${BLUE};transform:rotate(-14deg)"></div>
+    <div aria-hidden="true" style="position:absolute;left:-200px;top:-260px;width:820px;height:520px;transform:rotate(-14deg);${dots("#fff",.18)}"></div>
+    <div aria-hidden="true" style="position:absolute;right:-240px;bottom:-200px;width:900px;height:420px;background:${RED};transform:rotate(-14deg)"></div>
+    <div aria-hidden="true" style="position:absolute;right:-240px;bottom:-200px;width:900px;height:420px;transform:rotate(-14deg);${dots("#fff",.2)}"></div>
+    <div aria-hidden="true" style="position:absolute;right:-120px;top:-60px;width:520px;height:120px;background:${RED};transform:rotate(-14deg)"></div>
+    <div style="position:relative;height:100%;display:flex;flex-direction:column">${head}
+      <div style="flex:1;min-height:0;display:flex;gap:20px;padding:4px 22px 14px">${left}${centre}${right}</div>
+      ${cue}</div></div></div>`],fmtSeniorProm.sheet);
+}
+fmtSeniorProm.sheet={"w":1344,"h":960,"faces":["Menu"],"mm":[355.6,254.0]};
 
 function fmtNeverFeast(f,spec,menu,poster){
   /* The Neverland Feast (Hook): the Lost Boys' table in Neverland. Timber and rope trim, a parchment map card with the island on top,

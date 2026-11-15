@@ -5,7 +5,11 @@ FILM = {"id": "She's All That (1999)", "theme": "teen",
         "T": "A new comedy that proves there's more to attraction than meets the eye.",
         "D": "A dumped high school king bets he can turn the school's quiet art student into prom queen in six weeks.",
         "P": "Serve the fish tacos when Laney goes to the beach with Zack."}
-FORMAT = {"format": "prom", "era": "1990s", "tone": "playful"}
+# Own menu 15 Nov: hand-built "seniorprom" in formats.js (Josh's approved Canva look), so the film comes off the shared prom layout.
+FORMAT = {"format": "prom", "era": "1990s", "tone": "playful", "own": "seniorprom"}
+# word swaps for the hand-built menu's food lines (dietSpec, dietHTML)
+DIET_TEXT = {"veg": [["Hacky sack meatball subs", "Hacky sack eggplant parmigiana subs"], ["Beach day fish tacos", "Beach day black bean tacos"],
+                     ["Meatball and provolone rolls.", "Crumbed eggplant and provolone rolls."], ["Grilled fish tacos.", "Black bean tacos with slaw."]]}
 PALETTE = {"dark": "#1d1f2e", "accent": "#e0567a"}
 SERIES = []
 FLAVOUR = {"venue": "The Senior Prom", "sign": "Southern California, prom night",

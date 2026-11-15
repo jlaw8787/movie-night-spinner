@@ -1610,3 +1610,7 @@ Round 1 of the menus running as three writer agents (Josh chose agent teams), ea
 - Held back on main only: There's Something About Mary (1998) and She's All That (1999), removed from the live data (films, keyed data, stills, series, rollout, per-film files). Copy says 998 films (index.html meta x3, support.html). docs/STORE-LISTING.md still says 1,000.
 - Both are being rebuilt as own menus from Josh's approved Canva redesigns (Canva designs DAHa-Dj2qqU and DAHa-JbZm8g; PNGs in wip/next100/canva/) in worktree next100/own. When they pass: merge into feature/match-night, then into main, put both films back (merging restores them; check the removal commit doesn't win), set copy back to 1,000, deploy on Josh's go.
 - Live checked: index says 998 films, search index 998 films, The Flintstones card data live with RocDonald's. Sheet rev 34: Live layout filled for rows 902 to 1001 except 917 and 991.
+
+## 15 Nov, 7:20pm: all 1,000 live (own menus for There's Something About Mary and She's All That)
+
+- Josh: "Deploy when ready". Own menus (fmtNowShowing, fmtSeniorProm in formats.js, from his Canva redesigns) merged into main; the two held-back films put back; copy back to 1,000. Independent check: no fact issues; Mary 3.6 (in Match night), She's All That 3.4 (live, not in Match night; checker felt the stars and stripes read a bit Fourth of July).
