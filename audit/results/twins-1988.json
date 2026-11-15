@@ -1,0 +1,58 @@
+{
+ "id": "Twins (1988)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 1",
+ "facts": [
+  {
+   "text": "The window booth at Roadside Cafe.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The still above the caption is the twins in matching suits against the sky (the poster art), not a cafe booth. No source shows the twins at this cafe at all: Arroyo Seco is a filming location for the road trip and no page says what happens there.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Twins1988",
+   "fix": "Julius and Vincent, matching suits.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Overheard at the counter: the fuel injector in the Cadillac boot.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "Vincent finds the prototype fuel injector in the boot of the Cadillac he steals in Los Angeles. Nobody talks about it at a cafe counter; the stock 'Overheard at the counter' frame turns a prop into dialogue in the wrong place.",
+   "source": "https://en.wikipedia.org/wiki/Twins_(1988_film)",
+   "fix": "In the stolen Cadillac's boot: one fuel injector.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Twins_(1988_film)",
+  "https://en.wikiquote.org/wiki/Twins_(1988_film)",
+  "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Twins1988",
+  "https://www.sites.google.com/site/80sfilmlocations/Film-List/twins-1988"
+ ],
+ "vibe": {
+  "world": 2,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "The quotes are real and well used (six fathers, the milkshake lab, I'll be back, Thanksgiving dinner), but the venue is an unnamed cafe from a location list with no scene in the film, and the same poster art prints on two faces.",
+  "missing": [
+   "Julius bailing Vincent out of jail in LA",
+   "Linda and Marnie, and Julius's first date",
+   "Whispering Pines, the art colony where they find their mother",
+   "Julius protecting Vincent from the Klane brothers' loan sharks",
+   "Webster and the $5 million showdown in Houston"
+  ],
+  "ideas": [
+   "Replace the invented Roadside Cafe with a place the film actually shows on the road trip or in LA, keeping the diner layout",
+   "Swap the second hero still for a different TMDB still so the poster does not print twice",
+   "Swap the front's 'Only the waitress can tell them apart.' for the real tagline nod 'Only their mother can tell them apart.'",
+   "Swap 'Bottomless shoestring fries' for something from Julius's island upbringing"
+  ],
+  "overall": 3.0,
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "Bruce Almighty (2003)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 1",
+ "facts": [
+  {
+   "text": "OVERHEARD AT THE BOOTH",
+   "full": "OVERHEARD AT THE BOOTH / Parting your soup is not a miracle, Bruce, it's a magic trick. / God",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The line is God's, but he says it near the end in the white warehouse room while mopping the floor, not at the diner booth. At the diner God only sits opposite Bruce and asks 'Having fun?'.",
+   "source": "https://nofilmschool.com/bruce-almighty-quotes",
+   "fix": "OVERHEARD WHILE MOPPING",
+   "fix_note": {
+    "text": "Parting your soup is not a miracle, Bruce, it's a magic trick.",
+    "by": "God",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Overheard at the counter: Evan's teleprompter cha-cha.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "Evan's cha-cha gibberish happens live on air at the TV studio when Bruce works the teleprompter, not at a diner counter.",
+   "source": "https://en.wikiquote.org/wiki/Bruce_Almighty",
+   "fix": "On the TV over the counter: Evan's cha-cha.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The booth where Bruce parts his tomato soup.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The still above the caption shows a shirtless Bruce against the sky, not the diner booth, so the caption describes a different scene from the picture.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/BruceAlmighty",
+   "fix": "Bruce Almighty, trying out the powers.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bruce_Almighty",
+  "https://en.wikiquote.org/wiki/Bruce_Almighty",
+  "https://tvtropes.org/pmwiki/pmwiki.php/Film/BruceAlmighty",
+  "https://nofilmschool.com/bruce-almighty-quotes"
+ ],
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "verdict": "The soup parting and the Sabres land, but the diner is an invented name, the prime rib hangs on one teleprompter word, and the house pickles print a 5.95 price under 'Free with every miracle'.",
+  "missing": [
+   "Bruce pulling the moon closer for Grace (the lake date)",
+   "Bruce's dog Sam using the toilet",
+   "Grace's grilled cheese he leaves after one bite",
+   "Smite me, O mighty smiter (only an unprinted wink)",
+   "God sitting across the diner booth: 'Having fun?'",
+   "The prayers coming in as emails, all answered Yes"
+  ],
+  "ideas": [
+   "Swap 'Evan's prime rib roast with horseradish cream' for Grace's grilled cheese with the tomato soup as a blue plate, and move the soup starter to something tied to the moon date",
+   "Fix the house pickles so the price does not print against 'Free with every miracle', or change the note",
+   "Swap the diner check line 'Not a magic trick' for 'Having fun? (God, across the booth)'",
+   "Swap the footer 'Cash only.' for 'Smite me, O mighty smiter.'"
+  ],
+  "overall": 3.2,
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "Revenge of the Nerds (1984)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 1",
+ "facts": [
+  {
+   "text": "ALPHA BETAS",
+   "full": "ROUND 1 2 3 4 T / TRI-LAMBS 3 2 1 2 8 / ALPHA BETAS 0 0 0 0 0",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "The scoreboard prints the Alpha Betas scoreless in every round of the Greek Games. The nerds win overall, but the sources describe a contest the nerds win on ingenuity, not a shutout, and the numbers are really the layout's dish count. As printed it reads as a game score the film never shows.",
+   "source": "https://en.wikipedia.org/wiki/Revenge_of_the_Nerds",
+   "fix": "Relabel the rows so they are not a score: ROUND to STALL, TRI-LAMBS to PIES SOLD, ALPHA BETAS to KISSING BOOTH",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Revenge_of_the_Nerds",
+  "https://en.wikiquote.org/wiki/Revenge_of_the_Nerds"
+ ],
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "verdict": "The Homecoming carnival stand works and the lines are real (Ogre's stolen pie, two sevens beats a frush, Gilbert's speech), but the hot stand is filler and the stock stadium copy (section map, hawkers) has nothing to do with Adams College.",
+  "missing": [
+   "Booger's belching contest at the Greek Games",
+   "Lamar's javelin throw",
+   "The Tri-Lambs' stage show, 'Lambda Lambda Lambda!'",
+   "NERDS GET OUT! on the trashed house",
+   "Twenty-seven rejection letters (only a wink)"
+  ],
+  "ideas": [
+   "Swap 'Sonoran hot dogs' and its filler note for a Booger belching-contest dish",
+   "Swap the stock 'Hawkers in every aisle. Catch it if you can.' for 'Eat a pie for charity!'",
+   "Rename the section map tiles (Lower bowl, Club level) to the Greek Games events: kissing booth, pie stall, tricycle race, stage show"
+  ],
+  "overall": 3.6,
+  "flat": false,
+  "done": false
+ }
+}

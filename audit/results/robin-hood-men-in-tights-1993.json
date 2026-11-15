@@ -1,0 +1,52 @@
+{
+ "id": "Robin Hood: Men in Tights (1993)",
+ "checked": "2026-11-15",
+ "by": "independent checker, next 100 round 1",
+ "facts": [
+  {
+   "text": "FROM THE HOST",
+   "full": "FROM THE HOST / Because, unlike some other Robin Hoods, I can speak with an English accent. / Robin of Loxley",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The quote is Robin's real line, said to Prince John when Robin barges into John's banquet to warn him about the taxes. Prince John hosts that banquet; Robin is the uninvited guest, so 'From the host' signs it to the wrong side of the table.",
+   "source": "https://en.wikiquote.org/wiki/Robin_Hood:_Men_in_Tights",
+   "fix": "FROM THE GATECRASHER",
+   "fix_note": {
+    "text": "Because, unlike some other Robin Hoods, I can speak with an English accent.",
+    "by": "Robin of Loxley",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "sources": [
+  "https://en.wikipedia.org/wiki/Robin_Hood:_Men_in_Tights",
+  "https://en.wikiquote.org/wiki/Robin_Hood:_Men_in_Tights",
+  "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/RobinHoodMenInTights"
+ ],
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "verdict": "A proper Mel Brooks feast (toll rolls, Loxley and Bagel lox, the wild pig, Latrine's eyeball omelette, sacramental juice), let down a little by the same poster art printed twice and a stock price.",
+  "missing": [
+   "That's a wild bore! (the punchline, pointing at Prince John)",
+   "Latrine: it used to be Shithouse (kept off for a family menu, but her name joke is the gag)",
+   "Maid Marian's Everlast chastity belt",
+   "Ahchoo: it worked in Blazing Saddles",
+   "I have a mole? (Prince John)"
+  ],
+  "ideas": [
+   "Swap the pork note 'A wild boar? No, that's a wild pig.' for 'Not a wild boar. That's a wild pig.' and put 'That's a wild bore' on the place card for Prince John",
+   "Swap the bottom still for a different TMDB still so the poster art does not print twice",
+   "Swap the place card line 'Seated by Maid Marian' for 'Key to Marian's Everlast lock, held'"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false
+ }
+}
