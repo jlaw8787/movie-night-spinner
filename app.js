@@ -2874,8 +2874,9 @@ function renderShop(){
   shelfRest=[];
   if(!dishesReady)ensureDishes().then(()=>{if(!$("viewShop").hidden)renderShop()});
   const q=$("shopSearch").value.trim().toLowerCase(),dec=$("shopDecade").value,unseen=$("shopUnwatched").checked;
-  const ok=f=>(!q||filmScore(q,f)>=0)&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))&&onSvc(f,svc);
-  const list=FILMS.filter(ok);
+  const ok=f=>(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))&&onSvc(f,svc);
+  const found=q?findFilms(q,FILMS.filter(ok)):null;if(q)ensureSearch();
+  const list=found?found.map(x=>x.f):FILMS.filter(ok);
   const rows=[];
   const fresh=list.filter(isNew).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));
   const rented=hist.map(id=>list.find(f=>f.id===id)).filter(Boolean);
@@ -2886,14 +2887,16 @@ function renderShop(){
   const top=!q?topShelf(list):[];if(top.length)rows.push([member.name?`${member.name}'s shelf`:"Your top shelf",top,"Everything you gave 4 or 5 stars."]);
   if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
-  if(q&&list.length)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
+  /* search: titles first, then films on theme, then films that only mention it in the story or on the menu */
+  if(q&&list.length){const t=found.filter(x=>x.tier<4).map(x=>x.f),m=found.filter(x=>x.tier>=4&&x.tier<5).map(x=>x.f),w=found.filter(x=>x.tier>=5).map(x=>x.f);
+    const lab=found.find(x=>x.tier===4);if(t.length)rows.push([m.length||w.length?"Titles":"Search results",t]);if(m.length)rows.push([lab&&lab.why&&!/:/.test(lab.why)?lab.why:"On theme",m]);if(w.length)rows.push([t.length||m.length?"Also mentions it":"Search results",w,t.length||m.length?"In the story, a famous line or on the menu.":""])}
   else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>aisleOf(f)===n&&(kidsMode||!isLate(f))).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
   if(!q&&!kidsMode){const ls=list.filter(isLate).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. The proper scares, grown-ups only.","lateshow"])}
   if(!q&&peekSeason){const c=cal.find(c=>c.s.id===peekSeason&&!c.on&&c.next);if(c)rows.unshift(...seasonRows(c.s,list,c.next).map(r=>{r[2]=(r[2]||"").replace(/^Back on /,"Sneak look. Back on ");return r}))}
   renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
   const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}" data-name="${ESC(n)}" data-count="${r.length}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span><b class="sr">, </b>${r.length}<b class="sr"> tapes</b></span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.webp" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf" data-k="${shelfRest.push(/lateshow/.test(cls||"")?[]:r.slice(SHELF_FIRST))-1}">${(/lateshow/.test(cls||"")?[]:r.slice(0,SHELF_FIRST)).map(tapeHTML).join("")}</div></section>`;
-  $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">${q?`No tapes match "${ESC(q)}". Check the spelling, or clear the filters.`:"Nothing on the shelves matches that. Try another title or clear the filters."}</p>`;
+  $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">${q?`No tapes match "${ESC(q)}".${tryHTML(q)||" Check the spelling, or clear the filters."}`:"Nothing on the shelves matches that. Try another title or clear the filters."}</p>`;
   fillShelvesLater();buildAisleNav();
 }
 function tvHTML(f,still){
@@ -3161,6 +3164,8 @@ $("viewWheelBtn").addEventListener("click",()=>goView("wheel"));
 $("viewShopBtn").addEventListener("click",()=>goView("shop"));
 $("viewCraveBtn").addEventListener("click",()=>goView("crave"));
 ["shopSearch","shopDecade","shopUnwatched"].forEach(id=>$(id).addEventListener(id==="shopSearch"?"input":"change",renderShop));
+document.addEventListener("rd-search",()=>{if(!$("viewShop").hidden&&$("shopSearch").value.trim())renderShop()});
+$("shopAisles").addEventListener("click",e=>{const b=e.target.closest("[data-try]");if(!b)return;const s=$("shopSearch");s.value=b.dataset.try;s.dispatchEvent(new Event("input"))});
 $("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const id=b.dataset.season;
   if(!b.classList.contains("on")){peekSeason=peekSeason===id?"":id;$("shopSearch").value="";renderShop();if(!peekSeason)return}
   const el=document.getElementById("season-"+id);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
@@ -4020,7 +4025,7 @@ function warmOffline(reg){
   const u=FILMS.map(filmFile);
   if(typeof FMT_VER!=="undefined")for(const k in FMT_VER)u.push("formats/"+k+".js?v="+FMT_VER[k]);
   if(window.LIB_VER)for(const k in LIB_VER)u.push("menu-formats/"+k+".js?v="+LIB_VER[k]);
-  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
+  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.search)u.push("data/search-index.json?v="+DATA_V.search);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
   reg.active.postMessage({warm:u});
   /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
   ["assets/lib/html2canvas-1.4.1.min.js","assets/lib/jspdf-2.5.1.umd.min.js"].forEach(x=>{try{fetch(x).catch(()=>{})}catch(e){}});
@@ -4059,6 +4064,22 @@ function wordHit(w,toks){const r=ROMAN[w]||w;let fuzzy=false;for(const t of toks
 function filmScore(q,f){const Q=searchNorm(q);if(!Q)return 0;const T=searchNorm(f.title+" "+f.year),toks=T.split(" ");
   if(searchNorm(f.title)===Q||T===Q)return 0;if(T.startsWith(Q))return 0.5;if((" "+T).includes(" "+Q))return 1;if(Q.length>=2&&!Q.includes(" ")&&T.replace(/ /g,"").startsWith(Q))return 1;
   let worst=1,any=0;for(const w of Q.split(" ")){const h=wordHit(w,toks);if(!h){if(SEARCH_STOP.has(w))continue;return -1}any++;worst=Math.max(worst,h+1)}return any?worst:-1}
+/* wider search (search.js, data/search-index.json): finds films by meaning, story, venue, quote and dish words as well as the title.
+   The title search above still answers first and on its own until the index has loaded (or if it can't load) */
+let _sxCtx=null;
+function sxCtx(){if(!_sxCtx){const tw=new Set(FILMS.flatMap(f=>searchNorm(f.title).split(" ")));
+  _sxCtx={titleScore:filmScore,titleHas:(f,w)=>{const t=searchNorm(f.title+" "+f.year).split(" ");return searchNorm(w).split(" ").every(x=>wordHit(x,t)===1)},
+   titleWord:w=>tw.has(w),titleWords:()=>[...tw],theme:f=>f.theme,aisle:aisleOf,
+   season:id=>{const s=SEASONS.find(x=>x.id===id);if(!s)return new Set();const l=s.rows?s.rows(FILMS).flatMap(r=>r[1]):FILMS.filter(f=>{try{return s.has(f)}catch(e){return false}});return new Set(l.map(f=>f.id))}}}
+ return _sxCtx}
+function ensureSearch(){if(typeof RDSearch==="undefined")return Promise.resolve(false);if(RDSearch.ready())return Promise.resolve(true);
+  return RDSearch.load("data/search-index.json"+(window.DATA_V&&DATA_V.search?"?v="+DATA_V.search:"")).then(()=>{document.dispatchEvent(new Event("rd-search"));return true}).catch(()=>false)}
+/* ranked hits: [{f,tier,why}], tier under 4 is a title match */
+function findFilms(q,list){if(typeof RDSearch!=="undefined"&&RDSearch.ready())return RDSearch.search(q,list,sxCtx());
+  return list.map(f=>({f,tier:filmScore(q,f),why:""})).filter(x=>x.tier>=0).sort((a,b)=>a.tier-b.tier||(+a.f.year)-(+b.f.year)||a.f.title.localeCompare(b.f.title))}
+/* nothing found: a few close words to tap instead of an empty page */
+function searchTry(q){return typeof RDSearch!=="undefined"&&RDSearch.ready()?RDSearch.suggest(q,sxCtx(),5):[]}
+const tryHTML=q=>{const t=searchTry(q);return t.length?` Try <span class="try-list">${t.map(w=>`<button type="button" class="try-w" data-try="${ESC(w)}">${ESC(w)}</button>`).join("")}</span>`:""};
 /* ================= ease of use: quick find, saved menus, settings, clear and reset ================= */
 /* open any film straight from its title, the way a stub does */
 function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()}
@@ -4066,11 +4087,13 @@ function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="m
   inp.addEventListener("focus",()=>{if(innerWidth<760)setTimeout(()=>{const t=inp.getBoundingClientRect().top;if(t>innerHeight*0.3)scrollBy({top:t-70,behavior:reduce?"auto":"smooth"})},250)});
  const norm=s=>s.toLocaleLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
  const close=()=>{box.hidden=true;box.innerHTML="";hits=[];at=-1;inp.setAttribute("aria-expanded","false")};
- const draw=()=>{box.innerHTML=hits.length?hits.map((f,i)=>`<button type="button" role="option" data-i="${i}" aria-selected="${i===at}"><span>${ESC(f.title)}</span><small>${ESC(f.year)}</small></button>`).join(""):'<p class="none">No film by that name. Try fewer letters.</p>';box.hidden=false;inp.setAttribute("aria-expanded","true")};
- inp.addEventListener("input",()=>{const q=norm(inp.value);if(q.length<2){close();return}
-   const scored=[];
-   for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;const sc=filmScore(inp.value,f);if(sc>=0)scored.push([sc,f])}
-   scored.sort((a,b)=>a[0]-b[0]||(+a[1].year)-(+b[1].year)||a[1].title.localeCompare(b[1].title));hits=scored.slice(0,7).map(x=>x[1]);at=hits.length?0:-1;draw()});
+ let whys=[];
+ const draw=()=>{box.innerHTML=hits.length?hits.map((f,i)=>`<button type="button" role="option" data-i="${i}" aria-selected="${i===at}"><span>${ESC(f.title)}${whys[i]?`<em>${ESC(whys[i])}</em>`:""}</span><small>${ESC(f.year)}</small></button>`).join(""):`<p class="none">Nothing on the shelves for that.${tryHTML(inp.value)||" Try fewer letters."}</p>`;box.hidden=false;inp.setAttribute("aria-expanded","true")};
+ const run=()=>{const q=norm(inp.value);if(q.length<2){close();return}
+   const r=findFilms(inp.value,kidsMode?FILMS.filter(isKidSafe):FILMS).slice(0,8);hits=r.map(x=>x.f);whys=r.map(x=>x.tier>=4?x.why:"");at=hits.length?0:-1;draw()};
+ inp.addEventListener("input",()=>{run();ensureSearch()});
+ document.addEventListener("rd-search",()=>{if(!box.hidden||norm(inp.value).length>=2)run()});
+ box.addEventListener("click",e=>{const b=e.target.closest("[data-try]");if(!b)return;e.stopPropagation();inp.value=b.dataset.try;run();inp.focus()});
  inp.addEventListener("keydown",e=>{if(box.hidden)return;
    if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(!hits.length)return;at=(at+(e.key==="ArrowDown"?1:-1)+hits.length)%hits.length;draw()}
    else if(e.key==="Enter"){e.preventDefault();if(hits[at]){const f=hits[at];inp.value="";close();inp.blur();openFilm(f)}}

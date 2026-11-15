@@ -1410,3 +1410,33 @@ Checks: npm test pass. planCard (awaits fmtLoad, /tmp/rd/plan.cjs, not in repo) 
 Deployed on Josh's go: Publish site run 43663809115 passed (the first run, 43663645879, failed at GitHub's deploy step; re-running it fails on a duplicate artifact, so start a fresh run instead). Changed site files match main byte for byte live.
 
 Josh's queue after this: rebuild the four TMNT menus (independent review this morning: 1990 8, II 7.5, III 6.5, Mutant Mayhem 7; II needs the ooze canister and Japanese-style art from real stills), a finger-flick wheel where swipe strength sets the spin, and wider search (mafia also finds gangster, mob, crime family).
+
+## 15 Nov, 11:40am to 1:30pm: wider film search (main, NOT deployed; waiting on Josh's go)
+
+Before: the finder ("Find a film") and the video store box only matched title and year; the candy bar box matches dish names; the checklist is plain title text. Nothing searched genre, aisle, venue, quote, story or dishes.
+
+New:
+- data/search-terms.json: 109 term groups Josh approved (genres, eras, settings, moods, occasions). Each group: say (what people type), strong rules (g TMDB genre, th menu theme, ai aisle, yr years, tone, season holiday shelf, need/not genre limits, with = a story hit in that genre counts as strong) and text (story keywords, a weaker match). Edit this file to tweak, then rebuild.
+- scripts/build-search.cjs builds data/search-index.json (455 KB, about 190 KB gzipped): per film genres, tone, story words (plot line, tagline, venue, sign, quote and speaker, winks, prop) and menu words (dish names, house lines). build-data.cjs now runs it and stamps DATA_V.search, so `node scripts/build-data.cjs` keeps it current. tests/search.test.cjs fails if the stamp is stale.
+- search.js (loaded before app.js): ranking is title (old filmScore, unchanged) first, then a strong group match, then story keywords, then menu keywords. Plurals and typos (swapped letters count as one: mafai) match. A near-miss or part-word title (Annie Hall for halloween, The Mummy for mum) drops below the real matches. Multi-word queries must meet every part (80s horror). No match: RDSearch.suggest gives tap-to-try words.
+- app.js: findFilms/ensureSearch/searchTry helpers after filmScore. The index loads on the first keystroke; title search works on its own until then (and if it can't load). Finder shows up to 8 with the reason under the title ("Mob and gangsters", "In the film: Shirley", "On the menu: pizza"). Video store results split into Titles, the group name (or "On theme"), and "Also mentions it". Both empty states show try chips. Finder placeholder now "Title, genre, mood or food".
+- Offline: sw.js FILM_RX keeps search-index.json in the films store; the warm-offline list includes it. The app build copies search.js and the index (checked in www, then removed).
+
+Before and after:
+- mafia: 0 before (nothing), 29 after (The Godfather, Analyze This, The Freshman, The Godfather Part II)
+- gangster: 0 before (nothing), 29 after (The Godfather, Analyze This, The Freshman, The Godfather Part II)
+- cop: 4 before (Beverly Hills Cop, Beverly Hills Cop II), 105 after (Beverly Hills Cop, Beverly Hills Cop II, Kindergarten Cop, Beverly Hills Cop III)
+- space: 3 before (Spaceballs, Space Jam), 74 after (Space Jam, Office Space, The Empire Strikes Back, Flash Gordon)
+- Christmas: 13 before (Christmas with the Kranks, White Christmas), 68 after (Christmas with the Kranks, White Christmas, A Christmas Story, National Lampoon's Christmas Vacation)
+- scary: 0 before (nothing), 92 after (The Conjuring 2, The Exorcist, Insidious, A Nightmare on Elm Street 3: Dream Warriors)
+- date night: 0 before (nothing), 143 after (13 Going on 30, The 40-Year-Old Virgin, 50 First Dates, About Time)
+- 80s: 0 before (nothing), 145 after (48 Hrs., After Hours, Airplane!, Aliens)
+- pizza: 1 before (Mystic Pizza), 80 after (Mystic Pizza, Back to the Future Part II, Bad Boys, Beverly Hills Cop)
+
+Also: gangsters and mafai give the same 29 as mafia; Shirley finds Airplane! first; dude finds Lebowski.
+
+Checks: npm test pass (new tests/search.test.cjs, 24 ms a query). check-browser pass at 390 and 1280. A live run at 390 and 1280: finder and store results, try chips, no sideways scroll, no page errors. check-phone-fit (12 films) pass. check-store-taps pass. The service worker only registers on https, so the offline path was checked by code (same store as dish-names), not live.
+
+Not covered: cast and directors (no cast data). Within a tier, order is strength then A to Z (no popularity data), so date night starts with 13 Going on 30.
+
+Josh's queue after this: deploy on his go, then the four TMNT menu rebuilds and the finger-flick wheel.

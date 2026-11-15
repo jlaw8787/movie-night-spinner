@@ -39,7 +39,11 @@ if(n||f||W.REEL_APP_BUILD)document.write('<script src="app-art.js?v=d308a24c"><\
 .find-list button{display:flex;justify-content:space-between;gap:10px;width:100%;min-height:44px;padding:8px 12px;border:0;border-bottom:1px solid rgba(231,192,105,.15);background:none;color:#f4e6c8;font:inherit;text-align:left;cursor:pointer}
 .find-list button:last-child{border-bottom:0}.find-list button small{opacity:.65}
 .find-list button:hover,.find-list button[aria-selected=true]{background:rgba(231,192,105,.16)}
-.find-list .none{padding:10px 12px;opacity:.75}
+.find-list .none{padding:10px 12px;color:rgba(244,230,200,.8)}
+.find-list button span em{display:block;font-style:normal;font-size:12px;opacity:.6;margin-top:1px}
+.try-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-style:normal}
+.try-w{min-height:36px;padding:4px 12px;border-radius:18px;border:1px solid rgba(231,192,105,.55);background:rgba(231,192,105,.1);color:#f4e6c8;font:inherit;font-size:14px;cursor:pointer}
+.try-w:hover,.try-w:focus-visible{background:rgba(231,192,105,.25)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .hist-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .hist-clear{background:none;border:0;color:var(--soft,#cdbfa6);font:500 12px var(--f-body);letter-spacing:.1em;text-transform:uppercase;text-decoration:underline;cursor:pointer;min-height:36px;padding:0 4px}
@@ -2964,7 +2968,7 @@ html,body{overflow-x:clip}
     <div class="shop-head">
       <h2 class="shop-sign gv-head"><span class="sr-only">Galaxy Video</span><small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
       <div class="shop-tools">
-        <input type="search" id="shopSearch" placeholder="Ask the counter" aria-label="Search titles">
+        <input type="search" id="shopSearch" placeholder="Ask the counter" aria-label="Search films by title, genre, mood, era or food">
         <details class="shop-filt" id="shopFilt" open><summary>Filters<span class="sf-n" id="shopFiltN"></span></summary><div class="sf-in">
         <select id="shopDecade" aria-label="Decade"><option value="">Any decade</option></select>
         <select id="shopSvc" aria-label="Streaming on"><option value="">Any service</option></select>
@@ -3025,9 +3029,9 @@ html,body{overflow-x:clip}
         </div>
         <div class="field find">
           <label for="findFilm">Find a film</label>
-          <input type="search" id="findFilm" placeholder="Type a title" autocomplete="off" aria-controls="findList" aria-describedby="findHint">
+          <input type="search" id="findFilm" placeholder="Title, genre, mood or food" autocomplete="off" aria-controls="findList" aria-describedby="findHint">
           <div class="find-list" id="findList" role="listbox" aria-label="Matching films" hidden></div>
-          <span class="sr" id="findHint">Pick a match to open its menu</span>
+          <span class="sr" id="findHint">Search by title, genre, mood, era, a famous line or a dish. Pick a match to open its menu</span>
         </div>
         <button class="toggle df-btn" id="dfBtn" type="button">Double feature</button>
         <button class="toggle df-btn" id="mysBtn" type="button">Mystery night</button>
@@ -3113,10 +3117,11 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=b07b947b" defer></script>
+<script src="films.js?v=81d488f5" defer></script>
 <script src="assets/fonts/fonts.js?v=11978182" defer></script>
 <script src="formats-core.js?v=0a170225" defer></script>
-<script src="app.js?v=20715703" defer></script>
+<script src="search.js?v=db80a47a" defer></script>
+<script src="app.js?v=66628a3e" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
