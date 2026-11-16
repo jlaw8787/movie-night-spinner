@@ -2634,6 +2634,8 @@ function openSlip(f,go){
     member.rentals=(member.rentals||0)+1;
     const aisle=aisleOf(f);if(aisle)member.aisles[aisle]=(member.aisles[aisle]||0)+1;
     member.out=[{id:f.id,due:due.getTime()},...(member.out||[]).filter(r=>r.id!==f.id)].slice(0,6);
+    /* the rental history behind My card, Rentals (newest first, last 100) */
+    member.log=[{id:f.id,at:Date.now()},...(member.log||[])].slice(0,100);
     saveMember();renderMember();buzz(30);
     close();go();
   });
@@ -2762,6 +2764,7 @@ function applyRemote(d){
   member.stars=Object.assign({},mine.stars||{},d.member.stars||{});
   member.aisles=d.member.aisles||mine.aisles||{};
   member.stamps=Object.assign({},d.member.stamps||{},mine.stamps||{});
+  const logKey=new Set();member.log=[...(d.member.log||[]),...(mine.log||[])].filter(r=>r&&r.id&&!logKey.has(r.id+r.at)&&logKey.add(r.id+r.at)).sort((x,y)=>y.at-x.at).slice(0,100);
   const outIds=new Set();member.out=[...(d.member.out||[]),...(mine.out||[])].filter(r=>!outIds.has(r.id)&&outIds.add(r.id)).slice(0,6);
   if(!member.name&&mine.name)member.name=mine.name;
   (d.watched||[]).forEach(id=>{if(FILMS.some(f=>f.id===id))watched.add(id)});

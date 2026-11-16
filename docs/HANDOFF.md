@@ -1773,3 +1773,21 @@ Josh's calls (picked from options): a Final Cut switch on the Match night start 
 - Files: supabase/final-cut.sql (migration final_cut), supabase/tests/final-cut-test.sql (7 groups, PASS 16 Nov 9:30pm on the live project inside a transaction that always raises, checked after: nothing kept), scripts/check-final-cut.cjs (browser: pass the phone with undo, shortlist, wiped round, head to head, reload; room on two phones with a cut-nothing round, a split and the same film on both; Final Cut duel on two signed-in phones; switch off still reveals on the first shared keep; no page errors). tests/match.test.cjs has engine tests.
 - Checks: npm test pass, check-final-cut pass, check-friends pass, check-browser pass. build-data rerun.
 - To go live, in order: (1) apply supabase/final-cut.sql as migration final_cut (safe with the live page: old calls still work); (2) redeploy rd-alerts (verify_jwt off) for the duel_turn email line; (3) merge to main, Publish site.
+
+## 16 Nov, 9:45pm: My card stat pages (branch feat/card-stats, NOT deployed)
+
+Josh asked for each stats tile on My card to open a page (ratings, films seen and so on). No database change.
+- friends.js: tiles are buttons (data-stat). statPage(body, key) draws inside the My card tab with "Back to My card" (focus returns to the tile). sub holds the open page; switching tabs clears it.
+  - Rentals: count and next tier, Out on rental, Recent rentals (member.log), a bar per aisle.
+  - Films seen: every ticked film A to Z with your stars, a Find box from 7 films.
+  - Top shelf: rated films grouped 5 stars down to 1.
+  - Friends: each friend, streak, matches on the board, Send a duel, Manage friends.
+  - Duels on the board: opens the Duels tab.
+  - Match rate: finished duels (matched, wheel picked, waiting to spin) with Open the menu.
+  - Best streak: friends by streak with bars.
+  - Late fees: overdue tapes with days and fee, Return; if none, what's out.
+  - Menu buttons close the panel and open the film (openRentalMenu).
+- app.js: new member.log, the last 100 rentals {id, at}, written on every rental and merged on sync (applyRemote). Older rentals only had a count, so Recent rentals fills from the next rental on. privacy.html says so.
+- CSS: button.acct-stat (with a "More" cue), acct-back, acct-fr rows with poster thumbs, acct-bars, acct-find.
+- Checks: scripts/check-card-stats.cjs (seeded member, every page, Back focus, search, Return, Duels tile, Menu opens the film, no page errors) pass. npm test, check-friends, check-browser pass. build-data rerun.
+- To go live: merge to main, Publish site. If feat/final-cut lands first, friends.js and index.html merge by hand (different sections).

@@ -86,14 +86,14 @@
     const el = box.querySelector('#acctTabs');
     el.hidden = !inn();
     el.innerHTML = T.map(([k, l, n]) => `<button type="button" role="tab" data-tab="${k}" aria-selected="${tab === k}">${l}${n ? `<span class="acct-n" aria-label="${n} new">${n > 9 ? '9+' : n}</span>` : ''}</button>`).join('');
-    el.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { tab = b.dataset.tab; draw() });
+    el.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { tab = b.dataset.tab; sub = null; draw() });
   }
   function draw() {
     if (!box) return;
     head(); tabs();
     const body = box.querySelector('#acctBody');
     if (!inn()) return guest(body);
-    if (tab === 'card') return card(body);
+    if (tab === 'card') return sub ? statPage(body, sub) : card(body);
     if (tab === 'duels') return duels(body);
     if (tab === 'inbox') return inbox(body);
     if (tab === 'friends') return friends(body);
@@ -178,7 +178,7 @@
       const left = T.next ? T.next.at - T.n : 0;
       const dash = v => loaded ? v : '<span class="acct-dim">..</span>';
       const rate = s.finished ? `${Math.round(s.matchedN / s.finished * 100)}%` : '0%';
-      const tile = (n, l, sub) => `<li class="acct-stat"><b>${n}</b><span>${l}</span>${sub ? `<small>${sub}</small>` : ''}</li>`;
+      const tile = (n, l, sm, key) => `<li><button type="button" class="acct-stat" data-stat="${key}" aria-label="${ESC(l)}: ${String(n).replace(/<[^>]+>/g, '')}. Open the page"><b>${n}</b><span>${l}</span>${sm ? `<small>${sm}</small>` : ''}<i class="acct-more" aria-hidden="true">More</i></button></li>`;
       body.innerHTML = `${cardArt(false)}
         <div class="acct-tierbox t-${T.k}"><div class="acct-tierrow"><b>${ESC(T.name)}</b><small>${T.n} rental${T.n === 1 ? '' : 's'}</small></div>
           <div class="acct-bar" role="progressbar" aria-label="Progress to ${ESC(T.next ? T.next.name : 'the top')}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>
@@ -186,14 +186,14 @@
         ${fresh.length ? `<p class="acct-hint">New stamp${fresh.length > 1 ? 's' : ''}: ${fresh.map(ESC).join(', ')}.</p>` : ''}
         <h3 class="acct-h">Your stats</h3>
         <ul class="acct-stats">
-          ${tile(s.rentals, 'Rentals', s.fav ? `Usually in ${ESC(s.fav)}` : '')}
-          ${tile(s.seen, 'Films seen')}
-          ${tile(s.top, 'On your top shelf', `${s.rated} rated`)}
-          ${tile(dash(s.friends), 'Friends')}
-          ${tile(dash(s.duels), 'Duels on the board', 'Last 30 days')}
-          ${tile(dash(rate), 'Match rate', loaded ? `${s.matchedN} of ${s.finished} finished` : '')}
-          ${tile(dash(s.streak), 'Best streak', 'Matches in a row')}
-          ${tile(s.late ? `$${s.owe}.00` : '$0.00', 'Late fees', s.late ? `${s.late} tape${s.late > 1 ? 's' : ''} overdue` : 'Good member')}
+          ${tile(s.rentals, 'Rentals', s.fav ? `Usually in ${ESC(s.fav)}` : '', 'rentals')}
+          ${tile(s.seen, 'Films seen', '', 'seen')}
+          ${tile(s.top, 'On your top shelf', `${s.rated} rated`, 'top')}
+          ${tile(dash(s.friends), 'Friends', '', 'friends')}
+          ${tile(dash(s.duels), 'Duels on the board', 'Last 30 days', 'duels')}
+          ${tile(dash(rate), 'Match rate', loaded ? `${s.matchedN} of ${s.finished} finished` : '', 'rate')}
+          ${tile(dash(s.streak), 'Best streak', 'Matches in a row', 'streak')}
+          ${tile(s.late ? `$${s.owe}.00` : '$0.00', 'Late fees', s.late ? `${s.late} tape${s.late > 1 ? 's' : ''} overdue` : 'Good member', 'late')}
         </ul>
         ${s.out.length ? `<h3 class="acct-h">Out on rental</h3><ul class="acct-cards">${s.out.map(({ r, f }) => {
           const over = r.due < Date.now();
@@ -203,10 +203,76 @@
         <div class="acct-acts"><button type="button" class="acct-ghost" id="acctShop">Go to Galaxy Video</button></div>`;
       body.querySelectorAll('[data-rent]').forEach(b => b.onclick = () => { const f = FILMS.find(x => x.id === b.dataset.rent); if (!f) return; dismissModal(box); if (typeof openRentalMenu === 'function') openRentalMenu(f) });
       body.querySelector('#acctShop').onclick = () => { dismissModal(box); const b = document.getElementById('viewShopBtn'); if (b) b.click() };
+      body.querySelectorAll('[data-stat]').forEach(b => b.onclick = () => {
+        if (b.dataset.stat === 'duels') { tab = 'duels'; sub = null; return draw() }
+        sub = b.dataset.stat; statBack = b.dataset.stat; draw(); const top = box && box.querySelector('.acct-body'); if (top) top.scrollTop = 0;
+      });
+      if (statBack) { const b = body.querySelector(`[data-stat="${statBack}"]`); if (loaded) statBack = null; if (b) b.focus() }
     };
     paint(false);
     try { const [r] = await Promise.all([rpc('duels_list'), loadFriends()]); if (r && r.status === 'ok') DUELS = r.duels || [] } catch (e) { }
     paint(true);
+  }
+
+  /* ---------- My card, stat pages: each tile on the stats board opens the list behind its number ---------- */
+  let sub = null, statBack = null;
+  const filmOf = id => typeof FILMS !== 'undefined' ? FILMS.find(x => x.id === id) : null;
+  const thumb = f => typeof TMDB_POSTERS !== 'undefined' && f && TMDB_POSTERS[f.id] ? `<img class="acct-th" src="${TMDB_IMG}w92${TMDB_POSTERS[f.id]}" alt="" loading="lazy" crossorigin="anonymous" onerror="this.remove()">` : '<span class="acct-th" aria-hidden="true"></span>';
+  const starsOf = id => { const n = (member && member.stars && member.stars[id]) || 0; return n ? `<span class="acct-stars" aria-label="${n} star${n > 1 ? 's' : ''}">${'&#9733;'.repeat(n)}<i>${'&#9733;'.repeat(5 - n)}</i></span>` : '' };
+  const day = t => new Date(t).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+  const filmRow = (f, sm, extra) => `<li class="acct-fr">${thumb(f)}<div class="acct-frt"><b>${ESC(f.title)} <span>${f.year}</span></b>${sm ? `<small>${sm}</small>` : ''}</div><div class="acct-frb">${extra || ''}<button type="button" class="acct-go sm" data-film="${ESC(f.id)}">Menu</button></div></li>`;
+  async function statPage(body, key) {
+    if (!frLoaded || !DUELS.length) { try { const [r] = await Promise.all([rpc('duels_list'), frLoaded ? 0 : loadFriends()]); if (r && r.status === 'ok') DUELS = r.duels || [] } catch (e) { } }
+    if (!box || tab !== 'card' || sub !== key) return;
+    const s = stats(), m = member || {}, seenSet = typeof watched !== 'undefined' ? watched : new Set();
+    const top = (h, k) => `<button type="button" class="acct-back" id="acctBack">Back to My card</button><h3 class="acct-h acct-sh">${h}</h3>${k ? `<p class="acct-small acct-sk">${k}</p>` : ''}`;
+    const done = (DUELS || []).filter(d => d.turn === 'done' || d.turn === 'decide');
+    let html = '';
+    if (key === 'rentals') {
+      const aisles = Object.entries(m.aisles || {}).sort((a, b) => b[1] - a[1]), most = aisles.length ? aisles[0][1] : 1;
+      const log = (m.log || []).map(r => ({ r, f: filmOf(r.id) })).filter(x => x.f);
+      html = top(`${s.rentals} rental${s.rentals === 1 ? '' : 's'}`, tier().next ? `${tier().next.at - s.rentals} more to ${ESC(tier().next.name)}.` : 'Top of the shop.')
+        + (s.out.length ? `<h4 class="acct-h4">Out on rental</h4><ul class="acct-frs">${s.out.map(({ r, f }) => filmRow(f, `${r.due < Date.now() ? '<span class="acct-fee">Overdue</span> ' : ''}Due ${ESC(day(r.due))}`)).join('')}</ul>` : '')
+        + `<h4 class="acct-h4">Recent rentals</h4>${log.length ? `<ul class="acct-frs">${log.slice(0, 30).map(({ r, f }) => filmRow(f, `Rented ${ESC(day(r.at))}`)).join('')}</ul>` : `<p class="acct-small">Your rentals show up here from your next one on. Older ones only kept a count.</p>`}`
+        + (aisles.length ? `<h4 class="acct-h4">Your aisles</h4><ul class="acct-bars">${aisles.map(([a, n]) => `<li><span>${ESC(a)}</span><i style="--w:${Math.round(n / most * 100)}%"></i><b>${n}</b></li>`).join('')}</ul>` : '');
+    } else if (key === 'seen') {
+      const list = [...seenSet].map(filmOf).filter(Boolean).sort((a, b) => a.title.localeCompare(b.title));
+      html = top(`${list.length} film${list.length === 1 ? '' : 's'} seen`, list.length ? 'Every film you\'ve ticked off, with your stars.' : 'Tick a film as seen from its menu and it lands here.')
+        + (list.length > 6 ? `<input type="search" class="acct-find" id="acctFind" placeholder="Find a film" aria-label="Find a film you've seen" autocomplete="off">` : '')
+        + `<ul class="acct-frs" id="acctList">${list.map(f => filmRow(f, starsOf(f.id) || '<span class="acct-dim">Not rated</span>')).join('')}</ul>`;
+    } else if (key === 'top') {
+      const rated = Object.entries(m.stars || {}).map(([id, n]) => ({ f: filmOf(id), n })).filter(x => x.f && x.n);
+      html = top(`Your top shelf`, rated.length ? `${s.top} film${s.top === 1 ? '' : 's'} on 4 or 5 stars, ${rated.length} rated in all. Change stars from a film's menu.` : 'Give a film your stars from its menu and it lands here.')
+        + [5, 4, 3, 2, 1].map(n => { const l = rated.filter(x => x.n === n).sort((a, b) => a.f.title.localeCompare(b.f.title)); return l.length ? `<h4 class="acct-h4">${'&#9733;'.repeat(n)} <small>${n} star${n > 1 ? 's' : ''}, ${l.length}</small></h4><ul class="acct-frs">${l.map(x => filmRow(x.f, '')).join('')}</ul>` : '' }).join('');
+    } else if (key === 'friends' || key === 'streak') {
+      const fr = (FR.friends || []).slice().sort((a, b) => key === 'streak' ? (b.streak || 0) - (a.streak || 0) || nm(a).localeCompare(nm(b)) : nm(a).localeCompare(nm(b)));
+      const together = f => done.filter(d => d.friend && d.friend.id === f.id && d.state === 'matched').length;
+      const best = Math.max(1, ...fr.map(f => f.streak || 0));
+      html = top(key === 'streak' ? `Best streak: ${s.streak}` : `${fr.length} friend${fr.length === 1 ? '' : 's'}`, key === 'streak' ? 'Dinner Duel matches in a row with each friend.' : fr.length ? 'Your friends on Reel Dinner and how your duels go.' : 'Send your invite link from the Friends tab.')
+        + (fr.length ? `<ul class="acct-cards">${fr.map(f => `<li class="acct-card"><div class="acct-ct"><b>${ESC(nm(f))}</b><small>${f.streak > 0 ? `${f.streak} match${f.streak > 1 ? 'es' : ''} in a row` : 'No streak yet'}</small></div>
+            ${key === 'streak' ? `<div class="acct-bars one"><i style="--w:${Math.round((f.streak || 0) / best * 100)}%"></i></div>` : `<p class="acct-cl">${together(f)} match${together(f) === 1 ? '' : 'es'} on the board</p>`}
+            <div class="acct-cb"><button type="button" class="acct-go sm" data-duelto="${ESC(f.id)}">Send a duel</button></div></li>`).join('')}</ul>` : '')
+        + `<div class="acct-acts"><button type="button" class="acct-ghost" data-tabgo="friends">Manage friends</button></div>`;
+    } else if (key === 'rate') {
+      html = top(`Match rate: ${s.finished ? Math.round(s.matchedN / s.finished * 100) : 0}%`, s.finished ? `${s.matchedN} of ${s.finished} finished duels matched in the last 30 days.` : 'Finish a Dinner Duel and it counts here.')
+        + (done.length ? `<ul class="acct-cards">${done.map(d => { const f = filmOf(d.match); return `<li class="acct-card"><div class="acct-ct"><b>${d.friend ? ESC(nm(d.friend)) : 'Link duel'}</b><small>${ESC(ago(d.at))}</small></div>
+            <p class="acct-cl">${d.state === 'matched' ? `Matched on <b>${ESC(f ? f.title : title(d.match))}</b>` : d.state === 'settled' ? `No match. The wheel picked <b>${ESC(f ? f.title : title(d.match))}</b>` : 'No match yet. Spin for it.'}</p>
+            ${f ? `<div class="acct-cb"><button type="button" class="acct-go sm" data-film="${ESC(f.id)}">Open the menu</button></div>` : ''}</li>` }).join('')}</ul>` : '')
+        + `<div class="acct-acts"><button type="button" class="acct-ghost" data-tabgo="duels">Open the board</button></div>`;
+    } else if (key === 'late') {
+      const late = typeof lateFees === 'function' ? lateFees() : [];
+      html = top(late.length ? `Late fees: $${s.owe}.00` : 'No late fees', late.length ? 'A dollar a day per tape, never more than $10 a tape. Joke money, real guilt. Return a tape or tick the film as seen and the fee goes.' : 'Good member. Nothing overdue.')
+        + (late.length ? `<ul class="acct-frs">${late.map(x => filmRow(x.f, `<span class="acct-fee">${x.days} day${x.days > 1 ? 's' : ''} late</span> $${Math.min(x.days, 10)}.00`, `<button type="button" class="acct-ghost sm" data-return="${ESC(x.f.id)}">Return</button>`)).join('')}</ul>` : '')
+        + (s.out.length && !late.length ? `<h4 class="acct-h4">Out on rental</h4><ul class="acct-frs">${s.out.map(({ r, f }) => filmRow(f, `Due ${ESC(day(r.due))}`)).join('')}</ul>` : '');
+    }
+    body.innerHTML = `<div class="acct-statpage">${html}</div>`;
+    const back = body.querySelector('#acctBack'); back.onclick = () => { sub = null; draw() }; back.focus();
+    body.querySelectorAll('[data-film]').forEach(b => b.onclick = () => { const f = filmOf(b.dataset.film); if (!f) return; dismissModal(box); if (typeof openRentalMenu === 'function') openRentalMenu(f) });
+    body.querySelectorAll('[data-tabgo]').forEach(b => b.onclick = () => { tab = b.dataset.tabgo; sub = null; draw() });
+    body.querySelectorAll('[data-duelto]').forEach(b => b.onclick = () => { const f = (FR.friends || []).find(x => x.id === b.dataset.duelto); dismissModal(box); if (globalThis.RDMatch) RDMatch.newDuel(f ? { id: f.id, name: nm(f) } : undefined) });
+    body.querySelectorAll('[data-return]').forEach(b => b.onclick = () => { m.out = (m.out || []).filter(r => r.id !== b.dataset.return); if (typeof saveMember === 'function') saveMember(); if (typeof renderMember === 'function') renderMember(); statPage(body, key) });
+    const find = body.querySelector('#acctFind');
+    if (find) find.oninput = () => { const q = find.value.trim().toLowerCase(); body.querySelectorAll('#acctList .acct-fr').forEach(li => { li.hidden = !!q && !li.querySelector('b').textContent.toLowerCase().includes(q) }) };
   }
 
   /* Now Showing: every live duel and whose turn it is */
