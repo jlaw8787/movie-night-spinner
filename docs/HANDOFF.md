@@ -1799,3 +1799,11 @@ Josh: the menu pictures on the Google film pages were blurry (600 to 800 wide at
 - scripts/build-seo.cjs prints the picture at half its pixel size (width and height attributes halved), so pages lay out as before and phones get 2x pixels. The og:image is the same file, now 1200 wide, which is what Google and social cards like.
 - build-data rerun; npm test pass; checked Jaws at 100% by eye (small print readable).
 - To go live: merge to main, Publish site. Pushing the branch carries the 225 MB of pictures.
+
+## 17 Nov, 5:15am: Final Cut, sharp previews and card stats deployed together
+
+Josh's go: all three at once.
+- Database: supabase/final-cut.sql applied live as migration final_cut. Checked: old two and three argument versions of match_create/swipe/unswipe and duel_create/swipe/unswipe gone; new ones callable by the right roles (match_* anon and signed in, duel_* signed in only); fc_replay, notify_turn, alerts_due and alerts_digest_due not callable from the page.
+- rd-alerts redeployed from feat/final-cut (v4, verify_jwt off) with the duel_turn line and subject.
+- main: fast-forward to feat/final-cut, then merges of feat/card-stats and fix/sharp-previews (only HANDOFF, sw.js and the index.html script stamps clashed; friends.js merged on its own). build-data rerun for the stamps.
+- Checks on the merged code: npm test, check-browser, check-final-cut, check-card-stats, check-friends, check-members, check-quiz all pass.
