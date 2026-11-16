@@ -2091,7 +2091,8 @@ function parseWeekDate(key){
   const [y,m,d]=key.split("-").map(Number),at=new Date(y,m-1,d,12,0,0,0);
   return weekDateKey(at)===key?at:null;
 }
-const weekDay=day=>[5,6,0,"5","6","0"].includes(day)?Number(day):6;
+/* Josh, 17 Nov: any day of the week (was Friday to Sunday only), so a night can move to a Thursday or be watched early */
+const weekDay=day=>/^[0-6]$/.test(String(day))?Number(day):6;
 /* review 16: any time of day in 15-minute steps (was 5pm to 9pm on the half hour); 7pm stays the default */
 const weekTime=time=>/^(?:[01]\d|2[0-3]):(?:00|15|30|45)$/.test(time)?time:"19:00";
 function nextWeekDate(day,time="19:00",now=new Date()){
@@ -2104,7 +2105,7 @@ function nextWeekDate(day,time="19:00",now=new Date()){
 function normaliseWeek(value,now=new Date()){
   if(!value||typeof value!=="object"||Array.isArray(value)||typeof value.id!=="string")return null;
   const day=weekDay(value.day),time=weekTime(value.time),saved=parseWeekDate(value.date);
-  const date=saved&&[5,6,0].includes(saved.getDay())?value.date:nextWeekDate(day,time,now);
+  const date=saved?value.date:nextWeekDate(day,time,now);
   const ticks=value.ticks&&typeof value.ticks==="object"&&!Array.isArray(value.ticks)?value.ticks:{};
   return Object.assign({},value,{day:parseWeekDate(date).getDay(),time,date,ticks});
 }
@@ -2134,7 +2135,7 @@ function renderWeek(){
   /* review 15: the locked-in strip at the top already shows the poster, title, countdown and a Menu button, so this panel keeps only what the strip
      cannot do: change the cook night and showtime, open the shopping list, or clear the week */
   const strip=!!$("feature");if(box.classList)box.classList.toggle("week-slim",strip);
-  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekCal">${typeof calLabel==="function"?calLabel():"Add to calendar"}</button><button type="button" id="weekClear">Clear</button></div><p class="week-count" id="weekCount" aria-live="polite"></p>`;
+  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[1,2,3,4,5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekCal">${typeof calLabel==="function"?calLabel():"Add to calendar"}</button><button type="button" id="weekClear">Clear</button></div><p class="week-count" id="weekCount" aria-live="polite"></p>`;
   $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
   $("weekTime").addEventListener("change",e=>{week.time=weekTime(e.target.value);saveWeek();renderFeature(f);tickShowtime();if(typeof refreshPrepTime==="function")refreshPrepTime()});
   renderFeature(f);tickShowtime();renderMotw();
@@ -2152,10 +2153,36 @@ function renderFeature(f){const box=$("feature");if(!box)return;if(!f||!week){bo
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:'<span class="ft-ph"></span>'}<p class="ft-k">${n===0?(today==="Tonight"?"Tonight's feature":"Today's feature"):n<0?"Last feature":"Coming up"}</p>
     <p class="ft-t">${ESC(f.title)}${g?` + ${ESC(g.title)}`:""}</p><p class="ft-w">${day} ${d.getDate()} ${"JanFebMarAprMayJunJulAugSepOctNovDec".substr(d.getMonth()*3,3)}, ${clock(week.time||"19:00")} <span id="featCount"></span></p>
-    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button><button type="button" id="featCal">${typeof calLabel==="function"?calLabel():"Add to calendar"}</button></div>`;
+    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button><button type="button" id="featCal">${typeof calLabel==="function"?calLabel():"Add to calendar"}</button><button type="button" class="ft-edit" id="featEdit" aria-label="Edit this movie night: change the day or time, or remove it">Edit</button></div>`;
   $("featMenu").addEventListener("click",()=>{setView("wheel");if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()});
   $("featPrep").addEventListener("click",()=>{setView("wheel");replay(f).then(()=>{setTab("prep");toMenu()})});
   $("featCal").addEventListener("click",e=>{if(typeof calAdd==="function")calAdd(e.currentTarget)});
+  $("featEdit").addEventListener("click",e=>editNight(e.currentTarget));
+}
+/* Josh, 17 Nov: "How do I edit the movie time, remove if I watch early". Edit on the strip: any of the next 14 days and any showtime,
+   Watched it early (ticks it off, returns the tape, asks for stars, clears the night) or Remove (clears it, nothing ticked) */
+function editNight(trigger){
+  const f=week&&FILMS.find(x=>x.id===week.id);if(!f)return;const g=week.double&&FILMS.find(x=>x.id===week.double);
+  const title=f.title+(g?" + "+g.title:""),now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12);
+  const mon="JanFebMarAprMayJunJulAugSepOctNovDec",lab=(d,i)=>`${i===0?"Today, ":i===1?"Tomorrow, ":""}${DAYS[d.getDay()].slice(0,3)} ${d.getDate()} ${mon.substr(d.getMonth()*3,3)}`;
+  const days=Array.from({length:14},(_,i)=>{const d=new Date(today);d.setDate(d.getDate()+i);return [weekDateKey(d),lab(d,i)]});
+  if(!days.some(([k])=>k===week.date)){const d=parseWeekDate(week.date);if(d)days.unshift([week.date,`${lab(d,-1)} (set now)`])}
+  const dlg=document.createElement("dialog");dlg.className="counter pdfpick nightedit";dlg.setAttribute("aria-label","Edit your movie night");
+  dlg.innerHTML=`<div class="rate-box"><p class="rate-k">Your movie night</p><h3>${ESC(title)}</h3>
+    <label class="lk-time">Day <select id="neDay" aria-label="Day">${days.map(([k,t])=>`<option value="${k}"${k===week.date?" selected":""}>${ESC(t)}</option>`).join("")}</select></label>
+    <label class="lk-time">Showtime <select id="neTime" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></label>
+    <div class="pp-opts"><button type="button" class="ne-save" data-save><b>Save</b></button><button type="button" data-early><b>Watched it early</b><span class="ne-sub">Ticks it off as watched and clears the night</span></button><button type="button" data-remove><b>Remove</b><span class="ne-sub">Clears the night, nothing ticked off</span></button><button type="button" data-done>Cancel</button></div></div>`;
+  const clear=msg=>{week=null;saveWeek();renderWeek();updateWatchButton();if(typeof refreshPrepTime==="function")refreshPrepTime();$("status").textContent=msg};
+  dlg.addEventListener("click",e=>{
+    if(e.target===dlg||e.target.closest("[data-done]")){dismissModal(dlg);return}
+    if(e.target.closest("[data-save]")){const k=dlg.querySelector("#neDay").value,d=parseWeekDate(k);if(!d)return;
+      week.date=k;week.day=d.getDay();week.time=weekTime(dlg.querySelector("#neTime").value);saveWeek();renderWeek();if(typeof refreshPrepTime==="function")refreshPrepTime();
+      dismissModal(dlg);$("status").textContent=`${title} moved to ${DAYS[d.getDay()]} ${d.getDate()} ${mon.substr(d.getMonth()*3,3)}, ${clock(week.time)}.`;return}
+    if(e.target.closest("[data-early]")){for(const x of [f,g])if(x){if(!watched.has(x.id))setWatched(x,true);if(member&&member.out)member.out=member.out.filter(r=>r.id!==x.id)}
+      if(member){saveMember();renderMember()}dismissModal(dlg);clear(`${title} ticked off as watched. Movie night cleared.`);setTimeout(()=>openRate(f),0);return}
+    if(e.target.closest("[data-remove]")){dismissModal(dlg);clear(`${title} removed from your movie night.`)}
+  });
+  mountModal(dlg,"#neDay",trigger||document.activeElement);
 }
 function showToday(){const h=+weekTime(week&&week.time).slice(0,2);return h<12?"This morning":h<17?"This afternoon":"Tonight"}
 /* Countdown to the scheduled showtime. Cooking times belong to the individual recipes. */

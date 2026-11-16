@@ -97,6 +97,14 @@ if(n||f||W.REEL_APP_BUILD)document.write('<script src="app-art.js?v=d308a24c"><\
 .feature .ft-acts{grid-column:3;grid-row:1/3;display:flex;gap:8px}
 .feature .ft-acts button{min-height:44px;padding:0 14px;border-radius:22px;border:1px solid var(--brass);background:transparent;color:var(--screen);font:600 14px var(--f-body);cursor:pointer}
 .feature .ft-acts button.go{background:var(--brass);color:#1b1210;border-color:var(--brass)}
+/* Josh, 17 Nov: Edit on the strip. Desktop: a fourth button. Phones: a small pill top right so the three main buttons keep their row */
+.feature{position:relative}
+@media (max-width:560px){.feature .ft-acts button.ft-edit{position:absolute;top:6px;right:8px;min-height:32px;padding:0 12px;font-size:13px}
+  .feature .ft-t,.feature .ft-w{padding-right:62px}}
+.nightedit .lk-time{display:grid;grid-template-columns:6.2em minmax(0,1fr);text-align:left}.nightedit .lk-time select{width:100%}
+.nightedit .pp-opts b{display:block}.nightedit .ne-sub{display:block;margin-top:2px;opacity:.85}
+.nightedit .pp-opts .ne-save{background:#e2b04f;color:#1b1210;border-color:#e2b04f;text-align:center}.nightedit .pp-opts .ne-save b{color:#1b1210}
+.nightedit .pp-opts .ne-save:hover,.nightedit .pp-opts .ne-save:focus-visible{background:#f0c463;border-color:#fff4d6}
 @media (max-width:560px){.feature{grid-template-columns:40px minmax(0,1fr);margin:6px 10px 8px;gap:2px 12px}.feature img,.feature .ft-ph{width:40px;height:60px;grid-row:1/4}.feature .ft-k{grid-column:2;grid-row:1}.feature .ft-t{grid-column:2;grid-row:2}.feature .ft-w{grid-column:2;grid-row:3}.feature .ft-acts{grid-column:1/3;grid-row:4;margin-top:8px;flex-wrap:wrap}.feature .ft-acts button{flex:1 1 auto;padding:0 12px}}
 /* review 16: on a phone the strip took a fifth of the screen above the marquee. The kicker goes (the date line already says Tonight or Tomorrow),
    the poster is a thumbnail beside two lines, and the three buttons keep their 44px height on one row */
@@ -3437,7 +3445,7 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 <script src="formats-core.js?v=1c74fdbc" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=a395ddbb" defer></script>
+<script src="app.js?v=071fcaed" defer></script>
 <script src="match.js?v=26ec11c6" defer></script>
 <script src="friends.js?v=0ab54f1e" defer></script>
 <script src="quiz.js?v=15471707" defer></script>

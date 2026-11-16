@@ -1808,3 +1808,12 @@ Josh's go: all three at once.
 - main: fast-forward to feat/final-cut, then merges of feat/card-stats and fix/sharp-previews (only HANDOFF, sw.js and the index.html script stamps clashed; friends.js merged on its own). build-data rerun for the stamps.
 - Checks on the merged code: npm test, check-browser, check-final-cut, check-card-stats, check-friends, check-members, check-quiz all pass.
 - Pushed main 9ed23a74, Publish site run 43938462083 passed. match.js, friends.js, app.js, index.html, sw.js and the 1200 wide Jaws preview match live byte for byte.
+
+## 17 Nov, 5:30am to 6:10am: Edit on the locked-in strip (branch fix/night-edit, NOT deployed)
+
+Josh: "How do I edit the movie time, remove if I watch early etc?" (it was only on the menu screen's Your movie night bar, Friday to Sunday only). He picked "Edit button on the strip".
+- app.js: Edit button on the strip (featEdit) opens editNight: Day (the next 14 days, Today and Tomorrow labelled, plus the set date if outside them), Showtime (same 15 minute list), Save, Watched it early (ticks the film and any double feature off, returns the tape from member.out, clears the night, opens the stars sheet), Remove (clears the night, nothing ticked), Cancel.
+- Any day of the week now: weekDay takes 0 to 6 (was 5, 6, 0 only), normaliseWeek keeps any saved valid date (it used to push a weeknight date to the next Fri to Sun), and the menu screen's Cook night list shows Monday to Sunday.
+- index.html: phones (560 and under) put Edit as a small pill top right of the strip so Menu, Prep sheet and Add to calendar keep their row; title and date line pad 62px so long titles cut before the pill. Desktop: a fourth button. Dialog styles .nightedit.
+- scripts/check-night-edit.cjs (390 wide guest: pill clear of title and buttons, 14 days, move to a weeknight and 6:30pm, survives reload, Remove ticks nothing, Watched it early ticks and opens stars, no page errors) pass. npm test, check-card-stats, check-friends, check-final-cut pass; check-browser had 4 timeouts on the first run (the known flake), all pass on the rerun.
+- To go live: merge to main, Publish site.
