@@ -1760,3 +1760,11 @@ Review before deploy (16 Nov, 8:30pm), fixed on the same branch:
 - Tested: supabase/tests/quiz-test.sql, 7 groups, PASS 16 Nov 8:27pm in a rolled-back transaction (table confirmed not kept). check-friends.cjs now runs the full member quiz loop on two phones plus inbox delete. npm test, check-quiz, check-browser pass. privacy.html updated.
 - To go live: (1) apply supabase/quiz-challenges.sql as migration quiz_challenges; (2) deploy rd-alerts; (3) merge to main, Publish site.
 - Josh's next ideas (not built): Final Cut for Match night (swipe rounds until one film is left; pass the phone and room code first; Duel later with first "your turn" email each day, later rounds inbox only).
+
+## 16 Nov, 8:50pm to 10:40pm: sharp film page menu pictures (branch fix/sharp-previews, NOT deployed)
+
+Josh: the menu pictures on the Google film pages were blurry (600 to 800 wide at JPEG 72, soft on phone screens).
+- scripts/render-previews.cjs now shoots at deviceScaleFactor 2 and saves 1200 wide (1600 for two-page spreads, 2000 for three-page strips) at quality 80. All 1,000 re-shot (59 min at WORKERS=3 on a 2-core box). Folder 64 MB to 225 MB.
+- scripts/build-seo.cjs prints the picture at half its pixel size (width and height attributes halved), so pages lay out as before and phones get 2x pixels. The og:image is the same file, now 1200 wide, which is what Google and social cards like.
+- build-data rerun; npm test pass; checked Jaws at 100% by eye (small print readable).
+- To go live: merge to main, Publish site. Pushing the branch carries the 225 MB of pictures.
