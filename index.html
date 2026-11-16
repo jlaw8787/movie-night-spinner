@@ -3054,16 +3054,18 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
 @media (max-width:420px){.mn-cols{grid-template-columns:1fr}.mn-chip{min-width:88px;padding:8px 10px}}
 
 /* My account (friends.js): the card button in the top bar, the members panel, Dinner Duel board, inbox, friends */
-.acct-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%) rotate(-4deg);width:62px;height:39px;padding:0;border:0;border-radius:5px;background:none;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12);transition:transform .15s}
-.acct-btn img{display:block;width:100%;height:100%;border-radius:5px;filter:saturate(.35) brightness(.85)}
-.acct-btn.member img{filter:none}
-.acct-btn:hover{transform:translateY(-50%) rotate(0deg) scale(1.05)}
-.acct-btn.member{box-shadow:0 3px 8px rgba(0,0,0,.55),0 0 0 1.5px rgba(255,196,46,.7),0 0 14px rgba(255,196,46,.25)}
-@media (prefers-reduced-motion:reduce){.acct-btn{transition:none}}
+.acct-btn{position:absolute;right:14px;top:50%;transform:translateY(var(--ty,-50%)) rotate(-3deg);width:68px;height:42px;padding:0;border:0;border-radius:6px;background:none;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.6),0 0 0 1.5px rgba(255,255,255,.18);transition:transform .15s,box-shadow .2s}
+.acct-btn img{display:block;width:100%;height:100%;border-radius:6px;filter:saturate(.3) brightness(.8)}
+.acct-btn.is-member img{filter:none}
+.acct-btn:hover{transform:translateY(var(--ty,-50%)) rotate(0deg) scale(1.06)}
+.acct-btn:active{transform:translateY(var(--ty,-50%)) rotate(0deg) scale(.96)}
+.acct-btn.is-member{box-shadow:0 4px 10px rgba(0,0,0,.6),0 0 0 2px #e7c069,0 0 16px 2px rgba(255,196,46,.55);animation:acctGlow 3s ease-in-out infinite}
+@keyframes acctGlow{50%{box-shadow:0 4px 10px rgba(0,0,0,.6),0 0 0 2px #f3d27e,0 0 22px 4px rgba(255,196,46,.75)}}
+@media (prefers-reduced-motion:reduce){.acct-btn{transition:none}.acct-btn.is-member{animation:none}}
 .acct-btn:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
 .acct-dot{position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;padding:0 5px;box-sizing:border-box;border-radius:10px;background:#e5484d;color:#fff;font:700 12px/20px var(--f-body);text-align:center;box-shadow:0 0 0 2px #120608}
-@media (max-width:820px){.top .views{margin-right:74px}}
-@media (max-width:640px){.top .views{margin-right:0;margin-left:70px}.acct-btn{right:auto;left:12px;width:56px;height:35px}}
+@media (max-width:820px){.top .views{margin-right:82px}.acct-btn{top:auto;bottom:39px;--ty:50%}}
+@media (max-width:640px){.top .views{margin-right:0;margin-left:76px}.acct-btn{right:auto;left:12px;width:64px;height:40px;top:auto;bottom:15px;--ty:0px}}
 @media (max-width:420px){.top .views button{padding:8px 8px;font-size:13px}}
 @media (max-width:374px){.top .views button{padding:8px 6px;font-size:12px}}
 dialog.acct{position:fixed;inset:0;z-index:70;background:rgba(5,4,14,.82);display:flex;justify-content:center;align-items:flex-start;padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px));overflow:auto}
@@ -3171,7 +3173,7 @@ dialog.acct .modal-x{color:var(--gv-gold)}
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Galaxy Video</button>
     </nav>
-    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><img src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><span class="acct-dot" id="acctDot" hidden></span></button>
+    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><img src="assets/brand/member-card-mini.webp" alt="" width="288" height="180" decoding="async"><span class="acct-dot" id="acctDot" hidden></span></button>
   </header>
   <div class="ambient" id="ambient" aria-hidden="true"></div>
 

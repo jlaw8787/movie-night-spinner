@@ -42,7 +42,7 @@
     const n = inn() ? counts.unread + counts.turns : 0;
     if (dot) { dot.textContent = n > 9 ? '9+' : String(n); dot.hidden = !n }
     btn.setAttribute('aria-label', !inn() ? 'My account: guest pass' : n ? `My account: ${n} waiting` : 'My account');
-    btn.classList.toggle('member', inn());
+    btn.classList.toggle('is-member', inn());
   }
   let pinging = false;
   async function ping() {

@@ -1718,3 +1718,10 @@ Josh's calls (picked from options): card button = mini real Galaxy Video card; s
 - Checks: npm test pass, check-browser pass, check-members pass, check-friends pass (new: My card tier/stats, First match stamp, speaker on marquee and shopfront). check-phone-fit not run to the end (menu sweep, unrelated, needs fonts over the network).
 
 Deployed 16 Nov 7:45pm on Josh's go: fast-forward merge to main 872c34e, Publish site run 43842102803 passed. friends.js, app.js and index.html match main byte for byte live. No database change.
+
+## 16 Nov, 7:50pm to 8:10pm: clean mini card button (branch fix/mini-card, NOT deployed)
+Josh's call (from options): a clean mini card made for small size, lined up with the tabs, glow you can see.
+- New assets/brand/member-card-mini.webp (288x180, 8 KB): Galaxy Video logo plus the card's three stripes, no fine print. Button 68x42 desktop, 64x40 phones, tilt -3deg, gold ring plus a slow gold glow pulse when signed in (off with reduced motion), press-down on tap.
+- Bug fixed: the signed-in class was "member", which also picked up the old store card's .member rule (margin 16px etc.), pushing the button 16px low on Josh's phone. Now "is-member" (friends.js line 45 and CSS).
+- Phones and tablets (820px and under) anchor the button from the bottom of the top bar, since the top padding includes the iPhone safe area; centre now matches the tabs at 390, 700 and 1280 wide, with and without a 47px safe area.
+- Checks: npm test pass, check-browser pass, check-members pass, check-friends pass.
