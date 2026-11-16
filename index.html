@@ -3198,6 +3198,32 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 .acct-stat b{font:400 26px/1.05 var(--f-board);color:var(--gv-gold)}
 .acct-stat span{font-weight:700;font-size:13px;color:#fff;line-height:1.2}
 .acct-stat small{font-size:11.5px;color:var(--gv-lav);line-height:1.25;overflow-wrap:anywhere}
+.acct-stats>li{display:flex;min-width:0}
+button.acct-stat{position:relative;width:100%;font:inherit;color:inherit;cursor:pointer;transition:transform .12s,border-color .12s,background .12s;padding-bottom:22px}
+button.acct-stat:hover{border-color:var(--gv-gold);background:rgba(255,196,46,.08)}
+button.acct-stat:active{transform:scale(.98)}
+button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2px}
+.acct-more{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:600 10.5px var(--f-body);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--gv-teal)}
+.acct-more::after{content:" \203A";letter-spacing:0}
+.acct-back{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 14px 6px 10px;border-radius:999px;border:1px solid rgba(217,201,242,.35);background:transparent;color:var(--gv-lav);font:600 13px var(--f-body);cursor:pointer}
+.acct-back::before{content:"\2039";font-size:20px;line-height:1;color:var(--gv-gold)}
+.acct-back:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2px}
+.acct-sh{font-size:22px;margin:12px 0 4px}.acct-sk{margin:0 0 10px}
+.acct-h4{font:400 14px var(--f-board);color:var(--gv-gold);letter-spacing:.04em;margin:16px 0 8px}.acct-h4 small{font:500 12px var(--f-body);color:var(--gv-lav);letter-spacing:0;margin-left:4px}
+.acct-frs{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:6px}
+.acct-fr{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(217,201,242,.18);border-radius:10px;padding:6px 8px 6px 6px}
+.acct-fr[hidden]{display:none}
+.acct-th{flex:0 0 auto;width:36px;height:54px;border-radius:4px;object-fit:cover;background:rgba(0,0,0,.3);display:block}
+.acct-frt{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}.acct-frt b{font-size:14.5px;color:#fff;line-height:1.25}.acct-frt b span{font-weight:400;color:var(--gv-lav)}.acct-frt small{font-size:12.5px;color:var(--gv-lav)}
+.acct-frb{flex:0 0 auto;display:flex;gap:6px}
+.acct-stars{color:var(--gv-gold);letter-spacing:1px}.acct-stars i{font-style:normal;color:rgba(217,201,242,.25)}
+.acct-bars{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:6px}
+.acct-bars li{display:grid;grid-template-columns:minmax(0,9em) 1fr 2.4em;align-items:center;gap:8px;font-size:13px;color:#fff}
+.acct-bars li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.acct-bars li b{text-align:right;color:var(--gv-gold);font:400 15px var(--f-board)}
+.acct-bars i,.acct-bars.one i{display:block;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--gv-teal),var(--gv-gold));width:var(--w);min-width:4px}
+.acct-bars.one{margin:8px 0 4px;background:rgba(0,0,0,.3);border-radius:999px}
+.acct-find{width:100%;min-height:44px;margin:0 0 10px;padding:8px 14px;border-radius:999px;border:1px solid rgba(217,201,242,.35);background:rgba(0,0,0,.25);color:#fff;font:500 15px var(--f-body)}
+@media (prefers-reduced-motion:reduce){button.acct-stat{transition:none}}
 .acct-dim{opacity:.4}
 .acct-stamps{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 @media (min-width:480px){.acct-stamps{grid-template-columns:repeat(3,1fr)}}
@@ -3414,9 +3440,9 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 <script src="formats-core.js?v=1c74fdbc" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=589d6c29" defer></script>
+<script src="app.js?v=a395ddbb" defer></script>
 <script src="match.js?v=0c932e35" defer></script>
-<script src="friends.js?v=f1720f4d" defer></script>
+<script src="friends.js?v=b472c256" defer></script>
 <script src="quiz.js?v=15471707" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>

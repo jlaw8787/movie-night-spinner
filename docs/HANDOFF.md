@@ -1760,3 +1760,21 @@ Review before deploy (16 Nov, 8:30pm), fixed on the same branch:
 - Tested: supabase/tests/quiz-test.sql, 7 groups, PASS 16 Nov 8:27pm in a rolled-back transaction (table confirmed not kept). check-friends.cjs now runs the full member quiz loop on two phones plus inbox delete. npm test, check-quiz, check-browser pass. privacy.html updated.
 - To go live: (1) apply supabase/quiz-challenges.sql as migration quiz_challenges; (2) deploy rd-alerts; (3) merge to main, Publish site.
 - Josh's next ideas (not built): Final Cut for Match night (swipe rounds until one film is left; pass the phone and room code first; Duel later with first "your turn" email each day, later rounds inbox only).
+
+## 16 Nov, 9:45pm: My card stat pages (branch feat/card-stats, NOT deployed)
+
+Josh asked for each stats tile on My card to open a page (ratings, films seen and so on). No database change.
+- friends.js: tiles are buttons (data-stat). statPage(body, key) draws inside the My card tab with "Back to My card" (focus returns to the tile). sub holds the open page; switching tabs clears it.
+  - Rentals: count and next tier, Out on rental, Recent rentals (member.log), a bar per aisle.
+  - Films seen: every ticked film A to Z with your stars, a Find box from 7 films.
+  - Top shelf: rated films grouped 5 stars down to 1.
+  - Friends: each friend, streak, matches on the board, Send a duel, Manage friends.
+  - Duels on the board: opens the Duels tab.
+  - Match rate: finished duels (matched, wheel picked, waiting to spin) with Open the menu.
+  - Best streak: friends by streak with bars.
+  - Late fees: overdue tapes with days and fee, Return; if none, what's out.
+  - Menu buttons close the panel and open the film (openRentalMenu).
+- app.js: new member.log, the last 100 rentals {id, at}, written on every rental and merged on sync (applyRemote). Older rentals only had a count, so Recent rentals fills from the next rental on. privacy.html says so.
+- CSS: button.acct-stat (with a "More" cue), acct-back, acct-fr rows with poster thumbs, acct-bars, acct-find.
+- Checks: scripts/check-card-stats.cjs (seeded member, every page, Back focus, search, Return, Duels tile, Menu opens the film, no page errors) pass. npm test, check-friends, check-browser pass. build-data rerun.
+- To go live: merge to main, Publish site. If feat/final-cut lands first, friends.js and index.html merge by hand (different sections).
