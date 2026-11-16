@@ -2665,6 +2665,70 @@ dialog.mystery .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap
 dialog.mystery .acts button{font:600 15px var(--f-body);border-radius:999px;padding:12px 18px;cursor:pointer;border:1px solid #8a6a3a;background:transparent;color:#f3e6c8}
 dialog.mystery .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);color:#2a1206;border:0}
 #mysBtn.on{border-color:#e2b04f;color:#ffe9b0}
+/* Quiz night: the third tab beside Spin it and Match it, cinema red and gold (quiz.js) */
+body.quizzing .deck>.wheel-wrap,body.quizzing #spinbar,body.quizzing .stage .controls,body.quizzing .stage .count{display:none!important}
+.mode-sw button{padding:8px clamp(10px,3.4vw,22px);white-space:nowrap;letter-spacing:.03em}
+.quiz .qz-cards{display:grid;gap:12px;margin-top:6px}
+.qz-card{border:1px solid rgba(217,164,65,.35);border-radius:16px;background:linear-gradient(rgba(90,15,31,.55),rgba(30,6,12,.6));padding:14px 16px 6px;text-align:center}
+.qz-card .mn-actions{margin:10px 0 8px}
+.qz-daily{border-color:var(--brass);box-shadow:0 0 0 1px rgba(217,164,65,.25),0 0 22px rgba(255,200,90,.12)}
+.qz-ck{margin:0;font:400 19px var(--f-board);letter-spacing:.05em;color:var(--bulb)}
+.qz-cs{margin:6px auto 0;max-width:40ch;color:var(--muted);font-size:15px;line-height:1.45}
+.qz-cs b{color:var(--screen)}
+.qz-big{margin:4px 0 0;font:400 56px/1 var(--f-board);color:var(--bulb);text-shadow:0 0 18px rgba(255,200,90,.35)}
+.qz-big small{font-size:.45em;color:var(--muted)}
+.qz-grid{margin:6px 0 0;font-size:18px;letter-spacing:2px}
+.qz-foot{text-align:center;color:var(--muted);font-size:13.5px;margin:14px 0 0}
+.qz-wait{text-align:center;padding:30px 0}
+.qz-form{max-width:360px;margin:6px auto 0}
+.qz-lab{display:block;font:600 12px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;text-align:center}
+.qz-form input{width:100%;box-sizing:border-box;min-height:48px;padding:10px 14px;border-radius:12px;border:1px solid rgba(217,164,65,.45);background:rgba(18,6,8,.7);color:var(--screen);font:500 17px var(--f-body)}
+.qz-form input:focus-visible{outline:2px solid var(--bulb);outline-offset:1px}
+.qz-row{display:flex;gap:8px;align-items:center;margin:0 0 8px}
+.qz-add{display:block;margin:2px auto 0;padding:8px}
+.qz-who{margin:2px 0 10px}
+.qz-scores{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin:12px 0 0;color:var(--muted);font-size:14.5px}
+.qz-scores b{color:var(--bulb)}
+.qz-game{text-align:center}
+.qz-top{display:flex;justify-content:space-between;color:var(--muted);font:600 13px var(--f-body);letter-spacing:.04em}
+.qz-dots{display:flex;gap:6px;justify-content:center;margin:10px 0 4px}
+.qz-dots i{width:11px;height:11px;border-radius:50%;border:2px solid rgba(217,164,65,.45);display:block}
+.qz-dots i.now{border-color:var(--bulb);box-shadow:0 0 8px rgba(255,200,90,.6)}
+.qz-dots i.ok{background:#3fcf7a;border-color:#3fcf7a}
+.qz-dots i.no{background:#e0505a;border-color:#e0505a}
+.qz-film,.qz-round{margin:12px 0 2px;font:600 12px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.qz-q{margin:4px auto 12px;max-width:34ch;font:600 clamp(18px,4.6vw,22px)/1.32 var(--f-body);color:var(--screen);outline:none}
+.qz-still{margin:0 auto 12px;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#12060a;border:1px solid rgba(217,164,65,.35)}
+.qz-still img{width:100%;height:100%;object-fit:cover;display:block}
+.qz-dishes{list-style:none;margin:0 auto 12px;padding:12px 14px;max-width:360px;border-radius:12px;border:1px dashed rgba(217,164,65,.5);background:rgba(18,6,8,.55)}
+.qz-dishes li{font:400 17px/1.35 var(--f-board);letter-spacing:.03em;color:var(--bulb);padding:7px 0}
+.qz-dishes li+li{border-top:1px solid rgba(217,164,65,.3)}
+.qz-opts{display:grid;gap:9px}
+.qz-opts button{min-height:50px;padding:12px 16px;border-radius:12px;border:1px solid rgba(217,164,65,.4);background:rgba(90,15,31,.5);color:var(--screen);font:600 16px/1.3 var(--f-body);text-align:left;cursor:pointer}
+.qz-opts button:hover:not(:disabled){border-color:var(--bulb)}
+.qz-opts button:focus-visible{outline:2px solid var(--bulb);outline-offset:2px}
+.qz-opts button.ok{background:#1f6b40;border-color:#3fcf7a;color:#fff}
+.qz-opts button.no{background:#7a1f28;border-color:#e0505a;color:#fff}
+.qz-opts button:disabled{cursor:default}
+.qz-opts.done button:not(.ok):not(.no){opacity:.55}
+.qz-after{min-height:28px;margin:10px 0 0;color:var(--screen);font-size:15.5px}
+.qz-yes{color:#5fe08f}.qz-nope{color:#ff7c86}
+.qz-board{list-style:none;margin:8px auto 4px;padding:0;max-width:320px}
+.qz-board li{display:flex;justify-content:space-between;padding:9px 14px;border-bottom:1px solid rgba(217,164,65,.2);font-size:16.5px}
+.qz-board li.qz-win{color:var(--bulb);font-weight:700}
+.qz-vs{display:flex;justify-content:center;gap:22px;margin:12px 0 4px}
+.qz-vs p{margin:0;display:flex;flex-direction:column;align-items:center;min-width:92px;padding:10px 12px;border-radius:12px;border:1px solid rgba(217,164,65,.35);background:rgba(18,6,8,.5)}
+.qz-vs span{font:600 12px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.qz-vs b{font:400 38px/1.1 var(--f-board);color:var(--bulb)}
+.qz-vs small{color:var(--muted)}
+.qz-verdict{color:var(--screen);font-weight:600}
+.qz-review{margin:16px auto 0;max-width:540px;color:var(--screen)}
+.qz-review summary{cursor:pointer;text-align:center;color:var(--bulb);font:600 15px var(--f-body);padding:8px}
+.qz-review ol{margin:6px 0 0;padding-left:22px;display:grid;gap:10px;font-size:14.5px;line-height:1.4}
+.qz-review li span{display:block;color:var(--muted)}
+.qz-review li b{display:block}
+.qz-review li.ok b{color:#5fe08f}.qz-review li.no b{color:#ff9aa2}
+.qz-review .mn-link{font-size:13.5px}
 /* trivia spin */
 dialog.trivia .tv-box{background:#0f1426;color:#eef1ff;border:1px solid #3a4a8a;border-radius:18px;padding:22px 20px;width:min(520px,94vw);box-sizing:border-box;margin:auto;max-height:90vh;overflow:auto;text-align:center}
 dialog.trivia .tv-k{font:700 12px var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:#ffcf4a;margin:0}
@@ -2948,7 +3012,7 @@ html,body{overflow-x:clip}
 .mode-sw button{font:400 15px var(--f-board);letter-spacing:.06em;text-transform:uppercase;min-height:44px;padding:8px 22px;border-radius:999px;border:0;background:transparent;color:var(--muted);cursor:pointer}
 .mode-sw button[aria-selected="true"]{background:linear-gradient(#e9bd5c,#b98226);color:#2a1206;box-shadow:0 0 18px rgba(255,210,120,.35)}
 .mode-sw button:focus-visible{outline:2px solid var(--bulb);outline-offset:2px}
-body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .controls,body.matching .stage .count{display:none}
+body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .controls,body.matching .stage .count{display:none!important}
 .match{width:min(100%,540px);color:var(--screen);font-family:var(--f-body)}
 .match .mn-head,.match .mn-hand,.match .mn-nm{text-align:center}
 .mn-t{font:400 clamp(26px,6vw,36px)/1.05 var(--f-board);letter-spacing:.04em;color:var(--bulb);margin:4px 0 8px;text-shadow:0 0 14px rgba(255,200,90,.35)}
@@ -3227,9 +3291,11 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 
   <div class="stage" id="viewWheel" aria-label="Box office">
     <section class="deck" aria-label="Spin wheel">
-      <div class="mode-sw" role="tablist" aria-label="How to pick tonight's film"><button type="button" role="tab" id="modeSpin" aria-selected="true" aria-controls="viewWheel">Spin it</button><button type="button" role="tab" id="modeMatch" aria-selected="false" aria-controls="matchPanel">Match it</button></div>
+      <div class="mode-sw" role="tablist" aria-label="How to pick tonight's film"><button type="button" role="tab" id="modeSpin" aria-selected="true" aria-controls="viewWheel">Spin it</button><button type="button" role="tab" id="modeMatch" aria-selected="false" aria-controls="matchPanel">Match it</button><button type="button" role="tab" id="modeQuiz" aria-selected="false" aria-controls="quizPanel">Quiz it</button></div>
       <section class="match" id="matchPanel" aria-label="Match night" hidden></section>
       <p class="sr-only" id="matchLive" aria-live="polite"></p>
+      <section class="match quiz" id="quizPanel" aria-label="Quiz night" hidden></section>
+      <p class="sr-only" id="quizLive" aria-live="polite"></p>
       <div class="wheel-wrap">
         <div class="pointer" id="pointer" aria-hidden="true"><img src="assets/hero/pointer.webp" alt=""></div>
         <div class="wheel-box">
@@ -3336,7 +3402,7 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 <script src="ratings.js?v=c091d351" defer></script>
 <script src="aisles.js?v=15304814" defer></script>
 <script src="providers.js?v=3741da51" defer></script>
-<script src="films.js?v=6cd96341" defer></script>
+<script src="films.js?v=e5a1ab6c" defer></script>
 <script src="assets/fonts/fonts.js?v=f28d82e1" defer></script>
 <script src="formats-core.js?v=1c74fdbc" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
@@ -3344,6 +3410,7 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 <script src="app.js?v=8b9c8893" defer></script>
 <script src="match.js?v=0c932e35" defer></script>
 <script src="friends.js?v=ba3015a3" defer></script>
+<script src="quiz.js?v=13f04fe8" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

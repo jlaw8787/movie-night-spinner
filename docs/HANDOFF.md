@@ -1727,3 +1727,16 @@ Josh's call (from options): a clean mini card made for small size, lined up with
 - Checks: npm test pass, check-browser pass, check-members pass, check-friends pass.
 
 Deployed 16 Nov 8:10pm on Josh's go: fast-forward to main, Publish site run 43844863938 passed, friends.js, index.html and the mini card image match live.
+## 16 Nov, 8pm: Quiz night built on feat/quiz-night (held for Josh's deploy go)
+
+Josh's calls: Daily quiz, Pass the phone and Challenge a friend in the first build; all opt-in (nothing pops up, no emails); question bank 6 to 8 per film (3 written plus auto rounds) with a quarterly batch of new written questions for the most-played films only. Live rooms not built.
+- Third tab in the cinema: Spin it, Match it, Quiz it (#modeQuiz, #quizPanel, quiz.js loads after friends.js). Cinema red and gold, reuses the Match night mn-* styles plus qz-* in index.html.
+- Daily: same 10 for everyone by Brisbane date, one go a day (leaving part way counts what was answered), streak, share line with green and red squares. Daily No. 1 is 16 Nov 2026 (DAY0 in quiz.js). Kids' mode gets its own kid-safe daily.
+- Pass the phone: 2 to 6 players, 3/5/10 rounds, a question each per round, handover screen, scoreboard, winner spins the real wheel.
+- Challenge a friend: play 10, link ?quiz=c-SEED-SCORE-SECS-KIDS&by=NAME. No database: the seed deals the same 10 in the same order on any phone. Tie on score goes to the quicker time. "Send it back" sends your score on the same 10.
+- Win the film: the old Trivia spin (openTrivia), opened from the hub. The Trivia spin button by the wheel still works.
+- Questions: data/trivia.json now covers all 1,000 (300 written for the next 100 films, wip/quiz/new-trivia-*.json). Auto rounds from data/quiz.json (scripts/build-quiz.cjs, run by build-data): picture (up to 5 textless TMDB stills, still-block respected), menu (3 dishes, any dish naming the film skipped), year. Wrong films share a genre, never the same series. Every game: 5 written, 3 picture, 1 menu, 1 year.
+- GoatCounter events: quiz/daily, quiz/pass, quiz/chal, quiz/share-daily, quiz/share-challenge, quiz/link.
+- Also fixed: on phones the wheel controls showed under Match night (the phone .controls rule is !important); the hide rule is now !important for Match night and Quiz night.
+- Checks: npm test pass (new tests/quiz.test.cjs), check-browser pass, scripts/check-quiz.cjs pass (two phones: daily, pass the phone, challenge link plays the same 10 on phone B, tab switching, no page errors).
+- Later, if wanted: send a challenge to a member friend's inbox (needs a migration), members' daily streak synced across devices, live rooms.

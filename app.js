@@ -4162,7 +4162,7 @@ function warmOffline(reg){
   const u=FILMS.map(filmFile);
   if(typeof FMT_VER!=="undefined")for(const k in FMT_VER)u.push("formats/"+k+".js?v="+FMT_VER[k]);
   if(window.LIB_VER)for(const k in LIB_VER)u.push("menu-formats/"+k+".js?v="+LIB_VER[k]);
-  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.search)u.push("data/search-index.json?v="+DATA_V.search);if(DATA_V.match)u.push("data/match-deck.json?v="+DATA_V.match);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia)}
+  if(window.DATA_V){u.push("data/dish-names.json?v="+DATA_V.names,"data/dish-notes.json?v="+DATA_V.notes);if(DATA_V.search)u.push("data/search-index.json?v="+DATA_V.search);if(DATA_V.match)u.push("data/match-deck.json?v="+DATA_V.match);if(DATA_V.trivia)u.push("data/trivia.json?v="+DATA_V.trivia);if(DATA_V.quiz)u.push("data/quiz.json?v="+DATA_V.quiz)}
   reg.active.postMessage({warm:u});
   /* review 22: the Save PDF and Save image libraries too, so a first save offline works (the worker keeps them on first use) */
   ["assets/lib/html2canvas-1.4.1.min.js","assets/lib/jspdf-2.5.1.umd.min.js"].forEach(x=>{try{fetch(x).catch(()=>{})}catch(e){}});
