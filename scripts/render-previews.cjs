@@ -2,7 +2,8 @@
      node scripts/render-previews.cjs                 every film missing a preview
      node scripts/render-previews.cjs --all           redo every film
      node scripts/render-previews.cjs "Jaws (1975)"   just these films
-   Output: assets/menu-previews/<slug>.jpg, about 35 to 90 KB each: 600 wide, 800 for two-page spreads, 1000 for three-page strips.
+   Output: assets/menu-previews/<slug>.jpg, shot at 2x so it stays sharp on phone screens: 1200 wide, 1600 for two-page spreads,
+   2000 for three-page strips (the film page shows it at half that size).
      node scripts/render-previews.cjs --wide          redo the spreads and strips (wider than 1.5 to 1)
    Opens the real app (index.html?film=...) on a local server, waits for the menu card, and snaps it at full A4 size. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
@@ -42,7 +43,7 @@ async function snap(page,id){
   const browser=await chromium.launch();
   let done=0,fail=[];const t0=Date.now(),queue=todo.slice();
   async function worker(){
-    const ctx=await browser.newContext({viewport:{width:1400,height:1300},deviceScaleFactor:1});
+    const ctx=await browser.newContext({viewport:{width:1400,height:1300},deviceScaleFactor:2});
     await ctx.addInitScript(()=>{try{localStorage.setItem('mns-welcome','1')}catch(e){}});
     const page=await ctx.newPage();
     while(queue.length){const id=queue.shift();
@@ -51,9 +52,9 @@ async function snap(page,id){
 from PIL import Image
 im=Image.open(sys.argv[1]).convert('RGB')
 r=im.width/im.height
-w=1000 if r>=2 else 800 if r>=1.5 else 600
+w=2000 if r>=2 else 1600 if r>=1.5 else 1200
 im=im.resize((w,round(im.height*w/im.width)),Image.LANCZOS)
-im.save(sys.argv[2],'JPEG',quality=72,optimize=True,progressive=True)`,tmp,path.join(OUT,slug(id)+'.jpg')]);
+im.save(sys.argv[2],'JPEG',quality=80,optimize=True,progressive=True)`,tmp,path.join(OUT,slug(id)+'.jpg')]);
         fs.unlinkSync(tmp);
       }catch(e){fail.push(id+': '+String(e.message||e).split('\n')[0])}
       done++;if(done%25===0)console.log(done+'/'+todo.length+' in '+Math.round((Date.now()-t0)/1000)+'s');
