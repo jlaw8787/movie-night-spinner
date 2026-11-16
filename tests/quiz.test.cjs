@@ -12,6 +12,7 @@ for (const f of films) {
 }
 const html = rd('index.html');
 assert.ok(html.indexOf('src="quiz.js') > html.indexOf('src="friends.js'), 'quiz.js loads after friends.js');
+assert.ok((html.match(/src="quiz\.js/g) || []).length === 1, 'quiz.js loads once');
 assert.ok(html.includes('id="modeQuiz"') && html.includes('id="quizPanel"'), 'Quiz it tab and panel');
 for (const f of ['quiz.js', 'scripts/build-quiz.cjs', 'data/trivia.json']) assert.ok(!rd(f).includes(String.fromCharCode(8212)), 'em dash in ' + f);
 console.log('quiz: pass');
