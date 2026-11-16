@@ -1,7 +1,7 @@
 /* Quiz night check: two phones. Phone A plays the daily, a pass-the-phone game and a challenge, and sends the link.
    Phone B opens the link and must get the same 10 questions in the same order, then sees both scores.
    Run: node scripts/check-quiz.cjs  (SHOTS=dir saves phone screenshots). */
-const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const PW = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const { spawn } = require('child_process'), path = require('path'), http = require('http'), fs = require('fs');
 const REPO = path.resolve(__dirname, '..'), PORT = String(process.env.MNS_PORT || 4193), ORIGIN = 'http://127.0.0.1:' + PORT;
 const SHOTS = process.env.SHOTS || '';
@@ -27,7 +27,7 @@ async function answer(p, want) {
 }
 (async () => {
   await ready();
-  const browser = await chromium.launch();
+  const browser = await PW[process.env.ENGINE || 'chromium'].launch();
   const A = await phone(browser), pa = A.p;
   await pa.goto(ORIGIN + '/index.html'); await pa.waitForFunction(() => window.RDQuiz);
   ok(await pa.locator('#quizPanel').isHidden(), 'quiz stays closed until tapped');
