@@ -26,6 +26,12 @@
   const count = (p, t) => { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'quiz/' + p, title: t, event: true }) } catch (e) { } };
   const isKids = () => typeof kidsMode !== 'undefined' && !!kidsMode;
   const app = () => globalThis.REEL_NATIVE || !/^https?:$/.test(location.protocol) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  const inn = () => !!(globalThis.RDAuth && RDAuth.signedIn && RDAuth.signedIn());
+  const mates = () => inn() && globalThis.RDFriends ? (RDFriends.friends() || []) : [];
+  const arpc = (fn, b) => RDAuth.rpc(fn, b || {});
+  const flagsOf = g => (g.kids ? 1 : 0) + (g.np ? 2 : 0);
+  /* 1 you win, -1 they win, 0 dead heat: score first, then the quicker time */
+  const verdict = (ms, mt, ts, tt) => ms > ts || (ms === ts && mt < tt) ? 1 : ms === ts && mt === tt ? 0 : -1;
   const siteURL = () => app() ? 'https://reeldinner.com/' : location.origin + '/';
 
   /* ---------- data ---------- */
@@ -140,7 +146,7 @@
     const players = kind === 'pass' ? o.players : [{ n: myName() || 'You', s: 0, r: '' }];
     const n = kind === 'pass' ? players.length * o.rounds : 10;
     const seed = kind === 'daily' ? dailySeed(kids) : o.seed || newSeed(), np = !!(o.np || globalThis.REEL_APP);
-    G = { kind, seed, kids, np, day: today(), qs: deal(seed, kids, n, np), i: 0, players, ms: 0, t0: 0, ch: o.ch || null, rounds: o.rounds || 0 };
+    G = { kind, seed, kids, np, day: today(), qs: deal(seed, kids, n, np), i: 0, players, ms: 0, t0: 0, ch: o.ch || null, rounds: o.rounds || 0, to: o.to || null, sent: [] };
     if (!G.qs.length) { G = null; return hub() }
     count(kind, 'Quiz: ' + kind);
     view = kind === 'pass' && players.length > 1 ? 'hand' : 'q'; saveG(); render();
@@ -173,8 +179,8 @@
         </section>
         <section class="qz-card"><p class="qz-ck">Pass the phone</p><p class="qz-cs">2 to 6 players at the table, a question each per round. Winner spins the wheel.</p>
           <div class="mn-actions"><button type="button" class="mn-go" id="qzPass">Set up players</button></div></section>
-        <section class="qz-card"><p class="qz-ck">Challenge a friend</p><p class="qz-cs">Play 10, send the link. They get the same 10 and see if they can beat you. No sign-in needed.</p>
-          <div class="mn-actions"><button type="button" class="mn-go" id="qzChal">Play and send</button></div></section>
+        <section class="qz-card"><p class="qz-ck">Challenge a friend</p><p class="qz-cs">${inn() ? 'Play 10, then send them to friends on Reel Dinner or as a link.' : 'Play 10, send the link. They get the same 10 and see if they can beat you. No sign-in needed.'}</p>
+          <div id="qzIncoming"></div><div class="mn-actions"><button type="button" class="mn-go" id="qzChal">Play and send</button></div></section>
         <section class="qz-card"><p class="qz-ck">Win the film</p><p class="qz-cs">The wheel hides a film. Get two of three right and it's tonight's feature.</p>
           <div class="mn-actions"><button type="button" class="mn-ghost" id="qzWin">Try your luck</button></div></section>
       </div>${S.played ? `<p class="qz-foot">Games played on this phone: ${S.played}. Best score: ${S.best}/10.</p>` : ''}`;
@@ -184,7 +190,35 @@
     on('qzPass', () => { view = 'pass'; render() });
     on('qzChal', () => { if (myName()) need(() => start('chal')); else { view = 'name'; render() } });
     on('qzWin', () => { if (typeof openTrivia === 'function') openTrivia() });
+    if (inn()) incoming();
   }
+  /* challenges from friends waiting on you, straight on the hub */
+  async function incoming() {
+    let r; try { r = await arpc('quiz_list') } catch (e) { return }
+    const box = $('qzIncoming'); if (!box || view !== 'hub' || !r || r.status !== 'ok') return;
+    const mine = (r.quizzes || []).filter(q => q.turn === 'you');
+    if (!mine.length) { box.innerHTML = ''; return }
+    box.innerHTML = `<ul class="qz-inc">${mine.slice(0, 5).map(q => `<li><span><b>${ESC((q.friend && q.friend.name) || 'A friend')}</b> got ${q.from_score}/10. Your turn.</span><button type="button" class="mn-ghost qz-sm" data-play="${ESC(q.id)}">Play</button></li>`).join('')}</ul>`;
+    box.querySelectorAll('[data-play]').forEach(b => b.onclick = () => { const q = mine.find(x => x.id === b.dataset.play); if (q) play(q) });
+  }
+  function play(q) {
+    const ch = { n: (q.friend && q.friend.name) || 'Your friend', s: q.from_score, t: q.from_secs, id: q.id, fid: q.friend && q.friend.id };
+    open('hub'); need(() => start('chal', { seed: +q.seed, kids: !!(q.flags & 1), np: !!(q.flags & 2), ch }));
+  }
+  /* a finished challenge, shown without playing it again */
+  function result(q) {
+    open('hub');
+    const mine = q.me === 1 ? [q.from_score, q.from_secs] : [q.to_score, q.to_secs], theirs = q.me === 1 ? [q.to_score, q.to_secs] : [q.from_score, q.from_secs];
+    const n = (q.friend && q.friend.name) || 'Your friend', w = verdict(mine[0], mine[1], theirs[0], theirs[1]);
+    view = 'shown';
+    panel.innerHTML = `<div class="mn-hand qz-end"><p class="mn-tk">Quiz night challenge</p><h2 class="mn-t">${w > 0 ? `You beat ${ESC(n)}` : w < 0 ? `${ESC(n)} won this one` : 'Dead heat'}</h2>
+      <div class="qz-vs"><p><span>You</span><b>${mine[0]}</b><small>${mine[1]}s</small></p><p><span>${ESC(n)}</span><b>${theirs[0]}</b><small>${theirs[1]}s</small></p></div>
+      <div class="mn-actions"><button type="button" class="mn-go" id="qzRe">Rematch: new 10 for ${ESC(n)}</button><button type="button" class="mn-ghost" id="qzHub">Back to Quiz night</button></div></div>`;
+    $('qzRe').onclick = () => challenge({ id: q.friend && q.friend.id, name: n });
+    $('qzHub').onclick = hub;
+  }
+  /* play a fresh 10 aimed at one friend */
+  function challenge(f) { open('hub'); need(() => start('chal', { to: f && f.id ? { id: f.id, name: f.name || 'your friend' } : null })) }
   function need(fn) {
     if (QD) return fn();
     panel.innerHTML = `<p class="mn-k qz-wait">Shuffling the question cards...</p>`;
@@ -300,9 +334,14 @@
         <p class="qz-big">${me.s}<small>/${G.qs.length}</small></p><p class="qz-grid" aria-label="${me.s} right out of ${G.qs.length}">${grid(me.r)}</p>
         ${vs || `<p class="mn-k">${line}</p>`}
         <div class="mn-actions">${G.kind === 'daily' ? `<button type="button" class="mn-go" id="qzShareDay">Share my score</button>`
-          : `<button type="button" class="mn-go" id="qzSend">${ch ? `Send it back to ${ESC(ch.n)}` : 'Send this challenge'}</button>`}
+          : ch && ch.id ? `<button type="button" class="mn-go" id="qzRe">Rematch: new 10 for ${ESC(ch.n)}</button>`
+          : G.to ? `<button type="button" class="mn-go" id="qzTo" data-to="${ESC(G.to.id)}">${G.sent.includes(G.to.id) ? `Sent to ${ESC(G.to.name)}` : `Send to ${ESC(G.to.name)}`}</button>`
+          : `<button type="button" class="${!ch && mates().length ? 'mn-ghost' : 'mn-go'}" id="qzSend">${ch ? `Send it back to ${ESC(ch.n)}` : mates().length ? 'Send as a link' : 'Send this challenge'}</button>`}
           <button type="button" class="mn-ghost" id="qzHub">Back to Quiz night</button></div>
-        ${G.kind === 'chal' && !ch ? `<p class="qz-cs">Your friend gets these same 10 questions and sees your score at the end.</p>` : ''}`;
+        ${ch && ch.id ? `<p class="qz-cs" id="qzAns">${G.answered ? `${ESC(ch.n)} can see your score now.` : 'Sending your score...'}</p>` : ''}
+        ${G.kind === 'chal' && !ch && mates().filter(f => !G.to || f.id !== G.to.id).length ? `<div class="qz-send"><p class="mn-tk">Send to friends on Reel Dinner</p><div class="mn-chips">${mates().filter(f => !G.to || f.id !== G.to.id).map(f => `<button type="button" class="mn-chip" data-to="${ESC(f.id)}"${G.sent.includes(f.id) ? ' aria-pressed="true" disabled' : ''}>${ESC(f.name || 'Friend')}${G.sent.includes(f.id) ? '<small>Sent</small>' : ''}</button>`).join('')}</div>
+          ${G.to ? '' : `<p class="qz-cs">They get these same 10 in their inbox and you'll see their score when they play.</p>`}</div>`
+          : G.kind === 'chal' && !ch && !G.to ? `<p class="qz-cs">Your friend gets these same 10 questions and sees your score at the end.</p>` : ''}`;
     }
     panel.innerHTML = `<div class="mn-hand qz-end">${body}</div><details class="qz-review"><summary>See the answers</summary><ol>${G.qs.map((q, i) => {
       const f = byId.get(q.id), r = G.players[i % P.length].r[Math.floor(i / P.length)] === '1';
@@ -311,6 +350,9 @@
     const on = (id, fn) => { const b = $(id); if (b) b.onclick = fn };
     on('qzShareDay', e => shareDaily(e.currentTarget));
     on('qzSend', e => shareChal(e.currentTarget));
+    on('qzRe', () => challenge({ id: G.ch.fid, name: G.ch.n }));
+    panel.querySelectorAll('[data-to]').forEach(b => b.onclick = () => sendTo(b));
+    if (G.ch && G.ch.id && !G.answered) answerBack();
     on('qzHub', () => { G = null; saveG(); hub() });
     on('qzAgain', () => { const players = G.players.map(p => ({ n: p.n, s: 0, r: '' })); need(() => start('pass', { players, rounds: G.rounds })) });
     on('qzSpin', () => { G = null; saveG(); spinBtn.click(); setTimeout(() => { const s = $('spin'); s && s.click() }, 350) });
@@ -329,6 +371,25 @@
     const url = siteURL() + '?quiz=daily';
     send(`Reel Dinner ${k ? "Kids' daily" : 'Daily quiz'} No. ${today() - DAY0 + 1}\n${d.s}/10 ${grid(d.r)}${streak() > 1 ? `\n${streak()} day streak` : ''}\n${url}`, url, b);
     count('share-daily', 'Quiz: share daily');
+  }
+  async function sendTo(b) {
+    const id = b.dataset.to, me = G.players[0], f = mates().find(x => x.id === id) || (G.to && G.to.id === id ? G.to : null);
+    const name = (f && f.name) || 'your friend';
+    if (G.sent.includes(id)) return;
+    b.disabled = true;
+    let r; try { r = await arpc('quiz_send', { p_friend: id, p_seed: G.seed, p_flags: flagsOf(G), p_score: me.s, p_secs: Math.round(G.ms / 1000) }) } catch (e) { r = null }
+    const s = r && r.status;
+    if (s === 'ok' || s === 'already') { G.sent.push(id); saveG(); count('send-friend', 'Quiz: send to a friend'); say(`Sent to ${name}.`); results(); try { RDFriends.refresh() } catch (e) { } return }
+    b.disabled = false;
+    const msg = s === 'slow' ? "That's a lot of challenges for one day. Try again tomorrow." : s === 'toomany' ? `${name} already has 5 of yours waiting. Give them a chance to catch up.` : s === 'notfriends' ? `You and ${name} aren't friends on Reel Dinner any more.` : "Couldn't send that. Check your connection and try again.";
+    const cs = panel.querySelector('.qz-send .qz-cs') || panel.querySelector('.qz-end .mn-actions'); if (cs) { let e = panel.querySelector('.qz-err'); if (!e) { e = document.createElement('p'); e.className = 'qz-cs qz-err'; e.setAttribute('role', 'alert'); cs.after(e) } e.textContent = msg }
+  }
+  async function answerBack() {
+    const g = G, me = g.players[0];
+    let r; try { r = await arpc('quiz_answer', { p_id: g.ch.id, p_score: me.s, p_secs: Math.round(g.ms / 1000) }) } catch (e) { r = null }
+    const el = $('qzAns');
+    if (r && (r.status === 'ok' || r.status === 'done')) { g.answered = 1; if (G === g) saveG(); if (el) el.textContent = `${g.ch.n} can see your score now.`; try { RDFriends.refresh() } catch (e) { } }
+    else if (el) { el.innerHTML = `Couldn't send your score yet. <button type="button" class="mn-link" id="qzAnsGo">Try again</button>`; $('qzAnsGo').onclick = () => { el.textContent = 'Sending your score...'; answerBack() } }
   }
   function shareChal(b) {
     const me = G.players[0], secs = Math.round(G.ms / 1000);
@@ -382,5 +443,5 @@
     count('link', 'Quiz: opened a link');
   }
   else if (G) { /* a game in progress survives a reload, but the tab only opens when the person taps it */ }
-  window.RDQuiz = { open, deal: (seed, kids, n, np) => loadData().then(() => deal(seed, kids, n, np)) };
+  window.RDQuiz = { open, play, result, challenge, deal: (seed, kids, n, np) => loadData().then(() => deal(seed, kids, n, np)) };
 })();

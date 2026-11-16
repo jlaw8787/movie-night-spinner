@@ -13,7 +13,7 @@ const ok = (c, m) => { if (!c) throw Error('FAIL: ' + m); console.log('PASS ' + 
 
 /* ---------- the fake database ---------- */
 const USERS = { 'josh@example.com': 'u1', 'sam@example.com': 'u2' }, EMAIL = { u1: 'josh@example.com', u2: 'sam@example.com' };
-const cards = {}, friends = new Set(), invites = {}, duels = {}, inbox = [], prefs = {};
+const cards = {}, friends = new Set(), invites = {}, duels = {}, inbox = [], prefs = {}, quizzes = {};
 let seq = 1;
 const fkey = (a, b) => a + '|' + b, areFriends = (a, b) => friends.has(fkey(a, b));
 const who = u => u ? { id: u, no: cards[u] ? cards[u].no : null, name: cards[u] && cards[u].data.member && cards[u].data.member.name ? cards[u].data.member.name : cards[u] ? 'Member ' + cards[u].no.slice(0, 3) + ' ' + cards[u].no.slice(3) : 'A Galaxy Video member' } : null;
@@ -24,6 +24,7 @@ function view(d, u) {
   const both = mine.filter(s => s.k && th.some(t => t.f === s.f && t.k)).map(s => s.f);
   return { status: 'ok', id: d.id, state: d.status, me: d.from === u ? 1 : 2, friend: who(them), vibe: d.vibe, deck: d.deck, mine: mine.map(s => ({ f: s.f, k: s.k })), their_n: th.length, both, theirs: ['nomatch', 'settled'].includes(d.status) ? th.filter(s => s.k).map(s => s.f) : null, match: d.match, code: Object.keys(invites).find(c => invites[c].duel === d.id) || null };
 }
+const qview = (q, u) => ({ id: q.id, me: q.from === u ? 1 : 2, friend: who(q.from === u ? q.to : q.from), seed: q.seed, flags: q.flags, state: q.status, from_score: q.fs, from_secs: q.ft, to_score: q.ts, to_secs: q.tt, turn: q.status === 'done' ? 'done' : q.to === u ? 'you' : 'them', at: q.at });
 const code8 = () => Array.from({ length: 8 }, () => 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'[Math.floor(Math.random() * 31)]).join('');
 const RPC = {
   member_load: (u) => cards[u] ? { status: 'ok', no: cards[u].no, data: cards[u].data } : { status: 'new' },
@@ -37,8 +38,8 @@ const RPC = {
     return { status: 'ok', friend: who(i.from), new: fresh, duel: dl, taken: false };
   },
   friends_list: (u) => ({ status: 'ok', friends: [...friends].filter(k => k.startsWith(u + '|')).map(k => Object.assign(who(k.split('|')[1]), { streak: 0 })), incoming: [], outgoing: [] }),
-  inbox_unread: (u) => ({ status: 'ok', unread: inbox.filter(i => i.user === u && !i.read).length, turns: Object.values(duels).filter(d => (d.from === u || d.to === u) && d.to && d.status === 'open' && d.swipes.filter(s => s.u === u).length < d.deck.length).length }),
-  inbox_list: (u) => ({ status: 'ok', items: inbox.filter(i => i.user === u).reverse().map(i => ({ id: i.id, kind: i.kind, from: who(i.from), duel: i.duel || null, film: i.film || null, at: i.at, read: i.read })) }),
+  inbox_unread: (u) => ({ status: 'ok', unread: inbox.filter(i => i.user === u && !i.read).length, turns: Object.values(duels).filter(d => (d.from === u || d.to === u) && d.to && d.status === 'open' && d.swipes.filter(s => s.u === u).length < d.deck.length).length + Object.values(quizzes).filter(q => q.to === u && q.status === 'open').length }),
+  inbox_list: (u) => ({ status: 'ok', items: inbox.filter(i => i.user === u).reverse().map(i => ({ id: i.id, kind: i.kind, from: who(i.from), duel: i.duel || null, film: i.film || null, quiz: i.quiz ? qview(quizzes[i.quiz], u) : null, at: i.at, read: i.read })) }),
   inbox_read: (u) => { inbox.forEach(i => { if (i.user === u) i.read = true }); return { status: 'ok' } },
   duels_list: (u) => ({ status: 'ok', duels: Object.values(duels).filter(d => d.from === u || d.to === u).map(d => { const v = view(d, u), m = v.mine.length; return { id: d.id, state: d.status, me: v.me, friend: v.friend, vibe: d.vibe, n: d.deck.length, mine: m, their_n: v.their_n, match: d.match, code: v.code, turn: ['matched', 'settled'].includes(d.status) ? 'done' : d.status === 'nomatch' ? 'decide' : m < d.deck.length ? 'you' : 'them', at: new Date().toISOString() } }) }),
   duel_create: (u, a) => { const id = 'd' + seq++; duels[id] = { id, from: u, to: a.p_friend, vibe: a.p_vibe, deck: a.p_deck, swipes: [], status: 'open', match: null }; if (!a.p_friend) invites[code8()] = { from: u, duel: id }; return view(duels[id], u) },
@@ -53,6 +54,16 @@ const RPC = {
   },
   duel_unswipe: (u, a) => { const d = duels[a.p_id]; if (d.status === 'open') d.swipes = d.swipes.filter(s => !(s.u === u && s.f === a.p_film)); return view(d, u) },
   duel_close: (u, a) => { duels[a.p_id].status = 'closed'; return { status: 'ok' } },
+  /* Quiz night challenges (supabase/quiz-challenges.sql) */
+  quiz_send: (u, a) => { if (!areFriends(u, a.p_friend)) return { status: 'notfriends' }; if (Object.values(quizzes).some(q => q.from === u && q.to === a.p_friend && q.seed === a.p_seed)) return { status: 'already' };
+    const id = 'q' + seq++; quizzes[id] = { id, from: u, to: a.p_friend, seed: a.p_seed, flags: a.p_flags, fs: a.p_score, ft: a.p_secs, ts: null, tt: null, status: 'open', at: new Date().toISOString() };
+    inbox.push({ id: seq++, user: a.p_friend, kind: 'quiz_new', from: u, quiz: id, at: new Date().toISOString(), read: false }); return { status: 'ok', challenge: qview(quizzes[id], u) } },
+  quiz_list: (u) => ({ status: 'ok', quizzes: Object.values(quizzes).filter(q => (q.from === u || q.to === u) && q.status !== 'closed').reverse().map(q => qview(q, u)) }),
+  quiz_answer: (u, a) => { const q = quizzes[a.p_id]; if (!q || q.to !== u || q.status === 'closed') return { status: 'gone' }; if (q.status === 'done') return { status: 'done' };
+    q.ts = a.p_score; q.tt = a.p_secs; q.status = 'done'; inbox.forEach(i => { if (i.user === u && i.quiz === q.id) i.read = true });
+    inbox.push({ id: seq++, user: q.from, kind: 'quiz_done', from: u, quiz: q.id, at: new Date().toISOString(), read: false }); return { status: 'ok', challenge: qview(q, u) } },
+  quiz_close: (u, a) => { const q = quizzes[a.p_id]; if (q) q.status = 'closed'; return { status: 'ok' } },
+  inbox_delete: (u, a) => { for (let k = inbox.length - 1; k >= 0; k--) if (inbox[k].user === u && (!a.p_ids || a.p_ids.includes(inbox[k].id))) inbox.splice(k, 1); return { status: 'ok' } },
   alert_prefs_get: (u) => Object.assign({ status: 'ok', email: true, digest: true, late_fees: true }, prefs[u] || {}),
   alert_prefs_set: (u, a) => { prefs[u] = { email: a.p_email, digest: a.p_digest, late_fees: a.p_late_fees }; return RPC.alert_prefs_get(u) }
 };
@@ -198,6 +209,44 @@ const swipeAll = async (page, keepFirst) => {
   await pa.screenshot({ path: '/tmp/f-shop-top.png', clip: { x: 0, y: 0, width: 390, height: 360 } });
   await pa.setViewportSize({ width: 1280, height: 800 }); await pa.click('#viewWheelBtn'); await sleep(500); await pa.evaluate(() => scrollTo(0, 0));
   await pa.screenshot({ path: '/tmp/f-desk-top.png', clip: { x: 0, y: 0, width: 1280, height: 560 } });
+
+  /* Quiz night between friends: Josh taps Quiz next to Sam, plays 10 and sends them; Sam plays from the inbox;
+     Josh gets the result line; inbox lines delete one at a time and all at once */
+  const answer = async (p, right) => { await p.locator('.qz-opts button').first().waitFor(); const i = await p.evaluate(r => { const s = JSON.parse(sessionStorage.getItem('rd-quiz-game')); const q = s.qs[s.i]; return r ? q.c : (q.c + 1) % 4 }, right); await p.locator('.qz-opts button').nth(i).click(); await p.locator('#qzNext').click() };
+  await pa.setViewportSize({ width: 390, height: 844 }); await pa.click('#viewWheelBtn'); await sleep(300);
+  await pa.click('#acctBtn'); await pa.click('[data-tab="friends"]'); await pa.waitForSelector('[data-quizf="u2"]');
+  await pa.screenshot({ path: '/tmp/f-quiz-friends.png' });
+  await pa.click('[data-quizf="u2"]');
+  for (let i = 0; i < 10; i++) await answer(pa, i < 7);
+  await pa.waitForSelector('#qzTo'); ok(/Send to Sam/.test(await pa.textContent('#qzTo')), 'quiz aimed at Sam offers Send to Sam');
+  await pa.click('#qzTo'); await pa.waitForFunction(() => /Sent to Sam/.test(document.querySelector('#qzTo').textContent));
+  ok(Object.values(quizzes).length === 1 && Object.values(quizzes)[0].fs === 7, 'challenge saved with Josh\'s 7');
+  await pa.locator('#quizPanel').screenshot({ path: '/tmp/f-quiz-sent.png' });
+  await pb.keyboard.press('Escape'); await pb.evaluate(() => RDFriends.refresh()); await sleep(800);
+  ok(await pb.isVisible('#acctDot'), 'Sam gets a badge for the quiz');
+  await pb.click('#acctBtn'); await pb.click('[data-tab="inbox"]'); await pb.waitForSelector('[data-act="quiz"]');
+  ok(/Josh<\/b> challenged you to Quiz night\. They got <b>7\/10/.test(await pb.innerHTML('dialog.acct #acctBody')), 'Sam\'s inbox shows the challenge and Josh\'s score');
+  await pb.screenshot({ path: '/tmp/f-quiz-inbox-b.png' });
+  await pb.click('[data-act="quiz"]');
+  const sameQ = await pb.evaluate(() => new Promise(r => { const t = setInterval(() => { const s = sessionStorage.getItem('rd-quiz-game'); if (s) { clearInterval(t); r(JSON.parse(s).seed) } }, 100) }));
+  ok(sameQ === Object.values(quizzes)[0].seed, 'Sam plays the same 10 (same seed)');
+  for (let i = 0; i < 10; i++) await answer(pb, i < 9);
+  await pb.waitForSelector('.qz-vs'); await pb.waitForFunction(() => /can see your score/.test((document.querySelector('#qzAns') || {}).textContent || ''));
+  ok(/You beat Josh/.test(await pb.textContent('.qz-verdict')), 'Sam sees who won');
+  await pb.locator('#quizPanel').screenshot({ path: '/tmp/f-quiz-result-b.png' });
+  await pa.evaluate(() => RDFriends.refresh()); await sleep(600);
+  await pa.click('#acctBtn'); await pa.click('[data-tab="inbox"]'); await pa.waitForSelector('[data-act="quizfriend"]');
+  ok(/Sam<\/b> played your quiz: Sam 9, you 7\. They win\./.test(await pa.innerHTML('dialog.acct #acctBody')), 'Josh gets the result line');
+  await pa.screenshot({ path: '/tmp/f-quiz-inbox-a.png' });
+  const before = await pa.locator('dialog.acct .acct-card').count();
+  await pa.locator('[data-del]').first().click(); await sleep(400);
+  ok(await pa.locator('dialog.acct .acct-card').count() === before - 1, 'one inbox line deletes');
+  await pa.click('#acctClear'); await pa.click('#acctClear'); await sleep(500);
+  ok(!inbox.some(i => i.user === 'u1') && /Nothing yet/.test(await pa.textContent('dialog.acct #acctBody')), 'Clear all empties the inbox');
+  ok(inbox.some(i => i.user === 'u2'), 'clearing leaves Sam\'s inbox alone');
+  await pa.click('[data-tab="duels"]'); await pa.waitForSelector('[data-qz]');
+  ok(/You 7, Sam 9/.test(await pa.textContent('dialog.acct #acctBody')), 'board shows the quiz result');
+  await pa.screenshot({ path: '/tmp/f-quiz-board-a.png' });
 
   ok(!errs.length, 'no page errors ' + errs.join(' | '));
   await b.close(); process.exit(0);

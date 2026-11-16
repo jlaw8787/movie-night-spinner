@@ -212,10 +212,11 @@
   /* Now Showing: every live duel and whose turn it is */
   async function duels(body) {
     loading(body, 'Checking the board');
-    let r; try { r = await rpc('duels_list') } catch (e) { return failed(body, () => duels(body)) }
+    let r, qz = null; try { [r, qz] = await Promise.all([rpc('duels_list'), rpc('quiz_list').catch(() => null)]) } catch (e) { return failed(body, () => duels(body)) }
     if (!box || tab !== 'duels') return;
     DUELS = (r && r.duels) || [];
-    counts.turns = DUELS.filter(d => d.turn === 'you' && d.friend || d.turn === 'decide').length; badge(); tabs();
+    const QZ = (qz && qz.quizzes) || [];
+    counts.turns = DUELS.filter(d => d.turn === 'you' && d.friend || d.turn === 'decide').length + QZ.filter(q => q.turn === 'you').length; badge(); tabs();
     const line = d => {
       const who = d.friend ? ESC(nm(d.friend)) : 'your link';
       if (d.turn === 'done') return `${d.state === 'settled' ? 'The wheel picked' : 'Matched on'} <b>${ESC(title(d.match))}</b>`;
@@ -229,7 +230,22 @@
         <div class="acct-ct"><b>${d.friend ? ESC(nm(d.friend)) : 'Link duel'}</b><small>${ESC(VIBE[d.vibe] || 'Surprise me')} · ${ESC(ago(d.at))}</small></div>
         <p class="acct-cl">${line(d)}</p>
         <div class="acct-cb"><button type="button" class="acct-go sm" data-duel="${ESC(d.id)}">${act(d)}</button><button type="button" class="acct-ghost sm" data-close="${ESC(d.id)}">Close</button></div></li>`).join('')}</ul>`
-        : `<p class="acct-wait">No duels going. Start one and send it to a friend, they swipe whenever they get to it.</p>`}`;
+        : `<p class="acct-wait">No duels going. Start one and send it to a friend, they swipe whenever they get to it.</p>`}
+      <h3 class="acct-h">Quiz challenges</h3>
+      ${QZ.length ? `<ul class="acct-cards">${QZ.map(q => { const n = ESC(nm(q.friend)), mine = q.me === 1 ? q.from_score : q.to_score, theirs = q.me === 1 ? q.to_score : q.from_score;
+        const ln = q.turn === 'you' ? `${n} got ${q.from_score}/10. Your turn.` : q.turn === 'them' ? `You got ${q.from_score}/10. Waiting on ${n}.` : `You ${mine}, ${n} ${theirs}.`;
+        return `<li class="acct-card${q.turn === 'you' ? ' hot' : ''}"><div class="acct-ct"><b>${n}</b><small>${ESC(ago(q.at))}</small></div><p class="acct-cl">${ln}</p>
+        <div class="acct-cb"><button type="button" class="acct-go sm" data-qz="${ESC(q.id)}">${q.turn === 'you' ? 'Play' : q.turn === 'done' ? 'See the result' : 'Rematch'}</button><button type="button" class="acct-ghost sm" data-qclose="${ESC(q.id)}">Close</button></div></li>` }).join('')}</ul>`
+        : `<p class="acct-wait">No quiz challenges yet. Play one in Quiz night, or tap Quiz next to a friend.</p>`}`;
+    body.querySelectorAll('[data-qz]').forEach(b => b.onclick = () => {
+      const q = QZ.find(x => x.id === b.dataset.qz); if (!q) return; dismissModal(box);
+      if (q.turn === 'you') RDQuiz.play(q); else if (q.turn === 'done') RDQuiz.result(q); else RDQuiz.challenge({ id: q.friend && q.friend.id, name: nm(q.friend) });
+    });
+    body.querySelectorAll('[data-qclose]').forEach(b => b.onclick = async () => {
+      if (!b.classList.contains('arm')) { b.classList.add('arm'); b.textContent = 'Tap again to close'; setTimeout(() => { if (b.isConnected) { b.classList.remove('arm'); b.textContent = 'Close' } }, 5000); return }
+      b.disabled = true;
+      try { await rpc('quiz_close', { p_id: b.dataset.qclose }); duels(body) } catch (e) { b.disabled = false; toast("Couldn't close it. Check your connection.") }
+    });
     body.querySelector('#acctNewDuel').onclick = () => { dismissModal(box); RDMatch.newDuel() };
     body.querySelectorAll('[data-duel]').forEach(b => b.onclick = async () => {
       const d = DUELS.find(x => x.id === b.dataset.duel); if (!d) return;
@@ -256,6 +272,9 @@
     duel_match: i => [`You and <b>${ESC(nm(i.from))}</b> both kept <b>${ESC(title(i.film))}</b>. Dinner's sorted.`, 'Open the menu', 'film'],
     duel_nomatch: i => [`No match with <b>${ESC(nm(i.from))}</b>. Time for a tie-breaker spin.`, 'Spin for it', 'duel'],
     duel_settled: i => [`The wheel picked <b>${ESC(title(i.film))}</b> for you and <b>${ESC(nm(i.from))}</b>.`, 'Open the menu', 'film'],
+    quiz_new: i => { const q = i.quiz || {}; return [`<b>${ESC(nm(i.from))}</b> challenged you to Quiz night. They got <b>${+q.from_score}/10</b>.${q.turn === 'done' ? ' You played it.' : ''}`, q.turn === 'you' ? 'Play' : 'See the result', 'quiz'] },
+    quiz_done: i => { const q = i.quiz || {}, w = q.to_score > q.from_score || (q.to_score === q.from_score && q.to_secs < q.from_secs) ? -1 : q.to_score === q.from_score && q.to_secs === q.from_secs ? 0 : 1;
+      return [`<b>${ESC(nm(i.from))}</b> played your quiz: ${ESC(nm(i.from))} ${+q.to_score}, you ${+q.from_score}. ${w > 0 ? 'You win.' : w < 0 ? 'They win.' : 'Dead heat.'}`, 'Rematch', 'quizfriend'] },
     late_fee: i => [`<span class="acct-fee">Galaxy Video late fee</span> Your copy of <b>${ESC(title(i.film))}</b> is overdue. Please be kind, rewind and swipe. <b>${ESC(nm(i.from))}</b> is waiting.`, 'Swipe now', 'duel']
   };
   async function inbox(body) {
@@ -270,16 +289,30 @@
       const req = kind === 'request' && i.from && pending.has(i.from.id);
       return `<li class="acct-card${i.read ? '' : ' new'}"><p class="acct-cl">${text}</p><div class="acct-cb"><small>${ESC(ago(i.at))}</small>
         ${req ? `<button type="button" class="acct-go sm" data-yes="${ESC(i.from.id)}">Accept</button><button type="button" class="acct-ghost sm" data-no="${ESC(i.from.id)}">No thanks</button>`
-          : label && (kind !== 'duel' || i.duel) && (kind !== 'film' || i.film) && (kind !== 'duelfriend' || i.from) ? `<button type="button" class="acct-go sm" data-act="${kind}" data-i="${i.id}">${label}</button>` : ''}</div></li>`;
-    }).join('')}</ul>` : `<p class="acct-wait">Nothing yet. Turns, matches and friend requests land here.</p>`;
+          : label && (kind !== 'duel' || i.duel) && (kind !== 'film' || i.film) && (kind !== 'duelfriend' && kind !== 'quizfriend' || i.from) && (kind !== 'quiz' || i.quiz) ? `<button type="button" class="acct-go sm" data-act="${kind}" data-i="${i.id}">${label}</button>` : ''}
+        <button type="button" class="acct-x" data-del="${i.id}" aria-label="Delete this line">&times;</button></div></li>`;
+    }).join('')}</ul><div class="acct-acts"><button type="button" class="acct-ghost sm" id="acctClear">Clear all</button></div>` : `<p class="acct-wait">Nothing yet. Turns, matches, quiz challenges and friend requests land here.</p>`;
     wireRequests(body, () => inbox(body));
     body.querySelectorAll('[data-act]').forEach(b => b.onclick = () => {
       const i = INBOX.find(x => String(x.id) === b.dataset.i); if (!i) return;
       dismissModal(box);
+      if (b.dataset.act === 'quiz') return i.quiz.turn === 'you' ? RDQuiz.play(i.quiz) : RDQuiz.result(i.quiz);
+      if (b.dataset.act === 'quizfriend') return RDQuiz.challenge({ id: i.from.id, name: nm(i.from) });
       if (b.dataset.act === 'duel') RDMatch.openDuel(i.duel);
       else if (b.dataset.act === 'film') RDMatch.openFilm(i.film);
       else RDMatch.newDuel({ id: i.from.id, name: nm(i.from) });
     });
+    body.querySelectorAll('[data-del]').forEach(b => b.onclick = async () => {
+      b.disabled = true;
+      try { await rpc('inbox_delete', { p_ids: [+b.dataset.del] }); const li = b.closest('li'); li && li.remove(); INBOX = INBOX.filter(x => String(x.id) !== b.dataset.del); if (!INBOX.length) inbox(body) }
+      catch (e) { b.disabled = false; toast("Couldn't delete that. Check your connection.") }
+    });
+    const clr = body.querySelector('#acctClear');
+    if (clr) clr.onclick = async () => {
+      if (!clr.classList.contains('arm')) { clr.classList.add('arm'); clr.textContent = 'Tap again to clear all'; setTimeout(() => { if (clr.isConnected) { clr.classList.remove('arm'); clr.textContent = 'Clear all' } }, 5000); return }
+      clr.disabled = true;
+      try { await rpc('inbox_delete', { p_ids: null }); counts.unread = 0; badge(); tabs(); inbox(body) } catch (e) { clr.disabled = false; toast("Couldn't clear it. Check your connection.") }
+    };
     if (INBOX.some(i => !i.read)) { try { await rpc('inbox_read', { p_ids: null }); counts.unread = 0; badge(); tabs() } catch (e) { } }
   }
   function wireRequests(body, after) {
@@ -304,7 +337,7 @@
       ${inc.length ? `<h3 class="acct-h">Want to be friends</h3><ul class="acct-cards">${inc.map(p => `<li class="acct-card new"><div class="acct-ct"><b>${ESC(nm(p))}</b><small>${ESC(noFmt(p.no))}</small></div><div class="acct-cb"><button type="button" class="acct-go sm" data-yes="${ESC(p.id)}">Accept</button><button type="button" class="acct-ghost sm" data-no="${ESC(p.id)}">No thanks</button></div></li>`).join('')}</ul>` : ''}
       <h3 class="acct-h">Your friends${f.length ? ` (${f.length})` : ''}</h3>
       ${f.length ? `<ul class="acct-cards">${f.map(p => `<li class="acct-card"><div class="acct-ct"><b>${ESC(nm(p))}</b><small>${ESC(noFmt(p.no))}${p.streak > 1 ? ` · ${p.streak} matches in a row` : ''}</small></div>
-        <div class="acct-cb"><button type="button" class="acct-go sm" data-duelf="${ESC(p.id)}">Send a duel</button><button type="button" class="acct-ghost sm" data-more="${ESC(p.id)}" aria-expanded="false">More</button></div>
+        <div class="acct-cb"><button type="button" class="acct-go sm" data-duelf="${ESC(p.id)}">Send a duel</button><button type="button" class="acct-ghost sm" data-quizf="${ESC(p.id)}">Quiz</button><button type="button" class="acct-ghost sm" data-more="${ESC(p.id)}" aria-expanded="false">More</button></div>
         <div class="acct-more" hidden><button type="button" class="acct-ghost sm" data-rm="${ESC(p.id)}">Remove</button><button type="button" class="acct-ghost sm danger" data-block="${ESC(p.id)}">Block</button><small>Blocking removes them and stops their links, requests and duels reaching you.</small></div></li>`).join('')}</ul>`
         : `<p class="acct-wait">No one yet. Send your invite link to the people you have dinner with.</p>`}
       ${out.length ? `<h3 class="acct-h">Waiting to hear back</h3><ul class="acct-cards">${out.map(p => `<li class="acct-card"><div class="acct-ct"><b>${ESC(noFmt(p.no) || nm(p))}</b><small>Asked ${ESC(ago(p.at))}</small></div><div class="acct-cb"><button type="button" class="acct-ghost sm" data-rm="${ESC(p.id)}">Take it back</button></div></li>`).join('')}</ul>` : ''}`;
@@ -329,6 +362,7 @@
     };
     wireRequests(body, () => friends(body));
     body.querySelectorAll('[data-duelf]').forEach(b => b.onclick = () => { const p = f.find(x => x.id === b.dataset.duelf); dismissModal(box); RDMatch.newDuel({ id: p.id, name: nm(p) }) });
+    body.querySelectorAll('[data-quizf]').forEach(b => b.onclick = () => { const p = f.find(x => x.id === b.dataset.quizf); dismissModal(box); RDQuiz.challenge({ id: p.id, name: nm(p) }) });
     body.querySelectorAll('[data-more]').forEach(b => b.onclick = () => { const m = b.closest('li').querySelector('.acct-more'); m.hidden = !m.hidden; b.setAttribute('aria-expanded', String(!m.hidden)) });
     const arm = (b, label, go) => b.onclick = async () => {
       if (!b.classList.contains('arm')) { const was = b.textContent; b.classList.add('arm'); b.textContent = label; setTimeout(() => { if (b.isConnected) { b.classList.remove('arm'); b.textContent = was } }, 5000); return }

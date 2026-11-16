@@ -1749,3 +1749,14 @@ Review before deploy (16 Nov, 8:30pm), fixed on the same branch:
 - Swapped the From Dusk Till Dawn bar-name question for a cleaner one (the daily goes to everyone).
 - Checked: 45 random older questions all correct; 40 random picture-round stills all fair and textless; answer slots spread; no duplicates.
 - Known and left: someone could close the browser mid-daily and replay it (daily lives on the phone, no server); stills for adult films can be grim (kids' mode excludes them).
+
+## 16 Nov, 9pm: Quiz challenges between friends + inbox delete (branch feat/quiz-friends, held for Josh's go)
+- Members send the 10 they just played to friends on the site: results screen lists friends as chips ("Send to friends on Reel Dinner"), or tap Quiz next to a friend in My account, Friends to play 10 aimed at them ("Send to Sam"). The link option stays for everyone.
+- Friend gets a quiz_new inbox line (with the sender's score), the card button count goes up, and the Quiz night hub lists challenges waiting on you. They play the same 10 (seed and flags from the database), their score goes back once (quiz_answer), and the sender gets a quiz_done line ("Sam played your quiz: Sam 9, you 7. They win."). Rematch deals a new 10 at the same friend.
+- My account, Duels has a Quiz challenges section (Play, See the result, Rematch, Close).
+- Inbox: an x on every line and Clear all (inbox_delete, own inbox only).
+- Database: supabase/quiz-challenges.sql (table movies.quiz_challenges RLS on, inbox.quiz_id, kinds quiz_new/quiz_done, quiz_send/list/answer/close, inbox_delete, inbox_list/inbox_unread/alerts_due replaced with quiz added, cron rd-quiz-tidy deletes after 60 days). Limits: 30 sends a day, 5 open to one friend, one send per seed per friend, friends only, blocks respected.
+- Emails: quiz_new goes out like duel_new under the same Settings switch. rd-alerts index.ts has the quiz_new line and subject; needs redeploy (verify_jwt off) at go-live.
+- Tested: supabase/tests/quiz-test.sql, 7 groups, PASS 16 Nov 8:27pm in a rolled-back transaction (table confirmed not kept). check-friends.cjs now runs the full member quiz loop on two phones plus inbox delete. npm test, check-quiz, check-browser pass. privacy.html updated.
+- To go live: (1) apply supabase/quiz-challenges.sql as migration quiz_challenges; (2) deploy rd-alerts; (3) merge to main, Publish site.
+- Josh's next ideas (not built): Final Cut for Match night (swipe rounds until one film is left; pass the phone and room code first; Duel later with first "your turn" email each day, later rounds inbox only).
