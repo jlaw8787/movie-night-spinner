@@ -109,6 +109,12 @@
       location.href = SB + '/auth/v1/authorize?provider=google&redirect_to=' + encodeURIComponent(back);
     },
     rpc,
+    /* for the few functions guests may call (invite_peek): the public key only, no session */
+    async rpcGuest(fn, args) {
+      const r = await call('/rest/v1/rpc/' + fn, args || {}, KEY);
+      if (!r.ok) throw new Error('error');
+      return r.body;
+    },
     async signOut() {
       const t = sess && sess.access_token;
       sess = null; save();

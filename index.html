@@ -3050,6 +3050,61 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
 @keyframes mnChase{50%{opacity:.45}}
 @media (prefers-reduced-motion:reduce){.mn-card,.mn-card.gone{transition:none}.mn-reveal,.mn-bulbs{animation:none}}
 @media (max-width:420px){.mn-cols{grid-template-columns:1fr}.mn-chip{min-width:88px;padding:8px 10px}}
+
+/* My account (friends.js): the card button in the top bar, the members panel, Dinner Duel board, inbox, friends */
+.acct-btn{position:absolute;right:64px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--line);background:rgba(0,0,0,.25);color:var(--screen);cursor:pointer;padding:0}
+.acct-btn.member{border-color:var(--gv-gold);color:var(--gv-gold)}
+.acct-btn:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+.acct-dot{position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;padding:0 5px;box-sizing:border-box;border-radius:10px;background:#e5484d;color:#fff;font:700 12px/20px var(--f-body);text-align:center;box-shadow:0 0 0 2px #120608}
+@media (max-width:520px){.top .views{margin-left:52px}.acct-btn{right:auto;left:6px}}
+@media (max-width:420px){.top .views button{padding:8px 8px;font-size:13px}}
+@media (max-width:374px){.top .views button{padding:8px 6px;font-size:12px}}
+dialog.acct{position:fixed;inset:0;z-index:70;background:rgba(5,4,14,.82);display:flex;justify-content:center;align-items:flex-start;padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px));overflow:auto}
+.acct-in{position:relative;width:min(520px,100%);background:linear-gradient(180deg,var(--gv-deep),var(--gv-night) 45%);color:var(--gv-cream);border:2px solid var(--gv-gold);border-radius:16px;padding:18px 16px 20px;box-shadow:0 30px 70px rgba(0,0,0,.6);box-sizing:border-box;font:400 15px/1.45 var(--f-body)}
+dialog.acct .modal-x{color:var(--gv-gold)}
+.acct-k{margin:0;font:400 12px var(--f-board);letter-spacing:.08em;color:var(--gv-teal);text-transform:uppercase}
+.acct-t{margin:2px 0 0;font:400 26px/1.1 var(--f-board);color:var(--gv-gold);padding-right:44px;overflow-wrap:anywhere}
+.acct-no{margin:2px 0 0;font:700 14px "Courier New",monospace;letter-spacing:.12em;color:var(--gv-lav)}
+.acct-tabs{display:flex;gap:2px;margin:14px 0 12px;border-bottom:1px solid rgba(255,196,46,.25)}
+.acct-tabs button{flex:1;min-height:44px;padding:0 2px;background:none;border:0;border-bottom:3px solid transparent;color:var(--gv-lav);font:400 13px var(--f-board);letter-spacing:.03em;cursor:pointer;white-space:nowrap}
+.acct-tabs button[aria-selected="true"]{color:var(--gv-gold);border-bottom-color:var(--gv-gold)}
+.acct-n{display:inline-block;margin-left:4px;min-width:18px;height:18px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:#e5484d;color:#fff;font:700 11px/18px var(--f-body);vertical-align:2px}
+.acct-body p{margin:0 0 10px}
+.acct-wait{color:var(--gv-lav);text-align:center;padding:14px 0}
+.acct-acts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 14px}.acct-acts.left{justify-content:flex-start}
+.acct-go,.acct-ghost{min-height:44px;padding:10px 18px;border-radius:999px;font:400 15px var(--f-board);letter-spacing:.03em;cursor:pointer;border:2px solid var(--gv-gold)}
+.acct-go{background:var(--gv-grad);color:var(--gv-night);border-color:transparent}
+.acct-ghost{background:transparent;color:var(--gv-gold)}
+.acct-go.sm,.acct-ghost.sm{min-height:40px;padding:7px 14px;font-size:13px}
+.acct-ghost.danger{border-color:#e5484d;color:#ff8f8a}.acct-ghost.arm{background:#c62a2f;border-color:#c62a2f;color:#fff}
+.acct-go:disabled,.acct-ghost:disabled{opacity:.6;cursor:default}
+.acct-go:focus-visible,.acct-ghost:focus-visible,.acct-tabs button:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2px}
+.acct-cards{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:8px}
+.acct-card{background:rgba(255,255,255,.06);border:1px solid rgba(217,201,242,.18);border-radius:12px;padding:10px 12px}
+.acct-card.hot,.acct-card.new{border-color:var(--gv-gold);background:rgba(255,196,46,.1)}
+.acct-ct{display:flex;justify-content:space-between;align-items:baseline;gap:4px 8px;flex-wrap:wrap}.acct-ct b{font-size:16px;color:#fff}.acct-ct small{color:var(--gv-lav);font-size:12.5px}
+.acct-body .acct-cl{margin:4px 0 8px}.acct-cl b{color:#fff}
+.acct-cb{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.acct-cb small{color:var(--gv-lav);font-size:12.5px;margin-right:auto}
+.acct-more{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}.acct-more[hidden]{display:none}.acct-more small{flex-basis:100%;color:var(--gv-lav);font-size:12.5px}
+.acct-h{font:400 15px var(--f-board);color:var(--gv-gold);letter-spacing:.04em;margin:16px 0 8px}
+.acct-add,.acct-name{margin:0 0 6px}.acct-add label,.acct-name label{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+.acct-add div,.acct-name div{display:flex;gap:8px}
+.acct-add input,.acct-name input{flex:1;min-width:0;min-height:44px;padding:8px 12px;border-radius:10px;border:2px solid rgba(217,201,242,.4);background:rgba(0,0,0,.3);color:#fff;font:600 17px var(--f-body);box-sizing:border-box}
+.acct-add input{font-family:"Courier New",monospace;letter-spacing:.15em}
+.acct-add input:focus,.acct-name input:focus{outline:none;border-color:var(--gv-gold)}
+.acct-body .acct-err{color:#ffb4a8;font-weight:600;min-height:1.2em;margin:6px 0 0}
+.acct-small{font-size:13px;color:var(--gv-lav)}.acct-small a{color:inherit}.syncbox .acct-small.dark{color:#4a463d;margin:10px 0 0;font-size:13px}
+.acct-hint{background:rgba(31,181,173,.15);border:1px solid rgba(31,181,173,.5);border-radius:10px;padding:8px 12px;font-size:14px}
+.acct-link{background:none;border:0;padding:0;color:var(--gv-gold);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer}
+.acct-list{margin:0 0 12px;padding-left:20px}.acct-list li{margin:0 0 4px}
+.acct-sw{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(217,201,242,.12);cursor:pointer}
+.acct-sw input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--gv-gold);flex:none}
+.acct-sw b{display:block;color:#fff}.acct-sw small{display:block;color:var(--gv-lav);font-size:13px}
+.acct-fee{display:inline-block;font:400 11px var(--f-board);letter-spacing:.06em;background:#c62a2f;color:#fff;border-radius:4px;padding:2px 6px;margin-right:4px;transform:rotate(-2deg)}
+.rd-toast{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translate(-50%,160%);z-index:90;width:max-content;max-width:min(440px,calc(100% - 32px));margin:0;padding:12px 16px;border-radius:12px;background:var(--gv-night);border:2px solid var(--gv-gold);color:var(--gv-cream);font:600 14px/1.35 var(--f-body);box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .25s;pointer-events:none}
+.rd-toast.on{transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.rd-toast{transition:none}}
+.mn-styles .mn-chip.wide{flex:1 1 40%}
 </style>
 
 <div id="printArea"></div>
@@ -3081,6 +3136,7 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Galaxy Video</button>
     </nav>
+    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19"/><path d="M6 15h5"/></svg><span class="acct-dot" id="acctDot" hidden></span></button>
     <button type="button" class="quick-mute" id="quickMute" aria-pressed="false" aria-label="Mute sound"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="qm-on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="qm-off" d="M17 9l5 6M22 9l-5 6"/></svg></button>
   </header>
   <div class="ambient" id="ambient" aria-hidden="true"></div>
@@ -3248,9 +3304,10 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
 <script src="assets/fonts/fonts.js?v=f28d82e1" defer></script>
 <script src="formats-core.js?v=1c74fdbc" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
-<script src="account.js?v=e420e3bd" defer></script>
-<script src="app.js?v=bf1d3991" defer></script>
-<script src="match.js?v=1484d36a" defer></script>
+<script src="account.js?v=a9edd7c8" defer></script>
+<script src="app.js?v=738ad2f7" defer></script>
+<script src="match.js?v=0c932e35" defer></script>
+<script src="friends.js?v=8b4479cd" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

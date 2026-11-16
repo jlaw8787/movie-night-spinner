@@ -2871,6 +2871,8 @@ async function afterSignIn(){
   }
   await acctPull();
   if(typeof goatEvent==="function")goatEvent("member-signin");
+  /* friends.js picks up a waiting invite link here */
+  try{window.dispatchEvent(new Event("rd-signed-in"))}catch(e){}
 }
 /* sign out and delete both leave the phone as a guest pass: every personal pick on this device goes. Sound and the welcome stay. */
 const WIPE_KEEP=new Set(["mns-welcome","mns-sound","rd-dev"]);
