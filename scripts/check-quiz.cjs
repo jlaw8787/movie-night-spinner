@@ -43,6 +43,10 @@ async function answer(p, want) {
   ok(['w', 'p', 'm', 'y'].every(t => big.some(q => q.t === t)), 'written, picture, menu and year rounds all deal');
   const kids = await pa.evaluate(() => RDQuiz.deal(99, true, 30).then(a => a.every(q => isKidSafe(FILMS.find(f => f.id === q.id)))));
   ok(kids, 'kids games only use kid-safe films');
+  const np = await pa.evaluate(() => Promise.all([3, 4, 5].map(s => RDQuiz.deal(s, false, 30, true))).then(a => a.flat()));
+  ok(np.length === 90 && !np.some(q => q.t === 'p'), 'no-picture games (the app) swap pictures for written questions');
+  const head = t => t.toLowerCase().replace(/^(the|a|an) /, '').split(/[^a-z0-9]+/).filter(Boolean).slice(0, 2).join(' ');
+  ok(big.filter(q => q.t === 'p' || q.t === 'm').every(q => q.o.filter((t, i) => i !== q.c).every(t => head(t) !== head(q.o[q.c]))), 'no near-twin titles as wrong answers');
   /* daily */
   await pa.locator('#qzDaily').click();
   for (let i = 0; i < 10; i++) { if (i === 0) await shot(pa, 'question'); const t = await pa.evaluate(() => { const s = JSON.parse(sessionStorage.getItem('rd-quiz-game')); return s.qs[s.i].t }); if (t === 'p' && !fs.existsSync(path.join(SHOTS || '/x', 'pic'))) { await shot(pa, 'picture'); SHOTS && fs.mkdirSync(path.join(SHOTS, 'pic'), { recursive: true }) } if (t === 'm' && SHOTS && !fs.existsSync(path.join(SHOTS, 'menu'))) { await shot(pa, 'menu-round'); fs.mkdirSync(path.join(SHOTS, 'menu')) } await answer(pa, i % 4 !== 3) }
@@ -68,7 +72,7 @@ async function answer(p, want) {
   for (let i = 0; i < 10; i++) await answer(pa, i < 8);
   await pa.locator('#qzSend').click();
   const link = await pa.evaluate(() => window.__shared.at(-1).text.split('\n')[1]);
-  ok(/\?quiz=c-[0-9a-z]+-8-\d+-0&by=Josh$/.test(link), 'challenge link carries seed, score and name');
+  ok(/\?quiz=c-[0-9a-z]+-8-\d+-[0-3]&by=Josh$/.test(link), 'challenge link carries seed, score and name');
   ok(A.errs.length === 0, 'no page errors on phone A ' + A.errs.join(' | '));
   /* phone B opens the link */
   const B = await phone(browser), pb = B.p;

@@ -1740,3 +1740,12 @@ Josh's calls: Daily quiz, Pass the phone and Challenge a friend in the first bui
 - Also fixed: on phones the wheel controls showed under Match night (the phone .controls rule is !important); the hide rule is now !important for Match night and Quiz night.
 - Checks: npm test pass (new tests/quiz.test.cjs), check-browser pass, scripts/check-quiz.cjs pass (two phones: daily, pass the phone, challenge link plays the same 10 on phone B, tab switching, no page errors).
 - Later, if wanted: send a challenge to a member friend's inbox (needs a migration), members' daily streak synced across devices, live rooms.
+Review before deploy (16 Nov, 8:30pm), fixed on the same branch:
+- Wrong answers could be a near-twin film (TMNT sequels, Kung Fu Panda 2, Meet the Fockers are not in series.json): film rounds now also skip titles sharing the first two words.
+- App build shows no TMDB art, so picture rounds would have been blank there: in app mode picture rounds become written questions. Challenge links carry a flag (last number: 1 kids, 2 no pictures, 3 both) so a friend on the website gets the same 10.
+- A picture that fails to load (offline, TMDB down) shows a clue (year and a dish) instead of a blank box.
+- Daily saved to the day it started on, even past midnight. Kids' daily results now pruned after 400 days like the rest.
+- More time to read the right answer after a miss (3.4s), focus moves to Next for keyboard and screen reader users.
+- Swapped the From Dusk Till Dawn bar-name question for a cleaner one (the daily goes to everyone).
+- Checked: 45 random older questions all correct; 40 random picture-round stills all fair and textless; answer slots spread; no duplicates.
+- Known and left: someone could close the browser mid-daily and replay it (daily lives on the phone, no server); stills for adult films can be grim (kids' mode excludes them).

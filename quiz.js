@@ -38,7 +38,7 @@
   /* ---------- what this phone remembers: daily results, name, best score ---------- */
   let S = { days: {}, name: '', best: 0, played: 0 };
   try { S = Object.assign(S, JSON.parse(localStorage.getItem('rd-quiz') || '{}')) } catch (e) { }
-  const saveS = () => { try { const d = today(); for (const k of Object.keys(S.days)) if (+k < d - 400) delete S.days[k]; localStorage.setItem('rd-quiz', JSON.stringify(S)) } catch (e) { } };
+  const saveS = () => { try { const d = today(); for (const k of Object.keys(S.days)) if (parseInt(k, 10) < d - 400) delete S.days[k]; localStorage.setItem('rd-quiz', JSON.stringify(S)) } catch (e) { } };
   const dayKey = k => today() + (k ? 'k' : '');
   function streak() {
     let d = today(), n = 0;
@@ -63,7 +63,9 @@
   /* three wrong films that could pass for the right one: a shared genre, a nearby year, never the same series or title */
   function others(id, r, ids, k) {
     const f = byId.get(id), q = QD.q[id] || {}, g = q.g || [], y = +f.year;
-    const ok = x => x !== id && byId.get(x).title !== f.title && !(q.sr && QD.q[x].sr === q.sr);
+    const head = t => t.toLowerCase().replace(/^(the|a|an) /, '').split(/[^a-z0-9]+/).filter(Boolean).slice(0, 2).join(' ');
+    const fh = head(f.title);
+    const ok = x => x !== id && byId.get(x).title !== f.title && !(q.sr && QD.q[x].sr === q.sr) && head(byId.get(x).title) !== fh;
     let c = ids.filter(x => ok(x) && (QD.q[x].g || []).some(n => g.includes(n)));
     if (c.length < 12) c = ids.filter(ok);
     c = c.map(x => [x, Math.abs(+byId.get(x).year - y) + r() * 14]).sort((a, b) => a[1] - b[1]).slice(0, 30).map(x => x[0]);
@@ -74,6 +76,7 @@
     const titles = o.map(x => byId.get(x).title);
     return { o: o.map((x, i) => titles.indexOf(titles[i]) !== titles.lastIndexOf(titles[i]) ? `${titles[i]} (${byId.get(x).year})` : titles[i]), c: o.indexOf(id) };
   }
+  let NOPIC = false;
   function make(type, id, r, ids) {
     const f = byId.get(id), q = QD.q[id] || {};
     if (type === 'w') {
@@ -84,6 +87,8 @@
       return { t: 'w', id, film: `${f.title} (${f.year})`, q: w.q, o: o.map(x => x[0]), c: o.findIndex(x => x[1]) };
     }
     if (type === 'p') {
+      /* the app build shows no TMDB art (docs/ARTWORK-RIGHTS.md), so a written question takes the picture's place there */
+      if (NOPIC) return make('w', id, r, ids);
       if (!q.s || !q.s.length) return null;
       return Object.assign({ t: 'p', id, q: 'Which film is this still from?', img: q.s[Math.floor(r() * q.s.length)] }, filmOpts(id, r, ids));
     }
@@ -102,7 +107,8 @@
     return null;
   }
   /* n questions from a seed: 5 written, 3 picture, 1 menu, 1 year in every 10, no film twice in a game */
-  function deal(seed, kids, n) {
+  function deal(seed, kids, n, np) {
+    NOPIC = !!(np || globalThis.REEL_APP);
     const r = rng(seed), ids = pool(kids), used = new Set(), out = [];
     let plan = [];
     while (plan.length < n) plan = plan.concat(sh(BLOCK, r));
@@ -133,8 +139,8 @@
     const kids = o.kids != null ? o.kids : isKids();
     const players = kind === 'pass' ? o.players : [{ n: myName() || 'You', s: 0, r: '' }];
     const n = kind === 'pass' ? players.length * o.rounds : 10;
-    const seed = kind === 'daily' ? dailySeed(kids) : o.seed || newSeed();
-    G = { kind, seed, kids, qs: deal(seed, kids, n), i: 0, players, ms: 0, t0: 0, ch: o.ch || null, rounds: o.rounds || 0 };
+    const seed = kind === 'daily' ? dailySeed(kids) : o.seed || newSeed(), np = !!(o.np || globalThis.REEL_APP);
+    G = { kind, seed, kids, np, day: today(), qs: deal(seed, kids, n, np), i: 0, players, ms: 0, t0: 0, ch: o.ch || null, rounds: o.rounds || 0 };
     if (!G.qs.length) { G = null; return hub() }
     count(kind, 'Quiz: ' + kind);
     view = kind === 'pass' && players.length > 1 ? 'hand' : 'q'; saveG(); render();
@@ -226,14 +232,16 @@
     const q = G.qs[G.i], p = who(), solo = G.players.length === 1;
     const n = solo ? G.i + 1 : Math.floor(G.i / G.players.length) + 1, of = solo ? G.qs.length : G.rounds;
     const head = q.t === 'w' ? `<p class="qz-film">${ESC(q.film)}</p>` : `<p class="qz-round">${ROUND[q.t]}</p>`;
-    const media = q.t === 'p' ? `<div class="qz-still"><img alt="A still from the film" src="${TMDB_IMG}w780${ESC(q.img)}" decoding="async"></div>`
+    const media = q.t === 'p' ? `<div class="qz-still"><img alt="A still from the film" src="${TMDB_IMG}w780${ESC(q.img)}" decoding="async"></div><p class="qz-clue" hidden>The picture didn't load. Clue: it came out in ${ESC(byId.get(q.id).year)}${QD.q[q.id] && QD.q[q.id].d ? ` and its menu serves ${ESC(QD.q[q.id].d[0])}` : ''}.</p>`
       : q.t === 'm' ? `<ul class="qz-dishes">${q.dishes.map(d => `<li>${ESC(d)}</li>`).join('')}</ul>` : '';
     panel.innerHTML = `<div class="qz-game"><div class="qz-top"><span>${solo ? '' : `${ESC(p.n)} · `}Question ${n} of ${of}</span><span>${solo ? `Score ${p.s}` : ''}</span></div>
       ${solo ? `<div class="qz-dots" aria-hidden="true">${G.qs.map((x, i) => `<i class="${i < G.i ? (p.r[i] === '1' ? 'ok' : 'no') : i === G.i ? 'now' : ''}"></i>`).join('')}</div>` : ''}
       ${head}<h3 class="qz-q" tabindex="-1">${ESC(q.q)}</h3>${media}
       <div class="qz-opts">${q.o.map((t, i) => `<button type="button" data-o="${i}">${ESC(t)}</button>`).join('')}</div>
-      <p class="qz-after" aria-live="polite"></p><button type="button" class="mn-quit" id="qzQuit">${G.kind === 'daily' ? 'Leave (your daily counts what you answered)' : 'End the game'}</button></div>`;
+      <p class="qz-after" aria-live="polite"></p><button type="button" class="mn-quit" id="qzQuit">${G.kind === 'daily' ? "Leave (this counts as today's go)" : 'End the game'}</button></div>`;
     G.t0 = Date.now();
+    const im = panel.querySelector('.qz-still img');
+    if (im) im.onerror = () => { im.parentNode.hidden = true; const c = panel.querySelector('.qz-clue'); if (c) c.hidden = false };
     const h = panel.querySelector('.qz-q'); h.focus({ preventScroll: true });
     panel.querySelectorAll('[data-o]').forEach(b => b.onclick = () => answer(+b.dataset.o));
     $('qzQuit').onclick = quit;
@@ -254,7 +262,8 @@
     G.i++; saveG();
     const go = () => { clearTimeout(adv); next() };
     $('qzNext').onclick = go;
-    adv = setTimeout(go, q.t === 'w' && ok ? 1400 : 2400);
+    $('qzNext').focus({ preventScroll: true });
+    adv = setTimeout(go, ok ? (q.t === 'w' ? 1400 : 2200) : 3400);
   }
   function next() {
     if (!G) return;
@@ -263,7 +272,7 @@
   }
   function finish() {
     const me = G.players[0];
-    if (G.kind === 'daily') { S.days[dayKey(G.kids)] = { s: me.s, r: me.r.padEnd(10, '0').slice(0, 10) }; }
+    if (G.kind === 'daily') { S.days[(G.day || today()) + (G.kids ? 'k' : '')] = { s: me.s, r: me.r.padEnd(10, '0').slice(0, 10) }; }
     if (G.players.length === 1 && G.qs.length === 10) { S.played = (S.played || 0) + 1; S.best = Math.max(S.best || 0, me.s) }
     saveS(); view = 'end'; saveG(); render();
     try { if (typeof fanfare === 'function' && me.s >= 8) fanfare() } catch (e) { }
@@ -323,7 +332,7 @@
   }
   function shareChal(b) {
     const me = G.players[0], secs = Math.round(G.ms / 1000);
-    const url = `${siteURL()}?quiz=c-${G.seed.toString(36)}-${me.s}-${secs}-${G.kids ? 1 : 0}&by=${encodeURIComponent(me.n)}`;
+    const url = `${siteURL()}?quiz=c-${G.seed.toString(36)}-${me.s}-${secs}-${(G.kids ? 1 : 0) + (G.np ? 2 : 0)}&by=${encodeURIComponent(me.n)}`;
     send(`I got ${me.s}/10 on the Reel Dinner film quiz. Same 10 questions, think you can beat me?\n${url}`, url, b);
     count('share-challenge', 'Quiz: send challenge');
   }
@@ -335,7 +344,7 @@
       <p class="mn-k">Same 10 film questions, same order. Beat the score, or match it quicker.${pend.kids ? ' Kid-safe films only.' : ''}</p>
       <div class="mn-actions"><button type="button" class="mn-go" id="qzTake">Take the challenge</button></div><button type="button" class="mn-quit" id="qzBack">Not now</button></div>`;
     $('qzTake').focus();
-    $('qzTake').onclick = () => { const ch = { n: pend.n, s: pend.s, t: pend.t }, o = { seed: pend.seed, kids: pend.kids, ch }; pend = null; need(() => start('chal', o)) };
+    $('qzTake').onclick = () => { const ch = { n: pend.n, s: pend.s, t: pend.t }, o = { seed: pend.seed, kids: pend.kids, np: pend.np, ch }; pend = null; need(() => start('chal', o)) };
     $('qzBack').onclick = () => { pend = null; hub() };
   }
 
@@ -366,12 +375,12 @@
   const u = new URLSearchParams(location.search), qp = u.get('quiz'), by = u.get('by');
   if (qp) {
     try { u.delete('quiz'); u.delete('by'); history.replaceState(null, '', location.pathname + (u.toString() ? '?' + u : '')) } catch (e) { }
-    const m = /^c-([0-9a-z]{1,8})-(\d{1,2})-(\d{1,5})-([01])$/.exec(qp);
+    const m = /^c-([0-9a-z]{1,8})-(\d{1,2})-(\d{1,5})-([0-3])$/.exec(qp);
     if (typeof setView === 'function') try { setView('wheel') } catch (e) { }
-    if (m && parseInt(m[1], 36)) { pend = { seed: parseInt(m[1], 36), s: Math.min(10, +m[2]), t: +m[3], kids: m[4] === '1', n: String(by || '').trim().slice(0, 20) || 'A friend' }; G = null; saveG(); open('invite') }
+    if (m && parseInt(m[1], 36)) { pend = { seed: parseInt(m[1], 36), s: Math.min(10, +m[2]), t: +m[3], kids: !!(+m[4] & 1), np: !!(+m[4] & 2), n: String(by || '').trim().slice(0, 20) || 'A friend' }; G = null; saveG(); open('invite') }
     else if (qp === 'daily') { G = null; saveG(); open('hub') }
     count('link', 'Quiz: opened a link');
   }
   else if (G) { /* a game in progress survives a reload, but the tab only opens when the person taps it */ }
-  window.RDQuiz = { open, deal: (seed, kids, n) => loadData().then(() => deal(seed, kids, n)) };
+  window.RDQuiz = { open, deal: (seed, kids, n, np) => loadData().then(() => deal(seed, kids, n, np)) };
 })();
