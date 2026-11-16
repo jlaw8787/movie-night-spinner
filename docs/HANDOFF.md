@@ -1809,7 +1809,7 @@ Josh's go: all three at once.
 - Checks on the merged code: npm test, check-browser, check-final-cut, check-card-stats, check-friends, check-members, check-quiz all pass.
 - Pushed main 9ed23a74, Publish site run 43938462083 passed. match.js, friends.js, app.js, index.html, sw.js and the 1200 wide Jaws preview match live byte for byte.
 
-## 17 Nov, 5:30am to 6:10am: Edit on the locked-in strip (branch fix/night-edit, NOT deployed)
+## 17 Nov, 5:30am to 6:10am: Edit on the locked-in strip (live: main 43895ba6, Publish site run 43942066217 passed, app.js, index.html, sw.js match live)
 
 Josh: "How do I edit the movie time, remove if I watch early etc?" (it was only on the menu screen's Your movie night bar, Friday to Sunday only). He picked "Edit button on the strip".
 - app.js: Edit button on the strip (featEdit) opens editNight: Day (the next 14 days, Today and Tomorrow labelled, plus the set date if outside them), Showtime (same 15 minute list), Save, Watched it early (ticks the film and any double feature off, returns the tape from member.out, clears the night, opens the stars sheet), Remove (clears the night, nothing ticked), Cancel.
