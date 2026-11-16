@@ -1584,11 +1584,13 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .brand-badge{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.5),0 0 0 2px rgba(217,164,65,.55)}.brand-badge img{display:block;width:100%;height:100%;border-radius:50%}
 .palace-badge{display:none}
 @media (max-width:820px){.brand-badge{display:none}.palace-badge{display:block;position:absolute;left:10px;top:10px;width:58px;height:58px;z-index:3;border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.6),0 0 0 2px rgba(217,164,65,.55)}}
-.quick-mute{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--line);background:rgba(0,0,0,.25);color:var(--screen);cursor:pointer}
+/* the speaker floats in the top right corner of the marquee (and the Galaxy Video shopfront), clear of the tabs */
+.quick-mute{position:absolute;right:12px;top:12px;z-index:4;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid rgba(217,164,65,.55);background:rgba(10,6,8,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#f3e6c8;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+.sv-front .quick-mute{border-color:rgba(255,196,46,.6);background:rgba(27,15,48,.6)}
 .quick-mute:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
 body.in-shop .quick-mute:focus-visible{outline-color:#ff3d6e}
 .quick-mute .qm-off{display:none}.quick-mute.off .qm-on{display:none}.quick-mute.off .qm-off{display:inline}.quick-mute.off{opacity:.7}
-@media (max-width:520px){.top .views{margin-right:52px}.quick-mute{right:6px}}
+@media (max-width:820px){.quick-mute{right:10px;top:10px}}
 /* ---------- candy bar photos ---------- */
 .sc-credits{margin:14px 0 0;padding-top:4px;border-top:1px dashed rgba(42,7,16,.2);font-size:12px;opacity:.8;text-align:right}
 .sc-credits summary{cursor:pointer;min-height:44px;display:inline-flex;align-items:center;font-weight:600;letter-spacing:.04em}
@@ -3052,11 +3054,16 @@ body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .con
 @media (max-width:420px){.mn-cols{grid-template-columns:1fr}.mn-chip{min-width:88px;padding:8px 10px}}
 
 /* My account (friends.js): the card button in the top bar, the members panel, Dinner Duel board, inbox, friends */
-.acct-btn{position:absolute;right:64px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--line);background:rgba(0,0,0,.25);color:var(--screen);cursor:pointer;padding:0}
-.acct-btn.member{border-color:var(--gv-gold);color:var(--gv-gold)}
+.acct-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%) rotate(-4deg);width:62px;height:39px;padding:0;border:0;border-radius:5px;background:none;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12);transition:transform .15s}
+.acct-btn img{display:block;width:100%;height:100%;border-radius:5px;filter:saturate(.35) brightness(.85)}
+.acct-btn.member img{filter:none}
+.acct-btn:hover{transform:translateY(-50%) rotate(0deg) scale(1.05)}
+.acct-btn.member{box-shadow:0 3px 8px rgba(0,0,0,.55),0 0 0 1.5px rgba(255,196,46,.7),0 0 14px rgba(255,196,46,.25)}
+@media (prefers-reduced-motion:reduce){.acct-btn{transition:none}}
 .acct-btn:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
 .acct-dot{position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;padding:0 5px;box-sizing:border-box;border-radius:10px;background:#e5484d;color:#fff;font:700 12px/20px var(--f-body);text-align:center;box-shadow:0 0 0 2px #120608}
-@media (max-width:520px){.top .views{margin-left:52px}.acct-btn{right:auto;left:6px}}
+@media (max-width:820px){.top .views{margin-right:74px}}
+@media (max-width:640px){.top .views{margin-right:0;margin-left:70px}.acct-btn{right:auto;left:12px;width:56px;height:35px}}
 @media (max-width:420px){.top .views button{padding:8px 8px;font-size:13px}}
 @media (max-width:374px){.top .views button{padding:8px 6px;font-size:12px}}
 dialog.acct{position:fixed;inset:0;z-index:70;background:rgba(5,4,14,.82);display:flex;justify-content:center;align-items:flex-start;padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px));overflow:auto}
@@ -3101,6 +3108,33 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 .acct-sw input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--gv-gold);flex:none}
 .acct-sw b{display:block;color:#fff}.acct-sw small{display:block;color:var(--gv-lav);font-size:13px}
 .acct-fee{display:inline-block;font:400 11px var(--f-board);letter-spacing:.06em;background:#c62a2f;color:#fff;border-radius:4px;padding:2px 6px;margin-right:4px;transform:rotate(-2deg)}
+/* My card tab: the card, tier, stats board, stamps */
+.acct-tier{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font:400 11px var(--f-board);letter-spacing:.06em;vertical-align:1px;color:#1b0f30;background:linear-gradient(180deg,#eef0f6,#aeb3c2)}
+.acct-tier.t-gold,.acct-tierbox.t-gold .acct-bar i{background:linear-gradient(180deg,#ffe28a,#e0a21c)}
+.acct-tier.t-plat,.acct-tierbox.t-plat .acct-bar i{background:linear-gradient(180deg,#f4fbff,#9fd6e6)}
+.acct-tier.t-elite,.acct-tierbox.t-elite .acct-bar i{background:linear-gradient(90deg,#ff3d9a,#ffc42e,#1fb5ad)}
+.acct-mc{max-width:340px;margin:4px auto 16px;padding:0 6px}
+.acct-tierbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,196,46,.35);border-radius:12px;padding:12px 14px 4px;margin:0 0 12px}
+.acct-tierrow{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.acct-tierrow b{font:400 18px var(--f-board);color:var(--gv-gold);letter-spacing:.03em}.acct-tierrow small{color:var(--gv-lav);font-size:13px}
+.acct-bar{height:10px;border-radius:5px;background:rgba(0,0,0,.4);margin:8px 0;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+.acct-bar i{display:block;height:100%;border-radius:5px;background:linear-gradient(180deg,#eef0f6,#aeb3c2)}
+.acct-h small{font:400 13px var(--f-body);margin-left:6px;letter-spacing:0}
+.acct-stats{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media (min-width:480px){.acct-stats{grid-template-columns:repeat(4,1fr)}}
+.acct-stat{background:rgba(255,255,255,.06);border:1px solid rgba(217,201,242,.18);border-radius:12px;padding:10px 10px 9px;text-align:center;display:flex;flex-direction:column;gap:2px;min-width:0}
+.acct-stat b{font:400 26px/1.05 var(--f-board);color:var(--gv-gold)}
+.acct-stat span{font-weight:700;font-size:13px;color:#fff;line-height:1.2}
+.acct-stat small{font-size:11.5px;color:var(--gv-lav);line-height:1.25;overflow-wrap:anywhere}
+.acct-dim{opacity:.4}
+.acct-stamps{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media (min-width:480px){.acct-stamps{grid-template-columns:repeat(3,1fr)}}
+.acct-stamp{position:relative;border:2px dashed rgba(217,201,242,.28);border-radius:12px;padding:10px 10px 10px 48px;min-height:58px;display:flex;flex-direction:column;justify-content:center;gap:1px}
+.acct-stamp b{font-size:14px;color:rgba(255,255,255,.6)}.acct-stamp small{font-size:12px;color:var(--gv-lav);line-height:1.25}
+.acct-ink{position:absolute;left:10px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;border:2px dashed rgba(217,201,242,.3);display:grid;place-items:center;font-size:15px}
+.acct-stamp.on{border-style:solid;border-color:rgba(255,61,154,.55);background:rgba(255,61,154,.08)}
+.acct-stamp.on b{color:#fff}
+.acct-stamp.on .acct-ink{border:2px solid #ff3d9a;color:#ff3d9a;transform:rotate(-12deg);background:rgba(255,61,154,.12)}
+@media (max-width:420px){.acct-tabs button{font-size:12px}}
 .rd-toast{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translate(-50%,160%);z-index:90;width:max-content;max-width:min(440px,calc(100% - 32px));margin:0;padding:12px 16px;border-radius:12px;background:var(--gv-night);border:2px solid var(--gv-gold);color:var(--gv-cream);font:600 14px/1.35 var(--f-body);box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .25s;pointer-events:none}
 .rd-toast.on{transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.rd-toast{transition:none}}
@@ -3119,6 +3153,7 @@ dialog.acct .modal-x{color:var(--gv-gold)}
       <img class="lbox lb1" alt="" hidden><img class="lbox lb2" alt="" hidden><img class="lbox lb3" alt="" hidden><img class="lbox lb4" alt="" hidden>
       <div class="palace-glow" aria-hidden="true"></div>
     </div>
+    <button type="button" class="quick-mute" id="quickMute" aria-pressed="false" aria-label="Mute sound"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="qm-on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="qm-off" d="M17 9l5 6M22 9l-5 6"/></svg></button>
   </header>
   <div class="walkin" id="walkin" role="dialog" aria-modal="true" aria-label="Galaxy Video" hidden>
   <div class="wi-scene" id="wiScene">
@@ -3136,15 +3171,14 @@ dialog.acct .modal-x{color:var(--gv-gold)}
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Galaxy Video</button>
     </nav>
-    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19"/><path d="M6 15h5"/></svg><span class="acct-dot" id="acctDot" hidden></span></button>
-    <button type="button" class="quick-mute" id="quickMute" aria-pressed="false" aria-label="Mute sound"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="qm-on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="qm-off" d="M17 9l5 6M22 9l-5 6"/></svg></button>
+    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><img src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><span class="acct-dot" id="acctDot" hidden></span></button>
   </header>
   <div class="ambient" id="ambient" aria-hidden="true"></div>
 
   <div class="spinbar" id="spinbar" hidden><button type="button" id="spinbarBtn">Spin the wheel</button></div>
 
   <section class="shop" id="viewShop" aria-label="Galaxy Video" hidden>
-    <div class="sv-front" id="svFront"><img src="assets/hero/galaxy-front-1000.webp" srcset="assets/hero/galaxy-front-1000.webp 1000w, assets/hero/galaxy-front-1400.webp 1400w, assets/hero/galaxy-front.webp 1774w" sizes="(max-width:640px) 700px, 1240px" width="1774" height="1057" alt="Galaxy Video shopfront at night" loading="lazy"></div>
+    <div class="sv-front" id="svFront"><img src="assets/hero/galaxy-front-1000.webp" srcset="assets/hero/galaxy-front-1000.webp 1000w, assets/hero/galaxy-front-1400.webp 1400w, assets/hero/galaxy-front.webp 1774w" sizes="(max-width:640px) 700px, 1240px" width="1774" height="1057" alt="Galaxy Video shopfront at night" loading="lazy"><button type="button" class="quick-mute" aria-pressed="false" aria-label="Mute sound"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="qm-on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="qm-off" d="M17 9l5 6M22 9l-5 6"/></svg></button></div>
     <div class="shop-head">
       <h2 class="shop-sign gv-head"><span class="sr-only">Galaxy Video</span><small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
       <div class="shop-tools">
@@ -3305,9 +3339,9 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 <script src="formats-core.js?v=1c74fdbc" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=738ad2f7" defer></script>
+<script src="app.js?v=8b9c8893" defer></script>
 <script src="match.js?v=0c932e35" defer></script>
-<script src="friends.js?v=8b4479cd" defer></script>
+<script src="friends.js?v=ba3015a3" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

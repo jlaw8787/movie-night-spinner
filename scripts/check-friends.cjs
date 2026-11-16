@@ -181,6 +181,24 @@ const swipeAll = async (page, keepFirst) => {
   ok(/Matched on/.test(await pa.textContent('dialog.acct #acctBody')), 'board shows the match');
   await pa.screenshot({ path: '/tmp/f-board-a.png' });
 
+  /* My card tab: the card, tier, stats board and stamps (First match earned by now) */
+  await pa.click('[data-tab="card"]'); await pa.waitForSelector('.acct-stamp.on');
+  await sleep(500);
+  const ct = await pa.textContent('dialog.acct #acctBody');
+  ok(/Silver member/.test(ct) && /Your stats/.test(ct) && /Match rate/.test(ct), 'My card shows tier and stats');
+  ok(/First match/.test(await pa.textContent('.acct-stamp.on')) || (await pa.$$eval('.acct-stamp.on b', e => e.map(x => x.textContent))).includes('First match'), 'First match stamp earned');
+  await pa.screenshot({ path: '/tmp/f-card-1.png' });
+  await pa.evaluate(() => document.querySelector('dialog.acct').scrollTo(0, 99999)); await sleep(200);
+  await pa.screenshot({ path: '/tmp/f-card-2.png' });
+  await pa.keyboard.press('Escape'); await sleep(200);
+  await pa.evaluate(() => scrollTo(0, 0)); await pa.screenshot({ path: '/tmp/f-top-member.png', clip: { x: 0, y: 0, width: 390, height: 330 } });
+  ok(await pa.isVisible('.palace #quickMute'), 'speaker sits on the marquee');
+  await pa.click('#viewShopBtn'); await sleep(500); if (await pa.isVisible('#wiSkip')) { await pa.click('#wiSkip'); await sleep(600) } await pa.evaluate(() => scrollTo(0, 0));
+  ok(await pa.isVisible('.sv-front .quick-mute'), 'speaker sits on the shopfront in Galaxy Video');
+  await pa.screenshot({ path: '/tmp/f-shop-top.png', clip: { x: 0, y: 0, width: 390, height: 360 } });
+  await pa.setViewportSize({ width: 1280, height: 800 }); await pa.click('#viewWheelBtn'); await sleep(500); await pa.evaluate(() => scrollTo(0, 0));
+  await pa.screenshot({ path: '/tmp/f-desk-top.png', clip: { x: 0, y: 0, width: 1280, height: 560 } });
+
   ok(!errs.length, 'no page errors ' + errs.join(' | '));
   await b.close(); process.exit(0);
 })().catch(e => { console.error(e); process.exit(1) });
