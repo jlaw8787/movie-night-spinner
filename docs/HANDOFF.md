@@ -1725,3 +1725,5 @@ Josh's call (from options): a clean mini card made for small size, lined up with
 - Bug fixed: the signed-in class was "member", which also picked up the old store card's .member rule (margin 16px etc.), pushing the button 16px low on Josh's phone. Now "is-member" (friends.js line 45 and CSS).
 - Phones and tablets (820px and under) anchor the button from the bottom of the top bar, since the top padding includes the iPhone safe area; centre now matches the tabs at 390, 700 and 1280 wide, with and without a 47px safe area.
 - Checks: npm test pass, check-browser pass, check-members pass, check-friends pass.
+
+Deployed 16 Nov 8:10pm on Josh's go: fast-forward to main, Publish site run 43844863938 passed, friends.js, index.html and the mini card image match live.
