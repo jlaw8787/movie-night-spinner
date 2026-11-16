@@ -43,6 +43,7 @@ function line(i: Item) {
   switch (i.kind) {
     case 'duel_new': return `<b>${f}</b> sent you a Dinner Duel. Swipe your 20 and see if you match.`;
     case 'duel_match': return `You and <b>${f}</b> both kept <b>${t}</b>. Dinner's sorted, the menu's waiting.`;
+    case 'duel_turn': return `Your turn in your Final Cut with <b>${f}</b>. The shortlist got shorter. Your move.`;
     case 'quiz_new': return `<b>${f}</b> challenged you to Quiz night on Reel Dinner. Same 10 film questions, can you beat their score?`;
     case 'friend_request': return `<b>${f}</b> wants to add you as a friend on Reel Dinner.`;
     case 'late_fee': return `<b>Galaxy Video late fee:</b> your copy of <b>${t}</b> is overdue. Please be kind, rewind and swipe. ${f} is waiting.`;
@@ -54,6 +55,7 @@ function subject(items: Item[]) {
   if (items.length > 1) return `${items.length} things waiting on Reel Dinner`;
   if (first.kind === 'duel_new') return `${first.from} sent you a Dinner Duel`;
   if (first.kind === 'duel_match') return `It's a match: ${title(first.film || '')}`;
+  if (first.kind === 'duel_turn') return `Your turn: Final Cut with ${first.from}`;
   if (first.kind === 'quiz_new') return `${first.from} challenged you to Quiz night`;
   if (first.kind === 'friend_request') return `${first.from} wants to be friends on Reel Dinner`;
   return `Overdue: ${title(first.film || '')}`;

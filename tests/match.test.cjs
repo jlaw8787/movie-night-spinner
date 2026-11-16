@@ -42,4 +42,31 @@ assert.ok(!/rpc\('match_(swipe|unswipe|pick)'/.test(mj), 'room writes go through
 assert.ok(mj.includes("'https://reeldinner.com/'"), 'room link points at the website from the app');
 assert.ok(mj.includes('data-style="solo"') && mj.includes("'rd-solo'"), 'Just me mode and its saved shortlist');
 assert.ok(rd('app.js').includes('force.pair[i%force.pair.length]'), 'decider wheel takes more than two films');
+// Final Cut engine (match.js): the same swipes always give the same night
+{
+  const vm = require('vm'), src = mj.slice(mj.indexOf('/* FINAL-CUT-ENGINE start'), mj.indexOf('/* FINAL-CUT-ENGINE end')), g = {};
+  vm.runInNewContext(src, { globalThis: g });
+  const R = g.RDFinalCut.replay, D = ['a', 'b', 'c', 'd', 'e'];
+  const S = { 1: { 1: { a: true, b: true, c: true, d: false, e: false } }, 2: { 1: { a: true, b: true } } };
+  assert.strictEqual(R(D, S).phase, 'swipe', 'round one not done');
+  S[2][1] = { a: true, b: true, c: true, d: true, e: false };
+  let st = R(D, S); assert.deepStrictEqual([st.phase, st.round, st.deck.join()], ['swipe', 2, 'a,b,c'], 'shortlist is what both kept');
+  S[1][2] = { a: true, b: false, c: false }; S[2][2] = { a: true, b: true, c: false };
+  st = R(D, S); assert.deepStrictEqual([st.phase, st.film, st.how], ['win', 'a', 'cut'], 'one left wins');
+  S[2][2] = { a: false, b: false, c: false }; S[1][2] = { a: false, b: false, c: false };
+  st = R(D, S); assert.deepStrictEqual([st.phase, st.why, st.list.join(), st.call], ['h2h', 'wiped', 'a,b,c', 1], 'wiped round goes head to head on the last shortlist');
+  S[1][101] = { a: true }; S[2][101] = { b: true };
+  st = R(D, S); assert.deepStrictEqual([st.step, st.pair.join(), st.last.split, st.last.win, st.call], [2, 'a,c', true, 'a', 2], 'first split is player one call, next is player two');
+  S[1][102] = { c: true }; S[2][102] = { a: true };
+  st = R(D, S); assert.deepStrictEqual([st.phase, st.film], ['win', 'a'], 'second split goes to player two');
+  S[1][102] = { c: true }; S[2][102] = { c: true };
+  assert.strictEqual(R(D, S).film, 'c', 'agree and it wins');
+  S[1][102] = { e: true }; assert.strictEqual(R(D, S).phase, 'h2h', 'a pick outside the pair does not count');
+  const T = { 1: { 1: { a: true, b: true }, 2: { a: true, b: true } }, 2: { 1: { a: true, b: true }, 2: { a: true, b: true } } };
+  assert.deepStrictEqual([R(['a', 'b'], T).phase, R(['a', 'b'], T).why], ['h2h', 'stuck'], 'a round that cuts nothing goes head to head');
+  const N = { 1: { 1: { a: true, b: false } }, 2: { 1: { a: false, b: true } } };
+  assert.strictEqual(JSON.stringify(R(['a', 'b'], N).keep), JSON.stringify({ 1: ['a'], 2: ['b'] }), 'nothing in common: both keep lists for Meet in the middle');
+  assert.ok(/'p_round'|p_round:/.test(mj) && rd('supabase/final-cut.sql').includes('movies.fc_replay'), 'rounds go to the database');
+  assert.ok(!rd('supabase/final-cut.sql').includes(String.fromCharCode(8212)), 'em dash in final-cut.sql');
+}
 console.log(`match: ${n} films in Match night, ${deck.vibes.length} vibes, ok`);

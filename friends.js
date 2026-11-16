@@ -221,13 +221,14 @@
       const who = d.friend ? ESC(nm(d.friend)) : 'your link';
       if (d.turn === 'done') return `${d.state === 'settled' ? 'The wheel picked' : 'Matched on'} <b>${ESC(title(d.match))}</b>`;
       if (d.turn === 'decide') return 'No match. Spin for it.';
+      if (d.final && d.fc && d.fc.round > 1 || d.final && d.fc && d.fc.phase === 'h2h') { const at = d.fc.phase === 'h2h' ? 'head to head' : `round ${d.fc.round}`; return d.turn === 'you' ? `Final Cut, ${at}. Your turn.` : `Final Cut, ${at}. Waiting on ${who}.` }
       if (d.turn === 'you') return d.mine ? `Your turn. ${d.mine} of ${d.n} swiped.` : 'Your turn.';
       return d.friend ? `Waiting on ${who}. ${d.their_n} of ${d.n} swiped.` : 'Nobody has opened your link yet.';
     };
-    const act = d => d.turn === 'done' ? 'Open the menu' : d.turn === 'decide' ? 'Spin for it' : d.turn === 'you' ? (d.mine ? 'Keep swiping' : 'Play') : d.friend ? 'Have a look' : 'Send the link';
+    const act = d => d.turn === 'done' ? 'Open the menu' : d.turn === 'decide' ? 'Spin for it' : d.turn === 'you' ? (d.final && d.fc && (d.fc.round > 1 || d.fc.phase === 'h2h') ? 'Play your turn' : d.mine ? 'Keep swiping' : 'Play') : d.friend ? 'Have a look' : 'Send the link';
     body.innerHTML = `<div class="acct-acts"><button type="button" class="acct-go" id="acctNewDuel">New Dinner Duel</button></div>
       ${DUELS.length ? `<ul class="acct-cards">${DUELS.map(d => `<li class="acct-card${d.turn === 'you' || d.turn === 'decide' ? ' hot' : ''}">
-        <div class="acct-ct"><b>${d.friend ? ESC(nm(d.friend)) : 'Link duel'}</b><small>${ESC(VIBE[d.vibe] || 'Surprise me')} · ${ESC(ago(d.at))}</small></div>
+        <div class="acct-ct"><b>${d.friend ? ESC(nm(d.friend)) : 'Link duel'}</b><small>${d.final ? 'Final Cut · ' : ''}${ESC(VIBE[d.vibe] || 'Surprise me')} · ${ESC(ago(d.at))}</small></div>
         <p class="acct-cl">${line(d)}</p>
         <div class="acct-cb"><button type="button" class="acct-go sm" data-duel="${ESC(d.id)}">${act(d)}</button><button type="button" class="acct-ghost sm" data-close="${ESC(d.id)}">Close</button></div></li>`).join('')}</ul>`
         : `<p class="acct-wait">No duels going. Start one and send it to a friend, they swipe whenever they get to it.</p>`}
@@ -270,6 +271,7 @@
     friend_accepted: i => [`<b>${ESC(nm(i.from))}</b> said yes. You're friends now.`, 'Send a duel', 'duelfriend'],
     duel_new: i => [`<b>${ESC(nm(i.from))}</b> sent you a Dinner Duel. Your turn.`, 'Play', 'duel'],
     duel_match: i => [`You and <b>${ESC(nm(i.from))}</b> both kept <b>${ESC(title(i.film))}</b>. Dinner's sorted.`, 'Open the menu', 'film'],
+    duel_turn: i => [`Your turn in your Final Cut with <b>${ESC(nm(i.from))}</b>. The shortlist got shorter.`, 'Play your turn', 'duel'],
     duel_nomatch: i => [`No match with <b>${ESC(nm(i.from))}</b>. Time for a tie-breaker spin.`, 'Spin for it', 'duel'],
     duel_settled: i => [`The wheel picked <b>${ESC(title(i.film))}</b> for you and <b>${ESC(nm(i.from))}</b>.`, 'Open the menu', 'film'],
     quiz_new: i => { const q = i.quiz || {}; return [`<b>${ESC(nm(i.from))}</b> challenged you to Quiz night. They got <b>${+q.from_score}/10</b>.${q.turn === 'done' ? ' You played it.' : ''}`, q.turn === 'you' ? 'Play' : 'See the result', 'quiz'] },

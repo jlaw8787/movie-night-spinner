@@ -13,7 +13,52 @@
    send it to a friend (or as a link). They swipe whenever they get to it. The database (supabase/friends.sql) keeps
    the swipes and calls the match, so it works across days and phones. No match: a tie-breaker spin on both keeps.
    Loads after app.js and uses its globals: FILMS, TMDB_POSTERS, TMDB_IMG, show, spin, ESC, shuffle, pick, buzz, fanfare.
-   friends.js (loads after this) opens duels through window.RDMatch. */
+   friends.js (loads after this) opens duels through window.RDMatch.
+   Final Cut (a switch on the start screen): both swipe the 20, every film both keep makes the shortlist, then
+   both swipe rounds of just the shortlist until one film is left. A round that knocks out everything (or nothing)
+   sends the last films head to head, this or that, winner stays on. On one phone you pick together; on two phones
+   you pick in secret, and when you split, whose pick goes through takes turns (player one first). */
+
+/* FINAL-CUT-ENGINE start: no page globals, so tests can run it on its own.
+   S holds every swipe: S[player][round][film] = keep. Head to head picks sit at round 100 + step as {film: true}.
+   replay() walks the night from the start and says where it stands, so a reload, a second phone or the database
+   can all rebuild the same night from the same swipes. */
+(function (g) {
+  'use strict';
+  const H2H = 100, MAXR = 60;
+  function replay(deck, S) {
+    const at = (p, r) => (S && S[p] && S[p][r]) || {};
+    const hist = [];
+    let r = 1, d = deck.slice();
+    for (;;) {
+      const a = at(1, r), b = at(2, r);
+      const done = { 1: d.every(f => f in a), 2: d.every(f => f in b) };
+      if (!done[1] || !done[2]) return { phase: 'swipe', round: r, deck: d, done, hist };
+      const surv = d.filter(f => a[f] && b[f]);
+      hist.push({ round: r, n: d.length, kept: surv.length });
+      if (r === 1 && !surv.length) return { phase: 'none', round: 1, deck: d, keep: { 1: d.filter(f => a[f]), 2: d.filter(f => b[f]) }, hist };
+      if (surv.length === 1) return { phase: 'win', film: surv[0], how: 'cut', round: r, hist };
+      if ((r > 1 && (!surv.length || surv.length === d.length)) || r >= MAXR) return h2h(surv.length ? surv : d, r, surv.length ? 'stuck' : 'wiped');
+      d = surv; r++;
+    }
+    function h2h(list, r, why) {
+      const pk = (p, i, pair) => { const o = at(p, H2H + i); return pair.find(f => o[f]) };
+      let champ = list[0], splits = 0, last = null;
+      for (let i = 1; i < list.length; i++) {
+        const pair = [champ, list[i]], a = pk(1, i, pair), b = pk(2, i, pair);
+        if (!a || !b) return { phase: 'h2h', round: r, why, list, step: i, of: list.length - 1, pair, champ, picked: { 1: !!a, 2: !!b }, call: splits % 2 ? 2 : 1, last, hist };
+        const split = a !== b, call = splits % 2 ? 2 : 1, win = split ? (call === 1 ? a : b) : a;
+        if (split) splits++;
+        last = { pair, picks: { 1: a, 2: b }, win, split, call: split ? call : 0 };
+        champ = win;
+      }
+      return { phase: 'win', film: champ, how: 'h2h', round: r, why, list, last, hist };
+    }
+  }
+  g.RDFinalCut = { replay, H2H };
+})(globalThis);
+/* FINAL-CUT-ENGINE end */
+
 (function () {
   'use strict';
   const RPC = 'https://zpcgxupmclkxbzikdnfb.supabase.co/rest/v1/rpc/', KEY = 'sb_publishable_xKYQtgzsYWRLh843SrO9bQ_CfWc30ME';
@@ -27,7 +72,7 @@
 
   /* the night: who is swiping, the deck, each player's order, keeps and skips */
   let M = null;
-  const fresh = () => ({ step: 'setup', vibe: 'any', style: 'pass', deck: [], order: {}, at: { 1: 0, 2: 0 }, keep: { 1: [], 2: [] }, hist: { 1: [], 2: [] }, p: 1, match: null, backups: [], picks: {}, room: null, duel: null, flipped: false });
+  const fresh = () => ({ step: 'setup', vibe: 'any', style: 'pass', deck: [], order: {}, at: { 1: 0, 2: 0 }, keep: { 1: [], 2: [] }, hist: { 1: [], 2: [] }, p: 1, match: null, backups: [], picks: {}, room: null, duel: null, flipped: false, fc: false, S: { 1: {}, 2: {} }, ford: {}, fh: { 1: [], 2: [] }, fseen: {} });
   M = fresh();
   /* the night survives a reload (a locked phone or Safari dropping the tab at handover), Pass the phone included.
      A saved night whose films are no longer on the site is dropped */
@@ -98,6 +143,7 @@
     if (ids.length > 2) while (M.order[2][0] === M.order[1][0]) M.order[2] = shuffle(ids);
     M.at = { 1: 0, 2: 0 }; M.keep = { 1: [], 2: [] }; M.hist = { 1: [], 2: [] }; M.p = 1; M.match = null; M.backups = []; M.picks = {}; M.flipped = false; M.decided = null;
     M.had = M.style === 'solo' ? solo.keep.slice() : [];
+    M.S = { 1: {}, 2: {} }; M.ford = { 1: { 1: M.order[1].slice(), 2: M.order[2].slice() } }; M.fh = { 1: [], 2: [] }; M.fseen = {}; M.fcShown = null; M.fcOn = M.style !== 'solo' && M.fc;
   }
 
   /* ---------- Just me: the end of the deck ---------- */
@@ -140,6 +186,7 @@
     if (s === 'solo') return soloEnd();
     if (s === 'duelsent') return duelSent();
     if (s === 'duelnomatch') return duelNoMatch();
+    if (s === 'fc') return fcView();
   }
 
   function setup() {
@@ -150,13 +197,15 @@
         <button type="button" role="radio" class="mn-chip wide" data-style="solo" aria-checked="${M.style === 'solo'}">Just me<small>Swipe, then spin your keeps</small></button>
         <button type="button" role="radio" class="mn-chip wide" data-style="room" aria-checked="${M.style === 'room'}">Room code<small>A phone each, together</small></button>
         <button type="button" role="radio" class="mn-chip wide" data-style="duel" aria-checked="${M.style === 'duel'}">Dinner Duel<small>Send it, they swipe later</small></button></div></fieldset>
+      ${M.style === 'solo' ? '' : `<button type="button" role="switch" class="mn-fc" id="mnFc" aria-checked="${!!M.fc}"><span class="mn-fc-sw" aria-hidden="true"><i></i></span><span class="mn-fc-t"><b>Final Cut</b><small>${M.fc ? 'On: keep cutting the shortlist till one film is left' : 'Off: the first film you both keep wins'}</small></span></button>`}
       ${M.style === 'duel' ? duelSetup() : M.style === 'room' ? `<div class="mn-actions"><button type="button" class="mn-go" id="mnStart">Start a room</button></div>
         <form class="mn-join" id="mnJoin"><label for="mnCode">Got a code?</label><input id="mnCode" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="TACO" inputmode="text"><button type="submit" class="mn-ghost">Join</button></form>`
         : `<div class="mn-actions"><button type="button" class="mn-go" id="mnDeal">Deal ${Math.min(DECK, pool(M.vibe).length) || DECK} films</button>${M.style === 'solo' && shortlist().length > 1 ? `<button type="button" class="mn-ghost" id="mnList">Spin my shortlist (${shortlist().length})</button>` : ''}</div>`}
       <p class="mn-err" id="mnErr" role="alert"></p>`;
     panel.querySelectorAll('[data-vibe]').forEach(b => b.onclick = () => { M.vibe = b.dataset.vibe; setup() });
     panel.querySelectorAll('[data-style]').forEach(b => b.onclick = () => { M.style = b.dataset.style; setup() });
-    const d = $('mnDeal'); if (d) d.onclick = () => { deal(); if (!M.deck.length) return err('No films for that vibe right now. Try another.'); M.step = 'swipe'; M.listOnly = 0; save(); say(M.style === 'solo' ? `${M.deck.length} films dealt${M.lapped ? ". You've seen every film in this vibe, so they're coming round again" : ''}.` : `${M.deck.length} films dealt. ${who(1)} first.`); render() };
+    const fcb = $('mnFc'); if (fcb) fcb.onclick = () => { M.fc = !M.fc; save(); setup(); const n = $('mnFc'); if (n) n.focus() };
+    const d = $('mnDeal'); if (d) d.onclick = () => { deal(); if (!M.deck.length) return err('No films for that vibe right now. Try another.'); M.step = M.fcOn ? 'fc' : 'swipe'; M.listOnly = 0; save(); say(M.style === 'solo' ? `${M.deck.length} films dealt${M.lapped ? ". You've seen every film in this vibe, so they're coming round again" : ''}.` : `${M.deck.length} films dealt. ${who(1)} first.`); render() };
     const sl = $('mnList'); if (sl) sl.onclick = () => { M.step = 'solo'; M.listOnly = 1; save(); render() };
     const st = $('mnStart'); if (st) st.onclick = startRoom;
     panel.querySelectorAll('[data-to]').forEach(b => b.onclick = () => { const t = b.dataset.to; M.duelTo = t === 'link' ? 'link' : (duelFriends().find(f => f.id === t) || null); setup() });
@@ -230,14 +279,15 @@
   }
   function flip(card) { M.flipped = !M.flipped; card.classList.toggle('flip', M.flipped); card.setAttribute('aria-label', card.getAttribute('aria-label').replace(/Tap to .*$/, 'Tap to ' + (M.flipped ? 'see the poster' : 'see the menu'))); if (M.flipped) say('Menu: ' + teaser(card.dataset.id).d.join(', ')) }
   addEventListener('keydown', e => {
-    if (panel.hidden || M.step !== 'swipe' || e.altKey || e.ctrlKey || e.metaKey || document.querySelector('.mn-reveal')) return;
+    if (panel.hidden || !(M.step === 'swipe' || (M.step === 'fc' && fcNow && fcNow.phase === 'swipe' && panel.querySelector('.mn-card.mn-top'))) || e.altKey || e.ctrlKey || e.metaKey || document.querySelector('.mn-reveal')) return;
     if (/input|select|textarea/i.test((e.target && e.target.tagName) || '')) return;
     if (e.key === 'ArrowRight') { e.preventDefault(); decide(true) } else if (e.key === 'ArrowLeft') { e.preventDefault(); decide(false) }
-    else if ((e.key === 'z' || e.key === 'Backspace') && M.hist[M.p].length) { e.preventDefault(); undo() }
+    else if ((e.key === 'z' || e.key === 'Backspace') && (M.step === 'fc' ? fcCanUndo() : M.hist[M.p].length)) { e.preventDefault(); undo() }
   });
 
   let busy = false;
   function decide(keep, dx) {
+    if (M.step === 'fc') return fcDecide(keep);
     if (busy || M.step !== 'swipe') return;
     const p = M.p, id = M.order[p][M.at[p]]; if (!id) return;
     busy = true;
@@ -264,6 +314,7 @@
   function undo() {
     /* a duel match is a match: once the database has called it, it can't be swiped back */
     if (M.duel && M.match) return;
+    if (M.step === 'fc') return fcUndo();
     const p = M.p, id = M.hist[p].pop(); if (!id) return;
     M.at[p]--; M.keep[p] = M.keep[p].filter(x => x !== id); M.backups = M.backups.filter(x => x !== id);
     if (M.style === 'solo' && !M.room) { solo.seen = solo.seen.filter(x => x !== id); if (!(M.had || []).includes(id)) solo.keep = solo.keep.filter(x => x !== id); soloSave() }
@@ -298,7 +349,7 @@
     box.innerHTML = `<div class="mn-rv"><div class="mn-bulbs" aria-hidden="true"></div><p class="mn-rk">Tonight's feature</p>
       ${src ? `<img class="mn-rp" src="${src}" alt="${ESC(f.title)} poster" crossorigin="anonymous" onerror="this.remove()">` : ''}
       <h2 class="mn-rt">${ESC(f.title)}</h2><p class="mn-ry">${f.year}${d.ve ? ` · dinner at ${ESC(d.ve)}` : ''}</p>
-      <p class="mn-rw">${fromSpin ? 'The wheel has spoken.' : M.duel ? `You and ${ESC(duelName())} both kept it.` : 'You both kept it.'}</p>
+      <p class="mn-rw">${fromSpin ? 'The wheel has spoken.' : M.fcOn ? 'Final Cut: the last film standing.' : M.duel ? `You and ${ESC(duelName())} both kept it.` : 'You both kept it.'}</p>
       <div class="mn-actions"><button type="button" class="mn-go" id="mnOpen">Open the menu</button>${more && left ? `<button type="button" class="mn-ghost" id="mnMore">Keep swiping for a backup</button>` : ''}</div></div>`;
     document.body.appendChild(box);
     try { fanfare() } catch (e) { } buzz([30, 50, 90]);
@@ -383,7 +434,198 @@
     setTimeout(() => spin(), reduce ? 0 : 500);
   }
 
-  function quit() { stopPoll(); duelStop(); const keepVibe = M.vibe, keepStyle = M.style; M = fresh(); M.vibe = keepVibe; M.style = keepStyle; save(); render() }
+  function quit() { stopPoll(); duelStop(); const keepVibe = M.vibe, keepStyle = M.style, keepFc = M.fc; M = fresh(); M.vibe = keepVibe; M.style = keepStyle; M.fc = keepFc; save(); render() }
+
+  /* ---------- Final Cut ---------- */
+  let fcNow = null, fbusy = false;
+  const H2H = RDFinalCut.H2H;
+  const fcMe = () => M.room ? M.room.me : M.duel ? M.duel.me : 0;   /* 0: one phone, Pass the phone */
+  const thumb = id => typeof TMDB_POSTERS !== 'undefined' && TMDB_POSTERS[id] ? TMDB_IMG + 'w185' + TMDB_POSTERS[id] : '';
+  const theirName = () => M.duel ? duelName() : 'They';
+  function fcState() {
+    const st = RDFinalCut.replay(M.deck, M.S);
+    /* a duel hides the friend's swipes for the round they're on: the database only says whether they're done */
+    if (M.duel && M.duel.fc) {
+      const them = other(M.duel.me), td = !!M.duel.fc.their_done;
+      if (st.phase === 'swipe' && st.round === M.duel.fc.round) st.done[them] = td;
+      if (st.phase === 'h2h' && st.step === M.duel.fc.step) st.picked[them] = td;
+    }
+    return (fcNow = st);
+  }
+  /* each player gets the round's films in their own order, kept for the night so a reload doesn't reshuffle */
+  function fordFor(r, d) {
+    const o = M.ford[r];
+    if (!o || !o[1] || !o[2] || o[1].length !== d.length || !d.every(f => o[1].includes(f))) {
+      const a = shuffle(d.slice()); let b = shuffle(d.slice());
+      if (d.length > 2) while (b[0] === a[0]) b = shuffle(d.slice());
+      M.ford[r] = { 1: a, 2: b }; save();
+    }
+    return M.ford[r];
+  }
+  const fcSwiper = st => fcMe() || (st.done[1] ? 2 : 1);
+  function fcView() {
+    const st = fcState(), me = fcMe();
+    if (st.phase === 'win') return fcWin(st);
+    if (st.phase === 'none') {
+      /* round one had nothing in common: Meet in the middle, same as a normal night */
+      M.keep = { 1: st.keep[1].slice(), 2: st.keep[2].slice() };
+      M.step = M.duel ? 'duelnomatch' : 'nomatch'; save(); return render();
+    }
+    if (st.phase === 'h2h') return fcH2H(st);
+    const r = st.round;
+    if (r > 1 && !M.fseen['r' + r]) return fcCut(st);
+    if (!me) { const p = st.done[1] ? 2 : 1; if (p === 2 && !M.fseen['h' + r]) return fcHand(st); return fcSwipe(st, p) }
+    if (st.done[me]) return fcWait(st);
+    return fcSwipe(st, me);
+  }
+  function fcThem(st) {
+    const me = fcMe(); if (!me) return '';
+    const them = other(me);
+    if (M.room && !M.room.them) return 'Waiting for them to join';
+    if (M.duel && !M.duel.friend) return 'Nobody has opened your link yet.';
+    if (st.phase === 'h2h') return st.picked[them] ? `${theirName()} ${M.duel ? 'has' : 'have'} picked.` : `${theirName()} ${M.duel ? 'is' : 'are'} still deciding.`;
+    if (st.done[them]) return `${theirName()} ${M.duel ? 'has' : 'have'} finished round ${st.round}.`;
+    const n = Object.keys((M.S[them] || {})[st.round] || {}).length;
+    if (M.duel) return n || st.round > 1 ? `${duelName()} hasn't finished round ${st.round} yet.` : `${duelName()} hasn't started yet.`;
+    return n ? `They are on card ${Math.min(n + 1, st.deck.length)} of ${st.deck.length}.` : `They haven't started round ${st.round} yet.`;
+  }
+  function fcSwipe(st, p) {
+    const r = st.round, ord = fordFor(r, st.deck)[p], done = M.S[p][r] || {}, left = ord.filter(f => !(f in done));
+    const id = left[0], next = left[1], i = ord.length - left.length;
+    if (!id) return;
+    panel.innerHTML = `<div class="mn-bar"><span class="mn-who">${who(p)}</span><span class="mn-n">${i + 1} of ${ord.length}</span>${M.room ? `<span class="mn-code" title="Room code">Room ${M.room.code}</span>` : ''}${M.duel ? `<span class="mn-code">Duel</span>` : ''}<span class="mn-vb mn-fcb">Final Cut, round ${r}</span></div>
+      ${fcMe() ? `<p class="mn-them" id="mnThem">${ESC(fcThem(st))}</p>` : ''}
+      <div class="mn-stack">${next ? cardHTML(next, false) : ''}${cardHTML(id, true)}</div>
+      <p class="mn-hint">${r > 1 ? "Shortlist round. Keep only what you'd really watch tonight." : 'Tap the card for the menu. Swipe right to keep, left to skip.'}</p>
+      <div class="mn-btns"><button type="button" class="mn-b skip" id="mnSkip" aria-label="Skip">${ICON.x}<span>${r > 1 ? 'Cut' : 'Skip'}</span></button><button type="button" class="mn-b undo" id="mnUndo" aria-label="Undo" ${fcCanUndo() ? '' : 'disabled'}>${ICON.undo}<span>Undo</span></button><button type="button" class="mn-b keep" id="mnKeep" aria-label="Keep">${ICON.heart}<span>Keep</span></button></div>
+      <button type="button" class="mn-quit" id="mnQuit">Start over</button>`;
+    const top = panel.querySelector('.mn-card.mn-top'); if (top) top.dataset.p = p;
+    $('mnSkip').onclick = () => fcDecide(false);
+    $('mnKeep').onclick = () => fcDecide(true);
+    $('mnUndo').onclick = fcUndo;
+    $('mnQuit').onclick = quit;
+    drag(top);
+  }
+  function fcDecide(keep) {
+    const st = fcNow || fcState();
+    if (fbusy || st.phase !== 'swipe') return;
+    const card = panel.querySelector('.mn-card.mn-top'); if (!card) return;
+    const id = card.dataset.id, p = +card.dataset.p || fcSwiper(st), r = st.round;
+    if (!st.deck.includes(id) || id in (M.S[p][r] || {})) return;
+    fbusy = true;
+    card.classList.add(keep ? 'to-keep' : 'to-skip', 'gone'); card.style.setProperty('--k', 1); card.style.transform = `translateX(${(keep ? 1 : -1) * (reduce ? 20 : 140)}%) rotate(${keep ? 18 : -18}deg)`;
+    buzz(keep ? [20, 30, 20] : 12);
+    (M.S[p][r] || (M.S[p][r] = {}))[id] = keep; M.fh[p].push([r, id]); M.flipped = false;
+    if (M.room) send('match_swipe', { p_code: M.room.code, p_player: p, p_film: id, p_keep: keep, p_round: r });
+    if (M.duel) dsend('duel_swipe', { p_id: M.duel.id, p_film: id, p_keep: keep, p_round: r });
+    save();
+    setTimeout(() => { fbusy = false; render() }, reduce ? 60 : 260);
+  }
+  /* undo works inside the round you're on; once both have finished a round it's locked in */
+  function fcCanUndo(p) {
+    const st = fcNow; if (!st || st.phase !== 'swipe') return false;
+    p = p || fcSwiper(st);
+    const top = M.fh[p][M.fh[p].length - 1];
+    return !!top && top[0] === st.round && top[1] in ((M.S[p] || {})[top[0]] || {});
+  }
+  function fcUndoFor(p) {
+    if (!fcCanUndo(p)) return;
+    const [r, id] = M.fh[p].pop();
+    delete M.S[p][r][id]; M.flipped = false;
+    if (M.room) send('match_unswipe', { p_code: M.room.code, p_player: p, p_film: id, p_round: r });
+    if (M.duel) dsend('duel_unswipe', { p_id: M.duel.id, p_film: id, p_round: r });
+    save(); say('Back one card'); render();
+  }
+  function fcUndo() { const st = fcNow || fcState(); if (st.phase === 'swipe') fcUndoFor(fcSwiper(st)) }
+  function fcCut(st) {
+    const h = st.hist[st.hist.length - 1], r = st.round;
+    panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Final Cut, round ${r - 1} done</p><h2 class="mn-t">${h.kept} made the cut</h2>
+      <p class="mn-k">${h.kept} of ${h.n} kept by both of you. Round ${r} is just the shortlist. Keep only what you'd really watch tonight.</p>
+      <ul class="mn-shelf">${st.deck.map(id => `<li title="${ESC(film(id).title)}">${thumb(id) ? `<img src="${thumb(id)}" alt="" loading="lazy" crossorigin="anonymous" onerror="this.remove()">` : ''}<span>${ESC(film(id).title)}</span></li>`).join('')}</ul>
+      <div class="mn-actions"><button type="button" class="mn-go" id="mnRound">${fcMe() ? `Start round ${r}` : `Player one, start round ${r}`}</button></div>
+      <button type="button" class="mn-quit" id="mnQuit">Start over</button></div>`;
+    $('mnRound').onclick = () => { M.fseen['r' + r] = 1; save(); say(`Round ${r}, ${st.deck.length} films`); render() };
+    $('mnQuit').onclick = quit;
+    say(`${h.kept} made the cut`);
+  }
+  function fcHand(st) {
+    const r = st.round, n = Object.values(M.S[1][r] || {}).filter(Boolean).length;
+    panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Player one is done with round ${r}</p><h2 class="mn-t">Pass the phone</h2><p class="mn-k">${n ? `${n} kept, and no peeking.` : 'Player one cut the lot.'} Player two gets the same ${st.deck.length} in a different order.</p>
+      <div class="mn-actions"><button type="button" class="mn-go" id="mnP2">I'm player two, deal me in</button></div><button type="button" class="mn-quit" id="mnBack">Back to my cards</button></div>`;
+    $('mnP2').onclick = () => { M.fseen['h' + r] = 1; save(); say('Player two, your turn'); render() };
+    $('mnBack').onclick = () => fcUndoFor(1);
+  }
+  function fcWait(st) {
+    const me = fcMe(), n = Object.values(M.S[me][st.round] || {}).filter(Boolean).length, link = M.duel && !M.duel.friend && M.duel.code;
+    panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Final Cut, round ${st.round}</p><h2 class="mn-t">${M.duel ? (link ? 'Now send it' : `Over to ${ESC(duelName())}`) : 'Over to them'}</h2>
+      <p class="mn-k" id="mnThem">${ESC(fcThem(st))}</p><p class="mn-k">You kept ${n} of ${st.deck.length}. ${M.duel ? 'Your turn lands in your inbox when the next round opens.' : 'The next round starts when you both finish.'}</p>
+      <div class="mn-actions">${link ? '<button type="button" class="mn-go" id="mnDShare">Send the link</button>' : ''}${M.duel ? `<button type="button" class="${link ? 'mn-ghost' : 'mn-go'}" id="mnBoard">My duels</button>` : ''}</div>
+      ${fcCanUndo(me) ? '<button type="button" class="mn-quit" id="mnBack">Back to my last card</button> ' : ''}<button type="button" class="mn-quit" id="mnQuit">${M.room ? 'Leave the room' : M.duel ? 'New Match night' : 'Start over'}</button></div>`;
+    const bk = $('mnBack'); if (bk) bk.onclick = () => fcUndoFor(me);
+    const bd = $('mnBoard'); if (bd) bd.onclick = () => { if (globalThis.RDFriends) RDFriends.open('duels') };
+    const sh = $('mnDShare'); if (sh) sh.onclick = () => duelShare(sh);
+    $('mnQuit').onclick = quit;
+  }
+  function fcLast(last) {
+    if (!last) return '';
+    const me = fcMe(), t = ESC(film(last.win).title);
+    if (!me || !last.split) return me ? `You both picked ${t}.` : `${t} stays on.`;
+    return `Split. ${last.call === me ? 'Your' : M.duel ? ESC(duelName()) + "'s" : 'Their'} call: ${t} stays on.`;
+  }
+  function fcH2H(st) {
+    const me = fcMe();
+    if (!M.fseen['hh' + st.round]) {
+      panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Final Cut</p><h2 class="mn-t">Head to head</h2>
+        <p class="mn-k">${st.why === 'wiped' ? `Round ${st.round} knocked out every film, so the last ${st.list.length} go head to head.` : `Nothing got cut in round ${st.round}, so these ${st.list.length} go head to head.`} Two at a time, this or that. The winner stays on until one film is left.</p>
+        <p class="mn-k">${me ? 'You each pick in secret. If you split, whose pick goes through takes turns, player one first.' : 'Talk it out and tap the one that stays.'}</p>
+        <div class="mn-actions"><button type="button" class="mn-go" id="mnHH">Bring on the first two</button></div><button type="button" class="mn-quit" id="mnQuit">Start over</button></div>`;
+      $('mnHH').onclick = () => { M.fseen['hh' + st.round] = 1; save(); render() };
+      $('mnQuit').onclick = quit;
+      return;
+    }
+    const mine = me && (M.S[me][H2H + st.step] ? st.pair.find(f => M.S[me][H2H + st.step][f]) : null);
+    const callWho = st.call === me ? 'your' : M.duel ? ESC(duelName()) + "'s" : 'their';
+    const prompt = !me ? 'Talk it out. Tap the one that stays.' : mine ? `You picked ${ESC(film(mine).title)}. ${ESC(fcThem(st))}` : `Pick the one you want to stay. If you split, it's ${callWho} call this time.`;
+    const tile = id => { const d = DATA.films[id] || {}, [dark, acc] = d.c || ['#2a0d0d', '#c9a227'], src = poster(id);
+      return `<button type="button" class="mn-vt${mine === id ? ' on' : ''}" data-vs="${ESC(id)}" style="--mn-dark:${dark};--mn-acc:${acc}" ${mine ? 'disabled' : ''} aria-label="${ESC(film(id).title)} (${film(id).year})${d.ve ? ', dinner at ' + ESC(d.ve) : ''}">${src ? `<img src="${src}" alt="" crossorigin="anonymous" onerror="this.remove()">` : ''}<span class="mn-vtt"><b>${ESC(film(id).title)}</b><small>${film(id).year}${d.ve ? ` · ${ESC(d.ve)}` : ''}</small></span></button>` };
+    panel.innerHTML = `<div class="mn-bar"><span class="mn-who">${me ? 'You' : 'Both of you'}</span><span class="mn-n">${st.step} of ${st.of}</span>${M.room ? `<span class="mn-code">Room ${M.room.code}</span>` : ''}${M.duel ? `<span class="mn-code">Duel</span>` : ''}<span class="mn-vb mn-fcb">Final Cut, head to head</span></div>
+      <h2 class="mn-t mn-vsh">This or that</h2>${st.last ? `<p class="mn-k mn-vsl">${fcLast(st.last)}</p>` : ''}<p class="mn-k" id="mnThem" aria-live="polite">${prompt}</p>
+      <div class="mn-vs">${tile(st.pair[0])}<span class="mn-vsx" aria-hidden="true">or</span>${tile(st.pair[1])}</div>
+      ${M.duel && mine ? '<div class="mn-actions"><button type="button" class="mn-ghost" id="mnBoard">My duels</button></div>' : ''}
+      <button type="button" class="mn-quit" id="mnQuit">${M.room ? 'Leave the room' : M.duel ? 'New Match night' : 'Start over'}</button>`;
+    panel.querySelectorAll('[data-vs]').forEach(b => b.onclick = () => fcPick(b.dataset.vs));
+    const bd = $('mnBoard'); if (bd) bd.onclick = () => { if (globalThis.RDFriends) RDFriends.open('duels') };
+    $('mnQuit').onclick = quit;
+  }
+  function fcPick(id) {
+    const st = fcNow || fcState(); if (st.phase !== 'h2h' || !st.pair.includes(id)) return;
+    const me = fcMe(), rd = H2H + st.step;
+    if (me && M.S[me][rd]) return;
+    buzz(20);
+    if (!me) { M.S[1][rd] = { [id]: true }; M.S[2][rd] = { [id]: true } }
+    else {
+      M.S[me][rd] = { [id]: true };
+      if (M.room) send('match_swipe', { p_code: M.room.code, p_player: me, p_film: id, p_keep: true, p_round: rd });
+      if (M.duel) dsend('duel_swipe', { p_id: M.duel.id, p_film: id, p_keep: true, p_round: rd });
+    }
+    save(); say(`${film(id).title} picked`); render();
+  }
+  function fcWin(st) {
+    const fresh1 = M.fcShown !== st.film;
+    M.fcShown = st.film; M.match = st.film; M.backups = []; M.step = 'done'; save(); render();
+    if (fresh1) reveal(st.film, false);
+  }
+  /* a room check in Final Cut: their swipes from the room, ours too once nothing is waiting to go up */
+  function fcRoomSeen(st, sw) {
+    const me = M.room.me, them = other(me), q = M.room.q && M.room.q.length;
+    const build = p => { const o = {}; for (const s of sw) if (s.p === p) { const r = s.r || 1; (o[r] || (o[r] = {}))[s.f] = s.k } return o };
+    M.S[them] = build(them);
+    if (!q) M.S[me] = build(me);
+    if (st.picks) for (const k of ['1', '2']) if (st.picks[k]) M.picks[+k] = st.picks[k];
+    const key = JSON.stringify([M.S, M.picks, M.room.them]);
+    if (key !== M._fk) { M._fk = key; save(); if (M.step === 'fc' || M.step === 'nomatch' || M.step === 'lobby') render() }
+    if (M.step === 'done' && !q) stopPoll();
+  }
 
   /* ---------- Dinner Duel ---------- */
   const DPOLL = 6000;
@@ -407,7 +649,7 @@
     const known = v.deck.filter(id => byId.has(id));
     if (!known.length) return null;
     const me = v.me, them = other(me), had = M.match;
-    M.duel = Object.assign(M.duel || {}, { id: v.id, me, friend: v.friend || null, their: v.their_n || 0, code: v.code || null, state: v.state, theirs: v.theirs || null });
+    M.duel = Object.assign(M.duel || {}, { id: v.id, me, friend: v.friend || null, their: v.their_n || 0, code: v.code || null, state: v.state, theirs: v.theirs || null, fc: v.fc || null });
     M.style = 'duel'; if (v.vibe) M.vibe = v.vibe;
     if (fromLoad) {
       const swiped = (v.mine || []).map(s => s.f).filter(id => byId.has(id));
@@ -422,9 +664,22 @@
     M.keep[them] = (v.theirs || []).filter(id => byId.has(id));
     M.match = v.match && byId.has(v.match) ? v.match : null;
     M.backups = (v.both || []).filter(id => id !== M.match && byId.has(id));
+    if (v.final) {
+      /* Final Cut duel: every swipe by round. Theirs only shows for rounds you've both finished */
+      M.fc = M.fcOn = true; M.backups = [];
+      const build = rows => { const o = {}; for (const s of rows || []) if (byId.has(s.f)) { const r = s.r || 1; (o[r] || (o[r] = {}))[s.f] = !!s.k } return o };
+      if (!M.S) M.S = { 1: {}, 2: {} };
+      if (fromLoad || !(M.duel.q && M.duel.q.length)) M.S[me] = build(v.mine);
+      M.S[them] = build(v.tsw);
+      if (fromLoad) {
+        M.keep[me] = (v.mine || []).filter(s => s.k && (s.r || 1) === 1 && byId.has(s.f)).map(s => s.f);
+        M.ford = { 1: { 1: known.slice(), 2: seeded(known, v.id) } }; M.fh = { 1: [], 2: [] }; M.fseen = M.fseen || {};
+        if (M.match) M.fcShown = M.match;
+      }
+    }
     return !had && !!M.match && v.state === 'matched';
   }
-  const duelStepFor = () => M.duel.state === 'matched' || M.duel.state === 'settled' ? 'done' : M.duel.state === 'nomatch' ? 'duelnomatch' : M.at[M.duel.me] >= M.deck.length ? 'duelsent' : 'swipe';
+  const duelStepFor = () => M.duel.state === 'matched' || M.duel.state === 'settled' ? 'done' : M.duel.state === 'nomatch' ? 'duelnomatch' : M.fcOn ? 'fc' : M.at[M.duel.me] >= M.deck.length ? 'duelsent' : 'swipe';
 
   /* swipes queue up like room swipes: a dropped signal can't lose a keep */
   let dflushing = false;
@@ -441,6 +696,13 @@
     if (!v || v.status === 'gone') return duelMsg("That duel's closed", 'Your friend closed it, or it sat untouched for a month.');
     if (v.status !== 'ok') return;
     const fresh = duelApply(v, false); save();
+    if (M.fcOn) {
+      if (fresh) { M.fcShown = M.match; M.step = 'done'; save(); render(); return reveal(M.match, false) }
+      if (v.state === 'nomatch' && M.step !== 'duelnomatch') { M.step = 'duelnomatch'; save(); return render() }
+      if ((v.state === 'settled' || v.state === 'matched') && M.step !== 'done') { M.step = 'done'; save(); return render() }
+      if (M.step === 'fc') { const key = JSON.stringify([M.S, M.duel.fc, M.duel.friend && M.duel.friend.id]); if (key !== M._fk) { M._fk = key; render() } else { const el = $('mnThem'); if (el) el.textContent = fcThem(fcState()) } }
+      return;
+    }
     if (fresh) { if (M.step === 'duelsent') M.step = 'done'; save(); render(); return reveal(M.match, M.step === 'swipe') }
     if (M.step === 'duelsent' && v.state === 'nomatch') { M.step = 'duelnomatch'; save(); return render() }
     if ((M.step === 'duelsent' || M.step === 'duelnomatch') && (v.state === 'settled' || v.state === 'matched')) { M.step = 'done'; save(); return render() }
@@ -480,14 +742,22 @@
     deal(); if (!M.deck.length) { back(); return err('No films for that vibe right now. Try another.') }
     const to = M.duelTo;
     let v;
-    try { v = await arpc('duel_create', { p_friend: to && to !== 'link' ? to.id : null, p_vibe: M.vibe, p_deck: M.deck }) }
+    const body = { p_friend: to && to !== 'link' ? to.id : null, p_vibe: M.vibe, p_deck: M.deck }; if (M.fcOn) body.p_final = true;
+    try { v = await arpc('duel_create', body) }
     catch (e) { back(); return err(e.message === 'signedout' ? 'Sign in again to start a duel.' : "Couldn't reach Reel Dinner. Check your connection and try again.") }
     if (!v || v.status !== 'ok') { back(); return err(v && v.status === 'toomany' ? 'You already have three duels going with them. Finish one first.' : v && v.status === 'slow' ? "That's a lot of duels for one day. Try again tomorrow." : v && v.status === 'notfriends' ? "You're not on each other's friends list any more." : "Couldn't start the duel. Try again.") }
     M.duel = null;
     if (duelApply(v, true) === null) { back(); return err("Couldn't start the duel. Try again.") }
-    M.step = 'swipe'; save(); say(`${M.deck.length} films dealt. Swipe yours, then it goes to ${M.duel.friend ? duelName() : 'whoever opens your link'}.`); render(); duelPoll();
+    M.step = M.fcOn ? 'fc' : 'swipe'; save(); say(`${M.deck.length} films dealt${M.fcOn ? ', Final Cut' : ''}. Swipe yours, then it goes to ${M.duel.friend ? duelName() : 'whoever opens your link'}.`); render(); duelPoll();
   }
   const shareURL = c => ((globalThis.REEL_NATIVE || !/^https?:$/.test(location.protocol) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname)) ? 'https://reeldinner.com/' : location.origin + '/') + '?invite=' + c;
+  async function duelShare(sh) {
+    const d = M.duel; if (!d || !d.code) return;
+    const me = (typeof member !== 'undefined' && member && member.name) || 'Your friend';
+    const text = `${me} sent you a Dinner Duel${M.fcOn ? ' (Final Cut)' : ''} on Reel Dinner. Swipe ${M.deck.length} films and if we both keep one, dinner's sorted: ${shareURL(d.code)}`;
+    try { if (navigator.share) { await navigator.share({ title: 'Reel Dinner Dinner Duel', text }); return } } catch (e) { return }
+    try { await navigator.clipboard.writeText(text); sh.textContent = 'Copied, paste it in a text' } catch (e) { sh.textContent = shareURL(d.code) }
+  }
   function duelSent() {
     const d = M.duel, link = !d.friend && d.code, open = d.state === 'open';
     panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Dinner Duel</p><h2 class="mn-t">${link ? 'Now send it' : `Over to ${ESC(duelName())}`}</h2>
@@ -495,12 +765,7 @@
       <p class="mn-k">You kept ${M.keep[d.me].length}.</p>
       <div class="mn-actions">${link ? '<button type="button" class="mn-go" id="mnDShare">Send the link</button>' : ''}<button type="button" class="${link ? 'mn-ghost' : 'mn-go'}" id="mnBoard">My duels</button></div>
       ${open ? '<button type="button" class="mn-quit" id="mnBack">Back to my last card</button> ' : ''}<button type="button" class="mn-quit" id="mnQuit">New Match night</button></div>`;
-    const sh = $('mnDShare'); if (sh) sh.onclick = async () => {
-      const me = (typeof member !== 'undefined' && member && member.name) || 'Your friend';
-      const text = `${me} sent you a Dinner Duel on Reel Dinner. Swipe ${M.deck.length} films and if we both keep one, dinner's sorted: ${shareURL(d.code)}`;
-      try { if (navigator.share) { await navigator.share({ title: 'Reel Dinner Dinner Duel', text }); return } } catch (e) { return }
-      try { await navigator.clipboard.writeText(text); sh.textContent = 'Copied, paste it in a text' } catch (e) { sh.textContent = shareURL(d.code) }
-    };
+    const sh = $('mnDShare'); if (sh) sh.onclick = () => duelShare(sh);
     $('mnBoard').onclick = () => { if (globalThis.RDFriends) RDFriends.open('duels') };
     const bk = $('mnBack'); if (bk) bk.onclick = () => { M.step = 'swipe'; undo() };
     $('mnQuit').onclick = quit;
@@ -564,7 +829,7 @@
     err(''); const b = $('mnStart'); b.disabled = true; b.textContent = 'Opening the room';
     deal(); if (!M.deck.length) { b.disabled = false; b.textContent = 'Start a room'; return err('No films for that vibe right now. Try another.') }
     try {
-      const code = await rpc('match_create', { p_vibe: M.vibe, p_deck: M.deck });
+      const code = await rpc('match_create', M.fcOn ? { p_vibe: M.vibe, p_deck: M.deck, p_final: true } : { p_vibe: M.vibe, p_deck: M.deck });
       M.room = { code, me: 1, them: 0, seen: 0 }; M.p = 1; M.step = 'lobby'; save(); render(); poll();
     } catch (e) { b.disabled = false; b.textContent = 'Start a room'; err("Couldn't open a room. Check your connection, or play Pass the phone instead.") }
   }
@@ -580,14 +845,15 @@
       if (!ids.length) return err("That room's films aren't on this version of the site. Refresh and try again.");
       M.vibe = r.vibe || 'any'; M.deck = ids; M.order = { 1: ids.slice(), 2: shuffle(ids) };
       M.at = { 1: 0, 2: 0 }; M.keep = { 1: [], 2: [] }; M.hist = { 1: [], 2: [] }; M.match = null; M.backups = []; M.picks = {};
-      M.room = { code, me: 2, them: 0, seen: 0 }; M.p = 2; M.step = 'swipe'; save(); say('Joined room ' + code); render(); poll();
+      M.fc = M.fcOn = !!r.final; M.S = { 1: {}, 2: {} }; M.ford = { 1: { 1: M.order[1].slice(), 2: M.order[2].slice() } }; M.fh = { 1: [], 2: [] }; M.fseen = {}; M.fcShown = null;
+      M.room = { code, me: 2, them: 0, seen: 0 }; M.p = 2; M.step = M.fcOn ? 'fc' : 'swipe'; save(); say('Joined room ' + code + (M.fcOn ? '. Final Cut is on' : '')); render(); poll();
     } catch (e) { err("Couldn't reach the room. Check your connection.") }
   }
   function lobby() {
     const app = globalThis.REEL_NATIVE || !/^https?:$/.test(location.protocol) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
     const code = M.room.code, url = (app ? 'https://reeldinner.com/' : location.origin + location.pathname) + '?match=' + code;
     panel.innerHTML = `<div class="mn-hand"><p class="mn-tk">Your room</p><p class="mn-big" aria-label="Room code ${code.split('').join(' ')}">${code}</p>
-      <p class="mn-k">Text this code to the other person. They open Reel Dinner, tap Match it, then Room code, and type it in. Or send the link.</p>
+      ${M.fcOn ? '<p class="mn-k"><b>Final Cut is on.</b></p>' : ''}<p class="mn-k">Text this code to the other person. They open Reel Dinner, tap Match it, then Room code, and type it in. Or send the link.</p>
       <div class="mn-actions"><button type="button" class="mn-ghost" id="mnShare">Send the code</button><button type="button" class="mn-go" id="mnGo">Start swiping</button></div>
       <p class="mn-k" id="mnThem">${M.room.them ? 'They are in.' : 'Waiting for them to join. You can start swiping now.'}</p><button type="button" class="mn-quit" id="mnQuit">Close the room</button></div>`;
     $('mnShare').onclick = async () => {
@@ -595,7 +861,7 @@
       try { if (navigator.share) { await navigator.share({ title: 'Reel Dinner Match night', text }); return } } catch (e) { return }
       try { await navigator.clipboard.writeText(text); $('mnShare').textContent = 'Copied, paste it in a text' } catch (e) { $('mnShare').textContent = url }
     };
-    $('mnGo').onclick = () => { M.step = 'swipe'; save(); render() };
+    $('mnGo').onclick = () => { M.step = M.fcOn ? 'fc' : 'swipe'; save(); render() };
     $('mnQuit').onclick = quit;
   }
   const themLine = () => { const r = M.room; if (!r) return ''; if (!r.them) return 'Waiting for them to join'; return r.seen >= M.deck.length ? 'They have finished swiping' : `They are on card ${Math.min(r.seen + 1, M.deck.length)} of ${M.deck.length}` };
@@ -625,6 +891,7 @@
     const me = M.room.me, them = other(me), sw = st.swipes || [];
     const tk = sw.filter(s => s.p === them);
     M.room.them = st.players > 1 || tk.length ? 1 : 0; M.room.seen = tk.length;
+    if (M.fcOn) return fcRoomSeen(st, sw);
     M.keep[them] = tk.filter(s => s.k).map(s => s.f);
     /* picks for the decider */
     if (st.picks) for (const k of ['1', '2']) if (st.picks[k]) M.picks[+k] = st.picks[k];
