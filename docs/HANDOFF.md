@@ -1807,3 +1807,4 @@ Josh's go: all three at once.
 - rd-alerts redeployed from feat/final-cut (v4, verify_jwt off) with the duel_turn line and subject.
 - main: fast-forward to feat/final-cut, then merges of feat/card-stats and fix/sharp-previews (only HANDOFF, sw.js and the index.html script stamps clashed; friends.js merged on its own). build-data rerun for the stamps.
 - Checks on the merged code: npm test, check-browser, check-final-cut, check-card-stats, check-friends, check-members, check-quiz all pass.
+- Pushed main 9ed23a74, Publish site run 43938462083 passed. match.js, friends.js, app.js, index.html, sw.js and the 1200 wide Jaws preview match live byte for byte.
