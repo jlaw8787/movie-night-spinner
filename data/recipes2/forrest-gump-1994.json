@@ -458,71 +458,42 @@
    "af": true
   },
   {
-   "n": "White House cherry vanilla soda",
+   "n": "Fifteen Dr Peppers",
    "course": "d",
-   "prep_min": 6,
-   "cook_min": 30,
-   "make_ahead": "Syrup up to 1 week",
+   "prep_min": 5,
+   "cook_min": 0,
    "ingredients": [
     {
-     "q": 300,
-     "u": "g",
-     "item": "frozen pitted cherries",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
+     "q": 1500,
      "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "vanilla bean",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lime",
-     "aisle": "Produce"
-    },
-    {
-     "q": 800,
-     "u": "ml",
-     "item": "soda water",
+     "item": "Dr Pepper (4 x 375ml cans), chilled",
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, to serve",
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
      "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Simmer the cherries with the sugar, water and split vanilla bean.",
-     "min": 10
-    },
-    {
-     "text": "Mash, strain and cool the syrup.",
-     "min": 20
-    },
-    {
-     "text": "Fill four tall glasses with ice and add syrup and a squeeze of lime to each.",
-     "min": 4
-    },
-    {
-     "text": "Top with cold soda water, stir, and finish with a cherry.",
+     "text": "Put two scoops of vanilla ice cream in each of four tall glasses.",
      "min": 2
+    },
+    {
+     "text": "Pour a can of cold Dr Pepper slowly down the side of each glass so it foams up without spilling.",
+     "min": 2
+    },
+    {
+     "text": "Top with a maraschino cherry and serve with a straw and a long spoon.",
+     "min": 1
     }
    ],
    "veg": true,

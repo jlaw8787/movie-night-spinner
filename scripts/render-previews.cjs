@@ -40,10 +40,12 @@ async function snap(page,id){
 (async()=>{
   if(!todo.length){console.log('All previews present.');server.kill();return}
   await ready();
-  const browser=await chromium.launch();
+  /* behind a sandbox proxy (HTTPS_PROXY set) the TMDB photos need it, as in check-print-text */
+  const PX=process.env.HTTPS_PROXY||process.env.https_proxy;
+  const browser=await chromium.launch(PX?{args:['--proxy-server=https='+PX.replace(/^https?:\/\//,'')]}:{});
   let done=0,fail=[];const t0=Date.now(),queue=todo.slice();
   async function worker(){
-    const ctx=await browser.newContext({viewport:{width:1400,height:1300},deviceScaleFactor:2});
+    const ctx=await browser.newContext({viewport:{width:1400,height:1300},deviceScaleFactor:2,ignoreHTTPSErrors:!!PX});
     await ctx.addInitScript(()=>{try{localStorage.setItem('mns-welcome','1')}catch(e){}});
     const page=await ctx.newPage();
     while(queue.length){const id=queue.shift();

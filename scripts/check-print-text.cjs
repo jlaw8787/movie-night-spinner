@@ -16,6 +16,8 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  const PHOTOS=process.env.MNS_PHOTOS!=='0';
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||/fonts\.(googleapis|gstatic)\.com/.test(u.hostname)||(PHOTOS&&u.hostname==='image.tmdb.org')||u.protocol==='data:'||u.protocol==='blob:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(7200000);
+ /* review 28: a layout asking for a font cut that is not bundled prints in a stand-in face; fonts.js warns, so any warning fails the run */
+ const fontMiss=new Set();p.on('console',m=>{const t=m.text();if(/No local font for/.test(t))fontMiss.add(t)});
  await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
  const r=await p.evaluate(async([N,NAMED])=>{const out=[];const list=NAMED.length?NAMED.map(i=>FILMS.find(f=>f.id===i)).filter(Boolean):N?FILMS.slice(0,N):FILMS;
@@ -157,5 +159,6 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
      if(el.offsetWidth&&el.tagName!=='IMG'&&/drop-shadow/.test(cs.filter||''))out.push(`${f.id}: drop-shadow filter left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`)}
     st.remove()}}
   return {n:list.length,out:[...new Set(out)]}},[N,NAMED]);
+ for(const t of fontMiss)r.out.push('font not bundled: '+t.replace('No local font for ',''));
  console.log(`${r.n} printed menus read`);if(r.out.length){console.log(r.out.join('\n'));console.log('FAIL');process.exit(1)}
  console.log('PASS: no dish name or note hidden, and the Save PDF copy has none of the shapes html2canvas drops');await b.close();process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});

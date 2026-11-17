@@ -3031,6 +3031,9 @@ html,body{overflow-x:clip}
 .mode-sw button[aria-selected="true"]{background:linear-gradient(#e9bd5c,#b98226);color:#2a1206;box-shadow:0 0 18px rgba(255,210,120,.35)}
 .mode-sw button:focus-visible{outline:2px solid var(--bulb);outline-offset:2px}
 body.matching .deck>.wheel-wrap,body.matching #spinbar,body.matching .stage .controls,body.matching .stage .count{display:none!important}
+/* review 28: no empty stage ("Spin the wheel to raise the curtain") or second Menu of the week under Match night and Quiz night.
+   A match or a quiz win opens a menu, the theatre loses .closed and shows again */
+body.matching #theatre.closed,body.quizzing #theatre.closed,body.matching #motw,body.quizzing #motw{display:none!important}
 .match{width:min(100%,540px);color:var(--screen);font-family:var(--f-body)}
 .match .mn-head,.match .mn-hand,.match .mn-nm{text-align:center}
 .mn-t{font:400 clamp(26px,6vw,36px)/1.05 var(--f-board);letter-spacing:.04em;color:var(--bulb);margin:4px 0 8px;text-shadow:0 0 14px rgba(255,200,90,.35)}
@@ -3469,8 +3472,8 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
 <script src="ratings.js?v=c091d351" defer></script>
 <script src="aisles.js?v=15304814" defer></script>
 <script src="providers.js?v=3741da51" defer></script>
-<script src="films.js?v=44457ea2" defer></script>
-<script src="assets/fonts/fonts.js?v=f28d82e1" defer></script>
+<script src="films.js?v=a673121c" defer></script>
+<script src="assets/fonts/fonts.js?v=d8909e45" defer></script>
 <script src="formats-core.js?v=1c74fdbc" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
