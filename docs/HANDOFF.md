@@ -1836,3 +1836,5 @@ Josh: "How do I edit the movie time, remove if I watch early etc?" (it was only 
 
 - Search Console set up outside this repo by Josh with a Grok bot. Do not redo it.
 - Review 28: a fresh whole-site review (first since review 20) running from main 10901714. Report goes to docs/review-28.md.
+
+- Review 28 scored 8.4 (docs/review-28.md, screenshots review-28-01 to 24). Josh chose: fix all 16, quick ones first, then a fresh re-score aiming for 9.5. Start in a new chat.
