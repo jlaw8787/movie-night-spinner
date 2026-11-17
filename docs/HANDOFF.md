@@ -1824,3 +1824,10 @@ Josh: "How do I edit the movie time, remove if I watch early etc?" (it was only 
 - iPhone Safari drew a pink hairline after crooked last letters on the Now Showing board (e.g. GREASE). Side padding on .mq-t keeps the letters inside the blurred layer; fitMarquee ignores the padding so titles hang the same.
 - docs/RIPPLE.md: the checklist for adding a film, changing or removing one, and adding a feature.
 - scripts/check-ripple.cjs + tests/ripple.test.cjs: checks all 1000 films have every piece. Runs first in Publish site. 4 known gaps in data/ripple-baseline.json.
+
+## 17 Nov, 6:15pm: the 4 ripple gaps fixed (branch fix/ripple-gaps)
+
+- Title logos for La Bamba and Major League (English-title logos TMDB had filed under pt and fr). The Wog Boy has no logo on TMDB at all, so it is in data/logo-block.json and the menu letters the title.
+- Face/Off menu colours from its poster: black and the blue title glow.
+- Previews re-rendered for all 4. Ripple baseline now empty.
+

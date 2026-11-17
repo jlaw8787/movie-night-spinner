@@ -49,7 +49,9 @@ Answer each one before building. Write the answers in the HANDOFF.md entry.
 11. **Google and stats:** film pages and sitemap still right, GoatCounter still counting.
 12. **Tests:** add or update a test, run them all, then a HANDOFF.md entry. Hold for Josh's deploy go.
 
-## Known gaps (baseline, 17 Nov 2026)
+## Known gaps
 
-- The Wog Boy, La Bamba, Major League: no title logo.
-- Face/Off: no menu colours.
+None (cleared 17 Nov 2026). Notes for next time:
+
+- TMDB sometimes files an English-title logo under another language (La Bamba, Major League). Look at every language before calling a logo missing.
+- If no logo exists anywhere (The Wog Boy), add the film to `data/logo-block.json` so the menu letters the title itself.

@@ -23,7 +23,7 @@ const keyed = {
   'written quiz questions': json('data/trivia.json'),
   'TMDB id': json('data/tmdb-ids.json'),
   'menu colours': json('data/film-palette.json'),
-  'title logo': json('data/film-logos.json'),
+  'title logo': Object.assign({}, json('data/film-logos.json'), json('data/logo-block.json')), /* logo-block: no logo exists, the menu letters the title instead */
   'poster': jsConst('tmdb-posters.js', 'TMDB_POSTERS'),
   'rating': jsConst('ratings.js', 'RATINGS'),
   'trailer entry': jsConst('trailers.js', 'TRAILERS'),
