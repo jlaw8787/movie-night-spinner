@@ -3189,10 +3189,11 @@ let _hang=false;
 function fitMarquee(){if(_hang)return;const t=$("now"),mq=document.querySelector(".mq");if(!t||!mq)return;
   const txt=t.textContent,n=txt.length,room=mq.clientWidth-2*MQ_ROW,sig=txt+"|"+room;if(t.dataset.fit===sig)return;
   const hang=cut=>{_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?(i===cut?" <br>":" "):`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.03).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false};
-  const shrink=()=>{const w=t.scrollWidth;if(w>room)t.style.fontSize=`${(parseFloat(getComputedStyle(t).fontSize)*room/w*.98).toFixed(1)}px`};
+  const pad=()=>{const c=getComputedStyle(t);return parseFloat(c.paddingLeft)+parseFloat(c.paddingRight)||0},tw=()=>t.scrollWidth-pad();
+  const shrink=()=>{const w=tw();if(w>room)t.style.fontSize=`${(parseFloat(getComputedStyle(t).fontSize)*room/w*.98).toFixed(1)}px`};
   t.style.fontSize="";mq.classList.remove("one","two");hang(-1);t.dataset.fit=sig;
   const sp=[...txt].map((c,i)=>c===" "?i:-1).filter(i=>i>0);
-  if(room<=0||t.scrollWidth<=room*(sp.length?.72:1))return;
+  if(room<=0||tw()<=room*(sp.length?.72:1))return;
   if(sp.length){const cost=i=>Math.abs(i-n/2)-(txt[i-1]===":"?n/2:txt[i-1]===","?n/3:0),cut=sp.reduce((a,b)=>cost(b)<cost(a)?b:a);hang(cut);mq.classList.add("two")}else mq.classList.add("one");
   shrink()}
 
