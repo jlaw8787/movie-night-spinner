@@ -463,19 +463,18 @@ const FMT_FILMS={
          shop:["500g spaghetti@Pantry","100ml extra virgin olive oil@Pantry","8 garlic cloves@Produce","1 tsp chilli flakes@Pantry","1 bunch parsley@Produce","1 lemon@Produce","40g parmesan@Dairy"]}]},
       {h:"Off the menu",items:[
         {k:"Chocolate lava cake",n:"Chocolate lava cake",note:"Molten dark chocolate centre. The Twitter fight cake.",p:"$6"}]}]},
-  "When Harry Met Sally... (1989)":{fmt:"check",brand:"Katz's Delicatessen",place:"Katz's Delicatessen",tag:"I'll have what she's having.",
+  "When Harry Met Sally... (1989)":{fmt:"check",brand:"Katz's Delicatessen",place:"Harry and Sally's tab",tag:"I'll have what she's having.",
     fields:[["Table","4"],["Guests","2"],["Server","Joan"],["No.","1989"]],total:"$18.70",thanks:"Send a salami to your boy in the army",
     trip:["Chicago to New York, 1977","Chicago","New York","18 hours, can't be friends","They share the drive. They don't share the grapes."],
     stills:[["/nVnheU1iPMVJJZgW9I8P9tCNhco.jpg","The diner. Sally orders"],["/cAZADMfPpRuCZYkTO06IDdrEE2t.jpg","Katz's. The famous lunch"],["/tc8FdNY1R0Ob1oOyhI3XZbuV14m.jpg","New Year's Eve, at the party"]],
     groups:[
-      {h:"On the table",items:[
-        {k:"Fried deli pickles with mustard mayo",n:"Fried pickles",note:"Half-sours in rye batter. Pickles come with every table",p:"1.50",q:"1"}]},
-      {h:"Sally's order",items:[
+      {h:"Sally's order",sec:"On the drive, a diner in 1977",items:[
         {k:"Sally's chef salad",n:"Chef salad",mods:["oil and vinegar dressing"],note:"Ham, turkey, swiss and egg. Dressing on the side",p:"5.50",q:"1",
          how:"Wash and tear 2 cos lettuces. Arrange with 200g sliced leg ham, 200g sliced turkey, 150g swiss cheese strips, 4 halved hard-boiled eggs, 2 sliced tomatoes and half a sliced cucumber. Serve 60ml olive oil and 30ml red wine vinegar in two little jugs on the side.",
          shop:["2 cos lettuces@Produce","200g sliced leg ham@Deli","200g sliced turkey@Deli","150g swiss cheese@Dairy","4 eggs@Dairy","2 tomatoes@Produce","1 cucumber@Produce","60ml olive oil@Pantry","30ml red wine vinegar@Pantry"]},
         {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"Heated, with the ice cream on the side",p:"2.25",q:"1"}]},
-      {h:"From the counter",items:[
+      {h:"From the counter",sec:"Katz's Delicatessen, years later",items:[
+        {k:"Fried deli pickles with mustard mayo",n:"Fried pickles",note:"Half-sours in rye batter. Pickles come with every table",p:"1.50",q:"1"},
         {k:"Pastrami on rye",note:"The Katz's classic. Hand cut, piled high, a pickle on the side",p:"6.95",q:"1"}]},
       {h:"Fountain",items:[
         {k:"Egg cream",n:"Chocolate egg cream",c:"d",note:"Chocolate syrup, milk and soda. I'll have what she's having",p:"1.25",q:"2"}]}]},
@@ -1480,15 +1479,17 @@ function fmtCheck(f,spec,menu,poster){
   const GRN="#2f6b45",PAD="#f2f6ea",INK="#1d2e8f",DARK="#1f2a22",RED="#b8262b",LINE="rgba(47,107,69,.28)";
   const PRINT="font-family:'Archivo Narrow',sans-serif",HAND="font-family:'Homemade Apple',cursive;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",DISP="font-family:'DM Serif Display',serif;font-weight:400";
   const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
-  const L=50;
+  const L=46;/* 46 (was 50) makes room for the two section lines */
   const row=x=>{const it=pick(x.k);const mods=(x.mods||[]).map(m=>`<div style="${HAND};font-size:16px;line-height:${L/2}px;color:${INK};padding-left:18px">${ESC(m)}</div>`).join("");
     return `<div style="display:grid;grid-template-columns:44px minmax(0,1fr) 74px;border-bottom:1px solid ${LINE}"><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:center">${ESC(x.q||"4")}</span><div><div style="${HAND};font-size:20px;line-height:${L}px;color:${INK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</div>${mods}<div style="${BODY};font-size:13.5px;line-height:1.3;color:#5a6a5e;padding:0 0 6px 2px;font-style:italic">${ESC(x.note)}</div></div><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:right;padding-right:10px">${ESC(x.p)}</span></div>`};
+  /* a group with sec gets its own section line on the tab (review 28: When Harry Met Sally's diner order and Katz's lunch are two places) */
+  const sec=t=>`<div style="${PRINT};font-weight:700;font-size:11.5px;line-height:1;letter-spacing:.14em;text-transform:uppercase;color:${RED};padding:7px 10px 5px 46px;border-bottom:1px solid ${LINE}">${ESC(t)}</div>`;
   const items=spec.groups.flatMap(g=>g.items);
   const check=`<div class="fx-panel" style="position:relative;flex:1;min-width:0;min-height:0;background:${PAD};box-shadow:0 12px 26px rgba(0,0,0,.4);transform:rotate(-.6deg);display:flex;flex-direction:column;color:${DARK}">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:14px 18px 8px;border-bottom:3px solid ${GRN}"><div><div style="${PRINT};font-weight:700;font-size:28px;line-height:1;letter-spacing:.02em;color:${GRN}">Guest Check</div><div style="${PRINT};font-size:13px;letter-spacing:.12em;color:${GRN};text-transform:uppercase;margin-top:3px">${ESC(spec.place)}</div></div>
       <div style="display:grid;grid-template-columns:repeat(4,auto);gap:0 12px;${PRINT};font-size:11px;letter-spacing:.1em;color:${GRN};text-transform:uppercase;text-align:center">${spec.fields.map(([a,b])=>`<div style="border:1px solid ${GRN};padding:2px 8px"><div>${ESC(a)}</div><div style="${HAND};font-size:14px;letter-spacing:0;color:${INK};text-transform:none;line-height:1.6">${ESC(b)}</div></div>`).join("")}</div></div>
     <div style="display:grid;grid-template-columns:44px minmax(0,1fr) 74px;background:${GRN};color:#fff;${PRINT};font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase"><span style="padding:3px 0;text-align:center">Qty</span><span style="padding:3px 2px">Item</span><span style="padding:3px 10px 3px 0;text-align:right">Amount</span></div>
-    <div style="padding:0 0">${items.map(row).join("")}</div>
+    <div style="padding:0 0">${spec.groups.map(g=>(g.sec?sec(g.sec):"")+g.items.map(row).join("")).join("")}</div>
     ${FX_SP}
     <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:18px;padding:8px 18px 14px;border-top:3px solid ${GRN}"><div style="flex:1"><div style="${PRINT};font-weight:700;font-size:11.5px;letter-spacing:.14em;color:${RED};text-transform:uppercase">Showtime cue</div><div style="${HAND};font-size:15px;line-height:1.5;color:${INK}">${ESC(fmtCue(f))}</div></div><div style="flex:none;text-align:right"><div style="${PRINT};font-size:11.5px;letter-spacing:.14em;color:${GRN};text-transform:uppercase">Total</div><div style="${HAND};font-size:22px;color:${INK}">${ESC(spec.total)}</div></div></div>
     <div style="${PRINT};font-size:11px;letter-spacing:.2em;text-align:center;color:${GRN};text-transform:uppercase;padding:0 0 8px">${ESC(spec.thanks)}</div></div>`;

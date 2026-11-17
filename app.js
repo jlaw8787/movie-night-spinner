@@ -2010,7 +2010,7 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
@@ -4915,6 +4915,7 @@ function openWalkin(){
   let seen=false;try{seen=sessionStorage.getItem("mns-walkin")==="1"}catch(e){}
   if(seen)return;
   const prev=document.activeElement;
+  {const im=w.querySelector("img");if(im&&im.loading==="lazy")im.loading="eager"}
   w.hidden=false;document.body.style.overflow="hidden";
   try{fitSigns(w,true)}catch(e){}
   const done=(walk)=>{
@@ -5016,3 +5017,12 @@ function snackCredits(){const l=(window.SNACKS||[]).filter(x=>x.img&&x.credit);i
   return `<details class="sc-credits"><summary>Snack photo credits</summary><p>Snack photos are real photos, cropped, used under the licences shown.</p><ul>${l.map(x=>`<li>${ESC(x.n)}: <a href="${ESC(x.credit.url)}" target="_blank" rel="noopener">${ESC(x.credit.by)}</a>, ${ESC(x.credit.lic)}</li>`).join("")}</ul></details>`}
 /* the candy bar can be restored at startup before the snack counter code above is ready: draw it now that it is */
 try{if(!$("viewCrave").hidden)renderSnacks()}catch(e){}
+/* review 28: two pictures that waited too long. The Galaxy Video walk-in photo is lazy, so Safari opened the doors on an empty scene
+   for about a second; it now starts loading the moment a finger or pointer reaches the Galaxy Video tab (or it gets focus).
+   The candy bar popcorn sat hidden when the page loaded, so lazy loading never fetched it; it loads when the candy bar opens. */
+try{const eager=img=>{if(img&&img.loading==="lazy")img.loading="eager"};
+  const wi=document.querySelector("#wiScene img"),gb=$("viewShopBtn");
+  if(wi&&gb)["pointerenter","touchstart","focus"].forEach(ev=>gb.addEventListener(ev,()=>eager(wi),{once:true,passive:true}));
+  const pop=$("cbPop"),cb=$("viewCraveBtn");
+  if(pop){if(!$("viewCrave").hidden)eager(pop);if(cb)["pointerenter","touchstart","focus","click"].forEach(ev=>cb.addEventListener(ev,()=>eager(pop),{once:true,passive:true}))}
+}catch(e){}

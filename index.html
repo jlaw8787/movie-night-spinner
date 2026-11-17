@@ -2685,7 +2685,9 @@ body.quizzing .deck>.wheel-wrap,body.quizzing #spinbar,body.quizzing .stage .con
 .qz-cs b{color:var(--screen)}
 .qz-big{margin:4px 0 0;font:400 56px/1 var(--f-board);color:var(--bulb);text-shadow:0 0 18px rgba(255,200,90,.35)}
 .qz-big small{font-size:.45em;color:var(--muted)}
-.qz-grid{margin:6px 0 0;font-size:18px;letter-spacing:2px}
+.qz-grid{margin:8px 0 0;display:flex;justify-content:center;flex-wrap:wrap;gap:4px}
+.qz-stub{display:block;width:18px;height:26px;border-radius:3px;background:#5a1420;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);-webkit-mask:radial-gradient(circle 4px at 50% 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 4px at 50% 100%,#0000 98%,#000) bottom/100% 51% no-repeat;mask:radial-gradient(circle 4px at 50% 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 4px at 50% 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+.qz-stub.ok{background:linear-gradient(#f3d27a,#d9a83a)}
 .qz-foot{text-align:center;color:var(--muted);font-size:13.5px;margin:14px 0 0}
 .qz-wait{text-align:center;padding:30px 0}
 .qz-form{max-width:360px;margin:6px auto 0}
@@ -3472,15 +3474,15 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
 <script src="ratings.js?v=c091d351" defer></script>
 <script src="aisles.js?v=15304814" defer></script>
 <script src="providers.js?v=3741da51" defer></script>
-<script src="films.js?v=a673121c" defer></script>
+<script src="films.js?v=58287497" defer></script>
 <script src="assets/fonts/fonts.js?v=d8909e45" defer></script>
-<script src="formats-core.js?v=1c74fdbc" defer></script>
+<script src="formats-core.js?v=4e2bd3a5" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=7a8bb021" defer></script>
+<script src="app.js?v=aae00c1a" defer></script>
 <script src="match.js?v=26ec11c6" defer></script>
 <script src="friends.js?v=0ab54f1e" defer></script>
-<script src="quiz.js?v=15471707" defer></script>
+<script src="quiz.js?v=bfc6097c" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

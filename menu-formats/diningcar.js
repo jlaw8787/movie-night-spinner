@@ -114,9 +114,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* the poster is the hero; stills only feed the secondary photos. No poster: first still in the poster slot. */
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
   const heroIsPoster=!!poster;
-  const backSrc=stills[1]?ctx.img(stills[1],"w1280"):stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
-  const backIsPoster=!stills[1]&&!stills[0]&&!!poster;
-  const heroPos=heroIsPoster?"center 22%":"center 40%",backPos="50% 50%";
+  /* review 28: the back strip is tall and narrow (176 by 1056), so a blind centre crop of a wide still shows sky or a sliver
+     (Forrest Gump's bench). Use the first still with a known face point (data/still-focus.json), aimed at it; with none,
+     the strip carries the title logo on the menu colours instead, never a crop of the poster. */
+  const foc=ctx.focus||{},backKey=[stills[1],stills[0],...stills.slice(2)].find(p=>p&&foc[p])||null;
+  const backSrc=backKey?ctx.img(backKey,"w1280"):"";
+  const backIsPoster=false;
+  const heroPos=heroIsPoster?"center 22%":"center 40%";
+  /* aim the strip at the face point: the still is scaled to cover 176 by 1056, then slid so the point sits mid-strip */
+  const backPos=(()=>{const f=backKey&&foc[backKey];if(!f)return "50% 40%";const bw=176,bh=H,a=f[2]||1.778,Wd=Math.max(bw,bh*a),Hd=Math.max(bh,bw/a),c=v=>Math.min(1,Math.max(0,v));
+    const px=Wd-bw>1?c((f[0]*Wd-bw/2)/(Wd-bw)):.5,py=Hd-bh>1?c((f[1]*Hd-bh/2)/(Hd-bh)):.4;return (px*100).toFixed(1)+"% "+(py*100).toFixed(1)+"%"})();
   const pf=e.photo+" "+t.photo;
   const DF=e.disp,BF=e.body,SF=e.sig;
   const up=ei<6;  /* older cards set display in caps */
@@ -193,7 +200,9 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:${e.dw} 21px/1.05 ${DF};color:${ink};margin:4px 0 6px;${up?"text-transform:uppercase;":""}${clamp(3)}">${esc(tk)}</div>
     ${(prop.lines||[]).slice(0,2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:${ink};${clamp(2)}">${esc(l)}</div>`).join("")}
     <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:8px">${punch.map(n=>`<span style="flex:0 0 22px;height:22px;display:flex;align-items:center;justify-content:center;font:700 14px/1 ${BF};${n===pIdx?`background:${band};color:${bandText};border-radius:50%`:`color:${soft};border:1px solid ${mix(ink,paper,.6)}`}">${n}</span>`).join("")}</div></div>`;
-  const strip=`<div style="position:absolute;left:0;top:0;bottom:0;width:${SW}px;overflow:hidden;background:#222">${backSrc?(backIsPoster?`<img src="${backSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:photo(backSrc,pf,backPos,overlay())):""}
+  /* no still with a face point: the menu colour with the title logo (or the title set in type) where the photo would be */
+  const stripFace=()=>{const lg2=logoImg(ctx,SW-44,240);return `<div style="position:absolute;inset:0;background:${band}"></div><div style="position:absolute;left:22px;right:22px;top:150px;display:flex;justify-content:center">${lg2?`<img src="${lg2.src}" crossorigin="anonymous" alt="" style="width:${lg2.w}px;height:${lg2.h}px;display:block;padding:12px;box-sizing:content-box;background:${panelDark};border-radius:4px">`:`<div style="font:${e.dw} 30px/1.05 ${DF};color:${bandText};text-align:center;${up?"text-transform:uppercase;":""}">${esc(f.title)}</div>`}</div>`};
+  const strip=`<div style="position:absolute;left:0;top:0;bottom:0;width:${SW}px;overflow:hidden;background:#222">${backSrc?(backIsPoster?`<img src="${backSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:photo(backSrc,pf,backPos,overlay())):stripFace()}
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 0 10px ${band},inset 0 0 0 12px ${acc}"></div>
     <div style="position:absolute;left:10px;right:10px;top:10px;padding:10px 10px 30px;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,0));font:italic 400 15px/1.3 ${BF};color:#fbf6ea">${esc(t.cap)}</div>
     ${ticket}</div>`;

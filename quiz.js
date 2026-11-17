@@ -171,7 +171,7 @@
       <p class="mn-k">How well do you know your films? Stills, menus, quotes and cast from all ${byId.size.toLocaleString('en-AU')} films on the wheel.</p></div>
       <div class="qz-cards">
         <section class="qz-card qz-daily"><p class="qz-ck">${k ? "Kids' daily" : 'Daily quiz'} No. ${no}</p>
-          ${d ? `<p class="qz-big">${d.s}<small>/10</small></p><p class="qz-grid" aria-label="${d.s} right out of 10">${grid(d.r)}</p>
+          ${d ? `<p class="qz-big">${d.s}<small>/10</small></p><p class="qz-grid" role="img" aria-label="${d.s} right out of 10">${stubs(d.r)}</p>
             <p class="qz-cs">Done for today. New quiz in ${nextIn()}.${st > 1 ? ` <b>${st} day streak.</b>` : ''}</p>
             <div class="mn-actions"><button type="button" class="mn-ghost" id="qzShareDay">Share my score</button></div>`
           : `<p class="qz-cs">Ten questions, the same for everyone today. One go.${st ? ` <b>${st} day streak</b>, keep it going.` : ''}</p>
@@ -317,6 +317,8 @@
     G = null; saveG(); hub();
   }
   const grid = r => String(r || '').split('').map(c => c === '1' ? '🟩' : '🟥').join('');
+  /* on screen the score row is ticket stubs drawn in CSS (gold for right, dark red for wrong); the emoji stay in the shared text only */
+  const stubs = r => String(r || '').split('').map(c => `<i class="qz-stub${c === '1' ? ' ok' : ''}" aria-hidden="true"></i>`).join('');
   function results() {
     const P = G.players, me = P[0], secs = Math.round(G.ms / 1000);
     let body = '';
@@ -331,7 +333,7 @@
       let vs = '';
       if (ch) { const w = me.s > ch.s || (me.s === ch.s && secs < ch.t) ? 1 : me.s === ch.s && secs === ch.t ? 0 : -1; vs = `<div class="qz-vs"><p><span>You</span><b>${me.s}</b><small>${secs}s</small></p><p><span>${ESC(ch.n)}</span><b>${ch.s}</b><small>${ch.t}s</small></p></div><p class="mn-k qz-verdict">${w > 0 ? `You beat ${ESC(ch.n)}.` : w < 0 ? `${ESC(ch.n)} wins this one.` : 'Dead heat.'}${me.s === ch.s && w ? ' Same score, so the quicker time takes it.' : ''}</p>` }
       body = `<p class="mn-tk">${G.kind === 'daily' ? `${G.kids ? "Kids' daily" : 'Daily quiz'} No. ${today() - DAY0 + 1}` : ch ? `${ESC(ch.n)}'s challenge` : 'Your score'}</p>
-        <p class="qz-big">${me.s}<small>/${G.qs.length}</small></p><p class="qz-grid" aria-label="${me.s} right out of ${G.qs.length}">${grid(me.r)}</p>
+        <p class="qz-big">${me.s}<small>/${G.qs.length}</small></p><p class="qz-grid" role="img" aria-label="${me.s} right out of ${G.qs.length}">${stubs(me.r)}</p>
         ${vs || `<p class="mn-k">${line}</p>`}
         <div class="mn-actions">${G.kind === 'daily' ? `<button type="button" class="mn-go" id="qzShareDay">Share my score</button>`
           : ch && ch.id ? `<button type="button" class="mn-go" id="qzRe">Rematch: new 10 for ${ESC(ch.n)}</button>`
