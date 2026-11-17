@@ -26,6 +26,7 @@ const rj = n => { try { return JSON.parse(rd(n)); } catch (e) { return {}; } };
 const KITF = fs.existsSync(path.join(root, 'data/kit-flavour.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/kit-flavour.json'), 'utf8')) : {};
 /* house lines: one table item and one drink written for each film's own venue (data/film-house.json) */
 const HOUSE = rj('data/film-house.json');
+const { snackCue } = require('./snack-cue.cjs');
 const LIB = { fmt: rj('data/film-format.json'), fl: rj('data/film-flavour.json'), pal: rj('data/film-palette.json'), logo: rj('data/film-logos.json'), block: rj('data/logo-block.json'), sblock: rj('data/still-block.json'), st: rj('data/film-stills.json'), sfoc: rj('data/still-focus.json'), spick: rj('data/still-pick.json') };
 const lite = [], names = {}, notes = {};
 fs.mkdirSync(path.join(root, 'data/film'), { recursive: true });
@@ -36,6 +37,7 @@ for (const f of films) {
   const o = { title: f.title, year: f.year, theme: f.theme };
   if (f.hw) o.hw = f.hw;
   if (EDITIONS[id]) o.e = 1;
+  { const c = snackCue(f, LIB.fl[id]); if (c) o.sn = c; }
   lite.push(o);
   names[id] = C.map(k => (f[k] || []).map(d => d[0]));
   notes[id] = C.map(k => (f[k] || []).map(d => d[1] || ''));

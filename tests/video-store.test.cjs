@@ -14,3 +14,9 @@ for(const id of ['viewShop','viewShopBtn','viewWheelBtn','shopSearch','shopDecad
 for(const fn of ['function renderShop(','function openCase(','function setView('])assert.ok(html.includes(fn),`missing ${fn}`);
 assert.ok(html.includes('class="rent"'),'back of the box needs a Rent it button');
 console.log(`PASS: video store shelves all ${ctx.F.length} films across ${ctx.A.length} aisles, with search, decade, unseen filter and rent.`);
+// review 29: Australian classifications only, never US ones (R, PG-13, NC-17)
+{const rs=fs.readFileSync(path.join(root,'ratings.js'),'utf8');const R=JSON.parse(rs.match(/const RATINGS=(\{.*?\});/s)[1]);
+ const bad=Object.entries(R).filter(([,v])=>v&&!['G','PG','M','MA15+','R18+'].includes(v));
+ assert.equal(bad.length,0,'non-Australian ratings in ratings.js: '+bad.slice(0,5).map(x=>x.join(' = ')).join('; '));
+ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');assert.ok(!/R18\\\+\|R\)/.test(app),'plain R still matches a Late Show test');
+ console.log('PASS: every rating is Australian.')}

@@ -54,7 +54,7 @@ for fid in want:
     if not best: print('NOT FOUND', fid); out[fid] = {'conf': 'none'}; continue
     tid = best['id']; d = get(f'movie/{tid}', append_to_response='release_dates,videos,images,watch/providers', include_image_language='null,en,xx')
     cert = ''
-    for c in ('AU', 'US'):
+    for c in ('AU',):  # Australian only: a US rating (R, PG-13) never goes on the shelf (review 29)
         for rc in d.get('release_dates', {}).get('results', []):
             if rc.get('iso_3166_1') == c:
                 cs = [x.get('certification', '').strip() for x in rc.get('release_dates', []) if x.get('certification', '').strip()]

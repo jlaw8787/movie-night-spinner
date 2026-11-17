@@ -76,7 +76,9 @@ const sel=$("themeSel");
 /* Josh's call (5 Nov): titles written with a spaced hyphen read with a comma on screen and paper ("Mission: Impossible, Fallout").
    The id keeps the official title, so saved lists, links and data files still match */
 FILMS.forEach(f=>{if(/ - /.test(f.title))f.title=f.title.replace(/ - /g,", ")});
-sel.innerHTML=`<option value="all">Everything (${FILMS.length} films)</option>`+
+/* review 29: counts read the same everywhere (1,000 not 1000) */
+const nAU=n=>Number(n).toLocaleString("en-AU");
+sel.innerHTML=`<option value="all">Everything (${nAU(FILMS.length)} films)</option>`+
   Object.entries(T).sort((a,b)=>a[1].name.localeCompare(b[1].name)).map(([k,t])=>`<option value="${k}">${t.name} (${FILMS.filter(f=>f.theme===k).length})</option>`).join("");
 
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -156,7 +158,7 @@ function renderWatchList(){
   const films=programmeFilms().filter(f=>(f.title+" "+f.year).toLocaleLowerCase().includes(q))
     .filter(f=>filter==="all"||(filter==="watched"?watched.has(f.id):!watched.has(f.id)))
     .slice().sort((a,b)=>a.title.localeCompare(b.title)||a.year.localeCompare(b.year));
-  $("watchSummary").textContent=`My movie checklist · ${watched.size} / ${FILMS.length} watched`;
+  $("watchSummary").textContent=`My movie checklist · ${nAU(watched.size)} / ${nAU(FILMS.length)} watched`;
   $("watchResults").textContent=`${films.length} ${films.length===1?"film":"films"} shown in this programme`;
   const box=$("watchList");box.replaceChildren();
   if(!films.length){const p=document.createElement("p");p.textContent="No films match. Try another search, filter or programme.";box.appendChild(p)}
@@ -189,7 +191,7 @@ function setList(){
   rot=0;winner=-1;
   ctx.clearRect(0,0,canvas.width,canvas.height);draw();
   $("spin").disabled=!list.length;
-  $("count").textContent=list.length?`${list.length} films in tonight's programme${skipWatched?" · unwatched only":""}${kidsMode?" · kids mode":""}`:
+  $("count").textContent=list.length?`${nAU(list.length)} films in tonight's programme${skipWatched?" · unwatched only":""}${kidsMode?" · kids mode":""}`:
     "You've watched every film in this programme. Choose another programme, untick a film or turn off ‘Skip watched’.";
   renderWatchList();
 }
@@ -1477,6 +1479,8 @@ function waitWords(x){const w=[],put=v=>{if(!w.includes(v))w.push(v)};
       /\b(fridge|refrigerat\w*)\b/i.test(tx)?"chill":/\bfreezer\b/i.test(tx)?"freeze":/\bsyrupy\b/i.test(tx)?"steep":"rest";sw.length=0;sw.push(c)}
     sw.forEach(put)}
   return w.length?"to "+(w.length>1?w.slice(0,-1).join(", ")+" and "+w[w.length-1]:w[0]):"to rest"}
+/* review 29: a soak or marinade that comes before the heat is said first, in step order (Jaws calamari) */
+function waitFirst(x){const st=x.steps||[],w=st.findIndex(t=>(t.min||0)>=10&&WAIT_RE.test(String(t.text).trim())),h=st.findIndex(t=>HEAT_RE.test(String(t.text)));return w>=0&&h>=0&&w<h}
 /* only heat counts as cooking: a drink that is stirred or a tartare that is chopped is all prep */
 const HEAT_RE=/\b(oven|bake|baking|fry|fried|grill|boil|simmer|roast|sear|toast|heat|cook|pan|barbecue|bbq|microwave|poach|steam|saut|caramel|flame|reduce|melt|char|braise|broil|smoke)/i;
 /* review 16: the locked-in film's Prep sheet carries its showtime and when to start, worked out the same way as the calendar reminder */
@@ -1507,7 +1511,7 @@ function prepHTML2(f,menu){
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
-    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}${planWhen(T.wait)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}${batchTip(x,kk)?`<p class="pp-tip"><b>Tip</b> ${ESC(batchTip(x,kk))}</p>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).filter(s=>stepParts(s.text).main).map(s=>`<li>${ESC(degC(scaleStep(stepParts(s.text).main,kk)))}${s.min?` <span class="pp-t">${planDur(s.min)}</span>`:""}</li>`).join("")}</ol>${(x.steps||[]).map(s=>stepParts(s.text).tip).filter(Boolean).map(t=>`<p class="pp-tip"><b>Tip</b> ${ESC(degC(scaleStep(t,kk)))}</p>`).join("")}</li>`}).join("");
+    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${T.wait&&waitFirst(x)?`${planMin(T.wait)} ${waitWords(x)} first${planWhen(T.wait)}, then ${time.charAt(0).toLowerCase()+time.slice(1)}`:`${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}${planWhen(T.wait)}`:""}`}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}${batchTip(x,kk)?`<p class="pp-tip"><b>Tip</b> ${ESC(batchTip(x,kk))}</p>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).filter(s=>stepParts(s.text).main).map(s=>`<li>${ESC(degC(scaleStep(stepParts(s.text).main,kk)))}${s.min?` <span class="pp-t">${planDur(s.min)}</span>`:""}</li>`).join("")}</ol>${(x.steps||[]).map(s=>stepParts(s.text).tip).filter(Boolean).map(t=>`<p class="pp-tip"><b>Tip</b> ${ESC(degC(scaleStep(t,kk)))}</p>`).join("")}</li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
@@ -2641,7 +2645,7 @@ function hireCaseHTML(f){
 function openSlip(f,go){
   const modalTrigger=document.activeElement;setTimeout(()=>sfx.print(),350);
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
-  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
+  const o=document.createElement("dialog");o.className="counter galaxy";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
   o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. ${isNew(f)?"The cover went in that sleeve this week and it's still glossy.":+f.year<2000?"The cover's been in that sleeve since the shop opened.":"The cover's had a few years in that sleeve."}</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const close=()=>dismissModal(o);
@@ -2680,7 +2684,7 @@ function wireStars(root,f,onSet){root.querySelectorAll("[data-star]").forEach(b=
 function openChute(f,after){
   const modalTrigger=document.activeElement;
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
-  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Return ${f.title}`);
+  const o=document.createElement("dialog");o.className="counter galaxy";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Return ${f.title}`);
   o.innerHTML=`<div class="chute"><h3>Return chute</h3><p>${ESC(f.title)}. How was it?</p><div class="drop">${p?`<img alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}<div class="slot"><span>Returns</span></div></div>${starsHTML(f)}<div class="acts"><button type="button" data-a="back">Not yet</button><button type="button" class="go" data-a="drop">Drop it in</button></div></div>`;
   const close=()=>dismissModal(o);
   wireStars(o,f);
@@ -2849,7 +2853,7 @@ function syncNote(){if(isAcct())return navigator.onLine===false?"You're offline.
   return navigator.onLine===false?"You're offline. Your changes are saved on this device and go up once you're back online.":syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
 function openSyncForm(mode){
   const modalTrigger=document.activeElement;
-  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
+  const o=document.createElement("dialog");o.className="counter galaxy";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
   const join=mode==="join";
   o.setAttribute("aria-label",join?"Put your card online":"Use your card from another device");
   o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><p class="off-note" hidden>You're offline. Your card stays saved on this device. Try this again once you're back online.</p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go" data-net>${join?"Save my card":"Sign in"}</button></div></form>`;
@@ -2930,7 +2934,7 @@ async function acctDelete(b){
 /* the sign-in sheet: Google, or an emailed code. No password anywhere. */
 function openJoin(){
   const modalTrigger=document.activeElement;
-  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Get your member card");
+  const o=document.createElement("dialog");o.className="counter galaxy";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Get your member card");
   let email="";
   const step1=()=>{o.innerHTML=`<form class="syncbox joinbox" novalidate><h3>Get your member card</h3><p>Free, and no password. Your card, ticks, rentals and Match night picks follow you to any phone or computer you sign in on.</p><label class="j18"><input type="checkbox" id="j18" required> I'm 18 or over</label><button type="button" class="j-google" data-a="google"><svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.97 10.72A5.4 5.4 0 0 1 3.68 9c0-.6.1-1.18.29-1.72V4.95H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg>Continue with Google</button><p class="j-or"><span>or</span></p><label for="jEmail">Email</label><input id="jEmail" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" value="${ESC(email)}"><p class="err" id="jErr" role="alert"></p><div class="acts"><button type="button" data-a="back">Not now</button><button type="submit" class="go">Email me a code</button></div><p class="j-small">Signing up means you're happy with the <a href="privacy.html">privacy policy</a>. Rather stay a guest? Everything still works, saved on this device only.</p></form>`;wire1();mountFocus("#jEmail")};
   const step2=()=>{o.innerHTML=`<form class="syncbox joinbox" novalidate><h3>Check your email</h3><p>We sent a code to <b>${ESC(email)}</b>. Type it in here. It can take a minute, and check your junk folder.</p><label for="jCode">Code</label><input id="jCode" inputmode="numeric" autocomplete="one-time-code" maxlength="8" required><p class="err" id="jErr" role="alert"></p><div class="acts"><button type="button" data-a="restart">Different email</button><button type="submit" class="go">Sign in</button></div><p class="j-small"><button type="button" class="j-link" data-a="resend">Send the code again</button></p></form>`;wire2();mountFocus("#jCode")};
@@ -2979,7 +2983,7 @@ function welcomeMember(){
 addEventListener("rd-auth-lost",()=>{syncState="signedout";renderMember()});
 let shopBuilt=false;
 /* the Late Show: horror rated MA15+ or R, kept behind the curtain and off the open Horror aisle */
-const isLate=f=>f.theme==="horror"&&/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||"");
+const isLate=f=>f.theme==="horror"&&(/^(MA15\+|R18\+)$/.test(ratingOf(f)||"")||!ratingOf(f));
 function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
   /* one sticker per tape: Seen it, else the new release price, else Staff pick */
@@ -3031,7 +3035,7 @@ function renderShop(){
   renderCal(cal);renderBoard();
   if(rented.length&&!q)rows.push(["Your rentals",rented]);
   const top=!q?topShelf(list):[];if(top.length)rows.push([member.name?`${member.name}'s shelf`:"Your top shelf",top,"Everything you gave 4 or 5 stars."]);
-  if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
+  if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"New releases $4 for 3 nights. Back by 7pm.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   /* search: titles first, then films on theme, then films that only mention it in the story or on the menu */
   if(q&&list.length){const t=found.filter(x=>x.tier<4).map(x=>x.f),m=found.filter(x=>x.tier>=4&&x.tier<5).map(x=>x.f),w=found.filter(x=>x.tier>=5).map(x=>x.f);
@@ -3040,7 +3044,7 @@ function renderShop(){
   if(!q&&!kidsMode){const ls=list.filter(isLate).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. The proper scares, grown-ups only.","lateshow"])}
   if(!q&&peekSeason){const c=cal.find(c=>c.s.id===peekSeason&&!c.on&&c.next);if(c)rows.unshift(...seasonRows(c.s,list,c.next).map(r=>{r[2]=(r[2]||"").replace(/^Back on /,"Sneak look. Back on ");return r}))}
   renderMember();
-  $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
+  $("shopCount").textContent=list.length?`${nAU(list.length)} of ${nAU(FILMS.length)} titles on the shelves`:"";
   const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}" data-name="${ESC(n)}" data-count="${r.length}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span><b class="sr">, </b>${r.length}<b class="sr"> tapes</b></span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.webp" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf" data-k="${shelfRest.push(/lateshow/.test(cls||"")?[]:r.slice(SHELF_FIRST))-1}">${(/lateshow/.test(cls||"")?[]:r.slice(0,SHELF_FIRST)).map(tapeHTML).join("")}</div></section>`;
   $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">${q?`No tapes match "${ESC(q)}".${tryHTML(q)||" Check the spelling, or clear the filters."}`:"Nothing on the shelves matches that. Try another title or clear the filters."}</p>`;
   fillShelvesLater();buildAisleNav();
@@ -3053,7 +3057,7 @@ async function openCase(f){
   const modalTrigger=document.activeElement;
   await Promise.all([ensureExact(f),typeof TRAILERS==="undefined"?loadScript(TRAILERS_JS).catch(()=>{}):0]);
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
-  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
+  const o=document.createElement("dialog");o.className="counter galaxy";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
   const st=((f._lib&&f._lib.stills)||[]).map(x=>Array.isArray(x)?x[0]:x).filter(x=>x&&x!==p),shots=st.slice(1,4),fresh=typeof isNew==="function"&&isNew(f),rt=ratingOf(f);
   const tag=(movieEdition(f)||{}).tagline||f.T;
@@ -3336,7 +3340,7 @@ if(typeof document!=="undefined"&&document.addEventListener)document.addEventLis
 $("shopAisles").addEventListener("scroll",e=>{const sh=e.target;if(sh.classList&&sh.classList.contains("shelf")&&sh.scrollLeft+sh.clientWidth>sh.scrollWidth-600)fillShelf(sh)},true);
 $("shopAisles").addEventListener("click",e=>{
   const lc=e.target.closest(".ls-curtain");
-  if(lc){const sec=lc.closest(".aisle");const n="Late Show";const ls=FILMS.filter(f=>(f.theme==="horror"||/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||""))&&onSvc(f,svc)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));sec.querySelector(".shelf").innerHTML=ls.map(tapeHTML).join("");sec.classList.add("open");lc.setAttribute("aria-expanded","true");sfx.swish();return}
+  if(lc){const sec=lc.closest(".aisle");const n="Late Show";const ls=FILMS.filter(f=>(f.theme==="horror"||/^(MA15\+|R18\+)$/.test(ratingOf(f)||""))&&onSvc(f,svc)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));sec.querySelector(".shelf").innerHTML=ls.map(tapeHTML).join("");sec.classList.add("open");lc.setAttribute("aria-expanded","true");sfx.swish();return}
   const sp=e.target.closest(".aisle-spin");
   if(sp){fillShelf(sp.closest(".aisle").querySelector(".shelf"));const tapes=[...sp.closest(".aisle").querySelectorAll(".tape")];const pick=tapes[Math.floor(Math.random()*tapes.length)];
     buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));pick.classList.add("picked");pick.scrollIntoView({behavior:reduce?"auto":"smooth",inline:"center",block:"nearest"});
@@ -4878,11 +4882,11 @@ document.addEventListener("click",e=>{
 });
 
 /* goes well with: two snack counter picks for each film, from its theme, varied by film, vegetarian aware */
-function snackGoData(){return {only:{"Babe (1995)":["fairy-bread","musk-sticks","honey-joys"],"Chicken Run (2000)":["honey-joys","chocolate-crackles","sherbet"]},go:{redsauce:["cheese-twists","choc-peanuts","family-block"],pizza:["pretzels","slushies","sour-straps"],deli:["pretzels","chips-dip","milkshakes"],street:["nachos","slushies","sour-straps"],cop:["hot-chips","choc-peanuts","pretzel-mix"],soul:["honey-joys","milkshakes","hot-chips"],xmas:["rocky-road","coconut-ice","choc-tops"],aussie:["party-pies","musk-sticks","cheerios"],asian:["slushies","sour-straps","honeycomb-balls"],scifi:["sherbet","slushies","golden-syrup-popcorn"],hero:["butter-popcorn","slushies","dagwood-dogs"],kids:["fairy-bread","chocolate-crackles","honey-joys"],teen:["milkshakes","hot-chips","sour-straps"],diner:["milkshakes","hot-chips","spider"],mex:["nachos","slushies","chips-dip"],tiki:["icy-poles","slushies","coconut-ice"],uptown:["family-block","honeycomb-balls","caramel-popcorn"],horror:["lolly-snakes","mixed-lollies","caramel-popcorn"],western:["dagwood-dogs","golden-syrup-popcorn","pretzels"],philly:["hot-chips","choc-raisins","cheerios"],galaxy:["sherbet","choc-tops","slushies"],wizard:["honeycomb-balls","jelly-babies","caramel-popcorn"],adventure:["lolly-snakes","pretzel-mix","choc-peanuts"],fairytale:["fairy-bread","coconut-ice","milk-bottles"],romcom:["choc-tops","family-block","caramel-popcorn"]},fall:["butter-popcorn","choc-tops","orange-choc-balls","golden-syrup-popcorn"]}}
+function snackGoData(){return {only:{"Babe (1995)":["fairy-bread","musk-sticks","honey-joys"],"Chicken Run (2000)":["honey-joys","chocolate-crackles","sherbet"]},go:{redsauce:["cheese-twists","choc-peanuts","family-block"],pizza:["pretzels","slushies","sour-straps"],deli:["pretzels","chips-dip","milkshakes"],street:["nachos","slushies","sour-straps"],cop:["hot-chips","choc-peanuts","pretzel-mix"],soul:["honey-joys","milkshakes","hot-chips"],xmas:["rocky-road","coconut-ice","choc-tops"],aussie:["party-pies","musk-sticks","cheerios"],asian:["slushies","sour-straps","honeycomb-balls"],scifi:["sherbet","slushies","golden-syrup-popcorn"],hero:["butter-popcorn","slushies","dagwood-dogs"],kids:["fairy-bread","chocolate-crackles","honey-joys"],teen:["milkshakes","hot-chips","sour-straps"],diner:["milkshakes","hot-chips","spider"],mex:["nachos","slushies","chips-dip"],tiki:["icy-poles","slushies","coconut-ice"],uptown:["family-block","honeycomb-balls","caramel-popcorn"],horror:["lolly-snakes","mixed-lollies","caramel-popcorn"],western:["dagwood-dogs","golden-syrup-popcorn","pretzels"],philly:["hot-chips","choc-raisins","cheerios"],galaxy:["sherbet","choc-tops","slushies"],wizard:["honeycomb-balls","jelly-babies","caramel-popcorn"],adventure:["lolly-snakes","pretzel-mix","choc-peanuts"],fairytale:["fairy-bread","coconut-ice","milk-bottles"],romcom:["choc-tops","family-block","caramel-popcorn"]},fall:["butter-popcorn","choc-tops","orange-choc-balls","golden-syrup-popcorn"],cue:{asia:["honeycomb-balls","golden-syrup-popcorn","choc-raisins"],fr:["caramel-popcorn","family-block","choc-tops"],it:["cheese-twists","choc-coated-ice-creams","choc-peanuts"],mx:["nachos","chips-dip","slushies"],in:["honeycomb-balls","pretzel-mix","choc-raisins"]}}}
 function snackGoes(f){
   if(!f)return [];const by=SNACK_BY(),G=snackGoData(),ok=id=>by[id]&&(!DIET.veg||by[id].veg);
   let h=0;for(const ch of f.id)h=(h*31+ch.charCodeAt(0))>>>0;
-  const pool=(G.only[f.id]||G.go[f.theme]||[]).filter(ok),fall=G.fall.filter(id=>ok(id)&&!pool.includes(id));
+  const pool=(G.only[f.id]||(f.sn&&G.cue[f.sn])||G.go[f.theme]||[]).filter(ok)/* review 29: the menu's own cooking (sn, from build-data) beats the wheel theme */,fall=G.fall.filter(id=>ok(id)&&!pool.includes(id));
   const rot=pool.length?h%pool.length:0,list=[...pool.slice(rot),...pool.slice(0,rot)];
   return [...list,...fall].slice(0,2).map(id=>by[id]);
 }

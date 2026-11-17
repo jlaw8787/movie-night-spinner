@@ -288,7 +288,7 @@
     G.ms += Math.min(Date.now() - G.t0, 60000);
     panel.querySelector('.qz-opts').classList.add('done');
     panel.querySelectorAll('[data-o]').forEach((b, n) => { b.disabled = true; if (n === q.c) b.classList.add('ok'); else if (n === k) b.classList.add('no') });
-    p.r += ok ? '1' : '0'; if (ok) p.s++;
+    p.r += ok ? '1' : '0'; p.k = (p.k || '') + k; if (ok) p.s++;
     try { if (ok && sfx.beep) sfx.beep(); if (typeof buzz === 'function') buzz(ok ? 12 : [20, 40, 20]) } catch (e) { }
     const f = byId.get(q.id), tell = q.t === 'p' || q.t === 'm' || q.t === 'y' ? ` ${f.title} (${f.year}).` : '';
     const after = panel.querySelector('.qz-after');
@@ -346,8 +346,10 @@
           : G.kind === 'chal' && !ch && !G.to ? `<p class="qz-cs">Your friend gets these same 10 questions and sees your score at the end.</p>` : ''}`;
     }
     panel.innerHTML = `<div class="mn-hand qz-end">${body}</div><details class="qz-review"><summary>See the answers</summary><ol>${G.qs.map((q, i) => {
-      const f = byId.get(q.id), r = G.players[i % P.length].r[Math.floor(i / P.length)] === '1';
-      return `<li class="${r ? 'ok' : 'no'}"><span>${P.length > 1 ? ESC(G.players[i % P.length].n) + ': ' : ''}${ESC(q.t === 'w' ? q.film + ': ' + q.q : q.q)}</span><b>${ESC(q.o[q.c])}</b><button type="button" class="mn-link" data-film="${ESC(q.id)}">Open the ${ESC(f.title)} menu</button></li>`
+      const f = byId.get(q.id), pl = G.players[i % P.length], r = pl.r[Math.floor(i / P.length)] === '1', pk = pl.k ? +pl.k[Math.floor(i / P.length)] : NaN;
+      /* review 29: a miss shows what was picked, then the right answer, so the right one never reads as wrong */
+      const said = !r && q.o[pk] != null ? `<em class="qz-said">${P.length > 1 ? ESC(pl.n) + ' said' : 'You said'} ${ESC(q.o[pk])}</em>` : '';
+      return `<li class="${r ? 'ok' : 'no'}"><span>${P.length > 1 ? ESC(pl.n) + ': ' : ''}${ESC(q.t === 'w' ? q.film + ': ' + q.q : q.q)}</span>${said}<b>${r ? '' : 'Answer: '}${ESC(q.o[q.c])}</b><button type="button" class="mn-link" data-film="${ESC(q.id)}">Open the ${ESC(f.title)} menu</button></li>`
     }).join('')}</ol></details>`;
     const on = (id, fn) => { const b = $(id); if (b) b.onclick = fn };
     on('qzShareDay', e => shareDaily(e.currentTarget));

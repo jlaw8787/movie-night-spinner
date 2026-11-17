@@ -413,6 +413,8 @@ Real photos, cropped square and resized to 240px webp. Pack shots from Open Food
 - assets/snacks/caramel-popcorn.webp: Caramel popcorn. Capvi, CC BY 4.0. https://commons.wikimedia.org/wiki/File:Popcorn_Confection.jpg
 - assets/snacks/golden-syrup-popcorn.webp: Golden syrup and sea salt popcorn. msgohan, Public domain. https://commons.wikimedia.org/wiki/File:Kettle_Corn.jpg
 - assets/snacks/choc-tops.webp: Choc tops. Tomwsulcer, CC0. https://commons.wikimedia.org/wiki/File:Ice_cream_cone_chocolate_dipped_held_in_hand.jpg
+- assets/snacks/honey-joys.webp: Honey joys. various brennemans, CC BY-SA 2.0. https://www.flickr.com/photos/58143970@N00/7643386050
+- assets/snacks/milkshakes.webp: Chocolate malt milkshakes. Lauren Michell Rabaino, CC BY 2.0. https://commons.wikimedia.org/wiki/File:Milkshakes_at_Mels_Diner.jpg
 - assets/snacks/fairy-bread.webp: Fairy bread. Jellyfish juice, CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Fairy_bread.jpg
 - assets/snacks/chocolate-crackles.webp: Chocolate crackles. Sam Bedggood, Public domain. https://commons.wikimedia.org/wiki/File:Chocolatecrackles.jpg
 - assets/snacks/coconut-ice.webp: Coconut ice. Peter, CC BY-SA 2.0. https://commons.wikimedia.org/wiki/File:Coconut_ice.jpg

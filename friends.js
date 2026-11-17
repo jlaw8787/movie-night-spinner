@@ -501,13 +501,13 @@
   /* the walk-in welcome goes first on a first visit */
   const walkinGone = () => new Promise(res => { let n = 0; const w = document.getElementById('walkin'); const t = () => (!w || w.hidden || ++n > 120) ? res() : setTimeout(t, 500); t() });
   function note(h, k) {
-    const o = document.createElement('dialog'); o.className = 'counter'; o.setAttribute('aria-label', h);
+    const o = document.createElement('dialog'); o.className = 'counter galaxy'; o.setAttribute('aria-label', h);
     o.innerHTML = `<div class="syncbox"><h3>${ESC(h)}</h3><p>${ESC(k)}</p><div class="acts"><button type="button" class="go" data-a="ok">OK</button></div></div>`;
     o.addEventListener('click', e => { if (e.target === o || (e.target.dataset && e.target.dataset.a)) dismissModal(o) });
     mountModal(o, '.go', document.activeElement);
   }
   function offer(h, k) {
-    const o = document.createElement('dialog'); o.className = 'counter'; o.setAttribute('aria-label', 'Invite');
+    const o = document.createElement('dialog'); o.className = 'counter galaxy'; o.setAttribute('aria-label', 'Invite');
     o.innerHTML = `<div class="syncbox"><h3>${h}</h3><p>${ESC(k)}</p><div class="acts"><button type="button" data-a="no">Not now</button><button type="button" class="go" data-a="join">Get my card</button></div><p class="acct-small dark">Not now keeps the invite on this phone. Tap the card button up top when you're ready.</p></div>`;
     o.addEventListener('click', e => {
       const a = e.target.dataset && e.target.dataset.a;

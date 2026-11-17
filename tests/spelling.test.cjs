@@ -1,7 +1,7 @@
 /* Australian spelling on cards, notes and recipes (review 19: "Deviled Eggs" printed on Things to Do in Denver and eight more films while 35 said "devilled").
    Words that only ever turn up in their US spelling here when something slipped through; names and CSS are not scanned. */
 const fs=require('node:fs'),path=require('node:path');const R=path.join(__dirname,'..');
-const US=/\b(deviled|armor(s|ed)?|flavor(s|ed|ful)?|favorite(s)?|savory|jewelry|fiber|omelet(s)?|caramelize(d)?|color(s|ed)?(?= (sugar|sprinkles|candy|candies)))\b/gi;
+const US=/\b(deviled|armor(s|ed)?|flavor(s|ed|ful)?|favorite(s)?|savory|jewelry|fiber|omelet(s)?|caramelize(d)?|color(s|ed)?(?= (sugar|sprinkles|candy|candies))|cotton candy(?! cocoon)|harbor(?! (freight|ugh)))\b/gi;/* review 29: fairy floss and harbour (Killer Klowns' cotton candy cocoons are the film's own words) */
 const files=['data/films.json','data/dish-notes.json','data/dish-names.json','data/film-house.json','data/film-flavour.json','movie-menus.js',
  ...['data/recipes','data/recipes2','data/diet'].flatMap(d=>fs.readdirSync(path.join(R,d)).filter(f=>f.endsWith('.json')).map(f=>d+'/'+f))];
 /* formats.js and formats/*.js hold CSS ("color"): only the quoted words a card prints are read */
