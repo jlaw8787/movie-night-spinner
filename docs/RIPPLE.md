@@ -1,0 +1,55 @@
+# Ripple checklist
+
+Every change has knock-on effects. Before building anything, list what it touches using this page, and plan for every item. Nothing goes live until every box is ticked or Josh has said to skip it.
+
+The auto check backs this up: `node scripts/check-ripple.cjs` runs in the tests and as the first step of Publish site, so a film with a missing piece blocks the deploy. Known old gaps live in `data/ripple-baseline.json`. Only rewrite that file (`--baseline`) with Josh's OK.
+
+## 1. Adding a film
+
+Plan first (Josh's rule: all planning before builds).
+
+1. Title and year exactly as TMDB has them. Add to `wip/newfilms/films-new.txt`, run the New films workflow for TMDB data.
+2. Poster (`tmdb-posters.js`), rating (`ratings.js`), trailer (`trailers.js`), where to watch (`providers.js`), TMDB id (`data/tmdb-ids.json`).
+3. Stills (`data/film-stills.json`) and title logo (`data/film-logos.json`). Real TMDB stills only, no drawn stand-ins.
+4. Genres (`data/film-genres.json`) and Galaxy Video aisle (`aisles.js`, via `scripts/build-aisles.py`). Check seasonal shelves (Christmas from 1 Nov, holidays) and Musicals.
+5. Menu in `data/films.json`: a real venue from the film's world, every dish a complete dish, iconic lines and scenes in, facts true to the film, real quotes or unquoted notes in the character's voice.
+6. Menu layout: `data/film-format.json`, and `data/film-flavour.json` if it is on a shared layout. Update the layout tracker spreadsheet.
+7. Menu colours (`data/film-palette.json`), house lines (`data/film-house.json`, one table item and one drink).
+8. Dish names and notes (`data/dish-names.json`, `data/dish-notes.json`), recipes (`data/recipes2/`), and a veg / no alcohol version (`data/diet/`) if any dish has meat or alcohol.
+9. Quiz: 3 written questions (`data/trivia.json`); auto rounds come from `scripts/build-quiz.cjs`.
+10. Match night deck: passes the audit queue, lands in the right vibe (`scripts/build-match.cjs`).
+11. Series: if it is part of a series, add it to `data/series.json` (sequel prompt and marathon planner).
+12. Search terms (`scripts/build-search.cjs`), kids mode flag if it is family friendly.
+13. Run `node scripts/build-data.cjs`: builds `data/film/`, the Google film page (`menu/<slug>/`), sitemap and cache stamps.
+14. Printed menu preview picture (`scripts/render-previews.cjs`, `assets/menu-previews/`).
+15. Fact audit and vibe audit for the film (`docs/AUDIT.md`).
+16. Check it on the wheel, Galaxy Video shelf, Candy bar combos, Match night, Quiz night, My card stats, film page, print, phone and desktop.
+17. Run tests (includes the ripple check). Add a HANDOFF.md line. Hold for Josh's deploy go.
+
+## 2. Changing or removing a film
+
+1. Same list as above: change the piece everywhere it lives, not just the menu.
+2. Removing: also clear it from series, Match deck, sitemap, layout tracker, and check saved member data (watched, ratings, duel decks) still loads without it.
+3. Renaming or fixing the year changes the slug: the old film page URL needs a redirect or a note for Google Search Console.
+
+## 3. Adding or changing a feature
+
+Answer each one before building. Write the answers in the HANDOFF.md entry.
+
+1. **Where it shows:** Box office, Candy bar, Galaxy Video, Match night, Quiz night, My card, film pages, printed menus. Cinema stays red and gold, Galaxy Video stays purple, gold, teal and pink. Never mixed.
+2. **Who sees it:** guest and signed-in member. Guest must still work. Kids mode on and off.
+3. **Menu toggles:** Vegetarian and No alcohol still give a right menu.
+4. **Screens:** iPhone Safari (test on Josh's phone, Safari draws things Chrome does not), small phone, desktop, print.
+5. **Data:** does it save anything? Device only, or Supabase (migration, row security, free plan limits). If it collects anything new, update `privacy.html` and the App Store privacy answers.
+6. **Email and alerts:** inbox, email (Resend), daily limits (one "your turn" email a day).
+7. **The app:** works offline in the iPhone and Android wrapper (`scripts/build-app.cjs`), fonts bundled, no web-only bits that break in the app.
+8. **Speed and cache:** run `node scripts/build-data.cjs` so `?v=` stamps in `index.html` and `sw.js` change and phones get the new version.
+9. **Words:** plain Australian tone, no em dashes, "Weeklys" spelling. Update How it works if the feature is something people need to find.
+10. **Every film:** if the feature needs something per film (like quiz questions did), add that source to `scripts/check-ripple.cjs` so new films can never miss it.
+11. **Google and stats:** film pages and sitemap still right, GoatCounter still counting.
+12. **Tests:** add or update a test, run them all, then a HANDOFF.md entry. Hold for Josh's deploy go.
+
+## Known gaps (baseline, 17 Nov 2026)
+
+- The Wog Boy, La Bamba, Major League: no title logo.
+- Face/Off: no menu colours.

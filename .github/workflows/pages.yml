@@ -19,6 +19,8 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Ripple check (every film has every piece)
+        run: node scripts/check-ripple.cjs
       - name: Trim to the site files
         run: |
           mkdir -p _site

@@ -31,6 +31,7 @@ Left open from review 2, closed 4 Nov: sequel prices (checked: same-layout seque
 
 ## Rules Josh has set
 
+- Ripple rule (17 Nov): plan every change against docs/RIPPLE.md before building. Every film needs every piece; scripts/check-ripple.cjs blocks the deploy if one is missing.
 - Two brands, never mixed. Cinema (Movie Night Spinner: box office, wheel, marquee, candy bar) is red and gold. Galaxy Video (the store) is purple, gold, teal and pink.
 - No em dashes anywhere, in chat, code or files.
 - Plain, direct Australian tone. No AI-sounding phrasing.
@@ -1817,3 +1818,9 @@ Josh: "How do I edit the movie time, remove if I watch early etc?" (it was only 
 - index.html: phones (560 and under) put Edit as a small pill top right of the strip so Menu, Prep sheet and Add to calendar keep their row; title and date line pad 62px so long titles cut before the pill. Desktop: a fourth button. Dialog styles .nightedit.
 - scripts/check-night-edit.cjs (390 wide guest: pill clear of title and buttons, 14 days, move to a weeknight and 6:30pm, survives reload, Remove ticks nothing, Watched it early ticks and opens stars, no page errors) pass. npm test, check-card-stats, check-friends, check-final-cut pass; check-browser had 4 timeouts on the first run (the known flake), all pass on the rerun.
 - To go live: merge to main, Publish site.
+
+## 17 Nov, 6pm: marquee pink line fix + ripple checklist (branch fix/marquee-line, NOT deployed)
+
+- iPhone Safari drew a pink hairline after crooked last letters on the Now Showing board (e.g. GREASE). Side padding on .mq-t keeps the letters inside the blurred layer; fitMarquee ignores the padding so titles hang the same.
+- docs/RIPPLE.md: the checklist for adding a film, changing or removing one, and adding a feature.
+- scripts/check-ripple.cjs + tests/ripple.test.cjs: checks all 1000 films have every piece. Runs first in Publish site. 4 known gaps in data/ripple-baseline.json.
