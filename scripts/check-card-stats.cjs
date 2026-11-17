@@ -51,13 +51,18 @@ const RPC = {
   await open();
   ok(await p.$$eval('button.acct-stat', b => b.length) === 8, 'all 8 tiles are buttons');
   await p.screenshot({ path: '/tmp/cs-board.png' });
+  const tabs = await p.$eval('#acctTabs', el => { const r = el.getBoundingClientRect(), last = el.lastElementChild.getBoundingClientRect(), cs = getComputedStyle(el); return { fits: last.right <= r.right + 1, scroll: el.scrollWidth > el.clientWidth && /auto|scroll/.test(cs.overflowX) } });
+  ok(tabs.fits || tabs.scroll, 'Settings tab not clipped at 390 (fits, or the row scrolls)');
 
   let t = await page('rentals'); await p.screenshot({ path: '/tmp/cs-rentals.png', fullPage: false });
+  ok(await p.$eval('#acctBack', el => parseFloat(getComputedStyle(el).borderTopLeftRadius) > 0), 'stat page stylesheet loaded (Back button is a pill)');
   ok(/3 rentals/.test(t) && t.includes('Out on rental') && t.includes('Recent rentals') && t.includes('Your aisles') && t.includes('Comedy'), 'Rentals: count, out on rental, recent rentals, aisles');
   ok(await p.$$eval('.acct-statpage .acct-bars li', l => l.length) === 2, 'Rentals: a bar per aisle');
   await back('rentals');
 
   t = await page('seen'); await p.screenshot({ path: '/tmp/cs-seen.png' });
+  ok(await p.$eval('#acctList', el => { const r = el.querySelector('.acct-fr'), th = el.querySelector('.acct-th'); return getComputedStyle(r).display === 'flex' && (!th || Math.round(th.getBoundingClientRect().width) === 36) }), 'stat page stylesheet loaded (film rows in a line, poster thumbs 36px wide)');
+  ok(await p.$eval('.acct-frs', el => getComputedStyle(el).listStyleType === 'none'), 'stat page lists have no bullet dots');
   ok(t.includes(`${SEEN.length} films seen`), 'Films seen: count');
   ok(await p.$$eval('#acctList .acct-fr', l => l.length) === SEEN.length, 'Films seen: every film listed');
   ok(await p.$$eval('#acctList .acct-stars', l => l.length) === 3, 'Films seen: stars on the rated ones');

@@ -129,7 +129,7 @@ function filmPage(x) {
   const names = x.dishes.map(y => clean(y.n));
   const title = `${shown} (${f.year}) movie night dinner menu | Reel Dinner`;
   const listed = names.length > 3 ? names.slice(0, 3).join(', ') + ' and more' : names.join(', ').replace(/, ([^,]*)$/, ' and $1');
-  const desc = cut(`A ${shown} (${f.year}) movie night menu${x.venue ? ' from ' + x.venue : ''}: ${listed}. Recipes for 4, a shopping list and a printable menu.`, 160);
+  const desc = cut(`${shown} (${f.year}): a movie night menu${x.venue ? ' from ' + x.venue : ''}. ${listed}. Recipes for 4, a shopping list and a printable menu.`, 160);
   const img = x.preview ? `${SITE}/assets/menu-previews/${s}.jpg` : (x.poster ? posterUrl(x.poster, 'w500') : '');
   const lede = [d.D, d.T].filter(Boolean).map(esc);
   const courses = [...'smwd'].map(c => {
@@ -144,9 +144,12 @@ ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}
 ${ingr || steps ? `<details><summary>Recipe for 4</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
     }).join('\n');
   }).join('\n');
-  const theme = BY_THEME[x.theme] || [], at = theme.indexOf(x);
-  const near = theme.filter(y => y !== x).sort((a, b) => Math.abs(theme.indexOf(a) - at) - Math.abs(theme.indexOf(b) - at)).slice(0, 8);
-  const body = `<p class="crumbs"><a href="/menu/">Film menus</a> › <a href="/menu/theme/${x.theme}/">${esc(themeName(x.theme))}</a></p>
+  /* the crumb and the More block go by the film's main genre (always true to the film), not the wheel theme,
+     which can name a place the menu is not set in (review 28: Lebowski under Roadside Diner) */
+  const g0 = x.genres[0], pool = g0 ? BY_GENRE[g0] : (BY_THEME[x.theme] || []), at = pool.indexOf(x);
+  const near = pool.filter(y => y !== x).sort((a, b) => (b.theme === x.theme) - (a.theme === x.theme) || Math.abs(pool.indexOf(a) - at) - Math.abs(pool.indexOf(b) - at)).slice(0, 8);
+  const crumbName = g0 || themeName(x.theme), crumbHref = g0 ? `/menu/genre/${slug(g0)}/` : `/menu/theme/${x.theme}/`;
+  const body = `<p class="crumbs"><a href="/menu/">Film menus</a> › <a href="${crumbHref}">${esc(crumbName)}</a></p>
 <div class="hero">
 ${x.poster ? `<img src="${posterUrl(x.poster)}" width="342" height="513" alt="${esc(shown)} (${f.year}) poster" fetchpriority="high">` : '<span></span>'}
 <h1>${esc(shown)} (${f.year}) movie night dinner menu</h1>
@@ -161,11 +164,11 @@ ${x.preview ? `<h2>The printed menu</h2>
 <figure class="preview"><img src="/assets/menu-previews/${s}.jpg" width="${Math.round(x.preview.w / 2)}" height="${Math.round(x.preview.h / 2)}" alt="Printed movie night menu for ${esc(shown)} (${f.year})" loading="lazy"><figcaption>Open it in Reel Dinner to print it full size.</figcaption></figure>` : ''}
 ${courses}
 ${d.P ? `<h2>When to serve</h2>\n<p>${esc(d.P)}</p>` : ''}
-<p><a class="btn" href="${open}">Cook the ${esc(shown)} menu</a></p>
-${near.length ? `<h2>More ${esc(themeName(x.theme))} menus</h2>\n<ul class="cards">${near.map(card).join('')}</ul>` : ''}
+<p><a class="btn" href="${open}">Cook this menu</a></p>
+${near.length ? `<h2>More ${esc(crumbName)} film menus</h2>\n<ul class="cards">${near.map(card).join('')}</ul>` : ''}
 ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/menu/genre/${slug(g)}/">${esc(g)}</a>`).join(', ')}</p>` : ''}`;
   const recipe = y => ({
-    '@type': 'Recipe', name: clean(y.n), description: cap(y.note || `${COURSE[y.course]} for a ${shown} movie night`),
+    '@type': 'Recipe', name: clean(y.n), description: cap(y.note || `${COURSE[y.course]} for a movie night of ${shown}`),
     image: img ? [img] : undefined, author: { '@type': 'Organization', name: 'Reel Dinner', url: SITE + '/' },
     recipeCategory: COURSE_CAT[y.course] || 'Main course', recipeYield: '4 servings',
     keywords: clean(`${shown}, movie night, ${f.year}, film menu`),
@@ -180,7 +183,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
       about: { '@type': 'Movie', name: shown, dateCreated: String(f.year), image: x.poster ? posterUrl(x.poster, 'w500') : undefined },
       breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Film menus', item: SITE + '/menu/' },
-        { '@type': 'ListItem', position: 2, name: themeName(x.theme), item: `${SITE}/menu/theme/${x.theme}/` },
+        { '@type': 'ListItem', position: 2, name: crumbName, item: SITE + crumbHref },
         { '@type': 'ListItem', position: 3, name: shown + ' (' + f.year + ')', item: canon }] } },
     { '@type': 'ItemList', name: `${shown} (${f.year}) movie night menu`, numberOfItems: x.dishes.length,
       itemListElement: x.dishes.map((y, n) => ({ '@type': 'ListItem', position: n + 1, item: recipe(y) })) }] };
@@ -204,7 +207,7 @@ for (const x of ALL) urls.push(`${SITE}/menu/${x.s}/`);
 const themes = Object.keys(BY_THEME).sort((a, b) => themeName(a).localeCompare(themeName(b)));
 const genres = Object.keys(BY_GENRE).sort();
 for (const t of themes) {
-  write(`menu/theme/${t}/index.html`, listPage(`menu/theme/${t}/`, `${themeName(t)} movie night menus`, `${BY_THEME[t].length} films with a ${themeName(t)} dinner menu. Pick one to see the dishes and recipes, then open it in Reel Dinner to print the menu.`, BY_THEME[t], esc(themeName(t))));
+  write(`menu/theme/${t}/index.html`, listPage(`menu/theme/${t}/`, `${themeName(t)} movie night menus`, `${BY_THEME[t].length} films in the ${themeName(t)} theme, each with its own dinner menu. Pick one to see the dishes and recipes, then open it in Reel Dinner to print the menu.`, BY_THEME[t], esc(themeName(t))));
   urls.push(`${SITE}/menu/theme/${t}/`); keep.add('theme');
 }
 for (const g of genres) {

@@ -1128,7 +1128,7 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .fp-ing{margin:0 0 .8em;padding-left:1.2em;text-align:left}.fp-ing li{margin:0 0 .2em}
 .pp-num{font-weight:700;color:var(--ma);margin-right:.15em}
 .pp-tip{margin:.3em 0 .6em 1.4em;font-style:italic;text-align:left}.pp-tip b{font-style:normal;color:var(--ma);margin-right:.3em}
-#howBtn,.where-more{display:inline-flex;align-items:center;min-height:24px}
+#howBtn,.where-more{display:inline-flex;align-items:center;min-height:44px}
 .fp-asis{margin:0 0 .5em;font-size:.8em;letter-spacing:.06em;text-transform:uppercase;opacity:.75}.fp-lead{margin:0 0 .6em;font-style:italic;text-align:left}
 .fp-steps{margin:0;padding-left:1.5em;text-align:left}
 .fp-steps li{margin:0 0 .5em;padding-left:.2em}
@@ -2905,6 +2905,9 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .sv-hang-chip{min-height:44px}
 @media (max-width:700px){.credit a:not(.tmdb-logo),.credit a.tmdb-logo{display:inline-flex;align-items:center;min-height:44px;line-height:1.2;vertical-align:middle}}
 .watch-list label,.watch-option{min-height:44px;display:flex;align-items:center}
+/* review 28: the open candy bar credit list and the member card button get a real 44px to tap */
+.sc-credits li a{display:inline-flex;align-items:center;min-height:44px}
+.acct-btn::after{content:"";position:absolute;inset:-4px -2px}
 /* the card name sits in a printed slot: the tap area grows above and below with padding the margin cancels, so the text stays put and never covers the fine print */
 .member .mc-name{box-sizing:content-box;padding-block:max(0px,calc((44px - 1.2em) / 2));margin-block:min(0px,calc((1.2em - 44px) / 2))}
 /* skip link: first thing a keyboard reaches, hidden until it has focus */
@@ -3229,6 +3232,32 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 .acct-stat b{font:400 26px/1.05 var(--f-board);color:var(--gv-gold)}
 .acct-stat span{font-weight:700;font-size:13px;color:#fff;line-height:1.2}
 .acct-stat small{font-size:11.5px;color:var(--gv-lav);line-height:1.25;overflow-wrap:anywhere}
+.acct-stats>li{display:flex;min-width:0}
+button.acct-stat{position:relative;width:100%;font:inherit;color:inherit;cursor:pointer;transition:transform .12s,border-color .12s,background .12s;padding-bottom:22px}
+button.acct-stat:hover{border-color:var(--gv-gold);background:rgba(255,196,46,.08)}
+button.acct-stat:active{transform:scale(.98)}
+button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2px}
+.acct-more{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:600 10.5px var(--f-body);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--gv-teal)}
+.acct-more::after{content:" \203A";letter-spacing:0}
+.acct-back{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 14px 6px 10px;border-radius:999px;border:1px solid rgba(217,201,242,.35);background:transparent;color:var(--gv-lav);font:600 13px var(--f-body);cursor:pointer}
+.acct-back::before{content:"\2039";font-size:20px;line-height:1;color:var(--gv-gold)}
+.acct-back:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2px}
+.acct-sh{font-size:22px;margin:12px 0 4px}.acct-sk{margin:0 0 10px}
+.acct-h4{font:400 14px var(--f-board);color:var(--gv-gold);letter-spacing:.04em;margin:16px 0 8px}.acct-h4 small{font:500 12px var(--f-body);color:var(--gv-lav);letter-spacing:0;margin-left:4px}
+.acct-frs{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:6px}
+.acct-fr{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(217,201,242,.18);border-radius:10px;padding:6px 8px 6px 6px}
+.acct-fr[hidden]{display:none}
+.acct-th{flex:0 0 auto;width:36px;height:54px;border-radius:4px;object-fit:cover;background:rgba(0,0,0,.3);display:block}
+.acct-frt{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}.acct-frt b{font-size:14.5px;color:#fff;line-height:1.25}.acct-frt b span{font-weight:400;color:var(--gv-lav)}.acct-frt small{font-size:12.5px;color:var(--gv-lav)}
+.acct-frb{flex:0 0 auto;display:flex;gap:6px}
+.acct-stars{color:var(--gv-gold);letter-spacing:1px}.acct-stars i{font-style:normal;color:rgba(217,201,242,.25)}
+.acct-bars{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:6px}
+.acct-bars li{display:grid;grid-template-columns:minmax(0,9em) 1fr 2.4em;align-items:center;gap:8px;font-size:13px;color:#fff}
+.acct-bars li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.acct-bars li b{text-align:right;color:var(--gv-gold);font:400 15px var(--f-board)}
+.acct-bars i,.acct-bars.one i{display:block;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--gv-teal),var(--gv-gold));width:var(--w);min-width:4px}
+.acct-bars.one{margin:8px 0 4px;background:rgba(0,0,0,.3);border-radius:999px}
+.acct-find{width:100%;min-height:44px;margin:0 0 10px;padding:8px 14px;border-radius:999px;border:1px solid rgba(217,201,242,.35);background:rgba(0,0,0,.25);color:#fff;font:500 15px var(--f-body)}
+@media (prefers-reduced-motion:reduce){button.acct-stat{transition:none}}
 .acct-dim{opacity:.4}
 .acct-stamps{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 @media (min-width:480px){.acct-stamps{grid-template-columns:repeat(3,1fr)}}
@@ -3238,7 +3267,7 @@ dialog.acct .modal-x{color:var(--gv-gold)}
 .acct-stamp.on{border-style:solid;border-color:rgba(255,61,154,.55);background:rgba(255,61,154,.08)}
 .acct-stamp.on b{color:#fff}
 .acct-stamp.on .acct-ink{border:2px solid #ff3d9a;color:#ff3d9a;transform:rotate(-12deg);background:rgba(255,61,154,.12)}
-@media (max-width:420px){.acct-tabs button{font-size:12px}}
+@media (max-width:420px){.acct-tabs{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.acct-tabs::-webkit-scrollbar{display:none}.acct-tabs button{flex:1 0 auto;position:relative;padding:0 9px 0 5px;font-size:11px;letter-spacing:0}.acct-tabs .acct-n{position:absolute;top:1px;right:-6px;margin:0;min-width:15px;height:15px;padding:0 3px;font-size:9px;line-height:15px}}
 .rd-toast{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translate(-50%,160%);z-index:90;width:max-content;max-width:min(440px,calc(100% - 32px));margin:0;padding:12px 16px;border-radius:12px;background:var(--gv-night);border:2px solid var(--gv-gold);color:var(--gv-cream);font:600 14px/1.35 var(--f-body);box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .25s;pointer-events:none}
 .rd-toast.on{transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.rd-toast{transition:none}}

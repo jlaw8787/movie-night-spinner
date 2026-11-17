@@ -27,10 +27,15 @@ for(const f of films){
   assert.ok(h.includes('href="/?film='+encodeURIComponent(id)+'"'),`${id}: open-in-app button`);
   assert.ok((h.match(/<article class="dish">/g)||[]).length>=4,`${id}: dishes as text`);
   assert.ok(!/\u2014/.test(h),`${id}: em dash on the page`);
+  /* review 28: "A The Big Lebowski", "Cook the The ...", "A Alien" */
+  const words=h.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ')+' '+desc;
+  const bad=words.match(/\b(A|a|the|The) (The|A|An) [A-Z]|\b[Aa] (?!Uni|Use|Usu|Uti|Ura|Eu|One|Once)[AEIOU][a-z]|\bfor a [A-Z][\w']* movie night/);
+  assert.ok(!bad,`${id}: article bug "${bad&&bad[0]}"`);
   const ld=JSON.parse(h.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   const list=ld['@graph'].find(x=>x['@type']==='ItemList');
   assert.ok(list&&list.itemListElement.length,`${id}: ItemList`);
   for(const it of list.itemListElement){const r=it.item;assert.equal(r['@type'],'Recipe');assert.ok(r.name&&r.image&&r.image.length&&r.recipeIngredient.length&&r.recipeInstructions.length,`${id}: ${r.name} recipe data`);recipes++}
 }
+for(const t of fs.readdirSync(path.join(root,'menu/theme'))){const h=fs.readFileSync(path.join(root,'menu/theme',t,'index.html'),'utf8');assert.ok(!/\b[Aa] [AEIOU][a-z]/.test(h.replace(/<[^>]+>/g,' ')),`theme ${t}: a before a vowel`)}
 for(const f of ['menu/index.html','sitemap.xml','robots.txt'])assert.ok(!/\u2014/.test(fs.readFileSync(path.join(root,f),'utf8')),`${f}: em dash`);
 console.log(`PASS: ${films.length} film pages, ${locs.size} sitemap URLs, ${recipes} recipes with structured data, no em dashes.`);
