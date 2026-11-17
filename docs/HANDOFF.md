@@ -1831,3 +1831,8 @@ Josh: "How do I edit the movie time, remove if I watch early etc?" (it was only 
 - Face/Off menu colours from its poster: black and the blue title glow.
 - Previews re-rendered for all 4. Ripple baseline now empty.
 
+
+## 17 Nov, 8pm: Google Search Console done (by Josh with Grok); review 28 started
+
+- Search Console set up outside this repo by Josh with a Grok bot. Do not redo it.
+- Review 28: a fresh whole-site review (first since review 20) running from main 10901714. Report goes to docs/review-28.md.
