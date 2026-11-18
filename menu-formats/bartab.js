@@ -120,6 +120,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
+  /* review 29: the house table item and drink cost less than the cheapest dish in their course and every main, before the tab adds up */
+  {const mlo=Math.min(...PR.m);for(const k of ["s","d"]){const L=(menu[k]||[]).slice(0,4),own=PR[k].filter((v,i)=>!(L[i]&&L[i].house)),lo=Math.min(...own,mlo);if(isFinite(lo))PR[k]=PR[k].map((v,i)=>L[i]&&L[i].house&&v>=lo?rnd(lo*.7):v)}}
   /* every price lands on a price ending before the tab adds up, so the totals stay true (the film number on the first main only when it reads like a price) */
   if(window.priceEnd)for(const k of ["s","m","w","d"])PR[k]=PR[k].map(v=>window.priceEnd(v));
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:PR[k][i],house:!!x.house}));

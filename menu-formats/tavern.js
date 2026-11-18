@@ -24,8 +24,9 @@ function inkOn(h,paper,min){let c=hex(h);if(!c)return null;if(Math.max(...c)-Mat
 const band=e=>/193|194|1950/.test(e)?"P":/196|197/.test(e)?"S":/198|199/.test(e)?"E":"M";
 const yr2=y=>{const s=String(y||"").slice(-2);return s==="00"?String(y):s}; /* a 2000 film is "2000", never "00" */
 function hash(s){let h=0;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h}
-function price(f,fl,ci,ii,name,scale){
-  const base=[3,8,4,2][ci]+(ii>1?1:0);let c=["25","40","50","65","75","95"][hash(name)%6];
+function price(f,fl,ci,ii,name,scale,house){
+  /* review 29: the house table item and drink take one coin less than the cheapest dish in their course */
+  const base=house&&(ci===0||ci===3)?[2,8,4,1][ci]:[3,8,4,2][ci]+(ii>1?1:0);let c=["25","40","50","65","75","95"][hash(name)%6];
   /* the film number sets the first drink's pennies only when it reads like a price */
   if(ci===3&&ii===0&&fl&&/^\d{1,2}$/.test(String(fl.number||""))&&+fl.number%5===0)c=String(fl.number).padStart(2,"0");
   return scale(base,c);
@@ -103,7 +104,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const stills=(ctx.stills||[]).slice(),poster=ctx.poster||(((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&f.id)?TMDB_POSTERS[f.id]:null)||null;
   const posterSrc=poster?ctx.img(poster,"w780"):"";
   const heroSrc=posterSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
-  const sealSrc=stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):"");
+  /* review 29: flavour.seal names the still for the round seal (or "none"), for films whose second still is not the person in "A word from" (Crouching Tiger showed Jen beside Li Mu Bai) */
+  const sealPick=fl&&fl.seal,sealSrc=sealPick==="none"?"":sealPick?ctx.img(sealPick,"w780"):stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):"");
   const B=E.body,D=E.disp,w=T.wear,pf=[E.photo,T.f].filter(Boolean).join(" ")||"none";
   const nItems=["s","m","w","d"].reduce((a,k)=>a+Math.min(4,((ctx.menu||{})[k]||[]).length),0);
   const sealRed=(()=>{const c=hex(acc);return c&&c[0]>c[1]*1.4&&c[0]>c[2]*1.4?acc:"#8e1b12"})();
@@ -147,7 +149,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const m=ctx.menu||{};
   const secHead=t=>`<div style="break-inside:avoid;text-align:center;white-space:nowrap;margin:0 0 .3em;font-family:${D};font-weight:${E.dw};font-size:max(18px,1.08em);line-height:1.1;color:${acc};${E.up?"text-transform:uppercase;letter-spacing:.1em":""}">${E.up&&t.length>12?esc(t):`${E.orn} ${esc(t)} ${E.orn}`}</div>`;
   function row(it,ci,ii){
-    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin?(b=>b+" "+fl.coin):E.coin);
+    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin?(b=>b+" "+fl.coin):E.coin,!!it.house);
     return `<div style="break-inside:avoid;margin:0 0 .45em"><div style="display:flex;align-items:baseline;gap:.3em"><span style="font:600 max(15px,1em)/1.15 ${B};color:${ink}">${esc(n)}</span><span style="flex:1;min-width:1em;border-bottom:2px dotted ${ink};opacity:.45;transform:translateY(-.2em)"></span><span style="flex:none;font:italic 600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>
       ${it.note?`<div data-note="1" style="font:italic 400 max(14px,.74em)/1.28 ${B};color:${ink};opacity:.9;margin-top:.08em">${esc(sent(it.note))}</div>`:""}</div>`;
   }
@@ -168,7 +170,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* rooms and stabling only for a real inn (the Prancing Pony, the Three Broomsticks), not a workshop, castle kitchen or ball (Rise of the Guardians, A Christmas Carol) */
   const inn=/\b(inn|tavern|alehouse|beds|rooms)\b/i.test(venue+" "+sign);
   /* 15 Nov: flavour.year (per film, optional) prints the story year on the bill in place of the release year (Holy Grail: AD 932) */
-  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">${inn?"Rooms above, stabling round the back. ":""}Coin of the realm only. Bill No. ${esc(num)}, ${esc(fl&&fl.year||f.year||"")}. Images: TMDB</div>`;
+  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">${inn?"Rooms above, stabling round the back. ":""}Coin of the realm only. Bill No. ${esc(num)}${(()=>{const y=String(fl&&fl.year||f.year||"");return y&&y!==num?", "+esc(y):""})()}. Images: TMDB</div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:14px;${E.frame};pointer-events:none;opacity:.75"></div>

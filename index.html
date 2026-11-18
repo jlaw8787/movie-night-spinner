@@ -1267,6 +1267,7 @@ body.picked .week .week-acts button{padding:6px 12px;font-size:13px}
 .crave .box{width:100%;height:auto;aspect-ratio:2/3;padding:0;border-radius:10px;background:var(--raise);box-shadow:0 14px 28px -10px rgba(0,0,0,.7)}
 .crave .box img{border-radius:10px}
 .crave .box::after,.crave .price,.crave .sticker{display:none}
+.crave .tape.cine .box{box-shadow:0 0 0 2px rgba(226,176,79,.55),0 14px 28px -10px rgba(0,0,0,.7)}.crave .tape.cine .box::before{display:none}
 .crave .tape:hover .box,.crave .tape:focus-visible .box{transform:translateY(-3px)}
 .crave .tape-t{font:600 14px/1.25 var(--f-body);margin-top:8px}
 .crave-dish{font-size:12.5px;color:var(--acc)}
@@ -1640,7 +1641,6 @@ body.in-shop .quick-mute:focus-visible{outline-color:#ff3d6e}
 #shopAisles.one-aisle .aisles-later{border-top:0;margin-top:0;padding-top:0}
 #shopAisles.one-aisle .aisle.here{margin-top:4px}#shopAisles.one-aisle .aisle.here>.shelf{content-visibility:visible}
 @media (prefers-reduced-motion:reduce){.an-card[aria-pressed="true"]{transform:none}}
-#viewShop .sv-jump{display:none!important}
 /* ---------- Galaxy Video walk-in: the shopfront you step through once per visit ---------- */
 .walkin{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:16px;background:#0b0f2a linear-gradient(180deg,#04061a 0%,#0b1030 40%,#24183a 72%,#3a2236 100%);transition:opacity .5s ease}
 .walkin[hidden]{display:none}
@@ -1757,7 +1757,6 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop #svBoard{order:4;margin-top:4px}
   #viewShop #memberCard{order:5;margin:14px auto 6px}
   #viewShop #shopCal{order:6}
-  #viewShop .sv-jump{order:7}
   #viewShop .shop-count{order:8}
   #viewShop .aisle-nav{order:8}
   #viewShop #shopAisles{order:9}
@@ -1771,6 +1770,8 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop .sv-more .sv-board{font-size:13px;min-height:44px;padding:0 12px;display:inline-flex;align-items:center}
   #viewShop .sv-aisles .sv-aisles-k{display:block;position:sticky;left:0;bottom:auto;width:auto;box-sizing:border-box;background:#0b0f2a;padding:8px 10px;font-size:13px}
   #viewShop .sv-aisles .sv-aisles-k::before{content:"Swipe the shop. "}
+  /* review 29: the aisle cards right under the photo are the big-button way in on a phone */
+  #viewShop .sv-aisles .sv-aisles-k::after{content:" Or pick an aisle below."}
 }
 /* desktop store: the member card and the specials board share a row, card left, board right, ahead of the aisle photo */
 @media (min-width:960px){
@@ -1920,7 +1921,6 @@ html{scroll-padding-top:var(--topH,84px)}
 dialog .modal-x{position:fixed;top:max(12px,env(safe-area-inset-top,0px));right:12px;z-index:100;width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,.75);background:rgba(20,8,10,.78);color:#fff;font:400 26px/1 var(--f-body);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
 dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 .fit.tiny .fit-t{visibility:hidden}
-.sv-jump{display:none;gap:6px;flex-wrap:wrap;margin:-6px 0 14px}
 .sv-hang-chip{font:400 12px var(--f-board);letter-spacing:.04em;color:#14204f;background:#fbf7ea;border:2px solid #1d3aa8;border-radius:4px;padding:7px 10px;cursor:pointer}
 
 /* the rest of the aisles: small hanging boards along the floor of the shop photo, so every aisle has a sign */
@@ -1930,7 +1930,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 .sv-board::before,.sv-board::after{content:"";position:absolute;top:-1cqw;width:1px;height:1cqw;background:rgba(220,220,220,.7)}
 .sv-board::before{left:18%}.sv-board::after{right:18%}
 .sv-board:hover,.sv-board:focus-visible{background:#ffe9a8;outline:2px solid var(--gv-gold,#ffc42e);outline-offset:1px}
-@media (max-width:700px){.sv-jump{display:flex}.sv-aisles-k{display:none}}
+@media (max-width:700px){.sv-aisles-k{display:none}}
 .tape-t{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-height:none}
 .hc-label .fit-t{white-space:normal;line-height:1.05;max-width:100%}
 
@@ -3477,18 +3477,18 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
 <p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank" aria-label="TMDB, The Movie Database (opens in a new tab)"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. Cinema photo by SecretName101 via <a href="https://commons.wikimedia.org/wiki/File:Orpheum_Theatre_marquee_on_election_night_2024_IMG_2517.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC BY 4.0</a>, signs changed. Shopfront photo by Mathias Reding on <a href="https://unsplash.com/photos/0rgZp-E8iIs" rel="noopener" target="_blank">Unsplash</a>, signs changed. <button class="howlink" id="howBtn" type="button">How it works</button></p>
 
 <script src="tmdb-posters.js?v=a1221a42" defer></script>
-<script src="ratings.js?v=c091d351" defer></script>
+<script src="ratings.js?v=39b211a8" defer></script>
 <script src="aisles.js?v=15304814" defer></script>
 <script src="providers.js?v=3741da51" defer></script>
-<script src="films.js?v=172d7ceb" defer></script>
+<script src="films.js?v=5af10282" defer></script>
 <script src="assets/fonts/fonts.js?v=d8909e45" defer></script>
-<script src="formats-core.js?v=4e2bd3a5" defer></script>
+<script src="formats-core.js?v=128fd678" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=aae00c1a" defer></script>
+<script src="app.js?v=c6be9e09" defer></script>
 <script src="match.js?v=26ec11c6" defer></script>
-<script src="friends.js?v=0ab54f1e" defer></script>
-<script src="quiz.js?v=bfc6097c" defer></script>
+<script src="friends.js?v=071d0349" defer></script>
+<script src="quiz.js?v=4a286a7a" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

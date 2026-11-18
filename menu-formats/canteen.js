@@ -148,7 +148,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PR={},rnd=v=>Math.max(.05,Math.round(v*20)/20),SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
-  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:PR[k][i]}));
+  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({house:x.house,n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:PR[k][i]}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   /* then the shared check, so a cocktail also sits above the sweets (Police Academy's blue lagoon) */
   if(window.priceSense){const P={},M={};for(const k in I){M[k]=I[k];P[k]=I[k].map(x=>money(x.p,era))}const Q=window.priceSense(M,P);for(const k in I)I[k].forEach((x,i)=>{x.ps=Q[k][i]})}

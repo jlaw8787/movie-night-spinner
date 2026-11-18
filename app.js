@@ -55,6 +55,10 @@ window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin
   out.d=(out.d||[]).map((x,i)=>{const v=val(x);return isSp(i)&&v!=null&&plain&&v<=plain?lift(plain*(1.2+.05*i),x):x});
   /* any price left with odd cents (a film number like 28.12) goes up to the next ending that reads like a price */
   for(const k of ["s","m","w","d"])out[k]=(out[k]||[]).map(x=>{const m=String(x).match(/^(\D*)(\d+)\.(\d\d)(\D*)$/);if(!m||+m[3]%5===0)return x;const c=[25,50,75,95].find(e=>e>=+m[3]);return c?m[1]+m[2]+"."+c+m[4]:m[1]+(+m[2]+1)+".00"+m[4]});
+  /* review 29: the house table item and drink sit under the cheapest dish in their course and under every main */
+  {const ml=nums("m"),mlo=ml.length?Math.min(...ml):Infinity;for(const k of ["s","d"]){const it=menu[k]||[];if(!it.some(x=>x&&x.house))continue;
+    const ov=(out[k]||[]).filter((x,i)=>!(it[i]&&it[i].house)).map(val).filter(v=>v!=null),lo=Math.min(ov.length?Math.min(...ov):Infinity,mlo);if(!isFinite(lo)||lo<=.1)continue;
+    out[k]=(out[k]||[]).map((x,i)=>{const v=val(x);if(!(it[i]&&it[i].house)||v==null||v<lo)return x;const t=lo>=2?Math.floor(lo*.7*4)/4:Math.max(.05,Math.floor(lo*.7*20)/20);const r=fmt(t,x);return val(r)<lo?r:x})}}
   return out};
 /* a price that reads like a price: cents a multiple of 5, and odd cents (8.57, a film number) go up to .25, .50, .75 or .95 */
 window.priceEnd=v=>{if(v==null||isNaN(v))return v;if(v<1)return Math.max(.05,Math.ceil(v*20-1e-9)/20);const c=Math.round((v%1)*100);if(c%5===0)return Math.round(v*100)/100;const e=[25,50,75,95].find(x=>x>=c);return e?Math.floor(v)+e/100:Math.floor(v)+1};
@@ -158,7 +162,7 @@ function renderWatchList(){
   const films=programmeFilms().filter(f=>(f.title+" "+f.year).toLocaleLowerCase().includes(q))
     .filter(f=>filter==="all"||(filter==="watched"?watched.has(f.id):!watched.has(f.id)))
     .slice().sort((a,b)=>a.title.localeCompare(b.title)||a.year.localeCompare(b.year));
-  $("watchSummary").textContent=`My movie checklist · ${nAU(watched.size)} / ${nAU(FILMS.length)} watched`;
+  $("watchSummary").textContent=`My movie checklist · ${watched.size.toLocaleString("en-AU")} / ${FILMS.length.toLocaleString("en-AU")} watched`;
   $("watchResults").textContent=`${films.length} ${films.length===1?"film":"films"} shown in this programme`;
   const box=$("watchList");box.replaceChildren();
   if(!films.length){const p=document.createElement("p");p.textContent="No films match. Try another search, filter or programme.";box.appendChild(p)}
@@ -191,7 +195,7 @@ function setList(){
   rot=0;winner=-1;
   ctx.clearRect(0,0,canvas.width,canvas.height);draw();
   $("spin").disabled=!list.length;
-  $("count").textContent=list.length?`${nAU(list.length)} films in tonight's programme${skipWatched?" · unwatched only":""}${kidsMode?" · kids mode":""}`:
+  $("count").textContent=list.length?`${list.length.toLocaleString("en-AU")} films in tonight's programme${skipWatched?" · unwatched only":""}${kidsMode?" · kids mode":""}`:
     "You've watched every film in this programme. Choose another programme, untick a film or turn off ‘Skip watched’.";
   renderWatchList();
 }
@@ -1924,6 +1928,39 @@ function libLoad(k){
    Worcestershire); ginger beer, root beer, prawn cocktail, apple cider (juice), cooking vinegars and anything the text calls alcohol-free do not */
 const DIET_MEAT=/\b(beef|steaks?|pork|ham|bacon|chicken|turkey|lamb|veal|sausages?|meatballs?|meat|meats|brisket|salami|prosciutto|pepperoni|chorizo|pastrami|duck|venison|fish(?! crackers?)|tuna|salmon|anchov(y|ies)|prawns?|shrimp|lobsters?|crabs?(?! key)|oysters?|clams?|mussels?|squid|calamari|ribs?|rib eyes?|burgers?|hot ?dogs?|jerky|gelatine?|lard|suet|worcestershire|frankfurts?|frankfurters?|wieners?|weiners?|corn ?dogs?|pretzel dogs?|pigs in blankets|bratwursts?|kielbasa|bologna|cabana|cold cuts|bresaola|pancetta|guanciale|mortadella|capicola|lingui[cç]a|lardons?|sardines?|herrings?|kippers?|mackerel|cod|haddock|trout|snapper|barramundi|whitebait|scallops?|octopus|eels?|caviar|lox|escargots?|bonito|dashi|fish sauce|oyster sauce|goose|quail|pheasant|mutton|liver|foie gras|haggis|oxtail|bone marrow|spam|meatloaf|carnitas|barbacoa|al pastor|crayfish|yabbies|cutlets?|schnitzels?|drumsticks?|(?<!(moth|butterfly|angel|fairy|sturdy)[- ])wings?(?! (kong|shapes?))|nuggets?|kebabs?|gyros?|shawarma|souvlaki|chilli con carne|bolognese|ragu|marshmallows?|(?<!butter )(?<!butter and )(?<!butter & )jelly(?! beans?))\b|\bfranks\b(?!\s*')/i;
 const DIET_BOOZE=/\b(rum|brandy|whiske?y|wine(?! vinegar)|(?<!(ginger|root) )beers?|(?<!ginger )ales?|liqueurs?|bourbon|vodka|tequila|gin|champagne|sherry(?! vinegar)|kahlua|baileys|amaretto|cognac|stout|lager|(?<!(apple|hot) )cider(?!\s+(vinegar|doughnuts?|donuts?))|margaritas?|daiquiris?|martinis?|boozy|(?<!(prawn|shrimp|fruit) )cocktails?(?!\s+(franks?|onions?|cherr\w*|sauce|blinis?|sausages?|sticks?|party|meatballs?|bites|picks?|skewers?))|sangria|prosecco|schnapps|mead|grog|vermouth|ouzo|absinthe|marsala|sake|mirin|shaoxing|rice wine|cooking wine|limoncello|cointreau|triple sec|grand marnier|campari|aperol|frangelico|kirsch|madeira|port wine|soju|negronis?|mojitos?)\b/i,DIET_DRY_OK=/\b(no alcohol|alcohol[- ]free|non[- ]alcoholic|mocktails?|(?<!extra )virgin)\b/i;
+/* review 29: a house line (the film's own table item and drink, data/film-house.json) prices under the cheapest dish in its own course and under every main,
+   on every shared layout, so a cup of peanuts never costs more than the burger. Reads the printed card: each price that is a whole text node goes to the dish
+   it sits closest to in the page's structure. Layouts that price house lines themselves (bartab, which adds up a tab, and arcade, clubhouse, dimsum, foodcourt) are left alone. */
+const HOUSE_SELF=new Set(["bartab","arcade","clubhouse","dimsum","foodcourt"]);
+function houseCap(root,menu,fmt){
+  if(!root||!menu||HOUSE_SELF.has(fmt))return 0;
+  const items=[];for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it&&it.n)items.push({k,it,n:String(it.n).replace(/\s+/g," ").trim().toLowerCase(),el:null,ps:[]});
+  if(!items.some(x=>x.it.house))return 0;
+  const els=[...root.querySelectorAll("*")],txt=e=>(e.textContent||"").replace(/\s+/g," ").toLowerCase();
+  for(const x of items){if(x.n.length<3)continue;const hit=els.filter(e=>txt(e).includes(x.n));x.el=hit.find(e=>![...e.children].some(c=>txt(c).includes(x.n)))||null}
+  const PRICE=/^(\s*)(\$|£)?(\d{1,3})(?:\.(\d\d))?(\s*)$|^(\s*)(\d{1,2})(¢|c)(\s*)$/;
+  const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];let t;while((t=tw.nextNode())){const m=t.nodeValue.match(PRICE);if(!m)continue;
+    if(m[3]!=null&&!m[2]&&m[4]==null)continue;/* a bare whole number is a table or bill number, not a price */nodes.push({t,m,v:m[7]!=null?+m[7]/100:+m[3]+(m[4]?+m[4]/100:0)})}
+  const anc=e=>{const a=[];while(e&&e!==root){a.push(e);e=e.parentNode}return a};
+  const placed=items.filter(x=>x.el);if(!placed.length)return 0;
+  const A=new Map(placed.map(x=>[x,new Set(anc(x.el))]));
+  for(const pn of nodes){
+    const up=anc(pn.t.parentNode);let best=null,bd=-1,bi=1e9;
+    for(const x of placed){const S=A.get(x);const d=up.findIndex(e=>S.has(e));if(d<0)continue;const depth=up.length-d;const pos=x.el.compareDocumentPosition(pn.t)&Node.DOCUMENT_POSITION_FOLLOWING?0:1;
+      if(depth>bd||(depth===bd&&pos<bi)){best=x;bd=depth;bi=pos}}
+    if(best)best.ps.push(pn)}
+  /* a price shared by two dishes (the closest common box holds both) is not one dish's price */
+  const own=x=>x.ps.filter(pn=>!placed.some(y=>y!==x&&y.ps.includes(pn)));
+  const val=x=>own(x).length?Math.min(...own(x).map(p=>p.v)):null;
+  const mains=placed.filter(x=>x.k==="m").map(val).filter(v=>v!=null),mlo=mains.length?Math.min(...mains):Infinity;let n=0;
+  for(const k of ["s","d"]){const L=placed.filter(x=>x.k===k),hs=L.filter(x=>x.it.house);if(!hs.length)continue;
+    const ov=L.filter(x=>!x.it.house).map(val).filter(v=>v!=null),lo=Math.min(ov.length?Math.min(...ov):Infinity,mlo);if(!isFinite(lo)||lo<=.1)continue;
+    for(const h of hs)for(const pn of own(h)){if(pn.v<lo)continue;const m=pn.m;let s;
+      if(m[7]!=null){const c=Math.max(5,Math.floor(lo*100*.7/5)*5);if(c>=lo*100)continue;s=m[6]+c+m[8]+m[9]}
+      else if(m[4]==null){const w=Math.max(1,Math.floor(lo*.7));if(w>=lo)continue;s=m[1]+(m[2]||"")+w+m[5]}
+      else{let v=lo>=2?Math.floor(lo*.7*4)/4:Math.floor(lo*.7*20)/20;v=Math.max(.05,v);if(v>=lo)continue;s=m[1]+(m[2]||"")+v.toFixed(2)+m[5]}
+      pn.t.nodeValue=s;n++}}
+  return n}
 const FULL_CAP={galley:1,tearoom:1,candybar:2,canteen:1,club:1,diningcar:1,saloon:1,banquet:2,placemat:2,motel:3};
 function fullMenu(f,menu,fmt){
   if(window.LIB_FULL===false)return menu;
@@ -2014,9 +2051,9 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
@@ -2984,6 +3021,9 @@ addEventListener("rd-auth-lost",()=>{syncState="signedout";renderMember()});
 let shopBuilt=false;
 /* the Late Show: horror rated MA15+ or R, kept behind the curtain and off the open Horror aisle */
 const isLate=f=>f.theme==="horror"&&(/^(MA15\+|R18\+)$/.test(ratingOf(f)||"")||!ratingOf(f));
+/* review 29: the Candy bar is the cinema, so its film tiles are plain posters in a gold frame: no hire stickers, prices, "All copies out" or staff talk */
+function posterTileHTML(f){const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id],r=ratingOf(f);
+  return `<button class="tape cine" type="button" data-id="${ESC(f.id)}"><span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}${r?` · ${r}`:""}</span></button>`}
 function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
   /* one sticker per tape: Seen it, else the new release price, else Staff pick */
@@ -3271,7 +3311,7 @@ function renderCrave(){
   craveHits.sort((a,b)=>b[1].length-a[1].length||a[0].title.localeCompare(b[0].title));
   $("craveCount").textContent=craveHits.length?`Combo deal: ${label} with your pick of ${craveHits.length} film${craveHits.length>1?"s":""}`:"";
   $("craveSpin").hidden=craveHits.length<2;
-  $("craveGrid").innerHTML=craveHits.length?craveHits.map(([f,d])=>`<div class="crave-hit">${tapeHTML(f)}<span class="crave-dish">${ESC(d.slice(0,2).join(", "))}</span></div>`).join(""):`<p class="crave-empty">No menus with ${ESC(label)} yet. Try another food.</p>`;
+  $("craveGrid").innerHTML=craveHits.length?craveHits.map(([f,d])=>`<div class="crave-hit">${posterTileHTML(f)}<span class="crave-dish">${ESC(d.slice(0,2).join(", "))}</span></div>`).join(""):`<p class="crave-empty">No menus with ${ESC(label)} yet. Try another food.</p>`;
 }
 document.querySelectorAll(".more-menu .btn").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>b.closest("details").open=false,150)));
 $("svcSel").addEventListener("change",e=>setSvc(e.target.value));
@@ -3965,7 +4005,10 @@ async function exportMenu(kind,parts,opts){
     if(inf.ar){if(w/h>inf.ar){const nw=h*inf.ar;x+=(w-nw)/2;w=nw}else{const nh=w/inf.ar;y+=(h-nh)/2;h=nh}}
     return orig2.call(this,img,fmt,PW*(1-k)/2+x*k,PH*(1-k)/2+y*k,w*k,h*k,...rest)};
   try{
-    const canvas=kind==="pdf"&&parts==="prep"?null:await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
+    /* review 29: a sheet-faced menu (every shared layout) is painted face by face below, so the whole card is no longer painted first and thrown away;
+       that first pass was half the wait on Save PDF */
+    const shPre=kind==="pdf"&&card.classList.contains("fx-paper")&&((fmtSpec(current)&&fmtSheet(fmtSpec(current)))||current.libSheet);
+    const canvas=kind==="pdf"&&(parts==="prep"||shPre)?null:await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
     const land=(kind==="pdf"||tab==="menu")&&card.classList.contains("fmt");
     const name=`${slug(current.title)}-${current.year}-${kind==="png"&&tab==="prep"||parts==="prep"?"prep-sheet":parts==="menu"?"menu-only":"menu"}`;
     let data,filename;
