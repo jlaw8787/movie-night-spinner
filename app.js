@@ -1865,10 +1865,10 @@ function foldClear(card){
       box.querySelectorAll("[data-drop]").forEach(d=>{if(d.style.display==="none"&&box.scrollHeight<=box.clientHeight+1)d.style.display=""})})});
 }
 /* review 15: shorten a note at a natural break before a fit pass gives up on it, so "Garlic rosemary lamb shoulder roasted 5 hours until it pulls apart"
-   reads "Garlic rosemary lamb shoulder roasted 5 hours" instead of vanishing. Breaks: sentences, then commas, then joining words; never under four words (review 31) */
+   reads "Garlic rosemary lamb shoulder roasted 5 hours" instead of vanishing. Breaks: sentences, then commas, then joining words; four words or more first, three only rather than hide it (review 31) */
 window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?".":"",body=t.replace(/[.!?]+$/,""),cands=[];
   /* 15 Nov: a last sentence with no full stop is still a sentence (Venom printed "Eddie climbs into the tank. Grilled tails") */
-  const sent=t.match(/[^.!?]+(?:[.!?]+|$)/g);if(sent&&sent.length>1)for(let k=sent.length-1;k>=1;k--){const c=sent.slice(0,k).join("").trim();if(c.split(/\s+/).length>=4)cands.push(c)}
+  const sent=t.match(/[^.!?]+(?:[.!?]+|$)/g);if(sent&&sent.length>1)for(let k=sent.length-1;k>=1;k--){const c=sent.slice(0,k).join("").trim();if(c.split(/\s+/).length>=3)cands.push(c)}
   const rx=/,\s+|\s+(?:with|and|over|in|on|under|topped with|served|until|for|from|plus|then|or)\s+/gi;let m;const cuts=[];while((m=rx.exec(body)))cuts.push({i:m.index,w:m[0].trim().toLowerCase(),e:m.index+m[0].length});
   /* a cut that ends on a verb or a joining word reads unfinished ("Choux puffs filled.", "Lemon jelly set."), so those are skipped.
      15 Nov: nor an "and" inside a pair that names one dish thing ("Breast rolled round onion." of "onion and bacon dressing") */
@@ -1879,10 +1879,11 @@ window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?"
       /* the words after "and" up to a verb, a comma or a joining word: two or more ending on a dish word means the pair names a thing ("onion and bacon dressing", "beef and pork dumplings"), not "espresso and ice cream" */
       const after=[];for(const x of body.slice(e).split(/\s+/)){const y=x.toLowerCase().replace(/[,.;]$/,"");if(/(ed|ing|en)$/.test(y)||/^(with|and|over|in|on|under|served|until|for|from|plus|then|or)$/.test(y))break;after.push(y);if(/,$/.test(x))break}
       if((after.length>=2&&!/^(the|a|an|his|her|their|its|my|your)$/.test(after[0])&&/^(dressing|dumplings?|stuffing|sauce|gravy|pies?|rolls?|buns?|cakes?|tarts?|soup|salad|mayo|glaze|crust|filling|batter|crumb|dip|relish|salsa|slaw|skewers?|patties|fritters?|parcels?|bites|balls?|sandwich(es)?|toasties?|wraps?|tacos?|burgers?|cones?|biscuits?|scones?|sliders?|subs?|rolls?|skewers?)$/.test(after[after.length-1])))continue}
-    if(c.split(/\s+/).length>=4&&!/(ed|ing)$/.test(lw)&&!/^(shaken|beaten|frozen|stolen|taken|given|broken|chosen|hidden|drawn|sewn|blown|grown|thrown|torn|worn|spun|stirred|split|poured|kept|left|built|dipped)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
+    if(c.split(/\s+/).length>=3&&!/(ed|ing)$/.test(lw)&&!/^(shaken|beaten|frozen|stolen|taken|given|broken|chosen|hidden|drawn|sewn|blown|grown|thrown|torn|worn|spun|stirred|split|poured|kept|left|built|dipped)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
   /* 11 Nov: never cut inside a quote (The Goonies printed: Sloth: "Ruth, Ruth) */
   const open=c=>(c.match(/"/g)||[]).length%2===1||(c.match(/\u201c/g)||[]).length!==(c.match(/\u201d/g)||[]).length;
-  for(const c of cands)if(!open(c)&&fits(c))return c;return null};
+  /* review 31: four words or more first; a three-word cut only when the note would otherwise be hidden */
+  for(const c of cands)if(!open(c)&&c.split(/\s+/).length>=4&&fits(c))return c;for(const c of cands)if(!open(c)&&fits(c))return c;return null};
 /* 15 Nov: the same, but the film's moment is kept over the plain food words. A note like "Crisp buttermilk chicken, honey to dip,
    for Ren and Chuck's tractor game" is cut to "Crisp buttermilk chicken, for Ren and Chuck's tractor game." or "For Ren and Chuck's tractor game.",
    not to "Crisp buttermilk chicken". A part counts as the film's when it has a quote, a possessive name, a capitalised name inside it or ends on "!".
@@ -1915,7 +1916,8 @@ window.__fmtShortFilm=(t,fits)=>{t=String(t||"").replace(/\s+/g," ").trim();if(!
     if(head&&ref(head)&&!open(head)&&head.split(/\s+/).length>=3)cands.push(dot(head))}
   /* review 31: never under four words ("Dinner with Arthur." read as a scrap) */
   for(const c of cands)if(!open(c)&&c.split(/\s+/).length>=4&&fits(c))return c;
-  return plain(t)};
+  {const p=plain(t);if(p)return p}
+  for(const c of cands)if(!open(c)&&fits(c))return c;return null};
 /* notes from the bottom: each is first shortened at a break, and only hidden if even that will not fit. The full text is kept to put back on a refit */
 window.__fmtTrim=(ns,over)=>{for(let i=ns.length-1;i>=0&&over();i--){const n=ns[i];if(n.children.length||n.style.display==="none")continue;const full=n.dataset.full||(n.dataset.full=n.textContent);
     /* 11 Nov: a cut that does not fit is only kept when it frees a line; one that leaves the note the same height goes back to the full text */
@@ -2015,7 +2017,7 @@ function houseCap(root,menu,fmt){
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
 const PF_CHEAP=/\b(slices?|hot ?dogs?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 const pfCheap=n=>PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n);
-const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded)\b)/i;
+const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
 const PF_PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
 const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
@@ -2078,6 +2080,7 @@ function priceFix(root,menu,f,fl,era,fmt){
     if(med<bd[0]||med>bd[1]){const k=Math.sqrt(bd[0]*bd[1])/med;for(const x of P)x.v*=k;for(const x of O)x.v*=k}}
   const by=k=>P.filter(x=>x.k===k),mn=()=>by("m").filter(x=>!x.house),minM=()=>{const L=mn();return L.length?Math.min(...L.map(x=>x.v)):null};
   const maxOf=L=>L.length?Math.max(...L.map(x=>x.v)):null,minOf=L=>L.length?Math.min(...L.map(x=>x.v)):null;
+  const rules=()=>{
   /* 3. cheap bites */
   for(const k of ["s","w"]){const L=by(k),nc=L.filter(x=>!pfCheap(x.n)),top=maxOf(nc);if(top==null)continue;for(const x of L)if(pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>top)x.v=Math.max(step(top),top-step(top))}
   {const mS=maxOf(by("s"));if(mS!=null)for(const x of by("w"))if(pfCheap(x.n)&&x.v>mS)x.v=Math.max(step(mS),mS-step(mS))}
@@ -2096,6 +2099,7 @@ function priceFix(root,menu,f,fl,era,fmt){
       else for(const x of sw)if(x.v>=m0)x.v=Math.max(step(m0),m0*.8)}}}
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
   {const lo=minOf(by("s"));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo*.6)x.v=lo*.9}
+  };rules();
   /* 5. endings, keeping one film-number price */
   const egg=String((fl&&fl.number)||"").replace(/\D/g,"").slice(-2),yy=String(f&&f.year||"").slice(-2);
   const odd=x=>{const c=Math.round((x.v%1)*100);return x.v>=1?![0,25,50,75,95,99].includes(c):c%5!==0};
@@ -2103,6 +2107,9 @@ function priceFix(root,menu,f,fl,era,fmt){
   const keep=unchanged.find(x=>{const c=String(Math.round((x.v%1)*100)).padStart(2,"0");return c===egg||c===yy})||unchanged[0]||null;
   const cleanDown=v=>{let c=clean(v);if(c>v+1e-9){if(v<1)c=Math.max(.05,Math.floor(v*20)/20);else if(whole)c=Math.max(1,Math.floor(v));else{const b=Math.floor(v),E=[0,.25,.5,.75,.95].filter(e=>b+e<=v+1e-9);c=b+Math.max(...E)}}return Math.round(c*100)/100};
   for(const x of P)x.c=x===keep?x.v:x.down?cleanDown(x.v):clean(x.v);
+  /* review 31: rounding to clean endings can undo a rule (a cupcake rounded up past the dearest starter), so the rules run once more on
+     the rounded prices and anything they lower is rounded down */
+  for(const x of P)if(x!==keep){x.v=x.c;x.down=0}rules();for(const x of P)if(x!==keep&&Math.abs(x.v-x.c)>.001)x.c=x.v<x.c?cleanDown(x.v):clean(x.v);
   {const L=mn();if(L.length){const m0=Math.min(...L.map(x=>x.c));for(const x of [...by("s"),...by("w"),...by("d").filter(x=>!PF_SP.test(x.n))])if(x.c>=m0)x.c=m0>step(m0)?clean(m0-step(m0)):x.c}}
   const cur=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;
   for(const x of O)x.c=x.v<1?Math.max(.05,Math.round(x.v*20)/20):Math.abs(x.v-x.v0)<.001?x.v:clean(x.v);

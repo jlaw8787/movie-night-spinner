@@ -15,6 +15,7 @@ Plan first (Josh's rule: all planning before builds).
 5. Menu in `data/films.json`: a real venue from the film's world, every dish a complete dish, iconic lines and scenes in, facts true to the film, real quotes or unquoted notes in the character's voice.
 6. Menu layout: `data/film-format.json`, and `data/film-flavour.json` if it is on a shared layout. Update the layout tracker spreadsheet. The layout has to be able to exist in the film's world (no takeaway or airline before 1900 or where there are no phones; tests/setting-layouts.test.cjs).
    Set in another time than its release (a western, pirates, Middle-earth, 1910s London): add `priceEra` to its flavour ("1800s", "1930s-40s" and so on) so the card prints prices of that time whatever its look. Dishes must be of the film's time too (tests/era-words.test.cjs).
+   Fit table (review 31), also in its flavour: `currency` when it is not set in a dollar country ("£", "£sd" for pre-1971 UK and pre-1966 Australia, "€", "F", "L", "₩", "¥", "R$", "kr", "RM"), `world: "storybook"` only for a made-up or old-world setting (the only films that may print crowns, silver, gp, a compass or "realm"), and `country` for a pub outside Australia ("GB", "US" and so on). priceFix holds the card's middle main to the decade band (PF_BAND in app.js) and prints the local money. Check with `node scripts/check-menu-fit.cjs "Film (Year)"` (money, era band, storybook coin, notes under four words, signed quotes against data/quote-list.json, wrong-country words). A real quote added to a card goes on data/quote-list.json; anything else is a note (kind "note").
 7. Menu colours (`data/film-palette.json`), house lines (`data/film-house.json`, one table item and one drink).
 8. Dish names and notes (`data/dish-names.json`, `data/dish-notes.json`), recipes (`data/recipes2/`), and a veg / no alcohol version (`data/diet/`) if any dish has meat or alcohol.
 9. Quiz: 3 written questions (`data/trivia.json`); auto rounds come from `scripts/build-quiz.cjs`.
@@ -25,7 +26,8 @@ Plan first (Josh's rule: all planning before builds).
 14. Printed menu preview picture (`scripts/render-previews.cjs`, `assets/menu-previews/`). Any menu, price or layout change makes the film's preview stale: run `node scripts/render-previews.cjs --stale`. The ripple check fails on a stale preview (fingerprints in `data/preview-stamps.json`).
 15. Fact audit and vibe audit for the film (`docs/AUDIT.md`).
 16. Check it on the wheel, Galaxy Video shelf, Candy bar combos, Match night, Quiz night, My card stats, film page, print, phone and desktop.
-17. Prices: `node scripts/check-price-sense.cjs "Film (Year)"` (mains above starters and sweets, cheap bites never dearer than real dishes, clean endings). Run tests (includes the ripple check). Add a HANDOFF.md line. Hold for Josh's deploy go.
+17. Phone: `node scripts/check-phone-panels.cjs "Film (Year)"` (opens on a view with a dish, wide pages split into panels along clear gutters, nothing drawn under 6px).
+18. Prices: `node scripts/check-price-sense.cjs "Film (Year)"` (mains above starters and sweets, cheap bites never dearer than real dishes, clean endings). Run tests (includes the ripple check). Add a HANDOFF.md line. Hold for Josh's deploy go.
 
 ## 2. Changing or removing a film
 

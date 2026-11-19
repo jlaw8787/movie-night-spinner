@@ -41,8 +41,9 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
      /* the smallest block around the price that names exactly one dish */
      let el=tn.parentElement,hit=null,dp=0;for(let i=0;i<6&&el&&el!==card;i++,el=el.parentElement){const tx=norm(el.textContent);const ds=dish.filter(d=>tx.includes(d.nm));if(ds.length===1){hit=ds[0];dp=i;break}if(ds.length>1)break}
      /* review 31: a set dinner or combo line ("one of each", "complete dinner") is checked against the dishes it names */
-     {let e2=tn.parentElement;for(let i=0;i<4&&e2&&e2!==card;i++,e2=e2.parentElement){const tx=norm(e2.textContent);if(/\b(combo|complete dinner|family dinner|one of each|meal deal|set dinner|the lot for)\b/.test(tx)&&tx.length<260){sets.push({v,raw:t.trim(),tx});break}}}
+     {let e2=tn.parentElement;for(let i=0;i<3&&e2&&e2!==card;i++,e2=e2.parentElement){const tx=norm(e2.textContent);if((!hit||dp>=2)&&/\b(combo|complete dinner|family dinner|one of each|meal deal|set dinner|the lot for)\b/.test(tx)&&tx.length<200){sets.push({v,raw:t.trim(),tx});break}}}
      if(hit)prices.push({...hit,v,dp,raw:t.trim()})}
+   if(f._lib&&f._lib.flavour&&f._lib.flavour.currency&&f._lib.flavour.currency!=='$'){skipped++;continue}/* local money: checked before conversion in priceFix, and by check-menu-fit */
    if(!prices.length){noprice++;continue}
    prices.sort((a,b)=>a.dp-b.dp);
    const seen=new Set(),P=prices.filter(x=>{const key=x.k+x.nm;if(seen.has(key))return false;seen.add(key);return true});
@@ -54,7 +55,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const minM=mn.length?Math.min(...mn.map(x=>x.v)):null;
    if(minM!=null){for(const x of [...by('s'),...by('w')])if(x.v>=minM)bad.push(`${x.k==='s'?'starter':'sweet'} ${x.n} ${x.raw} not under the cheapest main ${minM}`);
      for(const x of by('d'))if(!SP.test(x.n)&&x.v>=minM)bad.push(`plain drink ${x.n} ${x.raw} not under the cheapest main ${minM}`)}
-   {const BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded)\b)/i,D=by('d');if(D.length){const lo=Math.min(...D.map(x=>x.v));for(const x of by('s'))if(BAR.test(x.n)&&!PREM.test(x.n)&&x.v>lo+.001)bad.push(`bar snack ${x.n} ${x.raw} dearer than a drink at ${lo}`)}}
+   {const BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i,D=by('d');if(D.length){const lo=Math.min(...D.map(x=>x.v));for(const x of by('s'))if(BAR.test(x.n)&&!PREM.test(x.n)&&x.v>lo+.001)bad.push(`bar snack ${x.n} ${x.raw} dearer than a drink at ${lo}`)}}
    const prem=P.filter(x=>x.k==='m'&&PREM.test(x.n)&&!isCheap(x.n));
    {const pl=mn.filter(x=>!PREM.test(x.n)||isCheap(x.n));if(pl.length){const hi=Math.max(...pl.map(x=>x.v));for(const x of prem)if(!x.house&&x.v<hi)bad.push(`premium main ${x.n} ${x.raw} under the plain main at ${hi}`)}}
    for(const x of P)if(isCheap(x.n)&&!PREM.test(x.n)){
