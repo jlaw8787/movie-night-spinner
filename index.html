@@ -1303,7 +1303,9 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
 .top{margin-top:0}
 .top .brand{display:none}
 .top{justify-content:center}
-@media (max-width:640px){.palace-stage{width:900px}.top{padding-top:8px}}
+@media (max-width:640px){.palace-stage{width:900px}.top{padding-top:8px}
+  /* review 30: the dark street under the sign is cropped on phones so the Spin button shows on first load (it sat cut off at the bottom) */
+  .palace{height:clamp(300px,43svh,360px)}}
 /* real photo hero: the crest is lit in the photo, the board gets live letters set in its perspective (placeMarquee) */
 .blade{left:0;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .lbox{display:none!important}
@@ -3184,6 +3186,20 @@ body.matching #theatre.closed,body.quizzing #theatre.closed,body.matching #motw,
 @media (max-width:640px){.top .views{margin-right:0;margin-left:76px}.acct-btn{right:auto;left:12px;width:64px;height:40px;top:auto;bottom:15px;--ty:0px}}
 @media (max-width:420px){.top .views button{padding:8px 8px;font-size:13px}}
 @media (max-width:374px){.top .views button{padding:8px 6px;font-size:12px}}
+/* review 30 (Josh: colour by room): the account opens in the colours of the room it was opened from. In the cinema (box office, candy bar,
+   Match and Quiz night) it is red and gold with a ticket; in Galaxy Video it keeps the purple member card. The top bar button follows suit */
+.acct-tk{display:none}
+body:not(.in-shop) .acct-btn img{display:none}
+body:not(.in-shop) .acct-tk{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;box-sizing:border-box;border-radius:6px;background:radial-gradient(circle at 0 50%,transparent 6px,#e7c069 6.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 6px,#e7c069 6.5px) right/51% 100% no-repeat;color:#5a0f1f;font:400 11px/1 var(--f-board);letter-spacing:.12em;text-transform:uppercase;filter:saturate(.5) brightness(.85)}
+body:not(.in-shop) .acct-btn.is-member .acct-tk{filter:none}
+.acct-tk i{font-style:normal;font-size:9px}.acct-tk b{font-weight:400;font-size:15px}
+dialog.acct.cinema{--gv-night:#1f0509;--gv-deep:#5a0f1f;--gv-purple:#7a1428;--gv-gold:#e7c069;--gv-grad:linear-gradient(180deg,#f2d38a,#c9973e);--gv-teal:#e7c069;--gv-pink:#c9973e;--gv-cream:#f4e6c8;--gv-lav:#e3cfae}
+.acct-tix{position:relative;margin:0 auto 14px;max-width:420px;aspect-ratio:2.2/1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;border-radius:10px;color:#5a0f1f;text-align:center;
+  background:radial-gradient(circle at 0 50%,transparent 16px,#f2d38a 17px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 16px,#f2d38a 17px) right/51% 100% no-repeat;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.acct-tix::before{content:"";position:absolute;inset:10px 26px;border:2px dashed rgba(90,15,31,.45);border-radius:6px;pointer-events:none}
+.acct-tix .tx-k{font:400 13px var(--f-board);letter-spacing:.3em;text-transform:uppercase}
+.acct-tix .tx-n{font:400 clamp(22px,7vw,34px)/1 var(--f-board);letter-spacing:.06em;text-transform:uppercase;max-width:80%;overflow-wrap:anywhere}
+.acct-tix .tx-no{font:700 14px "Courier New",monospace;letter-spacing:.14em}
 dialog.acct{position:fixed;inset:0;z-index:70;background:rgba(5,4,14,.82);display:flex;justify-content:center;align-items:flex-start;padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px));overflow:auto}
 .acct-in{position:relative;width:min(520px,100%);background:linear-gradient(180deg,var(--gv-deep),var(--gv-night) 45%);color:var(--gv-cream);border:2px solid var(--gv-gold);border-radius:16px;padding:18px 16px 20px;box-shadow:0 30px 70px rgba(0,0,0,.6);box-sizing:border-box;font:400 15px/1.45 var(--f-body)}
 dialog.acct .modal-x{color:var(--gv-gold)}
@@ -3316,7 +3332,7 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Galaxy Video</button>
     </nav>
-    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><img src="assets/brand/member-card-mini.webp" alt="" width="288" height="180" decoding="async"><span class="acct-dot" id="acctDot" hidden></span></button>
+    <button type="button" class="acct-btn" id="acctBtn" aria-label="My account" aria-haspopup="dialog"><img src="assets/brand/member-card-mini.webp" alt="" width="288" height="180" decoding="async"><span class="acct-tk" aria-hidden="true"><i>Admit</i><b>One</b></span><span class="acct-dot" id="acctDot" hidden></span></button>
   </header>
   <div class="ambient" id="ambient" aria-hidden="true"></div>
 
@@ -3481,14 +3497,14 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
 <script src="ratings.js?v=39b211a8" defer></script>
 <script src="aisles.js?v=15304814" defer></script>
 <script src="providers.js?v=580cc276" defer></script>
-<script src="films.js?v=a012dd1e" defer></script>
+<script src="films.js?v=fedd67d9" defer></script>
 <script src="assets/fonts/fonts.js?v=d8909e45" defer></script>
-<script src="formats-core.js?v=9f6b1b94" defer></script>
+<script src="formats-core.js?v=9749013e" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
 <script src="app.js?v=5100a90a" defer></script>
 <script src="match.js?v=e828f8e1" defer></script>
-<script src="friends.js?v=071d0349" defer></script>
+<script src="friends.js?v=8b6a7f6f" defer></script>
 <script src="quiz.js?v=4a286a7a" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>

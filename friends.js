@@ -69,17 +69,20 @@
   function openPanel(t) {
     if (box && box.open) { if (t) { tab = t; draw() } return }
     tab = t || (counts.turns ? 'duels' : counts.unread ? 'inbox' : 'card');
-    box = document.createElement('dialog'); box.className = 'acct'; box.setAttribute('aria-label', 'My account');
+    box = document.createElement('dialog'); box.className = 'acct' + (cinema() ? ' cinema' : ''); box.setAttribute('aria-label', 'My account');
     box.innerHTML = `<div class="acct-in"><div class="acct-head" id="acctHead"></div><div class="acct-tabs" role="tablist" aria-label="My account" id="acctTabs"></div><div class="acct-body" id="acctBody" role="tabpanel"></div></div>`;
     box.addEventListener('click', e => { if (e.target === box) dismissModal(box) });
     mountModal(box, null, btn, () => { box = null });
     draw();
   }
+  /* review 30: opened anywhere but Galaxy Video, the account is the cinema's (red and gold, a ticket) */
+  const cinema = () => !document.body.classList.contains('in-shop');
   function head() {
     const h = box.querySelector('#acctHead');
-    if (!inn()) { h.innerHTML = `<p class="acct-k">Galaxy Video</p><h2 class="acct-t">Guest pass</h2>`; return }
+    const brand = box.classList.contains('cinema') ? 'Reel Dinner' : 'Galaxy Video';
+    if (!inn()) { h.innerHTML = `<p class="acct-k">${brand}</p><h2 class="acct-t">Guest pass</h2>`; return }
     const T = tier();
-    h.innerHTML = `<p class="acct-k">Galaxy Video <span class="acct-tier t-${T.k}">${ESC(T.name)}</span></p><h2 class="acct-t">${ESC((member && member.name) || 'Member')}</h2><p class="acct-no">${ESC(noFmt(member && member.no))}</p>`;
+    h.innerHTML = `<p class="acct-k">${brand} <span class="acct-tier t-${T.k}">${ESC(T.name)}</span></p><h2 class="acct-t">${ESC((member && member.name) || 'Member')}</h2><p class="acct-no">${ESC(noFmt(member && member.no))}</p>`;
   }
   function tabs() {
     const T = [['card', 'My card', 0], ['duels', 'Duels', counts.turns], ['inbox', 'Inbox', counts.unread], ['friends', 'Friends', (FR.incoming || []).length], ['settings', 'Settings', 0]];
@@ -125,6 +128,7 @@
   }
   function cardArt(guestCard) {
     const m = member || {}, no = String(m.no || '');
+    if (box && box.classList.contains('cinema')) return `<div class="acct-tix" role="img" aria-label="${guestCard ? 'Your Reel Dinner guest pass' : `Your Reel Dinner member ticket, number ${ESC(no)}`}"><span class="tx-k">Admit one</span><span class="tx-n">${guestCard ? 'Guest pass' : ESC(m.name || 'Member')}</span>${guestCard ? '' : `<span class="tx-no">${ESC(noFmt(no))}</span>`}</div>`;
     const since = m.since ? new Date(m.since).toLocaleString('en-AU', { month: '2-digit', year: '2-digit' }) : '';
     return `<div class="acct-mc"><div class="mc${guestCard ? ' guest' : ''}" role="img" aria-label="${guestCard ? 'Your Galaxy Video guest pass' : `Your Galaxy Video member card, number ${ESC(no)}`}"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async">${guestCard ? '<span class="mc-guest" aria-hidden="true">Guest pass</span>' : ''}<p class="mc-no foil" aria-hidden="true">${ESC(no.slice(0, 3))} ${ESC(no.slice(3))}</p>${since ? `<p class="mc-since foil" aria-hidden="true">Member since ${ESC(since)}</p>` : ''}${typeof code39 === 'function' ? code39('GV' + no) : ''}${m.name ? `<span class="mc-sig" aria-hidden="true">${ESC(m.name)}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(m.name)}</span>` : ''}</div></div>`;
   }
