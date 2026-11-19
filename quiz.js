@@ -277,6 +277,9 @@
     const im = panel.querySelector('.qz-still img');
     if (im) im.onerror = () => { im.parentNode.hidden = true; const c = panel.querySelector('.qz-clue'); if (c) c.hidden = false };
     const h = panel.querySelector('.qz-q'); h.focus({ preventScroll: true });
+    /* review 31: on a phone the question and all four answers sit on screen together: the game scrolls to the top of the screen
+       (the marquee and tabs scroll away) and the still is held to about 40 per cent of the screen height in CSS */
+    if (window.matchMedia && matchMedia('(max-width: 700px)').matches) { const g = panel.querySelector('.qz-game'); if (g) { const y = g.getBoundingClientRect().top + window.scrollY - 8; if (Math.abs(window.scrollY - y) > 4) window.scrollTo({ top: y, behavior: G.i ? 'auto' : 'smooth' }) } }
     panel.querySelectorAll('[data-o]').forEach(b => b.onclick = () => answer(+b.dataset.o));
     $('qzQuit').onclick = quit;
     /* the next picture loads while this one is answered */

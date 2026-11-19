@@ -886,11 +886,46 @@ function cardFaces(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
   const fs=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];
   if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
-    return fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}))}
+    const pages=fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}));
+    /* review 31: wide pages of a two-page menu (Jurassic Park's dining guide) split into panels on a phone too */
+    if(swipeW()&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
+      xs.slice(0,-1).forEach((x,j)=>out.push({el:pg.el,w:xs[j+1]-x,h,x:pg.x+x,px:x,y:pg.y,row:true,part:"p"+i+"panel"+(j+1),panel:1}))});return out}
+    return pages}
   /* one wide page (a landscape placemat, canteen tray or bill of fare) shows whole, scaled to the screen; tap opens it full size to zoom.
-     Review 30 (Josh's call): the old left and right half views cut words at the fold and looked broken at first glance */
-  return [];
+     Review 30 (Josh's call): the old left and right half views cut words at the fold and looked broken at first glance.
+     Review 31 (Josh's call): on a phone a wide page is shown as its own panels, cut only along clear gutters where no text runs (pvPanels),
+     so a word is never split; three panels when the gutters allow (text near full size), else two; a page with no clean gutter stays whole */
+  if(!swipeW())return [];
+  const el=fs[0]||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;
+  if(!w||!h||(w<h*1.2&&w<900))return [];/* a wide page, or a big one (the pub face is 1240 across) */
+  const cuts=pvPanels(el,w,h);if(!cuts.length)return [];
+  const xs=[0,...cuts,w];return xs.slice(0,-1).map((x,i)=>({el,w:xs[i+1]-x,h,x,px:x,y:0,row:true,part:"panel"+(i+1),panel:1}));
 }
+/* gutters on a wide page: the x positions no line of text crosses (measured on the words, a little padding either side).
+   Kept per drawn card and page, so swiping does not measure again */
+function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(fi||0);card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
+  let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange();
+    for(const e of el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]"))continue;for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;rg.selectNodeContents(n);
+      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const a=Math.max(0,Math.floor(((r.left-b.left)/k-8)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+8)/R));for(let i=a;i<=z;i++)cov[i]=1}}}
+    /* candidate cuts: the middle of every clear run (long runs offer a point every 60px); then the fewest panels (2 to 4) that keep every
+       panel 200 to 440px wide, or failing that the split with the narrowest widest panel (Wall-E: photos, two menu columns, photos) */
+    const C=[];for(let i=1;i<N-1;){if(cov[i]){i++;continue}let j=i;while(j<N-1&&!cov[j])j++;const a=i*R,z=j*R;if(z-a>=8){if(z-a>120)for(let x=a+30;x<z-30;x+=60)C.push(x);else C.push(Math.round((a+z)/2))}i=j}
+    const MIN=200,best={};
+    const split=n=>{/* DP: widest panel minimised for n panels over cut points */const P=[0,...C.filter(x=>x>=MIN&&x<=w-MIN),w],M=P.length;
+      let D=P.map((x,i)=>i===0?{m:0,c:[]}:null);
+      for(let k=1;k<=n;k++){const E=P.map(()=>null);for(let j=1;j<M;j++)for(let i=0;i<j;i++){const d=D[i];if(!d)continue;if(k<n&&j===M-1)continue;const pw=P[j]-P[i];if(pw<MIN)continue;const m=Math.max(d.m,pw);if(!E[j]||m<E[j].m)E[j]={m,c:j<M-1?[...d.c,P[j]]:d.c}}D=E}
+      return D[M-1]};
+    let pick=null;for(let n=2;n<=4;n++){const r=split(n);if(!r)continue;if(r.m<=440){pick=r;break}if(!pick||r.m<pick.m)pick=r}
+    if(pick&&pick.m<=w*.72)cuts=pick.c}catch(e){cuts=[]}
+  card._pvp[key]=cuts;return cuts}
+/* review 31: a multi-page or panelled card opens on the page with the most dishes on it (Die Hard and Casablanca opened on a cover) */
+function pvFirstDish(fs){let best=0,bestC=0;try{const m=(current&&(current.printMenu||current.menu))||{},names=["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ").trim())).filter(n=>n.length>3);
+  if(!names.length)return 0;const b=card.getBoundingClientRect();
+  for(let i=0;i<fs.length;i++){const f=fs[i];let txt="";
+    if(f.panel){const k=b.width/(parseFloat(f.el.style.width)||+card.dataset.w||b.width)||1,eb=f.el.getBoundingClientRect(),rg=document.createRange();
+      for(const e of f.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();const cx=((r.left+r.right)/2-eb.left)/k;if(r.width&&cx>=f.px&&cx<f.px+f.w)txt+=" "+n.textContent}}
+    else txt=f.el.textContent;
+    txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=names.filter(n=>txt.includes(n)).length;if(c>bestC){bestC=c;best=i}}}catch(e){}return best}
 const pvDots=document.createElement("div");pvDots.className="pv-dots";pvDots.hidden=true;$("easel").after(pvDots);
 pvDots.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)pvGo(+b.dataset.i)});
 function paintDots(n){
@@ -910,7 +945,7 @@ function pvGo(i){
 /* half views of a wide page: text the view edge cuts so that less than 60% shows ("Parr", "DUMB") is hidden, so the edge reads as a clean peek */
 function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
   card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));if(!key)return;
-  const b=f.el.getBoundingClientRect(),lo=f.x,hi=f.x+f.w,off=[];
+  const b=f.el.getBoundingClientRect(),lo=f.px!=null?f.px:f.x,hi=lo+f.w,off=[];
   const rg=document.createRange();
   for(const e of f.el.querySelectorAll("*")){const tn=[...e.childNodes].filter(n=>n.nodeType===3&&n.textContent.trim());if(!tn.length)continue;
     /* measure the words themselves, not the box around them */
@@ -921,13 +956,13 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
     /* 13 Nov: a long line (three words or more) only steps aside when under about two words of it show (48px); a share of its width hid
        the drive-in Showtime line whole (24% in view) while the dish lines beside it ran on past the edge */
-    if(seen<w-1&&(seen<=0||(words<=2||seen<48)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
+    if(seen<w-1&&(seen<=0||(f.panel&&seen>0)||(words<=2||seen<48)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
-  if(fs.length){pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
+  if(fs.length){if(card.dataset.pvs!==String(renderId)){card.dataset.pvs=String(renderId);pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
     card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
-    preview.setAttribute("aria-label",`Printed menu, page ${pvFace+1} of ${fs.length}. Open it full size`);return}
+    preview.setAttribute("aria-label",`Printed menu, ${f.panel?"part":"page"} ${pvFace+1} of ${fs.length}. Open it full size`);return}
   pvMask(null);delete preview.dataset.part;if(preview.classList.contains("pv-swipe")){preview.classList.remove("pv-swipe");preview.setAttribute("aria-label","Open the printed menu full size")}
   const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
 let tab="menu";
