@@ -1987,11 +1987,14 @@ function priceFix(root,menu,f,fl,era,fmt){
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),P=[],seen=new Set(),cand=[];let t;
   while((t=tw.nextNode())){const m=t.nodeValue.match(PR);if(m)cand.push([t,m])}
   /* a bare whole number on a card that prints cents is a quantity, table or bill number (Ghostbusters' QTY 4), not a price */
-  const hasDec=cand.some(([,m])=>m[4]!=null||m[7]!=null||m[11]!=null);
+  const hasDec=cand.some(([,m])=>m[4]!=null||m[7]!=null||m[11]!=null),hits=[];
   for(const [t,m] of cand){if(hasDec&&m[3]!=null&&m[4]==null&&!m[2])continue;
     const v=m[3]!=null?+m[3]+(m[4]?+m[4]/100:0):m[7]!=null?+m[7]/100:+m[11]/100;if(!(v>0))continue;
-    let el=t.parentElement,hit=null;for(let i=0;i<6&&el&&el!==root;i++,el=el.parentElement){const tx=norm(el.textContent);const ds=dish.filter(d=>tx.includes(d.nm));if(ds.length===1){hit=ds[0];break}if(ds.length>1)break}
-    if(!hit||seen.has(hit))continue;seen.add(hit);P.push({...hit,v,v0:v,t,m})}
+    let el=t.parentElement,hit=null,dp=0;for(let i=0;i<6&&el&&el!==root;i++,el=el.parentElement){const tx=norm(el.textContent);const ds=dish.filter(d=>tx.includes(d.nm));if(ds.length===1){hit=ds[0];dp=i;break}if(ds.length>1)break}
+    if(hit)hits.push({hit,dp,v,t,m})}
+  /* review 31: a dish takes the price nearest to its name. A set dinner that lists the dish in its line ("...the veal, cannoli, espresso")
+     sits further out than the dish's own price, so it no longer steals the dish and gets repriced as one (Godfather's family dinner) */
+  hits.sort((a,b)=>a.dp-b.dp);for(const h of hits){if(seen.has(h.hit))continue;seen.add(h.hit);P.push({...h.hit,v:h.v,v0:h.v,t:h.t,m:h.m})}
   if(P.length<2||P.length<dish.length*.6)return 0;
   const cents=P.some(x=>x.m[7]!=null),dot=P.some(x=>x.m[11]!=null),whole=P.filter(x=>x.m[3]!=null&&x.m[4]==null).length>P.length/2;
   const clean=v=>{if(v<1)return Math.max(.05,Math.round(v*20)/20);if(whole)return Math.max(1,Math.round(v));const c=v%1,b=Math.floor(v),E=[0,.25,.5,.75,.95,1];let best=E[0];for(const e of E)if(Math.abs(c-e)<Math.abs(c-best))best=e;return Math.round((b+best)*100)/100};
@@ -4174,7 +4177,10 @@ $("pdf").addEventListener("click",()=>{if(!current)return;const o=document.creat
    <button type="button" data-p="prep"><b>Prep sheet only</b><span>${ESC(prepTip())}</span></button>
    <button type="button" data-p="all"><b>Menu and prep sheet</b><span>Everything in one file. Best kept on screen or printed single-sided.</span></button></div></div>`;
   o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-p]");if(!b)return;dismissModal(o);exportMenu("pdf",b.dataset.p)});
-  mountModal(o,"[data-p=menu]",$("pdf"))});
+  mountModal(o,"[data-p=menu]",$("pdf"));
+  /* review 31: a sheet measured before its fonts land runs long and read "two pages" for TMNT's one. Count again once the fonts are in,
+     the same fonts the PDF is drawn with */
+  {const sp=o.querySelector("[data-p=prep] span");try{document.fonts.ready.then(()=>{if(sp&&o.isConnected)sp.textContent=prepTip()})}catch(e){}}});
 $("png").addEventListener("click",()=>exportMenu("png"));
 /* story image: a 1080x1920 card of tonight's feature and menu for Instagram and TikTok stories */
 async function storyCanvas(f){

@@ -31,19 +31,25 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    window.__stage=false;current&&(current.printMenu=null);try{await ensureExact(f);await show(f,true)}catch(e){out.push({id,err:String(e).slice(0,80)});continue}
    await new Promise(r=>setTimeout(r,30));
    const m=current.printMenu&&current.printMenu.s!==undefined&&f._lib?current.printMenu:current.menu||{},dish=[];for(const k of ['s','m','w','d'])for(const it of (m[k]||[]))if(it){const nm=norm(it.label||it.n);if(nm)dish.push({k,n:it.label||it.n,nm,house:!!it.house,extra:!!it.extra})}
-   const walker=document.createTreeWalker(card,NodeFilter.SHOW_TEXT);const prices=[],cand=[];let tn0;
+   const walker=document.createTreeWalker(card,NodeFilter.SHOW_TEXT);const prices=[],cand=[],sets=[];let tn0;
    while((tn0=walker.nextNode())){const q=tn0.textContent.match(PR);if(q)cand.push([tn0,q])}
    /* a bare whole number on a card that prints cents is a quantity or table number, not a price */
    const hasDec=cand.some(([,q])=>q[2]!=null||q[3]!=null||q[5]!=null);
    for(const [tn,q] of cand){const t=tn.textContent;if(hasDec&&q[1]!=null&&q[2]==null&&!/[$£]/.test(t))continue;
      const v=q[1]!=null?+q[1]+(q[2]?+q[2]/100:0):q[3]!=null?+q[3]/100:+q[5]/100;if(!(v>0))continue;
      /* the smallest block around the price that names exactly one dish */
-     let el=tn.parentElement,hit=null;for(let i=0;i<6&&el&&el!==card;i++,el=el.parentElement){const tx=norm(el.textContent);const ds=dish.filter(d=>tx.includes(d.nm));if(ds.length===1){hit=ds[0];break}if(ds.length>1)break}
-     if(hit)prices.push({...hit,v,raw:t.trim()})}
+     let el=tn.parentElement,hit=null,dp=0;for(let i=0;i<6&&el&&el!==card;i++,el=el.parentElement){const tx=norm(el.textContent);const ds=dish.filter(d=>tx.includes(d.nm));if(ds.length===1){hit=ds[0];dp=i;break}if(ds.length>1)break}
+     /* review 31: a set dinner or combo line ("one of each", "complete dinner") is checked against the dishes it names */
+     {let e2=tn.parentElement;for(let i=0;i<4&&e2&&e2!==card;i++,e2=e2.parentElement){const tx=norm(e2.textContent);if(/\b(combo|complete dinner|family dinner|one of each|meal deal|set dinner|the lot for)\b/.test(tx)&&tx.length<260){sets.push({v,raw:t.trim(),tx});break}}}
+     if(hit)prices.push({...hit,v,dp,raw:t.trim()})}
    if(!prices.length){noprice++;continue}
+   prices.sort((a,b)=>a.dp-b.dp);
    const seen=new Set(),P=prices.filter(x=>{const key=x.k+x.nm;if(seen.has(key))return false;seen.add(key);return true});
    if(P.length<dish.length*.6){skipped++;continue}
    const by=k=>P.filter(x=>x.k===k),mn=by('m').filter(x=>!x.house),bad=[];
+   /* a set dinner never costs less than the dearest dish in it, and a combo never under 60% of what its named dishes add up to */
+   for(const st of sets){const inS=/\bone of each\b(?!\s+board)/.test(st.tx)?P.slice():P.filter(x=>st.tx.includes(x.nm)&&Math.abs(x.v-st.v)>.001);if(!inS.length)continue;const top=Math.max(...inS.map(x=>x.v)),sum=inS.reduce((a,x)=>a+x.v,0);
+     if(st.v<top)bad.push(`set or combo ${st.raw} under the dearest dish in it (${top})`);else if(inS.length>1&&st.v<sum*.6)bad.push(`combo ${st.raw} under 60% of its dishes (${sum.toFixed(2)})`)}
    const minM=mn.length?Math.min(...mn.map(x=>x.v)):null;
    if(minM!=null){for(const x of [...by('s'),...by('w')])if(x.v>=minM)bad.push(`${x.k==='s'?'starter':'sweet'} ${x.n} ${x.raw} not under the cheapest main ${minM}`);
      for(const x of by('d'))if(!SP.test(x.n)&&x.v>=minM)bad.push(`plain drink ${x.n} ${x.raw} not under the cheapest main ${minM}`)}
