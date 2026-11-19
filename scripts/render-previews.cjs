@@ -5,6 +5,7 @@
    Output: assets/menu-previews/<slug>.jpg, shot at 2x so it stays sharp on phone screens: 1200 wide, 1600 for two-page spreads,
    2000 for three-page strips (the film page shows it at half that size).
      node scripts/render-previews.cjs --wide          redo the spreads and strips (wider than 1.5 to 1)
+     node scripts/render-previews.cjs --stale         redo every film whose preview no longer matches its menu (data/preview-stamps.json)
    Opens the real app (index.html?film=...) on a local server, waits for the menu card, and snaps it at full A4 size. */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const {spawn,execFileSync}=require('child_process');
@@ -18,7 +19,11 @@ const films=JSON.parse(fs.readFileSync(path.join(ROOT,'data/films.json'),'utf8')
 const args=process.argv.slice(2),all=args.includes('--all'),named=args.filter(a=>!a.startsWith('--'));
 fs.mkdirSync(OUT,{recursive:true});
 const wide=args.includes('--wide')?new Set(execFileSync('python3',['-c',"import os,sys\nfrom PIL import Image\nfor f in os.listdir(sys.argv[1]):\n w,h=Image.open(os.path.join(sys.argv[1],f)).size\n if w/h>=1.5: print(f[:-4])",OUT]).toString().split('\n').filter(Boolean)):null;
-const todo=(named.length?named:films).filter(id=>wide?wide.has(slug(id)):all||named.length||!fs.existsSync(path.join(OUT,slug(id)+'.jpg')));
+const PS=require('./preview-stamp.cjs'),SF=path.join(ROOT,PS.STAMPS),stamps=fs.existsSync(SF)?JSON.parse(fs.readFileSync(SF,'utf8')):{};
+const stale=args.includes('--stale');
+const todo=(named.length?named:films).filter(id=>wide?wide.has(slug(id)):stale?stamps[id]!==PS.stamp(id):all||named.length||!fs.existsSync(path.join(OUT,slug(id)+'.jpg')));
+/* the fingerprint is saved as each preview lands, and written out every 25 films so a stopped run keeps what it did */
+const saveStamps=()=>{const o={};for(const k of Object.keys(stamps).sort())o[k]=stamps[k];fs.writeFileSync(SF,JSON.stringify(o,null,0).replace(/","/g,'",\n"')+'\n')};
 const server=spawn('python3',['-m','http.server',PORT,'--bind','127.0.0.1'],{cwd:ROOT,stdio:'ignore'});
 process.on('exit',()=>server.kill());
 const ready=async()=>{for(let i=0;i<60;i++){const ok=await new Promise(r=>{http.get(ORIGIN+'/index.html',res=>{res.resume();r(res.statusCode===200)}).on('error',()=>r(false))});if(ok)return;await new Promise(r=>setTimeout(r,250))}throw Error('server did not start')};
@@ -57,14 +62,14 @@ r=im.width/im.height
 w=2000 if r>=2 else 1600 if r>=1.5 else 1200
 im=im.resize((w,round(im.height*w/im.width)),Image.LANCZOS)
 im.save(sys.argv[2],'JPEG',quality=80,optimize=True,progressive=True)`,tmp,path.join(OUT,slug(id)+'.jpg')]);
-        fs.unlinkSync(tmp);
+        fs.unlinkSync(tmp);stamps[id]=PS.stamp(id);
       }catch(e){fail.push(id+': '+String(e.message||e).split('\n')[0])}
-      done++;if(done%25===0)console.log(done+'/'+todo.length+' in '+Math.round((Date.now()-t0)/1000)+'s');
+      done++;if(done%25===0){saveStamps();console.log(done+'/'+todo.length+' in '+Math.round((Date.now()-t0)/1000)+'s')}
     }
     await ctx.close();
   }
   await Promise.all(Array.from({length:Math.min(WORKERS,todo.length)},worker));
-  await browser.close();
+  await browser.close();saveStamps();
   console.log('Done '+(done-fail.length)+'/'+todo.length+' in '+Math.round((Date.now()-t0)/1000)+'s');
   if(fail.length){console.log('Failed:\n'+fail.join('\n'));process.exitCode=1}
   server.kill();process.exit();

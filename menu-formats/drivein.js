@@ -101,7 +101,9 @@ function film(ctx,dVenue,dSign,dNote){
   const num=String(fl.number||"").replace(/\D/g,"")||(year.slice(-2)==="00"?year:year.slice(-2))||"7";
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
-  return {f,fl,fam,tx,title,year,ei,b:band(ei),t:TONE[ctx.tone]||TONE.warm,
+  /* review 30: flavour.priceEra prices a film in its own time while the card keeps the look of ctx.era (Ghostbusters: Afterlife, a 1950s drive-in look in 2021) */
+  const pe=ERAS.indexOf(fl.priceEra),pei=pe>=0?pe:ei;
+  return {f,fl,fam,tx,title,year,ei,pei,b:band(ei),t:TONE[ctx.tone]||TONE.warm,
     venue:clean(fl.venue||dVenue(title)),sign:clean(fl.sign||dSign),
     note:fl.note&&fl.note.text?{text:clean(fl.note.text),by:clean(fl.note.by||"The House")}:dNote,
     winks:(fl.winks||[]).map(clean).filter(Boolean),prop:fl.prop&&fl.prop.title?{title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).filter(Boolean)}:null,
@@ -185,7 +187,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const HH=118,SL=176,cueH=F.cue?44:0;
   /* venue size from its width: the neon script runs about half an em a letter in the 466px beside the title */
   const vS=Math.max(30,Math.min(56,Math.floor(466/(Math.max(1,F.venue.length)*.5))));
-  const C=sections(ctx,F,e.cols),PI=prices(itemsOf(ctx),F.ei,F.egg),items=PI.items,pr=PI.pr;
+  const C=sections(ctx,F,e.cols),PI=prices(itemsOf(ctx),F.pei,F.egg),items=PI.items,pr=PI.pr;
   const MW=CW-48,MH=CHt-HH-SL-cueH-30;
   /* notes always print whole: budget every line a note needs (up to 4) and only use tiers that show notes */
   const nlOf=(it,tr,w)=>tr.nl?Math.min(4,wrapLines(F.tx(it.note),tr.n,w,e.cw*1.1)):0;

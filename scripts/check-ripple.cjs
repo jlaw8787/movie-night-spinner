@@ -13,6 +13,7 @@ const jsConst = (file, name) => { const c = {}; vm.runInNewContext(rd(file) + `\
 const slug = (t, y) => (t + ' (' + y + ')').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); /* same as scripts/build-data.cjs */
 
 const films = json('data/films.json');
+const PSTAMP = require('./preview-stamp.cjs'), STAMPS = has(PSTAMP.STAMPS) ? json(PSTAMP.STAMPS) : {};
 const sitemap = rd('sitemap.xml');
 const keyed = {
   'dish names': json('data/dish-names.json'),
@@ -38,6 +39,8 @@ for (const f of films) {
   for (const [what, src] of Object.entries(keyed)) if (!(id in src)) miss(what);
   if (!f.S && !f.hw && !f.e) miss('menu dishes');
   if (!has(`data/film/${s}.json`)) miss('built film data');
+  /* review 30: the film page preview must match today's menu and prices (scripts/preview-stamp.cjs) */
+  if (has(`assets/menu-previews/${s}.jpg`) && STAMPS[id] !== PSTAMP.stamp(id)) miss('menu preview out of date (node scripts/render-previews.cjs --stale)');
   if (!has(`data/recipes2/${s}.json`) && !has(`data/recipes/${s}.json`)) miss('recipes');
   if (!has(`menu/${s}/index.html`)) miss('Google film page');
   if (!has(`assets/menu-previews/${s}.jpg`)) miss('printed menu preview picture');
