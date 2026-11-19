@@ -46,6 +46,9 @@ const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);cons
 /* 15 Nov: a one-sentence note that runs long is cut at a break that keeps the film's part (window.__fmtShortFilm), not left off (every pub film printed names only) */
 const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
+/* review 31: a cut note keeps at least four words ("Smashed beef patties." and "Cucumber mint cream cheese." read as scraps);
+   when one line cannot hold four words, that note takes one more line */
+const clip4=(t,nl,w,N,cw)=>{for(let k=nl;k<=Math.max(nl,2)+(nl>=9?0:1);k++){const c=clip(t,Math.floor(k*w/(N*cw)*.95));if(c&&c.split(/\s+/).length>=4)return c;if(k>=9)return c}return clip(t,Math.floor((nl+1)*w/(N*cw)*.95))};
 const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 
 /* ---------- colour ---------- */
@@ -167,7 +170,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const noLogo=PM&&fl.logoPanel!==true,RRW=470;
   const rT0=fitType(prop.title,RRW-80,64,.6,30,18,1.05,2),rH0=14+18+6+rT0.n*rT0.z*1.05+6+prop.lines.length*20.8+14;
   var under=false;
-  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,2,1],[510,700,2,1],[510,760,2,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
+  /* review 31: full notes first. Every poster size and board height is tried with every note whole (nl 9) before any is cut to two lines,
+     then one; a bare first clause ("Smashed beef patties.") or a dish with no note at all is the last resort */
+  need:for(const NEED of [9,2,1]){
+  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[470,640],[470,700],[470,760],[430,700],[430,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,2,1],[510,700,2,1],[510,760,2,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
   /* the board may also grow down (and last of all the kitchen cue gives its room, NC) into the pinned note's spare room, but only while the note still holds its quote at the smallest size */
   under=noLogo&&FH+26+Math.round(PIWT*1.5)+16+22+38+rH0<=H-70;
   if(BHT>640){const bw=W-24-(24+PIWT+16+22),nq=Math.ceil(String(note.text).length*16*E.bcw/(bw-44))+1;if(H-74-(FH+26+BHT+20)-(under?0:170)-(90+nq*21.8+30)<0)continue}
@@ -211,12 +217,12 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       <div style="${caps(FS.S,CA,.12)};line-height:1.15;margin-bottom:6px;${chalk}">${esc(sec[c.k])}</div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
         <span style="font:700 ${FS.D}px/1.12 ${body};color:${CHALK};${chalk}">${esc(it.n)}</span><span style="font:${E.dw}${Math.round(FS.D*1.08)}px/1 ${disp};color:${CA};white-space:nowrap;${chalk}">$${esc(it.p)}</span></div>
-        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${rgba(CHALK,.78)};margin-top:2px;${chalk}">${esc(sentence(clip(it.note,Math.floor(FS.nl*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
+        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${rgba(CHALK,.78)};margin-top:2px;${chalk}">${esc(sentence(clip4(it.note,FS.nl,colW,FS.N,E.bcw)))}</div>`:""}</div>`).join("")}</div>`).join("");
   var est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+6+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.7,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
   var measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
   var FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.39:.55);s-=.05){/* 15 Nov: with notes, down to the type floor with gaps of 6px */
+  outer:for(const nl of (NEED===9?[9]:NEED===2?[2]:[1,0]))for(let s=1.07;s>=(nl?.39:.55);s-=.05){/* 15 Nov: with notes, down to the type floor with gaps of 6px */
     var base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
       var best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
@@ -230,7 +236,8 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
         if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break}}
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
-  if(FS&&FS.nl)break geo}
+  if(FS&&FS.nl&&(NEED===1||FS.nl>=NEED))break need}
+  }
 
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];

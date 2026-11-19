@@ -30,6 +30,13 @@ const GENRES = rj('data/film-genres.json');
 /* theme names as the app shows them (the T table near the top of app.js) */
 const THEMES = (() => { const m = rd('app.js').match(/const T=(\{[\s\S]*?\}\});/); return m ? JSON.parse(m[1]) : {}; })();
 const COURSE = { s: 'Snacks', m: 'Mains', w: 'Sweets', d: 'Drinks' };
+/* review 31: the page uses the app's own split of a recipe's time (dishTimes in app.js), so pickling, chilling and resting count as
+   waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
+const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const line = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', i)); };
+  const a = src.indexOf('function dishTimes('), b = src.indexOf('\n/*', a);
+  const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const isWaitStep='), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
+const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 48 * 60) { const h = Math.round(m / 30) / 2; return (h % 1 ? h.toFixed(1) : h) + ' hours'; } const d = Math.round(m / 1440); return d + (d === 1 ? ' day' : ' days'); };
+
 const COURSE_CAT = { s: 'Appetizer', m: 'Main course', w: 'Dessert', d: 'Drink' };
 const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
@@ -132,7 +139,8 @@ function filmPage(x) {
   const taken = new Map(), used = new Set();
   for (const y of x.dishes) { const b0 = dishId(y); let k = b0, n = 2; while (used.has(k)) k = b0 + '-' + n++; used.add(k); taken.set(y, k); }
   const did = y => taken.get(y);
-  const title = `${shown} (${f.year}) movie night dinner menu | Reel Dinner`;
+  /* review 31: Google cuts titles past about 60 characters, so the brand drops first, then "dinner" */
+  const title = [`${shown} (${f.year}) movie night dinner menu | Reel Dinner`, `${shown} (${f.year}) movie night dinner menu`, `${shown} (${f.year}) movie night menu`, `${shown} movie night menu`, `${shown} (${f.year}) menu`].find(t => t.length <= 60) || `${shown} (${f.year}) menu`;
   const listed = names.length > 3 ? names.slice(0, 3).join(', ') + ' and more' : names.join(', ').replace(/, ([^,]*)$/, ' and $1');
   /* review 30: the description always ends on a whole sentence, never cut mid-word. Longest version that fits in 155 */
   const two = names.length > 2 ? names.slice(0, 2).join(' and ') + ' and more' : listed;
@@ -151,8 +159,8 @@ function filmPage(x) {
   const courses = [...'smwd'].map(c => {
     const ds = x.dishes.filter(y => y.course === c); if (!ds.length) return '';
     return `<h2>${COURSE[c]}</h2>\n` + ds.map(y => {
-      const t = (y.prep_min || 0) + (y.cook_min || 0);
-      const meta = [t ? `Prep ${y.prep_min || 0} min, cook ${y.cook_min || 0} min` : '', y.make_ahead ? 'Make ahead: ' + esc(y.make_ahead) : ''].filter(Boolean).join(' · ');
+      const T = (y.prep_min || y.cook_min) ? dishTimes(y, 1) : null;
+      const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(y.make_ahead) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(st.text)}</li>`).join('') || (y.how ? `<li>${esc(y.how)}</li>` : '');
       return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}</h3>
@@ -188,8 +196,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
     image: img ? [img] : undefined, author: { '@type': 'Organization', name: 'Reel Dinner', url: SITE + '/' },
     recipeCategory: COURSE_CAT[y.course] || 'Main course', recipeYield: '4 servings',
     keywords: clean(`${shown}, movie night, ${f.year}, film menu`),
-    prepTime: y.prep_min != null ? iso(y.prep_min) : undefined, cookTime: y.cook_min != null ? iso(y.cook_min) : undefined,
-    totalTime: y.prep_min != null ? iso((y.prep_min || 0) + (y.cook_min || 0)) : undefined,
+    ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null)),
     suitableForDiet: y.veg ? 'https://schema.org/VegetarianDiet' : undefined,
     recipeIngredient: (y.ingredients || []).map(ing),
     recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(st.text) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(y.how) }] : undefined)

@@ -1300,7 +1300,7 @@ function planOne(item){let [head,...rest]=String(item).split(",");const par=head
 const PL_IRREG={chillies:"chilli",chilies:"chili",leaves:"leaf",loaves:"loaf",halves:"half",knives:"knife",shelves:"shelf",calves:"calf",cookies:"cookie",brownies:"brownie",smoothies:"smoothie",pies:"pie",lollies:"lolly",zombies:"zombie",veggies:"veggie",birdies:"birdie",hoodies:"hoodie",ties:"tie",oreos:"oreo",goodies:"goodie",sweeties:"sweetie",movies:"movie",cheeses:"cheese",pieces:"piece",slices:"slice",sauces:"sauce",juices:"juice",spices:"spice",prices:"price",dices:"dice",courses:"course",houses:"house",purees:"puree",purées:"purée"};
 const planSing=w=>{const lo=String(w).toLowerCase();if(PL_IRREG[lo]){const v=PL_IRREG[lo];return /^[A-Z]/.test(w)?v[0].toUpperCase()+v.slice(1):v}
   return /ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w};
-const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^((cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra|full cream|whole|unsalted|salted|free-range|large|medium|ripe)\s+)+/,"").replace(/\s+(slices|sliced|pieces)$/,"").split(" ").map(planSing).join(" ");
+const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^((cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra|full cream|whole|unsalted|salted|free-range|large|medium|ripe|thin|thinly|thin-sliced|sliced|shaved|thick-cut|thickly)\s+)+/,"").replace(/\s+(slices|sliced|pieces)$/,"").split(" ").map(planSing).join(" ");
 function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planDishes(f),base=ds.filter(d=>!d.extra);
   /* the card's extra dishes list shop lines like "100g butter" with no tested scaling: the amount is split out so anything a measured recipe
      already buys merges into that one line; the rest gets its own group so the main list stays exact */
@@ -1640,7 +1640,11 @@ function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")
   const e=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"),rx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
   const head=String(n.text).trim().slice(0,18),alt=[head,e(head),e(head).replace(/&quot;/g,'"'),head.replace(/'/g,"&#39;")].filter((v,i,A)=>A.indexOf(v)===i).map(rx).join("|");
   h=h.replace(new RegExp(`(["\u201c]|&quot;|&ldquo;|&#8220;)((?:${alt})[^<]*?)(["\u201d]|&quot;|&rdquo;|&#8221;)(?=\\s*(<|$))`,"g"),"$2");
-  return h.replace(/>(\s*)Overheard at the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)}
+  /* review 31 (item 15): a note in the character's voice reads as a note left for you, never as their signed words: "From the host",
+     "A word from ...", "Heard at the counter" and "Overheard on the ward" over it become "A note from ..." */
+  return h.replace(/>(\s*)(?:Overheard|Heard) (?:at|on|in) the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)
+    .replace(/>(\s*)(?:A word|Word) from ([^<]{1,40}?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from ${w}${b}<`)
+    .replace(/>(\s*)From the (host|director's desk)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)}
 function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
   card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.trim==="1"&&i.dataset.aim)return;
     const m=(i.getAttribute("src")||"").match(/\/t\/p\/[^/]+(\/[^?#]+)/),f=m&&foc[m[1]];if(!f)return;
@@ -1839,7 +1843,7 @@ window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?"
     if(w==="and"){const seg=c.split(",").pop().trim().split(/\s+/);
       /* the words after "and" up to a verb, a comma or a joining word: two or more ending on a dish word means the pair names a thing ("onion and bacon dressing", "beef and pork dumplings"), not "espresso and ice cream" */
       const after=[];for(const x of body.slice(e).split(/\s+/)){const y=x.toLowerCase().replace(/[,.;]$/,"");if(/(ed|ing|en)$/.test(y)||/^(with|and|over|in|on|under|served|until|for|from|plus|then|or)$/.test(y))break;after.push(y);if(/,$/.test(x))break}
-      if((after.length>=2&&!/^(the|a|an|his|her|their|its|my|your)$/.test(after[0])&&/^(dressing|dumplings?|stuffing|sauce|gravy|pies?|rolls?|buns?|cakes?|tarts?|soup|salad|mayo|glaze|crust|filling|batter|crumb|dip|relish|salsa|slaw|skewers?|patties|fritters?|parcels?|bites|balls?)$/.test(after[after.length-1])))continue}
+      if((after.length>=2&&!/^(the|a|an|his|her|their|its|my|your)$/.test(after[0])&&/^(dressing|dumplings?|stuffing|sauce|gravy|pies?|rolls?|buns?|cakes?|tarts?|soup|salad|mayo|glaze|crust|filling|batter|crumb|dip|relish|salsa|slaw|skewers?|patties|fritters?|parcels?|bites|balls?|sandwich(es)?|toasties?|wraps?|tacos?|burgers?|cones?|biscuits?|scones?|sliders?|subs?|rolls?|skewers?)$/.test(after[after.length-1])))continue}
     if(c.split(/\s+/).length>=3&&!/(ed|ing)$/.test(lw)&&!/^(shaken|beaten|frozen|stolen|taken|given|broken|chosen|hidden|drawn|sewn|blown|grown|thrown|torn|worn|spun|stirred|split|poured|kept|left|built|dipped)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
   /* 11 Nov: never cut inside a quote (The Goonies printed: Sloth: "Ruth, Ruth) */
   const open=c=>(c.match(/"/g)||[]).length%2===1||(c.match(/\u201c/g)||[]).length!==(c.match(/\u201d/g)||[]).length;
@@ -1985,7 +1989,9 @@ function priceFix(root,menu,f,fl,era,fmt){
   if(!dish.length)return 0;
   const PR=/^(\s*)(\$|£)?(\d{1,3})(?:\.(\d\d))?(\s*)$|^(\s*)(\d{1,2})(¢|c)(\s*)$|^(\s*)\.(\d\d)(\s*)$/;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),P=[],seen=new Set(),cand=[];let t;
-  while((t=tw.nextNode())){const m=t.nodeValue.match(PR);if(m)cand.push([t,m])}
+  while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;const m=t.nodeValue.match(PR);if(m)cand.push([t,m])}
+  /* review 31: a run of bare 1, 2, 3 ... is a numbered list (Mr Ping's boards), never prices */
+  {const w=cand.filter(([,m])=>m[3]!=null&&m[4]==null&&!m[2]);if(w.length>=3&&w.every(([,m],i)=>+m[3]===i+1))for(const c of w)cand.splice(cand.indexOf(c),1)}
   /* a bare whole number on a card that prints cents is a quantity, table or bill number (Ghostbusters' QTY 4), not a price */
   const hasDec=cand.some(([,m])=>m[4]!=null||m[7]!=null||m[11]!=null),hits=[];
   for(const [t,m] of cand){if(hasDec&&m[3]!=null&&m[4]==null&&!m[2])continue;
@@ -2010,6 +2016,8 @@ function priceFix(root,menu,f,fl,era,fmt){
     for(const x of mn())if(pfCheap(x.n)&&!PF_PREM.test(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
   /* 4. a seafood or steak starter never well under a plain one */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(PF_PREM.test(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
+  /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
+  {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<hi)x.v=hi+step(hi)}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */
   {let m0=minM();if(m0!=null){const sw=[...by("s"),...by("w")],hi=maxOf(sw);
     if(hi!=null&&hi>=m0){const med=sw.map(x=>x.v).sort((a,b)=>a-b)[Math.floor(sw.length/2)];
@@ -2031,6 +2039,13 @@ function priceFix(root,menu,f,fl,era,fmt){
     else if(m[4]==null&&v>=1){s=m[1]+(m[2]||"")+(Math.abs(v-Math.round(v))<.001?Math.round(v):v.toFixed(2))+m[5]}
     else s=m[1]+(m[2]||"")+(v<1&&!m[2]?"."+String(Math.round(v*100)).padStart(2,"0"):v.toFixed(2))+m[5];
     if(s!==x.t.nodeValue){x.t.nodeValue=s;n++}}
+  return n}
+/* review 31 (item 6): a "Cold Drinks" heading over a warm punch, or "Hot Drinks" over an iced one, reads plain "Drinks" */
+const HF_WARM=/\b(warm|hot|mulled|toddy|tea|coffee|cocoa|hot chocolate|cider|grog|wassail|posset|espresso|latte|cappuccino|chai)\b/i,HF_COLD=/\b(iced|cold|frozen|slush\w*|float|shake|soda|lemonade|cooler|spritz|fizz|frapp\w*|smoothie|sundae)\b/i;
+function headFix(root,menu){if(!root||!menu)return 0;const D=(menu.d||[]).map(x=>String((x&&(x.label||x.n))||"")+" "+String((x&&x.note)||""));if(!D.length)return 0;
+  const warm=D.some(t=>HF_WARM.test(t)&&!/\biced\b/i.test(t)),cold=D.some(t=>HF_COLD.test(t)&&!/\b(warm|hot|mulled)\b/i.test(t));let n=0;
+  const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){const v=t.nodeValue,m=v.match(/^(\s*)(cold|hot)(\s+)(drinks?)(\s*)$/i);if(!m)continue;
+    if((/cold/i.test(m[2])&&warm)||(/hot/i.test(m[2])&&cold)){const w=m[4];t.nodeValue=m[1]+(/^[A-Z]+$/.test(m[2])?w.toUpperCase():w.charAt(0).toUpperCase()+w.slice(1))+m[5];n++}}
   return n}
 const FULL_CAP={galley:1,tearoom:1,candybar:2,canteen:1,club:1,diningcar:1,saloon:1,banquet:2,placemat:2,motel:3};
 function fullMenu(f,menu,fmt){
@@ -2124,7 +2139,7 @@ async function show(f,preferSig){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}dietStamp();
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{headFix(card,LM)}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;

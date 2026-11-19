@@ -135,12 +135,12 @@ window.MENU_FORMATS.home=function(ctx){
      <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:${E.pr.ir};background:#222">
       ${src&&isP?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(16px) brightness(.55)"><img src="${src}" crossorigin="anonymous" alt="" style="position:relative;display:block;width:100%;height:100%;object-fit:contain">`:src?`<img src="${src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
       <div style="position:absolute;inset:0;background:${isP?`linear-gradient(160deg,rgba(255,255,255,.1),transparent 30%)`:`radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%),linear-gradient(160deg,rgba(255,255,255,${E.stamp?.16:.05}),transparent 40%)`}"></div>
-      ${E.stamp&&!isP?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">${fl.stamp?x(fl.stamp):`'${x(yy)} 10 26`}</div>`:""}
+      ${E.stamp&&!isP?`<div aria-hidden="true" data-np style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">${fl.stamp?x(fl.stamp):`'${x(yy)} 10 26`}</div>`:""}
      </div>
      ${cap&&E.cap?`<div style="position:absolute;left:0;right:0;bottom:2px;text-align:right;padding-right:26px;font:30px/1.1 ${SIG};color:#3a3326">${x(cap)}</div>`:""}
    </div>`;
   /* plastic letter magnets, type only */
-  const mags=(word,l,t,size)=>`<div style="position:absolute;left:${l}px;top:${t}px;display:flex;gap:2px;transform:rotate(${-T.rot*1.4}deg)">${[...word].map((ch,i)=>ch===" "?`<span style="width:${size*.35}px"></span>`:`<span style="font:900 ${size}px/1 'Baloo 2',${dd};color:${E.mag[i%E.mag.length]};transform:rotate(${((i*37)%9-4)*T.rot*.9}deg);display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 8px rgba(0,0,0,.3)">${x(ch)}</span>`).join("")}</div>`;
+  const mags=(word,l,t,size)=>`<div aria-hidden="true" data-np style="position:absolute;left:${l}px;top:${t}px;display:flex;gap:2px;transform:rotate(${-T.rot*1.4}deg)">${[...word].map((ch,i)=>ch===" "?`<span style="width:${size*.35}px"></span>`:`<span style="font:900 ${size}px/1 'Baloo 2',${dd};color:${E.mag[i%E.mag.length]};transform:rotate(${((i*37)%9-4)*T.rot*.9}deg);display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 8px rgba(0,0,0,.3)">${x(ch)}</span>`).join("")}</div>`;
   M.font("Baloo+2:wght@800");
 
   /* front geometry: the poster is the hero, shown whole at 2:3 in a hugging frame */

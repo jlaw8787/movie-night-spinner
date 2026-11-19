@@ -700,7 +700,7 @@ const FMT_FILMS={
         {k:"Oogway's peaches",zh:"仙桃",coinZh:"二文",p:"2 coins",note:"From the tree where Oogway sits"},
         {k:"Mr Ping's red bean steamed buns",zh:"豆沙包",coinZh:"四文",p:"4 coins",note:"Stacked high, worth the climb"}]},
       {h:"Noodles & wok",items:[
-        {k:"Secret ingredient soup",zh:"秘方湯麵",coinZh:"五文",p:"5 coins",note:"noodle soup, no secret ingredient"},
+        {k:"Secret ingredient soup",zh:"秘方湯麵",coinZh:"五文",p:"5 coins",note:"Noodle soup, no secret ingredient"},
         {k:"Valley of Peace kung pao chicken",zh:"和平谷小炒",coinZh:"六文",p:"6 coins",note:"The busy village below the Jade Palace"}]}],
     colB:[{h:"Sweet & tea",items:[
         {k:"Almond cookies",zh:"杏仁餅",coinZh:"二文",p:"2 coins",note:"The Furious Five's training snack"},
@@ -1080,7 +1080,7 @@ function fmtNoodle(f,spec,menu,poster){
       <div lang="zh-Hant" style="${ZH};font-weight:700;background:${RED};color:#fbe9d0;font-size:15px;line-height:1;padding:5px 4px;writing-mode:vertical-rl;border-radius:2px">${x.coinZh}</div>
     </div>
     <span style="${SC};font-size:13px;color:${GOLD};margin-top:5px">${i+1}</span></div>`;
-  const line=(x,i)=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${SC};font-size:14px;color:${RED};width:18px;flex:none">${i+1}</span><span style="${BODY};font-weight:700;font-size:17.5px;line-height:1.15;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(42,26,16,.4);transform:translateY(-4px);min-width:8px"></span><span style="${SC};font-size:15px;color:${RED};white-space:nowrap">${ESC(x.p)}</span></div><div style="${BODY};font-style:italic;font-size:14.5px;line-height:1.3;color:${NOTE};padding-left:26px;margin-top:1px">${ESC(x.note)}</div></div>`};
+  const line=(x,i)=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span data-np style="${SC};font-size:14px;color:${RED};width:18px;flex:none">${i+1}</span><span style="${BODY};font-weight:700;font-size:17.5px;line-height:1.15;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(42,26,16,.4);transform:translateY(-4px);min-width:8px"></span><span style="${SC};font-size:15px;color:${RED};white-space:nowrap">${ESC(x.p)}</span></div><div style="${BODY};font-style:italic;font-size:14.5px;line-height:1.3;color:${NOTE};padding-left:26px;margin-top:1px">${ESC(x.note)}</div></div>`};
   const half=Math.ceil(items.length/2);
   const scroll=`<div style="position:relative;flex:none;width:286px;display:flex;flex-direction:column;align-items:center">
     <div aria-hidden="true" style="width:120px;height:26px;border-left:2px solid #2b1a10;border-right:2px solid #2b1a10;transform:perspective(60px) rotateX(40deg);transform-origin:bottom;border-top:2px solid #2b1a10;border-radius:4px 4px 0 0"></div>

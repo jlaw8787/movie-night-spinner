@@ -32,7 +32,8 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    await new Promise(r=>setTimeout(r,30));
    const m=current.printMenu&&current.printMenu.s!==undefined&&f._lib?current.printMenu:current.menu||{},dish=[];for(const k of ['s','m','w','d'])for(const it of (m[k]||[]))if(it){const nm=norm(it.label||it.n);if(nm)dish.push({k,n:it.label||it.n,nm,house:!!it.house,extra:!!it.extra})}
    const walker=document.createTreeWalker(card,NodeFilter.SHOW_TEXT);const prices=[],cand=[],sets=[];let tn0;
-   while((tn0=walker.nextNode())){const q=tn0.textContent.match(PR);if(q)cand.push([tn0,q])}
+   while((tn0=walker.nextNode())){if(tn0.parentElement&&tn0.parentElement.closest('[data-np]'))continue;const q=tn0.textContent.match(PR);if(q)cand.push([tn0,q])}
+   {const w=cand.filter(([tn,q])=>q[1]!=null&&q[2]==null&&!/[$£]/.test(tn.textContent));if(w.length>=3&&w.every(([,q],i)=>+q[1]===i+1))for(const c of w)cand.splice(cand.indexOf(c),1)}
    /* a bare whole number on a card that prints cents is a quantity or table number, not a price */
    const hasDec=cand.some(([,q])=>q[2]!=null||q[3]!=null||q[5]!=null);
    for(const [tn,q] of cand){const t=tn.textContent;if(hasDec&&q[1]!=null&&q[2]==null&&!/[$£]/.test(t))continue;
@@ -54,6 +55,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    if(minM!=null){for(const x of [...by('s'),...by('w')])if(x.v>=minM)bad.push(`${x.k==='s'?'starter':'sweet'} ${x.n} ${x.raw} not under the cheapest main ${minM}`);
      for(const x of by('d'))if(!SP.test(x.n)&&x.v>=minM)bad.push(`plain drink ${x.n} ${x.raw} not under the cheapest main ${minM}`)}
    const prem=P.filter(x=>x.k==='m'&&PREM.test(x.n)&&!isCheap(x.n));
+   {const pl=mn.filter(x=>!PREM.test(x.n)||isCheap(x.n));if(pl.length){const hi=Math.max(...pl.map(x=>x.v));for(const x of prem)if(!x.house&&x.v<hi)bad.push(`premium main ${x.n} ${x.raw} under the plain main at ${hi}`)}}
    for(const x of P)if(isCheap(x.n)&&!PREM.test(x.n)){
      if(prem.length&&x.v>Math.min(...prem.map(y=>y.v)))bad.push(`cheap bite ${x.n} ${x.raw} above the ${prem[0].n}`);
      if(x.k==='m'&&mn.length>1&&x.v>=Math.max(...mn.filter(y=>!isCheap(y.n)).map(y=>y.v).concat([0]))&&mn.some(y=>!isCheap(y.n)))bad.push(`cheap main ${x.n} ${x.raw} dearest of the mains`)}

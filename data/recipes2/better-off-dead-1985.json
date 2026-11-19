@@ -1,644 +1,644 @@
 {
- "serves": 4,
- "dishes": [
-  {
-   "n": "Mom's French dinner fries",
-   "course": "s",
-   "prep_min": 20,
-   "cook_min": 68,
-   "make_ahead": "Cut and soak the potatoes in cold water up to 1 day ahead in the fridge; drain, dry well and fry on the night",
-   "ingredients": [
+  "serves": 4,
+  "dishes": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "potatoes",
-     "aisle": "Produce"
+      "n": "Mom's French dinner fries",
+      "course": "s",
+      "prep_min": 20,
+      "cook_min": 68,
+      "make_ahead": "Cut and soak the potatoes in cold water up to 1 day ahead in the fridge; drain, dry well and fry on the night",
+      "ingredients": [
+        {
+          "q": 1,
+          "u": "kg",
+          "item": "potatoes",
+          "aisle": "Produce"
+        },
+        {
+          "q": 1,
+          "u": "l",
+          "item": "vegetable oil, for frying",
+          "aisle": "Pantry"
+        },
+        {
+          "q": null,
+          "u": "",
+          "item": "fine salt, to taste",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 100,
+          "u": "ml",
+          "item": "tomato sauce",
+          "aisle": "Pantry"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Cut the potatoes into thin fries.",
+          "min": 10
+        },
+        {
+          "text": "Soak in cold water for an hour, then dry well.",
+          "min": 60
+        },
+        {
+          "text": "Fry in the vegetable oil at 140C until soft.",
+          "min": 10
+        },
+        {
+          "text": "Fry again at 190C until golden and crisp.",
+          "min": 6
+        },
+        {
+          "text": "Toss with fine salt and pile into paper cones with tomato sauce.",
+          "min": 2
+        }
+      ],
+      "veg": true,
+      "af": true
     },
     {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "fine salt, to taste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "tomato sauce",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Cut the potatoes into thin fries.",
-     "min": 10
-    },
-    {
-     "text": "Soak in cold water for an hour, then dry well.",
-     "min": 60
-    },
-    {
-     "text": "Fry in the vegetable oil at 140C until soft.",
-     "min": 10
-    },
-    {
-     "text": "Fry again at 190C until golden and crisp.",
-     "min": 6
-    },
-    {
-     "text": "Toss with fine salt and pile into paper cones with tomato sauce.",
-     "min": 2
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Ski lodge cheese fondue",
-   "course": "s",
-   "prep_min": 15,
-   "cook_min": 12,
-   "make_ahead": "Grate the cheeses and toss with the cornflour up to 1 day ahead, covered in the fridge; cube the bread and apple and melt the fondue on the night",
-   "ingredients": [
-    {
-     "q": 1,
-     "u": "",
-     "item": "clove garlic",
-     "aisle": "Produce"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "white wine",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "gruyere, grated",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "Swiss cheese, grated",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "cornflour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "baguette, cubed",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "apples, cubed",
-     "aisle": "Produce"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Cube the baguette and apple and toss the gruyere and Swiss cheese with cornflour.",
-     "min": 6
-    },
-    {
-     "text": "Rub a pot with the cut garlic clove.",
-     "min": 2
-    },
-    {
-     "text": "Warm the wine, then stir in the cheese gradually until smooth.",
-     "min": 4
-    },
-    {
-     "text": "Keep warm over low heat and dip in the baguette and apple.",
-     "min": 15
-    }
-   ],
-   "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Ski lodge cheese fondue",
-     "prep_min": 15,
-     "cook_min": 12,
-     "make_ahead": "Grate the cheeses and toss with the cornflour up to 1 day ahead, covered in the fridge; cube the bread and apple and melt the fondue on the night",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "",
-       "item": "clove garlic",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "cloudy apple juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "lemon juice",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "gruyere, grated",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "Swiss cheese, grated",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "cornflour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "baguette, cubed",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "apples, cubed",
-       "aisle": "Produce"
+      "n": "Ski lodge cheese fondue",
+      "course": "s",
+      "prep_min": 15,
+      "cook_min": 12,
+      "make_ahead": "Grate the cheeses and toss with the cornflour up to 1 day ahead, covered in the fridge; cube the bread and apple and melt the fondue on the night",
+      "ingredients": [
+        {
+          "q": 1,
+          "u": "",
+          "item": "clove garlic",
+          "aisle": "Produce"
+        },
+        {
+          "q": 250,
+          "u": "ml",
+          "item": "white wine",
+          "aisle": "Bottle shop"
+        },
+        {
+          "q": 200,
+          "u": "g",
+          "item": "gruyere, grated",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 200,
+          "u": "g",
+          "item": "Swiss cheese, grated",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 1,
+          "u": "tbsp",
+          "item": "cornflour",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 1,
+          "u": "",
+          "item": "baguette, cubed",
+          "aisle": "Bakery"
+        },
+        {
+          "q": 2,
+          "u": "",
+          "item": "apples, cubed",
+          "aisle": "Produce"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Cube the baguette and apple and toss the gruyere and Swiss cheese with cornflour.",
+          "min": 6
+        },
+        {
+          "text": "Rub a pot with the cut garlic clove.",
+          "min": 2
+        },
+        {
+          "text": "Warm the wine, then stir in the cheese gradually until smooth.",
+          "min": 4
+        },
+        {
+          "text": "Keep warm over low heat and dip in the baguette and apple.",
+          "min": 15
+        }
+      ],
+      "veg": true,
+      "af": false,
+      "alt": {
+        "af": {
+          "n": "Ski lodge cheese fondue",
+          "prep_min": 15,
+          "cook_min": 12,
+          "make_ahead": "Grate the cheeses and toss with the cornflour up to 1 day ahead, covered in the fridge; cube the bread and apple and melt the fondue on the night",
+          "ingredients": [
+            {
+              "q": 1,
+              "u": "",
+              "item": "clove garlic",
+              "aisle": "Produce"
+            },
+            {
+              "q": 200,
+              "u": "ml",
+              "item": "cloudy apple juice",
+              "aisle": "Drinks"
+            },
+            {
+              "q": 1,
+              "u": "tbsp",
+              "item": "lemon juice",
+              "aisle": "Produce"
+            },
+            {
+              "q": 200,
+              "u": "g",
+              "item": "gruyere, grated",
+              "aisle": "Dairy"
+            },
+            {
+              "q": 200,
+              "u": "g",
+              "item": "Swiss cheese, grated",
+              "aisle": "Dairy"
+            },
+            {
+              "q": 1,
+              "u": "tbsp",
+              "item": "cornflour",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 1,
+              "u": "",
+              "item": "baguette, cubed",
+              "aisle": "Bakery"
+            },
+            {
+              "q": 2,
+              "u": "",
+              "item": "apples, cubed",
+              "aisle": "Produce"
+            }
+          ],
+          "steps": [
+            {
+              "text": "Cube the baguette and apple and toss the gruyere and Swiss cheese with cornflour.",
+              "min": 6
+            },
+            {
+              "text": "Rub a pot with the cut garlic clove.",
+              "min": 2
+            },
+            {
+              "text": "Warm the apple juice and lemon juice, then stir in the cheese gradually until smooth.",
+              "min": 4
+            },
+            {
+              "text": "Keep warm over low heat and dip in the baguette and apple.",
+              "min": 15
+            }
+          ]
+        }
       }
-     ],
-     "steps": [
-      {
-       "text": "Cube the baguette and apple and toss the gruyere and Swiss cheese with cornflour.",
-       "min": 6
-      },
-      {
-       "text": "Rub a pot with the cut garlic clove.",
-       "min": 2
-      },
-      {
-       "text": "Warm the apple juice and lemon juice, then stir in the cheese gradually until smooth.",
-       "min": 4
-      },
-      {
-       "text": "Keep warm over low heat and dip in the baguette and apple.",
-       "min": 15
+    },
+    {
+      "n": "Pig Burgers double cheeseburger",
+      "course": "m",
+      "prep_min": 15,
+      "cook_min": 15,
+      "make_ahead": "Roll the mince into balls and mix the burger sauce up to 1 day ahead, covered in the fridge; smash and cook on the night",
+      "ingredients": [
+        {
+          "q": 800,
+          "u": "g",
+          "item": "chuck mince",
+          "aisle": "Meat"
+        },
+        {
+          "q": 8,
+          "u": "",
+          "item": "slices American cheese",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 4,
+          "u": "",
+          "item": "burger buns",
+          "aisle": "Bakery"
+        },
+        {
+          "q": 4,
+          "u": "tbsp",
+          "item": "mayonnaise",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 1,
+          "u": "tbsp",
+          "item": "tomato sauce",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 1,
+          "u": "tbsp",
+          "item": "yellow mustard",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 5,
+          "u": "",
+          "item": "dill pickles",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 1,
+          "u": "",
+          "item": "white onion, finely diced",
+          "aisle": "Produce"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Roll the mince into 8 balls of 100g.",
+          "min": 5
+        },
+        {
+          "text": "Chop one pickle and mix it with the mayonnaise, tomato sauce and mustard into a burger sauce.",
+          "min": 3
+        },
+        {
+          "text": "Heat a heavy pan until smoking, add the balls, smash flat, season and cook 2 minutes.",
+          "min": 4
+        },
+        {
+          "text": "Flip, top each patty with cheese and cook 1 minute more.",
+          "min": 2
+        },
+        {
+          "text": "Toast the buns.",
+          "min": 2
+        },
+        {
+          "text": "Stack two patties per bun with sauce, sliced pickles and onion, and wrap in baking paper.",
+          "min": 3
+        }
+      ],
+      "veg": false,
+      "af": true,
+      "alt": {
+        "veg": {
+          "n": "Pig Burgers double veggie cheeseburger",
+          "prep_min": 15,
+          "cook_min": 15,
+          "make_ahead": "Mix the burger sauce up to 1 day ahead, covered in the fridge; cook the patties on the night",
+          "ingredients": [
+            {
+              "q": 8,
+              "u": "",
+              "item": "small plant-based burger patties",
+              "aisle": "Frozen"
+            },
+            {
+              "q": 8,
+              "u": "",
+              "item": "slices American cheese",
+              "aisle": "Dairy"
+            },
+            {
+              "q": 4,
+              "u": "",
+              "item": "burger buns",
+              "aisle": "Bakery"
+            },
+            {
+              "q": 4,
+              "u": "tbsp",
+              "item": "mayonnaise",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 1,
+              "u": "tbsp",
+              "item": "tomato sauce",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 1,
+              "u": "tbsp",
+              "item": "yellow mustard",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 5,
+              "u": "",
+              "item": "dill pickles",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 1,
+              "u": "",
+              "item": "white onion, finely diced",
+              "aisle": "Produce"
+            }
+          ],
+          "steps": [
+            {
+              "text": "Chop one pickle and mix it with the mayonnaise, tomato sauce and mustard into a burger sauce.",
+              "min": 3
+            },
+            {
+              "text": "Heat a heavy pan, press the patties flat, season and cook 2 to 3 minutes a side.",
+              "min": 6
+            },
+            {
+              "text": "Top each patty with cheese for the last minute.",
+              "min": 1
+            },
+            {
+              "text": "Toast the buns.",
+              "min": 2
+            },
+            {
+              "text": "Stack two patties per bun with sauce, sliced pickles and onion, and wrap in baking paper.",
+              "min": 3
+            }
+          ],
+          "veg": true,
+          "af": true
+        }
       }
-     ]
-    }
-   }
-  },
-  {
-   "n": "Pig Burgers double cheeseburger",
-   "course": "m",
-   "prep_min": 15,
-   "cook_min": 15,
-   "make_ahead": "Roll the mince into balls and mix the burger sauce up to 1 day ahead, covered in the fridge; smash and cook on the night",
-   "ingredients": [
-    {
-     "q": 800,
-     "u": "g",
-     "item": "chuck mince",
-     "aisle": "Meat"
     },
     {
-     "q": 8,
-     "u": "",
-     "item": "slices American cheese",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "burger buns",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "mayonnaise",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "tomato sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "yellow mustard",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 5,
-     "u": "",
-     "item": "dill pickles",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "white onion, finely diced",
-     "aisle": "Produce"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Roll the mince into 8 balls of 100g.",
-     "min": 5
-    },
-    {
-     "text": "Chop one pickle and mix it with the mayonnaise, tomato sauce and mustard into a burger sauce.",
-     "min": 3
-    },
-    {
-     "text": "Heat a heavy pan until smoking, add the balls, smash flat, season and cook 2 minutes.",
-     "min": 4
-    },
-    {
-     "text": "Flip, top each patty with cheese and cook 1 minute more.",
-     "min": 2
-    },
-    {
-     "text": "Toast the buns.",
-     "min": 2
-    },
-    {
-     "text": "Stack two patties per bun with sauce, sliced pickles and onion, and wrap in baking paper.",
-     "min": 3
-    }
-   ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Pig Burgers double veggie cheeseburger",
-     "prep_min": 15,
-     "cook_min": 15,
-     "make_ahead": "Mix the burger sauce up to 1 day ahead, covered in the fridge; cook the patties on the night",
-     "ingredients": [
-      {
-       "q": 8,
-       "u": "",
-       "item": "small plant-based burger patties",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 8,
-       "u": "",
-       "item": "slices American cheese",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "burger buns",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "mayonnaise",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "tomato sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "yellow mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 5,
-       "u": "",
-       "item": "dill pickles",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "white onion, finely diced",
-       "aisle": "Produce"
+      "n": "Mom's chicken and mushroom rice bake",
+      "course": "m",
+      "prep_min": 20,
+      "cook_min": 45,
+      "make_ahead": "Brown the chicken and mushrooms up to 1 day ahead and keep chilled; assemble with the rice, stock and cream and bake on the night",
+      "ingredients": [
+        {
+          "q": 800,
+          "u": "g",
+          "item": "chicken thighs",
+          "aisle": "Meat"
+        },
+        {
+          "q": 250,
+          "u": "g",
+          "item": "mushrooms, sliced",
+          "aisle": "Produce"
+        },
+        {
+          "q": 300,
+          "u": "g",
+          "item": "long grain rice",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 750,
+          "u": "ml",
+          "item": "hot chicken stock",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 200,
+          "u": "ml",
+          "item": "thickened cream",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 3,
+          "u": "",
+          "item": "sprigs thyme",
+          "aisle": "Produce"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Brown the chicken and mushrooms.",
+          "min": 10
+        },
+        {
+          "text": "Spread the rice in a baking dish and add the chicken and mushrooms.",
+          "min": 3
+        },
+        {
+          "text": "Pour over the hot stock and cream with thyme.",
+          "min": 2
+        },
+        {
+          "text": "Bake covered at 180C for 40 minutes, then uncovered for 10 until golden on top.",
+          "min": 50
+        }
+      ],
+      "veg": false,
+      "af": true,
+      "alt": {
+        "veg": {
+          "n": "Mom's mushroom and white bean rice bake",
+          "prep_min": 15,
+          "cook_min": 52,
+          "make_ahead": "Brown the mushrooms up to 1 day ahead and keep chilled; assemble with the rice, beans, stock and cream and bake on the night",
+          "ingredients": [
+            {
+              "q": 500,
+              "u": "g",
+              "item": "mixed mushrooms, thickly sliced",
+              "aisle": "Produce"
+            },
+            {
+              "q": 400,
+              "u": "g",
+              "item": "tin cannellini beans, drained",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 1,
+              "u": "tbsp",
+              "item": "olive oil",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 20,
+              "u": "g",
+              "item": "butter",
+              "aisle": "Dairy"
+            },
+            {
+              "q": 300,
+              "u": "g",
+              "item": "long grain rice",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 750,
+              "u": "ml",
+              "item": "hot vegetable stock",
+              "aisle": "Pantry"
+            },
+            {
+              "q": 200,
+              "u": "ml",
+              "item": "thickened cream",
+              "aisle": "Dairy"
+            },
+            {
+              "q": 3,
+              "u": "",
+              "item": "sprigs thyme",
+              "aisle": "Produce"
+            }
+          ],
+          "steps": [
+            {
+              "text": "Brown the mushrooms in batches in the olive oil and butter.",
+              "min": 12
+            },
+            {
+              "text": "Spread the rice in a baking dish and add the mushrooms and cannellini beans.",
+              "min": 3
+            },
+            {
+              "text": "Pour over the hot vegetable stock and cream with the thyme.",
+              "min": 2
+            },
+            {
+              "text": "Cover and bake at 180C for 40 minutes, then uncover for 10 minutes until golden on top.",
+              "min": 50
+            }
+          ],
+          "af": true
+        }
       }
-     ],
-     "steps": [
-      {
-       "text": "Chop one pickle and mix it with the mayonnaise, tomato sauce and mustard into a burger sauce.",
-       "min": 3
-      },
-      {
-       "text": "Heat a heavy pan, press the patties flat, season and cook 2 to 3 minutes a side.",
-       "min": 6
-      },
-      {
-       "text": "Top each patty with cheese for the last minute.",
-       "min": 1
-      },
-      {
-       "text": "Toast the buns.",
-       "min": 2
-      },
-      {
-       "text": "Stack two patties per bun with sauce, sliced pickles and onion, and wrap in baking paper.",
-       "min": 3
-      }
-     ],
-     "veg": true,
-     "af": true
+    },
+    {
+      "n": "French crêpes",
+      "course": "w",
+      "prep_min": 25,
+      "cook_min": 55,
+      "make_ahead": "Make the batter and rest it overnight in the fridge, up to 1 day ahead; cook the crepes just before serving",
+      "ingredients": [
+        {
+          "q": 150,
+          "u": "g",
+          "item": "plain flour",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 2,
+          "u": "",
+          "item": "eggs",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 375,
+          "u": "ml",
+          "item": "full cream milk",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 50,
+          "u": "g",
+          "item": "butter, for the pan",
+          "aisle": "Dairy"
+        },
+        {
+          "q": 2,
+          "u": "",
+          "item": "lemons",
+          "aisle": "Produce"
+        },
+        {
+          "q": 2,
+          "u": "tbsp",
+          "item": "caster sugar",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 2,
+          "u": "",
+          "item": "bananas",
+          "aisle": "Produce"
+        },
+        {
+          "q": 50,
+          "u": "g",
+          "item": "dark chocolate",
+          "aisle": "Pantry"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Whisk the flour, eggs and milk until smooth.",
+          "min": 4
+        },
+        {
+          "text": "Rest for an hour.",
+          "min": 60
+        },
+        {
+          "text": "Cook thin crêpes in a pan brushed with butter, a minute a side.",
+          "min": 12
+        },
+        {
+          "text": "Fold with a squeeze of lemon and sugar, or with sliced banana and melted chocolate.",
+          "min": 4
+        }
+      ],
+      "veg": true,
+      "af": true
+    },
+    {
+      "n": "Citron pressé, French fresh lemonade",
+      "course": "d",
+      "prep_min": 10,
+      "cook_min": 0,
+      "make_ahead": "Squeeze the lemons and make the syrup up to 1 day ahead and keep chilled; add the iced water at the table",
+      "ingredients": [
+        {
+          "q": 6,
+          "u": "",
+          "item": "lemons",
+          "aisle": "Produce"
+        },
+        {
+          "q": 100,
+          "u": "g",
+          "item": "caster sugar",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 100,
+          "u": "ml",
+          "item": "hot water",
+          "aisle": "Pantry"
+        },
+        {
+          "q": 1,
+          "u": "l",
+          "item": "iced water, to serve",
+          "aisle": "Pantry"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Squeeze the lemons into a jug.",
+          "min": 5
+        },
+        {
+          "text": "Dissolve the sugar in hot water and cool.",
+          "min": 3
+        },
+        {
+          "text": "Put the lemon juice, syrup and a jug of iced water on the table so everyone mixes their own glass.",
+          "min": 2
+        }
+      ],
+      "veg": true,
+      "af": true
     }
-   }
-  },
-  {
-   "n": "Mom's chicken and mushroom rice bake",
-   "course": "m",
-   "prep_min": 20,
-   "cook_min": 45,
-   "make_ahead": "Brown the chicken and mushrooms up to 1 day ahead and keep chilled; assemble with the rice, stock and cream and bake on the night",
-   "ingredients": [
-    {
-     "q": 800,
-     "u": "g",
-     "item": "chicken thighs",
-     "aisle": "Meat"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "mushrooms, sliced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 300,
-     "u": "g",
-     "item": "long grain rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 750,
-     "u": "ml",
-     "item": "hot chicken stock",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "sprigs thyme",
-     "aisle": "Produce"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Brown the chicken and mushrooms.",
-     "min": 10
-    },
-    {
-     "text": "Spread the rice in a baking dish and add the chicken and mushrooms.",
-     "min": 3
-    },
-    {
-     "text": "Pour over the hot stock and cream with thyme.",
-     "min": 2
-    },
-    {
-     "text": "Bake covered at 180C for 40 minutes, then uncovered for 10 until golden on top.",
-     "min": 50
-    }
-   ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Mom's mushroom and white bean rice bake",
-     "prep_min": 15,
-     "cook_min": 52,
-     "make_ahead": "Brown the mushrooms up to 1 day ahead and keep chilled; assemble with the rice, beans, stock and cream and bake on the night",
-     "ingredients": [
-      {
-       "q": 500,
-       "u": "g",
-       "item": "mixed mushrooms, thickly sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "tin cannellini beans, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 20,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "long grain rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 750,
-       "u": "ml",
-       "item": "hot vegetable stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "thickened cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "sprigs thyme",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brown the mushrooms in batches in the olive oil and butter.",
-       "min": 12
-      },
-      {
-       "text": "Spread the rice in a baking dish and add the mushrooms and cannellini beans.",
-       "min": 3
-      },
-      {
-       "text": "Pour over the hot vegetable stock and cream with the thyme.",
-       "min": 2
-      },
-      {
-       "text": "Cover and bake at 180C for 40 minutes, then uncover for 10 minutes until golden on top.",
-       "min": 50
-      }
-     ],
-     "af": true
-    }
-   }
-  },
-  {
-   "n": "French crêpes",
-   "course": "w",
-   "prep_min": 25,
-   "cook_min": 55,
-   "make_ahead": "Make the batter and rest it overnight in the fridge, up to 1 day ahead; cook the crepes just before serving",
-   "ingredients": [
-    {
-     "q": 150,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 375,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "butter, for the pan",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "lemons",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "bananas",
-     "aisle": "Produce"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "dark chocolate",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Whisk the flour, eggs and milk until smooth.",
-     "min": 4
-    },
-    {
-     "text": "Rest for an hour.",
-     "min": 60
-    },
-    {
-     "text": "Cook thin crêpes in a pan brushed with butter, a minute a side.",
-     "min": 12
-    },
-    {
-     "text": "Fold with a squeeze of lemon and sugar, or with sliced banana and melted chocolate.",
-     "min": 4
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Citron pressé, French fresh lemonade",
-   "course": "d",
-   "prep_min": 10,
-   "cook_min": 0,
-   "make_ahead": "Squeeze the lemons and make the syrup up to 1 day ahead and keep chilled; add the iced water at the table",
-   "ingredients": [
-    {
-     "q": 6,
-     "u": "",
-     "item": "lemons",
-     "aisle": "Produce"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "hot water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "iced water, to serve",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Squeeze the lemons into a jug.",
-     "min": 5
-    },
-    {
-     "text": "Dissolve the sugar in hot water and cool.",
-     "min": 3
-    },
-    {
-     "text": "Put the lemon juice, syrup and a jug of iced water on the table so everyone mixes their own glass.",
-     "min": 2
-    }
-   ],
-   "veg": true,
-   "af": true
-  }
- ]
+  ]
 }
