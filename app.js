@@ -919,13 +919,16 @@ function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(f
     if(pick&&pick.m<=w*.72)cuts=pick.c}catch(e){cuts=[]}
   card._pvp[key]=cuts;return cuts}
 /* review 31: a multi-page or panelled card opens on the page with the most dishes on it (Die Hard and Casablanca opened on a cover) */
-function pvFirstDish(fs){let best=0,bestC=0;try{const m=(current&&(current.printMenu||current.menu))||{},names=["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ").trim())).filter(n=>n.length>3);
+function pvFirstDish(fs){let best=0,bestC=0;const C=[];try{const m=(current&&(current.printMenu||current.menu))||{},names=["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ").trim())).filter(n=>n.length>3);
   if(!names.length)return 0;const b=card.getBoundingClientRect();
   for(let i=0;i<fs.length;i++){const f=fs[i];let txt="";
     if(f.panel){const k=b.width/(parseFloat(f.el.style.width)||+card.dataset.w||b.width)||1,eb=f.el.getBoundingClientRect(),rg=document.createRange();
       for(const e of f.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();const cx=((r.left+r.right)/2-eb.left)/k;if(r.width&&cx>=f.px&&cx<f.px+f.w)txt+=" "+n.textContent}}
     else txt=f.el.textContent;
-    txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=names.filter(n=>txt.includes(n)).length;if(c>bestC){bestC=c;best=i}}}catch(e){}return best}
+    txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=names.filter(n=>txt.includes(n)).length;C[i]=c;if(c>bestC){bestC=c;best=i}}
+    /* review 32: the first page that carries a real share of the food, not the fullest one ("The Menu, continued" on Grease's third page
+       had more lines than the page with the starters and burgers) */
+    if(bestC>=3){const need=Math.max(2,Math.ceil(bestC*.4));const i=C.findIndex(c=>c>=need);if(i>=0)best=i}}catch(e){}return best}
 const pvDots=document.createElement("div");pvDots.className="pv-dots";pvDots.hidden=true;$("easel").after(pvDots);
 pvDots.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)pvGo(+b.dataset.i)});
 function paintDots(n){
@@ -2023,13 +2026,20 @@ const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|co
 const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
 /* review 31: a band per decade for the middle main on a card, in dollars of the day (the saloon menus and the hand-built ones sit inside these) */
 const PF_BAND={"1800s":[.12,.9],"1930s-40s":[.3,1.4],"1950s":[.6,2.5],"1960s":[1,3.5],"1970s":[2,7],"1980s":[3.5,12],"1990s":[5,18],"2000s":[7,24],"modern":[10,32]};
+/* review 32: the dearest a plain glass of beer, cider or a pint can be in each decade, in dollars of the day */
+const PF_PINT={"1800s":.06,"1930s-40s":.15,"1950s":.25,"1960s":.35,"1970s":.75,"1980s":1.5,"1990s":3,"2000s":5,"modern":9};
+const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
    The figure arrives in dollars of the day and is turned into what that place would print */
+const pfGBP=era=>({"1970s":.3,"1980s":.3,"1990s":.5,"2000s":.6})[era]||.75;
+/* review 32: wizarding money for the Harry Potter films (flavour.currency "G"): a Galleon is about five pounds, seventeen Sickles to the Galleon */
+const pfWiz=v=>{const sk=Math.max(1,Math.round(v*.75/5*17)),g=Math.floor(sk/17),r=sk%17,pl=(n,w)=>n+" "+w+(n===1?"":"s");return g?pl(g,"Galleon")+(r?" "+pl(r,"Sickle"):""):pl(r,"Sickle")};
 function pfMoney(v,cur,era,fl){const old=era==="1800s"||era==="1930s-40s"||era==="1950s",gs=(n,sep)=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,sep);
   const dec=(x,st)=>{x=Math.max(st,Math.round(x/st)*st);const c=Math.round((x%1)*100),b=Math.floor(x+1e-9);const E=[0,25,50,75,95];let e=E.reduce((a,q)=>Math.abs(q-c)<Math.abs(a-c)?q:a,0);return (b+e/100).toFixed(2)};
   switch(cur){
-    case "£":{const x=v*.75;return x<1?Math.max(5,Math.round(x*20)*5)+"p":"£"+dec(x,.05)}
-    case "£sd":{const d=Math.max(1,Math.round(v*.12*240));if(d<12)return d+"d";const sh=Math.floor(d/12),r=d%12;if(sh<20)return sh+"s"+(r?" "+r+"d":"");return "£"+Math.floor(sh/20)+(sh%20?" "+(sh%20)+"s":"")}
+    /* review 32: pounds by the era's price level, not one fixed rate (a 1981 pint of bitter was well under a pound, not £3) */
+    case "£":{const x=v*pfGBP(era);return x<.975?Math.max(5,Math.round(x*20)*5)+"p":"£"+dec(x,.05)}
+    case "£sd":{const d=Math.max(1,Math.round(v*.12*240));if(d<12)return d+"d";const sh=Math.floor(d/12),r=d%12;if(sh<20)return sh+"s"+(r?" "+r+"d":"");return "£"+Math.floor(sh/20)+(sh%20?" "+(sh%20)+"s":"")+(r?" "+r+"d":"")/* review 32: the pence stay on a pound price */}
     case "€":return "€"+dec(v*.9,.05);
     case "F":{const x=v*(era==="1800s"?5:old?60:6);return x<10?dec(x,.05).replace(".",",")+" F":Math.max(10,Math.round(x/5)*5)+" F"}
     case "L":return "L. "+gs(Math.max(50,Math.round(v*350/50)*50),".");
@@ -2038,8 +2048,57 @@ function pfMoney(v,cur,era,fl){const old=era==="1800s"||era==="1930s-40s"||era==
     case "R$":return "R$ "+dec(v*2.2,.1).replace(".",",");
     case "kr":{const is=fl&&String(fl.country||"").toUpperCase()==="IS",x=v*(is?140:10),st=is?50:5;return gs(Math.max(st,Math.round(x/st)*st),",")+" kr"}
     case "RM":return "RM "+dec(v*2.5,.05);
+    case "G":return pfWiz(v);
     default:return "$"+dec(v,.05)}}
-function priceFix(root,menu,f,fl,era,fmt){
+/* review 32: a total on the card (the bar tab's carried over and running tab, the clubhouse par line) is added up again from the prices
+   as printed, after priceFix has re-priced and re-moneyed them, and printed in the same money. Layouts mark the total [data-sum="g"]
+   and each price that feeds it [data-sum-in="g ..."]. Goldfinger's "£1 11S" now reads "£1 11s 4d", Deadpool's tab adds up */
+function pfParse(s){s=String(s||"").replace(/\s+/g," ").trim();let m;
+  if((m=s.match(/^(?:£ ?(\d+))? ?(?:(\d+) ?s)? ?(?:(\d+) ?d)?$/i))&&(m[2]||m[3]))return {k:"sd",u:(+m[1]||0)*240+(+m[2]||0)*12+(+m[3]||0)};
+  if((m=s.match(/^(\d+) ?p$/)))return {k:"£",u:+m[1]};
+  if((m=s.match(/^£ ?(\d+)(?:\.(\d\d))?$/)))return {k:"£",u:+m[1]*100+(+m[2]||0),whole:!m[2]};
+  if((m=s.match(/^(\d+) ?(¢|c)$/)))return {k:"c",u:+m[1],sym:m[2]};
+  if((m=s.match(/^(\d+)(?:,(\d\d))? F$/)))return {k:"F",u:+m[1]*100+(+m[2]||0)};
+  if((m=s.match(/^L\. ?([\d.]+)$/)))return {k:"L",u:+m[1].replace(/\./g,"")};
+  if((m=s.match(/^(₩|¥) ?([\d,]+)$/)))return {k:"W",u:+m[2].replace(/,/g,""),pre:m[1]};
+  if((m=s.match(/^([\d,]+) kr$/)))return {k:"kr",u:+m[1].replace(/,/g,"")};
+  if((m=s.match(/^(R\$ |RM |€|\$)?(\d*)([.,])(\d\d)$/)))return {k:"dec",u:(+m[2]||0)*100+ +m[4],pre:m[1]||"",sep:m[3],bare:!m[2]};
+  if((m=s.match(/^(\$|€|RM |R\$ )?(\d+)$/)))return {k:"n",u:+m[2],pre:m[1]||""};
+  return null}
+function pfFmt(u,p,all){const gs=(n,sep)=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,sep);u=Math.round(u);
+  switch(p.k){
+    case "sd":{const L=Math.floor(u/240),sh=Math.floor(u%240/12),d=u%12;if(!L)return sh?sh+"s"+(d?" "+d+"d":""):d+"d";return "£"+L+(sh?" "+sh+"s":"")+(d?" "+d+"d":"")}
+    case "£":return u<100?u+"p":"£"+(u/100).toFixed(2);
+    case "c":{const d=all&&all.find(x=>x.k==="dec");return u<100?u+p.sym:(d?d.pre:"$")+(u/100).toFixed(2)}
+    case "dec":{const t=(u/100).toFixed(2).replace(".",p.sep);return p.pre+(u<100&&p.bare?t.replace(/^0/,""):t)}
+    case "F":return u%100?(u/100).toFixed(2).replace(".",",")+" F":(u/100)+" F";
+    case "L":return "L. "+gs(u,".");
+    case "W":return p.pre+gs(u,",");
+    case "kr":return gs(u,",")+" kr";
+    default:return (p.pre||"")+u}}
+function sumFix(root){if(!root)return 0;
+  /* a price repeated in a line of text ("Frosty Palace burger, 1.50, with a cup of coffee") is copied from the dish's own printed price */
+  for(const e of root.querySelectorAll("[data-echo]")){const src=root.querySelector(`[data-echo-src="${e.getAttribute("data-echo")}"]`);if(src&&src.textContent.trim())e.textContent=src.textContent.trim()}
+  const T=[...root.querySelectorAll("[data-sum]")];if(!T.length)return 0;
+  const shown=e=>{for(let x=e;x&&x!==root;x=x.parentElement)if(x.style&&x.style.display==="none")return false;return true};
+  const I=[...root.querySelectorAll("[data-sum-in]")].filter(shown).map(e=>({g:e.getAttribute("data-sum-in").split(" "),t:e.textContent.trim(),p:pfParse(e.textContent)}));
+  /* a whole pound on a shillings and pence card is 240 pence, not 100 */
+  if(I.some(x=>x.p&&x.p.k==="sd"))for(const x of I)if(x.p&&x.p.k==="£"&&x.p.whole)x.p={k:"sd",u:x.p.u/100*240};
+  /* cents and dollars on one card add up in cents */
+  for(const x of I)if(x.p&&x.p.k==="n"&&I.some(y=>y.p&&(y.p.k==="dec"||y.p.k==="c")))x.p={k:"dec",u:x.p.u*100,pre:x.p.pre,sep:".",bare:false};
+  let n=0;for(const t of T){const g=t.getAttribute("data-sum"),L=I.filter(x=>x.g.includes(g)&&x.p);if(!L.length)continue;
+    const P=L.map(x=>x.p),s=P.find(p=>p.k!=="c")||P[0],v=pfFmt(P.reduce((a,p)=>a+p.u,0),s,P);if(t.textContent.trim()!==v){t.textContent=v;n++}}
+  return n}
+/* review 32: every priced card says what money it is. A dollar card (no flavour.currency) whose prices are all bare figures (".25", "1.75",
+   the banquet's "89.50 per cover") gets its mark: cents under a dollar ("75¢"), "$" above. A card that already sets "$" or "¢" anywhere
+   beside its prices is left as it is */
+function pfMark(root){const PR=/^(\s*)(\d{1,3})?\.(\d\d)(\s*)$/,tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),T=[];let t,marked=false;
+  while((t=tw.nextNode())){const v=t.nodeValue;if(/^\s*(\$|\$\s?[\d.,]+|\d{1,3}\s?¢|\d{1,2}c)\s*$/.test(v)){marked=true;break}if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;const m=v.match(PR);if(m)T.push([t,m])}
+  if(marked||!T.length)return 0;
+  for(const [t,m] of T){const x=(+m[2]||0)+ +m[3]/100;t.nodeValue=m[1]+(x<1?Math.round(x*100)+"¢":"$"+x.toFixed(2))+m[4]}
+  return T.length}
+function priceFix(root,menu,f,fl,era,fmt){const n=priceFix0(root,menu,f,fl,era,fmt);return (fl&&fl.currency&&fl.currency!=="$")||!root?n:n+pfMark(root)}
+function priceFix0(root,menu,f,fl,era,fmt){
   if(!root||!menu)return 0;
   /* review 31: layouts print "fry-up" as "fry up", so hyphens count as spaces when a price is tied to its dish */
   const norm=s=>String(s||"").toLowerCase().replace(/[’']/g,"'").replace(/[-‐–]/g," ").replace(/\s+/g," ").trim();
@@ -2088,6 +2147,8 @@ function priceFix(root,menu,f,fl,era,fmt){
     for(const x of mn())if(pfCheap(x.n)&&!PF_PREM.test(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
   /* review 31: a bowl of bar nuts or crisps never costs more than a drink beside it (the Winchester's nuts at twice a pint) */
   {const D=by("d"),lo=minOf(D);if(lo!=null)for(const x of by("s"))if(PF_BAR.test(x.n)&&!PF_PREM.test(x.n)&&x.v>lo){x.v=Math.max(step(lo),lo-step(lo)*0);x.down=1}}
+  /* review 32: a plain beer, cider or pint is held to what a glass cost in its decade (PF_PINT), so a 1981 pint is not dearer than the pie */
+  {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
   /* 4. a seafood or steak starter never well under a plain one */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(PF_PREM.test(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
   /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
@@ -2114,7 +2175,7 @@ function priceFix(root,menu,f,fl,era,fmt){
   const cur=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;
   for(const x of O)x.c=x.v<1?Math.max(.05,Math.round(x.v*20)/20):Math.abs(x.v-x.v0)<.001?x.v:clean(x.v);
   if(cur){let n=0;const ws=(m,i)=>m[i]||"";
-    for(const x of [...P,...O]){const m=x.m,lead=m[1]||m[6]||m[10]||"",tail=m[5]||m[9]||m[12]||"",s2=lead+pfMoney(m[2]==="£"&&cur==="£"?x.c/.75:x.c,cur,tgt,fl)+tail;if(s2!==x.t.nodeValue){x.t.nodeValue=s2;n++}}
+    for(const x of [...P,...O]){const m=x.m,lead=m[1]||m[6]||m[10]||"",tail=m[5]||m[9]||m[12]||"",s2=lead+pfMoney(m[2]==="£"&&cur==="£"?x.c/pfGBP(tgt):x.c,cur,tgt,fl)+tail;if(s2!==x.t.nodeValue){x.t.nodeValue=s2;n++}}
     /* a dollar sign set in its own box beside the figure goes too */
     const tw2=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let u;while((u=tw2.nextNode()))if(/^\s*(\$|CR)\s*$/.test(u.nodeValue))u.nodeValue="";
     return n}
@@ -2186,7 +2247,7 @@ function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.inclu
 function libWords(html,fl){const W=fl&&fl.words;if(!W)return html;const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   return String(html).replace(/>([^<]+)</g,(m,t)=>{for(const k in W){const ks=[...new Set([k,esc(k),esc(k).replace(/'/g,"&#39;"),k.replace(/'/g,"\u2019")])];for(const kk of ks){const re=new RegExp(kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"gi");t=t.replace(re,x=>{const n=esc(W[k]);return x===x.toUpperCase()&&x!==x.toLowerCase()?n.toUpperCase():n})}}return ">"+t+"<"})}
 /* 8 Nov: a quote that ends a note keeps its own stop: layouts that add a full stop leave "There goes my milk!". as "There goes my milk!" (text only) */
-function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */+"<")}
+function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */.replace(/([^.\s])\.\.(?=\s|$)/g,"$1.")/* review 32: a joined line never prints "midnight.." (an ellipsis of three stays) */+"<")}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
@@ -2228,7 +2289,7 @@ async function show(f,preferSig){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{headFix(card,LM)}catch(e){}dietStamp();
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;

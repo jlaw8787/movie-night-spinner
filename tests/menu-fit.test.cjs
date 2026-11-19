@@ -7,7 +7,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.join(__dirname,'..'),rj=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const FL=rj('data/film-flavour.json'),F=rj('data/films.json'),H=rj('data/film-house.json'),app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const BAND=Function("return "+app.match(/const PF_BAND=(\{[^;]*\});/)[1])();
-const CUR=new Set(['$','£','£sd','€','F','L','₩','¥','R$','kr','RM']);
+const CUR=new Set(['$','£','£sd','€','F','L','₩','¥','R$','kr','RM','G']);
 const bad=[];
 for(const [id,v] of Object.entries(FL)){
   if(v.currency!=null&&!CUR.has(v.currency))bad.push(`${id}: currency ${v.currency}`);

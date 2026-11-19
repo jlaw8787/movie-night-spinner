@@ -106,9 +106,9 @@
   const failed = (body, again) => { body.innerHTML = `<p class="acct-wait">${navigator.onLine === false ? "You're offline. Friends and duels need a connection." : "Couldn't reach Reel Dinner. Check your connection."}</p><div class="acct-acts"><button type="button" class="acct-go" id="acctAgain">Try again</button></div>`; body.querySelector('#acctAgain').onclick = again };
 
   function guest(body) {
-    body.innerHTML = `${cardArt(true)}<p>You're on a guest pass. Everything works, saved on this phone only.</p>
+    body.innerHTML = `${cardArt(true)}<p>You're on a guest pass. Everything works, saved on this device only.</p>
       <p>A free member card adds:</p>
-      <ul class="acct-list"><li>Dinner Duel: swipe a deck, send it to a friend, and they swipe when they get to it</li><li>A friends list and an inbox for your turns and matches</li><li>Your picks, ticks and rentals on every phone you sign in on</li></ul>
+      <ul class="acct-list"><li>Dinner Duel: swipe a deck, send it to a friend, and they swipe when they get to it</li><li>A friends list and an inbox for your turns and matches</li><li>Your picks, ticks and rentals on every device you sign in on</li></ul>
       <div class="acct-acts"><button type="button" class="acct-go" id="acctJoin">Get your member card</button></div>
       <p class="acct-small"><a href="privacy.html">Privacy policy</a></p>`;
     body.querySelector('#acctJoin').onclick = () => { dismissModal(box); if (typeof openJoin === 'function') openJoin() };

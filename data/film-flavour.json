@@ -6490,8 +6490,8 @@
   "venue": "The Travel Book Co.",
   "sign": "Maps, Guides and Quiet Afternoons",
   "note": {
-   "text": "Well, you'll have to fight me for it. This is a very good brownie.",
-   "by": "William Thacker",
+   "text": "I'm also just a girl, standing in front of a boy, asking him to love her.",
+   "by": "Anna Scott",
    "kind": "quote"
   },
   "winks": [
@@ -6539,7 +6539,7 @@
   "currency": "£"
  },
  "Four Weddings and a Funeral (1994)": {
-  "venue": "Angus and Laura's Wedding",
+  "venue": "Carrie and Hamish's Wedding",
   "sign": "Bride's Side. Groom's Side. Bar.",
   "note": {
    "text": "A toast before we go into battle. True love. In whatever shape or form it may come. May we all in our dotage be proud to say, 'I was adored once too.'",
@@ -6567,7 +6567,7 @@
    "guest": "Charles",
    "table": "Top Table",
    "seat": "Best man. Please try not to be late.",
-   "heading": "Angus and Laura"
+   "heading": "Carrie and Hamish"
   },
   "currency": "£"
  },
@@ -9722,9 +9722,9 @@
   "venue": "The Crown, Sandford",
   "sign": "Sandford: Village of the Year",
   "note": {
-   "text": "Sandford is the safest village in England. Have a cuppa, Nick.",
+   "text": "Have you ever fired two guns whilst jumping through the air?",
    "by": "Danny Butterman",
-   "kind": "note"
+   "kind": "quote"
   },
   "winks": [
    "Nicholas Angel, the top London cop sent to Sandford",
@@ -11543,7 +11543,8 @@
    "Reward £500000": "Debt £500,000",
    "When the bell rings": "After the last hand",
    "Lunch counter": "Bar snacks"
-  }
+  },
+  "reward": "£500000"
  },
  "Ocean's Eleven (2001)": {
   "venue": "The Bellagio",
@@ -11788,7 +11789,7 @@
   "venue": "Proximo's Gladiator School",
   "sign": "Proximo's School, Fight to Live",
   "note": {
-   "text": "Strength and honour. At my signal, unleash hell.",
+   "text": "At my signal, unleash hell.",
    "by": "Maximus",
    "kind": "quote"
   },
@@ -13242,8 +13243,8 @@
   "number": ""
  },
  "Men in Black II (2002)": {
-  "venue": "Ben's Famous Pizza",
-  "sign": "Ben's Famous Pizza, Laura on the Counter",
+  "venue": "MIB Headquarters",
+  "sign": "Agents' break room, Ben's pizza on order",
   "note": {
    "text": "Kevin. Heh. Wow. Kevin. That's funny.",
    "by": "Agent J",
@@ -14472,7 +14473,11 @@
     "Sydney to Alice"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Pie so good it ought to be a crime.": "Cold beer, counter meals and murals on every wall.",
+   "Est. 1994": "Est. 1889"
+  }
  },
  "The Man from Snowy River (1982)": {
   "venue": "Harrison Station Kitchen",
@@ -14504,7 +14509,8 @@
    "At the bar": "Billy and cup"
   },
   "priceEra": "1800s",
-  "currency": "£sd"
+  "currency": "£sd",
+  "reward": "£100"
  },
  "Gallipoli (1981)": {
   "venue": "Anzac Cove Mess",
@@ -14749,7 +14755,8 @@
   },
   "number": "1942",
   "priceEra": "1930s-40s",
-  "currency": "£sd"
+  "currency": "£sd",
+  "reward": "£50"
  },
  "The Wog Boy (2000)": {
   "venue": "Melbourne Greek Cafe",
@@ -14895,7 +14902,11 @@
     "Kai provided"
    ]
   },
-  "number": "1984"
+  "number": "1984",
+  "words": {
+   "Prom night, class of 2010": "Bay Hall dance, Waihau Bay"
+  },
+  "priceEra": "1980s"
  },
  "Furiosa: A Mad Max Saga (2024)": {
   "venue": "Gastown Refinery",
@@ -16075,7 +16086,7 @@
    ]
   },
   "number": "4",
-  "currency": "£"
+  "currency": "G"
  },
  "Harry Potter and the Chamber of Secrets (2002)": {
   "venue": "The Burrow Kitchen",
@@ -16101,7 +16112,7 @@
    ]
   },
   "number": "",
-  "currency": "£"
+  "currency": "G"
  },
  "Harry Potter and the Prisoner of Azkaban (2004)": {
   "venue": "Three Broomsticks Inn",
@@ -16128,7 +16139,8 @@
   },
   "number": "",
   "seal": "none",
-  "world": "storybook"
+  "world": "storybook",
+  "coin": "Sickles"
  },
  "Harry Potter and the Goblet of Fire (2005)": {
   "venue": "Hogwarts Yule Ball",
@@ -16154,7 +16166,7 @@
    ]
   },
   "number": "",
-  "currency": "£"
+  "currency": "G"
  },
  "The Lord of the Rings: The Fellowship of the Ring (2001)": {
   "venue": "The Prancing Pony",
@@ -16314,7 +16326,7 @@
    ]
   },
   "number": "12",
-  "currency": "£"
+  "currency": "G"
  },
  "Harry Potter and the Half-Blood Prince (2009)": {
   "venue": "Slughorn's Slug Club",
@@ -16340,7 +16352,7 @@
    ]
   },
   "number": "",
-  "currency": "£"
+  "currency": "G"
  },
  "Harry Potter and the Deathly Hallows: Part 1 (2010)": {
   "venue": "Shell Cottage",
@@ -16393,7 +16405,7 @@
    ],
    "flip": 0
   },
-  "currency": "£"
+  "currency": "G"
  },
  "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
   "venue": "Room of Requirement",
@@ -16419,7 +16431,7 @@
    ]
   },
   "number": "",
-  "currency": "£"
+  "currency": "G"
  },
  "Fantastic Beasts and Where to Find Them (2016)": {
   "venue": "Kowalski Quality Baked Goods",
@@ -18405,7 +18417,14 @@
     "Kung fu: not accepted as payment"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Phone your order": "Shout your order",
+   "555 0041": "Up the stairs",
+   "Free delivery over $25.": "Carried down the alley, no charge.",
+   "We deliver": "We carry"
+  },
+  "priceEra": "1930s-40s"
  },
  "Kill Bill: Vol. 1 (2003)": {
   "venue": "House of Blue Leaves",
@@ -18934,7 +18953,8 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "reward": "$2,000"
  },
  "Butch Cassidy and the Sundance Kid (1969)": {
   "venue": "Hole in the Wall Hideout",
@@ -19077,7 +19097,8 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "reward": "$1,000"
  },
  "City Slickers (1991)": {
   "venue": "Cow Camp Chuck Wagon",
@@ -19676,6 +19697,12 @@
     0,
     0
    ]
+  },
+  "words": {
+   "Lower bowl": "Touchline",
+   "Club level": "Under the palms",
+   "Upper deck": "Grass bank",
+   "Suites": "Car bonnets"
   }
  },
  "Glass Onion: A Knives Out Mystery (2022)": {

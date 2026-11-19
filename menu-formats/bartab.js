@@ -125,7 +125,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* every price lands on a price ending before the tab adds up, so the totals stay true (the film number on the first main only when it reads like a price) */
   if(window.priceEnd)for(const k of ["s","m","w","d"])PR[k]=PR[k].map(v=>window.priceEnd(v));
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:PR[k][i],house:!!x.house}));
-  const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
+  const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};for(const x of [...I.s,...I.m])x.front=1;/* review 32: the tab totals are added up again from the printed prices after the money pass (sumFix in app.js) */
   /* the photo gives way to the dishes: estimate the height the front's names and notes need at a slightly shrunk size,
      and take it off the poster or still first, so names, prices and the film's own notes still show (Blade, An American Werewolf) */
   const needFront=(()=>{let h=0;for(const k of ["s","m"]){if(!I[k].length)continue;h+=48;for(const it of I[k])h+=41+(it.note?Math.min(2,Math.ceil(it.note.length/50))*26:0)}return Math.round(h*.84)})();
@@ -170,10 +170,10 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="display:flex;align-items:baseline;gap:8px;color:${ink};${glow}">
         <span style="font:700 max(16px,calc(26px*var(--k)))/1.12 ${g.key==="chalk"?g.disp:g.body};${g.key==="chalk"?"font-weight:800;":""}">${esc(it.n)}</span>
         <span style="flex:1;min-width:16px;border-bottom:2px dotted ${rgba(ink,.35)};transform:translateY(-6px)"></span>
-        <span style="font:700 max(16px,calc(26px*var(--k)))/1.1 ${g.body};color:${acc};white-space:nowrap">${money(it.p,era)}</span></div>
+        <span data-sum-in="${it.front?"f t":"t"}" style="font:700 max(16px,calc(26px*var(--k)))/1.1 ${g.body};color:${acc};white-space:nowrap">${money(it.p,era)}</span></div>
       ${it.note?`<div ${A}-note="${it.house?"h":""}" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;color:${sub};font:500 max(14px,calc(20px*var(--k)))/1.28 ${g.body}">${esc(it.note)}</div>`:""}</div>`;
   const course=k=>I[k].length?`<div style="margin:0 0 calc(10px*var(--k))">${label(C[k])}${I[k].map(row).join("")}</div>`:"";
-  const ledger=(lab,val,strong)=>`<div style="display:flex;align-items:baseline;gap:10px;color:${ink};font:${strong?800:600} ${strong?24:19}px/1.1 ${g.body};letter-spacing:.1em;text-transform:uppercase;${strong?`border-top:3px double ${rgba(ink,.7)};padding-top:8px;`:`border-top:1px solid ${rgba(ink,.35)};padding-top:6px;`}"><span>${esc(lab)}</span><span style="flex:1"></span><span style="color:${acc};letter-spacing:.02em">${money(val,era)}</span></div>`;
+  const ledger=(lab,val,strong)=>`<div style="display:flex;align-items:baseline;gap:10px;color:${ink};font:${strong?800:600} ${strong?24:19}px/1.1 ${g.body};letter-spacing:.1em;text-transform:uppercase;${strong?`border-top:3px double ${rgba(ink,.7)};padding-top:8px;`:`border-top:1px solid ${rgba(ink,.35)};padding-top:6px;`}"><span>${esc(lab)}</span><span style="flex:1"></span><span data-sum="${strong?"t":"f"}" style="color:${acc};letter-spacing:.02em;text-transform:none">${money(val,era)}</span></div>`;
 
   /* logo panel. Under a poster (which already carries the title) the panel reads "Now showing, year" in the bar's own type, so the
      logo prints once (Top Gun 11 Nov, every bartab poster 15 Nov). Flavour logoPanel:true keeps the logo for a poster with no title. */

@@ -24,7 +24,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  const r=await p.evaluate(async ([FROM,COUNT,NAMED,QL])=>{
   const ids=NAMED.length?NAMED:FILMS.map(f=>f.id).slice(FROM,FROM+COUNT);
   const norm=s=>String(s||'').toLowerCase().replace(/[’']/g,"'").replace(/[“”"]/g,'"').replace(/[-‐–]/g,' ').replace(/\s+/g,' ').trim();
-  const SYM={'$':/\$/,'£':/£|\d+p\b/,'£sd':/\b\d+s\b|\b\d+d\b|£\d/,'€':/€/,'F':/\d F\b/,'L':/L\. \d/,'₩':/₩/,'¥':/¥/,'R$':/R\$/,'kr':/\d kr\b/,'RM':/RM \d/};
+  const SYM={'$':/\$/,'£':/£|\d+p\b/,'£sd':/\b\d+s\b|\b\d+d\b|£\d/,'€':/€/,'F':/\d F\b/,'L':/L\. \d/,'₩':/₩/,'¥':/¥/,'R$':/R\$/,'kr':/\d kr\b/,'RM':/RM \d/,'G':/\d (Galleons?|Sickles?)\b/};
   const FOREIGN=/£|€|₩|¥|R\$/;
   const out=[];let n=0;
   for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f){out.push({id,bad:['no film']});continue}
