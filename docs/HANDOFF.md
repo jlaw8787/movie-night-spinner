@@ -1881,3 +1881,4 @@ Josh: quick ones first, then medium, then a fresh re-score. His calls on the way
 - Also: motel stamp value on a 5 cent step (1997 printed 1.00), Breakfast at Tiffany's no-alcohol drink text, kids check false positives.
 - Checks: all node tests, check-ripple 0 gaps, check-browser, store taps, quiz, members, friends, final cut, card stats, night edit, prices, kids cards (375) pass. check-print-text in batches of 50.
 - Review 30 (fresh reviewer, no sight of earlier reviews, on this branch): 8.1 (docs/review-30.md, screenshots review-30-01 to 18). Its item 14 (film page previews out of date) is the preview re-render below.
+- Previews: all 1,000 re-rendered (render-previews --all, 48 min at WORKERS=3), then build-data. Branch pushed, held for Josh's deploy go.
