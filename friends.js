@@ -186,6 +186,8 @@
     const paint = (loaded) => {
       if (!box || tab !== 'card') return;
       const s = stats(), T = tier(), fresh = loaded ? earn(s) : [];
+      /* at the cinema, the stamps that are not about rentals or late fees */
+      const SH = T.cin ? STAMPS.filter(x => !/^(rent|clean)/.test(x[0])) : STAMPS;
       const got = (member && member.stamps) || {};
       const pct = T.next ? Math.min(100, Math.round((T.n - T.at) / (T.next.at - T.at) * 100)) : 100;
       const left = T.next ? T.next.at - T.n : 0;
@@ -208,11 +210,11 @@
           ${tile(dash(s.streak), 'Best streak', 'Matches in a row', 'streak')}
           ${T.cin ? '' : tile(s.late ? `$${s.owe}.00` : '$0.00', 'Late fees', s.late ? `${s.late} tape${s.late > 1 ? 's' : ''} overdue` : 'Good member', 'late')}
         </ul>
-        ${T.cin ? '<p class="acct-small">Your Galaxy Video card, rentals and stamps live inside the store.</p>' : ''}${!T.cin && s.out.length ? `<h3 class="acct-h">Out on rental</h3><ul class="acct-cards">${s.out.map(({ r, f }) => {
+        ${T.cin ? '<p class="acct-small">Your Galaxy Video card and rentals live inside the store.</p>' : ''}${!T.cin && s.out.length ? `<h3 class="acct-h">Out on rental</h3><ul class="acct-cards">${s.out.map(({ r, f }) => {
           const over = r.due < Date.now();
           return `<li class="acct-card${over ? ' hot' : ''}"><div class="acct-ct"><b>${ESC(f.title)}</b><small>${over ? '<span class="acct-fee">Overdue</span>' : ''}Due ${ESC(new Date(r.due).toLocaleString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' }))}</small></div><div class="acct-cb"><button type="button" class="acct-go sm" data-rent="${ESC(f.id)}">Open the menu</button></div></li>` }).join('')}</ul>` : ''}
-${T.cin ? '' : `        <h3 class="acct-h">Stamps <small class="acct-small">${STAMPS.filter(x => got[x[0]]).length} of ${STAMPS.length}</small></h3>
-        <ul class="acct-stamps">${STAMPS.map(([k, name, how]) => `<li class="acct-stamp${got[k] ? ' on' : ''}"><span class="acct-ink" aria-hidden="true">${got[k] ? '&#9733;' : ''}</span><b>${ESC(name)}</b><small>${got[k] ? `Earned ${ESC(new Date(got[k]).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }))}` : ESC(how)}</small></li>`).join('')}</ul>`}
+        <h3 class="acct-h">Stamps <small class="acct-small">${SH.filter(x => got[x[0]]).length} of ${SH.length}</small></h3>
+        <ul class="acct-stamps">${SH.map(([k, name, how]) => `<li class="acct-stamp${got[k] ? ' on' : ''}"><span class="acct-ink" aria-hidden="true">${got[k] ? '&#9733;' : ''}</span><b>${ESC(name)}</b><small>${got[k] ? `Earned ${ESC(new Date(got[k]).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }))}` : ESC(how)}</small></li>`).join('')}</ul>
         <div class="acct-acts"><button type="button" class="acct-ghost" id="acctShop">Go to Galaxy Video</button></div>`;
       body.querySelectorAll('[data-rent]').forEach(b => b.onclick = () => { const f = FILMS.find(x => x.id === b.dataset.rent); if (!f) return; dismissModal(box); if (typeof openRentalMenu === 'function') openRentalMenu(f) });
       body.querySelector('#acctShop').onclick = () => { dismissModal(box); const b = document.getElementById('viewShopBtn'); if (b) b.click() };
