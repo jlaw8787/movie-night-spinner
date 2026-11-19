@@ -52,7 +52,7 @@ const RPC = {
   ok(await p.$$eval('button.acct-stat', b => b.length) === 8, 'all 8 tiles are buttons');
   await p.screenshot({ path: '/tmp/cs-board.png' });
   const tabs = await p.$eval('#acctTabs', el => { const r = el.getBoundingClientRect(), last = el.lastElementChild.getBoundingClientRect(), cs = getComputedStyle(el); return { fits: last.right <= r.right + 1, scroll: el.scrollWidth > el.clientWidth && /auto|scroll/.test(cs.overflowX) } });
-  ok(tabs.fits || tabs.scroll, 'Settings tab not clipped at 390 (fits, or the row scrolls)');
+  ok(tabs.fits, 'all five account tabs fit at 390, Settings not clipped (review 30)');
 
   let t = await page('rentals'); await p.screenshot({ path: '/tmp/cs-rentals.png', fullPage: false });
   ok(await p.$eval('#acctBack', el => parseFloat(getComputedStyle(el).borderTopLeftRadius) > 0), 'stat page stylesheet loaded (Back button is a pill)');

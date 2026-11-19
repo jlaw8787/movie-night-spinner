@@ -124,12 +124,28 @@ ${body}
 const posterUrl = (p, w) => p ? 'https://image.tmdb.org/t/p/' + (w || 'w342') + p : '';
 const card = x => `<li><a href="/menu/${x.s}/"><img src="${posterUrl(x.poster, 'w185')}" width="185" height="278" loading="lazy" alt="${esc(x.shown)} poster">${esc(x.shown)} (${x.f.year})</a></li>`;
 
+/* each dish has an anchor so the Recipe entries in the JSON-LD point at their own spot on the page (all-in-one recipe list) */
+const dishId = y => 'dish-' + slug(clean(y.n)).slice(0, 60);
 function filmPage(x) {
   const { f, d, s, shown, id } = x, canon = `${SITE}/menu/${s}/`, open = '/?film=' + encodeURIComponent(id);
   const names = x.dishes.map(y => clean(y.n));
+  const taken = new Map(), used = new Set();
+  for (const y of x.dishes) { const b0 = dishId(y); let k = b0, n = 2; while (used.has(k)) k = b0 + '-' + n++; used.add(k); taken.set(y, k); }
+  const did = y => taken.get(y);
   const title = `${shown} (${f.year}) movie night dinner menu | Reel Dinner`;
   const listed = names.length > 3 ? names.slice(0, 3).join(', ') + ' and more' : names.join(', ').replace(/, ([^,]*)$/, ' and $1');
-  const desc = cut(`${shown} (${f.year}): a movie night menu${x.venue ? ' from ' + x.venue : ''}. ${listed}. Recipes for 4, a shopping list and a printable menu.`, 160);
+  /* review 30: the description always ends on a whole sentence, never cut mid-word. Longest version that fits in 155 */
+  const two = names.length > 2 ? names.slice(0, 2).join(' and ') + ' and more' : listed;
+  const head = `${shown} (${f.year}): a movie night menu`, from = x.venue ? ' from ' + clean(x.venue) : '';
+  const desc = [
+    `${head}${from}. ${listed}. Recipes for 4, a shopping list and a printable menu.`,
+    `${head}${from}. ${listed}. Recipes for 4 and a printable menu.`,
+    `${head}${from}. ${two}. Recipes for 4 and a printable menu.`,
+    `${head}. ${listed}. Recipes for 4 and a printable menu.`,
+    `${head}. ${two}. Recipes for 4 and a printable menu.`,
+    `${head}${from}. Recipes for 4 and a printable menu.`,
+    `${head}. Recipes for 4, a shopping list and a printable menu.`
+  ].map(clean).find(t => t.length <= 155) || clean(`${head}. Recipes for 4 and a printable menu.`);
   const img = x.preview ? `${SITE}/assets/menu-previews/${s}.jpg` : (x.poster ? posterUrl(x.poster, 'w500') : '');
   const lede = [d.D, d.T].filter(Boolean).map(esc);
   const courses = [...'smwd'].map(c => {
@@ -139,7 +155,7 @@ function filmPage(x) {
       const meta = [t ? `Prep ${y.prep_min || 0} min, cook ${y.cook_min || 0} min` : '', y.make_ahead ? 'Make ahead: ' + esc(y.make_ahead) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(st.text)}</li>`).join('') || (y.how ? `<li>${esc(y.how)}</li>` : '');
-      return `<article class="dish"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}</h3>
+      return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
 ${ingr || steps ? `<details><summary>Recipe for 4</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
     }).join('\n');
@@ -186,7 +202,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
         { '@type': 'ListItem', position: 2, name: crumbName, item: SITE + crumbHref },
         { '@type': 'ListItem', position: 3, name: shown + ' (' + f.year + ')', item: canon }] } },
     { '@type': 'ItemList', name: `${shown} (${f.year}) movie night menu`, numberOfItems: x.dishes.length,
-      itemListElement: x.dishes.map((y, n) => ({ '@type': 'ListItem', position: n + 1, item: recipe(y) })) }] };
+      itemListElement: x.dishes.map((y, n) => ({ '@type': 'ListItem', position: n + 1, url: canon + '#' + did(y), item: { ...recipe(y), '@id': canon + '#' + did(y), url: canon + '#' + did(y) } })) }] };
   return page({ title, desc, canon, body, image: img, ld, ogType: 'article' });
 }
 

@@ -4101,10 +4101,13 @@ sel.addEventListener("change",setList);
 /* Save PDF asks what it's for: everything in one file, the menu on its own (ready for double-sided), or just the prep sheet for the kitchen */
 function pdfTip(){if(!current)return "";const sh=card.classList.contains("fx-paper"),fc=sh?card.querySelector(".fx-face"):card,n=sh?card.querySelectorAll(".fx-face").length:1,w=parseFloat(fc&&fc.style.width)||+card.dataset.w||794,h=parseFloat(fc&&fc.style.height)||+card.dataset.h||1123,land=w>h;
   return n>1?`Two sides. Print double-sided, ${land?"flip on short edge":"flip on long edge"}, at 100%.`:"One page. Print it single-sided at 100%."}
+/* review 30: the prep sheet line says the real page count (a long shopping list or method runs to two pages) */
+function prepTip(){let n=1;try{if(!prep.querySelector(".pp-cols")&&current.menu){styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}n=prepParts().length}catch(e){}
+  return n>1?`Shopping list and method for the kitchen, ${n===2?"two":n} pages. Print single-sided.`:"Shopping list and method for the kitchen on one page. Print single-sided."}
 $("pdf").addEventListener("click",()=>{if(!current)return;const o=document.createElement("dialog");o.className="counter pdfpick";o.setAttribute("aria-label","Save PDF");
   o.innerHTML=`<div class="rate-box"><p class="rate-k">Save PDF</p><h3>${ESC(current.title)}</h3><div class="pp-opts">
    <button type="button" data-p="menu"><b>Menu only</b><span>${ESC(pdfTip())}</span></button>
-   <button type="button" data-p="prep"><b>Prep sheet only</b><span>Recipes and the shopping list for the kitchen. One page, single-sided.</span></button>
+   <button type="button" data-p="prep"><b>Prep sheet only</b><span>${ESC(prepTip())}</span></button>
    <button type="button" data-p="all"><b>Menu and prep sheet</b><span>Everything in one file. Best kept on screen or printed single-sided.</span></button></div></div>`;
   o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-p]");if(!b)return;dismissModal(o);exportMenu("pdf",b.dataset.p)});
   mountModal(o,"[data-p=menu]",$("pdf"))});

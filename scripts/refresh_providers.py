@@ -22,9 +22,15 @@ NAME = {'Netflix Standard with Ads': 'Netflix', 'Netflix Kids': 'Netflix', 'Para
         'Amazon Prime Video': 'Prime Video', 'Amazon Prime Video with Ads': 'Prime Video', 'Disney Plus': 'Disney+', 'BINGE': 'Binge', 'Tubi TV': 'Tubi', '10': '10 Play',
         'Apple TV Store': 'Apple TV', 'Amazon Video': 'Prime Video', 'Google Play Movies': 'Google Play', 'AMC Plus': 'AMC+'}
 DROP = ('JustWatch TV',)
-def clean(lst):
+# Horror-only services: TMDB sometimes matches them to the wrong film (Bloodstream on Beauty and the Beast).
+# Keep them only on films with Horror in data/film-genres.json. tests/providers.test.cjs checks the same.
+HORROR_ONLY = ('Bloodstream', 'Shudder')
+genres = json.load(open(REPO + '/data/film-genres.json'))
+def clean(lst, fid=''):
     seen, out = set(), []
+    horror = 'Horror' in genres.get(fid, [])
     for n, logo in lst:
+        if n in HORROR_ONLY and not horror: continue
         if n in DROP or 'Amazon Channel' in n or 'Apple TV channel' in n: continue
         n2 = NAME.get(n, n)
         if n2 in seen: continue
@@ -38,8 +44,8 @@ def one(f):
     au = d.get('results', {}).get('AU')
     if not au: return fid, {'t': tid}
     pick = lambda k: [[p['provider_name'], p.get('logo_path', '')] for p in sorted(au.get(k, []), key=lambda p: p.get('display_priority', 99))]
-    s = clean(pick('flatrate') + pick('free') + pick('ads'))
-    return fid, {'t': tid, 's': s[:6], 'r': clean(pick('rent'))[:4], 'b': clean(pick('buy'))[:4]}
+    s = clean(pick('flatrate') + pick('free') + pick('ads'), fid)
+    return fid, {'t': tid, 's': s[:6], 'r': clean(pick('rent'), fid)[:4], 'b': clean(pick('buy'), fid)[:4]}
 out = {}; errs = 0
 with ThreadPoolExecutor(8) as ex:
     for fid, v in ex.map(one, films):
