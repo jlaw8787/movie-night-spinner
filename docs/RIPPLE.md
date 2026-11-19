@@ -13,7 +13,8 @@ Plan first (Josh's rule: all planning before builds).
 3. Stills (`data/film-stills.json`) and title logo (`data/film-logos.json`). Real TMDB stills only, no drawn stand-ins.
 4. Genres (`data/film-genres.json`) and Galaxy Video aisle (`aisles.js`, via `scripts/build-aisles.py`). Check seasonal shelves (Christmas from 1 Nov, holidays) and Musicals.
 5. Menu in `data/films.json`: a real venue from the film's world, every dish a complete dish, iconic lines and scenes in, facts true to the film, real quotes or unquoted notes in the character's voice.
-6. Menu layout: `data/film-format.json`, and `data/film-flavour.json` if it is on a shared layout. Update the layout tracker spreadsheet.
+6. Menu layout: `data/film-format.json`, and `data/film-flavour.json` if it is on a shared layout. Update the layout tracker spreadsheet. The layout has to be able to exist in the film's world (no takeaway or airline before 1900 or where there are no phones; tests/setting-layouts.test.cjs).
+   Set in another time than its release (a western, pirates, Middle-earth, 1910s London): add `priceEra` to its flavour ("1800s", "1930s-40s" and so on) so the card prints prices of that time whatever its look. Dishes must be of the film's time too (tests/era-words.test.cjs).
 7. Menu colours (`data/film-palette.json`), house lines (`data/film-house.json`, one table item and one drink).
 8. Dish names and notes (`data/dish-names.json`, `data/dish-notes.json`), recipes (`data/recipes2/`), and a veg / no alcohol version (`data/diet/`) if any dish has meat or alcohol.
 9. Quiz: 3 written questions (`data/trivia.json`); auto rounds come from `scripts/build-quiz.cjs`.
@@ -21,10 +22,10 @@ Plan first (Josh's rule: all planning before builds).
 11. Series: if it is part of a series, add it to `data/series.json` (sequel prompt and marathon planner).
 12. Search terms (`scripts/build-search.cjs`), kids mode flag if it is family friendly.
 13. Run `node scripts/build-data.cjs`: builds `data/film/`, the Google film page (`menu/<slug>/`), sitemap and cache stamps.
-14. Printed menu preview picture (`scripts/render-previews.cjs`, `assets/menu-previews/`).
+14. Printed menu preview picture (`scripts/render-previews.cjs`, `assets/menu-previews/`). Any menu, price or layout change makes the film's preview stale: run `node scripts/render-previews.cjs --stale`. The ripple check fails on a stale preview (fingerprints in `data/preview-stamps.json`).
 15. Fact audit and vibe audit for the film (`docs/AUDIT.md`).
 16. Check it on the wheel, Galaxy Video shelf, Candy bar combos, Match night, Quiz night, My card stats, film page, print, phone and desktop.
-17. Run tests (includes the ripple check). Add a HANDOFF.md line. Hold for Josh's deploy go.
+17. Prices: `node scripts/check-price-sense.cjs "Film (Year)"` (mains above starters and sweets, cheap bites never dearer than real dishes, clean endings). Run tests (includes the ripple check). Add a HANDOFF.md line. Hold for Josh's deploy go.
 
 ## 2. Changing or removing a film
 
