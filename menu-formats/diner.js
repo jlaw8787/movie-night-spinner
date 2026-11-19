@@ -83,6 +83,8 @@ window.MENU_FORMATS.diner=ctx=>{
   const yy=String(f.year||"").slice(-2).padStart(2,"0"),num=String(fl&&fl.number||"").replace(/\D/g,"");
   const price=(k,n)=>periodPrice(PRICE[k],f.year,hash(n));
   const special={};if(num.length===2&&menu.d&&menu.d[0]){const pv=String(price("d",menu.d[0].n)),d=pv.match(/^(\d+)\./);if(+num%5===0)special.d0=d?d[1]+"."+num:/¢$/.test(pv)?(+num)+"¢":pv}
+  /* review 29: the house table item and drink price under the cheapest dish in their course and every main, set here so the fit sees the final prices */
+  const DP=(()=>{const P={};for(const k of ["s","m","w","d"])P[k]=(menu[k]||[]).map((it,i)=>special[k+i]||price(k,it.n));return window.priceSense?window.priceSense(menu,P,{houseOnly:true}):P})();
   /* a film number only sets the cents of the special, on the period price, and only when it reads like a price ("1945" on a 1.25 main reads 1.45); one that does not ("1957") goes on the plate in the day note instead ("Plate No. 57.") */
   if((num.length===3||num.length===4)&&menu.m&&menu.m[0]){const pv=String(price("m",menu.m[0].n)),d=pv.match(/^(\d+)\./);if(d&&+num.slice(-2)%5===0)special.m0=d[1]+"."+num.slice(-2)}
   const W=fl&&fl.winks||[],venue=(fl&&fl.venue)||(night?"Last Light Diner":"Blue Plate Diner"),signTxt=fl&&fl.sign?ESC(fl.sign):"Route 13 &nbsp;/&nbsp; Mile 66";
@@ -178,7 +180,7 @@ window.MENU_FORMATS.diner=ctx=>{
     ${cap?`<div style="position:absolute;right:20px;bottom:18px;max-width:300px;text-align:right;font:italic 400 15px/1.3 ${SERIF};color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${cap}<br><span style="font:700 14px/1.6 ${SANS};letter-spacing:.14em;font-style:normal">${src?"STILL":"POSTER"}: TMDB</span></div>`
       :(src||poster)?`<div style="position:absolute;right:20px;top:16px;font:700 14px/1 ${SANS};letter-spacing:.14em;color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${src?"STILL":"POSTER"}: TMDB</div>`:""}</div>`;
   const item=(k,it,i,L)=>`<div data-h="item" style="break-inside:avoid;padding-bottom:${L.pad}px">
-      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 ${L.dish}px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 ${L.dish}px/1 ${E.dish};color:${red};flex:none">${special[k+i]||price(k,it.n)}</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 ${L.dish}px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 ${L.dish}px/1 ${E.dish};color:${red};flex:none">${(DP[k]&&DP[k][i])||special[k+i]||price(k,it.n)}</span></div>
       ${it.note?`<div data-h="desc" style="font:400 ${L.desc}px/${L.lh} ${SERIF};color:#3a3d43;margin-top:4px">${ESC(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
   const head=(name,sub,L)=>{const hs=Math.round(E.hs*L.k);return ek==="modern"
     ?`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;justify-content:space-between;gap:10px;background:${red};padding:6px 10px 5px;margin:0 0 ${L.mb}px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;min-width:0;overflow:hidden;padding-bottom:.2em;margin-bottom:-.2em;${disp(hs)};color:#fff">${name}</span><span data-opt style="white-space:nowrap;min-width:0;overflow:hidden;flex:0 1 auto;padding-right:.25em;padding-bottom:.3em;margin-bottom:-.3em;font:italic 400 17px/1 ${SERIF};color:#fff">${sub}</span></div>`

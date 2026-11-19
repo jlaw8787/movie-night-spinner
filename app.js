@@ -22,7 +22,7 @@ window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an
   let s=t.replace(/[\s.,;:]+$/,"");const s0=s;for(let n=0;n<4&&D.test(s);n++)s=s.replace(D,"").replace(/[\s,;:]+$/,"");
   if(s===s0)return t;s=s.replace(/,\s*\S+$/,"");return s+(/[.!?]\s*$/.test(t)?".":"")};
 /* prices that make sense on their own card, for shared layouts: every main above every starter and sweet, a drink with spirits above every plain drink and sweet; a raised price keeps its own cents (the film's number lives there) and the card's price style, and nothing prints as 100 cents */
-window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry|blue lagoon|curacao|mimosa|bellini|shandy)\b/i;
+window.priceSense=function(menu,P,opt){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry|blue lagoon|curacao|mimosa|bellini|shandy)\b/i;
   const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢|\dc$/.test(x)),csym=all.some(x=>/\dc$/.test(x))?"c":"¢",dot=all.some(x=>/^\D*\.\d\d$/.test(x));
   const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢|\dc$/.test(x)?n/100:n};
   const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0].replace("¢",""),post=/¢|\dc$/.test(o)?"":(o.match(/[^\d.]*$/)||[""])[0];
@@ -32,7 +32,10 @@ window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin
   /* a raised price keeps its cents only when they read like a price (.95, .50, .25); otherwise it lands on one of those, never .12 or .31 */
   const lift=(t,o)=>{const ov=val(o),oc=Math.round((ov%1)*100);let fr=ov>=1&&oc%5===0?oc/100:[.25,.5,.95][Math.round(t*7)%3],v=Math.floor(t)+fr;if(v<t-1e-9)v+=1;if(t<.975)v=t;return fmt(v,o)};
   const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢|\dc$/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
+  /* opt.houseOnly (review 29, diner): only the house line cap below, every other price as the layout set it */
+  if(opt&&opt.houseOnly)for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).slice();
   const nums=k=>(out[k]||[]).map(val).filter(v=>v!=null),sw=Math.max(0,...nums("s"),...nums("w"));
+  if(!(opt&&opt.houseOnly)){
   out.m=(out.m||[]).map((x,i)=>{const v=val(x);return v!=null&&sw&&v<=sw?lift(sw*(1.15+.08*i),x):x});
   /* a card extra (no tested recipe) never prices above the mains cooked tonight, unless it is a premium dish (13 Nov, Josh): steak, seafood,
      a roast or surf and turf may sit above a plain cooked main, and only steps under a premium one. Prices here come from list place, not the
@@ -55,6 +58,7 @@ window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin
   out.d=(out.d||[]).map((x,i)=>{const v=val(x);return isSp(i)&&v!=null&&plain&&v<=plain?lift(plain*(1.2+.05*i),x):x});
   /* any price left with odd cents (a film number like 28.12) goes up to the next ending that reads like a price */
   for(const k of ["s","m","w","d"])out[k]=(out[k]||[]).map(x=>{const m=String(x).match(/^(\D*)(\d+)\.(\d\d)(\D*)$/);if(!m||+m[3]%5===0)return x;const c=[25,50,75,95].find(e=>e>=+m[3]);return c?m[1]+m[2]+"."+c+m[4]:m[1]+(+m[2]+1)+".00"+m[4]});
+  }
   /* review 29: the house table item and drink sit under the cheapest dish in their course and under every main */
   {const ml=nums("m"),mlo=ml.length?Math.min(...ml):Infinity;for(const k of ["s","d"]){const it=menu[k]||[];if(!it.some(x=>x&&x.house))continue;
     const ov=(out[k]||[]).filter((x,i)=>!(it[i]&&it[i].house)).map(val).filter(v=>v!=null),lo=Math.min(ov.length?Math.min(...ov):Infinity,mlo);if(!isFinite(lo)||lo<=.1)continue;
@@ -1931,7 +1935,7 @@ const DIET_BOOZE=/\b(rum|brandy|whiske?y|wine(?! vinegar)|(?<!(ginger|root) )bee
 /* review 29: a house line (the film's own table item and drink, data/film-house.json) prices under the cheapest dish in its own course and under every main,
    on every shared layout, so a cup of peanuts never costs more than the burger. Reads the printed card: each price that is a whole text node goes to the dish
    it sits closest to in the page's structure. Layouts that price house lines themselves (bartab, which adds up a tab, and arcade, clubhouse, dimsum, foodcourt) are left alone. */
-const HOUSE_SELF=new Set(["bartab","arcade","clubhouse","dimsum","foodcourt"]);
+const HOUSE_SELF=new Set(["bartab","arcade","clubhouse","dimsum","foodcourt","diner"]);
 function houseCap(root,menu,fmt){
   if(!root||!menu||HOUSE_SELF.has(fmt))return 0;
   const items=[];for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it&&it.n)items.push({k,it,n:String(it.n).replace(/\s+/g," ").trim().toLowerCase(),el:null,ps:[]});

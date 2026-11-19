@@ -1862,3 +1862,22 @@ Josh: fix all 16, quick ones first, then a fresh re-score aiming for 9.5. Ripple
 - Review 29 (fresh reviewer, no sight of earlier reviews, run on this branch): 8.0 (docs/review-29.md, screenshots review-29-01 to 11). None of the 16 review 28 faults came back; it found a different set: cinema dialogs on a purple backdrop and Trivia spin in navy, Galaxy tapes in the Candy bar, Galaxy price mismatch, aisle sign tap sizes, a tavern seal face, house add-on lines priced above mains, US ratings, two snacks with no photo, genre-based snack pairings, small content slips, slow Save PDF. Waiting on Josh for what next.
 - Deployed on Josh's go (18 Nov, 6:55am): main fast-forwarded to fix/review-28 (9fc431b6), Publish site run 44163402961 passed. app.js, index.html, sw.js and formats/check.js match live byte for byte.
 - Next (Josh's choice): work through docs/review-29.md, quick ones first, on a new branch, in a new chat.
+
+## 19 Nov: review 29, all 15 fixed (branch fix/review-29, NOT deployed, held for Josh's go)
+
+Josh: quick ones first, then medium, then a fresh re-score. His calls on the way: add the two Candy bar photos (33 of 35 already had free ones), keep the 3 Australian ratings found and show no sticker on the other 24 (lookups too costly), house lines priced under the course and side lines rewritten into dishes.
+- 1 Cinema dialogs are red (.counter); Galaxy dialogs (hire slip, returns, tape back, member card, friends notes) carry .counter.galaxy and stay purple. Trivia spin is maroon and gold.
+- 2 Candy bar film grid uses posterTileHTML (plain poster, gold frame, year and rating), not Galaxy tapes.
+- 3 Wall note: "New releases $4 for 3 nights. Back by 7pm."
+- 4 Aisle signs already had 44px pads (sv-hit). Phone hint adds "Or pick an aisle below" (the aisle cards). Dead .sv-jump CSS removed.
+- 5 Tavern: flavour.seal picks the seal still (or "none"), set on 13 films; footer drops the year when it equals the bill number.
+- 6 House lines: shared pass houseCap (app.js, reads the printed card) plus priceSense, bartab, tavern, campfire and canteen price the house table item and drink under the cheapest dish in their course and every main. 27 side or packet lines rewritten into dishes in data/film-house.json.
+- 7 ratings.js is Australian only (Bugsy M, Pelham M, Midnight Cowboy MA15+, 24 blank). new_films_tmdb.py reads AU only. Late Show: horror with MA15+, R18+ or no rating. Test in video-store.test.
+- 8 Honey joys (various brennemans, CC BY-SA 2.0) and milkshakes (Lauren Michell Rabaino, CC BY 2.0) photos, credits in snacks.json and docs/image-credits.md.
+- 9 Snack pairing cue (scripts/snack-cue.cjs, lite field sn): French, Italian, Asian, Mexican, Indian menus get their own snack pool (172 films).
+- 10 Luca Harbour, Amity Harbour, Thelma and Louise catfish, Wallace line credited to Hutch, fairy floss (Killer Klowns keep cotton candy cocoons), Jaws soak in step order (waitFirst). Superman, Walk the Line, Twisters quotes now unquoted notes. Godfather II Havana menu is "El Palacio, The President's party" (Isla Verde was invented). Spelling test now catches cotton candy and harbor.
+- 11 Save PDF no longer paints the whole card before painting each page.
+- 12 to 15 Tap targets 44px (Match links, Start over, small account buttons, quiz answers summary), account tabs 12.5px, quiz misses show "You said X" then the answer, desktop controls left-aligned, footer links padded inline, counts in 1,000 style.
+- Also: motel stamp value on a 5 cent step (1997 printed 1.00), Breakfast at Tiffany's no-alcohol drink text, kids check false positives.
+- Checks: all node tests, check-ripple 0 gaps, check-browser, store taps, quiz, members, friends, final cut, card stats, night edit, prices, kids cards (375) pass. check-print-text in batches of 50.
+- Review 30 (fresh reviewer, no sight of earlier reviews, on this branch): 8.1 (docs/review-30.md, screenshots review-30-01 to 18). Its item 14 (film page previews out of date) is the preview re-render below.
