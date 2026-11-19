@@ -530,7 +530,7 @@ const FMT_FILMS={
     card:["From the prison kitchen","Garlic sliced razor thin.<br>Sauce on low all afternoon.<br>Steaks last, in a hot pan."],
     groups:[
       {h:"Start early",items:[
-        {k:"Razor-thin garlic bruschetta",n:"Slice the garlic, razor thin",note:"Garlic and tomato on toast. Paulie's way",p:"6:55"},
+        {k:"Razor-thin garlic bruschetta",n:"Razor-thin garlic and tomato bruschetta",note:"Sliced the way Paulie does it inside",p:"6:55"},
         {k:"Prison gravy with three-meat meatballs",n:"Sauce on, three-meat meatballs",note:"Veal, beef and pork. Go easy on the onions",p:"7:30"}]},
       {h:"Like inside",items:[
         {k:"Crew's back booth salami and provolone",n:"Salami, prosciutto, cheese",note:"With pepperoncini and bread, laid out like the cell",p:"11:00",
@@ -556,11 +556,11 @@ const FMT_FILMS={
     groups:[
       {h:"Containment",items:[
         {k:"Slimer's slime dip",note:"Green and greedy. Caught at the Sedgewick Hotel",p:"6.00"},
-        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Open the fridge slowly. Zuul lives in there",p:"5.00"},
+        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Eggs whipped with Dijon and chives. Zuul lives in the fridge",p:"5.00"},
         {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Ray roasted these by the fire at Camp Waconda",p:"4.00"}]},
       {h:"Mains",items:[
         {k:"Firehouse meatball sub",note:"Long enough for the whole crew",p:"9.00"},
-        {k:"Chinese takeaway at the firehouse",n:"Firehouse Chinese",note:"Out of the boxes, while business is slow",p:"9.00"}]},
+        {k:"Chinese takeaway at the firehouse",n:"Firehouse fried rice and dumplings",note:"Lap cheong rice and pork dumplings, out of the boxes",p:"9.00"}]},
       {h:"Sweet & cold",items:[
         {k:"Stay Puft s'mores",note:"Choose the form of the destructor. Toast till he melts",p:"7.00"},
         {k:"Ectoplasm slushie",note:"Very green. Not EPA approved",p:"5.00"}]}]},
