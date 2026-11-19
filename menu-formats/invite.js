@@ -151,7 +151,7 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
      Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
   const dn=[...el.querySelectorAll("[data-note]")].filter(n=>!n.children.length),lo=dn.length?(+el.dataset.nlo||Math.round(min*.9)):min;
   if(dn.length&&window.__fmtShort){for(let i=dn.length-1;i>=0&&over(el);i--){const n=dn[i],full=n.dataset.full||(n.dataset.full=n.textContent),h0=n.offsetHeight;let last=null;
-      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;last=c;return !over(el)});n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
+      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;if(!last||c.length<last.length)last=c;return !over(el)});n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
     if(over(el))grow();if(over(el))shrink(lo);if(!over(el))return}
   /* still too much: drop notes from the end, then whole items (first item per course stays), then grow back */
   const opts=[...el.querySelectorAll("[data-opt]")],its=[...el.querySelectorAll("[data-item]:not([data-keep])")];
