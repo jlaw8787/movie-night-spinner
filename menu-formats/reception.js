@@ -178,10 +178,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* right: the welcome sign on its easel, the poster as the hero, the prop card hung on the easel legs */
   const LX=944,LW=W-LX-30,WT=34,WH=118;
   /* review 26: a sign welcomes you to "the" Marquee Reception Tent; a name that is already a possessive or starts with The or A reads on its own */
-  const theV=!/^(the|a|an)\s/i.test(F.venue)&&!/['’]s\b/i.test(F.venue);
+  /* review 30: "Welcome to" alone; a line ending "Welcome to the" read as cut words above the venue */
   const vS=Math.max(18,Math.min(34,Math.floor((LW-36)/(Math.max(1,F.venue.length)*.64))));
   const welcome=`<div style="position:absolute;left:${LX}px;top:${WT}px;width:${LW}px;height:${WH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:10px 18px;text-align:center;border:1px solid ${mix(acc,e.card,.5)}">
-    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to${theV?" the":""}</div>
+    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to</div>
     <div style="font:700 ${vS}px/1.2 ${CF};color:${e.ink};letter-spacing:.04em;white-space:nowrap;overflow:hidden">${esc(F.venue)}</div></div>`;
   const pc=F.prop,KIND={card:"Card",slip:"Slip",ticket:"Ticket",receipt:"Receipt",note:"Note",letter:"Letter",invitation:"Invitation",invite:"Invitation",tag:"Tag",label:"Label",badge:"Badge",coupon:"Coupon",flyer:"Flyer",postcard:"Postcard",program:"Programme",programme:"Programme",sign:"Sign"};
   const kindRaw=clean((F.fl.prop&&F.fl.prop.kind)||"card").toLowerCase(),kindLab=KIND[kindRaw]||kindRaw.replace(/\b\w/g,c=>c.toUpperCase());
