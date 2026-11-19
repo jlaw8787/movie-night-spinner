@@ -44,7 +44,7 @@ const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
 /* 15 Nov: a one-sentence note that runs long is cut at a break that keeps the film's part (window.__fmtShortFilm), not left off (every pub film printed names only) */
-const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12&&p.split(/\s+/).length>=4)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
 /* review 31: a cut note keeps at least four words ("Smashed beef patties." and "Cucumber mint cream cheese." read as scraps);
    when one line cannot hold four words, that note takes one more line */
@@ -127,19 +127,23 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),C=s=>fam?dry(clean(s)):clean(s);
   const year=String(f.year||"").slice(0,4)||"1999",yy=year.slice(-2);
   const fl=ctx.flavour||{};
+  /* review 31: the pub talks like its country. Counter meals, meat trays and a licence number are Australian; an English pub serves food
+     and runs a quiz; anywhere else the kitchen is simply open (flavour.country, or GB from a pound price) */
+  const PL=String(fl.country||(fl.currency==="£"?"GB":"AU")).toUpperCase(),AU=PL==="AU",GB=PL==="GB";
+  const raf=AU?null:GB?"Pub quiz, Thursday":"Trivia night, Wednesday";
   const title=clean(f.title||"Tonight's Feature");
   const venue=C(fl.venue)||"The Royal Hotel";
   const sign=C(fl.sign)||"";
   const note={text:C(fl.note&&fl.note.text)||sentence(f.T)||"Pull up a stool. Kitchen's open and the specials are on the board.",by:C(fl.note&&fl.note.by)||"The Publican"};
   const winks=(fl.winks||[]).map(C).filter(Boolean);
-  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:fam?"Friday Raffle":T.raffle.replace(/,.*$/,""),lines:["Drawn at the front bar","Must be present to win"]};
+  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:fam?"Friday Raffle":(raf||T.raffle).replace(/,.*$/,""),lines:raf?["Teams of up to six","Prizes behind the bar"]:["Drawn at the front bar","Must be present to win"]};
   const num=String(fl.number||"").replace(/\D/g,"")||year;
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=ctx.stills||[];
   const PM=!!poster; /* poster mode: the whole poster is the hero, the first still is only the fallback */
   const hero=PM?{src:img(poster,"w780"),poster:true}:{src:img(stills[0],"w1280"),poster:false};
-  const sec=Object.assign({},SEC,fam?{d:"Soft Drinks"}:{});
+  const sec=Object.assign({},SEC,AU?{}:{m:"Mains"},fam?{d:"Soft Drinks"}:{});
 
   const P=ctx.palette||{};
   const BOARD="#1f2623",CHALK="#f1efe6";
@@ -156,7 +160,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== verandah fascia ===== */
   const FH=150;
   const vT=fitType(up(venue),W-120,86,E.dcw*(E.up?1.12:1),78,34,1.0,2);
-  /* 7 Nov: a period film (number is a story year before release, Phar Lap 1930) gets a pub that already stood then */const sy=+String((fl&&fl.number)||"").replace(/\D/g,""),estY=sy>1800&&sy<+year?String(sy-60):year;const fasciaKick=`${E.kick}, ${E.est} ${estY}`;
+  /* 7 Nov: a period film (number is a story year before release, Phar Lap 1930) gets a pub that already stood then */const sy=+String((fl&&fl.number)||"").replace(/\D/g,""),estY=sy>1800&&sy<+year?String(sy-60):year;const fasciaKick=`${AU?E.kick:GB?"FOOD SERVED DAILY":"KITCHEN OPEN DAILY"}, ${E.est} ${estY}`;
   const fascia=`<div style="position:absolute;left:0;top:0;width:${W}px;height:${FH}px;background:linear-gradient(180deg,rgba(255,255,255,.14),transparent 30%,rgba(0,0,0,.2)),repeating-linear-gradient(180deg,transparent 0 42px,rgba(0,0,0,.14) 42px 44px,rgba(255,255,255,.08) 44px 46px),${grain(.12+.15*T.wear,lum(rgb(E.fascia))<.2,.6,true)},${E.fascia};border-bottom:10px solid ${E.frame};box-shadow:0 6px 14px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 60px;box-sizing:border-box;text-align:center">
       <div style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
       <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
@@ -196,7 +200,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== blackboard ===== */
   var BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=BHT,NB=H-74;
   var IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
-  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
+  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${AU?(fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"):GB?"Food served 12 to 3 and 6 to 9":"Kitchen open 12 to 2 and 6 to 9"}</div></div>`;
   var headH=76;
   var cue=sentence(C(f.P));
   var cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);
@@ -259,7 +263,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   const raffle=`<div style="position:${under?`absolute;left:${PX+4}px;top:${ZY+38}px`:"relative"};flex:none;width:${under?RRW:RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
       <div style="width:62px;border-right:2px dashed rgba(33,26,18,.45);display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);white-space:nowrap;font:800 18px/1 ${body};letter-spacing:.1em">No. ${esc(num.padStart(4,"0"))}</div></div>
       <div style="flex:1;padding:14px 16px 14px;min-width:0">
-        <div style="${caps(15,"#4a3a24",.16)}">${esc(fl.prop&&fl.prop.title?"Keep this":fam?"Friday raffle":T.raffle)}</div>
+        <div style="${caps(15,"#4a3a24",.16)}">${esc(fl.prop&&fl.prop.title?"Keep this":fam?"Friday raffle":raf||T.raffle)}</div>
         <div style="font:${E.dw}${rT.z}px/1.05 ${disp};color:#1b150e;margin:6px 0">${esc(up(prop.title))}</div>
         ${prop.lines.map(l=>`<div style="font:500 16px/1.3 ${body};color:#3a2f22">${esc(trunc(l,28))}</div>`).join("")}
         </div></div>`;
@@ -270,7 +274,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
       <div style="position:absolute;right:22px;bottom:18px;font:26px/1.5 ${sig};color:${fit(acc,"#f8f2e3","#1d3a6a",4)}">${esc(trunc(note.by,20))}</div></div>`;
-  const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?sentence(trunc(winks[0],60))+" ":""}Prices subject to change. Licence ${num}.`;
+  const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?sentence(trunc(winks[0],60))+" ":""}Prices subject to change.${AU?` Licence ${num}.`:GB?" Licensed premises.":""}`;
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
   const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
 

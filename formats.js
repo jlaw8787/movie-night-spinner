@@ -665,7 +665,7 @@ const FMT_FILMS={
     groups:[
       {h:"Starters",items:[
         {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"Falafel in pita with tahini.",note:"Laney in the falafel hat",p:"4.50"},
-        {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"Black bean and cheddar nachos.",note:"Taylor dumps Zack",p:"5.25"}],
+        {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"Black bean and cheddar nachos.",note:"Loaded nachos from the Real World party where Taylor dumps Zack",p:"5.25"}],
         house:{n:"Simon's breakfast muffins",d:"Warm blueberry muffins.",note:"Laney has his breakfast ready. Get up, Simon.",p:"1.50"}},
       {h:"Mains",items:[
         {k:"Hacky sack meatball subs",n:"Hacky sack meatball subs",d:"Meatball and provolone rolls.",note:"The hacky sack act",p:"5.95"},
@@ -673,7 +673,7 @@ const FMT_FILMS={
       {h:"Dessert",items:[
         {k:"Red dress on the stairs strawberry shortcake",n:"Red dress on the stairs strawberry shortcake",d:"Berry shortcake with cream.",note:"Laney on the stairs",p:"3.75"}]},
       {h:"Drinks",items:[
-        {k:"Laney's foghorn prom punch",n:"Laney's foghorn prom punch",d:"Pineapple and cranberry punch.",note:"Foghorn for Dean",p:"2.25"}],
+        {k:"Laney's foghorn prom punch",n:"Laney's foghorn prom punch",d:"Pineapple and cranberry punch.",note:"Fruit punch from the prom, with a foghorn for Dean",p:"2.25"}],
         house:{n:"Sparkling water by the pool",d:"Chilled, with lime.",note:"Not the last dance. The first.",p:"1.00"}}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",sign:"assets/era/slims/slims-sign.webp",motto:"The next best thing<br>to a time machine",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",

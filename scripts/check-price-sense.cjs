@@ -25,7 +25,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
   const PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
   const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
   const PR=/^\s*(?:\$|£)?(\d{1,3})(?:\.(\d\d))?\s*$|^\s*(\d{1,2})\s*(¢|c)\s*$|^\s*\.(\d\d)\s*$/;
-  const norm=s=>String(s||'').toLowerCase().replace(/[’']/g,"'").replace(/\s+/g,' ').trim();
+  const norm=s=>String(s||'').toLowerCase().replace(/[’']/g,"'").replace(/[-‐–]/g,' ').replace(/\s+/g,' ').trim();
   const out=[];let skipped=0,noprice=0;
   for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f){out.push({id,err:'no film'});continue}
    window.__stage=false;current&&(current.printMenu=null);try{await ensureExact(f);await show(f,true)}catch(e){out.push({id,err:String(e).slice(0,80)});continue}
@@ -46,7 +46,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    if(!prices.length){noprice++;continue}
    prices.sort((a,b)=>a.dp-b.dp);
    const seen=new Set(),P=prices.filter(x=>{const key=x.k+x.nm;if(seen.has(key))return false;seen.add(key);return true});
-   if(P.length<dish.length*.6){skipped++;continue}
+   {const rt=norm(card.textContent),onCard=dish.filter(d=>rt.includes(d.nm)).length;if(P.length<Math.max(2,onCard)*.6){skipped++;continue}}
    const by=k=>P.filter(x=>x.k===k),mn=by('m').filter(x=>!x.house),bad=[];
    /* a set dinner never costs less than the dearest dish in it, and a combo never under 60% of what its named dishes add up to */
    for(const st of sets){const inS=/\bone of each\b(?!\s+board)/.test(st.tx)?P.slice():P.filter(x=>st.tx.includes(x.nm)&&Math.abs(x.v-st.v)>.001);if(!inS.length)continue;const top=Math.max(...inS.map(x=>x.v)),sum=inS.reduce((a,x)=>a+x.v,0);
@@ -54,6 +54,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const minM=mn.length?Math.min(...mn.map(x=>x.v)):null;
    if(minM!=null){for(const x of [...by('s'),...by('w')])if(x.v>=minM)bad.push(`${x.k==='s'?'starter':'sweet'} ${x.n} ${x.raw} not under the cheapest main ${minM}`);
      for(const x of by('d'))if(!SP.test(x.n)&&x.v>=minM)bad.push(`plain drink ${x.n} ${x.raw} not under the cheapest main ${minM}`)}
+   {const BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded)\b)/i,D=by('d');if(D.length){const lo=Math.min(...D.map(x=>x.v));for(const x of by('s'))if(BAR.test(x.n)&&!PREM.test(x.n)&&x.v>lo+.001)bad.push(`bar snack ${x.n} ${x.raw} dearer than a drink at ${lo}`)}}
    const prem=P.filter(x=>x.k==='m'&&PREM.test(x.n)&&!isCheap(x.n));
    {const pl=mn.filter(x=>!PREM.test(x.n)||isCheap(x.n));if(pl.length){const hi=Math.max(...pl.map(x=>x.v));for(const x of prem)if(!x.house&&x.v<hi)bad.push(`premium main ${x.n} ${x.raw} under the plain main at ${hi}`)}}
    for(const x of P)if(isCheap(x.n)&&!PREM.test(x.n)){

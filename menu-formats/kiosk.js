@@ -136,7 +136,7 @@ const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
 /* 15 Nov: a one-sentence note that runs long is cut at a break that keeps the film's part (window.__fmtShortFilm), not left off (27 of 31 kiosk films lost notes) */
-const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12&&p.split(/\s+/).length>=4)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
 /* where the content ends inside a fixed-height box (floats included), read from an end marker */
 const domEnd=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const e=d.querySelector("[data-end]"),h=e.getBoundingClientRect().top-d.getBoundingClientRect().top;b.removeChild(d);return h}catch(e){return null}};
@@ -370,7 +370,8 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   const dcw=E.bcw+.05;
   const secStyle={wood:`border-bottom:3px solid ${ACC}`,varnish:`border-bottom:2px solid ${rgba(ink,.6)}`,faded:`background:${rgba(ACC,.92)};color:${E.board};padding:2px 12px;border-radius:30px;display:inline-block`,laminate:`color:${ACC};${glow}`,corflute:`background:${ink};color:${E.board};padding:2px 10px;display:inline-block`,vinyl:`background:${ACC};color:#fff;padding:2px 12px;border-radius:8px;display:inline-block`,ply:`border-bottom:2px solid ${ink}`}[E.plank];
   const secC={faded:fit(E.board,ACC,"#ffffff",3),corflute:E.board,vinyl:"#ffffff"}[E.plank]||ink;
-  const dishNote=(it,FS)=>it.note?sentence(clip(it.note,Math.floor((it.nk||FS.nl||1)*colW/(FS.N*E.bcw)*.95))):"";
+  /* review 31: a note that cannot keep four words on its lines gets one line more rather than printing a scrap */
+  const dishNote=(it,FS)=>{if(!it.note)return "";const k0=it.nk||FS.nl||1;for(const k of [k0,k0+1]){const c=clip(it.note,Math.floor(k*colW/(FS.N*E.bcw)*.95));if(c)return sentence(c)}return ""};
   const colHtml=(cs,FS)=>cs.map((c,i)=>`<div style="margin-top:${i?FS.G+6:0}px">
       <div style="margin-bottom:8px"><span style="font:${E.dw}${FS.S}px/1.15 ${disp};${secStyle};color:${secC}">${esc(SEC[c.k])}</span></div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">

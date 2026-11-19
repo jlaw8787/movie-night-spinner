@@ -116,6 +116,9 @@ window.MENU_FORMATS.home=function(ctx){
   [E.dq,E.bq,SIGQ].forEach(M.font);
   const fl=ctx.flavour||{},nt=fl.note&&fl.note.text?fl.note:{text:"Dinner is on the table at seven. Plates in the sink before the film starts, and no talking in the good bits.",by:"The cook"};
   const venue=fl.venue||"Family Kitchen",sign=fl.sign||"Home cooking, film night";
+  /* review 31: before fridges (or in a made-up world) the note is pinned by the hearth and dinner serves the table, not the couch;
+     in the 1930s and 40s it is the icebox and the wireless */
+  const OLD=fl.world==="storybook"||(fl.priceEra||ctx.era)==="1800s",ICE=!OLD&&(fl.priceEra||ctx.era)==="1930s-40s";
   const winks=(fl.winks&&fl.winks.length?fl.winks:["Popcorn after mains","Napkins by the couch","Phones off when the lights go down"]).slice(0,5).map(w=>M.dry(w,fam));
   const num=M.num(fl.number,f.year),/* 7 Nov: a film whose number is its story year (Selena, 1995) stamps that year, not the release year */sy=/^(19|20)\d\d$/.test(String(fl.number||""))&&Math.abs(+fl.number-(+f.year||0))<=5?String(fl.number):String(f.year||""),yy=sy.slice(-2);/* 15 Nov: optional per film, flavour.stamp prints a story-true stamp on the TV still and the recipe card in place of the year (The Truman Show: DAY 10,909) */
   const ink=E.ink,acc=M.accent(ctx.palette,E.card,E.acc,3.4),dark=M.darkOf(ctx.palette,"#15161a");
@@ -188,7 +191,7 @@ window.MENU_FORMATS.home=function(ctx){
    <div style="position:absolute;left:30px;top:${NT}px;width:${W-60}px;height:${NH}px;box-sizing:border-box;padding:46px 26px 20px;${lined}transform:rotate(${T.rot*.5}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
      <div style="position:absolute;left:0;right:0;top:0;height:30px;background:${acc}"></div>
      <div data-fit="17" style="height:${NFH}px;overflow:hidden;font-size:22px;color:${ink}">
-       ${kick(T.k)}
+       ${kick(OLD?T.k.replace(/Stuck on the fridge/i,"Pinned by the hearth").replace(/(on|from) the fridge/i,"by the hearth").replace(/fridge/i,"hearth"):ICE?T.k.replace(/fridge/i,"icebox"):T.k)}
        <div style="margin-top:.45em;font:italic 1.05em/1.4 ${bd}">${x(nt.text)}</div>
      </div>
      <div style="font:40px/1.1 ${SIG};color:#24407a;margin-top:6px;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
@@ -217,7 +220,7 @@ window.MENU_FORMATS.home=function(ctx){
    </div>
    ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
    ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
-   ${rcard(cardB,420,548,T.rot*.5,fl.stamp||sy,`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
+   ${rcard(cardB,420,548,T.rot*.5,fl.stamp||sy,`${OLD?"Serves everyone at the table.":ICE?"Serves everyone round the wireless.":"Serves everyone on the couch."} ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };
 /* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */
