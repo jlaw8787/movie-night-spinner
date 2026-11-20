@@ -1736,7 +1736,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(/\b(alcohol-free|non-alcoholic) (beer|lager|stout|ale)[- ]battered\b/gi,"crisp battered"),[new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
-   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?))/gi,"mocktail"),
+   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"),
    /* review 24: an alcohol-free wine, beer or spirit is still a grown-up's drink, so a kids' card pours what a child drinks, the same drink the card names:
       sparkling apple juice, grape juice, ginger beer, cucumber or blood orange juice. Wine by name goes the same way as wine */
    r(/\b(alcohol-free|non-alcoholic) (sparkling (wine|ros[ée]|white|red)|champagne|prosecco|spumante|cava|bubbly|bubbles|sparkling)(?![\w\u00C0-\u024F])/gi,"sparkling apple juice"),r(/\b(alcohol-free|non-alcoholic) bellinis?\b|\bbellinis?\b(?! mocktail)/gi,"peach fizz"),
@@ -1768,7 +1768,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    before and after the shared pass, and run on every card since a layout dries PG films too */
 const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v;
   return [[/\b(goodness|heaven|pete|god|christ)((['’]s?|s['’])?) (syrup|yuzu soda)\b/gi,(m,a,b)=>a+b+" sake"],
-   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing|blinis?)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
+   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing|blinis?|meatballs?)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
    [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
    /* It's a Wonderful Life: the housewarming is for the Martini family, and the martini swap turned them into "Mocktail' new house" */
    [/\bmocktail(?=['\u2019] new house)/gi,()=>"Martinis"],
