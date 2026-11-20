@@ -54,6 +54,21 @@
      "200g bean sprouts@Produce",
      "4 spring onions@Produce"
     ]
+   ],
+   [
+    "Meanwhile, Cape Cod lobster rolls",
+    "Lobster in lemon mayo on buttered toasted rolls. Maggie and Grace are having a much better week.",
+    "Cape Cod style lobster rolls: cooked lobster meat in a light lemon, chive and celery mayonnaise, piled into split rolls toasted in butter. Chop 500g cooked lobster meat into chunks. Mix with 4 tbsp mayonnaise, the zest and juice of half a lemon, 1 finely diced celery stick, 1 tbsp snipped chives, salt and pepper, and chill. Butter the sides of 4 split hot dog style rolls and toast in a pan until golden. Fill with the lobster and serve with lemon wedges and potato crisps.",
+    [
+     "500g cooked lobster meat@Seafood",
+     "4 tbsp mayonnaise@Pantry",
+     "1 lemon@Produce",
+     "1 celery stick@Produce",
+     "1 bunch chives@Produce",
+     "4 soft long rolls@Bakery",
+     "40g butter@Dairy",
+     "1 bag potato crisps@Pantry"
+    ]
    ]
   ],
   "W": [
@@ -83,7 +98,7 @@
     ]
    ]
   ],
-  "T": "Night one. Too full to flirt.",
+  "T": "His week at Applebee's. Her week on Cape Cod.",
   "D": "Two husbands get a week off from marriage and find out it is not the party they pictured.",
   "P": "Serve the riblets when Rick and Fred sink into the food coma at Applebee's."
  },
@@ -94,7 +109,13 @@
  },
  "film-flavour": {
   "venue": "Applebee's",
-  "sign": "Providence, Rhode Island. Night one, too full to go out.",
+  "sign": "Hall pass week, his and hers",
+  "labels": {
+   "s": "Night one, Applebee's",
+   "m": "His week, her week",
+   "w": "Day two, the golf course",
+   "d": "Day three, the gym and the bar"
+  },
   "note": {
    "text": "Eat light on night one, gentlemen. A full man never closes the deal.",
    "by": "Coakley",
@@ -128,7 +149,8 @@
    "Night one food coma riblets"
   ],
   [
-   "Fake chow"
+   "Fake chow",
+   "Meanwhile, Cape Cod lobster rolls"
   ],
   [
    "Gary's golf course brownies"
@@ -143,7 +165,8 @@
    "Sticky barbecue pork riblets and pickles. Eat these and you're asleep by nine, hall pass or not."
   ],
   [
-   "Chicken chow mein, soft noodles, cabbage and soy. Nothing fake about this chow."
+   "Chicken chow mein, soft noodles, cabbage and soy. Nothing fake about this chow.",
+   "Lobster in lemon mayo on buttered toasted rolls. Maggie and Grace are having a much better week."
   ],
   [
    "Fudgy dark chocolate brownies, nothing extra baked in. Gary's batch wrecked a whole round."
@@ -202,6 +225,21 @@
      "200g bean sprouts@Produce",
      "4 spring onions@Produce"
     ]
+   },
+   {
+    "n": "Meanwhile, Cape Cod lobster rolls",
+    "note": "Lobster in lemon mayo on buttered toasted rolls. Maggie and Grace are having a much better week.",
+    "how": "Cape Cod style lobster rolls: cooked lobster meat in a light lemon, chive and celery mayonnaise, piled into split rolls toasted in butter. Chop 500g cooked lobster meat into chunks. Mix with 4 tbsp mayonnaise, the zest and juice of half a lemon, 1 finely diced celery stick, 1 tbsp snipped chives, salt and pepper, and chill. Butter the sides of 4 split hot dog style rolls and toast in a pan until golden. Fill with the lobster and serve with lemon wedges and potato crisps.",
+    "shop": [
+     "500g cooked lobster meat@Seafood",
+     "4 tbsp mayonnaise@Pantry",
+     "1 lemon@Produce",
+     "1 celery stick@Produce",
+     "1 bunch chives@Produce",
+     "4 soft long rolls@Bakery",
+     "40g butter@Dairy",
+     "1 bag potato crisps@Pantry"
+    ]
    }
   ],
   "w": [
@@ -258,6 +296,14 @@
    "vegetable oil@Pantry",
    "200g bean sprouts@Produce",
    "4 spring onions@Produce",
+   "500g cooked lobster meat@Seafood",
+   "4 tbsp mayonnaise@Pantry",
+   "1 lemon@Produce",
+   "1 celery stick@Produce",
+   "1 bunch chives@Produce",
+   "4 soft long rolls@Bakery",
+   "40g butter@Dairy",
+   "1 bag potato crisps@Pantry",
    "200g dark chocolate@Pantry",
    "150g butter@Dairy",
    "250g caster sugar@Pantry",
@@ -704,6 +750,151 @@
     }
    },
    {
+    "n": "Meanwhile, Cape Cod lobster rolls",
+    "course": "m",
+    "prep_min": 15,
+    "cook_min": 5,
+    "make_ahead": "Mix the lobster up to 4 hours ahead and keep it cold; toast the rolls to order",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "cooked lobster meat",
+      "aisle": "Seafood"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "mayonnaise",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "celery stick, finely diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "snipped chives",
+      "aisle": "Produce"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "soft long rolls",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bag potato crisps",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Chop the lobster and mix with the mayonnaise, lemon zest and juice, celery and chives; chill.",
+      "min": 10
+     },
+     {
+      "text": "Butter the sides of the rolls and toast in a pan until golden.",
+      "min": 5
+     },
+     {
+      "text": "Fill with the lobster and serve with lemon wedges and crisps.",
+      "min": 5
+     }
+    ],
+    "veg": false,
+    "af": true,
+    "alt": {
+     "veg": {
+      "n": "Meanwhile, Cape Cod egg and chive rolls",
+      "prep_min": 15,
+      "cook_min": 10,
+      "make_ahead": "Boil the eggs up to 2 days ahead; mix and toast to order",
+      "ingredients": [
+       {
+        "q": 8,
+        "u": "",
+        "item": "eggs",
+        "aisle": "Dairy"
+       },
+       {
+        "q": 4,
+        "u": "tbsp",
+        "item": "mayonnaise",
+        "aisle": "Pantry"
+       },
+       {
+        "q": 1,
+        "u": "",
+        "item": "lemon",
+        "aisle": "Produce"
+       },
+       {
+        "q": 1,
+        "u": "",
+        "item": "celery stick, finely diced",
+        "aisle": "Produce"
+       },
+       {
+        "q": 1,
+        "u": "tbsp",
+        "item": "snipped chives",
+        "aisle": "Produce"
+       },
+       {
+        "q": 4,
+        "u": "",
+        "item": "soft long rolls",
+        "aisle": "Bakery"
+       },
+       {
+        "q": 40,
+        "u": "g",
+        "item": "butter",
+        "aisle": "Dairy"
+       },
+       {
+        "q": 1,
+        "u": "",
+        "item": "bag potato crisps",
+        "aisle": "Pantry"
+       }
+      ],
+      "steps": [
+       {
+        "text": "Boil the eggs for 9 minutes, cool and peel.",
+        "min": 12
+       },
+       {
+        "text": "Chop and mix with the mayonnaise, lemon, celery and chives.",
+        "min": 5
+       },
+       {
+        "text": "Toast the buttered rolls and fill.",
+        "min": 5
+       }
+      ]
+     }
+    }
+   },
+   {
     "n": "Gary's golf course brownies",
     "course": "w",
     "prep_min": 15,
@@ -820,6 +1011,9 @@
    },
    "Fake chow": {
     "veg": "Crisp tofu and soft egg noodles stir-fried with cabbage, carrot, soy and sesame"
+   },
+   "Meanwhile, Cape Cod lobster rolls": {
+    "veg": "Chopped egg in lemon chive mayo on buttered toasted rolls, with crisps"
    }
   }
  },

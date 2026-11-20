@@ -433,6 +433,151 @@
    }
   },
   {
+   "n": "Meanwhile, Cape Cod lobster rolls",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Mix the lobster up to 4 hours ahead and keep it cold; toast the rolls to order",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked lobster meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag potato crisps",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the lobster and mix with the mayonnaise, lemon zest and juice, celery and chives; chill.",
+     "min": 10
+    },
+    {
+     "text": "Butter the sides of the rolls and toast in a pan until golden.",
+     "min": 5
+    },
+    {
+     "text": "Fill with the lobster and serve with lemon wedges and crisps.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Meanwhile, Cape Cod egg and chive rolls",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Boil the eggs up to 2 days ahead; mix and toast to order",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "snipped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag potato crisps",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 9 minutes, cool and peel.",
+       "min": 12
+      },
+      {
+       "text": "Chop and mix with the mayonnaise, lemon, celery and chives.",
+       "min": 5
+      },
+      {
+       "text": "Toast the buttered rolls and fill.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Gary's golf course brownies",
    "course": "w",
    "prep_min": 15,
