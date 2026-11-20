@@ -230,6 +230,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const feeV=FEE*(.7+.05*Math.min(nIt,12)),fee=feeV<10?feeV.toFixed(1)+(num?num.slice(-1):"0"):Math.round(feeV)+"."+(num?num.slice(-2).padStart(2,"0"):"50");
   /* the footer gets two lines of room above the photo, so the credit never sits under it */
   const back=`${stock()}${border()}
+   <div data-pvzoom="40,30,736,672" aria-hidden="true" style="position:absolute;left:40px;top:30px;width:736px;height:672px;pointer-events:none"></div>
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick("The courses in procession")}</div>
    <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">Bill of Fare</div>
    <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:64px;right:64px;top:${heavy?136:150}px;height:${heavy?470:454}px;overflow:hidden;font-size:${heavy?20:28}px;text-align:center;display:flex;flex-direction:column">

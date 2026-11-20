@@ -890,6 +890,10 @@ function cardFaces(){
     /* review 31: wide pages of a two-page menu (Jurassic Park's dining guide) split into panels on a phone too */
     if(swipeW()&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
       xs.slice(0,-1).forEach((x,j)=>out.push({el:pg.el,w:xs[j+1]-x,h,x:pg.x+x,px:x,y:pg.y,row:true,part:"p"+i+"panel"+(j+1),panel:1}))});return out}
+    /* review 32: a portrait page can mark the block worth reading on a phone ([data-pvzoom], the banquet's bill of fare); on a phone that
+       block is the page's view, at about 1.2 times the size (Gone with the Wind opened at 7px italic). Tap still opens the whole page */
+    if(swipeW())return pages.map(pg=>{const z=pg.el.querySelector("[data-pvzoom]");if(!z)return pg;const [zx,zy,zw,zh]=z.dataset.pvzoom.split(",").map(Number);
+      return {el:pg.el,w:zw,h:zh,x:pg.x+zx,y:pg.y+zy,px:zx,row:pg.row,part:"zoom"+pages.indexOf(pg),panel:1}});
     return pages}
   /* one wide page (a landscape placemat, canteen tray or bill of fare) shows whole, scaled to the screen; tap opens it full size to zoom.
      Review 30 (Josh's call): the old left and right half views cut words at the fold and looked broken at first glance.
