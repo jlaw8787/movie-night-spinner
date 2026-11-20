@@ -2033,9 +2033,9 @@ function houseCap(root,menu,fmt){
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
 const PF_CHEAP=/\b(slices?|hot ?dogs?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
-const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|pasties|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?))\b/i;
+const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?))\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
-const pfCheap0=n=>PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
+const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
 const PF_PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
@@ -2208,6 +2208,8 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 31: rounding to clean endings can undo a rule (a cupcake rounded up past the dearest starter), so the rules run once more on
      the rounded prices and anything they lower is rounded down */
   for(const x of P)if(x!==keep){x.v=x.c;x.down=0}rules();for(const x of P)if(x!==keep&&Math.abs(x.v-x.c)>.001)x.c=x.v<x.c?cleanDown(x.v):clean(x.v);
+  /* review 32: the film-number price is kept as it is, so a roast, steak or seafood main is lifted over it rather than sitting under it */
+  {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<hi)x.c=clean(hi+step(hi))}}
   {const L=mn();if(L.length){const m0=Math.min(...L.map(x=>x.c));for(const x of [...by("s"),...by("w"),...by("d").filter(x=>!PF_SP.test(x.n))])if(x.c>=m0)x.c=m0>step(m0)?clean(m0-step(m0)):x.c}}
   const cur=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;
   for(const x of O)x.c=x.v<1?Math.max(.05,Math.round(x.v*20)/20):Math.abs(x.v-x.v0)<.001?x.v:clean(x.v);
