@@ -405,7 +405,10 @@
    ]
   },
   "number": "",
-  "priceEra": "modern"
+  "priceEra": "modern",
+  "currency": "coin",
+  "coin": "units",
+  "coinMid": 12
  },
  "Thor: Ragnarok (2017)": {
   "venue": "Sakaar Arena Cafe",
@@ -821,7 +824,10 @@
     "One gauntlet, one wish"
    ]
   },
-  "number": "6"
+  "number": "6",
+  "currency": "coin",
+  "coin": "units",
+  "coinMid": 12
  },
  "Guardians of the Galaxy Vol. 2 (2017)": {
   "venue": "Ego's Palace Dining Room",
@@ -846,7 +852,10 @@
     "I'm Mary Poppins, y'all!"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "units",
+  "coinMid": 12
  },
  "Guardians of the Galaxy Vol. 3 (2023)": {
   "venue": "Knowhere Bar",
@@ -871,7 +880,10 @@
     "Orgocorp"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "units",
+  "coinMid": 12
  },
  "Doctor Strange (2016)": {
   "venue": "Kamar-Taj Kitchen",
@@ -3584,7 +3596,9 @@
   "number": "",
   "sideStill": "/jAEMhmNmEgSuC16NjmBHhj63wFW.jpg",
   "sideLine": "A rowboat for two on the lagoon.",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Beauty and the Beast (1991)": {
   "venue": "Castle Dining Room",
@@ -3610,7 +3624,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Aladdin (1992)": {
   "venue": "Agrabah Marketplace",
@@ -3665,7 +3681,9 @@
   "number": "",
   "words": {
    "Clear skies, a fine evening ahead": "Clear skies over Pride Rock"
-  }
+  },
+  "currency": "coin",
+  "coin": "grubs"
  },
  "Shrek (2001)": {
   "venue": "Shrek's Swamp",
@@ -3700,7 +3718,10 @@
     4
    ],
    "flip": 0
-  }
+  },
+  "currency": "coin",
+  "coin": "gold coins",
+  "priceEra": "1800s"
  },
  "The Princess Bride (1987)": {
   "venue": "Miracle Max's Hut",
@@ -3907,7 +3928,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "shells"
  },
  "Frozen (2013)": {
   "venue": "Arendelle Castle Kitchen",
@@ -3933,7 +3956,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Encanto (2021)": {
   "venue": "Casa Madrigal Kitchen",
@@ -4010,7 +4035,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "taels"
  },
  "Tarzan (1999)": {
   "venue": "Treehouse Camp Kitchen",
@@ -4047,7 +4074,8 @@
    ],
    "flip": 1
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "£sd"
  },
  "Hercules (1997)": {
   "venue": "Phil's Training Camp",
@@ -4074,7 +4102,9 @@
   },
   "number": "",
   "sport": "fight",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "drachmas"
  },
  "The Emperor's New Groove (2000)": {
   "venue": "Mudka's Meat Hut",
@@ -4126,7 +4156,10 @@
     "Bring Fiona"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "gold coins",
+  "priceEra": "1800s"
  },
  "Snow White and the Seven Dwarfs (1937)": {
   "venue": "The Dwarfs' Cottage",
@@ -4152,7 +4185,9 @@
    ]
   },
   "number": "7",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Pinocchio (1940)": {
   "venue": "Geppetto's Workshop",
@@ -4308,7 +4343,9 @@
    ]
   },
   "number": "12",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Alice in Wonderland (1951)": {
   "venue": "The Mad Tea Party",
@@ -4334,7 +4371,8 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "£sd"
  },
  "Peter Pan (1953)": {
   "venue": "The Lost Boys' Hideout",
@@ -4432,7 +4470,9 @@
    "flip": 1,
    "sig": "full"
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "One Hundred and One Dalmatians (1961)": {
   "venue": "Pongo's London Flat",
@@ -4497,7 +4537,9 @@
    "Pinned to the bamboo": "Pinned to the tree",
    "Ring the gong": "Beat the drum"
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "bananas"
  },
  "Robin Hood (1973)": {
   "venue": "Sherwood Forest Camp",
@@ -4542,7 +4584,9 @@
    ],
    "flip": 0
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "farthings"
  },
  "Pocahontas (1995)": {
   "venue": "Powhatan Village Feast",
@@ -4677,7 +4721,9 @@
    ]
   },
   "number": "18",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Frozen II (2019)": {
   "venue": "Northuldra Camp",
@@ -4714,7 +4760,9 @@
    ],
    "flip": 0
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "Moana 2 (2024)": {
   "venue": "Voyager Canoe Galley",
@@ -4740,7 +4788,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "shells"
  },
  "Raya and the Last Dragon (2021)": {
   "venue": "Boun's Prawn Boat",
@@ -5006,7 +5056,9 @@
    ]
   },
   "number": "3",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "The Lion King (2019)": {
   "venue": "Pumbaa's Jungle Log",
@@ -5031,7 +5083,9 @@
     "No hyenas"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "grubs"
  },
  "I Am Legend (2007)": {
   "venue": "Washington Square Pantry",
@@ -5878,7 +5932,10 @@
     "Handle with care"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "lei",
+  "coinMid": 40
  },
  "The Rocky Horror Picture Show (1975)": {
   "venue": "Frank's Castle Banquet Hall",
@@ -6062,7 +6119,9 @@
    "From the front desk": "From the mistress",
    "Bar service": "From the pantry",
    "Order by 1 AM": "Curtains drawn"
-  }
+  },
+  "currency": "£sd",
+  "priceEra": "1930s-40s"
  },
  "Saw (2004)": {
   "venue": "Abandoned Bathroom Cell",
@@ -7271,7 +7330,8 @@
     "Rescue mission to Bali"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "Rp"
  },
  "Leap Year (2010)": {
   "venue": "Declan's Pub",
@@ -11373,7 +11433,10 @@
     "Continental Hotel"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "gold coins",
+  "coinMid": 1
  },
  "John Wick: Chapter 2 (2017)": {
   "venue": "Continental Rome",
@@ -11424,7 +11487,10 @@
     "Then the price is on you"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "gold coins",
+  "coinMid": 1
  },
  "John Wick: Chapter 4 (2023)": {
   "venue": "Osaka Continental",
@@ -11676,7 +11742,8 @@
     "Presumed lost"
    ]
   },
-  "number": "006"
+  "number": "006",
+  "currency": "roubles"
  },
  "Casino Royale (2006)": {
   "venue": "Casino Royale Montenegro",
@@ -11783,7 +11850,8 @@
   },
   "number": "",
   "sideStill": "/6D3Yii1ud6RcmocI3orVBTH1MgR.jpg",
-  "sideLine": "Mind the alarms on the way to dessert."
+  "sideLine": "Mind the alarms on the way to dessert.",
+  "currency": "Kč"
  },
  "Gladiator (2000)": {
   "venue": "Proximo's Gladiator School",
@@ -11865,7 +11933,9 @@
    ],
    "flip": 1
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "pennies"
  },
  "Titanic (1997)": {
   "venue": "First Class Dining Saloon",
@@ -12020,7 +12090,9 @@
     "Signed by General Weygand"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "F",
+  "priceEra": "1930s-40s"
  },
  "North by Northwest (1959)": {
   "venue": "Twentieth Century Dining Car",
@@ -12199,7 +12271,8 @@
   },
   "number": "",
   "sideStill": "/o59yWwfh0tDm9w2rku92BT4KGa9.jpg",
-  "sideLine": "Chef Didier is cooking. Order everything."
+  "sideLine": "Chef Didier is cooking. Order everything.",
+  "currency": "Kč"
  },
  "Batman Returns (1992)": {
   "venue": "Shreck's Department Store",
@@ -12614,7 +12687,9 @@
     "Warm cups"
    ],
    "board_t": "Today's Board"
-  }
+  },
+  "currency": "kr",
+  "priceEra": "1800s"
  },
  "Arthur Christmas (2011)": {
   "venue": "Mission Control Canteen",
@@ -14373,7 +14448,9 @@
     "Atoms split here"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "£sd",
+  "priceEra": "1800s"
  },
  "Babe (1995)": {
   "venue": "Hoggett Farm Kitchen",
@@ -15034,7 +15111,8 @@
    ]
   },
   "number": "1919",
-  "priceEra": "1930s-40s"
+  "priceEra": "1930s-40s",
+  "currency": "piastres"
  },
  "The Lighthorsemen (1987)": {
   "venue": "Beersheba Approach Camp",
@@ -15321,7 +15399,9 @@
     "Mind the snakes"
    ]
   },
-  "number": "1936"
+  "number": "1936",
+  "currency": "Rs",
+  "priceEra": "1930s-40s"
  },
  "Indiana Jones and the Temple of Doom (1984)": {
   "venue": "Club Obi Wan",
@@ -15410,7 +15490,9 @@
    "Logged": "Poured",
    "Mess call": "All hands"
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "pieces of eight"
  },
  "Romancing the Stone (1984)": {
   "venue": "Cartagena Bus Cantina",
@@ -15550,7 +15632,9 @@
     7
    ],
    "flip": 0
-  }
+  },
+  "currency": "piastres",
+  "priceEra": "1930s-40s"
  },
  "The Mummy Returns (2001)": {
   "venue": "O'Connell Manor Kitchen",
@@ -15581,7 +15665,9 @@
    "From the front desk": "From the study",
    "Front desk": "Study",
    "Bar service": "Drawing room"
-  }
+  },
+  "currency": "£sd",
+  "priceEra": "1930s-40s"
  },
  "Jurassic World (2015)": {
   "venue": "Main Street Food Court",
@@ -15724,7 +15810,9 @@
    ]
   },
   "number": "9",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "pieces of eight"
  },
  "National Treasure (2004)": {
   "venue": "Gates Family House",
@@ -15824,7 +15912,10 @@
     "Handle with care"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "pieces of eight",
+  "priceEra": "1800s"
  },
  "Pirates of the Caribbean: Dead Men Tell No Tales (2017)": {
   "venue": "The Dying Gull",
@@ -15850,7 +15941,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "pieces of eight"
  },
  "Jurassic World Dominion (2022)": {
   "venue": "Biosyn Valley Canteen",
@@ -16219,7 +16312,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "The Lord of the Rings: The Return of the King (2003)": {
   "venue": "Minas Tirith Citadel",
@@ -16245,7 +16340,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "Willow (1988)": {
   "venue": "Nelwyn Village Fair",
@@ -16483,7 +16580,9 @@
   },
   "number": "13",
   "priceEra": "1800s",
-  "covers": 13
+  "covers": 13,
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "The Hobbit: The Desolation of Smaug (2013)": {
   "venue": "Lake-town Market",
@@ -16536,7 +16635,9 @@
    ]
   },
   "number": "5",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)": {
   "venue": "Mr. Tumnus's Cave",
@@ -16562,7 +16663,9 @@
    ]
   },
   "number": "4",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "silver pieces"
  },
  "Wicked (2024)": {
   "venue": "Shiz University Dining Hall",
@@ -16587,7 +16690,9 @@
     "One seat, bring your luggage"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "emeralds"
  },
  "The Wizard of Oz (1939)": {
   "venue": "Emerald City Palace",
@@ -16612,7 +16717,9 @@
     "Bring Toto"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "emeralds"
  },
  "The Sword in the Stone (1963)": {
   "venue": "Sir Ector's Castle Kitchen",
@@ -16664,7 +16771,8 @@
     "Creatures and curiosities"
    ]
   },
-  "number": "1927"
+  "number": "1927",
+  "currency": "G"
  },
  "Fantastic Beasts: The Secrets of Dumbledore (2022)": {
   "venue": "Bhutan Election Hall",
@@ -16689,7 +16797,8 @@
     "The Qilin decides"
    ]
   },
-  "number": "1932"
+  "number": "1932",
+  "currency": "G"
  },
  "The Chronicles of Narnia: Prince Caspian (2008)": {
   "venue": "Cair Paravel Ruins",
@@ -16739,7 +16848,9 @@
    ],
    "flip": 0
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "silver pieces"
  },
  "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
   "venue": "Dawn Treader Galley",
@@ -16765,7 +16876,9 @@
    ]
   },
   "number": "7",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "silver pieces"
  },
  "Wicked: For Good (2025)": {
   "venue": "Emerald City Palace",
@@ -16790,7 +16903,9 @@
     "Enchanted shoes required"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "emeralds"
  },
  "Elemental (2023)": {
   "venue": "The Fireplace Shop",
@@ -17053,7 +17168,9 @@
     6
    ],
    "flip": 0
-  }
+  },
+  "currency": "coin",
+  "coin": "emeralds"
  },
  "Happy Feet (2006)": {
   "venue": "Emperor Colony Gathering",
@@ -17474,7 +17591,9 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "gold coins"
  },
  "The Little Mermaid (2023)": {
   "venue": "Ariel's Grotto",
@@ -17506,7 +17625,9 @@
    "From the Fire Pit": "From the Castle",
    "Lagoon Coolers": "Grotto Coolers",
    "Ring the gong": "Ring the bell"
-  }
+  },
+  "currency": "coin",
+  "coin": "sand dollars"
  },
  "The Jungle Book (2016)": {
   "venue": "Mowgli's Wolf Den",
@@ -17545,7 +17666,9 @@
   "labels": {
    "b": "Learned from the pack"
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "bananas"
  },
  "Jojo Rabbit (2019)": {
   "venue": "Betzler Family Kitchen",
@@ -17597,7 +17720,8 @@
     "Bear, travelling alone"
    ]
   },
-  "number": "32"
+  "number": "32",
+  "currency": "S/"
  },
  "Time Bandits (1981)": {
   "venue": "The Supreme Being's Map Room",
@@ -17888,7 +18012,10 @@
     "Mos Eisley, Tatooine"
    ]
   },
-  "number": "94"
+  "number": "94",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "The Empire Strikes Back (1980)": {
   "venue": "Yoda's Dagobah Hut",
@@ -17924,7 +18051,10 @@
    ],
    "flip": 1,
    "sig": "full"
-  }
+  },
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Return of the Jedi (1983)": {
   "venue": "Bright Tree Village",
@@ -17949,7 +18079,10 @@
     "Bring your own drum"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Avatar (2009)": {
   "venue": "Hometree Gathering",
@@ -18019,7 +18152,10 @@
     "Fear is the mind-killer."
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "solari",
+  "coinMid": 12
  },
  "Star Wars: Episode I - The Phantom Menace (1999)": {
   "venue": "Watto's Junk Shop",
@@ -18044,7 +18180,10 @@
     "Anakin Skywalker, driver"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Star Wars: Episode II - Attack of the Clones (2002)": {
   "venue": "Dex's Diner",
@@ -18069,7 +18208,10 @@
     "Info on the house"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Star Wars: Episode III - Revenge of the Sith (2005)": {
   "venue": "Galaxies Opera House",
@@ -18094,7 +18236,10 @@
     "Chancellor's box"
    ]
   },
-  "number": "66"
+  "number": "66",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Rogue One: A Star Wars Story (2016)": {
   "venue": "Rogue One Galley",
@@ -18119,7 +18264,10 @@
     "Mission: Scarif"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Solo: A Star Wars Story (2018)": {
   "venue": "Lando's Falcon Galley",
@@ -18144,7 +18292,10 @@
     "Falcon, one ride only"
    ]
   },
-  "number": "12"
+  "number": "12",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Star Wars: The Force Awakens (2015)": {
   "venue": "Maz Kanata's Castle",
@@ -18169,7 +18320,10 @@
     "Scavenge for more"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Star Wars: The Last Jedi (2017)": {
   "venue": "Ahch-To Island Hut",
@@ -18208,7 +18362,10 @@
   },
   "labels": {
    "b": "Lessons on Ahch-To"
-  }
+  },
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Star Wars: The Rise of Skywalker (2019)": {
   "venue": "Pasaana Festival Tent",
@@ -18233,7 +18390,10 @@
     "Admit one smuggler"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "credits",
+  "coinMid": 12
  },
  "Flash Gordon (1980)": {
   "venue": "Mongo Palace Feast",
@@ -18343,7 +18503,10 @@
     4
    ],
    "flip": 0
-  }
+  },
+  "currency": "coin",
+  "coin": "solari",
+  "coinMid": 12
  },
  "The Last Dragon (1985)": {
   "venue": "Sum Dum Goy Fortune Cookie Factory",
@@ -18684,7 +18847,9 @@
   },
   "number": "",
   "priceEra": "1800s",
-  "world": "storybook"
+  "world": "storybook",
+  "currency": "coin",
+  "coin": "coins"
  },
  "The Farewell (2019)": {
   "venue": "Changchun Wedding Banquet",
@@ -20547,7 +20712,9 @@
     "The Great Hall, at sundown"
    ]
   },
-  "number": "1300"
+  "number": "1300",
+  "currency": "coin",
+  "coin": "pennies"
  },
  "Bohemian Rhapsody (2018)": {
   "venue": "Wembley Stadium, July 1985",
@@ -20768,7 +20935,10 @@
    ]
   },
   "number": "5",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "kopeks",
+  "coinMid": 30
  },
  "Final Destination 2 (2003)": {
   "venue": "Last Stop Motel",
@@ -20907,7 +21077,8 @@
     "Compartment 7 and 8"
    ]
   },
-  "number": "3"
+  "number": "3",
+  "currency": "F"
  },
  "Halloween (2018)": {
   "venue": "Haddonfield High Halloween Dance",
@@ -21013,7 +21184,9 @@
    ]
   },
   "number": "6",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "pennies"
  },
  "Les Misérables (2012)": {
   "venue": "Thénardier's Inn, Montfermeil",
@@ -21065,7 +21238,8 @@
     "Kalokairi, Greece"
    ]
   },
-  "number": "1979"
+  "number": "1979",
+  "currency": "€"
  },
  "Mission: Impossible 2 (2000)": {
   "venue": "Sydney to Atlanta Flight",
@@ -21629,7 +21803,9 @@
     "Salzburg, 1938"
    ]
   },
-  "number": "7"
+  "number": "7",
+  "currency": "coin",
+  "coin": "schillings"
  },
  "The Spy Who Loved Me (1977)": {
   "venue": "Atlantis Dining Room",
@@ -21654,7 +21830,8 @@
     "Deck access: all"
    ]
   },
-  "number": "007"
+  "number": "007",
+  "currency": "L"
  },
  "Thunderball (1965)": {
   "venue": "Palmyra Terrace, Nassau",
@@ -22313,7 +22490,9 @@
   "words": {
    "From the host": "From the gatecrasher"
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "pennies"
  },
  "First Blood (1982)": {
   "venue": "Search Party Mess, Hope",
@@ -22429,7 +22608,8 @@
    "Bar snacks": "Drinking snacks",
    "Afters": "Sweets",
    "Cash or tab. No exceptions.": "Put it on Kurt's tab"
-  }
+  },
+  "currency": "฿"
  },
  "L.A. Confidential (1997)": {
   "venue": "Victory Motel",
@@ -23632,7 +23812,9 @@
    ]
   },
   "number": "2045",
-  "words": {}
+  "words": {},
+  "currency": "coin",
+  "coin": "coins"
  },
  "Starship Troopers (1997)": {
   "venue": "FedNet",
@@ -24015,7 +24197,9 @@
    ]
   },
   "number": "38",
-  "words": {}
+  "words": {},
+  "currency": "coin",
+  "coin": "clams"
  },
  "The Lego Movie (2014)": {
   "venue": "Downtown Bricksburg",
@@ -24046,7 +24230,10 @@
    "Spotted around the mall": "Spotted around town",
    "Mall directory": "City directory",
    "Ticket": "From the manual"
-  }
+  },
+  "currency": "coin",
+  "coin": "studs",
+  "coinMid": 12
  },
  "The Super Mario Bros. Movie (2023)": {
   "venue": "Punch-Out Pizzeria",
@@ -24307,7 +24494,10 @@
   "number": "76",
   "year": "1944",
   "words": {},
-  "priceEra": "1930s-40s"
+  "priceEra": "1930s-40s",
+  "currency": "coin",
+  "coin": "pfennigs",
+  "coinMid": 40
  },
  "The Sting (1973)": {
   "venue": "The 20th Century Limited",
@@ -24536,7 +24726,10 @@
   "words": {
    "2014": "1932",
    "From the grill": "Mains"
-  }
+  },
+  "currency": "coin",
+  "coin": "klubecks",
+  "coinMid": 12
  },
  "The Notebook (2004)": {
   "venue": "Windsor Plantation",

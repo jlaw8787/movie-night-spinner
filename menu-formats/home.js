@@ -55,6 +55,8 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
   const grow=()=>{if(!give)return;for(let c=8;over(el)&&c<=+el.dataset.grow;c+=8){give.style.height=(+give.dataset.h0-c)+"px";shift.forEach(n=>n.style.top=(+n.dataset.t0-c)+"px");el.style.top=(+el.dataset.t0-c)+"px";el.style.height=(+el.dataset.h0+c)+"px"}};
   const shrink=lo=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>lo&&g++<160){s=Math.max(lo,s-.5);el.style.fontSize=s+"px"}};
   shrink(min);if(!over(el))return;
+  /* review 32 (Josh: room for the full note, not cuts): the photo gives way and the type steps to its note floor before a note is shortened */
+  if(el.querySelector("[data-note]")){grow();if(!over(el))return;shrink(+el.dataset.nlo||Math.round(min*.9));if(!over(el))return}
   /* 15 Nov: dish notes ([data-note]) are shortened before anything is dropped. From the bottom, each is cut at a natural break
      (first sentence, a comma, a joining word), keeping the film's moment where it can (window.__fmtShortFilm): the first cut that fits is kept, else the shortest one if it saves a line.
      Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
@@ -198,22 +200,27 @@ window.MENU_FORMATS.home=function(ctx){
    </div>`;
 
   /* back: second print, magnet list of winks, two recipe cards for the courses */
-  const half=Math.ceil(C.length/2),cardA=C.slice(0,half),cardB=C.slice(half);
+  /* review 32: the courses split where the two cards hold about the same number of dishes (four starters no longer share a card with
+     both mains while the other card holds a cake and two drinks), and the cards take height from the second print so every note prints whole */
+  const cnt=c=>c.items.length+c.items.filter(i=>i.note).length*.9,tot=C.reduce((a,c)=>a+cnt(c),0);let half=1,bestD=1e9;
+  for(let i=1;i<C.length;i++){const a=C.slice(0,i).reduce((q,c)=>q+cnt(c),0),d=Math.abs(tot-2*a);if(d<bestD){bestD=d;half=i}}
+  if(C.length<2)half=C.length;const cardA=C.slice(0,half),cardB=C.slice(half);
+  const RAISE=Math.max(...[cardA,cardB].map(cs=>cs.reduce((q,c)=>q+cnt(c),0)))>5.5?96:48;
   const course=c=>`<div style="margin-bottom:.55em">
       <div style="font:${E.dw} 1.3em/1.1 ${dd};${up}color:${acc};margin-bottom:.25em">${LABEL[c.k]}</div>
       ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="margin-bottom:.42em"><div style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</div>${it.note?`<div data-opt data-note style="font:.76em/1.3 ${bd};color:${ink};opacity:.85;margin-top:.1em">${x(it.note)}</div>`:""}</div>`).join("")}
     </div>`;
-  const rcard=(cs,l,t,rot,head,foot)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:370px;height:476px;box-sizing:border-box;padding:18px 22px 14px;background:${E.card};transform:rotate(${rot}deg);box-shadow:0 12px 24px rgba(0,0,0,.3),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6});display:flex;flex-direction:column">
+  const rcard=(cs,l,t,rot,head,foot)=>`<div style="position:absolute;left:${l}px;top:${t-RAISE}px;width:370px;height:${476+RAISE}px;box-sizing:border-box;padding:18px 22px 14px;background:${E.card};transform:rotate(${rot}deg);box-shadow:0 12px 24px rgba(0,0,0,.3),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6});display:flex;flex-direction:column">
       <div style="display:flex;justify-content:space-between;align-items:baseline;font:700 17px/1.2 ${bd};letter-spacing:.18em;text-transform:uppercase;color:${acc}"><span>Recipe</span><span>${x(head)}</span></div>
       <div style="height:3px;background:${acc};margin:6px 0 3px"></div><div style="height:1px;background:rgba(60,100,170,.45);margin-bottom:12px"></div>
-      <div data-fit="19" style="flex:1;min-height:0;overflow:hidden;font-size:28px">${cs.length?cs.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">Whatever is in the fridge, served with the film.</div>`}</div>
+      <div data-fit="19" data-nlo="16" style="flex:1;min-height:0;overflow:hidden;font-size:28px">${cs.length?cs.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">Whatever is in the fridge, served with the film.</div>`}</div>
       <div style="font:15px/1.3 ${bd};color:${ink};opacity:.8;margin-top:6px">${foot}</div>
     </div>`;
   const back=`${door}
-   ${print(second,282,30,508,502,T.rot*.6,secPos,"",secIsPoster)}
-   <div style="position:absolute;left:30px;top:52px;width:236px;height:440px;box-sizing:border-box;padding:40px 18px 16px;${lined}transform:rotate(${-T.rot}deg);box-shadow:0 10px 20px rgba(0,0,0,.26)">
+   ${print(second,282,30,508,502-RAISE,T.rot*.6,secPos,"",secIsPoster)}
+   <div style="position:absolute;left:30px;top:52px;width:236px;height:${440-RAISE}px;box-sizing:border-box;padding:40px 18px 16px;${lined}transform:rotate(${-T.rot}deg);box-shadow:0 10px 20px rgba(0,0,0,.26)">
      <div style="position:absolute;left:0;right:0;top:0;height:24px;background:${E.mag[1]}"></div>
-     <div data-fit="15" style="height:380px;overflow:hidden;font-size:20px;color:${ink}">
+     <div data-fit="14" style="height:${380-RAISE}px;overflow:hidden;font-size:20px;color:${ink}">
        <div style="font:${E.dw} 1.35em/1.05 ${dd};${up}color:${acc};margin-bottom:.4em">${x(T.lst)}</div>
        ${winks.map((w,i)=>`<div style="display:flex;gap:.4em;font:1em/1.3 ${bd};margin-bottom:.45em"><span style="font-weight:700;color:${acc}">${i+1}.</span><span>${x(w)}</span></div>`).join("")}
      </div>

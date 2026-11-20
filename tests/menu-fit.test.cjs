@@ -7,11 +7,12 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.join(__dirname,'..'),rj=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const FL=rj('data/film-flavour.json'),F=rj('data/films.json'),H=rj('data/film-house.json'),app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const BAND=Function("return "+app.match(/const PF_BAND=(\{[^;]*\});/)[1])();
-const CUR=new Set(['$','£','£sd','€','F','L','₩','¥','R$','kr','RM','G']);
+const CUR=new Set(['$','£','£sd','€','F','L','₩','¥','R$','kr','RM','G','coin','Kč','roubles','piastres','Rs','฿','Rp','S/']);
 const bad=[];
 for(const [id,v] of Object.entries(FL)){
   if(v.currency!=null&&!CUR.has(v.currency))bad.push(`${id}: currency ${v.currency}`);
   if(v.priceEra!=null&&!BAND[v.priceEra])bad.push(`${id}: priceEra ${v.priceEra}`);
+  if(v.currency==='coin'&&!v.coin)bad.push(`${id}: coin money with no coin name`);
   if(v.world!=null&&v.world!=='storybook')bad.push(`${id}: world ${v.world}`);
   if(v.country!=null&&!/^[A-Z]{2}$/.test(v.country))bad.push(`${id}: country ${v.country}`);
   if(v.note&&typeof v.note==='object'&&v.note.text&&!['quote','note'].includes(v.note.kind))bad.push(`${id}: signed note with no kind`);

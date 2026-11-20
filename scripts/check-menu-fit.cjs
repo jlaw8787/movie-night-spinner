@@ -24,14 +24,14 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  const r=await p.evaluate(async ([FROM,COUNT,NAMED,QL])=>{
   const ids=NAMED.length?NAMED:FILMS.map(f=>f.id).slice(FROM,FROM+COUNT);
   const norm=s=>String(s||'').toLowerCase().replace(/[’']/g,"'").replace(/[“”"]/g,'"').replace(/[-‐–]/g,' ').replace(/\s+/g,' ').trim();
-  const SYM={'$':/\$/,'£':/£|\d+p\b/,'£sd':/\b\d+s\b|\b\d+d\b|£\d/,'€':/€/,'F':/\d F\b/,'L':/L\. \d/,'₩':/₩/,'¥':/¥/,'R$':/R\$/,'kr':/\d kr\b/,'RM':/RM \d/,'G':/\d (Galleons?|Sickles?)\b/};
+  const SYM={'$':/\$/,'£':/£|\d+p\b/,'£sd':/\b\d+s\b|\b\d+d\b|£\d/,'€':/€/,'F':/\d F\b/,'L':/L\. \d/,'₩':/₩/,'¥':/¥/,'R$':/R\$/,'kr':/\d kr\b/,'RM':/RM \d/,'G':/\d (Galleons?|Sickles?)\b/,'Kč':/\d Kč/,'roubles':/\d roubles/,'piastres':/\d piastres/,'Rs':/Rs \d/,'฿':/฿\d/,'Rp':/Rp \d/,'S/':/S\/ \d/};
   const FOREIGN=/£|€|₩|¥|R\$/;
   const out=[];let n=0;
   for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f){out.push({id,bad:['no film']});continue}
    try{await ensureExact(f);await show(f,true)}catch(e){out.push({id,bad:['render '+String(e).slice(0,60)]});continue}
    await new Promise(r=>setTimeout(r,25));
    if(!f._lib)continue;n++;const L=f._lib,fl=L.flavour||{},bad=[],txt=card.innerText,low=norm(txt);
-   const cur=fl.currency||'$';
+   const cur=fl.currency||'$';if(cur==='coin')SYM.coin=new RegExp('\\d '+String(fl.coin||'coins').split(' ')[0].replace(/(ies|s)$/,''),'i');
    /* 1. money */
    const hasPrice=/\d\.\d\d|\d+¢|\.\d\d\b|£|€|₩|¥|\d+d\b/.test(txt);
    if(hasPrice){if(cur==='$'){if(FOREIGN.test(txt))bad.push('foreign money on a dollar card')}
@@ -50,7 +50,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    /* 4. notes: the line after a dish name, when it is not a price, another dish or a heading */
    {const m=current.printMenu||{},ds=['s','m','w','d'].flatMap(k=>(m[k]||[]).filter(x=>x&&!x.house).map(x=>x.label||x.n));
     const lines=txt.split(/\n+/).map(s=>s.trim()).filter(Boolean),names=new Set(ds.map(norm));
-    const isPrice=s=>/^(\$|£|€|₩|¥|R\$ ?|L\. ?|RM ?)?[\d.,]+\s?(p|d|F|kr|¢|c|cr|crowns|silver|gp)?$|^\d+s( \d+d)?$|^\d+ gp \d+$|^\d+s \d+d$|^\d+\/\d+$|^\d+ (denarii|taels|coins?)$/.test(s);
+    const isPrice=s=>/^(\$|£|€|₩|¥|R\$ ?|L\. ?|RM ?)?[\d.,]+\s?(p|d|F|kr|¢|c|cr|crowns|silver|gp)?$|^\d+s( \d+d)?$|^\d+ gp \d+$|^\d+s \d+d$|^\d+\/\d+$|^\d+ (denarii|taels|coins?)$/.test(s)||/^[\d,. ]+ [A-Za-zčö][A-Za-zčö ]*$|^(Rs |฿|Rp |S\/ )[\d,.]+$/.test(s)&&s.length<26;
     for(const d of ds){const i=lines.findIndex(l=>norm(l)===norm(d));if(i<0)continue;let j=i+1;while(j<lines.length&&isPrice(lines[j]))j++;const nx=lines[j]||'';
       if(!nx||names.has(norm(nx))||/^[A-Z0-9 ,.&'!-]{3,}$/.test(nx)||/^\d+ cr$/.test(nx)||/^GUESTS\b/i.test(nx)||/^(cold |hot )?drinks$/i.test(nx))continue;/* no note slot here (a name-only board): not counted */
       const w=nx.replace(/[^\w' ]/g,' ').trim().split(/\s+/).filter(Boolean).length;if(w<4)bad.push(`thin note on ${d}: "${nx}"`)}}

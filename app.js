@@ -2039,6 +2039,8 @@ const PF_PINT={"1800s":.06,"1930s-40s":.15,"1950s":.25,"1960s":.35,"1970s":.75,"
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
    The figure arrives in dollars of the day and is turned into what that place would print */
+/* one coin of a plural money name: "1 piece of eight", "1 credit", "1 silver penny" */
+const pfOne=c=>({"pieces of eight":"piece of eight","silver pennies":"silver penny",pennies:"penny",farthings:"farthing",taels:"tael",denarii:"denarius",Sickles:"Sickle",klubecks:"klubeck",kopeks:"kopek",pfennigs:"pfennig"})[c]||c.replace(/(ies)$/,"y").replace(/s$/,"");
 const pfGBP=era=>({"1970s":.3,"1980s":.3,"1990s":.5,"2000s":.6})[era]||.75;
 /* review 32: wizarding money for the Harry Potter films (flavour.currency "G"): a Galleon is about five pounds, seventeen Sickles to the Galleon */
 const pfWiz=v=>{const sk=Math.max(1,Math.round(v*.75/5*17)),g=Math.floor(sk/17),r=sk%17,pl=(n,w)=>n+" "+w+(n===1?"":"s");return g?pl(g,"Galleon")+(r?" "+pl(r,"Sickle"):""):pl(r,"Sickle")};
@@ -2049,7 +2051,7 @@ function pfMoney(v,cur,era,fl){const old=era==="1800s"||era==="1930s-40s"||era==
     case "£":{const x=v*pfGBP(era);return x<.975?Math.max(5,Math.round(x*20)*5)+"p":"£"+dec(x,.05)}
     case "£sd":{const d=Math.max(1,Math.round(v*.12*240));if(d<12)return d+"d";const sh=Math.floor(d/12),r=d%12;if(sh<20)return sh+"s"+(r?" "+r+"d":"");return "£"+Math.floor(sh/20)+(sh%20?" "+(sh%20)+"s":"")+(r?" "+r+"d":"")/* review 32: the pence stay on a pound price */}
     case "€":return "€"+dec(v*.9,.05);
-    case "F":{const x=v*(era==="1800s"?5:old?60:6);return x<10?dec(x,.05).replace(".",",")+" F":Math.max(10,Math.round(x/5)*5)+" F"}
+    case "F":{const x=v*(era==="1800s"?5:old?60:6);return x<10&&!old?dec(x,.05).replace(".",",")+" F":x<10?Math.max(1,Math.round(x))+" F":Math.max(10,Math.round(x/5)*5)+" F"}
     case "L":return "L. "+gs(Math.max(50,Math.round(v*350/50)*50),".");
     case "₩":return "₩"+gs(Math.max(500,Math.round(v*1000/500)*500),",");
     case "¥":return "¥"+gs(Math.max(10,Math.round(v*110/10)*10),",");
@@ -2057,6 +2059,17 @@ function pfMoney(v,cur,era,fl){const old=era==="1800s"||era==="1930s-40s"||era==
     case "kr":{const is=fl&&String(fl.country||"").toUpperCase()==="IS",x=v*(is?140:10),st=is?50:5;return gs(Math.max(st,Math.round(x/st)*st),",")+" kr"}
     case "RM":return "RM "+dec(v*2.5,.05);
     case "G":return pfWiz(v);
+    /* review 32: storybook and made-up money (flavour.coin: credits, solari, pieces of eight, silver pennies, clams). The card's middle main
+       comes to about flavour.coinMid coins (6 unless set), whatever the decade, so a Mos Eisley drink and a Shire supper both read right */
+    case "coin":{const b=PF_BAND[era]||PF_BAND.modern,mid=Math.sqrt(b[0]*b[1]),n=Math.max(1,Math.round(v/mid*((fl&&+fl.coinMid)||6))),c=(fl&&fl.coin)||"coins";
+      return gs(n,",")+" "+(n===1?pfOne(c):c)}
+    case "Kč":return gs(Math.max(5,Math.round(v*25/5)*5)," ")+" Kč";
+    case "roubles":return gs(Math.max(500,Math.round(v*5000/500)*500),",")+" roubles";
+    case "piastres":return Math.max(1,Math.round(v*(old?22:60)))+" piastres";
+    case "Rs":return "Rs "+Math.max(1,Math.round(v*(old?3:45)));
+    case "฿":return "฿"+gs(Math.max(5,Math.round(v*25/5)*5),",");
+    case "Rp":return "Rp "+gs(Math.max(1000,Math.round(v*15000/1000)*1000),".");
+    case "S/":return "S/ "+dec(v*3.7,.5);
     default:return "$"+dec(v,.05)}}
 /* review 32: a total on the card (the bar tab's carried over and running tab, the clubhouse par line) is added up again from the prices
    as printed, after priceFix has re-priced and re-moneyed them, and printed in the same money. Layouts mark the total [data-sum="g"]
@@ -2072,6 +2085,8 @@ function pfParse(s){s=String(s||"").replace(/\s+/g," ").trim();let m;
   if((m=s.match(/^([\d,]+) kr$/)))return {k:"kr",u:+m[1].replace(/,/g,"")};
   if((m=s.match(/^(R\$ |RM |€|\$)?(\d*)([.,])(\d\d)$/)))return {k:"dec",u:(+m[2]||0)*100+ +m[4],pre:m[1]||"",sep:m[3],bare:!m[2]};
   if((m=s.match(/^(\$|€|RM |R\$ )?(\d+)$/)))return {k:"n",u:+m[2],pre:m[1]||""};
+  if((m=s.match(/^(\d[\d,. ]*) ([A-Za-zčö][A-Za-zčö ]*)$/)))return {k:"sfx",u:+m[1].replace(/[,. ]/g,""),name:m[2]};
+  if((m=s.match(/^(Rs |฿|Rp |S\/ )([\d,.]+)$/)))return {k:"pfx",u:+m[2].replace(/[,.]/g,""),pre:m[1]};
   return null}
 function pfFmt(u,p,all){const gs=(n,sep)=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,sep);u=Math.round(u);
   switch(p.k){
@@ -2083,6 +2098,8 @@ function pfFmt(u,p,all){const gs=(n,sep)=>String(n).replace(/\B(?=(\d{3})+(?!\d)
     case "L":return "L. "+gs(u,".");
     case "W":return p.pre+gs(u,",");
     case "kr":return gs(u,",")+" kr";
+    case "sfx":{const pl=all&&all.find(x=>x.k==="sfx"&&x.u!==1),nm=u===1?pfOne(p.name):p.u!==1?p.name:pl?pl.name:p.name+"s";return gs(u,",")+" "+nm}
+    case "pfx":return p.pre+gs(u,p.pre==="Rp "?".":",");
     default:return (p.pre||"")+u}}
 function sumFix(root){if(!root)return 0;
   /* a price repeated in a line of text ("Frosty Palace burger, 1.50, with a cup of coffee") is copied from the dish's own printed price */
