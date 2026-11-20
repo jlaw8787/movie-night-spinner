@@ -144,7 +144,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const anyNote=C.some(([k])=>items[k].some(it=>clean(it.note).trim()));
   /* review 32: when no whole-note tier fits the board, the board takes 48px from the order window below before notes are cut */
   {const fitsFull=()=>tiers.filter(x=>x.nl>=4).some(x=>{CW=CWall;if(C.reduce((a,[k])=>a+cH(x,k),0)*.9<=menuH)return true;CW=(CWall-colGap)/2;return split(x).m*.9<=menuH});
-   if(anyNote&&!fitsFull()){boardH+=48;menuH+=48}}
+   if(anyNote&&!fitsFull()){boardH+=40;menuH+=40}}
   for(const x of tiers){if(x.sh){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
       CW=(CWall-colGap)/2;const q=split(x);if(q.m<=menuH||(anyNote&&!tiers[tiers.indexOf(x)+1].sh)){tr=x;sp=q;break}continue}
     /* review 32: the whole-note tiers trust the estimate a little (it runs high on this board) and lean on the runtime shrink (--k) */
@@ -177,7 +177,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      a CSS object-position) fills the logo panel with that still when the poster is the hero and already carries the title (Straight Outta Compton) */
   const WY=BH+boardH,WH=H-WY;
   const nLen=clean(note.text).length,nSize=nLen>150?16:nLen>110?17:nLen>80?18:19;
-  const CWD=280,C2X=RX+20+CWD+16,C2W=RW-20-CWD-16-20,LH=96,TH=WH-40-LH-14;
+  const CWD=280,C2X=RX+20+CWD+16,C2W=RW-20-CWD-16-20,LH=boardH>560?68:96,TH=WH-40-LH-14;
   const card=`<div style="position:absolute;left:${RX+20}px;top:${WY+20}px;width:${CWD}px;height:${WH-40}px;box-sizing:border-box;padding:14px 18px 10px;background:#fbf7ec;transform:rotate(${t.tilt*.6}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
     <div>${kick("Overheard at the window",acc,14)}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
     <div style="font:400 ${ei<2?36:32}px/1 ${SF};color:${acc};text-align:right">${esc(note.by)}</div></div>`;
@@ -190,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="flex:0 0 auto">${kick("Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?36:num.slice(-4).length===3?42:48}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
     <div style="flex:1;min-width:0;text-align:right"><div style="font:700 15px/1.15 ${BF};color:#15171c;text-transform:uppercase;letter-spacing:.06em;${clamp(1)}">${esc(prop.title)}</div>
     ${(prop.lines||[]).slice(0,boardH>560?1:2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div></div>
-    <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(2)}">${winks[0]?esc(winks[0])+". ":""}Prices subject to change.${fam?" No alcohol served.":""} Images: TMDB.</div></div>`;
+    <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(3)}">${fam?"No alcohol served. ":""}Images: TMDB. Prices subject to change.${winks[0]?" "+esc(winks[0])+".":""}</div></div>`;/* review 32: the credit line comes first, so a tight ticket drops the wink, never the TMDB credit */
   const windowArea=`<div style="position:absolute;left:${RX}px;top:${WY}px;width:${RW}px;height:${WH}px;background:${truck};overflow:hidden">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1200px auto;opacity:${(.2+t.wear).toFixed(2)}"></div>
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,rgba(0,0,0,0) 1px 60px)"></div>
