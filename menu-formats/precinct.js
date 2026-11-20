@@ -55,6 +55,8 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
   const grow=()=>{if(!give)return;for(let c=8;over(el)&&c<=+el.dataset.grow;c+=8){give.style.height=(+give.dataset.h0-c)+"px";shift.forEach(n=>n.style.top=(+n.dataset.t0-c)+"px");el.style.top=(+el.dataset.t0-c)+"px";el.style.height=(+el.dataset.h0+c)+"px"}};
   const shrink=lo=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>lo&&g++<160){s=Math.max(lo,s-.5);el.style.fontSize=s+"px"}};
   shrink(min);if(!over(el))return;
+  /* review 32 (Josh: room for the full note, not cuts): the photo gives way and the type steps to its note floor before a note is shortened */
+  if(el.querySelector("[data-note]")){grow();if(!over(el))return;shrink(+el.dataset.nlo||Math.round(min*.85));if(!over(el))return}
   /* 15 Nov: dish notes ([data-note]) are shortened before anything is dropped. From the bottom, each is cut at a natural break
      (first sentence, a comma, a joining word), keeping the film's moment where it can (window.__fmtShortFilm): the first cut that fits is kept, else the shortest one if it saves a line.
      Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
@@ -188,7 +190,11 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="display:flex;justify-content:space-between;align-items:baseline;background:${dark};color:#fbf7ee;padding:.18em .45em;margin-bottom:.3em"><span style="font:${E.dw} 1.15em/1.1 ${dd};text-transform:uppercase;letter-spacing:.04em">${SHIFT[c.k][0]}</span><span style="flex:none;margin-left:.5em;font:.72em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase">${SHIFT[c.k][1]}</span></div>
      ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="padding:.15em .1em .3em;border-bottom:1px solid rgba(0,0,0,.12)"><div style="display:flex;gap:.5em;justify-content:space-between;align-items:baseline"><span style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</span><span style="flex:none;font:700 1em/1.15 ${bd};color:${acc}">${priceOf(c,i)}</span></div>${it.note?`<div data-opt data-note style="font:.76em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}
    </div>`;
-  const half=Math.ceil(C.length/2);
+  /* review 32: the two roster columns split where they hold about the same number of dishes, and a long roster takes height from the
+     surveillance photo so every note prints whole */
+  const cnt=c=>c.items.length+c.items.filter(i=>i.note).length*.9,tot=C.reduce((a,c)=>a+cnt(c),0);let half=Math.ceil(C.length/2),bestD=1e9;
+  for(let i=1;i<C.length;i++){const a=C.slice(0,i).reduce((q,c)=>q+cnt(c),0),d=Math.abs(tot-2*a);if(d<bestD){bestD=d;half=i}}
+  const RAISE=Math.max(C.slice(0,half).reduce((q,c)=>q+cnt(c),0),C.slice(half).reduce((q,c)=>q+cnt(c),0))>6.5?110:tot>9?60:0;
   const col=cs=>`<div data-fit="20" style="width:344px;height:100%;overflow:hidden;font-size:26px">${cs.map(shift).join("")}</div>`;
   const back=`${folder(`Duty roster ${x(yy)}`,476)}
    <div style="position:absolute;left:26px;top:74px;width:764px;height:966px;background:${paper};box-shadow:0 6px 16px rgba(0,0,0,.35);transform:rotate(${T.tilt*.15}deg)">
@@ -198,8 +204,8 @@ window.MENU_FORMATS.precinct=function(ctx){
          <div style="font:700 18px/1.25 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:clip">${x(venue)}</div></div>
        <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>Coins only</div>
      </div>
-     ${evid(second,26,128,712,340,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
-     <div style="position:absolute;left:26px;top:490px;width:712px;height:424px;display:flex;justify-content:space-between">
+     ${evid(second,26,128,712,340-RAISE,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
+     <div style="position:absolute;left:26px;top:${490-RAISE}px;width:712px;height:${424+RAISE}px;display:flex;justify-content:space-between">
        ${C.length?col(C.slice(0,half))+col(C.slice(half)):`<div style="font:22px/1.4 ${bd};color:${ink}">Breakroom closed. Try the vending machine.</div>`}
      </div>
      <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Exact change only. ${fam?"Every drink alcohol free. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>

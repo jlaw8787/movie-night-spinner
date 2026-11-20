@@ -146,6 +146,8 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
   const grow=()=>{if(!give)return;for(let c=8;over(el)&&c<=+el.dataset.grow;c+=8){give.style.height=(+give.dataset.h0-c)+"px";shift.forEach(n=>n.style.top=(+n.dataset.t0-c)+"px");el.style.top=(+el.dataset.t0-c)+"px";el.style.height=(+el.dataset.h0+c)+"px"}};
   const shrink=lo=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>lo&&g++<160){s=Math.max(lo,s-.5);el.style.fontSize=s+"px"}};
   shrink(min);if(!over(el))return;
+  /* review 32 (Josh: room for the full note, not cuts): the photo gives way and the type steps to its note floor before a note is shortened */
+  if(el.querySelector("[data-note]")){grow();if(!over(el))return;shrink(+el.dataset.nlo||Math.round(min*.85));if(!over(el))return}
   /* 15 Nov: dish notes ([data-note]) are shortened before anything is dropped. From the bottom, each is cut at a natural break
      (first sentence, a comma, a joining word), keeping the film's moment where it can (window.__fmtShortFilm): the first cut that fits is kept, else the shortest one if it saves a line.
      Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
@@ -293,7 +295,7 @@ window.MENU_FORMATS.invite=function(ctx){
    ${(second?photo(second,24,24,552,246,"50% 40%",{alts:st.slice(2,5).map(s=>ctx.img(s,"w1280"))}):pos?posterBand(24,24,552,246):"").replace(/^(\s*)<div /,"$1<div data-give ")}
    <div data-shift style="position:absolute;left:0;right:0;top:282px;text-align:center;font:${E.dw} 40px/1 ${dd};${up}letter-spacing:${E.up?".2em":"0"};color:${ink};${press}">Menu</div>
    <div data-shift style="position:absolute;left:0;right:0;top:330px">${rule}</div>
-   <div data-fit="20" data-nlo="17" data-grow="88" style="position:absolute;left:40px;top:346px;width:520px;height:398px;overflow:hidden;text-align:center;font-size:26px;${press}">
+   <div data-fit="20" data-nlo="14" data-grow="150" style="position:absolute;left:40px;top:346px;width:520px;height:398px;overflow:hidden;text-align:center;font-size:26px;${press}">
      ${C.length?C.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">The kitchen will surprise you.</div>`}
    </div>
    <div style="position:absolute;left:40px;top:756px;width:232px;height:116px;box-sizing:border-box;padding:12px 14px;background:${E.paper==="#ffffff"?"#f6f4ef":"#fffdf8"};box-shadow:0 4px 10px rgba(0,0,0,.18);text-align:center;transform:rotate(-1.5deg)">
