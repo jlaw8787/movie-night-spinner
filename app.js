@@ -953,7 +953,7 @@ function pvGo(i){
 }
 /* half views of a wide page: text the view edge cuts so that less than 60% shows ("Parr", "DUMB") is hidden, so the edge reads as a clean peek */
 function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
-  card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));if(!key)return;
+  card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));card.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});if(!key)return;
   const b=f.el.getBoundingClientRect(),lo=f.px!=null?f.px:f.x,hi=lo+f.w,off=[];
   const rg=document.createRange();
   for(const e of f.el.querySelectorAll("*")){const tn=[...e.childNodes].filter(n=>n.nodeType===3&&n.textContent.trim());if(!tn.length)continue;
@@ -966,6 +966,9 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     /* 13 Nov: a long line (three words or more) only steps aside when under about two words of it show (48px); a share of its width hid
        the drive-in Showtime line whole (24% in view) while the dish lines beside it ran on past the edge */
     if(seen<w-1&&(seen<=0||(f.panel&&seen>0)||(words<=2||seen<48)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
+  /* review 32: a sign marked [data-pvsign] (the pub fascia) is moved over the panel and scaled to it, so the food panel's band is not left blank (Hot Fuzz) */
+  for(const e of off.filter(e=>e.hasAttribute("data-pvsign"))){off.splice(off.indexOf(e),1);let l=1e9,rt=-1e9;for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);for(const r of rg.getClientRects())if(r.width){l=Math.min(l,r.left);rt=Math.max(rt,r.right)}}
+    l=(l-b.left)/k;rt=(rt-b.left)/k;const sc=Math.min(1,(hi-lo-40)/Math.max(1,rt-l)),dx=(lo+hi)/2-(l+rt)/2;e.dataset.pvt=e.style.transform||"-";e.style.transformOrigin="center";e.style.transform=`translateX(${dx.toFixed(1)}px) scale(${sc.toFixed(3)})`}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
