@@ -243,7 +243,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="flex:none;font:${g.dw} 22px/1 ${g.disp};color:${acc};letter-spacing:${g.track};text-transform:uppercase">Mess call</div>
       <div ${A}-box ${A}-min=".9" style="flex:1;min-width:0;height:50px;overflow:hidden;--k:1;display:flex;align-items:center;font:500 max(14px,calc(17px*var(--k)))/1.25 ${BODY};color:${ink}"><span>${esc(cue||voice[1])}</span></div></div>
     <div ${A}-box ${A}-min=".92" style="position:absolute;left:${P+6}px;right:${P+6}px;top:958px;height:70px;overflow:hidden;--k:1;color:${sub};font:400 max(14px,calc(15px*var(--k)))/1.3 ${BODY}">
-      <span>${esc(voice[1])}. Prices subject to change${space?", paid in ship's credit":""}. ${esc(g.print)}. Form G-${esc(String(number).slice(-4))}, sheet 2 of 2. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks.length?`<span ${A}-drop>Crew notes: ${esc(winks.slice(0,3).join(". "))}.</span>`:""}</div>
+      <span>${esc(voice[1])}. Prices subject to change${space?", paid in ship's credit":""}. ${esc(g.print)}. Form G-${esc(String(number).slice(-4))}, sheet 2 of 2. ${esc(yr)}.${fam?" Soft drinks only.":""} </span>${winks.length?`<span ${A}-drop>Crew notes: ${esc(winks.slice(0,3).join(". "))}.</span>`:""}</div>
     ${over_}</div>`;
   return {w:W,h:H,faces:[f0,f1]};
 };

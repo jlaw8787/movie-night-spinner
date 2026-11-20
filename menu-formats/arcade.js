@@ -117,7 +117,7 @@ function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="fon
 function logoOr(ctx,F,maxW,maxH,df,color,dw,keepDark){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" ${keepDark?"":`onload="${SAMPLE}"`} style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 const E=[

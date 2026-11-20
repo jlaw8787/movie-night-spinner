@@ -306,7 +306,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="display:flex;gap:18px;align-items:flex-end"><div style="flex:1;font:italic 400 ${nSize}px/1.34 ${BF};color:${ink};${clamp(3)}">"${esc(note.text)}"</div>
     <div style="flex:none;font:400 ${ei<2?38:34}px/1 ${SF};color:${acc};max-width:230px;text-align:right">${esc(note.by)}</div></div>
     ${winks.length?`<div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:8px;${clamp(1)}">On the big screen tonight: ${esc(winks.slice(0,2).join(". "))}.</div>`:""}
-    <div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:4px">Prices subject to change.${fam?" All drinks alcohol free.":""} ${esc(title.length>40?"":title+", "+year+". ")}Images: TMDB.</div></div>`;
+    <div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:4px">Prices subject to change.${fam?" Soft drinks only.":""} ${esc(title.length>40?"":title+", "+year+". ")}Images: TMDB.</div></div>`;
   const back=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${mapHead}${tiles.join("")}<div style="position:absolute;left:${MX}px;top:30px;bottom:30px;width:2px;background:${mix(ink,paper,.7)}"></div>${menuHead}${menu}${noteBox}</div>`;
   return {w:W,h:H,faces:[front,back]};
 };

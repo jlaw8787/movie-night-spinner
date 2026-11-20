@@ -226,7 +226,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="margin-top:4px;font:400 max(22px,calc(32px*var(--k)))/1.05 'Caveat Brush',cursive;color:${acc};text-align:right">${esc(note.by)}</div></div>
     ${coaster}
     <div ${A}-box ${A}-min=".9" style="position:absolute;left:${P+6}px;right:${P+6}px;top:990px;height:52px;overflow:hidden;--k:1;color:${sub};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-      ${cue?`<span ${A}-drop>Last call: ${esc(cue)} </span>`:""}${winks.length?`<span ${A}-drop>Bar talk: ${esc(winks.slice(0,3).join(". "))}. </span>`:""}<span>Prices subject to change. ${esc(g.print)}. Tab No. ${esc(number)}. ${esc(yr)}.${fam?" Every drink alcohol free.":""}</span></div>
+      ${cue?`<span ${A}-drop>Last call: ${esc(cue)} </span>`:""}${winks.length?`<span ${A}-drop>Bar talk: ${esc(winks.slice(0,3).join(". "))}. </span>`:""}<span>Prices subject to change. ${esc(g.print)}. Tab No. ${esc(number)}. ${esc(yr)}.${fam?" Soft drinks only.":""}</span></div>
     ${wearLayer}</div>`;
   return {w:W,h:H,faces:[f0,f1]};
 };

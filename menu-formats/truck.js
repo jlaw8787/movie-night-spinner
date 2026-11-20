@@ -190,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="flex:0 0 auto">${kick("Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?36:num.slice(-4).length===3?42:48}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
     <div style="flex:1;min-width:0;text-align:right"><div style="font:700 15px/1.15 ${BF};color:#15171c;text-transform:uppercase;letter-spacing:.06em;${clamp(1)}">${esc(prop.title)}</div>
     ${(prop.lines||[]).slice(0,boardH>560?1:2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div></div>
-    <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(3)}">${fam?"No alcohol served. ":""}Images: TMDB. Prices subject to change.${winks[0]?" "+esc(winks[0])+".":""}</div></div>`;/* review 32: the credit line comes first, so a tight ticket drops the wink, never the TMDB credit */
+    <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(3)}">${fam?"Soft drinks only. ":""}Images: TMDB. Prices subject to change.${winks[0]?" "+esc(winks[0])+".":""}</div></div>`;/* review 32: the credit line comes first, so a tight ticket drops the wink, never the TMDB credit */
   const windowArea=`<div style="position:absolute;left:${RX}px;top:${WY}px;width:${RW}px;height:${WH}px;background:${truck};overflow:hidden">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1200px auto;opacity:${(.2+t.wear).toFixed(2)}"></div>
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,rgba(0,0,0,0) 1px 60px)"></div>

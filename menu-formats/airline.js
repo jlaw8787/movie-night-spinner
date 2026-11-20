@@ -427,7 +427,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox data-menubox style="position:absolute;left:36px;right:36px;top:${sTop+sH+60}px;bottom:${cueTxt?150:106}px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:36px;right:36px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?20:26}px;height:${cueTxt?118:74}px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:8px">
-    ${cueTxt?`<div data-cue data-fs="14" style="font:400 15px/1.35 ${B};color:${K.ink};margin-bottom:2px"><b style="color:${K.acc};letter-spacing:.08em;text-transform:uppercase">Cabin crew cue:</b> ${esc(cueTxt)}</div>`:""}<div data-fs="14" style="font:400 15px/1.35 ${B};color:${K.soft}">Meals subject to availability. Trolley prices in local currency. ${fm?"Every drink is alcohol free. ":""}${wk?esc(wk)+". ":""}Card ${esc(flight)}/${esc(ctx.f.year)}. Images: TMDB.</div></div>`;
+    ${cueTxt?`<div data-cue data-fs="14" style="font:400 15px/1.35 ${B};color:${K.ink};margin-bottom:2px"><b style="color:${K.acc};letter-spacing:.08em;text-transform:uppercase">Cabin crew cue:</b> ${esc(cueTxt)}</div>`:""}<div data-fs="14" style="font:400 15px/1.35 ${B};color:${K.soft}">Meals subject to availability. Trolley prices in local currency. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Card ${esc(flight)}/${esc(ctx.f.year)}. Images: TMDB.</div></div>`;
   const back=face(top+still+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

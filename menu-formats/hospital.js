@@ -146,7 +146,7 @@ function titleText(F,maxW,maxH,df,color,dw,hidden){const t=F.title,L=t.length,on
 function logoOr(ctx,F,maxW,maxH,df,color,dw,panel,noLogo){const lg=noLogo?null:logoImg(ctx,maxW,maxH);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" alt="${esc(F.title)}" data-pl="${lum(panel).toFixed(4)}" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 5px rgba(255,255,255,.6))">${titleText(F,maxW,maxH,df,color,dw,1)}`:titleText(F,maxW,maxH,df,color,dw)}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 /* cw and cwd: average glyph width per px of font for notes and bold names, measured off proofs (Libre Franklin about .43 and .45,

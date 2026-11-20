@@ -271,7 +271,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.note}</div>
       <div data-fs="20" data-min="15" style="font:italic ${ty.bw} 20px ${ty.body};line-height:1.24;margin-top:3px">“${T(F.note.text)}” <span data-fs="${ty.sigS}" data-min="18" style="font:${ty.sigS}px ${ty.sig};color:${C.ink};font-style:normal;white-space:nowrap;margin-left:6px">${T(F.note.by)}</span></div>
     </div>
-    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:${Y.ft}px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Every cooler is alcohol free. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
+    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:${Y.ft}px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Soft drinks only. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
     ${wearLayer(P,tone,seed,true)}
   </div>`;
   /* back: island map of stills on the lagoon, then the kitchen */

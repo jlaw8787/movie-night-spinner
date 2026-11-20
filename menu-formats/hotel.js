@@ -306,7 +306,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox style="position:absolute;left:48px;right:48px;top:${secH+84}px;bottom:150px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:48px;right:48px;bottom:36px;height:100px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:10px">
-    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">A tray charge applies to every order. Prices subject to change. ${fm?"Every drink is alcohol free. ":""}${wk?esc(wk)+". ":""}Form RS ${esc(room)}. Images: TMDB.</div></div>`;
+    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">A tray charge applies to every order. Prices subject to change. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Form RS ${esc(room)}. Images: TMDB.</div></div>`;
   const back=face(second+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

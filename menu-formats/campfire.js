@@ -399,7 +399,7 @@ ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:47
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}
     <div data-box style="position:absolute;left:38px;top:900px;width:596px;height:40px;overflow:hidden;font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"Every drink is alcohol free. ":""}Poster and stills: TMDB. Form CM ${esc(F.number)}.</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Ask the cook about: "}${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB. Form CM ${esc(F.number)}.</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Ask the cook about: "}${T(w)}.</span>`).join("")}
     </div>
     ${wearLayer(P,tone,seed+20)}
   </div>`;

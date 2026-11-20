@@ -128,7 +128,7 @@ function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="fon
 function logoOr(ctx,F,maxW,maxH,df,color,dw){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 const E=[
@@ -235,7 +235,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   <div style="position:absolute;left:${GX+GW-TW}px;top:${NY}px;width:${TW}px;height:${NH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};text-align:center;display:flex;flex-direction:column;justify-content:space-between;padding:8px 6px">
     <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${e.soft}">TOTAL</div>
     <div style="font:400 56px/1 ${PEN};color:${acc}">300</div>
-    <div style="font:500 13px/1.25 ${BF};color:${e.soft}">Prices subject to change.<br>${F.fam?"No alcohol served. ":""}Images: TMDB.</div></div>`;
+    <div style="font:500 13px/1.25 ${BF};color:${e.soft}">Prices subject to change.<br>${F.fam?"Soft drinks only. ":""}Images: TMDB.</div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 62%,rgba(20,20,30,${(t.vig*.6).toFixed(2)}) 100%)"></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden;background:${e.paper}">${paper}${header}${pBox}${tag}${sheet}${notes}${vig}</div>`]};
 };

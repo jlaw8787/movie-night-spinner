@@ -208,7 +208,7 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="position:absolute;left:26px;top:${490-RAISE}px;width:712px;height:${424+RAISE}px;display:flex;justify-content:space-between">
        ${C.length?col(C.slice(0,half))+col(C.slice(half)):`<div style="font:22px/1.4 ${bd};color:${ink}">Breakroom closed. Try the vending machine.</div>`}
      </div>
-     <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Exact change only. ${fam?"Every drink alcohol free. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>
+     <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Exact change only. ${fam?"Soft drinks only. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>
    </div>`;
   return {w:W,h:H,faces:[front,back]};
 };
