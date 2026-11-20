@@ -228,7 +228,8 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   var FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
   outer:for(const nl of (NEED===9?[9]:NEED===2?[2]:[1,0]))for(let s=1.07;s>=(nl?.39:.55);s-=.05){/* 15 Nov: with notes, down to the type floor with gaps of 6px */
-    var base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
+    /* review 32: whole notes may go to 13px (about 9 point on the 1240 wide board) before any note is cut */
+    var base={D:Math.max(nl===9?15:17,Math.round(28*s)),N:Math.max(nl===9?13:15,Math.round(21*s)),S:Math.max(nl===9?17:19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
       var best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
