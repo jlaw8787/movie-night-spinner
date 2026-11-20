@@ -24,7 +24,8 @@ for(const f of F){const id=`${f.title} (${f.year})`;for(const k of 'SMWK')for(co
     if(FMT[id]&&words(r[1])<6)bad.push(`${id}: note on ${r[0]} under six words`);if(FMT[id]&&!FOOD.test(r[1]||''))bad.push(`${id}: note on ${r[0]} names no food`)}
   const h=H[id]||{};for(const c of ['s','d'])if(h[c]&&h[c].n&&words(h[c].note)<4)bad.push(`${id}: house ${c} note under four words`)}
 /* the house starter and drink each shared layout adds (data/film-house.json) print the same way: the dish first, then the film touch */
-for(const [id,h] of Object.entries(H))if(FMT[id])for(const c of ['s','d'])if(h[c]&&h[c].n){if(words(h[c].note)<6)bad.push(`${id}: house ${c} note on ${h[c].n} under six words`);if(!FOOD.test(h[c].note||''))bad.push(`${id}: house ${c} note on ${h[c].n} names no food`)}
+for(const [id,h] of Object.entries(H))if(FMT[id])for(const c of ['s','d'])if(h[c]&&h[c].n){if(words(h[c].note)<6)bad.push(`${id}: house ${c} note on ${h[c].n} under six words`);if(!FOOD.test(h[c].note||''))bad.push(`${id}: house ${c} note on ${h[c].n} names no food`);
+  {const nm=x=>String(x||'').toLowerCase().replace(/[-‐–]/g,' ').replace(/\s+/g,' ').trim();if(nm(h[c].note).startsWith(nm(h[c].n)))bad.push(`${id}: house ${c} note repeats its dish name`)}}
 const must={'Shaun of the Dead (2004)':'£','Hot Fuzz (2007)':'£','Kingsman: The Secret Service (2014)':'£','Mary Poppins (1964)':'£sd','Paddington (2014)':'£','Train to Busan (2016)':'₩','The Incredible Hulk (2008)':'R$'};
 for(const [id,c] of Object.entries(must))if((FL[id]||{}).currency!==c)bad.push(`${id}: should print ${c}`);
 for(const id of ['Spider-Man: No Way Home (2021)','The Conjuring (2013)','The Cable Guy (1996)','Doctor Strange (2016)'])if((FL[id]||{}).world==='storybook')bad.push(`${id}: real-world film marked storybook`);
