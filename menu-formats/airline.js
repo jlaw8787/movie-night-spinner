@@ -315,6 +315,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const heading=(col,sub,acc,al)=>`${kick(`${(ctx.flavour&&ctx.flavour.flight)?clean(ctx.flavour.flight):"Flight "+flight} · Now boarding`,acc,al)}
         <div data-fline="2" data-fs="20" style="${dispStyle}font-size:${F.venue.length>22?(G==="prop"?30:27):(G==="prop"?36:32)}px;line-height:1.04;color:${col};margin-top:5px;text-align:${al||"left"};${G==="prop"?inkSpread:""}">${esc(F.venue)}</div>
         <div data-fs="14" style="font:${G==="prop"?"italic ":""}400 16px/1.2 ${B};color:${sub};margin-top:4px;text-align:${al||"left"}">${esc(F.sign)}</div>`;
+  /* review 32 (Josh: room for full notes): long trolley notes take height from the window, so the poster steps down instead of the notes being cut */
+  const dl=(menu.d||[]).slice(0,3).reduce((a,it)=>a+String(it.n||"").length+String(it.note||"").length,0),dCut=dl>100?Math.min(110,Math.round((dl-100)*1.1)):0;
   let strip,winTop,winH,winW,winRad,frame,winExtra="";
   if(G==="prop"){
     strip=`<div data-fbox style="position:absolute;left:30px;right:164px;top:26px;height:104px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
@@ -327,7 +329,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div data-fbox style="position:absolute;left:26px;right:18px;top:12px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div></div>
       ${seatTile(22,18,"#fffaf0",K.ink,K.acc,"box-shadow:0 6px 16px rgba(0,0,0,.35)")}`;
     winTop=0;winH=706;winW=W;winRad="0";frame="none";
-    winExtra=stripes(660,true);
+    winExtra=stripes(660-dCut,true);
   }else if(G==="wide"){
     strip=`<div style="position:absolute;left:0;right:0;top:0;height:120px;background:${era===4?`linear-gradient(180deg,${toHex(mix(hex(liv),[255,255,255],.12))},${liv} 45%,${toHex(mix(hex(liv),[0,0,0],.3))})`:liv};overflow:hidden">
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.2;mix-blend-mode:screen"></div>
@@ -347,7 +349,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     frame=`0 0 0 9px ${bez},0 0 0 10px rgba(0,0,0,.12),0 10px 22px 4px rgba(0,0,0,.16)`;
   }
   /* the poster is the hero: whole, 2:3, on the cabin wall inside the window frame; the logo sits in the column beside it */
-  const PD=10,pH=G==="jet"?552:winH-2*PD,pW=Math.round(pH*2/3);
+  winH-=dCut;
+  const PD=10,pH=G==="jet"?552-dCut:winH-2*PD,pW=Math.round(pH*2/3);
   if(G!=="jet")winW=pW+2*PD;
   const winL=G==="jet"?0:G==="wide"?30:(G==="mod"&&era===6?36:30);
   const posL=G==="jet"?24:PD,posT=G==="jet"?140:PD;
@@ -358,7 +361,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${winExtra}${posterBox}</div>`;
   const ring=G==="jet"?0:G==="wide"?14:10;
   const colX=G==="jet"?posL+pW+26:winL+winW+ring+14,colW=W-24-colX,onWall=G==="jet";
-  const bz=G==="jet"?730:winTop+winH+ring+10;
+  const bz=G==="jet"?730-dCut:winTop+winH+ring+10;
   const lp=logoPanel(ctx,{maxW:colW-24,maxH:90,center:true,dark:rgba(K.deep,.92),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
     titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`${esc(ctx.f.year)}`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
     style:`position:relative;box-sizing:border-box;padding:12px 12px 10px;text-align:center;border-radius:${era>=6?14:G==="prop"?0:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4)${G==="prop"?`,inset 0 0 0 3px ${rgba(K.acc,.5)}`:""}`});
