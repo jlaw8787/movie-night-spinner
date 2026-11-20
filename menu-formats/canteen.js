@@ -92,7 +92,9 @@ function fitBox(b){if(window.__fmtTrimReset)window.__fmtTrimReset(b);const tray=
       Object.assign(under.style,room>=90?{display:"block",left:hero.style.left,top:top+"px",width:(w-d)+"px",height:room+"px"}:{display:"none"})}
     face.querySelectorAll("[data-shift]").forEach(x=>{const [l,ww]=x.dataset.shift.split(",").map(Number);x.style.left=(l-d)+"px";x.style.width=(ww+d)+"px"})};
   if(tb)shift(0);shrink();
-  if(tb&&hero)for(let d=14;d<=112&&(over(b)||k<.8);d+=14){shift(d);shrink()}
+  if(tb&&hero)for(let d=14;d<=154&&(over(b)||k<.8);d+=14){shift(d);shrink()}
+  /* review 32 (Josh: room for the full note, not cuts): a little smaller still (notes to 13px) before a house line or a note goes */
+  if(over(b)){const m0=min;while(over(b)&&k>Math.min(m0,.62)){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
   /* house lines go first, then whole notes from the bottom up: a note is shown in full or not at all, never cut to "mozzarell..." */
   for(let i=drops.length-1;i>=0&&over(b);i--)drops[i].style.display="none";
   {const ns=notes;(window.__fmtTrim?window.__fmtTrim(ns,()=>over(b)):(()=>{for(let i=ns.length-1;i>=0&&over(b);i--)ns[i].style.display="none"})())}
@@ -241,7 +243,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const row=it=>`<div style="margin:0 0 calc(8px*var(--k))"><div style="display:flex;align-items:baseline;gap:10px">
       <span ${A}-name style="flex:1;font:700 max(16px,calc(25px*var(--k)))/1.12 ${g.body};color:${cellInk}">${esc(it.n)}</span>
       <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${cAcc};white-space:nowrap">${it.ps||money(it.p,era)}</span></div>
-    ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(14px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
+    ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(13px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
   const comp=(k,grow)=>I[k].length?`<div data-well style="flex:${grow} 1 0;min-width:0;box-sizing:border-box;padding:calc(12px*var(--k)) 16px calc(8px*var(--k));background:${cell};border-radius:${g.radius}px;box-shadow:inset 0 3px 8px rgba(0,0,0,.28),inset 0 -2px 0 rgba(255,255,255,.5)">
       <div style="margin-bottom:calc(6px*var(--k));font:700 max(14px,calc(17px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${cAcc}">${esc(C[k])}</div>${I[k].map(row).join("")}</div>`:"";
   /* compartments stack full width (the tray column is too narrow to split without one word per line); each grows to share the spare depth */
