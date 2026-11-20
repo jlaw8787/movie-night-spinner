@@ -255,6 +255,8 @@ window.MENU_FORMATS.diner.ready=CSS_READY.then(()=>Promise.all(FONTS.map(fn=>doc
 const LEVELS=[{dish:28,desc:21,k:1,pad:16,gap:14,mb:14,lh:1.3},{dish:27,desc:20,k:.95,pad:12,gap:10,mb:10,lh:1.3},{dish:26,desc:20,k:.9,pad:9,gap:6,mb:8,lh:1.28},
   /* last resort for very long menus: same minimum sizes, tighter leading and spacing */
   {dish:26,desc:20,k:.85,pad:5,gap:3,mb:5,lh:1.2}];
+/* review 32: a dollar card's "$" marks (added after the layout draws) can push the last course out; the late fit has two smaller steps before anything hides */
+const LATE=LEVELS.concat([{dish:24,desc:19,k:.8,pad:4,gap:3,mb:4,lh:1.2},{dish:22,desc:18,k:.75,pad:3,gap:2,mb:3,lh:1.18}]);
 function schedule(token,night){
   let tries=0;
   const tick=async()=>{
@@ -291,7 +293,7 @@ function fit(faces,night){
   if(over()&&fd)fd.style.display="none";
   /* if the layout was measured before the web fonts arrived and now runs long, tighten spacing, then step type to the floor */
   faces.slice(1).forEach(fc=>{const m=fc.querySelector('[data-h="menu"]');if(!m||fits(m))return;
-    for(const L of LEVELS){
+    for(const L of LATE){
       fc.querySelectorAll('[data-h="dish"],[data-h="price"]').forEach(e=>e.style.fontSize=Math.min(parseFloat(e.style.fontSize),L.dish)+"px");
       fc.querySelectorAll('[data-h="desc"]').forEach(e=>e.style.fontSize=Math.min(parseFloat(e.style.fontSize),L.desc)+"px");
       fc.querySelectorAll('[data-h="item"]').forEach(e=>e.style.paddingBottom=Math.min(parseFloat(e.style.paddingBottom),L.pad)+"px");

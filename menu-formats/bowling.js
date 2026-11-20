@@ -217,7 +217,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const rowHTML=([k,l],ri)=>{const its=items[k],h=Math.round(rows[ri]+add),cw=(GW-LBL)/its.length;
     return `<div style="display:flex;height:${h}px;border-bottom:${bline}">
       <div style="flex:0 0 ${LBL}px;border-right:${bline};display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px"><div style="font:400 ${l.length>9?30:36}px/1.1 ${PEN};color:${acc};text-align:center;transform:rotate(-4deg);${clamp(2)}">${esc(l)}</div></div>
-      ${its.map((it,i)=>{const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0,pb=Math.round(tr.d*2.2+14);return `<div style="flex:0 0 ${cw}px;position:relative;box-sizing:border-box;padding:10px 12px 8px;border-right:${i<its.length-1?bline:"0"};overflow:hidden">
+      ${its.map((it,i)=>{const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0,pb=Math.round(tr.d*((F.fl&&F.fl.currency&&F.fl.currency!=="$")?2.2:2.75)+14);/* review 32: dollar cards get room for the $ mark, added after the layout draws (pfMark) */return `<div style="flex:0 0 ${cw}px;position:relative;box-sizing:border-box;padding:10px 12px 8px;border-right:${i<its.length-1?bline:"0"};overflow:hidden">
         <div style="position:absolute;right:0;top:0;width:${pb}px;height:${Math.round(tr.d*1.5)}px;border-left:${bline};border-bottom:${bline};font:400 ${tr.d+8}px/${Math.round(tr.d*1.5)}px ${PEN};color:${e.ink};text-align:center">${pr[k][i]}</div>
         <div style="font:700 ${tr.d}px/1.12 ${BF};color:${e.ink};text-transform:uppercase;letter-spacing:.02em;margin-right:${pb-6}px;${clamp(3)}">${esc(F.tx(it.n))}</div>
         ${nl?`<div style="font:500 ${tr.n}px/1.25 ${BF};color:${e.soft};margin-top:6px;${clamp(nl+1)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`};
