@@ -524,6 +524,8 @@ h1{margin:0;font-family:var(--f-marquee);font-weight:400;font-size:clamp(30px,7.
 
 /* stage */
 .stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);grid-template-rows:auto 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+/* review 33 (Josh): on a desktop the printed menu gets the wider column (about 760px at 1280), so its notes read without zooming */
+@media (min-width:1101px){.stage{grid-template-columns:minmax(0,1fr) minmax(0,1.95fr)}}
 /* desktop: the wheel runs down the left, the menu sits right, and the checklist and stubs fill the space under it */
 .stage>.deck{grid-row:1 / span 2}
 /* desktop: the wheel column stays beside you while you read a long menu or prep sheet, instead of leaving an empty column */
@@ -1111,6 +1113,8 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .fp-tag{margin:6px 0 0;font-size:15px;line-height:1.35;color:#fff;font-style:italic}
 .fp-hint{margin:6px 0 0;font-size:13px;color:var(--fp-top-ink)}
 .fp.fp-lib .fp-title{font-size:34px;line-height:1.02;overflow-wrap:break-word}.fp.fp-lib .fp-brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fp-top-ink)}.fp.fp-lib .fp-tab{font-size:13px}.fp.fp-lib .fp-tab,.fp.fp-lib .fp-more,.fp.fp-lib .fp-flip,.fp.fp-lib .fp-cue b,.fp.fp-lib .fp-hint{font-family:var(--fp-body);text-transform:none;letter-spacing:.02em}.fp.fp-lib .fp-film{font-size:16px;font-style:italic}
+/* review 33: a pale script note on white read faint on phones (Muriel's Wedding): shared-layout notes take a darker mix of the ink */
+.fp.fp-lib .fp-film{color:color-mix(in srgb,var(--fp-ink) 78%,var(--fp-soft))}
 .fp-tabs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;padding:0 12px 12px}
 .fp-tab{min-height:44px;font:400 13px var(--fp-disp);letter-spacing:.02em;color:var(--fp-tab);background:transparent;border:2px solid var(--fp-tab);border-radius:6px;cursor:pointer;padding:0 4px}
 .fp-tab[aria-selected="true"]{background:var(--fp-tab);color:var(--fp-top)}
@@ -3498,12 +3502,12 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
 <script src="ratings.js?v=39b211a8" defer></script>
 <script src="aisles.js?v=15304814" defer></script>
 <script src="providers.js?v=580cc276" defer></script>
-<script src="films.js?v=96e5c2cd" defer></script>
+<script src="films.js?v=0b067e63" defer></script>
 <script src="assets/fonts/fonts.js?v=d8909e45" defer></script>
 <script src="formats-core.js?v=3360f2c3" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=c390f423" defer></script>
+<script src="app.js?v=7658ffd9" defer></script>
 <script src="match.js?v=e828f8e1" defer></script>
 <script src="friends.js?v=fefdf1fe" defer></script>
 <script src="quiz.js?v=c9f3c0bd" defer></script>

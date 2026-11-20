@@ -336,18 +336,12 @@
    "af": true
   },
   {
-   "n": "Wrong week to quit espresso martini",
+   "n": "Wrong week to quit Black Russian",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 12,
-   "make_ahead": "Brew and cool the espresso up to 1 day ahead in the fridge; shake to order",
+   "cook_min": 0,
+   "make_ahead": "Chill the vodka and coffee liqueur up to 1 day ahead; pour to order",
    "ingredients": [
-    {
-     "q": 4,
-     "u": "",
-     "item": "shots espresso (about 120 ml)",
-     "aisle": "Pantry"
-    },
     {
      "q": 160,
      "u": "ml",
@@ -359,12 +353,6 @@
      "u": "ml",
      "item": "coffee liqueur",
      "aisle": "Bottle shop"
-    },
-    {
-     "q": 20,
-     "u": "ml",
-     "item": "sugar syrup",
-     "aisle": "Pantry"
     },
     {
      "q": 1,
@@ -381,26 +369,26 @@
    ],
    "steps": [
     {
-     "text": "Brew the espresso and cool.",
-     "min": 10
+     "text": "Fill short glasses with ice.",
+     "min": 1
     },
     {
-     "text": "Shake the espresso, vodka, liqueur and syrup with ice very hard to build the foam.",
+     "text": "Pour over the vodka and coffee liqueur and stir.",
      "min": 2
     },
     {
-     "text": "Strain into chilled coupes and float coffee beans on top.",
-     "min": 2
+     "text": "Finish each glass with coffee beans.",
+     "min": 1
     }
    ],
    "veg": true,
    "af": false,
    "alt": {
     "af": {
-     "n": "Flight 209 espresso shaker",
+     "n": "Flight 209 iced coffee",
      "prep_min": 5,
      "cook_min": 12,
-     "make_ahead": "Brew and cool the espresso up to 1 day ahead in the fridge; shake with the cold brew to order",
+     "make_ahead": "Brew and chill the coffee up to 1 day ahead; pour to order",
      "ingredients": [
       {
        "q": 4,
@@ -411,7 +399,7 @@
       {
        "q": 120,
        "u": "ml",
-       "item": "cold brew coffee",
+       "item": "strong black coffee, chilled",
        "aisle": "Drinks"
       },
       {
@@ -445,7 +433,7 @@
        "min": 12
       },
       {
-       "text": "Shake the espresso, cold brew, syrup and vanilla with ice very hard to build the foam.",
+       "text": "Shake the espresso, chilled coffee, syrup and vanilla with ice until foamy.",
        "min": 3
       },
       {
