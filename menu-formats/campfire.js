@@ -168,7 +168,7 @@ function fitRoot(root){
        the menu takes room from the photo above it, then runs in two columns, so the film's own lines stay */
     if(over(box)&&box.dataset.menu){const [top0,h0]=box.dataset.menu.split(",").map(Number),face=box.parentElement,ph=face&&face.querySelector("[data-flexph]");
       const grow=d=>{box.style.top=(top0-d)+"px";box.style.height=(h0+d)+"px";if(ph)ph.style.height=(+ph.dataset.flexph-d)+"px"};
-      const room=ph?Math.max(0,+ph.dataset.flexph-150):0;
+      const room=ph?Math.max(0,+ph.dataset.flexph-110):0;/* review 32: the photo keeps 110px, not 150, before a note is cut */
       for(let d=20;d<=room&&over(box);d+=20){grow(d);shrinkAll()}
       if(over(box)){box.style.columnCount="2";grow(0);shrinkAll();for(let d=20;d<=room&&over(box);d+=20){grow(d);shrinkAll()}}}
     if(over(box)){const ns=[...box.querySelectorAll("[data-note]")];
@@ -292,7 +292,7 @@ function menuHTML(cs,era,ty,C,tone,LBL){LBL=LBL||LABEL;
   /* audit, 7 Nov: a heading never ends a column on its own ("Mess Hall Mains" sat at the foot of the left column, its dishes in the right):
      it is held with its first dish */
   const item=(k,it,i)=>`<div ${i?`data-drop="${i+1}"`:""} style="break-inside:avoid"><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,it&&it.house?-2:i,era)}</span></div>
-      ${it.note?`<div data-note data-fs="20" data-min="16" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
+      ${it.note?`<div data-note data-fs="20" data-min="14" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
   return["s","m","w","d"].filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 10px">
     <div style="break-inside:avoid"><div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${esc(LBL[k])}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>${item(k,cs[k][0],0)}</div>
     ${cs[k].slice(1).map((it,i)=>item(k,it,i+1)).join("")}

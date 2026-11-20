@@ -189,7 +189,7 @@ const FX=window.__fmtAir=window.__fmtAir||{
     cut(0);
     el.querySelectorAll("[data-fbox]").forEach(box=>FX.fitBox(box));
     if(mb&&st){const lost=()=>[...mb.querySelectorAll("[data-clamp]")].some(n=>n.style.display==="none"||(n.dataset.full&&n.textContent!==n.dataset.full))||[...mb.querySelectorAll("[data-gap]")].some(g=>g.style.display==="none");
-      for(let c=16;lost()&&c<=+st.dataset.h0*.45;c+=16){cut(c);FX.fitBox(mb)}}
+      for(let c=16;lost()&&c<=+st.dataset.h0*.7;c+=16){cut(c);FX.fitBox(mb)}/* review 32: the still may give up to 70 per cent before a note is cut */}
   },
   fitBox(box){{
       const nodes=[...box.querySelectorAll("[data-fs]")];
@@ -372,8 +372,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const trolley=`<div style="position:absolute;left:314px;right:28px;top:${bz-6}px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
     <div data-fbox style="position:absolute;left:16px;right:0;top:6px;bottom:0;overflow:hidden">
     ${kick(fm?"From the juice trolley":"From the trolley")}
-    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n)).replace(/(\S) (\d{1,3})(?=$|\s)/g,"$1\u00a0$2")/* a number in a drink name stays with its word ("French 75"), so it never wraps under the price */}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
-      ${it.note?`<div data-clamp data-fs="14" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
+    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="14" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n)).replace(/(\S) (\d{1,3})(?=$|\s)/g,"$1\u00a0$2")/* a number in a drink name stays with its word ("French 75"), so it never wraps under the price */}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
+      ${it.note?`<div data-clamp data-fs="12" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
     ${drinks.length?"":`<div data-fs="14" style="font:400 18px/1.3 ${B};color:${K.soft};margin-top:8px">Tea, coffee and juice served throughout the flight.</div>`}</div></div>`;
   const front=face(strip+win+col+note+trolley);
 
@@ -416,7 +416,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const keys=["s","m","w"];
   const item=(k,it,i)=>`<div data-gap style="padding-bottom:12px">
     <div style="display:flex;align-items:baseline;gap:12px"><span data-fs="17" style="flex:1;font:700 26px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span data-fs="15" style="font:700 ${price(k,i)==="Included"?18:26}px/1 ${B};color:${K.acc};${price(k,i)==="Included"?"letter-spacing:.08em;text-transform:uppercase":""}">${price(k,i)}</span></div>
-    ${it.note?`<div data-clamp data-fs="14" style="font:400 20px/1.28 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
+    ${it.note?`<div data-clamp data-fs="13" style="font:400 20px/1.28 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=(k,j)=>{const its=(menu[k]||[]).slice(0,4);if(!its.length)return"";
     return`<div style="display:flex;align-items:center;gap:12px;margin:2px 0 8px"><span data-fs="20" style="${dispStyle}font-size:34px;line-height:1.05;color:${K.acc};${inkSpread}">${esc(labels[j])}</span><i style="flex:1;height:2px;background:${K.acc};opacity:.45"></i></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
   /* the showtime cue (15 Nov, Josh: airline never printed it): a cabin crew line that opens the fine print, which grows by a line for it */
