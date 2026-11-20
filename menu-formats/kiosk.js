@@ -383,8 +383,10 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   let FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
   /* 15 Nov, Josh: a short menu grows to fill its board (Karate Kid left a gap under the list at the old 1.17 top size) */
-  outer:for(const nl of [2,1,0])for(let s=nl===2?1.5:1.17;s>=(nl?.6:.55);s-=.05){
-    const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s))};
+  /* review 32 (Josh: room for full notes, not cuts): whole notes (up to four lines) at every size, down to 12px notes, before any cut */
+  /* the card is 1344 across for landscape A4, so 14px notes print at about 9 point and 13px (the second whole-note pass) at about 8 */
+  outer:for(const [nl,nf] of [[4,14],[4,13],[2,15],[1,15],[0,15]])for(let s=nl>=2?1.5:1.17;s>=(nl===4?.42:nl?.6:.55);s-=.05){
+    const base={D:Math.max(nl===4?nf+2:17,Math.round(28*s)),N:Math.max(nf,Math.round(21*s)),S:Math.max(nl===4?nf+4:20,Math.round(30*s)),G:Math.max(nl===4?3:4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
       let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
