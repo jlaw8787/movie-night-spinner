@@ -2398,7 +2398,7 @@ function fmtSeniorProm(f,spec,menu,poster){
     <div aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:70px;${dots(BLUE,.35)}"></div><div aria-hidden="true" style="position:absolute;right:0;top:0;bottom:0;width:70px;${dots(RED,.35)}"></div>
     <div style="position:relative;${BODY};font-weight:600;font-style:italic;font-size:20px;line-height:1.3;color:${NAVY}">&ldquo;${ESC(q[0])}&rdquo;</div>
     <div style="position:relative;${SCRIPT};font-size:24px;line-height:1.3;color:${RED}">${ESC(q[1])}</div></div>`;
-  const centre=`<div style="flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;gap:14px">${panel}${banner}</div>`;
+  const centre=`<div data-pvzoom="self" style="flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;gap:14px">${panel}${banner}</div>`;
   const b=spec.ballot,box=`<span aria-hidden="true" style="flex:none;width:17px;height:17px;border:2px solid ${BLUE};border-radius:2px;background:#fff"></span>`;
   const ballot=`<div style="background:#fff;border:2px solid ${RED};border-radius:4px;padding:9px 13px 10px;box-shadow:4px 4px 0 ${BLUE}">
     <div style="${HEAD};font-size:20px;line-height:1.05;color:${RED};text-transform:uppercase">${ESC(b[0])}</div>

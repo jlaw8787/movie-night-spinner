@@ -268,6 +268,6 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:600 ${nS}px/1.1 ${PEN};color:#1f3fa0;margin-top:4px;${clamp(3)}">${isQ?`&ldquo;${esc(n.text)}&rdquo;`:esc(n.text)} <span style="color:${acc}${byOwn?";display:block;text-align:right;padding-right:20px":""}">${esc(n.by)}</span></div></div>
     <div style="position:absolute;left:${FX+FW-SW2}px;top:${NY}px;width:${SW2}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)};display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;padding:8px 10px 6px">${propCard}
       <div style="font:400 12px/1.2 ${BF};color:${e.soft};text-align:center">${esc(credit(F).replace("Prices subject to change. ",""))}</div></div>`;
-  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}</div>`]};
+  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}${R.cols.map((c,ci)=>`<div data-pvzoom="${FX+18-10+ci*(R.CW+26)},${FY0+MT-6},${R.CW+20},${MH+14}" aria-hidden="true" style="display:none"></div>`).join("")}</div>`]};/* review 32: on a phone each column of the meal order form is a view, swiped across */
 };
 })();

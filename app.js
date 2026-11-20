@@ -882,6 +882,10 @@ const prep=document.createElement("div");prep.className="mcard";prep.hidden=true
 /* phones: a menu with more than one page shows one page per screen, swipe or tap a dot to turn */
 const swipeW=()=>matchMedia("(max-width:600px)").matches;
 let pvFace=0,pvDrag=0;
+/* the block a [data-pvzoom] names: "x,y,w,h" on the page, or "self" for the element where it sits now (the canteen tray moves left as its poster gives way) */
+function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",").map(Number);let x=0,y=0;for(let e=z;e&&!e.classList.contains("fx-face")&&e!==card;e=e.offsetParent){x+=e.offsetLeft;y+=e.offsetTop}/* as tall as what is in it (a short kiosk column stops at its last dish, not at the foot of the taller one) */
+  const zr=z.getBoundingClientRect(),k=zr.width/(z.offsetWidth||1)||1;let hb=0;for(const c of z.querySelectorAll("*")){const r=c.getBoundingClientRect();if(r.height)hb=Math.max(hb,r.bottom)}
+  const h=hb?Math.min(z.offsetHeight,Math.ceil((hb-zr.top)/k)):z.offsetHeight;return [x-12,y-12,z.offsetWidth+24,h+24]}
 function cardFaces(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
   const fs=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];
@@ -892,7 +896,7 @@ function cardFaces(){
       xs.slice(0,-1).forEach((x,j)=>out.push({el:pg.el,w:xs[j+1]-x,h,x:pg.x+x,px:x,y:pg.y,row:true,part:"p"+i+"panel"+(j+1),panel:1}))});return out}
     /* review 32: a portrait page can mark the block worth reading on a phone ([data-pvzoom], the banquet's bill of fare); on a phone that
        block is the page's view, at about 1.2 times the size (Gone with the Wind opened at 7px italic). Tap still opens the whole page */
-    if(swipeW())return pages.map(pg=>{const z=pg.el.querySelector("[data-pvzoom]");if(!z)return pg;const [zx,zy,zw,zh]=z.dataset.pvzoom.split(",").map(Number);
+    if(swipeW())return pages.map(pg=>{const z=pg.el.querySelector("[data-pvzoom]");if(!z)return pg;const [zx,zy,zw,zh]=pvZoomBox(z);
       return {el:pg.el,w:zw,h:zh,x:pg.x+zx,y:pg.y+zy,px:zx,row:pg.row,part:"zoom"+pages.indexOf(pg),panel:1}});
     return pages}
   /* one wide page (a landscape placemat, canteen tray or bill of fare) shows whole, scaled to the screen; tap opens it full size to zoom.
@@ -908,7 +912,11 @@ function cardFaces(){
       if(V.every(v=>v.w<cw*.75))return V}}
   const el=fs[0]||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;
   if(!w||!h||(w<h*1.2&&w<900))return [];/* a wide page, or a big one (the pub face is 1240 across) */
-  const cuts=pvPanels(el,w,h);if(!cuts.length)return [];
+  /* review 32: a wide page can mark the blocks to read on a phone ([data-pvzoom]: the hospital meal form, the canteen tray, a tight kiosk
+     board's columns); those are its views, ahead of any gutter panels */
+  const Z=[...el.querySelectorAll("[data-pvzoom]")],cuts=Z.length?[]:pvPanels(el,w,h);
+  if(!cuts.length){if(!Z.length)return [];
+    return Z.map((z,i)=>{const [zx,zy,zw,zh]=pvZoomBox(z);return {el,w:zw,h:zh,x:zx,y:zy,px:zx,row:true,part:"zoom"+i,panel:1}})}
   const xs=[0,...cuts,w];return xs.slice(0,-1).map((x,i)=>({el,w:xs[i+1]-x,h,x,px:x,y:0,row:true,part:"panel"+(i+1),panel:1}));
 }
 /* gutters on a wide page: the x positions no line of text crosses (measured on the words, a little padding either side).
@@ -932,13 +940,14 @@ function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(f
 function pvFirstDish(fs){let best=0,bestC=0;const C=[];try{const m=(current&&(current.printMenu||current.menu))||{},names=["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ").trim())).filter(n=>n.length>3);
   if(!names.length)return 0;const b=card.getBoundingClientRect();
   for(let i=0;i<fs.length;i++){const f=fs[i];let txt="";
-    if(f.panel){const k=b.width/(parseFloat(f.el.style.width)||+card.dataset.w||b.width)||1,eb=f.el.getBoundingClientRect(),rg=document.createRange();
+    if(f.panel&&f.el.getBoundingClientRect().width){const eb=f.el.getBoundingClientRect(),k=eb.width/(parseFloat(f.el.style.width)||+card.dataset.w||eb.width)||1,rg=document.createRange();/* scale of the page itself: a two-page card is twice the page across */
       for(const e of f.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();const cx=((r.left+r.right)/2-eb.left)/k;if(r.width&&cx>=f.px&&cx<f.px+f.w)txt+=" "+n.textContent}}
-    else txt=f.el.textContent;
+    else txt=f.el.textContent;/* not laid out yet (first draw): the page's own text */
     txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=names.filter(n=>txt.includes(n)).length;C[i]=c;if(c>bestC){bestC=c;best=i}}
     /* review 32: the first page that carries a real share of the food, not the fullest one ("The Menu, continued" on Grease's third page
        had more lines than the page with the starters and burgers) */
-    if(bestC>=3){const need=Math.max(2,Math.ceil(bestC*.4));const i=C.findIndex(c=>c>=need);if(i>=0)best=i}}catch(e){}return best}
+    /* three dishes at least: a cover whose tagline names two (the Grinch's "Roast beast. Who pudding.") is not the menu */
+    if(bestC>=3){const need=Math.max(3,Math.ceil(bestC*.4));const i=C.findIndex(c=>c>=need);if(i>=0)best=i}}catch(e){}return best}
 const pvDots=document.createElement("div");pvDots.className="pv-dots";pvDots.hidden=true;$("easel").after(pvDots);
 pvDots.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)pvGo(+b.dataset.i)});
 function paintDots(n){
@@ -2130,7 +2139,9 @@ function pfMark(root){const PR=/^(\s*)(\d{1,3})?\.(\d\d)(\s*)$/,tw=document.crea
   if(marked||!T.length)return 0;
   for(const [t,m] of T){const x=(+m[2]||0)+ +m[3]/100;t.nodeValue=m[1]+(x<1?Math.round(x*100)+"¢":"$"+x.toFixed(2))+m[4]}
   return T.length}
-function priceFix(root,menu,f,fl,era,fmt){const n=priceFix0(root,menu,f,fl,era,fmt);return (fl&&fl.currency&&fl.currency!=="$")||!root?n:n+pfMark(root)}
+/* the money mark goes on shared layouts only: a hand-built menu that prints bare prices was drawn that way, and its boxes are sized to them
+   (Splash, Sleepless in Seattle and Money Train ran into their fine print with a $ added) */
+function priceFix(root,menu,f,fl,era,fmt){const n=priceFix0(root,menu,f,fl,era,fmt);return (fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"?n:n+pfMark(root)}
 function priceFix0(root,menu,f,fl,era,fmt){
   if(!root||!menu)return 0;
   /* review 31: layouts print "fry-up" as "fry up", so hyphens count as spaces when a price is tied to its dish */

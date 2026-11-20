@@ -419,13 +419,14 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
     FS=best.FS;all.forEach((it,i)=>it.nk=FS.nks[i])}
   /* room left over: open up the spacing between dishes and courses, up to about double, so a short menu fills its panel */
   {const G0=FS.G;for(let g=G0+1;g<=Math.round(G0*2.2)+2;g++){const FSx=Object.assign({},FS,{G:g}),t=Math.max(...colsArr.map(cs=>measure(cs,FSx)));if(t>MH)break;FS.G=g;FS.t=t}}
+  /* review 32: a tight board prints its dish names under 16px; on a phone each column is then its own view (the panel view drew them at 5.7px) */
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=!FLT&&spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];
   const boardHtml=`<div style="position:absolute;left:${BX}px;top:0;width:${BW}px;height:${PH}px;background:${boardBg(E,T)};box-shadow:inset 8px 0 18px rgba(0,0,0,.25);border-radius:0">
     <div style="position:absolute;left:${pad}px;top:${pad}px;width:${IW}px;height:${PH-pad*2}px;display:flex;flex-direction:column">
       <div>${hdr}</div>
       <div style="margin-top:14px;height:${Math.floor(MH)}px;display:flex;flex-direction:column">
-        ${FLT?`<div style="height:${Math.floor(MH)}px">${flo(MH)}${colHtml(colsArr[0],FS)}</div>`:`<div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>`}
+        ${FLT?`<div style="height:${Math.floor(MH)}px">${flo(MH)}${colHtml(colsArr[0],FS)}</div>`:`<div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div ${FS.D<16?'data-pvzoom="self" ':""}style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>`}
         ${also.length?`<div style="margin-top:auto;margin-bottom:12px;border-top:2px solid ${ACC};padding-top:10px"><div style="${caps(15,ACC,.2)};margin-bottom:4px">${beach?"Seen on the beach":"Seen out front"}</div>${also.map(w=>`<div style="font:600 18px/1.3 ${body};color:${ink};margin-top:3px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}
       </div>
       <div style="margin-top:auto">
