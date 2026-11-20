@@ -262,7 +262,8 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   /* loyalty card: paper, stamps are spaced type, never icons */
   const stamped=Math.min(9,Math.max(3,(String(num).replace(/\D/g,"").split("").reduce((a,d)=>a+ +d,0)%7)+3));
   /* a real stamp is a short word: the film's own word if it fits the box, else the till's PAID */
-  const stampWord=i=>{const w=((winks[i%Math.max(1,winks.length)]||"").replace(/^(the|a|an)\s+/i,"").split(/\s+/)[0]||"").replace(/[^A-Za-z0-9]/g,"");return (w.length>=2&&w.length<=5?w:"PAID").toUpperCase()};
+  /* review 33: a name pulled from the winks made "TANIA" and "HIROS" stamps; the till's PAID unless the film sets its own stamp word */
+  const stampWord=i=>{const w=String((ctx.flavour&&ctx.flavour.stamp)||"").replace(/[^A-Za-z0-9]/g,"");return (w.length>=2&&w.length<=5?w:"PAID").toUpperCase()};
   const cardInk=e.cardInk,cardAcc=readable(pal.accent,e.card,4.5,e.acc0==="#f2d36b"?"#7a5a10":e.acc0);
   const boxes=Array.from({length:10},(_,i)=>`<div style="height:44px;border:1.5px solid ${cardInk}55;border-radius:${era==="1970s"||era==="1950s"?22:3}px;display:flex;align-items:center;justify-content:center;position:relative;font-family:'${e.body}',sans-serif;font-size:15px;color:${cardInk}88">${i<stamped?`<span style="max-width:100%;overflow:hidden;white-space:nowrap;transform:rotate(${(i%3-1)*9-6}deg);color:${cardAcc};font-weight:700;letter-spacing:.04em;font-size:14px;border:2px solid ${cardAcc};padding:1px 3px;opacity:.85">${esc(stampWord(i))}</span>`:i===9?`<span style="font-weight:700;color:${cardInk}">FREE</span>`:String(i+1)}</div>`).join("");
   const card=`<div style="width:340px;flex:none;align-self:flex-start;transform:rotate(${T.tilt}deg);margin-top:${hasP?0:4}px;${hasP?"margin-left:6px;":""}background:${e.card};background-image:${noise("#5a4a30",.16,.9,180)};box-shadow:0 10px 22px rgba(0,0,0,.5);padding:14px 16px 12px;box-sizing:border-box;color:${cardInk};border-radius:${era==="modern"||era==="2000s"?10:4}px">

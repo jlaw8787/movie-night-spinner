@@ -723,7 +723,30 @@
     "Bring your own lightning"
    ]
   },
-  "number": ""
+  "number": "",
+  "strip": [
+   [
+    "Out front",
+    ""
+   ],
+   [
+    "Sky",
+    "Overcast"
+   ],
+   [
+    "Wind",
+    "off the fjord"
+   ],
+   [
+    "Temp",
+    "9 C"
+   ],
+   [
+    "Last orders",
+    "9:00"
+   ]
+  ],
+  "forecast": "Cold and grey, thunder by nightfall"
  },
  "Captain America: The Winter Soldier (2014)": {
   "venue": "Cap's Washington Apartment",
@@ -2651,8 +2674,7 @@
     "Books checked out: all of them"
    ]
   },
-  "number": "",
-  "currency": "£"
+  "number": ""
  },
  "Casper (1995)": {
   "venue": "Whipstaff Manor",
@@ -2839,7 +2861,8 @@
     "Russell, Wilderness Explorer"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceEra": "2000s"
  },
  "Inside Out (2015)": {
   "venue": "Riley's Headquarters",
@@ -3459,7 +3482,8 @@
     "Radiator Springs bound"
    ]
   },
-  "number": "95"
+  "number": "95",
+  "priceEra": "2000s"
  },
  "Cars 2 (2011)": {
   "venue": "World Grand Prix Pit",
@@ -3502,7 +3526,7 @@
   "winks": [
    "The Great Before and the Great Beyond",
    "Terry, counting souls and getting it wrong",
-   "Joe's mom and her tailor shop",
+   "Joe's mum and her tailor shop",
    "Dorothea Williams and her quartet",
    "A pizza slice and a maple seed"
   ],
@@ -4816,7 +4840,10 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "coins",
+  "world": "storybook"
  },
  "Zootopia (2016)": {
   "venue": "Jumbeaux's Cafe",
@@ -5160,7 +5187,8 @@
     "Cash, no questions"
    ]
   },
-  "number": "1"
+  "number": "1",
+  "priceEra": "1960s"
  },
  "Rosemary's Baby (1968)": {
   "venue": "The Bramford Kitchen",
@@ -6223,7 +6251,8 @@
     "Find yourself"
    ]
   },
-  "number": "1111"
+  "number": "1111",
+  "priceEra": "modern"
  },
  "Nope (2022)": {
   "venue": "Haywood Hollywood Horses",
@@ -6656,7 +6685,10 @@
   "number": "",
   "sideStill": "/cmo3Tbnll5bKt2NAZOGB2xQhVds.jpg",
   "sideLine": "Two men, one buffet, one very blue soup.",
-  "currency": "£"
+  "currency": "£",
+  "party": 8,
+  "time": "1:00 pm",
+  "meal": "lunch"
  },
  "The Proposal (2009)": {
   "venue": "Paxton Family Lodge",
@@ -7867,7 +7899,8 @@
     "Sunglasses required"
    ]
   },
-  "number": "106"
+  "number": "106",
+  "priceEra": "1980s"
  },
  "Rain Man (1988)": {
   "venue": "Wallbrook Cafeteria",
@@ -10543,7 +10576,7 @@
   },
   "winks": [
    "Tracy's enormous hair",
-   "Edna Turnblad, mom in the laundry",
+   "Edna Turnblad, mum in the laundry",
    "Velma rigging the pageant",
    "Penny hiding Tracy in the fallout shelter",
    "Link Larkin on the show"
@@ -10596,7 +10629,7 @@
    "The ski pole swordfight with Ricky",
    "Charles snorting the snow",
    "Monique pretending she has no English",
-   "Mom's dinner crawling off the plate"
+   "Mum's dinner crawling off the plate"
   ],
   "prop": {
    "kind": "bill",
@@ -11598,7 +11631,7 @@
    "kind": "slip",
    "title": "IOU",
    "lines": [
-    "Owed to Harry: 500000",
+    "Owed to Harry: £500,000",
     "Due in a week, or JD's bar"
    ]
   },
@@ -12593,7 +12626,30 @@
     "Do not open yet"
    ]
   },
-  "number": ""
+  "number": "",
+  "strip": [
+   [
+    "Out front",
+    ""
+   ],
+   [
+    "Sky",
+    "Fog"
+   ],
+   [
+    "Moon",
+    "full"
+   ],
+   [
+    "Temp",
+    "chilly"
+   ],
+   [
+    "Last orders",
+    "Midnight"
+   ]
+  ],
+  "forecast": "Gloom all day, snow drifting in from Christmas Town"
  },
  "Bad Santa (2003)": {
   "venue": "Saguaro Square Food Court",
@@ -12955,7 +13011,7 @@
    "title": "Santa Trap Note",
    "lines": [
     "Cindy Lou Who",
-    "Please help my mom"
+    "Please help my mum"
    ]
   },
   "number": ""
@@ -13783,7 +13839,7 @@
    "The red pill and the blue pill",
    "Neo: I know kung fu",
    "Trinity: Dodge this",
-   "Plain gray porridge on the ship",
+   "Plain grey porridge on the ship",
    "Agent Smith in the subway"
   ],
   "prop": {
@@ -14551,9 +14607,9 @@
   },
   "number": "",
   "words": {
-   "Pie so good it ought to be a crime.": "Cold beer, counter meals and murals on every wall.",
-   "Est. 1994": "Est. 1889"
-  }
+   "Pie so good it ought to be a crime.": "Cold beer, counter meals and murals on every wall."
+  },
+  "est": "1889"
  },
  "The Man from Snowy River (1982)": {
   "venue": "Harrison Station Kitchen",
@@ -15522,7 +15578,7 @@
   "venue": "Jumanji Desert Outpost",
   "sign": "Sand, ostriches and old friends",
   "note": {
-   "text": "Keep the cake away from me. I am not blowing up again.",
+   "text": "Cake is still Mouse's weakness. Milo, keep it well away from you this time.",
    "by": "Fridge",
    "kind": "note"
   },
@@ -17193,7 +17249,30 @@
     "Heartsong required"
    ]
   },
-  "number": ""
+  "number": "",
+  "strip": [
+   [
+    "Out on the ice",
+    ""
+   ],
+   [
+    "Sky",
+    "Blizzard"
+   ],
+   [
+    "Wind",
+    "howling"
+   ],
+   [
+    "Temp",
+    "-30 C"
+   ],
+   [
+    "Last orders",
+    "Before the long dark"
+   ]
+  ],
+  "forecast": "Snow, with a chance of tap dancing"
  },
  "Daddy's Home (2015)": {
   "venue": "Brad's Kitchen Table",
@@ -17244,8 +17323,9 @@
   "number": "",
   "words": {
    "Ask about pie": "Ask about pancakes",
-   "The pie case": "The griddle",
-   "Pie so good it ought to be a crime": "Pancakes the size of a hubcap"
+   "Pie so good it ought to be a crime": "Pancakes the size of a hubcap",
+   "slice from the pie case": "pancake off the griddle",
+   "The Pie Case": "The Griddle"
   }
  },
  "Hop (2011)": {
@@ -18886,7 +18966,7 @@
   },
   "winks": [
    "The Easter gathering in Daly City",
-   "Joe's mom, Susan, at the stove",
+   "Joe's mum, Susan, at the stove",
    "Manny Pacquiao's gloves hidden at Mum's"
   ],
   "prop": {
@@ -23872,7 +23952,7 @@
   "number": "2",
   "words": {
    "Overheard at the counter": "Seen at the counter",
-   "Hot coffee, homemade pie, booths by the window. Est. 1980.": "Hot coffee, Annie's special, booths by the window."
+   "Hot coffee, homemade pie, booths by the window.": "Hot coffee, Annie's special, booths by the window."
   }
  },
  "The Last Starfighter (1984)": {
@@ -24161,8 +24241,7 @@
   "caption": "The band on stage, guitars up.",
   "words": {
    "1996": "1964",
-   "Hot coffee, homemade pie, booths by the window.": "Red booths, spaghetti and a band on the little stage.",
-   "Est. 1956.": "Erie, 1964.",
+   "Hot coffee, homemade pie, booths by the window.": "Red booths, spaghetti and a band on the little stage. Erie, 1964.",
    "with a cup of coffee and a slice from the pie case": "with garlic bread on the side",
    "Open all night, daily": "Red booths, Erie",
    "Overheard at the counter": "Coming up",

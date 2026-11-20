@@ -393,7 +393,7 @@ window.MENU_FORMATS.placemat=ctx=>{
       ${eg==="now"?"":`<div style="position:absolute;inset:12px;border:${eg==="e40"?`3px double ${L.hi}`:`2px solid ${L.hi}`};border-radius:${Math.min(L.radius,12)}px"></div>`}
       ${T.gold?`<div style="position:absolute;inset:18px;border:1px solid rgba(201,162,74,.9);border-radius:8px"></div>`:""}
       <div style="position:absolute;left:32px;right:28px;top:24px;bottom:22px;display:flex;flex-direction:column;justify-content:center">
-        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family?` &nbsp;/&nbsp; ${esc(L.kick+f.year)}`:""}</div>
+        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family&&ctx.flavour&&ctx.flavour.est?` &nbsp;/&nbsp; ${esc(L.kick+ctx.flavour.est)}`:""}</div>
         <div data-fit="venue" style="font:${L.dispW} ${venue.length>20?32:40}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};margin-top:7px;text-shadow:0 2px 0 rgba(0,0,0,.3)">${esc(venue)}</div>
         <div style="font:700 17px/1.2 ${L.body};color:${L.hi};margin-top:6px">${esc(sign)}</div>
       </div>
@@ -425,7 +425,7 @@ window.MENU_FORMATS.placemat=ctx=>{
       ${eg==="now"?"":`<div style="position:absolute;inset:12px;border:${eg==="e40"?`3px double ${L.hi}`:`2px solid ${L.hi}`};border-radius:${Math.min(L.radius,12)}px"></div>`}
       ${T.gold?`<div style="position:absolute;inset:18px;border:1px solid rgba(201,162,74,.9);border-radius:8px"></div>`:""}
       <div style="position:absolute;left:32px;right:28px;top:24px;bottom:22px;display:flex;flex-direction:column;justify-content:center">
-        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family?` &nbsp;/&nbsp; ${esc(L.kick+f.year)}`:""}</div>
+        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family&&ctx.flavour&&ctx.flavour.est?` &nbsp;/&nbsp; ${esc(L.kick+ctx.flavour.est)}`:""}</div>
         <div data-fit="venue" style="font:${L.dispW} ${venue.length>20?32:40}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};margin-top:7px;text-shadow:0 2px 0 rgba(0,0,0,.3)">${esc(venue)}</div>
         <div style="font:700 17px/1.2 ${L.body};color:${L.hi};margin-top:6px">${esc(sign)}</div>
       </div>

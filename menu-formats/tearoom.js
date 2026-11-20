@@ -123,13 +123,20 @@ window.MENU_FORMATS[ID]=ctx=>{
     :`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`):`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`;
   const fitImg=()=>`<img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" onload="window.__fmtFitTearoom&&window.__fmtFitTearoom(this)">`;
 
+  /* review 33: the tea room's stock words suit a store or a tea room. A home, a cave, a pub or a party gets its own line and hours
+     (Tangled's Snuggly Duckling was "The Tea Room, top floor, children's tea served with a wink"; Up's house had morning tea from 10) */
+  const VS=venue+" "+sign,PLACE=/duckling|tavern|\bpub\b|\binn\b|reading room/i.test(VS)?{k:"other",sub:"Come in, sit down, tea's on",hrs:"Open till the last pot's poured.",kick:"Leave your troubles at the door."}
+    :/\bparty\b|shower/i.test(VS)?{k:"party",sub:"Tea party, all welcome",hrs:"Tea served all afternoon.",kick:null}
+    :/house|home|kitchen|cottage|flat|apartment|windsor gardens|street|nursery|\bcave\b|garden|castle/i.test(VS)?{k:"home",sub:"Tea at home, in the front room",hrs:"Tea's on when the kettle boils.",kick:"Wipe your feet on the way in."}
+    :{k:"store",sub:"The Tea Room, top floor",hrs:"Luncheon 11.30 till 2.30. Afternoon tea from 3.",kick:null};
+  const KICK=PLACE.kick&&/trolley|top floor|children's tea|basement|gloves/i.test(T.kick)?PLACE.kick:T.kick;
   /* ---------- front: store band, window display, logo, gift tag, note ---------- */
   const bandH=132;
   const vs=venue.length<=14?52:venue.length<=22?44:36;
   const bandHtml=`<div style="position:absolute;left:0;right:0;top:0;height:${bandH}px;background:${bandC};color:${paper};text-align:center;border-bottom:4px solid ${E.gilt}">
     <div style="margin-top:22px;font:600 15px/1.2 ${B};letter-spacing:.24em;text-transform:uppercase;opacity:.92;white-space:nowrap;overflow:hidden;padding:0 30px">${esc(sign)}</div>
     <div data-fitw="${vs}" data-min="24" style="margin:8px 30px 0;font-family:${D};font-weight:${E.dw};font-size:${vs}px;line-height:1.08;white-space:nowrap;overflow:hidden;${up}">${esc(venue)}</div>
-    <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">${/house|home|kitchen|cottage|flat|apartment|windsor gardens|street/i.test(venue+" "+sign)?"Tea at home, in the front room":"The Tea Room, top floor"}</div></div>`;
+    <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">${esc(PLACE.sub)}</div></div>`;
   const WX=24,WY=bandH+52,WW=672-2*WX,WH=470;
   const winLabel=`<div data-fitw="24" data-min="16" style="position:absolute;left:${WX}px;width:${WW-200}px;top:${bandH+14}px;text-align:center;white-space:nowrap;overflow:hidden;font-family:${D};font-weight:${E.dw};font-size:24px;line-height:1.1;color:${acc};${up}">${xmas?"Our Christmas windows":"In the windows this season"}</div>`;
   const PW=420,PH=630,BW=({P:10,S:12,E:4,M:1})[band(ctx.era||"modern")],RX=24+PW+2*BW+26,RW=672-24-RX;
@@ -156,8 +163,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font-family:${B};font-style:italic;font-size:max(16px,1em);line-height:1.35;color:${ink};margin-top:.3em">"${esc(note||"Do come up for tea. Coats on the stand, parcels under the table, and the cake trolley comes round twice.")}"</div>
     <div style="font:400 max(30px,1.7em)/1.1 'Great Vibes',cursive;color:${ink};margin-top:.15em">${esc(by)}</div></div>`;
   const frontFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;color:${ink}">
-    <div style="border-top:1px solid ${E.gilt};padding-top:8px;font:400 16px/1.3 ${B};white-space:nowrap;overflow:hidden">Luncheon 11.30 till 2.30. Afternoon tea from 3.</div>
-    <div data-fitw="15" data-min="14" style="font:italic 400 15px/1.3 ${B};opacity:.85;white-space:nowrap;overflow:hidden">${esc(T.kick)}</div></div>`;
+    <div style="border-top:1px solid ${E.gilt};padding-top:8px;font:400 16px/1.3 ${B};white-space:nowrap;overflow:hidden">${esc(PLACE.hrs)}</div>
+    <div data-fitw="15" data-min="14" style="font:italic 400 15px/1.3 ${B};opacity:.85;white-space:nowrap;overflow:hidden">${esc(KICK)}</div></div>`;
   const front=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:8px;${E.frame};pointer-events:none"></div>
     ${bandHtml}${posterSrc?"":winLabel}${win}${tag}${noteHtml}${frontFoot}${fitImg()}</div>`;

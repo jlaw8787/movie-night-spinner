@@ -234,12 +234,12 @@ window.MENU_FORMATS[ID]=ctx=>{
        <div style="flex:1;min-width:0">
          <div style="display:flex;justify-content:space-between;gap:.5em;align-items:baseline">
            <span style="font:700 1em/1.12 ${E.body};color:${INK};text-transform:${up};${heavy?clamp(2):""}">${esc(txt(it.n))}</span>
-           <span style="flex:none;font:700 1em/1.1 ${E.body};color:${INK}">${price(k,i)}</span></div>
+           <span ${i===0?'data-sum-in="set" ':""}style="flex:none;font:700 1em/1.1 ${E.body};color:${INK}">${price(k,i)}</span></div>
          ${it.note&&!(nIt>12&&i>1)?`<div style="font:italic 500 .76em/1.28 ${E.body};font-size:max(15px,.76em);color:${SOFT};margin-top:.1em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div></div>`).join("")}</div>`;
   const setNo=num||(yy?"8"+yy[1]:"88");
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
-     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
-     <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">One of every course, packed in one bag, ready by the opening credits.</div></div>`;
+     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span data-sum="set" data-sum-k="1.7" style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
+     <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">The first of every course for two, packed in one bag, ready by the opening credits.</div></div>`;
   /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
   const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];
   const tileSrc=i=>extra.length?IMG+"w780"+extra[i%extra.length]:"";

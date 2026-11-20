@@ -70,6 +70,12 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    {const L=by('s');const pl=L.filter(x=>!PREM.test(x.n));for(const x of L)if(PREM.test(x.n)&&pl.length&&x.v<Math.min(...pl.map(y=>y.v))*.8)bad.push(`seafood or steak starter ${x.n} ${x.raw} well under every plain starter`)}
    /* a cocktail or spirit is never cheaper than the cheapest starter */
    if(by('s').length){const lo=Math.min(...by('s').map(x=>x.v));for(const x of by('d'))if(/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i.test(x.n)&&x.v<lo*.6)bad.push(`cocktail ${x.n} ${x.raw} far under the cheapest starter ${lo}`)}
+   /* review 33: a cocktail is never under the cheapest real starter; a plain soft drink is never dearer than the dearest sweet;
+      no real starter under two fifths of the dearest one (The Other Guys' $2.25 dip beside $7.75 bagel bites, $8.75 pineapple juice) */
+   {const RS=by('s').filter(x=>!isCheap(x.n));if(RS.length){const lo=Math.min(...RS.map(x=>x.v)),hi=Math.max(...RS.map(x=>x.v));
+     for(const x of by('d'))if(/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i.test(x.n)&&x.v<lo-.001)bad.push(`cocktail ${x.n} ${x.raw} under the cheapest starter ${lo}`);
+     for(const x of RS)if(x.v<hi*.4-.01)bad.push(`starter ${x.n} ${x.raw} under two fifths of the dearest starter ${hi}`)}
+    const W=by('w');if(W.length){const hw=Math.max(...W.map(x=>x.v));for(const x of by('d'))if(/\b(juice|soda|cola|lemonade|iced tea|tea|coffee|water|cordial|squash|ginger beer|root beer|sarsaparilla|milk)\b/i.test(x.n)&&!/\b(long island|shakes?|milkshakes?|malts?|malted|floats?|smoothies?|frapp|sundaes?|spiked|irish coffee|punch|cocktail|mocktail|tiki)\b/i.test(x.n)&&!SP.test(x.n)&&x.v>hw+.001)bad.push(`plain drink ${x.n} ${x.raw} dearer than every sweet (${hw})`)}}
    /* endings: .00 .25 .50 .75 .95 (.99 reads like a real price too). One odd ending a card is the film's number hidden in the cents (Josh's
       Easter egg rule: TMNT's 1.84, A Bronx Tale's 1.87), so only a second one fails */
    {const odd=P.filter(x=>{const c=Math.round((x.v%1)*100);return x.v>=1&&/\./.test(x.raw)?![0,25,50,75,95,99].includes(c):x.v<1&&c%5!==0});if(odd.length>1)for(const x of odd.slice(1))bad.push(`odd ending ${x.n} ${x.raw} (${odd[0].raw} is the card's one film-number price)`)}

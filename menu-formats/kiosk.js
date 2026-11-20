@@ -332,8 +332,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== the board ===== */
   const BX=PW,BW=W-PW,pad=34,IW=BW-pad*2;
   const leftW=PM?IW-320:IW,sT=fitType(sign,leftW,128,E.dcw,PM?56:64,30,1.0,2);
-  const kickN=PM?lines(KICK+", since "+year,17,leftW,.8):1;
-  const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(KICK)}, since ${esc(year)}</div>
+  /* review 33: "since" a year only when the film gives one (flavour.est), never the release year */const sinceY=fl.est?String(fl.est):"",kickT=KICK+(sinceY?", since "+sinceY:"");const kickN=PM?lines(kickT,17,leftW,.8):1;
+  const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(kickT)}</div>
      <div style="font:${E.dw}${sT.z}px/1.0 ${disp};color:${ink};margin-top:8px;${glow}">${esc(sign)}</div>`;
   const hdr=PM?`<div style="display:flex;align-items:flex-start;gap:20px"><div style="flex:1;min-width:0">${hdrL}</div><div style="flex:none">${logoHtml}${logoHtml?"<br>":""}${capHtml}</div></div>`:hdrL;
   /* measured when the page can, since the estimate ran 40px over on three-line signs and left a gap under the menu (Terminator 2) */

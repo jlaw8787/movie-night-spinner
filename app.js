@@ -1702,6 +1702,11 @@ function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")
   h=h.replace(new RegExp(`(["\u201c]|&quot;|&ldquo;|&#8220;)((?:${alt})[^<]*?)(["\u201d]|&quot;|&rdquo;|&#8221;)(?=\\s*(<|$))`,"g"),"$2");
   /* review 31 (item 15): a note in the character's voice reads as a note left for you, never as their signed words: "From the host",
      "A word from ...", "Heard at the counter" and "Overheard on the ward" over it become "A note from ..." */
+  /* review 33 (Josh): a signed note says it is a note. The name under it reads "A note from Muriel", unless a heading over it already
+     says so (tea room), so a line in a character's voice is never mistaken for a line from the film */
+  {const by=String(n.by||"").trim();if(by&&!new RegExp("A note from "+rx(e(by)),"i").test(h)){const at=h.search(new RegExp(alt));
+    if(at>=0){const tail=h.slice(at),re=new RegExp(`>(\\s*)(?:[\u2014\u2013-]\\s*)?(${rx(e(by))}|${rx(by)}|${rx(e(by).replace(/'/g,"&#39;"))})(\\s*)<`),m=tail.match(re);
+      if(m)h=h.slice(0,at)+tail.replace(re,(x,a,b2,c)=>`>${a}A note from ${b2}${c}<`)}}}
   return h.replace(/>(\s*)(?:Overheard|Heard) (?:at|on|in) the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)
     .replace(/>(\s*)(?:A word|Word) from ([^<]{1,40}?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from ${w}${b}<`)
     .replace(/>(\s*)From the (host|director's desk)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)}
@@ -2040,19 +2045,22 @@ function houseCap(root,menu,fmt){
      4. a seafood or steak starter is never well under a plain one
      5. clean endings (.00 .25 .50 .75 .95 .99, cents in fives). One odd ending stays: the film's number hidden in the cents (Josh's Easter egg rule) */
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
-const PF_CHEAP=/\b(slices?|hot ?dogs?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
+const PF_CHEAP=/\b(slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
-const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
+const PF_BITE=/\b(crackling|pork scratchings|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
-const PF_PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
+const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
 const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
 /* review 31: a band per decade for the middle main on a card, in dollars of the day (the saloon menus and the hand-built ones sit inside these) */
 const PF_BAND={"1800s":[.12,.9],"1930s-40s":[.3,1.4],"1950s":[.6,2.5],"1960s":[1,3.5],"1970s":[2,7],"1980s":[3.5,12],"1990s":[5,18],"2000s":[7,24],"modern":[10,32]};
 /* review 32: the dearest a plain glass of beer, cider or a pint can be in each decade, in dollars of the day */
 const PF_PINT={"1800s":.06,"1930s-40s":.15,"1950s":.25,"1960s":.35,"1970s":.75,"1980s":1.5,"1990s":3,"2000s":5,"modern":9};
+/* review 33: the dearest a plain soft drink (juice, soda, tea, coffee, lemonade) can be in each decade (The Other Guys' $8.75 pineapple juice) */
+const PF_SOFT={"1800s":.05,"1930s-40s":.1,"1950s":.15,"1960s":.25,"1970s":.5,"1980s":1.25,"1990s":2.5,"2000s":3.5,"modern":5.5};
+const PF_SOFTD=/\b(juice|soda|cola|lemonade|iced tea|tea|coffee|water|cordial|squash|ginger beer|root beer|sarsaparilla|creaming soda|lemon squash|milk)\b/i,PF_NOTSOFT=/\b(long island|shakes?|milkshakes?|malts?|malted|floats?|smoothies?|frapp|sundaes?|spiked|irish coffee|punch|cocktail|mocktail|tiki)\b/i;
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
    The figure arrives in dollars of the day and is turned into what that place would print */
@@ -2121,6 +2129,11 @@ function pfFmt(u,p,all){const gs=(n,sep)=>String(n).replace(/\B(?=(\d{3})+(?!\d)
 function sumFix(root){if(!root)return 0;
   /* a price repeated in a line of text ("Frosty Palace burger, 1.50, with a cup of coffee") is copied from the dish's own printed price */
   for(const e of root.querySelectorAll("[data-echo]")){const src=root.querySelector(`[data-echo-src="${e.getAttribute("data-echo")}"]`);if(src&&src.textContent.trim())e.textContent=src.textContent.trim()}
+  /* review 33: the clubhouse Yds column is the hole's price in cents on a dollar card (Caddyshack's hole 4 read 135 against $3.25 after re-pricing),
+     so it is read again from the printed price, and the Out / In yards add up again */
+  {const Y=[...root.querySelectorAll("[data-yds]")];for(const y of Y){const pe=y.nextElementSibling&&y.nextElementSibling.querySelector("[data-sum-in]"),p=pe&&pfParse(pe.textContent);
+     if(p&&(p.k==="dec"||p.k==="c"||p.k==="n"))y.textContent=String(p.k==="n"?p.u*100:p.u)}
+   for(const t of root.querySelectorAll("[data-ysum]")){const g=t.getAttribute("data-ysum"),v=Y.filter(y=>y.getAttribute("data-yds")===g).reduce((a,y)=>a+(+y.textContent||0),0);if(v)t.textContent=String(v)}}
   const T=[...root.querySelectorAll("[data-sum]")];if(!T.length)return 0;
   const shown=e=>{for(let x=e;x&&x!==root;x=x.parentElement)if(x.style&&x.style.display==="none")return false;return true};
   const I=[...root.querySelectorAll("[data-sum-in]")].filter(shown).map(e=>({g:e.getAttribute("data-sum-in").split(" "),t:e.textContent.trim(),p:pfParse(e.textContent)}));
@@ -2129,7 +2142,10 @@ function sumFix(root){if(!root)return 0;
   /* cents and dollars on one card add up in cents */
   for(const x of I)if(x.p&&x.p.k==="n"&&I.some(y=>y.p&&(y.p.k==="dec"||y.p.k==="c")))x.p={k:"dec",u:x.p.u*100,pre:x.p.pre,sep:".",bare:false};
   let n=0;for(const t of T){const g=t.getAttribute("data-sum"),L=I.filter(x=>x.g.includes(g)&&x.p);if(!L.length)continue;
-    const P=L.map(x=>x.p),s=P.find(p=>p.k!=="c")||P[0],v=pfFmt(P.reduce((a,p)=>a+p.u,0),s,P);if(t.textContent.trim()!==v){t.textContent=v;n++}}
+    /* review 33: a deal (data-sum-k, the takeaway's "movie night for two" at 1.7 times one of each course) is a real discount on the sum, on a clean step */
+    const K=+t.getAttribute("data-sum-k")||1,P=L.map(x=>x.p),s=P.find(p=>p.k!=="c")||P[0];let u=P.reduce((a,p)=>a+p.u,0)*K;
+    if(K!==1){const st=s.k==="sd"?6:s.k==="dec"||s.k==="c"||s.k==="£"?(u>=1000?50:u>=100?25:5):Math.max(1,Math.pow(10,Math.max(0,String(Math.round(u)).length-2)));u=Math.max(st,Math.floor(u/st)*st)}
+    const v=pfFmt(u,s,P);if(t.textContent.trim()!==v){t.textContent=v;n++}}
   return n}
 /* review 32: every priced card says what money it is. A dollar card (no flavour.currency) whose prices are all bare figures (".25", "1.75",
    the banquet's "89.50 per cover") gets its mark: cents under a dollar ("75¢"), "$" above. A card that already sets "$" or "¢" anywhere
@@ -2182,6 +2198,9 @@ function priceFix0(root,menu,f,fl,era,fmt){
     const mid=L=>L.length%2?L[(L.length-1)/2]:(L[L.length/2-1]+L[L.length/2])/2,med=ms.length?mid(ms):mid(all)*1.6;
     if(med<bd[0]||med>bd[1]){const k=Math.sqrt(bd[0]*bd[1])/med;for(const x of P)x.v*=k;for(const x of O)x.v*=k}}
   const by=k=>P.filter(x=>x.k===k),mn=()=>by("m").filter(x=>!x.house),minM=()=>{const L=mn();return L.length?Math.min(...L.map(x=>x.v)):null};
+  /* review 33: a steak, roast, lobster or prime rib main costs at least the middle of its decade's band (Caddyshack's $3.95 prime rib at a 1980
+     country club, Dumb and Dumber's $5.50 surf and turf); the premium mains rise together so their order stays */
+  if(bd){const pr=mn().filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)),fl0=(bd[0]+bd[1])/2,lo=pr.length?Math.min(...pr.map(x=>x.v)):0;if(lo&&lo<fl0){const k=fl0/lo;for(const x of pr)x.v=Math.min(x.v*k,Math.max(x.v,bd[1]*1.3))}}
   const maxOf=L=>L.length?Math.max(...L.map(x=>x.v)):null,minOf=L=>L.length?Math.min(...L.map(x=>x.v)):null;
   const rules=()=>{
   /* 3. cheap bites */
@@ -2195,6 +2214,10 @@ function priceFix0(root,menu,f,fl,era,fmt){
   {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if((x.k==="s"||x.k==="w")&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
   /* review 32: a plain beer, cider or pint is held to what a glass cost in its decade (PF_PINT), so a 1981 pint is not dearer than the pie */
   {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
+  /* review 33: a plain soft drink is held to its decade (PF_SOFT) and never dearer than the dearest sweet */
+  {const cap=tgt&&PF_SOFT[tgt],wHi=maxOf(by("w"));for(const x of by("d"))if(PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)){let c=Infinity;if(cap)c=cap;if(wHi!=null)c=Math.min(c,wHi);if(x.v>c){x.v=c;x.down=1}}}
+  /* review 33: no real starter costs under two fifths of the dearest one (The Other Guys' $2.25 dip beside $7.75 bagel bites) */
+  {const L=by("s").filter(x=>!pfCheap(x.n)),hi=maxOf(L);if(hi!=null)for(const x of L)if(x.v<hi*.4)x.v=hi*.4}
   /* 4. a seafood or steak starter never well under a plain one */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(PF_PREM.test(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
   /* review 32: and never under a plain, real starter beside it (Lost in Translation's wagyu sando was the cheapest thing on the card) */
@@ -2207,7 +2230,9 @@ function priceFix0(root,menu,f,fl,era,fmt){
       if(m0<med*.8)for(const x of mn()){if(x.v<=hi)x.v=hi*1.2+step(hi)*mn().indexOf(x)}
       else for(const x of sw)if(x.v>=m0)x.v=Math.max(step(m0),m0*.8)}}}
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
-  {const lo=minOf(by("s"));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo*.6)x.v=lo*.9}
+  {const lo=minOf(by("s").filter(x=>!pfCheap(x.n)));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
+  /* review 33: a vintage or bottled wine is the dearest drink on the card (Goldfinger's vintage champagne sat under the mint julep) */
+  {const D=by("d"),top=x=>/\b(vintage|bottle of|magnum|dom p[eé]rignon|krug|cristal)\b/i.test(x.n);for(const x of D.filter(top)){const hi=maxOf(D.filter(y=>!top(y)));if(hi!=null&&x.v<=hi)x.v=hi+step(hi)}}
   };rules();
   /* 5. endings, keeping one film-number price */
   const egg=String((fl&&fl.number)||"").replace(/\D/g,"").slice(-2),yy=String(f&&f.year||"").slice(-2);
