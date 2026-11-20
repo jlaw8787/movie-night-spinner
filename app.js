@@ -2047,7 +2047,7 @@ function houseCap(root,menu,fmt){
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
 const PF_CHEAP=/\b(slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
-const PF_BITE=/\b(crackling|pork scratchings|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
+const PF_BITE=/\b(crackling|pork scratchings|pork rinds|chicharrones|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
@@ -2217,7 +2217,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 33: a plain soft drink is held to its decade (PF_SOFT) and never dearer than the dearest sweet */
   {const cap=tgt&&PF_SOFT[tgt],wHi=maxOf(by("w"));for(const x of by("d"))if(PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)){let c=Infinity;if(cap)c=cap;if(wHi!=null)c=Math.min(c,wHi);if(x.v>c){x.v=c;x.down=1}}}
   /* review 33: no real starter costs under two fifths of the dearest one (The Other Guys' $2.25 dip beside $7.75 bagel bites) */
-  {const L=by("s").filter(x=>!pfCheap(x.n)),hi=maxOf(L);if(hi!=null)for(const x of L)if(x.v<hi*.4)x.v=hi*.4}
+  {const L=by("s").filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))),hi=maxOf(L);if(hi!=null)for(const x of L)if(x.v<hi*.4){const st=step(hi*.4);x.v=Math.ceil(hi*.4/st-1e-9)*st+(st<.25?0:0)}}
   /* 4. a seafood or steak starter never well under a plain one */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(PF_PREM.test(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
   /* review 32: and never under a plain, real starter beside it (Lost in Translation's wagyu sando was the cheapest thing on the card) */
@@ -2230,7 +2230,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
       if(m0<med*.8)for(const x of mn()){if(x.v<=hi)x.v=hi*1.2+step(hi)*mn().indexOf(x)}
       else for(const x of sw)if(x.v>=m0)x.v=Math.max(step(m0),m0*.8)}}}
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
-  {const lo=minOf(by("s").filter(x=>!pfCheap(x.n)));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
+  {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
   /* review 33: a vintage or bottled wine is the dearest drink on the card (Goldfinger's vintage champagne sat under the mint julep) */
   {const D=by("d"),top=x=>/\b(vintage|bottle of|magnum|dom p[eé]rignon|krug|cristal)\b/i.test(x.n);for(const x of D.filter(top)){const hi=maxOf(D.filter(y=>!top(y)));if(hi!=null&&x.v<=hi)x.v=hi+step(hi)}}
   };rules();
@@ -2247,6 +2247,11 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 32: the film-number price is kept as it is, so a roast, steak or seafood main is lifted over it rather than sitting under it */
   {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<hi)x.c=clean(hi+step(hi))}}
   {const L=mn();if(L.length){const m0=Math.min(...L.map(x=>x.c));for(const x of [...by("s"),...by("w"),...by("d").filter(x=>!PF_SP.test(x.n))])if(x.c>=m0)x.c=m0>step(m0)?clean(m0-step(m0)):x.c}}
+  /* review 33: the last word on the printed figures: a cheap sweet never above the dearest starter, a cocktail never under the cheapest real starter */
+  {const S=by("s"),hiS=S.length?Math.max(...S.map(x=>x.c)):null,RS=S.filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))),loS=RS.length?Math.min(...RS.map(x=>x.c)):null;
+   if(hiS!=null)for(const x of by("w"))if(x!==keep&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.c>hiS)x.c=hiS>step(hiS)?cleanDown(hiS-step(hiS)*.5):hiS;
+   if(loS!=null)for(const x of by("d"))if(x!==keep&&PF_COCK.test(x.n)&&x.c<loS)x.c=clean(loS)<loS?clean(loS+step(loS)):clean(loS)
+   {const W=by("w"),B=by("s").filter(x=>PF_BAR.test(x.n)&&!PF_PREM.test(x.n)),hiW=W.length?Math.max(...W.map(x=>x.c),...B.map(x=>x.c)):null;if(hiW!=null)for(const x of by("d"))if(x!==keep&&PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.c>hiW)x.c=cleanDown(hiW)}}
   const cur=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;
   for(const x of O)x.c=x.v<1?Math.max(.05,Math.round(x.v*20)/20):Math.abs(x.v-x.v0)<.001?x.v:clean(x.v);
   if(cur){let n=0;const ws=(m,i)=>m[i]||"";
