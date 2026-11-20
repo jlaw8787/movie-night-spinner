@@ -33,12 +33,6 @@
      "aisle": "Pantry"
     },
     {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "ground lemon myrtle",
-     "aisle": "Pantry"
-    },
-    {
      "q": 100,
      "u": "g",
      "item": "butter for serving",
@@ -69,11 +63,7 @@
      "min": 30
     },
     {
-     "text": "Mix the sea salt with ground lemon myrtle.",
-     "min": 2
-    },
-    {
-     "text": "Serve warm with butter, golden syrup and the salt.",
+     "text": "Serve warm with butter, golden syrup and a little dish of sea salt.",
      "min": 2
     }
    ],
@@ -572,7 +562,7 @@
    "af": true
   },
   {
-   "n": "Shack lemon myrtle billy tea",
+   "n": "Shack gum leaf billy tea",
    "course": "d",
    "prep_min": 5,
    "cook_min": 13,
@@ -582,12 +572,6 @@
      "q": 6,
      "u": "",
      "item": "black tea bags",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "dried lemon myrtle",
      "aisle": "Pantry"
     },
     {
@@ -609,7 +593,7 @@
      "min": 8
     },
     {
-     "text": "Add the tea bags, lemon myrtle and a clean gum leaf if you have one, and take off the heat.",
+     "text": "Add the tea bags and a clean gum leaf, and take off the heat.",
      "min": 2
     },
     {

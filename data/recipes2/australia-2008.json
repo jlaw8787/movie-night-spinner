@@ -359,7 +359,7 @@
    }
   },
   {
-   "n": "Wattleseed pavlova",
+   "n": "Passionfruit pavlova",
    "course": "w",
    "prep_min": 30,
    "cook_min": 130,
@@ -384,28 +384,22 @@
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground wattleseed",
-     "aisle": "Spices"
-    },
-    {
      "q": 300,
      "u": "ml",
      "item": "thickened cream, whipped",
      "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "mango, sliced",
-     "aisle": "Produce"
-    },
-    {
      "q": 3,
      "u": "",
      "item": "passionfruit, pulp",
      "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
@@ -414,7 +408,7 @@
      "min": 20
     },
     {
-     "text": "Fold in the cornflour and wattleseed and shape on baking paper.",
+     "text": "Fold in the cornflour and vinegar and shape on baking paper.",
      "min": 10
     },
     {
@@ -426,7 +420,7 @@
      "min": 30
     },
     {
-     "text": "Top with cream, mango and passionfruit.",
+     "text": "Top with cream and passionfruit.",
      "min": 10
     }
    ],
