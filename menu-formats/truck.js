@@ -122,7 +122,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:${PXL}px;top:${PTOP}px;width:${PWI}px;height:${PHI}px;border:${PB}px solid ${darkTruck?"#e9e5d8":"#fbf7ec"};background:#222;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.4)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay())):""}</div></div>`;
 
   /* right: the board (signature) */
-  const RX=HX,boardH=560;
+  const RX=HX;let boardH=560;
   const C=[["s",e.cols[0]],["m",e.cols[1]],["w",e.cols[2]],["d",fl.drinksHeading||e.cols[3]]].filter(([k])=>(ctx.menu[k]||[]).length);
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
@@ -130,8 +130,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const CWall=RW-2*fw-2*pad-8,colGap=24,mTop=96;
   /* the showtime cue, a short line along the foot of the board (8 Nov: truck never printed it) */
   const cue=tx(f.P||"").trim(),cueN=cue?Math.min(2,wrapLines("Showtime: "+cue,15,CWall,e.cw)):0,cueH=cueN?cueN*15*1.3+12:0;
-  const menuH=boardH-2*fw-mTop-18-cueH;
-  const tiers=[{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:12,h:30,nl:2},{d:24,n:18,g:10,h:27,nl:1},{d:22,n:17,g:8,h:25,nl:1},{d:20,n:15,g:6,h:22,nl:1},{d:19,n:14,g:5,h:21,nl:1},{d:18,n:14,g:4,h:20,nl:1},{d:17,n:13,g:3,h:19,nl:1},{d:17,n:13,g:2,h:19,nl:1,sh:1},{d:16,n:13,g:2,h:18,nl:1,sh:1},{d:15,n:12.5,g:1,h:17,nl:1,sh:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:4,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
+  let menuH=boardH-2*fw-mTop-18-cueH;
+  /* review 32 (Josh: room for full notes): whole notes (up to four lines) are tried at every size before the two and one-line tiers */
+  const tiers=[...[[30,21,16,34],[28,20,14,32],[26,19,12,30],[24,18,10,27],[22,17,8,25],[20,15,6,22],[19,14,5,21],[18,14,4,20],[17,13,3,19],[16,13,2,18],[15,12.5,2,17]].map(([d,n,g,h])=>({d,n,g,h,nl:4})),{d:30,n:21,g:16,h:34,nl:2},{d:28,n:20,g:14,h:32,nl:2},{d:26,n:19,g:12,h:30,nl:2},{d:24,n:18,g:10,h:27,nl:1},{d:22,n:17,g:8,h:25,nl:1},{d:20,n:15,g:6,h:22,nl:1},{d:19,n:14,g:5,h:21,nl:1},{d:18,n:14,g:4,h:20,nl:1},{d:17,n:13,g:3,h:19,nl:1},{d:17,n:13,g:2,h:19,nl:1,sh:1},{d:16,n:13,g:2,h:18,nl:1,sh:1},{d:15,n:12.5,g:1,h:17,nl:1,sh:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:4,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*(ei>=6?1.5:2.5)+8;
   let CW=CWall;
   const cH=(tr,k)=>tr.h*1.3+14+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd*(e.caps?1.12:1)));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g},0);
@@ -141,10 +142,15 @@ window.MENU_FORMATS[ID]=ctx=>{
      so they fit against the menu height without the 8 per cent margin; the smallest one is kept even when the estimate says no,
      so every dish keeps a one-line note (cut at a break on screen by libUnclip) and the name-only tiers are only for menus with no notes */
   const anyNote=C.some(([k])=>items[k].some(it=>clean(it.note).trim()));
+  /* review 32: when no whole-note tier fits the board, the board takes 48px from the order window below before notes are cut */
+  {const fitsFull=()=>tiers.filter(x=>x.nl>=4).some(x=>{CW=CWall;if(C.reduce((a,[k])=>a+cH(x,k),0)*.9<=menuH)return true;CW=(CWall-colGap)/2;return split(x).m*.9<=menuH});
+   if(anyNote&&!fitsFull()){boardH+=48;menuH+=48}}
   for(const x of tiers){if(x.sh){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
       CW=(CWall-colGap)/2;const q=split(x);if(q.m<=menuH||(anyNote&&!tiers[tiers.indexOf(x)+1].sh)){tr=x;sp=q;break}continue}
-    CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*1.08<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
-    CW=(CWall-colGap)/2;const q=split(x);if(q.m*1.08<=menuH){tr=x;sp=q;break}}
+    /* review 32: the whole-note tiers trust the estimate a little (it runs high on this board) and lean on the runtime shrink (--k) */
+    const mg=x.nl>=4?.9:1.08;
+    CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*mg<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
+    CW=(CWall-colGap)/2;const q=split(x);if(q.m*mg<=menuH){tr=x;sp=q;break}}
   if(!sp){dmax=2;CW=(CWall-colGap)/2;sp=split(tr)}
   const cgap=12+Math.min(48,Math.max(0,menuH-sp.m*1.08)/Math.max(1,C.length));
   const head=l=>e.board==="enamel"?`<div style="font:${e.dw} ${tr.h}px/1.1 ${DF};color:${bacc};border-bottom:3px double ${bacc};padding-bottom:2px;margin-bottom:8px">${l}</div>`
@@ -153,7 +159,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     :`<div style="display:inline-block;font:700 ${tr.h-4}px/1.1 ${DF};color:${e.bbg};background:${bacc};padding:4px 12px;margin-bottom:10px;border-radius:6px">${l}</div>`;
   const course=([k,l])=>`<div style="margin-bottom:${cgap}px">${head(l)}${items[k].map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return `<div style="margin-bottom:calc(${tr.g}px*var(--k,1))">
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="flex:1;font:700 calc(${tr.d}px*var(--k,1))/1.15 ${BF};color:${e.btx};${UP()}${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.pw} calc(${tr.d+4}px*var(--k,1))/1 ${PF};color:${e.board==="enamel"?bacc:e.btx};white-space:nowrap">${pr[k][i]}</span></div>
-      ${nl?`<div data-fnote style="font:400 calc(${tr.n}px*var(--k,1))/1.3 ${BF};color:${bsoft};margin-top:3px;${clamp(nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
+      ${nl?`<div data-fnote style="font:400 calc(${tr.n}px*var(--k,1))/1.3 ${BF};color:${bsoft};margin-top:3px;${clamp(tr.nl>=4?6:nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
   const colA=C.slice(0,sp.s).map(course).join(""),colB=C.slice(sp.s).map(course).join("");
   const boardTex=e.board==="letter"?`<div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 2px,rgba(0,0,0,0) 2px 10px)"></div>`
     :e.board==="chalk"?`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.08),rgba(255,255,255,0) 60%),radial-gradient(ellipse at 70% 80%,rgba(255,255,255,.06),rgba(255,255,255,0) 55%)"></div><div style="position:absolute;inset:0;background:url(${grain}) center/900px auto;opacity:.9;mix-blend-mode:screen;filter:invert(1)"></div>`
@@ -183,7 +189,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="display:flex;gap:12px;align-items:flex-start;justify-content:space-between">
     <div style="flex:0 0 auto">${kick("Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?36:num.slice(-4).length===3?42:48}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
     <div style="flex:1;min-width:0;text-align:right"><div style="font:700 15px/1.15 ${BF};color:#15171c;text-transform:uppercase;letter-spacing:.06em;${clamp(1)}">${esc(prop.title)}</div>
-    ${(prop.lines||[]).slice(0,2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div></div>
+    ${(prop.lines||[]).slice(0,boardH>560?1:2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div></div>
     <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(2)}">${winks[0]?esc(winks[0])+". ":""}Prices subject to change.${fam?" No alcohol served.":""} Images: TMDB.</div></div>`;
   const windowArea=`<div style="position:absolute;left:${RX}px;top:${WY}px;width:${RW}px;height:${WH}px;background:${truck};overflow:hidden">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1200px auto;opacity:${(.2+t.wear).toFixed(2)}"></div>
