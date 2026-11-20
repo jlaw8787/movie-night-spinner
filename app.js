@@ -2033,7 +2033,7 @@ function houseCap(root,menu,fmt){
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
 const PF_CHEAP=/\b(slices?|hot ?dogs?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
-const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?))\b/i;
+const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
