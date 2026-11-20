@@ -2066,7 +2066,7 @@ const PF_BAND={"1800s":[.12,.9],"1930s-40s":[.3,1.4],"1950s":[.6,2.5],"1960s":[1
 const PF_PINT={"1800s":.06,"1930s-40s":.15,"1950s":.25,"1960s":.35,"1970s":.75,"1980s":1.5,"1990s":3,"2000s":5,"modern":9};
 /* review 33: the dearest a plain soft drink (juice, soda, tea, coffee, lemonade) can be in each decade (The Other Guys' $8.75 pineapple juice) */
 const PF_SOFT={"1800s":.05,"1930s-40s":.1,"1950s":.15,"1960s":.25,"1970s":.5,"1980s":1.25,"1990s":2.5,"2000s":3.5,"modern":5.5};
-const PF_SOFTD=/\b(juice|soda|cola|lemonade|iced tea|tea|coffee|water|cordial|squash|ginger beer|root beer|sarsaparilla|creaming soda|lemon squash|milk)\b/i,PF_NOTSOFT=/\b(long island|shakes?|milkshakes?|malts?|malted|floats?|smoothies?|frapp|sundaes?|spiked|irish coffee|punch|cocktail|mocktail|tiki)\b/i;
+const PF_SOFTD=/\b(juice|soda|cola|lemonade|iced tea|tea|coffee|flat white|lattes?|cappuccinos?|water|cordial|squash|ginger beer|root beer|sarsaparilla|creaming soda|lemon squash|milk)\b/i,PF_NOTSOFT=/\b(long island|shakes?|milkshakes?|malts?|malted|floats?|smoothies?|frapp|sundaes?|spiked|irish coffee|punch|cocktail|mocktail|tiki)\b/i;
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
    The figure arrives in dollars of the day and is turned into what that place would print */
