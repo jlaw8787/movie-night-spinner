@@ -327,7 +327,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const front=`<div style="position:absolute;inset:0;background:${bg};${fp}">${banner}${heroHtml}${ticket}${noteHtml}${PMq?"":frontFine}</div>`;
 
   /* ===== BACK ===== */
-  const SX=18,SW=176,STY=18,STH=H-36;
+  /* review 32: a long menu gets a narrower photo booth strip, so the full notes have the width */
+  const TL=["s","m","w","d"].reduce((a,k)=>a+((ctx.menu||{})[k]||[]).filter(i=>i&&i.n).slice(0,4).reduce((b,it)=>b+String(it.n||"").length+String(it.note||"").length+12,0),0);
+  const SX=18,SW=TL>760?120:TL>600?136:TL>480?152:176,STY=18,STH=H-36;
   const fh=Math.floor((STH-16-44-3*8)/4);
   const strip=`<div style="position:absolute;left:${SX}px;top:${STY}px;width:${SW}px;height:${STH}px;background:linear-gradient(180deg,#ffffff,#f1efe9);box-shadow:0 3px 10px rgba(0,0,0,.28);transform:rotate(${(T.tilt*.35).toFixed(2)}deg);padding:8px 8px 0;box-sizing:border-box">
       ${booth.map(b=>`<div style="margin-bottom:8px">${photo(b.src,SW-16,fh,{filter:`${E.booth} ${T.photo}`,poster:b.poster,pos:"50% 30%",vig:20,last:poster?img(poster,"w500"):""})}</div>`).join("")}
@@ -371,8 +373,10 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   const measure=FS=>{const h=domH(menuFor(FS),RW);return h==null?est(FS):h*1.04};
   let FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0]){for(let s=1.07;s>=(nl?.6:.55);s-=.05){
-    const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(18,Math.round(26*s)),G:Math.max(4,Math.round(14*s))};
+  /* review 32 (Josh: room for full notes, not cuts): whole notes (up to four lines) at every size first, then the two and one-line cuts */
+  outer:for(const nl of [4,2,1,0]){for(let s=1.07;s>=(nl===4?.42:nl?.6:.55);s-=.05){
+    /* the page is 600 across for an A4 sheet, so 12px notes still print at about 12 point */
+    const base={D:Math.max(nl===4?14:17,Math.round(28*s)),N:Math.max(nl===4?12:15,Math.round(21*s)),S:Math.max(nl===4?15:18,Math.round(26*s)),G:Math.max(nl===4?3:4,Math.round(14*s))};
     {const FSx=Object.assign({},base,{nl});const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break outer}}
   }
     /* 15 Nov: before any size without notes, one-line notes at 13px under 16 or 15px names (Barbie and other nine-dish menus) */
