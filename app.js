@@ -896,6 +896,12 @@ function cardFaces(){
      Review 31 (Josh's call): on a phone a wide page is shown as its own panels, cut only along clear gutters where no text runs (pvPanels),
      so a word is never split; three panels when the gutters allow (text near full size), else two; a page with no clean gutter stays whole */
   if(!swipeW())return [];
+  /* review 32: a hand-built menu drawn without a fixed sheet (Ratatouille's Gusteau's spread: photos either side of the menu card) opens on
+     its menu card, one view per .fx-panel, so the dishes read at about 10px instead of 5 to 6. Tap still opens the whole spread */
+  if(!fs.length&&!card.dataset.w&&card.classList.contains("fmt")){const P=[...card.querySelectorAll(".fx-panel")].filter(e=>e.offsetWidth&&e.offsetHeight);
+    if(P.length&&P.length<=2){const cb=card.getBoundingClientRect(),k=cb.width/(card.offsetWidth||1123)||1,cw=card.offsetWidth||1123;
+      const V=P.map((e,i)=>{const r=e.getBoundingClientRect();return {el:card,w:Math.round(r.width/k)+24,h:Math.round(r.height/k)+24,x:Math.round((r.left-cb.left)/k)-12,y:Math.round((r.top-cb.top)/k)-12,px:Math.round((r.left-cb.left)/k)-12,part:"menu"+(i+1),panel:1,crop:1}});
+      if(V.every(v=>v.w<cw*.75))return V}}
   const el=fs[0]||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;
   if(!w||!h||(w<h*1.2&&w<900))return [];/* a wide page, or a big one (the pub face is 1240 across) */
   const cuts=pvPanels(el,w,h);if(!cuts.length)return [];
@@ -981,7 +987,7 @@ function applyPhone(){
   const has=!!fmtPhone.innerHTML,on=has&&narrow()&&tab==="menu";
   fmtPhone.hidden=!on;$("easel").hidden=false;$("fmtBack").hidden=true;
   scalePreview();if(on)fitPhoneTitle();
-  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=isTouch()?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
+  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=isTouch()?"tap":"click";zh.textContent=ok&&cardFaces().length>1&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
 /* the phone text menu uses the Prep sheet's own recipe for a dish: same amounts for tonight's guests, same method */
 function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;const LB=planLabels(f),want=[it.orig,it.n,it.label].filter(Boolean).map(x=>String(x).toLowerCase());
@@ -2019,9 +2025,11 @@ function houseCap(root,menu,fmt){
      5. clean endings (.00 .25 .50 .75 .95 .99, cents in fives). One odd ending stays: the film's number hidden in the cents (Josh's Easter egg rule) */
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
 const PF_CHEAP=/\b(slices?|hot ?dogs?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
-const pfCheap=n=>PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n);
+/* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
+const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|pasties|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?))\b/i;
+const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
-const PF_PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
+const PF_PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
 const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
 /* review 31: a band per decade for the middle main on a card, in dollars of the day (the saloon menus and the hand-built ones sit inside these) */
@@ -2147,10 +2155,14 @@ function priceFix0(root,menu,f,fl,era,fmt){
     for(const x of mn())if(pfCheap(x.n)&&!PF_PREM.test(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
   /* review 31: a bowl of bar nuts or crisps never costs more than a drink beside it (the Winchester's nuts at twice a pint) */
   {const D=by("d"),lo=minOf(D);if(lo!=null)for(const x of by("s"))if(PF_BAR.test(x.n)&&!PF_PREM.test(x.n)&&x.v>lo){x.v=Math.max(step(lo),lo-step(lo)*0);x.down=1}}
+  /* review 32: a cheap bite is held under half the bottom of its decade's main band (Mad Max's 1979 meat pie was $4.25, The Dish's 1969 scone $1) */
+  {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if(x.k!=="d"&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
   /* review 32: a plain beer, cider or pint is held to what a glass cost in its decade (PF_PINT), so a 1981 pint is not dearer than the pie */
   {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
   /* 4. a seafood or steak starter never well under a plain one */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(PF_PREM.test(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
+  /* review 32: and never under a plain, real starter beside it (Lost in Translation's wagyu sando was the cheapest thing on the card) */
+  {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of L)if(PF_PREM.test(x.n)&&!pfCheap(x.n)&&x.v<hi)x.v=hi+step(hi)}
   /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
   {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<hi)x.v=hi+step(hi)}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */

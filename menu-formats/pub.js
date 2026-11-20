@@ -137,7 +137,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const note={text:C(fl.note&&fl.note.text)||sentence(f.T)||"Pull up a stool. Kitchen's open and the specials are on the board.",by:C(fl.note&&fl.note.by)||"The Publican"};
   const winks=(fl.winks||[]).map(C).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:fam?"Friday Raffle":(raf||T.raffle).replace(/,.*$/,""),lines:raf?["Teams of up to six","Prizes behind the bar"]:["Drawn at the front bar","Must be present to win"]};
-  const num=String(fl.number||"").replace(/\D/g,"")||year;
+  /* review 32: a pub set in an earlier decade (flavour.priceEra) never prints the release year as its licence (Red Dog's "Licence 2011" over 1970s prices) */
+  const num=String(fl.number||"").replace(/\D/g,"")||(fl.priceEra?String(year).slice(-2)+"7":year);
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=ctx.stills||[];
@@ -160,7 +161,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== verandah fascia ===== */
   const FH=150;
   const vT=fitType(up(venue),W-120,86,E.dcw*(E.up?1.12:1),78,34,1.0,2);
-  /* 7 Nov: a period film (number is a story year before release, Phar Lap 1930) gets a pub that already stood then */const sy=+String((fl&&fl.number)||"").replace(/\D/g,""),estY=sy>1800&&sy<+year?String(sy-60):year;const fasciaKick=`${AU?E.kick:GB?"FOOD SERVED DAILY":"KITCHEN OPEN DAILY"}, ${E.est} ${estY}`;
+  /* 7 Nov: a period film (number is a story year before release, Phar Lap 1930) gets a pub that already stood then */const sy=+String((fl&&fl.number)||"").replace(/\D/g,""),estY=fl.est?String(fl.est):sy>1800&&sy<+year?String(sy-60):(({"1800s":1850,"1930s-40s":1920,"1950s":1940,"1960s":1950,"1970s":1960,"1980s":1970,"1990s":1980,"2000s":1990})[fl.priceEra]<+year?String(({"1800s":1850,"1930s-40s":1920,"1950s":1940,"1960s":1950,"1970s":1960,"1980s":1970,"1990s":1980,"2000s":1990})[fl.priceEra]):year);/* review 32: Red Dog's 1970s pub no longer "Est. 2011" */const fasciaKick=`${AU?E.kick:GB?"FOOD SERVED DAILY":"KITCHEN OPEN DAILY"}, ${E.est} ${estY}`;
   const fascia=`<div style="position:absolute;left:0;top:0;width:${W}px;height:${FH}px;background:linear-gradient(180deg,rgba(255,255,255,.14),transparent 30%,rgba(0,0,0,.2)),repeating-linear-gradient(180deg,transparent 0 42px,rgba(0,0,0,.14) 42px 44px,rgba(255,255,255,.08) 44px 46px),${grain(.12+.15*T.wear,lum(rgb(E.fascia))<.2,.6,true)},${E.fascia};border-bottom:10px solid ${E.frame};box-shadow:0 6px 14px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 60px;box-sizing:border-box;text-align:center">
       <div style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
       <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;

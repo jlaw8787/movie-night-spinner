@@ -136,10 +136,11 @@ window.MENU_FORMATS.precinct=function(ctx){
   const IH=690,FH=IH+pT+pB,FW=Math.round(IH*2/3+2*pR),FT=108,RX=36+FW+22,RW=780-RX,FB=FT+FH;
   /* logo in its own colours on a case label that suits it */
   const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?(heroP?Math.min(RW-40,96*lr):Math.min(330,96*lr)):0,lh=lr?lw/lr:0;
-  const lpH=heroP?(lr?Math.round(lh+28):104+28):0;
+  /* review 32: the typed title that stands in when the logo will not load fits the room kept for the logo, so the memo never covers it (Dirty Work) */
+  const tyH=lr?Math.max(56,Math.round(lh)):104,lpH=heroP?(lr?Math.round(Math.max(lh,tyH)+28):104+28):0;
   const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:${heroP?RX:64}px;top:${heroP?FT+4:(lr?Math.round(640-lh-40):520)}px;max-width:${heroP?RW:340}px;box-sizing:border-box;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
      ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
-     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?RW-40:440}px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
+     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?RW-40:440}px;height:${heroP?tyH:104}px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
    </div>`;
   const evid=(src,l,t,w,h,rot,op,tag,pad,isP)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${pad||E.pb};background:#fbfaf6;transform:rotate(${rot}deg);box-shadow:0 14px 30px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.3)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">
