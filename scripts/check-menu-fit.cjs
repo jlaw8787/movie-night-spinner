@@ -3,7 +3,7 @@
      1. money: the card prints the film's own currency (flavour.currency, default $) and no other
      2. storybook coin (crowns, silver, gp, "coin of the realm", a compass) only where flavour.world is "storybook"
      3. era: the middle main sits in the band for the film's decade (PF_BAND in app.js, flavour.priceEra or the layout era)
-     4. notes: no printed dish note under four words, and no dish printed with no note on a layout that gives notes
+     4. notes: no printed dish note under six words (review 32), no priced dollar card without a money mark, and no dish printed with no note on a layout that gives notes
      5. quotes: a line printed in quote marks and signed with a name is on the film's quote list (data/quote-list.json)
      6. words: no warm drink under a "Cold" heading; no counter meals or licence number on a pub outside Australia;
         no fridge or couch on a card set before fridges or in a made-up world
@@ -34,6 +34,8 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const cur=fl.currency||'$';if(cur==='coin')SYM.coin=new RegExp('\\d '+String(fl.coin||'coins').split(' ')[0].replace(/(ies|s)$/,''),'i');
    /* 1. money */
    const hasPrice=/\d\.\d\d|\d+¢|\.\d\d\b|£|€|₩|¥|\d+d\b/.test(txt);
+   /* review 32: a priced card says what money it is: bare figures (".25", "1.75") with no mark anywhere fail */
+   if(hasPrice&&cur==='$'&&!/\$\s?\d|\d\s?¢|\b\d{1,2}c\b/.test(txt))bad.push('prices with no money mark');
    if(hasPrice){if(cur==='$'){if(FOREIGN.test(txt))bad.push('foreign money on a dollar card')}
      else{if(!SYM[cur].test(txt))bad.push(`no ${cur} prices`);if(/\$\s?\d(?![\d,]{3,})/.test(txt.replace(/R\$/g,'')))bad.push(`dollar prices on a ${cur} card`)}}
    /* 2. storybook coin */
@@ -53,7 +55,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     const isPrice=s=>/^(\$|£|€|₩|¥|R\$ ?|L\. ?|RM ?)?[\d.,]+\s?(p|d|F|kr|¢|c|cr|crowns|silver|gp)?$|^\d+s( \d+d)?$|^\d+ gp \d+$|^\d+s \d+d$|^\d+\/\d+$|^\d+ (denarii|taels|coins?)$/.test(s)||/^[\d,. ]+ [A-Za-zčö][A-Za-zčö ]*$|^(Rs |฿|Rp |S\/ )[\d,.]+$/.test(s)&&s.length<26;
     for(const d of ds){const i=lines.findIndex(l=>norm(l)===norm(d));if(i<0)continue;let j=i+1;while(j<lines.length&&isPrice(lines[j]))j++;const nx=lines[j]||'';
       if(!nx||names.has(norm(nx))||/^[A-Z0-9 ,.&'!-]{3,}$/.test(nx)||/^\d+ cr$/.test(nx)||/^GUESTS\b/i.test(nx)||/^(cold |hot )?drinks$/i.test(nx))continue;/* no note slot here (a name-only board): not counted */
-      const w=nx.replace(/[^\w' ]/g,' ').trim().split(/\s+/).filter(Boolean).length;if(w<4)bad.push(`thin note on ${d}: "${nx}"`)}}
+      const w=nx.replace(/[^\w' ]/g,' ').trim().split(/\s+/).filter(Boolean).length;if(w<6)bad.push(`thin note on ${d}: "${nx}"`)}}
    /* 5. signed quotes */
    {const ql=(QL[id]||[]).map(norm);const qs=[...txt.matchAll(/[“"]([^”"\n]{12,200})[”"]\s*\n\s*([A-Z][\w.'’ -]{2,40})\s*(\n|$)/g)];
     for(const q of qs){const k=norm(q[1]);if(!ql.some(x=>x.includes(k.slice(0,40))||k.includes(x.slice(0,40))))bad.push(`signed quote not on the quote list: "${q[1].slice(0,60)}" (${q[2].trim()})`)}}

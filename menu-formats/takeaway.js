@@ -186,7 +186,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:30px;top:138px;width:388px;background:${BAR};color:${BARINK};padding:12px 16px;box-sizing:border-box;${eg==="new"?"border-radius:10px;":""}">
      <div style="font:700 15px/1 ${E.body};letter-spacing:.24em;text-transform:uppercase">Phone your order</div>
      <div style="font:${E.dw} 44px/1.1 ${E.disp};margin-top:4px;white-space:nowrap">${phone}</div></div>
-   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over $25.</div>
+   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over ${((ctx.flavour&&ctx.flavour.currency)==="¥"?"¥3,000":"$"+(({"1930s-40s":2,"1950s":3,"1960s":5,"1970s":8,"1980s":12,"1990s":15,"2000s":20})[(ctx.flavour&&ctx.flavour.priceEra)||ctx.era]||25))}.</div>
    <div style="position:absolute;left:30px;top:310px;width:388px;height:1px;background:${SOFT};opacity:.6"></div>
    <div data-fit data-min="15" style="position:absolute;left:30px;top:322px;width:388px;height:220px;overflow:hidden;font-size:20px;color:${INK}">
      <div style="font:700 15px/1.2 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${SPOT};margin-bottom:.4em">Talk on the delivery run</div>
