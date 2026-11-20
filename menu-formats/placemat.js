@@ -193,9 +193,10 @@ window.__placematFit=window.__placematFit||function(trigger){
      then lost height, cutting its last dish (Jingle All the Way, The Incredibles). It runs again as each picture arrives */
   const run=()=>{
     const over=b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1;
-    const step=(nodes,box,min)=>{for(let k=0;k<14&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>min){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}};
+    const step=(nodes,box,min)=>{for(let k=0;k<14&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize),lo=typeof min==="function"?min(n):min;if(s>lo){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}};
     const menu=el.querySelector('[data-fit="menu"]');
-    if(menu){step([...menu.querySelectorAll('[data-fit="dish"],[data-fit="note"],[data-fit="head"]')],menu,16);
+    /* review 32 (Josh: room for the full note, not cuts): notes may go to 13px and names to 15 (about 9 point on the printed sheet) before any is shortened */
+    if(menu){step([...menu.querySelectorAll('[data-fit="dish"],[data-fit="note"],[data-fit="head"]')],menu,16);step([...menu.querySelectorAll('[data-fit="dish"],[data-fit="note"],[data-fit="head"]')],menu,n=>n.dataset.fit==="note"?13:15);
       /* review 15: no clamped notes; shortened at a break before one is hidden */{if(window.__fmtTrimReset)window.__fmtTrimReset(menu);const ns=[...menu.querySelectorAll('[data-fit="note"]')];ns.forEach(e=>{e.style.display="";e.style.webkitLineClamp="";e.style.overflow=""});(window.__fmtTrim?window.__fmtTrim(ns,()=>over(menu)):(()=>{for(let i=ns.length-1;i>=0&&over(menu);i--)ns[i].style.display="none"})())}}
     const sign=el.querySelector('[data-fit="signbox"]'),vn=el.querySelector('[data-fit="venue"]');
     for(let k=0;sign&&vn&&k<20&&(over(sign)||vn.offsetHeight>parseFloat(getComputedStyle(vn).fontSize)*2.3);k++)vn.style.fontSize=(parseFloat(getComputedStyle(vn).fontSize)-2)+"px";
