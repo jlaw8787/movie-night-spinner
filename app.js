@@ -2035,6 +2035,7 @@ const PF_CHEAP=/\b(slices?|hot ?dogs?|franks|frankfurts?|wieners?|cookies?(?!'s)
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
 const PF_BITE=/\b(crackling|pork scratchings|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|pasties|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?))\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
+const pfCheap0=n=>PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
 const PF_PREM=/\b(steaks?|sirloin|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
@@ -2175,12 +2176,12 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* 3. cheap bites */
   for(const k of ["s","w"]){const L=by(k),nc=L.filter(x=>!pfCheap(x.n)),top=maxOf(nc);if(top==null)continue;for(const x of L)if(pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>top)x.v=Math.max(step(top),top-step(top))}
   {const mS=maxOf(by("s"));if(mS!=null)for(const x of by("w"))if(pfCheap(x.n)&&x.v>mS)x.v=Math.max(step(mS),mS-step(mS))}
-  {const prem=mn().filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),nc=mn().filter(x=>!pfCheap(x.n)),mS=maxOf(by("s"));
-    for(const x of mn())if(pfCheap(x.n)&&!PF_PREM.test(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
+  {const prem=mn().filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)),nc=mn().filter(x=>!pfCheap0(x.n)),mS=maxOf(by("s"));
+    for(const x of mn())if(pfCheap0(x.n)&&!PF_PREM.test(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
   /* review 31: a bowl of bar nuts or crisps never costs more than a drink beside it (the Winchester's nuts at twice a pint) */
   {const D=by("d"),lo=minOf(D);if(lo!=null)for(const x of by("s"))if(PF_BAR.test(x.n)&&!PF_PREM.test(x.n)&&x.v>lo){x.v=Math.max(step(lo),lo-step(lo)*0);x.down=1}}
   /* review 32: a cheap bite is held under half the bottom of its decade's main band (Mad Max's 1979 meat pie was $4.25, The Dish's 1969 scone $1) */
-  {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if(x.k!=="d"&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
+  {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if((x.k==="s"||x.k==="w")&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
   /* review 32: a plain beer, cider or pint is held to what a glass cost in its decade (PF_PINT), so a 1981 pint is not dearer than the pie */
   {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
   /* 4. a seafood or steak starter never well under a plain one */

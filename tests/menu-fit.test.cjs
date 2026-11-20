@@ -31,6 +31,9 @@ for(const [id,e] of Object.entries({'The Rocketeer (1991)':'1930s-40s','Red Dog 
 {const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
  for(const id of Object.keys(FMT)){const p=path.join(root,'data/recipes',slug(id)+'.json');if(!fs.existsSync(p))continue;const r=JSON.parse(fs.readFileSync(p,'utf8'));
   for(const [k,arr] of Object.entries(r))if(Array.isArray(arr))for(const x of arr)if(x&&x.n){if(words(x.note)<6)bad.push(`${id}: printed note on ${x.n} under six words`);if(!FOOD.test(x.note||''))bad.push(`${id}: printed note on ${x.n} names no food`)}}}
+/* and in the finished poster menus (movie-menus.js), which print instead of the recipe file for 124 films */
+{const vm=require('node:vm'),cx={};vm.createContext(cx);vm.runInContext(fs.readFileSync(path.join(root,'movie-menus.js'),'utf8')+';this.E=MOVIE_MENU_EDITIONS',cx);
+ for(const [id,e] of Object.entries(cx.E))if(FMT[id])for(const k of ['s','m','w','d'])for(const x of (e.menu&&e.menu[k])||[]){if(words(x.note)<6)bad.push(`${id}: edition note on ${x.n} under six words`);if(!FOOD.test(x.note||''))bad.push(`${id}: edition note on ${x.n} names no food`)}}
 assert.deepEqual(bad,[],bad.join('\n'));
 const n=Object.values(FL).filter(v=>v.currency).length,s=Object.values(FL).filter(v=>v.world).length,e=Object.values(FL).filter(v=>v.priceEra).length;
 console.log(`PASS: fit table well formed (${n} with their own money, ${e} with a price era, ${s} storybook), every note four words or more.`);

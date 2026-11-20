@@ -172,7 +172,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     /* review 32: a Victorian tea room (priceEra 1800s, The Prestige) charges pence, not 1950s shillings: about an eighth of the card */
     const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?(fl.priceEra==="1800s"?LSD1800:LSD):E.coin);
     return `<div style="break-inside:avoid;margin:0 0 .5em"><div style="display:flex;gap:.6em;align-items:baseline"><span style="flex:1;font-family:${D};font-weight:${E.dw};font-size:max(15px,1em);line-height:1.15;color:${ink}">${esc(n)}</span><span style="flex:none;font:600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>
-      ${it.note?`<div data-note="1" style="font:italic 400 max(14px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
+      ${it.note?`<div data-note="1" style="font:italic 400 max(12px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
   }
   let flow="";
   ["s","m","w","d"].forEach((k,ci)=>{const items=(m[k]||[]).slice(0,4);if(!items.length)return;
@@ -180,7 +180,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;text-align:center;font-size:max(15px,.74em);line-height:1.35;color:${ink};margin:.1em 0 .4em"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">The bell for the picture </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.62em);line-height:1.35;color:${ink};opacity:.9"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">Overheard at the next table </span>${winks.map(esc).join(". ")}.</div>`;
-  const SH=nItems>10?300:nItems>7?320:340, SY=1056-58-SH;
+  /* review 32: the still gives the menu more height on a long card, so each note prints whole */
+  const SH=nItems>10?240:nItems>7?270:nItems>5?310:340, SY=1056-58-SH;
   const two=nItems>8;
   const bHead=`<div style="position:absolute;left:36px;right:36px;top:34px;text-align:center">
     <div style="font:600 15px/1.2 ${B};letter-spacing:.22em;text-transform:uppercase;color:${acc};white-space:nowrap;overflow:hidden">${esc(venue)}</div>
