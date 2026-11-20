@@ -257,6 +257,11 @@ for (const g of genres) {
 ${Object.entries(groups).map(([k, xs]) => `<p class="letter" id="l-${k === '#' ? 'num' : k}">${k}</p>\n<ul class="cols">${xs.map(x => `<li><a href="/menu/${x.s}/">${esc(x.shown)} (${x.f.year})</a></li>`).join('')}</ul>`).join('\n')}`;
   write('menu/index.html', page({ title: `Movie night dinner menus for ${ALL.length.toLocaleString('en-AU')} films | Reel Dinner`, desc: `Themed dinner menus for ${ALL.length.toLocaleString('en-AU')} films, from The Godfather to The Big Lebowski. Recipes for 4, shopping lists and printable menus.`, canon: SITE + '/menu/', body }));
 }
+/* review 33: a film swapped out of the lineup keeps its old address as a redirect to the film that took its place (data/film-redirects.json),
+   so Google and old links land on a live page (Kicking & Screaming to Hall Pass) */
+{let RD={};try{RD=JSON.parse(fs.readFileSync(path.join(ROOT,'data/film-redirects.json'),'utf8'))}catch(e){}
+ for(const [from,to] of Object.entries(RD)){keep.add(from);const url=`https://reeldinner.com/menu/${to}/`;
+  write(`menu/${from}/index.html`,`<!DOCTYPE html>\n<html lang="en-AU"><head><meta charset="utf-8"><title>Moved | Reel Dinner</title><meta name="robots" content="noindex"><link rel="canonical" href="${url}"><meta http-equiv="refresh" content="0; url=/menu/${to}/"></head><body><p>This menu has moved: <a href="/menu/${to}/">/menu/${to}/</a></p></body></html>\n`)}}
 /* tidy pages for films, themes or genres that have gone */
 const menuDir = path.join(ROOT, 'menu');
 for (const n of fs.readdirSync(menuDir)) {

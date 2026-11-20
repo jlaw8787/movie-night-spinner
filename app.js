@@ -1706,10 +1706,16 @@ function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")
      says so (tea room), so a line in a character's voice is never mistaken for a line from the film */
   {const by=String(n.by||"").trim();if(by&&!new RegExp("A note from "+rx(e(by)),"i").test(h)){const at=h.search(new RegExp(alt));
     if(at>=0){const tail=h.slice(at),re=new RegExp(`>(\\s*)(?:[\u2014\u2013-]\\s*)?(${rx(e(by))}|${rx(by)}|${rx(e(by).replace(/'/g,"&#39;"))})(\\s*)<`),m=tail.match(re);
-      if(m)h=h.slice(0,at)+tail.replace(re,(x,a,b2,c)=>`>${a}A note from ${b2}${c}<`)}}}
+      if(m)h=h.slice(0,at)+tail.replace(re,(x,a,b2,c)=>`>${a}<span data-notefrom>A note from </span>${b2}${c}<`)}}}
   return h.replace(/>(\s*)(?:Overheard|Heard) (?:at|on|in) the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)
     .replace(/>(\s*)(?:A word|Word) from ([^<]{1,40}?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from ${w}${b}<`)
     .replace(/>(\s*)From the (host|director's desk)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)}
+/* review 33: "A note from Muriel" is longer than the bare name it replaced; where its box is tight the line steps down in size,
+   then reads "from Muriel", so nothing is cut (Annie, Newsies) */
+function noteFromFit(root){if(!root)return;for(const sp of root.querySelectorAll("[data-notefrom]")){const el=sp.parentElement;if(!el)continue;
+  const over=()=>{const er=el.getBoundingClientRect(),sr=sp.getBoundingClientRect();for(let x=el,i=0;x&&x!==root&&i<5;x=x.parentElement,i++){const cs=getComputedStyle(x);if(!/hidden|clip/.test(cs.overflow+cs.overflowX+cs.overflowY))continue;const r=x.getBoundingClientRect();if(x.scrollWidth>x.clientWidth||x.scrollHeight>x.clientHeight||Math.max(er.bottom,sr.bottom)>r.bottom+.3||Math.max(er.right,sr.right)>r.right+.3||Math.min(er.top,sr.top)<r.top-.3)return true}return false};
+  if(!over())continue;const z0=parseFloat(getComputedStyle(el).fontSize)||16;for(let k=.94;k>=.7&&over();k-=.06)el.style.fontSize=(z0*k).toFixed(1)+"px";
+  if(over()){el.style.fontSize="";sp.textContent="from "}}}
 function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
   card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.trim==="1"&&i.dataset.aim)return;
     const m=(i.getAttribute("src")||"").match(/\/t\/p\/[^/]+(\/[^?#]+)/),f=m&&foc[m[1]];if(!f)return;
@@ -2369,7 +2375,7 @@ async function show(f,preferSig){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}dietStamp();
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
