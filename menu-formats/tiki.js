@@ -123,7 +123,7 @@ function fitRoot(root){
   cut(0);
   root.querySelectorAll("[data-box]").forEach(fitBox);
   if(map&&mn&&mb){const lost=()=>[...mb.querySelectorAll("[data-note]")].some(n=>n.style.display==="none"||(n.dataset.full&&n.textContent!==n.dataset.full))||[...mb.querySelectorAll("[data-drop]")].some(n=>n.style.display==="none");
-    for(let c=16;lost()&&c<=150;c+=16){cut(c);mb.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});if(window.__fmtTrimReset)window.__fmtTrimReset(mb);
+    for(let c=16;lost()&&c<=200;c+=16){cut(c);mb.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});if(window.__fmtTrimReset)window.__fmtTrimReset(mb);
       mb.querySelectorAll("[data-note],[data-drop]").forEach(n=>{n.style.display=""});fitBox(mb)}}
 }
 function fitBox(box){{
@@ -222,8 +222,8 @@ function img(url,o){
 }
 function items(list,k,era,ty,C,big){
   const ds=big?30:26,ns=big?21:20;
-  return list.map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:12px;align-items:baseline;margin-top:${big?8:5}px"><span data-fs="${ds}" data-min="19" style="flex:1;font:${ty.dishW} ${ds}px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="${ds}" data-min="19" style="font:${ty.dishW} ${ds}px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
-    ${it.note?`<div data-note data-fs="${ns}" data-min="16" style="font:italic ${ty.bw} ${ns}px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("");
+  return list.map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:12px;align-items:baseline;margin-top:${big?8:5}px"><span data-fs="${ds}" data-min="16" style="flex:1;font:${ty.dishW} ${ds}px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="${ds}" data-min="19" style="font:${ty.dishW} ${ds}px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
+    ${it.note?`<div data-note data-fs="${ns}" data-min="13" style="font:italic ${ty.bw} ${ns}px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("");
 }
 
 window.MENU_FORMATS[ID]=ctx=>{

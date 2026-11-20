@@ -50,6 +50,8 @@ if(!window.__fmtFit){
     el.querySelectorAll("[data-drop]").forEach(x=>x.style.display="");for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}
     /* review 18: past the box's own floor, down to the site floor of 14px before anything is cut (The Santa Clause 2 lost its last drink note) */
     for(let n=0;n<60&&over()&&fs>14;n++){fs=Math.max(14,fs*.97);el.style.fontSize=fs+"px"}
+    /* review 32 (Josh: room for full notes): a board box that still runs over goes to 13px before a description is dropped */
+    if(el.querySelector("[data-drop]"))for(let n=0;n<20&&over()&&fs>13;n++){fs=Math.max(13,fs*.97);el.style.fontSize=fs+"px"}
     /* last resort: drop descriptions from the bottom up, never a dish or price */
     const dr=[...el.querySelectorAll("[data-drop]")];while(over()&&dr.length)dr.pop().style.display="none"});
   const run=()=>{try{window.__fmtFit()}catch(e){}};
@@ -163,7 +165,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="display:flex;justify-content:space-between;gap:.6em;align-items:baseline">
           <span style="font:${E.it} ${E.dw} 1em/1.1 ${E.disp};text-transform:${up};letter-spacing:${trk};color:${boardInk};${heavy?clamp(1):""}">${esc(txt(it.n))}</span>
           <span style="flex:none;font:${E.it} ${E.dw} 1em/1.1 ${E.disp};color:${priceInk}${E.board==="neon"?`;text-shadow:0 0 ${6*T.glow}px ${LIT}`:""}">${price(k,ii)}</span></div>
-        ${it.note&&!(nIt>12&&ii>0)?`<div data-drop style="font:500 .74em/1.25 ${E.body};font-size:max(15px,.74em);color:${noteInk};margin-top:.08em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div>`).join("")}
+        ${it.note&&!(nIt>12&&ii>0)?`<div data-drop style="font:500 .74em/1.25 ${E.body};font-size:max(12px,.74em);color:${noteInk};margin-top:.08em;${heavy?clamp(3):""}">${esc(sent(txt(it.note)))}</div>`:""}</div>`).join("")}
      </div></div>`).join("");
 
   /* ---------- the wall and the lightbox ---------- */
