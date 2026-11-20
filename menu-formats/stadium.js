@@ -275,15 +275,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   const CX=MX+30,CWall=W-CX-34,colGap=26;
   const pr=prices(items,e,ei,egg);
   const mTop=118,noteH=winks.length?186:150,menuH=H-mTop-noteH-26;
-  const tiers=[{d:30,n:22,g:18,h:32,nl:2},{d:28,n:21,g:16,h:30,nl:2},{d:26,n:19,g:14,h:26,nl:2},{d:24,n:18,g:11,h:24,nl:2},{d:22,n:17,g:9,h:22,nl:1},{d:21,n:16,g:7,h:21,nl:1},{d:20,n:15,g:6,h:20,nl:0},{d:18,n:14,g:5,h:18,nl:0}];
+  /* review 32 (Josh: room for full notes): whole-note tiers first, down to 14px notes, before the two and one-line cuts */
+  const tiers=[...[[30,22,18,32],[28,21,16,30],[26,19,14,26],[24,18,11,24],[22,17,9,22],[21,16,7,21],[20,15,6,20],[19,14,5,19],[18,14,4,18],[17,13,3,17]].map(([d,n,g,h])=>({d,n,g,h,nl:4})),{d:30,n:22,g:18,h:32,nl:2},{d:28,n:21,g:16,h:30,nl:2},{d:26,n:19,g:14,h:26,nl:2},{d:24,n:18,g:11,h:24,nl:2},{d:22,n:17,g:9,h:22,nl:1},{d:21,n:16,g:7,h:21,nl:1},{d:20,n:15,g:6,h:20,nl:0},{d:18,n:14,g:5,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*2.4+8;
   let CW=(CWall-colGap)/2;
   const cH=(tr,k)=>tr.h*1.3+14+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g},0);
   /* best split of the courses into two columns, in order; one wide column when that fits bigger type */
   const split=tr=>{let best=null;for(let s=1;s<=C.length;s++){const a=C.slice(0,s).reduce((x,[k])=>x+cH(tr,k),0),b=C.slice(s).reduce((x,[k])=>x+cH(tr,k),0),m=Math.max(a,b);if(!best||m<best.m)best={s,m}}return best};
   let tr=tiers[tiers.length-1],sp=null,one=false;
-  for(const x of tiers){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*1.04<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
-    CW=(CWall-colGap)/2;const q=split(x);if(q.m*1.04<=menuH){tr=x;sp=q;break}}
+  for(const x of tiers){const mg=x.nl>=4?.95:1.04;CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*mg<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
+    CW=(CWall-colGap)/2;const q=split(x);if(q.m*mg<=menuH){tr=x;sp=q;break}}
   if(!sp){dmax=2;CW=(CWall-colGap)/2;sp=split(tr)}
   /* review 18: the gap under each course comes out of the room that is left, shared by the courses in the taller column (it was a third of the room
      per course plus 14px each, so a four-course column ran past the box and cut its last drink: Phar Lap's shandy) */
@@ -296,7 +297,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   };
   const course=([k,l])=>`<div style="margin-bottom:${cgap}px">${head(l)}${items[k].map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return `<div style="margin-bottom:${tr.g}px">
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="flex:1;font:700 ${tr.d}px/1.15 ${BF};color:${ink};${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.dw} ${tr.d}px/1.15 ${DF};color:${acc};white-space:nowrap">${pr[k][i]}</span></div>
-      ${nl?`<div style="font:400 ${tr.n}px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
+      ${nl?`<div style="font:400 ${tr.n}px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(tr.nl>=4?6:nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
   const colA=C.slice(0,sp.s).map(course).join(""),colB=C.slice(sp.s).map(course).join("");
   const menuHead=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:26px">${kick(t.hawk,acc,15)}<div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Concessions</div></div>`;
   const menu=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>`;
