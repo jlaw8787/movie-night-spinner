@@ -1023,7 +1023,9 @@ const phoneGuests=f=>typeof current!=="undefined"&&current===f?PLAN.guests:USUAL
 let pvArgs=null;function phoneRefresh(){if(pvArgs&&pvArgs[0]===current&&fmtPhone.innerHTML)phoneView(...pvArgs)}
 /* review 34: a shared card may drop its house lines when the board is full (Josh's rule: house lines go before any film note). The phone
    menu and the print list then leave them out too, so the card and the phone always show the same dishes (Kingsman, Hot Fuzz, Shaun) */
-function cardHouseKept(menu){try{if(!menu||!card.classList.contains("fmt")||!card.innerHTML)return menu;const t=String(card.textContent).toLowerCase().replace(/[^a-z0-9]+/g," ");
+function cardHouseKept(menu){try{if(!menu||!card.classList.contains("fmt")||!card.innerHTML)return menu;
+  /* the card's shown words: text a fit pass set to display none does not count (panel views only hide by visibility, so they still count) */
+  let t="";{const tw=document.createTreeWalker(card,NodeFilter.SHOW_TEXT);let n;while((n=tw.nextNode())){const e=n.parentElement;if(e&&e.getClientRects().length)t+=" "+n.nodeValue}}t=t.toLowerCase().replace(/[^a-z0-9]+/g," ");
   const on=it=>!it||!it.house||t.includes(String(it.label||it.n||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
   if(["s","m","w","d"].every(k=>(menu[k]||[]).every(on)))return menu;const o=Object.assign({},menu);for(const k of ["s","m","w","d"])if(menu[k])o[k]=menu[k].filter(on);return o}catch(e){return menu}}
 let pvHouseT=0;
@@ -1167,7 +1169,8 @@ function libCardOrder(root,pm){
   const used=new Set();for(const c of ["s","m","w","d"]){const h=out.courses[c];if(!h)continue;if(used.has(h.toLowerCase()))delete out.courses[c];else used.add(h.toLowerCase())}
   return out}
 function libPhoneView(f,menu,L,root){
-  menu=cardHouseKept(menu);/* review 34: house lines the card dropped stay off the phone too */
+  {const m0=menu;menu=cardHouseKept(menu);/* review 34: house lines the card dropped stay off the phone too; a fit pass can drop one after this runs, so look again */
+   if(menu===m0){clearTimeout(pvHouseT);pvHouseT=setTimeout(()=>{if(current===f&&cardHouseKept(m0)!==m0)libPhoneView(f,m0,L,root)},2500)}}
   const fl=L.flavour||{},pm={};let any=false;
   for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,orig:it.orig,extra:!!it.extra,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
   if(!any){phoneView(null);return}
