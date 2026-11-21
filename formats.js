@@ -644,17 +644,17 @@ const FMT_FILMS={
     cue:["/51hHkBv4hj31bnaECQcXR0RYkGX.jpg","Prom night, 1985: off to hospital, not the prom","0% 45%"],
     groups:[
       {h:"Starters",c:"pink",left:true,items:[
-        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Crumbed risotto balls, mozzarella middle, marinara.",note:"Crumbed risotto balls with a mozzarella middle and marinara. Have you seen Warren's baseball?",p:"6.50"},
+        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Crumbed risotto balls, mozzarella middle, marinara.",note:"Arancini. Have you seen my baseball?",p:"6.50"},
         {k:"Pat Healy's architect garlic knots",n:"Pat Healy's architect garlic knots",d:"Garlic butter knots, parmesan, marinara.",note:"Healy spies on Mary in Miami.",p:"4.25"}],
-        house:{n:"Magda's cheese ball and crackers",d:"Cheddar and cream cheese rolled in chopped nuts, with crackers.",note:"Cheese ball with crackers from Magda, next door to Mary's flat.",p:"3.95"}},
+        house:{n:"Magda's cheese ball and crackers",d:"Cheddar and cream cheese rolled in chopped nuts, with crackers.",note:"Cheese ball from Magda next door.",p:"3.95"}},
       {h:"Mains",c:"yellow",left:true,items:[
-        {k:"Warren's franks and beans",n:"Warren's franks and beans",d:"Smoky franks, molasses baked beans, slaw.",note:"Smoky franks with baked beans and slaw, for Ted's prom night disaster.",p:"8.95"},
+        {k:"Warren's franks and beans",n:"Warren's franks and beans",d:"Smoky franks, molasses baked beans, slaw.",note:"Franks and beans, Ted's prom night disaster.",p:"8.95"},
         {k:"Puffy's body-cast chicken cordon bleu",n:"Puffy's body-cast chicken cordon bleu",d:"Ham and swiss chicken, crumbed, mustard cream.",note:"Puffy ends up in a full body cast.",p:"12.95"}]},
       {h:"Dessert",c:"aqua",items:[
-        {k:"Hair gel meringues with lemon curd",n:"Hair gel meringues with lemon curd",d:"Vanilla meringues, whipped cream, lemon curd.",note:"Vanilla meringues with whipped cream and lemon curd. Mary thinks it's hair gel.",p:"5.50"}]},
+        {k:"Hair gel meringues with lemon curd",n:"Hair gel meringues with lemon curd",d:"Vanilla meringues, whipped cream, lemon curd.",note:"Meringues. Mary thinks it's hair gel.",p:"5.50"}]},
       {h:"Drinks",c:"pink",items:[
-        {k:"Senior prom punch",n:"Senior prom punch",d:"Pineapple, ginger beer, rum and lime sorbet.",note:"Pineapple, ginger beer, rum and lime sorbet punch for Ted's senior prom.",p:"4.50"}],
-        house:{n:"Beer. Not lite beer, beer.",d:"Ice cold, by the bottle.",note:"Cold beer, not lite beer, after 36 holes of golf.",p:"2.75",alc:true}}]},
+        {k:"Senior prom punch",n:"Senior prom punch",d:"Pineapple, ginger beer, rum and lime sorbet.",note:"Pineapple punch for the senior prom.",p:"4.50"}],
+        house:{n:"Beer. Not lite beer, beer.",d:"Ice cold, by the bottle.",note:"Cold beer after 36 holes of golf.",p:"2.75",alc:true}}]},
   "She's All That (1999)":{fmt:"seniorprom",brand:"The Senior Prom",phoneTitle:"She's All That",tag:"Prom queen in six weeks.",
     head:["The Senior Prom","Southern California, prom night"],
     ballot:["Prom Queen Ballot","Prom queen in six weeks","Laney Boggs","Taylor Vaughan","Vote for one"],
@@ -767,7 +767,7 @@ const FMT_FILMS={
       {h:"Cold tea",sub:"In a cup, from the cellar",items:[
         {k:"Bootleg lager",note:"Capone's own beer. Every bar in town has to stock it",p:"25¢",how:"Chill 8 bottles of crisp lager for at least 3 hours. Pour into heavy glass steins straight down the middle so each gets a proper head.",shop:["8 bottles lager@Bottle shop"]},
         {k:"Canadian rye",note:"Down from the border by the truckload",p:"50¢",how:"Pour 30ml Canadian rye whisky per person over one large ice cube in a short glass, then add a small splash of cold water to open it up.",shop:["700ml Canadian rye whisky@Bottle shop","1 bag large ice cubes@Frozen"]},
-        {k:"Repeal Day old fashioned",note:"Bourbon, bitters and orange peel, the night Ness finally has a drink.. Here endeth the lesson",p:"40¢"}]}]},
+        {k:"Repeal Day old fashioned",note:"Bourbon and bitters, the night Ness finally drinks.. Here endeth the lesson",p:"40¢"}]}]},
   "Friday (1995)":{fmt:"market",brand:"Normandie & Western Market",
     sign:["Off Normandie","Normandie & Western Market","Open 7 days"],
     sub:"Porch menu &nbsp;·&nbsp; Serves four &nbsp;·&nbsp; Summer 1995",
