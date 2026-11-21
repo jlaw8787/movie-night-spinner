@@ -1,0 +1,28 @@
+{
+ "id": "As Good as It Gets (1997)",
+ "ops": [
+  {
+   "old": "Crisp bacon with maple syrup. Melvin keeps some in his pocket.",
+   "new": "Crisp bacon with maple syrup, a morning regular's order.",
+   "done": true
+  },
+  {
+   "old": "Beef meatloaf under a brown sugar tomato glaze. Carol serves it, and only Carol.",
+   "new": "Beef meatloaf under a brown sugar tomato glaze, sliced thick.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Melvin's own plastic cutlery",
+    "His reserved table",
+    "Simon the painter next door",
+    "Verdell the little dog",
+    "Avoiding every crack in the sidewalk"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

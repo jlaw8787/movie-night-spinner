@@ -1,0 +1,40 @@
+{
+ "id": "Let the Right One In (2008)",
+ "ops": [
+  {
+   "old": "Puzzle cube Swedish cheese tart",
+   "new": "Aged cheese tart with roe",
+   "done": true
+  },
+  {
+   "old": "Swedish crispbread",
+   "new": "Rye crispbread",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Tapping Morse code through the wall",
+    "Eli asleep in the bathtub",
+    "The snowy courtyard jungle gym",
+    "The swimming pool scene",
+    "Candy Eli cannot keep down"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Wall Message",
+    "lines": [
+     "Two taps for hello",
+     "Tap back"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

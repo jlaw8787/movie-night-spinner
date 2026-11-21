@@ -1,0 +1,85 @@
+{
+ "id": "Storm Boy (1976)",
+ "old": "Beach shack golden syrup dumplings",
+ "dish": {
+  "n": "Shack baked honey apples",
+  "note": "Apples baked soft with honey, sultanas and cinnamon, with cream.",
+  "how": "Core 4 large Granny Smith apples and score a line around the middle of each. Stand them in a baking dish, fill with a mix of 60g sultanas, 40g softened butter, 3 tbsp honey and 1 tsp cinnamon, pour 100ml hot water into the dish and bake at 180C for 45 minutes, spooning the juices over twice, until soft. Serve warm with cream.",
+  "shop": [
+   "4 Granny Smith apples@Produce",
+   "60g sultanas@Pantry",
+   "40g butter@Dairy",
+   "3 tbsp honey@Pantry",
+   "1 tsp ground cinnamon@Pantry",
+   "100ml hot water@Pantry",
+   "300ml pouring cream@Dairy"
+  ],
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "",
+    "item": "Granny Smith apples",
+    "aisle": "Produce"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "sultanas",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 40,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "honey",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "ground cinnamon",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 100,
+    "u": "ml",
+    "item": "hot water",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 300,
+    "u": "ml",
+    "item": "pouring cream",
+    "aisle": "Dairy"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Core the apples and score a line around the middle of each.",
+    "min": 5
+   },
+   {
+    "text": "Mix the sultanas, butter, honey and cinnamon and pack into the apples.",
+    "min": 5
+   },
+   {
+    "text": "Stand the apples in a dish with the hot water and bake at 180C, spooning the juices over twice.",
+    "min": 45
+   },
+   {
+    "text": "Rest 5 minutes and serve warm with cream.",
+    "min": 5
+   }
+  ],
+  "prep_min": 10,
+  "cook_min": 50,
+  "make_ahead": "Stuff the apples up to 4 hours ahead; bake just before dinner",
+  "veg": true,
+  "af": true
+ }
+}

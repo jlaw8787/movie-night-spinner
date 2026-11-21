@@ -1,0 +1,38 @@
+{
+ "id": "Neighbors (2014)",
+ "ops": [
+  {
+   "old": "Frat party pork and fennel sausage rolls",
+   "new": "Rush Week pork and fennel sausage rolls",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the snacks when the brothers next door throw their first party.",
+   "done": true
+  },
+  {
+   "old": "The frat's next door. So are the snacks.",
+   "new": "The party's next door. So are the snacks.",
+   "done": true
+  },
+  {
+   "old": "Re: the frat house",
+   "new": "Re: Delta Psi Beta",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Baby's first rave",
+    "Teddy Sanders, Delta Psi's president",
+    "Teddy, shirtless at Abercrombie",
+    "Pete Regazolli, Delta Psi's other leader",
+    "A forged letter from the dean"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

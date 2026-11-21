@@ -1,0 +1,32 @@
+{
+ "id": "Poltergeist (1982)",
+ "ops": [
+  {
+   "old": "Buttered popcorn, pepper and sesame static. They're here.",
+   "new": "Buttered popcorn with pepper and sesame. They're here.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The half-dug swimming pool",
+    "The clown doll on the chair",
+    "The big tree outside the window",
+    "Tangina, the small medium",
+    "The Cuesta Verde neighbourhood"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Light beer, ice cold",
+    "note": "Ice cold light beer for game day. Shared remote with next door.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

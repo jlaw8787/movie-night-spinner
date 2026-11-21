@@ -1,0 +1,48 @@
+{
+ "id": "Fantastic Beasts and Where to Find Them (2016)",
+ "ops": [
+  {
+   "old": "Puff pastry beasts baked with cinnamon sugar, Jacob's bakery pastries",
+   "new": "Puff pastry beasts baked with cinnamon sugar, golden and flaky",
+   "done": true
+  },
+  {
+   "old": "Cheese puffs shiny enough to tempt the Niffler",
+   "new": "Gruyère cheese puffs, golden and light, Niffler bait",
+   "done": true
+  },
+  {
+   "old": "Beef pot roast with carrots and potatoes, at Tina and Queenie's flat with a No-Maj at the table",
+   "new": "Beef pot roast with carrots and potatoes, at the Goldstein flat with a No-Maj at the table",
+   "done": true
+  },
+  {
+   "old": "Potato and cheddar dumplings. Jacob grabs the wrong suitcase",
+   "new": "Potato and cheddar dumplings, pan-fried with onions",
+   "done": true
+  },
+  {
+   "old": "Fresh lemon, syrup and soda. Queenie reads your order first",
+   "new": "Fresh lemon, syrup and soda, poured over ice",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve dessert when Queenie magics up the strudel.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Niffler stealing every shiny thing",
+    "Pickett the Bowtruckle in Newt's pocket",
+    "Jacob Kowalski and his bakery dream",
+    "Mary Lou Barebone and the Second Salemers",
+    "Frank the Thunderbird released over New York"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

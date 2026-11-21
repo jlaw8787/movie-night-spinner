@@ -1,0 +1,27 @@
+{
+ "id": "The Waterboy (1998)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Mud Dogs Water",
+    "lines": [
+     "Water boy, first class",
+     "Bayou approved"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Chicory iced coffee",
+    "note": "Iced coffee with chicory and milk, a Louisiana habit."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

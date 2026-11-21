@@ -1,0 +1,29 @@
+{
+ "id": "21 Jump Street (2012)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Jump Street ID",
+    "lines": [
+     "Brad and Doug McQuaid",
+     "Jump Street"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Crushed grape ice topped with sour lollies. Jenko's table, with the chem kids.",
+   "new": "Crushed grape ice topped with sour lollies. A table for the chem kids.",
+   "done": true
+  },
+  {
+   "old": "Raspberry, lime and orange juice jellies in layers. Jenko's chem class special, alcohol free.",
+   "new": "Raspberry, lime and orange juice jellies in layers, set in test tubes, alcohol free.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

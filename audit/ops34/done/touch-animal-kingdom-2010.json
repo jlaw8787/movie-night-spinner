@@ -1,0 +1,36 @@
+{
+ "id": "Animal Kingdom (2010)",
+ "ops": [
+  {
+   "old": "Smurf's Melbourne chicken parma",
+   "new": "Melbourne chicken parma",
+   "done": true
+  },
+  {
+   "old": "Onion and sour cream dip. Smurf has a word for Leckie in the supermarket",
+   "new": "Onion and sour cream dip. A quiet word with the detective in the supermarket",
+   "done": true
+  },
+  {
+   "old": "Pork and fennel in pastry, on the couch with the telly on",
+   "new": "Pork and fennel sausage rolls in golden pastry, hot with tomato sauce",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when the family decides that J needs to go.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Jatz, cabana and cheddar platter",
+    "note": "Jatz crackers with cabana slices and tasty cheddar, set out on the coffee table.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

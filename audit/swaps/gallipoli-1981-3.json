@@ -1,0 +1,110 @@
+{
+ "id": "Gallipoli (1981)",
+ "old": "Golden syrup dumplings",
+ "dish": {
+  "n": "Cairo bazaar basbousa",
+  "note": "Semolina cake soaked in lemon syrup, topped with an almond, with cream.",
+  "how": "Mix 250g fine semolina, 100g desiccated coconut, 100g sugar, 1 tsp baking powder, 150g plain yoghurt and 120g melted butter into a thick batter and rest 10 minutes. Press into a greased 20cm square tin, cut into diamonds, press an almond into each and bake at 180C for 30 minutes until golden. Boil 250g sugar, 250ml water and the juice of half a lemon for 8 minutes, pour the cool syrup over the hot cake and rest for 10 minutes before serving.",
+  "shop": [
+   "250g fine semolina@Pantry",
+   "100g desiccated coconut@Pantry",
+   "350g caster sugar@Pantry",
+   "1 tsp baking powder@Pantry",
+   "150g plain yoghurt@Dairy",
+   "120g butter@Dairy",
+   "16 blanched almonds@Pantry",
+   "1 lemon@Produce",
+   "250ml water@Pantry",
+   "200ml thickened cream@Dairy"
+  ],
+  "ingredients": [
+   {
+    "q": 250,
+    "u": "g",
+    "item": "fine semolina",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "desiccated coconut",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 350,
+    "u": "g",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "baking powder",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "plain yoghurt",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 120,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 16,
+    "u": "",
+    "item": "blanched almonds",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "lemon",
+    "aisle": "Produce"
+   },
+   {
+    "q": 250,
+    "u": "ml",
+    "item": "water",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 200,
+    "u": "ml",
+    "item": "thickened cream",
+    "aisle": "Dairy"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the semolina, coconut, 100g of the sugar, baking powder, yoghurt and melted butter to a thick batter and rest.",
+    "min": 15
+   },
+   {
+    "text": "Press into a greased tin, cut into diamonds and press an almond into each.",
+    "min": 5
+   },
+   {
+    "text": "Bake at 180C until golden.",
+    "min": 30
+   },
+   {
+    "text": "Boil the remaining sugar, water and lemon juice into a syrup and cool a little.",
+    "min": 8
+   },
+   {
+    "text": "Pour the syrup over the hot cake and rest, then serve with cream.",
+    "min": 12
+   }
+  ],
+  "prep_min": 20,
+  "cook_min": 50,
+  "make_ahead": "Bake up to 1 day ahead; syrup it while still warm",
+  "veg": true,
+  "af": true
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "The Dressmaker (2015)",
+ "old": "Footy final party pies with tomato sauce",
+ "dish": {
+  "n": "CWA tasty cheese scones with butter",
+  "note": "Light tasty cheese scones, split warm and buttered, for the fete tea table.",
+  "how": "Rub 50g cold butter into 450g self-raising flour and 1 tsp salt, stir in 150g grated tasty cheese, then mix in about 300ml cold milk with a butter knife to a soft, sticky dough. Pat out to 3cm thick, cut into 12 rounds, set close together on a tray and brush with milk. Bake at 220C for 15 minutes until risen and golden, and serve warm with butter.",
+  "shop": [
+   "50g cold butter@Dairy",
+   "450g self-raising flour@Pantry",
+   "1 tsp salt@Pantry",
+   "150g grated tasty cheese@Dairy",
+   "330ml cold milk@Dairy",
+   "100g butter, for serving@Dairy"
+  ],
+  "ingredients": [
+   {
+    "q": 50,
+    "u": "g",
+    "item": "cold butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 450,
+    "u": "g",
+    "item": "self-raising flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "salt",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "grated tasty cheese",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 330,
+    "u": "ml",
+    "item": "cold milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "butter, for serving",
+    "aisle": "Dairy"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Rub the butter into the flour and salt, then stir in the cheese.",
+    "min": 8
+   },
+   {
+    "text": "Mix in the milk to a soft dough, pat out and cut into 12 rounds.",
+    "min": 7
+   },
+   {
+    "text": "Set on a tray, brush with milk and bake at 220C until risen and golden.",
+    "min": 15
+   },
+   {
+    "text": "Serve warm with butter.",
+    "min": 2
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 17,
+  "make_ahead": "Bake on the day; they are best warm",
+  "veg": true,
+  "af": true
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "Roman Holiday (1953)",
+ "ops": [
+  {
+   "old": "Serve dessert when Ann sits on the Spanish Steps with her gelato.",
+   "new": "Serve dessert when Joe finds Ann asleep on a low wall.",
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "A princess, a reporter and a day off.",
+   "done": true
+  },
+  {
+   "old": "Toasted bread with whipped ricotta, fresh figs and honey. Ann orders champagne at the pavement café.",
+   "new": "Toasted bread with whipped ricotta, fresh figs and honey. Joe calls her Anya.",
+   "done": true
+  },
+  {
+   "old": "Joe gets cold coffee. Ann's order at the café.",
+   "new": "Chilled champagne in a tall glass, ordered at the pavement café.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Day Pass",
+    "lines": [
+     "One day only, no schedule",
+     "Ann and Joe"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.sideLine",
+   "value": "Two on a Vespa, one cone each.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

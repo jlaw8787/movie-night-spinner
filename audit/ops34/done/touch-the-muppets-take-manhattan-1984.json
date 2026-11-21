@@ -1,0 +1,30 @@
+{
+ "id": "The Muppets Take Manhattan (1984)",
+ "ops": [
+  {
+   "old": "Tomato, cucumber, olives and feta with pork souvlaki. Pete's diner, big tomato, very Pete.",
+   "new": "Tomato, cucumber, olives and feta with pork souvlaki. No grits on this plate.",
+   "done": true
+  },
+  {
+   "old": "Pete's Diner club sandwich",
+   "new": "Danhurst College club sandwich",
+   "done": true
+  },
+  {
+   "old": "Kermit and Piggy's wedding cake",
+   "new": "Pink and green buttercream wedding cake",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Vanilla egg cream",
+    "note": "Milk, soda water and vanilla syrup, stirred tall. A New York counter classic."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

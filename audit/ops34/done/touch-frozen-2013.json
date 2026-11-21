@@ -1,0 +1,30 @@
+{
+ "id": "Frozen (2013)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Olaf the snowman wanting summer",
+    "Oaken's trading post and sauna",
+    "Sven the reindeer pulling the sled",
+    "Elsa's ice palace on the mountain",
+    "Anna and Hans singing Love Is an Open Door"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Castle Day Pass",
+    "lines": [
+     "Castle gates open",
+     "Let it go, snowmen welcome"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

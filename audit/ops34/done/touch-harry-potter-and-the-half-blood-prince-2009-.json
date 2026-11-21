@@ -1,0 +1,21 @@
+{
+ "id": "Harry Potter and the Half-Blood Prince (2009)",
+ "ops": [
+  {
+   "old": "Pastry cases of creamy mushroom, for Slughorn's party",
+   "new": "Pastry cases of creamy mushroom, passed round before the toast",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Yorkshire puddings with beef",
+    "note": "Yorkshire puddings with roast beef, Hogwarts feast style.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

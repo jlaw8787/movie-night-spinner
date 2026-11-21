@@ -1,0 +1,28 @@
+{
+ "id": "American Pie (1999)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "The Pact",
+    "lines": [
+     "Four friends",
+     "One shared goal"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Keg beer in a red cup",
+    "note": "Cold lager pulled straight from the keg, foam on top.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

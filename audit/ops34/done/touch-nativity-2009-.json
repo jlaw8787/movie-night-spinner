@@ -1,0 +1,37 @@
+{
+ "id": "Nativity! (2009)",
+ "ops": [
+  {
+   "old": "Nativity Hollywood hot blackcurrant punch",
+   "new": "Hot blackcurrant punch",
+   "done": true
+  },
+  {
+   "old": "Pork, apple and sage sausage rolls to share with Mr Poppy",
+   "new": "Pork, apple and sage sausage rolls, to share around the class",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Cheese and pineapple on sticks",
+    "note": "Cheese cubes and pineapple on toothpicks, a class party classic."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Nativity Ticket",
+    "lines": [
+     "St Bernadette's School",
+     "Special guests may attend"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

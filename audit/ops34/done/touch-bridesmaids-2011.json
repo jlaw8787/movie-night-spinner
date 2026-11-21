@@ -1,0 +1,32 @@
+{
+ "id": "Bridesmaids (2011)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "Pink drinks, tiny tarts, one long shower.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Brazilian cheese bread, pão de queijo",
+    "note": "Warm, chewy tapioca cheese rolls, one for each bridesmaid."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Bridesmaid Card",
+    "lines": [
+     "Annie Walker, in charge",
+     "Helen disagrees"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

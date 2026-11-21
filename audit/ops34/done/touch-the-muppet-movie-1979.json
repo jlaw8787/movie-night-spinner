@@ -1,0 +1,33 @@
+{
+ "id": "The Muppet Movie (1979)",
+ "ops": [
+  {
+   "old": "Not-frog-legs fried chicken",
+   "new": "Southern fried chicken drumsticks",
+   "done": true
+  },
+  {
+   "old": "Buttermilk fried chicken drumsticks, not frog legs. Kermit turns Hopper down.",
+   "new": "Buttermilk-soaked drumsticks fried crisp. Kermit turns Hopper down.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Insta-grow pills",
+    "Bernie, the talent agent in the swamp",
+    "Gonzo going about seven knots",
+    "Fozzie's 1951 Studebaker",
+    "A standard rich and famous contract"
+   ],
+   "done": true
+  },
+  {
+   "old": "The waiter's Idaho fizz. Frozen grapes on ice.",
+   "new": "Sparkling grape juice over frozen grapes. The waiter's Idaho fizz.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

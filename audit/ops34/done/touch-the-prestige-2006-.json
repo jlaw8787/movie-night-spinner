@@ -1,0 +1,36 @@
+{
+ "id": "The Prestige (2006)",
+ "ops": [
+  {
+   "old": "Thin cucumber sandwiches. First the magician shows you something ordinary.",
+   "new": "Thin cucumber sandwiches. The first part of the trick is the pledge.",
+   "done": true
+  },
+  {
+   "old": "White bread, mint butter, salted cucumber. First the magician shows you something ordinary.",
+   "new": "White bread, mint butter, salted cucumber. The first part of the trick is the pledge.",
+   "done": true
+  },
+  {
+   "old": "Roast beef with Yorkshire puddings. Tesla tells Angier not to forget his hat.",
+   "new": "Roast beef with Yorkshire puddings, sliced thick and shared.",
+   "done": true
+  },
+  {
+   "old": "Rare roast sirloin, top hat puddings, gravy. Tesla tells Angier not to forget his hat.",
+   "new": "Rare roast sirloin, top hat puddings, gravy, sliced thick and shared.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Shortbread fingers",
+    "note": "Buttery shortbread fingers, gone before you can blink.",
+    "meat": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

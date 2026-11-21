@@ -1,0 +1,184 @@
+{
+ "id": "The Adventures of Priscilla, Queen of the Desert (1994)",
+ "old": "Alice Springs damper",
+ "dish": {
+  "n": "Palace Hotel chicken parmigiana sliders",
+  "note": "Crumbed chicken, ham, napoli sauce and melted cheese in soft rolls.",
+  "how": "Slice 2 chicken breasts (about 600g) into 8 thin steaks and flatten. Crumb through flour, 2 beaten eggs and 200g breadcrumbs, and shallow fry in 1cm of oil for 3 minutes a side. Put on a tray, top each with 1 tbsp napoli sauce, half a slice of ham and a pinch of grated cheese, and grill for 5 minutes until melted and bubbling. Serve in 8 soft slider rolls.",
+  "shop": [
+   "2 chicken breasts (about 600 g)@Meat",
+   "50g plain flour@Pantry",
+   "2 eggs@Dairy",
+   "200g breadcrumbs@Pantry",
+   "250ml vegetable oil, for frying@Pantry",
+   "150g napoli sauce@Pantry",
+   "4 slices ham@Meat",
+   "150g grated tasty cheese@Dairy",
+   "8 slider rolls@Bakery"
+  ],
+  "ingredients": [
+   {
+    "q": 2,
+    "u": "",
+    "item": "chicken breasts (about 600 g)",
+    "aisle": "Meat"
+   },
+   {
+    "q": 50,
+    "u": "g",
+    "item": "plain flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "eggs",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 200,
+    "u": "g",
+    "item": "breadcrumbs",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 250,
+    "u": "ml",
+    "item": "vegetable oil, for frying",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "napoli sauce",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "",
+    "item": "slices ham",
+    "aisle": "Meat"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "grated tasty cheese",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "slider rolls",
+    "aisle": "Bakery"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Slice and flatten the chicken into 8 thin steaks.",
+    "min": 8
+   },
+   {
+    "text": "Crumb through the flour, egg and breadcrumbs.",
+    "min": 8
+   },
+   {
+    "text": "Shallow fry, 3 minutes a side, in two batches.",
+    "min": 12
+   },
+   {
+    "text": "Top with the napoli sauce, ham and cheese and grill until bubbling.",
+    "min": 5
+   },
+   {
+    "text": "Fill the rolls.",
+    "min": 3
+   }
+  ],
+  "prep_min": 20,
+  "cook_min": 16,
+  "make_ahead": "Crumb the chicken up to 4 hours ahead and keep it chilled",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Palace Hotel eggplant parmigiana sliders (vegetarian)",
+    "ingredients": [
+     {
+      "q": 1,
+      "u": "",
+      "item": "large eggplant, cut into 8 rounds",
+      "aisle": "Produce"
+     },
+     {
+      "q": 50,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "eggs",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 200,
+      "u": "g",
+      "item": "breadcrumbs",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 250,
+      "u": "ml",
+      "item": "vegetable oil, for frying",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "napoli sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "grated tasty cheese",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "slider rolls",
+      "aisle": "Bakery"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Slice the eggplant into 8 rounds and salt for 10 minutes, then pat dry.",
+      "min": 10
+     },
+     {
+      "text": "Crumb through the flour, egg and breadcrumbs.",
+      "min": 8
+     },
+     {
+      "text": "Shallow fry, 3 minutes a side, in two batches.",
+      "min": 12
+     },
+     {
+      "text": "Top with the napoli sauce and cheese and grill until bubbling.",
+      "min": 5
+     },
+     {
+      "text": "Fill the rolls.",
+      "min": 3
+     }
+    ],
+    "prep_min": 28,
+    "cook_min": 10,
+    "make_ahead": "Crumb the eggplant up to 4 hours ahead and keep it chilled"
+   }
+  },
+  "vegNote": "Crumbed eggplant rounds replace the chicken and ham"
+ }
+}

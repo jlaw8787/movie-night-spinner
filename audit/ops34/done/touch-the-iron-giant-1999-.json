@@ -1,0 +1,63 @@
+{
+ "id": "The Iron Giant (1999)",
+ "ops": [
+  {
+   "old": "Dean's scrap metal peanut brittle",
+   "new": "Dean's silver shard peanut brittle",
+   "done": true
+  },
+  {
+   "old": "Creamy clam chowder with bacon and crackers, Annie's late shift while Hogarth hides a giant",
+   "new": "Creamy clam chowder with bacon and crackers, for Annie's late shift",
+   "done": true
+  },
+  {
+   "old": "Clams, potato and bacon in creamy broth with crackers, you are who you choose to be",
+   "new": "Clams, potato and bacon in creamy broth with crackers, Rockwell diner style",
+   "done": true
+  },
+  {
+   "old": "Devilled eggs with mustard yolk and paprika, for the government man in Hogarth's spare room",
+   "new": "Devilled eggs with mustard yolk and paprika, for the government man in the spare room",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when Hogarth hides the giant in the junkyard.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Dean's scrapyard and the Giant's lunch",
+    "Hogarth's squirrel in the living room",
+    "Hogarth's comics and the Giant's favourite hero",
+    "Kent Mansley, the nervous government man",
+    "Hogarth saying souls don't die"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Diner Check",
+    "lines": [
+     "1 meal, extra bolts on the side",
+     "Table 4, window seat"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Onion rings in a paper boat",
+    "note": "Battered onion rings in a paper boat, crisp and hot."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

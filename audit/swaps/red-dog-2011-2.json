@@ -1,0 +1,89 @@
+{
+ "id": "Red Dog (2011)",
+ "old": "Red Dog lamingtons",
+ "dish": {
+  "n": "Mine canteen jam roly-poly and custard",
+  "note": "Jam rolled in soft pastry, baked and sliced, with hot custard.",
+  "how": "Rub 100g cold butter into 250g self-raising flour, mix in 1 tbsp sugar and about 120ml milk to a soft dough, and roll to a 25 x 30cm rectangle. Spread with 150g raspberry jam leaving a 2cm edge, roll up and wrap loosely in baking paper and foil. Bake at 180C for 45 minutes. Heat 500ml milk with 2 tbsp custard powder and 3 tbsp sugar, whisking until thick, and pour over thick slices.",
+  "shop": [
+   "100g cold butter@Dairy",
+   "250g self-raising flour@Pantry",
+   "1 tbsp caster sugar@Pantry",
+   "620ml milk@Dairy",
+   "150g raspberry jam@Pantry",
+   "2 tbsp custard powder@Pantry",
+   "3 tbsp caster sugar, for custard@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 100,
+    "u": "g",
+    "item": "cold butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 250,
+    "u": "g",
+    "item": "self-raising flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 620,
+    "u": "ml",
+    "item": "milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "raspberry jam",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "custard powder",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "caster sugar, for custard",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Rub the butter into the flour and sugar and mix in enough milk for a soft dough.",
+    "min": 10
+   },
+   {
+    "text": "Roll out, spread with the jam, roll up and wrap in baking paper and foil.",
+    "min": 10
+   },
+   {
+    "text": "Bake at 180C.",
+    "min": 45
+   },
+   {
+    "text": "Heat the milk, custard powder and sugar, whisking until thick.",
+    "min": 8
+   },
+   {
+    "text": "Slice the roll and pour custard over.",
+    "min": 2
+   }
+  ],
+  "prep_min": 20,
+  "cook_min": 55,
+  "make_ahead": "Roll and wrap up to 4 hours ahead; bake just before dinner",
+  "veg": true,
+  "af": true
+ }
+}

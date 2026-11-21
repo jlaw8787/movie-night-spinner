@@ -1,0 +1,34 @@
+{
+ "id": "The Great Outdoors (1988)",
+ "ops": [
+  {
+   "old": "Chet's waterski root beer floats",
+   "new": "Waterski root beer floats",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Wisconsin lager in a frosted mug",
+    "note": "Midwest lager in a frosted mug. Roman raises it to the lake.",
+    "alc": true
+   },
+   "keep": true,
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Steak Slip",
+    "lines": [
+     "Eat the whole steak",
+     "Free if you finish"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

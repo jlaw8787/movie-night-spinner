@@ -1,0 +1,103 @@
+{
+ "id": "Two Hands (1999)",
+ "old": "Pavlova",
+ "dish": {
+  "n": "Loukoumades with honey and walnuts",
+  "note": "Hot puffs of fried yeast dough in honey syrup with cinnamon and walnuts.",
+  "how": "Mix 250g plain flour, 7g sachet dried yeast, 1 tbsp sugar and a pinch of salt with 300ml warm water to a thick, sticky batter and rest in a warm spot for 45 minutes until bubbly. Simmer 150g honey with 100ml water and 1 tsp cinnamon for 5 minutes. Fry heaped teaspoons of batter in 180C oil for 3 minutes, turning, until deep golden, in 3 batches. Toss in the syrup and top with 60g chopped walnuts.",
+  "shop": [
+   "250g plain flour@Pantry",
+   "7g dried yeast@Pantry",
+   "1 tbsp caster sugar@Pantry",
+   "1 pinch salt@Pantry",
+   "400ml warm water@Pantry",
+   "150g honey@Pantry",
+   "1 tsp ground cinnamon@Pantry",
+   "750ml vegetable oil, for frying@Pantry",
+   "60g walnuts@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 250,
+    "u": "g",
+    "item": "plain flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 7,
+    "u": "g",
+    "item": "dried yeast",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "pinch",
+    "item": "salt",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 400,
+    "u": "ml",
+    "item": "warm water",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "honey",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "ground cinnamon",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 750,
+    "u": "ml",
+    "item": "vegetable oil, for frying",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "walnuts",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the flour, yeast, sugar, salt and warm water to a thick batter.",
+    "min": 5
+   },
+   {
+    "text": "Rest in a warm spot until bubbly.",
+    "min": 45
+   },
+   {
+    "text": "Simmer the honey, water and cinnamon into a syrup.",
+    "min": 5
+   },
+   {
+    "text": "Fry spoonfuls of batter in 180C oil, turning, in 3 batches.",
+    "min": 10
+   },
+   {
+    "text": "Toss in the syrup and top with chopped walnuts.",
+    "min": 3
+   }
+  ],
+  "prep_min": 10,
+  "cook_min": 58,
+  "make_ahead": "Best fried just before serving; syrup keeps for 3 days",
+  "veg": true,
+  "af": true
+ }
+}

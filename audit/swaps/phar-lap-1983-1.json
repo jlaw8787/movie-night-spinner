@@ -1,0 +1,143 @@
+{
+ "id": "Phar Lap (1983)",
+ "old": "Flemington Cup day beef party pies",
+ "dish": {
+  "n": "Members' lawn cold lamb and mint sandwiches",
+  "note": "Thin-sliced cold roast lamb, mint sauce and butter in soft white bread, crusts off.",
+  "how": "Rub 500g lamb backstrap with oil, salt and pepper, sear 3 minutes a side in a hot pan and roast at 200C for 10 minutes, then rest 15 minutes and chill. Butter 8 slices of soft white bread, spread 4 slices with 3 tbsp mint sauce, top with the thinly sliced lamb, a handful of mint leaves and the other bread. Trim the crusts and cut into fingers.",
+  "shop": [
+   "500g lamb backstrap@Meat",
+   "1 tbsp olive oil@Pantry",
+   "8 slices soft white bread@Bakery",
+   "60g butter@Dairy",
+   "3 tbsp mint sauce@Pantry",
+   "1 bunch mint@Produce"
+  ],
+  "ingredients": [
+   {
+    "q": 500,
+    "u": "g",
+    "item": "lamb backstrap",
+    "aisle": "Meat"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "olive oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "slices soft white bread",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "mint sauce",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch mint",
+    "aisle": "Produce"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Rub the lamb with oil, salt and pepper and sear in a hot pan.",
+    "min": 6
+   },
+   {
+    "text": "Roast at 200C, then rest and chill.",
+    "min": 25
+   },
+   {
+    "text": "Butter the bread, spread half with mint sauce and layer the thinly sliced lamb and mint.",
+    "min": 8
+   },
+   {
+    "text": "Top with the remaining bread, trim the crusts and cut into fingers.",
+    "min": 4
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 28,
+  "make_ahead": "Roast the lamb the day before; make the sandwiches up to 3 hours ahead under a damp cloth",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Members' lawn minted pea and feta sandwiches (vegetarian)",
+    "ingredients": [
+     {
+      "q": 300,
+      "u": "g",
+      "item": "frozen peas",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 100,
+      "u": "g",
+      "item": "feta",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch mint",
+      "aisle": "Produce"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "slices soft white bread",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 60,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Simmer the peas for 3 minutes, drain and cool.",
+      "min": 5
+     },
+     {
+      "text": "Mash the peas with the feta, lemon juice, chopped mint, salt and pepper.",
+      "min": 5
+     },
+     {
+      "text": "Butter the bread and spread half with the pea mash.",
+      "min": 6
+     },
+     {
+      "text": "Top with the remaining bread, trim the crusts and cut into fingers.",
+      "min": 4
+     }
+    ],
+    "prep_min": 15,
+    "cook_min": 5,
+    "make_ahead": "Make the sandwiches up to 3 hours ahead under a damp cloth"
+   }
+  },
+  "vegNote": "Minted pea and feta in place of the lamb"
+ }
+}

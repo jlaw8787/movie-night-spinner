@@ -1,0 +1,37 @@
+{
+ "id": "Bambi (1942)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bambi meets a butterfly",
+    "Flower the shy skunk",
+    "Three friends in the long grass",
+    "The Great Prince of the Forest",
+    "Bambi slipping on the frozen pond",
+    "Faline, the fawn in the meadow",
+    "If you can't say somethin' nice, don't say nothin' at all"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Meadow Tag",
+    "lines": [
+     "Name: Bambi",
+     "Friends: Flower and Faline"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Pastry tart of soft cheese and greens. Awful stuff to eat, Thumper says.",
+   "new": "Pastry tart of soft cheese and greens, with spring leaves on top.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

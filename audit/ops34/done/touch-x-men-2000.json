@@ -1,0 +1,39 @@
+{
+ "id": "X-Men (2000)",
+ "ops": [
+  {
+   "old": "Cage fight maple chilli peanuts",
+   "new": "Rogue's maple chilli peanuts",
+   "done": true
+  },
+  {
+   "old": "Cage fight poutine",
+   "new": "Laughlin City poutine",
+   "done": true
+  },
+  {
+   "old": "Chips, curds and hot beef gravy. Anything goes in the cage",
+   "new": "Chips, curds and hot beef gravy, the way a Canadian bar serves it",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Dog Tags",
+    "lines": [
+     "Name: Wolverine",
+     "Found in Laughlin City"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Anything goes in the cage. Chips, curds and mushroom gravy",
+   "new": "Chips, curds and mushroom gravy, the way a Canadian bar serves it",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

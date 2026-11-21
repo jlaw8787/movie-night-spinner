@@ -1,0 +1,31 @@
+{
+ "id": "Two Hands (1999)",
+ "ops": [
+  {
+   "old": "Ten-grand Bondi passionfruit shandy",
+   "new": "Ten-grand passionfruit shandy",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Jim Beam and Coke over ice",
+    "note": "Bourbon and Coke over ice. Acko's Falcon is parked outside.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jimmy, the young runner",
+    "Wozza and the Bankstown job",
+    "Deirdre, in the middle of it all",
+    "Sydney's Kings Cross at night"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

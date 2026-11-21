@@ -1,0 +1,205 @@
+{
+ "id": "The Dressmaker (2015)",
+ "old": "Pratt's counter sausage rolls with bush tomato chutney",
+ "dish": {
+  "n": "Country jellied chicken with salad",
+  "note": "Poached chicken set in clear jelly, sliced cold with salad and pickles.",
+  "how": "Simmer a 1.6kg chicken with 1 onion, 1 carrot, 1 celery stick and 2 bay leaves in 1.5 litres of water for 45 minutes, then cool in the stock for 20 minutes. Pick the meat into chunks. Strain 500ml of the stock, whisk in 4 tsp gelatine softened in cold water until dissolved, and stir in 2 tbsp chopped parsley. Pack the chicken into a lined loaf tin, pour over the stock and chill at least 3 hours. Turn out and serve sliced with lettuce, tomato and pickled onions.",
+  "shop": [
+   "1.6kg whole chicken@Meat",
+   "1 brown onion@Produce",
+   "1 carrot@Produce",
+   "1 celery stick@Produce",
+   "2 bay leaves@Pantry",
+   "4 tsp powdered gelatine@Pantry",
+   "1 bunch parsley@Produce",
+   "1 cos lettuce@Produce",
+   "2 tomatoes@Produce",
+   "1 jar pickled onions@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 1.6,
+    "u": "kg",
+    "item": "whole chicken",
+    "aisle": "Meat"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "brown onion",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "carrot",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "celery stick",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "bay leaves",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "tsp",
+    "item": "powdered gelatine",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch parsley",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "cos lettuce",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "tomatoes",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "jar pickled onions",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Simmer the chicken with the onion, carrot, celery and bay leaves.",
+    "min": 45
+   },
+   {
+    "text": "Cool the chicken in the stock, then pick the meat into chunks.",
+    "min": 30
+   },
+   {
+    "text": "Strain and measure the stock, dissolve the gelatine in it and add the parsley.",
+    "min": 8
+   },
+   {
+    "text": "Pack the chicken into a lined loaf tin and pour over the stock.",
+    "min": 5
+   },
+   {
+    "text": "Chill until set.",
+    "min": 180
+   },
+   {
+    "text": "Turn out, slice and serve with salad and pickled onions.",
+    "min": 7
+   }
+  ],
+  "prep_min": 30,
+  "cook_min": 245,
+  "make_ahead": "Make the day before; it needs at least 3 hours to set",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Country egg and herb terrine with salad (vegetarian)",
+    "ingredients": [
+     {
+      "q": 8,
+      "u": "",
+      "item": "eggs",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "item": "agar powder",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "vegetable stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch parsley",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch chives",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "item": "frozen peas",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "cos lettuce",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "tomatoes",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "jar pickled onions",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Boil the eggs for 9 minutes, cool and peel, then cut into chunks.",
+      "min": 15
+     },
+     {
+      "text": "Simmer the stock with the agar for 3 minutes, then add the parsley and chives.",
+      "min": 5
+     },
+     {
+      "text": "Blanch the peas for 2 minutes and drain.",
+      "min": 3
+     },
+     {
+      "text": "Pack the eggs and peas into a lined loaf tin and pour over the stock.",
+      "min": 5
+     },
+     {
+      "text": "Chill until set.",
+      "min": 120
+     },
+     {
+      "text": "Turn out, slice and serve with salad and pickled onions.",
+      "min": 7
+     }
+    ],
+    "prep_min": 30,
+    "cook_min": 125,
+    "make_ahead": "Make the day before; it needs at least 2 hours to set"
+   }
+  },
+  "vegNote": "Set egg, pea and herb terrine in place of the chicken"
+ }
+}

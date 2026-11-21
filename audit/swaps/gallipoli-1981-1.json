@@ -1,0 +1,131 @@
+{
+ "id": "Gallipoli (1981)",
+ "old": "Archy's WA cheese and chive damper",
+ "dish": {
+  "n": "Cairo street ta'amiya",
+  "note": "Egyptian fava bean falafel in flatbread with tahini sauce and pickles.",
+  "how": "Soak 400g dried split fava beans (or chickpeas) overnight, drain and blitz with 1 onion, 4 garlic cloves, 1 bunch each of parsley and coriander, 2 tsp ground cumin, 1 tsp ground coriander and 1 tsp salt to a rough green paste. Rest 10 minutes, shape into 16 patties, shallow fry in 2cm of oil at 180C for 3 minutes a side until deep golden. Stuff 4 flatbreads with the ta'amiya, tahini sauce (4 tbsp tahini, juice of 1 lemon, 1 garlic clove, water to loosen), tomato and pickles.",
+  "shop": [
+   "400g dried split fava beans, soaked overnight@Pantry",
+   "1 brown onion@Produce",
+   "4 garlic cloves@Produce",
+   "1 bunch parsley@Produce",
+   "1 bunch coriander@Produce",
+   "2 tsp ground cumin@Pantry",
+   "1 tsp ground coriander@Pantry",
+   "500ml vegetable oil, for frying@Pantry",
+   "4 tbsp tahini@Pantry",
+   "1 lemon@Produce",
+   "2 tomatoes@Produce",
+   "4 flatbreads@Bakery",
+   "1 jar pickled turnips or gherkins@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 400,
+    "u": "g",
+    "item": "dried split fava beans, soaked overnight",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "brown onion",
+    "aisle": "Produce"
+   },
+   {
+    "q": 4,
+    "u": "",
+    "item": "garlic cloves",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch parsley",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch coriander",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "tsp",
+    "item": "ground cumin",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "ground coriander",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 500,
+    "u": "ml",
+    "item": "vegetable oil, for frying",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "tahini",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "lemon",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "tomatoes",
+    "aisle": "Produce"
+   },
+   {
+    "q": 4,
+    "u": "",
+    "item": "flatbreads",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "jar pickled turnips or gherkins",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Drain the soaked beans and blitz with the onion, garlic, herbs, cumin, coriander and salt to a rough paste.",
+    "min": 10
+   },
+   {
+    "text": "Rest the paste, then shape into 16 patties.",
+    "min": 15
+   },
+   {
+    "text": "Shallow fry in 180C oil, 3 minutes a side, in two batches.",
+    "min": 12
+   },
+   {
+    "text": "Whisk the tahini with lemon juice, 1 crushed garlic clove and enough water to make a pourable sauce.",
+    "min": 3
+   },
+   {
+    "text": "Warm the flatbreads and fill with ta'amiya, sliced tomato, pickles and tahini sauce.",
+    "min": 5
+   }
+  ],
+  "prep_min": 30,
+  "cook_min": 15,
+  "make_ahead": "Soak the beans the night before; the paste can be made 4 hours ahead and fried just before serving",
+  "veg": true,
+  "af": true
+ }
+}

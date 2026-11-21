@@ -1,0 +1,36 @@
+{
+ "id": "True Grit (2010)",
+ "ops": [
+  {
+   "old": "Buttermilk fried chicken, crisp and hot. The grub Mattie swore off on the trail.",
+   "new": "Buttermilk fried chicken, crisp and hot. Eaten before the ride into the Choctaw Nation.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Sarsaparilla over cracked ice",
+    "note": "Sarsaparilla soda over cracked ice. The stronger drink is in the toddy."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Rooster Cogburn's eye patch",
+    "Lucky Ned Pepper and his gang",
+    "LaBoeuf's 400 yard shot",
+    "Rooster's reins in his teeth",
+    "The snake pit"
+   ],
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the cornbread when Rooster and LaBoeuf start the shooting contest.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

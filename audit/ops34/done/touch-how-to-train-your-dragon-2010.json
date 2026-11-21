@@ -1,0 +1,33 @@
+{
+ "id": "How to Train Your Dragon (2010)",
+ "ops": [
+  {
+   "old": "Toothless's fish bites",
+   "new": "Berk dock fish bites",
+   "done": true
+  },
+  {
+   "old": "Smoked trout, dill and cream cheese on rye. Toothless coughs up half a fish. Not these.",
+   "new": "Smoked trout, dill and cream cheese on rye. Fishlegs has read the whole Book of Dragons.",
+   "done": true
+  },
+  {
+   "old": "Gobber's toast, one hand and one hook.",
+   "new": "Hot buttered cider, warm and spiced. Gobber's toast, one hand and one hook.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "A shared drawing in the dirt",
+    "Gobber's forge",
+    "The Dragon Training Ring",
+    "The Book of Dragons",
+    "The Red Death"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,25 @@
+{
+ "id": "Shanghai Noon (2000)",
+ "ops": [
+  {
+   "old": "Imperial almond jelly with lychees",
+   "new": "Forbidden City almond jelly with lychees",
+   "done": true
+  },
+  {
+   "old": "Rump over hot coals, sticky mustard beans. Roy, buried to his chin, digs out with two chopsticks.",
+   "new": "Rump over hot coals, sticky mustard beans. Roy teaches Wang to be a cowboy.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Five-spice roasted peanuts",
+    "note": "Peanuts roasted with five-spice and salt. A jail cell snack for two."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

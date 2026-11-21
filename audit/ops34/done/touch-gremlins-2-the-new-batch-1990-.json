@@ -1,0 +1,26 @@
+{
+ "id": "Gremlins 2: The New Batch (1990)",
+ "ops": [
+  {
+   "old": "The gremlin that drinks the vegetable serum in the Splice O' Life lab and sprouts leaves",
+   "new": "Crisp vegetables and herbs in rice paper, for the gremlin who sprouts leaves",
+   "done": true
+  },
+  {
+   "old": "Clamp tower rainbow cookies",
+   "new": "Clamp Center rainbow cookies",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spicy tuna maki rolls",
+    "note": "Spicy tuna sushi rolls. The gremlins feast in the food court.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

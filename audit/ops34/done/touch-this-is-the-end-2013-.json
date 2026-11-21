@@ -1,0 +1,32 @@
+{
+ "id": "This Is the End (2013)",
+ "ops": [
+  {
+   "old": "Franco's housewarming hot honey pizza",
+   "new": "Rapture hot honey pizza",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Mexican lager with lime",
+    "note": "Mexican lager beer with a wedge of lime. Emma Watson took the rest.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Backstreet Boys, live in Heaven",
+    "Emma Watson with an axe",
+    "Craig and the locked cellar doors",
+    "Michael Cera at the party",
+    "The big sinkhole in the yard"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

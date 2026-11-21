@@ -1,0 +1,34 @@
+{
+ "id": "The Fugitive (1993)",
+ "ops": [
+  {
+   "old": "Thin Italian beef dipped in jus with hot giardiniera. Kimble poses as a Cook County janitor.",
+   "new": "Thin Italian beef dipped in jus with hot giardiniera. Worth chasing across Chicago.",
+   "done": true
+  },
+  {
+   "old": "Gerard wants a donut with little sprinkles",
+   "new": "Chocolate donuts with little sprinkles on top, ordered by Gerard.",
+   "done": true
+  },
+  {
+   "old": "Lime jelly cups. Hospital cafeteria, St Patrick's week.",
+   "new": "Lime jelly cups, set cold and bright green, one on every tray.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "poster",
+    "title": "Wanted: Kimble",
+    "lines": [
+     "Escaped from the bus wreck",
+     "Says he is innocent"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

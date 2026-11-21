@@ -1,0 +1,33 @@
+{
+ "id": "Deck the Halls (2006)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Buddy's live animals in the light show",
+    "Steve ends up in the frozen lake",
+    "Steve's car doors, ripped off",
+    "Steve's tree lot, burned down"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spinach and cheese stuffed mushrooms",
+    "note": "Mushrooms stuffed with spinach and cheese. The horses spook at sleigh bells."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hot spiced apple juice with cinnamon",
+    "note": "Hot apple juice with cinnamon. The advent calendar says it's time."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

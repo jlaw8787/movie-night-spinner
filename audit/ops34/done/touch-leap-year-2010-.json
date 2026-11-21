@@ -1,0 +1,21 @@
+{
+ "id": "Leap Year (2010)",
+ "ops": [
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pint of Murphy's stout",
+    "note": "Dark Irish stout poured slow with a creamy head. Murphy's Law, hailstones and all.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "old": "Fried potato cakes, hold the cow pat",
+   "new": "Fried potato cakes, buttered. Wait for the cows.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

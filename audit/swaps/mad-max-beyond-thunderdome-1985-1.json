@@ -1,0 +1,78 @@
+{
+ "id": "Mad Max Beyond Thunderdome (1985)",
+ "old": "Crack in the Earth damper",
+ "dish": {
+  "n": "Bartertown garlic flatbreads",
+  "note": "Griddled yoghurt flatbreads brushed with garlic and herb oil.",
+  "how": "Mix 400g self-raising flour, 400g Greek yoghurt and 1 tsp salt into a soft dough, knead 2 minutes and divide into 8. Roll each to 3mm and cook in a dry hot pan for 2 minutes a side until puffed and blistered. Brush with 4 tbsp olive oil warmed with 3 crushed garlic cloves and a handful of chopped parsley, and serve warm.",
+  "shop": [
+   "400g self-raising flour@Pantry",
+   "400g Greek yoghurt@Dairy",
+   "1 tsp sea salt@Pantry",
+   "4 tbsp olive oil@Pantry",
+   "3 garlic cloves@Produce",
+   "1 bunch parsley@Produce"
+  ],
+  "ingredients": [
+   {
+    "q": 400,
+    "u": "g",
+    "item": "self-raising flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 400,
+    "u": "g",
+    "item": "Greek yoghurt",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "sea salt",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "olive oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 3,
+    "u": "",
+    "item": "garlic cloves",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch parsley",
+    "aisle": "Produce"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the flour, yoghurt and salt into a soft dough, knead briefly and divide into 8.",
+    "min": 8
+   },
+   {
+    "text": "Roll each piece out thin.",
+    "min": 7
+   },
+   {
+    "text": "Cook in a dry hot pan, 2 minutes a side, until puffed and blistered.",
+    "min": 16
+   },
+   {
+    "text": "Warm the oil with the garlic, stir in the parsley and brush over the breads.",
+    "min": 4
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 20,
+  "make_ahead": "Cook up to 2 hours ahead and wrap in a tea towel; brush with oil just before serving",
+  "veg": true,
+  "af": true
+ }
+}

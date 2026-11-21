@@ -17,6 +17,10 @@ const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const [cmd,...args]=process.argv.slice(2);const dry=args.includes('--dry');const files=args.filter(a=>a!=='--dry');
 const films=rj('data/films.json'),FL=rj('data/film-flavour.json'),HO=rj('data/film-house.json'),DN=rj('data/dish-names.json'),DNo=rj('data/dish-notes.json');
 let FMT=fs.readFileSync(path.join(R,'formats.js'),'utf8');
+/* review 34: the 124 finished editions keep their own dish names and recipes in movie-menus.js; a rename has to land there too or the
+   Prep sheet loses the dish (You've Got Mail's sandwiches) */
+const MMP=path.join(R,'movie-menus.js'),MMRAW=fs.readFileSync(MMP,'utf8'),MMK='const MOVIE_MENU_EDITIONS = ',mm0=MMRAW.indexOf(MMK),mm1=MMRAW.lastIndexOf('};');
+const ED=JSON.parse(MMRAW.slice(mm0+MMK.length,mm1+1));let edTouched=false;
 const touched=new Set();
 const film=id=>films.find(f=>f.title+' ('+f.year+')'===id);
 /* walk a JSON value, replacing strings (and object keys) */
@@ -30,8 +34,10 @@ function replaceAll(id,old,nw){
   const targets=[];/* [label,get,set] */
   if(f){for(const k of ['S','M','W','K','T','D','P'])if(f[k]!==undefined)targets.push(['films.json '+k,()=>f[k],v=>{f[k]=v}])}
   if(FL[id])targets.push(['film-flavour',()=>FL[id],v=>{FL[id]=v}]);if(HO[id])targets.push(['film-house',()=>HO[id],v=>{HO[id]=v}]);
+  if(ED[id])targets.push(['movie-menus',()=>ED[id],v=>{ED[id]=v;edTouched=true}]);
   if(DN[id])targets.push(['dish-names',()=>DN[id],v=>{DN[id]=v}]);if(DNo[id])targets.push(['dish-notes',()=>DNo[id],v=>{DNo[id]=v}]);
   for(const p of perFilm(id))targets.push([p,()=>getF(p),v=>{cache[p]=v;touched.add(p)}]);
+  if(process.env.CARDOPS_ONLY){const keep=targets.filter(t=>t[0]===process.env.CARDOPS_ONLY);targets.length=0;targets.push(...keep)}/* re-run old ops on one new target only */
   let mode=targets.some(t=>count(t[1](),exact))?'exact':'sub';
   for(const [lab,get,set] of targets){const pred=mode==='exact'?exact:sub;const n=count(get(),pred);if(!n)continue;
     set(walk(get(),s=>mode==='exact'?(s===old?nw:s):s.split(old).join(nw)));hits.push(lab+' x'+n)}
@@ -81,5 +87,5 @@ if(!dry){fs.writeFileSync(path.join(R,'data/films.json'),JSON.stringify(films));
   fs.writeFileSync(path.join(R,'data/film-flavour.json'),JSON.stringify(FL,null,1)+'\n');fs.writeFileSync(path.join(R,'data/film-house.json'),JSON.stringify(HO,null,1)+(fs.readFileSync(path.join(R,'data/film-house.json'),'utf8').endsWith('\n')?'\n':''));
   fs.writeFileSync(path.join(R,'data/dish-names.json'),JSON.stringify(DN));fs.writeFileSync(path.join(R,'data/dish-notes.json'),JSON.stringify(DNo));
   for(const p of touched){const raw=fs.readFileSync(path.join(R,p),'utf8');const ind=/^\{\n( +)/.exec(raw);fs.writeFileSync(path.join(R,p),ind?JSON.stringify(cache[p],null,ind[1].length)+(raw.endsWith('\n')?'\n':''):JSON.stringify(cache[p]))}
-  fs.writeFileSync(path.join(R,'formats.js'),FMT)}
+  fs.writeFileSync(path.join(R,'formats.js'),FMT);if(edTouched)fs.writeFileSync(MMP,MMRAW.slice(0,mm0+MMK.length)+JSON.stringify(ED)+MMRAW.slice(mm1+1))}
 console.log(`${files.length} files, ${nOps} ops, ${nMiss} missed${dry?' (dry run)':''}`);

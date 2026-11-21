@@ -1,0 +1,25 @@
+{
+ "id": "Last Holiday (2006)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Seared foie gras on brioche",
+    "note": "Seared foie gras on toasted brioche. The dish she cooked for the neighbour.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Slivovitz plum brandy",
+    "note": "Plum brandy, served small, after dinner at the Pupp.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

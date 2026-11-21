@@ -1,0 +1,37 @@
+{
+ "id": "Under Siege (1992)",
+ "ops": [
+  {
+   "old": "Get my pies out of the oven!",
+   "new": "Glazed meatloaf with creamy mash. Get my pies out of the oven!",
+   "done": true
+  },
+  {
+   "old": "Two-layer butter cake. Jordan Tate came in a bigger one.",
+   "new": "Two-layer butter cake, iced and candled for the party.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Smoked salmon blinis with crème fraîche",
+    "note": "Little buckwheat pancakes with smoked salmon and crème fraîche, passed round at the party.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The ship's cook who turns out to be an ex-SEAL",
+    "The cake, with Miss July 1989 inside",
+    "Strannix, the former CIA man leading the takeover",
+    "Krill, the unhinged officer on the inside",
+    "The Tomahawk missile and the battleship"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

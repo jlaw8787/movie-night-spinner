@@ -1,0 +1,148 @@
+{
+ "id": "Crocodile Dundee (1986)",
+ "old": "Wally's Walkabout Creek party pies",
+ "dish": {
+  "n": "Street cart hot dogs with sauerkraut",
+  "note": "Frankfurts in soft rolls with mustard, sauerkraut and fried onion, off the cart.",
+  "how": "Fry 2 sliced onions in 1 tbsp oil for 15 minutes until soft and golden. Simmer 8 frankfurts in hot water for 6 minutes, or grill until browned. Warm 8 soft hot dog rolls and fill with a frankfurt, onion, 200g drained sauerkraut and yellow mustard, with extra mustard and tomato sauce to pass around.",
+  "shop": [
+   "8 frankfurts@Meat",
+   "8 soft hot dog rolls@Bakery",
+   "2 brown onions@Produce",
+   "1 tbsp vegetable oil@Pantry",
+   "200g sauerkraut@Pantry",
+   "4 tbsp yellow mustard@Pantry",
+   "1 bottle tomato sauce@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 8,
+    "u": "",
+    "item": "frankfurts",
+    "aisle": "Meat"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "soft hot dog rolls",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "brown onions",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "vegetable oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 200,
+    "u": "g",
+    "item": "sauerkraut",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "yellow mustard",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bottle tomato sauce",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Fry the sliced onions slowly until soft and golden.",
+    "min": 15
+   },
+   {
+    "text": "Simmer or grill the frankfurts.",
+    "min": 7
+   },
+   {
+    "text": "Warm the rolls and fill with frankfurt, onion, sauerkraut and mustard.",
+    "min": 5
+   }
+  ],
+  "prep_min": 5,
+  "cook_min": 22,
+  "make_ahead": "Fry the onions up to 1 day ahead and reheat",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Street cart veggie hot dogs with sauerkraut (vegetarian)",
+    "ingredients": [
+     {
+      "q": 8,
+      "u": "",
+      "item": "vegetarian frankfurts",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "soft hot dog rolls",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "brown onions",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "vegetable oil",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 200,
+      "u": "g",
+      "item": "sauerkraut",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "yellow mustard",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bottle tomato sauce",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Fry the sliced onions slowly until soft and golden.",
+      "min": 15
+     },
+     {
+      "text": "Grill or pan fry the vegetarian frankfurts as the packet says.",
+      "min": 7
+     },
+     {
+      "text": "Warm the rolls and fill with frankfurt, onion, sauerkraut and mustard.",
+      "min": 5
+     }
+    ],
+    "prep_min": 5,
+    "cook_min": 22,
+    "make_ahead": "Fry the onions up to 1 day ahead and reheat"
+   }
+  },
+  "vegNote": "Plant-based frankfurts in the same rolls"
+ }
+}

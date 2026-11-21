@@ -1,0 +1,20 @@
+{
+ "id": "The Santa Clause (1994)",
+ "ops": [
+  {
+   "old": "Sage and onion patties, cranberry and brie in soft buns, the night Scott finds the suit",
+   "new": "Sage and onion patties, cranberry and brie in soft buns, for the night the suit is found",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Candy cane milkshake",
+    "note": "Vanilla milkshake with crushed candy cane and whipped cream."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

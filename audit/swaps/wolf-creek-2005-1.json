@@ -1,0 +1,103 @@
+{
+ "id": "Wolf Creek (2005)",
+ "old": "Golden syrup dumplings",
+ "dish": {
+  "n": "Kimberley roadhouse vanilla slice",
+  "note": "Wobbly vanilla custard between crisp pastry, passionfruit icing.",
+  "how": "Bake 2 sheets of puff pastry (pricked, between trays) at 200C for 25 minutes until flat and golden. Whisk 750ml milk, 120g sugar, 60g cornflour, 3 egg yolks and 2 tsp vanilla in a pot over medium heat for 8 minutes until thick, stir in 30g butter and cool for 20 minutes. Spread the custard over one pastry sheet, top with the other and ice with 1 cup icing sugar mixed with the pulp of 2 passionfruit and a little water. Chill 30 minutes and cut into 4 big squares.",
+  "shop": [
+   "2 sheets puff pastry@Frozen",
+   "750ml milk@Dairy",
+   "120g caster sugar@Pantry",
+   "60g cornflour@Pantry",
+   "3 egg yolks@Dairy",
+   "2 tsp vanilla extract@Pantry",
+   "30g butter@Dairy",
+   "150g icing sugar@Pantry",
+   "2 passionfruit@Produce"
+  ],
+  "ingredients": [
+   {
+    "q": 2,
+    "u": "",
+    "item": "sheets puff pastry",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 750,
+    "u": "ml",
+    "item": "milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 120,
+    "u": "g",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "cornflour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 3,
+    "u": "",
+    "item": "egg yolks",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 2,
+    "u": "tsp",
+    "item": "vanilla extract",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 30,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "icing sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "passionfruit",
+    "aisle": "Produce"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Prick the pastry sheets, bake between two trays at 200C until flat and golden, then cool.",
+    "min": 25
+   },
+   {
+    "text": "Cook the milk, sugar, cornflour, yolks and vanilla over medium heat, whisking, until thick. Stir in the butter.",
+    "min": 10
+   },
+   {
+    "text": "Cool the custard, spread over one pastry sheet and top with the second.",
+    "min": 20
+   },
+   {
+    "text": "Mix the icing sugar with passionfruit pulp and spread over the top.",
+    "min": 3
+   },
+   {
+    "text": "Chill, then cut into 4 squares with a serrated knife.",
+    "min": 30
+   }
+  ],
+  "prep_min": 20,
+  "cook_min": 68,
+  "make_ahead": "Make the day before and chill; ice just before serving",
+  "veg": true,
+  "af": true
+ }
+}

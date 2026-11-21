@@ -1,0 +1,29 @@
+{
+ "id": "Newsies (1992)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the mains when the newsies sing Seize the Day.",
+   "done": true
+  },
+  {
+   "old": "Sarsaparilla poured over vanilla until it fizzes into a creamy foam, seize the day",
+   "new": "Sarsaparilla poured over vanilla until it fizzes into a creamy foam, a newsie's night off",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Newsboy Bundle Slip",
+    "lines": [
+     "100 papes, one headline",
+     "60 cents a hundred, up from fifty"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,24 @@
+{
+ "id": "The Good Dinosaur (2015)",
+ "ops": [
+  {
+   "old": "Rashers, onion and potato, kernels and stock, finished with cream and chives, a bowl for Spot",
+   "new": "Rashers, onion and potato, kernels and stock, finished with cream and chives, for Arlo's long way home",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Silo Tag",
+    "lines": [
+     "Arlo, Clawtooth Mountain Farm",
+     "Paw print on the silo"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

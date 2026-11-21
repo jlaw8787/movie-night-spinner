@@ -1,0 +1,21 @@
+{
+ "id": "Monsters, Inc. (2001)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the sushi when Roz says she is always watching.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Agedashi tofu in dashi broth",
+    "note": "Crisp fried tofu in a hot soy and dashi broth. A booth for two, Googly Bear.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

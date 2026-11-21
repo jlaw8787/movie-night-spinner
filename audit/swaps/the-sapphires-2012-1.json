@@ -1,0 +1,156 @@
+{
+ "id": "The Sapphires (2012)",
+ "old": "Songbirds' damper with syrup",
+ "dish": {
+  "n": "Corned beef in parsley white sauce on toast",
+  "note": "Sliced corned beef in parsley white sauce on thick toast, a plain 1960s tea.",
+  "how": "Melt 50g butter, stir in 50g plain flour for 1 minute and whisk in 500ml warm milk until thick, about 8 minutes. Add 3 tbsp chopped parsley, a pinch of nutmeg and pepper. Fold in 400g of thickly sliced cooked corned beef from the deli and warm through for 4 minutes. Serve over 8 slices of thick toasted white bread.",
+  "shop": [
+   "50g butter@Dairy",
+   "50g plain flour@Pantry",
+   "500ml milk@Dairy",
+   "1 bunch parsley@Produce",
+   "1 pinch ground nutmeg@Pantry",
+   "400g sliced cooked corned beef@Meat",
+   "8 slices thick white bread@Bakery"
+  ],
+  "ingredients": [
+   {
+    "q": 50,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 50,
+    "u": "g",
+    "item": "plain flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 500,
+    "u": "ml",
+    "item": "milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch parsley",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "pinch",
+    "item": "ground nutmeg",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 400,
+    "u": "g",
+    "item": "sliced cooked corned beef",
+    "aisle": "Meat"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "slices thick white bread",
+    "aisle": "Bakery"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Melt the butter, stir in the flour for 1 minute and whisk in the milk until thick.",
+    "min": 9
+   },
+   {
+    "text": "Stir in the parsley, nutmeg and pepper.",
+    "min": 2
+   },
+   {
+    "text": "Fold in the corned beef and warm through.",
+    "min": 4
+   },
+   {
+    "text": "Toast the bread and spoon the beef and sauce over.",
+    "min": 5
+   }
+  ],
+  "prep_min": 8,
+  "cook_min": 12,
+  "make_ahead": "Make the sauce up to 1 day ahead and reheat with a splash of milk",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Egg in parsley white sauce on toast (vegetarian)",
+    "ingredients": [
+     {
+      "q": 50,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 50,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "milk",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch parsley",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "item": "ground nutmeg",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "eggs",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "slices thick white bread",
+      "aisle": "Bakery"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Boil the eggs for 9 minutes, cool in cold water and peel.",
+      "min": 12
+     },
+     {
+      "text": "Melt the butter, stir in the flour for 1 minute and whisk in the milk until thick.",
+      "min": 9
+     },
+     {
+      "text": "Stir in the parsley, nutmeg and pepper and fold in the halved eggs.",
+      "min": 3
+     },
+     {
+      "text": "Toast the bread and spoon the eggs and sauce over.",
+      "min": 5
+     }
+    ],
+    "prep_min": 10,
+    "cook_min": 19,
+    "make_ahead": "Make the sauce up to 1 day ahead and reheat with a splash of milk"
+   }
+  },
+  "vegNote": "Halved boiled eggs in the same white sauce instead of corned beef"
+ }
+}

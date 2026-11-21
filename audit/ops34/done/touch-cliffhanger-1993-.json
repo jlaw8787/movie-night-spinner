@@ -1,0 +1,39 @@
+{
+ "id": "Cliffhanger (1993)",
+ "ops": [
+  {
+   "old": "Ranger hut roast pumpkin soup",
+   "new": "Rescue thermos roast pumpkin soup",
+   "done": true
+  },
+  {
+   "old": "Rump steak with foil-baked potatoes, cooked at the ranger hut in the high country",
+   "new": "Rump steak grilled over coals, foil-baked potatoes on the side, for a cold night",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Smoked cheddar and elk sausage board",
+    "note": "Elk sausage and smoked cheese on a board. Hal shares this one, friends again.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Gabe braced across a rock chimney",
+    "Out of the jet, over the Rockies",
+    "A tracking beacon on a rabbit",
+    "Qualen and his crew",
+    "The mid-air plane transfer",
+    "The opening cliff rescue",
+    "Hal Tucker, Gabe's best friend"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

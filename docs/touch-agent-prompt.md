@@ -22,7 +22,8 @@ For each film in your list:
    - The printed note in data/recipes/<slug>.json (and data/diet) can differ from films.json: card-ops find shows every copy; fix each different string with its own op.
    - Use /tmp/<your batch name> for scratch files: other agents share /tmp.
    - `old` must be the text exactly as stored (check with card-ops find). Prefer replacing whole note strings. Ops run in order.
-   - Dish names: rename only if the name is the repeat, and the new name must honestly describe the same food (the recipe does not change). A rename op changes the card, recipes and shopping together. If the cue or a note names the dish, add an op for that too.
+   - Dish names: rename only if the name is the repeat; the new name stays exciting and tied to the film's world (a place, a time, another moment), never a plain menu name like "Cheese board". Renames and the new name must honestly describe the same food (the recipe does not change). A rename op changes the card, recipes and shopping together. If the cue or a note names the dish, add an op for that too.
+   - Prop lines and taglines change with plain {"old","new"} ops on their exact stored text.
    - Keep the same number of winks; keep house lines as {n, note} (keep "meat": true if it was there).
 
 ## Rules (Josh's, all of them hold)

@@ -1,0 +1,26 @@
+{
+ "id": "Jumanji: The Next Level (2019)",
+ "ops": [
+  {
+   "old": "Flatbread. Ostrich stampede on the dunes.",
+   "new": "Warm flatbreads brushed with olive oil and za'atar. Ostrich stampede on the dunes.",
+   "done": true
+  },
+  {
+   "old": "Blended watermelon, lime and mint. Oberon's weakness is heat.",
+   "new": "Blended watermelon, lime and mint, made for a drought.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Lamb and pine nut fatayer",
+    "note": "Little pastries filled with spiced lamb and pine nuts. Meet at the bazaar.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

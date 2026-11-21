@@ -1,0 +1,24 @@
+{
+ "id": "Gladiator (2000)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the mains when Proximo tells Maximus to win the crowd.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Games of Rome",
+    "lines": [
+     "Rome, opening day",
+     "Stand for the Spaniard"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

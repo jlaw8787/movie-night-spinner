@@ -1,0 +1,40 @@
+{
+ "id": "Con Air (1997)",
+ "ops": [
+  {
+   "old": "Bunny cake",
+   "new": "Casey's birthday cake",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Jailbird, the prison transport plane",
+    "Poe writing letters to his daughter Casey",
+    "Garland Greene, the calm serial killer",
+    "Cyrus the Virus running the whole plane",
+    "The plane landing on the Las Vegas strip"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Smoked turkey pinwheels",
+    "note": "Smoked turkey and cream cheese pinwheels. Baby-O needs his insulin first.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Orange soda in the can",
+    "note": "Ice-cold fizzy orange. Cue Sweet Home Alabama."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

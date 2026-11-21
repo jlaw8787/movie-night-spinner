@@ -1,0 +1,43 @@
+{
+ "id": "Tarzan (1999)",
+ "ops": [
+  {
+   "old": "Jane's peach iced tea",
+   "new": "Porter's afternoon peach iced tea",
+   "done": true
+  },
+  {
+   "old": "Curried chicken tea sandwiches with mango chutney, for teatime with the teapots Terk drums on",
+   "new": "Curried chicken tea sandwiches with mango chutney, for English teatime in the jungle",
+   "done": true
+  },
+  {
+   "old": "Banana, mango, pineapple, papaya. Jane met the baboons first.",
+   "new": "Banana, mango, pineapple, papaya. The baboons got to it first.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Grilled plantain with chilli salt",
+    "note": "Plantain grilled with chilli salt. Eaten straight off the fire."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Tarzan sliding along branches on his feet",
+    "Palm to palm with Jane",
+    "Swinging through the jungle on a vine",
+    "Kala caring for baby Tarzan",
+    "The elephant stampede",
+    "Tarzan's treehouse, built by his shipwrecked parents",
+    "The baby baboon and the chase"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

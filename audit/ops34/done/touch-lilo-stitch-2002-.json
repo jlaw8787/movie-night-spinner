@@ -1,0 +1,45 @@
+{
+ "id": "Lilo & Stitch (2002)",
+ "ops": [
+  {
+   "old": "Tuna, soy and sesame on rice crackers. Never for Pudge.",
+   "new": "Tuna, soy and sesame on rice crackers, eaten near the surf.",
+   "done": true
+  },
+  {
+   "old": "Shell-on, fried hard with whole garlic and lemon, over rice, after surfing with Nani",
+   "new": "Shell-on, fried hard with whole garlic and lemon, over rice, after a day surfing",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jumba and Pleakley on the hunt for 626",
+    "Elvis records on the player",
+    "Experiment 626 causing trouble",
+    "Nani's job at the luau",
+    "Cobra Bubbles on the doorstep"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spam musubi",
+    "note": "Grilled Spam on rice, wrapped in a strip of nori. Plenty to go round the table.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "POG juice, passionfruit, orange and guava",
+    "note": "Passionfruit, orange and guava juice. Poured cold after a day at the beach."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

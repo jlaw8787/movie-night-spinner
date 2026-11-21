@@ -1,0 +1,29 @@
+{
+ "id": "Hall Pass (2011)",
+ "ops": [
+  {
+   "old": "Night one food coma riblets",
+   "new": "Night one pork riblets",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "2 for $20",
+    "lines": [
+     "Two mains, one long nap",
+     "Night one special"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Crumbed mozzarella fried golden with warm marinara. Take a mental photograph.",
+   "new": "Crumbed mozzarella fried golden with warm marinara. Pick-up night with Flats.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

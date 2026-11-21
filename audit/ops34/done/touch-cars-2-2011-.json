@@ -1,0 +1,43 @@
+{
+ "id": "Cars 2 (2011)",
+ "ops": [
+  {
+   "old": "Tokyo party edamame, tossed warm in sesame oil, chilli and sea salt",
+   "new": "Edamame tossed warm in sesame oil, chilli and sea salt",
+   "done": true
+  },
+  {
+   "old": "Green, nutty ice cream with crushed pistachios and honey. No wasabi this time.",
+   "new": "Green, nutty ice cream with crushed pistachios and honey.",
+   "done": true
+  },
+  {
+   "old": "Porto Corsa blood orange soda",
+   "new": "Blood orange soda",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "World Grand Prix",
+    "lines": [
+     "Tokyo, Italy, London",
+     "Pit pass, tow truck"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Takoyaki with Japanese mayo",
+    "note": "Crisp batter balls filled with octopus, drizzled with sweet sauce.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

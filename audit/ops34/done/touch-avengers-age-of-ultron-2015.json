@@ -1,0 +1,24 @@
+{
+ "id": "Avengers: Age of Ultron (2015)",
+ "ops": [
+  {
+   "old": "Paper-thin seared fillet on garlic toasts, rocket and parmesan, while nobody lifts the hammer",
+   "new": "Paper-thin seared fillet on garlic toasts, rocket and parmesan, passed round the party",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Party Pass",
+    "lines": [
+     "Worthy guests only",
+     "Ultron not on the list"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

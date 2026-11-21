@@ -1,0 +1,41 @@
+{
+ "id": "Amélie (2001)",
+ "ops": [
+  {
+   "old": "Amélie's crème brûlée",
+   "new": "Amélie's burnt sugar custard",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve dessert when Amélie cracks the sugar top with a spoon.",
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Crack the sugar top.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Escorting the blind man to the Métro station",
+    "The garden gnome sent traveling the world",
+    "Nino and his album of photo booth rejects",
+    "The glass man painting the same picture",
+    "Skipping stones on the canal"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Puy lentil salad with shallots",
+    "note": "Puy lentils with shallots. Her hand goes in the sack first."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

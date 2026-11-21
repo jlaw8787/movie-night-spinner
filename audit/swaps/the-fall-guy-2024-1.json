@@ -1,0 +1,139 @@
+{
+ "id": "The Fall Guy (2024)",
+ "old": "Stunt crew party pies",
+ "dish": {
+  "n": "Sydney rock oysters with lemon and mignonette",
+  "note": "Freshly opened oysters with a shallot and red wine vinegar mignonette.",
+  "how": "Ask the fishmonger to open 24 Sydney rock oysters on the day, or open them at home with an oyster knife. Stir 3 tbsp red wine vinegar with 1 finely diced shallot and plenty of cracked black pepper. Serve the oysters on crushed ice with the mignonette and lemon wedges.",
+  "shop": [
+   "24 Sydney rock oysters, opened@Seafood",
+   "3 tbsp red wine vinegar@Pantry",
+   "1 shallot@Produce",
+   "1 tsp cracked black pepper@Pantry",
+   "2 lemons@Produce",
+   "1kg crushed ice@Frozen"
+  ],
+  "ingredients": [
+   {
+    "q": 24,
+    "u": "",
+    "item": "Sydney rock oysters, opened",
+    "aisle": "Seafood"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "red wine vinegar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "shallot",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "cracked black pepper",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "lemons",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "kg",
+    "item": "crushed ice",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Dice the shallot finely and stir into the vinegar with the pepper.",
+    "min": 5
+   },
+   {
+    "text": "Cut the lemons into wedges and set the ice on a platter.",
+    "min": 3
+   },
+   {
+    "text": "Lay the oysters on the ice and serve with the mignonette and lemon.",
+    "min": 2
+   }
+  ],
+  "prep_min": 10,
+  "cook_min": 0,
+  "make_ahead": "Buy the oysters the day you serve them; make the mignonette up to 1 day ahead",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Roasted oyster mushrooms with lemon and mignonette (vegetarian)",
+    "ingredients": [
+     {
+      "q": 400,
+      "u": "g",
+      "item": "oyster mushrooms",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "olive oil",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "item": "red wine vinegar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "shallot",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "cracked black pepper",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "lemons",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Toss the mushrooms with the oil and salt and roast at 220C until golden.",
+      "min": 12
+     },
+     {
+      "text": "Dice the shallot finely and stir into the vinegar with the pepper.",
+      "min": 5
+     },
+     {
+      "text": "Cut the lemons into wedges.",
+      "min": 3
+     },
+     {
+      "text": "Pile the mushrooms on a platter with the mignonette and lemon.",
+      "min": 2
+     }
+    ],
+    "prep_min": 10,
+    "cook_min": 12,
+    "make_ahead": "Make the mignonette up to 1 day ahead; roast the mushrooms just before serving"
+   }
+  },
+  "vegNote": "Roasted oyster mushrooms with the same mignonette"
+ }
+}

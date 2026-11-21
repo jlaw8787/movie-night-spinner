@@ -1,0 +1,21 @@
+{
+ "id": "Child's Play (1988)",
+ "ops": [
+  {
+   "old": "Maggie digs into the birthday cake",
+   "new": "Vanilla sponge with rainbow sprinkles. Maggie digs into the birthday cake",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "A pot of tea for John",
+    "note": "A pot of hot black tea with milk on the side, poured for the detective.",
+    "alc": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,29 @@
+{
+ "id": "Despicable Me 2 (2013)",
+ "ops": [
+  {
+   "old": "Minion banana caramel smoothie",
+   "new": "Banana caramel smoothie",
+   "done": true
+  },
+  {
+   "old": "Grape jelly, cream and banana. PX-41 turned the minions purple",
+   "new": "Grape jelly, cream and banana. Not the PX-41 kind.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Jelly Order",
+    "lines": [
+     "One jar, strawberry",
+     "Keep the lid on, always"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

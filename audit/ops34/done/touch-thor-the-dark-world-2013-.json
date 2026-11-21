@@ -1,0 +1,31 @@
+{
+ "id": "Thor: The Dark World (2013)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Loki, as Captain America",
+    "Erik Selvig's day out at Stonehenge",
+    "Darcy and her intern Ian",
+    "Thor catches the Jubilee line",
+    "Portals opening over Greenwich"
+   ],
+   "done": true
+  },
+  {
+   "old": "Hang your hammer on the hook. Dinner's up.",
+   "new": "Asgard visits London. Dinner's up.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Honey roasted parsnips with thyme",
+    "note": "Parsnips roasted with honey and thyme. Heimdall sees everything."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

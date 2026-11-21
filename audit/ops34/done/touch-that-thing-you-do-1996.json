@@ -1,0 +1,59 @@
+{
+ "id": "That Thing You Do! (1996)",
+ "ops": [
+  {
+   "old": "Salami, olives and cheese on a big platter. Villapiano lays a bonus on the bar.",
+   "new": "Salami, olives and cheese on a big platter. Phil promises radio in ten days.",
+   "done": true
+  },
+  {
+   "old": "Salami, provolone, olives and marinated peppers. Villapiano lays a bonus on the bar.",
+   "new": "Salami, provolone, olives and marinated peppers. Phil promises radio in ten days.",
+   "done": true
+  },
+  {
+   "old": "Villapiano lays a bonus on the bar. Provolone, olives, marinated peppers and grilled zucchini.",
+   "new": "Provolone, olives, marinated peppers and grilled zucchini. Phil promises radio in ten days.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Villapiano's",
+    "lines": [
+     "Table: The Oneders",
+     "Paid at the bar"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "The spaghetti place out by the airport. Beef and pork meatballs in red sauce over spaghetti.",
+   "new": "Beef and pork meatballs in red sauce over spaghetti, out by the airport.",
+   "done": true
+  },
+  {
+   "old": "The spaghetti place out by the airport. Eggplant and ricotta balls in red sauce over spaghetti.",
+   "new": "Eggplant and ricotta balls in red sauce over spaghetti, out by the airport.",
+   "done": true
+  },
+  {
+   "old": "The spaghetti place out by the airport",
+   "new": "Beef and pork meatballs in red sauce over spaghetti",
+   "done": true
+  },
+  {
+   "old": "The paying gig after the talent show. Thin-crust mushroom pizza with oregano.",
+   "new": "Thin-crust mushroom pizza with oregano. The paying gig after the talent show.",
+   "done": true
+  },
+  {
+   "old": "Mr White calls them one-hit Wonders. Red grape juice and soda, poured short.",
+   "new": "Red grape juice and soda, poured short. Mr White calls them one-hit Wonders.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,53 @@
+{
+ "id": "Starship Troopers (1997)",
+ "ops": [
+  {
+   "old": "Dulce de leche biscuits for the Buenos Aires recruits",
+   "new": "Dulce de leche biscuits sandwiched and rolled in coconut",
+   "done": true
+  },
+  {
+   "old": "Dulce de leche sandwich biscuits in coconut. Service guarantees citizenship.",
+   "new": "Dulce de leche sandwich biscuits rolled in coconut.",
+   "done": true
+  },
+  {
+   "old": "Cold lager poured into frosted glasses. Here's the beer, says Rasczak.",
+   "new": "Cold lager poured into frosted glasses, straight from the keg.",
+   "done": true
+  },
+  {
+   "old": "Here's the beer, says Rasczak. Ice-cold lager poured straight from the keg.",
+   "new": "Ice-cold lager poured straight from the keg.",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the cauliflower when the Roughnecks go back to Planet P.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Mobile Infantry",
+    "lines": [
+     "Rico, the Roughnecks",
+     "Lieutenant, field promoted"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Iced yerba mate",
+    "note": "South American herbal tea, iced and lightly bitter.",
+    "alc": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

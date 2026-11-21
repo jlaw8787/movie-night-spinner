@@ -1,0 +1,169 @@
+{
+ "id": "Storm Boy (1976)",
+ "old": "Fingerbone Bill's golden syrup damper",
+ "dish": {
+  "n": "Coorong smoked mullet pâté on toast",
+  "note": "Smoked mullet whipped with cream cheese and lemon, piled on hot toast.",
+  "how": "Flake 400g smoked mullet fillets (smoked trout works too) off the skin and bones. Beat with 150g softened cream cheese, 2 tbsp sour cream, the zest and juice of 1 lemon, 1 bunch of chopped chives and plenty of black pepper until creamy but still rough. Toast 8 slices of sourdough and serve with sliced cucumber and lemon wedges.",
+  "shop": [
+   "400g smoked mullet fillets@Seafood",
+   "150g cream cheese@Dairy",
+   "2 tbsp sour cream@Dairy",
+   "1 lemon@Produce",
+   "1 bunch chives@Produce",
+   "1 cucumber@Produce",
+   "8 slices sourdough@Bakery",
+   "1 tsp cracked black pepper@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 400,
+    "u": "g",
+    "item": "smoked mullet fillets",
+    "aisle": "Seafood"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "cream cheese",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "sour cream",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "lemon",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bunch chives",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "cucumber",
+    "aisle": "Produce"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "slices sourdough",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "cracked black pepper",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Flake the smoked mullet into a bowl, taking out every bone and the skin.",
+    "min": 5
+   },
+   {
+    "text": "Beat in the cream cheese, sour cream, lemon zest and juice, chives and pepper until creamy but rough.",
+    "min": 5
+   },
+   {
+    "text": "Toast the sourdough, slice the cucumber and cut the lemon into wedges.",
+    "min": 5
+   },
+   {
+    "text": "Pile the pâté on the toast and serve with cucumber and lemon.",
+    "min": 2
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 2,
+  "make_ahead": "Make the pâté up to 1 day ahead and keep it covered in the fridge; toast just before serving",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Smoked eggplant and white bean pâté on toast (vegetarian)",
+    "ingredients": [
+     {
+      "q": 2,
+      "u": "",
+      "item": "eggplants",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "tin white beans, drained",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "olive oil",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "smoked paprika",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch chives",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "cucumber",
+      "aisle": "Produce"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "slices sourdough",
+      "aisle": "Bakery"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Prick the eggplants and roast whole at 220C until they collapse.",
+      "min": 35
+     },
+     {
+      "text": "Scoop out the flesh and blend with the beans, oil, lemon zest and juice, paprika and a pinch of salt until rough.",
+      "min": 5
+     },
+     {
+      "text": "Toast the sourdough, slice the cucumber and chop the chives.",
+      "min": 5
+     },
+     {
+      "text": "Pile the pâté on the toast and serve with cucumber and chives.",
+      "min": 2
+     }
+    ],
+    "prep_min": 12,
+    "cook_min": 35,
+    "make_ahead": "Make the pâté up to 1 day ahead and keep it covered in the fridge; toast just before serving"
+   }
+  },
+  "vegNote": "Smoky roast eggplant and white bean pâté on toast, with lemon and cucumber"
+ }
+}

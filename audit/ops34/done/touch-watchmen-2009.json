@@ -1,0 +1,44 @@
+{
+ "id": "Watchmen (2009)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the beans when Dan's visitor helps himself to some beans.",
+   "done": true
+  },
+  {
+   "old": "Onion fritters, mint yoghurt. Rorschach's journal goes in the crank file",
+   "new": "Onion fritters, mint yoghurt. Dan and Laurie rescue people from a fire",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Hollis Mason, the first Nite Owl",
+    "Archie the owl ship",
+    "The Doomsday Clock near midnight",
+    "Rorschach's shifting ink mask",
+    "Dr Manhattan on Mars"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Vegetable samosas with tamarind chutney",
+    "note": "Crisp spiced samosas. Who watches the samosas?"
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Mango lassi",
+    "note": "Mango blended with yoghurt, milk and cardamom. Sally Jupiter, still going at 67."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

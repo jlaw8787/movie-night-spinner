@@ -1,0 +1,29 @@
+{
+ "id": "New Year's Eve (2011)",
+ "ops": [
+  {
+   "old": "Midnight garlic prawn linguine",
+   "new": "Stan's rooftop garlic prawn linguine",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "New York knish with spicy brown mustard",
+    "note": "Potato knish with spicy brown mustard. Kim and Hailey disagree about tonight."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Classic champagne cocktail",
+    "note": "Champagne over a sugar cube and bitters. For Auld Lang Syne.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

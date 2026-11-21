@@ -1,0 +1,49 @@
+{
+ "id": "Braveheart (1995)",
+ "ops": [
+  {
+   "old": "Scottish shortbread",
+   "new": "Bannockburn shortbread",
+   "done": true
+  },
+  {
+   "old": "Crisp Scottish oatcakes with sharp cheddar. For Hamish, who trains with stones.",
+   "new": "Crisp oatcakes with sharp cheddar and chutney. For Hamish, who trains with stones.",
+   "done": true
+  },
+  {
+   "old": "Smoked salmon squares, with Murron's thistle kept close",
+   "new": "Smoked salmon squares on lemon butter wholemeal, dill and capers",
+   "done": true
+  },
+  {
+   "old": "Smoked tofu squares, with Murron's thistle kept close",
+   "new": "Smoked tofu squares on lemon butter wholemeal, dill and capers",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Rebel heather ale",
+    "note": "Ale brewed with heather. They'll never take our freedom!",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Wallace and Hamish ride out",
+    "The blue face paint before battle",
+    "Wallace's sword at Bannockburn",
+    "Robert the Bruce and his wavering loyalty",
+    "Longshanks and the trouble with Scotland",
+    "Wallace and Murron's secret wedding",
+    "Wallace sacking York"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

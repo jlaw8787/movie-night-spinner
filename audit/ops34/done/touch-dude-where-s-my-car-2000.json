@@ -1,0 +1,39 @@
+{
+ "id": "Dude, Where's My Car? (2000)",
+ "ops": [
+  {
+   "old": "Tattoo parlour pork spring rolls",
+   "new": "Pork and cabbage spring rolls",
+   "done": true
+  },
+  {
+   "old": "Drive-through lemon chicken and fried rice",
+   "new": "Lemon chicken and fried rice",
+   "done": true
+  },
+  {
+   "old": "Drive-through lychee lime slushie",
+   "new": "Lychee lime slushie",
+   "done": true
+  },
+  {
+   "old": "Crab and cream cheese wontons with sweet chilli. And then? No and then.",
+   "new": "Crab and cream cheese wontons with sweet chilli. Ostriches not included.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Pudding Receipt",
+    "lines": [
+     "Chocolate pudding, two",
+     "Paid, no questions asked"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

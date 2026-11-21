@@ -1,0 +1,66 @@
+{
+ "id": "Commando (1985)",
+ "ops": [
+  {
+   "old": "Braised pork belly in steamed buns with pickles. Let off some steam, Bennett.",
+   "new": "Braised pork belly in steamed buns with pickles. Bennett faked his own death.",
+   "done": true
+  },
+  {
+   "old": "Steamed bao, sticky pork belly, cucumber. Let off some steam, Bennett.",
+   "new": "Steamed bao, sticky pork belly, cucumber. Bennett faked his own death.",
+   "done": true
+  },
+  {
+   "old": "Citrus and garlic mojo chicken grilled with rice. Arius wants Matrix back in Val Verde.",
+   "new": "Citrus and garlic mojo chicken grilled with rice. Arius wants to lead a coup.",
+   "done": true
+  },
+  {
+   "old": "Citrus garlic chicken, black beans and rice. Arius wants Matrix back in Val Verde.",
+   "new": "Citrus garlic chicken, black beans and rice. Arius wants to lead a coup.",
+   "done": true
+  },
+  {
+   "old": "Matrix eats Green Berets for breakfast",
+   "new": "Fried eggs on tortillas with salsa roja, beans and green chilli, served motel style.",
+   "done": true
+  },
+  {
+   "old": "Fried eggs, salsa roja, beans, green chilli. Matrix eats Green Berets for breakfast.",
+   "new": "Fried eggs, salsa roja, beans, green chilli. Served motel style.",
+   "done": true
+  },
+  {
+   "old": "Sponge soaked in three milks under whipped cream. Matrix tells Cindy he let Sully go.",
+   "new": "Sponge soaked in three milks under whipped cream. Cindy tails Sully to the mall.",
+   "done": true
+  },
+  {
+   "old": "Milk-soaked sponge, coconut cream, lime. Matrix tells Cindy he let Sully go.",
+   "new": "Milk-soaked sponge, coconut cream, lime. Cindy tails Sully to the mall.",
+   "done": true
+  },
+  {
+   "old": "Rum, pineapple, lime and grenadine punch. Matrix gets the seaplane up: fly or die.",
+   "new": "Rum, pineapple, lime and grenadine punch. Next stop, Arius's island.",
+   "done": true
+  },
+  {
+   "old": "Dark rum, pineapple, lime, nutmeg. Matrix gets the seaplane up: fly or die.",
+   "new": "Dark rum, pineapple, lime, nutmeg. Next stop, Arius's island.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cold beer, San Nicolas style",
+    "note": "Lager, ice cold in the bottle.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

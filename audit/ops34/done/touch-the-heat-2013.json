@@ -1,0 +1,32 @@
+{
+ "id": "The Heat (2013)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "Two cops. One big family dinner.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ashburn, the by-the-book FBI agent",
+    "Mullins, the loud cop",
+    "The tracheotomy in the restaurant",
+    "Mullins keeping weapons in her fridge",
+    "Mullins' brother Jason, fresh out of prison"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pint of cold lager",
+    "note": "A pint of cold lager. Then Ashburn gives her car away.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

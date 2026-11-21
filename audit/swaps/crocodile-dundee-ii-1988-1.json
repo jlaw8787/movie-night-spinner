@@ -1,0 +1,85 @@
+{
+ "id": "Crocodile Dundee II (1988)",
+ "old": "I am home pavlova",
+ "dish": {
+  "n": "Top End mango fool",
+  "note": "Mango and lime folded through whipped cream, layered with crushed shortbread.",
+  "how": "Blend the flesh of 3 ripe mangoes with the juice of 2 limes and 2 tbsp icing sugar to a smooth purée. Whip 300ml cream to soft peaks, fold in 150g Greek yoghurt and two thirds of the purée, and a teaspoon of Kakadu plum powder if you have it. Layer into 4 glasses with 6 crushed shortbread biscuits and the rest of the purée, and chill 30 minutes.",
+  "shop": [
+   "3 ripe mangoes@Produce",
+   "2 limes@Produce",
+   "2 tbsp icing sugar@Pantry",
+   "300ml thickened cream@Dairy",
+   "150g Greek yoghurt@Dairy",
+   "1 tsp Kakadu plum powder, optional@Pantry",
+   "6 shortbread biscuits@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 3,
+    "u": "",
+    "item": "ripe mangoes",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "limes",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "icing sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 300,
+    "u": "ml",
+    "item": "thickened cream",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "Greek yoghurt",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "Kakadu plum powder, optional",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 6,
+    "u": "",
+    "item": "shortbread biscuits",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Blend the mango, lime juice and icing sugar to a purée.",
+    "min": 5
+   },
+   {
+    "text": "Whip the cream to soft peaks and fold in the yoghurt and most of the purée.",
+    "min": 5
+   },
+   {
+    "text": "Layer into glasses with the crushed shortbread and the rest of the purée.",
+    "min": 5
+   },
+   {
+    "text": "Chill until cold.",
+    "min": 30
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 30,
+  "make_ahead": "Make up to 6 hours ahead",
+  "veg": true,
+  "af": true
+ }
+}

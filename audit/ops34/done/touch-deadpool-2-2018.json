@@ -1,0 +1,23 @@
+{
+ "id": "Deadpool 2 (2018)",
+ "ops": [
+  {
+   "old": "Serve the snacks when X-Force jumps out of the plane.",
+   "new": "Serve the snacks when the team jumps out of the plane.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Vanessa's Skee-Ball token",
+    "Peter, the guy with no powers",
+    "Domino, who just has luck",
+    "Cable with his time device",
+    "Juggernaut in a cell"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

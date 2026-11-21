@@ -1,0 +1,182 @@
+{
+ "id": "Gallipoli (1981)",
+ "old": "Uncle Jack's lamb roast",
+ "dish": {
+  "n": "Corned beef and onion hash with army biscuits",
+  "note": "Tinned corned beef, potato and onion fried crisp, plain biscuits alongside.",
+  "how": "Boil 800g diced potatoes for 8 minutes until just tender and drain well. Fry 2 sliced onions in 2 tbsp oil and 30g butter for 10 minutes until golden, add the potatoes and 2 x 300g tins of corned beef broken up with a fork, and press down. Cook over medium heat for 15 minutes, turning once, until crusty with a splash of Worcestershire sauce. Serve with fried eggs, mustard, and plain water crackers or hard plain biscuits.",
+  "shop": [
+   "800g potatoes, diced@Produce",
+   "2 brown onions@Produce",
+   "2 tbsp vegetable oil@Pantry",
+   "30g butter@Dairy",
+   "2 tins corned beef (300 g each)@Meat",
+   "1 tbsp Worcestershire sauce@Pantry",
+   "4 eggs@Dairy",
+   "1 tbsp wholegrain mustard@Pantry",
+   "1 packet plain water crackers@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 800,
+    "u": "g",
+    "item": "potatoes, diced",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "brown onions",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "vegetable oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 30,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "tins corned beef (300 g each)",
+    "aisle": "Meat"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "Worcestershire sauce",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "",
+    "item": "eggs",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "wholegrain mustard",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "packet plain water crackers",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Boil the diced potatoes until just tender, then drain well.",
+    "min": 10
+   },
+   {
+    "text": "Fry the onions in the oil and butter until golden.",
+    "min": 10
+   },
+   {
+    "text": "Add the potatoes and corned beef, press down and cook, turning once, until crusty. Splash in the Worcestershire sauce.",
+    "min": 15
+   },
+   {
+    "text": "Fry the eggs and serve on top with mustard and the biscuits.",
+    "min": 8
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 28,
+  "make_ahead": "Boil the potatoes the day before to save time",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Potato, onion and baked bean hash with army biscuits (vegetarian)",
+    "ingredients": [
+     {
+      "q": 800,
+      "u": "g",
+      "item": "potatoes, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "brown onions",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "vegetable oil",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 30,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "tin baked beans (400 g)",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "Worcestershire sauce, vegetarian",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "eggs",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "wholegrain mustard",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "packet plain water crackers",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Boil the diced potatoes until just tender, then drain well.",
+      "min": 10
+     },
+     {
+      "text": "Fry the onions in the oil and butter until golden.",
+      "min": 10
+     },
+     {
+      "text": "Add the potatoes and cook, turning once, until crusty. Stir through the beans and sauce and heat through.",
+      "min": 15
+     },
+     {
+      "text": "Fry the eggs and serve on top with mustard and the biscuits.",
+      "min": 8
+     }
+    ],
+    "prep_min": 15,
+    "cook_min": 28,
+    "make_ahead": "Boil the potatoes the day before to save time"
+   }
+  },
+  "vegNote": "Crisp potato and onion hash with baked beans in place of the corned beef"
+ }
+}

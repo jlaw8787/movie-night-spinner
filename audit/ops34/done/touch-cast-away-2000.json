@@ -1,0 +1,39 @@
+{
+ "id": "Cast Away (2000)",
+ "ops": [
+  {
+   "old": "Gotta love crab. Blistered on the coals with lime.",
+   "new": "Crab claws blistered on the coals with lime. Gotta love crab.",
+   "done": true
+  },
+  {
+   "old": "Chuck learns to spear fish. Whole snapper stuffed with lemon and herbs.",
+   "new": "Whole snapper stuffed with lemon and herbs. Chuck learns to spear fish.",
+   "done": true
+  },
+  {
+   "old": "Crisp meringue piled with cream and mango. The one package Chuck never opens.",
+   "new": "Crisp meringue piled with cream and mango. The one box Chuck never opens.",
+   "done": true
+  },
+  {
+   "old": "Pavlova with mango and passionfruit, for the one package Chuck never opens",
+   "new": "Pavlova with mango and passionfruit, for the one box Chuck never opens",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "FedEx package",
+    "lines": [
+     "From the gate of Dick & Bettina",
+     "Never opened"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

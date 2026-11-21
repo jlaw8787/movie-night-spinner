@@ -1,0 +1,139 @@
+{
+ "id": "Red Dog (2011)",
+ "old": "Mining camp sausage rolls",
+ "dish": {
+  "n": "Dampier prawns with lemon aioli",
+  "note": "Cold king prawns with lemon aioli and buttered white bread.",
+  "how": "Beat 150g mayonnaise with 2 crushed garlic cloves, the zest and juice of 1 lemon and a pinch of salt. Pile 1.2kg cooked king prawns on a platter over ice with lemon wedges, and serve with the aioli and 8 slices of buttered white bread. Peel as you go.",
+  "shop": [
+   "1.2kg cooked king prawns@Seafood",
+   "150g whole egg mayonnaise@Pantry",
+   "2 garlic cloves@Produce",
+   "2 lemons@Produce",
+   "8 slices white bread@Bakery",
+   "60g butter@Dairy"
+  ],
+  "ingredients": [
+   {
+    "q": 1.2,
+    "u": "kg",
+    "item": "cooked king prawns",
+    "aisle": "Seafood"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "whole egg mayonnaise",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "garlic cloves",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "lemons",
+    "aisle": "Produce"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "slices white bread",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Beat the mayonnaise with the garlic, lemon zest and juice.",
+    "min": 5
+   },
+   {
+    "text": "Butter the bread and cut into triangles.",
+    "min": 5
+   },
+   {
+    "text": "Pile the prawns on a platter with the lemon wedges and serve with the aioli.",
+    "min": 5
+   }
+  ],
+  "prep_min": 15,
+  "cook_min": 0,
+  "make_ahead": "Make the aioli up to 1 day ahead and keep the prawns cold",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Asparagus with lemon aioli and buttered bread (vegetarian)",
+    "ingredients": [
+     {
+      "q": 3,
+      "u": "",
+      "item": "bunches asparagus",
+      "aisle": "Produce"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "whole egg mayonnaise",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "garlic cloves",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "lemons",
+      "aisle": "Produce"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "slices white bread",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 60,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Beat the mayonnaise with the garlic, lemon zest and juice.",
+      "min": 5
+     },
+     {
+      "text": "Blanch the asparagus for 3 minutes in boiling salted water, then cool in iced water.",
+      "min": 5
+     },
+     {
+      "text": "Butter the bread and cut into triangles.",
+      "min": 5
+     },
+     {
+      "text": "Pile the asparagus on a platter with lemon wedges and serve with the aioli.",
+      "min": 2
+     }
+    ],
+    "prep_min": 15,
+    "cook_min": 2,
+    "make_ahead": "Make the aioli up to 1 day ahead and keep the asparagus chilled"
+   }
+  },
+  "vegNote": "Blanched asparagus spears with the same aioli"
+ }
+}

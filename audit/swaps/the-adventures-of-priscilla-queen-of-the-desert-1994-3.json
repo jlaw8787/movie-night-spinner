@@ -1,0 +1,96 @@
+{
+ "id": "The Adventures of Priscilla, Queen of the Desert (1994)",
+ "old": "Frock on a rock pavlova",
+ "dish": {
+  "n": "Kings Canyon wattleseed and macadamia slice",
+  "note": "Shortbread base, wattleseed caramel and macadamias, dark chocolate top.",
+  "how": "Rub 150g cold butter into 225g plain flour and 60g sugar, press into a lined 20cm square tin and bake at 170C for 20 minutes. Stir a 395g tin of condensed milk, 60g butter, 100g brown sugar and 1 tbsp ground wattleseed in a pot over medium heat for 10 minutes until thick and caramel coloured, fold in 100g chopped macadamias and spread over the base. Cool, pour over 150g melted dark chocolate and chill 60 minutes before cutting into squares.",
+  "shop": [
+   "210g butter@Dairy",
+   "225g plain flour@Pantry",
+   "60g caster sugar@Pantry",
+   "1 tin sweetened condensed milk (395 g)@Pantry",
+   "100g brown sugar@Pantry",
+   "1 tbsp ground wattleseed@Pantry",
+   "100g macadamias, chopped@Pantry",
+   "150g dark chocolate@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 210,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 225,
+    "u": "g",
+    "item": "plain flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "tin sweetened condensed milk (395 g)",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "brown sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "ground wattleseed",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "macadamias, chopped",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "dark chocolate",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Rub the cold butter into the flour and sugar and press into a lined tin.",
+    "min": 10
+   },
+   {
+    "text": "Bake at 170C until pale gold.",
+    "min": 20
+   },
+   {
+    "text": "Cook the condensed milk, butter, sugar and wattleseed until thick, then fold in the macadamias.",
+    "min": 10
+   },
+   {
+    "text": "Spread the caramel over the base and cool.",
+    "min": 10
+   },
+   {
+    "text": "Pour over the melted chocolate and chill, then cut into squares.",
+    "min": 60
+   }
+  ],
+  "prep_min": 30,
+  "cook_min": 80,
+  "make_ahead": "Make up to 3 days ahead; keeps in the fridge",
+  "veg": true,
+  "af": true
+ }
+}

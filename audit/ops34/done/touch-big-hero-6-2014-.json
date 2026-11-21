@@ -1,0 +1,32 @@
+{
+ "id": "Big Hero 6 (2014)",
+ "ops": [
+  {
+   "old": "Braised in soy and star anise till melting, steamed buns with hoisin, Aunt Cass's stress snack",
+   "new": "Braised in soy and star anise till melting, in steamed buns with hoisin",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Japanese milk bread with miso butter",
+    "note": "Soft, pillowy loaf with whipped miso butter, baked fresh at the café."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Care Card",
+    "lines": [
+     "Personal healthcare companion",
+     "Low battery, may act tipsy"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

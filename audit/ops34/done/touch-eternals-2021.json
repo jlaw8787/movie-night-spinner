@@ -1,0 +1,40 @@
+{
+ "id": "Eternals (2021)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pani puri with tamarind water",
+    "note": "Crisp puffed shells filled with potato and chickpeas, tamarind water to pour. Karun films every bite."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Fresh pomegranate and mint juice",
+    "note": "Pomegranate and mint juice. Sprite's illusion fills the glass."
+   },
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Earth's oldest heroes. Still time for dinner.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Eternal Roster",
+    "lines": [
+     "Ten members, one mission",
+     "Sent by Arishem"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

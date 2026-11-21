@@ -1,0 +1,35 @@
+{
+ "id": "Demolition Man (1993)",
+ "ops": [
+  {
+   "old": "Fine dining fish tacos with pico de gallo",
+   "new": "Crisp fish tacos with pico de gallo",
+   "done": true
+  },
+  {
+   "old": "Taco Bell is fine dining now. White tablecloths for the taco course",
+   "new": "Crisp fish in soft tortillas with fresh pico de gallo, from the Franchise Wars winner",
+   "done": true
+  },
+  {
+   "old": "Future fast food chips and salsa",
+   "new": "Corn tortilla chips and charred salsa",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Guacamole with blue corn tostadas",
+    "note": "Creamy guacamole with blue corn tostadas. Dinner and dancing at Taco Bell."
+   },
+   "done": true
+  },
+  {
+   "old": "Hibiscus flower water with lime, iced. Swearing costs a credit.",
+   "new": "Hibiscus flower water with lime, iced. Caffeine is illegal here.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

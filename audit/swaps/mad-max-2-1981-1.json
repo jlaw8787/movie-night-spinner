@@ -1,0 +1,216 @@
+{
+ "id": "Mad Max 2 (1981)",
+ "old": "Tanker convoy beef stew and damper",
+ "dish": {
+  "n": "Tanker run beef and onion stew with mash",
+  "note": "Chuck steak, onion and carrot stewed dark and thick, on buttery mash.",
+  "how": "Brown 800g diced chuck steak in 2 tbsp oil in batches, then soften 3 sliced onions and 2 diced carrots in the same pot. Return the beef with 2 tbsp tomato paste, 1 tbsp Worcestershire sauce, 500ml beef stock and 2 bay leaves, cover and simmer on low for 2 hours until tender. Boil 1kg peeled potatoes, mash with 60g butter and 100ml hot milk, and serve the stew over the mash.",
+  "shop": [
+   "800g diced chuck steak@Meat",
+   "2 tbsp vegetable oil@Pantry",
+   "3 brown onions@Produce",
+   "2 carrots@Produce",
+   "2 tbsp tomato paste@Pantry",
+   "1 tbsp Worcestershire sauce@Pantry",
+   "500ml beef stock@Pantry",
+   "2 bay leaves@Pantry",
+   "1kg potatoes@Produce",
+   "60g butter@Dairy",
+   "100ml full cream milk@Dairy"
+  ],
+  "ingredients": [
+   {
+    "q": 800,
+    "u": "g",
+    "item": "diced chuck steak",
+    "aisle": "Meat"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "vegetable oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 3,
+    "u": "",
+    "item": "brown onions",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "carrots",
+    "aisle": "Produce"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "tomato paste",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "Worcestershire sauce",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 500,
+    "u": "ml",
+    "item": "beef stock",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "bay leaves",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "kg",
+    "item": "potatoes",
+    "aisle": "Produce"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 100,
+    "u": "ml",
+    "item": "full cream milk",
+    "aisle": "Dairy"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Brown the beef in batches in the oil and set aside.",
+    "min": 12
+   },
+   {
+    "text": "Soften the onions and carrots in the same pot.",
+    "min": 8
+   },
+   {
+    "text": "Return the beef with the paste, Worcestershire sauce, stock and bay leaves, cover and simmer low.",
+    "min": 120
+   },
+   {
+    "text": "Boil the potatoes until soft, then mash with the butter and hot milk.",
+    "min": 25
+   },
+   {
+    "text": "Spoon the stew over the mash.",
+    "min": 2
+   }
+  ],
+  "prep_min": 20,
+  "cook_min": 147,
+  "make_ahead": "Better made the day before and reheated",
+  "veg": false,
+  "af": true,
+  "alt": {
+   "veg": {
+    "n": "Tanker run mushroom and onion stew with mash (vegetarian)",
+    "ingredients": [
+     {
+      "q": 600,
+      "u": "g",
+      "item": "field mushrooms, quartered",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "vegetable oil",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 3,
+      "u": "",
+      "item": "brown onions",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "carrots",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "tomato paste",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "Worcestershire sauce, vegetarian",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "vegetable stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "bay leaves",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "kg",
+      "item": "potatoes",
+      "aisle": "Produce"
+     },
+     {
+      "q": 60,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 100,
+      "u": "ml",
+      "item": "full cream milk",
+      "aisle": "Dairy"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the mushrooms in batches in the oil and set aside.",
+      "min": 12
+     },
+     {
+      "text": "Soften the onions and carrots in the same pot.",
+      "min": 8
+     },
+     {
+      "text": "Return the mushrooms with the paste, sauce, stock and bay leaves, cover and simmer low.",
+      "min": 45
+     },
+     {
+      "text": "Boil the potatoes until soft, then mash with the butter and hot milk.",
+      "min": 25
+     },
+     {
+      "text": "Spoon the stew over the mash.",
+      "min": 2
+     }
+    ],
+    "prep_min": 20,
+    "cook_min": 72,
+    "make_ahead": "Better made the day before and reheated"
+   }
+  },
+  "vegNote": "Dark mushroom and onion stew replaces the beef"
+ }
+}

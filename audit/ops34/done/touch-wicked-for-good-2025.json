@@ -1,0 +1,24 @@
+{
+ "id": "Wicked: For Good (2025)",
+ "ops": [
+  {
+   "old": "Glinda's bubble emerald mint fizz",
+   "new": "Emerald City mint fizz",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Yellow Brick Road Pass",
+    "lines": [
+     "Emerald City bound",
+     "Pass by order of the Wizard"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

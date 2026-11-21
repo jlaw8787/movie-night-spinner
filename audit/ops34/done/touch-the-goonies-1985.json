@@ -1,0 +1,37 @@
+{
+ "id": "The Goonies (1985)",
+ "ops": [
+  {
+   "old": "Chunk's root beer float",
+   "new": "Root beer float with long spoons",
+   "done": true
+  },
+  {
+   "old": "Pirate ship treasure chest cake",
+   "new": "Pirate ship chocolate coin cake",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Data's Pinchers of Peril",
+    "The marble bag the Fratellis forgot to check",
+    "Sloth, the Fratellis' big secret",
+    "Mikey's inhaler",
+    "The pirate ship in the cavern"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Chilli cheese hot dog",
+    "note": "Hot dog with chilli and cheese, best eaten while you tell all.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

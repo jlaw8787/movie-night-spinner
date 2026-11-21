@@ -1,0 +1,53 @@
+{
+ "id": "Gallipoli (1981)",
+ "old": "Billy tea",
+ "dish": {
+  "n": "Mena camp sweet black tea",
+  "note": "Strong black tea with condensed milk, poured into tin mugs.",
+  "how": "Boil 1.2 litres of water, pour over 6 black tea bags in a large pot and steep for 5 minutes. Stir 4 tbsp sweetened condensed milk through the pot until dissolved and serve in tin mugs or sturdy enamel mugs.",
+  "shop": [
+   "6 black tea bags@Drinks",
+   "4 tbsp sweetened condensed milk@Dairy",
+   "1.2l water@Pantry"
+  ],
+  "ingredients": [
+   {
+    "q": 6,
+    "u": "",
+    "item": "black tea bags",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "sweetened condensed milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1.2,
+    "u": "l",
+    "item": "water",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Boil the water and pour it over the tea bags in a large pot.",
+    "min": 5
+   },
+   {
+    "text": "Steep for 5 minutes and stir in the condensed milk until dissolved.",
+    "min": 6
+   },
+   {
+    "text": "Pour into mugs.",
+    "min": 1
+   }
+  ],
+  "prep_min": 5,
+  "cook_min": 7,
+  "make_ahead": "Best made fresh",
+  "veg": true,
+  "af": true
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "West Side Story (1961)",
+ "ops": [
+  {
+   "old": "Sunday dinner, then Tonight out on the fire escape",
+   "new": "Garlic roast pork with rice, then Tonight on the fire escape",
+   "done": true
+  },
+  {
+   "old": "Something sweet after closing at the bridal shop",
+   "new": "Baked coconut custard over caramel, after closing at the bridal shop",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pineapple tamarind punch",
+    "note": "Pineapple punch with a tamarind tang, ladled from the bowl."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

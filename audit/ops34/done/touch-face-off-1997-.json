@@ -1,0 +1,44 @@
+{
+ "id": "Face/Off (1997)",
+ "ops": [
+  {
+   "old": "Honey lime peach wedges. Castor eats them for hours.",
+   "new": "Honey lime peach wedges, eaten for hours.",
+   "done": true
+  },
+  {
+   "old": "Castor, as Sean, at a candlelit dinner with Eve",
+   "new": "Lemon thyme roast chicken, carved for a family dinner",
+   "done": true
+  },
+  {
+   "old": "Castor's lavish dinner",
+   "new": "Candlelight lobster and champagne dinner",
+   "done": true
+  },
+  {
+   "old": "Lobster and champagne, he takes over the life",
+   "new": "Lobster and champagne, a borrowed life",
+   "done": true
+  },
+  {
+   "old": "lobster and champagne, he takes over the life",
+   "new": "Lobster and champagne, a borrowed life",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Erewhon Inmate",
+    "lines": [
+     "Face: not his own",
+     "Swapped, do not reissue"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

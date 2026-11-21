@@ -1,0 +1,34 @@
+{
+ "id": "The Sound of Music (1965)",
+ "ops": [
+  {
+   "old": "Dinner at the villa, the children marched in by the bosun's whistle",
+   "new": "Beef simmered in its own broth with root vegetables and apple horseradish. Served at the villa.",
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Seven children, one table, and nobody leaves hungry.",
+   "done": true
+  },
+  {
+   "old": "A pine cone left on Maria's dinner chair",
+   "new": "A pine cone left on the dinner chair",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Party Invitation",
+    "lines": [
+     "The pleasure of your company at the villa",
+     "Salzburg, 1938"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}
