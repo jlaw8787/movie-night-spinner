@@ -2269,7 +2269,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
   {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<=hi)x.v=hi+step(hi)}/* review 34: never the same price either (Thunderball's lobster and stew chicken) */
   {const L=mn(),hot=L.filter(x=>!PF_HAND.test(x.n)),hand=L.filter(x=>PF_HAND.test(x.n)&&!PF_PREM.test(x.n)),loH=minOf(hot),hiS=maxOf(by("s"));
-    for(const x of hand){let c=Infinity;if(loH!=null&&hand.length<L.length){c=Math.min(c,loH-step(loH));if(hiS!=null)c=Math.min(c,Math.max(hiS*1.6,hiS+step(hiS)))}if(x.v>c){x.v=c;x.down=1}}}
+    for(const x of hand){let c=Infinity;if(loH!=null&&hand.length<L.length){c=Math.min(c,loH-step(loH));if(hiS!=null)c=Math.min(c,Math.max(hiS*1.4,hiS+step(hiS)))}if(x.v>c){x.v=c;x.down=1}}}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */
   {let m0=minM();if(m0!=null){const sw=[...by("s"),...by("w")],hi=maxOf(sw);
     if(hi!=null&&hi>=m0){const med=sw.map(x=>x.v).sort((a,b)=>a-b)[Math.floor(sw.length/2)];
