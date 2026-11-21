@@ -2059,3 +2059,9 @@ Josh: port the repeat and food-first checks so they block deploys, scripts/swap-
 - Fit fixes: West Side Story's longer punch note squeezed two prom notes thin (shortened). The Untouchables and There's Something About Mary ran past their panel in print (notes shortened back near their old length). 4 canteen cut notes that were already on fix/review-36 (Alien: Romulus x2, The Green Mile, Walk the Line) shortened so the whole note prints.
 - Checks (22 Nov, 8:24am to 8:53am, on the 181 changed cards; the other 819 are unchanged from fix/review-36's full run): all 33 node tests pass; check-ripple 1,000 films 0 gaps; check-menu-fit, check-price-sense, check-phone-panels 0 problems; check-print-text in 4 batches of 50, 2 overflows fixed; check-phone-fit and check-prep-a4 in chunks of 25, all pass; cut notes sweep on a photo-on dump 0 after fixes; the 7 cards changed during the run checked again on every check. Previews: 162 re-rendered with --stale. check-touch.py (main's dump check) still notes Albert x4 on Hitch, which was already there; it is on the baseline list.
 - Next: Josh gives one go for review 36 plus these ports together. Before the deploy, check main is still 13925e10. Review 37 can take the 645-card repeat list (audit/touch-baseline.json).
+
+## 22 Nov, 9:13am: review 36 plus the review 34 ports live on Josh's go
+
+- Fresh independent re-score before the deploy: docs/review-37.md, 7.2 (186 cards; prices 6.0, notes and template wording 6.5). Most faults were already live; Josh chose to deploy and fix review 37 next. American Beauty's "pass the asparagus" x4 (one from the food-first rewrite) cut before the deploy.
+- main was still 13925e10, fast-forwarded to 9ff3374e. Publish site run 44960708993 failed once on GitHub's side (deploy-pages found no artifact), passed on re-run. app.js, index.html and sw.js match live byte for byte.
+- Next: review 37 fixes in a new chat on a new branch off main.
