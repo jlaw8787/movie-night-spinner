@@ -2023,3 +2023,8 @@ Josh: fix every review 35 item, quick ones first, check each against the real ca
 - main had been replaced at 10:47am by a single commit with no history (40ed7fdb: the old live site plus the Lighter print switch from another chat, branch lighter-print). Its change is folded into fix/review-33: "Lighter print: off/on" in More options, gamma lift 0.62 on A4 pages for Save PDF, Print and Print to fold, saved on the device (localStorage mns-lightprint), test tests/lighter-print.test.cjs. build-data rerun for the stamps.
 - main is now a merge of 40ed7fdb and fix/review-33 with this branch's files, so nothing was force pushed. Publish site run by hand.
 - Next (waiting on Josh): review 34 in a new chat on a new branch off main.
+
+## 22 Nov, 4:44am: reviews 34 and 35 live on Josh's go
+
+- main had moved on (reviews 30 to 33 went live 21 Nov 12:45pm from another chat, plus the lightPrint load hotfix 1dd280aa). Merged main into fix/review-35 (same lightPrint fix on both sides, kept ours), restamped with build-data, all tests pass, page loads clean. main fast-forwarded to 3e9b075e, Publish site run 44937189879 passed. app.js, index.html and sw.js match live byte for byte.
+- Next (waiting on Josh): review 36 fixes (docs/review-36.md, 8.2) in a new chat on a new branch off main.
