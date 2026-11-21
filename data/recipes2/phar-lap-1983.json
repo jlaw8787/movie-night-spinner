@@ -2,202 +2,131 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Flemington Cup day beef party pies",
+   "n": "Members' lawn cold lamb and mint sandwiches",
    "course": "s",
-   "prep_min": 31,
-   "cook_min": 73,
-   "make_ahead": "Filling up to 2 days ahead, bake fresh",
+   "prep_min": 15,
+   "cook_min": 28,
+   "make_ahead": "Roast the lamb the day before; make the sandwiches up to 3 hours ahead under a damp cloth",
    "ingredients": [
     {
      "q": 500,
      "u": "g",
-     "item": "beef mince",
+     "item": "lamb backstrap",
      "aisle": "Meat"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "onion",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
      "u": "tbsp",
-     "item": "plain flour",
+     "item": "olive oil",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
-     "u": "ml",
-     "item": "beef stock",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
+     "q": 8,
      "u": "",
-     "item": "bottle of tomato sauce",
-     "aisle": "Pantry"
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "Worcestershire sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "sheets shortcrust pastry",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "sheet puff pastry",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
+     "q": 60,
+     "u": "g",
+     "item": "butter",
      "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mint sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Dice the onions.",
-     "min": 5
+     "text": "Rub the lamb with oil, salt and pepper and sear in a hot pan.",
+     "min": 6
     },
     {
-     "text": "Brown the mince with the onion.",
+     "text": "Roast at 200C, then rest and chill.",
+     "min": 25
+    },
+    {
+     "text": "Butter the bread, spread half with mint sauce and layer the thinly sliced lamb and mint.",
      "min": 8
     },
     {
-     "text": "Stir in the flour, then the stock, tomato sauce, Worcestershire and plenty of pepper and simmer until thick.",
-     "min": 15
-    },
-    {
-     "text": "Cool the filling.",
-     "min": 30
-    },
-    {
-     "text": "Cut bases from the shortcrust pastry and press into a greased patty pan tin.",
-     "min": 15
-    },
-    {
-     "text": "Fill, top with rounds of puff pastry and brush with egg.",
-     "min": 10
-    },
-    {
-     "text": "Bake at 200C until golden.",
-     "min": 20
-    },
-    {
-     "text": "Serve with tomato sauce.",
-     "min": 1
+     "text": "Top with the remaining bread, trim the crusts and cut into fingers.",
+     "min": 4
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Flemington Cup day party pies (vegetarian)",
-     "prep_min": 56,
-     "cook_min": 48,
-     "make_ahead": "Filling up to 2 days ahead, bake fresh",
+     "n": "Members' lawn minted pea and feta sandwiches (vegetarian)",
      "ingredients": [
       {
-       "q": 500,
+       "q": 300,
        "u": "g",
-       "item": "plant-based mince",
+       "item": "frozen peas",
        "aisle": "Frozen"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
       },
       {
        "q": 1,
        "u": "",
-       "item": "onion",
+       "item": "lemon",
        "aisle": "Produce"
       },
       {
-       "q": 2,
-       "u": "tbsp",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "vegetable stock",
-       "aisle": "Pantry"
-      },
-      {
        "q": 1,
        "u": "",
-       "item": "bottle of tomato sauce",
-       "aisle": "Pantry"
+       "item": "bunch mint",
+       "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
+       "q": 8,
        "u": "",
-       "item": "sheets shortcrust pastry",
-       "aisle": "Frozen"
+       "item": "slices soft white bread",
+       "aisle": "Bakery"
       },
       {
-       "q": 1,
-       "u": "",
-       "item": "sheet puff pastry",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "egg",
+       "q": 60,
+       "u": "g",
+       "item": "butter",
        "aisle": "Dairy"
       }
      ],
      "steps": [
       {
-       "text": "Dice the onion and brown with the plant-based mince in the oil.",
-       "min": 13
+       "text": "Simmer the peas for 3 minutes, drain and cool.",
+       "min": 5
       },
       {
-       "text": "Stir in the flour, then the stock, a good squeeze of tomato sauce, the soy sauce and plenty of pepper and simmer until thick.",
-       "min": 15
+       "text": "Mash the peas with the feta, lemon juice, chopped mint, salt and pepper.",
+       "min": 5
       },
       {
-       "text": "Cool the filling.",
-       "min": 30
+       "text": "Butter the bread and spread half with the pea mash.",
+       "min": 6
       },
       {
-       "text": "Cut bases from the shortcrust pastry and press into a greased patty pan tin.",
-       "min": 15
-      },
-      {
-       "text": "Fill, top with rounds of puff pastry and brush with egg.",
-       "min": 10
-      },
-      {
-       "text": "Bake at 200C until golden.",
-       "min": 20
-      },
-      {
-       "text": "Serve with tomato sauce.",
-       "min": 1
+       "text": "Top with the remaining bread, trim the crusts and cut into fingers.",
+       "min": 4
       }
      ],
-     "af": true
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "Make the sandwiches up to 3 hours ahead under a damp cloth"
     }
    }
   },
