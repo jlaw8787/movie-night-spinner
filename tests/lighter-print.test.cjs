@@ -11,4 +11,6 @@ assert(lut[40]>70,"navy panels come out clearly lighter");
 const kitLine=app.split("\n").filter(l=>/pdf\.addImage\((?!inkLift)\w+\.toDataURL/.test(l)&&!/cvs\.forEach/.test(l));
 assert(app.includes("cvs.push(inkLift(await renderCanvas(el,true)))"),"sheet pages lifted as they render");
 assert(!app.includes("inkLift(cv).toDataURL"),"sheet pages not lifted twice");
+/* 21 Nov: the setting was declared below the line that wires the switch, so the page threw on load (let before init). Declare first */
+assert(app.indexOf("let lightPrint")<app.indexOf("setLightUI();"),"lightPrint is declared before the switch first reads it");
 console.log(`PASS: lighter print switch, remembered choice, gamma lift never darkens, every PDF page lifted once (${kitLine.length} other addImage line(s) left as is).`);
