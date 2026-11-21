@@ -3638,6 +3638,7 @@ function renderCrave(){
 document.querySelectorAll(".more-menu .btn").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>b.closest("details").open=false,150)));
 $("svcSel").addEventListener("change",e=>setSvc(e.target.value));
 $("shopSvc").addEventListener("change",e=>setSvc(e.target.value));
+let lightPrint=false;try{lightPrint=localStorage.getItem("mns-lightprint")==="1"}catch(e){}
 $("lightBtn").addEventListener("click",()=>{lightPrint=!lightPrint;try{localStorage.setItem("mns-lightprint",lightPrint?"1":"0")}catch(e){};setLightUI();$("status").textContent=lightPrint?"Lighter print is on. Save PDF and Print now use less ink.":"Lighter print is off."});setLightUI();
 $("lazyBtn").addEventListener("click",()=>{lazy=!lazy;try{localStorage.setItem("mns-lazy",lazy?"1":"0")}catch(e){};setLazyUI();if(current)show(current,true)});
 $("howBtn").addEventListener("click",showWelcome);
@@ -4308,7 +4309,7 @@ function trimWhite(cv){const W=cv.width,H=cv.height,d=cv.getContext("2d").getIma
   if(t)t++;if(l)l++;if(H-1-b)b--;if(W-1-r)r--;const o=document.createElement("canvas");o.width=r-l+1;o.height=b-t+1;o.getContext("2d").drawImage(cv,l,t,o.width,o.height,0,0,o.width,o.height);return o}
 /* lighter print (21 Nov): an opt-in switch for home printers that print dark. Every PDF page is lifted with a gamma curve before it goes in,
    so navy panels and dark stills come out lighter and use less ink, while white stays white and text stays readable. Screen menus are never touched */
-let lightPrint=false;try{lightPrint=localStorage.getItem("mns-lightprint")==="1"}catch(e){}
+/* lightPrint is declared up by the More options buttons (it was read there before this line: the page stopped loading) */
 const INK_LUT=(()=>{const l=new Uint8ClampedArray(256);for(let v=0;v<256;v++)l[v]=Math.round(255*Math.pow(v/255,.62));return l})();
 function inkLift(cv){if(!lightPrint||!cv||!cv.width)return cv;try{const x=cv.getContext("2d"),im=x.getImageData(0,0,cv.width,cv.height),d=im.data;
   for(let i=0;i<d.length;i+=4){d[i]=INK_LUT[d[i]];d[i+1]=INK_LUT[d[i+1]];d[i+2]=INK_LUT[d[i+2]]}x.putImageData(im,0,0)}catch(e){}return cv}
