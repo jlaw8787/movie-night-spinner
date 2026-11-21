@@ -2290,7 +2290,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
      sandwich or roll main stays near the starters, not two and a half times a pie (Wolf Creek) */
   {const HUM=/\b(broth|soup|porridge|gruel|pottage|stew|chowder)\b/i,L=mn(),pr=L.filter(x=>PF_PREM.test(x.n)&&!HUM.test(x.n)&&!pfCheap(x.n)),lo=minOf(pr);
    if(lo!=null)for(const x of L)if(HUM.test(x.n)&&x.v>=lo)x.v=Math.max(step(lo),lo-step(lo))}
-  {const hiS=maxOf(by("s"));if(hiS!=null)for(const x of mn())if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!PF_PREM.test(x.n)&&x.v>hiS*1.6)x.v=Math.max(hiS+step(hiS),hiS*1.6)}
+  {const hiS=maxOf(by("s"));if(hiS!=null)for(const x of mn())if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!PF_PREM.test(x.n)&&x.v>Math.max(hiS*1.6,bd?bd[0]*1.05:0))x.v=Math.max(hiS+step(hiS),hiS*1.6,bd?bd[0]*1.05:0)}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */
   {let m0=minM();if(m0!=null){const sw=[...by("s"),...by("w")],hi=maxOf(sw);
     if(hi!=null&&hi>=m0){const med=sw.map(x=>x.v).sort((a,b)=>a-b)[Math.floor(sw.length/2)];
