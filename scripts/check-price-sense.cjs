@@ -60,7 +60,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const prem=P.filter(x=>x.k==='m'&&PREM.test(x.n)&&!isCheap(x.n));
    {const pl=mn.filter(x=>!PREM.test(x.n)||isCheap(x.n));if(pl.length){const hi=Math.max(...pl.map(x=>x.v));for(const x of prem)if(!x.house&&x.v<=hi)bad.push(`premium main ${x.n} ${x.raw} not above the plain main at ${hi}`)}}
    /* review 34: a sandwich, roll or burger main sits under the hot plates beside it (Wolf Creek's sausage sandwich over the barra) */
-   {const HAND=/\b(sandwich(es)?|sangas?|toasties?|rolls?|subs?|hoagies?|burgers?|cheeseburgers?|sliders?|wraps?|burritos?|tacos?|hot dogs?)\b/i,hot=mn.filter(x=>!HAND.test(x.n)&&!x.house);if(hot.length&&hot.length<mn.length){const lo=Math.min(...hot.map(x=>x.v));for(const x of mn)if(HAND.test(x.n)&&!PREM.test(x.n)&&!x.house&&x.v>=lo)bad.push(`sandwich main ${x.n} ${x.raw} not under the hot main at ${lo}`)}}
+   {const HAND=/\b(sandwich(es)?|sangas?|toasties?|rolls?|subs?|hoagies?|burgers?|cheeseburgers?|sliders?|wraps?|burritos?|tacos?|hot dogs?)\b/i,hot=mn.filter(x=>!HAND.test(x.n)&&!x.house&&!isCheap(x.n));if(hot.length&&hot.length<mn.length){const lo=Math.min(...hot.map(x=>x.v));for(const x of mn)if(HAND.test(x.n)&&!PREM.test(x.n)&&!x.house&&x.v>=lo)bad.push(`sandwich main ${x.n} ${x.raw} not under the hot main at ${lo}`)}}
    for(const x of P)if(isCheap(x.n)&&!PREM.test(x.n)){
      if(prem.length&&x.v>Math.min(...prem.map(y=>y.v)))bad.push(`cheap bite ${x.n} ${x.raw} above the ${prem[0].n}`);
      if(x.k==='m'&&mn.length>1&&x.v>=Math.max(...mn.filter(y=>!isCheap(y.n)).map(y=>y.v).concat([0]))&&mn.some(y=>!isCheap(y.n)))bad.push(`cheap main ${x.n} ${x.raw} dearest of the mains`)}
