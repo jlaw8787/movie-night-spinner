@@ -1884,3 +1884,7 @@ Josh: quick ones first, then medium, then a fresh re-score. His calls on the way
 - Previews: all 1,000 re-rendered (render-previews --all, 48 min at WORKERS=3), then build-data. Branch pushed, held for Josh's deploy go.
 - Deployed on Josh's go (19 Nov, 12:30pm): main fast-forwarded to fix/review-29 (0fe4d58), Publish site run 44444569955 passed. app.js, index.html and sw.js match live byte for byte.
 - Next (Josh's choice): work through docs/review-30.md, quick ones first, on a new branch, in a new chat.
+
+## 21 Nov, lighter print (branch lighter-print, held for Josh's deploy go)
+
+Josh's home Canon printed the Lebowski menu too dark from his phone. Added an opt-in "Lighter print: off/on" switch in More options. When on, every A4 page going into Save PDF, Print and Print to fold gets a gamma lift (0.62) first: navy panels and stills come out lighter, white stays white, text stays readable. Screen menus are untouched. Remembered on the device (localStorage mns-lightprint), nothing new saved online, so no privacy change. Sheet pages are lifted as they render so the margin colour matches. Table kit print is left as is. Test: tests/lighter-print.test.cjs. Ripple: works for guest and member, all layouts, app wrapper (no web-only bits). To ship: merge lighter-print into main, then run Publish site.
