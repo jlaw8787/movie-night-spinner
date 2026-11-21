@@ -16,7 +16,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
 (async()=>{await new Promise(r=>setTimeout(r,1200));
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),args:['--no-sandbox']});
  const ctx=await b.newContext({viewport:{width:1280,height:900},serviceWorkers:'block'});
- await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
+ await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0');window.__mnsNoDesk=1});/* review 35: checks read the whole card, not the desktop page or half view */
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||u.protocol==='data:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(3600000);
  await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
@@ -52,7 +52,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    /* 4. notes: the line after a dish name, when it is not a price, another dish or a heading */
    {const m=current.printMenu||{},ds=['s','m','w','d'].flatMap(k=>(m[k]||[]).filter(x=>x&&!x.house).map(x=>x.label||x.n));
     const lines=txt.split(/\n+/).map(s=>s.trim()).filter(Boolean),names=new Set(ds.map(norm));
-    const isPrice=s=>/^(\$|£|€|₩|¥|R\$ ?|L\. ?|RM ?)?[\d.,]+\s?(p|d|F|kr|¢|c|cr|crowns|silver|gp)?$|^\d+s( \d+d)?$|^\d+ gp \d+$|^\d+s \d+d$|^\d+\/(\d+|-)$|^\d+¢\s?TIX$|^\d+ (Galleons?|Sickles?)( \d+ Sickles?)?$|^\d+ (denarii|taels|coins?)$/.test(s)||/^[\d,. ]+ [A-Za-zčö][A-Za-zčö ]*$|^(Rs |฿|Rp |S\/ )[\d,.]+$/.test(s)&&s.length<26;
+    const isPrice=s=>/^(\$|£|€|₩|¥|R\$ ?|L\. ?|RM ?)?[\d.,]+\s?(p|d|F|kr|¢|c|cr|crowns|silver|gp)?$|^\d+s( \d+d)?$|^\d+ gp \d+$|^\d+s \d+d$|^\d+\/(\d+|-)$|^\d+¢\s?TIX$|^\d+ (Galleons?|Sickles?)( \d+ Sickles?)?$|^\d+ (denarii|taels|coins?)$|^(Issue|Trade|Ration|Free)$|^\d+ (tins?|boots?|batter(y|ies)|gal( fuel| guzz)?|bullets?)$/.test(s)||/^[\d,. ]+ [A-Za-zčö][A-Za-zčö ]*$|^(Rs |฿|Rp |S\/ )[\d,.]+$/.test(s)&&s.length<26;
     for(const d of ds){const i=lines.findIndex(l=>norm(l)===norm(d));if(i<0)continue;let j=i+1;while(j<lines.length&&isPrice(lines[j]))j++;const nx=lines[j]||'';
       if(!nx||names.has(norm(nx))||/^[A-Z0-9 ,.&'!-]{3,}$/.test(nx)||/^\d+ cr$/.test(nx)||/^GUESTS\b/i.test(nx)||/^(cold |hot )?drinks$/i.test(nx))continue;/* no note slot here (a name-only board): not counted */
       const w=nx.replace(/[^\w' ]/g,' ').trim().split(/\s+/).filter(Boolean).length;if(w<6)bad.push(`thin note on ${d}: "${nx}"`)}}

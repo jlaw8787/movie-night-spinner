@@ -999,7 +999,7 @@ function cardSmallPx(){const key=renderId+"|"+card.innerHTML.length;if(card._smk
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   /* review 35: on desktop a card whose notes would print under 11px when the whole sheet fits the column shows a page (a wide page in two
      halves) at a time with the dots, so notes read at 11px or more (Thunderdome 7px, Goldfinger and Lebowski 7.3px, Jurassic Park 8.4px) */
-  pvDesk=false;if(tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<11}
+  pvDesk=false;if(!window.__mnsNoDesk&&tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<11}
   /* review 34: on desktop a two or three page menu shrunk whole into the column printed its notes at 4 to 7px (Grease, Gallipoli):
      when the whole sheet would scale under 0.62 it shows one page at a time at column width, with the dots to turn the page */
   const deskFaces=tab==="menu"&&!swipeW()&&(pvDesk||card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62);
@@ -2403,7 +2403,9 @@ function priceFix0(root,menu,f,fl,era,fmt){
   {const S=by("s"),hiS=S.length?Math.max(...S.map(x=>x.c)):null,RS=S.filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))),loS=RS.length?Math.min(...RS.map(x=>x.c)):null;
    if(hiS!=null)for(const x of by("w"))if(x!==keep&&pfCheap(x.n)&&!pfPrem(x.n)&&x.c>hiS)x.c=hiS>step(hiS)?cleanDown(hiS-step(hiS)*.5):hiS;
    if(loS!=null)for(const x of by("d"))if(x!==keep&&PF_COCK.test(x.n)&&x.c<loS)x.c=clean(loS)<loS?clean(loS+step(loS)):clean(loS)
-   {const W=by("w"),B=by("s").filter(x=>PF_BAR.test(x.n)&&!pfPrem(x.n)),hiW=W.length?Math.max(...W.map(x=>x.c),...B.map(x=>x.c)):null;if(hiW!=null)for(const x of by("d"))if(x!==keep&&PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.c>hiW)x.c=cleanDown(hiW)}}
+   {const W=by("w"),B=by("s").filter(x=>PF_BAR.test(x.n)&&!pfPrem(x.n)),hiW=W.length?Math.max(...W.map(x=>x.c),...B.map(x=>x.c)):null;if(hiW!=null)for(const x of by("d"))if(x!==keep&&PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.c>hiW)x.c=cleanDown(hiW)}
+   /* review 35: and after that, a bar snack is still never dearer than the cheapest drink (Elm Street's chips and dip at 75c beside a 70c drink) */
+   {const D=by("d");if(D.length){const lo=Math.min(...D.map(x=>x.c));for(const x of by("s"))if(x!==keep&&PF_BAR.test(x.n)&&!pfPrem(x.n)&&x.c>lo)x.c=cleanDown(lo)}}}
   const cur=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;
   for(const x of O)x.c=x.v<1?Math.max(.05,Math.round(x.v*20)/20):Math.abs(x.v-x.v0)<.001?x.v:clean(x.v);
   if(cur){let n=0;const ws=(m,i)=>m[i]||"";
@@ -4181,6 +4183,9 @@ async function renderCanvas(src,forPrint){
   const stage=document.createElement("div"),land=src.classList.contains("fmt");
   stage.style.cssText=`position:fixed;left:-20000px;top:0;width:${+src.dataset.w||(land?1123:794)}px;height:${+src.dataset.h||(land?794:1123)}px;`;
   const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;if(forPrint&&land)clone.classList.add("for-print");
+  /* review 35: the page or half view (phones, and desktop since review 35) moves a sign and hides words that cross the view's edge; the copy for
+     print and Save PDF is always the whole page as drawn */
+  clone.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});clone.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));
   /* review 19: a hand-built card with rounded outer corners (Coming to America, Pulp Fiction, Chef) printed its frame in the edge colour with white
      corners, because the print copy swaps the dark surround for a white border. Those cards keep the surround the screen shows */
   if(forPrint&&land&&!src.classList.contains("fx-paper")){const wall=[...src.children].find(c=>!c.classList.contains("fx-back")&&getComputedStyle(c).display!=="none");
@@ -4682,7 +4687,7 @@ function printPage(el,w,h){const land=w>h,W=land?1120:792,H=land?790:1118,k=Math
 function fillPrint(){
   const pa=$("printArea");pa.innerHTML="";if(!current)return;
   if(card.classList.contains("fx-paper")){card.querySelectorAll(".fx-face").forEach(fc=>{const c=card.cloneNode(false);c.hidden=false;c.innerHTML=fc.innerHTML;pa.appendChild(printPage(c,parseFloat(fc.style.width)||+card.dataset.w,parseFloat(fc.style.height)||+card.dataset.h))})}
-  else{const c=card.cloneNode(true);c.hidden=false;const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
+  else{const c=card.cloneNode(true);c.hidden=false;c.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});c.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
   for(const el of prepParts()){const st=document.createElement("div");st.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
     const c=el.cloneNode(true);c.hidden=false;c.style.transform="none";c.classList.add("pp-a4");prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);st.remove();pa.appendChild(printPage(c,794,1123))}
 }

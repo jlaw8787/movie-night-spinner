@@ -8,7 +8,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
 (async()=>{await new Promise(r=>setTimeout(r,1200));const PX=process.env.HTTPS_PROXY||process.env.https_proxy;
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),args:['--no-sandbox',...(PX?['--proxy-server=https='+PX.replace(/^https?:\/\//,'')]:[])]});
  const ctx=await b.newContext({viewport:{width:1440,height:900},serviceWorkers:'block',ignoreHTTPSErrors:true});
- await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
+ await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0');window.__mnsNoDesk=1});/* review 35: checks read the whole card, not the desktop page or half view */
  const PHOTOS=process.env.MNS_PHOTOS!=='0';
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||/fonts\.(googleapis|gstatic)\.com/.test(u.hostname)||(PHOTOS&&u.hostname==='image.tmdb.org')||u.protocol==='data:'||u.protocol==='blob:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(7200000);

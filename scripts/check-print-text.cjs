@@ -10,7 +10,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
 (async()=>{await new Promise(r=>setTimeout(r,1200));const PX=process.env.HTTPS_PROXY||process.env.https_proxy;
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),args:['--no-sandbox',...(PX?['--proxy-server=https='+PX.replace(/^https?:\/\//,'')]:[])]});
  const ctx=await b.newContext({viewport:{width:1440,height:900},serviceWorkers:'block',ignoreHTTPSErrors:true});
- await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
+ await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0');window.__mnsNoDesk=1});/* review 35: checks read the whole card, not the desktop page or half view */
  /* web fonts and the TMDB photos load: the fit passes depend on both (review 16: Mad Max 2's lab poster is taller with its photo in,
     and the check passed without it while the note was hidden). MNS_PHOTOS=0 blocks the photos for a quick run. The export libraries are not needed. */
  const PHOTOS=process.env.MNS_PHOTOS!=='0';

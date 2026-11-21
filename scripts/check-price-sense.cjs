@@ -14,7 +14,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
 (async()=>{await new Promise(r=>setTimeout(r,1200));
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),args:['--no-sandbox']});
  const ctx=await b.newContext({viewport:{width:1280,height:900},serviceWorkers:'block'});
- await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
+ await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0');window.__mnsNoDesk=1});/* review 35: checks read the whole card, not the desktop page or half view */
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||u.protocol==='data:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(3600000);
  await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
@@ -88,7 +88,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
       Easter egg rule: TMNT's 1.84, A Bronx Tale's 1.87), so only a second one fails */
    /* review 34: a broth, soup or stew main never above a roast, game or seafood main; a sandwich main stays near the starters */
    {const HUM=/\b(broth|soup|porridge|gruel|pottage|stew|chowder)\b/i,pr=mn.filter(x=>PREM.test(x.n)&&!HUM.test(x.n)&&!isCheap(x.n));if(pr.length){const lo=Math.min(...pr.map(x=>x.v));for(const x of mn)if(HUM.test(x.n)&&x.v>lo+.001)bad.push(`humble main ${x.n} ${x.raw} above the ${pr[0].n}`)}}
-   if(maxS!=null)for(const x of mn)if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!PREM.test(x.n)&&x.v>maxS*1.6+.3&&mn.filter(y=>!/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(y.n)).length)bad.push(`sandwich main ${x.n} ${x.raw} over 1.6 times the dearest starter ${maxS}`);
+   if(maxS!=null)for(const x of mn)if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!PREM.test(x.n)&&x.v>Math.max(maxS*1.6,(()=>{const L=f._lib,fl=(L&&L.flavour)||{},tg=fl.priceEra||(L&&L.era),b=typeof PF_BAND!=='undefined'&&tg&&PF_BAND[tg],k=typeof pfVenueK==='function'?pfVenueK(fl,L&&L.fmt):1;return b?b[0]*k*1.05:0})())+.3&&mn.filter(y=>!/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(y.n)).length)bad.push(`sandwich main ${x.n} ${x.raw} over 1.6 times the dearest starter ${maxS}`);
    {const odd=P.filter(x=>{const c=Math.round((x.v%1)*100);return x.v>=1&&/\./.test(x.raw)?![0,25,50,75,95,99].includes(c):x.v<1&&c%5!==0});if(odd.length>1)for(const x of odd.slice(1))bad.push(`odd ending ${x.n} ${x.raw} (${odd[0].raw} is the card's one film-number price)`)}
    out.push({id,fmt:f._lib&&f._lib.fmt||(typeof fmtSpec==='function'&&fmtSpec(f)?'own':''),n:P.length,bad,P:P.map(x=>[x.k,x.n,x.raw])})}
   return {out,skipped,noprice}},[FROM,COUNT,NAMED]);

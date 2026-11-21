@@ -51,7 +51,7 @@ async function snap(page,id){
   let done=0,fail=[];const t0=Date.now(),queue=todo.slice();
   async function worker(){
     const ctx=await browser.newContext({viewport:{width:1400,height:1300},deviceScaleFactor:2,ignoreHTTPSErrors:!!PX});
-    await ctx.addInitScript(()=>{try{localStorage.setItem('mns-welcome','1')}catch(e){}});
+    await ctx.addInitScript(()=>{try{localStorage.setItem('mns-welcome','1')}catch(e){}window.__mnsNoDesk=1});/* review 35: the whole card, not the desktop page view */
     const page=await ctx.newPage();
     while(queue.length){const id=queue.shift();
       try{const tmp=await snap(page,id);
