@@ -220,228 +220,59 @@
    }
   },
   {
-   "n": "Phuoc Tuy prawn rice paper rolls",
+   "n": "Corned beef and pickle sandwiches",
    "course": "s",
-   "prep_min": 37,
-   "cook_min": 5,
-   "make_ahead": "Up to 4 hours, keep covered with damp paper towel",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "Make up to 2 hours ahead, wrapped in the fridge",
    "ingredients": [
     {
-     "q": 100,
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
      "u": "g",
-     "item": "rice vermicelli",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 340,
+     "u": "g",
+     "item": "tin corned beef",
      "aisle": "Pantry"
     },
     {
-     "q": 12,
-     "u": "",
-     "item": "cooked king prawns",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "carrot",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "Lebanese cucumber",
-     "aisle": "Produce"
-    },
-    {
-     "q": 12,
-     "u": "",
-     "item": "rice paper sheets",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bunch of mint",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bunch of coriander",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
+     "q": 4,
      "u": "tbsp",
-     "item": "fish sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "caster sugar",
+     "item": "mustard pickles",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "",
-     "item": "garlic clove",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "red chilli",
+     "item": "small iceberg lettuce",
      "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Soak the vermicelli in hot water, then drain.",
-     "min": 5
+     "text": "Butter the bread.",
+     "min": 3
     },
     {
-     "text": "Halve the prawns lengthways.",
+     "text": "Lay the sliced corned beef over half the slices, spread with pickles and add shredded lettuce.",
      "min": 6
     },
     {
-     "text": "Julienne the carrot and cucumber.",
-     "min": 8
-    },
-    {
-     "text": "Dip the rice paper sheets one at a time in warm water for a few seconds.",
-     "min": 4
-    },
-    {
-     "text": "Lay prawns, noodles, vegetables, mint and coriander on each and roll tightly.",
-     "min": 15
-    },
-    {
-     "text": "Mix the fish sauce, lime juice, sugar, water, garlic and chilli for dipping.",
-     "min": 4
+     "text": "Top, press down and cut into quarters.",
+     "min": 3
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Phuoc Tuy tofu rice paper rolls",
-     "prep_min": 31,
-     "cook_min": 13,
-     "make_ahead": "Up to 4 hours, keep covered with damp paper towel",
-     "ingredients": [
-      {
-       "q": 100,
-       "u": "g",
-       "item": "rice vermicelli",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "firm tofu",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "carrot",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "Lebanese cucumber",
-       "aisle": "Produce"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "rice paper sheets",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bunch of mint",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bunch of coriander",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "garlic clove",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "red chilli",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Soak the vermicelli in hot water, then drain.",
-       "min": 5
-      },
-      {
-       "text": "Cut the tofu into strips, fry in the oil until golden and toss with a tablespoon of the soy.",
-       "min": 8
-      },
-      {
-       "text": "Julienne the carrot and cucumber.",
-       "min": 8
-      },
-      {
-       "text": "Dip the rice paper sheets one at a time in warm water for a few seconds.",
-       "min": 4
-      },
-      {
-       "text": "Lay tofu, noodles, vegetables, mint and coriander on each and roll tightly.",
-       "min": 15
-      },
-      {
-       "text": "Mix the rest of the soy, lime juice, sugar, water, garlic and chilli for dipping.",
-       "min": 4
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "D Company field kitchen beef and beans",
@@ -682,222 +513,87 @@
    }
   },
   {
-   "n": "Delta Company caramel pork",
+   "n": "Delta Company curried sausages",
    "course": "m",
-   "prep_min": 20,
-   "cook_min": 95,
-   "make_ahead": "Braise up to 2 days ahead and reheat; skim the fat off the cold braise first",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Make the curry up to 2 days ahead and reheat; cook the rice on the night",
    "ingredients": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "pork belly, skin off",
+     "q": 8,
+     "u": "",
+     "item": "thick beef sausages",
      "aisle": "Meat"
     },
     {
-     "q": 80,
-     "u": "g",
-     "item": "brown sugar",
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mild curry powder",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 2,
      "u": "tbsp",
-     "item": "fish sauce",
+     "item": "plain flour",
      "aisle": "Pantry"
     },
     {
      "q": 500,
      "u": "ml",
-     "item": "coconut water",
-     "aisle": "Drinks"
+     "item": "beef stock",
+     "aisle": "Pantry"
     },
     {
-     "q": 3,
-     "u": "",
-     "item": "red Asian shallots",
-     "aisle": "Produce"
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
     },
     {
-     "q": 3,
-     "u": "",
-     "item": "garlic cloves",
-     "aisle": "Produce"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
+     "q": 2,
+     "u": "tbsp",
+     "item": "sultanas",
+     "aisle": "Pantry"
     },
     {
      "q": 300,
      "u": "g",
-     "item": "jasmine rice",
+     "item": "white rice",
      "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "Lebanese cucumber",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "spring onions",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "red chilli",
-     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Boil the eggs for 8 minutes, cool and peel. Cut the pork into 4cm pieces.",
+     "text": "Brown the sausages, then cut into thick slices.",
      "min": 10
     },
     {
-     "text": "Melt the sugar in a heavy pot over medium heat until dark amber, then stir in the sliced shallots and garlic.",
+     "text": "Soften the onion and carrot, then stir in the curry powder, flour and stock.",
      "min": 8
     },
     {
-     "text": "Add the pork and toss for 5 minutes, then add the fish sauce and coconut water.",
-     "min": 8
+     "text": "Add the sausages, peas and sultanas and simmer until thick, cooking the rice alongside.",
+     "min": 15
     },
     {
-     "text": "Simmer gently, half covered, for 1 hour 15 minutes, adding the eggs for the last 20 minutes, until the pork is tender and the sauce sticky.",
-     "min": 75
-    },
-    {
-     "text": "Simmer the rice with 450ml water, covered, for 12 minutes, then rest for 5.",
-     "min": 17
-    },
-    {
-     "text": "Serve with the rice, sliced cucumber, spring onion and chilli.",
-     "min": 3
+     "text": "Serve the curry over the rice.",
+     "min": 2
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Delta Company caramel tofu and eggplant",
-     "prep_min": 20,
-     "cook_min": 40,
-     "make_ahead": "Braise up to 2 days ahead and reheat; skim the fat off the cold braise first",
-     "ingredients": [
-      {
-       "q": 400,
-       "u": "g",
-       "item": "firm tofu",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "large eggplant",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 80,
-       "u": "g",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 500,
-       "u": "ml",
-       "item": "coconut water",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "red Asian shallots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "garlic cloves",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "jasmine rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "Lebanese cucumber",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "spring onions",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "red chilli",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Boil the eggs for 8 minutes, cool and peel. Cut the tofu and eggplant into chunks.",
-       "min": 10
-      },
-      {
-       "text": "Fry the tofu and eggplant in the oil until golden and lift out.",
-       "min": 10
-      },
-      {
-       "text": "Melt the sugar in the pot over medium heat until dark amber, then stir in the sliced shallots and garlic.",
-       "min": 8
-      },
-      {
-       "text": "Add the soy, coconut water, tofu, eggplant and eggs and simmer for 20 minutes until sticky.",
-       "min": 20
-      },
-      {
-       "text": "Simmer the rice with 450ml water, covered, for 12 minutes, then rest for 5.",
-       "min": 17
-      },
-      {
-       "text": "Serve with the rice, sliced cucumber, spring onion and chilli.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "Ration pack chocolate orange pots",

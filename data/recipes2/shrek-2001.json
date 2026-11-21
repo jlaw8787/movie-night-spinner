@@ -85,51 +85,39 @@
   {
    "n": "Onion dip",
    "course": "s",
-   "prep_min": 17,
-   "cook_min": 20,
-   "make_ahead": "Assemble up to 1 day, bake to serve",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Make the dip up to 2 days ahead, covered in the fridge; warm gently to serve",
    "ingredients": [
     {
-     "q": 250,
-     "u": "g",
-     "item": "spinach",
+     "q": 3,
+     "u": "",
+     "item": "brown onions",
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "jar artichoke hearts",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
+     "q": 40,
      "u": "g",
-     "item": "cream cheese",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 100,
+     "q": 250,
      "u": "g",
      "item": "sour cream",
      "aisle": "Dairy"
     },
     {
-     "q": 50,
+     "q": 125,
      "u": "g",
-     "item": "parmesan",
+     "item": "cream cheese",
      "aisle": "Dairy"
     },
     {
-     "q": 2,
-     "u": "",
-     "item": "garlic cloves",
-     "aisle": "Produce"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "mozzarella",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
     },
     {
      "q": 1,
@@ -140,20 +128,20 @@
    ],
    "steps": [
     {
-     "text": "Wilt the spinach, squeeze dry and chop.",
-     "min": 8
+     "text": "Slice the onions thinly.",
+     "min": 5
     },
     {
-     "text": "Mix with chopped artichokes, cream cheese, sour cream, parmesan and crushed garlic.",
-     "min": 8
+     "text": "Cook the onions slowly in the butter with a pinch of salt until deep golden.",
+     "min": 35
     },
     {
-     "text": "Top with mozzarella and bake at 200C until bubbling.",
-     "min": 20
+     "text": "Stir the onions into the sour cream and cream cheese with the mustard and black pepper.",
+     "min": 3
     },
     {
-     "text": "Serve with corn chips.",
-     "min": 1
+     "text": "Warm through gently and serve with corn chips.",
+     "min": 5
     }
    ],
    "veg": true,

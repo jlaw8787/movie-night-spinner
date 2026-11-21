@@ -1,0 +1,29 @@
+{
+ "id": "Notting Hill (1999)",
+ "ops": [
+  {
+   "set": "flavour.venue",
+   "value": "Max and Bella's Dinner Party",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Honey's Birthday, Notting Hill",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Place Card",
+    "lines": [
+     "Anna, next to William",
+     "Last brownie to the saddest story"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

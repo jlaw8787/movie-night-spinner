@@ -228,7 +228,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "swede, diced",
+     "item": "turnip, diced",
      "aisle": "Produce"
     },
     {
@@ -260,7 +260,7 @@
      "min": 60
     },
     {
-     "text": "Add the leeks, carrots and swede and simmer for another hour.",
+     "text": "Add the leeks, carrots and turnip and simmer for another hour.",
      "min": 60
     },
     {
@@ -326,7 +326,7 @@
       {
        "q": 1,
        "u": "",
-       "item": "swede, diced",
+       "item": "turnip, diced",
        "aisle": "Produce"
       },
       {
@@ -375,189 +375,145 @@
    }
   },
   {
-   "n": "Scottish shortbread",
+   "n": "Bramble crowdie with toasted oats",
    "course": "w",
-   "prep_min": 15,
-   "cook_min": 45,
-   "make_ahead": "Keeps 1 week airtight",
+   "prep_min": 10,
+   "cook_min": 4,
+   "make_ahead": "Toast the oats up to 3 days ahead, airtight; layer just before serving",
    "ingredients": [
     {
-     "q": 250,
+     "q": 60,
      "u": "g",
-     "item": "butter, softened",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 130,
-     "u": "g",
-     "item": "caster sugar, plus extra to sprinkle",
+     "item": "rolled oats",
      "aisle": "Pantry"
     },
     {
      "q": 300,
      "u": "g",
-     "item": "plain flour",
+     "item": "crowdie or ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "heather or local honey",
      "aisle": "Pantry"
     },
     {
-     "q": 60,
+     "q": 250,
      "u": "g",
-     "item": "rice flour",
-     "aisle": "Pantry"
+     "item": "blackberries",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Beat the butter with most of the sugar until pale, then work in the flour and rice flour.",
-     "min": 10
+     "text": "Toast the oats in a dry pan until golden, then cool.",
+     "min": 4
     },
     {
-     "text": "Press into a tin and prick all over.",
-     "min": 5
+     "text": "Beat the crowdie with the honey until smooth.",
+     "min": 3
     },
     {
-     "text": "Bake at 150C for 40 minutes.",
-     "min": 40
-    },
-    {
-     "text": "Cut while warm and sprinkle with caster sugar.",
-     "min": 5
+     "text": "Layer into glasses with the blackberries and oats, finishing with berries and honey.",
+     "min": 7
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Wallace's heather honey whisky toddy",
+   "n": "Wallace's hot spiced heather mead",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 3,
-   "make_ahead": "Stud the lemon wheels with the cloves up to 1 day ahead and keep chilled; build the glasses and top with just-boiled water to serve",
+   "prep_min": 3,
+   "cook_min": 8,
+   "make_ahead": "Warm just before serving",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "lemon wheels",
-     "aisle": "Produce"
-    },
-    {
-     "q": 12,
-     "u": "",
-     "item": "whole cloves",
-     "aisle": "Spices"
-    },
-    {
-     "q": 160,
+     "q": 750,
      "u": "ml",
-     "item": "Scotch whisky",
+     "item": "mead",
      "aisle": "Bottle shop"
     },
     {
      "q": 4,
-     "u": "tbsp",
-     "item": "heather honey",
+     "u": "",
+     "item": "whole cloves",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "",
-     "item": "lemon, juiced",
+     "item": "lemon",
      "aisle": "Produce"
     },
     {
-     "q": 600,
-     "u": "ml",
-     "item": "just-boiled water",
+     "q": 1,
+     "u": "tbsp",
+     "item": "heather or local honey",
      "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "cinnamon sticks",
-     "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Stud the lemon wheels with the cloves.",
-     "min": 5
-    },
-    {
-     "text": "Into four heatproof glasses put whisky, honey and lemon juice.",
-     "min": 2
-    },
-    {
-     "text": "Top with just-boiled water and stir until the honey dissolves. Add a studded lemon wheel and a cinnamon stick to each.",
+     "text": "Peel two strips of lemon peel.",
      "min": 3
+    },
+    {
+     "text": "Warm the mead with the cloves and peel until steaming, without boiling.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the honey and pour into cups.",
+     "min": 2
     }
    ],
    "veg": true,
    "af": false,
    "alt": {
     "af": {
-     "n": "Freedom heather honey and lemon tea",
-     "prep_min": 10,
-     "cook_min": 3,
-     "make_ahead": "Stud the lemon wheels with the cloves up to 1 day ahead and keep chilled; steep the tea and top up the glasses just before serving",
+     "n": "Hot spiced apple and honey (alcohol-free)",
+     "prep_min": 3,
+     "cook_min": 8,
+     "make_ahead": "Warm just before serving",
      "ingredients": [
       {
-       "q": 4,
-       "u": "",
-       "item": "lemon wheels",
-       "aisle": "Produce"
+       "q": 750,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
       },
       {
-       "q": 12,
+       "q": 4,
        "u": "",
        "item": "whole cloves",
        "aisle": "Pantry"
       },
       {
-       "q": 2,
-       "u": "",
-       "item": "smoky black tea bags (lapsang souchong)",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "heather honey",
-       "aisle": "Pantry"
-      },
-      {
        "q": 1,
        "u": "",
-       "item": "lemon, juiced",
+       "item": "lemon",
        "aisle": "Produce"
       },
       {
-       "q": 600,
-       "u": "ml",
-       "item": "just-boiled water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "cinnamon sticks",
+       "q": 1,
+       "u": "tbsp",
+       "item": "heather or local honey",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Stud the lemon wheels with the cloves.",
-       "min": 5
+       "text": "Peel two strips of lemon peel.",
+       "min": 3
       },
       {
-       "text": "Steep the tea bags in the just-boiled water for 3 minutes, then lift out.",
-       "min": 4
+       "text": "Warm the apple juice with the cloves and peel until steaming.",
+       "min": 8
       },
       {
-       "text": "Into four heatproof glasses put the honey and lemon juice.",
-       "min": 2
-      },
-      {
-       "text": "Top with the hot tea and stir until the honey dissolves. Add a studded lemon wheel and a cinnamon stick to each.",
+       "text": "Stir in the honey and pour into cups.",
        "min": 2
       }
      ]

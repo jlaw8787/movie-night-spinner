@@ -185,7 +185,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   let flow="";
   ["s","m","w","d"].forEach((k,ci)=>{const items=(m[k]||[]).slice(0,4);if(!items.length)return;
     flow+=`<div style="break-inside:avoid">${secHead((PLACE.k==="store"?LAB:PLACE.k==="home"?["Little bites","From the kitchen","Something sweet","Tea and drinks"]:["To start","Plates","Sweets","Drinks"])[ci])}${row(items[0],ci,0)}</div>`+items.slice(1).map((it,ii)=>row(it,ci,ii+1)).join("")+`<div style="height:.4em"></div>`});
-  if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;text-align:center;font-size:max(15px,.74em);line-height:1.35;color:${ink};margin:.1em 0 .4em"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">The bell for the picture </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
+  if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;text-align:center;font-size:max(15px,.74em);line-height:1.35;color:${ink};margin:.1em 0 .4em"><span style="display:block;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">The bell for the picture</span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.62em);line-height:1.35;color:${ink};opacity:.9"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">Overheard at the next table </span>${winks.map(esc).join(". ")}.</div>`;
   /* review 32: the still gives the menu more height on a long card, so each note prints whole */

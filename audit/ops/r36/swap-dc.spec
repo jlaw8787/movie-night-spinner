@@ -1,0 +1,16 @@
+[{"id":"Danger Close: The Battle of Long Tan (2019)","old":"Delta Company caramel pork","new":{
+ "n":"Delta Company curried sausages",
+ "note":"Beef sausages simmered in a mild curry gravy with peas and sultanas, over rice. A hot plate before the long patrol.",
+ "how":"Brown 8 thick beef sausages in a large pan, then cut into thick slices. Soften 1 diced onion and 1 diced carrot in the same pan for 5 minutes, stir in 2 tbsp mild curry powder and 2 tbsp plain flour, then 500ml beef stock. Add the sausages, 1 cup frozen peas and 2 tbsp sultanas and simmer 15 minutes until thick. Serve over 300g cooked white rice.",
+ "shop":["8 thick beef sausages@Meat","1 brown onion@Produce","1 carrot@Produce","1 jar mild curry powder@Pantry","1 packet plain flour@Pantry","500ml beef stock@Pantry","1 bag frozen peas@Frozen","1 packet sultanas@Pantry","300g white rice@Pantry"],
+ "r2":{"prep_min":10,"cook_min":30,"make_ahead":"Make the curry up to 2 days ahead and reheat; cook the rice on the night","ingredients":[{"q":8,"u":"","item":"thick beef sausages","aisle":"Meat"},{"q":1,"u":"","item":"brown onion","aisle":"Produce"},{"q":1,"u":"","item":"carrot","aisle":"Produce"},{"q":2,"u":"tbsp","item":"mild curry powder","aisle":"Pantry"},{"q":2,"u":"tbsp","item":"plain flour","aisle":"Pantry"},{"q":500,"u":"ml","item":"beef stock","aisle":"Pantry"},{"q":150,"u":"g","item":"frozen peas","aisle":"Frozen"},{"q":2,"u":"tbsp","item":"sultanas","aisle":"Pantry"},{"q":300,"u":"g","item":"white rice","aisle":"Pantry"}],
+  "steps":[{"text":"Brown the sausages, then cut into thick slices.","min":10},{"text":"Soften the onion and carrot, then stir in the curry powder, flour and stock.","min":8},{"text":"Add the sausages, peas and sultanas and simmer until thick, cooking the rice alongside.","min":15},{"text":"Serve the curry over the rice.","min":2}],"veg":false,"af":true}},
+ "veg":"Butter beans in a mild curry gravy with peas and sultanas, over rice"},
+{"id":"Danger Close: The Battle of Long Tan (2019)","old":"Phuoc Tuy prawn rice paper rolls","new":{
+ "n":"Camp pie and pickle sandwiches",
+ "note":"Sliced camp pie with mustard pickles and lettuce on buttered white bread, cut in quarters.",
+ "how":"Butter 8 slices of white bread. Lay sliced camp pie or corned beef from a 340g tin over 4 slices, spread with mustard pickles and add shredded lettuce. Top with the other slices, press down and cut into quarters.",
+ "shop":["1 white sandwich loaf@Bakery","50g butter@Dairy","1 tin corned beef, 340g@Pantry","1 jar mustard pickles@Pantry","1 small iceberg lettuce@Produce"],
+ "r2":{"prep_min":12,"cook_min":0,"make_ahead":"Make up to 2 hours ahead, wrapped in the fridge","ingredients":[{"q":8,"u":"","item":"slices white bread","aisle":"Bakery"},{"q":50,"u":"g","item":"butter","aisle":"Dairy"},{"q":340,"u":"g","item":"tin corned beef","aisle":"Pantry"},{"q":4,"u":"tbsp","item":"mustard pickles","aisle":"Pantry"},{"q":1,"u":"","item":"small iceberg lettuce","aisle":"Produce"}],
+  "steps":[{"text":"Butter the bread.","min":3},{"text":"Lay the sliced corned beef over half the slices, spread with pickles and add shredded lettuce.","min":6},{"text":"Top, press down and cut into quarters.","min":3}],"veg":false,"af":true}},
+ "veg":"Sliced cheddar with mustard pickles and lettuce on buttered white bread"}]

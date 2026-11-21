@@ -68,6 +68,9 @@ for (const f of films) {
   const id = `${f.title} (${f.year})`;
   if (!passed(id)) { skipped++; continue }
   let card = null; try { card = D(`audit/cards/${slug(id)}.json`) } catch (e) { }
+  /* review 36: an audit card snapshot taken before a dish was renamed or swapped no longer matches the menu: use the menu then */
+  const curN = new Set(['S', 'M', 'W', 'K'].flatMap(k => (f[k] || []).map(it => clean(it[0]).toLowerCase())));
+  if (card && card.dishes && card.dishes.some(d => !curN.has(clean(d.name).toLowerCase()))) card = null;
   const dishes = card && card.dishes && card.dishes.length ? card.dishes : ['S', 'M', 'W', 'K'].flatMap(k => (f[k] || []).map(it => ({ course: k, name: it[0] })));
   const by = k => dishes.filter(d => d.course === k).map(d => clean(d.name)).filter(Boolean);
   /* three headline dishes: a main, a starter and a sweet, topped up from whatever else prints */

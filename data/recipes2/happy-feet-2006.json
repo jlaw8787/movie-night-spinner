@@ -215,6 +215,12 @@
     {
      "q": 1,
      "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
      "item": "tomato",
      "aisle": "Produce"
     }
@@ -229,7 +235,7 @@
      "min": 4
     },
     {
-     "text": "Fry the rashers bacon until crisp and crumble.",
+     "text": "Fry the bacon rashers until crisp and crumble.",
      "min": 8
     },
     {
@@ -308,8 +314,8 @@
   {
    "n": "Mumble's fish pie",
    "course": "m",
-   "prep_min": 30,
-   "cook_min": 55,
+   "prep_min": 25,
+   "cook_min": 41,
    "make_ahead": "Assemble the pie up to 1 day ahead, covered in the fridge; bake on the night",
    "ingredients": [
     {
@@ -357,16 +363,20 @@
    ],
    "steps": [
     {
-     "text": "Poach the white fish in the milk for 5 minutes and flake.",
-     "min": 19
+     "text": "Peel the potatoes and boil in salted water for 15 minutes until tender, then mash with half the butter.",
+     "min": 20
     },
     {
-     "text": "Make a sauce with the butter, the flour and the poaching milk, add the peeled prawns and chopped parsley, and pour into a dish with the fish.",
+     "text": "Poach the white fish in the milk for 5 minutes and flake.",
+     "min": 8
+    },
+    {
+     "text": "Make a sauce with the rest of the butter, the flour and the poaching milk, add the peeled prawns and chopped parsley, and pour into a dish with the fish.",
      "min": 10
     },
     {
-     "text": "Top with the potatoes mashed with the butter and bake at 200C for 25 minutes.",
-     "min": 56
+     "text": "Top with the mash and bake at 200°C for 25 minutes.",
+     "min": 28
     }
    ],
    "veg": false,

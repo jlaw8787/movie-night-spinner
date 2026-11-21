@@ -201,7 +201,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== blackboard ===== */
   var BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=BHT,NB=H-74;
   var IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
-  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${AU?(fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"):GB?"Food served 12 to 3 and 6 to 9":"Kitchen open 12 to 2 and 6 to 9"}</div></div>`;
+  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${AU?(/^(1930s-40s|1800s|1900s|1910s|1920s)$/.test(ctx.era)?"Counter meals 12 to 2. Bar shuts at six":fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"):GB?"Food served 12 to 3 and 6 to 9":"Kitchen open 12 to 2 and 6 to 9"}</div></div>`;
   var headH=76;
   var cue=sentence(C(f.P));
   var cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);

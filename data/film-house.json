@@ -124,7 +124,8 @@
  "A Minecraft Movie (2025)": {
   "s": {
    "n": "Golden carrots with honey butter",
-   "note": "The golden apples were already taken."
+   "note": "Roasted carrots glazed in honey butter until golden at the edges.",
+   "meat": false
   },
   "d": {
    "n": "Sweet berry and lime soda",
@@ -281,7 +282,7 @@
  "Alice in Wonderland (1951)": {
   "s": {
    "n": "Warm cheese scones with chive butter",
-   "note": "\"No room!\" But plenty of scones."
+   "note": "“No room!” But plenty of scones."
   },
   "d": {
    "n": "Lapsang souchong",
@@ -319,7 +320,7 @@
   },
   "d": {
    "n": "Lemon vodka on ice",
-   "note": "Lemon vodka over ice. Ask Ripley what she did: \"I died.\"",
+   "note": "Lemon vodka over ice. Ask Ripley what she did:.",
    "alc": true
   }
  },
@@ -453,7 +454,7 @@
  "Animal House (1978)": {
   "s": {
    "n": "Shoplifted saltines with devilled ham",
-   "note": "Saltines with devilled ham spread. “Fat, drunk and stupid is no way to go through life, son.”",
+   "note": "Salty crackers spread thick with devilled ham.",
    "meat": true
   },
   "d": {
@@ -492,7 +493,7 @@
  "Annie (1982)": {
   "s": {
    "n": "Waldorf salad cups",
-   "note": "Washington apples, from Mrs. Pugh's list for Mr. Warbucks."
+   "note": "Washington apples, from Mrs Pugh's list for Mr Warbucks."
   },
   "d": {
    "n": "Shirley Temple",
@@ -721,7 +722,7 @@
   },
   "d": {
    "n": "Coconut water with passionfruit",
-   "note": "Chilled coconut water with passionfruit. “I see you.”"
+   "note": "Chilled coconut water stirred with fresh passionfruit pulp."
   },
   "fit": [
    "d"
@@ -754,7 +755,7 @@
  "Avengers: Endgame (2019)": {
   "s": {
    "n": "Chicken nuggets with honey mustard",
-   "note": "Crumbed chicken pieces with a sweet mustard dip. “I love you 3000.”",
+   "note": "Crumbed chicken pieces with a sweet mustard dip.",
    "meat": true
   },
   "d": {
@@ -792,7 +793,7 @@
   },
   "d": {
    "n": "Warm spiced milk with honey",
-   "note": "Warm milk spiced with cinnamon and honey. “That'll do, pig. That'll do.”"
+   "note": "Warm milk spiced with cinnamon and honey."
   }
  },
  "Back to the Future Part II (1989)": {
@@ -1091,18 +1092,18 @@
  "Bill & Ted's Excellent Adventure (1989)": {
   "s": {
    "n": "Beef taquitos with salsa",
-   "note": "Crisp beef taquitos with salsa. Circle K taquitos. “Excellent!”",
+   "note": "Crisp beef taquitos with salsa. Circle K taquitos.",
    "meat": true
   },
   "d": {
    "n": "Wild cherry slushie",
-   "note": "Cherry crushed ice, bright red. “Strange things are afoot at the Circle K.”"
+   "note": "Cherry syrup over crushed ice, bright red and very cold."
   }
  },
  "Billy Madison (1995)": {
   "s": {
    "n": "Prawn cocktail, Marie Rose sauce",
-   "note": "Prawns on shredded lettuce with Marie Rose sauce. Chilled by the pool. “O'Doyle rules!”",
+   "note": "Prawns on shredded lettuce with Marie Rose sauce. Chilled by the pool.",
    "meat": true
   },
   "d": {
@@ -1113,7 +1114,7 @@
  "Black Panther (2018)": {
   "s": {
    "n": "Puff-puff with chilli honey",
-   "note": "Fried sweet dough balls drizzled with chilli honey. “Wakanda forever!”"
+   "note": "Fried sweet dough balls drizzled with chilli honey."
   },
   "d": {
    "n": "Chilled baobab and ginger",
@@ -1318,7 +1319,7 @@
   },
   "d": {
    "n": "Scottish heather ale",
-   "note": "Scottish ale brewed with heather. “They may take our lives, but they'll never take our freedom!”",
+   "note": "Dark Scottish ale brewed with heather flowers, poured cool.",
    "alc": true
   }
  },
@@ -1658,7 +1659,7 @@
  "Chinatown (1974)": {
   "s": {
    "n": "Devilled crab on toast",
-   "note": "Spiced crab on hot toast. “Forget it, Jake. It's Chinatown.”",
+   "note": "Spiced devilled crab piled on hot buttered toast.",
    "meat": true
   },
   "d": {
@@ -3887,7 +3888,7 @@
  "Idiocracy (2006)": {
   "s": {
    "n": "Popcorn chicken bites",
-   "note": "Bite-size crumbed chicken, fried crisp. “Welcome to Costco. I love you.”",
+   "note": "Bite-size crumbed chicken, fried crisp.",
    "meat": true
   },
   "d": {
@@ -4875,7 +4876,7 @@
  "Luca (2021)": {
   "s": {
    "n": "Fried sardines with lemon",
-   "note": "Floured and fried crisp. “Silenzio, Bruno!”",
+   "note": "Fresh sardines floured and fried crisp, with lemon wedges.",
    "meat": true
   },
   "d": {
@@ -4908,7 +4909,7 @@
  "Mad Max 2 (1981)": {
   "s": {
    "n": "Chargrilled lamb sausages with relish",
-   "note": "Lamb sausages off the grill with relish. Just here for the gasoline.",
+   "note": "Lamb sausages off the grill with a sweet tomato relish.",
    "meat": true
   },
   "d": {
@@ -5005,7 +5006,7 @@
  "Man of Steel (2013)": {
   "s": {
    "n": "Buttermilk biscuits with peach jam",
-   "note": "Fluffy buttermilk biscuits with peach jam. “On my world, it means hope.”"
+   "note": "Fluffy buttermilk biscuits with peach jam."
   },
   "d": {
    "n": "Cold bottle of beer",
@@ -5325,7 +5326,7 @@
  "Monty Python and the Holy Grail (1975)": {
   "s": {
    "n": "Peasant's bread and dripping",
-   "note": "Crusty bread with beef dripping. “Help! Help! I'm being repressed!”",
+   "note": "Crusty bread spread with salted beef dripping, for the peasants.",
    "meat": true
   },
   "d": {
@@ -5905,7 +5906,7 @@
   },
   "d": {
    "n": "Pressed carrot and apple juice",
-   "note": "Fresh carrot and apple juice. Mr. Tod's new plant-based diet."
+   "note": "Fresh carrot and apple juice. Mr Tod's new plant-based diet."
   },
   "fit": [
    "d"
@@ -6148,8 +6149,8 @@
  },
  "Project Hail Mary (2026)": {
   "s": {
-   "n": "Squeeze-pouch apple puree",
-   "note": "Apple purée in a squeeze pouch. Meals for one, 11.9 light years out.",
+   "n": "Squeeze-pouch apple purée",
+   "note": "Apple purée in a squeeze pouch, sweet and cold.",
    "meat": false
   },
   "d": {
@@ -6451,7 +6452,7 @@
   },
   "d": {
    "n": "Hot cocoa with whipped cream",
-   "note": "Hot cocoa topped with whipped cream. After the 4 a.m. Run up the steps."
+   "note": "Hot cocoa topped with whipped cream. After the 4 a.m. run up the steps."
   },
   "fit": [
    "d"
@@ -6491,7 +6492,7 @@
   },
   "d": {
    "n": "Banana honey protein shake",
-   "note": "Banana and honey protein shake. “There is no tomorrow!”"
+   "note": "Banana, honey and milk blended into a thick protein shake."
   }
  },
  "Rocky IV (1985)": {
@@ -6685,7 +6686,7 @@
   },
   "d": {
    "n": "Ice-cold Budweiser",
-   "note": "An ice cold Budweiser beer. “Wassup!”",
+   "note": "An ice-cold Budweiser beer straight from the bottle.",
    "alc": true
   }
  },
@@ -7282,7 +7283,8 @@
  "Star Wars (1977)": {
   "s": {
    "n": "Grilled flatbread with spiced chickpea dip",
-   "note": "Pass the bread. Han shot first."
+   "note": "Charred flatbread torn for a cumin and garlic chickpea dip.",
+   "meat": false
   },
   "d": {
    "n": "Mezcal and lime on ice",
@@ -7330,7 +7332,7 @@
   },
   "d": {
    "n": "Spiced dark rum on ice",
-   "note": "Dark rum with spice, over ice. “Chewie, we're home.”",
+   "note": "Dark rum with spice, over ice.",
    "alc": true
   }
  },
@@ -7523,7 +7525,7 @@
  "Sweet Home Alabama (2002)": {
   "s": {
    "n": "Cajun boiled peanuts",
-   "note": "Boiled peanuts with Cajun spice. “So I can kiss you anytime I want.”"
+   "note": "Soft boiled peanuts in the shell with Cajun spice."
   },
   "d": {
    "n": "Bourbon peach smash",
@@ -7887,7 +7889,7 @@
  "The Crow (1994)": {
   "s": {
    "n": "Detroit-style pizza squares",
-   "note": "Thick square pizza with crispy cheese edges. “It can't rain all the time.”"
+   "note": "Thick square pizza with crispy cheese edges."
   },
   "d": {
    "n": "Kentucky bourbon, neat",
@@ -7903,7 +7905,7 @@
   },
   "d": {
    "n": "Glass of vintage Champagne",
-   "note": "Vintage French Champagne, chilled. “I believe in Harvey Dent.”",
+   "note": "Vintage French Champagne, well chilled in tall flutes.",
    "alc": true
   }
  },
@@ -7954,7 +7956,7 @@
  "The Emperor's New Groove (2000)": {
   "s": {
    "n": "Fried yuca with ají amarillo",
-   "note": "Fried cassava with yellow chilli sauce. “No touchy!”"
+   "note": "Fried cassava with yellow chilli sauce."
   },
   "d": {
    "n": "Inca Kola over ice",
@@ -7968,7 +7970,7 @@
   },
   "d": {
    "n": "Spiced root tea with honey",
-   "note": "Hot spiced root tea with honey. “Do. Or do not. There is no try.”"
+   "note": "Hot spiced root tea with honey."
   }
  },
  "The Evil Dead (1981)": {
@@ -8190,7 +8192,7 @@
  "The Graduate (1967)": {
   "s": {
    "n": "Salted almonds from the Taft bar",
-   "note": "Salted almonds from the bar. On the house for Mr. Gladstone.",
+   "note": "Salted almonds from the bar. On the house for Mr Gladstone.",
    "meat": false
   },
   "d": {
@@ -8418,7 +8420,7 @@
   },
   "d": {
    "n": "Cherry cola from the fountain",
-   "note": "Cola with cherry from the fountain. “You are who you choose to be.”"
+   "note": "Cola with cherry from the fountain."
   }
  },
  "The Italian Job (1969)": {
@@ -8878,7 +8880,7 @@
   },
   "d": {
    "n": "Bourbon eggnog with nutmeg",
-   "note": "Eggnog with bourbon and nutmeg. Flawless, says Mr. Green.",
+   "note": "Eggnog with bourbon and nutmeg. Flawless, says Mr Green.",
    "alc": true
   },
   "fit": [
@@ -9114,7 +9116,7 @@
   },
   "d": {
    "n": "Sparkling apple and ginger",
-   "note": "Apple and ginger juice with bubbles. Raised at the Mrs. Claus wedding."
+   "note": "Apple and ginger juice with bubbles. Raised at the Mrs Claus wedding."
   }
  },
  "The Sapphires (2012)": {
@@ -9142,7 +9144,7 @@
  "The Shining (1980)": {
   "s": {
    "n": "Prawn cocktail with Marie Rose sauce",
-   "note": "Chilled prawns in Marie Rose sauce. “All work and no play makes Jack a dull boy.”",
+   "note": "Chilled prawns in Marie Rose sauce.",
    "meat": true
   },
   "d": {
@@ -9206,7 +9208,7 @@
    "meat": false
   },
   "d": {
-   "n": "Black coffee for Mr. Lonnegan",
+   "n": "Black coffee for Mr Lonnegan",
    "note": "Black coffee, the way Lonnegan takes it.",
    "alc": false
   }
@@ -10099,9 +10101,9 @@
    "meat": false
   },
   "d": {
-   "n": "A brown-bag nip from USA Liquors",
-   "note": "A nip of whisky in a brown bag. Mrs. Gandy is on leave.",
-   "alc": true
+   "n": "Apple juice box",
+   "note": "Apple juice in a box with a bent straw, one per tray.",
+   "alc": false
   }
  },
  "Wedding Crashers (2005)": {
@@ -10272,7 +10274,7 @@
  "Wolf Creek (2005)": {
   "s": {
    "n": "Smoked kangaroo jerky",
-   "note": "Dried smoky kangaroo strips. “That's not a knife. That's a knife.”",
+   "note": "Dried smoky kangaroo strips, chewy and peppery.",
    "meat": true
   },
   "d": {

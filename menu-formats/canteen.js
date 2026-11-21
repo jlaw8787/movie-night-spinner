@@ -142,7 +142,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cell=mix(tray,"#ffffff",gi===3?.6:.55);
   const cellInk=lum(cell)>.35?"#1b1b1b":"#f6f2ea";
   const cAcc=pickAccent(acc,cell,4.5,g.acc);
-  const sub=mix(cellInk,cell,.3);
+  const sub=mix(cellInk,cell,.15);/* review 36: darker notes, the canteen read soft on screen */
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* a 2000 film reads "No. 2000", never "No. 00" (review 12) */
   const price=priceFor(era,yr,fl.number);/* 15 Nov: flavour.year (per film, optional) prints the story year on the form in place of the release year (The Great Escape: 1944); prices still go by the release year */
   const C=school?{s:"Starters",m:"Main tray",w:"Pudding",d:"Drinks"}:{s:"Starters",m:"Hot line",w:"Sweets",d:"Drinks"};
@@ -161,7 +161,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* paper, wear */
   const tex=[noise(.8,gi===0?.10:gi===1?.08:.05,gi<2?"#7a5a30":"#606060",3),noise(.02,.10,gi<2?"#8a6a40":"#808080",2),t.wear>.5?noise("0.02 0.3",(t.wear*.12).toFixed(3),"#5a4a30",2):null].filter(Boolean).join(",");
   const vign=`radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 60%,rgba(60,40,20,${t.vig}) 100%)`;
-  const xerox=t.xerox?`<div style="position:absolute;inset:0;background:${noise(1.3,.12,"#000000",1)};mix-blend-mode:multiply;pointer-events:none"></div>`:"";
+  const xerox=t.xerox?`<div style="position:absolute;inset:0;background:${noise(1.3,.06,"#000000",1)};mix-blend-mode:multiply;pointer-events:none"></div>`:"";
   const gilt=t.gilt?`<div style="position:absolute;inset:8px;border:2px solid ${acc};box-shadow:inset 0 0 0 4px ${paper},inset 0 0 0 5px ${acc};pointer-events:none"></div>`:"";
 
   /* timetable strip */
@@ -244,7 +244,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const row=it=>`<div style="margin:0 0 calc(8px*var(--k))"><div style="display:flex;align-items:baseline;gap:10px">
       <span ${A}-name style="flex:1;font:700 max(16px,calc(25px*var(--k)))/1.12 ${g.body};color:${cellInk}">${esc(it.n)}</span>
       <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${cAcc};white-space:nowrap">${it.ps||money(it.p,era)}</span></div>
-    ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(13px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
+    ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(14px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
   const comp=(k,grow)=>I[k].length?`<div data-well style="flex:${grow} 1 0;min-width:0;box-sizing:border-box;padding:calc(12px*var(--k)) 16px calc(8px*var(--k));background:${cell};border-radius:${g.radius}px;box-shadow:inset 0 3px 8px rgba(0,0,0,.28),inset 0 -2px 0 rgba(255,255,255,.5)">
       <div style="margin-bottom:calc(6px*var(--k));font:700 max(14px,calc(17px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${cAcc}">${esc(C[k])}</div>${I[k].map(row).join("")}</div>`:"";
   /* compartments stack full width (the tray column is too narrow to split without one word per line); each grows to share the spare depth */

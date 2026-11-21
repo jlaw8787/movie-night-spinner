@@ -256,7 +256,7 @@ root.MENU_FORMATS.newspaper=ctx=>{
   }else{
     mast=`<div style="display:flex;align-items:flex-end;justify-content:space-between;height:86px;gap:14px">
         <div style="min-width:0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:${Math.max(30,Math.min(62,Math.floor(560/(venue.length*.6))))}px;line-height:1;letter-spacing:-.03em;color:${C.head};white-space:nowrap;overflow:hidden">${esc(venue)}</div>
-        <div style="flex:none;background:${C.red};color:#fff;border-radius:999px;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:18px;line-height:22px;padding:7px 14px;margin-bottom:6px">FREE. TAKE ONE.</div></div>
+        <div style="flex:none;background:${C.red};color:#fff;border-radius:999px;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:18px;line-height:22px;padding:7px 14px;margin-bottom:6px">LATE EDITION</div></div>
       <div style="height:6px;background:${C.red};margin-top:8px;border-radius:3px"></div>
       <div style="height:30px;display:flex;justify-content:space-between;align-items:center;font-family:'Inter Tight',sans-serif;font-size:15px;font-weight:600;color:${C.soft};white-space:nowrap;overflow:hidden">
         <span>Issue ${esc(num)}</span><span>${esc(clean(fl&&fl.sign)||"City newsstand and lunch counter")}</span><span>${esc(T.ed.charAt(0)+T.ed.slice(1).toLowerCase())}</span></div>`;

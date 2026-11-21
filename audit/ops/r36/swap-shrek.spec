@@ -1,0 +1,7 @@
+[{"id":"Shrek (2001)","old":"Onion dip","new":{
+ "n":"Onion dip",
+ "note":"Sweet caramelised onion and sour cream dip, served warm with corn chips.",
+ "how":"Slice 3 brown onions thinly and cook slowly in 40g butter with a pinch of salt for 35 minutes until deep golden. Cool a little, then stir into 250g sour cream and 125g cream cheese with 1 tsp Worcestershire sauce and plenty of black pepper. Warm through gently and serve with corn chips.",
+ "shop":["3 brown onions@Produce","40g butter@Dairy","250g sour cream@Dairy","125g cream cheese@Dairy","1 bottle Worcestershire sauce@Pantry","1 bag corn chips@Pantry"],
+ "r2":{"prep_min":10,"cook_min":40,"make_ahead":"Make the dip up to 2 days ahead, covered in the fridge; warm gently to serve","ingredients":[{"q":3,"u":"","item":"brown onions","aisle":"Produce"},{"q":40,"u":"g","item":"butter","aisle":"Dairy"},{"q":250,"u":"g","item":"sour cream","aisle":"Dairy"},{"q":125,"u":"g","item":"cream cheese","aisle":"Dairy"},{"q":1,"u":"tsp","item":"Worcestershire sauce","aisle":"Pantry"},{"q":1,"u":"","item":"bag corn chips","aisle":"Pantry"}],
+  "steps":[{"text":"Slice the onions thinly.","min":5},{"text":"Cook the onions slowly in the butter with a pinch of salt until deep golden.","min":35},{"text":"Stir the onions into the sour cream and cream cheese with the Worcestershire and black pepper.","min":3},{"text":"Warm through gently and serve with corn chips.","min":5}],"veg":true,"af":true}}}]

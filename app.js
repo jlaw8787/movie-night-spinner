@@ -999,7 +999,7 @@ function cardSmallPx(){const key=renderId+"|"+card.innerHTML.length;if(card._smk
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   /* review 35: on desktop a card whose notes would print under 11px when the whole sheet fits the column shows a page (a wide page in two
      halves) at a time with the dots, so notes read at 11px or more (Thunderdome 7px, Goldfinger and Lebowski 7.3px, Jurassic Park 8.4px) */
-  pvDesk=false;if(!window.__mnsNoDesk&&tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<11}
+  pvDesk=false;if(!window.__mnsNoDesk&&tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<14}/* review 36: 14px floor at 1280 (Goldfinger 12px, Gladiator 13px) */
   /* review 34: on desktop a two or three page menu shrunk whole into the column printed its notes at 4 to 7px (Grease, Gallipoli):
      when the whole sheet would scale under 0.62 it shows one page at a time at column width, with the dots to turn the page */
   const deskFaces=tab==="menu"&&!swipeW()&&(pvDesk||card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62);
@@ -1041,7 +1041,7 @@ function phoneView(f,spec,menu){
   pvArgs=f?[f,spec,menu]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   setTimeout(()=>{try{kidsDryDom(fmtPhone,f)}catch(e){}},0);
-  fmtPhone.innerHTML=spec.fmt==="lib"?fmtPhoneHTML(f,spec,menu):dietPhone(f,fmtPhoneHTML(f,spec,menu));fmtPhoneWire(fmtPhone);
+  fmtPhone.innerHTML=spec.fmt==="lib"?fmtPhoneHTML(f,spec,menu):dietPhone(f,fmtPhoneHTML(f,spec,menu));try{curlyQuotes(fmtPhone)}catch(e){}fmtPhoneWire(fmtPhone);
   {const fb=fmtPhone.querySelector(".fp-flip");fb.textContent="Read the printed menu full size";fb.addEventListener("click",()=>openMenuZoom(fb))}
   applyPhone();
 }
@@ -1415,7 +1415,7 @@ const BASES=[
   step:(g,i)=>{const n=i.item.toLowerCase().match(/spaghetti|macaroni|penne|rigatoni|ziti|egg noodles/)[0];return `Cook ${planQty(g/2.2,"g")} dried ${n} in well salted water until just tender, then drain.`}}];
 const baseOf=i=>i&&i.q!=null&&baseG(i.q,i)!=null&&BASES.find(b=>b.re.test(String(i.item)));
 /* tap water is never on the shopping list; soda, tonic, mineral and coconut water are */
-const WATER_RE=/^((cold|hot|boiling|iced|ice|warm|fresh|filtered|tap)\s+)?water\b(?!\s*(crackers?|chestnuts?))|^(boiling|hot|cold) and (cold|hot) water|^water or (soda|stock)/i;
+const WATER_RE=/^((splash|small cups?|cups?)( of)?\s+)?((cold|hot|boiling|iced|ice|warm|fresh|filtered|tap|cool|chilled|still|chilled still|just-boiled|just boiled|freshly boiled)\s+)?water\b(?!\s*(crackers?|chestnuts?))|^(boiling|hot|cold) and (cold|hot) water|^water or (soda|stock)/i;
 const EACH_G=[[/potato/i,200],[/marshmallow/i,7],[/almond/i,1.2],[/raspberr/i,4],[/strawberr/i,15],[/steak/i,250],[/onion/i,150],[/carrot/i,120],[/tomato/i,120],[/apple/i,150],[/lemon/i,100],[/lime/i,70],[/banana/i,120],[/blueberr/i,1]];
 const packFirst=i=>{const pk=!i.u&&String(i.item).match(/^(.+?) \((\d+(?:\.\d+)?\s?(?:g|kg|ml|L))\s+(tins?|cans?|jars?|packets?|bags?|bottles?|tubs?)\)$/i);return pk?`${pk[2]} ${pk[3].replace(/s$/,"")} ${pk[1]}`:i.item};
 function shopLines(list){
@@ -1501,6 +1501,8 @@ function shopLines(list){
 const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
 const BUY_N=t=>{const m=String(t).trim().match(/^(\d+)(?:\s+(\d)\/(\d))?|^(\d)\/(\d)/);return m?(m[1]?+m[1]+(m[2]?m[2]/m[3]:0):m[4]/m[5]):0};
 function buyBy(t){let x=String(t).trim();
+  /* review 36: what you buy, not what you make with it ("instant coffee, dissolved in 2 tbsp hot water", "hot gravy") */
+  x=x.replace(/,\s*dissolved in [^,]*$/i,"").replace(/^(hot |vegetarian )?(beef |vegetable )?gravy(, made up hot)?$/i,(m,h,k)=>(h&&/veg/i.test(h)?"vegetarian ":"")+(k||"")+"gravy powder");
   x=x.replace(/,\s*(leaves picked|divided|to finish|for dusting|plus extra( for [^,]+)?|cut (in|into) [^,]+|in (thick |thin |small |big )?(chunks|slices|wedges|rings|cubes|strips|pieces|rounds))\s*$/i,"");
   let m;
   /* herbs by the spoon, sprig or handful: a bunch */
@@ -1781,6 +1783,11 @@ const kitQ=n=>n&&n.kind==="quote"?`"${ESC(n.text)}"`:ESC(n&&n.text);
 const kitSaid=(n,verb)=>n.kind==="quote"?(verb==="said"?`"${ESC(n.text)}" said ${ESC(n.by)}.`:`"${ESC(n.text)}" ${ESC(n.by)} told this paper.`):`A note from ${ESC(n.by)}: ${ESC(n.text)}`;
 /* review 34: a real quote (flavour.note kind "quote") always prints inside quote marks, so it reads apart from the notes in a
    character's voice. Eleven layouts printed the bare line (Grease "Tell me about it, stud." under LEFT ON THE COUNTER) */
+/* review 36: one quote style on every card, phone menu and print list: curly. Straight pairs in hand-built menus and layout lines turn curly */
+function curlyQuotes(root){if(!root)return;const P=/(^|[\s(\[,:;\u2014])"([^"\n]{1,300}?)"(?=$|[\s).,;:!?\]\u2014])/g,w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;
+  while((t=w.nextNode())){const v=t.nodeValue;if(v.indexOf('"')<0)continue;if(t.parentElement&&/^(SCRIPT|STYLE)$/.test(t.parentElement.tagName))continue;
+    let x=v.replace(P,(m,a,q)=>a+"\u201c"+q+"\u201d");if(x.indexOf('"')>=0){const n=(x.match(/"/g)||[]).length;if(n===1)x=/^\s*"/.test(x)?x.replace('"',"\u201c"):/"\s*$/.test(x)?x.replace(/"(\s*)$/,"\u201d$1"):x}
+    if(x!==v)t.nodeValue=x}}
 function quoteMarks(root,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind!=="quote")return;const nz=t=>String(t).replace(/[\u2018\u2019]/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/\s+/g," ").trim();
   const want=nz(n.text).replace(/^["']|["']$/g,""),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;
   while((t=w.nextNode())){const raw=nz(t.textContent);if(raw.replace(/^["']|["']$/g,"")!==want)continue;
@@ -2168,7 +2175,11 @@ const pfPrem=n=>PF_PREM.test(n)&&!PF_HAND.test(n);
 /* review 35: the dearest a plain sweet can be in each decade, in dollars of the day (It's a Wonderful Life's 80c sundae in 1946); a plain
    starter at most about twice that. A canteen, mess, commissary or soldiers' club charges a bit over half a cafe's prices (The Dish, The Sapphires) */
 const PF_SWEETCAP={"1800s":.1,"1930s-40s":.3,"1950s":.5,"1960s":.9,"1970s":2,"1980s":5,"1990s":8,"2000s":11,"modern":16};
-const PF_CHEAPV=/\b(canteen|cafeteria|mess|commissary|soldiers'? club|staff)\b/i,pfVenueK=(fl,fmt)=>/^(canteen|lab|hospital)$/.test(fmt||"")||PF_CHEAPV.test(String(fl&&fl.venue||""))?.55:1;
+const PF_CHEAPV=/\b(canteen|cafeteria|mess|commissary|soldiers'? club|staff)\b/i,pfVenueK=(fl,fmt)=>{const v=String(fl&&fl.venue||"");if(fl&&typeof fl.priceK==="number")return fl.priceK;
+    /* review 36: price the venue's level, not just the decade: a school lunch or a hawker plate is cheap, a five-star hotel bar dear (flavour.priceK overrides) */
+    if(/\b(elementary|primary|kindergarten|lunchroom|hawker|food centre)\b/i.test(v))return .32;
+    if(/\b(park hyatt|ritz|savoy|plaza|four seasons|waldorf|penthouse|bellagio|continental|grand budapest)\b/i.test(v))return 1.8;
+    return /^(canteen|lab|hospital)$/.test(fmt||"")||PF_CHEAPV.test(v)?.55:1};
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
    The figure arrives in dollars of the day and is turned into what that place would print */
@@ -2253,7 +2264,7 @@ function sumFix(root){if(!root)return 0;
     /* review 33: a deal (data-sum-k, the takeaway's "movie night for two" at 1.7 times one of each course) is a real discount on the sum, on a clean step */
     const K=+t.getAttribute("data-sum-k")||1,P=L.map(x=>x.p),s=P.find(p=>p.k!=="c")||P[0];let u=P.reduce((a,p)=>a+p.u,0)*K;
     if(K!==1){const st=s.k==="sd"?6:s.k==="dec"||s.k==="c"||s.k==="£"?(u>=1000?50:u>=100?25:5):Math.max(1,Math.pow(10,Math.max(0,String(Math.round(u)).length-2)));u=Math.max(st,Math.floor(u/st)*st)}
-    const v=pfFmt(u,s,P);if(t.textContent.trim()!==v){t.textContent=v;n++}}
+    let v=pfFmt(u,s,P);{const o=t.textContent.trim();if(/^\$/.test(o)&&/^\d/.test(v))v="$"+v}if(t.textContent.trim()!==v){t.textContent=v;n++}}
   return n}
 /* review 32: every priced card says what money it is. A dollar card (no flavour.currency) whose prices are all bare figures (".25", "1.75",
    the banquet's "89.50 per cover") gets its mark: cents under a dollar ("75¢"), "$" above. A card that already sets "$" or "¢" anywhere
@@ -2271,8 +2282,8 @@ function pfMark(root){const PR=/^(\s*)(\d{1,3})?\.(\d\d)(\s*)$/,tw=document.crea
    where the price sat: a mess or prison "Issue", a home or camp nothing, the Wasteland what it trades in (flavour.pay: a word, a list
    of words that take turns, "" for nothing, or true where the venue does charge: a boarding house, a hotel dining room, a takeaway) */
 const PAY_NOT=/\b(diner|caf[eé]|cafeteria|canteen|pub|bar|tavern|inn|hotel|motel|restaurant|tent|steakhouse|roadhouse|bakehouse|chophouse|coffee ?house|alehouse|tea ?house|public house|station house|clubhouse|house of|lounge|grill|shop|store|kiosk|stand|truck|cart|parlou?r|bistro|club|deli|bakery|market|saloon|lodge|counter|bodega|joint|trattoria|pizzeria|commissary|cantina|brasserie|food court|concession|snack bar|tea room|opera house|reception hall)\b/i,
-  PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen)\b/i,
-  PAY_MESS=/\b(mess|barracks|prison|jail|gaol|bunker|outpost|base|fort|army)\b/i;
+  PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen|swamp|sietch|workshop|cookhouse|bunkhouse|chuck ?wagon|lifeboat|locker room|green room|backstage|great hall|common room)\b/i,
+  PAY_MESS=/\b(mess|barracks|prison|jail|gaol|bunker|outpost|base|fort|army|stalag|pow camp|brig)\b/i;
 function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.pay!=null)return fl.pay;if(fmt==="own"||fmt==="takeaway"||fmt==="truck")return null;
   const v=String(fl.venue||"");if(!v)return null;
   if(fl.camp==="army"||PAY_MESS.test(v)&&!/\b(cafeteria|canteen|diner|caf[eé]|club)\b/i.test(v))return "Issue";
@@ -2283,7 +2294,7 @@ function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
   T.sort((a,b)=>a.compareDocumentPosition(b)&Node.DOCUMENT_POSITION_FOLLOWING?-1:1);
   for(const t of T){const m=t.nodeValue.match(/^(\s*)[\s\S]*?(\s*)$/);t.nodeValue=m[1]+W[i++%W.length]+m[2]}
   for(const e of root.querySelectorAll("[data-sum],[data-echo]"))e.textContent=W[0];
-  const PAYW=/\b(prices?|priced|cash|charges?|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst)\b/i;
+  const PAYW=/\b(prices?|priced|cash|(?:cover|service|tray|corkage|extra|no|room) charges?|charges? (?:apply|applies|extra|may)|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst)\b/i;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),N=[];let t;while((t=tw.nextNode()))N.push(t);
   for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;const ss=v.split(/(?<=[.!])\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
     const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
@@ -2299,6 +2310,10 @@ function priceFix0(root,menu,f,fl,era,fmt){
   const norm=s=>String(s||"").toLowerCase().replace(/[’']/g,"'").replace(/[-‐–]/g," ").replace(/\s+/g," ").trim();
   const dish=[];for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it){const nm=norm(it.label||it.n);if(nm.length>2)dish.push({k,n:it.label||it.n,nm,house:!!it.house})}
   if(!dish.length)return 0;
+  /* review 36: where nobody pays, every price on the card goes, in whatever money the layout printed it ("12 cr" in a galley, "9 gold coins", "4s 8d") */
+  {const pw=payWord(fl,fmt);if(pw!=null){const MR=/^\s*((\$|£|¥|€)\s?\d{1,4}([.,]\d\d)?|\d{1,4}\.\d\d|\.\d\d|\d{1,4}\s?(¢|c|cr|credits|d|p|pfennigs?|solari|gold coins?|silver|silver pennies|Galleons?|Sickles?|Knuts?|crowns?|gp|kr)|\d{1,3}s(\s\d{1,2}d)?|\d+ Galleons?( \d+ Sickles?)?)\s*$/i,
+     tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),T=[];let t;while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;if(MR.test(t.nodeValue))T.push(t)}
+     if(T.length>=2)return payFix(root,T,pw)}}
   const PR=/^(\s*)(\$|£)?(\d{1,3})(?:\.(\d\d))?(\s*)$|^(\s*)(\d{1,2})(¢|c)(\s*)$|^(\s*)\.(\d\d)(\s*)$/;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),P=[],seen=new Set(),cand=[];let t;
   while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;const m=t.nodeValue.match(PR);if(m)cand.push([t,m])}
@@ -2385,6 +2400,14 @@ function priceFix0(root,menu,f,fl,era,fmt){
     lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));for(const x of D.filter(x=>FZ.test(x.n)&&!/\b(mulled|punch|spritzer|cooler)\b/i.test(x.n))){const fl0=Math.max(hs!=null?hs+step(hs):0,lo!=null?lo+step(lo):0);if(x.v<fl0)x.v=fl0}}
   /* review 33: a vintage or bottled wine is the dearest drink on the card (Goldfinger's vintage champagne sat under the mint julep) */
   {const D=by("d"),top=x=>/\b(vintage|bottle of|magnum|dom p[eé]rignon|krug|cristal)\b/i.test(x.n);for(const x of D.filter(top)){const hi=maxOf(D.filter(y=>!top(y)));if(hi!=null&&x.v<=hi)x.v=hi+step(hi)}}
+  /* review 36: a cocktail, spirit or beer costs at least what the soft drinks do (Easter Parade's Manhattan sat under the fruit punch), and a
+     drink by the glass never costs more than the cheapest main (Goldfinger's mint julep over the Dover sole) */
+  {const D=by("d"),SP=x=>PF_SP.test(x.n)&&!/\b(punch|shandy|mocktail|alcohol-free|non-alcoholic)\b/i.test(x.n),soft=D.filter(x=>!PF_SP.test(x.n)),hs=maxOf(soft);
+   if(hs!=null)for(const x of D.filter(SP))if(x.v<hs)x.v=hs;
+   const lm=minOf(mn().filter(x=>!pfCheap0(x.n)&&!PF_HAND.test(x.n))),top=x=>/\b(vintage|bottle of|magnum|dom p[eé]rignon|krug|cristal|jug|pitcher)\b/i.test(x.n);
+   if(lm!=null)for(const x of D.filter(x=>!top(x)))if(x.v>=lm)x.v=Math.max(step(lm),lm-step(lm))}
+  /* review 36: humble beans and rice never cost more than a plated main (Sinners' red beans over the pork chops) */
+  {const BR=/\b(red beans|beans and rice|rice and beans|dal|dhal)\b/i,L=mn(),o=L.filter(x=>!BR.test(x.n)&&!PF_HAND.test(x.n)&&!pfCheap0(x.n)),lo=minOf(o);if(lo!=null)for(const x of L)if(BR.test(x.n)&&x.v>lo)x.v=Math.max(step(lo),lo-step(lo))}
   };rules();
   /* 5. endings, keeping one film-number price */
   const egg=String((fl&&fl.number)||"").replace(/\D/g,"").slice(-2),yy=String(f&&f.year||"").slice(-2);
@@ -2510,7 +2533,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;try{planWire(f)}catch(e){}
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{priceFix(card,menu,f,spec.flavour||null,"modern","own")}catch(e){console.warn("price sense",e)}dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{priceFix(card,menu,f,spec.flavour||null,"modern","own")}catch(e){console.warn("price sense",e)}try{curlyQuotes(card)}catch(e){}try{sumFix(card)}catch(e){console.warn("totals",e)}/* review 36: hand-built totals add up too (Ghostbusters work order) */dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
@@ -2523,7 +2546,7 @@ async function show(f,preferSig){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}try{quoteMarks(card,L.flavour)}catch(e){}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}try{quoteMarks(card,L.flavour)}catch(e){}try{curlyQuotes(card)}catch(e){}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;

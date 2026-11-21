@@ -1,0 +1,24 @@
+{
+ "id": "The Menu (2022)",
+ "ops": [
+  {
+   "set": "flavour.pay",
+   "value": "",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Tonight's Tasting",
+    "lines": [
+     "Twelve guests, one seating",
+     "$1,250 a head. No substitutions"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

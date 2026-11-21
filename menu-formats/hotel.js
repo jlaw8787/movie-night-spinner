@@ -179,8 +179,11 @@ function logoPanel(ctx,o){
 /* film flavour with theme-neutral fallbacks */
 function flavourOf(ctx,neutral){
   const fl=ctx.flavour||{};const d=x=>clean(x);
+  /* review 36: the year the guest is in the room (The Water Diviner's 1919 Istanbul guesthouse, not 2014); an inn or guesthouse has rooms, not suites, and no tray charge before 1950 */
+  const stayY=String(fl.year||(/^(18|19|20)\d\d$/.test(String(fl.number||""))&&+fl.number<=+((ctx.f||{}).year||9999)?fl.number:(ctx.f||{}).year)||""),
+    roomWord=/\b(guest ?house|boarding|pension|inn|hotel dining room|lodging)\b/i.test(String(fl.venue||""))||+stayY<1950?"room":"suite",trayOk=+stayY>=1950;
   const winks=(fl.winks||[]).map(d).filter(Boolean);
-  return{venue:d(fl.venue)||neutral.venue,sign:d(fl.sign)||neutral.sign,
+  return{stayY,roomWord,trayOk,venue:d(fl.venue)||neutral.venue,sign:d(fl.sign)||neutral.sign,
     note:fl.note&&fl.note.text?{text:d(fl.note.text),by:d(fl.note.by)||neutral.by}:{text:d(neutral.noteText(ctx)),by:neutral.by},
     winks:winks.length?winks:neutral.winks(ctx),prop:fl.prop&&fl.prop.title?{kind:fl.prop.kind||"card",title:d(fl.prop.title),lines:(fl.prop.lines||[]).map(d).filter(Boolean).slice(0,3)}:neutral.prop(ctx),
     num:/^\d{1,4}$/.test(String(fl.number||""))?String(fl.number):"",has:!!ctx.flavour};
@@ -252,7 +255,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-fs="15" style="font:italic 400 20px/1.2 ${B};color:${K.soft};margin-top:7px">${esc(F.sign)}</div></div>`;
   const heroTop=262,heroH=720,posW=480,colW=360;
   const lp=logoPanel(ctx,{maxW:colW-36,maxH:74,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
-    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your suite ${esc(ctx.f.year)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
+    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your ${F.roomWord} ${esc(F.stayY)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
     style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
   /* 15 Nov, Josh (call 5): under a poster (which carries the title) the logo plaque goes and the front desk note moves up into its place,
      headed "In your suite, year". Flavour logoPanel:true keeps the plaque for a poster with no title. */
@@ -261,7 +264,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${noPlaque?"":lp}`;
   /* 15 Nov, Josh: the showtime cue reads "Wake-up call" under the front desk note and takes the place of the Dial 0 line, so it fits more often */
   const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:${noPlaque?1004:1130}px;height:${noPlaque?322:196}px;box-sizing:border-box;padding-bottom:4px;overflow:hidden;display:flex;flex-direction:column">
-    ${noPlaque?`<div data-fs="13" style="flex:none;font:700 16px/1.15 ${B};letter-spacing:.24em;text-transform:uppercase;color:${K.acc};opacity:.75;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid ${rgba(K.acc,.6)}">In your suite, ${esc(ctx.f.year)}</div>`:""}
+    ${noPlaque?`<div data-fs="13" style="flex:none;font:700 16px/1.15 ${B};letter-spacing:.24em;text-transform:uppercase;color:${K.acc};opacity:.75;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid ${rgba(K.acc,.6)}">In your ${F.roomWord}, ${esc(F.stayY)}</div>`:""}
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
@@ -306,7 +309,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox style="position:absolute;left:48px;right:48px;top:${secH+84}px;bottom:150px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:48px;right:48px;bottom:36px;height:100px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:10px">
-    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">A tray charge applies to every order. Prices subject to change. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Form RS ${esc(room)}. Images: TMDB.</div></div>`;
+    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">${F.trayOk?"A tray charge applies to every order. ":""}Prices subject to change. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Form RS ${esc(room)}. Images: TMDB.</div></div>`;
   const back=face(second+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};
