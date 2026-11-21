@@ -1506,7 +1506,7 @@ const stepParts=t=>{const ss=String(t).split(/(?<=[.!?])\s+(?=[A-Z])/),tip=ss.fi
 /* a step is waiting if it says so, or if it runs over four hours without heat: nobody does four hours of hands-on prep */
 /* review 34: a step that starts by baking, frying or simmering is heat, whatever it says about setting or cooling after (Hall Pass brownies) */
 const HEAT_START=/^(bake|roast|fry|deep[- ]fry|grill|boil|simmer|poach|steam|sear|braise|barbecue|toast|cook)\b/i;
-const isWaitStep=t=>(t.min||0)>=10&&!HEAT_START.test(String(t.text).trim())&&(WAIT_RE.test(String(t.text).trim())||((t.min||0)>=240&&!HEAT_RE.test(String(t.text))));
+const isWaitStep=t=>(t.min||0)>=10&&!HEAT_START.test(String(t.text).trim())&&!(()=>{/* review 34: a step that bakes, fries or simmers before it cools is heat (Wolf Creek's pastry, Ratatouille's brulee) */const x=String(t.text),h=x.search(/\b(bake|baking|roast|oven|simmer|fry|grill|boil|poach|steam)\b/i),w=x.search(/\b(chill|refrigerate|fridge|freeze|soak|marinate|rest|cool|prove|steep|stand|infuse|set aside|oven off|overnight|leave|day before|salt the)\b/i);return h>=0&&(w<0||h<w)})()&&(WAIT_RE.test(String(t.text).trim())||((t.min||0)>=240&&!HEAT_RE.test(String(t.text))));
 function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let wait=0;for(const t of st)if(isWaitStep(t))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0,full=st.length&&st.every(t=>t.min!=null&&t.min>=0)&&st.some(t=>t.min>0);if(!full)wait=Math.min(wait,prep+cook);
   /* split by the steps themselves when their minutes add up to the recipe's total: hands-on, heat and waiting each counted where they happen */
