@@ -114,7 +114,7 @@ if(!document.getElementById("fmt-kiosk-fonts")){
   document.head.appendChild(l);
 }
 /* ---------- text safety ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\w)-(?=\w)/g,"$1 ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\d)-(?=\d)/g,"$1 to ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"']$/.test(s)?s:s+"."};
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
@@ -236,7 +236,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* beach kit only where the film has a beach: flavour beach true or false decides, otherwise the venue and sign do */
   const beach=typeof fl.beach==="boolean"?fl.beach:BEACH_RE.test(String(fl.venue||"")+" "+String(fl.sign||""));
   const TK=beach?T:Object.assign({},T,LAND[ctx.tone]||LAND.warm);
-  const KICK=beach?E.kick:E.kick==="SURF SHACK"?"SNACK SHACK":E.kick.replace(/^(BATHING PAVILION|BEACH) /,"");
+  /* review 34: a kiosk card set in someone's house, yard or farm is not a business: no KIOSK banner and no licence number
+     (Say Anything at Diane Court's house, Young Einstein's apple farm) */
+  const HOMEV=/\b(house|home|kitchen|backyard|yard|driveway|farm|apartment|flat|pool|log|den|camp|tent|roommate)\b/i.test(String(fl.venue||"")+" "+String(fl.sign||""))&&!/\b(stand|stall|shop|store|bar|cafe|caf\u00e9|kiosk|snack|grill|eats)\b/i.test(String(fl.venue||""));
+  const KICK=HOMEV?(beach?"BEACH SNACKS":"SNACKS ON"):beach?E.kick:E.kick==="SURF SHACK"?"SNACK SHACK":E.kick.replace(/^(BATHING PAVILION|BEACH) /,"");
   const title=clean(f.title||"Tonight's Feature");
   const venue=C(fl.venue)||(beach?"The Beach Kiosk":"The Kiosk");
   const sign=C(fl.sign)||venue;
@@ -342,7 +345,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cue=sentence(C(f.P));
   const cueW=PM?IW-316-28:IW;
   let cT=fitType(cue,cueW-24,PM?150:80,E.bcw,19,15,1.3,PM?8:4);
-  const fine=`${TK.close} Prices subject to change. Kiosk licence ${num}.`;
+  const fine=HOMEV?`${TK.close} No. ${num}.`:`${TK.close} Prices subject to change. Kiosk licence ${num}.`;
   const fT=fitType(fine,IW,44,.52,15,14,1.3,3);
   let cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0;const footTail=fT.n*fT.z*1.3+8,footH=(PM?Math.max(cueH,noteH+12):cueH)+footTail;
   /* review 15: html2canvas sets a line a touch lower than Chrome, so a column filled to the pixel ran under the note card on paper (A Bug's Life); keep 10px spare */

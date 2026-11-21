@@ -224,18 +224,30 @@ const PAPER=[
   {bg:"#caa671",fib:[120,86,40],spk:[246,230,196],ink:"#271b0e",print:"#fbf7ee"},
   {bg:"#b3a084",fib:[84,72,56],spk:[236,228,214],ink:"#1f1b16",print:"#ffffff"}
 ];
+/* review 34: the stock words were a summer camp's (Chow Line, Mess Hall Mains, Canteen Drinks, Session of, badges) and printed on Shrek's
+   swamp, Wolf Creek and Gallipoli. The default set now suits any fire; flavour.camp "summer" (a real summer camp) or "army" (a mess)
+   brings the camp words back. Per-film flavour.labels still win over both */
 const VOICE={
-  gritty:{t:"Chow Line",n:"Nailed to the mess hall door",b:"Earned the hard way"},
-  glossy:{t:"Camp Kitchen",n:"From the director's desk",b:"Badges this session"},
-  warm:{t:"Supper Is Served",n:"Pinned to the notice board",b:"Merit badges on offer"},
-  eerie:{t:"Supper Before Dark",n:"Found under the cabin door",b:"Stay with the group for"},
-  playful:{t:"Grub's Up",n:"Scribbled on the bunk wall",b:"Badges up for grabs"},
-  grand:{t:"The Lodge Table",n:"From the lodge",b:"Honours of the session"},
-  tender:{t:"Round the Fire",n:"Left on your pillow",b:"Badges worth keeping"},
-  tense:{t:"Head Count Supper",n:"Orders from the cabin",b:"Required before lights out"},
-  scrappy:{t:"Chow Line",n:"Taped to the canteen",b:"Badges, maybe"}
+  gritty:{t:"Fire's Lit",n:"Nailed to the post",b:"Earned the hard way"},
+  glossy:{t:"Camp Kitchen",n:"From the host",b:"Worth a look"},
+  warm:{t:"Supper Is Served",n:"Pinned up by the fire",b:"Spotted in the film"},
+  eerie:{t:"Supper Before Dark",n:"Found by the fire",b:"Stay together for"},
+  playful:{t:"Grub's Up",n:"Scribbled on the wall",b:"Spotted in the film"},
+  grand:{t:"The Lodge Table",n:"From the lodge",b:"Told round the fire"},
+  tender:{t:"Round the Fire",n:"Left by the fire",b:"Worth keeping"},
+  tense:{t:"Supper by the Fire",n:"Passed round the fire",b:"Before the fire dies"},
+  scrappy:{t:"Grub's Up",n:"Taped to the wall",b:"Spotted, maybe"}
 };
-const LABEL={s:"Trail Snacks",m:"Mess Hall Mains",w:"Campfire Treats",d:"Canteen Drinks"};
+const CAMP={
+  summer:{gritty:{t:"Chow Line",n:"Nailed to the mess hall door",b:"Earned the hard way"},glossy:{t:"Camp Kitchen",n:"From the director's desk",b:"Badges this session"},
+    warm:{t:"Supper Is Served",n:"Pinned to the notice board",b:"Merit badges on offer"},eerie:{t:"Supper Before Dark",n:"Found under the cabin door",b:"Stay with the group for"},
+    playful:{t:"Grub's Up",n:"Scribbled on the bunk wall",b:"Badges up for grabs"},grand:{t:"The Lodge Table",n:"From the lodge",b:"Honours of the session"},
+    tender:{t:"Round the Fire",n:"Left on your pillow",b:"Badges worth keeping"},tense:{t:"Head Count Supper",n:"Orders from the cabin",b:"Required before lights out"},
+    scrappy:{t:"Chow Line",n:"Taped to the canteen",b:"Badges, maybe"}},
+  army:{t:"Chow Line",n:"Nailed to the mess tent",b:"Mentioned in dispatches"}
+};
+const LABEL={s:"Fireside Snacks",m:"Off the Fire",w:"Campfire Treats",d:"Drinks"};
+const CAMP_LABEL={summer:{s:"Trail Snacks",m:"Mess Hall Mains",w:"Campfire Treats",d:"Canteen Drinks"},army:{s:"Ration Snacks",m:"Mess Mains",w:"Sweet Rations",d:"Canteen Drinks"}};
 const FB={venue:"The Camp Mess Hall",sign:"Lights out at ten",by:"The Camp Director",
   noteText:c=>(c.f&&c.f.T)||"Wash up, line up, and save room for the campfire.",
   winks:["Early riser","Campfire cook","Clean plate"],prop:{kind:"ticket",title:"Mess Ticket",lines:["Admit one camper","Seconds on request"]}};
@@ -277,7 +289,7 @@ function logoPanel(ctx,x,y,maxW,ty,C,P,year){
   return`<div data-lpanel data-dark="${esc(dark)}" data-light="${esc(light)}" style="${dark}">
     ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:${maxW-40}px;max-height:96px;object-fit:contain">`:""}
     <div data-title-fb data-box style="${url?"display:none;":""}width:${maxW-40}px;max-height:110px;overflow:hidden"><div data-fs="${fbSize}" data-min="20" style="font:${ty.dw} ${fbSize}px ${ty.disp};line-height:1.02;color:${C.onDark};${ty.up?"text-transform:uppercase;":""}">${title}</div></div>
-    <div data-pink data-pink-l="${C.ink}" data-pink-d="${C.onDark}" style="margin-top:8px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.22em;text-transform:uppercase;color:${C.onDark}">Session of ${esc(year)}</div>
+    <div data-pink data-pink-l="${C.ink}" data-pink-d="${C.onDark}" style="margin-top:8px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.22em;text-transform:uppercase;color:${C.onDark}">${ctx.flavour&&ctx.flavour.camp==="summer"?"Session of "+esc(year):esc(ctx.flavour&&ctx.flavour.est?"Est. "+ctx.flavour.est:"Now showing")}</div>
   </div>`;
 }
 function prop(p,ty,C,P,x,y,w,h){
@@ -328,7 +340,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LK=ctx.flavour&&ctx.flavour.look||{};
   const ty=Object.assign({},TYPE[E.g],LK.type),P=Object.assign({},PAPER[E.g],LK.paper);
   const C=inks(ctx.palette,P.bg,"#7a2e1c");
-  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */V=Object.assign({},VOICE[tone],LB),LBL=Object.assign({},LABEL,LB);
+  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */CK=ctx.flavour&&ctx.flavour.camp,V=Object.assign({},VOICE[tone],CK==="summer"?CAMP.summer[tone]:CK==="army"?CAMP.army:{},LB),LBL=Object.assign({},LABEL,CK&&CAMP_LABEL[CK]||{},LB);
   const ph=heroes(ctx),year=String(ctx.f.year||"");
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo}`;
@@ -394,12 +406,12 @@ ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:47
       extra:`<div style="position:absolute;left:12px;bottom:12px;padding:5px 12px;background:${P.print};color:#2a2219;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase">Tonight's feature, ${esc(year)}</div>`})}
     <div data-box data-menu="418,378" style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply;column-gap:24px">${menuHTML(cs,era,ty,C,tone,LBL)}</div>
     <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
-      <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${esc(LB.call||"Bugle call")}</div>
+      <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${esc(LB.call||(CK==="summer"||CK==="army"?"Bugle call":"When to serve"))}</div>
       <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||"Serve the mains when the campfire is lit.")}</div>
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}
     <div data-box style="position:absolute;left:38px;top:900px;width:596px;height:40px;overflow:hidden;font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB. Form CM ${esc(F.number)}.</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Ask the cook about: "}${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB.${CK?" Form CM "+esc(F.number)+".":F.number?" No. "+esc(F.number)+".":""}</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":(CK==="summer"||CK==="army"?"Ask the cook about: ":"Round the fire: ")}${T(w)}.</span>`).join("")}
     </div>
     ${wearLayer(P,tone,seed+20)}
   </div>`;

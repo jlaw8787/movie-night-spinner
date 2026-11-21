@@ -170,66 +170,54 @@
    }
   },
   {
-   "n": "Beersheba camp damper with honey butter",
+   "n": "Beersheba bazaar labneh and olives",
    "course": "s",
-   "prep_min": 23,
-   "cook_min": 30,
-   "make_ahead": "Best eaten warm on the day",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Set out the labneh and olives up to 2 hours ahead; warm the pita to order",
    "ingredients": [
     {
-     "q": 160,
+     "q": 500,
      "u": "g",
-     "item": "butter",
+     "item": "labneh",
      "aisle": "Dairy"
     },
     {
-     "q": 450,
-     "u": "g",
-     "item": "self-raising flour",
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
      "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
     },
     {
      "q": 2,
      "u": "tbsp",
-     "item": "honey",
-     "aisle": "Pantry"
+     "item": "za'atar",
+     "aisle": "Spices"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "sea salt flakes",
-     "aisle": "Pantry"
+     "q": 200,
+     "u": "g",
+     "item": "mixed olives",
+     "aisle": "Deli"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Rub the cold butter into the flour and salt.",
-     "min": 10
-    },
-    {
-     "text": "Stir in the milk to a soft dough and knead briefly.",
+     "text": "Spoon the labneh into a shallow dish, swirl with the oil and scatter with za'atar.",
      "min": 5
     },
     {
-     "text": "Shape into a round, cut a cross on top and dust with flour.",
-     "min": 3
+     "text": "Warm the pita in a dry pan.",
+     "min": 5
     },
     {
-     "text": "Bake at 200C until it sounds hollow when tapped.",
-     "min": 30
-    },
-    {
-     "text": "Whip the soft butter with honey and sea salt.",
-     "min": 4
-    },
-    {
-     "text": "Serve the damper warm with the honey butter.",
+     "text": "Serve with the olives.",
      "min": 1
     }
    ],
@@ -931,81 +919,67 @@
    }
   },
   {
-   "n": "Camp golden syrup dumplings",
+   "n": "Jaffa orange and semolina cake",
    "course": "w",
-   "prep_min": 13,
-   "cook_min": 25,
-   "make_ahead": "Cook fresh",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Bake up to 2 days ahead; keep covered",
    "ingredients": [
-    {
-     "q": 80,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
     {
      "q": 200,
      "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
+     "item": "butter, softened",
      "aisle": "Dairy"
     },
     {
-     "q": 80,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 125,
-     "u": "ml",
-     "item": "golden syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 80,
+     "q": 300,
      "u": "g",
-     "item": "brown sugar",
+     "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
+     "q": 3,
      "u": "",
-     "item": "lemon",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges",
      "aisle": "Produce"
     },
     {
-     "q": 200,
-     "u": "ml",
-     "item": "thick cream",
-     "aisle": "Dairy"
+     "q": 150,
+     "u": "g",
+     "item": "fine semolina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Rub the butter into the flour, then stir in the egg and milk to a soft dough.",
-     "min": 8
+     "text": "Heat the oven to 180C. Beat the butter with 200g of the sugar, then the eggs, orange zest, semolina, almond meal, flour and half the juice.",
+     "min": 12
     },
     {
-     "text": "In a wide pan, bring the water, golden syrup, brown sugar, butter and a squeeze of lemon to the boil.",
+     "text": "Bake in a lined 22cm tin until golden.",
+     "min": 40
+    },
+    {
+     "text": "Boil the rest of the juice with the rest of the sugar for 5 minutes and pour over the hot cake.",
      "min": 5
-    },
-    {
-     "text": "Drop in spoonfuls of dough.",
-     "min": 3
-    },
-    {
-     "text": "Cover and simmer gently without lifting the lid.",
-     "min": 20
-    },
-    {
-     "text": "Serve in bowls with the sauce and thick cream.",
-     "min": 2
     }
    ],
    "veg": true,

@@ -176,59 +176,67 @@
    }
   },
   {
-   "n": "Alice Springs damper",
+   "n": "Silver City pikelets with jam and cream",
    "course": "s",
-   "prep_min": 15,
-   "cook_min": 30,
-   "make_ahead": "Best the day it is baked",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Cook up to 2 hours ahead and keep covered; warm to order",
    "ingredients": [
     {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 450,
+     "q": 150,
      "u": "g",
      "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
      "q": 1,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Spices"
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar strawberry jam",
+     "aisle": "Pantry"
     },
     {
      "q": 300,
      "u": "ml",
-     "item": "full cream milk",
+     "item": "thickened cream",
      "aisle": "Dairy"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "golden syrup, to serve",
-     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Rub a portion of the butter into the flour and salt, add the milk and mix to a soft dough.",
-     "min": 10
+     "text": "Whisk the flour, sugar, egg and milk into a thick batter.",
+     "min": 4
     },
     {
-     "text": "Shape into a round and cut a cross on top.",
-     "min": 3
+     "text": "Cook tablespoons in a buttered pan until bubbles show, then flip for a minute, in batches.",
+     "min": 15
     },
     {
-     "text": "Bake at 200C until it sounds hollow when tapped.",
-     "min": 30
-    },
-    {
-     "text": "Serve warm with the rest of the butter and golden syrup.",
-     "min": 2
+     "text": "Whip the cream and serve the pikelets warm with jam and cream.",
+     "min": 5
     }
    ],
    "veg": true,

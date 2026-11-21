@@ -186,62 +186,46 @@
    }
   },
   {
-   "n": "Campfire damper",
+   "n": "Servo dim sims with soy",
    "course": "s",
-   "prep_min": 10,
-   "cook_min": 30,
-   "make_ahead": "Best served warm",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Steam up to 1 hour ahead; fry to order",
    "ingredients": [
     {
-     "q": 60,
-     "u": "g",
-     "item": "cold butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 450,
-     "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "golden syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
+     "q": 12,
      "u": "",
-     "item": "extra butter, to serve",
-     "aisle": "Dairy"
+     "item": "frozen dim sims",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 200C. Rub the butter into the flour until crumbly.",
+     "text": "Steam the dim sims for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Fry in 180C oil until crisp at the edges, then drain.",
      "min": 5
     },
     {
-     "text": "Mix in the milk with a knife until it just comes together.",
-     "min": 3
-    },
-    {
-     "text": "Shape into a round, score the top and bake. Or wrap around green sticks over coals.",
-     "min": 30
-    },
-    {
-     "text": "Serve with butter and golden syrup.",
-     "min": 2
+     "text": "Serve hot with soy sauce to dip.",
+     "min": 1
     }
    ],
-   "veg": true,
+   "veg": false,
    "af": true
   },
   {
@@ -355,77 +339,87 @@
    }
   },
   {
-   "n": "Golden syrup dumplings",
+   "n": "Roadhouse vanilla slice",
    "course": "w",
-   "prep_min": 15,
-   "cook_min": 30,
-   "make_ahead": "Best served hot",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Make the day before; it needs 4 hours to set",
    "ingredients": [
     {
-     "q": 30,
-     "u": "g",
-     "item": "cold butter",
-     "aisle": "Dairy"
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
     },
     {
-     "q": 250,
+     "q": 100,
      "u": "g",
-     "item": "self-raising flour",
+     "item": "custard powder",
      "aisle": "Pantry"
     },
     {
      "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
      "u": "ml",
      "item": "milk",
      "aisle": "Dairy"
     },
     {
-     "q": 375,
+     "q": 300,
      "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "golden syrup",
-     "aisle": "Pantry"
+     "item": "thickened cream",
+     "aisle": "Dairy"
     },
     {
      "q": 30,
      "u": "g",
-     "item": "butter, for the syrup",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "brown sugar",
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
      "aisle": "Pantry"
     },
     {
-     "q": 200,
-     "u": "ml",
-     "item": "cream, to serve",
-     "aisle": "Dairy"
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Rub the butter into the flour and mix in the milk to a soft dough.",
-     "min": 7
+     "text": "Heat the oven to 200C and bake the pastry sheets between two trays until crisp.",
+     "min": 15
     },
     {
-     "text": "Simmer the water, golden syrup, butter and sugar in a wide pan.",
-     "min": 8
+     "text": "Whisk the custard powder and sugar into the milk and cream and stir over medium heat until very thick, then add the butter and vanilla.",
+     "min": 10
     },
     {
-     "text": "Drop in spoonfuls of dough, cover and cook until puffed.",
-     "min": 20
+     "text": "Layer pastry, custard and pastry in a lined 23cm tin.",
+     "min": 5
     },
     {
-     "text": "Serve with cream.",
-     "min": 2
+     "text": "Chill until set.",
+     "min": 240
+    },
+    {
+     "text": "Mix the icing sugar with the passionfruit pulp, spread on top, let it set and cut into squares.",
+     "min": 10
     }
    ],
    "veg": true,

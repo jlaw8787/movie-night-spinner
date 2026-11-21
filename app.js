@@ -1276,6 +1276,12 @@ function planFive(f,r2){const have=new Set(r2.map(d=>String(d.orig||d.n).toLower
   const out=new Set();for(const [c,n] of [["s",2],["m",1],["w",1],["d",1]]){let k=0;for(const x of byC[c])if(k<n&&have.has(x)&&!out.has(x)){out.add(x);k++}}
   for(const c of ["s","m","w","d"])for(const x of byC[c])if(out.size<5&&have.has(x))out.add(x);
   return out.size?out:null}
+/* review 34, Josh (21 Nov): cook five, mains first. Every main with a recipe goes in tonight's five (Hall Pass printed two mains and the
+   prep sheet cooked one); to stay at five it drops a second starter, then the drink. Never more than five, never a course left empty by it */
+function planMains(r2,ck){if(!ck)return ck;const key=d=>String(d.orig||d.n).toLowerCase(),out=new Set(ck),by=c=>r2.filter(d=>d.course===c&&out.has(key(d)));
+  for(const d of r2.filter(d=>d.course==="m"&&!out.has(key(d)))){const s=by("s"),dr=by("d"),w=by("w");
+    const drop=s.length>1?s[s.length-1]:dr.length&&(s.length||w.length)?dr[dr.length-1]:null;if(out.size>=5&&!drop)break;if(drop)out.delete(key(drop));out.add(key(d))}
+  return out}
 /* review 17, Josh (6 Nov): "show all dishes, cook 5" on every film. A menu whose cooked list names six or seven dishes (Paddington 2, Hot Fuzz)
    cooks the five planFive picks from those; the others stay on the list unticked */
 function planTrim(f,r2,ck0){const inn=r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase()));if(inn.length<=5)return ck0;return planFive(f,inn)||ck0}
@@ -1283,7 +1289,7 @@ function planTrim(f,r2,ck0){const inn=r2.filter(d=>ck0.has(String(d.orig||d.n).t
 const planDish=(f,d)=>dietDish(d,dietAF()||DRY_THEMES.includes(f&&f.theme));
 const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>planDish(f,d)),
     /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
-    ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?planTrim(f,r2,ck0):r2.length>5?planFive(f,r2):null,
+    ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=planMains(r2,ok?planTrim(f,r2,ck0):r2.length>5?planFive(f,r2):null),
     hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),sp=!!ck,all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(planExtras(f).map(d=>planDish(f,d))).concat(snackDishes(f).map(d=>planDish(f,d)))};
@@ -1456,9 +1462,37 @@ function shopLines(list){
      for(let k=sl.length-1;k>=0;k--)lines.splice(sl[k][1],1);if(pl||fl)lines.splice(sl[0][1],0,(pl&&fl?"salt and salt flakes":fl?"salt flakes":"salt")+"@"+at)}}
   /* "salt and pepper" already covers a plain "salt" or "pepper" line (Casino Royale listed both) */
   {const sp=lines.find(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l));if(sp)for(let i=lines.length-1;i>=0;i--)if(lines[i]!==sp&&/^((sea |table |cooking |fine )?salt|(ground |cracked )?(black )?pepper)@/i.test(lines[i]))lines.splice(i,1)}
+  /* review 34: a shopping list reads like what you buy, not like the recipe ("3 cups shredded cabbage", "8 shots of espresso",
+     "1 tbsp grated ginger", "100ml lemon juice"): buyBy turns each into the thing on the shelf. Two lines that land on the same buy merge */
+  {const out=[];for(const l of lines){const at=l.lastIndexOf("@"),b=buyBy(l.slice(0,at));const nl=b+l.slice(at);
+     const twin=out.findIndex(x=>x.toLowerCase()===nl.toLowerCase());if(twin>=0)continue;
+     const fm=nl.match(/^(\d+) (lemon|lime|orange)s?(@.+)$/i),fi=fm?out.findIndex(x=>{const y=x.match(/^(\d+) (lemon|lime|orange)s?(@.+)$/i);return y&&y[2].toLowerCase()===fm[2].toLowerCase()&&y[3]===fm[3]}):-1;
+     if(fi>=0){const n=+out[fi].match(/^\d+/)[0]+ +fm[1];out[fi]=`${n} ${fm[2].toLowerCase()}s${fm[3]}`;continue}out.push(nl)}lines.length=0;lines.push(...out)}
   return lines;
 }
-const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|to taste|to serve|for serving|plus extra|cut into [^,]+|at room temperature)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed))?\s*$/i;
+const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
+const BUY_N=t=>{const m=String(t).trim().match(/^(\d+)(?:\s+(\d)\/(\d))?|^(\d)\/(\d)/);return m?(m[1]?+m[1]+(m[2]?m[2]/m[3]:0):m[4]/m[5]):0};
+function buyBy(t){let x=String(t).trim();
+  x=x.replace(/,\s*(leaves picked|divided|to finish|for dusting|plus extra( for [^,]+)?|cut (in|into) [^,]+|in (thick |thin |small |big )?(chunks|slices|wedges|rings|cubes|strips|pieces|rounds))\s*$/i,"");
+  let m;
+  /* herbs by the spoon, sprig or handful: a bunch */
+  if((m=x.match(new RegExp("^[\\d\\/ ]+\\s*(?:tbsp|tsp|cups?|handfuls?|small handfuls?|sprigs?|small bunch(?:es)?)?\\s*(?:of\\s+)?(?:fresh\\s+)?(?:(?:finely |roughly )?(?:chopped|snipped|torn|picked|shredded)\\s+)?"+BUY_HERB+"(?:\\s+leaves|\\s+sprigs)?$","i"))))return `1 bunch ${m[1].toLowerCase()}`;
+  /* juice measured out: whole fruit (a lemon gives about 40ml, a lime about 25ml) */
+  if((m=x.match(/^(\d+)\s?ml\s+(?:fresh(?:ly squeezed)?\s+)?(lemon|lime|orange)\s+juice$/i))){const per={lemon:40,lime:25,orange:80}[m[2].toLowerCase()],n=Math.max(1,Math.ceil(+m[1]/per-0.15));return `${n} ${m[2].toLowerCase()}${n>1?(m[2].toLowerCase()==="lemon"?"s":m[2].toLowerCase()==="lime"?"s":"s"):""}`}
+  /* grated or minced ginger and garlic by the spoon */
+  if(/^[\d\/ ]+\s*(tbsp|tsp)\s+(?:freshly\s+)?(?:grated|minced|chopped|crushed)?\s*(?:fresh\s+)?ginger$/i.test(x))return "1 knob ginger";
+  if(/^[\d\/ ]+\s*(tbsp|tsp)\s+(?:minced|crushed|chopped)\s+garlic$/i.test(x))return "1 head garlic";
+  /* cabbage by the cup: a quarter is about 3 cups shredded */
+  if((m=x.match(/^([\d\/ ]+)\s*cups?\s+(?:of\s+)?(?:finely\s+)?(?:shredded|sliced|chopped)\s+((?:red |green |savoy |wombok |chinese )?cabbage)$/i))){const c=BUY_N(m[1]);return `${c<=3?"1/4":c<=6?"1/2":"1"} ${m[2].toLowerCase()}`}
+  /* shots of espresso: the coffee */
+  if((m=x.match(/^(\d+)\s+(?:shots? of\s+)?espresso(?:\s+shots?)?$/i)))return `250g ground coffee (for ${m[1]} espresso shots)`;
+  /* pickle slices and whipped cream come as a jar and a carton */
+  if(/^\d+\s+(?:dill\s+)?pickle\s+slices$|^\d+\s+slices\s+(?:of\s+)?(?:dill\s+)?pickles?$/i.test(x))return "1 jar dill pickles";
+  if(/^[\d\/ ]+\s*(tbsp|cups?)\s+whipped cream$/i.test(x))return "300ml thickened cream (whip it)";
+  /* a cut word at the front of produce ("2 tbsp chopped mint" is handled above; "500g sliced mushrooms" is just mushrooms) */
+  x=x.replace(/^([\d\/ .]+\s*(?:g|kg|ml|l|L)?\s+)(?:finely |roughly |thinly )?(?:chopped|diced|sliced|shredded|minced|snipped|torn)\s+(?!.*\b(cheese|cheddar|mozzarella|parmesan|pecorino|gruyere|ham|salami|turkey|beef|pork|chicken|almonds|coconut)\b)/i,"$1");
+  return x}
+const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|hulled|snipped|half juiced|half sliced|to taste|to serve|for serving|plus extra( for [^,]+)?|cut into [^,]+|at room temperature)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed|hulled|snipped))?\s*$/i;
 const STAPLE_RE=/^(salt|sea salt|table salt|cooking salt|fine salt|kosher salt|flaky salt|salt flake|sea salt flake|pepper|black pepper|ground black pepper|cracked black pepper|white pepper|salt and pepper|salt and black pepper|salt and freshly ground black pepper)$/;
 /* waiting time (chilling, soaking, resting, setting) is shown apart from hands-on and cooking time */
 const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep|drain|set|churn|rise)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse|to drain|until doubled|doubled in size|an hour before|hours before|an hour ahead|hours ahead|to room temperature for|come to room temperature|wait for|chill until|until firm|until cold|until solid|for the setting)\b|\b(and|then) (chill|refrigerate|freeze|set|leave to set|cool)\b|\bin the freezer\b|\bdoubled\b|\b(chill|refrigerate|rest|set|freeze|soak|marinate|drain) (\d+|an?|one|two|three) (hours?|hrs?|minutes?|mins?)\b|\b(cure|age|ferment|pickle|steep|infuse|macerate)\w*\b[^.]{0,40}\bfor (\d+|an?|one|two|three|several)( to \d+)? (days?|weeks?)\b|\b(dry|leave|cool) (it |them )?in the (turned-off |switched-off )?oven\b|\boven (off|turned off)\b|\b(part|half|semi)[- ]?freez\w*|\b(leave|keep|store|rest|sit)\b[^.]{0,30}\b(a|one|two|three|four|\d+) (weeks?|days?)\b\b|\b(drain|chill|refrigerat|freez|set|rest|soak|marinat|prove|rise|stand|steep|infus|churn|cool)\w*\b[^.]{0,50}\bfor (at least |about |up to )?(\d+|an?|one|two|three|four|five|six|several)( to \d+)? (hours?|hrs?|minutes?|mins?|days?)\b/i;
@@ -1471,14 +1505,20 @@ const BAKE_RE=/\b(cake tins?|loaf tins?|baking (tin|dish|tray)|pie dish|tart tin
 const batchTip=(x,k)=>{if(!(k>1.5)||!(x.steps||[]).some(s=>BAKE_RE.test(s.text)&&/\bbake\b/i.test(s.text)))return "";const n=Math.ceil(k-0.05);return `For this many, make it in ${n===2?"two":n===3?"three":n} batches: same tins and baking time for each.`};
 const stepParts=t=>{const ss=String(t).split(/(?<=[.!?])\s+(?=[A-Z])/),tip=ss.filter(x=>TIP_RE.test(x)),main=ss.filter(x=>!TIP_RE.test(x));return {main:main.join(" "),tip:tip.join(" ")}};
 /* a step is waiting if it says so, or if it runs over four hours without heat: nobody does four hours of hands-on prep */
-const isWaitStep=t=>(t.min||0)>=10&&(WAIT_RE.test(String(t.text).trim())||((t.min||0)>=240&&!HEAT_RE.test(String(t.text))));
+/* review 34: a bake that ends "then cool and cut" is the bake, not waiting (Hall Pass brownies read "28 min to set and cool");
+   a step only counts as waiting with heat in it when it opens on the wait ("Cool, then chill"). "Cut and soak" is waiting (Grease fries) */
+const WAIT_LEAD=/^(cover and )?(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|stand|infuse|set|churn|rise)(?!\s+(the|a|an|each|it|them)\b(?!\s+(cool|rest|set|stand|chill)))\b/i;
+const isWaitStep=t=>{const x=String(t.text).trim(),m=t.min||0;if(m<10)return false;if(HEAT_RE.test(x)&&!WAIT_LEAD.test(x))return false;
+  return WAIT_RE.test(x)||/\band (soak|marinate|steep)\b/i.test(x)||(m>=240&&!HEAT_RE.test(x))};
 function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let wait=0;for(const t of st)if(isWaitStep(t))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
   /* split by the steps themselves when their minutes add up to the recipe's total: hands-on, heat and waiting each counted where they happen */
   const isW=isWaitStep,isH=t=>!isW(t)&&HEAT_RE.test(String(t.text));
   const heat=st.filter(isH).reduce((a,t)=>a+(t.min||0),0),sum=st.reduce((a,t)=>a+(t.min||0),0);
   let c2,p2;
-  if(st.length&&st.every(t=>t.min>0)&&Math.abs(sum-(prep+cook))<=Math.max(5,(prep+cook)*.25)){c2=heat;p2=Math.max(0,sum-heat-wait)}
+  /* review 34: when every step carries its minutes, the header is built from the steps alone, so it can never disagree with them
+     (Ratatouille's brulee said cook 13 min and 1 hr to chill beside a 35 min bake and 3 hr chill). A serving step may be 0 */
+  if(st.length&&st.every(t=>typeof t.min==="number"&&t.min>=0)&&sum>0){wait=st.filter(isW).reduce((a,t)=>a+(t.min||0),0);c2=heat;p2=Math.max(0,sum-heat-wait)}
   else{/* otherwise take the waiting off cooking, but never below the heat steps, and the rest off prep */
     c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait)}/* someone always has to chop, season or mix: prep is never shown as 0 */
   if(st.length&&p2<5)p2=5;
@@ -1696,6 +1736,17 @@ function iosBakeFilters(card){
 /* the intermission cards print a signed note in quote marks, with "said", only when it is the character's real line (note.kind "quote") */
 const kitQ=n=>n&&n.kind==="quote"?`"${ESC(n.text)}"`:ESC(n&&n.text);
 const kitSaid=(n,verb)=>n.kind==="quote"?(verb==="said"?`"${ESC(n.text)}" said ${ESC(n.by)}.`:`"${ESC(n.text)}" ${ESC(n.by)} told this paper.`):`A note from ${ESC(n.by)}: ${ESC(n.text)}`;
+/* review 34: a real quote (flavour.note kind "quote") always prints inside quote marks, so it reads apart from the notes in a
+   character's voice. Eleven layouts printed the bare line (Grease "Tell me about it, stud." under LEFT ON THE COUNTER) */
+function quoteMarks(root,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind!=="quote")return;const nz=t=>String(t).replace(/[\u2018\u2019]/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/\s+/g," ").trim();
+  const want=nz(n.text).replace(/^["']|["']$/g,""),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;
+  while((t=w.nextNode())){const raw=nz(t.textContent);if(raw.replace(/^["']|["']$/g,"")!==want)continue;
+    if(/^["']/.test(raw)||/["“]\s*$/.test(nz(t.previousSibling&&t.previousSibling.textContent||""))||/[\u201c"]/.test(getComputedStyle(t.parentElement,"::before").content))return;
+    t.textContent="\u201c"+t.textContent.trim().replace(/^["'\u201c]|["'\u201d]$/g,"")+"\u201d";return}}
+/* review 34: a house line the printed card had no room for (Josh's rule: only house lines drop, never a dish) leaves the phone menu and the
+   print list too, so the three always show the same dishes (Kingsman's potted prawns were on the phone, not the card) */
+function houseShown(m,root){if(!m||!root)return m;const nz=t=>String(t||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim(),txt=(()=>{const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t,o=[];while((t=w.nextNode())){let e=t.parentElement,hid=false;while(e&&e!==root){if(e.style&&e.style.display==="none"){hid=true;break}e=e.parentElement}if(!hid)o.push(t.textContent)}return nz(o.join(" "))})();
+  const o=Object.assign({},m);for(const k of ["s","m","w","d"])if(Array.isArray(m[k]))o[k]=m[k].filter(it=>!it||!it.house||txt.includes(nz(it.n).slice(0,28)));return o}
 function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")return h;
   const e=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"),rx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
   const head=String(n.text).trim().slice(0,18),alt=[head,e(head),e(head).replace(/&quot;/g,'"'),head.replace(/'/g,"&#39;")].filter((v,i,A)=>A.indexOf(v)===i).map(rx).join("|");
@@ -2375,12 +2426,12 @@ async function show(f,preferSig){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}try{quoteMarks(card,L.flavour)}catch(e){}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
       await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);foldClear(card);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card);foldClear(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId){fitLines(card);foldClear(card)}},5000);
-      try{libPhoneView(f,fullMenu(f,menu,L.fmt),L,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
+      try{libPhoneView(f,houseShown(fullMenu(f,menu,L.fmt),card),L,card);current.printMenu=houseShown(current.printMenu,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
       return;

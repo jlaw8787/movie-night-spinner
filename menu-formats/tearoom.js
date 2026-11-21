@@ -177,13 +177,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const secHead=t=>`<div style="break-inside:avoid;break-after:avoid;margin:0 0 .3em;text-align:center"><span style="font-family:${D};font-weight:${E.dw};font-size:max(18px,1.06em);line-height:1.1;color:${acc};${up}">${esc(t)}</span><div style="margin:.2em auto 0;width:3em;border-top:2px solid ${E.gilt}"></div></div>`;
   function row(it,ci,ii){
     /* review 32: a Victorian tea room (priceEra 1800s, The Prestige) charges pence, not 1950s shillings: about an eighth of the card */
-    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?(fl.priceEra==="1800s"?LSD1800:LSD):E.coin);
-    return `<div style="break-inside:avoid;margin:0 0 .5em"><div style="display:flex;gap:.6em;align-items:baseline"><span style="flex:1;font-family:${D};font-weight:${E.dw};font-size:max(15px,1em);line-height:1.15;color:${ink}">${esc(n)}</span><span style="flex:none;font:600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>
+    /* review 34: nobody charges at home (Paddington's kitchen, the Dwarfs' cottage): a home tea prints no prices */
+    const n=clean(it.n),p=PLACE.k==="home"?"":price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?(fl.priceEra==="1800s"?LSD1800:LSD):E.coin);
+    return `<div style="break-inside:avoid;margin:0 0 .5em"><div style="display:flex;gap:.6em;align-items:baseline"><span style="flex:1;font-family:${D};font-weight:${E.dw};font-size:max(15px,1em);line-height:1.15;color:${ink}">${esc(n)}</span>${p?`<span style="flex:none;font:600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span>`:""}</div>
       ${it.note?`<div data-note="1" style="font:italic 400 max(12px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
   }
   let flow="";
   ["s","m","w","d"].forEach((k,ci)=>{const items=(m[k]||[]).slice(0,4);if(!items.length)return;
-    flow+=`<div style="break-inside:avoid">${secHead(LAB[ci])}${row(items[0],ci,0)}</div>`+items.slice(1).map((it,ii)=>row(it,ci,ii+1)).join("")+`<div style="height:.4em"></div>`});
+    flow+=`<div style="break-inside:avoid">${secHead((PLACE.k==="store"?LAB:PLACE.k==="home"?["Little bites","From the kitchen","Something sweet","Tea and drinks"]:["To start","Plates","Sweets","Drinks"])[ci])}${row(items[0],ci,0)}</div>`+items.slice(1).map((it,ii)=>row(it,ci,ii+1)).join("")+`<div style="height:.4em"></div>`});
   if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;text-align:center;font-size:max(15px,.74em);line-height:1.35;color:${ink};margin:.1em 0 .4em"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">The bell for the picture </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.62em);line-height:1.35;color:${ink};opacity:.9"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">Overheard at the next table </span>${winks.map(esc).join(". ")}.</div>`;
@@ -192,7 +193,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const two=nItems>8;
   const bHead=`<div style="position:absolute;left:36px;right:36px;top:34px;text-align:center">
     <div style="font:600 15px/1.2 ${B};letter-spacing:.22em;text-transform:uppercase;color:${acc};white-space:nowrap;overflow:hidden">${esc(venue)}</div>
-    <div style="font-family:${D};font-weight:${E.dw};font-size:40px;line-height:1.05;color:${ink};margin-top:6px;${up}">Luncheon and Tea</div>
+    <div style="font-family:${D};font-weight:${E.dw};font-size:40px;line-height:1.05;color:${ink};margin-top:6px;${up}">${PLACE.k==="store"?"Luncheon and Tea":PLACE.k==="party"?"The Tea Party":PLACE.k==="home"?"Tea Is Served":"Food and Tea"}</div>
     <div style="margin:10px auto 0;width:120px;border-top:3px double ${E.gilt}"></div></div>`;
   const MY=150;
   const menu=`<div data-fit="25" style="position:absolute;left:44px;right:44px;top:${MY}px;height:${SY-MY-22}px;overflow:hidden;font-size:25px;${two?"column-count:2;column-gap:30px;column-fill:auto;":""}">${flow}</div>`;
@@ -200,11 +201,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const prop=`<div style="position:absolute;left:14px;bottom:14px;width:236px;transform:rotate(${(T.tilt/3).toFixed(1)}deg);background:#fffdf7;box-shadow:0 3px 12px rgba(0,0,0,.35);border-top:6px solid ${acc};padding:9px 14px 10px">
     <div style="font-family:${D};font-weight:${E.dw};font-size:20px;line-height:1.1;color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(pr.title))}</div>
     ${(pr.lines||[]).slice(0,2).map(l=>`<div style="font:400 15px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(l))}</div>`).join("")}
-    <div style="font:600 14px/1.2 ${B};letter-spacing:.16em;color:${acc};margin-top:3px">COUNTER ${esc(num)}</div></div>`;
+    <div style="font:600 14px/1.2 ${B};letter-spacing:.16em;color:${acc};margin-top:3px">${PLACE.k==="store"?"COUNTER "+esc(num):PLACE.k==="home"?"With love":"Table "+esc(num)}</div></div>`;
   const still2=`<div style="position:absolute;left:24px;right:24px;top:${SY}px;height:${SH}px">
     <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s2,(stills[1]||stills[0])?"still":"poster")}</div>${prop}
     <div style="position:absolute;right:12px;bottom:12px;background:${paper};color:${ink};font:italic 400 15px/1.2 ${B};padding:5px 10px">Now showing, ${esc(f.year||"")}</div></div>`;
-  const backFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;font:400 14px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">Prices include tea for one. Form TR-${esc(num)}. Images: TMDB</div>`;
+  const backFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;font:400 14px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${PLACE.k==="store"?"Prices include tea for one. Form TR-"+esc(num)+".":PLACE.k==="home"?"Made at home, served in the front room.":PLACE.k==="party"?"Tea and cake for every guest.":"Pay on the way out."} Images: TMDB</div>`;
   const back=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:8px;${E.frame};pointer-events:none"></div>
     ${bHead}${menu}${still2}${backFoot}${fitImg()}</div>`;

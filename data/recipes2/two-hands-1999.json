@@ -712,69 +712,65 @@
    }
   },
   {
-   "n": "Pavlova",
+   "n": "Darlinghurst tiramisu",
    "course": "w",
-   "prep_min": 30,
-   "cook_min": 130,
-   "make_ahead": "Base up to 1 day, top just before serving",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Make the day before; it needs 4 hours to set",
    "ingredients": [
     {
-     "q": 4,
+     "q": 3,
      "u": "",
-     "item": "egg whites",
+     "item": "eggs, separated",
      "aisle": "Dairy"
     },
     {
-     "q": 220,
+     "q": 75,
      "u": "g",
      "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "cornflour",
-     "aisle": "Pantry"
+     "q": 500,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "white vinegar",
+     "q": 200,
+     "u": "g",
+     "item": "sponge fingers",
      "aisle": "Pantry"
     },
     {
      "q": 300,
      "u": "ml",
-     "item": "thickened cream, whipped",
-     "aisle": "Dairy"
+     "item": "strong coffee, cooled",
+     "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "",
-     "item": "passionfruit, pulp",
-     "aisle": "Produce"
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 120C. Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
-     "min": 20
+     "text": "Whisk the yolks and sugar until pale and fold in the mascarpone.",
+     "min": 8
     },
     {
-     "text": "Fold in the cornflour and vinegar and shape into a round.",
+     "text": "Whisk the whites to soft peaks and fold them through.",
+     "min": 5
+    },
+    {
+     "text": "Dip the sponge fingers in the coffee and layer with the cream in a dish.",
      "min": 10
     },
     {
-     "text": "Bake for 90 minutes.",
-     "min": 90
-    },
-    {
-     "text": "Cool in the oven.",
-     "min": 30
-    },
-    {
-     "text": "Top with whipped cream and passionfruit.",
-     "min": 10
+     "text": "Chill until set, then dust with cocoa.",
+     "min": 240
     }
    ],
    "veg": true,

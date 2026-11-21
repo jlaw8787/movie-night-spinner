@@ -2,142 +2,65 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Mining camp sausage rolls",
+   "n": "Mining camp curried egg sandwiches",
    "course": "s",
-   "prep_min": 25,
-   "cook_min": 25,
-   "make_ahead": "Up to 1 day, reheat to crisp",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Make the egg filling up to a day ahead and chill",
    "ingredients": [
     {
-     "q": 500,
-     "u": "g",
-     "item": "pork sausage mince",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
+     "q": 8,
      "u": "",
-     "item": "onion, grated",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "carrot, grated",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "sheets of puff pastry, halved",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg, beaten",
+     "item": "eggs",
      "aisle": "Dairy"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "tomato sauce, to serve",
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 200C and line a tray.",
-     "min": 3
+     "text": "Boil the eggs for 9 minutes, then cool in cold water and peel.",
+     "min": 12
     },
     {
-     "text": "Mix the sausage mince, onion and carrot.",
+     "text": "Mash with the mayonnaise, curry powder, salt and pepper.",
      "min": 5
     },
     {
-     "text": "Lay the filling along the edge of the pastry, roll up and seal.",
-     "min": 10
-    },
-    {
-     "text": "Brush with egg, cut into pieces and bake.",
-     "min": 25
-    },
-    {
-     "text": "Serve hot with tomato sauce.",
-     "min": 2
+     "text": "Butter the bread, add lettuce and the egg, sandwich and cut into triangles.",
+     "min": 8
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Mining camp sausage rolls (vegetarian)",
-     "prep_min": 20,
-     "cook_min": 25,
-     "make_ahead": "Up to 1 day, reheat to crisp",
-     "ingredients": [
-      {
-       "q": 500,
-       "u": "g",
-       "item": "vegetarian sausages, skins removed",
-       "aisle": "Deli"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "onion, grated",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "carrot, grated",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "sheets of puff pastry, halved",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "egg, beaten",
-       "aisle": "Dairy"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "tomato sauce, to serve",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Heat the oven to 200C and line a tray.",
-       "min": 3
-      },
-      {
-       "text": "Mix the vegetarian sausage filling with the onion and carrot.",
-       "min": 5
-      },
-      {
-       "text": "Lay the filling along the edge of the pastry, roll up and seal.",
-       "min": 10
-      },
-      {
-       "text": "Brush with egg, cut into pieces and bake.",
-       "min": 25
-      },
-      {
-       "text": "Serve hot with tomato sauce.",
-       "min": 2
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dampier barbecued squid",
@@ -430,154 +353,53 @@
    }
   },
   {
-   "n": "Red Dog lamingtons",
+   "n": "Carnarvon mango cheeks with coconut ice cream",
    "course": "w",
-   "prep_min": 50,
-   "cook_min": 160,
-   "make_ahead": "Make the day before",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "Cut the mango up to 2 hours ahead and chill",
    "ingredients": [
     {
-     "q": 125,
-     "u": "g",
-     "item": "butter, softened",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
+     "q": 4,
      "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
+     "item": "mangoes",
+     "aisle": "Produce"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "milk",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "l",
+     "item": "coconut ice cream",
+     "aisle": "Frozen"
     },
     {
      "q": 1,
      "u": "",
-     "item": "packet of raspberry jelly crystals",
-     "aisle": "Pantry"
+     "item": "lime",
+     "aisle": "Produce"
     },
     {
-     "q": 200,
+     "q": 30,
      "u": "g",
-     "item": "desiccated coconut",
+     "item": "shredded coconut",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 180C and line a square tin. Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
-     "min": 15
+     "text": "Toast the coconut in a dry pan until golden.",
+     "min": 3
     },
     {
-     "text": "Bake the sponge and cool overnight.",
-     "min": 30
+     "text": "Cut the cheeks from the mangoes and score the flesh.",
+     "min": 8
     },
     {
-     "text": "Make up the jelly and chill until just starting to set.",
-     "min": 30
-    },
-    {
-     "text": "Cut the sponge into cubes, dip in the jelly and roll in coconut.",
-     "min": 15
-    },
-    {
-     "text": "Chill until firm.",
-     "min": 120
+     "text": "Serve with a scoop of ice cream, lime zest and the toasted coconut.",
+     "min": 3
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Red Dog lamingtons (vegetarian)",
-     "prep_min": 50,
-     "cook_min": 150,
-     "make_ahead": "Make the day before",
-     "ingredients": [
-      {
-       "q": 125,
-       "u": "g",
-       "item": "butter, softened",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "self-raising flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "ml",
-       "item": "milk",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "packet of vegetarian raspberry jelly crystals, set with agar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "desiccated coconut",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Heat the oven to 180C and line a square tin. Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
-       "min": 15
-      },
-      {
-       "text": "Bake the sponge for 30 minutes and cool completely.",
-       "min": 90
-      },
-      {
-       "text": "Make up the jelly and let it cool until lukewarm but still runny.",
-       "min": 20
-      },
-      {
-       "text": "Cut the sponge into cubes, dip in the jelly and roll in coconut.",
-       "min": 15
-      },
-      {
-       "text": "Chill until firm.",
-       "min": 60
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red Dog ruby grapefruit radler",

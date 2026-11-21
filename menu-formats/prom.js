@@ -115,7 +115,7 @@ if(!document.getElementById("fmt-prom-fonts")){
 }
 
 /* ---------- text safety ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\w)-(?=\w)/g,"$1 ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\d)-(?=\d)/g,"$1 to ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"']$/.test(s)?s:s+"."};
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);

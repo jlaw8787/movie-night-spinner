@@ -22,7 +22,7 @@ if(!document.getElementById("fmt-pub-fonts")){
   document.head.appendChild(l);
 }
 /* ---------- text safety ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\w)-(?=\w)/g,"$1 ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\d)-(?=\d)/g,"$1 to ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"']$/.test(s)?s:s+"."};
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
@@ -95,7 +95,7 @@ const ERA={
 };
 const TONE={
  gritty:{wear:.85,smudge:.8,tilt:-2,photo:"contrast(1.15) saturate(.86)",kick:"Locals and blow ins",raffle:"Meat tray raffle, Friday",close:"No boots on the bar. Cash preferred."},
- glossy:{wear:.08,smudge:.15,tilt:0,photo:"saturate(1.1) brightness(1.03)",kick:"Fine country dining",raffle:"Members draw, Friday",close:"Bookings taken at the front bar."},
+ glossy:{wear:.08,smudge:.15,tilt:0,photo:"saturate(1.1) brightness(1.03)",kick:"Dining room open",raffle:"Members draw, Friday",close:"Bookings taken at the front bar."},
  warm:{wear:.4,smudge:.45,tilt:-1.4,photo:"sepia(.08) saturate(1.06)",kick:"Come in out of the heat",raffle:"Meat tray raffle, Friday",close:"Kids and dogs welcome on the verandah."},
  eerie:{wear:.55,smudge:.6,tilt:1.6,photo:"saturate(.78) contrast(1.12)",kick:"Last stop for a long way",raffle:"Raffle drawn at dark",close:"Don't go wandering after closing."},
  playful:{wear:.25,smudge:.35,tilt:-3,photo:"saturate(1.2) brightness(1.04)",kick:"Trivia every Wednesday",raffle:"Chook raffle, Friday",close:"Spot prize for the worst joke."},

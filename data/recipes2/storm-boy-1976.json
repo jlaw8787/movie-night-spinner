@@ -2,72 +2,58 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Fingerbone Bill's golden syrup damper",
+   "n": "Fingerbone Bill's smoked Coorong mullet",
    "course": "s",
-   "prep_min": 22,
-   "cook_min": 30,
-   "make_ahead": "Best eaten warm on the day",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Flake the fish up to a day ahead and chill",
    "ingredients": [
     {
-     "q": 60,
+     "q": 400,
+     "u": "g",
+     "item": "hot-smoked mullet or other smoked fish",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 450,
-     "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "sea salt flakes",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "butter for serving",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "golden syrup",
-     "aisle": "Pantry"
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Rub the cold butter into the flour and salt until it looks like breadcrumbs.",
-     "min": 10
-    },
-    {
-     "text": "Stir in the milk to make a soft dough and knead briefly.",
+     "text": "Flake the fish, discarding the skin and bones.",
      "min": 5
     },
     {
-     "text": "Shape into a round, cut a cross in the top and dust with flour.",
+     "text": "Toast and butter the sourdough.",
+     "min": 5
+    },
+    {
+     "text": "Pile on the fish and finish with lemon juice, pepper and chopped parsley.",
      "min": 3
-    },
-    {
-     "text": "Bake at 200C until it sounds hollow when tapped.",
-     "min": 30
-    },
-    {
-     "text": "Serve warm with butter, golden syrup and a little dish of sea salt.",
-     "min": 2
     }
    ],
-   "veg": true,
+   "veg": false,
    "af": true
   },
   {
@@ -257,7 +243,7 @@
    }
   },
   {
-   "n": "Hideaway Tom's crisp fish and chips",
+   "n": "Hide-Away Tom's crisp fish and chips",
    "course": "m",
    "prep_min": 19,
    "cook_min": 35,
@@ -366,7 +352,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Hideaway Tom's crisp banana blossom and chips",
+     "n": "Hide-Away Tom's crisp banana blossom and chips",
      "prep_min": 22,
      "cook_min": 35,
      "make_ahead": "Eat straight away",
@@ -487,75 +473,61 @@
    }
   },
   {
-   "n": "Beach shack golden syrup dumplings",
+   "n": "Hide-Away Tom's apple turnovers",
    "course": "w",
-   "prep_min": 13,
-   "cook_min": 25,
-   "make_ahead": "Cook fresh",
+   "prep_min": 15,
+   "cook_min": 26,
+   "make_ahead": "Fill and fold up to 4 hours ahead and chill; bake to order",
    "ingredients": [
     {
-     "q": 80,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
+     "q": 3,
+     "u": "",
+     "item": "green apples, peeled and diced",
+     "aisle": "Produce"
     },
     {
-     "q": 200,
+     "q": 40,
      "u": "g",
-     "item": "self-raising flour",
+     "item": "raisins",
      "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
     },
     {
      "q": 1,
      "u": "",
-     "item": "egg",
+     "item": "egg, beaten",
      "aisle": "Dairy"
-    },
-    {
-     "q": 80,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 125,
-     "u": "ml",
-     "item": "golden syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 80,
-     "u": "g",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "vanilla ice cream",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Rub the butter into the flour, then stir in the egg and milk to a soft dough.",
+     "text": "Cook the apple, raisins, 2 tbsp of the sugar and the cinnamon with a splash of water until soft, then cool.",
      "min": 8
     },
     {
-     "text": "In a wide pan, bring the water, golden syrup, brown sugar and butter to the boil.",
-     "min": 5
+     "text": "Heat the oven to 200C. Cut the pastry into quarters, spoon on the apple, fold into triangles and press the edges.",
+     "min": 10
     },
     {
-     "text": "Drop in spoonfuls of dough.",
-     "min": 3
-    },
-    {
-     "text": "Cover and simmer gently without lifting the lid.",
-     "min": 20
-    },
-    {
-     "text": "Spoon into bowls with the sauce and serve with vanilla ice cream.",
-     "min": 2
+     "text": "Brush with egg, sprinkle with the rest of the sugar and bake until puffed and golden.",
+     "min": 18
     }
    ],
    "veg": true,

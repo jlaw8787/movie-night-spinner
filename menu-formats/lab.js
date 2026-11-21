@@ -107,7 +107,7 @@ const TONE={
   tense:{f:"contrast(1.16) saturate(.86)",wear:.45,tilt:0,stamp:"RESTRICTED",kick:"Clearance required past this line."},
   scrappy:{f:"grayscale(.3) contrast(1.22)",wear:.85,tilt:-5,stamp:"PROVISIONAL",kick:"Whatever is left in the store room."}
 };
-const LAB=["Rations","Hot mess","Sweet issue","Canteen"];
+const LAB=["Rations","Hot meals","Sweet issue","Canteen"];
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{

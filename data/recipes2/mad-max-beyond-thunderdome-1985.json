@@ -63,62 +63,52 @@
    "af": true
   },
   {
-   "n": "Crack in the Earth damper",
+   "n": "Bartertown flatbread with dukkah",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 30,
-   "make_ahead": "Best baked on the day; rub the butter into the flour up to 3 hours ahead and add the milk when ready to bake. Eat warm, or keep wrapped for the next day and toast",
+   "cook_min": 15,
+   "make_ahead": "Make the dough up to 4 hours ahead and chill; cook to order",
    "ingredients": [
     {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 450,
+     "q": 300,
      "u": "g",
      "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "pinch salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "full cream milk",
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
      "aisle": "Dairy"
     },
     {
-     "q": 3,
+     "q": 4,
      "u": "tbsp",
-     "item": "golden syrup",
+     "item": "olive oil",
      "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "dukkah",
+     "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Rub half the butter into the flour and salt.",
+     "text": "Mix the flour, yoghurt and a pinch of salt into a soft dough.",
      "min": 5
     },
     {
-     "text": "Mix in the milk with a knife until just combined.",
-     "min": 4
+     "text": "Divide into 6 and roll each out thin.",
+     "min": 8
     },
     {
-     "text": "Shape into a round and score.",
-     "min": 4
+     "text": "Cook in a dry hot pan for 2 minutes a side until blistered.",
+     "min": 14
     },
     {
-     "text": "Bake at 200C until hollow when tapped.",
-     "min": 30
-    },
-    {
-     "text": "Serve with the remaining butter and golden syrup.",
+     "text": "Brush with oil and serve with dukkah and more oil to dip.",
      "min": 2
     }
    ],
@@ -308,97 +298,67 @@
    }
   },
   {
-   "n": "Thunderdome lamingtons",
+   "n": "Thunderdome rock cakes",
    "course": "w",
-   "prep_min": 60,
-   "cook_min": 45,
-   "make_ahead": "Better the next day",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Bake up to 2 days ahead and keep airtight",
    "ingredients": [
     {
      "q": 125,
      "u": "g",
-     "item": "butter, soft",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
+     "q": 300,
      "u": "g",
      "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
+     "q": 110,
      "u": "g",
-     "item": "icing sugar",
+     "item": "sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 30,
+     "q": 100,
      "u": "g",
-     "item": "cocoa",
+     "item": "currants",
      "aisle": "Pantry"
     },
     {
-     "q": 150,
-     "u": "ml",
-     "item": "full cream milk",
+     "q": 1,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
      "aisle": "Dairy"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "desiccated coconut",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 0.5,
-     "u": "cup",
-     "item": "strawberry jam",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "thickened cream",
+     "q": 4,
+     "u": "tbsp",
+     "item": "milk",
      "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Beat the butter with the sugar, add the eggs, then fold in the flour and milk.",
-     "min": 15
-    },
-    {
-     "text": "Bake the sponge at 180C.",
-     "min": 25
-    },
-    {
-     "text": "Cool and cut into squares.",
-     "min": 25
-    },
-    {
-     "text": "Split and fill with jam.",
+     "text": "Heat the oven to 190C. Rub the butter into the flour, then stir in 100g of the sugar, the currants and spice.",
      "min": 8
     },
     {
-     "text": "Mix the icing sugar, cocoa and a little milk, dip the squares and roll in coconut.",
-     "min": 15
+     "text": "Mix in the egg and milk to a stiff dough and drop rough heaps on a lined tray.",
+     "min": 7
     },
     {
-     "text": "Pipe cream in the middle.",
-     "min": 5
+     "text": "Sprinkle with the rest of the sugar and bake until golden.",
+     "min": 15
     }
    ],
    "veg": true,

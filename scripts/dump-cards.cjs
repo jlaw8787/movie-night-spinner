@@ -20,12 +20,12 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
   const r=await p.evaluate(async id=>{const f=FILMS.find(x=>x.id===id);try{await ensureExact(f);await show(f,true)}catch(e){return {err:String(e)}}await document.fonts.ready;
    {const t0=Date.now();while(Date.now()-t0<8000&&[...card.querySelectorAll('img')].some(i=>i.getAttribute('src')&&!i.complete))await new Promise(r=>setTimeout(r,120))}
    await new Promise(r=>setTimeout(r,900));
-   const vis=e=>{const out=[];const walk=n=>{if(n.nodeType===3){const t=n.textContent.replace(/\s+/g,' ').trim();if(t)out.push(t);return}if(n.nodeType!==1)return;const s=getComputedStyle(n);if(s.display==='none'||s.visibility==='hidden'||n.getAttribute('aria-hidden')==='true')return;for(const c of n.childNodes)walk(c);if(/^(DIV|P|LI|H\d|TR|BR|SECTION|ARTICLE|HEADER|FOOTER|TD|TH|DT|DD)$/.test(n.tagName)||s.display==='block'||s.display==='flex'||s.display==='grid')out.push('\n')};walk(e);return out.join(' ').replace(/ *\n[ \n]*/g,'\n').trim()};
+   const vis=(e,all)=>{const out=[];const walk=n=>{if(n.nodeType===3){const t=n.textContent.replace(/\s+/g,' ').trim();if(t)out.push(t);return}if(n.nodeType!==1)return;const s=getComputedStyle(n);if(!all&&(s.display==='none'||s.visibility==='hidden'||n.getAttribute('aria-hidden')==='true'))return;if(/^(SCRIPT|STYLE)$/.test(n.tagName))return;for(const c of n.childNodes)walk(c);if(/^(DIV|P|LI|H\d|TR|BR|SECTION|ARTICLE|HEADER|FOOTER|TD|TH|DT|DD)$/.test(n.tagName)||s.display==='block'||s.display==='flex'||s.display==='grid')out.push('\n')};walk(e);return out.join(' ').replace(/ *\n[ \n]*/g,'\n').trim()};
    const faces=[...card.querySelectorAll(':scope > *')].map(vis).filter(Boolean);
    const pm=current.printMenu||null,list=[];
    if(pm)for(const k of ['s','m','w','d'])for(const it of (pm[k]||[]))if(it&&it.n)list.push({c:k,n:it.n,note:it.note||'',d:it.d||it.desc||'',house:!!it.house,extra:!!it.extra});
    const fl=f._lib||null;
-   return {fmt:fl?fl.fmt:(fmtSpec(f)||{}).fmt||'card',faces,list,phone:vis(fmtPhone),prep:prep.innerText.replace(/\n{2,}/g,'\n').trim(),cue:f.P||'',venue:fl&&fl.flavour&&fl.flavour.venue||''}},id);
+   return {fmt:fl?fl.fmt:(fmtSpec(f)||{}).fmt||'card',faces,list,phone:vis(fmtPhone,1),prep:prep.innerText.replace(/\n{2,}/g,'\n').trim(),cue:f.P||'',venue:fl&&fl.flavour&&fl.flavour.venue||''}},id);
   out[id]=r;n++;if(n%25===0)process.stderr.write(`${n}/${ids.length} ${Math.round((Date.now()-t0)/1000)}s\n`);
  }
  fs.writeFileSync(OUT,JSON.stringify(out));await b.close();process.exit(0);

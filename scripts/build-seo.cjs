@@ -40,7 +40,9 @@ const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 4
 const COURSE_CAT = { s: 'Appetizer', m: 'Main course', w: 'Dessert', d: 'Drink' };
 const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
-const ing = i => { const q = frac(i.q), u = i.u || ''; const tight = /^(g|kg|ml|l)$/.test(u); return clean([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' ')); };
+/* review 34: cups go plural over one (the app already said "3 cups"), and temperatures read "200°C" as they do in the app */
+const degC = t => String(t == null ? '' : t).replace(/(\d)\s?C\b/g, '$1°C').replace(/(\d)\s?F\b/g, '$1°F');
+const ing = i => { const q = frac(i.q); let u = i.u || ''; if (u === 'cup' && (+i.q > 1)) u = 'cups'; const tight = /^(g|kg|ml|l)$/.test(u); return clean(degC([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' '))); };
 const cap = t => { t = clean(t); return t.charAt(0).toUpperCase() + t.slice(1); };
 /* width and height of a jpeg, read from its frame header */
 /* previews are shot at 2x (scripts/render-previews.cjs), so pages show them at half their pixel size */
@@ -164,9 +166,9 @@ function filmPage(x) {
     const ds = x.dishes.filter(y => y.course === c); if (!ds.length) return '';
     return `<h2>${COURSE[c]}</h2>\n` + ds.map(y => {
       const T = (y.prep_min || y.cook_min) ? dishTimes(y, 1) : null;
-      const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(y.make_ahead) : ''].filter(Boolean).join(' · ');
+      const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
-      const steps = (y.steps || []).map(st => `<li>${esc(st.text)}</li>`).join('') || (y.how ? `<li>${esc(y.how)}</li>` : '');
+      const steps = (y.steps || []).map(st => `<li>${esc(degC(st.text))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
       return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.extra ? '<span class="tag">On the printed menu</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
 ${ingr || steps ? `<details><summary>${y.extra ? 'How it is made' : 'Recipe for 4'}</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
@@ -183,7 +185,7 @@ ${x.poster ? `<img src="${posterUrl(x.poster)}" width="342" height="513" alt="${
 <h1>${esc(shown)} (${f.year}) movie night dinner menu</h1>
 <div class="hi">
 ${lede.length ? `<p class="lead">${lede.join(' ')}</p>` : ''}
-${x.venue ? `<p>The menu comes from <strong>${esc(x.venue)}</strong>, straight out of the film.</p>` : ''}
+${x.venue ? `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>` : ''}
 <a class="btn" href="${open}">Open this menu in Reel Dinner</a>
 <p class="small">Print the menu, get the shopping list and plan the night, free.</p>
 </div>
@@ -203,7 +205,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
     ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null)),
     suitableForDiet: y.veg ? 'https://schema.org/VegetarianDiet' : undefined,
     recipeIngredient: (y.ingredients || []).map(ing),
-    recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(st.text) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(y.how) }] : undefined)
+    recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(degC(st.text)) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(degC(y.how)) }] : undefined)
   });
   const ld = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'WebPage', '@id': canon, url: canon, name: title, description: desc, inLanguage: 'en-AU', isPartOf: { '@type': 'WebSite', name: 'Reel Dinner', url: SITE + '/' },

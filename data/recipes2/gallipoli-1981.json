@@ -180,319 +180,178 @@
    "af": true
   },
   {
-   "n": "Uncle Jack's lamb roast",
+   "n": "Mena Camp mutton and barley stew",
    "course": "m",
-   "prep_min": 20,
-   "cook_min": 120,
-   "make_ahead": "Stud the lamb with garlic and rosemary up to 1 day ahead and keep chilled; roast on the day",
+   "prep_min": 15,
+   "cook_min": 105,
+   "make_ahead": "Make up to 2 days ahead and chill; it is better reheated",
    "ingredients": [
     {
-     "q": 2,
+     "q": 1,
      "u": "kg",
-     "item": "lamb leg",
+     "item": "diced lamb shoulder",
      "aisle": "Meat"
     },
     {
-     "q": 4,
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
      "u": "",
-     "item": "garlic cloves",
+     "item": "onions, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "bunch rosemary",
-     "aisle": "Produce"
-    },
-    {
-     "q": 800,
-     "u": "g",
-     "item": "potatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 600,
-     "u": "g",
-     "item": "pumpkin",
-     "aisle": "Produce"
-    },
-    {
-     "q": 300,
-     "u": "g",
-     "item": "frozen peas",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "beef stock",
-     "aisle": "Pantry"
+     "item": "crusty loaf",
+     "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Stud the lamb with sliced garlic and rosemary. Peel and cut the potatoes and pumpkin.",
-     "min": 20
-    },
-    {
-     "text": "Roast the lamb at 180C until 58C inside, adding the potatoes and pumpkin for the last hour.",
-     "min": 90
-    },
-    {
-     "text": "Rest the lamb under foil.",
-     "min": 20
-    },
-    {
-     "text": "Cook the peas, and make gravy by simmering the pan juices with the stock.",
+     "text": "Brown the lamb in the oil in batches.",
      "min": 10
-    }
-   ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "\"As fast as a leopard\" nut roast",
-     "prep_min": 30,
-     "cook_min": 70,
-     "make_ahead": "Shape the roast up to 1 day ahead, keep chilled",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "brown onion, diced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "garlic cloves",
-       "aisle": "Produce"
-      },
-      {
-       "q": 250,
-       "u": "g",
-       "item": "mushrooms, finely chopped",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bunch rosemary",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "mixed nuts, chopped",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "tin brown lentils, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "breadcrumbs",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "cheddar, grated",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 800,
-       "u": "g",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 600,
-       "u": "g",
-       "item": "pumpkin",
-       "aisle": "Produce"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "frozen peas",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "vegetable stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Fry the onion, crushed garlic, mushrooms and chopped rosemary in half the oil until dry and golden.",
-       "min": 12
-      },
-      {
-       "text": "Mix with the nuts, lentils, breadcrumbs, cheddar and eggs and press into a lined loaf tin. Peel and cut the potatoes and pumpkin and toss in the rest of the oil.",
-       "min": 15
-      },
-      {
-       "text": "Roast the nut roast and vegetables at 190C until the roast is firm and browned.",
-       "min": 60
-      },
-      {
-       "text": "Rest the roast in the tin, then turn out and slice.",
-       "min": 10
-      },
-      {
-       "text": "Cook the peas, and make gravy by cooking the flour in the roasting tray, then whisking in the stock and soy sauce.",
-       "min": 8
-      }
-     ],
-     "af": true
-    }
-   }
-  },
-  {
-   "n": "Golden syrup dumplings",
-   "course": "w",
-   "prep_min": 10,
-   "cook_min": 25,
-   "make_ahead": "Best cooked just before serving; rub in the butter and make the dough up to 3 hours ahead, keep chilled",
-   "ingredients": [
-    {
-     "q": 60,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 375,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "golden syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Rub a portion of the butter into the flour and mix in the milk to a soft dough.",
+     "text": "Soften the onion, carrot and garlic in the same pot.",
      "min": 8
     },
     {
-     "text": "Bring the water, brown sugar, golden syrup and remaining butter to a simmer.",
+     "text": "Add the barley, stock, bay leaves and thyme, cover and simmer until the lamb is tender and the barley soft.",
+     "min": 90
+    },
+    {
+     "text": "Season well and serve with crusty bread.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
+   "n": "Plum and apple jam tarts",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Bake up to 2 days ahead and keep airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plum and apple jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Cut the pastry into 12 rounds and press into a patty tin.",
      "min": 5
     },
     {
-     "text": "Drop in spoonfuls of dough, cover and cook gently.",
-     "min": 20
+     "text": "Fill each with a heaped teaspoon of jam.",
+     "min": 5
     },
     {
-     "text": "Serve with the sauce and cream.",
-     "min": 2
+     "text": "Bake until the pastry is golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool in the tin and dust with icing sugar.",
+     "min": 10
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Archy and Frank's billy tea",
+   "n": "Mena Camp sweet mint tea",
    "course": "d",
-   "prep_min": 2,
-   "cook_min": 11,
-   "make_ahead": "Best brewed fresh; nothing to make ahead",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Best made fresh",
    "ingredients": [
     {
-     "q": 1.2,
-     "u": "l",
-     "item": "water",
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "loose leaf tea",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "sugar, to taste",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sugar",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Boil the water in a billy or pot.",
-     "min": 8
+     "text": "Boil a litre of water.",
+     "min": 5
     },
     {
-     "text": "Add the tea, boil for a minute and swing to settle.",
-     "min": 3
+     "text": "Steep the tea bags and most of the mint for 4 minutes, then take out the tea bags.",
+     "min": 4
     },
     {
-     "text": "Pour into tin mugs with milk and plenty of sugar.",
+     "text": "Stir in the sugar and pour into glasses with a mint sprig in each.",
      "min": 2
     }
    ],

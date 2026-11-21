@@ -1,0 +1,22 @@
+{
+ "id": "Barbershop (2002)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Chicago caramel and cheese popcorn mix",
+    "note": "Sweet and salty popcorn mixed in the bag. Eddie talks, the bag empties."
+   },
+   "done": true
+  },
+  {
+   "old": "Caramel and cheese popcorn mix",
+   "new": "Chicago caramel and cheese popcorn mix",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": [
+  "not found: Caramel and cheese popcorn mix"
+ ]
+}

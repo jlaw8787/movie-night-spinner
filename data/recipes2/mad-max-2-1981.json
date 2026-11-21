@@ -520,40 +520,34 @@
    }
   },
   {
-   "n": "Wasteland golden syrup dumplings",
+   "n": "Wasteland tinned peach crumble",
    "course": "w",
-   "prep_min": 20,
-   "cook_min": 30,
-   "make_ahead": "Best cooked just before serving; rub the butter into the flour up to 1 day ahead and add the milk on the night",
+   "prep_min": 10,
+   "cook_min": 35,
+   "make_ahead": "Assemble up to a day ahead and chill; bake to order",
    "ingredients": [
     {
-     "q": 80,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "water",
+     "q": 2,
+     "u": "",
+     "item": "825g tins sliced peaches",
      "aisle": "Pantry"
     },
     {
      "q": 100,
      "u": "g",
-     "item": "golden syrup",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "rolled oats",
      "aisle": "Pantry"
     },
     {
@@ -563,31 +557,27 @@
      "aisle": "Pantry"
     },
     {
-     "q": 200,
+     "q": 600,
      "u": "ml",
-     "item": "thickened cream",
+     "item": "custard",
      "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Rub half the butter into the flour and mix in the milk to a soft dough.",
-     "min": 8
+     "text": "Heat the oven to 180C and drain the peaches into a baking dish.",
+     "min": 3
     },
     {
-     "text": "Roll into 12 balls.",
-     "min": 5
-    },
-    {
-     "text": "Bring the water, golden syrup, sugar and remaining butter to a simmer in a wide pan.",
+     "text": "Rub the butter into the flour, then stir in the oats and sugar.",
      "min": 7
     },
     {
-     "text": "Drop in the dumplings, cover and cook without lifting the lid.",
-     "min": 20
+     "text": "Scatter over the peaches and bake until golden.",
+     "min": 35
     },
     {
-     "text": "Serve with cream.",
+     "text": "Serve warm with custard.",
      "min": 2
     }
    ],

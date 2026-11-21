@@ -617,83 +617,65 @@
    }
   },
   {
-   "n": "Big Red jam lamingtons",
+   "n": "Cup day passionfruit sponge",
    "course": "w",
-   "prep_min": 43,
-   "cook_min": 60,
-   "make_ahead": "Up to 2 days, keep chilled",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Bake the sponges a day ahead and keep airtight; fill on the day",
    "ingredients": [
     {
-     "q": 1,
+     "q": 4,
      "u": "",
-     "item": "20cm sponge cake",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 400,
-     "u": "g",
-     "item": "icing sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "cocoa powder",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 20,
-     "u": "g",
-     "item": "butter",
+     "item": "eggs",
      "aisle": "Dairy"
     },
     {
      "q": 150,
      "u": "g",
-     "item": "desiccated coconut",
+     "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "tbsp",
-     "item": "raspberry jam",
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
-     "q": 200,
+     "q": 300,
      "u": "ml",
      "item": "thickened cream",
      "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Cut the sponge cake into squares.",
+     "text": "Heat the oven to 180C. Beat the eggs and sugar until thick and pale.",
      "min": 10
     },
     {
-     "text": "Freeze the squares for 30 minutes.",
+     "text": "Sift in and fold the flour, then bake in two lined 20cm tins.",
+     "min": 22
+    },
+    {
+     "text": "Cool on a rack.",
      "min": 30
     },
     {
-     "text": "Mix the icing sugar, cocoa, melted butter and boiling water into a thin icing.",
-     "min": 5
-    },
-    {
-     "text": "Dip each square in the icing, let it drip, then roll in desiccated coconut.",
-     "min": 15
-    },
-    {
-     "text": "Set for 30 minutes.",
-     "min": 30
-    },
-    {
-     "text": "Whip the cream.",
-     "min": 5
-    },
-    {
-     "text": "Split each in half and fill with raspberry jam and whipped cream.",
-     "min": 8
+     "text": "Whip the cream and sandwich the sponges, then ice with the icing sugar mixed with passionfruit pulp.",
+     "min": 10
     }
    ],
    "veg": true,
