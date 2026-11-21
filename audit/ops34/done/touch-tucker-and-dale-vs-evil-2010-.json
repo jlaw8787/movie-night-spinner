@@ -1,0 +1,22 @@
+{
+ "id": "Tucker and Dale vs. Evil (2010)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the honey chicken when Allison wakes up in the cabin.",
+   "done": true
+  },
+  {
+   "old": "Tea-soaked honey cake. Dale throws the chamomile tea at Chad.",
+   "new": "Tea-soaked honey cake. Chamomile tea flies at Chad.",
+   "done": true
+  },
+  {
+   "old": "Dale throws the chamomile tea at Chad",
+   "new": "Honey cake soaked in chamomile tea",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

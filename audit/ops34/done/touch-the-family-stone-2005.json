@@ -1,0 +1,35 @@
+{
+ "id": "The Family Stone (2005)",
+ "ops": [
+  {
+   "old": "Ham, spinach and gruyère strata",
+   "new": "New England ham, spinach and gruyère bake",
+   "done": true
+  },
+  {
+   "old": "Bread and egg bake with ham and gruyère. A Morton family tradition.",
+   "new": "Bread and egg bake with ham and gruyère, soaked overnight.",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve breakfast when Meredith's bake hits the floor.",
+   "done": true
+  },
+  {
+   "old": "Strong coffee, eggnog milk, nutmeg. Meredith can make more.",
+   "new": "Strong coffee, eggnog milk and nutmeg, poured all morning.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Baked cheese gougères",
+    "note": "Little choux puffs baked with gruyère, crisp outside, soft inside. A tidy plate, before dinner went sideways."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

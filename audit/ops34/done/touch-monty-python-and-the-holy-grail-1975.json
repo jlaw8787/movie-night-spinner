@@ -1,0 +1,38 @@
+{
+ "id": "Monty Python and the Holy Grail (1975)",
+ "ops": [
+  {
+   "old": "Slow-braised rabbit under a golden pastry lid. The rabbit that sees off three knights.",
+   "new": "Slow-braised rabbit under a golden pastry lid. Run away!",
+   "done": true
+  },
+  {
+   "old": "Rabbit pie under golden pastry. The rabbit that sees off three knights.",
+   "new": "Rabbit pie under golden pastry. Run away!",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the pie when the knights reach the cave of Caerbannog.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "'Tis but a scratch",
+    "The French taunter on the castle wall",
+    "Brother Maynard's Book of Armaments",
+    "The Bridge of Death",
+    "Tim the Enchanter"
+   ],
+   "done": true
+  },
+  {
+   "old": "Patsy bangs two coconut halves together",
+   "new": "Crisp coconut-crumbed prawns with lime mayo. Patsy bangs two coconut halves together.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

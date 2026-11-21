@@ -1,0 +1,36 @@
+{
+ "id": "Bruce Almighty (2003)",
+ "ops": [
+  {
+   "old": "Hot sauce wings, blue cheese dip, celery. Bruce makes the Sabres win the Cup.",
+   "new": "Hot sauce wings, blue cheese dip and celery, the Buffalo way.",
+   "done": true
+  },
+  {
+   "old": "Bruce makes the Sabres win the Cup",
+   "new": "Hot sauce wings, blue cheese dip and celery, the Buffalo way.",
+   "done": true
+  },
+  {
+   "old": "Roast tomato soup, cheddar toastie on sourdough. Bruce parts his tomato soup.",
+   "new": "Roast tomato soup, cheddar toastie on sourdough. Bruce's soup, split in two.",
+   "done": true
+  },
+  {
+   "old": "Roast tomato soup with a grilled cheese for dipping. Bruce parts his tomato soup.",
+   "new": "Roast tomato soup with a grilled cheese for dipping. Bruce's soup, split in two.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Bottomless drip coffee",
+    "note": "Filter coffee, refilled until you leave. Poured at Eyewitness News.",
+    "alc": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}
