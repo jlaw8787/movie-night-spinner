@@ -159,7 +159,7 @@ const ERAS=Object.keys(ERA);
 function eraOf(e){e=String(e||"").toLowerCase();if(ERA[e])return e;if(/30|40/.test(e))return"1930s-40s";if(/2000|00s/.test(e))return"2000s";const m=e.match(/(19)?([5-9])0/);if(m)return"19"+m[2]+"0s";return"modern"}
 function fam(e){const list=[e.disp+(e.dw?":wght@"+e.dw:""),e.body+(e.bw?":wght@"+e.bw:(e.body===e.disp?"":"")),e.sig];
   if(e.body==="Lora")list[1]="Lora:ital,wght@0,400;0,600;1,400";if(e.body==="Kalam")list[1]="Kalam:wght@400;700";if(e.body==="Josefin Sans")list[1]="Josefin Sans:wght@400;600;700";
-  if(e.disp===e.body)list.splice(1,1);if(e.disp==="Domine")list.push("DM Sans:wght@400;700");return[...new Set(list)]}
+  if(e.disp===e.body)list.splice(1,1);if(e.disp==="Domine")list.push("DM Sans:wght@400;700");if(e.body==="Architects Daughter")list.push("Patrick Hand");return[...new Set(list)]}
 
 function money(era,k,i,f,fl){const e=ERA[era],v=e.P[k][i%4];
   const egg=false, y=yy(f);
@@ -256,7 +256,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const itemHtml=(c,it,i)=>`<div data-citem style="margin:0 0 calc(${gap}px + var(--xg,0px))">
       <div style="display:flex;align-items:baseline;gap:14px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${bodyF};font-weight:${e.bw?"700":"400"};color:${INK};line-height:1.14;${fs(dish,18)};${e.up&&era!=="1930s-40s"?"text-transform:uppercase;letter-spacing:.03em;":""}">${esc(it.n)}</div>
       <div style="font-family:${bodyF};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,18)};white-space:nowrap">${PQ[c.k][i]}</div></div>
-      <div data-cnote style="display:var(--nd,block);font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${mix(INK,BOARD,.12)};line-height:1.28;${fs(desc,12)};margin-top:3px">${esc(it.note)}</div></div>`;
+      <div data-cnote style="display:var(--nd,block);font-family:${e.body==="Architects Daughter"?"'Patrick Hand',"+bodyF:bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${e.chalk?INK:mix(INK,BOARD,.12)};line-height:1.28;${fs(desc,12)};margin-top:3px">${esc(it.note)}</div></div>`;
   const colHtml=list=>list.map(c=>`<div data-csec="${C.indexOf(c)}" style="margin:0 0 calc(${gap+6}px + var(--xg,0px))">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
 
   /* loyalty card: paper, stamps are spaced type, never icons */

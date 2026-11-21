@@ -25,7 +25,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const pm=current.printMenu||null,list=[];
    if(pm)for(const k of ['s','m','w','d'])for(const it of (pm[k]||[]))if(it&&it.n)list.push({c:k,n:it.n,note:it.note||'',d:it.d||it.desc||'',house:!!it.house,extra:!!it.extra});
    const fl=f._lib||null;
-   return {fmt:fl?fl.fmt:(fmtSpec(f)||{}).fmt||'card',faces,list,phone:vis(fmtPhone,1),prep:prep.innerText.replace(/\n{2,}/g,'\n').trim(),cue:f.P||'',venue:fl&&fl.flavour&&fl.flavour.venue||''}},id);
+   return {fmt:fl?fl.fmt:(fmtSpec(f)||{}).fmt||'card',faces,list,phone:vis(fmtPhone,1),prep:vis(prep,1),cue:f.P||'',venue:fl&&fl.flavour&&fl.flavour.venue||''}},id);
   out[id]=r;n++;if(n%25===0)process.stderr.write(`${n}/${ids.length} ${Math.round((Date.now()-t0)/1000)}s\n`);
  }
  fs.writeFileSync(OUT,JSON.stringify(out));await b.close();process.exit(0);

@@ -984,7 +984,10 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     l=(l-b.left)/k;rt=(rt-b.left)/k;const sc=Math.min(1,(hi-lo-40)/Math.max(1,rt-l)),dx=(lo+hi)/2-(l+rt)/2;e.dataset.pvt=e.style.transform||"-";e.style.transformOrigin="center";e.style.transform=`translateX(${dx.toFixed(1)}px) scale(${sc.toFixed(3)})`}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
-  const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
+  /* review 34: on desktop a two or three page menu shrunk whole into the column printed its notes at 4 to 7px (Grease, Gallipoli):
+     when the whole sheet would scale under 0.62 it shows one page at a time at column width, with the dots to turn the page */
+  const deskFaces=tab==="menu"&&!swipeW()&&card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62;
+  const fs=tab==="menu"&&(swipeW()||deskFaces)?cardFaces():[];paintDots(fs.length);
   if(fs.length){if(card.dataset.pvs!==String(renderId)){card.dataset.pvs=String(renderId);pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
     card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
     preview.setAttribute("aria-label",`Printed menu, ${f.panel?"part":"page"} ${pvFace+1} of ${fs.length}. Open it full size`);return}
@@ -1162,7 +1165,9 @@ function libPhoneView(f,menu,L,root){
 function fitPhoneTitle(){
   const t=fmtPhone.querySelector(".fp-lib .fp-title");if(!t||!t.offsetWidth)return;
   let z=34;t.style.fontSize=z+"px";
-  while(z>18&&(t.scrollWidth>t.clientWidth+1||t.offsetHeight>z*3.3)){z-=2;t.style.fontSize=z+"px"}
+  while(z>16&&(t.scrollWidth>t.clientWidth+1||t.offsetHeight>z*3.3)){z-=2;t.style.fontSize=z+"px"}
+  /* review 34: Tombstone's title ran off a 390 screen: it was measured before the wide display face arrived. Fit again once fonts land */
+  if(!t.dataset.fontFit){t.dataset.fontFit="1";document.fonts.ready.then(()=>{if(t.isConnected)fitPhoneTitle()});setTimeout(()=>{if(t.isConnected)fitPhoneTitle()},900)}
 }
 
 let renderId=0;
@@ -1508,7 +1513,7 @@ const stepParts=t=>{const ss=String(t).split(/(?<=[.!?])\s+(?=[A-Z])/),tip=ss.fi
 /* review 34: a bake that ends "then cool and cut" is the bake, not waiting (Hall Pass brownies read "28 min to set and cool");
    a step only counts as waiting with heat in it when it opens on the wait ("Cool, then chill"). "Cut and soak" is waiting (Grease fries) */
 const WAIT_LEAD=/^(cover and )?(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|stand|infuse|set|churn|rise)(?!\s+(the|a|an|each|it|them)\b(?!\s+(cool|rest|set|stand|chill)))\b/i;
-const isWaitStep=t=>{const x=String(t.text).trim(),m=t.min||0;if(m<10)return false;if(HEAT_RE.test(x)&&!WAIT_LEAD.test(x))return false;
+const isWaitStep=t=>{const x=String(t.text).trim(),m=t.min||0;if(m<10)return false;if(/\b(in the fridge|overnight|the day before|in the freezer)\b/i.test(x)&&!/\b(bake|roast|grill|fry|simmer|boil)\s+(at|for|until|in)\b/i.test(x))return true;if(HEAT_RE.test(x)&&!WAIT_LEAD.test(x))return false;
   return WAIT_RE.test(x)||/\band (soak|marinate|steep)\b/i.test(x)||(m>=240&&!HEAT_RE.test(x))};
 function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let wait=0;for(const t of st)if(isWaitStep(t))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
@@ -2102,13 +2107,13 @@ function houseCap(root,menu,fmt){
      4. a seafood or steak starter is never well under a plain one
      5. clean endings (.00 .25 .50 .75 .95 .99, cents in fives). One odd ending stays: the film's number hidden in the cents (Josh's Easter egg rule) */
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
-const PF_CHEAP=/\b(slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
+const PF_CHEAP=/\b(pancakes?|pikelets?|waffles?|slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
 const PF_BITE=/\b(crackling|pork scratchings|pork rinds|chicharrones|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
-const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
+const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck|venison|pheasant|grouse|quail|goose)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
 const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
 /* review 31: a band per decade for the middle main on a card, in dollars of the day (the saloon menus and the hand-built ones sit inside these) */
@@ -2280,7 +2285,12 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 32: and never under a plain, real starter beside it (Lost in Translation's wagyu sando was the cheapest thing on the card) */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of L)if(PF_PREM.test(x.n)&&!pfCheap(x.n)&&x.v<hi)x.v=hi+step(hi)}
   /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
-  {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<hi)x.v=hi+step(hi)}
+  {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<=hi)x.v=hi+step(hi)}
+  /* review 34: a broth, soup or stew main never above a roast, game or seafood main (Braveheart's Scotch broth over the venison), and a
+     sandwich or roll main stays near the starters, not two and a half times a pie (Wolf Creek) */
+  {const HUM=/\b(broth|soup|porridge|gruel|pottage|stew|chowder)\b/i,L=mn(),pr=L.filter(x=>PF_PREM.test(x.n)&&!HUM.test(x.n)&&!pfCheap(x.n)),lo=minOf(pr);
+   if(lo!=null)for(const x of L)if(HUM.test(x.n)&&x.v>=lo)x.v=Math.max(step(lo),lo-step(lo))}
+  {const hiS=maxOf(by("s"));if(hiS!=null)for(const x of mn())if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!PF_PREM.test(x.n)&&x.v>hiS*1.6)x.v=Math.max(hiS+step(hiS),hiS*1.6)}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */
   {let m0=minM();if(m0!=null){const sw=[...by("s"),...by("w")],hi=maxOf(sw);
     if(hi!=null&&hi>=m0){const med=sw.map(x=>x.v).sort((a,b)=>a-b)[Math.floor(sw.length/2)];
@@ -2302,7 +2312,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
      the rounded prices and anything they lower is rounded down */
   for(const x of P)if(x!==keep){x.v=x.c;x.down=0}rules();for(const x of P)if(x!==keep&&Math.abs(x.v-x.c)>.001)x.c=x.v<x.c?cleanDown(x.v):clean(x.v);
   /* review 32: the film-number price is kept as it is, so a roast, steak or seafood main is lifted over it rather than sitting under it */
-  {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<hi)x.c=clean(hi+step(hi))}}
+  {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<=hi)x.c=clean(hi+step(hi))}}
   {const L=mn();if(L.length){const m0=Math.min(...L.map(x=>x.c));for(const x of [...by("s"),...by("w"),...by("d").filter(x=>!PF_SP.test(x.n))])if(x.c>=m0)x.c=m0>step(m0)?clean(m0-step(m0)):x.c}}
   /* review 33: the last word on the printed figures: a cheap sweet never above the dearest starter, a cocktail never under the cheapest real starter */
   {const S=by("s"),hiS=S.length?Math.max(...S.map(x=>x.c)):null,RS=S.filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))),loS=RS.length?Math.min(...RS.map(x=>x.c)):null;

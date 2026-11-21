@@ -683,88 +683,49 @@
    "af": true
   },
   {
-   "n": "Toad's Old Harper and cola",
+   "n": "Toad's chocolate malted",
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "Chill the cola well; pour to order",
+   "make_ahead": "Best blended to order",
    "ingredients": [
     {
-     "q": 240,
-     "u": "ml",
-     "item": "Kentucky bourbon",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "Coca-Cola, chilled",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 2,
+     "q": 8,
      "u": "",
-     "item": "limes, cut in wedges",
-     "aisle": "Produce"
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
     },
     {
-     "q": 2,
-     "u": "cup",
-     "item": "ice cubes",
-     "aisle": "Frozen"
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Fill 4 tall glasses with ice and pour 60ml bourbon into each.",
-     "min": 2
+     "text": "Blend the ice cream, milk, chocolate syrup and malt until thick.",
+     "min": 3
     },
     {
-     "text": "Top with cola and squeeze in a lime wedge.",
-     "min": 3
+     "text": "Pour into tall glasses with two straws each.",
+     "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Toad's cola float (alcohol-free)",
-     "course": "d",
-     "prep_min": 5,
-     "cook_min": 0,
-     "make_ahead": "Chill the cola well; float the ice cream to order",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "l",
-       "item": "Coca-Cola, chilled",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "scoops vanilla ice cream",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lime",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Drop a scoop of ice cream into each tall glass.",
-       "min": 2
-      },
-      {
-       "text": "Pour over the cola slowly and add a squeeze of lime.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

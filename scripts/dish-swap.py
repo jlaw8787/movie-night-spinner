@@ -72,7 +72,20 @@ for op in spec:
         v = rj(p).get(fid)
         if v and old.lower() in json.dumps(v, ensure_ascii=False).lower(): print('  still named in', p)
     if old.lower() in (f.get('P', '') + f.get('T', '') + f.get('D', '')).lower(): print('  still named in cue/tagline/about')
+# review 34: a poster edition (movie-menus.js) keeps its own copy of the menu: swap it there too
+ME = open(P('movie-menus.js')).read(); pre = 'const MOVIE_MENU_EDITIONS = '; mi = ME.index(pre) + len(pre)
+EDS = json.loads(re.sub(r';\s*$', '', ME[mi:])); ned = 0
+for op in spec:
+    e = EDS.get(op['id'])
+    if not e: continue
+    for k in ('s', 'm', 'w', 'd'):
+        for j, it in enumerate(e.get('menu', {}).get(k, [])):
+            if it.get('n') == op['old']:
+                e['menu'][k][j] = dict(it, n=op['new']['n'], note=op['new']['note'], how=op['new']['how'], shop=op['new']['shop']); ned += 1
+if ned: print(ned, 'poster edition dishes swapped')
 if not dry:
+    if ned:
+        with open(P('movie-menus.js'), 'w') as fh: fh.write(ME[:mi] + json.dumps(EDS, ensure_ascii=False, separators=(',', ':')) + (';' if re.search(r';\s*$', ME) else '') + ('\n' if ME.endswith('\n') else ''))
     with open(P('data/films.json'), 'w') as fh: json.dump(films, fh, ensure_ascii=False, separators=(',', ':'))
     with open(P('data/dish-names.json'), 'w') as fh: json.dump(DN, fh, ensure_ascii=False, separators=(',', ':'))
     with open(P('data/dish-notes.json'), 'w') as fh: json.dump(DNO, fh, ensure_ascii=False, separators=(',', ':'))
