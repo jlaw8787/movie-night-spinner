@@ -69,6 +69,10 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
   while(over(el)&&opts.length)opts.pop().style.display="none";
   while(over(el)&&its.length)its.pop().style.display="none";
   shrink(lo)});
+/* review 35: boxes in one group (the two recipe cards) print at the same size, the smaller of the two, so one card's notes are not
+   visibly bigger than the other's (The Castle). The smaller size always still fits the roomier card */
+{const fa=M.fitAll;M.fitAll=()=>{fa();const G={};for(const el of document.querySelectorAll("[data-fitgroup]")){if(!el.isConnected||!el.getClientRects().length)continue;const k=(el.closest(".mcard")?"c":"")+el.dataset.fitgroup;(G[k]=G[k]||[]).push(el)}
+  for(const L of Object.values(G)){if(L.length<2)continue;const m=Math.min(...L.map(e=>parseFloat(e.style.fontSize)||99));for(const e of L)e.style.fontSize=m+"px"}}}
 const run=()=>{cancelAnimationFrame(M.raf);M.raf=requestAnimationFrame(M.fitAll)};
 new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true});
 if(document.fonts){document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",run);document.fonts.ready.then(run)}
@@ -213,7 +217,7 @@ window.MENU_FORMATS.home=function(ctx){
   const rcard=(cs,l,t,rot,head,foot)=>`<div style="position:absolute;left:${l}px;top:${t-RAISE}px;width:370px;height:${476+RAISE}px;box-sizing:border-box;padding:18px 22px 14px;background:${E.card};transform:rotate(${rot}deg);box-shadow:0 12px 24px rgba(0,0,0,.3),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6});display:flex;flex-direction:column">
       <div style="display:flex;justify-content:space-between;align-items:baseline;font:700 17px/1.2 ${bd};letter-spacing:.18em;text-transform:uppercase;color:${acc}"><span>Recipe</span><span>${x(head)}</span></div>
       <div style="height:3px;background:${acc};margin:6px 0 3px"></div><div style="height:1px;background:rgba(60,100,170,.45);margin-bottom:12px"></div>
-      <div data-fit="19" data-nlo="16" style="flex:1;min-height:0;overflow:hidden;font-size:28px">${cs.length?cs.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">Whatever is in the fridge, served with the film.</div>`}</div>
+      <div data-fit="19" data-nlo="16" data-fitgroup="rc" style="flex:1;min-height:0;overflow:hidden;font-size:28px">${cs.length?cs.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">Whatever is in the fridge, served with the film.</div>`}</div>
       <div style="font:15px/1.3 ${bd};color:${ink};opacity:.8;margin-top:6px">${foot}</div>
     </div>`;
   const back=`${door}

@@ -1112,7 +1112,7 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .fp-title{margin:2px 0 0;font-family:var(--fp-title);font-weight:400;font-size:38px;line-height:.95;color:#fff;text-shadow:3px 3px 0 var(--fp-acc)}
 .fp-tag{margin:6px 0 0;font-size:15px;line-height:1.35;color:#fff;font-style:italic}
 .fp-hint{margin:6px 0 0;font-size:13px;color:var(--fp-top-ink)}
-.fp.fp-lib .fp-title{font-size:34px;line-height:1.02;overflow-wrap:break-word}.fp.fp-lib .fp-brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fp-top-ink)}.fp.fp-lib .fp-tab{font-size:13px}.fp.fp-lib .fp-tab,.fp.fp-lib .fp-more,.fp.fp-lib .fp-flip,.fp.fp-lib .fp-cue b,.fp.fp-lib .fp-hint{font-family:var(--fp-body);text-transform:none;letter-spacing:.02em}.fp.fp-lib .fp-film{font-size:16px;font-style:italic}
+.fp.fp-lib .fp-title{font-size:34px;line-height:1.02;overflow-wrap:break-word}.fp.fp-lib .fp-brand{font-family:var(--fp-body);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fp-top-ink)}.fp.fp-lib .fp-tab{font-size:13px}.fp.fp-lib .fp-tab,.fp.fp-lib .fp-more,.fp.fp-lib .fp-flip,.fp.fp-lib .fp-cue b,.fp.fp-lib .fp-hint{font-family:var(--fp-body);text-transform:none;letter-spacing:.02em}.fp.fp-lib .fp-film{font-size:16px;font-style:italic}
 /* review 33: a pale script note on white read faint on phones (Muriel's Wedding): shared-layout notes take a darker mix of the ink */
 .fp.fp-lib .fp-film{color:color-mix(in srgb,var(--fp-ink) 78%,var(--fp-soft))}
 .fp-tabs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;padding:0 12px 12px}
@@ -2925,7 +2925,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .member .mc-name{box-sizing:content-box;padding-block:max(0px,calc((44px - 1.2em) / 2));margin-block:min(0px,calc((1.2em - 44px) / 2))}
 /* skip link: first thing a keyboard reaches, hidden until it has focus */
 .skip-link{position:fixed;left:12px;top:-60px;z-index:100;padding:12px 18px;border-radius:10px;background:#e7c069;color:#24110a;font:700 15px var(--f-body);text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.5);transition:top .15s}
-.skip-link:focus{top:12px;outline:3px solid #fff3d6;outline-offset:2px}
+/* review 35: only a keyboard user tabbing in sees it; a tap or a scripted focus left it floating over the first dish on phones */
+.skip-link:focus-visible{top:12px;outline:3px solid #fff3d6;outline-offset:2px}
 /* prep sheet stats as chips: they wrap as whole units, never a stray slash at the start of a line */
 .pp-serves{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
 .pp-chip{display:inline-block;padding:2px 9px;border:1px solid currentColor;border-radius:999px;line-height:1.5;white-space:nowrap}
@@ -3503,12 +3504,12 @@ button.acct-stat:focus-visible{outline:3px solid var(--gv-teal);outline-offset:2
 <script src="ratings.js?v=05d32e10" defer></script>
 <script src="aisles.js?v=9681ee44" defer></script>
 <script src="providers.js?v=a7e59ee5" defer></script>
-<script src="films.js?v=424a5b67" defer></script>
+<script src="films.js?v=89366b2a" defer></script>
 <script src="assets/fonts/fonts.js?v=d8909e45" defer></script>
-<script src="formats-core.js?v=0841cbcf" defer></script>
+<script src="formats-core.js?v=dcf5baaa" defer></script>
 <script src="search.js?v=db80a47a" defer></script>
 <script src="account.js?v=a9edd7c8" defer></script>
-<script src="app.js?v=4bdf6978" defer></script>
+<script src="app.js?v=c4eb7cdd" defer></script>
 <script src="match.js?v=e828f8e1" defer></script>
 <script src="friends.js?v=fefdf1fe" defer></script>
 <script src="quiz.js?v=c9f3c0bd" defer></script>

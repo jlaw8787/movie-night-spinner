@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 35,
-   "make_ahead": "Make the sauce up to 3 days ahead, keep chilled and reheat; fry the chips and grill the bratwurst fresh",
+   "make_ahead": "Make the sauce up to 3 days ahead, keep chilled and reheat; fry the fries and grill the bratwurst fresh",
    "ingredients": [
     {
      "q": 4,
@@ -65,7 +65,7 @@
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into chips and fry in the vegetable oil until golden.",
+     "text": "Cut the potatoes into fries and fry in the vegetable oil until golden.",
      "min": 20
     },
     {
@@ -77,7 +77,7 @@
      "min": 10
     },
     {
-     "text": "Pour over the sausage and dust with curry powder. Serve with the chips.",
+     "text": "Pour over the sausage and dust with curry powder. Serve with the fries.",
      "min": 5
     }
    ],
@@ -88,7 +88,7 @@
      "n": "Berlin currywurst (vegetarian)",
      "prep_min": 12,
      "cook_min": 35,
-     "make_ahead": "Make the sauce up to 3 days ahead, keep chilled and reheat; fry the chips and grill the vegetarian bratwurst fresh",
+     "make_ahead": "Make the sauce up to 3 days ahead, keep chilled and reheat; fry the fries and grill the vegetarian bratwurst fresh",
      "ingredients": [
       {
        "q": 4,
@@ -147,7 +147,7 @@
      ],
      "steps": [
       {
-       "text": "Cut the potatoes into chips and fry in the vegetable oil until golden.",
+       "text": "Cut the potatoes into fries and fry in the vegetable oil until golden.",
        "min": 20
       },
       {
@@ -159,7 +159,7 @@
        "min": 10
       },
       {
-       "text": "Pour over the sliced bratwurst and dust with curry powder. Serve with the chips.",
+       "text": "Pour over the sliced bratwurst and dust with curry powder. Serve with the fries.",
        "min": 5
       }
      ],
@@ -168,7 +168,7 @@
    }
   },
   {
-   "n": "Paris cheese puffs (gougères)",
+   "n": "Cheese puffs (gougères)",
    "course": "s",
    "prep_min": 25,
    "cook_min": 20,

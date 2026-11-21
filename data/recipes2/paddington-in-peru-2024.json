@@ -262,16 +262,16 @@
    }
   },
   {
-   "n": "Beef lomo saltado with fries",
+   "n": "Beef lomo saltado with chips",
    "course": "m",
    "prep_min": 20,
    "cook_min": 30,
-   "make_ahead": "Slice the beef, onion and tomatoes up to 1 day ahead in the fridge; bake the fries and sear in the wok just before serving",
+   "make_ahead": "Slice the beef, onion and tomatoes up to 1 day ahead in the fridge; bake the chips and sear in the wok just before serving",
    "ingredients": [
     {
      "q": 500,
      "u": "g",
-     "item": "frozen fries",
+     "item": "frozen chips",
      "aisle": "Frozen"
     },
     {
@@ -313,7 +313,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the frozen fries until crisp.",
+     "text": "Bake the frozen chips until crisp.",
      "min": 29
     },
     {
@@ -329,7 +329,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Mushroom lomo saltado with fries",
+     "n": "Mushroom lomo saltado with chips",
      "prep_min": 20,
      "cook_min": 36,
      "make_ahead": "Slice the mushrooms, onion and tomatoes up to 1 day ahead in the fridge; cook the rice and sear in the wok at the last minute",
@@ -337,7 +337,7 @@
       {
        "q": 500,
        "u": "g",
-       "item": "frozen fries",
+       "item": "frozen chips",
        "aisle": "Frozen"
       },
       {
@@ -385,7 +385,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the frozen fries until crisp.",
+       "text": "Bake the frozen chips until crisp.",
        "min": 29
       },
       {

@@ -357,7 +357,7 @@
    "course": "m",
    "prep_min": 10,
    "cook_min": 30,
-   "make_ahead": "Make the slaw up to a day ahead; cook the chips and steak to serve",
+   "make_ahead": "Make the slaw up to a day ahead; cook the fries and steak to serve",
    "ingredients": [
     {
      "q": 500,
@@ -410,13 +410,13 @@
     {
      "q": 500,
      "u": "g",
-     "item": "frozen thick-cut chips",
+     "item": "frozen thick-cut fries",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Bake the chips at 220C until golden.",
+     "text": "Bake the fries at 220C until golden.",
      "min": 25
     },
     {
@@ -440,7 +440,7 @@
      "course": "m",
      "prep_min": 15,
      "cook_min": 30,
-     "make_ahead": "Make the slaw up to a day ahead; cook the chips and mushrooms to serve",
+     "make_ahead": "Make the slaw up to a day ahead; cook the fries and mushrooms to serve",
      "ingredients": [
       {
        "q": 4,
@@ -481,13 +481,13 @@
       {
        "q": 500,
        "u": "g",
-       "item": "frozen thick-cut chips",
+       "item": "frozen thick-cut fries",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Bake the chips until golden.",
+       "text": "Bake the fries until golden.",
        "min": 25
       },
       {

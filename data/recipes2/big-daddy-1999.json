@@ -396,12 +396,12 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 23,
-   "make_ahead": "Roll the mince into balls up to 1 day ahead and prep the toppings up to 4 hours ahead, keep chilled; bake the chips and cook the burgers on the night",
+   "make_ahead": "Roll the mince into balls up to 1 day ahead and prep the toppings up to 4 hours ahead, keep chilled; bake the fries and cook the burgers on the night",
    "ingredients": [
     {
      "q": 800,
      "u": "g",
-     "item": "frozen crinkle-cut chips",
+     "item": "frozen crinkle-cut fries",
      "aisle": "Frozen"
     },
     {
@@ -479,7 +479,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the chips and onion rings at 220C until crisp.",
+     "text": "Bake the fries and onion rings at 220C until crisp.",
      "min": 25
     },
     {
@@ -511,7 +511,7 @@
       {
        "q": 800,
        "u": "g",
-       "item": "frozen crinkle-cut chips",
+       "item": "frozen crinkle-cut fries",
        "aisle": "Frozen"
       },
       {
@@ -595,7 +595,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the chips and onion rings at 220C until crisp.",
+       "text": "Bake the fries and onion rings at 220C until crisp.",
        "min": 25
       },
       {

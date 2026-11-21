@@ -42,7 +42,8 @@ const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
 /* review 34: cups go plural over one (the app already said "3 cups"), and temperatures read "200°C" as they do in the app */
 const degC = t => String(t == null ? '' : t).replace(/(\d)\s?C\b/g, '$1°C').replace(/(\d)\s?F\b/g, '$1°F');
-const ing = i => { const q = frac(i.q); let u = i.u || ''; if (u === 'cup' && (+i.q > 1)) u = 'cups'; const tight = /^(g|kg|ml|l)$/.test(u); return clean(degC([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' '))); };
+/* review 35: metric amounts read as the app writes them: decimals, never fractions ("1.5 L", "375ml", "1.2kg"), litres with a capital L */
+const ing = i => { let u = i.u || ''; const met = /^(g|kg|ml|l|L)$/.test(u); const q = met ? (i.q == null || i.q === '' ? '' : String(+(+i.q).toFixed(2))) : frac(i.q); if (u === 'cup' && (+i.q > 1)) u = 'cups'; if (u === 'l' || u === 'L') return clean(degC([q && q + ' L', i.item].filter(Boolean).join(' '))); const tight = met; return clean(degC([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' '))); };
 const cap = t => { t = clean(t); return t.charAt(0).toUpperCase() + t.slice(1); };
 /* width and height of a jpeg, read from its frame header */
 /* previews are shot at 2x (scripts/render-previews.cjs), so pages show them at half their pixel size */

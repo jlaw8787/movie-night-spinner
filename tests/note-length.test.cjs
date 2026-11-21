@@ -4,7 +4,7 @@
    Run node scripts/build-data.cjs first (it reads data/film). */
 const fs=require('node:fs'),path=require('node:path');const R=path.join(__dirname,'..'),MAX=100;
 const dir=path.join(R,'data/film'),bad=[];let n=0,films=0;
-const chk=(f,where,t)=>{if(typeof t!=='string')return;n++;const s=t.trim();if(s.length>MAX)bad.push(`${f} ${where} (${s.length}): ${s}`)};
+const chk=(f,where,t)=>{if(typeof t!=='string')return;n++;const s=t.trim().replace(/[.!?]$/,'');/* review 35: the closing full stop is not counted (libMenu allows it) */if(s.length>MAX)bad.push(`${f} ${where} (${s.length}): ${s}`)};
 for(const file of fs.readdirSync(dir).filter(x=>x.endsWith('.json'))){
   const d=JSON.parse(fs.readFileSync(path.join(dir,file),'utf8'));if(!d.lib)continue;films++;
   for(const k of ['S','M','W','K'])for(const it of d[k]||[])chk(file,`${k} ${Array.isArray(it)?it[0]:it.n}`,Array.isArray(it)?it[1]:it&&it.note);

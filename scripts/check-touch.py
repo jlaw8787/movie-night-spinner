@@ -102,6 +102,37 @@ for fid, (keep, fl) in pieces_by.items():
             flags.append(('"' + gr + '"', [keep[i][:2] for i in sorted(idx)]))
     if flags:
         out.append((fid, flags))
+# review 35: venue, place and character names counted across the whole printed card (header, sign, dish names, notes, cue, stamps,
+# footer). A name the template already prints (the venue on the sign) may show again in the food at most once; any name printed five
+# times or more with two of those in the food, or four times in the food alone, is flagged (Frosty Palace 11 times on Grease, Mick 14 on
+# Croc II). Character names in the signer line and props count too. Capitals-only stamp words (PAID, TIX) and the film's title do not.
+CAPT = int(os.environ.get('CAPT', '5')); CAPF = int(os.environ.get('CAPF', '4'))
+VCOMMON = set("""The A An And Of In On At To For With From By Now Showing Serve Prices Images Poster TMDB Still Stills No Card Form Table Starters Mains Sweets Drinks
+Bar Kitchen Menu House Today Tonight Keep Admit One Two Three Day Night Mr Mrs Ms Dr St I It We You He She They This That Our Your His Her Their
+Est Open Closed Bill Fare Sheet Page Edition Special Specials Counter Meals Puddings Plates Blue Fountain Showtime Note Reserved Room Ticket Pass
+Christmas Sunday Monday Tuesday Wednesday Thursday Friday Saturday New Old Big Little Hot Cold Lunch Dinner Breakfast Supper Tea Coffee Cafe Café Pub
+Hotel Diner Club Street Road Avenue Hall Mess Camp Station Home Family Kitchen Small Sweet Sips Cup Cups Glass Board Cake Case Pie Wine Beer Paid Issue Ration Trade""".split())
+def vtoks(t):
+    o = []
+    for w in re.findall(r"\b[A-Z][a-zA-Z'’]+", t):
+        w = re.sub(r"['’]s$", '', w)
+        if (w.upper() == w and len(w) > 1) or w in VCOMMON or len(w) < 3: continue
+        o.append(w)
+    return o
+for fid, (keep, fl) in pieces_by.items():
+    v = dump[fid]; face = norm(' \n '.join(v.get('faces', [])))
+    title = set(re.findall(r"[A-Za-z']+", fid.split(' (')[0]))
+    tot = collections.Counter(w for w in vtoks(face) if w not in title)
+    food = collections.Counter()
+    for k, t, g in keep:
+        for w in set(vtoks(t)):
+            if w not in title: food[w] += 1
+    over = [(w, tot[w], food[w]) for w in food if food[w] >= CAPF or (tot[w] >= CAPT and food[w] >= 2 and food[w] > max(1, 4 - (tot[w] - food[w])))]
+    if over:
+        fl2 = [('venue word ' + w + ' x' + str(a) + ' (' + str(b) + ' in the food)', [kt[:2] for kt in keep if re.search(r'\b' + re.escape(w), kt[1])]) for w, a, b in over]
+        hit = next((x for x in out if x[0] == fid), None)
+        if hit: hit[1].extend(fl2)
+        else: out.append((fid, fl2))
 json.dump([[f, [[w, p] for w, p in fl]] for f, fl in out], open('/tmp/touch.json', 'w'), indent=0)
 print(len(out), 'films flagged of', len(pieces_by))
 for fid, flags in out[:int(os.environ.get('SHOW', '15'))]:

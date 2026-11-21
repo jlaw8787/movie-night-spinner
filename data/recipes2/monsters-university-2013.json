@@ -178,12 +178,12 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 31,
-   "make_ahead": "Make the cheese sauce up to 2 days ahead, keep chilled and reheat with a splash of milk; bake the chips fresh",
+   "make_ahead": "Make the cheese sauce up to 2 days ahead, keep chilled and reheat with a splash of milk; bake the fries fresh",
    "ingredients": [
     {
      "q": 1,
      "u": "kg",
-     "item": "frozen chips",
+     "item": "frozen fries",
      "aisle": "Frozen"
     },
     {
@@ -225,7 +225,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the chips at 220C until crisp.",
+     "text": "Bake the fries at 220C until crisp.",
      "min": 25
     },
     {
@@ -237,7 +237,7 @@
      "min": 3
     },
     {
-     "text": "Pour the sauce over the chips and top with spring onion and jalapenos.",
+     "text": "Pour the sauce over the fries and top with spring onion and jalapenos.",
      "min": 3
     }
    ],

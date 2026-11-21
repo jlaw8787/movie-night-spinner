@@ -47,7 +47,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
       const v=q[1]!=null?+q[1]+ +q[2]/100:q[3]!=null?+q[3]/100:+q[4]/100;let el=t.parentElement,hit=null;
       for(let i=0;i<5&&el&&el!==card;i++,el=el.parentElement){const tx=norm(el.textContent),ds=alld.filter(d=>tx.includes(d));if(ds.length===1){hit=ds[0];break}if(ds.length>1)break}
       if(hit&&mains.includes(hit))P.push(v)}
-    const tg=fl.priceEra||L.era,bd=PF_BAND[tg];
+    const tg=fl.priceEra||L.era,vk=typeof pfVenueK==='function'?pfVenueK(fl,L.fmt):1,bd=PF_BAND[tg]&&PF_BAND[tg].map(x=>x*vk);/* review 35: a canteen or mess charges about half */
     if(cur==='$'&&bd&&P.length){P.sort((a,b)=>a-b);const med=P.length%2?P[(P.length-1)/2]:(P[P.length/2-1]+P[P.length/2])/2;if(med<bd[0]*.85||med>bd[1]*1.2)bad.push(`middle main ${med.toFixed(2)} outside the ${tg} band ${bd[0]} to ${bd[1]}`)}}
    /* 4. notes: the line after a dish name, when it is not a price, another dish or a heading */
    {const m=current.printMenu||{},ds=['s','m','w','d'].flatMap(k=>(m[k]||[]).filter(x=>x&&!x.house).map(x=>x.label||x.n));

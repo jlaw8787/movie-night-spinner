@@ -1,0 +1,21 @@
+{
+ "id": "Fiddler on the Roof (1971)",
+ "ops": [
+  {
+   "old": "Strong plum brandy, a small glass each. Tevye and Lazar Wolf shake on it. L'chaim.",
+   "new": "Strong plum brandy, a small glass each. L'chaim.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The fiddler balanced on a rooftop",
+    "Yente's visits with news and husbands",
+    "Tevye talking things over with God"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

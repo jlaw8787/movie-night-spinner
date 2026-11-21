@@ -128,7 +128,7 @@
    "course": "m",
    "prep_min": 30,
    "cook_min": 40,
-   "make_ahead": "Shape the patties up to 1 day ahead and keep them chilled; fry the chips and cook the burgers on the night",
+   "make_ahead": "Shape the patties up to 1 day ahead and keep them chilled; fry the fries and cook the burgers on the night",
    "ingredients": [
     {
      "q": 1,
@@ -181,11 +181,11 @@
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into crinkle chips.",
+     "text": "Cut the potatoes into crinkle fries.",
      "min": 15
     },
     {
-     "text": "Fry the chips twice in the oil until crisp.",
+     "text": "Fry the fries twice in the oil until crisp.",
      "min": 18
     },
     {
@@ -205,7 +205,7 @@
      "min": 3
     },
     {
-     "text": "Stack it all in the buns and serve with the chips.",
+     "text": "Stack it all in the buns and serve with the fries.",
      "min": 4
     }
    ],
@@ -216,7 +216,7 @@
      "n": "Flo's café mushroom and haloumi burgers",
      "prep_min": 30,
      "cook_min": 35,
-     "make_ahead": "Slice the onions and haloumi up to 1 day ahead and keep chilled; fry the chips and grill the mushrooms on the night",
+     "make_ahead": "Slice the onions and haloumi up to 1 day ahead and keep chilled; fry the fries and grill the mushrooms on the night",
      "ingredients": [
       {
        "q": 1,
@@ -269,11 +269,11 @@
      ],
      "steps": [
       {
-       "text": "Cut the potatoes into crinkle chips.",
+       "text": "Cut the potatoes into crinkle fries.",
        "min": 15
       },
       {
-       "text": "Fry the chips twice in the oil until crisp.",
+       "text": "Fry the fries twice in the oil until crisp.",
        "min": 18
       },
       {
@@ -293,7 +293,7 @@
        "min": 3
       },
       {
-       "text": "Stack it all in the buns and serve with the chips.",
+       "text": "Stack it all in the buns and serve with the fries.",
        "min": 4
       }
      ],

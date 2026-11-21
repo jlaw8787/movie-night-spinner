@@ -892,7 +892,7 @@ function cardFaces(){
   if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
     const pages=fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}));
     /* review 31: wide pages of a two-page menu (Jurassic Park's dining guide) split into panels on a phone too */
-    if(swipeW()&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
+    if((swipeW()||pvDesk)&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
       xs.slice(0,-1).forEach((x,j)=>out.push({el:pg.el,w:xs[j+1]-x,h,x:pg.x+x,px:x,y:pg.y,row:true,part:"p"+i+"panel"+(j+1),panel:1}))});return out}
     /* review 32: a portrait page can mark the block worth reading on a phone ([data-pvzoom], the banquet's bill of fare); on a phone that
        block is the page's view, at about 1.2 times the size (Gone with the Wind opened at 7px italic). Tap still opens the whole page */
@@ -903,25 +903,28 @@ function cardFaces(){
      Review 30 (Josh's call): the old left and right half views cut words at the fold and looked broken at first glance.
      Review 31 (Josh's call): on a phone a wide page is shown as its own panels, cut only along clear gutters where no text runs (pvPanels),
      so a word is never split; three panels when the gutters allow (text near full size), else two; a page with no clean gutter stays whole */
-  if(!swipeW())return [];
+  if(!swipeW()&&!pvDesk)return [];
   /* review 32: a hand-built menu drawn without a fixed sheet (Ratatouille's Gusteau's spread: photos either side of the menu card) opens on
      its menu card, one view per .fx-panel, so the dishes read at about 10px instead of 5 to 6. Tap still opens the whole spread */
-  if(!fs.length&&!card.dataset.w&&card.classList.contains("fmt")){const P=[...card.querySelectorAll(".fx-panel")].filter(e=>e.offsetWidth&&e.offsetHeight);
-    if(P.length&&P.length<=2){const cb=card.getBoundingClientRect(),k=cb.width/(card.offsetWidth||1123)||1,cw=card.offsetWidth||1123;
+  const fxPanels=()=>{const P=[...card.querySelectorAll(".fx-panel")].filter(e=>e.offsetWidth&&e.offsetHeight);
+    if(P.length&&P.length<=2){const cb=card.getBoundingClientRect(),cw=+card.dataset.w||card.offsetWidth||1123,k=cb.width/cw||1;
       const V=P.map((e,i)=>{const r=e.getBoundingClientRect();return {el:card,w:Math.round(r.width/k)+24,h:Math.round(r.height/k)+24,x:Math.round((r.left-cb.left)/k)-12,y:Math.round((r.top-cb.top)/k)-12,px:Math.round((r.left-cb.left)/k)-12,part:"menu"+(i+1),panel:1,crop:1}});
-      if(V.every(v=>v.w<cw*.75))return V}}
+      if(V.every(v=>v.w<cw*.75))return V}return null};
+  if(!fs.length&&!card.dataset.w&&card.classList.contains("fmt")){const V=fxPanels();if(V)return V}
   const el=fs[0]||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;
   if(!w||!h||(w<h*1.2&&w<900))return [];/* a wide page, or a big one (the pub face is 1240 across) */
   /* review 32: a wide page can mark the blocks to read on a phone ([data-pvzoom]: the hospital meal form, the canteen tray, a tight kiosk
      board's columns); those are its views, ahead of any gutter panels */
   const Z=[...el.querySelectorAll("[data-pvzoom]")],cuts=Z.length?[]:pvPanels(el,w,h);
+  /* review 35: a sheet with no clean gutter but drawn as two .fx-panel cards (The Big Lebowski's lanes menu) opens on its panels on desktop too */
+  if(!cuts.length&&!Z.length&&pvDesk){const V=fxPanels();if(V)return V}
   if(!cuts.length){if(!Z.length)return [];
     return Z.map((z,i)=>{const [zx,zy,zw,zh]=pvZoomBox(z);return {el,w:zw,h:zh,x:zx,y:zy,px:zx,row:true,part:"zoom"+i,panel:1}})}
   const xs=[0,...cuts,w];return xs.slice(0,-1).map((x,i)=>({el,w:xs[i+1]-x,h,x,px:x,y:0,row:true,part:"panel"+(i+1),panel:1}));
 }
 /* gutters on a wide page: the x positions no line of text crosses (measured on the words, a little padding either side).
    Kept per drawn card and page, so swiping does not measure again */
-function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(fi||0);card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
+function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(fi||0)+(pvDesk?"d":"");card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
   let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange();
     for(const e of el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]"))continue;for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;rg.selectNodeContents(n);
       for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const a=Math.max(0,Math.floor(((r.left-b.left)/k-8)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+8)/R));for(let i=a;i<=z;i++)cov[i]=1}}}
@@ -933,7 +936,8 @@ function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(f
       let D=P.map((x,i)=>i===0?{m:0,c:[]}:null);
       for(let k=1;k<=n;k++){const E=P.map(()=>null);for(let j=1;j<M;j++)for(let i=0;i<j;i++){const d=D[i];if(!d)continue;if(k<n&&j===M-1)continue;const pw=P[j]-P[i];if(pw<MIN)continue;const m=Math.max(d.m,pw);if(!E[j]||m<E[j].m)E[j]={m,c:j<M-1?[...d.c,P[j]]:d.c}}D=E}
       return D[M-1]};
-    let pick=null;for(let n=2;n<=4;n++){const r=split(n);if(!r)continue;if(r.m<=440){pick=r;break}if(!pick||r.m<pick.m)pick=r}
+    let pick=null;if(pvDesk){/* review 35: desktop halves, a wide page in two at its clearest middle gutter */const r=split(2);if(r&&r.m<=w*.7)pick=r}
+    else for(let n=2;n<=4;n++){const r=split(n);if(!r)continue;if(r.m<=440){pick=r;break}if(!pick||r.m<pick.m)pick=r}
     if(pick&&pick.m<=w*.72)cuts=pick.c}catch(e){cuts=[]}
   card._pvp[key]=cuts;return cuts}
 /* review 31: a multi-page or panelled card opens on the page with the most dishes on it (Die Hard and Casablanca opened on a cover) */
@@ -983,13 +987,28 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
   for(const e of off.filter(e=>e.hasAttribute("data-pvsign"))){off.splice(off.indexOf(e),1);let l=1e9,rt=-1e9;for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);for(const r of rg.getClientRects())if(r.width){l=Math.min(l,r.left);rt=Math.max(rt,r.right)}}
     l=(l-b.left)/k;rt=(rt-b.left)/k;const sc=Math.min(1,(hi-lo-40)/Math.max(1,rt-l)),dx=(lo+hi)/2-(l+rt)/2;e.dataset.pvt=e.style.transform||"-";e.style.transformOrigin="center";e.style.transform=`translateX(${dx.toFixed(1)}px) scale(${sc.toFixed(3)})`}
   off.forEach(e=>e.classList.add("pv-off"))}
+/* review 35: the size the card's small print (the dish notes) reads at when the whole sheet is scaled by k: the character-weighted fifth
+   smallest share of its text, in card pixels (inner transforms counted), times k. Kept per drawn card */
+let pvDesk=false;
+function cardSmallPx(){const key=renderId+"|"+card.innerHTML.length;if(card._smk===key)return card._smpx;let px=99;
+  try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,L=[];let tot=0;
+    for(const e of card.querySelectorAll("*")){if(!e.offsetWidth||e.closest("[aria-hidden=true],[data-np]"))continue;let n=0;for(const c of e.childNodes)if(c.nodeType===3)n+=c.textContent.trim().length;if(n<12)continue;
+      const r=e.getBoundingClientRect(),k=r.width/e.offsetWidth/ck,f=parseFloat(getComputedStyle(e).fontSize)*(k>0?k:1);if(f>0){L.push([f,n]);tot+=n}}
+    L.sort((a,b)=>a[0]-b[0]);let acc=0;for(const [f,n] of L){acc+=n;if(acc>=tot*.2){px=f;break}}}catch(e){}
+  card._smk=key;card._smpx=px;return px}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
+  /* review 35: on desktop a card whose notes would print under 11px when the whole sheet fits the column shows a page (a wide page in two
+     halves) at a time with the dots, so notes read at 11px or more (Thunderdome 7px, Goldfinger and Lebowski 7.3px, Jurassic Park 8.4px) */
+  pvDesk=false;if(tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<11}
   /* review 34: on desktop a two or three page menu shrunk whole into the column printed its notes at 4 to 7px (Grease, Gallipoli):
      when the whole sheet would scale under 0.62 it shows one page at a time at column width, with the dots to turn the page */
-  const deskFaces=tab==="menu"&&!swipeW()&&card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62;
+  const deskFaces=tab==="menu"&&!swipeW()&&(pvDesk||card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62);
   const fs=tab==="menu"&&(swipeW()||deskFaces)?cardFaces():[];paintDots(fs.length);
-  if(fs.length){if(card.dataset.pvs!==String(renderId)){card.dataset.pvs=String(renderId);pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
-    card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
+  if(fs.length){if(card.dataset.pvs!==String(renderId)){card.dataset.pvs=String(renderId);pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace];
+    /* review 35: on desktop a page or half is shown no bigger than it needs to be (notes at about 14px, or the page in about a screen),
+       centred in the column, so a narrow panel is not blown up to a page one and a half screens tall (Lebowski) */
+    let k=pw/f.w,dx=0;if(pvDesk&&!swipeW()){const sp=cardSmallPx();k=Math.min(k,Math.max(14/sp,innerHeight*1.05/f.h,(pw*.7)/f.w));dx=Math.max(0,(pw-f.w*k)/2)}preview.classList.add("pv-swipe");
+    card.style.transform=`translate(${-f.x*k+pvDrag+dx}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
     preview.setAttribute("aria-label",`Printed menu, ${f.panel?"part":"page"} ${pvFace+1} of ${fs.length}. Open it full size`);return}
   pvMask(null);delete preview.dataset.part;if(preview.classList.contains("pv-swipe")){preview.classList.remove("pv-swipe");preview.setAttribute("aria-label","Open the printed menu full size")}
   const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
@@ -1472,7 +1491,11 @@ function shopLines(list){
   {const out=[];for(const l of lines){const at=l.lastIndexOf("@"),b=buyBy(l.slice(0,at));const nl=b+l.slice(at);
      const twin=out.findIndex(x=>x.toLowerCase()===nl.toLowerCase());if(twin>=0)continue;
      const fm=nl.match(/^(\d+) (lemon|lime|orange)s?(@.+)$/i),fi=fm?out.findIndex(x=>{const y=x.match(/^(\d+) (lemon|lime|orange)s?(@.+)$/i);return y&&y[2].toLowerCase()===fm[2].toLowerCase()&&y[3]===fm[3]}):-1;
-     if(fi>=0){const n=+out[fi].match(/^\d+/)[0]+ +fm[1];out[fi]=`${n} ${fm[2].toLowerCase()}s${fm[3]}`;continue}out.push(nl)}lines.length=0;lines.push(...out)}
+     if(fi>=0){const n=+out[fi].match(/^\d+/)[0]+ +fm[1];out[fi]=`${n} ${fm[2].toLowerCase()}s${fm[3]}`;continue}out.push(nl)}
+     /* review 35: a jar or bottle line goes when the same thing is already on the list by weight or volume ("60g butter" and "1 block butter") */
+     for(let i=out.length-1;i>=0;i--){const pm=out[i].match(/^1 (?:jar|bottle|packet|bag|tin|carton|tub|block) (.+?)@/i);if(!pm)continue;const it=pm[1].toLowerCase();
+       if(out.some((y,j)=>j!==i&&new RegExp("^[\\d./ ]+\\s*(?:g|kg|ml|l|L)?\\s+"+it.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"(?:,[^@]*)?@","i").test(y)))out.splice(i,1)}
+     lines.length=0;lines.push(...out)}
   return lines;
 }
 const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
@@ -1494,6 +1517,21 @@ function buyBy(t){let x=String(t).trim();
   /* pickle slices and whipped cream come as a jar and a carton */
   if(/^\d+\s+(?:dill\s+)?pickle\s+slices$|^\d+\s+slices\s+(?:of\s+)?(?:dill\s+)?pickles?$/i.test(x))return "1 jar dill pickles";
   if(/^[\d\/ ]+\s*(tbsp|cups?)\s+whipped cream$/i.test(x))return "300ml thickened cream (whip it)";
+  /* review 35: anything else measured by the spoon or cup is bought as its jar, bottle, packet or bag ("4 tbsp mayonnaise" is a jar of
+     mayonnaise, "1 1/2 tbsp Worcestershire sauce" a bottle, "4 cups crushed ice" a bag of ice); a spoon of juice or zest is the fruit */
+  if((m=x.match(/^[\d\/ .]+\s*(?:tbsp|tsp|tablespoons?|teaspoons?|cups?|dashes|dash|splash(?:es)?|drops?)\s+(?:of\s+)?(.+)$/i))){const it=m[1].trim().replace(/,\s*(?:plus|and) extra\b.*$|,\s*(?:to|for) (?:dust|serve|finish|garnish|taste)\w*.*$/i,""),lo=it.toLowerCase();
+    if(/\b(bicarb(?:onate)?(?: of soda)?|baking soda|baking powder|cream of tartar)\b/.test(lo))return `1 packet ${it}`;
+    if((m=lo.match(/^(?:fresh(?:ly squeezed)?\s+)?(lemon|lime|orange)\s+(juice|zest)$/)))return `1 ${m[1]}`;
+    if(/\b(water|boiling water|iced water|ice water|hot water|cold water|salt|pepper)\b/.test(lo)&&!/\b(coconut water|soda water|tonic water|rose ?water|orange blossom water)\b/.test(lo))return x;
+    if(/\bice( cubes)?\b|\bcrushed ice\b/.test(lo))return "1 bag ice";
+    const P=[[/\b(mayonnaise|mayo|mustard|dijon|jam|marmalade|honey|relish|chutney|horseradish|capers|pickled onions|gherkins|pickles|peanut butter|tahini|pesto|curry paste|miso|harissa|sambal|nutella|olives|lemon curd|tapenade|aioli|vegemite|marmite|paste)\b/,"jar"],
+      [/\b(golden syrup|treacle|anchovies|coconut milk|coconut cream|condensed milk|evaporated milk)\b/,"tin"],
+      [/\b(cream|milk|buttermilk|stock|broth)\b/,"carton"],[/\b(yoghurt|yogurt|sour cream|cream cheese|ricotta|mascarpone|cr[eè]me fra[iî]che|custard)\b/,"tub"],
+      [/\b(butter)\b/,"block"],
+      [/\b(sauce|ketchup|tabasco|vinegar|oil|syrup|extract|essence|bitters|mirin|sherry|wine|rum|brandy|whisk(?:e)?y|bourbon|vodka|gin|tequila|liqueur|cordial|grenadine|juice|sake|vermouth|port|cola|lemonade|soda|tonic|beer|ale|lager|cider|coffee|espresso)\b/,"bottle"],
+      [/\b(sugar|flour|cornflour|baking powder|bicarb(?:onate)?(?: of soda)?|baking soda|cocoa|yeast|gelatine|cornstarch|semolina|polenta|breadcrumbs|panko|oats|desiccated coconut|shredded coconut|coconut|sprinkles|cornmeal|rice|lentils|couscous|nuts|almonds|walnuts|pecans|peanuts|pistachios|raisins|sultanas|currants|chocolate chips|choc chips|chocolate|cereal|crisps|chips|popcorn|marshmallows|seeds|sesame seeds|chia|tea|tea leaves|cheese|parmesan|cheddar|mozzarella|feta)\b/,"packet"],
+      [/\b(paprika|cumin|cinnamon|nutmeg|turmeric|coriander|chill?i flakes|chill?i powder|cayenne|oregano|thyme|allspice|cloves|ginger|garam masala|curry powder|five spice|mixed spice|cardamom|star anise|saffron|sumac|za'?atar|dukkah|bay leaves|celery salt|onion powder|garlic powder|stock powder|seasoning|spice|dried herbs|herbs)\b/,"jar"]];
+    for(const [rx,pk] of P)if(rx.test(lo))return `1 ${pk} ${it.replace(/^(?:(?:finely |roughly )?(?:chopped|grated|crushed|ground|melted|softened)\s+)(?=.*\b(sugar|cheese|parmesan|nuts|almonds|chocolate|butter)\b)/i,"")}`}
   /* a cut word at the front of produce ("2 tbsp chopped mint" is handled above; "500g sliced mushrooms" is just mushrooms) */
   x=x.replace(/^([\d\/ .]+\s*(?:g|kg|ml|l|L)?\s+)(?:finely |roughly |thinly )?(?:chopped|diced|sliced|shredded|minced|snipped|torn)\s+(?!.*\b(cheese|cheddar|mozzarella|parmesan|pecorino|gruyere|ham|salami|turkey|beef|pork|chicken|almonds|coconut)\b)/i,"$1");
   return x}
@@ -1523,10 +1561,10 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
   let c2,p2;
   /* review 34: when every step carries its minutes, the header is built from the steps alone, so it can never disagree with them
      (Ratatouille's brulee said cook 13 min and 1 hr to chill beside a 35 min bake and 3 hr chill). A serving step may be 0 */
+  /* review 35: built from the steps, the header adds nothing of its own (a stray "Prep 5 min" sat over steps that were all on the heat) */
   if(st.length&&st.every(t=>typeof t.min==="number"&&t.min>=0)&&sum>0){wait=st.filter(isW).reduce((a,t)=>a+(t.min||0),0);c2=heat;p2=Math.max(0,sum-heat-wait)}
   else{/* otherwise take the waiting off cooking, but never below the heat steps, and the rest off prep */
-    c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait)}/* someone always has to chop, season or mix: prep is never shown as 0 */
-  if(st.length&&p2<5)p2=5;
+    c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait);/* someone always has to chop, season or mix: prep is never shown as 0 */if(st.length&&p2<5)p2=5}
   const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
@@ -1620,9 +1658,9 @@ function prepHTML2(f,menu){
   const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
-    const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
+    const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook&&T.prep?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:hot&&T.cook?`Cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
-    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${T.wait&&waitFirst(x)?`${planMin(T.wait)} ${waitWords(x)} first${planWhen(T.wait)}, then ${time.charAt(0).toLowerCase()+time.slice(1)}`:`${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}${planWhen(T.wait)}`:""}`}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}${batchTip(x,kk)?`<p class="pp-tip"><b>Tip</b> ${ESC(batchTip(x,kk))}</p>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).filter(s=>stepParts(s.text).main).map(s=>`<li>${ESC(degC(scaleStep(stepParts(s.text).main,kk)))}${s.min?` <span class="pp-t">${planDur(s.min)}</span>`:""}</li>`).join("")}</ol>${(x.steps||[]).map(s=>stepParts(s.text).tip).filter(Boolean).map(t=>`<p class="pp-tip"><b>Tip</b> ${ESC(degC(scaleStep(t,kk)))}</p>`).join("")}</li>`}).join("");
+    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${T.wait&&waitFirst(x)?`${planMin(T.wait)} ${waitWords(x)} first${planWhen(T.wait)}, then ${time.charAt(0).toLowerCase()+time.slice(1)}`:`${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}${planWhen(T.wait)}`:""}`}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}${batchTip(x,kk)?`<p class="pp-tip"><b>Tip</b> ${ESC(batchTip(x,kk))}</p>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).filter(s=>stepParts(s.text).main).map(s=>`<li>${ESC(degC(scaleStep(stepParts(s.text).main,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol>${(x.steps||[]).map(s=>stepParts(s.text).tip).filter(Boolean).map(t=>`<p class="pp-tip"><b>Tip</b> ${ESC(degC(scaleStep(t,kk)))}</p>`).join("")}</li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
@@ -2046,7 +2084,7 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
       if(hid()&&e.textContent.split(/\s+/).length<4){e.textContent=full;e.style.textOverflow="ellipsis";e.dataset.keep="1"}}
     if(hid()&&!e.dataset.keep)e.style.display="none";}
  })}
-function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:degC(libTrim(it.note,100))}));return m}
+function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:degC(libTrim(it.note,/[.!?]\s*$/.test(String(it.note||""))?101:100))}));/* review 35: every note ends with its full stop, which does not count against the 100 */return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
 const _libLoads={};
 function libLoad(k){
@@ -2109,7 +2147,7 @@ function houseCap(root,menu,fmt){
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
 const PF_CHEAP=/\b(pancakes?|pikelets?|waffles?|slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
-const PF_BITE=/\b(crackling|pork scratchings|pork rinds|chicharrones|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
+const PF_BITE=/\b(jelly( gems| cubes| cups)?|crackling|pork scratchings|pork rinds|chicharrones|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
@@ -2123,6 +2161,14 @@ const PF_PINT={"1800s":.06,"1930s-40s":.15,"1950s":.25,"1960s":.35,"1970s":.75,"
 /* review 33: the dearest a plain soft drink (juice, soda, tea, coffee, lemonade) can be in each decade (The Other Guys' $8.75 pineapple juice) */
 const PF_SOFT={"1800s":.05,"1930s-40s":.1,"1950s":.15,"1960s":.25,"1970s":.5,"1980s":1.25,"1990s":2.5,"2000s":3.5,"modern":5.5};
 const PF_SOFTD=/\b(juice|soda|cola|lemonade|iced tea|tea|coffee|flat white|lattes?|cappuccinos?|water|cordial|squash|ginger beer|root beer|sarsaparilla|creaming soda|lemon squash|milk)\b/i,PF_NOTSOFT=/\b(long island|shakes?|milkshakes?|malts?|malted|floats?|smoothies?|frapp|sundaes?|spiked|irish coffee|punch|cocktail|mocktail|tiki)\b/i;
+/* review 35: a sandwich, burger or roll is a hand-held main even when it holds steak (Croc Dundee's steak sandwich sat over the barra,
+   Grease's burger over the chicken basket): never premium, and never above a plated main on the same card */
+const PF_HAND=/\b(sandwich(es)?|sangas?|sangers?|burgers?|cheeseburgers?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?|wraps?|po' ?boys?|tacos?|hot ?dogs?|melts?|sandos?)\b/i;
+const pfPrem=n=>PF_PREM.test(n)&&!PF_HAND.test(n);
+/* review 35: the dearest a plain sweet can be in each decade, in dollars of the day (It's a Wonderful Life's 80c sundae in 1946); a plain
+   starter at most about twice that. A canteen, mess, commissary or soldiers' club charges a bit over half a cafe's prices (The Dish, The Sapphires) */
+const PF_SWEETCAP={"1800s":.1,"1930s-40s":.3,"1950s":.5,"1960s":.9,"1970s":2,"1980s":5,"1990s":8,"2000s":11,"modern":16};
+const PF_CHEAPV=/\b(canteen|cafeteria|mess|commissary|soldiers'? club|staff)\b/i,pfVenueK=(fl,fmt)=>/^(canteen|lab|hospital)$/.test(fmt||"")||PF_CHEAPV.test(String(fl&&fl.venue||""))?.55:1;
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
    The figure arrives in dollars of the day and is turned into what that place would print */
@@ -2213,13 +2259,40 @@ function sumFix(root){if(!root)return 0;
    the banquet's "89.50 per cover") gets its mark: cents under a dollar ("75¢"), "$" above. A card that already sets "$" or "¢" anywhere
    beside its prices is left as it is */
 function pfMark(root){const PR=/^(\s*)(\d{1,3})?\.(\d\d)(\s*)$/,tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),T=[];let t,marked=false;
-  while((t=tw.nextNode())){const v=t.nodeValue;if(/^\s*(\$|\$\s?[\d.,]+|\d{1,3}\s?¢|\d{1,2}c)\s*$/.test(v)){marked=true;break}if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;const m=v.match(PR);if(m)T.push([t,m])}
+  /* review 35: only a "$" set apart from its figures (a price column headed "$") counts as the card's mark; a card mixing "50¢" with a bare
+     "1.75" (Psycho) gets the "$" on the bare ones */
+  while((t=tw.nextNode())){const v=t.nodeValue;if(/^\s*\$\s*$/.test(v)){marked=true;break}if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;const m=v.match(PR);if(m)T.push([t,m])}
   if(marked||!T.length)return 0;
   for(const [t,m] of T){const x=(+m[2]||0)+ +m[3]/100;t.nodeValue=m[1]+(x<1?Math.round(x*100)+"¢":"$"+x.toFixed(2))+m[4]}
   return T.length}
 /* the money mark goes on shared layouts only: a hand-built menu that prints bare prices was drawn that way, and its boxes are sized to them
    (Splash, Sleepless in Seattle and Money Train ran into their fine print with a $ added) */
-function priceFix(root,menu,f,fl,era,fmt){const n=priceFix0(root,menu,f,fl,era,fmt);return (fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"?n:n+pfMark(root)}
+/* review 35 (Josh's call): nobody pays at a family home, an army mess, a prison, a camp or the Wasteland, so those cards print a film word
+   where the price sat: a mess or prison "Issue", a home or camp nothing, the Wasteland what it trades in (flavour.pay: a word, a list
+   of words that take turns, "" for nothing, or true where the venue does charge: a boarding house, a hotel dining room, a takeaway) */
+const PAY_NOT=/\b(diner|caf[eé]|cafeteria|canteen|pub|bar|tavern|inn|hotel|motel|restaurant|tent|steakhouse|roadhouse|bakehouse|chophouse|coffee ?house|alehouse|tea ?house|public house|station house|clubhouse|house of|lounge|grill|shop|store|kiosk|stand|truck|cart|parlou?r|bistro|club|deli|bakery|market|saloon|lodge|counter|bodega|joint|trattoria|pizzeria|commissary|cantina|brasserie|food court|concession|snack bar|tea room|opera house|reception hall)\b/i,
+  PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen)\b/i,
+  PAY_MESS=/\b(mess|barracks|prison|jail|gaol|bunker|outpost|base|fort|army)\b/i;
+function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.pay!=null)return fl.pay;if(fmt==="own"||fmt==="takeaway"||fmt==="truck")return null;
+  const v=String(fl.venue||"");if(!v)return null;
+  if(fl.camp==="army"||PAY_MESS.test(v)&&!/\b(cafeteria|canteen|diner|caf[eé]|club)\b/i.test(v))return "Issue";
+  if(fl.camp==="summer")return "";
+  if(PAY_HOME.test(v)&&!PAY_NOT.test(v))return "";return null}
+/* the price nodes become the film word; template lines about paying (prices subject to change, service included, cash only) go */
+function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
+  T.sort((a,b)=>a.compareDocumentPosition(b)&Node.DOCUMENT_POSITION_FOLLOWING?-1:1);
+  for(const t of T){const m=t.nodeValue.match(/^(\s*)[\s\S]*?(\s*)$/);t.nodeValue=m[1]+W[i++%W.length]+m[2]}
+  for(const e of root.querySelectorAll("[data-sum],[data-echo]"))e.textContent=W[0];
+  const PAYW=/\b(prices?|priced|cash|charges?|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst)\b/i;
+  const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),N=[];let t;while((t=tw.nextNode()))N.push(t);
+  for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;const ss=v.split(/(?<=[.!])\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
+    const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
+  for(const t of N)if(/,\s*,/.test(t.nodeValue))t.nodeValue=t.nodeValue.replace(/\s*,\s*,\s*/g,", ");
+  root.dataset.nopay="1";return T.length}
+function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;const n=priceFix0(root,menu,f,fl,era,fmt);if((fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"||root.dataset.nopay)return n;
+  /* review 35: one way to write cents: "60¢" on an American (or any non-Australian) dollar card, "60c" on an Australian or New Zealand one */
+  const k=pfMark(root);{const au=f&&f.theme==="aussie",tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){const m=t.nodeValue.match(/^(\s*)(\d{1,2})(¢|c)(\s*)$/);if(m&&m[3]!==(au?"c":"¢"))t.nodeValue=m[1]+m[2]+(au?"c":"¢")+m[4]}}
+  return n+k}
 function priceFix0(root,menu,f,fl,era,fmt){
   if(!root||!menu)return 0;
   /* review 31: layouts print "fry-up" as "fry up", so hyphens count as spaces when a price is tied to its dish */
@@ -2242,6 +2315,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   hits.sort((a,b)=>a.dp-b.dp);for(const h of hits){if(seen.has(h.hit))continue;seen.add(h.hit);P.push({...h.hit,v:h.v,v0:h.v,t:h.t,m:h.m})}
   {const rt=norm(root.textContent),onCard=dish.filter(d=>rt.includes(d.nm)).length;if(P.length<2||P.length<Math.max(2,onCard)*.6){
     /* no dish prices (a banquet's single per cover fee): the money of the place still applies */
+    {const pw=payWord(fl,fmt);if(pw!=null){const T=cand.filter(([,m])=>m[2]||m[4]!=null||m[7]!=null||m[11]!=null).map(([t])=>t);if(T.length)return payFix(root,T,pw)}}
     const cu=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;if(!cu)return 0;let n=0;const tg=(fl&&fl.priceEra)||era;
     for(const [t,m] of cand){if(!(m[2]||m[4]!=null||m[7]!=null||m[11]!=null))continue;const v=m[3]!=null?+m[3]+(m[4]?+m[4]/100:0):m[7]!=null?+m[7]/100:+m[11]/100;if(!(v>0))continue;
       t.nodeValue=(m[1]||m[6]||m[10]||"")+pfMoney(v,cu,tg,fl)+(m[5]||m[9]||m[12]||"");n++}
@@ -2249,55 +2323,66 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 31: the card's other prices (a combo, a set dinner, a per cover fee) move with the dishes, so they stay on the same scale and money */
   const tied=new Set(P.map(x=>x.t)),O=[];
   for(const [t,m] of cand){if(tied.has(t))continue;if(!(m[2]||m[4]!=null||m[7]!=null||m[11]!=null))continue;const v=m[3]!=null?+m[3]+(m[4]?+m[4]/100:0):m[7]!=null?+m[7]/100:+m[11]/100;if(v>0)O.push({v,v0:v,t,m})}
+  {const pw=payWord(fl,fmt);if(pw!=null)return payFix(root,[...P.map(x=>x.t),...O.map(x=>x.t)],pw)}
   const cents=P.some(x=>x.m[7]!=null),dot=P.some(x=>x.m[11]!=null),whole=P.filter(x=>x.m[3]!=null&&x.m[4]==null).length>P.length/2;
   const clean=v=>{if(v<1)return Math.max(.05,Math.round(v*20)/20);if(whole)return Math.max(1,Math.round(v));const c=v%1,b=Math.floor(v),E=[0,.25,.5,.75,.95,1];let best=E[0];for(const e of E)if(Math.abs(c-e)<Math.abs(c-best))best=e;return Math.round((b+best)*100)/100};
   const step=v=>v<1?.05:whole?1:.25;
   /* 1. priced in the film's own time. review 31: every layout, not only the ones that read priceEra. The card's middle main is held to a
      band for its decade (flavour.priceEra, else the layout era); a card outside it is scaled, whole card at once, to the middle of the band.
      The Rocketeer's 1938 cafe no longer charges 7.25 a plate, Red Dog's 1970s counter meal is no longer $16 */
-  const tgt=(fl&&fl.priceEra)||(fmt==="own"?null:era),bd=tgt&&PF_BAND[tgt];
+  const tgt=(fl&&fl.priceEra)||(fmt==="own"?null:era),vk=pfVenueK(fl,fmt),bd=tgt&&PF_BAND[tgt]&&PF_BAND[tgt].map(x=>x*vk);
   if(bd){const ms=P.filter(x=>x.k==="m"&&!x.house).map(x=>x.v).sort((a,b)=>a-b),all=P.map(x=>x.v).sort((a,b)=>a-b);
     const mid=L=>L.length%2?L[(L.length-1)/2]:(L[L.length/2-1]+L[L.length/2])/2,med=ms.length?mid(ms):mid(all)*1.6;
     if(med<bd[0]||med>bd[1]){const k=Math.sqrt(bd[0]*bd[1])/med;for(const x of P)x.v*=k;for(const x of O)x.v*=k}}
   const by=k=>P.filter(x=>x.k===k),mn=()=>by("m").filter(x=>!x.house),minM=()=>{const L=mn();return L.length?Math.min(...L.map(x=>x.v)):null};
   /* review 33: a steak, roast, lobster or prime rib main costs at least the middle of its decade's band (Caddyshack's $3.95 prime rib at a 1980
      country club, Dumb and Dumber's $5.50 surf and turf); the premium mains rise together so their order stays */
-  if(bd){const pr=mn().filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)),fl0=(bd[0]+bd[1])/2,lo=pr.length?Math.min(...pr.map(x=>x.v)):0;if(lo&&lo<fl0){const k=fl0/lo;for(const x of pr)x.v=Math.min(x.v*k,Math.max(x.v,bd[1]*1.3))}}
+  if(bd){const pr=mn().filter(x=>pfPrem(x.n)&&!pfCheap0(x.n)),fl0=(bd[0]+bd[1])/2,lo=pr.length?Math.min(...pr.map(x=>x.v)):0;if(lo&&lo<fl0){const k=fl0/lo;for(const x of pr)x.v=Math.min(x.v*k,Math.max(x.v,bd[1]*1.3))}}
   const maxOf=L=>L.length?Math.max(...L.map(x=>x.v)):null,minOf=L=>L.length?Math.min(...L.map(x=>x.v)):null;
   const rules=()=>{
   /* 3. cheap bites */
-  for(const k of ["s","w"]){const L=by(k),nc=L.filter(x=>!pfCheap(x.n)),top=maxOf(nc);if(top==null)continue;for(const x of L)if(pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>top)x.v=Math.max(step(top),top-step(top))}
+  for(const k of ["s","w"]){const L=by(k),nc=L.filter(x=>!pfCheap(x.n)),top=maxOf(nc);if(top==null)continue;for(const x of L)if(pfCheap(x.n)&&!pfPrem(x.n)&&x.v>top)x.v=Math.max(step(top),top-step(top))}
   {const mS=maxOf(by("s"));if(mS!=null)for(const x of by("w"))if(pfCheap(x.n)&&x.v>mS)x.v=Math.max(step(mS),mS-step(mS))}
-  {const prem=mn().filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)),nc=mn().filter(x=>!pfCheap0(x.n)),mS=maxOf(by("s"));
-    for(const x of mn())if(pfCheap0(x.n)&&!PF_PREM.test(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
+  {const prem=mn().filter(x=>pfPrem(x.n)&&!pfCheap0(x.n)),nc=mn().filter(x=>!pfCheap0(x.n)),mS=maxOf(by("s"));
+    for(const x of mn())if(pfCheap0(x.n)&&!pfPrem(x.n)){let cap=Infinity;if(prem.length)cap=Math.min(cap,minOf(prem)-step(minOf(prem)));if(nc.length&&mn().length>1)cap=Math.min(cap,maxOf(nc)-step(maxOf(nc)));if(mS!=null)cap=Math.min(cap,mS*1.45);if(x.v>cap){x.v=cap;x.down=1}}}
   /* review 31: a bowl of bar nuts or crisps never costs more than a drink beside it (the Winchester's nuts at twice a pint) */
-  {const D=by("d"),lo=minOf(D);if(lo!=null)for(const x of by("s"))if(PF_BAR.test(x.n)&&!PF_PREM.test(x.n)&&x.v>lo){x.v=Math.max(step(lo),lo-step(lo)*0);x.down=1}}
+  {const D=by("d"),lo=minOf(D);if(lo!=null)for(const x of by("s"))if(PF_BAR.test(x.n)&&!pfPrem(x.n)&&x.v>lo){x.v=Math.max(step(lo),lo-step(lo)*0);x.down=1}}
   /* review 32: a cheap bite is held under half the bottom of its decade's main band (Mad Max's 1979 meat pie was $4.25, The Dish's 1969 scone $1) */
-  {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if((x.k==="s"||x.k==="w")&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
+  {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if((x.k==="s"||x.k==="w")&&pfCheap(x.n)&&!pfPrem(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
   /* review 32: a plain beer, cider or pint is held to what a glass cost in its decade (PF_PINT), so a 1981 pint is not dearer than the pie */
   {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
   /* review 33: a plain soft drink is held to its decade (PF_SOFT) and never dearer than the dearest sweet */
   {const cap=tgt&&PF_SOFT[tgt],wHi=maxOf(by("w"));for(const x of by("d"))if(PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)){let c=Infinity;if(cap)c=cap;if(wHi!=null)c=Math.min(c,wHi);if(x.v>c){x.v=c;x.down=1}}}
   /* review 33: no real starter costs under two fifths of the dearest one (The Other Guys' $2.25 dip beside $7.75 bagel bites) */
-  {const L=by("s").filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))),hi=maxOf(L);if(hi!=null)for(const x of L)if(x.v<hi*.4){const st=step(hi*.4);x.v=Math.ceil(hi*.4/st-1e-9)*st+(st<.25?0:0)}}
+  {const L=by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))),hi=maxOf(L);if(hi!=null)for(const x of L)if(x.v<hi*.4){const st=step(hi*.4);x.v=Math.ceil(hi*.4/st-1e-9)*st+(st<.25?0:0)}}
   /* 4. a seafood or steak starter never well under a plain one */
-  {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(PF_PREM.test(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
+  {const L=by("s"),pl=L.filter(x=>!pfPrem(x.n)),lo=minOf(pl);if(lo!=null)for(const x of L)if(pfPrem(x.n)&&x.v<lo*.8)x.v=lo+step(lo)}
   /* review 32: and never under a plain, real starter beside it (Lost in Translation's wagyu sando was the cheapest thing on the card) */
-  {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of L)if(PF_PREM.test(x.n)&&!pfCheap(x.n)&&x.v<hi)x.v=hi+step(hi)}
+  {const L=by("s"),pl=L.filter(x=>!pfPrem(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of L)if(pfPrem(x.n)&&!pfCheap(x.n)&&x.v<hi)x.v=hi+step(hi)}
   /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
-  {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<=hi)x.v=hi+step(hi)}
+  {const L=mn(),pl=L.filter(x=>!pfPrem(x.n)||pfCheap(x.n)),pr=L.filter(x=>pfPrem(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<=hi)x.v=hi+step(hi)}
   /* review 34: a broth, soup or stew main never above a roast, game or seafood main (Braveheart's Scotch broth over the venison), and a
      sandwich or roll main stays near the starters, not two and a half times a pie (Wolf Creek) */
-  {const HUM=/\b(broth|soup|porridge|gruel|pottage|stew|chowder)\b/i,L=mn(),pr=L.filter(x=>PF_PREM.test(x.n)&&!HUM.test(x.n)&&!pfCheap(x.n)),lo=minOf(pr);
+  {const HUM=/\b(broth|soup|porridge|gruel|pottage|stew|chowder)\b/i,L=mn(),pr=L.filter(x=>pfPrem(x.n)&&!HUM.test(x.n)&&!pfCheap(x.n)),lo=minOf(pr);
    if(lo!=null)for(const x of L)if(HUM.test(x.n)&&x.v>=lo)x.v=Math.max(step(lo),lo-step(lo))}
-  {const hiS=maxOf(by("s"));if(hiS!=null)for(const x of mn())if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!PF_PREM.test(x.n)&&x.v>Math.max(hiS*1.6,bd?bd[0]*1.05:0))x.v=Math.max(hiS+step(hiS),hiS*1.6,bd?bd[0]*1.05:0)}
+  {const hiS=maxOf(by("s"));if(hiS!=null)for(const x of mn())if(/\b(sandwich(es)?|rolls?|toasties?|subs?|hoagies?|sliders?|baps?|butties?)\b/i.test(x.n)&&!pfPrem(x.n)&&x.v>Math.max(hiS*1.6,bd?bd[0]*1.05:0))x.v=Math.max(hiS+step(hiS),hiS*1.6,bd?bd[0]*1.05:0)}
+  /* review 35: a hand-held main (sandwich, burger, roll) costs at most four fifths of the cheapest plated main beside it */
+  {const L=mn(),pl=L.filter(x=>!PF_HAND.test(x.n)&&!pfCheap0(x.n)),lo=minOf(pl);if(lo!=null&&pl.length<L.length)for(const x of L)if(PF_HAND.test(x.n)&&x.v>lo*.8){x.v=Math.max(step(lo),lo*.8);x.down=1}}
+  /* review 35: a plain sweet and a plain starter are held to their decade (PF_SWEETCAP, starters about twice it), at the venue's rate */
+  {const sc=tgt&&PF_SWEETCAP[tgt];if(sc&&fmt!=="own"){const BIG=/\b(whole|platter|for (two|the table|four|six|eight)|board|tower|feast|bucket|share)\b/i;
+    for(const x of by("w"))if(!BIG.test(x.n)&&x.v>sc*vk){x.v=sc*vk;x.down=1}
+    for(const x of by("s"))if(!BIG.test(x.n)&&!pfPrem(x.n)&&x.v>sc*vk*1.8){x.v=sc*vk*1.8;x.down=1}}}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */
   {let m0=minM();if(m0!=null){const sw=[...by("s"),...by("w")],hi=maxOf(sw);
     if(hi!=null&&hi>=m0){const med=sw.map(x=>x.v).sort((a,b)=>a-b)[Math.floor(sw.length/2)];
       if(m0<med*.8)for(const x of mn()){if(x.v<=hi)x.v=hi*1.2+step(hi)*mn().indexOf(x)}
       else for(const x of sw)if(x.v>=m0)x.v=Math.max(step(m0),m0*.8)}}}
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
-  {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
+  {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
+  /* review 35: champagne or wine by the glass costs more than any soft drink or coffee and more than the cheapest starter (Roman Holiday's
+     champagne for lunch sat at the price of the zucchini flowers and the iced espresso) */
+  {const D=by("d"),FZ=/\b(champagne|prosecco|spumante|cava|wine|claret|sherry|port)\b/i,soft=D.filter(x=>!PF_SP.test(x.n)),hs=maxOf(soft),
+    lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));for(const x of D.filter(x=>FZ.test(x.n)&&!/\b(mulled|punch|spritzer|cooler)\b/i.test(x.n))){const fl0=Math.max(hs!=null?hs+step(hs):0,lo!=null?lo+step(lo):0);if(x.v<fl0)x.v=fl0}}
   /* review 33: a vintage or bottled wine is the dearest drink on the card (Goldfinger's vintage champagne sat under the mint julep) */
   {const D=by("d"),top=x=>/\b(vintage|bottle of|magnum|dom p[eé]rignon|krug|cristal)\b/i.test(x.n);for(const x of D.filter(top)){const hi=maxOf(D.filter(y=>!top(y)));if(hi!=null&&x.v<=hi)x.v=hi+step(hi)}}
   };rules();
@@ -2312,13 +2397,13 @@ function priceFix0(root,menu,f,fl,era,fmt){
      the rounded prices and anything they lower is rounded down */
   for(const x of P)if(x!==keep){x.v=x.c;x.down=0}rules();for(const x of P)if(x!==keep&&Math.abs(x.v-x.c)>.001)x.c=x.v<x.c?cleanDown(x.v):clean(x.v);
   /* review 32: the film-number price is kept as it is, so a roast, steak or seafood main is lifted over it rather than sitting under it */
-  {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<=hi)x.c=clean(hi+step(hi))}}
+  {const L=mn(),pl=by("m").filter(x=>!pfPrem(x.n)||pfCheap0(x.n)),pr=L.filter(x=>pfPrem(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<=hi)x.c=clean(hi+step(hi))}}
   {const L=mn();if(L.length){const m0=Math.min(...L.map(x=>x.c));for(const x of [...by("s"),...by("w"),...by("d").filter(x=>!PF_SP.test(x.n))])if(x.c>=m0)x.c=m0>step(m0)?clean(m0-step(m0)):x.c}}
   /* review 33: the last word on the printed figures: a cheap sweet never above the dearest starter, a cocktail never under the cheapest real starter */
-  {const S=by("s"),hiS=S.length?Math.max(...S.map(x=>x.c)):null,RS=S.filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))),loS=RS.length?Math.min(...RS.map(x=>x.c)):null;
-   if(hiS!=null)for(const x of by("w"))if(x!==keep&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.c>hiS)x.c=hiS>step(hiS)?cleanDown(hiS-step(hiS)*.5):hiS;
+  {const S=by("s"),hiS=S.length?Math.max(...S.map(x=>x.c)):null,RS=S.filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))),loS=RS.length?Math.min(...RS.map(x=>x.c)):null;
+   if(hiS!=null)for(const x of by("w"))if(x!==keep&&pfCheap(x.n)&&!pfPrem(x.n)&&x.c>hiS)x.c=hiS>step(hiS)?cleanDown(hiS-step(hiS)*.5):hiS;
    if(loS!=null)for(const x of by("d"))if(x!==keep&&PF_COCK.test(x.n)&&x.c<loS)x.c=clean(loS)<loS?clean(loS+step(loS)):clean(loS)
-   {const W=by("w"),B=by("s").filter(x=>PF_BAR.test(x.n)&&!PF_PREM.test(x.n)),hiW=W.length?Math.max(...W.map(x=>x.c),...B.map(x=>x.c)):null;if(hiW!=null)for(const x of by("d"))if(x!==keep&&PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.c>hiW)x.c=cleanDown(hiW)}}
+   {const W=by("w"),B=by("s").filter(x=>PF_BAR.test(x.n)&&!pfPrem(x.n)),hiW=W.length?Math.max(...W.map(x=>x.c),...B.map(x=>x.c)):null;if(hiW!=null)for(const x of by("d"))if(x!==keep&&PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.c>hiW)x.c=cleanDown(hiW)}}
   const cur=fl&&fl.currency&&fl.currency!=="$"?fl.currency:null;
   for(const x of O)x.c=x.v<1?Math.max(.05,Math.round(x.v*20)/20):Math.abs(x.v-x.v0)<.001?x.v:clean(x.v);
   if(cur){let n=0;const ws=(m,i)=>m[i]||"";

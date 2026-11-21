@@ -15,7 +15,8 @@ const ee='everything-everywhere-all-at-once-2022';
 for(const g of [2,4,9])assert.deepEqual(oil(lines(ee,g)),['2 L vegetable oil@Pantry'],`Everything Everywhere at ${g}`);
 assert.deepEqual([...ctx.dishIngList(dish(ee,'Sesame balls'),9/4)].filter(l=>/oil/.test(l)),['2 L vegetable oil'],'Prep sheet You need at 9');
 // spoons of oil still scale
-assert.ok(lines(ee,8).some(l=>/^2 tsp sesame oil@/.test(l)),'sesame oil scales');
+// review 35: a spoon of oil is bought as the bottle (the Prep sheet's You need list keeps the scaled spoons)
+assert.ok(lines(ee,8).some(l=>/^1 bottle sesame oil@/.test(l)),'sesame oil is a bottle on the list');
 
 // fix 6: notes inside an item follow the guests
 const find=(id,g,re)=>{const l=lines(id,g).find(x=>re.test(x));assert.ok(l,`${id} at ${g}: no line for ${re}`);return l};
@@ -40,7 +41,7 @@ for(const g of [2,9]){const L=lines('casino-royale-2006',g);assert.ok(!(L.some(l
  assert.match(m2,/^1 packet banana leaves@/m,'banana leaves stay leaves');assert.match(m2,/^1 dried chilli@/m,'one chilli, not chilly');
  assert.match(m9,/^3 chipotles in adobo@/m,'plural on the head noun');assert.ok(!/chilli powder@[^\n]*\n[^\n]*pinch/i.test(m2)&&!/pinch(es)? (of )?chilli powder/i.test(m2),'a pinch folds into the measured chilli powder');
  assert.match(L('moana-2016',4),/^1 handful mint leaves, plus sprigs@/m,'mint leaves stay leaves');
- const s4=L('the-sound-of-music-1965',4);assert.match(s4,/^4 1\/2 tbsp mustard@/m,'spoons round to a half, not a third');
+ const s4=L('the-sound-of-music-1965',4);assert.match(s4,/^1 jar (sweet )?mustard@|^\\d+ml (sweet )?mustard@/m,'review 35: spoons of mustard are bought as the jar');{const yn=film('the-sound-of-music-1965').dishes.flatMap(d=>[...ctx.dishIngList(d,1)]).join('\n');assert.ok(!/\d\/3 (tsp|tbsp)/.test(yn),'spoons round to a half, not a third')}
  assert.ok(!/tbsp chives|tbsp parsley/.test(s4),'spoonfuls of a herb bought by the bunch fold into the bunch');
  assert.equal((s4.match(/^[^\n@]*salt[^\n@]*@/gm)||[]).length,1,'salt is one line');
  for(const [g,n] of [[2,4],[4,8],[9,18]])assert.match(L('some-like-it-hot-1959',g),new RegExp('bitters, '+n+' dashes@'),'bitters scale with the guests at '+g);

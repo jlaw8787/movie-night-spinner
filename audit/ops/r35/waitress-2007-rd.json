@@ -1,0 +1,27 @@
+{
+ "id": "Waitress (2007)",
+ "ops": [
+  {
+   "old": "Hand pies filled with cheddar and apple. Old Joe's same booth.",
+   "new": "Hand pies filled with cheddar and apple.",
+   "done": true
+  },
+  {
+   "old": "Leftover pie pastry twisted with cinnamon sugar and baked crisp. Joe's card said start fresh.",
+   "new": "Leftover pie pastry twisted with cinnamon sugar and baked crisp.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Pies named for how Jenna feels",
+    "A strawberry pie that solves Joe's problems",
+    "Dawn and Becky on the shift",
+    "Dr Pomatter in the waiting room"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

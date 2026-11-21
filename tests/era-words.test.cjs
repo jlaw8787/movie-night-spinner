@@ -16,5 +16,21 @@ for(const f of films){const id=`${f.title} (${f.year})`;if(+f.year>=2010)continu
 const core=fs.readFileSync(path.join(R,'formats-core.js'),'utf8'),idx=JSON.parse(core.match(/FMT_INDEX=(\{[^;]*?\})[;,\n]/)[1]);
 for(const [id,key] of Object.entries(idx)){const y=+(id.match(/\((\d{4})\)$/)||[])[1];if(!(y<2010))continue;const p=path.join(R,'formats',key+'.js');if(!fs.existsSync(p))continue;
   const t=fs.readFileSync(p,'utf8').replace(/<[^>]*>/g,' '),m=t.match(ERA);if(m&&!(OK[id]&&OK[id].test(m[0])))bad.push(`${id} (formats/${key}.js): "${m[0]}"`)}
+/* review 35: food of the setting's time. A film set before 1960 (its priceEra, or its release year before 1960) or in the old world
+   (Rome, medieval Britain) prints no word that only took off later: no New World food in Rome or medieval Scotland, no balsamic,
+   pancetta, panko, crostini, goat's cheese, filo, pesto or corn chips on a 1930s to 1950s card, no native Australian pantry
+   (wattleseed, bush tomato, lemon myrtle, pepperberry) before 1990 and no radler, Turkish bread or dukkah before then either.
+   Fairy tale and fantasy films (world "storybook", or priceEra 1800s made-up worlds) and food local to the setting are left alone. */
+{const FL=JSON.parse(fs.readFileSync(path.join(R,'data/film-flavour.json'),'utf8'));
+ const EY={"1800s":1880,"1930s-40s":1940,"1950s":1955,"1960s":1965,"1970s":1975,"1980s":1985,"1990s":1995,"2000s":2005,"modern":2020};
+ const OLD={"Gladiator (2000)":100,"Gladiator II (2024)":200,"Braveheart (1995)":1300,"Robin Hood (1973)":1190,"Brave (2012)":1000,"How to Train Your Dragon (2010)":900};
+ const W=[[/\b(tomato(es)?|chill?i(es)?|potato(es)?|capsicums?|maize|chocolate|vanilla|turkey|pumpkin|peanuts?|avocados?|pineapples?|harissa|paprika|polenta|tortillas?|cocoa|cashews?)\b/i,1550],
+  [/\bbalsamic\b/i,1980],[/\bpancetta\b/i,1980],[/\bpanko\b/i,1985],[/\bcrostini\b/i,1985],[/\b(wattleseed|bush tomato|lemon myrtle|pepperberr(y|ies)|finger limes?|quandong|riberr(y|ies))\b/i,1990],
+  [/\bon turkish\b|\bturkish bread\b/i,1990],[/\b(corn|tortilla) chips\b/i,1975],[/\bdukkah\b/i,1995],[/\b(goat'?s? cheese|ch[eè]vre)\b/i,1980],[/\bradler\b/i,1990],[/\bpesto\b/i,1980],[/\b(sriracha|sweet chill?i sauce)\b/i,1985]];
+ const LOCAL={"Gallipoli (1981)":/dukkah/i,"Roman Holiday (1953)":/pancetta|crostini|pesto|balsamic/i,"Pinocchio (1940)":/crostini/i,"Casablanca (1942)":/filo/i,"Luca (2021)":/pesto/i};
+ for(const f of films){const id=`${f.title} (${f.year})`,fl=FL[id]||{};if(fl.world==="storybook")continue;
+   const y=OLD[id]||(+f.year<1960?+f.year:(fl.priceEra&&fl.priceEra!=="1800s"?EY[fl.priceEra]:null));if(!y)continue;
+   const txt=[];for(const c of 'SMWK')for(const d of f[c]||[])if(Array.isArray(d))txt.push(d[0],d[1]);const h=house[id]||{};for(const k of ['s','d'])if(h[k])txt.push(h[k].n,h[k].note);
+   for(const t of txt)for(const [rx,yr] of W){if(yr===1550&&y>=1550)continue;if(y>=yr)continue;const m=String(t||'').match(rx);if(m&&!(LOCAL[id]&&LOCAL[id].test(m[0])))bad.push(`${id} (set about ${y}): "${m[0]}" in "${String(t).slice(0,60)}"`)}}}
 if(bad.length){console.log(`FAIL: ${bad.length} dishes out of their time:\n  `+bad.join('\n  '));process.exit(1)}
 console.log('PASS: no 2010s food trends on films released before 2010');

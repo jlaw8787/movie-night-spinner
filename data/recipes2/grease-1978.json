@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Frosty Palace chilli cheese fries",
+   "n": "Chilli cheese fries",
    "course": "s",
    "prep_min": 20,
    "cook_min": 45,
@@ -95,7 +95,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Frosty Palace chilli cheese fries",
+     "n": "Chilli cheese fries",
      "prep_min": 20,
      "cook_min": 45,
      "make_ahead": "Chilli up to 2 days ahead; cut and soak the potatoes up to 4 hours ahead",
@@ -474,7 +474,7 @@
     {
      "q": 600,
      "u": "g",
-     "item": "frozen crinkle-cut chips",
+     "item": "frozen crinkle-cut fries",
      "aisle": "Frozen"
     },
     {
@@ -512,7 +512,7 @@
      "min": 5
     },
     {
-     "text": "Fry in hot oil in batches until golden and cooked through, then hold in a 160°C oven. Bake the chips at the same time.",
+     "text": "Fry in hot oil in batches until golden and cooked through, then hold in a 160°C oven. Bake the fries at the same time.",
      "min": 30
     },
     {
@@ -568,7 +568,7 @@
       {
        "q": 600,
        "u": "g",
-       "item": "frozen crinkle-cut chips",
+       "item": "frozen crinkle-cut fries",
        "aisle": "Frozen"
       },
       {
@@ -606,7 +606,7 @@
        "min": 5
       },
       {
-       "text": "Fry in hot oil in batches until golden and tender. Bake the chips at the same time.",
+       "text": "Fry in hot oil in batches until golden and tender. Bake the fries at the same time.",
        "min": 20
       },
       {
@@ -619,7 +619,7 @@
    }
   },
   {
-   "n": "Frosty Palace sundae",
+   "n": "Strawberry fudge sundae",
    "course": "w",
    "prep_min": 20,
    "cook_min": 5,
