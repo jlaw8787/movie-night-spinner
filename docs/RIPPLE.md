@@ -35,7 +35,7 @@ Plan first (Josh's rule: all planning before builds).
 
 1. Same list as above: change the piece everywhere it lives, not just the menu.
 2. Removing: also clear it from series, Match deck, sitemap, layout tracker, and check saved member data (watched, ratings, duel decks) still loads without it.
-3. Renaming or fixing the year changes the slug: the old film page URL needs a redirect or a note for Google Search Console.
+3. Renaming, fixing the year or swapping a film out changes the slug: add the old slug to data/film-redirects.json (old slug to new slug) and build-seo keeps the old address as a redirect page.
 
 ## 3. Adding or changing a feature
 

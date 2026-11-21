@@ -11,7 +11,10 @@ const locs=new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]));
 assert.ok(fs.readFileSync(path.join(root,'robots.txt'),'utf8').includes('Sitemap: https://reeldinner.com/sitemap.xml'),'robots.txt must point at the sitemap');
 assert.ok(locs.has('https://reeldinner.com/')&&locs.has('https://reeldinner.com/menu/'),'sitemap needs the home page and the film index');
 const index=fs.readFileSync(path.join(root,'menu/index.html'),'utf8');
-const pages=new Set(fs.readdirSync(path.join(root,'menu')).filter(n=>n!=='theme'&&n!=='genre'&&fs.statSync(path.join(root,'menu',n)).isDirectory()));
+/* review 33: a film swapped out keeps its old address as a redirect page (data/film-redirects.json), which is not a film page */
+const REDIR=new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root,'data/film-redirects.json'),'utf8'))));
+for(const r of REDIR)assert.ok(/http-equiv="refresh"/.test(fs.readFileSync(path.join(root,'menu',r,'index.html'),'utf8')),`menu/${r}/ should redirect`);
+const pages=new Set(fs.readdirSync(path.join(root,'menu')).filter(n=>n!=='theme'&&n!=='genre'&&!REDIR.has(n)&&fs.statSync(path.join(root,'menu',n)).isDirectory()));
 assert.equal(pages.size,films.length,'one film page per film (run node scripts/build-data.cjs)');
 let recipes=0;
 for(const f of films){
