@@ -9,7 +9,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
 (async()=>{await new Promise(r=>setTimeout(r,1200));
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),args:['--no-sandbox']});
  const ctx=await b.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true,serviceWorkers:'block'});
- await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
+ await ctx.addInitScript(()=>{window.MNS_WHOLE=1;localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
  await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||u.protocol==='data:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(3600000);
  await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});

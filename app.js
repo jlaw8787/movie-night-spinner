@@ -883,7 +883,7 @@ const prep=document.createElement("div");prep.className="mcard";prep.hidden=true
 const swipeW=()=>matchMedia("(max-width:600px)").matches;
 /* review 34 (Josh's call, option A): on a desktop, a wide fold-out menu that would show its notes under about 9px (Grease's tri-fold at 4.5)
    opens one panel at a time like the phone, with dots and arrow keys; click still opens it full size. Cards that read fine stay whole */
-const deskPanels=()=>{if(swipeW()||!card.classList.contains("fmt"))return false;const pw=preview.clientWidth;if(!pw)return false;
+const deskPanels=()=>{if(window.MNS_WHOLE||swipeW()||!card.classList.contains("fmt"))return false;/* MNS_WHOLE: the preview and text tools see the whole card */const pw=preview.clientWidth;if(!pw)return false;
   const cw=+card.dataset.w||(card.classList.contains("fx-paper")?0:1123);let W=cw;if(!W){const fs=[...card.querySelectorAll(".fx-face")];if(fs.length){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height);W=h>w?fs.length*w:w}}
   return !!W&&pw/W<.64};
 const panelW=()=>swipeW()||deskPanels();
@@ -1026,9 +1026,12 @@ let pvArgs=null;function phoneRefresh(){if(pvArgs&&pvArgs[0]===current&&fmtPhone
 function cardHouseKept(menu){try{if(!menu||!card.classList.contains("fmt")||!card.innerHTML)return menu;const t=String(card.textContent).toLowerCase().replace(/[^a-z0-9]+/g," ");
   const on=it=>!it||!it.house||t.includes(String(it.label||it.n||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
   if(["s","m","w","d"].every(k=>(menu[k]||[]).every(on)))return menu;const o=Object.assign({},menu);for(const k of ["s","m","w","d"])if(menu[k])o[k]=menu[k].filter(on);return o}catch(e){return menu}}
+let pvHouseT=0;
 function phoneView(f,spec,menu){
-  if(f&&spec&&spec.fmt==="lib")menu=cardHouseKept(menu);
-  pvArgs=f?[f,spec,menu]:null;
+  const menu0=menu;if(f&&spec&&spec.fmt==="lib"){menu=cardHouseKept(menu);
+    /* the card may still be drawing when the phone menu is built: look again once it has settled */
+    clearTimeout(pvHouseT);if(menu===menu0)pvHouseT=setTimeout(()=>{if(pvArgs&&pvArgs[0]===f&&cardHouseKept(menu0)!==menu0)phoneView(f,spec,menu0)},2500)}
+  pvArgs=f?[f,spec,menu0]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   setTimeout(()=>{try{kidsDryDom(fmtPhone,f)}catch(e){}},0);
   fmtPhone.innerHTML=spec.fmt==="lib"?fmtPhoneHTML(f,spec,menu):dietPhone(f,fmtPhoneHTML(f,spec,menu));fmtPhoneWire(fmtPhone);
@@ -1164,6 +1167,7 @@ function libCardOrder(root,pm){
   const used=new Set();for(const c of ["s","m","w","d"]){const h=out.courses[c];if(!h)continue;if(used.has(h.toLowerCase()))delete out.courses[c];else used.add(h.toLowerCase())}
   return out}
 function libPhoneView(f,menu,L,root){
+  menu=cardHouseKept(menu);/* review 34: house lines the card dropped stay off the phone too */
   const fl=L.flavour||{},pm={};let any=false;
   for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,orig:it.orig,extra:!!it.extra,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
   if(!any){phoneView(null);return}
