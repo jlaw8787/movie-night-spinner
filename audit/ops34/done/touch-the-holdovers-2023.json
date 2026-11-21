@@ -1,0 +1,28 @@
+{
+ "id": "The Holdovers (2023)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve dessert when the waitress calls it the signature dessert.",
+   "done": true
+  },
+  {
+   "old": "Hard-boiled eggs with creamy mustard yolks and paprika. Lydia's party plate, Hunham's rare night out.",
+   "new": "Hard-boiled eggs with creamy mustard yolks and paprika. A plate at Lydia's Christmas Eve party.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mary, the head cook",
+    "Paul, the ancient history teacher",
+    "Angus Tully, left behind at school",
+    "Christmas break, 1970",
+    "The trip to Boston"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

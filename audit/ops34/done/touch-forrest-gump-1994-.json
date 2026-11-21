@@ -1,0 +1,24 @@
+{
+ "id": "Forrest Gump (1994)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the prawns when Bubba starts in on shrimp creole, shrimp kabobs and the rest.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "The Jenny's Log",
+    "lines": [
+     "Captain: Forrest Gump",
+     "First mate: Lieutenant Dan"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

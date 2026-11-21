@@ -1,0 +1,41 @@
+{
+ "id": "Coneheads (1993)",
+ "ops": [
+  {
+   "old": "Beldar's driving school burgers",
+   "new": "Driving lesson smash burgers",
+   "done": true
+  },
+  {
+   "old": "Beldar's lager shandy jug",
+   "new": "Conehead lager shandy jug",
+   "done": true
+  },
+  {
+   "old": "Chicken and sausages, charred mammal flesh",
+   "new": "Chicken and sausages grilled over coals until charred",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Orange soda by the jug",
+    "note": "Bright orange soda by the jug. Connie goes to the prom with Ronnie."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The cover story: we come from France",
+    "Connie wanting to fit in at high school",
+    "The driving school in Paramus",
+    "Gorman and Eli posing as Jehovah's Witnesses",
+    "The rock shot at the Garthok"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

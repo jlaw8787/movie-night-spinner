@@ -881,6 +881,12 @@ const card=document.createElement("div");card.className="mcard";preview.appendCh
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
 /* phones: a menu with more than one page shows one page per screen, swipe or tap a dot to turn */
 const swipeW=()=>matchMedia("(max-width:600px)").matches;
+/* review 34 (Josh's call, option A): on a desktop, a wide fold-out menu that would show its notes under about 9px (Grease's tri-fold at 4.5)
+   opens one panel at a time like the phone, with dots and arrow keys; click still opens it full size. Cards that read fine stay whole */
+const deskPanels=()=>{if(swipeW()||!card.classList.contains("fmt"))return false;const pw=preview.clientWidth;if(!pw)return false;
+  const cw=+card.dataset.w||(card.classList.contains("fx-paper")?0:1123);let W=cw;if(!W){const fs=[...card.querySelectorAll(".fx-face")];if(fs.length){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height);W=h>w?fs.length*w:w}}
+  return !!W&&pw/W<.64};
+const panelW=()=>swipeW()||deskPanels();
 let pvFace=0,pvDrag=0;
 /* the block a [data-pvzoom] names: "x,y,w,h" on the page, or "self" for the element where it sits now (the canteen tray moves left as its poster gives way) */
 function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",").map(Number);let x=0,y=0;for(let e=z;e&&!e.classList.contains("fx-face")&&e!==card;e=e.offsetParent){x+=e.offsetLeft;y+=e.offsetTop}/* as tall as what is in it (a short kiosk column stops at its last dish, not at the foot of the taller one) */
@@ -892,7 +898,7 @@ function cardFaces(){
   if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
     const pages=fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}));
     /* review 31: wide pages of a two-page menu (Jurassic Park's dining guide) split into panels on a phone too */
-    if(swipeW()&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
+    if(panelW()&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
       xs.slice(0,-1).forEach((x,j)=>out.push({el:pg.el,w:xs[j+1]-x,h,x:pg.x+x,px:x,y:pg.y,row:true,part:"p"+i+"panel"+(j+1),panel:1}))});return out}
     /* review 32: a portrait page can mark the block worth reading on a phone ([data-pvzoom], the banquet's bill of fare); on a phone that
        block is the page's view, at about 1.2 times the size (Gone with the Wind opened at 7px italic). Tap still opens the whole page */
@@ -903,7 +909,7 @@ function cardFaces(){
      Review 30 (Josh's call): the old left and right half views cut words at the fold and looked broken at first glance.
      Review 31 (Josh's call): on a phone a wide page is shown as its own panels, cut only along clear gutters where no text runs (pvPanels),
      so a word is never split; three panels when the gutters allow (text near full size), else two; a page with no clean gutter stays whole */
-  if(!swipeW())return [];
+  if(!panelW())return [];
   /* review 32: a hand-built menu drawn without a fixed sheet (Ratatouille's Gusteau's spread: photos either side of the menu card) opens on
      its menu card, one view per .fx-panel, so the dishes read at about 10px instead of 5 to 6. Tap still opens the whole spread */
   if(!fs.length&&!card.dataset.w&&card.classList.contains("fmt")){const P=[...card.querySelectorAll(".fx-panel")].filter(e=>e.offsetWidth&&e.offsetHeight);
@@ -984,7 +990,7 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     l=(l-b.left)/k;rt=(rt-b.left)/k;const sc=Math.min(1,(hi-lo-40)/Math.max(1,rt-l)),dx=(lo+hi)/2-(l+rt)/2;e.dataset.pvt=e.style.transform||"-";e.style.transformOrigin="center";e.style.transform=`translateX(${dx.toFixed(1)}px) scale(${sc.toFixed(3)})`}
   off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
-  const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
+  const fs=tab==="menu"&&panelW()?cardFaces():[];paintDots(fs.length);
   if(fs.length){if(card.dataset.pvs!==String(renderId)){card.dataset.pvs=String(renderId);pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
     card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
     preview.setAttribute("aria-label",`Printed menu, ${f.panel?"part":"page"} ${pvFace+1} of ${fs.length}. Open it full size`);return}
@@ -1003,7 +1009,7 @@ function applyPhone(){
   const has=!!fmtPhone.innerHTML,on=has&&narrow()&&tab==="menu";
   fmtPhone.hidden=!on;$("easel").hidden=false;$("fmtBack").hidden=true;
   scalePreview();if(on)fitPhoneTitle();
-  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=isTouch()?"tap":"click";zh.textContent=ok&&cardFaces().length>1&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
+  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=isTouch()?"tap":"click";zh.textContent=ok&&cardFaces().length>1&&panelW()?(swipeW()?`Swipe to turn, ${tap} to zoom`:`Use the dots or arrow keys to turn, ${tap} to zoom`):`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
 /* the phone text menu uses the Prep sheet's own recipe for a dish: same amounts for tonight's guests, same method */
 function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;const LB=planLabels(f),want=[it.orig,it.n,it.label].filter(Boolean).map(x=>String(x).toLowerCase());
@@ -1015,7 +1021,13 @@ function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;con
   return {ing:dishIngList(x,k),steps:(x.ingredients||[]).filter(baseOf).map(i=>baseOf(i).step(baseG(i.q,i)*k,i)).concat((x.steps||[]).map(s=>degC(scaleStep(s.text,k))))}}catch(e){return null}}
 const phoneGuests=f=>typeof current!=="undefined"&&current===f?PLAN.guests:USUAL;
 let pvArgs=null;function phoneRefresh(){if(pvArgs&&pvArgs[0]===current&&fmtPhone.innerHTML)phoneView(...pvArgs)}
+/* review 34: a shared card may drop its house lines when the board is full (Josh's rule: house lines go before any film note). The phone
+   menu and the print list then leave them out too, so the card and the phone always show the same dishes (Kingsman, Hot Fuzz, Shaun) */
+function cardHouseKept(menu){try{if(!menu||!card.classList.contains("fmt")||!card.innerHTML)return menu;const t=String(card.textContent).toLowerCase().replace(/[^a-z0-9]+/g," ");
+  const on=it=>!it||!it.house||t.includes(String(it.label||it.n||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
+  if(["s","m","w","d"].every(k=>(menu[k]||[]).every(on)))return menu;const o=Object.assign({},menu);for(const k of ["s","m","w","d"])if(menu[k])o[k]=menu[k].filter(on);return o}catch(e){return menu}}
 function phoneView(f,spec,menu){
+  if(f&&spec&&spec.fmt==="lib")menu=cardHouseKept(menu);
   pvArgs=f?[f,spec,menu]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   setTimeout(()=>{try{kidsDryDom(fmtPhone,f)}catch(e){}},0);
@@ -1162,7 +1174,9 @@ function libPhoneView(f,menu,L,root){
 function fitPhoneTitle(){
   const t=fmtPhone.querySelector(".fp-lib .fp-title");if(!t||!t.offsetWidth)return;
   let z=34;t.style.fontSize=z+"px";
-  while(z>18&&(t.scrollWidth>t.clientWidth+1||t.offsetHeight>z*3.3)){z-=2;t.style.fontSize=z+"px"}
+  /* review 34: a long wide-lettered word (Tombstone) also pushed its box past the screen edge, so the box's own width is no guide: measure the words against the screen */
+  const over=()=>{const rg=document.createRange();rg.selectNodeContents(t);const r=rg.getBoundingClientRect(),box=fmtPhone.getBoundingClientRect(),lim=Math.min(box.right,document.documentElement.clientWidth)-16;return r.right>lim+1};
+  while(z>16&&(t.scrollWidth>t.clientWidth+1||t.offsetHeight>z*3.3||over())){z-=2;t.style.fontSize=z+"px"}
 }
 
 let renderId=0;
@@ -1291,7 +1305,7 @@ const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>
    Method and shopping come from the menu itself (no quantities), and the tonight's-five recipes stay the default cook. */
 /* what the printed card actually shows for a film, so the planner lists exactly those dishes, under the card's own names */
 function planCard(f){try{const sp=typeof fmtSpec==="function"&&fmtSpec(f),m=(typeof current!=="undefined"&&current===f&&current.menu)?current.menu:(sp?fmtMenu(f,sp):makeMenu(f));
-  const full=f._lib?fullMenu(f,m,f._lib.fmt):m;return ["s","m","w","d"].flatMap(k=>(full[k]||[]).map(it=>Object.assign({},it,{course:k})))}catch(e){return []}}
+  const full=f._lib&&typeof current!=="undefined"&&current===f?cardHouseKept(fullMenu(f,m,f._lib.fmt)):f._lib?fullMenu(f,m,f._lib.fmt):m;return ["s","m","w","d"].flatMap(k=>(full[k]||[]).map(it=>Object.assign({},it,{course:k})))}catch(e){return []}}
 function planExtras(f){if(!f||!f._full)return [];const have=new Set(((f._r2&&f._r2.dishes)||[]).map(d=>String(d.n).toLowerCase())),out=[];
   /* only the film's other dishes the card prints (a layout shows as many as fit) */
   for(const it of planCard(f)){if(!it.extra)continue;const key=String(it.n||"").toLowerCase();if(!it.n||have.has(key))continue;have.add(key);
@@ -1408,6 +1422,7 @@ function shopLines(list){
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name; prep words ("shredded", "juiced", "to taste") stay in the method */
     let item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
     for(let g=0;g<4&&PREP_TAIL.test(item);g++)item=item.replace(PREP_TAIL,"");
+    {const plain=String(item).replace(/^(\d+\s*)?(small |large |medium )?/,m=>/bunch/.test(item)?m:"").trim();for(const [re,fn] of BUY_AS){const m=plain.match(re)||String(item).match(re);if(m){const P={};for(const u of t.order)P[u]=t.parts[u];return fn(P,m)+"@"+t.a}}}
     /* salt and pepper are in every kitchen: listed so you check, never measured */
     if(STAPLE_RE.test(planKey(item)))return item+"@"+t.a;
     for(const u of ["tsp","tbsp"])if(u in t.parts){const q=t.parts[u];t.parts[u]=q<1?Math.ceil(q*4-0.01)/4:Math.ceil(q*2-0.01)/2}
@@ -1458,7 +1473,18 @@ function shopLines(list){
   {const sp=lines.find(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l));if(sp)for(let i=lines.length-1;i>=0;i--)if(lines[i]!==sp&&/^((sea |table |cooking |fine )?salt|(ground |cracked )?(black )?pepper)@/i.test(lines[i]))lines.splice(i,1)}
   return lines;
 }
-const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|to taste|to serve|for serving|plus extra|cut into [^,]+|at room temperature)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed))?\s*$/i;
+const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|to taste|to serve|for serving|plus extra|cut into [^,]+|at room temperature|hulled|snipped|half juiced|zested and juiced|plus extra[^,]*|for the [^,]+|to garnish|peel in strips)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed|hulled))?\s*$/i;
+/* review 34: the shopping list reads like a list you shop from: the cutting words stay in the recipe, and things are bought the way a shop sells them
+   ("3 cups shredded cabbage" is "1/2 cabbage", "1 tbsp grated ginger" a knob of ginger, "8 shots espresso" a bag of coffee) */
+const BUY_AS=[
+ [/^(?:shredded|sliced|chopped|finely shredded) ((?:red|white|green|savoy|napa|wombok|chinese) )?cabbage$/i,(p,m)=>{const c=(p.cup||0)+(p.g||0)/90+(p[""]||0)*8;return c<=2.5?`1/4 ${m[1]||""}cabbage`:c<=5?`1/2 ${m[1]||""}cabbage`:`${Math.ceil(c/9)} ${m[1]||""}cabbage${Math.ceil(c/9)>1?"s":""}`}],
+ [/^(?:grated|minced|chopped|finely grated) (?:fresh )?ginger$/i,p=>{const t=(p.tbsp||0)+(p.tsp||0)/3+(p.g||0)/6;const n=Math.max(1,Math.ceil(t/3-0.01));return n>1?`${n} knobs ginger`:"1 knob ginger"}],
+ [/^(?:chopped|snipped|torn|picked|fresh chopped|finely chopped|roughly chopped) (?:fresh )?(mint|basil|coriander|parsley|flat-leaf parsley|dill|chives|thyme|rosemary|sage|tarragon|oregano|chervil)(?: leaves)?$/i,(p,m)=>{const t=(p.tbsp||0)+(p.tsp||0)/3+(p.cup||0)*16;const n=Math.max(1,Math.ceil(t/10-0.01));return `${n} bunch${n>1?"es":""} ${m[1].toLowerCase()}`}],
+ [/^(?:small |large )?bunch(?:es)? (?:fresh )?([a-z -]+)$/i,(p,m)=>{const n=Math.max(1,Math.ceil((p[""]||1)-0.05));return `${n} bunch${n>1?"es":""} ${m[1].toLowerCase()}`}],
+ [/^(?:shots?(?: of)? )?espresso(?: shots?)?$|^shots? espresso$/i,p=>{const n=Math.round(p[""]||(p.ml||0)/30)||1;return n>12?"500g ground coffee or beans":`250g ground coffee or beans (${n} shot${n>1?"s":""})`}],
+ [/^whipped cream$/i,p=>{const c=(p.cup||0)+(p.tbsp||0)/16+(p.ml||0)/250+(p.g||0)/250;return c>1.2?"600ml thickened cream":"300ml thickened cream"}],
+ [/^(?:dill )?pickle (?:slices|spears|chips)$/i,()=>"1 jar dill pickles"],
+ [/^(?:crushed|minced|grated) garlic$/i,p=>{const n=Math.max(1,Math.ceil((p.tsp||0)+(p.tbsp||0)*3+(p[""]||0)-0.05));return n>8?"2 bulbs garlic":`${n} garlic clove${n>1?"s":""}`}]];
 const STAPLE_RE=/^(salt|sea salt|table salt|cooking salt|fine salt|kosher salt|flaky salt|salt flake|sea salt flake|pepper|black pepper|ground black pepper|cracked black pepper|white pepper|salt and pepper|salt and black pepper|salt and freshly ground black pepper)$/;
 /* waiting time (chilling, soaking, resting, setting) is shown apart from hands-on and cooking time */
 const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep|drain|set|churn|rise)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse|to drain|until doubled|doubled in size|an hour before|hours before|an hour ahead|hours ahead|to room temperature for|come to room temperature|wait for|chill until|until firm|until cold|until solid|for the setting)\b|\b(and|then) (chill|refrigerate|freeze|set|leave to set|cool)\b|\bin the freezer\b|\bdoubled\b|\b(chill|refrigerate|rest|set|freeze|soak|marinate|drain) (\d+|an?|one|two|three) (hours?|hrs?|minutes?|mins?)\b|\b(cure|age|ferment|pickle|steep|infuse|macerate)\w*\b[^.]{0,40}\bfor (\d+|an?|one|two|three|several)( to \d+)? (days?|weeks?)\b|\b(dry|leave|cool) (it |them )?in the (turned-off |switched-off )?oven\b|\boven (off|turned off)\b|\b(part|half|semi)[- ]?freez\w*|\b(leave|keep|store|rest|sit)\b[^.]{0,30}\b(a|one|two|three|four|\d+) (weeks?|days?)\b\b|\b(drain|chill|refrigerat|freez|set|rest|soak|marinat|prove|rise|stand|steep|infus|churn|cool)\w*\b[^.]{0,50}\bfor (at least |about |up to )?(\d+|an?|one|two|three|four|five|six|several)( to \d+)? (hours?|hrs?|minutes?|mins?|days?)\b/i;
@@ -1471,14 +1497,18 @@ const BAKE_RE=/\b(cake tins?|loaf tins?|baking (tin|dish|tray)|pie dish|tart tin
 const batchTip=(x,k)=>{if(!(k>1.5)||!(x.steps||[]).some(s=>BAKE_RE.test(s.text)&&/\bbake\b/i.test(s.text)))return "";const n=Math.ceil(k-0.05);return `For this many, make it in ${n===2?"two":n===3?"three":n} batches: same tins and baking time for each.`};
 const stepParts=t=>{const ss=String(t).split(/(?<=[.!?])\s+(?=[A-Z])/),tip=ss.filter(x=>TIP_RE.test(x)),main=ss.filter(x=>!TIP_RE.test(x));return {main:main.join(" "),tip:tip.join(" ")}};
 /* a step is waiting if it says so, or if it runs over four hours without heat: nobody does four hours of hands-on prep */
-const isWaitStep=t=>(t.min||0)>=10&&(WAIT_RE.test(String(t.text).trim())||((t.min||0)>=240&&!HEAT_RE.test(String(t.text))));
+/* review 34: a step that starts by baking, frying or simmering is heat, whatever it says about setting or cooling after (Hall Pass brownies) */
+const HEAT_START=/^(bake|roast|fry|deep[- ]fry|grill|boil|simmer|poach|steam|sear|braise|barbecue|toast|cook)\b/i;
+const isWaitStep=t=>(t.min||0)>=10&&!HEAT_START.test(String(t.text).trim())&&(WAIT_RE.test(String(t.text).trim())||((t.min||0)>=240&&!HEAT_RE.test(String(t.text))));
 function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let wait=0;for(const t of st)if(isWaitStep(t))wait+=t.min;
-  const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
+  const prep=x.prep_min||0,cook=x.cook_min||0,full=st.length&&st.every(t=>t.min!=null&&t.min>=0)&&st.some(t=>t.min>0);if(!full)wait=Math.min(wait,prep+cook);
   /* split by the steps themselves when their minutes add up to the recipe's total: hands-on, heat and waiting each counted where they happen */
   const isW=isWaitStep,isH=t=>!isW(t)&&HEAT_RE.test(String(t.text));
   const heat=st.filter(isH).reduce((a,t)=>a+(t.min||0),0),sum=st.reduce((a,t)=>a+(t.min||0),0);
   let c2,p2;
-  if(st.length&&st.every(t=>t.min>0)&&Math.abs(sum-(prep+cook))<=Math.max(5,(prep+cook)*.25)){c2=heat;p2=Math.max(0,sum-heat-wait)}
+  /* review 34: when every step has its minutes, the header comes from the steps alone, so it can never disagree with them
+     (Ratatouille's creme brulee said cook 13 min over a 35 minute bake and a 3 hour chill) */
+  if(full){c2=heat;p2=Math.max(0,sum-heat-wait)}
   else{/* otherwise take the waiting off cooking, but never below the heat steps, and the rest off prep */
     c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait)}/* someone always has to chop, season or mix: prep is never shown as 0 */
   if(st.length&&p2<5)p2=5;
@@ -1584,7 +1614,9 @@ function prepHTML2(f,menu){
     <div class="pp-title">${ESC(f.title)}</div>
     <p class="pp-serves">${((PW,LD,ND)=>{/* review 27: a short wait is already inside "longest on the night", and a long one that fits while the longest dish cooks
       adds nothing, so neither prints as a second total. Only a wait that starts before the night's cooking says how much earlier */
-      const XT=ND.filter(d=>!d.ahead&&d.wait>=CAL_LONG&&d.wait<600).reduce((m,d)=>Math.max(m,d.active+d.wait-LD.lead),0);return [...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":XT>0?`start ${planDur(XT)} earlier, for waiting`:""):"",aheadN.length&&!PW.length?`make ahead: ${aheadN.length>1?aheadN.length+" dishes":aheadN[0]}`:""]})(PWN,calLead(prepNight(ds,TT)),prepNight(ds,TT)).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}
+      const XT=ND.filter(d=>!d.ahead&&d.wait>=CAL_LONG&&d.wait<600).reduce((m,d)=>Math.max(m,d.active+d.wait-LD.lead),0);return [...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":XT>0?`start ${planDur(XT)} earlier, for waiting`:""):"",aheadN.length&&!PW.length?`make ahead: ${aheadN.length>1?aheadN.length+" dishes":aheadN[0]}`:""]})(PWN,calLead(prepNight(ds,TT)),prepNight(ds,TT)).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}${(()=>{/* review 34: the sheet cooks five (Josh, 6 Nov); a dish on the card it leaves out is named, so card and sheet printed together are never a main short */
+      const LT=planLate(f),LBo=planLabels(f),off=planAll(f).filter(d=>d.course!=="c"&&!d.snack&&!planOn(d)&&!LT.has(d.orig||d.n)).map(d=>LBo[d.orig||d.n]&&!d.tag?LBo[d.orig||d.n]:d.n);
+      return off.length?`<p class="pp-late pp-also" role="note">Also on the menu, not in this sheet: ${ESC(off.join(", "))}. Tick ${off.length>1?"them":"it"} in Choose dishes to add ${off.length>1?"them":"it"}.</p>`:""})()}
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
@@ -1696,7 +1728,11 @@ function iosBakeFilters(card){
 /* the intermission cards print a signed note in quote marks, with "said", only when it is the character's real line (note.kind "quote") */
 const kitQ=n=>n&&n.kind==="quote"?`"${ESC(n.text)}"`:ESC(n&&n.text);
 const kitSaid=(n,verb)=>n.kind==="quote"?(verb==="said"?`"${ESC(n.text)}" said ${ESC(n.by)}.`:`"${ESC(n.text)}" ${ESC(n.by)} told this paper.`):`A note from ${ESC(n.by)}: ${ESC(n.text)}`;
-function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")return h;
+/* review 34: a real line (note.kind "quote") always prints in quote marks; some layouts set the text bare (Grease's diner, Chinatown's paper) */
+function libQuoteMarks(h,n){const e=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"),rx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const t=String(n.text).trim();if(/^["\u201c]/.test(t))return h;const alt=[t,e(t),e(t).replace(/'/g,"&#39;"),e(t).replace(/&quot;/g,'"')].filter((v,i,A)=>A.indexOf(v)===i).map(rx).join("|");
+  return h.replace(new RegExp(`>(\\s*)(${alt})(\\s*)<`,"g"),(m,a,b,c)=>`>${a}&quot;${b}&quot;${c}<`)}
+function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text)return h;if(n.kind==="quote")return libQuoteMarks(h,n);
   const e=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"),rx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
   const head=String(n.text).trim().slice(0,18),alt=[head,e(head),e(head).replace(/&quot;/g,'"'),head.replace(/'/g,"&#39;")].filter((v,i,A)=>A.indexOf(v)===i).map(rx).join("|");
   h=h.replace(new RegExp(`(["\u201c]|&quot;|&ldquo;|&#8220;)((?:${alt})[^<]*?)(["\u201d]|&quot;|&rdquo;|&#8221;)(?=\\s*(<|$))`,"g"),"$2");
@@ -2057,7 +2093,9 @@ const PF_BITE=/\b(crackling|pork scratchings|pork rinds|chicharrones|cheese puff
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
-const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck)\b/i;
+const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck|venison|pheasant|grouse|quail)\b/i;
+/* review 34: a sandwich, roll or burger main sits under the hot plates beside it and near the snacks (Wolf Creek's $15.50 sausage sandwich beside a $6.50 pie) */
+const PF_HAND=/\b(sandwich(es)?|sangas?|sangers?|toasties?|rolls?|subs?|hoagies?|burgers?|cheeseburgers?|sliders?|wraps?|burritos?|tacos?|po' ?boys?|hot dogs?)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
 const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
 /* review 31: a band per decade for the middle main on a card, in dollars of the day (the saloon menus and the hand-built ones sit inside these) */
@@ -2199,7 +2237,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* 1. priced in the film's own time. review 31: every layout, not only the ones that read priceEra. The card's middle main is held to a
      band for its decade (flavour.priceEra, else the layout era); a card outside it is scaled, whole card at once, to the middle of the band.
      The Rocketeer's 1938 cafe no longer charges 7.25 a plate, Red Dog's 1970s counter meal is no longer $16 */
-  const tgt=(fl&&fl.priceEra)||(fmt==="own"?null:era),bd=tgt&&PF_BAND[tgt];
+  const tgt=(fl&&fl.priceEra)||(fmt==="own"?null:era),bd=(fl&&Array.isArray(fl.priceBand)&&fl.priceBand.length===2&&fl.priceBand)||(tgt&&PF_BAND[tgt]);/* review 34: flavour.priceBand [low, high] for a cheap counter in its decade (American Graffiti's 1962 drive-in, Matilda's canteen) */
   if(bd){const ms=P.filter(x=>x.k==="m"&&!x.house).map(x=>x.v).sort((a,b)=>a-b),all=P.map(x=>x.v).sort((a,b)=>a-b);
     const mid=L=>L.length%2?L[(L.length-1)/2]:(L[L.length/2-1]+L[L.length/2])/2,med=ms.length?mid(ms):mid(all)*1.6;
     if(med<bd[0]||med>bd[1]){const k=Math.sqrt(bd[0]*bd[1])/med;for(const x of P)x.v*=k;for(const x of O)x.v*=k}}
@@ -2217,7 +2255,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 31: a bowl of bar nuts or crisps never costs more than a drink beside it (the Winchester's nuts at twice a pint) */
   {const D=by("d"),lo=minOf(D);if(lo!=null)for(const x of by("s"))if(PF_BAR.test(x.n)&&!PF_PREM.test(x.n)&&x.v>lo){x.v=Math.max(step(lo),lo-step(lo)*0);x.down=1}}
   /* review 32: a cheap bite is held under half the bottom of its decade's main band (Mad Max's 1979 meat pie was $4.25, The Dish's 1969 scone $1) */
-  {const b0=tgt&&PF_BAND[tgt];if(b0)for(const x of P)if((x.k==="s"||x.k==="w")&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
+  {const b0=bd;if(b0)for(const x of P)if((x.k==="s"||x.k==="w")&&pfCheap(x.n)&&!PF_PREM.test(x.n)&&x.v>b0[0]*.5){x.v=b0[0]*.5;x.down=1}}
   /* review 32: a plain beer, cider or pint is held to what a glass cost in its decade (PF_PINT), so a 1981 pint is not dearer than the pie */
   {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
   /* review 33: a plain soft drink is held to its decade (PF_SOFT) and never dearer than the dearest sweet */
@@ -2229,7 +2267,9 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 32: and never under a plain, real starter beside it (Lost in Translation's wagyu sando was the cheapest thing on the card) */
   {const L=by("s"),pl=L.filter(x=>!PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of L)if(PF_PREM.test(x.n)&&!pfCheap(x.n)&&x.v<hi)x.v=hi+step(hi)}
   /* review 31: a lobster, steak or roast main is never cheaper than a plain one beside it (Superman's thermidor under the fried chicken) */
-  {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<hi)x.v=hi+step(hi)}
+  {const L=mn(),pl=L.filter(x=>!PF_PREM.test(x.n)||pfCheap(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap(x.n)),hi=maxOf(pl);if(hi!=null)for(const x of pr)if(x.v<=hi)x.v=hi+step(hi)}/* review 34: never the same price either (Thunderball's lobster and stew chicken) */
+  {const L=mn(),hot=L.filter(x=>!PF_HAND.test(x.n)),hand=L.filter(x=>PF_HAND.test(x.n)&&!PF_PREM.test(x.n)),loH=minOf(hot),hiS=maxOf(by("s"));
+    for(const x of hand){let c=Infinity;if(loH!=null&&hand.length<L.length){c=Math.min(c,loH-step(loH));if(hiS!=null)c=Math.min(c,Math.max(hiS*1.6,hiS+step(hiS)))}if(x.v>c){x.v=c;x.down=1}}}
   /* 2. course order: mains above starters and sweets (a main that is tiny against them goes up, otherwise they come down) */
   {let m0=minM();if(m0!=null){const sw=[...by("s"),...by("w")],hi=maxOf(sw);
     if(hi!=null&&hi>=m0){const med=sw.map(x=>x.v).sort((a,b)=>a-b)[Math.floor(sw.length/2)];
@@ -2251,7 +2291,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
      the rounded prices and anything they lower is rounded down */
   for(const x of P)if(x!==keep){x.v=x.c;x.down=0}rules();for(const x of P)if(x!==keep&&Math.abs(x.v-x.c)>.001)x.c=x.v<x.c?cleanDown(x.v):clean(x.v);
   /* review 32: the film-number price is kept as it is, so a roast, steak or seafood main is lifted over it rather than sitting under it */
-  {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<hi)x.c=clean(hi+step(hi))}}
+  {const L=mn(),pl=by("m").filter(x=>!PF_PREM.test(x.n)||pfCheap0(x.n)),pr=L.filter(x=>PF_PREM.test(x.n)&&!pfCheap0(x.n)&&x!==keep);if(pl.length)for(const x of pr){const hi=Math.max(...pl.map(y=>y.c));if(x.c<=hi)x.c=clean(hi+step(hi))}}
   {const L=mn();if(L.length){const m0=Math.min(...L.map(x=>x.c));for(const x of [...by("s"),...by("w"),...by("d").filter(x=>!PF_SP.test(x.n))])if(x.c>=m0)x.c=m0>step(m0)?clean(m0-step(m0)):x.c}}
   /* review 33: the last word on the printed figures: a cheap sweet never above the dearest starter, a cocktail never under the cheapest real starter */
   {const S=by("s"),hiS=S.length?Math.max(...S.map(x=>x.c)):null,RS=S.filter(x=>!(pfCheap(x.n)&&!PF_PREM.test(x.n))),loS=RS.length?Math.min(...RS.map(x=>x.c)):null;

@@ -1,0 +1,40 @@
+{
+ "id": "The Conjuring 2 (2016)",
+ "ops": [
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hot Ribena",
+    "note": "Blackcurrant Ribena topped with hot water, Janet's mug on a cold night."
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pork pie with Branston pickle",
+    "note": "Raised pork pie with a jar of sweet brown pickle. Ed's guitar out for the kids.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Dinner for four. Set a fifth place for the old man in the chair.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ed and Lorraine arriving in Enfield",
+    "Lorraine calling the demon nun Valak",
+    "Ed's painting of the nun",
+    "The Crooked Man and his spinning toy",
+    "A tape recorder left running all night"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

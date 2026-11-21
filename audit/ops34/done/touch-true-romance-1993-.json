@@ -1,0 +1,40 @@
+{
+ "id": "True Romance (1993)",
+ "ops": [
+  {
+   "old": "Triple feature popcorn",
+   "new": "Sonny Chiba night popcorn",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the pie when Clarence and Alabama head to the diner after the movies.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Three Films, One Ticket",
+    "lines": [
+     "Kung fu night, Detroit",
+     "Admit one, birthday boy"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Floyd, Dick's stoner roommate",
+    "Elvis turning up in the bathroom mirror",
+    "We now return to Bullitt, already in progress",
+    "Heading from Detroit to Hollywood",
+    "Lee Donowitz and the movie deal"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

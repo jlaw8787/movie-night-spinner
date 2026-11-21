@@ -114,7 +114,7 @@ if(!document.getElementById("fmt-kiosk-fonts")){
   document.head.appendChild(l);
 }
 /* ---------- text safety ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\w)-(?=\w)/g,"$1 ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"']$/.test(s)?s:s+"."};
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
@@ -400,7 +400,7 @@ const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.tes
   if(!FS){
     for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
       splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
-      for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
+      for(const D of cap===4?[17,16,15,14,13]:[17,16,15]){/* review 34: smaller names before a dish is dropped */const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
         if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break}}
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}

@@ -1,0 +1,26 @@
+{
+ "id": "Chinatown (1974)",
+ "ops": [
+  {
+   "old": "Orange grove bourbon smash",
+   "new": "Orange bourbon smash",
+   "done": true
+  },
+  {
+   "old": "Albacore Club orange chiffon cake",
+   "new": "Orange chiffon cake",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Gin rickey",
+    "note": "Gin, lime and soda over ice. Gittes fishes a pair of bifocals from the pond.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

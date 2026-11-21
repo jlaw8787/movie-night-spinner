@@ -1,0 +1,39 @@
+{
+ "id": "Arthur Christmas (2011)",
+ "ops": [
+  {
+   "old": "Gwen in Trelew, Cornwall",
+   "new": "Arthur answering the letters to Santa",
+   "done": true
+  },
+  {
+   "old": "The S-1, the giant high tech sleigh",
+   "new": "The S-1, run by hundreds of elves",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Missed Present",
+    "lines": [
+     "Trelew, Cornwall",
+     "Delivered by Christmas morning"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Flaky pastry and pork sausage, brown sauce for dipping. Packed for Gwen.",
+   "new": "Flaky pastry and pork sausage, brown sauce for dipping. Packed for Malcolm's seventieth mission.",
+   "done": true
+  },
+  {
+   "old": "Serve the mains when Arthur and Grandsanta take off in the old sleigh.",
+   "new": "Serve the mains when Arthur and Grandsanta take off on Eve.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

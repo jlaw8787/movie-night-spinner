@@ -1,0 +1,31 @@
+{
+ "id": "Liar Liar (1997)",
+ "ops": [
+  {
+   "old": "Max's birthday wish chocolate cake",
+   "new": "Max's fudge-iced chocolate cake",
+   "done": true
+  },
+  {
+   "old": "Mr. Allen loves a good roast",
+   "new": "Roast lamb carved thick, served with gravy, ready for the boardroom",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Cut the cake when Max blows out his five candles.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Sparkling grape juice",
+    "note": "Grape juice with bubbles. Max only asks for rollerblades.",
+    "alc": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

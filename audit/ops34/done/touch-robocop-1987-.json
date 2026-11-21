@@ -1,0 +1,29 @@
+{
+ "id": "RoboCop (1987)",
+ "ops": [
+  {
+   "old": "Oiled-pan base, cheese to the edges, tomato striped over, I'd buy that for a dollar",
+   "new": "Oiled-pan base, cheese baked to the edges, tomato striped over the top",
+   "done": true
+  },
+  {
+   "old": "OCP and its Old Detroit takeover",
+   "new": "OCP and its Delta City plans",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Metro West Badge",
+    "lines": [
+     "Officer Murphy",
+     "Protect the innocent"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

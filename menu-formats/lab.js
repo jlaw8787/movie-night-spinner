@@ -107,11 +107,11 @@ const TONE={
   tense:{f:"contrast(1.16) saturate(.86)",wear:.45,tilt:0,stamp:"RESTRICTED",kick:"Clearance required past this line."},
   scrappy:{f:"grayscale(.3) contrast(1.22)",wear:.85,tilt:-5,stamp:"PROVISIONAL",kick:"Whatever is left in the store room."}
 };
-const LAB=["Rations","Hot mess","Sweet issue","Canteen"];
+const LAB0=["Rations","Hot meals","Sweet issue","Canteen"];/* review 34: "Hot mess" read as a joke on The Dish and Thunderbolts*; flavour.labels sets a film's own */
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{
-  const f=ctx.f||{},fl=ctx.flavour||null,E=ERA[band(ctx.era||"modern")],T=TONE[ctx.tone]||TONE.warm;
+  const f=ctx.f||{},fl=ctx.flavour||null,LB=(fl&&fl.labels)||{},LAB=[LB.s||LAB0[0],LB.m||LAB0[1],LB.w||LAB0[2],LB.d||LAB0[3]],E=ERA[band(ctx.era||"modern")],T=TONE[ctx.tone]||TONE.warm;
   const paper=E.paper,ink=(ctx.palette&&hex(ctx.palette.dark)&&ratio(hex(ctx.palette.dark),hex(paper))>=9)?ctx.palette.dark:E.ink;
   const acc=(ctx.palette&&inkOn(ctx.palette.accent,paper,4.6))||E.accent;
   const darkPanel=(ctx.palette&&hex(ctx.palette.dark)&&lum(hex(ctx.palette.dark))<.04)?ctx.palette.dark:"#15171b";

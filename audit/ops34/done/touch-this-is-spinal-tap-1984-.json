@@ -1,0 +1,51 @@
+{
+ "id": "This Is Spinal Tap (1984)",
+ "ops": [
+  {
+   "old": "Nigel can't work the miniature bread",
+   "new": "Salami and provolone in large bread rolls. The band gets lost on the way to the stage.",
+   "done": true
+  },
+  {
+   "old": "Backstage, the olives came with no pimentos",
+   "new": "Green olives stuffed with pimento, crumbed and fried until golden.",
+   "done": true
+  },
+  {
+   "old": "The Shark Sandwich review ran to two words",
+   "new": "Battered flake in soft rolls. The Shark Sandwich review ran to two words.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Tinned tuna on crackers",
+    "note": "Tinned tuna with mayo and pepper on crackers. Little cans, no bones.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Strong black coffee",
+    "note": "Coffee, black. We can't help you further.",
+    "alc": false
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "These go to 11",
+    "A drummer who spontaneously combusts",
+    "Hello Cleveland",
+    "Billed under a puppet show",
+    "None more black"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

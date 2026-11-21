@@ -1,0 +1,50 @@
+{
+ "id": "The Grand Budapest Hotel (2014)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "A concierge, his protégé and a stolen painting.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Boy with Apple, stolen (by us)",
+    "Nobody move; everybody's under arrest",
+    "Mendl's pale blue pastry boxes",
+    "A van full of pastries",
+    "Nineteen seasons with Madame D"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Society of the Crossed Keys",
+    "lines": [
+     "Concierge: Monsieur Gustave",
+     "Staff: Zero Moustafa"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Salted almonds from the lobby bar",
+   "new": "Salted almonds from the hotel bar",
+   "done": true
+  },
+  {
+   "old": "Almonds with salt from the lobby bar. Set out before the need is needed.",
+   "new": "Almonds with salt from the hotel bar. Set out before the need is needed.",
+   "done": true
+  },
+  {
+   "old": "Agatha bakes the tools into the pastries",
+   "new": "Chocolate cream choux buns with pastel icing. Agatha bakes the tools in.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

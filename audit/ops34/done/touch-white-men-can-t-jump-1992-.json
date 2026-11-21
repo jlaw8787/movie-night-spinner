@@ -1,0 +1,33 @@
+{
+ "id": "White Men Can't Jump (1992)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Pour the drinks when Gloria makes her comeback on Jeopardy!",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The $14,100 Jeopardy win",
+    "The Vista View apartments",
+    "The King and the Duck",
+    "A hook shot from past half court",
+    "Listen to the woman"
+   ],
+   "done": true
+  },
+  {
+   "old": "Gloria wants sympathy not a glass of water",
+   "new": "Fresh watermelon blended with water and lime, poured over ice.",
+   "done": true
+  },
+  {
+   "old": "Sidney explains what makes a biscuit",
+   "new": "Tall flaky buttermilk biscuits, baked hot. Sidney explains what makes a biscuit.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

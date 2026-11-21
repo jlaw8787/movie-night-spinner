@@ -1,0 +1,25 @@
+{
+ "id": "A Bug's Life (1998)",
+ "ops": [
+  {
+   "old": "Harvest offering seed crackers",
+   "new": "Anthill seed crackers",
+   "done": true
+  },
+  {
+   "old": "Serve the snacks when the ants pile up the harvest offering.",
+   "new": "Serve the snacks when the ants pile up their offering for the grasshoppers.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Toasted pepitas with chilli and lime",
+    "note": "Toasted pepitas with chilli and lime, a snack for little Princess Dot."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

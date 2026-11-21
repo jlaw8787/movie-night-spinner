@@ -1,0 +1,32 @@
+{
+ "id": "Dumb and Dumber (1994)",
+ "ops": [
+  {
+   "old": "Aspen snowflake cookies",
+   "new": "Snowflake sugar cookies",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Mutt Cutts van",
+    "Mary's ransom drop at the airport",
+    "Harry's tuxedo at the fancy party",
+    "The briefcase full of cash",
+    "Petey the parakeet"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Hot pepper beef taquitos",
+    "note": "Crisp taquitos filled with spicy beef and jalapeños. Road food for the long drive.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

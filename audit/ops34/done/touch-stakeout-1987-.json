@@ -1,0 +1,45 @@
+{
+ "id": "Stakeout (1987)",
+ "ops": [
+  {
+   "old": "Where are my donuts? Warm cake ones, cinnamon sugar",
+   "new": "Warm cake doughnuts rolled in cinnamon sugar. Where are my donuts?",
+   "done": true
+  },
+  {
+   "old": "Serve the snacks when Bill and Chris start their movie trivia game.",
+   "new": "Serve the snacks when Bill and Chris start quizzing each other on old film lines.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The couch stuffed with Montgomery's cash",
+    "Maria McGuire, the woman Lecce falls for",
+    "Richard Montgomery, the prisoner on the run",
+    "Binoculars on the window across the street",
+    "Seattle rain and stale car food"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Telephone lineman's cold drumsticks",
+    "note": "Cold roast chicken drumsticks, for a cop pretending to fix the phones.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Thermos of spiced apple juice",
+    "note": "Spiced apple juice, hot from a thermos, for the long wait in the car."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

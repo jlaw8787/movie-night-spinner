@@ -1,0 +1,30 @@
+{
+ "id": "48 Hrs. (1982)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Pour drinks when the prison gates open on the furlough.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spicy fried pork rinds",
+    "note": "Crackling pork rinds dusted in chilli salt. \"Tax refund!\" says the redneck.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ice cold longneck beer",
+    "note": "Ice cold beer in a longneck bottle, one for every cowboy.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

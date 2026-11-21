@@ -1,0 +1,34 @@
+{
+ "id": "Scream 2 (1997)",
+ "ops": [
+  {
+   "old": "Stab premiere caramel corn",
+   "new": "Cinema caramel corn",
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Back for seconds. Bigger servings.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Cinema Ticket",
+    "lines": [
+     "Windsor, Ohio",
+     "Free mask with every ticket"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Ohio's favourite sweet, half dipped so the peanut butter peeks through",
+   "new": "Peanut butter balls half dipped in chocolate, so the peanut butter peeks through",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

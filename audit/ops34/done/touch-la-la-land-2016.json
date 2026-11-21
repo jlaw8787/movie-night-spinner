@@ -1,0 +1,26 @@
+{
+ "id": "La La Land (2016)",
+ "ops": [
+  {
+   "old": "Jazz club old fashioned",
+   "new": "Bourbon old fashioned",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the drinks when Sebastian takes Mia to hear live jazz.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Charcuterie with cornichons and grissini",
+    "note": "Cured meats and grissini. Tapas. Pick one, you know? Samba.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "The Proposal (2009)",
+ "ops": [
+  {
+   "old": "Maple mustard salmon, potatoes, beans. Margaret's Canadian, hence the maple.",
+   "new": "Maple mustard salmon, potatoes, beans. A Canadian boss, hence the maple.",
+   "done": true
+  },
+  {
+   "old": "Pot roast for the barn wedding Margaret calls off",
+   "new": "Pot roast with sharp horseradish. Margaret calls it all off.",
+   "done": true
+  },
+  {
+   "old": "Barn wedding cake",
+   "new": "Strawberry jam wedding cake",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Alaskan amber ale",
+    "note": "Malty amber ale, poured cold. Drunk at the lodge bar.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "Danger Close: The Battle of Long Tan (2019)",
+ "ops": [
+  {
+   "old": "D Company field kitchen beef and beans",
+   "new": "Field kitchen beef and beans",
+   "done": true
+  },
+  {
+   "old": "Delta Company caramel pork",
+   "new": "Caramel pork belly with rice",
+   "done": true
+  },
+  {
+   "old": "Satay for the Little Pattie show D Company misses",
+   "new": "Satay for the Little Pattie show the men miss",
+   "done": true
+  },
+  {
+   "old": "A cold can of VB beer. One for the 108 men of D Company.",
+   "new": "A cold can of VB beer. One for each of the 108 men.",
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "D Company is relieving Bravo at the rubber plantation today. Eat while it's hot.",
+    "by": "Major Harry Smith",
+    "kind": "note"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

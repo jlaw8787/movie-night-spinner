@@ -1,0 +1,29 @@
+{
+ "id": "The Fantastic Four: First Steps (2025)",
+ "ops": [
+  {
+   "old": "Retro future. Fresh dinner.",
+   "new": "First family. Fresh dinner.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cherry lime rickey",
+    "note": "Cherry, lime and soda over ice. A toast to Franklin."
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Swedish meatballs on cocktail sticks",
+    "note": "Meatballs in gravy on cocktail sticks, passed around the table.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,34 @@
+{
+ "id": "The Lion King (2019)",
+ "ops": [
+  {
+   "old": "Pride Rock beef samosas with mint yoghurt",
+   "new": "Savannah beef samosas with mint yoghurt",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Jungle Pass",
+    "lines": [
+     "Admit one cub",
+     "No hyenas"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Jam, not grubs. Umami, says Timon.",
+   "new": "Fried dough with apricot jam. Umami, says Timon.",
+   "done": true
+  },
+  {
+   "old": "Fresh ginger brewed with sugar and lime until fizzy. Rafiki shakes it, like the gourd.",
+   "new": "Fresh ginger brewed with sugar and lime until fizzy. Shake it like a gourd.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

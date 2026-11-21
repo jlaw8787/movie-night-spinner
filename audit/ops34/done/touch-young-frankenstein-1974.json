@@ -1,0 +1,45 @@
+{
+ "id": "Young Frankenstein (1974)",
+ "ops": [
+  {
+   "old": "The hermit pours hot soup into the monster's lap",
+   "new": "Hot chicken soup the hermit pours into the monster's lap.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Short black espresso",
+    "note": "Strong short black. Wait, I was gonna make espresso."
+   },
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Liverwurst on dark rye with mustard",
+    "note": "Liver sausage on dark rye with mustard. Put the candle back.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Back at the family castle. Dinner is served.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Frau Blucher and the neighing horses",
+    "Igor's moving hump",
+    "Dr Fronkensteen, with the right accent",
+    "The blind hermit and the soup",
+    "The candle that spins the bookcase"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

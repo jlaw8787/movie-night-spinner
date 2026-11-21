@@ -1,0 +1,34 @@
+{
+ "id": "Tommy Boy (1995)",
+ "ops": [
+  {
+   "old": "Cinnamon beef chilli on spaghetti with cheddar. Ohio road trip food for Tommy and Richard",
+   "new": "Cinnamon beef chilli on spaghetti with cheddar, fuel for the drive in a '67 Plymouth GTX",
+   "done": true
+  },
+  {
+   "old": "Sweet-sour fruit under a woven top in crisp shortcrust, ice cream, holy schnikes",
+   "new": "Sweet-sour cherries under a woven top in crisp shortcrust, ice cream, for a Marquette graduate",
+   "done": true
+  },
+  {
+   "old": "Sausages and cheeseburgers off the grill, chilli butter cobs, potato salad, for the brake pad crew",
+   "new": "Sausages and cheeseburgers off the grill, chilli butter cobs, potato salad, for the factory crew",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Callahan Auto",
+    "lines": [
+     "Auto parts, built right",
+     "Sandusky, Ohio"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "BASEketball (1998)",
+ "ops": [
+  {
+   "old": "Milwaukee beer-battered cheese curds",
+   "new": "Beer-battered cheese curds",
+   "done": true
+  },
+  {
+   "old": "Milwaukee warm potato salad",
+   "new": "Warm potato salad with mustard and dill",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ice cold lager",
+    "note": "Crisp American beer, ice cold. Squeak always tags along.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the snacks when the Beers take the court.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

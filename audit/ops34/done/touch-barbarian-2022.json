@@ -1,0 +1,49 @@
+{
+ "id": "Barbarian (2022)",
+ "ops": [
+  {
+   "old": "Keith in the living room",
+   "new": "Andre running up with a warning",
+   "done": true
+  },
+  {
+   "old": "The tunnels below Detroit",
+   "new": "The tunnel under the house",
+   "done": true
+  },
+  {
+   "old": "AJ Gill's basement tapes",
+   "new": "AJ and the VHS tapes",
+   "done": true
+  },
+  {
+   "old": "The first basement door",
+   "new": "The hidden room with the camera",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Key Tag 476",
+    "lines": [
+     "Barbary Street, Brightmoor",
+     "Do not go down there"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "Hot dogs with chilli sauce and onions. Grab one before the basement.",
+   "new": "Hot dogs with chilli sauce and onions. Grab one on the way back from the interview.",
+   "done": true
+  },
+  {
+   "old": "Vernors ginger ale over ice with a squeeze of lime. Detroit's own, sipped while Keith makes tea.",
+   "new": "Vernors ginger ale over ice with a squeeze of lime. Poured for the night before the interview.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

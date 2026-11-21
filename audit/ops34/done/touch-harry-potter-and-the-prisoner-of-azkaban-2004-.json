@@ -1,0 +1,26 @@
+{
+ "id": "Harry Potter and the Prisoner of Azkaban (2004)",
+ "ops": [
+  {
+   "old": "Knight Bus ham and cheese toasties",
+   "new": "Stan and Ernie's ham and cheese toasties",
+   "done": true
+  },
+  {
+   "old": "Ham and gruyère griddled in butter, tomato soup to dunk, a ride with Stan and Ernie",
+   "new": "Ham and gruyère griddled in butter, tomato soup to dunk, on a bumpy ride",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pork scratchings with apple sauce",
+    "note": "Crisp pork scratchings with apple sauce. Pub grub for a Hogsmeade weekend.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

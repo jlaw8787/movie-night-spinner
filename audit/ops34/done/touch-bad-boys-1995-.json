@@ -1,0 +1,51 @@
+{
+ "id": "Bad Boys (1995)",
+ "ops": [
+  {
+   "old": "Ham croquetas. Julie Mott will only talk to Mike",
+   "new": "Ham croquetas, crisp outside. Internal Affairs gives them 72 hours",
+   "done": true
+  },
+  {
+   "old": "Sweet plantain, which nobody argues over like a french fry",
+   "new": "Sweet plantain slices fried golden, caramelised at the edges",
+   "done": true
+  },
+  {
+   "old": "Mike and Marcus swap Cuban sandwich",
+   "new": "Identity swap Cuban sandwich",
+   "done": true
+  },
+  {
+   "old": "Mike Lowrey's ocean view mojito",
+   "new": "Ocean view mojito",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Marcus pretending to be Mike Lowrey",
+    "The partners arguing over a french fry",
+    "Julie Mott, the witness who asks for one detective",
+    "Captain Howard shouting at both partners",
+    "Fouchet, the villain, and the airfield finale"
+   ],
+   "done": true
+  },
+  {
+   "old": "Flaky puff pastry filled with guava paste and cream cheese. Crumbs stay out of Mike's Porsche.",
+   "new": "Flaky puff pastry filled with guava paste and cream cheese. Crumbs stay out of the Porsche.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cafecito, sweet Cuban espresso",
+    "note": "Strong sugared coffee in small cups. Captain Howard needs three."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,24 @@
+{
+ "id": "Raising Arizona (1987)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "Corner store snacks. No stick-up needed.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Corner Store Receipt",
+    "lines": [
+     "Paid in full, sort of",
+     "Make it quick"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

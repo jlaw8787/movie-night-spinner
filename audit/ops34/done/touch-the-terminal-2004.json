@@ -1,0 +1,40 @@
+{
+ "id": "The Terminal (2004)",
+ "ops": [
+  {
+   "old": "Viktor lives on crackers and mustard",
+   "new": "Crackers spread with hot mustard and sandwiched together, dinner on a budget",
+   "done": true
+  },
+  {
+   "old": "Thin cheeseburgers. Viktor returns luggage carts for quarters.",
+   "new": "Thin cheeseburgers. A quarter back for every cart returned.",
+   "done": true
+  },
+  {
+   "old": "New York cheesecake. Viktor gets Benny Golson's autograph.",
+   "new": "New York cheesecake, creamy with a biscuit base. Benny Golson saved for last.",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Planters peanuts, honey-roasted with sea salt",
+    "note": "Honey roasted peanuts with sea salt, warm from the roaster.",
+    "meat": false
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hot drip coffee by the gate",
+    "note": "Filter coffee, strong and hot. Free refills for anyone stuck here.",
+    "alc": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

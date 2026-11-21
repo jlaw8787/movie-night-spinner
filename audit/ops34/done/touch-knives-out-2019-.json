@@ -1,0 +1,35 @@
+{
+ "id": "Knives Out (2019)",
+ "ops": [
+  {
+   "old": "Donut holes",
+   "new": "Cinnamon doughnut bites",
+   "done": true
+  },
+  {
+   "old": "Yeast donut holes fried golden and rolled in cinnamon sugar",
+   "new": "Yeast doughnut bites fried golden and rolled in cinnamon sugar",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the cinnamon doughnut bites when Blanc explains the hole at the centre of the case.",
+   "done": true
+  },
+  {
+   "old": "Harlan's birthday roast beef",
+   "new": "Thrombey family roast beef",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Hot apple juice with cinnamon",
+    "note": "Apple juice simmered with cinnamon and served hot. Elliot and Wagner question the family."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

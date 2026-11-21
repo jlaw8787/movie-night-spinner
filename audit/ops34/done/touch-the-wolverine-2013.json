@@ -1,0 +1,54 @@
+{
+ "id": "The Wolverine (2013)",
+ "ops": [
+  {
+   "old": "Bullet train rice balls",
+   "new": "Salmon onigiri rice balls",
+   "done": true
+  },
+  {
+   "set": "tagline",
+   "value": "Tokyo. Snow. Noodles.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Nagasaki, 1945",
+    "Mariko's fiancé, the Minister of Justice",
+    "Logan living rough in the Yukon",
+    "The Silver Samurai",
+    "Yukio's visions of the dead"
+   ],
+   "done": true
+  },
+  {
+   "old": "Never upright in the rice. Chopsticks flat, Logan.",
+   "new": "Crunchy pickles and steamed rice. Mariko: \"Chopsticks upright are a bad omen.\"",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Train Ticket",
+    "lines": [
+     "Roof seat, no charge",
+     "Hold on tight"
+    ]
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Logan, you eat like a bear. At least try the chopsticks.",
+    "by": "Yukio",
+    "kind": "note"
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

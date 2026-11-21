@@ -1,0 +1,55 @@
+{
+ "id": "Red Heat (1988)",
+ "ops": [
+  {
+   "old": "Herring on rye. Ridzik slips Danko his spare gun",
+   "new": "Pickled herring on rye. Commander Donnelly confiscates the visitor's gun.",
+   "done": true
+  },
+  {
+   "old": "Soft fried buns stuffed with beef, rice and dill, a taste of Danko's Moscow",
+   "new": "Soft fried buns stuffed with beef, rice and dill, a taste of Red Square",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Pour the vodka when the Soviet cop answers how his people handle stress.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Moscow banya fight at the opening",
+    "Everyone knows the Magnum",
+    "Popping the cleanheads",
+    "The wild bus versus bus chase",
+    "Cat Manzetti's dance school"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Garlic dill pickles with black bread",
+    "note": "Sour pickles with garlic and dill, black bread alongside. The locksmith matches the key."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Chilled kvass",
+    "note": "Tangy kvass brewed from rye bread, served cold.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "old": "Ridzik's Chicago deep dish sausage pizza",
+   "new": "Chicago deep dish sausage pizza",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

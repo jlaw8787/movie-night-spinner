@@ -4,7 +4,8 @@
      2. a cheap bite (slice, hot dog, frank, fries, cookie, cupcake, lollipop, peanuts, popcorn, chips) never costs more than a steak,
         roast or seafood main, and never more than the cheapest main
      3. a plain drink (no spirits or wine) never costs more than the cheapest main
-     4. prices end on a clean step: whole dollars or .00, .25, .50, .75, .95 (cent prices in fives)
+     4. (review 34) a premium main never the same price as a plain one; a sandwich or burger main under the hot plates beside it
+     5. prices end on a clean step: whole dollars or .00, .25, .50, .75, .95 (cent prices in fives)
    Films with no prices, or prices that could not be tied to dishes, are skipped and counted.
      NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-price-sense.cjs [from] [count] [--json out.json] ["Film (Year)" ...] */
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const {spawn}=require('child_process');const path=require('path'),fs=require('fs');
@@ -57,7 +58,9 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
      for(const x of by('d'))if(!SP.test(x.n)&&x.v>=minM)bad.push(`plain drink ${x.n} ${x.raw} not under the cheapest main ${minM}`)}
    {const BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i,D=by('d');if(D.length){const lo=Math.min(...D.map(x=>x.v));for(const x of by('s'))if(BAR.test(x.n)&&!PREM.test(x.n)&&x.v>lo+.001)bad.push(`bar snack ${x.n} ${x.raw} dearer than a drink at ${lo}`)}}
    const prem=P.filter(x=>x.k==='m'&&PREM.test(x.n)&&!isCheap(x.n));
-   {const pl=mn.filter(x=>!PREM.test(x.n)||isCheap(x.n));if(pl.length){const hi=Math.max(...pl.map(x=>x.v));for(const x of prem)if(!x.house&&x.v<hi)bad.push(`premium main ${x.n} ${x.raw} under the plain main at ${hi}`)}}
+   {const pl=mn.filter(x=>!PREM.test(x.n)||isCheap(x.n));if(pl.length){const hi=Math.max(...pl.map(x=>x.v));for(const x of prem)if(!x.house&&x.v<=hi)bad.push(`premium main ${x.n} ${x.raw} not above the plain main at ${hi}`)}}
+   /* review 34: a sandwich, roll or burger main sits under the hot plates beside it (Wolf Creek's sausage sandwich over the barra) */
+   {const HAND=/\b(sandwich(es)?|sangas?|toasties?|rolls?|subs?|hoagies?|burgers?|cheeseburgers?|sliders?|wraps?|burritos?|tacos?|hot dogs?)\b/i,hot=mn.filter(x=>!HAND.test(x.n)&&!x.house);if(hot.length&&hot.length<mn.length){const lo=Math.min(...hot.map(x=>x.v));for(const x of mn)if(HAND.test(x.n)&&!PREM.test(x.n)&&!x.house&&x.v>=lo)bad.push(`sandwich main ${x.n} ${x.raw} not under the hot main at ${lo}`)}}
    for(const x of P)if(isCheap(x.n)&&!PREM.test(x.n)){
      if(prem.length&&x.v>Math.min(...prem.map(y=>y.v)))bad.push(`cheap bite ${x.n} ${x.raw} above the ${prem[0].n}`);
      if(x.k==='m'&&mn.length>1&&x.v>=Math.max(...mn.filter(y=>!isCheap(y.n)).map(y=>y.v).concat([0]))&&mn.some(y=>!isCheap(y.n)))bad.push(`cheap main ${x.n} ${x.raw} dearest of the mains`)}

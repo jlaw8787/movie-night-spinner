@@ -1,0 +1,20 @@
+{
+ "id": "The Nightmare Before Christmas (1993)",
+ "ops": [
+  {
+   "old": "Pumpkin and carrot soup, sour cream spiderweb. No frog's breath.",
+   "new": "Pumpkin and carrot soup with a sour cream spiderweb on top.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Warm pumpkin spice milk",
+    "note": "Warm pumpkin spice milk for the long ride on Christmas Eve."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

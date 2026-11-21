@@ -1,0 +1,39 @@
+{
+ "id": "Boyz n the Hood (1991)",
+ "ops": [
+  {
+   "old": "Doughboy's porch devilled eggs",
+   "new": "Smoked paprika devilled eggs",
+   "done": true
+  },
+  {
+   "old": "Serve the mains when Doughboy's welcome-home barbecue gets going.",
+   "new": "Serve the mains when the welcome-home barbecue gets going.",
+   "done": true
+  },
+  {
+   "old": "Corner store onion dip with ridged chips",
+   "new": "Slow-browned onion dip with ridged chips",
+   "done": true
+  },
+  {
+   "old": "Slow-browned onions in sour cream and cream cheese, salted crinkle-cuts, from the corner store",
+   "new": "Onions browned slow in sour cream and cream cheese, salted crinkle-cuts, for the street football game",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Corner Market Receipt",
+    "lines": [
+     "Increase the Peace",
+     "Barbecue supplies for the yard"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,33 @@
+{
+ "id": "Batman & Robin (1997)",
+ "ops": [
+  {
+   "old": "Allow me to break the ice. Vanilla and mint on a chocolate base",
+   "new": "Vanilla and mint ice cream on a chocolate base. Allow me to break the ice.",
+   "done": true
+  },
+  {
+   "old": "Chipotle beef and bean chilli, for thawing out after Freeze's Observatory gun",
+   "new": "Chipotle beef and bean chilli, for thawing out after the Observatory",
+   "done": true
+  },
+  {
+   "old": "Serve dessert when Mr Freeze freezes the charity auction.",
+   "new": "Serve dessert when the charity auction begins.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Gotham Museum diamond heist",
+    "Ivy's one kiss, for luck",
+    "Barbara Wilson becoming Batgirl",
+    "Alfred falling ill",
+    "The Gotham Observatory"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

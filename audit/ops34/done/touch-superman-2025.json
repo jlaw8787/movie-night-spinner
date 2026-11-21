@@ -1,0 +1,32 @@
+{
+ "id": "Superman (2025)",
+ "ops": [
+  {
+   "old": "Red cape strawberry shortcake",
+   "new": "Strawberry shortcake with cream biscuits",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mister Terrific and his T-spheres",
+    "Lex Luthor's pocket universe",
+    "Metamorpho and baby Joey",
+    "Lois Lane's interview",
+    "Guy Gardner: Make a move, Big Blue."
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Buffalo chicken dip with celery",
+    "note": "Hot buffalo chicken dip with celery. Order it for the whole Justice Gang.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

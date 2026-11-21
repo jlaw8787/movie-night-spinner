@@ -1,0 +1,43 @@
+{
+ "id": "Alien: Romulus (2024)",
+ "ops": [
+  {
+   "old": "Packed for a double shift in the mine, still warm at the end of it",
+   "new": "Beef, potato and swede baked in shortcrust, packed for a double shift in the mine",
+   "done": true
+  },
+  {
+   "old": "The colony never sees the sun, so dinner has to warm you instead",
+   "new": "Beef chuck, carrots and barley simmered for an hour, with crusty bread to mop up",
+   "done": true
+  },
+  {
+   "old": "As cold as the cryo pods they came up to steal",
+   "new": "Frozen lime slush with soda and mint, as cold as the pods they came to steal",
+   "done": true
+  },
+  {
+   "old": "Mashed potato, cheddar and onion, fried crisp. Andy can't eat them but still asks.",
+   "new": "Mashed potato, cheddar and onion, shaped into cakes and fried crisp. Kay is eating for two.",
+   "done": true
+  },
+  {
+   "old": "Hot cocoa made with powdered milk. Rain's ration, shared before Romulus.",
+   "new": "Hot cocoa made with powdered milk. The last mug, shared before Romulus.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Andy's dad jokes",
+    "No sunlight on Jackson's Star, ever",
+    "The dream of Yvaga III",
+    "Zero gravity acid blood fight",
+    "The hauler Corbelan"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

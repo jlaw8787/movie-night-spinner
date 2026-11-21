@@ -1,0 +1,55 @@
+{
+ "id": "There's Something About Mary (1998)",
+ "ops": [
+  {
+   "old": "Have you seen my baseball? asks Warren",
+   "new": "Crumbed risotto balls with a mozzarella middle, like little baseballs",
+   "done": true
+  },
+  {
+   "old": "Healy spies on Mary in Miami",
+   "new": "Garlic butter knots with parmesan and marinara. Healy spies on Mary in Miami",
+   "done": true
+  },
+  {
+   "old": "Ted's prom night zipper disaster",
+   "new": "Smoky franks with molasses baked beans. Ted's prom night zipper disaster",
+   "done": true
+  },
+  {
+   "old": "Puffy ends up in a full body cast",
+   "new": "Crumbed chicken stuffed with ham and Swiss. Puffy ends up in a full body cast",
+   "done": true
+  },
+  {
+   "old": "Mary thinks it's hair gel",
+   "new": "Vanilla meringues with whipped cream and lemon curd, swirled tall",
+   "done": true
+  },
+  {
+   "old": "Mary asks Ted to the prom",
+   "new": "Pineapple and ginger beer punch with rum and lime sorbet. Mary asks Ted to the prom",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Magda's cheese ball and crackers",
+    "note": "A cheese ball with crackers. Magda lives next door to Mary's flat.",
+    "meat": false
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Beer. Not lite beer, beer.",
+    "note": "Cold beer in the bottle. Mary's ad: after 36 holes of golf.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

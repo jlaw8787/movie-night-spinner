@@ -1,0 +1,45 @@
+{
+ "id": "Hot Rod (2007)",
+ "ops": [
+  {
+   "old": "Fifteen bus jump choc chip cookies",
+   "new": "Daredevil choc chip cookies",
+   "done": true
+  },
+  {
+   "old": "Dark choc chip cookies. One more bus than Evel Knievel",
+   "new": "Dark choc chip cookies, thick and chewy. Beat Evel Knievel's record.",
+   "done": true
+  },
+  {
+   "old": "Cool beans black bean dip",
+   "new": "Baked black bean dip",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Rod's trusty moped",
+    "Rod and Frank sparring in the basement",
+    "Rod's punch dancing",
+    "Rod's quiet place",
+    "Denise, the girl next door"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Stunt Show",
+    "lines": [
+     "One huge jump",
+     "Rod Kimble, live"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

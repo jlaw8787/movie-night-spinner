@@ -1,0 +1,28 @@
+{
+ "id": "Beverly Hills Cop II (1987)",
+ "ops": [
+  {
+   "old": "Shortcrust bites of bacon, onion, cheese and set custard, for the mansion Axel crashes",
+   "new": "Shortcrust bites of bacon, onion, cheese and set custard. Rosewood and Taggart trail the getaway.",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve dessert when Axel bluffs his way into the swanky party at the mansion.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Captain Bogomil shot in the opening",
+    "Alphabet Crimes, robberies named in sequence",
+    "Karla Fry, the tall, deadly henchwoman",
+    "Maxwell Dent and his gun business",
+    "Mayor Egan sacking Chief Lutz"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

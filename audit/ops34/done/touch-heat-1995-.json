@@ -1,0 +1,35 @@
+{
+ "id": "Heat (1995)",
+ "ops": [
+  {
+   "old": "Double espresso with a lemon twist. Hanna and McCauley, no small talk.",
+   "new": "Double espresso with a lemon twist. Alone, but not lonely.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The coffee shop meeting between cop and thief",
+    "The downtown bank shootout",
+    "The armoured car heist",
+    "Chris Shiherlis in the crew",
+    "Waingro, the problem on the first job"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Two Coffees",
+    "lines": [
+     "Kate Mantilini",
+     "One conversation"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

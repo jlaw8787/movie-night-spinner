@@ -1,0 +1,26 @@
+{
+ "id": "Midsommar (2019)",
+ "ops": [
+  {
+   "old": "May Queen's lucky herring and new potatoes",
+   "new": "Lucky pickled herring and new potatoes",
+   "done": true
+  },
+  {
+   "old": "May Queen strawberry cake",
+   "new": "Hårga strawberry cream cake",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Aquavit and lingonberry spritz",
+    "note": "Aquavit and lingonberry syrup topped with soda water. Check your glass first.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

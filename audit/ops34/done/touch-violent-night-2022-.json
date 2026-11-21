@@ -1,0 +1,24 @@
+{
+ "id": "Violent Night (2022)",
+ "ops": [
+  {
+   "old": "Naughty list black forest trifle",
+   "new": "Black forest trifle",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Santa's Gift Tag",
+    "lines": [
+     "Trudy Lightstone",
+     "Status: Nice"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1451,7 +1451,7 @@
   "winks": [
    "The tornado and Jonathan Kent",
    "The old Kryptonian ship in the ice",
-   "Clark working on a fishing boat",
+   "Jor-El speaking through the scout ship",
    "Lois Lane and her press pass",
    "Zod sneering, trained on a farm?"
   ],
@@ -1598,7 +1598,7 @@
    "kind": "note"
   },
   "winks": [
-   "Krypto, and Kara Zor-El collecting him",
+   "Mister Terrific and his T-spheres",
    "Lex Luthor's pocket universe",
    "Metamorpho and baby Joey",
    "Lois Lane's interview",
@@ -1647,7 +1647,7 @@
    "kind": "note"
   },
   "winks": [
-   "Mr. Freeze and his ice puns",
+   "The Gotham Museum diamond heist",
    "Ivy's one kiss, for luck",
    "Barbara Wilson becoming Batgirl",
    "Alfred falling ill",
@@ -1871,10 +1871,10 @@
   },
   "winks": [
    "Gargantos, the one-eyed monster",
-   "Pizza Poppa, who wants his money",
+   "America Chavez and her star portals",
    "The Darkhold",
    "The Illuminati of Earth-838",
-   "Wanda's hunt at Kamar-Taj"
+   "Strange's third eye opening"
   ],
   "prop": {
    "kind": "slip",
@@ -1926,7 +1926,7 @@
   "note": {
    "text": "Bob, eat. Nobody here is okay. We're all hungry.",
    "by": "Yelena Belova",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "Bob and the Void",
@@ -2064,7 +2064,7 @@
    "kind": "receipt",
    "title": "Grocery Receipt",
    "lines": [
-    "Canned tomatoes",
+    "One tin, for the sauce",
     "Thank you, come again"
    ]
   },
@@ -2172,18 +2172,18 @@
   "note": {
    "text": "Logan, you eat like a bear. At least try the chopsticks.",
    "by": "Yukio",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "Nagasaki, 1945",
-   "The fight on top of the bullet train",
+   "Mariko's fiancé, the Minister of Justice",
    "Logan living rough in the Yukon",
    "The Silver Samurai",
    "Yukio's visions of the dead"
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Bullet Train Ticket",
+   "title": "Train Ticket",
    "lines": [
     "Roof seat, no charge",
     "Hold on tight"
@@ -2657,7 +2657,7 @@
   "note": {
    "text": "Shall we go inside and have tea and cookies?",
    "by": "Miss Honey",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "Bruce Bogtrotter and the giant chocolate cake",
@@ -2674,7 +2674,11 @@
     "Books checked out: all of them"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceBand": [
+   2.5,
+   6
+  ]
  },
  "Casper (1995)": {
   "venue": "Whipstaff Manor",
@@ -3294,7 +3298,7 @@
    "Tex Richman and his oil plan",
    "Gary and Walter singing Man or Muppet",
    "Fozzie stuck in a tribute act",
-   "A telethon to save the old theatre"
+   "Miss Piggy, an editor at Vogue Paris"
   ],
   "prop": {
    "kind": "ticket",
@@ -3340,10 +3344,10 @@
    "kind": "quote"
   },
   "winks": [
-   "Forky and his love of the trash",
+   "Woody sneaks into Bonnie's backpack",
    "Gabby Gabby and the broken voice box",
    "Duke Caboom's big dramatic pose",
-   "Ducky and Bunny at the carnival",
+   "Ducky and Bunny, hands stitched together",
    "Bo Peep back on the road"
   ],
   "prop": {
@@ -3390,7 +3394,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Jack-Jack's powers, and one raccoon",
+   "The Underminer's bank job in Municiberg",
    "The Incredibile, Bob's old supercar",
    "The Screenslaver's hypnotic screens",
    "Dash's math homework",
@@ -3835,7 +3839,7 @@
   "note": {
    "text": "You don't have to tell me about hard stares, I practically invented them.",
    "by": "Knuckles McGinty",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "The pop-up book of London",
@@ -4725,8 +4729,8 @@
   "venue": "The Snuggly Duckling",
   "sign": "The Snuggly Duckling, Thugs With Dreams",
   "note": {
-   "text": "Mother says stay in, so I'm cooking. The lanterns go up after dessert, and the frying pan is for the eggs this time.",
-   "by": "Rapunzel",
+   "text": "Swords by the door, mugs on the table. Everyone in here has a dream, love.",
+   "by": "Hook Hand",
    "kind": "note"
   },
   "winks": [
@@ -4993,7 +4997,7 @@
    "The wall of thorns around the Moors",
    "A spindle and a sleep like death",
    "The three bumbling pixies",
-   "Maleficent's kiss wakes Aurora"
+   "Maleficent's kiss wakes the sleeping princess"
   ],
   "prop": {
    "kind": "slip",
@@ -5104,7 +5108,7 @@
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Pride Rock Pass",
+   "title": "Jungle Pass",
    "lines": [
     "Admit one cub",
     "No hyenas"
@@ -5199,8 +5203,8 @@
    "kind": "note"
   },
   "winks": [
-   "Chocolate mousse with a chalky aftertaste",
-   "The Tannis root charm on a chain",
+   "Hutch's warning about the Bramford",
+   "The pendant that smells so strong",
    "What have you done to its eyes?",
    "Scrabble tiles that spell a name",
    "The Castevets next door"
@@ -5859,7 +5863,8 @@
     6
    ],
    "flip": 0
-  }
+  },
+  "camp": "camp"
  },
  "The Witches (1990)": {
   "venue": "Hotel Excelsior Banquet Hall",
@@ -5896,8 +5901,8 @@
    "kind": "note"
   },
   "winks": [
-   "Audrey II, named for Audrey",
-   "The strange plant found during an eclipse",
+   "Arthur Denton and his long, slow root canal",
+   "The strange seedling found during an eclipse",
    "Orin the dentist",
    "Skid Row, rain and all",
    "Crystal, Ronette and Chiffon on the stoop"
@@ -5950,7 +5955,7 @@
    "Igor's moving hump",
    "Dr Fronkensteen, with the right accent",
    "The blind hermit and the soup",
-   "The brain jar Igor dropped"
+   "The candle that spins the bookcase"
   ],
   "prop": {
    "kind": "tag",
@@ -5999,8 +6004,8 @@
    "kind": "note"
   },
   "winks": [
-   "Midnight margaritas in the kitchen",
-   "Chocolate cake for breakfast",
+   "Sally's impossible true love spell",
+   "Village kids chanting at the sisters",
    "The curse on the Owens women",
    "The townswomen's coven on the lawn",
    "State investigator Gary Hallett"
@@ -6127,7 +6132,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Heavy curtains drawn in every room",
+   "The thick fog around the house",
    "Grace and her keys to all fifty doors",
    "If you see a ghost, say hello",
    "The old blind medium and her séance",
@@ -6315,7 +6320,7 @@
   },
   "winks": [
    "Georgie in his yellow raincoat",
-   "The red balloon",
+   "Ben's library research into Derry",
    "The Losers' Club",
    "Pennywise's circus smells",
    "The house on Neibolt Street",
@@ -6358,7 +6363,7 @@
   },
   "winks": [
    "Miss Collins and gym class",
-   "Tommy Ross and Sue Snell",
+   "Chris Hargensen's prom plot",
    "The pink prom dress",
    "Carrie's strict mother",
    "Margaret: they're all going to laugh at you"
@@ -6386,7 +6391,7 @@
    "The misspelled Pet Sematary sign",
    "Victor Pascow's ghost and his warning",
    "Trucks racing down the highway",
-   "Jud's warning on the porch"
+   "The Mi'kmaq burial ground in the woods"
   ],
   "prop": {
    "kind": "tag",
@@ -6432,7 +6437,7 @@
    "kind": "note"
   },
   "winks": [
-   "Smiling at the wrong time",
+   "Joel, the ex-boyfriend detective",
    "Laura Weaver, the patient",
    "Dr Madeline Northcott, the therapist",
    "The toy train, then the box",
@@ -6459,7 +6464,7 @@
    "kind": "note"
   },
   "winks": [
-   "Two lovebirds in a cage",
+   "Melanie's rented boat across the bay",
    "The gas station by the harbour",
    "The phone booth scene",
    "Annie Hayworth, the teacher",
@@ -6535,7 +6540,7 @@
   "winks": [
    "Three waitresses: Daisy, Kat and Jojo",
    "Jojo fainting at the altar",
-   "The restaurant critic and the secret recipe",
+   "Kat's nights at the Seaport planetarium",
    "Daisy and the Windsor family dinner",
    "Kat's summer job minding a kid"
   ],
@@ -6558,7 +6563,7 @@
    "kind": "quote"
   },
   "winks": [
-   "A birthday kung fu triple feature",
+   "Floyd, Dick's stoner roommate",
    "Elvis turning up in the bathroom mirror",
    "We now return to Bullitt, already in progress",
    "Heading from Detroit to Hollywood",
@@ -6566,7 +6571,7 @@
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Triple Feature",
+   "title": "Three Films, One Ticket",
    "lines": [
     "Kung fu night, Detroit",
     "Admit one, birthday boy"
@@ -6609,7 +6614,7 @@
    "kind": "note"
   },
   "winks": [
-   "Billy Mack's Christmas single comeback",
+   "Billy Mack's Christmas comeback",
    "Cue cards held up on a doorstep",
    "The Prime Minister dancing down the hall at Number 10",
    "Colin heading off to Wisconsin",
@@ -6781,7 +6786,7 @@
    "Poker night at Ben's",
    "The love fern",
    "The diamond advertising pitch",
-   "Meeting the family on Staten Island",
+   "The scrapbook of their future children",
    "Andie's How To column at Composure"
   ],
   "prop": {
@@ -7911,7 +7916,7 @@
    "kind": "note"
   },
   "winks": [
-   "246 toothpicks on the floor",
+   "Raymond's slow dance with Susanna",
    "Pancakes and the syrup ritual",
    "Ten minutes to Wapner",
    "Who's on first, the routine",
@@ -7939,7 +7944,7 @@
   "winks": [
    "The Mutt Cutts van",
    "Mary's ransom drop at the airport",
-   "The road trip to Aspen",
+   "Harry's tuxedo at the fancy party",
    "The briefcase full of cash",
    "Petey the parakeet"
   ],
@@ -7972,7 +7977,7 @@
    "kind": "card",
    "title": "Callahan Auto",
    "lines": [
-    "Brake pads, built right",
+    "Auto parts, built right",
     "Sandusky, Ohio"
    ]
   },
@@ -8103,7 +8108,7 @@
    "title": "Tour Qualifier",
    "lines": [
     "Happy Gilmore",
-    "Slap shot approved"
+    "Putting not approved"
    ]
   },
   "number": "",
@@ -8151,7 +8156,7 @@
   ],
   "prop": {
    "kind": "slip",
-   "title": "Shrimp Boat Log",
+   "title": "The Jenny's Log",
    "lines": [
     "Captain: Forrest Gump",
     "First mate: Lieutenant Dan"
@@ -8622,7 +8627,7 @@
   ],
   "prop": {
    "kind": "receipt",
-   "title": "Prison Prep",
+   "title": "Training Invoice",
    "lines": [
     "30 days to go",
     "Fee: $30,000"
@@ -9205,15 +9210,15 @@
   "winks": [
    "The banana in the tailpipe of the unmarked car",
    "Serge at the art gallery, very sure of himself",
-   "Taggart and Rosewood tailing Axel around town",
-   "Axel talking his way into the Beverly Palms Hotel",
+   "Taggart and Rosewood on a very slow tail",
+   "A fast talker getting past the Beverly Palms front desk",
    "Victor Maitland, the polished villain, and his warehouse"
   ],
   "prop": {
    "kind": "slip",
    "title": "Room Service Order",
    "lines": [
-    "Axel Foley, Detroit",
+    "Suite service, no questions",
     "Charge to Rosewood"
    ]
   },
@@ -9244,7 +9249,7 @@
    "Alphabet Crimes, robberies named in sequence",
    "Karla Fry, the tall, deadly henchwoman",
    "Maxwell Dent and his gun business",
-   "Axel back in Beverly Hills without an invitation"
+   "Mayor Egan sacking Chief Lutz"
   ],
   "prop": {
    "kind": "badge",
@@ -9316,7 +9321,7 @@
   },
   "winks": [
    "Reggie out of prison and chasing his share",
-   "Reggie's car, blown up. It's a damn shame",
+   "The Bird Cage nightclub showdown",
    "The Iceman, a mystery villain with a price",
    "Jack's same old sky blue Cadillac"
   ],
@@ -9364,11 +9369,11 @@
    "kind": "note"
   },
   "winks": [
-   "Danko's Moscow banya fight at the opening",
+   "The Moscow banya fight at the opening",
    "Everyone knows the Magnum",
    "Popping the cleanheads",
    "The wild bus versus bus chase",
-   "Danko and Ridzik swap watches"
+   "Cat Manzetti's dance school"
   ],
   "prop": {
    "kind": "badge",
@@ -9417,7 +9422,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Lecce and Reimers parked outside Maria's house",
+   "The couch stuffed with Montgomery's cash",
    "Maria McGuire, the woman Lecce falls for",
    "Richard Montgomery, the prisoner on the run",
    "Binoculars on the window across the street",
@@ -9442,11 +9447,11 @@
    "kind": "quote"
   },
   "winks": [
-   "Kimble's pet ferret, Junior",
+   "The class mascot ferret, Junior",
    "Who is your daddy and what does he do?",
    "Whistle drill, one toy each",
    "There is no bathroom",
-   "It's not a tumor, at all"
+   "A snapped pencil for the back row"
   ],
   "prop": {
    "kind": "badge",
@@ -9497,8 +9502,8 @@
   },
   "winks": [
    "Marcus pretending to be Mike Lowrey",
-   "Mike and Marcus arguing over a french fry",
-   "Julie Mott, the witness who will only talk to Mike",
+   "The partners arguing over a french fry",
+   "Julie Mott, the witness who asks for one detective",
    "Captain Howard shouting at both partners",
    "Fouchet, the villain, and the airfield finale"
   ],
@@ -9847,7 +9852,7 @@
    "kind": "note"
   },
   "winks": [
-   "The coffee shop face to face between Hanna and McCauley",
+   "The coffee shop meeting between cop and thief",
    "The downtown bank shootout",
    "The armoured car heist",
    "Chris Shiherlis in the crew",
@@ -9857,7 +9862,7 @@
    "kind": "receipt",
    "title": "Two Coffees",
    "lines": [
-    "Table by the window",
+    "Kate Mantilini",
     "One conversation"
    ]
   },
@@ -9942,13 +9947,13 @@
   "venue": "Spurbury Station Diner",
   "sign": "Vermont State Troopers",
   "note": {
-   "text": "Coffee served! No, no, that one's for Rabbit!",
+   "text": "Coffee's served! Oh, no! That's Rabbit's.",
    "by": "Farva",
    "kind": "quote"
   },
   "winks": [
    "Mac, Thorny, Foster, Rabbit and Farva",
-   "Farva, the loudest trooper alive",
+   "The abandoned Winnebago on the highway",
    "The Meow game, played at traffic stops",
    "Captain O'Hagan, shouting from the doorway",
    "The rival Spurbury police department"
@@ -10681,7 +10686,7 @@
    "Heather Chandler's red scrunchie",
    "J.D. in his trench coat",
    "Veronica's forged notes",
-   "The opening croquet game"
+   "Kurt and Ram, the football jocks"
   ],
   "prop": {
    "kind": "slip",
@@ -10927,8 +10932,8 @@
    "kind": "quote"
   },
   "winks": [
-   "The stunt jump over fifteen buses",
-   "Kevin, cool beans",
+   "Rod's trusty moped",
+   "Rod and Frank sparring in the basement",
    "Rod's punch dancing",
    "Rod's quiet place",
    "Denise, the girl next door"
@@ -10937,7 +10942,7 @@
    "kind": "ticket",
    "title": "Stunt Show",
    "lines": [
-    "Fifteen buses",
+    "One huge jump",
     "Rod Kimble, live"
    ]
   },
@@ -10978,7 +10983,8 @@
    ],
    "flip": 1,
    "sig": "name"
-  }
+  },
+  "camp": "camp"
  },
  "Role Models (2008)": {
   "venue": "Sturdy Wings",
@@ -11051,7 +11057,7 @@
    "kind": "note"
   },
   "winks": [
-   "Riding a cheetah in the woods",
+   "Kumar botching his medical school interview",
    "Neil Patrick Harris as himself",
    "Harold the banker, Kumar the slacker",
    "A bag of burgers as the goal",
@@ -11456,7 +11462,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Santino D'Antonio and the blood marker",
+   "Santino D'Antonio, who wants his sister's seat",
    "The sommelier's tasting of weapons",
    "The catacomb gunfight",
    "The hall of mirrors",
@@ -11832,7 +11838,8 @@
    ]
   },
   "number": "",
-  "currency": "£"
+  "currency": "£",
+  "kick": "A proper Kennington local"
  },
  "Mission: Impossible (1996)": {
   "venue": "Prague Aquarium Restaurant",
@@ -11922,7 +11929,7 @@
    "w": "Sweet Things",
    "d": "Drams and Ale",
    "t": "Highland Table",
-   "n": "Said before Stirling",
+   "n": "Said to Isabella",
    "call": "Battle cry"
   },
   "words": {
@@ -12085,7 +12092,7 @@
    "kind": "note"
   },
   "winks": [
-   "The letters of transit",
+   "Ugarte arrested at Rick's tables",
    "Sam at the piano",
    "The airport in the fog",
    "The Marseillaise sung over the Germans",
@@ -12159,7 +12166,7 @@
   "note": {
    "text": "Rome will fall. I need only give it a push.",
    "by": "Macrinus",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "The rhinoceros in the arena",
@@ -12638,7 +12645,7 @@
   "winks": [
    "Thurman Merman and his pink elephant",
    "Marcus the elf",
-   "The mall Santa job as cover for a heist",
+   "Lois waiting in the getaway car",
    "Willie's grumpy Santa chair"
   ],
   "prop": {
@@ -12655,12 +12662,12 @@
   "venue": "Rosehill Cottage",
   "sign": "Rosehill Cottage, Surrey",
   "note": {
-   "text": "You're supposed to be the leading lady of your own life, for God's sake!",
+   "text": "You're supposed to be the leading lady in your own life, for God's sake!",
    "by": "Iris",
    "kind": "quote"
   },
   "winks": [
-   "A house swap between Surrey and Los Angeles",
+   "Arthur's Writers Guild gala",
    "Amanda's movie trailer voice",
    "Arthur Abbott, the old screenwriter",
    "Miles, who used only the good notes",
@@ -12731,18 +12738,18 @@
    "kind": "note"
   },
   "winks": [
-   "The S-1, the giant high tech sleigh",
+   "The S-1, run by hundreds of elves",
    "Grandsanta and his old wooden sleigh",
    "Bryony, always time for a bow",
    "Gwen's pink bicycle",
-   "Gwen in Trelew, Cornwall"
+   "Arthur answering the letters to Santa"
   ],
   "prop": {
    "kind": "tag",
    "title": "Missed Present",
    "lines": [
-    "For Gwen, Trelew",
-    "Pink bicycle"
+    "Trelew, Cornwall",
+    "Delivered by Christmas morning"
    ]
   },
   "number": ""
@@ -12984,7 +12991,7 @@
   ],
   "prop": {
    "kind": "tag",
-   "title": "Santa Trap Note",
+   "title": "Cindy Lou's Note",
    "lines": [
     "Cindy Lou Who",
     "Please help my mum"
@@ -13061,7 +13068,7 @@
   ],
   "prop": {
    "kind": "tag",
-   "title": "Nice List Entry",
+   "title": "Santa's Gift Tag",
    "lines": [
     "Trudy Lightstone",
     "Status: Nice"
@@ -13079,7 +13086,7 @@
   },
   "winks": [
    "Snowcone, the reindeer with Mrs. Claus's letter",
-   "Nick, who ran off to Phoenix",
+   "Polly, Noelle's childhood nanny",
    "Gabriel's list of 2,837 nice children",
    "Jake Hapman, the detective",
    "A yoga retreat at the Desert Botanical Garden"
@@ -13132,7 +13139,7 @@
   },
   "winks": [
    "Mary, the head cook",
-   "Paul Hunham, the ancient history teacher",
+   "Paul, the ancient history teacher",
    "Angus Tully, left behind at school",
    "Christmas break, 1970",
    "The trip to Boston"
@@ -13666,7 +13673,7 @@
    "Baby food jars for the new officer",
    "ED-209 failing in the boardroom",
    "Clarence Boddicker's gang at the plant",
-   "OCP and its Old Detroit takeover",
+   "OCP and its Delta City plans",
    "The prime directives flashing on screen"
   ],
   "prop": {
@@ -13674,7 +13681,7 @@
    "title": "Metro West Badge",
    "lines": [
     "Officer Murphy",
-    "Old Detroit"
+    "Protect the innocent"
    ]
   },
   "number": ""
@@ -13712,7 +13719,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Deckard ordering at the rainy noodle stand",
+   "Rachael letting her hair down at the piano",
    "The Voight-Kampff test and its twitchy eye",
    "The origami unicorn on the floor",
    "Tyrell's giant pyramid",
@@ -13763,7 +13770,7 @@
   },
   "winks": [
    "The asteroid the size of Texas",
-   "Animal crackers on Grace's stomach",
+   "The Zero Barrier countdown",
    "The Armadillo driving clinic",
    "Rockhound and his mouth",
    "Make your peace with God, AJ"
@@ -13789,7 +13796,7 @@
   "winks": [
    "The Omega 13 nobody understands",
    "The Thermians who think the show is real",
-   "NSEA Protector rebuilt from the TV show",
+   "Gwen repeating everything the computer says",
    "Commander Taggart, the TV captain Jason plays",
    "The rock monster on the planet"
   ],
@@ -13812,7 +13819,7 @@
    "kind": "quote"
   },
   "winks": [
-   "The red pill and the blue pill",
+   "Waking up in the pod, tubes and all",
    "Neo: I know kung fu",
    "Trinity: Dodge this",
    "Plain grey porridge on the ship",
@@ -13837,11 +13844,11 @@
    "kind": "quote"
   },
   "winks": [
-   "Beldar's cover story: we come from France",
-   "Beldar's endless appetite at dinner",
-   "Beldar's driving school in Paramus",
+   "The cover story: we come from France",
+   "Connie wanting to fit in at high school",
+   "The driving school in Paramus",
    "Gorman and Eli posing as Jehovah's Witnesses",
-   "Beldar's rock shot at the Garthok"
+   "The rock shot at the Garthok"
   ],
   "prop": {
    "kind": "card",
@@ -14074,7 +14081,7 @@
    "kind": "quote"
   },
   "winks": [
-   "The Hubble repair mission",
+   "Matt drifting away on the tether",
    "Debris tearing through the shuttle",
    "Fire inside the space station",
    "The Soyuz capsule and its fuel",
@@ -14178,7 +14185,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Cage waking up on the duffel bag again",
+   "The Claymore mine and the Alpha Mimic",
    "Rita's giant sword",
    "On your feet, maggot",
    "The Mimics on the beach",
@@ -14419,7 +14426,7 @@
    "The Feral Kid and his boomerang",
    "The Gyro Captain's autogyro",
    "Max's dog",
-   "The tanker rig as a decoy"
+   "The decoy rig leaking sand"
   ],
   "prop": {
    "kind": "ticket",
@@ -14492,10 +14499,10 @@
    "kind": "note"
   },
   "winks": [
-   "Fly the sheepdog",
+   "Fly the border collie",
    "Rex the old dog",
    "Ferdinand the duck wants to be a rooster",
-   "Baa, ram, ewe, the sheep's password",
+   "Baa, ram, ewe, the flock's password",
    "Hoggett's jig for Babe"
   ],
   "prop": {
@@ -14537,15 +14544,15 @@
   "venue": "Pan Pacific Grand Prix",
   "sign": "PAN PACIFIC GRAND PRIX",
   "note": {
-   "text": "Shall we dance?",
-   "by": "Doug Hastings",
+   "text": "A life lived in fear is a life half lived.",
+   "by": "Fran",
    "kind": "quote"
   },
   "winks": [
    "Scott Hastings and his own steps",
    "Fran, the beginner from the back",
    "Barry Fife runs the federation",
-   "Fran's father Rico and the paso doble",
+   "Doug clapping out the beat to keep them dancing",
    "Fran, calling Scott a gutless wonder"
   ],
   "prop": {
@@ -14621,15 +14628,15 @@
   "reward": "£100"
  },
  "Gallipoli (1981)": {
-  "venue": "Anzac Cove Mess",
-  "sign": "ANZAC COVE, 1915",
+  "venue": "Mena Camp Mess",
+  "sign": "MENA CAMP, EGYPT, 1915",
   "note": {
    "text": "Frank, eat what you can and keep your legs ready. We have a long way to go.",
    "by": "Archy Hamilton",
    "kind": "note"
   },
   "winks": [
-   "Archy and Frank, two sprinters",
+   "The freight train to nowhere",
    "Training camp in Egypt",
    "Marching through the desert sand",
    "The Nek, Archy's last run",
@@ -14640,7 +14647,7 @@
    "title": "Troopship Pass",
    "lines": [
     "Western Australia to Egypt",
-    "Archy Hamilton"
+    "A. Hamilton"
    ]
   },
   "number": "1915",
@@ -14654,7 +14661,8 @@
    "flip": 1
   },
   "currency": "£sd",
-  "priceEra": "1930s-40s"
+  "priceEra": "1930s-40s",
+  "camp": "anzac"
  },
  "The Dish (2000)": {
   "venue": "Parkes Radio Telescope",
@@ -15098,7 +15106,7 @@
   "sign": "THE COORONG, SOUTH AUSTRALIA",
   "note": {
    "text": "The radio will tell you you need this or that and a thousand other things.",
-   "by": "Hide-Away Tom",
+   "by": "Hideaway Tom",
    "kind": "quote"
   },
   "winks": [
@@ -15179,7 +15187,8 @@
    "flip": 1
   },
   "priceEra": "1930s-40s",
-  "currency": "£sd"
+  "currency": "£sd",
+  "camp": "anzac"
  },
  "Beneath Hill 60 (2010)": {
   "venue": "Hill 60 Tunnel Camp",
@@ -15214,13 +15223,14 @@
    "flip": 0
   },
   "currency": "£sd",
-  "priceEra": "1930s-40s"
+  "priceEra": "1930s-40s",
+  "camp": "anzac"
  },
  "Danger Close: The Battle of Long Tan (2019)": {
   "venue": "Nui Dat Mess Tent",
   "sign": "NUI DAT, VIETNAM, 1966",
   "note": {
-   "text": "Delta Company is relieving Bravo at the rubber plantation today. Eat while it's hot.",
+   "text": "D Company is relieving Bravo at the rubber plantation today. Eat while it's hot.",
    "by": "Major Harry Smith",
    "kind": "note"
   },
@@ -15282,7 +15292,7 @@
    "Walter Chang names them graboids",
    "Val and Earl stuck on the rocks",
    "Burt's basement full of guns",
-   "Graboids hunting by sound"
+   "Rhonda's seismographs all over the valley"
   ],
   "prop": {
    "kind": "slip",
@@ -15609,7 +15619,7 @@
    "kind": "quote"
   },
   "winks": [
-   "The tuk tuk chase in Tangier",
+   "Jurgen Voller, the Nazi turned NASA scientist",
    "Indy on a horse in the subway",
    "The ticker tape moon parade",
    "Archimedes' Antikythera dial",
@@ -15642,7 +15652,7 @@
    "Off to Hamunaptra by camel",
    "Ardeth Bay: a creature that never eats",
    "Beni switching sides",
-   "Evy toppling the library shelves",
+   "The plagues of Egypt over Cairo",
    "Scarab beetles under the skin",
    "The Book of the Dead"
   ],
@@ -15830,7 +15840,7 @@
    "The Maelstrom battle",
    "The wedding in the middle of the battle",
    "Jack votes Elizabeth Pirate King",
-   "Singapore and Sao Feng"
+   "Davy Jones and the heart in the chest"
   ],
   "prop": {
    "kind": "tag",
@@ -15854,7 +15864,7 @@
    "kind": "note"
   },
   "winks": [
-   "Lemon juice on the Declaration",
+   "Abigail, the archivist",
    "Ben Franklin glasses",
    "Silence Dogood",
    "The Charlotte frozen in the Arctic",
@@ -15879,8 +15889,8 @@
    "kind": "note"
   },
   "winks": [
-   "The sequined jumpsuit in the jungle",
-   "The jungle hammock",
+   "The sequined jumpsuit on the run",
+   "The ancient clue Loretta has to decipher",
    "Leeches in the lake",
    "Jack Trainer, rescue guy",
    "Beth the loyal publisher"
@@ -16276,10 +16286,10 @@
   },
   "winks": [
    "The Goblet's blue flame spits out a name",
-   "A Hungarian Horntail in the first task",
+   "A Hungarian Horntail chasing Harry over the castle",
    "The Beauxbatons carriage and the Durmstrang ship",
    "Mad-Eye Moody's spinning eye",
-   "The maze in the final task"
+   "The hedge maze and the Cup"
   ],
   "prop": {
    "kind": "badge",
@@ -17463,7 +17473,8 @@
    ],
    "flip": 1,
    "sig": "name"
-  }
+  },
+  "camp": "camp"
  },
  "Freaky Friday (2003)": {
   "venue": "Coleman Family Kitchen",
@@ -17474,7 +17485,7 @@
    "kind": "note"
   },
   "winks": [
-   "The fortune cookie swap",
+   "The talk show tirade about getting older",
    "Pink Slip, Anna's band",
    "Tess and Ryan's wedding plans",
    "Anna crushing on Jake"
@@ -17815,16 +17826,16 @@
   },
   "winks": [
    "The double booked rental",
-   "Keith in the living room",
-   "AJ Gill's basement tapes",
-   "The tunnels below Detroit",
-   "The first basement door"
+   "Andre running up with a warning",
+   "AJ and the VHS tapes",
+   "The tunnel under the house",
+   "The hidden room with the camera"
   ],
   "prop": {
    "kind": "tag",
    "title": "Key Tag 476",
    "lines": [
-    "Barbary Street, Detroit",
+    "Barbary Street, Brightmoor",
     "Do not go down there"
    ]
   },
@@ -18151,7 +18162,7 @@
    "Riding a banshee over Pandora",
    "The floating mountains",
    "Woodsprites drifting down",
-   "Toruk Makto calls to the clans",
+   "Jake's avatar body waking in the lab",
    "Unobtanium mining",
    "Toruk, the last shadow"
   ],
@@ -18596,8 +18607,8 @@
    "kind": "quote"
   },
   "winks": [
-   "Waxing Miyagi's cars",
-   "Catching a fly with chopsticks",
+   "Waxing the cars, circular motions",
+   "Daniel's shower costume at the Halloween dance",
    "Painting the fence, up and down",
    "Strike first, strike hard, no mercy",
    "The crane stance on the beach post"
@@ -18621,7 +18632,7 @@
    "kind": "note"
   },
   "winks": [
-   "The Landlady's hair curlers and cigarette",
+   "Coolie, Tailor and Donut, the hidden masters",
    "The Axe Gang in black suits and hats",
    "Sing's giant swirl lollipop",
    "The Beast, sprung from the asylum",
@@ -18656,7 +18667,7 @@
    "The yellow jumpsuit",
    "The Crazy 88 and their black masks",
    "Gogo Yubari's school uniform and chain",
-   "Hattori Hanzo's sushi bar in Okinawa",
+   "The anime story of O-Ren's childhood",
    "O-Ren Ishii's party of the Tokyo bosses"
   ],
   "prop": {
@@ -18705,7 +18716,7 @@
   },
   "winks": [
    "Charlotte's pink wig at karaoke",
-   "A tense shabu-shabu lunch for two",
+   "Charlotte trying her hand at ikebana",
    "Bob's whisper at the very end",
    "A wedding procession in Kyoto",
    "The hotel bar late at night"
@@ -19464,7 +19475,7 @@
    "title": "Corner Market Receipt",
    "lines": [
     "Increase the Peace",
-    "Welcome home, Doughboy"
+    "Barbecue supplies for the yard"
    ]
   },
   "number": ""
@@ -19839,7 +19850,7 @@
   "winks": [
    "Mayor Vaughn won't close the beaches",
    "Teens out in sailboats on the bay",
-   "Brody's sons, Mike and Sean",
+   "Mike and Sean out on the water",
    "A water skier on a sunny day",
    "The underwater power cable at the end"
   ],
@@ -19862,7 +19873,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Three possible dads on one Greek island",
+   "Sam, Bill and Harry hiding in the goat house",
    "Sophie's secret wedding invitations",
    "Tanya and Rosie arriving to help",
    "Bill and his sailboat",
@@ -19968,7 +19979,7 @@
    "Birthday bash for El Guapo",
    "The Singing Bush by the road",
    "The Invisible Swordsman",
-   "El Guapo and his bandits",
+   "Carmen's telegram to the Amigos",
    "Lucky, Dusty and Ned, the silent movie heroes"
   ],
   "prop": {
@@ -19976,7 +19987,7 @@
    "title": "Three Amigos Show",
    "lines": [
     "Lucky, Dusty and Ned",
-    "Face your El Guapo, one night only"
+    "One night only, live on stage"
    ]
   },
   "number": "3",
@@ -20001,7 +20012,7 @@
    "kind": "ticket",
    "title": "Lucha Libre Night",
    "lines": [
-    "Nacho and Esqueleto",
+    "Nacho versus Ramses",
     "Ringside, bring a snack"
    ]
   },
@@ -20142,11 +20153,11 @@
    "kind": "note"
   },
   "winks": [
-   "Ritchie's guitar in the backyard",
+   "The guitar he sleeps with",
    "The talisman Bob breaks at Christmas",
    "Donna, the girl and the song",
    "Buddy Holly and the Big Bopper on tour",
-   "\"Ricky Zuela\", the name Ritchie dodged"
+   "\"Ricky Zuela\", the name that could have been"
   ],
   "prop": {
    "kind": "ticket",
@@ -20202,7 +20213,7 @@
   "winks": [
    "Paulie's birthday robot",
    "Drago's machines and lab",
-   "Logs and a sled in the Siberian snow",
+   "Logs and a sled in the deep snow",
    "Apollo's entrance to Living in America",
    "Rocky's speech to Moscow: everybody can change"
   ],
@@ -20477,7 +20488,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Miss Torso dancing by her window",
+   "The dancer across the courtyard",
    "Lars Thorwald and his sample case",
    "Jeff's flashbulbs against Thorwald",
    "Lisa's case: preview of coming attractions",
@@ -20504,7 +20515,7 @@
   "winks": [
    "Pizza delivered right into history class",
    "Mr. Hand and his strict rules",
-   "Spicoli's tasty waves",
+   "Brad and his pirate uniform",
    "Damone selling concert tickets",
    "Stacy working at the mall"
   ],
@@ -20603,7 +20614,7 @@
   },
   "winks": [
    "The run down house on Paper Street",
-   "Support group meetings every night",
+   "Remaining Men Together, every night",
    "Marla Singer in the back row",
    "Project Mayhem and its rules"
   ],
@@ -20653,7 +20664,7 @@
   },
   "winks": [
    "A stick-on eyebrow peeled off backstage",
-   "Frozen peas from the supermarket car park",
+   "That bright orange hair dye",
    "Shallow, sung to the whole arena",
    "A ringing in the ears after every show",
    "A packed arena crowd seen from the side of the stage"
@@ -20663,7 +20674,7 @@
    "title": "Bar Tab",
    "lines": [
     "1 gin on the rocks, 1 bag frozen peas",
-    "Paid by the country singer"
+    "Paid by Jackson Maine"
    ]
   },
   "number": "10"
@@ -20713,7 +20724,7 @@
    "title": "Auriga Access Badge",
    "lines": [
     "Medical Research Deck",
-    "Specimen: Clone No. 8"
+    "Specimen: Number 8"
    ]
   },
   "number": "8"
@@ -20729,7 +20740,7 @@
   "winks": [
    "Andy's dad jokes",
    "No sunlight on Jackson's Star, ever",
-   "Rain's dream of the sun on Yvaga",
+   "The dream of Yvaga III",
    "Zero gravity acid blood fight",
    "The hauler Corbelan"
   ],
@@ -20791,7 +20802,7 @@
    "title": "Wembley Stadium",
    "lines": [
     "Saturday 13 July 1985",
-    "Gates open midday"
+    "Live Aid benefit concert"
    ]
   },
   "number": "1985",
@@ -21082,7 +21093,8 @@
   },
   "labels": {
    "b": "Last seen at Crystal Lake"
-  }
+  },
+  "camp": "camp"
  },
  "Friday the 13th Part 2 (1981)": {
   "venue": "The Bar in Town, Crystal Lake",
@@ -21570,7 +21582,7 @@
    "kind": "receipt",
    "title": "Bar Tab",
    "lines": [
-    "R. Balboa, Kensington",
+    "Tab for one, Kensington",
     "Paid in full, eventually"
    ]
   },
@@ -21618,9 +21630,9 @@
   ],
   "prop": {
    "kind": "ticket",
-   "title": "Stab Premiere",
+   "title": "Cinema Ticket",
    "lines": [
-    "Opening night, Windsor, Ohio",
+    "Windsor, Ohio",
     "Free mask with every ticket"
    ]
   },
@@ -21685,7 +21697,7 @@
    "kind": "note"
   },
   "winks": [
-   "The toy fire engine rolling down the hall",
+   "Ed and Lorraine arriving in Enfield",
    "Lorraine calling the demon nun Valak",
    "Ed's painting of the nun",
    "The Crooked Man and his spinning toy",
@@ -21711,7 +21723,7 @@
    "kind": "note"
   },
   "winks": [
-   "The cellar trapdoor that won't stay shut",
+   "The Sumerian dagger and the Book of the Dead",
    "The professor's reel-to-reel tape",
    "Cheryl's card guessing game",
    "The bridge that gets wrecked",
@@ -21728,7 +21740,7 @@
   "number": "5",
   "words": {
    "Recipe box no.": "Cabin box no.",
-   "Serves everyone on the couch.": "Serves five. Stay out of the cellar."
+   "Serves everyone on the couch.": "Serves five friends."
   }
  },
  "The Lost World: Jurassic Park (1997)": {
@@ -21792,7 +21804,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Neo stuck on the platform at Mobil Avenue",
+   "Seraph watching over the Oracle",
    "Neo and Smith, one last fight",
    "The Oracle in her kitchen with Sati",
    "The APU suits defending the Zion dock",
@@ -21894,7 +21906,7 @@
   "note": {
    "text": "Eat and drink, Mr. Bond. My terrace is the finest in Nassau, and my pool is very well stocked.",
    "by": "Emilio Largo",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "Largo's shark pool at Palmyra",
@@ -22471,9 +22483,9 @@
   ],
   "prop": {
    "kind": "receipt",
-   "title": "One pack of Huggies",
+   "title": "Corner Store Receipt",
    "lines": [
-    "Whatever cash you got",
+    "Paid in full, sort of",
     "Make it quick"
    ]
   },
@@ -22736,7 +22748,7 @@
   },
   "winks": [
    "Long is the way, and hard",
-   "Somerset's metronome",
+   "John Doe walking into the station covered in blood",
    "A library card doesn't make him Yoda",
    "Become vengeance, David",
    "What was in the box?"
@@ -23030,7 +23042,7 @@
    "Scary German Guy",
    "The monster test",
    "The amulet at midnight",
-   "Wolf Man can not drive a car"
+   "Frankenstein's monster and little Phoebe"
   ],
   "prop": {
    "kind": "card",
@@ -23640,7 +23652,7 @@
   "venue": "Pratt's Store",
   "sign": "Pratt's Store, Dungatar",
   "note": {
-   "text": "I'm back, you bastard.",
+   "text": "I'm back, you bastards.",
    "by": "Tilly Dunnage",
    "kind": "quote"
   },
@@ -23911,7 +23923,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Clark's hand in the fireplace",
+   "Lois jumping into Niagara Falls",
    "The red sun chamber",
    "Zod's faces on Mount Rushmore",
    "Australia, for Lex Luthor",
@@ -24009,7 +24021,7 @@
   },
   "winks": [
    "These go to 11",
-   "Stonehenge in inches, not feet",
+   "A drummer who spontaneously combusts",
    "Hello Cleveland",
    "Billed under a puppet show",
    "None more black"
@@ -24147,7 +24159,7 @@
    "The Kid's monkey puppet",
    "Slow Groove, the tape from Wendy and Lisa",
    "Three house band slots",
-   "The box of Francis L.'s songs",
+   "The box of Francis L.'s compositions",
    "The Kid on his motorcycle"
   ],
   "prop": {
@@ -24267,8 +24279,8 @@
    "Where Are My Pants? on the telly",
    "The Piece of Resistance stuck to Emmet's back",
    "Good Cop and Bad Cop, one head",
-   "Emmet's double-decker couch",
-   "Benny wants to build a spaceship"
+   "The double-decker couch",
+   "Metalbeard the pirate"
   ],
   "prop": {
    "kind": "ticket",
@@ -24369,7 +24381,12 @@
    ]
   },
   "number": "62",
-  "words": {}
+  "words": {},
+  "priceEra": "1960s",
+  "priceBand": [
+   0.4,
+   1.2
+  ]
  },
  "Citizen Kane (1941)": {
   "venue": "Inquirer Welcome Dinner",
@@ -24620,7 +24637,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Dottie's catch in the splits",
+   "Ira Lowenstein running the league",
    "Evelyn's team song",
    "Stillwell and Miss Cuthburt on the bus",
    "The hard is what makes it great",
@@ -24654,7 +24671,7 @@
    "Phil Knight barefoot in his office",
    "The whole $250,000 basketball budget",
    "A Mercedes 380SL from Adidas",
-   "The 7-Eleven clerk who doubted Jordan",
+   "Rob Strasser and the long basketball meetings",
    "Arthur Ashe and his Head racket"
   ],
   "prop": {
@@ -24679,7 +24696,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Coughlin's Diet of cocktails and dreams",
+   "Bottle work behind the bar",
    "The bet over Bonnie",
    "Uncle Pat's loan",
    "Drinks on the house for the twins",
@@ -24764,7 +24781,7 @@
   "winks": [
    "Boy with Apple, stolen (by us)",
    "Nobody move; everybody's under arrest",
-   "A lobby boy is completely invisible",
+   "Mendl's pale blue pastry boxes",
    "A van full of pastries",
    "Nineteen seasons with Madame D"
   ],
@@ -24773,7 +24790,7 @@
    "title": "Society of the Crossed Keys",
    "lines": [
     "Concierge: Monsieur Gustave",
-    "Lobby boy: Zero Moustafa"
+    "Staff: Zero Moustafa"
    ]
   },
   "number": "19",
@@ -24795,7 +24812,7 @@
   },
   "winks": [
    "365 letters, one a day for a year",
-   "Noah hanging off the Ferris wheel",
+   "The Ferris wheel and the carnival date",
    "Lying down in the middle of the street",
    "Walt Whitman, read aloud",
    "Duke reads from the notebook"
@@ -24879,7 +24896,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Gloria's $14,100 on Jeopardy",
+   "The $14,100 Jeopardy win",
    "The Vista View apartments",
    "The King and the Duck",
    "A hook shot from past half court",

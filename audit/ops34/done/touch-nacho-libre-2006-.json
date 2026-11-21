@@ -1,0 +1,32 @@
+{
+ "id": "Nacho Libre (2006)",
+ "ops": [
+  {
+   "old": "Not an eagle egg. Those eggs were a lie.",
+   "new": "Chicken in rich mole sauce, sesame rice alongside. Not an eagle egg.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Champurrado, warm chocolate atole",
+    "note": "Warm thick chocolate drink with cinnamon. Someone has slashed the moped tyres."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Lucha Libre Night",
+    "lines": [
+     "Nacho versus Ramses",
+     "Ringside, bring a snack"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

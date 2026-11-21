@@ -19,7 +19,9 @@ const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, 
 /* no em dashes anywhere on these pages: spaced dashes read as commas, number ranges as "to" */
 const clean = s => String(s == null ? '' : s)
   .replace(/(\d)\s*[\u2013\u2014]\s*(\d)/g, '$1 to $2')
-  .replace(/\s*\u2014\s*/g, ', ').replace(/\s+\u2013\s+/g, ', ').replace(/\u2013/g, '-');
+  .replace(/\s*\u2014\s*/g, ', ').replace(/\s+\u2013\s+/g, ', ').replace(/\u2013/g, '-')
+  /* review 34: oven heat reads "200°C" as in the app, never "200C" */
+  .replace(/\b(\d{2,3})\s?C\b/g, '$1\u00b0C');
 const esc = s => clean(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const cut = (s, n) => { s = clean(s); if (s.length <= n) return s; const t = s.slice(0, n - 3); return t.slice(0, t.lastIndexOf(' ')).replace(/[,;:.]$/, '') + '...'; };
 const write = (rel, txt) => { const p = path.join(ROOT, rel); fs.mkdirSync(path.dirname(p), { recursive: true }); if (!fs.existsSync(p) || fs.readFileSync(p, 'utf8') !== txt) fs.writeFileSync(p, txt); };
@@ -34,13 +36,14 @@ const COURSE = { s: 'Snacks', m: 'Mains', w: 'Sweets', d: 'Drinks' };
    waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
 const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const line = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', i)); };
   const a = src.indexOf('function dishTimes('), b = src.indexOf('\n/*', a);
-  const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const isWaitStep='), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
+  const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const HEAT_START='), line('const isWaitStep='), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
 const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 48 * 60) { const h = Math.round(m / 30) / 2; return (h % 1 ? h.toFixed(1) : h) + ' hours'; } const d = Math.round(m / 1440); return d + (d === 1 ? ' day' : ' days'); };
 
 const COURSE_CAT = { s: 'Appetizer', m: 'Main course', w: 'Dessert', d: 'Drink' };
 const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
-const ing = i => { const q = frac(i.q), u = i.u || ''; const tight = /^(g|kg|ml|l)$/.test(u); return clean([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' ')); };
+/* review 34: "3 cups", as the app prints it (it read "3 cup shredded cabbage") */
+const ing = i => { const q = frac(i.q), u = (i.u === 'cup' && i.q != null && !/^(1|\d\/\d)$/.test(frac(i.q))) ? 'cups' : (i.u || ''); const tight = /^(g|kg|ml|l)$/.test(u); return clean([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' ')); };
 const cap = t => { t = clean(t); return t.charAt(0).toUpperCase() + t.slice(1); };
 /* width and height of a jpeg, read from its frame header */
 /* previews are shot at 2x (scripts/render-previews.cjs), so pages show them at half their pixel size */
@@ -183,7 +186,7 @@ ${x.poster ? `<img src="${posterUrl(x.poster)}" width="342" height="513" alt="${
 <h1>${esc(shown)} (${f.year}) movie night dinner menu</h1>
 <div class="hi">
 ${lede.length ? `<p class="lead">${lede.join(' ')}</p>` : ''}
-${x.venue ? `<p>The menu comes from <strong>${esc(x.venue)}</strong>, straight out of the film.</p>` : ''}
+${x.venue ? `<p>The menu is set at <strong>${esc(x.venue)}</strong>, in the world of the film.</p>` : ''}
 <a class="btn" href="${open}">Open this menu in Reel Dinner</a>
 <p class="small">Print the menu, get the shopping list and plan the night, free.</p>
 </div>

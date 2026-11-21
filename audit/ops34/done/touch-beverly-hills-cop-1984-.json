@@ -1,0 +1,55 @@
+{
+ "id": "Beverly Hills Cop (1984)",
+ "ops": [
+  {
+   "old": "Cocktail franks in soft buns under a loose beef chilli, Axel's Detroit home turf",
+   "new": "Cocktail franks in soft buns under a loose beef chilli, a long way from Beverly Hills",
+   "done": true
+  },
+  {
+   "old": "The steak sandwich Axel puts on someone else's tab",
+   "new": "The steak sandwich, put on someone else's tab",
+   "done": true
+  },
+  {
+   "old": "White rum, pineapple and coconut cream blended frosty, for Axel blagging into the Beverly Palms",
+   "new": "White rum, pineapple and coconut cream blended frosty, for a guest with a good story",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The banana in the tailpipe of the unmarked car",
+    "Serge at the art gallery, very sure of himself",
+    "Taggart and Rosewood on a very slow tail",
+    "A fast talker getting past the Beverly Palms front desk",
+    "Victor Maitland, the polished villain, and his warehouse"
+   ],
+   "done": true
+  },
+  {
+   "old": "Axel Foley, Detroit",
+   "new": "Suite service, no questions",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Prawn cocktail with spicy cocktail sauce",
+    "note": "Chilled prawns with a spicy tomato and horseradish sauce. Coffee shop favourite.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Vernors ginger ale over ice",
+    "note": "Spicy Vernors ginger soda over ice. Lions jersey optional."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

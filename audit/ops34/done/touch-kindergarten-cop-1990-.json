@@ -1,0 +1,39 @@
+{
+ "id": "Kindergarten Cop (1990)",
+ "ops": [
+  {
+   "old": "Kimble's class cupcakes",
+   "new": "Primary colour class cupcakes",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Celery with peanut butter and raisins",
+    "note": "Celery sticks filled with peanut butter and dotted with raisins. Time to turn this mush into muscles."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Apple juice box",
+    "note": "An apple juice box with a straw. Joyce says kindergarten is like the ocean."
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The class mascot ferret, Junior",
+    "Who is your daddy and what does he do?",
+    "Whistle drill, one toy each",
+    "There is no bathroom",
+    "A snapped pencil for the back row"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,20 @@
+{
+ "id": "Saw (2004)",
+ "ops": [
+  {
+   "old": "Chained up. Pick a snack.",
+   "new": "Locked in. Pick a snack.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Red cream soda over ice",
+    "note": "Strawberry cream soda over plenty of ice. Until six on the clock."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

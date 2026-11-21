@@ -1,0 +1,42 @@
+{
+ "id": "Super Troopers (2001)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Coffee's served! Oh, no! That's Rabbit's.",
+    "by": "Farva",
+    "kind": "quote"
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mac, Thorny, Foster, Rabbit and Farva",
+    "The abandoned Winnebago on the highway",
+    "The Meow game, played at traffic stops",
+    "Captain O'Hagan, shouting from the doorway",
+    "The rival Spurbury police department"
+   ],
+   "done": true
+  },
+  {
+   "old": "A liter o' cola, not a large Farva. Citrus and spice syrup, soda",
+   "new": "Citrus and spice syrup with soda. A liter o' cola, not a large",
+   "done": true
+  },
+  {
+   "old": "Vermont maple lemonade",
+   "new": "Iced maple lemonade",
+   "done": true
+  },
+  {
+   "old": "Chug it, but not like the syrup.",
+   "new": "Fresh lemonade sweetened with maple syrup, over ice.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

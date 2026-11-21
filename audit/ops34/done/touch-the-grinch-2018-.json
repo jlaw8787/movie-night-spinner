@@ -1,0 +1,29 @@
+{
+ "id": "The Grinch (2018)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "Christmas dinner for the whole of Whoville.",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Cindy Lou's Note",
+    "lines": [
+     "Cindy Lou Who",
+     "Please help my mum"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "A short, strong espresso. Max has it brewed before the Grinch wakes.",
+   "new": "Espresso pulled short and strong. Max has it brewed before the Grinch wakes.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

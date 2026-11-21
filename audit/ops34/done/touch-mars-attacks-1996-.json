@@ -1,0 +1,26 @@
+{
+ "id": "Mars Attacks! (1996)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Dice-cut crispy potatoes",
+    "note": "Crisp diced potatoes, salted. People still want to roll them bones.",
+    "meat": false
+   },
+   "done": true
+  },
+  {
+   "old": "The Martians blow up the donut shop. Warm yeast donuts in a lime-green glaze.",
+   "new": "Warm yeast donuts in a lime-green glaze. Richie's dad is ready to lock and load.",
+   "done": true
+  },
+  {
+   "old": "The Martians blow up the donut shop",
+   "new": "Warm yeast donuts in a lime-green glaze. Richie's dad is ready to lock and load.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

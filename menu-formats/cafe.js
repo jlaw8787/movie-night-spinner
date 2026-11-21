@@ -256,7 +256,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const itemHtml=(c,it,i)=>`<div data-citem style="margin:0 0 calc(${gap}px + var(--xg,0px))">
       <div style="display:flex;align-items:baseline;gap:14px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${bodyF};font-weight:${e.bw?"700":"400"};color:${INK};line-height:1.14;${fs(dish,18)};${e.up&&era!=="1930s-40s"?"text-transform:uppercase;letter-spacing:.03em;":""}">${esc(it.n)}</div>
       <div style="font-family:${bodyF};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,18)};white-space:nowrap">${PQ[c.k][i]}</div></div>
-      <div data-cnote style="display:var(--nd,block);font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${mix(INK,BOARD,.12)};line-height:1.28;${fs(desc,12)};margin-top:3px">${esc(it.note)}</div></div>`;
+      <div data-cnote style="display:var(--nd,block);font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${INK};${/Architects|Caveat|Patrick|Kalam|Gochi|Indie/.test(bodyF)?"font-weight:600;":""}line-height:1.28;${fs(desc,12)};margin-top:3px">${esc(it.note)}</div></div>`;
   const colHtml=list=>list.map(c=>`<div data-csec="${C.indexOf(c)}" style="margin:0 0 calc(${gap+6}px + var(--xg,0px))">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
 
   /* loyalty card: paper, stamps are spaced type, never icons */

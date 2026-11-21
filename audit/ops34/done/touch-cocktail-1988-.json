@@ -1,0 +1,57 @@
+{
+ "id": "Cocktail (1988)",
+ "ops": [
+  {
+   "old": "Jerk chicken skewers with lime. Brian tends bar on a Jamaican beach.",
+   "new": "Jerk chicken skewers with lime, passed along the Jamaican beach bar.",
+   "done": true
+  },
+  {
+   "old": "Vodka, peach schnapps and orange shaken hard. Brian, the world's last barman poet.",
+   "new": "Vodka, peach schnapps and orange shaken hard, poured with a flourish.",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Pour the Sex on the Beach when Brian recites his bar poem.",
+   "done": true
+  },
+  {
+   "old": "Fried snapper under pickled vegetables. Doug bets Brian he can't win Bonnie.",
+   "new": "Fried snapper under pickled vegetables, the day's catch.",
+   "done": true
+  },
+  {
+   "old": "Slow-cooked curry goat with rice. Doug turns up married to Kerry.",
+   "new": "Slow-cooked curry goat with rice. Kerry is the surprise.",
+   "done": true
+  },
+  {
+   "old": "Grilled pineapple in cinnamon sugar. Flanagan's Cocktails and Dreams opens.",
+   "new": "Grilled pineapple in cinnamon sugar. Flanagan's finally opens its doors.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bottle work behind the bar",
+    "The bet over Bonnie",
+    "Uncle Pat's loan",
+    "Drinks on the house for the twins",
+    "The aristocrat of the working class"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Red Stripe on ice",
+    "note": "Cold Jamaican lager, straight from the cooler.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

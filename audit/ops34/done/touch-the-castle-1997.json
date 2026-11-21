@@ -1,0 +1,26 @@
+{
+ "id": "The Castle (1997)",
+ "ops": [
+  {
+   "old": "Bonnie Doon cheese and kabana",
+   "new": "Kabana and cheese cubes",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Chilled moselle from the cask",
+    "note": "Cold sweet white wine, poured from the cask, on ice.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when Darryl asks what it's called.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

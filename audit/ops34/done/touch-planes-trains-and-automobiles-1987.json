@@ -1,0 +1,25 @@
+{
+ "id": "Planes, Trains and Automobiles (1987)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Chicago Italian beef sandwich bites",
+    "note": "Roast beef on soft rolls, dipped in gravy. Almost Chicago.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Tallboy of cold lager",
+    "note": "Cold lager, shaken on the motel bed. Open it carefully.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

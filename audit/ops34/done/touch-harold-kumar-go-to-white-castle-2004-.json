@@ -1,0 +1,39 @@
+{
+ "id": "Harold & Kumar Go to White Castle (2004)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Kumar botching his medical school interview",
+    "Neil Patrick Harris as himself",
+    "Harold the banker, Kumar the slacker",
+    "A bag of burgers as the goal",
+    "Freakshow"
+   ],
+   "done": true
+  },
+  {
+   "old": "On the side of Harold's thirty sliders and four large Cherry Cokes",
+   "new": "Crumbed fish fillets with tartare on soft buns, beside Harold's thirty sliders",
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Burger Shack onion rings with ranch",
+    "note": "Crisp battered onion rings with ranch. Wrong place, wrong burgers."
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Large sweet iced tea",
+    "note": "A large sweet iced tea, poured tall over ice. Harold earned it after the raccoon bite."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

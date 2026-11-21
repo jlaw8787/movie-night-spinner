@@ -1,0 +1,34 @@
+{
+ "id": "Gallipoli (1981)",
+ "ops": [
+  {
+   "old": "Frank and Archy's Cairo kofta wraps",
+   "new": "Cairo kofta wraps",
+   "done": true
+  },
+  {
+   "old": "Archy and Frank's billy tea",
+   "new": "Billy tea",
+   "done": true
+  },
+  {
+   "old": "Archy and Frank, two sprinters",
+   "new": "The freight train to nowhere",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Troopship Pass",
+    "lines": [
+     "Western Australia to Egypt",
+     "A. Hamilton"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

@@ -1,0 +1,31 @@
+{
+ "id": "The Man from Snowy River (1982)",
+ "ops": [
+  {
+   "old": "Billy tea, milk and sugar. Clancy leads the muster",
+   "new": "Billy tea with milk and sugar, boiled over the fire at a mountain camp",
+   "done": true
+  },
+  {
+   "old": "Currant pudding, custard. Curly lets the colt loose",
+   "new": "Currant pudding with custard. Curly is studying to be supervisor",
+   "done": true
+  },
+  {
+   "old": "Soft pumpkin scones with butter. Before the brumby chase.",
+   "new": "Soft pumpkin scones with butter, warm on the station table.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Rum and hot milk",
+    "note": "Dark rum stirred into hot milk with sugar and nutmeg, for a cold high country night.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

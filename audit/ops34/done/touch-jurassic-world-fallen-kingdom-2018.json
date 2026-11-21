@@ -1,0 +1,30 @@
+{
+ "id": "Jurassic World: Fallen Kingdom (2018)",
+ "ops": [
+  {
+   "old": "Lockwood auction smoked salmon on rye",
+   "new": "Lockwood smoked salmon on rye",
+   "done": true
+  },
+  {
+   "old": "Cured fish on rye, lemon crème fraîche. Sold at the Lockwood auction",
+   "new": "Cured salmon on rye with lemon crème fraîche, passed round the Lockwood house",
+   "done": true
+  },
+  {
+   "old": "Isla Nublar stampede chilli lime chicken and beans",
+   "new": "Lava run chilli lime chicken and beans",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Earl Grey iced tea",
+    "note": "Bergamot black tea, cooled over ice with lemon. Iris raised Maisie, this tea is for her."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

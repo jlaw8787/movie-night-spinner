@@ -22,7 +22,7 @@ if(!document.getElementById("fmt-pub-fonts")){
   document.head.appendChild(l);
 }
 /* ---------- text safety ---------- */
-const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/(\w)-(?=\w)/g,"$1 ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s==null?"":s).replace(/\s*[‒-―−]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/\s+/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"']$/.test(s)?s:s+"."};
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
@@ -95,7 +95,7 @@ const ERA={
 };
 const TONE={
  gritty:{wear:.85,smudge:.8,tilt:-2,photo:"contrast(1.15) saturate(.86)",kick:"Locals and blow ins",raffle:"Meat tray raffle, Friday",close:"No boots on the bar. Cash preferred."},
- glossy:{wear:.08,smudge:.15,tilt:0,photo:"saturate(1.1) brightness(1.03)",kick:"Fine country dining",raffle:"Members draw, Friday",close:"Bookings taken at the front bar."},
+ glossy:{wear:.08,smudge:.15,tilt:0,photo:"saturate(1.1) brightness(1.03)",kick:"Dining room and front bar",raffle:"Members draw, Friday",close:"Bookings taken at the front bar."},
  warm:{wear:.4,smudge:.45,tilt:-1.4,photo:"sepia(.08) saturate(1.06)",kick:"Come in out of the heat",raffle:"Meat tray raffle, Friday",close:"Kids and dogs welcome on the verandah."},
  eerie:{wear:.55,smudge:.6,tilt:1.6,photo:"saturate(.78) contrast(1.12)",kick:"Last stop for a long way",raffle:"Raffle drawn at dark",close:"Don't go wandering after closing."},
  playful:{wear:.25,smudge:.35,tilt:-3,photo:"saturate(1.2) brightness(1.04)",kick:"Trivia every Wednesday",raffle:"Chook raffle, Friday",close:"Spot prize for the worst joke."},
@@ -236,9 +236,15 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
   var dropCue=!!(NC===1&&cue);
   if(!FS){dropCue=!!cue;if(NC!==1)MH+=footH;
-    for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
+    /* review 34: a long menu goes to two columns before a single dish is dropped (Kingsman, Hot Fuzz and Shaun lost dishes the phone kept) */
+    {cols=2;colW=(IW-GAP)/2;splits=courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]);
+     two:for(const nl of [2,1,0])for(const D of [21,19,17,16,15]){const FSx={D,N:Math.max(13,D-3),S:D+1,G:Math.max(3,Math.round(D/4)),nl};let best=null;
+       for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
+       if(best&&best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break two}}
+     if(!FS){cols=1;colW=IW;splits=[[courses]];colsArr=splits[0]}}
+    if(!FS)for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
       splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
-      for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
+      for(const D of cap===4?[17,16,15,14,13]:[17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
         if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break}}
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
@@ -273,7 +279,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   const nT=fitType(note.text,RW-44,nh-90,E.bcw,21,16,1.36,9);
   const noteHtml=`<div style="position:relative;flex:1;margin-top:${under?0:22}px;width:${RW}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
       <div style="position:absolute;left:50%;top:-8px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.4)"></div>
-      <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
+      <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(C(fl.kick)||T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
       <div style="position:absolute;right:22px;bottom:18px;font:26px/1.5 ${sig};color:${fit(acc,"#f8f2e3","#1d3a6a",4)}">${esc(trunc(note.by,20))}</div></div>`;
   const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?sentence(trunc(winks[0],60))+" ":""}Prices subject to change.${AU?` Licence ${num}.`:GB?" Licensed premises.":""}`;

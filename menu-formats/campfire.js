@@ -236,6 +236,17 @@ const VOICE={
   scrappy:{t:"Chow Line",n:"Taped to the canteen",b:"Badges, maybe"}
 };
 const LABEL={s:"Trail Snacks",m:"Mess Hall Mains",w:"Campfire Treats",d:"Canteen Drinks"};
+/* review 34: camp words ("Chow line", "Mess hall mains", "Session of 1981") belong on a real summer camp only. flavour.camp picks the voice:
+   "camp" (Camp Walden, Crystal Lake: the words above), "army" (a US field camp), "anzac" (Australian army, Gallipoli, Hill 60),
+   anything else is a fire in the wild (Shrek's swamp, Wolf Creek, Arrakis): plain fireside words. flavour.labels still wins. */
+const WILD_LABEL={s:"Snacks by the Fire",m:"From the Fire",w:"Sweet Things",d:"Drinks"};
+const WILD={gritty:{t:"Round the Fire",n:"Scratched on a rock",b:"Learned the hard way"},glossy:{t:"Supper Is Served",n:"Left by the fire",b:"Worth knowing"},
+  warm:{t:"Supper Is Served",n:"Left by the fire",b:"Worth knowing"},eerie:{t:"Supper Before Dark",n:"Found by the cold fire",b:"Stay close for"},
+  playful:{t:"Grub's Up",n:"Left by the fire",b:"Bragging rights"},grand:{t:"The Long Table",n:"Spoken at the fire",b:"Honours"},
+  tender:{t:"Round the Fire",n:"Left by your bedroll",b:"Worth keeping"},tense:{t:"Supper Before Dark",n:"Passed round the fire",b:"Know before dark"},
+  scrappy:{t:"Grub's Up",n:"Scratched on a rock",b:"Bragging rights"}};
+const ARMY_LABEL={s:"Field Rations",m:"Mess Hall Mains",w:"Sweet Issue",d:"Canteen Drinks"},ARMY={t:"Chow Line",n:"Orders from the CO",b:"Earned in the field",call:"Bugle call"};
+const ANZAC_LABEL={s:"Rations",m:"From the Dixie",w:"Comforts Fund",d:"Brew Up"},ANZAC={t:"Mess Tent",n:"Pinned up in the dugout",b:"Mentioned in dispatches",call:"Stand to"};
 const FB={venue:"The Camp Mess Hall",sign:"Lights out at ten",by:"The Camp Director",
   noteText:c=>(c.f&&c.f.T)||"Wash up, line up, and save room for the campfire.",
   winks:["Early riser","Campfire cook","Clean plate"],prop:{kind:"ticket",title:"Mess Ticket",lines:["Admit one camper","Seconds on request"]}};
@@ -277,7 +288,7 @@ function logoPanel(ctx,x,y,maxW,ty,C,P,year){
   return`<div data-lpanel data-dark="${esc(dark)}" data-light="${esc(light)}" style="${dark}">
     ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:${maxW-40}px;max-height:96px;object-fit:contain">`:""}
     <div data-title-fb data-box style="${url?"display:none;":""}width:${maxW-40}px;max-height:110px;overflow:hidden"><div data-fs="${fbSize}" data-min="20" style="font:${ty.dw} ${fbSize}px ${ty.disp};line-height:1.02;color:${C.onDark};${ty.up?"text-transform:uppercase;":""}">${title}</div></div>
-    <div data-pink data-pink-l="${C.ink}" data-pink-d="${C.onDark}" style="margin-top:8px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.22em;text-transform:uppercase;color:${C.onDark}">Session of ${esc(year)}</div>
+    <div data-pink data-pink-l="${C.ink}" data-pink-d="${C.onDark}" style="margin-top:8px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.22em;text-transform:uppercase;color:${C.onDark}">${ctx.flavour&&ctx.flavour.camp==="camp"?"Session of":"Now showing,"} ${esc(year)}</div>
   </div>`;
 }
 function prop(p,ty,C,P,x,y,w,h){
@@ -328,7 +339,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LK=ctx.flavour&&ctx.flavour.look||{};
   const ty=Object.assign({},TYPE[E.g],LK.type),P=Object.assign({},PAPER[E.g],LK.paper);
   const C=inks(ctx.palette,P.bg,"#7a2e1c");
-  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */V=Object.assign({},VOICE[tone],LB),LBL=Object.assign({},LABEL,LB);
+  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */CK=String((ctx.flavour&&ctx.flavour.camp)||""),V=Object.assign({},CK==="camp"?VOICE[tone]:VOICE[tone]&&{b:VOICE[tone].b},CK==="camp"?{}:CK==="army"?ARMY:CK==="anzac"?ANZAC:WILD[tone]||WILD.warm,LB),LBL=Object.assign({},CK==="camp"?LABEL:CK==="army"?ARMY_LABEL:CK==="anzac"?ANZAC_LABEL:WILD_LABEL,LB);
   const ph=heroes(ctx),year=String(ctx.f.year||"");
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo}`;
@@ -394,7 +405,7 @@ ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:47
       extra:`<div style="position:absolute;left:12px;bottom:12px;padding:5px 12px;background:${P.print};color:#2a2219;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase">Tonight's feature, ${esc(year)}</div>`})}
     <div data-box data-menu="418,378" style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply;column-gap:24px">${menuHTML(cs,era,ty,C,tone,LBL)}</div>
     <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
-      <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${esc(LB.call||"Bugle call")}</div>
+      <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${esc(LB.call||V.call||(CK==="camp"?"Bugle call":"When to serve"))}</div>
       <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||"Serve the mains when the campfire is lit.")}</div>
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}

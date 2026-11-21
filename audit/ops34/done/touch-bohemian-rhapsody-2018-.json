@@ -1,0 +1,33 @@
+{
+ "id": "Bohemian Rhapsody (2018)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Wembley Stadium",
+    "lines": [
+     "Saturday 13 July 1985",
+     "Live Aid benefit concert"
+    ]
+   },
+   "done": true
+  },
+  {
+   "old": "A hot July day in front of the biggest crowd on earth",
+   "new": "Lager and lemonade over ice, cold for a hot July day at Wembley",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pimm's cup with cucumber and mint",
+    "note": "Pimm's with cucumber, mint and lemonade. A toast to Mary, just next door.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-21",
+ "misses": []
+}

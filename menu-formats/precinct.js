@@ -202,13 +202,13 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="position:absolute;left:26px;right:26px;top:20px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${ink};padding-bottom:8px">
        <div style="max-width:470px"><div style="font:${E.dw} 54px/.95 ${dd};text-transform:uppercase;color:${ink}">Duty Roster</div>
          <div style="font:700 18px/1.25 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:clip">${x(venue)}</div></div>
-       <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>Coins only</div>
+       <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>Pay the honour jar</div>
      </div>
      ${evid(second,26,128,712,340-RAISE,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
      <div style="position:absolute;left:26px;top:${490-RAISE}px;width:712px;height:${424+RAISE}px;display:flex;justify-content:space-between">
        ${C.length?col(C.slice(0,half))+col(C.slice(half)):`<div style="font:22px/1.4 ${bd};color:${ink}">Breakroom closed. Try the vending machine.</div>`}
      </div>
-     <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Exact change only. ${fam?"Soft drinks only. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>
+     <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Honour jar by the kettle. ${fam?"Soft drinks only. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>
    </div>`;
   return {w:W,h:H,faces:[front,back]};
 };
