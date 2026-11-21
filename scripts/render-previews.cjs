@@ -47,7 +47,7 @@ async function snap(page,id){
   await ready();
   /* behind a sandbox proxy (HTTPS_PROXY set) the TMDB photos need it, as in check-print-text */
   const PX=process.env.HTTPS_PROXY||process.env.https_proxy;
-  const browser=await chromium.launch(PX?{args:['--proxy-server=https='+PX.replace(/^https?:\/\//,'')]}:{});
+  const browser=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER,args:['--no-sandbox']}:{}),...(PX?{args:[...(process.env.MNS_BROWSER?['--no-sandbox']:[]),'--proxy-server=https='+PX.replace(/^https?:\/\//,'')]}:{})});
   let done=0,fail=[];const t0=Date.now(),queue=todo.slice();
   async function worker(){
     const ctx=await browser.newContext({viewport:{width:1400,height:1300},deviceScaleFactor:2,ignoreHTTPSErrors:!!PX});
