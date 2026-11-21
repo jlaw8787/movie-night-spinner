@@ -105,7 +105,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(whiskey|whisky|bourbon)\b|\bscotch\b(?! (eggs?|bonnets?|broth|fillets?|finger|pancakes?|pies?|mist|tape))/gi,"butterscotch"],[/\bmai tais?\b/gi,"lagoon cooler"],[/\bpi[nñ]a coladas?\b/gi,"pineapple colada"],[/\bmargaritas?\b/gi,"lime slushie"],[/\brum\b/gi,"coconut"],[/\b(wine|sangria)s?\b/gi,"grape juice"],[/\b(champagne|prosecco)\b/gi,"sparkling apple"],[/\b(beer|ale|lager|stout)s?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(vodka|gin|tequila|brandy|liqueur|sake|grog)\b/gi,"fizz"],[/\b(spiked|boozy)\b/gi,"fizzy"]];
+[/\b(whiskey|whisky|bourbon)\b|\bscotch\b(?! (eggs?|bonnets?|broth|fillets?|finger|pancakes?|pies?|mist|tape))/gi,"butterscotch"],[/\bmai tais?\b/gi,"lagoon cooler"],[/\bpi[nñ]a coladas?\b/gi,"pineapple colada"],[/\bmargaritas?\b/gi,"lime slushie"],[/\brum\b/gi,"coconut"],[/\b(wine|sangria)s?\b/gi,"grape juice"],[/\b(champagne|prosecco)\b/gi,"sparkling apple"],[/\b(beer|ale|lager|stout)s?\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(vodka|gin|tequila|brandy|liqueur|sake|grog)\b/gi,"fizz"],[/\b(spiked|boozy)\b/gi,"fizzy"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[r,w])=>t.replace(r,w),String(s||""));
@@ -168,7 +168,7 @@ function fitRoot(root){
        the menu takes room from the photo above it, then runs in two columns, so the film's own lines stay */
     if(over(box)&&box.dataset.menu){const [top0,h0]=box.dataset.menu.split(",").map(Number),face=box.parentElement,ph=face&&face.querySelector("[data-flexph]");
       const grow=d=>{box.style.top=(top0-d)+"px";box.style.height=(h0+d)+"px";if(ph)ph.style.height=(+ph.dataset.flexph-d)+"px"};
-      const room=ph?Math.max(0,+ph.dataset.flexph-150):0;
+      const room=ph?Math.max(0,+ph.dataset.flexph-110):0;/* review 32: the photo keeps 110px, not 150, before a note is cut */
       for(let d=20;d<=room&&over(box);d+=20){grow(d);shrinkAll()}
       if(over(box)){box.style.columnCount="2";grow(0);shrinkAll();for(let d=20;d<=room&&over(box);d+=20){grow(d);shrinkAll()}}}
     if(over(box)){const ns=[...box.querySelectorAll("[data-note]")];
@@ -292,7 +292,7 @@ function menuHTML(cs,era,ty,C,tone,LBL){LBL=LBL||LABEL;
   /* audit, 7 Nov: a heading never ends a column on its own ("Mess Hall Mains" sat at the foot of the left column, its dishes in the right):
      it is held with its first dish */
   const item=(k,it,i)=>`<div ${i?`data-drop="${i+1}"`:""} style="break-inside:avoid"><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,it&&it.house?-2:i,era)}</span></div>
-      ${it.note?`<div data-note data-fs="20" data-min="16" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
+      ${it.note?`<div data-note data-fs="20" data-min="13" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
   return["s","m","w","d"].filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 10px">
     <div style="break-inside:avoid"><div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${esc(LBL[k])}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>${item(k,cs[k][0],0)}</div>
     ${cs[k].slice(1).map((it,i)=>item(k,it,i+1)).join("")}
@@ -387,7 +387,7 @@ ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:47
     ${border(tone,C.ink)}
     <div data-box style="position:absolute;left:38px;top:34px;width:430px;height:72px;overflow:hidden;mix-blend-mode:multiply">
       <div data-line data-fs="42" data-min="26" style="font:${ty.dw} 42px ${ty.disp};line-height:1.05;${ty.up?"text-transform:uppercase;":""}white-space:nowrap;overflow:hidden;${mis}">${V.t}</div>
-      <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.venue)}</div>
+      <div data-line data-fs="16" data-min="14" style="margin-top:4px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.venue)}</div>
     </div>
     <div style="position:absolute;right:40px;top:36px;padding:6px 14px;border:3px solid ${C.ink};border-radius:4px;color:${C.ink};font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;text-align:center;transform:rotate(${stampRot}deg);opacity:.88;line-height:1.25">Card no.<br><span style="font:${ty.dw} 28px ${ty.disp};letter-spacing:.04em">${T(F.number)}</span></div>
     ${photo(ph.second,{poster:ph.isPoster,mat:"#2a2016",x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",flex:1,
@@ -399,7 +399,7 @@ ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:47
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}
     <div data-box style="position:absolute;left:38px;top:900px;width:596px;height:40px;overflow:hidden;font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"Every drink is alcohol free. ":""}Poster and stills: TMDB. Form CM ${esc(F.number)}.</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Ask the cook about: "}${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB. Form CM ${esc(F.number)}.</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Ask the cook about: "}${T(w)}.</span>`).join("")}
     </div>
     ${wearLayer(P,tone,seed+20)}
   </div>`;

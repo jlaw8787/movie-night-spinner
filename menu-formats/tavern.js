@@ -124,12 +124,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   </div>`;
 
   /* map plate: the still, compass letters set in type at the edges */
+  /* review 31: storybook money, the compass and "realm" lines only where the film's world is made up or older than money as we know it
+     (flavour.world "storybook", or a flavour.coin of its own). A real-world film (No Way Home's Sanctum, the 1971 Perron farmhouse,
+     Medieval Times in 1996) prices in plain money and drops the compass */
+  const SB=!!(fl&&(fl.world==="storybook"||fl.coin));
   const bb=band(ctx.era||"modern"),bw={P:8,S:6,E:2,M:7}[bb];
   const PX=52,PY=152,ph=684,pw=456,PW=pw+2*bw,PH=ph+2*bw;
   const heroImg=posterSrc
     ?`<img data-pw="${pw}" data-ph="${ph}" src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${pw}px;height:${ph}px;object-fit:contain">`
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
-  const bear=(t,pos)=>`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
+  const bear=(t,pos)=>!SB?"":`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
   /* logo sits in the foot band, never over the poster */
   const logo=logoPanel(ctx,{font:D,typeSize:36,typeInk:"#f4ead2",lightInk:ink,maxW:210,maxH:84,dark:darkPanel,light:"#f3e8cc",
     wrap:`position:absolute;left:44px;top:892px;box-shadow:0 3px 14px rgba(0,0,0,.4);border:1px solid rgba(255,240,200,.35)`});
@@ -142,14 +146,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const plate=`<div data-plate="${PW}"${posterSrc?` data-ph="${PH}" data-py="${PY}"`:""} style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
     ${bear("S","left:50%;bottom:-26px;margin-left:-12px")}${bear("W","left:-30px;top:50%;margin-top:-10px")}${bear("E","right:-30px;top:50%;margin-top:-10px")}
     <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box;padding:${bb==="P"?5:bb==="M"?6:0}px"><div data-pw="${pw}"${posterSrc?` data-ph="${ph}"`:""} style="position:relative;width:${pw}px;height:${ph}px;overflow:hidden;background:#1a120a">${heroImg}</div></div>
-    <div style="position:absolute;left:50%;top:-31px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>
+    ${SB?`<div style="position:absolute;left:50%;top:-31px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>`:""}
     </div>${logo.html}${seal}`;
 
   /* bill of fare: two columns with a rule between, dotted leaders to coin prices */
   const m=ctx.menu||{};
   const secHead=t=>`<div style="break-inside:avoid;text-align:center;white-space:nowrap;margin:0 0 .3em;font-family:${D};font-weight:${E.dw};font-size:max(18px,1.08em);line-height:1.1;color:${acc};${E.up?"text-transform:uppercase;letter-spacing:.1em":""}">${E.up&&t.length>12?esc(t):`${E.orn} ${esc(t)} ${E.orn}`}</div>`;
   function row(it,ci,ii){
-    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin?(b=>b+" "+fl.coin):E.coin,!!it.house);
+    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin?(b=>b+" "+(+b===1?({taels:"tael",denarii:"denarius",Sickles:"Sickle",coins:"coin",crowns:"crown",pennies:"penny"})[fl.coin]||fl.coin.replace(/s$/,""):fl.coin))/* review 32: "1 tael", never "1 taels" */:SB?E.coin:((b,c)=>b+"."+c),!!it.house);
     return `<div style="break-inside:avoid;margin:0 0 .45em"><div style="display:flex;align-items:baseline;gap:.3em"><span style="font:600 max(15px,1em)/1.15 ${B};color:${ink}">${esc(n)}</span><span style="flex:1;min-width:1em;border-bottom:2px dotted ${ink};opacity:.45;transform:translateY(-.2em)"></span><span style="flex:none;font:italic 600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>
       ${it.note?`<div data-note="1" style="font:italic 400 max(14px,.74em)/1.28 ${B};color:${ink};opacity:.9;margin-top:.08em">${esc(sent(it.note))}</div>`:""}</div>`;
   }
@@ -170,7 +174,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* rooms and stabling only for a real inn (the Prancing Pony, the Three Broomsticks), not a workshop, castle kitchen or ball (Rise of the Guardians, A Christmas Carol) */
   const inn=/\b(inn|tavern|alehouse|beds|rooms)\b/i.test(venue+" "+sign);
   /* 15 Nov: flavour.year (per film, optional) prints the story year on the bill in place of the release year (Holy Grail: AD 932) */
-  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">${inn?"Rooms above, stabling round the back. ":""}Coin of the realm only. Bill No. ${esc(num)}${(()=>{const y=String(fl&&fl.year||f.year||"");return y&&y!==num?", "+esc(y):""})()}. Images: TMDB</div>`;
+  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">${inn?(SB?"Rooms above, stabling round the back. ":"Rooms upstairs. "):""}${SB?"Coin of the realm only. ":"Prices subject to change. "}Bill No. ${esc(num)}${(()=>{const y=String(fl&&fl.year||f.year||"");return y&&y!==num?", "+esc(y):""})()}. Images: TMDB</div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:14px;${E.frame};pointer-events:none;opacity:.75"></div>

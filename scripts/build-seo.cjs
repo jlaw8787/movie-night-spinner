@@ -30,6 +30,13 @@ const GENRES = rj('data/film-genres.json');
 /* theme names as the app shows them (the T table near the top of app.js) */
 const THEMES = (() => { const m = rd('app.js').match(/const T=(\{[\s\S]*?\}\});/); return m ? JSON.parse(m[1]) : {}; })();
 const COURSE = { s: 'Snacks', m: 'Mains', w: 'Sweets', d: 'Drinks' };
+/* review 31: the page uses the app's own split of a recipe's time (dishTimes in app.js), so pickling, chilling and resting count as
+   waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
+const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const line = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', i)); };
+  const a = src.indexOf('function dishTimes('), b = src.indexOf('\n/*', a);
+  const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const isWaitStep='), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
+const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 48 * 60) { const h = Math.round(m / 30) / 2; return (h % 1 ? h.toFixed(1) : h) + ' hours'; } const d = Math.round(m / 1440); return d + (d === 1 ? ' day' : ' days'); };
+
 const COURSE_CAT = { s: 'Appetizer', m: 'Main course', w: 'Dessert', d: 'Drink' };
 const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
@@ -49,6 +56,10 @@ const ALL = films.map((f, i) => {
   for (const k of 'SMWK') for (const r of (d[k] || f[k] || [])) notes[String(r[0]).toLowerCase()] = r[1];
   const dishes = ((d.r2 && d.r2.dishes) || []).map(x => ({ ...x, note: notes[String(x.n).toLowerCase()] || '' }));
   if (!dishes.length) for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: [], steps: [] });
+  /* review 32: every dish printed on the menu is on the page. The ones without a full recipe card (the menu cooks five) follow in their
+     course, marked "On the printed menu", with how it is made; they stay out of the Recipe list in the JSON-LD */
+  { const have = new Set(dishes.map(y => String(y.n).toLowerCase()));
+    for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase())) { have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: String(x).split('@')[0] })), steps: [], extra: true }); } }
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
 });
@@ -124,24 +135,41 @@ ${body}
 const posterUrl = (p, w) => p ? 'https://image.tmdb.org/t/p/' + (w || 'w342') + p : '';
 const card = x => `<li><a href="/menu/${x.s}/"><img src="${posterUrl(x.poster, 'w185')}" width="185" height="278" loading="lazy" alt="${esc(x.shown)} poster">${esc(x.shown)} (${x.f.year})</a></li>`;
 
+/* each dish has an anchor so the Recipe entries in the JSON-LD point at their own spot on the page (all-in-one recipe list) */
+const dishId = y => 'dish-' + slug(clean(y.n)).slice(0, 60);
 function filmPage(x) {
   const { f, d, s, shown, id } = x, canon = `${SITE}/menu/${s}/`, open = '/?film=' + encodeURIComponent(id);
   const names = x.dishes.map(y => clean(y.n));
-  const title = `${shown} (${f.year}) movie night dinner menu | Reel Dinner`;
+  const taken = new Map(), used = new Set();
+  for (const y of x.dishes) { const b0 = dishId(y); let k = b0, n = 2; while (used.has(k)) k = b0 + '-' + n++; used.add(k); taken.set(y, k); }
+  const did = y => taken.get(y);
+  /* review 31: Google cuts titles past about 60 characters, so the brand drops first, then "dinner" */
+  const title = [`${shown} (${f.year}) movie night dinner menu | Reel Dinner`, `${shown} (${f.year}) movie night dinner menu`, `${shown} (${f.year}) movie night menu`, `${shown} movie night menu`, `${shown} (${f.year}) menu`].find(t => t.length <= 60) || `${shown} (${f.year}) menu`;
   const listed = names.length > 3 ? names.slice(0, 3).join(', ') + ' and more' : names.join(', ').replace(/, ([^,]*)$/, ' and $1');
-  const desc = cut(`${shown} (${f.year}): a movie night menu${x.venue ? ' from ' + x.venue : ''}. ${listed}. Recipes for 4, a shopping list and a printable menu.`, 160);
+  /* review 30: the description always ends on a whole sentence, never cut mid-word. Longest version that fits in 155 */
+  const two = names.length > 2 ? names.slice(0, 2).join(' and ') + ' and more' : listed;
+  const head = `${shown} (${f.year}): a movie night menu`, from = x.venue ? ' from ' + clean(x.venue) : '';
+  const desc = [
+    `${head}${from}. ${listed}. Recipes for 4, a shopping list and a printable menu.`,
+    `${head}${from}. ${listed}. Recipes for 4 and a printable menu.`,
+    `${head}${from}. ${two}. Recipes for 4 and a printable menu.`,
+    `${head}. ${listed}. Recipes for 4 and a printable menu.`,
+    `${head}. ${two}. Recipes for 4 and a printable menu.`,
+    `${head}${from}. Recipes for 4 and a printable menu.`,
+    `${head}. Recipes for 4, a shopping list and a printable menu.`
+  ].map(clean).find(t => t.length <= 155) || clean(`${head}. Recipes for 4 and a printable menu.`);
   const img = x.preview ? `${SITE}/assets/menu-previews/${s}.jpg` : (x.poster ? posterUrl(x.poster, 'w500') : '');
   const lede = [d.D, d.T].filter(Boolean).map(esc);
   const courses = [...'smwd'].map(c => {
     const ds = x.dishes.filter(y => y.course === c); if (!ds.length) return '';
     return `<h2>${COURSE[c]}</h2>\n` + ds.map(y => {
-      const t = (y.prep_min || 0) + (y.cook_min || 0);
-      const meta = [t ? `Prep ${y.prep_min || 0} min, cook ${y.cook_min || 0} min` : '', y.make_ahead ? 'Make ahead: ' + esc(y.make_ahead) : ''].filter(Boolean).join(' · ');
+      const T = (y.prep_min || y.cook_min) ? dishTimes(y, 1) : null;
+      const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(y.make_ahead) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(st.text)}</li>`).join('') || (y.how ? `<li>${esc(y.how)}</li>` : '');
-      return `<article class="dish"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}</h3>
+      return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.extra ? '<span class="tag">On the printed menu</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
-${ingr || steps ? `<details><summary>Recipe for 4</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
+${ingr || steps ? `<details><summary>${y.extra ? 'How it is made' : 'Recipe for 4'}</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
     }).join('\n');
   }).join('\n');
   /* the crumb and the More block go by the film's main genre (always true to the film), not the wheel theme,
@@ -172,8 +200,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
     image: img ? [img] : undefined, author: { '@type': 'Organization', name: 'Reel Dinner', url: SITE + '/' },
     recipeCategory: COURSE_CAT[y.course] || 'Main course', recipeYield: '4 servings',
     keywords: clean(`${shown}, movie night, ${f.year}, film menu`),
-    prepTime: y.prep_min != null ? iso(y.prep_min) : undefined, cookTime: y.cook_min != null ? iso(y.cook_min) : undefined,
-    totalTime: y.prep_min != null ? iso((y.prep_min || 0) + (y.cook_min || 0)) : undefined,
+    ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null)),
     suitableForDiet: y.veg ? 'https://schema.org/VegetarianDiet' : undefined,
     recipeIngredient: (y.ingredients || []).map(ing),
     recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(st.text) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(y.how) }] : undefined)
@@ -185,8 +212,8 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
         { '@type': 'ListItem', position: 1, name: 'Film menus', item: SITE + '/menu/' },
         { '@type': 'ListItem', position: 2, name: crumbName, item: SITE + crumbHref },
         { '@type': 'ListItem', position: 3, name: shown + ' (' + f.year + ')', item: canon }] } },
-    { '@type': 'ItemList', name: `${shown} (${f.year}) movie night menu`, numberOfItems: x.dishes.length,
-      itemListElement: x.dishes.map((y, n) => ({ '@type': 'ListItem', position: n + 1, item: recipe(y) })) }] };
+    { '@type': 'ItemList', name: `${shown} (${f.year}) movie night menu`, numberOfItems: x.dishes.filter(y => !y.extra).length,
+      itemListElement: x.dishes.filter(y => !y.extra).map((y, n) => ({ '@type': 'ListItem', position: n + 1, url: canon + '#' + did(y), item: { ...recipe(y), '@id': canon + '#' + did(y), url: canon + '#' + did(y) } })) }] };
   return page({ title, desc, canon, body, image: img, ld, ogType: 'article' });
 }
 
@@ -230,6 +257,11 @@ for (const g of genres) {
 ${Object.entries(groups).map(([k, xs]) => `<p class="letter" id="l-${k === '#' ? 'num' : k}">${k}</p>\n<ul class="cols">${xs.map(x => `<li><a href="/menu/${x.s}/">${esc(x.shown)} (${x.f.year})</a></li>`).join('')}</ul>`).join('\n')}`;
   write('menu/index.html', page({ title: `Movie night dinner menus for ${ALL.length.toLocaleString('en-AU')} films | Reel Dinner`, desc: `Themed dinner menus for ${ALL.length.toLocaleString('en-AU')} films, from The Godfather to The Big Lebowski. Recipes for 4, shopping lists and printable menus.`, canon: SITE + '/menu/', body }));
 }
+/* review 33: a film swapped out of the lineup keeps its old address as a redirect to the film that took its place (data/film-redirects.json),
+   so Google and old links land on a live page (Kicking & Screaming to Hall Pass) */
+{let RD={};try{RD=JSON.parse(fs.readFileSync(path.join(ROOT,'data/film-redirects.json'),'utf8'))}catch(e){}
+ for(const [from,to] of Object.entries(RD)){keep.add(from);const url=`https://reeldinner.com/menu/${to}/`;
+  write(`menu/${from}/index.html`,`<!DOCTYPE html>\n<html lang="en-AU"><head><meta charset="utf-8"><title>Moved | Reel Dinner</title><meta name="robots" content="noindex"><link rel="canonical" href="${url}"><meta http-equiv="refresh" content="0; url=/menu/${to}/"></head><body><p>This menu has moved: <a href="/menu/${to}/">/menu/${to}/</a></p></body></html>\n`)}}
 /* tidy pages for films, themes or genres that have gone */
 const menuDir = path.join(ROOT, 'menu');
 for (const n of fs.readdirSync(menuDir)) {

@@ -196,7 +196,7 @@ const swipeAll = async (page, keepFirst) => {
   await pa.click('[data-tab="card"]'); await pa.waitForSelector('.acct-stamp.on');
   await sleep(500);
   const ct = await pa.textContent('dialog.acct #acctBody');
-  ok(/Silver member/.test(ct) && /Your stats/.test(ct) && /Match rate/.test(ct), 'My card shows tier and stats');
+  ok(/Silver member|Matinee member/.test(ct) && /Your stats/.test(ct) && /Match rate/.test(ct), 'My card shows tier and stats');
   ok(/First match/.test(await pa.textContent('.acct-stamp.on')) || (await pa.$$eval('.acct-stamp.on b', e => e.map(x => x.textContent))).includes('First match'), 'First match stamp earned');
   await pa.screenshot({ path: '/tmp/f-card-1.png' });
   await pa.evaluate(() => document.querySelector('dialog.acct').scrollTo(0, 99999)); await sleep(200);

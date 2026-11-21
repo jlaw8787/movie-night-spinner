@@ -64,6 +64,7 @@ if(!window.__fmtFitTearoom)window.__fmtFitTearoom=function(t){
 const PIX="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
 /* per film: coin "lsd" prints pre-decimal shillings and pence, "3/6" (Ladies in Black, Sydney 1959; decimal came in 1966) */
+const LSD1800=(b,c)=>{const d=Math.max(2,Math.round((b-1+(+c)/100)*12/8));return d<12?d+"d":Math.floor(d/12)+"/"+(d%12?d%12:"-")};
 const LSD=(b,c)=>{const sh=b-1,d=Math.round(+c/100*12)%12;return sh<1?d+"d":sh+"/"+(d?d:"-")};
 /* ---------- era and tone ---------- */
 const ERA={
@@ -122,13 +123,20 @@ window.MENU_FORMATS[ID]=ctx=>{
     :`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`):`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`;
   const fitImg=()=>`<img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" onload="window.__fmtFitTearoom&&window.__fmtFitTearoom(this)">`;
 
+  /* review 33: the tea room's stock words suit a store or a tea room. A home, a cave, a pub or a party gets its own line and hours
+     (Tangled's Snuggly Duckling was "The Tea Room, top floor, children's tea served with a wink"; Up's house had morning tea from 10) */
+  const VS=venue+" "+sign,PLACE=/duckling|tavern|\bpub\b|\binn\b|reading room/i.test(VS)?{k:"other",sub:"Come in, sit down, tea's on",hrs:"Open till the last pot's poured.",kick:"Leave your troubles at the door."}
+    :/\bparty\b|shower/i.test(VS)?{k:"party",sub:"Tea party, all welcome",hrs:"Tea served all afternoon.",kick:null}
+    :/house|home|kitchen|cottage|flat|apartment|windsor gardens|street|nursery|\bcave\b|garden|castle/i.test(VS)?{k:"home",sub:"Tea at home, in the front room",hrs:"Tea's on when the kettle boils.",kick:"Wipe your feet on the way in."}
+    :{k:"store",sub:"The Tea Room, top floor",hrs:"Luncheon 11.30 till 2.30. Afternoon tea from 3.",kick:null};
+  const KICK=PLACE.kick&&/trolley|top floor|children's tea|basement|gloves/i.test(T.kick)?PLACE.kick:T.kick;
   /* ---------- front: store band, window display, logo, gift tag, note ---------- */
   const bandH=132;
   const vs=venue.length<=14?52:venue.length<=22?44:36;
   const bandHtml=`<div style="position:absolute;left:0;right:0;top:0;height:${bandH}px;background:${bandC};color:${paper};text-align:center;border-bottom:4px solid ${E.gilt}">
     <div style="margin-top:22px;font:600 15px/1.2 ${B};letter-spacing:.24em;text-transform:uppercase;opacity:.92;white-space:nowrap;overflow:hidden;padding:0 30px">${esc(sign)}</div>
     <div data-fitw="${vs}" data-min="24" style="margin:8px 30px 0;font-family:${D};font-weight:${E.dw};font-size:${vs}px;line-height:1.08;white-space:nowrap;overflow:hidden;${up}">${esc(venue)}</div>
-    <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">${/house|home|kitchen|cottage|flat|apartment|windsor gardens|street/i.test(venue+" "+sign)?"Tea at home, in the front room":"The Tea Room, top floor"}</div></div>`;
+    <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">${esc(PLACE.sub)}</div></div>`;
   const WX=24,WY=bandH+52,WW=672-2*WX,WH=470;
   const winLabel=`<div data-fitw="24" data-min="16" style="position:absolute;left:${WX}px;width:${WW-200}px;top:${bandH+14}px;text-align:center;white-space:nowrap;overflow:hidden;font-family:${D};font-weight:${E.dw};font-size:24px;line-height:1.1;color:${acc};${up}">${xmas?"Our Christmas windows":"In the windows this season"}</div>`;
   const PW=420,PH=630,BW=({P:10,S:12,E:4,M:1})[band(ctx.era||"modern")],RX=24+PW+2*BW+26,RW=672-24-RX;
@@ -155,8 +163,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font-family:${B};font-style:italic;font-size:max(16px,1em);line-height:1.35;color:${ink};margin-top:.3em">"${esc(note||"Do come up for tea. Coats on the stand, parcels under the table, and the cake trolley comes round twice.")}"</div>
     <div style="font:400 max(30px,1.7em)/1.1 'Great Vibes',cursive;color:${ink};margin-top:.15em">${esc(by)}</div></div>`;
   const frontFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;color:${ink}">
-    <div style="border-top:1px solid ${E.gilt};padding-top:8px;font:400 16px/1.3 ${B};white-space:nowrap;overflow:hidden">Luncheon 11.30 till 2.30. Afternoon tea from 3.</div>
-    <div data-fitw="15" data-min="14" style="font:italic 400 15px/1.3 ${B};opacity:.85;white-space:nowrap;overflow:hidden">${esc(T.kick)}</div></div>`;
+    <div style="border-top:1px solid ${E.gilt};padding-top:8px;font:400 16px/1.3 ${B};white-space:nowrap;overflow:hidden">${esc(PLACE.hrs)}</div>
+    <div data-fitw="15" data-min="14" style="font:italic 400 15px/1.3 ${B};opacity:.85;white-space:nowrap;overflow:hidden">${esc(KICK)}</div></div>`;
   const front=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:8px;${E.frame};pointer-events:none"></div>
     ${bandHtml}${posterSrc?"":winLabel}${win}${tag}${noteHtml}${frontFoot}${fitImg()}</div>`;
@@ -168,9 +176,10 @@ window.MENU_FORMATS[ID]=ctx=>{
    const mv=(m.s||[]).filter(it=>CAKE.test(it.n)&&!SAV.test(it.n));if(mv.length&&(m.s||[]).length>mv.length){m.s=m.s.filter(it=>!mv.includes(it));m.w=[...(m.w||[]),...mv]}}
   const secHead=t=>`<div style="break-inside:avoid;break-after:avoid;margin:0 0 .3em;text-align:center"><span style="font-family:${D};font-weight:${E.dw};font-size:max(18px,1.06em);line-height:1.1;color:${acc};${up}">${esc(t)}</span><div style="margin:.2em auto 0;width:3em;border-top:2px solid ${E.gilt}"></div></div>`;
   function row(it,ci,ii){
-    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?LSD:E.coin);
+    /* review 32: a Victorian tea room (priceEra 1800s, The Prestige) charges pence, not 1950s shillings: about an eighth of the card */
+    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?(fl.priceEra==="1800s"?LSD1800:LSD):E.coin);
     return `<div style="break-inside:avoid;margin:0 0 .5em"><div style="display:flex;gap:.6em;align-items:baseline"><span style="flex:1;font-family:${D};font-weight:${E.dw};font-size:max(15px,1em);line-height:1.15;color:${ink}">${esc(n)}</span><span style="flex:none;font:600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>
-      ${it.note?`<div data-note="1" style="font:italic 400 max(14px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
+      ${it.note?`<div data-note="1" style="font:italic 400 max(12px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
   }
   let flow="";
   ["s","m","w","d"].forEach((k,ci)=>{const items=(m[k]||[]).slice(0,4);if(!items.length)return;
@@ -178,7 +187,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;text-align:center;font-size:max(15px,.74em);line-height:1.35;color:${ink};margin:.1em 0 .4em"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">The bell for the picture </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.62em);line-height:1.35;color:${ink};opacity:.9"><span style="font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:${acc}">Overheard at the next table </span>${winks.map(esc).join(". ")}.</div>`;
-  const SH=nItems>10?300:nItems>7?320:340, SY=1056-58-SH;
+  /* review 32: the still gives the menu more height on a long card, so each note prints whole */
+  const SH=nItems>10?240:nItems>7?270:nItems>5?310:340, SY=1056-58-SH;
   const two=nItems>8;
   const bHead=`<div style="position:absolute;left:36px;right:36px;top:34px;text-align:center">
     <div style="font:600 15px/1.2 ${B};letter-spacing:.22em;text-transform:uppercase;color:${acc};white-space:nowrap;overflow:hidden">${esc(venue)}</div>

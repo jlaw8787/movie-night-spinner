@@ -25,7 +25,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\bred wine\b|\bwhite wine\b|\bmulled wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b|\bbubbly\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bale\b/gi,"cider punch"],[/\bcocktails?\b/gi,"mocktail"],[/\bpunch\b(?! bowl)/gi,"fruit punch"],[/\b(rum|vodka|gin|whisky|whiskey|bourbon|tequila|brandy|sherry|liqueur|mead|sake|schnapps|cognac)\b/gi,"syrup"]];
+[/\bred wine\b|\bwhite wine\b|\bmulled wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b|\bbubbly\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bale\b/gi,"cider punch"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\bpunch\b(?! bowl)/gi,"fruit punch"],[/\b(rum|vodka|gin|whisky|whiskey|bourbon|tequila|brandy|sherry|liqueur|mead|sake|schnapps|cognac)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -50,6 +50,8 @@ if(!window.__fmtFit){
     el.querySelectorAll("[data-drop]").forEach(x=>x.style.display="");for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}
     /* review 18: past the box's own floor, down to the site floor of 14px before anything is cut (The Santa Clause 2 lost its last drink note) */
     for(let n=0;n<60&&over()&&fs>14;n++){fs=Math.max(14,fs*.97);el.style.fontSize=fs+"px"}
+    /* review 32 (Josh: room for full notes): a board box that still runs over goes to 13px before a description is dropped */
+    if(el.querySelector("[data-drop]"))for(let n=0;n<20&&over()&&fs>13;n++){fs=Math.max(13,fs*.97);el.style.fontSize=fs+"px"}
     /* last resort: drop descriptions from the bottom up, never a dish or price */
     const dr=[...el.querySelectorAll("[data-drop]")];while(over()&&dr.length)dr.pop().style.display="none"});
   const run=()=>{try{window.__fmtFit()}catch(e){}};
@@ -163,7 +165,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="display:flex;justify-content:space-between;gap:.6em;align-items:baseline">
           <span style="font:${E.it} ${E.dw} 1em/1.1 ${E.disp};text-transform:${up};letter-spacing:${trk};color:${boardInk};${heavy?clamp(1):""}">${esc(txt(it.n))}</span>
           <span style="flex:none;font:${E.it} ${E.dw} 1em/1.1 ${E.disp};color:${priceInk}${E.board==="neon"?`;text-shadow:0 0 ${6*T.glow}px ${LIT}`:""}">${price(k,ii)}</span></div>
-        ${it.note&&!(nIt>12&&ii>0)?`<div data-drop style="font:500 .74em/1.25 ${E.body};font-size:max(15px,.74em);color:${noteInk};margin-top:.08em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div>`).join("")}
+        ${it.note&&!(nIt>12&&ii>0)?`<div data-drop style="font:500 .74em/1.25 ${E.body};font-size:max(12px,.74em);color:${noteInk};margin-top:.08em;${heavy?clamp(3):""}">${esc(sent(txt(it.note)))}</div>`:""}</div>`).join("")}
      </div></div>`).join("");
 
   /* ---------- the wall and the lightbox ---------- */
@@ -224,7 +226,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="15" style="font-size:17px;height:22px;overflow:hidden;white-space:nowrap"><div style="font:500 1em/1.2 ${E.body};color:${E.board==="acrylic"?noteInk:"#d8d8de"}">${esc(sign)}</div></div></div>
    <div data-fit data-min="14" style="position:absolute;left:850px;top:156px;width:472px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
    <div style="position:absolute;left:850px;top:${heavy?722:684}px;width:472px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
-     <span style="font:${E.it} ${E.dw} 22px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
+     <span style="font:${E.it} ${E.dw} 22px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one from each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT};white-space:nowrap;flex:none">${combo}</span></div>
    ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:850px;top:736px;width:472px;height:72px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
      <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.map((c,i)=>i?`<span data-drop>${c}. </span>`:`${c}. `).join("")}Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
 
@@ -244,7 +246,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="15" style="font-size:17px;height:22px;overflow:hidden;white-space:nowrap"><div style="font:500 1em/1.2 ${E.body};color:${E.board==="acrylic"?noteInk:"#d8d8de"}">${esc(sign)}</div></div></div>
    <div data-fit data-min="14" style="position:absolute;left:${RX}px;top:156px;width:${RW}px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
    <div style="position:absolute;left:${RX}px;top:${heavy?722:684}px;width:${RW}px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
-     <span style="font:${E.it} ${E.dw} 20px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
+     <span style="font:${E.it} ${E.dw} 20px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one from each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT};white-space:nowrap;flex:none">${combo}</span></div>
    ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:${RX}px;top:736px;width:${RW}px;height:72px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
      <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.map((c,i)=>i?`<span data-drop>${c}. </span>`:`${c}. `).join("")}Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
   const face=heroIsPoster?`${wallTex}${posterFront}${col}${right}`:faceOld;

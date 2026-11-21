@@ -64,7 +64,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(whiskey|whisky|bourbon)\b|\bscotch\b(?! (eggs?|bonnets?|broth|fillets?|finger|pancakes?|pies?|mist|tape))/gi,"butterscotch"],[/\bmai tais?\b/gi,"lagoon cooler"],[/\bpi[nñ]a coladas?\b/gi,"pineapple colada"],[/\bmargaritas?\b/gi,"lime slushie"],[/\brum\b/gi,"coconut"],[/\b(wine|sangria)s?\b/gi,"grape juice"],[/\b(champagne|prosecco)\b/gi,"sparkling apple"],[/\b(beer|ale|lager|stout)s?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(vodka|gin|tequila|brandy|liqueur|sake|grog)\b/gi,"fizz"],[/\b(spiked|boozy)\b/gi,"fizzy"]];
+[/\b(whiskey|whisky|bourbon)\b|\bscotch\b(?! (eggs?|bonnets?|broth|fillets?|finger|pancakes?|pies?|mist|tape))/gi,"butterscotch"],[/\bmai tais?\b/gi,"lagoon cooler"],[/\bpi[nñ]a coladas?\b/gi,"pineapple colada"],[/\bmargaritas?\b/gi,"lime slushie"],[/\brum\b/gi,"coconut"],[/\b(wine|sangria)s?\b/gi,"grape juice"],[/\b(champagne|prosecco)\b/gi,"sparkling apple"],[/\b(beer|ale|lager|stout)s?\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(vodka|gin|tequila|brandy|liqueur|sake|grog)\b/gi,"fizz"],[/\b(spiked|boozy)\b/gi,"fizzy"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[r,w])=>t.replace(r,w),String(s||""));
@@ -123,7 +123,7 @@ function fitRoot(root){
   cut(0);
   root.querySelectorAll("[data-box]").forEach(fitBox);
   if(map&&mn&&mb){const lost=()=>[...mb.querySelectorAll("[data-note]")].some(n=>n.style.display==="none"||(n.dataset.full&&n.textContent!==n.dataset.full))||[...mb.querySelectorAll("[data-drop]")].some(n=>n.style.display==="none");
-    for(let c=16;lost()&&c<=150;c+=16){cut(c);mb.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});if(window.__fmtTrimReset)window.__fmtTrimReset(mb);
+    for(let c=16;lost()&&c<=200;c+=16){cut(c);mb.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});if(window.__fmtTrimReset)window.__fmtTrimReset(mb);
       mb.querySelectorAll("[data-note],[data-drop]").forEach(n=>{n.style.display=""});fitBox(mb)}}
 }
 function fitBox(box){{
@@ -222,8 +222,8 @@ function img(url,o){
 }
 function items(list,k,era,ty,C,big){
   const ds=big?30:26,ns=big?21:20;
-  return list.map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:12px;align-items:baseline;margin-top:${big?8:5}px"><span data-fs="${ds}" data-min="19" style="flex:1;font:${ty.dishW} ${ds}px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="${ds}" data-min="19" style="font:${ty.dishW} ${ds}px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
-    ${it.note?`<div data-note data-fs="${ns}" data-min="16" style="font:italic ${ty.bw} ${ns}px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("");
+  return list.map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:12px;align-items:baseline;margin-top:${big?8:5}px"><span data-fs="${ds}" data-min="16" style="flex:1;font:${ty.dishW} ${ds}px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="${ds}" data-min="19" style="font:${ty.dishW} ${ds}px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
+    ${it.note?`<div data-note data-fs="${ns}" data-min="13" style="font:italic ${ty.bw} ${ns}px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("");
 }
 
 window.MENU_FORMATS[ID]=ctx=>{
@@ -271,7 +271,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.note}</div>
       <div data-fs="20" data-min="15" style="font:italic ${ty.bw} 20px ${ty.body};line-height:1.24;margin-top:3px">“${T(F.note.text)}” <span data-fs="${ty.sigS}" data-min="18" style="font:${ty.sigS}px ${ty.sig};color:${C.ink};font-style:normal;white-space:nowrap;margin-left:6px">${T(F.note.by)}</span></div>
     </div>
-    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:${Y.ft}px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Every cooler is alcohol free. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
+    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:${Y.ft}px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Soft drinks only. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
     ${wearLayer(P,tone,seed,true)}
   </div>`;
   /* back: island map of stills on the lagoon, then the kitchen */

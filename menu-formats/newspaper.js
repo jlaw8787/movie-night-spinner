@@ -184,6 +184,8 @@ const TONES={
 };
 
 root.MENU_FORMATS.newspaper=ctx=>{
+  /* review 32: the cover price is in the film's own money (Oliver!'s London paper said "TWO CENTS") */
+  const coverPrice=us=>{const cu=ctx.flavour&&ctx.flavour.currency;return cu==="£sd"?"ONE PENNY":cu==="£"?"40P":cu==="G"?"FIVE KNUTS":cu==="€"?"€1":cu==="coin"?"ONE "+String(ctx.flavour.coin||"coins").toUpperCase().replace(/IES$/,"Y").replace(/S$/,""):us};
   const f=ctx.f||{},fl=ctx.flavour||null,logo=ctx.logo||null,pal=ctx.palette||{};
   const E=ERAS[ctx.era]||ERAS.modern,T=TONES[ctx.tone]||TONES.warm,K=E.kind;
   /* era type pairing */
@@ -243,14 +245,14 @@ root.MENU_FORMATS.newspaper=ctx=>{
         <div style="flex:1;min-width:0;text-align:center;font-family:${FM};font-size:${Math.max(28,Math.min(64,Math.floor(470/(venue.length*.53))))}px;line-height:1;color:${C.head};white-space:nowrap;overflow:hidden">${esc(venue)}</div>
         ${ear("WEATHER","Clear skies.","Look up.")}</div>
       <div style="border-top:1px solid ${C.ink};border-bottom:3px double ${C.ink};margin-top:8px;height:30px;display:flex;justify-content:space-between;align-items:center;font-family:${FB};font-size:14px;font-weight:700;letter-spacing:.12em;white-space:nowrap;overflow:hidden">
-        <span>VOL. ${esc(year.slice(-2))}, No. ${esc(num)}</span><span style="color:${C.red}">${esc(signTxt)}</span><span>TWO CENTS</span></div>`;
+        <span>VOL. ${esc(year.slice(-2))}, No. ${esc(num)}</span><span style="color:${C.red}">${esc(signTxt)}</span><span>${esc(coverPrice("TWO CENTS"))}</span></div>`;
   }else if(K==="tabloid"){
     const block=inkFor(pal.accent,1)&&ratio(hex(inkFor(pal.accent,1)),[255,255,255])>=4.5?inkFor(pal.accent,1):"#c8161d";
     mast=`<div style="background:${block};height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;gap:12px;overflow:hidden">
         <div style="min-width:0;font-family:'Oswald',Impact,sans-serif;font-weight:700;font-size:${Math.max(30,Math.min(70,Math.floor(560/(venue.length*.56))))}px;line-height:1;color:#fff;text-transform:uppercase;letter-spacing:-.005em;white-space:nowrap;overflow:hidden">${esc(venue)}</div>
         <div style="flex:none;background:#fff;color:${block};font-family:'Oswald',Impact,sans-serif;font-weight:700;font-size:20px;line-height:24px;padding:6px 10px;text-align:center;transform:rotate(-3deg)">${/EDITION/.test(T.ed)?`${esc(T.ed.replace(" EDITION",""))}<br>EDITION`:`${esc(T.ed)}<br>LATE NEWS`}</div></div>
       <div style="background:#ffd23a;height:30px;margin-top:6px;display:flex;justify-content:space-between;align-items:center;padding:0 12px;font-family:'Oswald',sans-serif;font-weight:500;font-size:17px;letter-spacing:.06em;color:#141210;white-space:nowrap;overflow:hidden">
-        <span>No. ${esc(num)}</span><span>${esc(signTxt)}</span><span>${year<"1975"?"15 CENTS":"35 CENTS"}</span></div>`;
+        <span>No. ${esc(num)}</span><span>${esc(signTxt)}</span><span>${esc(coverPrice(year<"1975"?"15 CENTS":"35 CENTS"))}</span></div>`;
   }else{
     mast=`<div style="display:flex;align-items:flex-end;justify-content:space-between;height:86px;gap:14px">
         <div style="min-width:0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:${Math.max(30,Math.min(62,Math.floor(560/(venue.length*.6))))}px;line-height:1;letter-spacing:-.03em;color:${C.head};white-space:nowrap;overflow:hidden">${esc(venue)}</div>
@@ -291,7 +293,7 @@ root.MENU_FORMATS.newspaper=ctx=>{
   const slip=`<div style="position:relative;align-self:center;transform:rotate(${pr.kind==="card"?-T.rot:T.rot}deg);width:${SLW}px;flex:none;background:${K==="modern"?"#ffffff":"#fbf7ec"};${edge};border-radius:${K==="modern"?6:0}px;box-shadow:0 4px 10px rgba(30,22,10,.35);padding:8px 12px 9px;box-sizing:border-box;text-align:center;font-family:${FB};color:${C.ink}">
     <div style="border-top:2px solid ${C.red};border-bottom:2px solid ${C.red};padding:3px 0;font-family:${FD};font-weight:${HW};font-size:${tz}px;line-height:${tz+5}px;color:${C.red};white-space:normal;overflow:hidden">${esc(ptitle)}</div>
     <div style="font-size:15px;line-height:19px;margin-top:5px">${plines.map(esc).join("<br>")}</div>
-    <div style="font-family:${FD};font-weight:${HW};font-size:21px;line-height:28px;margin-top:3px">${fl&&fl.number?`No. ${esc(fl.number)}`:"5 CENTS"}</div></div>`;
+    <div style="font-family:${FD};font-weight:${HW};font-size:21px;line-height:28px;margin-top:3px">${fl&&fl.number?`No. ${esc(fl.number)}`:esc(coverPrice("5 CENTS"))}</div></div>`;
 
   /* height budget for the right column; if it runs over, drop the deck, then trim the note */
   const edH=22+22,logoH=LG?LG.h+22:B.lines.length*Math.ceil(B.size*1.08);

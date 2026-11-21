@@ -20,7 +20,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\bred wine\b|\bwhite wine\b|\bmulled wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b|\bbubbly\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bale\b/gi,"cider punch"],[/\bcocktails?\b/gi,"mocktail"],[/\bpunch\b(?! bowl)/gi,"fruit punch"],[/\b(rum|vodka|gin|whisky|whiskey|bourbon|tequila|brandy|sherry|liqueur|mead|sake|schnapps|cognac)\b/gi,"syrup"]];
+[/\bred wine\b|\bwhite wine\b|\bmulled wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b|\bbubbly\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bale\b/gi,"cider punch"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\bpunch\b(?! bowl)/gi,"fruit punch"],[/\b(rum|vodka|gin|whisky|whiskey|bourbon|tequila|brandy|sherry|liqueur|mead|sake|schnapps|cognac)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -203,7 +203,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:600 16px/1.2 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">From the host</div>
      <div style="font:italic ${E.bodyW} 1em/1.34 ${E.body}">${esc(sent(note.t))}</div>
      <div style="font:400 1.6em/1.1 'Pinyon Script',cursive;color:${ACC};text-align:right;margin-top:.1em">${esc(note.by)}</div></div>
-   <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(fl&&fl.year||f.year)} &nbsp;·&nbsp; Covers laid for ${esc(num||yy||"12")}</div>`;
+   <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(fl&&fl.year||f.year)} &nbsp;·&nbsp; Covers laid for ${esc(String(fl&&fl.covers||4))}</div>`;
 
   /* ---------- back: courses in procession ---------- */
   const LAB=fam?{s:"To Begin",m:"The Remove",w:"Entremets",d:"The Cordials"}:{s:"To Begin",m:"The Remove",w:"Entremets",d:"From the Cellar"};
@@ -224,10 +224,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     courses=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 26px;align-items:start"><div>${keys.slice(0,best).map((k,i)=>course(k,i)).join("")}</div><div>${keys.slice(best).map((k,i)=>course(k,i+best)).join("")}</div></div>`}
   else courses=keys.map(course).join("");
   /* per cover on the era's price scale; the film's number, when it has one, only sets the cents (a nod, never a year as a price) */
-  const FEE={"1930s-40s":3,"1950s":5,"1960s":8,"1970s":14,"1980s":28,"1990s":45,"2000s":65,"modern":85}[ctx.era]||85;
-  const fee=FEE+"."+(num?num.slice(-2).padStart(2,"0"):"50");
+  /* review 31: covers are the table the menu serves (4, or flavour.covers), never the year; the fee goes by the film's price era
+     (Titanic's 1912 saloon, not its look) and by how many courses come out, so two modern banquets no longer share 85.50 */
+  const FEE={"1800s":1.5,"1930s-40s":3,"1950s":5,"1960s":8,"1970s":14,"1980s":28,"1990s":45,"2000s":65,"modern":85}[(fl&&fl.priceEra)||ctx.era]||85;
+  const feeV=FEE*(.7+.05*Math.min(nIt,12)),fee=feeV<10?feeV.toFixed(1)+(num?num.slice(-1):"0"):Math.round(feeV)+"."+(num?num.slice(-2).padStart(2,"0"):"50");
   /* the footer gets two lines of room above the photo, so the credit never sits under it */
   const back=`${stock()}${border()}
+   <div data-pvzoom="40,30,736,672" aria-hidden="true" style="position:absolute;left:40px;top:30px;width:736px;height:672px;pointer-events:none"></div>
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick("The courses in procession")}</div>
    <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">Bill of Fare</div>
    <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:64px;right:64px;top:${heavy?136:150}px;height:${heavy?470:454}px;overflow:hidden;font-size:${heavy?20:28}px;text-align:center;display:flex;flex-direction:column">

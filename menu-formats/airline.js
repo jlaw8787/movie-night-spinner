@@ -189,7 +189,7 @@ const FX=window.__fmtAir=window.__fmtAir||{
     cut(0);
     el.querySelectorAll("[data-fbox]").forEach(box=>FX.fitBox(box));
     if(mb&&st){const lost=()=>[...mb.querySelectorAll("[data-clamp]")].some(n=>n.style.display==="none"||(n.dataset.full&&n.textContent!==n.dataset.full))||[...mb.querySelectorAll("[data-gap]")].some(g=>g.style.display==="none");
-      for(let c=16;lost()&&c<=+st.dataset.h0*.45;c+=16){cut(c);FX.fitBox(mb)}}
+      for(let c=16;lost()&&c<=+st.dataset.h0*.7;c+=16){cut(c);FX.fitBox(mb)}/* review 32: the still may give up to 70 per cent before a note is cut */}
   },
   fitBox(box){{
       const nodes=[...box.querySelectorAll("[data-fs]")];
@@ -315,6 +315,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const heading=(col,sub,acc,al)=>`${kick(`${(ctx.flavour&&ctx.flavour.flight)?clean(ctx.flavour.flight):"Flight "+flight} · Now boarding`,acc,al)}
         <div data-fline="2" data-fs="20" style="${dispStyle}font-size:${F.venue.length>22?(G==="prop"?30:27):(G==="prop"?36:32)}px;line-height:1.04;color:${col};margin-top:5px;text-align:${al||"left"};${G==="prop"?inkSpread:""}">${esc(F.venue)}</div>
         <div data-fs="14" style="font:${G==="prop"?"italic ":""}400 16px/1.2 ${B};color:${sub};margin-top:4px;text-align:${al||"left"}">${esc(F.sign)}</div>`;
+  /* review 32 (Josh: room for full notes): long trolley notes take height from the window, so the poster steps down instead of the notes being cut */
+  const dl=(menu.d||[]).slice(0,3).reduce((a,it)=>a+String(it.n||"").length+String(it.note||"").length,0),dCut=dl>100?Math.min(110,Math.round((dl-100)*1.1)):0;
   let strip,winTop,winH,winW,winRad,frame,winExtra="";
   if(G==="prop"){
     strip=`<div data-fbox style="position:absolute;left:30px;right:164px;top:26px;height:104px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
@@ -327,7 +329,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div data-fbox style="position:absolute;left:26px;right:18px;top:12px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div></div>
       ${seatTile(22,18,"#fffaf0",K.ink,K.acc,"box-shadow:0 6px 16px rgba(0,0,0,.35)")}`;
     winTop=0;winH=706;winW=W;winRad="0";frame="none";
-    winExtra=stripes(660,true);
+    winExtra=stripes(660-dCut,true);
   }else if(G==="wide"){
     strip=`<div style="position:absolute;left:0;right:0;top:0;height:120px;background:${era===4?`linear-gradient(180deg,${toHex(mix(hex(liv),[255,255,255],.12))},${liv} 45%,${toHex(mix(hex(liv),[0,0,0],.3))})`:liv};overflow:hidden">
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.2;mix-blend-mode:screen"></div>
@@ -347,7 +349,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     frame=`0 0 0 9px ${bez},0 0 0 10px rgba(0,0,0,.12),0 10px 22px 4px rgba(0,0,0,.16)`;
   }
   /* the poster is the hero: whole, 2:3, on the cabin wall inside the window frame; the logo sits in the column beside it */
-  const PD=10,pH=G==="jet"?552:winH-2*PD,pW=Math.round(pH*2/3);
+  winH-=dCut;
+  const PD=10,pH=G==="jet"?552-dCut:winH-2*PD,pW=Math.round(pH*2/3);
   if(G!=="jet")winW=pW+2*PD;
   const winL=G==="jet"?0:G==="wide"?30:(G==="mod"&&era===6?36:30);
   const posL=G==="jet"?24:PD,posT=G==="jet"?140:PD;
@@ -358,7 +361,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${winExtra}${posterBox}</div>`;
   const ring=G==="jet"?0:G==="wide"?14:10;
   const colX=G==="jet"?posL+pW+26:winL+winW+ring+14,colW=W-24-colX,onWall=G==="jet";
-  const bz=G==="jet"?730:winTop+winH+ring+10;
+  const bz=G==="jet"?730-dCut:winTop+winH+ring+10;
   const lp=logoPanel(ctx,{maxW:colW-24,maxH:90,center:true,dark:rgba(K.deep,.92),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
     titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`${esc(ctx.f.year)}`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
     style:`position:relative;box-sizing:border-box;padding:12px 12px 10px;text-align:center;border-radius:${era>=6?14:G==="prop"?0:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4)${G==="prop"?`,inset 0 0 0 3px ${rgba(K.acc,.5)}`:""}`});
@@ -372,8 +375,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const trolley=`<div style="position:absolute;left:314px;right:28px;top:${bz-6}px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
     <div data-fbox style="position:absolute;left:16px;right:0;top:6px;bottom:0;overflow:hidden">
     ${kick(fm?"From the juice trolley":"From the trolley")}
-    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n)).replace(/(\S) (\d{1,3})(?=$|\s)/g,"$1\u00a0$2")/* a number in a drink name stays with its word ("French 75"), so it never wraps under the price */}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
-      ${it.note?`<div data-clamp data-fs="14" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
+    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="14" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n)).replace(/(\S) (\d{1,3})(?=$|\s)/g,"$1\u00a0$2")/* a number in a drink name stays with its word ("French 75"), so it never wraps under the price */}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
+      ${it.note?`<div data-clamp data-fs="12" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
     ${drinks.length?"":`<div data-fs="14" style="font:400 18px/1.3 ${B};color:${K.soft};margin-top:8px">Tea, coffee and juice served throughout the flight.</div>`}</div></div>`;
   const front=face(strip+win+col+note+trolley);
 
@@ -416,7 +419,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const keys=["s","m","w"];
   const item=(k,it,i)=>`<div data-gap style="padding-bottom:12px">
     <div style="display:flex;align-items:baseline;gap:12px"><span data-fs="17" style="flex:1;font:700 26px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span data-fs="15" style="font:700 ${price(k,i)==="Included"?18:26}px/1 ${B};color:${K.acc};${price(k,i)==="Included"?"letter-spacing:.08em;text-transform:uppercase":""}">${price(k,i)}</span></div>
-    ${it.note?`<div data-clamp data-fs="14" style="font:400 20px/1.28 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
+    ${it.note?`<div data-clamp data-fs="13" style="font:400 20px/1.28 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=(k,j)=>{const its=(menu[k]||[]).slice(0,4);if(!its.length)return"";
     return`<div style="display:flex;align-items:center;gap:12px;margin:2px 0 8px"><span data-fs="20" style="${dispStyle}font-size:34px;line-height:1.05;color:${K.acc};${inkSpread}">${esc(labels[j])}</span><i style="flex:1;height:2px;background:${K.acc};opacity:.45"></i></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
   /* the showtime cue (15 Nov, Josh: airline never printed it): a cabin crew line that opens the fine print, which grows by a line for it */
@@ -424,7 +427,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox data-menubox style="position:absolute;left:36px;right:36px;top:${sTop+sH+60}px;bottom:${cueTxt?150:106}px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:36px;right:36px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?20:26}px;height:${cueTxt?118:74}px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:8px">
-    ${cueTxt?`<div data-cue data-fs="14" style="font:400 15px/1.35 ${B};color:${K.ink};margin-bottom:2px"><b style="color:${K.acc};letter-spacing:.08em;text-transform:uppercase">Cabin crew cue:</b> ${esc(cueTxt)}</div>`:""}<div data-fs="14" style="font:400 15px/1.35 ${B};color:${K.soft}">Meals subject to availability. Trolley prices in local currency. ${fm?"Every drink is alcohol free. ":""}${wk?esc(wk)+". ":""}Card ${esc(flight)}/${esc(ctx.f.year)}. Images: TMDB.</div></div>`;
+    ${cueTxt?`<div data-cue data-fs="14" style="font:400 15px/1.35 ${B};color:${K.ink};margin-bottom:2px"><b style="color:${K.acc};letter-spacing:.08em;text-transform:uppercase">Cabin crew cue:</b> ${esc(cueTxt)}</div>`:""}<div data-fs="14" style="font:400 15px/1.35 ${B};color:${K.soft}">Meals subject to availability. Trolley prices in local currency. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Card ${esc(flight)}/${esc(ctx.f.year)}. Images: TMDB.</div></div>`;
   const back=face(top+still+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

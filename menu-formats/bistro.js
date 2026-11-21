@@ -316,7 +316,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sw=(menu.w||[]).slice(0,4);
   const boardItems=sw.length?sw.map((it,i)=>`<div data-gap style="padding-bottom:12px">
       <div style="display:flex;gap:10px;align-items:baseline"><span data-fs="17" style="flex:1;${dispStyle}font-size:27px;line-height:1.08;color:#f6efe0">${esc(dry(it.n))}</span><span data-fs="17" style="font:700 26px/1 ${D};color:${K.light}">${price("w",i)}</span></div>
-      ${it.note?`<div data-clamp data-fs="14" style="font:400 19px/1.25 ${B};color:rgba(246,239,224,.82);margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")
+      ${it.note?`<div data-clamp data-fs="12" style="font:400 19px/1.25 ${B};color:rgba(246,239,224,.82);margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")
     :`<div data-fs="16" style="${dispStyle}font-size:26px;line-height:1.15;color:#f6efe0">${esc(sentence(ctx.f.T||"Ask your server"))}</div>`;
   const board=`<div style="position:absolute;left:30px;top:640px;width:330px;height:286px;background:${toHex(mix(hex(K.deep),[24,28,26],.5))};border-radius:4px;box-shadow:inset 0 0 0 7px ${rgba(era===0||T.gilt?"#b48a35":"#6b4a2b",.9)},inset 0 0 40px rgba(0,0,0,.45),0 4px 10px rgba(0,0,0,.25);overflow:hidden">
     <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.25;mix-blend-mode:screen"></div>
@@ -351,14 +351,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const keys=["s","m","d"],labIdx={s:0,m:1,w:2,d:3};
   const item=(k,it,i)=>`<div data-gap${it.house?" data-x":""} style="padding-bottom:16px">
     <div style="display:flex;align-items:baseline;gap:10px"><span data-fs="18" style="font:700 28px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span style="flex:1;min-width:20px;border-bottom:2px dotted ${rgba(K.ink,.4)};transform:translateY(-6px)"></span><span data-fs="18" style="font:700 28px/1 ${B};color:${K.acc}">${price(k,i)}</span></div>
-    ${it.note?`<div data-clamp data-fs="14" style="font:italic 400 21px/1.28 ${B};color:${K.soft};margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
+    ${it.note?`<div data-clamp data-fs="12" style="font:italic 400 21px/1.28 ${B};color:${K.soft};margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=k=>{const its=(menu[k]||[]).slice(0,4);if(!its.length)return"";
     return`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px"><i style="flex:1;height:1px;background:${K.acc};opacity:.6"></i><span data-fs="22" style="${dispStyle}font-size:38px;line-height:1.05;color:${K.acc};${inkSpread}${L.ital&&!L.caps?"font-style:italic;":""}">${esc(labels[labIdx[k]])}</span><i style="flex:1;height:1px;background:${K.acc};opacity:.6"></i></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
   const tag=ctx.f.T?`<div data-drop data-fs="16" style="font:italic 400 22px/1.25 ${B};color:${K.ink};text-align:center;margin:0 0 14px">${esc(sentence(dry(ctx.f.T)))}</div>`:"";
   const menuBox=`<div data-fbox style="position:absolute;left:46px;right:46px;top:${secH+40}px;bottom:112px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:46px;right:46px;bottom:34px;height:74px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:8px;text-align:center">
-    <div data-fs="14" style="font:400 16px/1.35 ${B};color:${K.soft}">Prices subject to change. Service included. ${fm?"Every drink is alcohol free. ":""}${wk?esc(wk)+". ":""}Carte no. ${esc(F.num||ctx.f.year)}. Images: TMDB.</div></div>`;
+    <div data-fs="14" style="font:400 16px/1.35 ${B};color:${K.soft}">Prices subject to change. Service included. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Carte no. ${esc(F.num||ctx.f.year)}. Images: TMDB.</div></div>`;
   const back=face(second+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

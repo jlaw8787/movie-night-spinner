@@ -34,7 +34,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -117,7 +117,7 @@ function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="fon
 function logoOr(ctx,F,maxW,maxH,df,color,dw){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 const E=[
@@ -178,10 +178,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* right: the welcome sign on its easel, the poster as the hero, the prop card hung on the easel legs */
   const LX=944,LW=W-LX-30,WT=34,WH=118;
   /* review 26: a sign welcomes you to "the" Marquee Reception Tent; a name that is already a possessive or starts with The or A reads on its own */
-  const theV=!/^(the|a|an)\s/i.test(F.venue)&&!/['’]s\b/i.test(F.venue);
+  /* review 30: "Welcome to" alone; a line ending "Welcome to the" read as cut words above the venue */
   const vS=Math.max(18,Math.min(34,Math.floor((LW-36)/(Math.max(1,F.venue.length)*.64))));
   const welcome=`<div style="position:absolute;left:${LX}px;top:${WT}px;width:${LW}px;height:${WH}px;background:${e.card};box-shadow:${shadow};box-sizing:border-box;padding:10px 18px;text-align:center;border:1px solid ${mix(acc,e.card,.5)}">
-    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to${theV?" the":""}</div>
+    <div style="font:400 44px/1.15 ${S};color:${acc}">Welcome to</div>
     <div style="font:700 ${vS}px/1.2 ${CF};color:${e.ink};letter-spacing:.04em;white-space:nowrap;overflow:hidden">${esc(F.venue)}</div></div>`;
   const pc=F.prop,KIND={card:"Card",slip:"Slip",ticket:"Ticket",receipt:"Receipt",note:"Note",letter:"Letter",invitation:"Invitation",invite:"Invitation",tag:"Tag",label:"Label",badge:"Badge",coupon:"Coupon",flyer:"Flyer",postcard:"Postcard",program:"Programme",programme:"Programme",sign:"Sign"};
   const kindRaw=clean((F.fl.prop&&F.fl.prop.kind)||"card").toLowerCase(),kindLab=KIND[kindRaw]||kindRaw.replace(/\b\w/g,c=>c.toUpperCase());

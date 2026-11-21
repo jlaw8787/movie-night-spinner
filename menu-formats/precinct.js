@@ -18,7 +18,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake|baijiu)\b/gi,"syrup"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake|baijiu)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 M.family=f=>["kids","fairytale","xmas"].includes(f&&f.theme);
@@ -55,12 +55,14 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
   const grow=()=>{if(!give)return;for(let c=8;over(el)&&c<=+el.dataset.grow;c+=8){give.style.height=(+give.dataset.h0-c)+"px";shift.forEach(n=>n.style.top=(+n.dataset.t0-c)+"px");el.style.top=(+el.dataset.t0-c)+"px";el.style.height=(+el.dataset.h0+c)+"px"}};
   const shrink=lo=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>lo&&g++<160){s=Math.max(lo,s-.5);el.style.fontSize=s+"px"}};
   shrink(min);if(!over(el))return;
+  /* review 32 (Josh: room for the full note, not cuts): the photo gives way and the type steps to its note floor before a note is shortened */
+  if(el.querySelector("[data-note]")){grow();if(!over(el))return;shrink(+el.dataset.nlo||Math.round(min*.85));if(!over(el))return}
   /* 15 Nov: dish notes ([data-note]) are shortened before anything is dropped. From the bottom, each is cut at a natural break
      (first sentence, a comma, a joining word), keeping the film's moment where it can (window.__fmtShortFilm): the first cut that fits is kept, else the shortest one if it saves a line.
      Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
   const dn=[...el.querySelectorAll("[data-note]")].filter(n=>!n.children.length),lo=dn.length?(+el.dataset.nlo||Math.round(min*.9)):min;
   if(dn.length&&window.__fmtShort){for(let i=dn.length-1;i>=0&&over(el);i--){const n=dn[i],full=n.dataset.full||(n.dataset.full=n.textContent),h0=n.offsetHeight;let last=null;
-      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;last=c;return !over(el)});n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
+      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;if(!last||c.length<last.length)last=c;return !over(el)});/* review 31: the shortest cut tried, not the last (cuts are now tried four words first) */n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
     if(over(el))grow();if(over(el))shrink(lo);if(!over(el))return}
   /* still too much: drop notes from the end, then whole items (first item per course stays), then grow back */
   const opts=[...el.querySelectorAll("[data-opt]")],its=[...el.querySelectorAll("[data-item]:not([data-keep])")];
@@ -136,10 +138,11 @@ window.MENU_FORMATS.precinct=function(ctx){
   const IH=690,FH=IH+pT+pB,FW=Math.round(IH*2/3+2*pR),FT=108,RX=36+FW+22,RW=780-RX,FB=FT+FH;
   /* logo in its own colours on a case label that suits it */
   const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?(heroP?Math.min(RW-40,96*lr):Math.min(330,96*lr)):0,lh=lr?lw/lr:0;
-  const lpH=heroP?(lr?Math.round(lh+28):104+28):0;
+  /* review 32: the typed title that stands in when the logo will not load fits the room kept for the logo, so the memo never covers it (Dirty Work) */
+  const tyH=lr?Math.max(56,Math.round(lh)):104,lpH=heroP?(lr?Math.round(Math.max(lh,tyH)+28):104+28):0;
   const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:${heroP?RX:64}px;top:${heroP?FT+4:(lr?Math.round(640-lh-40):520)}px;max-width:${heroP?RW:340}px;box-sizing:border-box;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
      ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
-     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?RW-40:440}px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
+     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?RW-40:440}px;height:${heroP?tyH:104}px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
    </div>`;
   const evid=(src,l,t,w,h,rot,op,tag,pad,isP)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${pad||E.pb};background:#fbfaf6;transform:rotate(${rot}deg);box-shadow:0 14px 30px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.3)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">
@@ -187,7 +190,11 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="display:flex;justify-content:space-between;align-items:baseline;background:${dark};color:#fbf7ee;padding:.18em .45em;margin-bottom:.3em"><span style="font:${E.dw} 1.15em/1.1 ${dd};text-transform:uppercase;letter-spacing:.04em">${SHIFT[c.k][0]}</span><span style="flex:none;margin-left:.5em;font:.72em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase">${SHIFT[c.k][1]}</span></div>
      ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="padding:.15em .1em .3em;border-bottom:1px solid rgba(0,0,0,.12)"><div style="display:flex;gap:.5em;justify-content:space-between;align-items:baseline"><span style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</span><span style="flex:none;font:700 1em/1.15 ${bd};color:${acc}">${priceOf(c,i)}</span></div>${it.note?`<div data-opt data-note style="font:.76em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}
    </div>`;
-  const half=Math.ceil(C.length/2);
+  /* review 32: the two roster columns split where they hold about the same number of dishes, and a long roster takes height from the
+     surveillance photo so every note prints whole */
+  const cnt=c=>c.items.length+c.items.filter(i=>i.note).length*.9,tot=C.reduce((a,c)=>a+cnt(c),0);let half=Math.ceil(C.length/2),bestD=1e9;
+  for(let i=1;i<C.length;i++){const a=C.slice(0,i).reduce((q,c)=>q+cnt(c),0),d=Math.abs(tot-2*a);if(d<bestD){bestD=d;half=i}}
+  const RAISE=Math.max(C.slice(0,half).reduce((q,c)=>q+cnt(c),0),C.slice(half).reduce((q,c)=>q+cnt(c),0))>6.5?110:tot>9?60:0;
   const col=cs=>`<div data-fit="20" style="width:344px;height:100%;overflow:hidden;font-size:26px">${cs.map(shift).join("")}</div>`;
   const back=`${folder(`Duty roster ${x(yy)}`,476)}
    <div style="position:absolute;left:26px;top:74px;width:764px;height:966px;background:${paper};box-shadow:0 6px 16px rgba(0,0,0,.35);transform:rotate(${T.tilt*.15}deg)">
@@ -197,11 +204,11 @@ window.MENU_FORMATS.precinct=function(ctx){
          <div style="font:700 18px/1.25 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:clip">${x(venue)}</div></div>
        <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>Coins only</div>
      </div>
-     ${evid(second,26,128,712,340,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
-     <div style="position:absolute;left:26px;top:490px;width:712px;height:424px;display:flex;justify-content:space-between">
+     ${evid(second,26,128,712,340-RAISE,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
+     <div style="position:absolute;left:26px;top:${490-RAISE}px;width:712px;height:${424+RAISE}px;display:flex;justify-content:space-between">
        ${C.length?col(C.slice(0,half))+col(C.slice(half)):`<div style="font:22px/1.4 ${bd};color:${ink}">Breakroom closed. Try the vending machine.</div>`}
      </div>
-     <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Exact change only. ${fam?"Every drink alcohol free. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>
+     <div style="position:absolute;left:26px;right:26px;bottom:14px;border-top:1px solid rgba(0,0,0,.25);padding-top:6px;font:16px/1.3 ${bd};color:${ink};opacity:.85">Prices subject to change. Exact change only. ${fam?"Soft drinks only. ":""}Photos: TMDB. Filed ${x(f.year||"")}.</div>
    </div>`;
   return {w:W,h:H,faces:[front,back]};
 };

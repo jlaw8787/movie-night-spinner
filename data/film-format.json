@@ -685,7 +685,7 @@
   "tone": "grand"
  },
  "Aladdin (1992)": {
-  "format": "truck",
+  "format": "tavern",
   "era": "1990s",
   "tone": "playful"
  },
@@ -755,7 +755,7 @@
   "tone": "playful"
  },
  "Mulan (1998)": {
-  "format": "takeaway",
+  "format": "banquet",
   "era": "1990s",
   "tone": "grand"
  },
@@ -770,7 +770,7 @@
   "tone": "playful"
  },
  "The Emperor's New Groove (2000)": {
-  "format": "diner",
+  "format": "tavern",
   "era": "2000s",
   "tone": "scrappy"
  },
@@ -870,7 +870,7 @@
   "tone": "warm"
  },
  "Raya and the Last Dragon (2021)": {
-  "format": "takeaway",
+  "format": "dimsum",
   "era": "modern",
   "tone": "warm"
  },
@@ -910,7 +910,7 @@
   "tone": "glossy"
  },
  "Beauty and the Beast (2017)": {
-  "format": "cafe",
+  "format": "tavern",
   "era": "modern",
   "tone": "warm"
  },
@@ -1572,11 +1572,6 @@
  "Semi-Pro (2008)": {
   "format": "stadium",
   "era": "1970s",
-  "tone": "playful"
- },
- "Kicking & Screaming (2005)": {
-  "format": "kiosk",
-  "era": "2000s",
   "tone": "playful"
  },
  "Eurovision Song Contest: The Story of Fire Saga (2020)": {
@@ -3010,7 +3005,7 @@
   "tone": "grand"
  },
  "Willow (1988)": {
-  "format": "truck",
+  "format": "tavern",
   "era": "1980s",
   "tone": "playful"
  },
@@ -3045,12 +3040,12 @@
   "tone": "warm"
  },
  "The Hobbit: An Unexpected Journey (2012)": {
-  "format": "home",
+  "format": "banquet",
   "era": "modern",
   "tone": "warm"
  },
  "The Hobbit: The Desolation of Smaug (2013)": {
-  "format": "truck",
+  "format": "tavern",
   "era": "modern",
   "tone": "gritty"
  },
@@ -3135,7 +3130,7 @@
   "tone": "playful"
  },
  "Meet the Robinsons (2007)": {
-  "format": "airline",
+  "format": "home",
   "era": "2000s",
   "tone": "playful"
  },
@@ -3445,7 +3440,7 @@
   "tone": "glossy"
  },
  "Kung Fu Panda 2 (2011)": {
-  "format": "takeaway",
+  "format": "dimsum",
   "era": "2000s",
   "tone": "warm"
  },
@@ -3485,12 +3480,12 @@
   "tone": "playful"
  },
  "Django Unchained (2012)": {
-  "format": "truck",
+  "format": "saloon",
   "era": "2000s",
   "tone": "gritty"
  },
  "True Grit (2010)": {
-  "format": "home",
+  "format": "saloon",
   "era": "2000s",
   "tone": "gritty"
  },
@@ -4512,6 +4507,11 @@
  "White Men Can't Jump (1992)": {
   "format": "truck",
   "era": "1990s",
+  "tone": "playful"
+ },
+ "Hall Pass (2011)": {
+  "format": "bartab",
+  "era": "modern",
   "tone": "playful"
  }
 }

@@ -65,7 +65,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|kir)\b/gi,"syrup"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|kir)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
@@ -276,7 +276,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const menuHtml=C.map(c=>`<div style="margin:0 0 ${n<=6?12:7}px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-family:${BODY};font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:${ACC};${fs(15,14)};white-space:nowrap">${esc(LABEL[c.k])}</div><div style="flex:1;border-top:1.5px ${era==="1970s"||era==="1960s"?"dotted":"solid"} ${ACC}88"></div></div>
       ${c.items.map((it,i)=>`<div${it.x?" data-x":""} style="margin:0 0 5px"><div style="display:flex;align-items:baseline;gap:10px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${e.ink};line-height:1.15;${fs(dish,14)}">${esc(it.n)}</div><div style="font-family:${BODY};font-weight:700;color:${e.ink};${fs(dish,14)};white-space:nowrap">${PQ[c.k][i]}</div></div>
-        ${it.note?`<div data-n style="display:var(--nd,block);font-family:${BODY};color:${mix(e.ink,e.paper,.3)};line-height:1.25;${fs(desc,14)}">${esc(it.note)}</div>`:""}</div>`).join("")}</div>`).join("");
+        ${it.note?`<div data-n style="display:var(--nd,block);font-family:${BODY};color:${mix(e.ink,e.paper,.3)};line-height:1.25;${fs(desc,12)}">${esc(it.note)}</div>`:""}</div>`).join("")}</div>`).join("");
 
   const stillStamp=s1||s0;
   /* 15 Nov, Josh (call 6): a film with no spare still (Paranormal Activity has one, already on the front) lost its stamp photo to the

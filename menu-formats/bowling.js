@@ -33,7 +33,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -128,7 +128,7 @@ function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="fon
 function logoOr(ctx,F,maxW,maxH,df,color,dw){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 const E=[
@@ -217,7 +217,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const rowHTML=([k,l],ri)=>{const its=items[k],h=Math.round(rows[ri]+add),cw=(GW-LBL)/its.length;
     return `<div style="display:flex;height:${h}px;border-bottom:${bline}">
       <div style="flex:0 0 ${LBL}px;border-right:${bline};display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px"><div style="font:400 ${l.length>9?30:36}px/1.1 ${PEN};color:${acc};text-align:center;transform:rotate(-4deg);${clamp(2)}">${esc(l)}</div></div>
-      ${its.map((it,i)=>{const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0,pb=Math.round(tr.d*2.2+14);return `<div style="flex:0 0 ${cw}px;position:relative;box-sizing:border-box;padding:10px 12px 8px;border-right:${i<its.length-1?bline:"0"};overflow:hidden">
+      ${its.map((it,i)=>{const nl=tr.nl?wrapLines(F.tx(it.note),tr.n,cw-24,NCW):0,pb=Math.round(tr.d*((F.fl&&F.fl.currency&&F.fl.currency!=="$")?2.2:2.75)+14);/* review 32: dollar cards get room for the $ mark, added after the layout draws (pfMark) */return `<div style="flex:0 0 ${cw}px;position:relative;box-sizing:border-box;padding:10px 12px 8px;border-right:${i<its.length-1?bline:"0"};overflow:hidden">
         <div style="position:absolute;right:0;top:0;width:${pb}px;height:${Math.round(tr.d*1.5)}px;border-left:${bline};border-bottom:${bline};font:400 ${tr.d+8}px/${Math.round(tr.d*1.5)}px ${PEN};color:${e.ink};text-align:center">${pr[k][i]}</div>
         <div style="font:700 ${tr.d}px/1.12 ${BF};color:${e.ink};text-transform:uppercase;letter-spacing:.02em;margin-right:${pb-6}px;${clamp(3)}">${esc(F.tx(it.n))}</div>
         ${nl?`<div style="font:500 ${tr.n}px/1.25 ${BF};color:${e.soft};margin-top:6px;${clamp(nl+1)}">${esc(cap(F.tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`};
@@ -235,7 +235,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   <div style="position:absolute;left:${GX+GW-TW}px;top:${NY}px;width:${TW}px;height:${NH}px;box-sizing:border-box;border:2.5px solid ${e.ink};background:${e.paper};text-align:center;display:flex;flex-direction:column;justify-content:space-between;padding:8px 6px">
     <div style="font:700 14px/1 ${BF};letter-spacing:.22em;color:${e.soft}">TOTAL</div>
     <div style="font:400 56px/1 ${PEN};color:${acc}">300</div>
-    <div style="font:500 13px/1.25 ${BF};color:${e.soft}">Prices subject to change.<br>${F.fam?"No alcohol served. ":""}Images: TMDB.</div></div>`;
+    <div style="font:500 13px/1.25 ${BF};color:${e.soft}">Prices subject to change.<br>${F.fam?"Soft drinks only. ":""}Images: TMDB.</div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 62%,rgba(20,20,30,${(t.vig*.6).toFixed(2)}) 100%)"></div>`;
   return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden;background:${e.paper}">${paper}${header}${pBox}${tag}${sheet}${notes}${vig}</div>`]};
 };

@@ -34,7 +34,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -147,7 +147,7 @@ function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="fon
 function logoOr(ctx,F,maxW,maxH,df,color,dw){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 const E=[
@@ -227,7 +227,8 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="flex:0 0 ${QTY}px;border-left:${bl};display:flex;align-items:center;justify-content:center"><div style="width:38px;height:${Math.min(36,Math.round(tr.d*1.5))}px;border:2px solid ${mix(e.ink,e.paper,.4)};display:flex;align-items:center;justify-content:center;font:600 ${Math.round(tr.d*1.3)}px/1 ${PEN};color:#1f3fa0">${it.house||it.extra?"":"&#10003;"}</div></div></div>`}).join("")).join("");
   const colHead=`<div style="height:${COLH}px;display:flex;font:700 14px/${COLH}px ${BF};letter-spacing:.14em;color:${e.soft};border-bottom:2px solid ${red}"><div style="flex:0 0 ${STAMP}px;text-align:center">NO.</div><div style="flex:0 0 ${NW}px;padding-left:12px;box-sizing:border-box">DISH</div><div style="flex:1;padding-left:12px">FROM THE KITCHEN</div><div style="flex:0 0 ${PRW}px;text-align:center">PRICE</div><div style="flex:0 0 ${QTY}px;text-align:center">QTY</div></div>`;
   const grid=`<div style="position:absolute;left:12px;width:${SW-24}px;top:${TOPH}px;height:${GH+COLH}px;overflow:hidden;display:flex;flex-direction:column"><div style="flex:0 0 auto">${colHead}</div>${rows}</div>`;
-  const sheet=`<div style="position:absolute;left:${SX}px;top:${ST}px;width:${SW}px;height:${SH}px;background:${e.paper};box-shadow:${shadow};overflow:hidden">
+  /* review 32: on a phone the order sheet is the view (as a panel its dish names drew at 6px) */
+  const sheet=`<div data-pvzoom="self" style="position:absolute;left:${SX}px;top:${ST}px;width:${SW}px;height:${SH}px;background:${e.paper};box-shadow:${shadow};overflow:hidden">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.1+t.wear*.4).toFixed(2)};mix-blend-mode:multiply"></div>
     <div style="position:absolute;left:12px;right:12px;top:10px;height:${TOPH-14}px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px double ${red}">
       <div style="font:400 30px/1.2 ${DF};color:${red};letter-spacing:.1em">ORDER SHEET</div>

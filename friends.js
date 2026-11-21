@@ -69,17 +69,20 @@
   function openPanel(t) {
     if (box && box.open) { if (t) { tab = t; draw() } return }
     tab = t || (counts.turns ? 'duels' : counts.unread ? 'inbox' : 'card');
-    box = document.createElement('dialog'); box.className = 'acct'; box.setAttribute('aria-label', 'My account');
+    box = document.createElement('dialog'); box.className = 'acct' + (cinema() ? ' cinema' : ''); box.setAttribute('aria-label', 'My account');
     box.innerHTML = `<div class="acct-in"><div class="acct-head" id="acctHead"></div><div class="acct-tabs" role="tablist" aria-label="My account" id="acctTabs"></div><div class="acct-body" id="acctBody" role="tabpanel"></div></div>`;
     box.addEventListener('click', e => { if (e.target === box) dismissModal(box) });
     mountModal(box, null, btn, () => { box = null });
     draw();
   }
+  /* review 30: opened anywhere but Galaxy Video, the account is the cinema's (red and gold, a ticket) */
+  const cinema = () => !document.body.classList.contains('in-shop');
   function head() {
     const h = box.querySelector('#acctHead');
-    if (!inn()) { h.innerHTML = `<p class="acct-k">Galaxy Video</p><h2 class="acct-t">Guest pass</h2>`; return }
+    const brand = box.classList.contains('cinema') ? 'Reel Dinner' : 'Galaxy Video';
+    if (!inn()) { h.innerHTML = `<p class="acct-k">${brand}</p><h2 class="acct-t">Guest pass</h2>`; return }
     const T = tier();
-    h.innerHTML = `<p class="acct-k">Galaxy Video <span class="acct-tier t-${T.k}">${ESC(T.name)}</span></p><h2 class="acct-t">${ESC((member && member.name) || 'Member')}</h2><p class="acct-no">${ESC(noFmt(member && member.no))}</p>`;
+    h.innerHTML = `<p class="acct-k">${brand} <span class="acct-tier t-${T.k}">${ESC(T.name)}</span></p><h2 class="acct-t">${ESC((member && member.name) || 'Member')}</h2><p class="acct-no">${ESC(noFmt(member && member.no))}</p>`;
   }
   function tabs() {
     const T = [['card', 'My card', 0], ['duels', 'Duels', counts.turns], ['inbox', 'Inbox', counts.unread], ['friends', 'Friends', (FR.incoming || []).length], ['settings', 'Settings', 0]];
@@ -103,9 +106,9 @@
   const failed = (body, again) => { body.innerHTML = `<p class="acct-wait">${navigator.onLine === false ? "You're offline. Friends and duels need a connection." : "Couldn't reach Reel Dinner. Check your connection."}</p><div class="acct-acts"><button type="button" class="acct-go" id="acctAgain">Try again</button></div>`; body.querySelector('#acctAgain').onclick = again };
 
   function guest(body) {
-    body.innerHTML = `${cardArt(true)}<p>You're on a guest pass. Everything works, saved on this phone only.</p>
+    body.innerHTML = `${cardArt(true)}<p>You're on a guest pass. Everything works, saved on this device only.</p>
       <p>A free member card adds:</p>
-      <ul class="acct-list"><li>Dinner Duel: swipe a deck, send it to a friend, and they swipe when they get to it</li><li>A friends list and an inbox for your turns and matches</li><li>Your picks, ticks and rentals on every phone you sign in on</li></ul>
+      <ul class="acct-list"><li>Dinner Duel: swipe a deck, send it to a friend, and they swipe when they get to it</li><li>A friends list and an inbox for your turns and matches</li><li>Your picks, ticks and rentals on every device you sign in on</li></ul>
       <div class="acct-acts"><button type="button" class="acct-go" id="acctJoin">Get your member card</button></div>
       <p class="acct-small"><a href="privacy.html">Privacy policy</a></p>`;
     body.querySelector('#acctJoin').onclick = () => { dismissModal(box); if (typeof openJoin === 'function') openJoin() };
@@ -118,13 +121,23 @@
     { k: 'plat', name: 'Platinum member', at: 25 },
     { k: 'elite', name: 'Galaxy Elite', at: 50 }
   ];
+  /* review 31: rentals and late fees are Galaxy Video's. Opened at the cinema the card counts films seen, on the cinema's own tiers */
+  const CTIERS = [
+    { k: 'silver', name: 'Matinee member', at: 0, u: 'film' },
+    { k: 'gold', name: 'Gold Class', at: 10, u: 'film' },
+    { k: 'plat', name: 'Front Row Club', at: 25, u: 'film' },
+    { k: 'elite', name: 'Premiere Club', at: 50, u: 'film' }
+  ];
   function tier() {
-    const n = (member && member.rentals) || 0;
-    let i = 0; TIERS.forEach((t, j) => { if (n >= t.at) i = j });
-    return Object.assign({ n, next: TIERS[i + 1] || null }, TIERS[i]);
+    const cin = !!(box && box.classList.contains('cinema'));
+    const L = cin ? CTIERS : TIERS;
+    const n = cin ? ((typeof watched !== 'undefined' && watched.size) || 0) : ((member && member.rentals) || 0);
+    let i = 0; L.forEach((t, j) => { if (n >= t.at) i = j });
+    return Object.assign({ n, u: cin ? 'film' : 'rental', cin, next: L[i + 1] || null }, L[i]);
   }
   function cardArt(guestCard) {
     const m = member || {}, no = String(m.no || '');
+    if (box && box.classList.contains('cinema')) return `<div class="acct-tix" role="img" aria-label="${guestCard ? 'Your Reel Dinner guest pass' : `Your Reel Dinner member ticket, number ${ESC(no)}`}"><span class="tx-k">Admit one</span><span class="tx-n">${guestCard ? 'Guest pass' : ESC(m.name || 'Member')}</span>${guestCard ? '' : `<span class="tx-no">${ESC(noFmt(no))}</span>`}</div>`;
     const since = m.since ? new Date(m.since).toLocaleString('en-AU', { month: '2-digit', year: '2-digit' }) : '';
     return `<div class="acct-mc"><div class="mc${guestCard ? ' guest' : ''}" role="img" aria-label="${guestCard ? 'Your Galaxy Video guest pass' : `Your Galaxy Video member card, number ${ESC(no)}`}"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async">${guestCard ? '<span class="mc-guest" aria-hidden="true">Guest pass</span>' : ''}<p class="mc-no foil" aria-hidden="true">${ESC(no.slice(0, 3))} ${ESC(no.slice(3))}</p>${since ? `<p class="mc-since foil" aria-hidden="true">Member since ${ESC(since)}</p>` : ''}${typeof code39 === 'function' ? code39('GV' + no) : ''}${m.name ? `<span class="mc-sig" aria-hidden="true">${ESC(m.name)}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(m.name)}</span>` : ''}</div></div>`;
   }
@@ -173,6 +186,8 @@
     const paint = (loaded) => {
       if (!box || tab !== 'card') return;
       const s = stats(), T = tier(), fresh = loaded ? earn(s) : [];
+      /* at the cinema, the stamps that are not about rentals or late fees */
+      const SH = T.cin ? STAMPS.filter(x => !/^(rent|clean)/.test(x[0])) : STAMPS;
       const got = (member && member.stamps) || {};
       const pct = T.next ? Math.min(100, Math.round((T.n - T.at) / (T.next.at - T.at) * 100)) : 100;
       const left = T.next ? T.next.at - T.n : 0;
@@ -180,26 +195,26 @@
       const rate = s.finished ? `${Math.round(s.matchedN / s.finished * 100)}%` : '0%';
       const tile = (n, l, sm, key) => `<li><button type="button" class="acct-stat" data-stat="${key}" aria-label="${ESC(l)}: ${String(n).replace(/<[^>]+>/g, '')}. Open the page"><b>${n}</b><span>${l}</span>${sm ? `<small>${sm}</small>` : ''}<i class="acct-more" aria-hidden="true">More</i></button></li>`;
       body.innerHTML = `${cardArt(false)}
-        <div class="acct-tierbox t-${T.k}"><div class="acct-tierrow"><b>${ESC(T.name)}</b><small>${T.n} rental${T.n === 1 ? '' : 's'}</small></div>
+        <div class="acct-tierbox t-${T.k}"><div class="acct-tierrow"><b>${ESC(T.name)}</b><small>${T.n} ${T.u}${T.n === 1 ? '' : 's'}${T.cin ? ' seen' : ''}</small></div>
           <div class="acct-bar" role="progressbar" aria-label="Progress to ${ESC(T.next ? T.next.name : 'the top')}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>
-          <p class="acct-small">${T.next ? `${left} more rental${left === 1 ? '' : 's'} to ${ESC(T.next.name)}.` : 'Top of the shop. The staff know your name.'}</p></div>
+          <p class="acct-small">${T.next ? `${left} more ${T.u}${left === 1 ? '' : 's'} to ${ESC(T.next.name)}.` : T.cin ? 'Top of the house. Best seat is yours.' : 'Top of the shop. The staff know your name.'}</p></div>
         ${fresh.length ? `<p class="acct-hint">New stamp${fresh.length > 1 ? 's' : ''}: ${fresh.map(ESC).join(', ')}.</p>` : ''}
         <h3 class="acct-h">Your stats</h3>
         <ul class="acct-stats">
-          ${tile(s.rentals, 'Rentals', s.fav ? `Usually in ${ESC(s.fav)}` : '', 'rentals')}
+          ${T.cin ? '' : tile(s.rentals, 'Rentals', s.fav ? `Usually in ${ESC(s.fav)}` : '', 'rentals')}
           ${tile(s.seen, 'Films seen', '', 'seen')}
           ${tile(s.top, 'On your top shelf', `${s.rated} rated`, 'top')}
           ${tile(dash(s.friends), 'Friends', '', 'friends')}
           ${tile(dash(s.duels), 'Duels on the board', 'Last 30 days', 'duels')}
           ${tile(dash(rate), 'Match rate', loaded ? `${s.matchedN} of ${s.finished} finished` : '', 'rate')}
           ${tile(dash(s.streak), 'Best streak', 'Matches in a row', 'streak')}
-          ${tile(s.late ? `$${s.owe}.00` : '$0.00', 'Late fees', s.late ? `${s.late} tape${s.late > 1 ? 's' : ''} overdue` : 'Good member', 'late')}
+          ${T.cin ? '' : tile(s.late ? `$${s.owe}.00` : '$0.00', 'Late fees', s.late ? `${s.late} tape${s.late > 1 ? 's' : ''} overdue` : 'Good member', 'late')}
         </ul>
-        ${s.out.length ? `<h3 class="acct-h">Out on rental</h3><ul class="acct-cards">${s.out.map(({ r, f }) => {
+        ${T.cin ? '<p class="acct-small">Your Galaxy Video card and rentals live inside the store.</p>' : ''}${!T.cin && s.out.length ? `<h3 class="acct-h">Out on rental</h3><ul class="acct-cards">${s.out.map(({ r, f }) => {
           const over = r.due < Date.now();
           return `<li class="acct-card${over ? ' hot' : ''}"><div class="acct-ct"><b>${ESC(f.title)}</b><small>${over ? '<span class="acct-fee">Overdue</span>' : ''}Due ${ESC(new Date(r.due).toLocaleString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' }))}</small></div><div class="acct-cb"><button type="button" class="acct-go sm" data-rent="${ESC(f.id)}">Open the menu</button></div></li>` }).join('')}</ul>` : ''}
-        <h3 class="acct-h">Stamps <small class="acct-small">${STAMPS.filter(x => got[x[0]]).length} of ${STAMPS.length}</small></h3>
-        <ul class="acct-stamps">${STAMPS.map(([k, name, how]) => `<li class="acct-stamp${got[k] ? ' on' : ''}"><span class="acct-ink" aria-hidden="true">${got[k] ? '&#9733;' : ''}</span><b>${ESC(name)}</b><small>${got[k] ? `Earned ${ESC(new Date(got[k]).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }))}` : ESC(how)}</small></li>`).join('')}</ul>
+        <h3 class="acct-h">Stamps <small class="acct-small">${SH.filter(x => got[x[0]]).length} of ${SH.length}</small></h3>
+        <ul class="acct-stamps">${SH.map(([k, name, how]) => `<li class="acct-stamp${got[k] ? ' on' : ''}"><span class="acct-ink" aria-hidden="true">${got[k] ? '&#9733;' : ''}</span><b>${ESC(name)}</b><small>${got[k] ? `Earned ${ESC(new Date(got[k]).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }))}` : ESC(how)}</small></li>`).join('')}</ul>
         <div class="acct-acts"><button type="button" class="acct-ghost" id="acctShop">Go to Galaxy Video</button></div>`;
       body.querySelectorAll('[data-rent]').forEach(b => b.onclick = () => { const f = FILMS.find(x => x.id === b.dataset.rent); if (!f) return; dismissModal(box); if (typeof openRentalMenu === 'function') openRentalMenu(f) });
       body.querySelector('#acctShop').onclick = () => { dismissModal(box); const b = document.getElementById('viewShopBtn'); if (b) b.click() };

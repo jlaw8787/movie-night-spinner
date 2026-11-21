@@ -33,7 +33,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -141,7 +141,7 @@ function cueLine(F,bf,ink,acc,size){return F.cue?`<div data-fit="cue" style="fon
 function logoOr(ctx,F,maxW,maxH,df,color,dw){const lg=logoImg(ctx,maxW,maxH);const ts=F.title.length>40?Math.round(maxH*.26):F.title.length>24?Math.round(maxH*.34):F.title.length>12?Math.round(maxH*.44):Math.round(maxH*.56);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`:`<div style="font:${dw||700} ${Math.max(18,ts)}px/1.05 ${df};color:${color};text-align:center;${clamp(3)}">${esc(F.title)}</div>`}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 const E=[
@@ -201,7 +201,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const stack=hasStack?`<div style="position:absolute;left:${RX}px;top:${SY}px;width:${RW}px;height:${STH}px;box-sizing:border-box;border:2px solid ${e.soft};padding:10px 14px;overflow:hidden">
       <div style="font:700 14px/1 ${BF};letter-spacing:.2em;color:${e.soft}">HOW WE STACK IT</div>
       <div style="font:700 17px/1.2 ${BF};color:${lt};text-transform:uppercase;margin:6px 0 8px;${clamp(1)}">${esc(F.tx(m0.n))}</div>
-      ${[bread,...fill,bread].map((s,i,a)=>{const out=i===0||i===a.length-1;return `<div style="margin-top:4px;border:2px solid ${out?"#d9b47a":mix(e.soft,e.board,.3)};border-radius:${i===0?"16px 16px 3px 3px":i===a.length-1?"3px 3px 10px 10px":"3px"};background:${out?"rgba(217,180,122,.18)":"transparent"};padding:3px 10px;font:${out?700:500} 15px/1.25 ${BF};color:${lt};text-transform:uppercase;letter-spacing:.05em;text-align:center;${clamp(1)}">${esc(s)}</div>`}).join("")}</div>`:"";
+      ${[bread,...fill,bread].map((s,i,a)=>{const out=i===0||i===a.length-1;return `<div style="margin-top:4px;border:2px solid ${out?"#d9b47a":mix(e.soft,e.board,.3)};border-radius:${i===0?"16px 16px 3px 3px":i===a.length-1?"3px 3px 10px 10px":"3px"};background:${out?"rgba(217,180,122,.18)":"transparent"};padding:3px 10px;font:${out?700:500} 15px/1.25 ${BF};color:${lt};text-transform:uppercase;letter-spacing:.05em;text-align:center;${clamp(1)}">${esc(i&&i===a.length-1?"Bottom slice":s)}</div>`}).join("")}</div>`:"";/* review 32: the bread is listed once, the base reads "Bottom slice" */
 
   /* the receipt: the prop's lines when it is a receipt, then the counter note. Its content height decides how much room the scenes box gets */
   const n=F.note,nk=String((ctx.flavour&&ctx.flavour.note&&ctx.flavour.note.kind)||"note").toLowerCase(),isQ=nk==="quote";

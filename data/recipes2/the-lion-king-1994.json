@@ -69,11 +69,11 @@
    "af": true
   },
   {
-   "n": "Hakuna Matata chakalaka",
+   "n": "Hakuna Matata maharagwe",
    "course": "s",
-   "prep_min": 15,
+   "prep_min": 10,
    "cook_min": 25,
-   "make_ahead": "Make the chakalaka up to 3 days ahead and keep it chilled; it tastes better the next day. Char the bread on the night",
+   "make_ahead": "Make the beans up to 2 days ahead and keep them chilled. Warm the chapati on the night",
    "ingredients": [
     {
      "q": 2,
@@ -102,55 +102,43 @@
     {
      "q": 1,
      "u": "",
-     "item": "red capsicum, diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "green capsicum, diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "carrots, grated",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
      "item": "long red chilli, chopped",
      "aisle": "Produce"
     },
     {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
      "q": 2,
-     "u": "tsp",
-     "item": "mild curry powder",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "smoked paprika",
-     "aisle": "Spices"
-    },
-    {
-     "q": 400,
-     "u": "g",
-     "item": "tinned diced tomatoes",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 400,
-     "u": "g",
-     "item": "tinned baked beans",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
      "u": "",
-     "item": "Turkish loaf",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned red kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chapati",
      "aisle": "Bakery"
     },
     {
@@ -166,195 +154,230 @@
      "min": 6
     },
     {
-     "text": "Add the capsicums and carrot and cook 5 minutes.",
-     "min": 5
+     "text": "Stir in the turmeric and cumin, add the tomatoes and cook 5 minutes.",
+     "min": 6
     },
     {
-     "text": "Stir in the curry powder and paprika, then the tomatoes and baked beans. Simmer 15 minutes until thick.",
-     "min": 16
+     "text": "Add the beans and coconut milk and simmer until thick.",
+     "min": 15
     },
     {
-     "text": "Slice and char the bread on a hot grill pan. Serve with the chakalaka, warm or at room temperature, and scatter with coriander.",
-     "min": 5
+     "text": "Warm the chapati in a dry pan, scatter the beans with coriander and serve together.",
+     "min": 4
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Pride Lands bobotie",
+   "n": "Pride Lands beef pilau",
    "course": "m",
-   "prep_min": 13,
-   "cook_min": 47,
-   "make_ahead": "Up to 1 day, bake fresh",
+   "prep_min": 12,
+   "cook_min": 46,
+   "make_ahead": "Up to 1 day, reheat with a splash of water",
    "ingredients": [
     {
      "q": 2,
-     "u": "",
-     "item": "slices white bread",
-     "aisle": "Bakery"
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
     },
     {
-     "q": 300,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 800,
+     "q": 600,
      "u": "g",
-     "item": "beef mince",
+     "item": "rump steak, diced",
      "aisle": "Meat"
     },
     {
-     "q": 1,
+     "q": 2,
      "u": "",
-     "item": "brown onion",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "tbsp",
-     "item": "curry powder",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
      "aisle": "Spices"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "ground turmeric",
+     "item": "ground cardamom",
      "aisle": "Spices"
     },
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "mango chutney",
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "basmati rice",
      "aisle": "Pantry"
     },
     {
-     "q": 2,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 1,
      "u": "",
-     "item": "bay leaves",
-     "aisle": "Spices"
+     "item": "lime",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Soak the bread in some of the milk and chop the onion.",
+     "text": "Brown the beef in the oil in a heavy pot.",
      "min": 8
     },
     {
-     "text": "Fry the mince with the onion, curry powder and turmeric.",
-     "min": 12
+     "text": "Add the onions and cook until golden.",
+     "min": 8
     },
     {
-     "text": "Stir in the chutney and the squeezed bread, then press into a dish.",
-     "min": 5
+     "text": "Stir in the garlic, ginger and spices for a minute.",
+     "min": 2
     },
     {
-     "text": "Beat the eggs with the remaining milk and pour over. Add bay leaves and bake at 180C.",
-     "min": 35
+     "text": "Add the rice and stir to coat, then the stock. Cover and simmer on low for 18 minutes.",
+     "min": 18
+    },
+    {
+     "text": "Rest off the heat for 10 minutes, then fluff with a fork and serve with lime wedges.",
+     "min": 10
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Pride Lands lentil bobotie",
-     "prep_min": 13,
-     "cook_min": 47,
-     "make_ahead": "Up to 1 day, bake fresh",
+     "n": "Pride Lands chickpea pilau",
+     "prep_min": 12,
+     "cook_min": 38,
+     "make_ahead": "Up to 1 day, reheat with a splash of water",
      "ingredients": [
       {
        "q": 2,
-       "u": "",
-       "item": "slices white bread",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "full cream milk",
-       "aisle": "Dairy"
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "",
-       "item": "tins brown lentils (400g), drained",
-       "aisle": "Pantry"
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
       },
       {
-       "q": 250,
+       "q": 2,
+       "u": "",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
        "u": "g",
-       "item": "mushrooms, chopped",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "brown onion",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "oil",
+       "item": "tinned chickpeas, drained",
        "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "curry powder",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "ground turmeric",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "mango chutney",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
       },
       {
        "q": 3,
        "u": "",
-       "item": "bay leaves",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cardamom",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "basmati rice",
        "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
       }
      ],
      "steps": [
       {
-       "text": "Soak the bread in some of the milk and chop the onion.",
+       "text": "Cook the onions in the oil until golden.",
        "min": 8
       },
       {
-       "text": "Fry the onion and mushrooms in the oil with the curry powder and turmeric.",
-       "min": 12
+       "text": "Add the potato, chickpeas, garlic, ginger and spices and stir for 2 minutes.",
+       "min": 2
       },
       {
-       "text": "Stir in the lentils, chutney and the squeezed bread, then press into a dish.",
-       "min": 5
+       "text": "Add the rice and stir to coat, then the stock. Cover and simmer on low for 18 minutes.",
+       "min": 18
       },
       {
-       "text": "Beat the eggs with the remaining milk and pour over. Add the bay leaves and bake at 180C.",
-       "min": 35
+       "text": "Rest off the heat for 10 minutes, then fluff with a fork and serve with lime wedges.",
+       "min": 10
       }
      ],
+     "veg": true,
      "af": true
     }
    }

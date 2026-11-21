@@ -35,7 +35,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/\bcocktails?\b/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
+[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=(s,fam)=>fam?DRY.reduce((t,[r,v])=>t.replace(r,v),String(s||"")):String(s||"");
@@ -115,7 +115,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const voice=t.voice;
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* 2000 reads "2000", never "00" (review 12) */
   const price=priceFor(era,yr,fl.number);
-  const C={s:"Bar snacks",m:"Plates",w:"Afters",d:fam?"From the fountain":"Behind the bar"};
+  const LBL=(ctx.flavour&&ctx.flavour.labels)||{};/* review 33: a film can name its own headings (Hall Pass runs the week) */const C={s:LBL.s||"Bar snacks",m:LBL.m||"Plates",w:LBL.w||"Afters",d:fam?"From the fountain":LBL.d||"Behind the bar"};
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
   const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
@@ -125,7 +125,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* every price lands on a price ending before the tab adds up, so the totals stay true (the film number on the first main only when it reads like a price) */
   if(window.priceEnd)for(const k of ["s","m","w","d"])PR[k]=PR[k].map(v=>window.priceEnd(v));
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:(n=>n&&/^[a-z]/.test(n)?n[0].toUpperCase()+n.slice(1):n)(dry(x.note,fam))/* 15 Nov: a note starts with a capital (Tango & Cash printed "dry-brined, seared hard") */,p:PR[k][i],house:!!x.house}));
-  const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
+  const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};for(const x of [...I.s,...I.m])x.front=1;/* review 32: the tab totals are added up again from the printed prices after the money pass (sumFix in app.js) */
   /* the photo gives way to the dishes: estimate the height the front's names and notes need at a slightly shrunk size,
      and take it off the poster or still first, so names, prices and the film's own notes still show (Blade, An American Werewolf) */
   const needFront=(()=>{let h=0;for(const k of ["s","m"]){if(!I[k].length)continue;h+=48;for(const it of I[k])h+=41+(it.note?Math.min(2,Math.ceil(it.note.length/50))*26:0)}return Math.round(h*.84)})();
@@ -170,10 +170,10 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="display:flex;align-items:baseline;gap:8px;color:${ink};${glow}">
         <span style="font:700 max(16px,calc(26px*var(--k)))/1.12 ${g.key==="chalk"?g.disp:g.body};${g.key==="chalk"?"font-weight:800;":""}">${esc(it.n)}</span>
         <span style="flex:1;min-width:16px;border-bottom:2px dotted ${rgba(ink,.35)};transform:translateY(-6px)"></span>
-        <span style="font:700 max(16px,calc(26px*var(--k)))/1.1 ${g.body};color:${acc};white-space:nowrap">${money(it.p,era)}</span></div>
+        <span data-sum-in="${it.front?"f t":"t"}" style="font:700 max(16px,calc(26px*var(--k)))/1.1 ${g.body};color:${acc};white-space:nowrap">${money(it.p,era)}</span></div>
       ${it.note?`<div ${A}-note="${it.house?"h":""}" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;color:${sub};font:500 max(14px,calc(20px*var(--k)))/1.28 ${g.body}">${esc(it.note)}</div>`:""}</div>`;
   const course=k=>I[k].length?`<div style="margin:0 0 calc(10px*var(--k))">${label(C[k])}${I[k].map(row).join("")}</div>`:"";
-  const ledger=(lab,val,strong)=>`<div style="display:flex;align-items:baseline;gap:10px;color:${ink};font:${strong?800:600} ${strong?24:19}px/1.1 ${g.body};letter-spacing:.1em;text-transform:uppercase;${strong?`border-top:3px double ${rgba(ink,.7)};padding-top:8px;`:`border-top:1px solid ${rgba(ink,.35)};padding-top:6px;`}"><span>${esc(lab)}</span><span style="flex:1"></span><span style="color:${acc};letter-spacing:.02em">${money(val,era)}</span></div>`;
+  const ledger=(lab,val,strong)=>`<div style="display:flex;align-items:baseline;gap:10px;color:${ink};font:${strong?800:600} ${strong?24:19}px/1.1 ${g.body};letter-spacing:.1em;text-transform:uppercase;${strong?`border-top:3px double ${rgba(ink,.7)};padding-top:8px;`:`border-top:1px solid ${rgba(ink,.35)};padding-top:6px;`}"><span>${esc(lab)}</span><span style="flex:1"></span><span data-sum="${strong?"t":"f"}" style="color:${acc};letter-spacing:.02em;text-transform:none">${money(val,era)}</span></div>`;
 
   /* logo panel. Under a poster (which already carries the title) the panel reads "Now showing, year" in the bar's own type, so the
      logo prints once (Top Gun 11 Nov, every bartab poster 15 Nov). Flavour logoPanel:true keeps the logo for a poster with no title. */
@@ -226,7 +226,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="margin-top:4px;font:400 max(22px,calc(32px*var(--k)))/1.05 'Caveat Brush',cursive;color:${acc};text-align:right">${esc(note.by)}</div></div>
     ${coaster}
     <div ${A}-box ${A}-min=".9" style="position:absolute;left:${P+6}px;right:${P+6}px;top:990px;height:52px;overflow:hidden;--k:1;color:${sub};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-      ${cue?`<span ${A}-drop>Last call: ${esc(cue)} </span>`:""}${winks.length?`<span ${A}-drop>Bar talk: ${esc(winks.slice(0,3).join(". "))}. </span>`:""}<span>Prices subject to change. ${esc(g.print)}. Tab No. ${esc(number)}. ${esc(yr)}.${fam?" Every drink alcohol free.":""}</span></div>
+      ${cue?`<span ${A}-drop>Last call: ${esc(cue)} </span>`:""}${winks.length?`<span ${A}-drop>Bar talk: ${esc(winks.slice(0,3).join(". "))}. </span>`:""}<span>Prices subject to change. ${esc(g.print)}. Tab No. ${esc(number)}. ${esc(yr)}.${fam?" Soft drinks only.":""}</span></div>
     ${wearLayer}</div>`;
   return {w:W,h:H,faces:[f0,f1]};
 };

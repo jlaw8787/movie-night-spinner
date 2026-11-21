@@ -35,7 +35,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/\bcocktails?\b/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
+[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=(s,fam)=>fam?DRY.reduce((t,[r,v])=>t.replace(r,v),String(s||"")):String(s||"");
@@ -92,7 +92,9 @@ function fitBox(b){if(window.__fmtTrimReset)window.__fmtTrimReset(b);const tray=
       Object.assign(under.style,room>=90?{display:"block",left:hero.style.left,top:top+"px",width:(w-d)+"px",height:room+"px"}:{display:"none"})}
     face.querySelectorAll("[data-shift]").forEach(x=>{const [l,ww]=x.dataset.shift.split(",").map(Number);x.style.left=(l-d)+"px";x.style.width=(ww+d)+"px"})};
   if(tb)shift(0);shrink();
-  if(tb&&hero)for(let d=14;d<=112&&(over(b)||k<.8);d+=14){shift(d);shrink()}
+  if(tb&&hero)for(let d=14;d<=154&&(over(b)||k<.8);d+=14){shift(d);shrink()}
+  /* review 32 (Josh: room for the full note, not cuts): a little smaller still (notes to 13px) before a house line or a note goes */
+  if(over(b)){const m0=min;while(over(b)&&k>Math.min(m0,.62)){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
   /* house lines go first, then whole notes from the bottom up: a note is shown in full or not at all, never cut to "mozzarell..." */
   for(let i=drops.length-1;i>=0&&over(b);i--)drops[i].style.display="none";
   {const ns=notes;(window.__fmtTrim?window.__fmtTrim(ns,()=>over(b)):(()=>{for(let i=ns.length-1;i>=0&&over(b);i--)ns[i].style.display="none"})())}
@@ -241,7 +243,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const row=it=>`<div style="margin:0 0 calc(8px*var(--k))"><div style="display:flex;align-items:baseline;gap:10px">
       <span ${A}-name style="flex:1;font:700 max(16px,calc(25px*var(--k)))/1.12 ${g.body};color:${cellInk}">${esc(it.n)}</span>
       <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${cAcc};white-space:nowrap">${it.ps||money(it.p,era)}</span></div>
-    ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(14px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
+    ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(13px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
   const comp=(k,grow)=>I[k].length?`<div data-well style="flex:${grow} 1 0;min-width:0;box-sizing:border-box;padding:calc(12px*var(--k)) 16px calc(8px*var(--k));background:${cell};border-radius:${g.radius}px;box-shadow:inset 0 3px 8px rgba(0,0,0,.28),inset 0 -2px 0 rgba(255,255,255,.5)">
       <div style="margin-bottom:calc(6px*var(--k));font:700 max(14px,calc(17px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${cAcc}">${esc(C[k])}</div>${I[k].map(row).join("")}</div>`:"";
   /* compartments stack full width (the tray column is too narrow to split without one word per line); each grows to share the spare depth */
@@ -250,13 +252,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lines=(t,cpl)=>Math.max(1,Math.ceil(String(t||"").length/cpl));
   const estTray=["m","s","w","d"].filter(k=>I[k].length).reduce((h,k)=>h+12+46+I[k].reduce((a,it)=>a+lines(it.n,19)*28+(it.note?Math.min(2,lines(it.note,34))*24+2:0)+8,0),0);
   const k0=Math.max(.68,Math.min(1,Math.floor(536/estTray*100)/100));
-  const trayBox=`<div ${heroPoster?`data-shift="${RX},${TW}" `:""}style="position:absolute;left:${heroPoster?RX:634}px;top:198px;width:${heroPoster?TW:408}px;height:${heroPoster?558:560}px;box-sizing:border-box;padding:12px;background:${tray};background-image:${gi===3?"linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,255,255,0) 40%,rgba(0,0,0,.06)),":""}${noise(.9,.06,"#ffffff",2)};border-radius:${g.radius+10}px;box-shadow:0 6px 16px rgba(0,0,0,.3),inset 0 2px 0 rgba(255,255,255,.4)">
+  const trayBox=`<div data-pvzoom="self" ${heroPoster?`data-shift="${RX},${TW}" `:""}style="position:absolute;left:${heroPoster?RX:634}px;top:198px;width:${heroPoster?TW:408}px;height:${heroPoster?558:560}px;box-sizing:border-box;padding:12px;background:${tray};background-image:${gi===3?"linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,255,255,0) 40%,rgba(0,0,0,.06)),":""}${noise(.9,.06,"#ffffff",2)};border-radius:${g.radius+10}px;box-shadow:0 6px 16px rgba(0,0,0,.3),inset 0 2px 0 rgba(255,255,255,.4)">
     <div ${A}-box style="width:100%;height:100%;overflow:hidden;--k:${k0};display:flex;flex-direction:column;gap:12px">${trayInner}</div></div>`;
 
   const head=`<div ${A}-text="17" ${A}-lo="14" ${heroPoster?`data-shift="${RX+6},${SX-14-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?88:84}px;height:24px;overflow:hidden;white-space:nowrap;color:${acc};font:700 17px/24px ${g.body};letter-spacing:.2em;text-transform:uppercase">${esc(sign)}</div>
     <div ${A}-text="44" ${A}-lo="20" ${heroPoster?`data-shift="${RX+6},${SX-14-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?114:110}px;height:${heroPoster?80:82}px;overflow:hidden;display:flex;align-items:center;color:${ink};font:${g.dw} 44px/1 ${g.disp};${gi===2?"font-style:italic;":""}">${esc(venue)}</div>`;
   const fine=`<div ${A}-box ${A}-min=".93" ${heroPoster?`data-shift="${RX+6},${RR-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?RR-RX-6:396}px;top:764px;height:44px;overflow:hidden;--k:1;color:${mix(ink,paper,.3)};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(fl.year||yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
+    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(fl.year||yr)}.${fam?" Soft drinks only.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
     ${hero}${heroPoster?underPic:sidePic}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}

@@ -13,4 +13,7 @@ console.log(r);const bad=r.split('\n').filter(l=>+l.split('tap height ')[1]<44);
 // a tap on the Horror pad, above the sign, walks to Horror
 const hb=await p.evaluate(()=>{const b=document.querySelector('#viewShop .sv-hang[data-go="Horror"]');const pan=document.querySelector('#viewShop .sv-aisles');pan.scrollLeft=Math.max(0,b.offsetLeft-100);const r=b.getBoundingClientRect();return {x:r.left+r.width/2,y:r.top-12}});
 await p.touchscreen.tap(hb.x,hb.y);await p.waitForTimeout(1500);{const top=await p.evaluate(()=>{const t=document.querySelector('#shopAisles .aisle[data-name="Horror"]');return t?t.getBoundingClientRect().top:9999});if(!(top>-50&&top<844)){console.error('FAIL: tap above Horror did not walk to the aisle');process.exitCode=1}else console.log('PASS: store sign taps')}
+// review 30: the store's filter toggles are small switches, so the whole label is the tap target and must be 44 by 44 or more
+{const small=await p.evaluate(()=>[...document.querySelectorAll('#viewShop .shop-tools label')].filter(l=>l.getClientRects().length).map(l=>{const r=l.getBoundingClientRect();return [l.textContent.trim().slice(0,20),Math.round(r.width),Math.round(r.height)]}).filter(x=>x[1]<44||x[2]<44));
+ if(small.length){console.error('FAIL: store toggles under 44px',small);process.exitCode=1}else console.log('PASS: store toggle labels are 44px or more')}
 await b.close();srv.kill();process.exit(process.exitCode||0)})().catch(e=>{console.error(e);srv.kill();process.exit(1)});

@@ -37,7 +37,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/\bcocktails?\b/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
+[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=(s,fam)=>fam?DRY.reduce((t,[r,v])=>t.replace(r,v),String(s||"")):String(s||"");
@@ -243,7 +243,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="flex:none;font:${g.dw} 22px/1 ${g.disp};color:${acc};letter-spacing:${g.track};text-transform:uppercase">Mess call</div>
       <div ${A}-box ${A}-min=".9" style="flex:1;min-width:0;height:50px;overflow:hidden;--k:1;display:flex;align-items:center;font:500 max(14px,calc(17px*var(--k)))/1.25 ${BODY};color:${ink}"><span>${esc(cue||voice[1])}</span></div></div>
     <div ${A}-box ${A}-min=".92" style="position:absolute;left:${P+6}px;right:${P+6}px;top:958px;height:70px;overflow:hidden;--k:1;color:${sub};font:400 max(14px,calc(15px*var(--k)))/1.3 ${BODY}">
-      <span>${esc(voice[1])}. Prices subject to change${space?", paid in ship's credit":""}. ${esc(g.print)}. Form G-${esc(String(number).slice(-4))}, sheet 2 of 2. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks.length?`<span ${A}-drop>Crew notes: ${esc(winks.slice(0,3).join(". "))}.</span>`:""}</div>
+      <span>${esc(voice[1])}. Prices subject to change${space?", paid in ship's credit":""}. ${esc(g.print)}. Form G-${esc(String(number).slice(-4))}, sheet 2 of 2. ${esc(yr)}.${fam?" Soft drinks only.":""} </span>${winks.length?`<span ${A}-drop>Crew notes: ${esc(winks.slice(0,3).join(". "))}.</span>`:""}</div>
     ${over_}</div>`;
   return {w:W,h:H,faces:[f0,f1]};
 };

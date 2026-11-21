@@ -37,15 +37,18 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|schnapps)\b/gi,"syrup"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|schnapps)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
 /* 15 Nov: a one-sentence note that runs long is cut at a break that keeps the film's part (window.__fmtShortFilm), not left off (every pub film printed names only) */
-const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();if(p.length<=n&&p.length>=12&&p.split(/\s+/).length>=4)return p;const sf=window.__fmtShortFilm||window.__fmtShort,b=sf&&sf(s,c=>c.length<=n);return b?b.replace(/[.;]$/,""):""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
+/* review 31: a cut note keeps at least four words ("Smashed beef patties." and "Cucumber mint cream cheese." read as scraps);
+   when one line cannot hold four words, that note takes one more line */
+const clip4=(t,nl,w,N,cw)=>{for(let k=nl;k<=Math.max(nl,2)+(nl>=9?0:1);k++){const c=clip(t,Math.floor(k*w/(N*cw)*.95));if(c&&c.split(/\s+/).length>=4)return c;if(k>=9)return c}return clip(t,Math.floor((nl+1)*w/(N*cw)*.95))};
 const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 
 /* ---------- colour ---------- */
@@ -124,19 +127,24 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),C=s=>fam?dry(clean(s)):clean(s);
   const year=String(f.year||"").slice(0,4)||"1999",yy=year.slice(-2);
   const fl=ctx.flavour||{};
+  /* review 31: the pub talks like its country. Counter meals, meat trays and a licence number are Australian; an English pub serves food
+     and runs a quiz; anywhere else the kitchen is simply open (flavour.country, or GB from a pound price) */
+  const PL=String(fl.country||(fl.currency==="£"?"GB":"AU")).toUpperCase(),AU=PL==="AU",GB=PL==="GB";
+  const raf=AU?null:GB?"Pub quiz, Thursday":"Trivia night, Wednesday";
   const title=clean(f.title||"Tonight's Feature");
   const venue=C(fl.venue)||"The Royal Hotel";
   const sign=C(fl.sign)||"";
   const note={text:C(fl.note&&fl.note.text)||sentence(f.T)||"Pull up a stool. Kitchen's open and the specials are on the board.",by:C(fl.note&&fl.note.by)||"The Publican"};
   const winks=(fl.winks||[]).map(C).filter(Boolean);
-  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:fam?"Friday Raffle":T.raffle.replace(/,.*$/,""),lines:["Drawn at the front bar","Must be present to win"]};
-  const num=String(fl.number||"").replace(/\D/g,"")||year;
+  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:fam?"Friday Raffle":(raf||T.raffle).replace(/,.*$/,""),lines:raf?["Teams of up to six","Prizes behind the bar"]:["Drawn at the front bar","Must be present to win"]};
+  /* review 32: a pub set in an earlier decade (flavour.priceEra) never prints the release year as its licence (Red Dog's "Licence 2011" over 1970s prices) */
+  const num=String(fl.number||"").replace(/\D/g,"")||(fl.priceEra?String(year).slice(-2)+"7":year);
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=ctx.stills||[];
   const PM=!!poster; /* poster mode: the whole poster is the hero, the first still is only the fallback */
   const hero=PM?{src:img(poster,"w780"),poster:true}:{src:img(stills[0],"w1280"),poster:false};
-  const sec=Object.assign({},SEC,fam?{d:"Soft Drinks"}:{});
+  const sec=Object.assign({},SEC,AU?{}:{m:"Mains"},fam?{d:"Soft Drinks"}:{});
 
   const P=ctx.palette||{};
   const BOARD="#1f2623",CHALK="#f1efe6";
@@ -153,10 +161,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== verandah fascia ===== */
   const FH=150;
   const vT=fitType(up(venue),W-120,86,E.dcw*(E.up?1.12:1),78,34,1.0,2);
-  /* 7 Nov: a period film (number is a story year before release, Phar Lap 1930) gets a pub that already stood then */const sy=+String((fl&&fl.number)||"").replace(/\D/g,""),estY=sy>1800&&sy<+year?String(sy-60):year;const fasciaKick=`${E.kick}, ${E.est} ${estY}`;
+  /* review 33 (Josh): an Est. year only when the film gives one (flavour.est), never the release year or a made-up one */const estY=fl.est?String(fl.est):"";const fasciaKick=`${AU?E.kick:GB?"FOOD SERVED DAILY":"KITCHEN OPEN DAILY"}${estY?`, ${E.est} ${estY}`:""}`;
   const fascia=`<div style="position:absolute;left:0;top:0;width:${W}px;height:${FH}px;background:linear-gradient(180deg,rgba(255,255,255,.14),transparent 30%,rgba(0,0,0,.2)),repeating-linear-gradient(180deg,transparent 0 42px,rgba(0,0,0,.14) 42px 44px,rgba(255,255,255,.08) 44px 46px),${grain(.12+.15*T.wear,lum(rgb(E.fascia))<.2,.6,true)},${E.fascia};border-bottom:10px solid ${E.frame};box-shadow:0 6px 14px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 60px;box-sizing:border-box;text-align:center">
-      <div style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
-      <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
+      <div data-pvsign style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
+      <div data-pvsign style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
   /* ===== the poster: the main picture, about 37 percent of the face, whole at 2:3, pinned straight to the wall ===== */
   /* 15 Nov: the film's notes before the poster's size. A long board (Phar Lap's nine dishes) printed names only beside the 590px poster,
      so the poster steps down to 550 then 510 (still whole at 2:3) to widen the board, and notes only drop if even 510 cannot hold them */
@@ -167,7 +175,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const noLogo=PM&&fl.logoPanel!==true,RRW=470;
   const rT0=fitType(prop.title,RRW-80,64,.6,30,18,1.05,2),rH0=14+18+6+rT0.n*rT0.z*1.05+6+prop.lines.length*20.8+14;
   var under=false;
-  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,2,1],[510,700,2,1],[510,760,2,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
+  /* review 31: full notes first. Every poster size and board height is tried with every note whole (nl 9) before any is cut to two lines,
+     then one; a bare first clause ("Smashed beef patties.") or a dish with no note at all is the last resort */
+  need:for(const NEED of [9,2,1]){
+  geo:for(const [PIWT,BHT,NC,HD] of [[590,640],[590,700],[590,760],[550,640],[550,700],[550,760],[510,640],[510,700],[510,760],[470,640],[470,700],[470,760],[430,700],[430,760],[590,640,0,1],[590,700,0,1],[590,760,0,1],[550,640,0,1],[550,700,0,1],[550,760,0,1],[510,640,0,1],[510,700,0,1],[510,760,0,1],[510,640,2,1],[510,700,2,1],[510,760,2,1],[510,640,1,1],[510,700,1,1],[510,760,1,1],[590,640,0,0,1]]){
   /* the board may also grow down (and last of all the kitchen cue gives its room, NC) into the pinned note's spare room, but only while the note still holds its quote at the smallest size */
   under=noLogo&&FH+26+Math.round(PIWT*1.5)+16+22+38+rH0<=H-70;
   if(BHT>640){const bw=W-24-(24+PIWT+16+22),nq=Math.ceil(String(note.text).length*16*E.bcw/(bw-44))+1;if(H-74-(FH+26+BHT+20)-(under?0:170)-(90+nq*21.8+30)<0)continue}
@@ -190,7 +201,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== blackboard ===== */
   var BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=BHT,NB=H-74;
   var IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
-  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
+  var head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${AU?(fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"):GB?"Food served 12 to 3 and 6 to 9":"Kitchen open 12 to 2 and 6 to 9"}</div></div>`;
   var headH=76;
   var cue=sentence(C(f.P));
   var cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);
@@ -211,13 +222,14 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       <div style="${caps(FS.S,CA,.12)};line-height:1.15;margin-bottom:6px;${chalk}">${esc(sec[c.k])}</div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
         <span style="font:700 ${FS.D}px/1.12 ${body};color:${CHALK};${chalk}">${esc(it.n)}</span><span style="font:${E.dw}${Math.round(FS.D*1.08)}px/1 ${disp};color:${CA};white-space:nowrap;${chalk}">$${esc(it.p)}</span></div>
-        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${rgba(CHALK,.78)};margin-top:2px;${chalk}">${esc(sentence(clip(it.note,Math.floor(FS.nl*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
+        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${rgba(CHALK,.78)};margin-top:2px;${chalk}">${esc(sentence(clip4(it.note,FS.nl,colW,FS.N,E.bcw)))}</div>`:""}</div>`).join("")}</div>`).join("");
   var est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+6+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.7,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
   var measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
   var FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.39:.55);s-=.05){/* 15 Nov: with notes, down to the type floor with gaps of 6px */
-    var base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
+  outer:for(const nl of (NEED===9?[9]:NEED===2?[2]:[1,0]))for(let s=1.07;s>=(nl?.39:.55);s-=.05){/* 15 Nov: with notes, down to the type floor with gaps of 6px */
+    /* review 32: whole notes may go to 13px (about 9 point on the 1240 wide board) before any note is cut */
+    var base={D:Math.max(nl===9?15:17,Math.round(28*s)),N:Math.max(nl===9?13:15,Math.round(21*s)),S:Math.max(nl===9?17:19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
       var best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
@@ -230,7 +242,8 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
         if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break}}
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
-  if(FS&&FS.nl)break geo}
+  if(FS&&FS.nl&&(NEED===1||FS.nl>=NEED))break need}
+  }
 
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];
@@ -252,7 +265,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   const raffle=`<div style="position:${under?`absolute;left:${PX+4}px;top:${ZY+38}px`:"relative"};flex:none;width:${under?RRW:RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
       <div style="width:62px;border-right:2px dashed rgba(33,26,18,.45);display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);white-space:nowrap;font:800 18px/1 ${body};letter-spacing:.1em">No. ${esc(num.padStart(4,"0"))}</div></div>
       <div style="flex:1;padding:14px 16px 14px;min-width:0">
-        <div style="${caps(15,"#4a3a24",.16)}">${esc(fl.prop&&fl.prop.title?"Keep this":fam?"Friday raffle":T.raffle)}</div>
+        <div style="${caps(15,"#4a3a24",.16)}">${esc(fl.prop&&fl.prop.title?"Keep this":fam?"Friday raffle":raf||T.raffle)}</div>
         <div style="font:${E.dw}${rT.z}px/1.05 ${disp};color:#1b150e;margin:6px 0">${esc(up(prop.title))}</div>
         ${prop.lines.map(l=>`<div style="font:500 16px/1.3 ${body};color:#3a2f22">${esc(trunc(l,28))}</div>`).join("")}
         </div></div>`;
@@ -263,7 +276,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
       <div style="position:absolute;right:22px;bottom:18px;font:26px/1.5 ${sig};color:${fit(acc,"#f8f2e3","#1d3a6a",4)}">${esc(trunc(note.by,20))}</div></div>`;
-  const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?sentence(trunc(winks[0],60))+" ":""}Prices subject to change. Licence ${num}.`;
+  const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?sentence(trunc(winks[0],60))+" ":""}Prices subject to change.${AU?` Licence ${num}.`:GB?" Licensed premises.":""}`;
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
   const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
 

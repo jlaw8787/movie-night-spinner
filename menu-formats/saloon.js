@@ -64,7 +64,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(whiskey|whisky|bourbon)\b|\bscotch\b(?! (eggs?|bonnets?|broth|fillets?|finger|pancakes?|pies?|mist|tape))/gi,"butterscotch"],[/\bmai tais?\b/gi,"lagoon cooler"],[/\bpi[nñ]a coladas?\b/gi,"pineapple colada"],[/\bmargaritas?\b/gi,"lime slushie"],[/\brum\b/gi,"coconut"],[/\b(wine|sangria)s?\b/gi,"grape juice"],[/\b(champagne|prosecco)\b/gi,"sparkling apple"],[/\b(beer|ale|lager|stout)s?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(vodka|gin|tequila|brandy|liqueur|sake|grog)\b/gi,"fizz"],[/\b(spiked|boozy)\b/gi,"fizzy"]];
+[/\b(whiskey|whisky|bourbon)\b|\bscotch\b(?! (eggs?|bonnets?|broth|fillets?|finger|pancakes?|pies?|mist|tape))/gi,"butterscotch"],[/\bmai tais?\b/gi,"lagoon cooler"],[/\bpi[nñ]a coladas?\b/gi,"pineapple colada"],[/\bmargaritas?\b/gi,"lime slushie"],[/\brum\b/gi,"coconut"],[/\b(wine|sangria)s?\b/gi,"grape juice"],[/\b(champagne|prosecco)\b/gi,"sparkling apple"],[/\b(beer|ale|lager|stout)s?\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(vodka|gin|tequila|brandy|liqueur|sake|grog)\b/gi,"fizz"],[/\b(spiked|boozy)\b/gi,"fizzy"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[r,w])=>t.replace(r,w),String(s||""));
@@ -94,7 +94,7 @@ function flav(ctx,fb){
   const winks=(v.winks||[]).filter(Boolean);
   return{venue:v.venue||fb.venue,sign:v.sign||fb.sign,note:note?{text:note.text,by:note.by||fb.by}:{text:fb.noteText(ctx),by:fb.by},
     winks:winks.length?winks:fb.winks,prop:v.prop&&v.prop.title?v.prop:fb.prop,
-    number:String(v.number||"").replace(/[^0-9a-z]/gi,"").slice(0,6)||((y=>y.slice(-2)==="00"?y:y.slice(-2))(String(ctx.f&&ctx.f.year||"")))/* a 2000 film reads "2000", never "REWARD $00" (review 12) */||"7",cur:/^[£€¥$]$/.test(v.currency||"")?v.currency:"$"/* per film: Lock, Stock's debt is in pounds */,has:!!ctx.flavour};
+    number:String(v.number||"").replace(/[^0-9a-z]/gi,"").slice(0,6)||((y=>y.slice(-2)==="00"?y:y.slice(-2))(String(ctx.f&&ctx.f.year||"")))/* a 2000 film reads "2000", never "REWARD $00" (review 12) */||"7",reward:v.reward||"",era:v.priceEra||ctx.era||"",cur:v.currency==="£sd"?"£":/^[£€¥$]$/.test(v.currency||"")?v.currency:"$"/* per film: Lock, Stock's debt is in pounds */,has:!!ctx.flavour};
 }
 /* fonts: one link per format */
 let fontsReady=Promise.resolve();
@@ -240,7 +240,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const vlen=String(F.venue).length,vs=vlen>36?54:vlen>24?64:vlen>14?78:92;
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
   const fb=Math.max(14,Math.min(title.length>40?20:title.length>22?24:30,Math.floor(150/(Math.max(...String(title).replace(/<[^>]*>/g,"").split(/\s+/).map(w=>w.length),1)*.7))));
-  const reward=/^\d+$/.test(F.number)?`${F.cur}${F.number}`:F.number;
+  /* review 32: the reward is a sum of money for its time (flavour.reward, else a sensible amount for the era), never the bill number or
+     the film year ("REWARD £1942" on Australia, "REWARD £82" beside Snowy River's 100 pound card) */
+  const reward=F.reward||(F.cur+String(({"1800s":500,"1930s-40s":100,"1950s":500,"1960s":1000,"1970s":1000,"1980s":5000,"1990s":10000,"2000s":10000,modern:10000})[F.era]||500).replace(/\B(?=(\d{3})+(?!\d))/g,","));
   const lpDark=`position:relative;display:block;width:100%;max-width:182px;padding:10px 12px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${toHex(mix(hex(P.bg),WHITE,.5))}`);
   const face=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
@@ -290,7 +292,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-box data-col="2" style="flex:1;overflow:hidden">${menuCol(["w","d"],cs,era,ty,C,fam)}</div>
     </div>
     <div data-box style="flex:none;height:22px;margin-top:4px;overflow:hidden;text-align:center;white-space:nowrap;font:${ty.bw} 15px ${ty.body};opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Talk of the town: "}${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Talk of the town: "}${T(w)}.</span>`).join("")}
     </div>
     </div>
   </div>`;

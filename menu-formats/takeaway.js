@@ -25,7 +25,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\bred wine\b|\bwhite wine\b|\bmulled wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b|\bbubbly\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bale\b/gi,"cider punch"],[/\bcocktails?\b/gi,"mocktail"],[/\bpunch\b(?! bowl)/gi,"fruit punch"],[/\b(rum|vodka|gin|whisky|whiskey|bourbon|tequila|brandy|sherry|liqueur|mead|sake|schnapps|cognac)\b/gi,"syrup"]];
+[/\bred wine\b|\bwhite wine\b|\bmulled wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b|\bbubbly\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bale\b/gi,"cider punch"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\bpunch\b(?! bowl)/gi,"fruit punch"],[/\b(rum|vodka|gin|whisky|whiskey|bourbon|tequila|brandy|sherry|liqueur|mead|sake|schnapps|cognac)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -186,7 +186,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:30px;top:138px;width:388px;background:${BAR};color:${BARINK};padding:12px 16px;box-sizing:border-box;${eg==="new"?"border-radius:10px;":""}">
      <div style="font:700 15px/1 ${E.body};letter-spacing:.24em;text-transform:uppercase">Phone your order</div>
      <div style="font:${E.dw} 44px/1.1 ${E.disp};margin-top:4px;white-space:nowrap">${phone}</div></div>
-   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over $25.</div>
+   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over ${((ctx.flavour&&ctx.flavour.currency)==="¥"?"¥3,000":"$"+(({"1930s-40s":2,"1950s":3,"1960s":5,"1970s":8,"1980s":12,"1990s":15,"2000s":20})[(ctx.flavour&&ctx.flavour.priceEra)||ctx.era]||25))}.</div>
    <div style="position:absolute;left:30px;top:310px;width:388px;height:1px;background:${SOFT};opacity:.6"></div>
    <div data-fit data-min="15" style="position:absolute;left:30px;top:322px;width:388px;height:220px;overflow:hidden;font-size:20px;color:${INK}">
      <div style="font:700 15px/1.2 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${SPOT};margin-bottom:.4em">Talk on the delivery run</div>
@@ -234,12 +234,12 @@ window.MENU_FORMATS[ID]=ctx=>{
        <div style="flex:1;min-width:0">
          <div style="display:flex;justify-content:space-between;gap:.5em;align-items:baseline">
            <span style="font:700 1em/1.12 ${E.body};color:${INK};text-transform:${up};${heavy?clamp(2):""}">${esc(txt(it.n))}</span>
-           <span style="flex:none;font:700 1em/1.1 ${E.body};color:${INK}">${price(k,i)}</span></div>
+           <span ${i===0?'data-sum-in="set" ':""}style="flex:none;font:700 1em/1.1 ${E.body};color:${INK}">${price(k,i)}</span></div>
          ${it.note&&!(nIt>12&&i>1)?`<div style="font:italic 500 .76em/1.28 ${E.body};font-size:max(15px,.76em);color:${SOFT};margin-top:.1em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div></div>`).join("")}</div>`;
   const setNo=num||(yy?"8"+yy[1]:"88");
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
-     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
-     <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">One of every course, packed in one bag, ready by the opening credits.</div></div>`;
+     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span data-sum="set" data-sum-k="1.7" style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
+     <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">The first of every course for two, packed in one bag, ready by the opening credits.</div></div>`;
   /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
   const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];
   const tileSrc=i=>extra.length?IMG+"w780"+extra[i%extra.length]:"";

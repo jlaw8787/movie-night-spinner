@@ -18,7 +18,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake|baijiu)\b/gi,"syrup"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake|baijiu)\b/gi,"syrup"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 M.family=f=>["kids","fairytale","xmas"].includes(f&&f.theme);
@@ -55,12 +55,14 @@ M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.
   const grow=()=>{if(!give)return;for(let c=8;over(el)&&c<=+el.dataset.grow;c+=8){give.style.height=(+give.dataset.h0-c)+"px";shift.forEach(n=>n.style.top=(+n.dataset.t0-c)+"px");el.style.top=(+el.dataset.t0-c)+"px";el.style.height=(+el.dataset.h0+c)+"px"}};
   const shrink=lo=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>lo&&g++<160){s=Math.max(lo,s-.5);el.style.fontSize=s+"px"}};
   shrink(min);if(!over(el))return;
+  /* review 32 (Josh: room for the full note, not cuts): the photo gives way and the type steps to its note floor before a note is shortened */
+  if(el.querySelector("[data-note]")){grow();if(!over(el))return;shrink(+el.dataset.nlo||Math.round(min*.9));if(!over(el))return}
   /* 15 Nov: dish notes ([data-note]) are shortened before anything is dropped. From the bottom, each is cut at a natural break
      (first sentence, a comma, a joining word), keeping the film's moment where it can (window.__fmtShortFilm): the first cut that fits is kept, else the shortest one if it saves a line.
      Then a data-grow box takes room from its photo, and the type may go to its note floor (data-nlo, else 90 per cent of its floor). Only after that do notes drop from the end, then whole items */
   const dn=[...el.querySelectorAll("[data-note]")].filter(n=>!n.children.length),lo=dn.length?(+el.dataset.nlo||Math.round(min*.9)):min;
   if(dn.length&&window.__fmtShort){for(let i=dn.length-1;i>=0&&over(el);i--){const n=dn[i],full=n.dataset.full||(n.dataset.full=n.textContent),h0=n.offsetHeight;let last=null;
-      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;last=c;return !over(el)});n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
+      const ok=(window.__fmtShortFilm||window.__fmtShort)(full,c=>{n.textContent=c;if(!last||c.length<last.length)last=c;return !over(el)});/* review 31: the shortest cut tried, not the last (cuts are now tried four words first) */n.textContent=ok||last||full;if(!ok&&last&&n.offsetHeight>=h0)n.textContent=full}
     if(over(el))grow();if(over(el))shrink(lo);if(!over(el))return}
   /* still too much: drop notes from the end, then whole items (first item per course stays), then grow back */
   const opts=[...el.querySelectorAll("[data-opt]")],its=[...el.querySelectorAll("[data-item]:not([data-keep])")];
@@ -116,6 +118,9 @@ window.MENU_FORMATS.home=function(ctx){
   [E.dq,E.bq,SIGQ].forEach(M.font);
   const fl=ctx.flavour||{},nt=fl.note&&fl.note.text?fl.note:{text:"Dinner is on the table at seven. Plates in the sink before the film starts, and no talking in the good bits.",by:"The cook"};
   const venue=fl.venue||"Family Kitchen",sign=fl.sign||"Home cooking, film night";
+  /* review 31: before fridges (or in a made-up world) the note is pinned by the hearth and dinner serves the table, not the couch;
+     in the 1930s and 40s it is the icebox and the wireless */
+  const OLD=fl.world==="storybook"||(fl.priceEra||ctx.era)==="1800s",ICE=!OLD&&(fl.priceEra||ctx.era)==="1930s-40s";
   const winks=(fl.winks&&fl.winks.length?fl.winks:["Popcorn after mains","Napkins by the couch","Phones off when the lights go down"]).slice(0,5).map(w=>M.dry(w,fam));
   const num=M.num(fl.number,f.year),/* 7 Nov: a film whose number is its story year (Selena, 1995) stamps that year, not the release year */sy=/^(19|20)\d\d$/.test(String(fl.number||""))&&Math.abs(+fl.number-(+f.year||0))<=5?String(fl.number):String(f.year||""),yy=sy.slice(-2);/* 15 Nov: optional per film, flavour.stamp prints a story-true stamp on the TV still and the recipe card in place of the year (The Truman Show: DAY 10,909) */
   const ink=E.ink,acc=M.accent(ctx.palette,E.card,E.acc,3.4),dark=M.darkOf(ctx.palette,"#15161a");
@@ -135,12 +140,12 @@ window.MENU_FORMATS.home=function(ctx){
      <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:${E.pr.ir};background:#222">
       ${src&&isP?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(16px) brightness(.55)"><img src="${src}" crossorigin="anonymous" alt="" style="position:relative;display:block;width:100%;height:100%;object-fit:contain">`:src?`<img src="${src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
       <div style="position:absolute;inset:0;background:${isP?`linear-gradient(160deg,rgba(255,255,255,.1),transparent 30%)`:`radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%),linear-gradient(160deg,rgba(255,255,255,${E.stamp?.16:.05}),transparent 40%)`}"></div>
-      ${E.stamp&&!isP?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">${fl.stamp?x(fl.stamp):`'${x(yy)} 10 26`}</div>`:""}
+      ${E.stamp&&!isP?`<div aria-hidden="true" data-np style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">${fl.stamp?x(fl.stamp):`'${x(yy)} 10 26`}</div>`:""}
      </div>
      ${cap&&E.cap?`<div style="position:absolute;left:0;right:0;bottom:2px;text-align:right;padding-right:26px;font:30px/1.1 ${SIG};color:#3a3326">${x(cap)}</div>`:""}
    </div>`;
   /* plastic letter magnets, type only */
-  const mags=(word,l,t,size)=>`<div style="position:absolute;left:${l}px;top:${t}px;display:flex;gap:2px;transform:rotate(${-T.rot*1.4}deg)">${[...word].map((ch,i)=>ch===" "?`<span style="width:${size*.35}px"></span>`:`<span style="font:900 ${size}px/1 'Baloo 2',${dd};color:${E.mag[i%E.mag.length]};transform:rotate(${((i*37)%9-4)*T.rot*.9}deg);display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 8px rgba(0,0,0,.3)">${x(ch)}</span>`).join("")}</div>`;
+  const mags=(word,l,t,size)=>`<div aria-hidden="true" data-np style="position:absolute;left:${l}px;top:${t}px;display:flex;gap:2px;transform:rotate(${-T.rot*1.4}deg)">${[...word].map((ch,i)=>ch===" "?`<span style="width:${size*.35}px"></span>`:`<span style="font:900 ${size}px/1 'Baloo 2',${dd};color:${E.mag[i%E.mag.length]};transform:rotate(${((i*37)%9-4)*T.rot*.9}deg);display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 8px rgba(0,0,0,.3)">${x(ch)}</span>`).join("")}</div>`;
   M.font("Baloo+2:wght@800");
 
   /* front geometry: the poster is the hero, shown whole at 2:3 in a hugging frame */
@@ -188,36 +193,41 @@ window.MENU_FORMATS.home=function(ctx){
    <div style="position:absolute;left:30px;top:${NT}px;width:${W-60}px;height:${NH}px;box-sizing:border-box;padding:46px 26px 20px;${lined}transform:rotate(${T.rot*.5}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
      <div style="position:absolute;left:0;right:0;top:0;height:30px;background:${acc}"></div>
      <div data-fit="17" style="height:${NFH}px;overflow:hidden;font-size:22px;color:${ink}">
-       ${kick(T.k)}
+       ${kick(OLD?T.k.replace(/Stuck on the fridge/i,"Pinned by the hearth").replace(/(on|from) the fridge/i,"by the hearth").replace(/fridge/i,"hearth"):ICE?T.k.replace(/fridge/i,"icebox"):T.k)}
        <div style="margin-top:.45em;font:italic 1.05em/1.4 ${bd}">${x(nt.text)}</div>
      </div>
      <div style="font:40px/1.1 ${SIG};color:#24407a;margin-top:6px;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>`;
 
   /* back: second print, magnet list of winks, two recipe cards for the courses */
-  const half=Math.ceil(C.length/2),cardA=C.slice(0,half),cardB=C.slice(half);
+  /* review 32: the courses split where the two cards hold about the same number of dishes (four starters no longer share a card with
+     both mains while the other card holds a cake and two drinks), and the cards take height from the second print so every note prints whole */
+  const cnt=c=>c.items.length+c.items.filter(i=>i.note).length*.9,tot=C.reduce((a,c)=>a+cnt(c),0);let half=1,bestD=1e9;
+  for(let i=1;i<C.length;i++){const a=C.slice(0,i).reduce((q,c)=>q+cnt(c),0),d=Math.abs(tot-2*a);if(d<bestD){bestD=d;half=i}}
+  if(C.length<2)half=C.length;const cardA=C.slice(0,half),cardB=C.slice(half);
+  const RAISE=Math.max(...[cardA,cardB].map(cs=>cs.reduce((q,c)=>q+cnt(c),0)))>5.5?96:48;
   const course=c=>`<div style="margin-bottom:.55em">
       <div style="font:${E.dw} 1.3em/1.1 ${dd};${up}color:${acc};margin-bottom:.25em">${LABEL[c.k]}</div>
       ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="margin-bottom:.42em"><div style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</div>${it.note?`<div data-opt data-note style="font:.76em/1.3 ${bd};color:${ink};opacity:.85;margin-top:.1em">${x(it.note)}</div>`:""}</div>`).join("")}
     </div>`;
-  const rcard=(cs,l,t,rot,head,foot)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:370px;height:476px;box-sizing:border-box;padding:18px 22px 14px;background:${E.card};transform:rotate(${rot}deg);box-shadow:0 12px 24px rgba(0,0,0,.3),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6});display:flex;flex-direction:column">
+  const rcard=(cs,l,t,rot,head,foot)=>`<div style="position:absolute;left:${l}px;top:${t-RAISE}px;width:370px;height:${476+RAISE}px;box-sizing:border-box;padding:18px 22px 14px;background:${E.card};transform:rotate(${rot}deg);box-shadow:0 12px 24px rgba(0,0,0,.3),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6});display:flex;flex-direction:column">
       <div style="display:flex;justify-content:space-between;align-items:baseline;font:700 17px/1.2 ${bd};letter-spacing:.18em;text-transform:uppercase;color:${acc}"><span>Recipe</span><span>${x(head)}</span></div>
       <div style="height:3px;background:${acc};margin:6px 0 3px"></div><div style="height:1px;background:rgba(60,100,170,.45);margin-bottom:12px"></div>
-      <div data-fit="19" style="flex:1;min-height:0;overflow:hidden;font-size:28px">${cs.length?cs.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">Whatever is in the fridge, served with the film.</div>`}</div>
+      <div data-fit="19" data-nlo="16" style="flex:1;min-height:0;overflow:hidden;font-size:28px">${cs.length?cs.map(course).join(""):`<div style="font:italic .8em/1.4 ${bd};color:${ink}">Whatever is in the fridge, served with the film.</div>`}</div>
       <div style="font:15px/1.3 ${bd};color:${ink};opacity:.8;margin-top:6px">${foot}</div>
     </div>`;
   const back=`${door}
-   ${print(second,282,30,508,502,T.rot*.6,secPos,"",secIsPoster)}
-   <div style="position:absolute;left:30px;top:52px;width:236px;height:440px;box-sizing:border-box;padding:40px 18px 16px;${lined}transform:rotate(${-T.rot}deg);box-shadow:0 10px 20px rgba(0,0,0,.26)">
+   ${print(second,282,30,508,502-RAISE,T.rot*.6,secPos,"",secIsPoster)}
+   <div style="position:absolute;left:30px;top:52px;width:236px;height:${440-RAISE}px;box-sizing:border-box;padding:40px 18px 16px;${lined}transform:rotate(${-T.rot}deg);box-shadow:0 10px 20px rgba(0,0,0,.26)">
      <div style="position:absolute;left:0;right:0;top:0;height:24px;background:${E.mag[1]}"></div>
-     <div data-fit="15" style="height:380px;overflow:hidden;font-size:20px;color:${ink}">
+     <div data-fit="14" style="height:${380-RAISE}px;overflow:hidden;font-size:20px;color:${ink}">
        <div style="font:${E.dw} 1.35em/1.05 ${dd};${up}color:${acc};margin-bottom:.4em">${x(T.lst)}</div>
        ${winks.map((w,i)=>`<div style="display:flex;gap:.4em;font:1em/1.3 ${bd};margin-bottom:.45em"><span style="font-weight:700;color:${acc}">${i+1}.</span><span>${x(w)}</span></div>`).join("")}
      </div>
    </div>
    ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
    ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
-   ${rcard(cardB,420,548,T.rot*.5,fl.stamp||sy,`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
+   ${rcard(cardB,420,548,T.rot*.5,fl.stamp||sy,`${OLD?"Serves everyone at the table.":ICE?"Serves everyone round the wireless.":"Serves everyone on the couch."} ${fam?"Soft drinks only. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };
 /* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */

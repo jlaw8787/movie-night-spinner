@@ -1,0 +1,689 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Not the Olive Garden spinach dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 22,
+   "make_ahead": "Mix the dip up to 1 day ahead and keep it covered in the fridge; bake to order",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "grated mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 280,
+     "u": "g",
+     "item": "marinated artichoke hearts, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag tortilla chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wilt the spinach in a dry pan, squeeze dry and chop.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cream cheese, sour cream, garlic, most of the mozzarella and the parmesan, then stir in the spinach and artichoke.",
+     "min": 5
+    },
+    {
+     "text": "Spread in a baking dish, top with the rest of the mozzarella and bake at 200C until bubbling.",
+     "min": 20
+    },
+    {
+     "text": "Serve hot with tortilla chips.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Night one food coma riblets",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 130,
+   "make_ahead": "Bake the riblets in foil up to 2 days ahead and chill; glaze and grill to order",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork riblets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the riblets with the paprika, garlic powder, sugar and salt.",
+     "min": 10
+    },
+    {
+     "text": "Wrap tightly in foil and bake at 160C until tender.",
+     "min": 120
+    },
+    {
+     "text": "Brush with barbecue sauce and grill on high until sticky, turning once.",
+     "min": 10
+    },
+    {
+     "text": "Serve with dill pickles.",
+     "min": 1
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Night one barbecue cauliflower",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "Roast the cauliflower up to 1 day ahead; glaze and grill to order",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the cauliflower with the oil, paprika, garlic powder and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C until tender and browned.",
+       "min": 25
+      },
+      {
+       "text": "Brush with barbecue sauce and grill until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Serve with dill pickles.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Fake chow",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Slice the chicken and vegetables and mix the sauce up to 1 day ahead; stir-fry to order",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken thigh fillets, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "fresh egg noodles",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, julienned",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the chicken with 1 tbsp soy and the cornflour.",
+     "min": 3
+    },
+    {
+     "text": "Cook the noodles for 1 minute, drain and toss with a little oil.",
+     "min": 4
+    },
+    {
+     "text": "Stir-fry the chicken in a very hot wok and set aside.",
+     "min": 5
+    },
+    {
+     "text": "Stir-fry the cabbage, carrot, garlic and ginger.",
+     "min": 3
+    },
+    {
+     "text": "Add the noodles, chicken, the rest of the soy, sugar and sesame oil and toss hot.",
+     "min": 3
+    },
+    {
+     "text": "Finish with bean sprouts and spring onion.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fake chow, tofu",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Press and cube the tofu and slice the vegetables up to 1 day ahead; stir-fry to order",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, pressed and cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "fresh egg noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, julienned",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "bean sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu in cornflour and fry golden in the wok, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Cook the noodles for 1 minute and drain.",
+       "min": 4
+      },
+      {
+       "text": "Stir-fry the cabbage, carrot, garlic and ginger.",
+       "min": 3
+      },
+      {
+       "text": "Add the noodles, tofu, soy, sugar and sesame oil and toss hot.",
+       "min": 3
+      },
+      {
+       "text": "Finish with bean sprouts and spring onion.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Meanwhile, Cape Cod lobster rolls",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Mix the lobster up to 4 hours ahead and keep it cold; toast the rolls to order",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked lobster meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag potato crisps",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the lobster and mix with the mayonnaise, lemon zest and juice, celery and chives; chill.",
+     "min": 10
+    },
+    {
+     "text": "Butter the sides of the rolls and toast in a pan until golden.",
+     "min": 5
+    },
+    {
+     "text": "Fill with the lobster and serve with lemon wedges and crisps.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Meanwhile, Cape Cod egg and chive rolls",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Boil the eggs up to 2 days ahead; mix and toast to order",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "snipped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag potato crisps",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 9 minutes, cool and peel.",
+       "min": 12
+      },
+      {
+       "text": "Chop and mix with the mayonnaise, lemon, celery and chives.",
+       "min": 5
+      },
+      {
+       "text": "Toast the buttered rolls and fill.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Gary's golf course brownies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 28,
+   "make_ahead": "Bake up to 2 days ahead and keep airtight; they cut cleaner the next day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the sugar, then the eggs one at a time and the vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour, cocoa and a pinch of salt and spread in a lined 20cm tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C until just set, then cool and cut into squares.",
+     "min": 28
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Leigh's flat white",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Best made to order; warm the cups while the machine heats",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "shots espresso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pull a double espresso into each warm cup.",
+     "min": 4
+    },
+    {
+     "text": "Steam the milk until silky with only a little foam.",
+     "min": 3
+    },
+    {
+     "text": "Pour the milk into the coffee in a steady stream.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

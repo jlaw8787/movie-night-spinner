@@ -71,7 +71,14 @@ window.MENU_FORMATS.diner=ctx=>{
   const E=ERA[eraOf(era)],ek=eraOf(era),night=NIGHT(tone),T=tone||"warm";
   /* the diner opened before the story: a film set in an earlier decade than its release (The Iron Giant's 1957, Stand by Me's 1959)
      says Est. one to eight years before that decade starts, never the release year; a diner in its own decade keeps the film's year */
-  const eraD=+((String(era||"").match(/(\d{4})s/)||[])[1]||0),estYear=(ctx.flavour&&/^\d{4}$/.test(String(ctx.flavour.est||"")))?String(ctx.flavour.est):eraD&&eraD+10<=+f.year?eraD-1-(hash(f.title)%8):f.year;/* 7 Nov: diner `est` per film where the film names the year (Wreck-It Ralph's Tapper's) */
+  const eraD=+((String(era||"").match(/(\d{4})s/)||[])[1]||0),estYear=(ctx.flavour&&/^\d{4}$/.test(String(ctx.flavour.est||"")))?String(ctx.flavour.est):"";/* review 33 (Josh): no Est. year unless the film gives one *//* 7 Nov: diner `est` per film where the film names the year (Wreck-It Ralph's Tapper's) */
+  /* review 33: the stock pie words only where the pie case holds a pie (Grease's sundae and coconut ice, Priscilla's pavlova).
+     A film whose word swaps already replace a pie line keeps it, so the swap still lands (Uncle Buck's pancakes) */
+  const WSW=(ctx.flavour&&ctx.flavour.words)||{},swapped=t=>Object.keys(WSW).some(k=>String(t).toLowerCase().includes(k.toLowerCase())),
+    hasPie=(menu.w||[]).some(d=>d&&/\b(pies?|tarts?|cobbler|crumble|strudel|turnovers?)\b/i.test(d.n||"")),
+    pieOr=(t,alt)=>hasPie||swapped(t)?t:alt;
+  const NOPIE={sub:{warm:"Hot coffee, home cooking, booths by the window.",tender:"Made fresh every morning.",playful:"So good it ought to be a crime.",glossy:"Shakes, burgers and the best booths on the strip.",grand:"Fine diner fare, served all day.",scrappy:"Cheap coffee, honest food."},
+    note:{warm:"TODAY'S SPECIAL",tender:"TODAY'S PLATE",playful:"TODAY'S SPECIAL",glossy:"TODAY'S SPECIAL",grand:"CHEF'S SPECIAL",scrappy:"TODAY'S SPECIAL"}};
   const V=night?VOICE[T]||VOICE.eerie:null;
   const token="d"+(++SEQ)+"-"+(hash(f.id||f.title)%9999);
   /* colour: the poster accent if it holds up on paper and in the dark, else the era's diner colour */
@@ -119,7 +126,7 @@ window.MENU_FORMATS.diner=ctx=>{
         :`<div style="position:absolute;left:0;right:0;top:0;height:12px;background:${red}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:12px;background:${red}"></div>`}`;
   const sign=`<div style="position:absolute;left:0;right:0;top:26px;text-align:center;white-space:nowrap;font:600 ${ks}px/1 ${SANS};letter-spacing:.26em;color:${fg};opacity:.85;text-transform:uppercase">${signTxt}${/open/i.test(fl&&fl.sign||"")?"":` &nbsp;/&nbsp; ${night?"Open all night":"Open every day"}`}</div>
     ${signBox}
-    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:DAY.sub[T]||DAY.sub.warm)} Est. ${ESC(estYear)}.</div>`;
+    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:pieOr(DAY.sub[T]||DAY.sub.warm,NOPIE.sub[T]||NOPIE.sub.warm))}${estYear?` Est. ${ESC(estYear)}.`:""}</div>`;
   const heroImg=s0?`<img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${img(s0,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`
     :poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w342")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(12px) brightness(.5)"><img alt="${ESC(f.title)} poster" crossorigin="anonymous" src="${img(poster,"w500")}" style="position:relative;height:100%;display:block;margin:0 auto;filter:${photo}">`
     :`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;${disp(64)};line-height:1.05;color:${K.paper};white-space:normal">${ESC(f.title)}</div>`;
@@ -146,14 +153,14 @@ window.MENU_FORMATS.diner=ctx=>{
   if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(posterOn?224:318,96*ar),h=w/ar;
     logoHTML=`<div data-h="plate" style="display:inline-block;padding:10px 16px;border-radius:3px;background:${night?"rgba(6,8,10,.62)":"transparent"}"><img data-h="logo" alt="${ESC(f.title)}" crossorigin="anonymous" src="${img(lg[0],"w500")}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"></div>`}
   const firstMain=menu.m&&menu.m[0];
-  const noteTxt=night?V.noteTxt(W[3]&&W[3].length<=48?ESC(low(W[3])):"",fl&&fl.lastSeenAt?ESC(fl.lastSeenAt):""):firstMain?`${!special.m0&&(num.length===3||num.length===4)?`Plate No. ${num.length===4?num.slice(-2):num}. `:""}${ESC(firstMain.n)}, ${special.m0||price("m",firstMain.n)}, with a cup of coffee and a slice from the pie case.`:"Ask at the counter for today's plate.";
+  const noteTxt=night?V.noteTxt(W[3]&&W[3].length<=48?ESC(low(W[3])):"",fl&&fl.lastSeenAt?ESC(fl.lastSeenAt):""):firstMain?`${!special.m0&&(num.length===3||num.length===4)?`Plate No. ${num.length===4?num.slice(-2):num}. `:""}${ESC(firstMain.n)}, <span data-echo="m0" data-np>${special.m0||price("m",firstMain.n)}</span>, ${pieOr("with a cup of coffee and a slice from the pie case","with a cup of coffee and something sweet from the case")}.`:"Ask at the counter for today's plate.";
   const info=`<div data-h="info" style="position:absolute;left:${posterOn?552:44}px;right:${posterOn?26:296}px;top:${posterOn?208:738}px;bottom:${posterOn?(P?424:330):50}px;display:flex;flex-direction:column;justify-content:${posterOn?"flex-start":"center"};gap:10px;overflow:hidden">
       <div style="white-space:${posterOn?"normal":"nowrap"};font:700 17px/1.15 ${SANS};letter-spacing:${posterOn?".1em":".18em"};color:${night?neon:red};text-transform:uppercase">${night?"Tonight on the late show":"Now showing above the counter"}</div>
       <div style="display:flex;${posterOn?"flex-direction:column;align-items:flex-start;gap:8px":"align-items:flex-end;gap:16px"}">${logoHTML}<div data-h="${lg?"alt":"title"}" data-max="${ts}" style="${lg?"display:none;":""}${disp(ts)};line-height:.95;color:${night?K.paper:K.ink}">${ESC(f.title)}</div><span style="${disp(40)};color:${night?neon:red};flex:none">${ESC(f.year)}</span></div>
       <div style="font:italic 600 24px/1.25 ${SERIF};color:${night?"#fff":K.ink}">${ESC(f.T||"")}</div>
       <div data-h="fdesc" style="font:400 20px/1.36 ${SERIF};color:${night?K.bone:"#3a3d43"}">${ESC(f.D||"")}</div></div>`;
   const notice=`<div style="position:absolute;top:${posterOn?(P?640:730):748}px;right:${posterOn?26:30}px;width:${posterOn?240:240}px;box-sizing:border-box;transform:rotate(${2.5*tilt}deg);background:${night?K.paper:"#fffdf6"};color:${K.ink};padding:13px 15px;box-shadow:0 8px 22px rgba(0,0,0,${night?.55:.25});border-top:6px solid ${red}">
-    <div style="${disp(ek==="classic"?28:30)};color:${red}">${night?V.note:DAY.note[T]||DAY.note.warm}</div>
+    <div style="${disp(ek==="classic"?28:30)};color:${red}">${night?V.note:pieOr(DAY.note[T]||DAY.note.warm,NOPIE.note[T]||NOPIE.note.warm)}</div>
     <div style="font:400 17px/1.32 ${SERIF};margin-top:6px">${noteTxt}</div>
     <div style="font:700 14px/1 ${SANS};letter-spacing:.18em;margin-top:9px;color:${K.mute}">THE MANAGEMENT</div></div>`;
   const ft=night?V.foot:DAY.foot;
@@ -166,7 +173,7 @@ window.MENU_FORMATS.diner=ctx=>{
      Two faces if the menu fits the back; otherwise three, with as many items as fit on the back, the rest on the
      last face, the order slip and the note moved there if the back needs the room, and the last face's still grown
      to fill whatever is left. Never more than three faces, never type under dish 26 / note 20. */
-  const SECTIONS=night?SECTIONS_N:SECTIONS_D;
+  const SECTIONS=(night?SECTIONS_N:SECTIONS_D).map(x=>x[0]==="w"?[x[0],pieOr(x[1],"The Dessert Case"),x[2]]:x);
   const edge=night?`<div style="position:absolute;inset:0;border:12px solid #17191e;pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(235,230,216,.42);pointer-events:none"></div>`
     :ek==="classic"?`<div style="position:absolute;inset:0;border:12px solid transparent;border-image:${chrome} 1;pointer-events:none"></div><div style="position:absolute;inset:16px;border:1.5px solid ${red};pointer-events:none"></div>`
     :`<div style="position:absolute;inset:0;border:12px solid ${red};pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(255,255,255,.5);pointer-events:none"></div>`;
@@ -180,7 +187,7 @@ window.MENU_FORMATS.diner=ctx=>{
     ${cap?`<div style="position:absolute;right:20px;bottom:18px;max-width:300px;text-align:right;font:italic 400 15px/1.3 ${SERIF};color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${cap}<br><span style="font:700 14px/1.6 ${SANS};letter-spacing:.14em;font-style:normal">${src?"STILL":"POSTER"}: TMDB</span></div>`
       :(src||poster)?`<div style="position:absolute;right:20px;top:16px;font:700 14px/1 ${SANS};letter-spacing:.14em;color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${src?"STILL":"POSTER"}: TMDB</div>`:""}</div>`;
   const item=(k,it,i,L)=>`<div data-h="item" style="break-inside:avoid;padding-bottom:${L.pad}px">
-      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 ${L.dish}px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 ${L.dish}px/1 ${E.dish};color:${red};flex:none">${(DP[k]&&DP[k][i])||special[k+i]||price(k,it.n)}</span></div>
+      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 ${L.dish}px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price"${k==="m"&&i===0?' data-echo-src="m0"':""} style="font:700 ${L.dish}px/1 ${E.dish};color:${red};flex:none">${(DP[k]&&DP[k][i])||special[k+i]||price(k,it.n)}</span></div>
       ${it.note?`<div data-h="desc" style="font:400 ${L.desc}px/${L.lh} ${SERIF};color:#3a3d43;margin-top:4px">${ESC(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
   const head=(name,sub,L)=>{const hs=Math.round(E.hs*L.k);return ek==="modern"
     ?`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;justify-content:space-between;gap:10px;background:${red};padding:6px 10px 5px;margin:0 0 ${L.mb}px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;min-width:0;overflow:hidden;padding-bottom:.2em;margin-bottom:-.2em;${disp(hs)};color:#fff">${name}</span><span data-opt style="white-space:nowrap;min-width:0;overflow:hidden;flex:0 1 auto;padding-right:.25em;padding-bottom:.3em;margin-bottom:-.3em;font:italic 400 17px/1 ${SERIF};color:#fff">${sub}</span></div>`
@@ -201,7 +208,7 @@ window.MENU_FORMATS.diner=ctx=>{
       <div style="font:400 20px/1.5 ${HAND};color:#23324f;margin-top:2px;white-space:nowrap">${N?ESC(N.by):"Dot, the counter"}</div></div></div>`;
   const backFoot=`<div style="position:absolute;left:40px;right:40px;bottom:20px;font:400 15px/19px ${SANS};color:${K.mute}">
     ${W[4]?`<div style="font-style:italic;font-family:${SERIF};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Overheard at the counter: ${ESC(low(W[4]))}.</div>`:""}
-    <div style="display:flex;justify-content:space-between"><span>${night?V.fine:DAY.fine}</span><span>Form No. ${num||"13-"+yy}</span></div></div>`;
+    <div style="display:flex;justify-content:space-between"><span>${night?V.fine:pieOr(DAY.fine,"Prices subject to change. Refills on the coffee.")}</span><span>Form No. ${num||"13-"+yy}</span></div></div>`;
   const lastFoot=`<div style="position:absolute;left:40px;right:40px;bottom:26px;display:flex;justify-content:space-between;font:400 15px/1 ${SANS};color:${K.mute}"><span>${ESC(venue)}. Turn over for the cover.</span><span>Form No. ${num||"13-"+yy}</span></div>`;
   const s1=stills[1]||stills[0],s2=stills[2]||stills[1]||stills[0];
   const cap1=fl&&fl.caption?ESC(fl.caption):`The window booth at ${ESC(venue)}${night?", after midnight":""}.`;
@@ -255,6 +262,8 @@ window.MENU_FORMATS.diner.ready=CSS_READY.then(()=>Promise.all(FONTS.map(fn=>doc
 const LEVELS=[{dish:28,desc:21,k:1,pad:16,gap:14,mb:14,lh:1.3},{dish:27,desc:20,k:.95,pad:12,gap:10,mb:10,lh:1.3},{dish:26,desc:20,k:.9,pad:9,gap:6,mb:8,lh:1.28},
   /* last resort for very long menus: same minimum sizes, tighter leading and spacing */
   {dish:26,desc:20,k:.85,pad:5,gap:3,mb:5,lh:1.2}];
+/* review 32: a dollar card's "$" marks (added after the layout draws) can push the last course out; the late fit has two smaller steps before anything hides */
+const LATE=LEVELS.concat([{dish:24,desc:19,k:.8,pad:4,gap:3,mb:4,lh:1.2},{dish:22,desc:18,k:.75,pad:3,gap:2,mb:3,lh:1.18}]);
 function schedule(token,night){
   let tries=0;
   const tick=async()=>{
@@ -291,7 +300,7 @@ function fit(faces,night){
   if(over()&&fd)fd.style.display="none";
   /* if the layout was measured before the web fonts arrived and now runs long, tighten spacing, then step type to the floor */
   faces.slice(1).forEach(fc=>{const m=fc.querySelector('[data-h="menu"]');if(!m||fits(m))return;
-    for(const L of LEVELS){
+    for(const L of LATE){
       fc.querySelectorAll('[data-h="dish"],[data-h="price"]').forEach(e=>e.style.fontSize=Math.min(parseFloat(e.style.fontSize),L.dish)+"px");
       fc.querySelectorAll('[data-h="desc"]').forEach(e=>e.style.fontSize=Math.min(parseFloat(e.style.fontSize),L.desc)+"px");
       fc.querySelectorAll('[data-h="item"]').forEach(e=>e.style.paddingBottom=Math.min(parseFloat(e.style.paddingBottom),L.pad)+"px");

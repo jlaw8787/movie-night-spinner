@@ -34,7 +34,7 @@ const DRY=[
   [/\brum balls?\b/gi,m=>cap(m,"choc coconut balls")],[/\birish coffee\b/gi,m=>cap(m,"Irish-style hot chocolate")],[/\bmimosas?\b/gi,m=>cap(m,"orange fizz")],
   [/\bshandy\b/gi,m=>cap(m,"lemon squash")],[/\b(gin|vodka) and tonic\b/gi,m=>cap(m,"lime and tonic")],[/\bmint juleps?\b/gi,m=>cap(m,"mint lemonade")],
   [/\bold fashioneds?\b/gi,m=>cap(m,"orange and cherry soda")],[/\bboilermakers?\b/gi,m=>cap(m,"ginger beer float")]]})(),
-[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
+[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing|blinis?|meatballs?))/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|gin|liqueur|martini)\b/gi,"soda"]];
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
@@ -146,7 +146,7 @@ function titleText(F,maxW,maxH,df,color,dw,hidden){const t=F.title,L=t.length,on
 function logoOr(ctx,F,maxW,maxH,df,color,dw,panel,noLogo){const lg=noLogo?null:logoImg(ctx,maxW,maxH);
   return lg?`<img src="${lg.src}" crossorigin="anonymous" alt="${esc(F.title)}" data-pl="${lum(panel).toFixed(4)}" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 0 5px rgba(255,255,255,.6))">${titleText(F,maxW,maxH,df,color,dw,1)}`:titleText(F,maxW,maxH,df,color,dw)}
 const grainOf=(ctx,root)=>(ctx.root!=null?ctx.root:root)+"assets/era/_shared/paper-grain.webp";
-const credit=F=>`Prices subject to change.${F.fam?" No alcohol served.":""} Images: TMDB.`;
+const credit=F=>`Prices subject to change.${F.fam?" Soft drinks only.":""} Images: TMDB.`;
 
 const W=1344,H=960;
 /* cw and cwd: average glyph width per px of font for notes and bold names, measured off proofs (Libre Franklin about .43 and .45,
@@ -268,6 +268,6 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:600 ${nS}px/1.1 ${PEN};color:#1f3fa0;margin-top:4px;${clamp(3)}">${isQ?`&ldquo;${esc(n.text)}&rdquo;`:esc(n.text)} <span style="color:${acc}${byOwn?";display:block;text-align:right;padding-right:20px":""}">${esc(n.by)}</span></div></div>
     <div style="position:absolute;left:${FX+FW-SW2}px;top:${NY}px;width:${SW2}px;height:${NH}px;box-sizing:border-box;border:2px solid ${rule};background:${mix(e.form,"#ffffff",.5)};display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;padding:8px 10px 6px">${propCard}
       <div style="font:400 12px/1.2 ${BF};color:${e.soft};text-align:center">${esc(credit(F).replace("Prices subject to change. ",""))}</div></div>`;
-  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}</div>`]};
+  return {w:W,h:H,faces:[`<div style="position:absolute;inset:0;overflow:hidden">${bg}${header}${band}${clip}${form}${note}${R.cols.map((c,ci)=>`<div data-pvzoom="${FX+18-10+ci*(R.CW+26)},${FY0+MT-6},${R.CW+20},${MH+14}" aria-hidden="true" style="display:none"></div>`).join("")}</div>`]};/* review 32: on a phone each column of the meal order form is a view, swiped across */
 };
 })();

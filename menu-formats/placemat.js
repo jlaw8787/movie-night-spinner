@@ -193,9 +193,10 @@ window.__placematFit=window.__placematFit||function(trigger){
      then lost height, cutting its last dish (Jingle All the Way, The Incredibles). It runs again as each picture arrives */
   const run=()=>{
     const over=b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1;
-    const step=(nodes,box,min)=>{for(let k=0;k<14&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>min){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}};
+    const step=(nodes,box,min)=>{for(let k=0;k<14&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize),lo=typeof min==="function"?min(n):min;if(s>lo){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}};
     const menu=el.querySelector('[data-fit="menu"]');
-    if(menu){step([...menu.querySelectorAll('[data-fit="dish"],[data-fit="note"],[data-fit="head"]')],menu,16);
+    /* review 32 (Josh: room for the full note, not cuts): notes may go to 13px and names to 15 (about 9 point on the printed sheet) before any is shortened */
+    if(menu){step([...menu.querySelectorAll('[data-fit="dish"],[data-fit="note"],[data-fit="head"]')],menu,16);step([...menu.querySelectorAll('[data-fit="dish"],[data-fit="note"],[data-fit="head"]')],menu,n=>n.dataset.fit==="note"?12:14);
       /* review 15: no clamped notes; shortened at a break before one is hidden */{if(window.__fmtTrimReset)window.__fmtTrimReset(menu);const ns=[...menu.querySelectorAll('[data-fit="note"]')];ns.forEach(e=>{e.style.display="";e.style.webkitLineClamp="";e.style.overflow=""});(window.__fmtTrim?window.__fmtTrim(ns,()=>over(menu)):(()=>{for(let i=ns.length-1;i>=0&&over(menu);i--)ns[i].style.display="none"})())}}
     const sign=el.querySelector('[data-fit="signbox"]'),vn=el.querySelector('[data-fit="venue"]');
     for(let k=0;sign&&vn&&k<20&&(over(sign)||vn.offsetHeight>parseFloat(getComputedStyle(vn).fontSize)*2.3);k++)vn.style.fontSize=(parseFloat(getComputedStyle(vn).fontSize)-2)+"px";
@@ -392,7 +393,7 @@ window.MENU_FORMATS.placemat=ctx=>{
       ${eg==="now"?"":`<div style="position:absolute;inset:12px;border:${eg==="e40"?`3px double ${L.hi}`:`2px solid ${L.hi}`};border-radius:${Math.min(L.radius,12)}px"></div>`}
       ${T.gold?`<div style="position:absolute;inset:18px;border:1px solid rgba(201,162,74,.9);border-radius:8px"></div>`:""}
       <div style="position:absolute;left:32px;right:28px;top:24px;bottom:22px;display:flex;flex-direction:column;justify-content:center">
-        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family?` &nbsp;/&nbsp; ${esc(L.kick+f.year)}`:""}</div>
+        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family&&ctx.flavour&&ctx.flavour.est?` &nbsp;/&nbsp; ${esc(L.kick+ctx.flavour.est)}`:""}</div>
         <div data-fit="venue" style="font:${L.dispW} ${venue.length>20?32:40}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};margin-top:7px;text-shadow:0 2px 0 rgba(0,0,0,.3)">${esc(venue)}</div>
         <div style="font:700 17px/1.2 ${L.body};color:${L.hi};margin-top:6px">${esc(sign)}</div>
       </div>
@@ -424,7 +425,7 @@ window.MENU_FORMATS.placemat=ctx=>{
       ${eg==="now"?"":`<div style="position:absolute;inset:12px;border:${eg==="e40"?`3px double ${L.hi}`:`2px solid ${L.hi}`};border-radius:${Math.min(L.radius,12)}px"></div>`}
       ${T.gold?`<div style="position:absolute;inset:18px;border:1px solid rgba(201,162,74,.9);border-radius:8px"></div>`:""}
       <div style="position:absolute;left:32px;right:28px;top:24px;bottom:22px;display:flex;flex-direction:column;justify-content:center">
-        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family?` &nbsp;/&nbsp; ${esc(L.kick+f.year)}`:""}</div>
+        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family&&ctx.flavour&&ctx.flavour.est?` &nbsp;/&nbsp; ${esc(L.kick+ctx.flavour.est)}`:""}</div>
         <div data-fit="venue" style="font:${L.dispW} ${venue.length>20?32:40}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};margin-top:7px;text-shadow:0 2px 0 rgba(0,0,0,.3)">${esc(venue)}</div>
         <div style="font:700 17px/1.2 ${L.body};color:${L.hi};margin-top:6px">${esc(sign)}</div>
       </div>

@@ -48,11 +48,17 @@ const RPC = {
   const open = async () => { if (!await p.$('dialog.acct[open]')) await p.click('#acctBtn'); await p.waitForSelector('dialog.acct [data-tab="card"]'); await p.click('[data-tab="card"]'); await p.waitForSelector('[data-stat="rentals"]'); await sleep(500) };
   const page = async key => { await p.click(`[data-stat="${key}"]`); await p.waitForSelector('#acctBack'); await sleep(150); return p.textContent('.acct-statpage') };
   const back = async key => { await p.click('#acctBack'); await p.waitForSelector(`[data-stat="${key}"]`); ok(await p.evaluate(k => document.activeElement && document.activeElement.dataset.stat === k, key), `Back returns to the board, focus on ${key}`) };
+  /* review 31: at the cinema the card counts films seen on the cinema's tiers, with no rentals, late fees or stamps */
+  { await p.click('#acctBtn'); await p.waitForSelector('dialog.acct [data-tab="card"]'); await p.click('[data-tab="card"]'); await p.waitForSelector('[data-stat="seen"]'); await sleep(400);
+    const ct = await p.textContent('dialog.acct'); ok(!/rental|late fee/i.test(ct.replace(/card and rentals live inside the store/i, '')) && /films? seen/i.test(ct) && /Matinee member|Gold Class|Front Row Club|Premiere Club/.test(ct), 'cinema card: films seen, cinema tiers, no rentals (review 31)');
+    await p.keyboard.press('Escape'); await sleep(300); }
+  /* the rest is the Galaxy Video card, opened from inside the store */
+  await p.evaluate(() => document.body.classList.add('in-shop'));
   await open();
   ok(await p.$$eval('button.acct-stat', b => b.length) === 8, 'all 8 tiles are buttons');
   await p.screenshot({ path: '/tmp/cs-board.png' });
   const tabs = await p.$eval('#acctTabs', el => { const r = el.getBoundingClientRect(), last = el.lastElementChild.getBoundingClientRect(), cs = getComputedStyle(el); return { fits: last.right <= r.right + 1, scroll: el.scrollWidth > el.clientWidth && /auto|scroll/.test(cs.overflowX) } });
-  ok(tabs.fits || tabs.scroll, 'Settings tab not clipped at 390 (fits, or the row scrolls)');
+  ok(tabs.fits, 'all five account tabs fit at 390, Settings not clipped (review 30)');
 
   let t = await page('rentals'); await p.screenshot({ path: '/tmp/cs-rentals.png', fullPage: false });
   ok(await p.$eval('#acctBack', el => parseFloat(getComputedStyle(el).borderTopLeftRadius) > 0), 'stat page stylesheet loaded (Back button is a pill)');
