@@ -3638,6 +3638,7 @@ function renderCrave(){
 document.querySelectorAll(".more-menu .btn").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>b.closest("details").open=false,150)));
 $("svcSel").addEventListener("change",e=>setSvc(e.target.value));
 $("shopSvc").addEventListener("change",e=>setSvc(e.target.value));
+$("lightBtn").addEventListener("click",()=>{lightPrint=!lightPrint;try{localStorage.setItem("mns-lightprint",lightPrint?"1":"0")}catch(e){};setLightUI();$("status").textContent=lightPrint?"Lighter print is on. Save PDF and Print now use less ink.":"Lighter print is off."});setLightUI();
 $("lazyBtn").addEventListener("click",()=>{lazy=!lazy;try{localStorage.setItem("mns-lazy",lazy?"1":"0")}catch(e){};setLazyUI();if(current)show(current,true)});
 $("howBtn").addEventListener("click",showWelcome);
 fillSvcSelects();setLazyUI();
@@ -4305,6 +4306,13 @@ function trimWhite(cv){const W=cv.width,H=cv.height,d=cv.getContext("2d").getIma
   /* review 24: a card edge that falls between two pixels leaves one blended row or column, half card and half padding, and it printed as a pale
      hairline round landscape menus. A side that was cut loses that one more pixel */
   if(t)t++;if(l)l++;if(H-1-b)b--;if(W-1-r)r--;const o=document.createElement("canvas");o.width=r-l+1;o.height=b-t+1;o.getContext("2d").drawImage(cv,l,t,o.width,o.height,0,0,o.width,o.height);return o}
+/* lighter print (21 Nov): an opt-in switch for home printers that print dark. Every PDF page is lifted with a gamma curve before it goes in,
+   so navy panels and dark stills come out lighter and use less ink, while white stays white and text stays readable. Screen menus are never touched */
+let lightPrint=false;try{lightPrint=localStorage.getItem("mns-lightprint")==="1"}catch(e){}
+const INK_LUT=(()=>{const l=new Uint8ClampedArray(256);for(let v=0;v<256;v++)l[v]=Math.round(255*Math.pow(v/255,.62));return l})();
+function inkLift(cv){if(!lightPrint||!cv||!cv.width)return cv;try{const x=cv.getContext("2d"),im=x.getImageData(0,0,cv.width,cv.height),d=im.data;
+  for(let i=0;i<d.length;i+=4){d[i]=INK_LUT[d[i]];d[i+1]=INK_LUT[d[i+1]];d[i+2]=INK_LUT[d[i+2]]}x.putImageData(im,0,0)}catch(e){}return cv}
+function setLightUI(){const b=$("lightBtn");if(!b)return;b.setAttribute("aria-pressed",lightPrint);b.textContent=lightPrint?"Lighter print: on":"Lighter print: off"}
 async function exportMenu(kind,parts,opts){
   parts=parts||"all";opts=opts||{};const toPrint=!!opts.print;
   /* printing: every page sits on A4 with an even 5mm white margin, so home printers never clip the border (see addImage below) */let sides=0,orient="portrait";
@@ -4338,7 +4346,7 @@ async function exportMenu(kind,parts,opts){
       const {jsPDF}=window.jspdf;
       const spec=fmtSpec(current),sh=card.classList.contains("fx-paper")&&(spec&&fmtSheet(spec)||current.libSheet);
       let pdf;
-      if(parts==="prep"){pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});const pcs=await prepCanvases();pcs.forEach((pc,i)=>{if(i)pdf.addPage("a4","portrait");pdf.addImage(pc.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)})}
+      if(parts==="prep"){pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});const pcs=await prepCanvases();pcs.forEach((pc,i)=>{if(i)pdf.addPage("a4","portrait");pdf.addImage(inkLift(pc).toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)})}
       else if(sh){
         const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait",PW=o==="landscape"?297:210,PH=o==="landscape"?210:297;
         const k=Math.min(PW/mm[0],PH/mm[1]),dw=mm[0]*k,dh=mm[1]*k,dx=(PW-dw)/2,dy=(PH-dh)/2;
@@ -4348,7 +4356,7 @@ async function exportMenu(kind,parts,opts){
           pdfStep(`Page ${i+1} of ${faces.length+(parts==="all"?1:0)}`);
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
           el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML.replace(/\s(onload|onerror)="[^"]*"/g,"");
-          cvs.push(await renderCanvas(el,true));
+          cvs.push(inkLift(await renderCanvas(el,true)));
         }
         /* review 21: a campfire front carries the poster's white frame and the still strip near its edges, so its margin came out cream, maroon
            or brown while the back stayed on the card's own dark surround. Both pages take the back's margin */
@@ -4360,10 +4368,10 @@ async function exportMenu(kind,parts,opts){
         sides=faces.length;orient=o;
       }else{
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
-        pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);sides=1;orient=land?"landscape":"portrait";
+        pdf.addImage(inkLift(canvas).toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);sides=1;orient=land?"landscape":"portrait";
       }
       if(parts==="all"){pdfStep("The prep sheet");for(const prepCanvas of await prepCanvases()){
-      pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}}
+      pdf.addPage("a4","portrait");pdf.addImage(inkLift(prepCanvas).toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}}
       /* print settings travel inside the PDF, so the print dialog opens ready: actual size, and two-sided with the right flip for a two-sided or folded menu
          (landscape folds turn like a book on the short edge, portrait front-and-back on the long edge) */
       try{pdf.viewerPreferences({PrintScaling:"None",Duplex:sides>=2?(orient==="landscape"?"DuplexFlipShortEdge":"DuplexFlipLongEdge"):"Simplex"})}catch(e){}
@@ -4501,9 +4509,9 @@ async function exportFold(){
     const page=async html=>{const el=document.createElement("div");styleCard(el,f);el.className="mcard fmt fmt-"+spec.fmt;el.style.transform="none";el.innerHTML=html;fmtTilesPNG(el);return renderCanvas(el,true)};
     const out=await page(pages.outside),ins=await page(pages.inside),pps=await prepCanvases();
     const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"landscape"});
-    pdf.addImage(out.toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
-    pdf.addPage("a4","landscape");pdf.addImage(ins.toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
-    for(const pp of pps){pdf.addPage("a4","portrait");pdf.addImage(pp.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
+    pdf.addImage(inkLift(out).toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
+    pdf.addPage("a4","landscape");pdf.addImage(inkLift(ins).toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
+    for(const pp of pps){pdf.addPage("a4","portrait");pdf.addImage(inkLift(pp).toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
     const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-fold-at-home.pdf`;
     const tip="Print pages 1 and 2 double-sided, flip on the short edge, actual size. Fold the left panel in first, then the cover over it.";
     if(downloads){try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. ${tip}`}catch(e){$("status").textContent=e&&e.code==="declined"?"Save cancelled.":"Couldn't save the PDF."}}
