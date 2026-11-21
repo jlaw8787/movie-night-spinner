@@ -473,62 +473,54 @@
    "af": true
   },
   {
-   "n": "Badge 714 iced coffee tonic",
+   "n": "Badge 714 lemon squash",
    "course": "d",
-   "prep_min": 15,
-   "cook_min": 720,
-   "make_ahead": "Steep the coffee overnight, up to 2 days ahead, keep chilled",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "Make the syrup up to a week ahead and chill",
    "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
     {
      "q": 100,
      "u": "g",
-     "item": "coarsely ground coffee",
+     "item": "sugar",
      "aisle": "Pantry"
     },
     {
      "q": 800,
      "u": "ml",
-     "item": "cold water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "tray ice",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "tonic water",
+     "item": "soda water",
      "aisle": "Drinks"
     },
     {
      "q": 1,
      "u": "",
-     "item": "orange",
+     "item": "bunch mint",
      "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Stir the coffee into the cold water in a jug, cover and refrigerate overnight.",
+     "text": "Dissolve the sugar in 100ml hot water and cool.",
      "min": 3
     },
     {
-     "text": "Leave to steep.",
-     "min": 720
+     "text": "Squeeze the lemons and stir the juice into the syrup in a jug.",
+     "min": 5
     },
     {
-     "text": "Strain through a paper filter.",
-     "min": 7
-    },
-    {
-     "text": "Fill glasses with ice, pour in tonic, then slowly pour iced coffee over the top so it layers.",
-     "min": 3
-    },
-    {
-     "text": "Squeeze orange peel over each glass and drop it in.",
+     "text": "Add the soda water and ice and pour into tall glasses with a mint sprig in each.",
      "min": 2
     }
    ],
