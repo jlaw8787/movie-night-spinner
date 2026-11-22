@@ -40,7 +40,7 @@ for(const g of [2,9]){const L=lines('casino-royale-2006',g);assert.ok(!(L.some(l
 {const L=(id,g)=>lines(id,g).join('\n');const m2=L('once-upon-a-time-in-mexico-2003',2),m9=L('once-upon-a-time-in-mexico-2003',9);
  assert.match(m2,/^1 packet banana leaves@/m,'banana leaves stay leaves');assert.match(m2,/^1 dried chilli@/m,'one chilli, not chilly');
  assert.match(m9,/^3 chipotles in adobo@/m,'plural on the head noun');assert.ok(!/chilli powder@[^\n]*\n[^\n]*pinch/i.test(m2)&&!/pinch(es)? (of )?chilli powder/i.test(m2),'a pinch folds into the measured chilli powder');
- assert.match(L('moana-2016',4),/^1 handful mint leaves, plus sprigs@/m,'mint leaves stay leaves');
+ assert.match(L('moana-2016',4),/^1 handful mint leaves@/m,'mint leaves stay leaves, and the serving clause stays in the method (review 38)');
  const s4=L('the-sound-of-music-1965',4);assert.match(s4,/^1 jar (sweet )?mustard@|^\\d+ml (sweet )?mustard@/m,'review 35: spoons of mustard are bought as the jar');{const yn=film('the-sound-of-music-1965').dishes.flatMap(d=>[...ctx.dishIngList(d,1)]).join('\n');assert.ok(!/\d\/3 (tsp|tbsp)/.test(yn),'spoons round to a half, not a third')}
  assert.ok(!/tbsp chives|tbsp parsley/.test(s4),'spoonfuls of a herb bought by the bunch fold into the bunch');
  assert.equal((s4.match(/^[^\n@]*salt[^\n@]*@/gm)||[]).length,1,'salt is one line');

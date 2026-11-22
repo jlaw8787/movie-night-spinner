@@ -65,12 +65,12 @@ const ALL = films.map((f, i) => {
   /* review 38: kids, family, Christmas and wizard menus print the alcohol-free version of a dish (DRY_THEMES in app.js): so does the page
      (The Fellowship of the Ring's card serves hot buttered apple, the page listed hot buttered ale) */
   const dry = DRY_THEMES.includes(f.theme);
-  const dishes = ((d.r2 && d.r2.dishes) || []).map(x0 => { const af = dry && x0.alt && x0.alt.af; const x = af ? { ...x0, ...af, alt: undefined, af: true } : x0; return { ...x, note: notes[String(x.n).toLowerCase()] || notes[String(x0.n).toLowerCase()] || '' }; });
+  const dishes = ((d.r2 && d.r2.dishes) || []).map(x0 => { const af = dry && x0.alt && x0.alt.af; const x = af ? { ...x0, ...af, alt: undefined, af: true, n0: x0.n } : x0; return { ...x, note: notes[String(x.n).toLowerCase()] || notes[String(x0.n).toLowerCase()] || '' }; });
   if (!dishes.length) for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: [], steps: [] });
   /* review 32: every dish printed on the menu is on the page. The ones without a full recipe card (the menu cooks five) follow in their
      course, marked "On the printed menu", with how it is made; they stay out of the Recipe list in the JSON-LD */
-  { const have = new Set(dishes.map(y => String(y.n).toLowerCase()));
-    for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase())) { have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: String(x).split('@')[0] })), steps: [], extra: true }); } }
+  { const have = new Set(dishes.flatMap(y => [String(y.n).toLowerCase(), String(y.n0 || '').toLowerCase()]));
+    for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase()) && !(dry && c === 'd' && /\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|ale|beer|lager|stout|cider|sherry|port|highball|martini|margarita|mead|cocktail|liqueur|schnapps|prosecco|spritz)\b/i.test(String(r[0]) + ' ' + String(r[1] || '')))) {/* review 38: a dry card never prints the alcoholic drink, so its page does not list it (Ratatouille's Bordeaux) */ have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: String(x).split('@')[0] })), steps: [], extra: true }); } }
   /* review 37: a hand-built menu prints its own short name for a dish ("Buddy Holly chicken", not "Buddy Holly's chicken basket"): the page uses it */
   { const nm = HB_NAMES[id]; if (nm) for (const y of dishes) { const v = nm[String(y.n).toLowerCase()]; if (v) y.n = v; } }
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,

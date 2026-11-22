@@ -1518,9 +1518,24 @@ const TIDY_TAIL=/\s*\((?:for|to|plus|optional)\b[^)]*\)|,\s*(?:to taste|to decor
 const TIDY_ADJ=/^(?:cold|chilled|ice[- ]cold|icy|fresh|freshly|ripe|cubed|seedless|very cold)\s+/i;
 const PACK_ML={bottle:375,bottles:375,stubby:375,stubbies:375,can:375,cans:375,tinny:375,tinnies:375,longneck:750,longnecks:750};
 function shopTidy(lines){
-  const cl=lines.map(l=>{const at=l.lastIndexOf("@");let t=l.slice(0,at).replace(TIDY_TAIL,"").replace(/\s+of fresh\s+/i," ").replace(/\s{2,}/g," ").trim();return t+l.slice(at)});
+  const cl=lines.map(l=>{const at=l.lastIndexOf("@");let t=l.slice(0,at).replace(TIDY_TAIL,"").replace(/\s+of fresh\s+/i," ").replace(/\s{2,}/g," ").trim();
+    /* a clause about serving or prepping stays in the method ("2 ripe peaches, sliced, plus 1 for serving", "150g feta, crumbled", "1 L ginger ale, cold") */
+    t=t.replace(/,\s*[^,@]*\b(serv(e|ing)|to taste|decorat|garnish|plus|to give|whip)\w*[^@]*$/i,"").replace(/\s*\((whip it|whipped|to whip|for whipping|softened|chilled|cold)\)/i,"")
+      .replace(/,\s*((finely |thinly |roughly |lightly )?(crumbled|cold|chilled|ice[- ]cold|softened|melted|beaten|sliced|chopped|diced|grated|juiced|zested|halved|peeled|minced|crushed|torn|cubed|drained|rinsed|whipped|shaved or crushed|crushed or shaved|in wheels|in wedges|quartered|stalks chopped|at room temperature)(\s+and\s+\w+)?)$/i,"")
+      .replace(/^(\d+)\s*x\s*(\d+)ml (cans?|bottles?|stubbies) of (.+)$/i,(m,n,ml,pk,it)=>`${n} ${pk} ${it}, ${ml}ml each`);
+    /* ginger, however a recipe measures it, is bought by the knob (about 20g, or 4cm) */
+    {const g=t.match(/^(?:a |(\d+(?:\.\d+)?)\s*(g|cm)?\s*)?(?:(knobs?|pieces?)(?: of)?\s+)?(?:fresh )?ginger(?:,\s*(\d+)\s*cm)?$/i);
+     if(g){const n=+(g[1]||1),u=(g[2]||"").toLowerCase(),gr=u==="g"?n:u==="cm"?n*5:g[4]?n*(+g[4])*5:n*20;t="ginger "+gr+"g"}}
+    return t+l.slice(at)});
+  /* ginger lines add up into whole knobs */
+  {const gi=cl.map((l,i)=>[l,i]).filter(([l])=>/^ginger \d+g@/.test(l));if(gi.length){const gr=gi.reduce((a,[l])=>a+ +l.match(/(\d+)g@/)[1],0),n=Math.max(1,Math.ceil(gr/20-0.1)),at=gi[0][0].split("@")[1];
+    for(let k=gi.length-1;k>=0;k--)cl.splice(gi[k][1],1);cl.splice(gi[0][1],0,`${n} knob${n>1?"s":""} ginger@${at}`)}}
   /* "salt and pepper" covers a plain salt or pepper line */
-  if(cl.some(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l)))for(let i=cl.length-1;i>=0;i--)if(/^((sea |table |cooking |fine )?salt|(freshly )?(ground |cracked )?(black )?pepper)@/i.test(cl[i]))cl.splice(i,1);
+  {const spi=cl.findIndex(l=>/^salt and (freshly ground )?(black |white )?pepper(, mixed)?@/i.test(l));if(spi>=0){let flakes=false,white=/white/i.test(cl[spi]);
+    for(let i=cl.length-1;i>=0;i--){if(i===spi)continue;const x=cl[i].split("@")[0];
+      if(/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?)?\s+)?(?:(?:a )?pinch(?:es)? of )?(?:(?:sea|table|cooking|fine|kosher|flaky|coarse|rock)\s+)*salt(\s+flakes?)?$/i.test(x)||/^salt and salt flakes$/i.test(x)){if(/flak/i.test(x))flakes=true;cl.splice(i,1);continue}
+      if(/^(?:[\d./ ]+\s*(?:tsp|tbsp|g)?\s+)?(freshly )?(ground |cracked )?(black |white )?pepper(corns)?$/i.test(x)){if(/white/i.test(x))white=true;cl.splice(i,1)}}
+    const at2=cl.findIndex(l=>/^salt and (freshly ground )?(black |white )?pepper/i.test(l)),a2=cl[at2].split("@")[1];cl[at2]=(flakes?"salt, salt flakes and ":"salt and ")+(white?"black and white ":"")+"pepper@"+a2}}
   /* one salt line and one pepper line */
   const SALT=/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?|pinch of|cups?)?\s+)?(?:(?:a )?pinch(?:es)? of )?((?:(?:sea|table|cooking|fine|kosher|flaky|coarse|rock|smoked|pink|himalayan)\s+)+)?salt(\s+flakes?)?(?:,[^@]*)?(\s+and\s+salt\s+flakes)?@/i;
   const PEP=/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?)?\s+)?(?:(?:a )?pinch(?:es)? of )?((?:freshly )?(?:ground |cracked |coarsely ground )?(?:black|white)?\s*)pepper(corns)?(?:,[^@]*)?@/i;
@@ -1532,7 +1547,7 @@ function shopTidy(lines){
   /* the same thing twice, in any aisle: added up into the first line */
   const P=l=>{const at=l.lastIndexOf("@"),a=l.slice(at+1);let t=l.slice(0,at),each=0;{const e=t.match(/,\s*(\d+)ml each$/i);if(e){each=+e[1];t=t.slice(0,e.index)}}
     const m=t.match(/^(\d+(?:\.\d+)?)\s?(kg|g|ml|L|l)?\s+(?:(bottles?|stubbies|stubby|cans?|tinnies|tinny|longnecks?)\s+(?:of\s+)?)?(.+)$/);if(!m)return null;
-    let item=m[4].replace(TIDY_ADJ,"").replace(TIDY_ADJ,"").replace(/\s+(flesh|pieces|chunks|wedges)$/i,"").toLowerCase();
+    let item=m[4].replace(/^(small|large|medium|big)\s+/i,"").replace(TIDY_ADJ,"").replace(TIDY_ADJ,"").replace(/^(small|large|medium|big)\s+/i,"").replace(/\s+(flesh|pieces|chunks|wedges)$/i,"").toLowerCase();
     if(/[,(+]/.test(item))return null;
     const sing=item.replace(/(oes)$/,"o").replace(/(ies)$/,"y").replace(/([^s])s$/,"$1");
     let q=+m[1],u=(m[2]||"").toLowerCase();if(u==="kg"){q*=1000;u="g"}if(u==="l"){q*=1000;u="ml"}
@@ -1545,6 +1560,8 @@ function shopTidy(lines){
     /* drinks by the pack: millilitres fold into whole bottles or cans */
     if(y.pack||p.pack){const pk=y.pack||p.pack,per=(y.pack?y.each:p.each)||PACK_ML[pk]||375;const ml=(y.pack?y.q*per:y.u==="ml"?y.q:y.q*per)+(p.pack?p.q*per:p.u==="ml"?p.q:p.q*per);
       if((y.pack||y.u==="ml"||!y.u)&&(p.pack||p.u==="ml"||!p.u)){const n=Math.ceil(ml/per-0.05);const word=n>1?(/y$/.test(pk)?pk.replace(/y$/,"ies"):/s$/.test(pk)?pk:pk+"s"):pk.replace(/ies$/,"y").replace(/s$/,"");out[j]=`${n} ${word} ${y.pack?y.item:p.item}${per!==(PACK_ML[pk]||375)?`, ${per}ml each`:""}@${y.a}`;continue}}
+    /* a count beside a weight (8 small potatoes and 1kg potatoes, 4 small pumpkins and 800g pumpkin) becomes one weight at a standard size */
+    if(!!y.u!==!!p.u&&(y.u==="g"||p.u==="g")){const w=EACH_G.find(([re])=>re.test(y.sing))||(/pumpkin/.test(y.sing)?[0,200]:null);if(w){const q=(y.u?y.q:y.q*w[1])+(p.u?p.q:p.q*w[1]);out[j]=(q>=1000?`${+(q/1000).toFixed(2)}kg`:`${Math.round(q)}g`)+" "+(y.u?y.item:p.item)+"@"+(p.a==="Produce"?p.a:y.a);continue}}
     if(y.u===p.u){const q=y.q+p.q;const name=y.u?y.item:(q>1.01?(/y$/.test(y.sing)&&!/[aeiou]y$/.test(y.sing)?y.sing.replace(/y$/,"ies"):/o$/.test(y.sing)&&/mango|tomato|potato/.test(y.sing)?y.sing+"es":y.sing+(/s$/.test(y.sing)?"":"s")):y.sing);
       out[j]=(y.u==="g"&&q>=1000?`${+(q/1000).toFixed(2)}kg`:y.u==="ml"&&q>=1000?`${+(q/1000).toFixed(2)}\u00a0L`:y.u?`${Math.round(q)}${y.u}`:`${Math.ceil(q-0.05)}`)+" "+name+"@"+(p.a==="Produce"?p.a:y.a);continue}
     out.push(l)}
