@@ -946,7 +946,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FL
 function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
   const fs=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];
-  if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
+  if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=fs[1].offsetParent?Math.abs(fs[1].offsetTop-fs[0].offsetTop)<10:h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;/* review 39: side by side or stacked, read from where the pages sit (a cue strip made Denver's square pages portrait) */
     const pages=fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}));
     /* review 31: wide pages of a two-page menu (Jurassic Park's dining guide) split into panels on a phone too */
     if((swipeW()||pvDesk)&&(w>=h*1.2||w>=900)){const out=[];pages.forEach((pg,i)=>{const c=pvPanels(pg.el,w,h,i),xs=[0,...c,w];if(!c.length){out.push(pg);return}
@@ -2728,7 +2728,7 @@ function cueStrip(f){try{
   const d=sh,T=faces.length?faces:[tg];T.forEach(x=>{x.style.height=(parseFloat(x.style.height)||x.offsetHeight)+d+"px";const c=x.firstElementChild;if(c&&c!==el&&!faces.length)return;});
   if(!faces.length){tg.style.height=H+d+"px"}else{for(const x of faces){const c=[...x.children].find(c=>c!==el&&parseFloat(c.style.height)>=H-2);if(c&&!bg)c.style.height=H+d+"px"}}
   el.style.top=H+"px";if(!bg)el.style.background=getComputedStyle(card).backgroundColor||"#fff";
-  if(card.classList.contains("fx-paper")&&faces.length){const n=faces.length,row=H>W,ch=+card.dataset.h||0;if(ch){const nh=row?ch+d:ch+d*n;card.dataset.h=nh;card.style.height=nh+"px"}}
+  if(card.classList.contains("fx-paper")&&faces.length){const n=faces.length,row=n<2?true:Math.abs(faces[1].offsetTop-faces[0].offsetTop)<10,ch=+card.dataset.h||0;/* side by side or stacked, read from where the pages sit (Denver's near-square pages stack) */if(ch){const nh=row?ch+d:ch+d*n;card.dataset.h=nh;card.style.height=nh+"px"}}
 }catch(e){console.warn("cue strip",e)}}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
