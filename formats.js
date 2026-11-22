@@ -318,16 +318,16 @@ const FMT_FILMS={
     roach:["/3fycb4TETdZ0mleBqQQYzrMiCGS.jpg","His cockroach, along for every shift",118],
     groups:[
       {h:"Today's finds",en:"Brought home by Wall-E",left:true,items:[
-        {k:"Wall-E's stuffed pressed cob loaf",n:"Cooler box pressed cob loaf",d:"Hollowed cob filled with ham, roast capsicum, pesto, mozzarella and spinach, pressed and sliced.",note:"Packed tight, like the cooler he carries his finds home in"},
-        {k:"Plant-in-a-boot pea and mint smash",n:"Plant-in-a-boot pea smash",d:"Peas crushed with mint, feta, lemon and olive oil, green shoots on top, crunchy pita chips.",note:"He found the seedling in an old fridge and kept it in a boot"},
-        {k:"Trash cube puffed rice bars",n:"Trash cube rice bars",d:"Marshmallow puffed rice, cut into cubes and stacked into towers.",note:"Compacted and stacked, like his towers over the city"}]},
+        {k:"Wall-E's stuffed pressed cob loaf",n:"Cooler box pressed cob loaf",d:"Hollowed cob filled with ham, roast capsicum, pesto, mozzarella and spinach, pressed and sliced.",note:"Packed tight, like the cooler he carries his finds home in."},
+        {k:"Plant-in-a-boot pea and mint smash",n:"Plant-in-a-boot pea smash",d:"Peas crushed with mint, feta, lemon and olive oil, green shoots on top, crunchy pita chips.",note:"He found the seedling in an old fridge and kept it in a boot."},
+        {k:"Trash cube puffed rice bars",n:"Trash cube rice bars",d:"Marshmallow puffed rice, cut into cubes and stacked into towers.",note:"Compacted and stacked, like his towers over the city."}]},
       {h:"Sweet",en:"Built to last",left:true,items:[
-        {k:"Golden sponge cakes",n:"Golden sponge cakes",d:"Light sponge fingers split and filled with piped vanilla cream.",note:"Cream-filled snack cakes, the one thing tougher than his cockroach"}]},
+        {k:"Golden sponge cakes",n:"Golden sponge cakes",d:"Light sponge fingers split and filled with piped vanilla cream.",note:"Cream-filled snack cakes, the one thing tougher than his cockroach."}]},
       {h:"In a cup",en:"Time for lunch, in a cup",items:[
-        {k:"Pumpkin lentil soup in a mug",n:"Pumpkin lentil soup in a mug",d:"Pumpkin, red lentil and coconut soup with ginger, in big mugs with a straw.",note:"Sipped through a straw, the way everyone on the Axiom eats"},
-        {k:"Axiom blue raspberry lemonade slushie",n:"Axiom blue slushie",d:"Frozen raspberries, lemon and blue cordial blended with ice.",note:"The chair screens switch the whole deck from red to blue"}]},
+        {k:"Pumpkin lentil soup in a mug",n:"Pumpkin lentil soup in a mug",d:"Pumpkin, red lentil and coconut soup with ginger, in big mugs with a straw.",note:"Sipped through a straw, the way everyone on the Axiom eats."},
+        {k:"Axiom blue raspberry lemonade slushie",n:"Axiom blue slushie",d:"Frozen raspberries, lemon and blue cordial blended with ice.",note:"The chair screens switch the whole deck from red to blue."}]},
       {h:"Grown on Earth",en:"Vegetable plants. Pizza plants!",items:[
-        {k:"Earth garden roast veg and haloumi tray",n:"Earth garden veg and haloumi tray",d:"Pumpkin, capsicum, zucchini and chickpeas roasted with honey and cumin, golden haloumi, mint and lemon yoghurt.",note:"The captain learns food comes out of the ground"}]}]},
+        {k:"Earth garden roast veg and haloumi tray",n:"Earth garden veg and haloumi tray",d:"Pumpkin, capsicum, zucchini and chickpeas roasted with honey and cumin, golden haloumi, mint and lemon yoghurt.",note:"The captain learns food comes out of the ground."}]}]},
   "Sleepless in Seattle (1993)":{"fmt":"latenightcall","brand":"The Rainbow Room","phoneTitle":"Sleepless in Seattle","tag":"A supper for the long-distance romantics.","art":{"meeting":"/2rFIzJvWSPT4l1Sm1uriDSnm9TE.jpg","sam":"/mVNAaoZoWmn29I8Th3cl0r6VyUJ.jpg","annie":"/3zYGUcdMza7JMm8Nzjn0xnkQw83.jpg","dinner":"/2x9lre6U5kB2czxZrIltB4aAvGT.jpg"},"groups":[{"h":"On the lake","tab":"Snacks","items":[{"k":"Seattle smoked salmon dip","c":"s","d":"Hot-smoked fish worked into cream cheese and crème fraîche with dill, capers, lemon and horseradish. Toasted bagel chips.","note":"Flown in overnight from Seattle.","n":"Northwest salmon spread"},{"k":"Radio show popcorn","c":"s","d":"Popped in coconut oil, tossed with browned butter and sea salt.","note":"Bar radio stays on the call-in show.","n":"Late show popcorn"}]},{"h":"Before the flight","tab":"Main","items":[{"k":"Annie's dinner with Walter","c":"m","d":"Fillet roasted under parsley, grated lemon peel and bread crumbs. Steamed green beans, warm butter spooned over.","note":"Mild. Nothing to sneeze at.","n":"Baked salmon"}]},{"h":"At the top","tab":"Dessert","items":[{"k":"Valentine's heart cookies","c":"w","d":"Browned butter sugar cookies, hand cut, iced red and white.","note":"A pair on every saucer tonight.","n":"Valentine hearts"}]},{"h":"Still awake","tab":"Drink","items":[{"k":"Houseboat iced mocha","c":"d","d":"Strong coffee with dark chocolate melted through, cold milk over ice, whipped cream and cocoa.","note":"The way they take it in Seattle.","n":"Iced mocha"}]}]},
   "You've Got Mail (1998)":{"fmt":"bookshopcafe","brand":"Fox & Sons Books","phoneTitle":"You've Got Mail","tag":"A neighbourhood supper on the Upper West Side.","art":{"identity":"/1XDolJ6DjVxRuhxk3sQJGihoXMy.jpg","corner":"/r8JshT8rXVowFbdiUgguTblt3PX.jpg","fox":"/iZ1HwAER8jWgjkc0Vhu32T5sUAI.jpg"},"groups":[{"h":"While you wait","tab":"Snacks","items":[{"k":"Publishing party salmon cucumber bites","c":"s","d":"Two dozen cucumber rounds with dill cream cheese, capers and cracked pepper.","note":"Platters to order. 8.50","n":"Smoked salmon bites"},{"k":"Upper West Side bagels","c":"s","d":"Three to an order, with spring onion cream cheese and cracked pepper.","note":"From the cafe kitchen, 3.25.","n":"Toasted mini bagels"}]},{"h":"The other bookshop","tab":"Main","items":[{"k":"Fox Books cafe sandwiches","c":"m","d":"Cranberry sauce on buttered sourdough, pressed hot until the cheese runs.","note":"From the cafe kitchen, 6.50.","n":"Turkey and brie melt"}]},{"h":"At the café table","tab":"Dessert","items":[{"k":"Cafe cheesecake","c":"w","d":"Baked rich and dense, with sugared fresh strawberries.","note":"From the bakery case, 3.95.","n":"New York cheesecake"}]},{"h":"Decisions, decisions","tab":"Drink","items":[{"k":"Fox Books cafe cappuccino","c":"d","d":"Two shots of decaf espresso, steamed milk and a deep crown of foam.","note":"Any size, any strength. 2.95","n":"Fox Books cafe cappuccino"}]}]},
   "Tootsie (1982)":{"fmt":"dorothysupper","brand":"Between takes & a weekend away","phoneTitle":"Tootsie","tag":"A little studio lunch. A proper country supper.","art":{"identity":"/qbKKPCd8u6TT5G89l1G6rO986KP.jpg","studio":"/pPMbp8hNviXiPNIEW98tDxxuzOs.jpg","farm":"/pdpJR1k8auhrKlSxJEhAbHiuuq8.jpg","tearoom":"/kNCx57cRFvUqzKPZRRwbN3wgDqT.jpg"},"groups":[{"h":"Between takes","tab":"Snacks","items":[{"k":"Southwest General green room sandwiches","c":"s","d":"Egg salad with watercress, and cucumber with cream cheese, on soft white bread. Crusts off, cut in triangles.","note":"The best tomato, the best cucumber.","n":"Finger sandwiches"},{"k":"Sandy's audition capsicum and feta dip","c":"s","d":"Charred under the grill, peeled, whipped smooth with feta, yoghurt, garlic, hot chilli flakes and olive oil. Sesame crackers.","note":"Zakuski, to begin at the table.","n":"Red pepper dip"}]},{"h":"The farm weekend","tab":"Main","items":[{"k":"Les's farm roast chicken","c":"m","d":"Butter, grated lemon peel and thyme under the skin. Carved, with potatoes browned in the drippings.","note":"Carved at the table.","n":"Roast chicken"}]},{"h":"A weekend off","tab":"Dessert","items":[{"k":"Strawberry shortcake","c":"w","d":"Cream biscuits baked this morning, split and filled with sugared berries and soft whipped cream.","note":"Edward Kimberly, live on air.","n":"Strawberry shortcake"}]},{"h":"Lunch with George","tab":"Drink","items":[{"k":"Dorothy Michaels' Russian caravan tea","c":"d","d":"Strong and black, poured into glasses. Lemon and cherry preserves on the side, to stir in.","note":"Here, it is Dorothy.","n":"Russian tea"}]}]},
@@ -411,39 +411,39 @@ const FMT_FILMS={
     stills:[["/hAj5B7NNjd05081eZhqKujmpVdx.jpg","The soup Remy saved"],["/pFIQZaWSyn4YAdE9jGriCTnTDZB.jpg","The ratatouille, for Ego"],["/lxpv2ikF3Cdml90d1JI7hJzh6rK.jpg","Colette's bread test"]],
     groups:[
       {h:"Pour commencer",en:"To start",items:[
-        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"Leek, potato and cream. Remy fixed it",p:"€12"},
-        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Mushroom and gruyère, by lightning",p:"€9"},
-        {k:"Paris market jambon-beurre and brie",fr:"La baguette",n:"Bread, with a proper crust",note:"Warm baguette. Hear it crackle",p:"€4",
+        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"Leek, potato and cream. Remy fixed it.",p:"€12"},
+        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Mushroom and gruyère, by lightning.",p:"€9"},
+        {k:"Paris market jambon-beurre and brie",fr:"La baguette",n:"Bread, with a proper crust",note:"Warm baguette. Hear it crackle.",p:"€4",
          how:"Warm 2 good baguettes in a 200C oven for 6 minutes until the crust crackles when you squeeze it. Tear, do not slice, and serve with 100g salted butter at room temperature.",
          shop:["2 baguettes@Bakery","100g salted butter@Dairy"]}]},
       {h:"Les plats",en:"Mains",items:[
-        {k:"Ratatouille",fr:"Ratatouille",n:"Ratatouille, layered fine",note:"Zucchini, eggplant, squash, tomato. Takes Ego home",p:"€28"},
-        {k:"Sweetbreads à la Gusteau",fr:"Ris de veau à la Gusteau",n:"Sweetbreads à la Gusteau",note:"Veal sweetbreads in butter and lemon. The recipe Remy rewrote",p:"€32",c:"m",
+        {k:"Ratatouille",fr:"Ratatouille",n:"Ratatouille, layered fine",note:"Zucchini, eggplant, squash, tomato. Takes Ego home.",p:"€28"},
+        {k:"Sweetbreads à la Gusteau",fr:"Ris de veau à la Gusteau",n:"Sweetbreads à la Gusteau",note:"Veal sweetbreads in butter and lemon. The recipe Remy rewrote.",p:"€32",c:"m",
          how:"Soak 600g veal sweetbreads in cold water for 2 hours, then simmer in salted water for 4 minutes and plunge into iced water. Peel off the membrane and press under a weighted tray for an hour. Slice into 2cm pieces, dust with flour and pan-fry in 30g butter for 3 minutes a side until golden. Deglaze with 80ml white wine and 100ml veal or chicken stock, reduce, then swirl in 20g cold butter. Serve with the sauce spooned over.",
          shop:["600g veal sweetbreads@Meat","50g butter@Dairy","2 tbsp plain flour@Pantry","80ml white wine@Bottle shop","100ml chicken stock@Pantry"]}]},
       {h:"Le dessert",en:"Sweet",left:true,items:[
         {k:"Colette's crème brûlée",fr:"Crème brûlée",n:"Colette's crème brûlée",note:"Custard, burnt sugar. Colette's lesson.",p:"€10"}]},
       {h:"Les boissons",en:"To drink",items:[
-        {k:"Anton Ego's grape spritz",fr:"Grape juice, 1947",n:"A good grape fizz",note:"Grape juice, berries and soda. Ego's order",p:"Ask the waiter"}]}]},
+        {k:"Anton Ego's grape spritz",fr:"Grape juice, 1947",n:"A good grape fizz",note:"Grape juice, berries and soda. Ego's order.",p:"Ask the waiter"}]}]},
   "Big Night (1996)":{fmt:"feast",over:"Cucina Italiana · Jersey Shore",brand:"Paradise",sub:"Primo in the kitchen. Secondo out front.",
     foot:"No spaghetti with the risotto. Primo: she is a Philistine.",
     note:["The big night","For the night Louis Prima was meant to come. To eat good food is to be close to God."],
     stills:[["/dohqxi6QW7SSmzEaK8Wv9dMhxcP.jpg","The customer who wanted spaghetti too"],["/dtUVvnbYSusSaI6xwPrkPK2xLeB.jpg","The long table, the big night"]],
     groups:[
       {h:"Primi",en:"First courses",items:[
-        {k:"Seafood risotto",it:"Risotto di mare",n:"Seafood risotto",note:"Prawns, squid and mussels. No cheese, no spaghetti",p:"2.50",c:"s",
+        {k:"Seafood risotto",it:"Risotto di mare",n:"Seafood risotto",note:"Prawns, squid and mussels. No cheese, no spaghetti.",p:"2.50",c:"s",
          how:"Warm 1.2L fish stock. Soften 1 diced onion and 2 garlic cloves in 3 tbsp olive oil, add 350g carnaroli rice and toast 2 minutes, then 125ml white wine. Add the stock a ladle at a time, stirring, for 16 minutes. Stir in 300g peeled green prawns, 200g squid rings and 500g cleaned mussels, cover for 4 minutes until the mussels open. Finish with 30g butter, parsley and lemon. No cheese.",
          shop:["1.2L fish stock@Pantry","1 onion@Produce","2 garlic cloves@Produce","350g carnaroli rice@Pantry","125ml white wine@Bottle shop","300g green prawns@Seafood","200g squid rings@Seafood","500g mussels@Seafood","30g butter@Dairy","1 bunch parsley@Produce","1 lemon@Produce"]},
-        {k:"Risotto three ways",it:"Risotto tricolore",n:"Risotto in three colours",note:"Spinach, parmesan and tomato risottos, side by side",p:"3.00",
+        {k:"Risotto three ways",it:"Risotto tricolore",n:"Risotto in three colours",note:"Spinach, parmesan and tomato risottos, side by side.",p:"3.00",
          how:"Make one risotto base: soften 1 onion in 40g butter, toast 400g arborio rice, add 125ml white wine, then 1.4L hot chicken stock a ladle at a time for 17 minutes. Split into three pans. Green: stir in 100g blitzed spinach and basil. White: stir in 60g parmesan and 30g butter. Red: stir in 4 tbsp tomato passata and a pinch of saffron soaked in hot water. Spoon the three side by side on each plate.",
          shop:["1 onion@Produce","70g butter@Dairy","400g arborio rice@Pantry","125ml white wine@Bottle shop","1.4L chicken stock@Pantry","100g baby spinach@Produce","1 bunch basil@Produce","60g parmesan@Dairy","4 tbsp tomato passata@Pantry","1 pinch saffron@Pantry"]}]},
       {h:"Secondi",en:"Main courses",items:[
-        {k:"Timpano",it:"Il timpano",n:"Timpano",note:"Ziti, ragù, egg and provolone in a pasta drum. The big night's star",p:"5.00"},
-        {k:"Roast suckling pig",it:"Maialino arrosto",n:"Roast pork, whole-pig style",note:"Pork with fennel, garlic and rosemary, for the feast",p:"4.50",
+        {k:"Timpano",it:"Il timpano",n:"Timpano",note:"Ziti, ragù, egg and provolone in a pasta drum. The big night's star.",p:"5.00"},
+        {k:"Roast suckling pig",it:"Maialino arrosto",n:"Roast pork, whole-pig style",note:"Pork with fennel, garlic and rosemary, for the feast.",p:"4.50",
          how:"Score the skin of a 1.5kg boned pork belly, rub with 2 tsp salt, 1 tbsp fennel seeds, 4 crushed garlic cloves and rosemary on the flesh side, roll and tie. Dry uncovered in the fridge overnight. Roast at 240C for 30 minutes, then 160C for 2 hours until tender and crackling. Rest 15 minutes and carve thick.",
          shop:["1.5kg boned pork belly@Meat","1 tbsp fennel seeds@Pantry","4 garlic cloves@Produce","1 bunch rosemary@Produce"]}]},
       {h:"All'alba",en:"At dawn",items:[
-        {k:"Secondo's omelette",it:"La frittata",n:"Secondo's omelette",note:"Eggs, olive oil, crusty bread. The silent morning after",p:"",c:"m",
+        {k:"Secondo's omelette",it:"La frittata",n:"Secondo's omelette",note:"Eggs, olive oil, crusty bread. The silent morning after.",p:"",c:"m",
          how:"Beat 8 eggs with a pinch of salt. Heat 2 tbsp olive oil in a non-stick pan over medium heat, pour in the eggs and stir gently until just set underneath and soft on top, about 3 minutes. Fold, slide onto a plate and cut into four. Serve with torn bread.",
          shop:["8 eggs@Dairy","2 tbsp olive oil@Pantry","1 loaf crusty bread@Bakery"]}]}]},
   "Chef (2014)":{fmt:"truck",brand:"El Jefe",sub:"Cubanos",boardHead:"Today on the truck",boardSide:"Miami to LA",
@@ -451,14 +451,14 @@ const FMT_FILMS={
     stills:[["/fQQmnrIPimZ8ZcVL6M0YUDdJhI6.jpg","Chalking up the board"],["/lDBNicr668AbJ9q0FBJa8AREFOj.jpg","The window, open for business"],["/7Un2nV752i6AKxmtH0wSgiuANLE.jpg","Carl teaching Percy the line"]],
     groups:[
       {h:"The truck",items:[
-        {k:"El Jefe Cubano",n:"El Jefe Cubano",note:"Roast pork, ham, swiss, pickles, mustard. Pressed hot",p:"$7"}]},
+        {k:"El Jefe Cubano",n:"El Jefe Cubano",note:"Roast pork, ham, swiss, pickles, mustard. Pressed hot.",p:"$7"}]},
       {h:"For Percy",items:[
-        {k:"The grilled cheese for Percy",n:"Grilled cheese",note:"Cheddar, gruyère and parmesan. Made for Percy, never burnt",p:"$5"}]},
+        {k:"The grilled cheese for Percy",n:"Grilled cheese",note:"Cheddar, gruyère and parmesan. Made for Percy, never burnt.",p:"$5"}]},
       {h:"On the road",items:[
-        {k:"New Orleans beignets with chicory café",n:"Beignets",note:"Fried yeast dough under icing sugar. The New Orleans stop",p:"$4",
+        {k:"New Orleans beignets with chicory café",n:"Beignets",note:"Fried yeast dough under icing sugar. The New Orleans stop.",p:"$4",
          how:"Mix 7g dried yeast, 1 tbsp sugar and 180ml warm milk, stand 10 minutes. Beat in 1 egg, 30g melted butter, 350g plain flour and a pinch of salt to a soft dough, knead 3 minutes, cover and rise 1 hour. Roll 5mm thick, cut into 6cm squares and fry at 175C for 1 minute a side until puffed and golden. Drain and bury in 100g icing sugar.",
          shop:["7g dried yeast@Pantry","1 tbsp caster sugar@Pantry","180ml full cream milk@Dairy","1 egg@Dairy","30g butter@Dairy","350g plain flour@Pantry","100g icing sugar@Pantry","1L vegetable oil@Pantry"]},
-        {k:"Carl's late-night aglio e olio",n:"Aglio e olio",note:"Garlic, chilli and olive oil. For Molly at midnight",p:"$9",
+        {k:"Carl's late-night aglio e olio",n:"Aglio e olio",note:"Garlic, chilli and olive oil. For Molly at midnight.",p:"$9",
          how:"Cook 500g spaghetti in well-salted water until just shy of al dente, keeping 1 cup of the water. Meanwhile warm 100ml olive oil with 8 thinly sliced garlic cloves and 1 tsp chilli flakes over low heat until the garlic is pale gold. Toss the pasta through with a splash of pasta water until glossy. Finish with a bunch of chopped parsley, lemon juice and parmesan.",
          shop:["500g spaghetti@Pantry","100ml extra virgin olive oil@Pantry","8 garlic cloves@Produce","1 tsp chilli flakes@Pantry","1 bunch parsley@Produce","1 lemon@Produce","40g parmesan@Dairy"]}]},
       {h:"Off the menu",items:[
@@ -469,15 +469,15 @@ const FMT_FILMS={
     stills:[["/nVnheU1iPMVJJZgW9I8P9tCNhco.jpg","The diner. Sally orders"],["/cAZADMfPpRuCZYkTO06IDdrEE2t.jpg","Katz's. The famous lunch"],["/tc8FdNY1R0Ob1oOyhI3XZbuV14m.jpg","New Year's Eve, at the party"]],
     groups:[
       {h:"Sally's order",sec:"On the drive, a diner in 1977",items:[
-        {k:"Sally's chef salad",n:"Chef salad",mods:["oil and vinegar dressing"],note:"Ham, turkey, swiss and egg. Dressing on the side",p:"5.50",q:"1",
+        {k:"Sally's chef salad",n:"Chef salad",mods:["oil and vinegar dressing"],note:"Ham, turkey, swiss and egg. Dressing on the side.",p:"5.50",q:"1",
          how:"Wash and tear 2 cos lettuces. Arrange with 200g sliced leg ham, 200g sliced turkey, 150g swiss cheese strips, 4 halved hard-boiled eggs, 2 sliced tomatoes and half a sliced cucumber. Serve 60ml olive oil and 30ml red wine vinegar in two little jugs on the side.",
          shop:["2 cos lettuces@Produce","200g sliced leg ham@Deli","200g sliced turkey@Deli","150g swiss cheese@Dairy","4 eggs@Dairy","2 tomatoes@Produce","1 cucumber@Produce","60ml olive oil@Pantry","30ml red wine vinegar@Pantry"]},
-        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"Heated, with the ice cream on the side",p:"2.25",q:"1"}]},
+        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["served warm · a scoop of vanilla","or berries if you like","or a dollop of cream"],note:"Heated, with the ice cream on the side.",p:"2.25",q:"1"}]},
       {h:"From the counter",sec:"Katz's Delicatessen, years later",items:[
-        {k:"Fried deli pickles with mustard mayo",n:"Fried pickles",note:"Half-sours in rye batter. Pickles come with every table",p:"1.50",q:"1"},
-        {k:"Pastrami on rye",note:"The Katz's classic. Hand cut, piled high, a pickle on the side",p:"6.95",q:"1"}]},
+        {k:"Fried deli pickles with mustard mayo",n:"Fried pickles",note:"Half-sours in rye batter. Pickles come with every table.",p:"1.50",q:"1"},
+        {k:"Pastrami on rye",note:"The Katz's classic. Hand cut, piled high, a pickle on the side.",p:"6.95",q:"1"}]},
       {h:"Fountain",items:[
-        {k:"Egg cream",n:"Chocolate egg cream",c:"d",note:"Chocolate syrup, milk and soda. I'll have what she's having",p:"1.25",q:"2"}]}]},
+        {k:"Egg cream",n:"Chocolate egg cream",c:"d",note:"Chocolate syrup, milk and soda. I'll have what she's having.",p:"1.25",q:"2"}]}]},
   "Home Alone (1990)":{fmt:"nero",order:[0,2,1],still:["/gqi0faVa8GvgcG991QL2ZrL3ECw.jpg","Kevin's dinner at the big table, all by himself"],brand:"Little Nero's",over:"Hot to your door",slogan:"No fiddlin' around!",
     tag:"Pay at the door.<br>Pass the pizza.",caption:"Tonight's movie",
     sizes:[["Small","7.50"],["Medium","9.50"],["Large","11.80"]],sizesNote:"Extra cheese 1.00 · Plain cheese always on",stamp:["Delivered hot","Knock at the front door.<br>Wait for the dog door."],
@@ -486,18 +486,18 @@ const FMT_FILMS={
     total:"$11.80",scrawl:"Paid $12. “Keep the change, you filthy animal.”",thanks:"Thank you, and merry Christmas",
     colA:[
       {h:"Pies",items:[
-        {k:"Cheese pizza bites",n:"Large cheese pizza",c:"m",d:"Plain cheese, cut in triangles",note:"Buzz ate the last plain cheese. Not this time.",p:"11.80",
+        {k:"Cheese pizza bites",n:"Large cheese pizza",c:"m",d:"Plain cheese, cut in triangles.",note:"Buzz ate the last plain cheese. Not this time.",p:"11.80",
          how:"Heat the oven to its highest setting, about 250C, with two trays inside for 30 minutes. Simmer 400g crushed tomatoes with 1 crushed garlic clove, 1 tsp dried oregano and a pinch of salt for 10 minutes. Stretch 2 x 400g balls of pizza dough into 30cm rounds on baking paper. Spread each with half the sauce, leaving a 2cm edge, and scatter 200g grated mozzarella over each. Slide onto the hot trays and bake 10 to 12 minutes until the edges blister. Cut each into 8 triangles.",
          shop:["2 x 400g pizza dough balls@Bakery","400g tin crushed tomatoes@Pantry","1 garlic clove@Produce","1 tsp dried oregano@Pantry","400g mozzarella@Dairy"]}]},
       {h:"Drinks",items:[
-        {k:"Kevin's chocolate malted milkshake",n:"Big glass of milk",d:"Ice cold, full cream",note:"Mind the plane tickets",p:"0.75"},
-        {k:"Fuller's cola",n:"Fuller's cola",d:"Big glass, lots of ice",note:"Easy on the refills",p:"1.25",c:"d",
+        {k:"Kevin's chocolate malted milkshake",n:"Big glass of milk",d:"Ice cold, full cream.",note:"Mind the plane tickets.",p:"0.75"},
+        {k:"Fuller's cola",n:"Fuller's cola",d:"Big glass, lots of ice.",note:"Easy on the refills.",p:"1.25",c:"d",
          how:"Chill a 1.25L bottle of cola overnight. Fill four tall glasses with ice, drop a slice of lemon into each and pour. Go easy on the refills.",
          shop:["1.25L cola@Drinks","1 lemon@Produce","1 bag ice@Frozen"]}]}],
     colB:[
       {h:"Kevin's night in",items:[
-        {k:"Kevin's mac and cheese",n:"Mac and cheese dinner",d:"Macaroni, cheddar sauce, crumb on top",note:"Heated up all by himself",p:"3.50"},
-        {k:"Kevin's sundae bar",n:"The giant sundae",c:"w",d:"Two ice creams, hot fudge, the lot",note:"Built in front of Angels with Filthy Souls",p:"2.95",
+        {k:"Kevin's mac and cheese",n:"Mac and cheese dinner",d:"Macaroni, cheddar sauce, crumb on top.",note:"Heated up all by himself.",p:"3.50"},
+        {k:"Kevin's sundae bar",n:"The giant sundae",c:"w",d:"Two ice creams, hot fudge, the lot.",note:"Built in front of Angels with Filthy Souls.",p:"2.95",
          how:"Set out 1L vanilla and 1L chocolate ice cream to soften for 10 minutes. Melt 150g chopped dark chocolate with 150ml thickened cream over low heat for hot fudge. Whip another 150ml thickened cream to soft peaks. Put 100g mini marshmallows, 80g chopped roasted peanuts, 4 tbsp sprinkles and 4 maraschino cherries in small bowls. Everyone builds their own in a big bowl.",
          shop:["1L vanilla ice cream@Frozen","1L chocolate ice cream@Frozen","150g dark chocolate@Pantry","300ml thickened cream@Dairy","100g mini marshmallows@Pantry","80g roasted peanuts@Pantry","4 tbsp sprinkles@Pantry","4 maraschino cherries@Pantry"]}]}]},
   "Back to the Future (1985)":{fmt:"lous",still:["/uhWens64CKeMkIfkhXGkXrMGOo3.jpg","Marty and George, at Lou's"],place:"Lou's Cafe",sub:"Courthouse Square<br>Hill Valley &nbsp;·&nbsp; 1955",
@@ -506,8 +506,8 @@ const FMT_FILMS={
     flyerStill:"/19SqaRZi24WJjCAvXGoMju6ZoXz.jpg",flyerCrop:"8% 14%",flyer:["Save the<br>clock tower","Struck by lightning<br>10:04 PM, 1.21 gigawatts<br>November 12, 1955","Hill Valley Preservation Society"],
     colA:[
       {h:"Off the grill",items:[
-        {k:"Lou's malt shop cheeseburger",n:"Cheeseburger",note:"Griddled onions, pickles, mustard",p:"35¢"},
-        {k:"Lou's Cafe fries",n:"French fries",note:"Hand cut, fried twice. Ready at 88 miles an hour",p:"15¢"}]},
+        {k:"Lou's malt shop cheeseburger",n:"Cheeseburger",note:"Griddled onions, pickles, mustard.",p:"35¢"},
+        {k:"Lou's Cafe fries",n:"French fries",note:"Hand cut, fried twice. Ready at 88 miles an hour.",p:"15¢"}]},
       {h:"Breakfast all day",items:[
         {k:"Lou's breakfast plate",n:"Breakfast plate",note:"Two eggs, bacon and buttered toast, served all day.",p:"45¢",
          how:"Lay 8 rashers of bacon in a cold frying pan and cook over medium heat for 8 to 10 minutes, turning, until crisp. Lift out and fry 4 eggs in the bacon fat, spooning the fat over the yolks. Toast 8 slices of white bread and butter them with 40g butter. Plate the eggs with the bacon and toast.",
@@ -517,7 +517,7 @@ const FMT_FILMS={
         {k:"Chocolate milk",n:"Milk, chocolate",note:"Cold, sweet, with a straw.",p:"10¢",c:"d",
          how:"Whisk 4 tbsp cocoa and 4 tbsp caster sugar with 100ml hot water until smooth. Stir in 900ml cold full cream milk and chill for an hour. Pour into four tall glasses with a straw each.",
          shop:["4 tbsp cocoa@Pantry","4 tbsp caster sugar@Pantry","900ml full cream milk@Dairy"]},
-        {k:"Coffee, no sugar",n:"Coffee, no sugar",note:"Black, nothing added. No Pepsi Free",p:"5¢",c:"d",
+        {k:"Coffee, no sugar",n:"Coffee, no sugar",note:"Black, nothing added. No Pepsi Free.",p:"5¢",c:"d",
          how:"Brew 1L of filter coffee from 60g medium-ground coffee. Pour it black into four diner mugs. No sugar, no milk.",
          shop:["60g ground coffee@Pantry"]}]},
       {h:"From the cake stand",items:[
@@ -530,17 +530,17 @@ const FMT_FILMS={
     card:["From the prison kitchen","Garlic sliced razor thin.<br>Sauce on low all afternoon.<br>Steaks last, in a hot pan."],
     groups:[
       {h:"Start early",items:[
-        {k:"Razor-thin garlic bruschetta",n:"Razor-thin garlic and tomato bruschetta",note:"Sliced the way Paulie does it inside",p:"6:55"},
-        {k:"Prison gravy with three-meat meatballs",n:"Sauce on, three-meat meatballs",note:"Veal, beef and pork. Go easy on the onions",p:"7:30"}]},
+        {k:"Razor-thin garlic bruschetta",n:"Razor-thin garlic and tomato bruschetta",note:"Sliced the way Paulie does it inside.",p:"6:55"},
+        {k:"Prison gravy with three-meat meatballs",n:"Sauce on, three-meat meatballs",note:"Veal, beef and pork. Go easy on the onions.",p:"7:30"}]},
       {h:"Like inside",items:[
-        {k:"Crew's back booth salami and provolone",n:"Salami, prosciutto, cheese",note:"With pepperoncini and bread, laid out like the cell",p:"11:00",
+        {k:"Crew's back booth salami and provolone",n:"Salami, prosciutto, cheese",note:"With pepperoncini and bread, laid out like the cell.",p:"11:00",
          how:"Arrange 150g sliced Genoa salami, 100g prosciutto and 200g sharp provolone cut into thick batons on a board. Add 150g pepperoncini and 150g marinated mushrooms in small bowls. Tear 1 loaf of seeded Italian bread by hand and set it beside the board.",
          shop:["150g Genoa salami@Deli","100g prosciutto@Deli","200g sharp provolone@Deli","150g pepperoncini@Deli","150g marinated mushrooms@Deli","1 loaf Italian bread@Bakery"]},
         {k:"Johnny Dio's pan steaks",n:"Johnny Dio's pan steaks",note:"Rump in butter and garlic, rare or medium. Funny how?",p:"5:30",c:"m",
          how:"Take 4 rump steaks, about 250g each, out of the fridge 30 minutes early and season well with salt and pepper. Heat a heavy pan with 1 tbsp olive oil until smoking. Cook two at a time, 2 to 3 minutes each side for rare, 4 for medium. In the last minute add 30g butter and 2 smashed garlic cloves and spoon them over. Rest 5 minutes.",
          shop:["4 rump steaks, about 1kg@Meat","30g butter@Dairy","2 garlic cloves@Produce","1 tbsp olive oil@Pantry"]}]},
       {h:"Last thing",items:[
-        {k:"Red wine, opened early",n:"Red wine, opened early",note:"Short glasses of Chianti, like inside",p:"6:00",c:"d",
+        {k:"Red wine, opened early",n:"Red wine, opened early",note:"Short glasses of Chianti, like inside.",p:"6:00",c:"d",
          how:"Open 2 bottles of Italian red, a Chianti or Montepulciano, an hour before dinner. Serve in short tumblers.",
          shop:["2 bottles Italian red wine@Bottle shop"]}]}]},
   "Ghostbusters (1984)":{fmt:"workorder",brand:"Ghostbusters",trade:"Paranormal investigation and elimination",address:"14 North Moore St, NYC",
@@ -555,15 +555,15 @@ const FMT_FILMS={
     foot:"It's the Stay Puft Marshmallow Man.",footBy:"Ray",
     groups:[
       {h:"Containment",items:[
-        {k:"Slimer's slime dip",note:"Warm spinach and artichoke dip, green and greedy",p:"6.00"},
-        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Eggs whipped with Dijon and chives. Zuul lives in the fridge",p:"5.00"},
-        {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Marshmallows toasted golden on skewers, Camp Waconda style",p:"4.00"}]},
+        {k:"Slimer's slime dip",note:"Warm spinach and artichoke dip, green and greedy.",p:"6.00"},
+        {k:"Dana's fridge devilled eggs",n:"Fridge devilled eggs",note:"Eggs whipped with Dijon and chives. Zuul lives in the fridge.",p:"5.00"},
+        {k:"Toasted marshmallow skewers",n:"Marshmallow skewers",note:"Marshmallows toasted golden on skewers, Camp Waconda style.",p:"4.00"}]},
       {h:"Mains",items:[
         {k:"Firehouse meatball sub",note:"Meatballs in red sauce on a long roll, long enough for the whole crew.",p:"9.00"},
-        {k:"Chinese takeaway at the firehouse",n:"Firehouse fried rice and dumplings",note:"Lap cheong rice and pork dumplings, out of the boxes",p:"9.00"}]},
+        {k:"Chinese takeaway at the firehouse",n:"Firehouse fried rice and dumplings",note:"Lap cheong rice and pork dumplings, out of the boxes.",p:"9.00"}]},
       {h:"Sweet & cold",items:[
-        {k:"Stay Puft s'mores",note:"Marshmallow and chocolate on biscuits. Toast till he melts",p:"7.00"},
-        {k:"Ectoplasm slushie",note:"Lime slushie, very green. Not EPA approved",p:"5.00"}]}]},
+        {k:"Stay Puft s'mores",note:"Marshmallow and chocolate on biscuits. Toast till he melts.",p:"7.00"},
+        {k:"Ectoplasm slushie",note:"Lime slushie, very green. Not EPA approved.",p:"5.00"}]}]},
   "Hook (1991)":{fmt:"neverfeast",pay:"",brand:"The Neverland Feast",phoneTitle:"Hook",tag:"Neverland dinners are pretend. This one isn't.",
     over:"The Lost Boys' hideout · Neverland",
     sub:["Imagination required","One table, every Lost Boy, one grown-up Pan"],
@@ -576,16 +576,16 @@ const FMT_FILMS={
     foot:["“Think a happy thought.” Tinker Bell","Bangarang!","“To live would be an awfully big adventure.” Peter"],
     groups:[
       {h:"Never Foods",en:"Lost Boys' favourites",left:true,items:[
-        {k:"Neverland rainbow fruit",n:"Neverland rainbow fruit",d:"Melon, kiwi, pineapple and blueberries in rainbow rows, lime and honey drizzle.",note:"Real fruit, for a grown-up who can't imagine it yet",p:"2.50"},
+        {k:"Neverland rainbow fruit",n:"Neverland rainbow fruit",d:"Melon, kiwi, pineapple and blueberries in rainbow rows, lime and honey drizzle.",note:"Real fruit, for a grown-up who can't imagine it yet.",p:"2.50"},
         {k:"Rufio's rainbow dips",n:"Rufio's rainbow dips",d:"Beetroot hummus, pea and mint, and cumin carrot, with warm pita chips.",note:"Made for flicking across the table. Bangarang, Rufio!",p:"3.25"},
-        {k:"Tinkerbell fairy bread",n:"Tinkerbell fairy bread",d:"Buttered white bread covered in hundreds and thousands, cut into triangles.",note:"For Tink. She once drank poison for Peter",p:"1.50"}]},
+        {k:"Tinkerbell fairy bread",n:"Tinkerbell fairy bread",d:"Buttered white bread covered in hundreds and thousands, cut into triangles.",note:"For Tink. She once drank poison for Peter.",p:"1.50"}]},
       {h:"The feast table",en:"Where's the real food?",items:[
-        {k:"Lost Boys roast chicken, potatoes and corn",n:"Lost Boys roast chicken, potatoes and corn",d:"Spatchcock chicken with garlic, lemon and smoked paprika, roast potatoes, grilled corn.",note:"“I want steak, I want eggs, I want a cup of coffee.” Peter, before he imagines it",p:"8.50"},
-        {k:"Smee's Jolly Roger beef stew",n:"Smee's Jolly Roger beef stew",d:"Chuck braised with smoked paprika, tomato and molasses, with cheesy damper.",note:"From the galley of the Jolly Roger, for Hook's crew",p:"9.25"}]},
+        {k:"Lost Boys roast chicken, potatoes and corn",n:"Lost Boys roast chicken, potatoes and corn",d:"Spatchcock chicken with garlic, lemon and smoked paprika, roast potatoes, grilled corn.",note:"“I want steak, I want eggs, I want a cup of coffee.” Peter, before he imagines it.",p:"8.50"},
+        {k:"Smee's Jolly Roger beef stew",n:"Smee's Jolly Roger beef stew",d:"Chuck braised with smoked paprika, tomato and molasses, with cheesy damper.",note:"From the galley of the Jolly Roger, for Hook's crew.",p:"9.25"}]},
       {h:"Tick-tock",en:"From pirate town",left:true,items:[
-        {k:"Tick-tock crocodile cake",n:"Tick-tock crocodile cake",d:"Pandan sponge with pandan buttercream and a chocolate clock face piped on top.",note:"Hook turned the crocodile into a quiet clock",p:"2.75"}]},
+        {k:"Tick-tock crocodile cake",n:"Tick-tock crocodile cake",d:"Pandan sponge with pandan buttercream and a chocolate clock face piped on top.",note:"Hook turned the crocodile into a quiet clock.",p:"2.75"}]},
       {h:"Mermaid Lagoon",en:"To wash it down",items:[
-        {k:"Pixie dust lemonade",n:"Pixie dust lemonade",d:"Cold lemonade, fresh lime juice and a pinch of edible glitter.",note:"Peter ran out of fairy dust. Tink has plenty",p:"1.25"}]}]},
+        {k:"Pixie dust lemonade",n:"Pixie dust lemonade",d:"Cold lemonade, fresh lime juice and a pinch of edible glitter.",note:"Peter ran out of fairy dust. Tink has plenty.",p:"1.25"}]}]},
   "Planes, Trains and Automobiles (1987)":{fmt:"braidwood",brand:"Braidwood Inn",phoneTitle:"Planes, Trains and Automobiles",tag:"Three days to get home. Snacks for every leg.",
     over:"Wichita, Kansas · Rooms available",
     sub:["One room left","One double bed. Chicago is snowed in."],
@@ -600,15 +600,15 @@ const FMT_FILMS={
     foot:["Credit cards may get swapped at check-in","Those aren't pillows!","Happy Thanksgiving from Wichita"],
     groups:[
       {h:"Vending machine",en:"Down the hall",left:true,items:[
-        {k:"Braidwood Inn vending machine mix",n:"Braidwood Inn vending machine mix",d:"Salted peanuts, pretzels, chocolate and beef jerky in one shared bowl.",note:"Bought before the thief cleans out the room overnight",p:"1.95"},
-        {k:"Shower curtain ring onion rings",n:"Shower curtain ring onion rings",d:"Buttermilk soaked onion rings in crisp golden beer batter.",note:"Named for Del's trunk full of samples",p:"2.50"}]},
+        {k:"Braidwood Inn vending machine mix",n:"Braidwood Inn vending machine mix",d:"Salted peanuts, pretzels, chocolate and beef jerky in one shared bowl.",note:"Bought before the thief cleans out the room overnight.",p:"1.95"},
+        {k:"Shower curtain ring onion rings",n:"Shower curtain ring onion rings",d:"Buttermilk soaked onion rings in crisp golden beer batter.",note:"Named for Del's trunk full of samples.",p:"2.50"}]},
       {h:"Blue plates",en:"Worth the long way home",items:[
-        {k:"Thanksgiving turkey sliders",n:"Thanksgiving turkey sliders",d:"Roast turkey with cranberry, baked stuffing and gravy in soft buns.",note:"Neal brings Del home for Thanksgiving dinner",p:"4.95"},
-        {k:"Del's Wichita fried chicken and mash",n:"Del's Wichita fried chicken and mash",d:"Crumbed chicken, creamy mash, peppery white gravy and green beans.",note:"Del knows a place in every town on the way",p:"5.50"}]},
+        {k:"Thanksgiving turkey sliders",n:"Thanksgiving turkey sliders",d:"Roast turkey with cranberry, baked stuffing and gravy in soft buns.",note:"Neal brings Del home for Thanksgiving dinner.",p:"4.95"},
+        {k:"Del's Wichita fried chicken and mash",n:"Del's Wichita fried chicken and mash",d:"Crumbed chicken, creamy mash, peppery white gravy and green beans.",note:"Del knows a place in every town on the way.",p:"5.50"}]},
       {h:"Pie case",en:"Three days in the making",left:true,items:[
-        {k:"Thanksgiving pumpkin pie",n:"Thanksgiving pumpkin pie",d:"Spiced roast pumpkin custard in pastry, served with whipped cream.",note:"A plane, a train, a bus, a burnt car and a truck later",p:"1.75"}]},
+        {k:"Thanksgiving pumpkin pie",n:"Thanksgiving pumpkin pie",d:"Spiced roast pumpkin custard in pastry, served with whipped cream.",note:"A plane, a train, a bus, a burnt car and a truck later.",p:"1.75"}]},
       {h:"Coffee and pop",en:"From the front desk",items:[
-        {k:"Home for Thanksgiving apple cider punch",n:"Home for Thanksgiving apple cider punch",d:"Cloudy apple juice simmered with cinnamon, cloves and orange.",note:"Poured when Neal lets Del in from the snow",p:"0.95"}]}]},
+        {k:"Home for Thanksgiving apple cider punch",n:"Home for Thanksgiving apple cider punch",d:"Cloudy apple juice simmered with cinnamon, cloves and orange.",note:"Poured when Neal lets Del in from the snow.",p:"0.95"}]}]},
   "The Big Lebowski (1998)":{fmt:"starlanes",brand:"Hollywood Star Lanes",phoneTitle:"The Big Lebowski",tag:"League night at the lanes. White Russians at the bar.",
     over:"5227 Santa Monica Blvd · Hollywood, California",
     sub:["Coffee shop & cocktail lounge","League night. Rental shoes at the front desk."],
@@ -621,18 +621,18 @@ const FMT_FILMS={
     cue:["/hKsvdTYqu85UDsfyIKVr8K1PiFl.jpg","Half-and-half at Ralphs"],
     groups:[
       {h:"Snack bar",en:"Between frames",left:true,items:[
-        {k:"Persian rug flatbread",n:"Persian rug flatbread",d:"Charred yoghurt flatbread striped with sesame and oregano, feta dip, pomegranate, mint and dill.",note:"Laid out like the rug that really tied the room together",p:"3.95"},
-        {k:"Jesus Quintana's chorizo taquitos",n:"Jesus Quintana's chorizo taquitos",d:"Corn tortillas rolled round chorizo, potato and cheddar, fried crisp, with purple pickled onion, lime crema and salsa verde.",note:"Rolled tight and dressed in purple. Nobody messes with the Jesus",p:"4.50"},
-        {k:"Over the line buffalo wings",n:"Over the line buffalo wings",d:"Crisp oven-roasted chicken wings in a hot sauce, honey and butter glaze, spring onion, pickled cucumber.",note:"“This is not 'Nam. This is bowling. There are rules.” Walter",p:"4.95"}]},
+        {k:"Persian rug flatbread",n:"Persian rug flatbread",d:"Charred yoghurt flatbread striped with sesame and oregano, feta dip, pomegranate, mint and dill.",note:"Laid out like the rug that really tied the room together.",p:"3.95"},
+        {k:"Jesus Quintana's chorizo taquitos",n:"Jesus Quintana's chorizo taquitos",d:"Corn tortillas rolled round chorizo, potato and cheddar, fried crisp, with purple pickled onion, lime crema and salsa verde.",note:"Rolled tight and dressed in purple. Nobody messes with the Jesus.",p:"4.50"},
+        {k:"Over the line buffalo wings",n:"Over the line buffalo wings",d:"Crisp oven-roasted chicken wings in a hot sauce, honey and butter glaze, spring onion, pickled cucumber.",note:"“This is not 'Nam. This is bowling. There are rules.” Walter.",p:"4.95"}]},
       {h:"Grill",en:"Hot off the flat-top",items:[
-        {k:"Drive-thru double-double, animal style",n:"Drive-thru double-double, animal style",d:"Two smashed beef patties seared in mustard, American cheese, slow-cooked onion, pickles and spread on a toasted bun. Fries on the side.",note:"The drive-thru order, three in the car. “Those are good burgers, Walter.” Donny",p:"5.25"},
-        {k:"Shomer shabbos coffee brisket on challah",n:"Shomer shabbos coffee brisket on challah",d:"Brisket braised low with onions, paprika and black Folgers coffee, piled on challah with horseradish cream and pickles.",note:"Cooked on Friday so Walter is done by sundown. He does not roll on Shabbos",p:"6.95"}]},
+        {k:"Drive-thru double-double, animal style",n:"Drive-thru double-double, animal style",d:"Two smashed beef patties seared in mustard, American cheese, slow-cooked onion, pickles and spread on a toasted bun. Fries on the side.",note:"The drive-thru order, three in the car. “Those are good burgers, Walter.” Donny.",p:"5.25"},
+        {k:"Shomer shabbos coffee brisket on challah",n:"Shomer shabbos coffee brisket on challah",d:"Brisket braised low with onions, paprika and black Folgers coffee, piled on challah with horseradish cream and pickles.",note:"Cooked on Friday so Walter is done by sundown. He does not roll on Shabbos.",p:"6.95"}]},
       {h:"Sweets",en:"From the coffee shop",left:true,items:[
-        {k:"Nihilist lingonberry Dutch baby",n:"Nihilist lingonberry Dutch baby",d:"A puffed oven pancake with lingonberry jam, whipped crème fraîche, lemon and icing sugar.",note:"What the nihilists order at the coffee shop. They believe in nothing, except pancakes",p:"3.25"},
+        {k:"Nihilist lingonberry Dutch baby",n:"Nihilist lingonberry Dutch baby",d:"A puffed oven pancake with lingonberry jam, whipped crème fraîche, lemon and icing sugar.",note:"What the nihilists order at the coffee shop. They believe in nothing, except pancakes.",p:"3.25"},
         {k:"Larry's homework cookies",n:"Larry's homework cookies",d:"Brown butter choc chip cookies with dark chocolate and sea salt flakes, packed warm in a zip-lock bag.",note:"Found under the car seat. “Is this your homework, Larry?”",p:"0.99"}]},
       {h:"Cocktail lounge",en:"Careful, man",items:[
         {k:"White Russian",n:"White Russian",d:"Vodka and coffee liqueur over ice, topped with half-and-half and stirred lazily.",note:"The Dude calls it a Caucasian. “Careful, man, there's a beverage here!”",p:"3.50"},
-        {k:"The Stranger's sarsaparilla float",n:"The Stranger's sarsaparilla float",d:"Ice-cold sarsaparilla poured over vanilla ice cream, with a curl of lemon peel.",note:"The Stranger asks the barman for a good one",p:"1.95"}]}]},
+        {k:"The Stranger's sarsaparilla float",n:"The Stranger's sarsaparilla float",d:"Ice-cold sarsaparilla poured over vanilla ice cream, with a curl of lemon peel.",note:"The Stranger asks the barman for a good one.",p:"1.95"}]}]},
   "There's Something About Mary (1998)":{fmt:"nowshowing",pay:"",brand:"Senior Prom, 1985",phoneTitle:"There's Something About Mary",tag:"Love is in the hair.",
     head:["Senior Prom, 1985","Miami, 1998"],tagline:"Love is in the hair.",
     over:["Cumberland, Rhode Island","Miami, Florida"],
@@ -664,44 +664,44 @@ const FMT_FILMS={
     cue:["/675B5ALS1WMXkhptLhRWgKckBcp.jpg","Laney and Zack at the beach","60% 40%"],
     groups:[
       {h:"Starters",items:[
-        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"Falafel in pita with tahini.",note:"Laney in the falafel hat.",p:"4.50"},
-        {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"Black bean and cheddar nachos.",note:"Loaded nachos from the Real World party where Taylor dumps Zack.",p:"5.25"}],
-        house:{n:"Simon's breakfast muffins",d:"Warm blueberry muffins.",note:"Breakfast muffins ready for Simon. Get up, Simon.",p:"1.50"}},
+        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"",note:"Falafel in warm pita with tahini, served by Laney in the falafel hat.",p:"4.50"},
+        {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"",note:"Black bean and cheddar nachos, loaded for the Real World party.",p:"5.25"}],
+        house:{n:"Simon's breakfast muffins",d:"",note:"Warm blueberry muffins, ready before Simon gets up.",p:"1.50"}},
       {h:"Mains",items:[
-        {k:"Hacky sack meatball subs",n:"Hacky sack meatball subs",d:"Meatball and provolone rolls.",note:"The hacky sack act.",p:"5.95"},
-        {k:"Beach day fish tacos",n:"Beach day fish tacos",d:"Grilled fish tacos.",note:"Grilled fish tacos for the beach day Laney says yes to.",p:"6.50"}]},
+        {k:"Hacky sack meatball subs",n:"Hacky sack meatball subs",d:"",note:"Meatball and provolone rolls, kept well clear of the hacky sack act.",p:"5.95"},
+        {k:"Beach day fish tacos",n:"Beach day fish tacos",d:"",note:"Grilled fish in soft tortillas with lime slaw, for the beach day Laney says yes to.",p:"6.50"}]},
       {h:"Dessert",items:[
-        {k:"Red dress on the stairs strawberry shortcake",n:"Red dress on the stairs strawberry shortcake",d:"Berry shortcake with cream.",note:"Laney on the stairs.",p:"3.75"}]},
+        {k:"Red dress on the stairs strawberry shortcake",n:"Red dress on the stairs strawberry shortcake",d:"",note:"Berry shortcake with cream, red as the dress on the stairs.",p:"3.75"}]},
       {h:"Drinks",items:[
-        {k:"Laney's foghorn prom punch",n:"Laney's foghorn prom punch",d:"Pineapple and cranberry punch.",note:"Fruit punch from the prom, with a foghorn for Dean.",p:"2.25"}],
-        house:{n:"Sparkling water by the pool",d:"Chilled, with lime.",note:"Not the last dance. The first.",p:"1.00"}}]},
+        {k:"Laney's foghorn prom punch",n:"Laney's foghorn prom punch",d:"",note:"Pineapple and cranberry punch from the prom, foghorn for Dean.",p:"2.25"}],
+        house:{n:"Sparkling water by the pool",d:"",note:"Sparkling water chilled with lime, for the first dance, not the last.",p:"1.00"}}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",sign:"assets/era/slims/slims-sign.webp",motto:"The next best thing<br>to a time machine",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",
     under:"Now playing<br>in every car booth",tag:"Five dollar shakes. Worth every cent.",
     colA:[
       {h:"Little things",items:[
-        {k:"Buddy Holly's chicken basket",n:"Buddy Holly chicken",note:"Your waiter brings it to the car",p:"3.95"},
-        {k:"Mamie Van Doren devilled eggs",n:"Mamie's devilled eggs",note:"Paprika, crisp shallots, chives",p:"2.95"},
+        {k:"Buddy Holly's chicken basket",n:"Buddy Holly chicken",note:"Your waiter brings it to the car.",p:"3.95"},
+        {k:"Mamie Van Doren devilled eggs",n:"Mamie's devilled eggs",note:"Paprika, crisp shallots, chives.",p:"2.95"},
         {k:"Jack Rabbit Slim's fries",n:"Slim's fries",note:"Mayonnaise on the side, as in Holland. Royale with cheese? That's Paris.",p:"1.95"}]},
       {h:"Hollywood plates",items:[
         {k:"Douglas Sirk steak",note:"Vincent's order. Bloody as hell.",p:"15.95",special:"House special"},
-        {k:"Big Kahuna Hawaiian burger",n:"Big Kahuna burger",note:"This is a tasty burger! Jules, at Brett's",p:"6.95"}]}],
+        {k:"Big Kahuna Hawaiian burger",n:"Big Kahuna burger",note:"This is a tasty burger! Jules, at Brett's.",p:"6.95"}]}],
     colB:[
       {h:"Fountain & sweets",items:[
-        {k:"Five dollar shake",n:"Martin & Lewis shake",note:"Vanilla. Mia's order",p:"5.00",burst:["$5","No bourbon","#ffd23a",-8,106]},
-        {k:"Vanilla Coke",note:"Vincent's order. Cola, with vanilla",p:"1.50",how:"Fill four tall glasses with ice. Add 15ml vanilla syrup to each (or half a teaspoon of vanilla extract with a teaspoon of sugar syrup), top with 300ml cold cola and stir once.",shop:["1.25L cola@Drinks","vanilla syrup@Pantry","1 bag ice@Frozen"]},
-        {k:"Diner pancakes",n:"Coffee shop stack",note:"Vincent's pancakes, then Jules and Ezekiel 25:17",p:"3.50"}]}],
+        {k:"Five dollar shake",n:"Martin & Lewis shake",note:"Vanilla. Mia's order.",p:"5.00",burst:["$5","No bourbon","#ffd23a",-8,106]},
+        {k:"Vanilla Coke",note:"Vincent's order. Cola, with vanilla.",p:"1.50",how:"Fill four tall glasses with ice. Add 15ml vanilla syrup to each (or half a teaspoon of vanilla extract with a teaspoon of sugar syrup), top with 300ml cold cola and stir once.",shop:["1.25L cola@Drinks","vanilla syrup@Pantry","1 bag ice@Frozen"]},
+        {k:"Diner pancakes",n:"Coffee shop stack",note:"Vincent's pancakes, then Jules and Ezekiel 25:17.",p:"3.50"}]}],
     trophy:["Twist contest","Won by Vincent and Mia. They kept the trophy."],
     hosts:{h:"Tonight at Slim's",rows:[["Host","Ed Sullivan"],["Your waiter","Buddy Holly"],["Waitress","Marilyn"],["Your booth","A '50s convertible"],["On the floor","The twist contest."]]}},
   "Kung Fu Panda (2008)":{fmt:"noodle",brand:"Mr Ping's Noodle Shop",sign:"Mr Ping's Noodle Shop",signZh:"平記麵館",
     tag:"Every bowl made by hand.<br>Plus dumplings.",motto:"沒有秘方",quote:["Family noodles, made fresh every morning.","Mr Ping"],sheetH:"Today's menu in plain words",sheetSide:"Serves four · priced in coins",
     colA:[{h:"Small plates",items:[
-        {k:"Training bowl dumplings",zh:"練功餃子",coinZh:"三文",p:"3 coins",note:"Shifu makes Po fight for the last one"},
-        {k:"Oogway's peaches",zh:"仙桃",coinZh:"二文",p:"2 coins",note:"From the tree where Oogway sits"},
-        {k:"Mr Ping's red bean steamed buns",zh:"豆沙包",coinZh:"四文",p:"4 coins",note:"Stacked high, worth the climb"}]},
+        {k:"Training bowl dumplings",zh:"練功餃子",coinZh:"三文",p:"3 coins",note:"Shifu makes Po fight for the last one."},
+        {k:"Oogway's peaches",zh:"仙桃",coinZh:"二文",p:"2 coins",note:"From the tree where Oogway sits."},
+        {k:"Mr Ping's red bean steamed buns",zh:"豆沙包",coinZh:"四文",p:"4 coins",note:"Stacked high, worth the climb."}]},
       {h:"Noodles & wok",items:[
         {k:"Secret ingredient soup",zh:"秘方湯麵",coinZh:"五文",p:"5 coins",note:"Noodle soup, no secret ingredient."},
-        {k:"Valley of Peace kung pao chicken",zh:"和平谷小炒",coinZh:"六文",p:"6 coins",note:"The busy village below the Jade Palace"}]}],
+        {k:"Valley of Peace kung pao chicken",zh:"和平谷小炒",coinZh:"六文",p:"6 coins",note:"The busy village below the Jade Palace."}]}],
     colB:[{h:"Sweet & tea",items:[
         {k:"Almond cookies",zh:"杏仁餅",coinZh:"二文",p:"2 coins",note:"The Furious Five's training snack."},
         {k:"Oogway's iced peach jasmine tea",zh:"茉莉花茶",coinZh:"一文",p:"1 coin",note:"A quiet moment, then Skadoosh."}]}]},
@@ -709,17 +709,17 @@ const FMT_FILMS={
     title:["Big Trouble","in Little China"],signs:["黑龍潭","大酒樓"],tag:"Dragon of the Black Pool, Chinatown",
     colA:[
       {h:"Entrées",zh:"點心",items:[
-        {k:"Pork and chive dumplings",n:"Pork & chive dumplings",code:"A1",zh:"韭菜豬肉餃",extra:"pan fried, 8 pcs",note:"Everybody relax, I'm here",p:"5.80"},
-        {k:"Salt and pepper squid",n:"Salt & pepper squid",code:"A2",zh:"椒鹽鮮魷",extra:"with lemon",note:"Thunder, Rain and Lightning",p:"8.50",hot:1}]},
+        {k:"Pork and chive dumplings",n:"Pork & chive dumplings",code:"A1",zh:"韭菜豬肉餃",extra:"pan fried, 8 pcs",note:"Everybody relax, I'm here.",p:"5.80"},
+        {k:"Salt and pepper squid",n:"Salt & pepper squid",code:"A2",zh:"椒鹽鮮魷",extra:"with lemon",note:"Thunder, Rain and Lightning.",p:"8.50",hot:1}]},
       {h:"Noodles & Mains",zh:"麵食小菜",items:[
-        {k:"Wang Chi's beef ho fun",code:"M1",zh:"干炒牛河",extra:"dry fried, wok hei",note:"Fast hands. It's all in the reflexes",p:"8.90"},
-        {k:"Pork-Chop Express ribs",code:"M2",zh:"叉燒排骨",extra:"honey char siu",note:"Straight off Jack's truck",p:"12.80",special:"Chef's Special"},
-        {k:"Dragon of the Black Pool fried rice",n:"House fried rice",code:"M3",zh:"蛋炒飯",extra:"egg & spring onion",note:"Chang Sing or Wing Kong, all order it",p:"4.50"},
+        {k:"Wang Chi's beef ho fun",code:"M1",zh:"干炒牛河",extra:"dry fried, wok hei",note:"Fast hands. It's all in the reflexes.",p:"8.90"},
+        {k:"Pork-Chop Express ribs",code:"M2",zh:"叉燒排骨",extra:"honey char siu",note:"Straight off Jack's truck.",p:"12.80",special:"Chef's Special"},
+        {k:"Dragon of the Black Pool fried rice",n:"House fried rice",code:"M3",zh:"蛋炒飯",extra:"egg & spring onion",note:"Chang Sing or Wing Kong, all order it.",p:"4.50"},
         {k:"Garlic gai lan",code:"M4",zh:"蒜蓉芥蘭",extra:"wok tossed",note:"Green as Miao Yin's eyes.",p:"4.80"}]}],
     colB:[
       {h:"Dessert & Drinks",zh:"甜品飲品",items:[
         {k:"Fortune cookies",code:"D1",zh:"幸運餅",extra:"one each",note:"Jack would ignore his anyway.",p:"1.00"},
-        {k:"Egg Shen's magic potion",n:"Egg Shen's magic potion",code:"D2",zh:"梅酒",extra:"by the glass",note:"The flask for the trip below",p:"3.50"}]}],
+        {k:"Egg Shen's magic potion",n:"Egg Shen's magic potion",code:"D2",zh:"梅酒",extra:"by the glass",note:"The flask for the trip below.",p:"3.50"}]}],
     banquet:{name:"Six Demon Banquet",price:"$11.50",lines:["Pork & chive dumplings","Salt & pepper squid","Pork-Chop Express ribs","House fried rice / Garlic gai lan","Fortune cookies / Plum wine"]},
     hours:["Open 7 nights &nbsp;·&nbsp; 5pm till late","Licensed &amp; B.Y.O. &nbsp;·&nbsp; Dine in or take away"],
     fold:{name:"Dragon of the Black Pool",line:"Wang Chi's family restaurant, late into the night",flapLine:"Find your year, then turn the page",
@@ -731,16 +731,16 @@ const FMT_FILMS={
     title:["My Cousin","Vinny"],place:"Wazoo, Alabama",name:"Wazoo Diner",tag:"Two yutes, one diner",est:"Est. 1952 · Off Route 31 · Ample parking",
     colA:[
       {h:"From the Griddle",items:[
-        {k:"Five-minute grits",d:"butter & sharp cheddar",note:"The grits cross-examination. Nobody cooks them that fast",p:"1.25"},
-        {k:"Fried green tomatoes",d:"cornmeal crust, remoulade",note:"Alabama's finest",p:"2.95"},
-        {k:"Biscuits and sausage gravy",n:"Biscuits & gravy",d:"two biscuits, sausage gravy",note:"Where Vinny tries to order breakfast",p:"1.75"}]},
+        {k:"Five-minute grits",d:"butter & sharp cheddar",note:"The grits cross-examination. Nobody cooks them that fast.",p:"1.25"},
+        {k:"Fried green tomatoes",d:"cornmeal crust, remoulade",note:"Alabama's finest.",p:"2.95"},
+        {k:"Biscuits and sausage gravy",n:"Biscuits & gravy",d:"two biscuits, sausage gravy",note:"Where Vinny tries to order breakfast.",p:"1.75"}]},
       {h:"Blue Plate Special",items:[
-        {k:"Sac-O-Suds chicken fried steak",n:"Chicken fried steak",d:"cream gravy, mashed potatoes",note:"Sac-O-Suds, the corner store where the whole mess started",p:"5.95",special:"Today's special"}]},
+        {k:"Sac-O-Suds chicken fried steak",n:"Chicken fried steak",d:"cream gravy, mashed potatoes",note:"Sac-O-Suds, the corner store where the whole mess started.",p:"5.95",special:"Today's special"}]},
       {h:"Soda Fountain",items:[
-        {k:"Wazoo peach sweet tea",d:"by the pitcher, lemon on the side",note:"So sweet your teeth hurt",p:"0.75"}]}],
+        {k:"Wazoo peach sweet tea",d:"by the pitcher, lemon on the side",note:"So sweet your teeth hurt.",p:"0.75"}]}],
     colB:[
       {h:"From the Pie Case",items:[
-        {k:"Mona Lisa's blackberry cobbler",n:"Blackberry cobbler",d:"warm, with pouring cream",note:"Mona Lisa's pick. Positraction, and the tyre marks to prove it",p:"1.95"}]}],
+        {k:"Mona Lisa's blackberry cobbler",n:"Blackberry cobbler",d:"warm, with pouring cream",note:"Mona Lisa's pick. Positraction, and the tyre marks to prove it.",p:"1.95"}]}],
     supper:{name:"Family Supper",price:"$19.95",lines:["Grits / Fried green tomatoes","Chicken fried steak & gravy","Cobbler / A pitcher of sweet tea"]},
     glossary:{h:"Southern for beginners",rows:[["Grits","Ground hominy corn. Twenty minutes, minimum."],["Okra","Green pods, fried crisp. Try it."],["Sweet tea","Sugared while hot. Never served unsweet."],["Biscuit","A soft scone. Comes with gravy."]]},
     foot:["Breakfast served all day","Bottomless coffee 50¢"],
@@ -757,17 +757,17 @@ const FMT_FILMS={
     photo:"Banquet night, 1930",exhibit:"Exhibit C",
     colA:[
       {h:"For the table",items:[
-        {k:"Capone's arancini",note:"Fried in the hotel kitchen, tomato sauce on the side",p:"20¢"},
-        {k:"Capone's hotel antipasto",n:"Banquet antipasto",note:"Laid down the middle of the round table, before the bat comes out",p:"35¢"}]},
+        {k:"Capone's arancini",note:"Fried in the hotel kitchen, tomato sauce on the side.",p:"20¢"},
+        {k:"Capone's hotel antipasto",n:"Banquet antipasto",note:"Laid down the middle of the round table, before the bat comes out.",p:"35¢"}]},
       {h:"From the carvery",items:[
-        {k:"Italian beef",note:"Shaved thin, dipped in the jus, hot peppers on top",p:"45¢",special:"Mr Capone's pick"}]},
+        {k:"Italian beef",note:"Shaved thin, dipped in the jus, hot peppers on top.",p:"45¢",special:"Mr Capone's pick"}]},
       {h:"Sweets",items:[
-        {k:"Ricotta zeppole",note:"From the Italian bakers on Taylor Street",p:"15¢"}]}],
+        {k:"Ricotta zeppole",note:"From the Italian bakers on Taylor Street.",p:"15¢"}]}],
     colB:[
       {h:"Cold tea",sub:"In a cup, from the cellar",items:[
-        {k:"Bootleg lager",note:"Capone's own beer. Every bar in town has to stock it",p:"25¢",how:"Chill 8 bottles of crisp lager for at least 3 hours. Pour into heavy glass steins straight down the middle so each gets a proper head.",shop:["8 bottles lager@Bottle shop"]},
-        {k:"Canadian rye",note:"Down from the border by the truckload",p:"50¢",how:"Pour 30ml Canadian rye whisky per person over one large ice cube in a short glass, then add a small splash of cold water to open it up.",shop:["700ml Canadian rye whisky@Bottle shop","1 bag large ice cubes@Frozen"]},
-        {k:"Repeal Day old fashioned",note:"Bourbon and bitters, the night Ness finally drinks. Here endeth the lesson",p:"40¢"}]}]},
+        {k:"Bootleg lager",note:"Capone's own beer. Every bar in town has to stock it.",p:"25¢",how:"Chill 8 bottles of crisp lager for at least 3 hours. Pour into heavy glass steins straight down the middle so each gets a proper head.",shop:["8 bottles lager@Bottle shop"]},
+        {k:"Canadian rye",note:"Down from the border by the truckload.",p:"50¢",how:"Pour 30ml Canadian rye whisky per person over one large ice cube in a short glass, then add a small splash of cold water to open it up.",shop:["700ml Canadian rye whisky@Bottle shop","1 bag large ice cubes@Frozen"]},
+        {k:"Repeal Day old fashioned",note:"Bourbon and bitters, the night Ness finally drinks. Here endeth the lesson.",p:"40¢"}]}]},
   "Friday (1995)":{fmt:"market",brand:"Normandie & Western Market",
     sign:["Off Normandie","Normandie & Western Market","Open 7 days"],
     sub:"Porch menu &nbsp;·&nbsp; Serves four &nbsp;·&nbsp; Summer 1995",

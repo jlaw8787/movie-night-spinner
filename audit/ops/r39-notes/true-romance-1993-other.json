@@ -1,0 +1,19 @@
+{
+ "id": "True Romance (1993)",
+ "ops": [
+  {
+   "old": "Lattice cherry pie with almond. “You want a bite of my pie?”",
+   "new": "Lattice cherry pie with almond, a bite offered across the diner table.",
+   "done": true
+  },
+  {
+   "old": "Lattice cherry pie with almond. \"You want a bite of my pie?\"",
+   "new": "Lattice cherry pie with almond, a bite offered across the diner table.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": [
+  "not found: Lattice cherry pie with almond. \"You want a bite of my pie?\""
+ ]
+}
