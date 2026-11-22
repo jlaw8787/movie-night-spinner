@@ -895,7 +895,7 @@ function cardFaces(){const base=cardFaces0();if(!swipeW()||pvDesk||!card.classLi
 function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FLOOR=10.5,TGT=Math.max(260,pw*sp/11.5),MAXH=Math.max(500,(innerHeight||800)*.92);
   let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;if(!w||!h)return base;V=[{el,w,h,x:0,y:0,px:0,row:true}]}
   const out=[];let n=0;const NM=(()=>{const m=(current&&(current.printMenu||current.menu))||{};return ["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/\s+/g," ").trim())).filter(n=>n.length>3)})();
-  const hasDish=L=>L.some(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))});/* a line that is the dish name, not a cue that mentions the cornbread */
+  const nDish=L=>L.filter(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))}).length;const hasDish=L=>L.some(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))});/* a line that is the dish name, not a cue that mentions the cornbread */
   for(const v of V){const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
     if(sp*pw/v.w>=FLOOR){out.push(v);continue}
     /* page origin on the card: a panel's x is the page's x plus its own px */
@@ -930,7 +930,10 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FL
       for(let i=0;i<regions.length;i++){const R=regions[i];if(chars(R)>=40)continue;const j=[i+1,i-1].find(j=>regions[j]&&fits(R,regions[j]));if(j!=null)regions[j].push(...R);regions.splice(i,1);i--}
       for(let i=0;i<regions.length-1;i++){if(fits(regions[i],regions[i+1])){regions[i].push(...regions[i+1]);regions.splice(i+1,1);i--}}}
     /* the whole view stays first, as the overview (sign, poster, props); reading views follow only for the blocks that carry dishes */
-    const R2=regions.filter(hasDish);if(!R2.length){out.push(v);continue}out.push(v);const at0=out.length;
+    const R2=regions.filter(hasDish);if(!R2.length||R2.reduce((a,L)=>a+nDish(L),0)<2){out.push(v);continue}
+    /* review 39 (Josh: Men in Black was 8 swipes): only the first page stays as a whole-page overview; a later page goes straight to its
+       reading views, and a page with only one dish line on it (a cover's "today's special") stays whole with no reading view */
+    if(V.indexOf(v)===0)out.push(v);const at0=out.length;
     for(const L of R2){const [x0,y0,x1,y1]=bb(L),w=Math.min(v.w,x1-x0+28),kk=pw/w,cx=Math.max(lo,Math.min(hi-w,x0-14));
       /* tall regions: cut at the line gap nearest each screenful */
       const ys=[y0-14];const G=(gaps(L,1,12).length?gaps(L,1,12):gaps(L,1,6)).map(([a,z])=>(a+z)/2);let at=y0-14;
@@ -938,7 +941,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FL
       for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i]})}}
     /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
        takes the panel's place instead of following it (the card had opened on dot 4 of 4 with dots 3 and 4 the same menu) */
-    if(out.length-at0===1){const r=out[at0];if(r.w>=.85*v.w&&r.h>=.8*v.h)out.splice(at0-1,1)}}
+    if(V.indexOf(v)===0&&out.length-at0===1){const r=out[at0];if(r.w>=.85*v.w&&r.h>=.8*v.h)out.splice(at0-1,1)}}
   return out.length&&out.length<=14?out:base}
 function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
@@ -1017,7 +1020,7 @@ function paintDots(n){
 }
 /* animate only a page turn, never the first layout of a new menu */
 let pvT=0;function pvTurn(){preview.classList.add("pv-turn");clearTimeout(pvT);pvT=setTimeout(()=>preview.classList.remove("pv-turn"),340)}
-function pvGo(i){
+function pvGo(i){card._pvUser=renderId;
   const fs=cardFaces();if(!fs.length)return;i=Math.max(0,Math.min(fs.length-1,i));
   if(i===pvFace||fs[0].row||reduce){pvTurn();pvFace=i;scalePreview();return}
   /* pages stacked top to bottom on the sheet: fade across instead of sliding */
@@ -1060,7 +1063,9 @@ function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.cli
      when the whole sheet would scale under 0.62 it shows one page at a time at column width, with the dots to turn the page */
   const deskFaces=tab==="menu"&&!swipeW()&&(pvDesk||card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62);
   const fs=tab==="menu"&&(swipeW()||deskFaces)?cardFaces():[];paintDots(fs.length);
-  if(fs.length){if(card.dataset.pvs!==String(renderId)){card.dataset.pvs=String(renderId);pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace];
+  if(fs.length){/* review 39 (Josh's screen recording, The Muppets 2011): the views settle as photos, fonts and fit passes land, so the opening
+       view is picked again each time the set of views changes, until the person turns a page themselves (it had stuck on the poster) */
+    const sig=renderId+"|"+fs.length+"|"+fs.map(v=>v.part||"").join(",");if(card._pvUser!==renderId){card.dataset.pvs=sig;pvFace=pvFirstDish(fs)}pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace];
     /* review 35: on desktop a page or half is shown no bigger than it needs to be (notes at about 14px, or the page in about a screen),
        centred in the column, so a narrow panel is not blown up to a page one and a half screens tall (Lebowski) */
     let k=pw/f.w,dx=0;if(pvDesk&&!swipeW()){const sp=cardSmallPx();k=Math.min(k,Math.max(14/sp,innerHeight*1.05/f.h,(pw*.7)/f.w));dx=Math.max(0,(pw-f.w*k)/2)}preview.classList.add("pv-swipe");
@@ -1164,7 +1169,7 @@ preview.addEventListener("keydown",e=>{if(tab!=="menu"||e.target!==preview)retur
   preview.addEventListener("pointermove",e=>{if(!s||e.pointerId!==s.id)return;const dx=e.clientX-s.x,dy=e.clientY-s.y;
     if(!s.on){if(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy)*1.2){s.on=moved=true;card.style.transition="none";try{preview.setPointerCapture(e.pointerId)}catch(_){}}else{if(Math.abs(dy)>10)s=null;return}}
     const n=cardFaces().length;pvDrag=(pvFace===0&&dx>0)||(pvFace===n-1&&dx<0)?dx*.3:dx;scalePreview()});
-  const end=e=>{if(!s||e.pointerId!==s.id)return;const on=s.on,dx=pvDrag;s=null;pvDrag=0;card.style.transition="";if(!on)return;
+  const end=e=>{if(!s||e.pointerId!==s.id)return;const on=s.on,dx=pvDrag;s=null;pvDrag=0;card.style.transition="";if(!on)return;card._pvUser=renderId;
     const step=dx<-50?1:dx>50?-1:0,fs=cardFaces();if(step&&fs.length&&!fs[0].row){scalePreview();pvGo(pvFace+step)}else{pvTurn();pvFace=Math.max(0,Math.min(fs.length-1,pvFace+step));scalePreview()}};
   preview.addEventListener("pointerup",end);preview.addEventListener("pointercancel",end);
   /* a swipe is not a tap: don't open the full size view after one */
@@ -2725,8 +2730,9 @@ async function show(f,preferSig){
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}try{quoteMarks(card,L.flavour)}catch(e){}try{curlyQuotes(card)}catch(e){}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
+      try{phoneOn&&swipeW()&&scalePreview()}catch(e){}/* review 39: on a phone the opening view is set before the photos load, not after (Muppets 2011 sat on the poster) */
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
-      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);foldClear(card);cueStrip(f);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card);foldClear(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId){fitLines(card);foldClear(card)}},5000);
+      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);foldClear(card);cueStrip(f);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card);foldClear(card);scalePreview()}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card);scalePreview()}},3200);setTimeout(()=>{if(id===renderId){fitLines(card);foldClear(card)}},5000);
       try{libPhoneView(f,houseShown(fullMenu(f,menu,L.fmt),card),L,card);current.printMenu=houseShown(current.printMenu,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
