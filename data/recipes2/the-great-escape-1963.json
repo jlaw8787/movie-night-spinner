@@ -529,22 +529,22 @@
    }
   },
   {
-   "n": "The cooler ice cream sandwiches",
+   "n": "Hilts' cooler jam drops",
    "course": "w",
-   "prep_min": 25,
-   "cook_min": 12,
-   "make_ahead": "Build and freeze the sandwiches up to a week ahead",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Bake up to 3 days ahead and keep in an airtight tin",
    "ingredients": [
     {
      "q": 125,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 150,
+     "q": 100,
      "u": "g",
-     "item": "brown sugar",
+     "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
@@ -554,46 +554,36 @@
      "aisle": "Dairy"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "Dutch cocoa",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "bicarbonate of soda",
-     "aisle": "Pantry"
-    },
-    {
      "q": 1,
-     "u": "l",
-     "item": "vanilla ice cream",
-     "aisle": "Frozen"
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Beat the butter and sugar, then beat in the egg.",
-     "min": 5
+     "text": "Beat the butter and sugar until pale, then beat in the egg and vanilla and mix in the flour.",
+     "min": 8
     },
     {
-     "text": "Mix in the flour, cocoa and bicarb, roll into 16 balls and flatten on lined trays.",
-     "min": 10
+     "text": "Roll into 24 balls on lined trays, press a dip in each and fill with jam.",
+     "min": 7
     },
     {
-     "text": "Bake at 180C until just set, then cool completely.",
-     "min": 12
-    },
-    {
-     "text": "Sandwich a thick slice of ice cream between pairs of biscuits and freeze until firm.",
-     "min": 10
+     "text": "Bake at 180C for 12 to 15 minutes until golden, then cool on the trays.",
+     "min": 15
     }
    ],
    "veg": true,

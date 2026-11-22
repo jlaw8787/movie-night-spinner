@@ -1,0 +1,88 @@
+{
+ "id": "Pocahontas (1995)",
+ "old": "Meeko's buttermilk scones",
+ "dish": {
+  "n": "Meeko's cornmeal ashcakes with honey",
+  "note": "Cornmeal cakes griddled hot by the fire with butter and honey, the ones Meeko raids first.",
+  "how": "Mix the cornmeal, flour, baking powder and salt, then stir in the milk, egg and half the melted butter to a thick batter. Fry spoonfuls in a hot buttered pan for 2 to 3 minutes a side until golden. Serve hot with butter and honey.",
+  "shop": [
+   "250g fine cornmeal@Pantry",
+   "75g plain flour@Pantry",
+   "2 tsp baking powder@Pantry",
+   "1 tsp salt@Pantry",
+   "300ml milk@Dairy",
+   "1 egg@Dairy",
+   "60g butter@Dairy",
+   "4 tbsp honey@Pantry"
+  ],
+  "prep_min": 10,
+  "cook_min": 15,
+  "make_ahead": "Mix the dry ingredients up to a day ahead; add the wet ones and cook to serve",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 250,
+    "u": "g",
+    "item": "fine cornmeal",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 75,
+    "u": "g",
+    "item": "plain flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "tsp",
+    "item": "baking powder",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "salt",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 300,
+    "u": "ml",
+    "item": "milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "egg",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "honey",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the cornmeal, flour, baking powder and salt, then whisk in the milk, egg and half the melted butter.",
+    "min": 5
+   },
+   {
+    "text": "Fry spoonfuls in a hot buttered pan for 2 to 3 minutes a side until golden.",
+    "min": 12
+   },
+   {
+    "text": "Serve hot with butter and honey.",
+    "min": 3
+   }
+  ]
+ }
+}

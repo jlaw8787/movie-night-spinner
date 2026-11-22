@@ -557,16 +557,46 @@
    }
   },
   {
-   "n": "Der Klown fennel and apple salad",
+   "n": "Der Klown pork schnitzel with fennel slaw",
    "course": "m",
-   "prep_min": 15,
-   "cook_min": 0,
-   "make_ahead": "Make the dressing up to 2 days ahead; shave the fennel and apple and toss just before serving",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Crumb the schnitzels up to 4 hours ahead and chill; fry and dress the slaw to serve",
    "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pork loin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
     {
      "q": 2,
      "u": "",
-     "item": "fennel bulbs",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
      "aisle": "Produce"
     },
     {
@@ -576,31 +606,19 @@
      "aisle": "Produce"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "rocket",
-     "aisle": "Produce"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "parmesan",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
+     "q": 2,
      "u": "",
-     "item": "lemon",
+     "item": "lemons",
      "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "tsp",
+     "u": "tbsp",
      "item": "Dijon mustard",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 2,
      "u": "tbsp",
      "item": "olive oil",
      "aisle": "Pantry"
@@ -608,20 +626,114 @@
    ],
    "steps": [
     {
-     "text": "Whisk the juice of the lemon with the mustard, olive oil and salt.",
-     "min": 3
+     "text": "Pound the pork thin, then dip in flour, beaten egg and breadcrumbs.",
+     "min": 12
     },
     {
-     "text": "Shave the fennel and apples thin and toss straight into the dressing so the apple stays white.",
+     "text": "Shallow-fry for 3 minutes a side until golden and cooked through, then drain.",
+     "min": 12
+    },
+    {
+     "text": "Shave the fennel and apples thin and toss with lemon juice, mustard and olive oil.",
      "min": 8
     },
     {
-     "text": "Toss through the rocket and shave the parmesan over the top.",
-     "min": 4
+     "text": "Serve the schnitzels with the slaw and lemon wedges.",
+     "min": 3
     }
    ],
-   "veg": true,
-   "af": true
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Der Klown eggplant schnitzel with fennel slaw",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Crumb the eggplant up to 4 hours ahead and chill; fry and dress the slaw to serve",
+     "veg": true,
+     "af": true,
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplants 1cm thick, salt for 10 minutes and pat dry, then dip in flour, egg and breadcrumbs.",
+       "min": 15
+      },
+      {
+       "text": "Shallow-fry for 3 minutes a side until golden and soft inside, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Shave the fennel and apples thin and toss with lemon juice, mustard and olive oil.",
+       "min": 8
+      },
+      {
+       "text": "Serve the schnitzels with the slaw and lemon wedges.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Gingerbread men with icing grins",

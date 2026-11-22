@@ -1,0 +1,63 @@
+{
+ "id": "The Nutty Professor (1996)",
+ "old": "Sherman's formula lemonade",
+ "dish": {
+  "n": "Sherman's formula lemonade",
+  "note": "Lemonade with a raspberry syrup float that turns it pink as you stir, tested on Sherman first.",
+  "how": "Stir the lemon juice and sugar with 250ml cold water until the sugar dissolves. Fill 4 glasses with ice, pour in the lemonade and top with soda water. Spoon 1 tbsp raspberry syrup over the back of a spoon into each so it sinks, and stir at the table.",
+  "shop": [
+   "4 lemons@Produce",
+   "100g caster sugar@Pantry",
+   "60ml raspberry syrup@Pantry",
+   "500ml soda water@Drinks",
+   "1 bag ice@Frozen"
+  ],
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Make the lemon base up to a day ahead and chill; add the syrup at the table",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "",
+    "item": "lemons",
+    "aisle": "Produce"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "ml",
+    "item": "raspberry syrup",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 500,
+    "u": "ml",
+    "item": "soda water",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag ice",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Stir the lemon juice and sugar with cold water until dissolved.",
+    "min": 3
+   },
+   {
+    "text": "Pour over ice, top with soda and float the raspberry syrup on top.",
+    "min": 4
+   }
+  ]
+ }
+}

@@ -146,7 +146,7 @@
    "course": "m",
    "prep_min": 30,
    "cook_min": 50,
-   "make_ahead": "Cook the chicken in the gravy up to 2 days ahead and chill; reheat gently and cook the rice and kale on the night",
+   "make_ahead": "Cook the chicken in the gravy up to 2 days ahead and chill; reheat gently and cook the rice and collard greens on the night",
    "ingredients": [
     {
      "q": 1,
@@ -187,7 +187,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "bunch kale",
+     "item": "bunch collard greens",
      "aisle": "Produce"
     },
     {
@@ -215,11 +215,11 @@
      "min": 40
     },
     {
-     "text": "Cook the rice and braise the kale with garlic.",
+     "text": "Cook the rice and braise the collard greens with garlic.",
      "min": 15
     },
     {
-     "text": "Serve the chicken and gravy over the rice with the kale.",
+     "text": "Serve the chicken and gravy over the rice with the collard greens.",
      "min": 2
     }
    ],
@@ -277,7 +277,7 @@
       {
        "q": 1,
        "u": "",
-       "item": "bunch kale",
+       "item": "bunch collard greens",
        "aisle": "Produce"
       },
       {
@@ -305,11 +305,11 @@
        "min": 20
       },
       {
-       "text": "Cook the rice and braise the kale with garlic.",
+       "text": "Cook the rice and braise the collard greens with garlic.",
        "min": 15
       },
       {
-       "text": "Serve the cauliflower and gravy over the rice with the kale.",
+       "text": "Serve the cauliflower and gravy over the rice with the collard greens.",
        "min": 2
       }
      ],

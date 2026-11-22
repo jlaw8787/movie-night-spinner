@@ -486,7 +486,7 @@
    "af": true
   },
   {
-   "n": "Late-night giant choc chip skillet cookie",
+   "n": "Late-night giant choc chip cookie",
    "course": "w",
    "prep_min": 15,
    "cook_min": 25,
@@ -571,21 +571,15 @@
   {
    "n": "Backyard pool blue lemonade",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 5,
-   "make_ahead": "Brew and chill the tea and make the lemon syrup up to 2 days ahead",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Mix the lemon and sugar up to a day ahead and chill; build each glass to serve",
    "ingredients": [
     {
      "q": 4,
      "u": "",
-     "item": "butterfly pea flower tea bags",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "boiling water",
-     "aisle": "Pantry"
+     "item": "lemons",
+     "aisle": "Produce"
     },
     {
      "q": 100,
@@ -594,36 +588,32 @@
      "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "",
-     "item": "lemons, juiced",
-     "aisle": "Produce"
+     "q": 60,
+     "u": "ml",
+     "item": "blue raspberry syrup",
+     "aisle": "Pantry"
     },
     {
-     "q": 500,
-     "u": "ml",
-     "item": "soda water, chilled",
+     "q": 1,
+     "u": "L",
+     "item": "soda water",
      "aisle": "Drinks"
     },
     {
-     "q": 2,
-     "u": "cup",
-     "item": "ice cubes",
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Steep the tea bags in the boiling water for 5 minutes, then stir in the sugar and chill.",
-     "min": 7
+     "text": "Stir the lemon juice and sugar until dissolved.",
+     "min": 3
     },
     {
-     "text": "Fill 4 glasses with ice and pour in the blue tea and the soda.",
-     "min": 2
-    },
-    {
-     "text": "Pour the lemon juice in at the table and watch it turn purple.",
-     "min": 2
+     "text": "Fill glasses with ice, add the blue syrup and lemon mix, top with soda and stir.",
+     "min": 4
     }
    ],
    "veg": true,

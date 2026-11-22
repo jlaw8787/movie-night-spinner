@@ -716,21 +716,15 @@
   {
    "n": "Sherman's formula lemonade",
    "course": "d",
-   "prep_min": 15,
-   "cook_min": 5,
-   "make_ahead": "Brew the blue tea and make the syrup up to 3 days ahead and chill; add the lemon at the table",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make the lemon base up to a day ahead and chill; add the syrup at the table",
    "ingredients": [
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "dried butterfly pea flowers",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 750,
-     "u": "ml",
-     "item": "boiling water",
-     "aisle": "Pantry"
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
     },
     {
      "q": 100,
@@ -739,19 +733,13 @@
      "aisle": "Pantry"
     },
     {
-     "q": 100,
+     "q": 60,
      "u": "ml",
-     "item": "water",
+     "item": "raspberry syrup",
      "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "",
-     "item": "lemons, juiced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 250,
+     "q": 500,
      "u": "ml",
      "item": "soda water",
      "aisle": "Drinks"
@@ -759,26 +747,18 @@
     {
      "q": 1,
      "u": "",
-     "item": "tray ice",
+     "item": "bag ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Steep the butterfly pea flowers in the boiling water until deep blue, then strain and chill.",
-     "min": 8
-    },
-    {
-     "text": "Simmer the sugar and 100ml water until dissolved and cool.",
-     "min": 5
-    },
-    {
-     "text": "Fill 4 glasses with ice, the blue tea and syrup, then top with soda.",
-     "min": 4
-    },
-    {
-     "text": "Pour in the lemon juice at the table and watch it turn purple.",
+     "text": "Stir the lemon juice and sugar with cold water until dissolved.",
      "min": 3
+    },
+    {
+     "text": "Pour over ice, top with soda and float the raspberry syrup on top.",
+     "min": 4
     }
    ],
    "veg": true,

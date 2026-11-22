@@ -1,0 +1,60 @@
+{
+ "id": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)",
+ "old": "Sardines on toast",
+ "dish": {
+  "n": "Mr Tumnus's brown eggs and soldiers",
+  "note": "Soft-boiled brown eggs with hot buttered toast soldiers, laid out for tea in the faun's cave.",
+  "how": "Lower the eggs into simmering water and cook for 6 minutes. Toast the bread, butter it while hot and cut into fingers. Sit the eggs in cups, take off the tops and serve with the soldiers and a little salt.",
+  "shop": [
+   "4 brown eggs@Dairy",
+   "8 slices wholemeal bread@Bakery",
+   "40g butter@Dairy",
+   "salt@Pantry"
+  ],
+  "prep_min": 5,
+  "cook_min": 8,
+  "make_ahead": "Best made to order; set the cups and butter out ahead",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "",
+    "item": "brown eggs",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "slices wholemeal bread",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 40,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": null,
+    "u": "",
+    "item": "salt",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Lower the eggs into simmering water and cook for 6 minutes.",
+    "min": 8
+   },
+   {
+    "text": "Toast the bread, butter it hot and cut into fingers.",
+    "min": 4
+   },
+   {
+    "text": "Serve the eggs in cups with the soldiers.",
+    "min": 3
+   }
+  ]
+ }
+}

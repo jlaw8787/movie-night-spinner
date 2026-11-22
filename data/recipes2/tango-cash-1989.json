@@ -517,46 +517,28 @@
    "af": true
   },
   {
-   "n": "Tango's sharp-dressed Manhattan",
+   "n": "Tango's sharp-dressed cherry cola",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 15,
-   "make_ahead": "Stir the rye, vermouth and bitters together up to 2 days ahead in the fridge; chill the coupes in the freezer, then stir over ice and strain to order",
+   "cook_min": 0,
+   "make_ahead": "Chill the cola well ahead; build each glass to serve",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "coupe glasses",
+     "q": 1.25,
+     "u": "L",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "cherry syrup",
      "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "rye whiskey",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 80,
-     "u": "ml",
-     "item": "sweet vermouth",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "dashes aromatic bitters",
-     "aisle": "Bottle shop"
     },
     {
      "q": 1,
      "u": "",
-     "item": "tray ice",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "cocktail cherries",
+     "item": "jar cocktail cherries",
      "aisle": "Pantry"
     },
     {
@@ -564,96 +546,26 @@
      "u": "",
      "item": "orange",
      "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Chill the coupes in the freezer.",
-     "min": 15
+     "text": "Fill 4 tall glasses with ice and add 2 tbsp cherry syrup to each.",
+     "min": 2
     },
     {
-     "text": "Stir the rye, vermouth and bitters over ice in a jug until very cold.",
-     "min": 1
-    },
-    {
-     "text": "Strain into the coupes and drop a cherry into each. Twist orange peel over the top.",
-     "min": 4
+     "text": "Top with cold cola, stir once, add a cherry and twist orange peel over the top.",
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Tango's sharp-dressed Manhattan (alcohol-free)",
-     "prep_min": 6,
-     "cook_min": 15,
-     "make_ahead": "Brew and chill the tea up to 2 days ahead; chill the coupes in the freezer, then stir with the juice and ice and strain to order",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "coupe glasses",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "smoky black tea bags",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "red grape juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 0.5,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "tray ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "cocktail cherries",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "orange",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and chill the tea. Chill the coupes in the freezer at the same time.",
-       "min": 15
-      },
-      {
-       "text": "Stir 200ml of the tea, the grape juice, the vanilla and a strip of orange zest over ice in a jug until very cold.",
-       "min": 2
-      },
-      {
-       "text": "Strain into the coupes and drop a cherry into each. Twist orange peel over the top.",
-       "min": 4
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

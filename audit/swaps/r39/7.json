@@ -1,0 +1,63 @@
+{
+ "id": "Beethoven (1992)",
+ "old": "Backyard pool blue lemonade",
+ "dish": {
+  "n": "Backyard pool blue lemonade",
+  "note": "Fizzy lemonade turned pool blue with blue raspberry syrup, poured over plenty of ice.",
+  "how": "Stir the lemon juice and sugar until the sugar dissolves. Fill 4 tall glasses with ice, add 1 tbsp blue raspberry syrup to each, pour in the lemon mix and top with cold soda water. Stir once.",
+  "shop": [
+   "4 lemons@Produce",
+   "100g caster sugar@Pantry",
+   "60ml blue raspberry syrup@Pantry",
+   "1 L soda water@Drinks",
+   "1 bag ice@Frozen"
+  ],
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Mix the lemon and sugar up to a day ahead and chill; build each glass to serve",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "",
+    "item": "lemons",
+    "aisle": "Produce"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "ml",
+    "item": "blue raspberry syrup",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "L",
+    "item": "soda water",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag ice",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Stir the lemon juice and sugar until dissolved.",
+    "min": 3
+   },
+   {
+    "text": "Fill glasses with ice, add the blue syrup and lemon mix, top with soda and stir.",
+    "min": 4
+   }
+  ]
+ }
+}

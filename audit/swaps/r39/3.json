@@ -1,0 +1,63 @@
+{
+ "id": "Tango & Cash (1989)",
+ "old": "Tango's sharp-dressed Manhattan",
+ "dish": {
+  "n": "Tango's sharp-dressed cherry cola",
+  "note": "Cola over ice with cherry syrup and a twist of orange, sharp as Tango's suit in the mess line.",
+  "how": "Fill 4 tall glasses with ice. Add 2 tbsp cherry syrup to each, top with cold cola and stir once. Drop in a cocktail cherry and twist a strip of orange peel over the top.",
+  "shop": [
+   "1.25 L cola@Drinks",
+   "125ml cherry syrup@Pantry",
+   "1 jar cocktail cherries@Pantry",
+   "1 orange@Produce",
+   "1 bag ice@Frozen"
+  ],
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Chill the cola well ahead; build each glass to serve",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1.25,
+    "u": "L",
+    "item": "cola",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 125,
+    "u": "ml",
+    "item": "cherry syrup",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "jar cocktail cherries",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "orange",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag ice",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Fill 4 tall glasses with ice and add 2 tbsp cherry syrup to each.",
+    "min": 2
+   },
+   {
+    "text": "Top with cold cola, stir once, add a cherry and twist orange peel over the top.",
+    "min": 3
+   }
+  ]
+ }
+}

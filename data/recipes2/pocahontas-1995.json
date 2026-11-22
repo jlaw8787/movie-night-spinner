@@ -2,44 +2,56 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Meeko's buttermilk scones",
+   "n": "Meeko's cornmeal ashcakes with honey",
    "course": "s",
-   "prep_min": 21,
-   "cook_min": 14,
-   "make_ahead": "Rub in the butter and cut the rounds up to 1 day ahead, chilled on a tray; bake just before serving",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Mix the dry ingredients up to a day ahead; add the wet ones and cook to serve",
    "ingredients": [
     {
-     "q": 100,
+     "q": 250,
      "u": "g",
-     "item": "cold butter, diced",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 450,
-     "u": "g",
-     "item": "self-raising flour",
+     "item": "fine cornmeal",
      "aisle": "Pantry"
     },
     {
-     "q": 0.5,
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
      "u": "tsp",
      "item": "salt",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 300,
      "u": "ml",
-     "item": "buttermilk",
+     "item": "milk",
      "aisle": "Dairy"
     },
     {
-     "q": 50,
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
      "u": "g",
-     "item": "butter, for spreading",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 3,
+     "q": 4,
      "u": "tbsp",
      "item": "honey",
      "aisle": "Pantry"
@@ -47,24 +59,16 @@
    ],
    "steps": [
     {
-     "text": "Rub the cold butter into the flour and salt.",
-     "min": 8
+     "text": "Mix the cornmeal, flour, baking powder and salt, then whisk in the milk, egg and half the melted butter.",
+     "min": 5
     },
     {
-     "text": "Stir in the buttermilk until it just comes together.",
+     "text": "Fry spoonfuls in a hot buttered pan for 2 to 3 minutes a side until golden.",
+     "min": 12
+    },
+    {
+     "text": "Serve hot with butter and honey.",
      "min": 3
-    },
-    {
-     "text": "Pat out and cut into rounds.",
-     "min": 6
-    },
-    {
-     "text": "Bake at 220C until tall and golden.",
-     "min": 14
-    },
-    {
-     "text": "Split while warm and spread with butter and honey.",
-     "min": 4
     }
    ],
    "veg": true,
