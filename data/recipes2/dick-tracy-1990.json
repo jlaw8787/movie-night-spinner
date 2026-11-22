@@ -164,65 +164,49 @@
    }
   },
   {
-   "n": "Yellow coat cheese puffs",
+   "n": "Yellow coat cheese and pineapple sticks",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 30,
-   "make_ahead": "Up to 1 day airtight, crisp in the oven to serve",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Thread up to 4 hours ahead and keep covered in the fridge",
    "ingredients": [
     {
-     "q": 125,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 50,
+     "q": 250,
      "u": "g",
-     "item": "butter",
+     "item": "sharp cheddar",
      "aisle": "Dairy"
     },
     {
-     "q": 75,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
+     "q": 1,
      "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
+     "item": "pineapple pieces (440g tin)",
+     "aisle": "Pantry"
     },
     {
-     "q": 80,
-     "u": "g",
-     "item": "Gruyere, grated",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "",
+     "item": "grapefruit, halved",
+     "aisle": "Produce"
     },
     {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "ground turmeric",
-     "aisle": "Spices"
+     "q": 24,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Bring the water and butter to the boil, beat in the flour and cook for a minute. Cool slightly.",
+     "text": "Cut the cheddar into 2cm cubes and drain the pineapple well.",
+     "min": 6
+    },
+    {
+     "text": "Thread a cube of cheese and a piece of pineapple onto each toothpick.",
      "min": 8
     },
     {
-     "text": "Beat in the eggs, then the Gruyere and turmeric.",
-     "min": 7
-    },
-    {
-     "text": "Pipe small mounds onto lined trays.",
-     "min": 5
-    },
-    {
-     "text": "Bake at 200C until puffed and golden.",
-     "min": 25
+     "text": "Stand them in the grapefruit half and chill until serving.",
+     "min": 2
     }
    ],
    "veg": true,

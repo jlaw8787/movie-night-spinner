@@ -2414,6 +2414,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
   {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
   /* review 37: a cocktail costs at least any bar snack (Casino Royale's Vesper sat under the olive picks), and a coffee or tea is never dearer than the cheapest starter (Bad Boys' cafecito) */
+  {const M=by("m"),hi=maxOf(M.filter(x=>!pfCheap(x.n)));if(hi!=null)for(const x of M)if(pfCheap(x.n)&&x.v>=hi){x.v=hi*.8;x.down=1}}/* review 37: a hot dog main never ties the dearest main (League of Their Own) */
   {const hb=maxOf(by("s").filter(x=>PF_BAR.test(x.n)||/\b(picks|olives|nuts)\b/i.test(x.n)));if(hb!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<hb)x.v=hb}
   {const lo=minOf(by("s"));if(lo!=null)for(const x of by("d"))if(/\b(coffee|espresso|cafecito|caf[eé]|cortado|tea|latte|cappuccino|flat white)\b/i.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.v>lo){x.v=lo;x.down=1}}
   /* review 35: champagne or wine by the glass costs more than any soft drink or coffee and more than the cheapest starter (Roman Holiday's

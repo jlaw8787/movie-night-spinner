@@ -581,6 +581,71 @@
    ],
    "veg": true,
    "af": true
+  },
+  {
+   "n": "Skull Rock cheese scones",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 14,
+   "make_ahead": "Best baked on the night; rub in the butter up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 130,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C and rub the butter into the flour, mustard and salt.",
+     "min": 6
+    },
+    {
+     "text": "Stir in most of the cheese and mix to a soft dough with the milk.",
+     "min": 4
+    },
+    {
+     "text": "Pat out, cut rounds, brush with milk and top with the rest of the cheese.",
+     "min": 5
+    },
+    {
+     "text": "Bake until risen and golden, then split warm and butter.",
+     "min": 14
+    }
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }
