@@ -128,7 +128,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
   const venue=clean(fl&&fl.venue||"Golden Door Kitchen");
   const sign=clean(fl&&fl.sign||"Takeaway and delivery, open late");
-  const note=fl&&fl.note&&fl.note.text?{t:txt(fl.note.text),by:clean(fl.note.by||"The Cook")}:{t:"Everything here is cooked when you ring, packed hot and sent straight out. Thanks for ordering in tonight.",by:"The Cook"};
+  const HOME0=!!fl&&fl.home!==false&&(fl.home===true||/\b(family|kitchen|apartment|flat|house|home|temple|loft|dorm)\b/i.test(String(fl.venue||""))&&!/\b(restaurant|cafe|takeaway|takeout|diner|shop|bar|express|palace|garden|wok|noodle|pizza|grill)\b/i.test(String(fl.venue||"")));
+  const note=fl&&fl.note&&fl.note.text?{t:txt(fl.note.text),by:clean(fl.note.by||"The Cook")}:{t:HOME0?"Everything here is cooked at home and put out to share. Pull up a chair.":"Everything here is cooked when you ring, packed hot and sent straight out. Thanks for ordering in tonight.",by:"The Cook"};
   const winks=(fl&&fl.winks||[]).map(txt).filter(Boolean);
   const prop=fl&&fl.prop&&fl.prop.title?{title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).slice(0,2)}:{title:"Good things arrive hot",lines:["Order again soon"]};
   const stills=(ctx.stills||[]).filter(Boolean);
@@ -158,9 +159,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const titleType=`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:uppercase;color:currentColor">${esc(f.title)}</div>`;
   const logoPanel=`<div data-lpanel data-dark="rgba(12,10,10,.82)" data-light="rgba(252,249,242,.92)" data-darkink="#fff" data-lightink="#151515" style="position:relative;flex:none;padding:14px 20px 12px;background:rgba(12,10,10,.82);color:#fff;border-radius:${eg==="new"?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.4);text-align:center">
       ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo2&&__fmtLogo2(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:268px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType}</div>`:titleType}
-      <div style="font:700 15px/1 ${E.body};letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;margin-top:10px;opacity:.9">Movie night order, ${esc(f.year)}</div></div>`;
+      <div style="font:700 15px/1 ${E.body};letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;margin-top:10px;opacity:.9">${HOME0?"Movie night at home":"Movie night order"}, ${esc(f.year)}</div></div>`;
 
   /* ---------- outside: delivery panel, wraparound photo, cover ---------- */
+  /* review 39: a family home or a flat on this layout (The Big Sick, Big Daddy, Blue Beetle, The Heat, Turning Red) prints home words, not a delivery panel */
+  const HOME=HOME0;
   const phone="555 0"+(num?num.padStart(3,"0").slice(-3):(yy||"00")+"1");
   const run=(winks.length?winks.slice(0,3):["Every street in town","Hot or it is free","Napkins in every bag"]).map(w=>esc(w.replace(/\.$/,"")));
   /* lucky numbers: the film's own number and year when it has them, the rest drawn from the title so no two films share a set */
@@ -178,18 +181,18 @@ window.MENU_FORMATS[ID]=ctx=>{
    ${folds}
    <div style="position:absolute;left:466px;top:102px;width:412px;height:612px;background:#fbfaf6;padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>
    ${tagLine?`<div style="position:absolute;left:486px;top:22px;width:372px;height:60px;background:#fbfaf6;color:${readable(toHex(pa),"#fbfaf6",4.5)};transform:rotate(-1.5deg);box-shadow:0 5px 12px rgba(0,0,0,.45);padding:0 16px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;${eg==="new"?"border-radius:10px;":""}"><div data-fit data-min="15" style="width:100%;height:44px;overflow:hidden;font-size:26px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${E.dw} 1em/1.05 ${E.disp};text-transform:uppercase">${esc(tagLine)}</div></div></div>`:""}
-   ${driver?`<div style="position:absolute;left:486px;top:730px;width:372px;height:66px;background:${BAR};color:${BARINK};transform:rotate(1deg);box-shadow:0 5px 12px rgba(0,0,0,.45);padding:8px 16px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;${eg==="new"?"border-radius:10px;":""}"><div style="font:700 13px/1 ${E.body};letter-spacing:.22em;text-transform:uppercase;opacity:.85">Ask the driver about</div><div data-fit data-min="14" style="height:26px;overflow:hidden;white-space:nowrap;font-size:21px;margin-top:5px"><div style="font:600 1em/1.2 ${E.body}">${esc(driver)}</div></div></div>`:""}`;
+   ${driver?`<div style="position:absolute;left:486px;top:730px;width:372px;height:66px;background:${BAR};color:${BARINK};transform:rotate(1deg);box-shadow:0 5px 12px rgba(0,0,0,.45);padding:8px 16px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;${eg==="new"?"border-radius:10px;":""}"><div style="font:700 13px/1 ${E.body};letter-spacing:.22em;text-transform:uppercase;opacity:.85">${HOME?"Ask at the table about":"Ask the driver about"}</div><div data-fit data-min="14" style="height:26px;overflow:hidden;white-space:nowrap;font-size:21px;margin-top:5px"><div style="font:600 1em/1.2 ${E.body}">${esc(driver)}</div></div></div>`:""}`;
   const outside=`${stock}
    ${heroIsPoster?posterWrap:`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:#111">${photo(hero,"50% 40%")}</div>${folds}`}
-   <div data-fit data-min="14" style="position:absolute;left:30px;top:30px;width:388px;height:24px;overflow:hidden;white-space:nowrap;font-size:18px"><div style="font:700 1em/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${SPOT}">${esc(T.run)}</div></div>
-   <div data-fit data-min="34" style="position:absolute;left:30px;top:60px;width:388px;height:70px;overflow:hidden;white-space:nowrap;font-size:64px"><div style="font:${E.dw} 1em/1.05 ${E.disp};text-transform:uppercase;color:${INK};${press}">We deliver</div></div>
+   <div data-fit data-min="14" style="position:absolute;left:30px;top:30px;width:388px;height:24px;overflow:hidden;white-space:nowrap;font-size:18px"><div style="font:700 1em/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${SPOT}">${esc(HOME?"Home cooking, made to share":T.run)}</div></div>
+   <div data-fit data-min="34" style="position:absolute;left:30px;top:60px;width:388px;height:70px;overflow:hidden;white-space:nowrap;font-size:64px"><div style="font:${E.dw} 1em/1.05 ${E.disp};text-transform:uppercase;color:${INK};${press}">${HOME?"Dinner\u2019s on":"We deliver"}</div></div>
    <div style="position:absolute;left:30px;top:138px;width:388px;background:${BAR};color:${BARINK};padding:12px 16px;box-sizing:border-box;${eg==="new"?"border-radius:10px;":""}">
-     <div style="font:700 15px/1 ${E.body};letter-spacing:.24em;text-transform:uppercase">Phone your order</div>
-     <div style="font:${E.dw} 44px/1.1 ${E.disp};margin-top:4px;white-space:nowrap">${phone}</div></div>
-   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over ${((ctx.flavour&&ctx.flavour.currency)==="¥"?"¥3,000":"$"+(({"1930s-40s":2,"1950s":3,"1960s":5,"1970s":8,"1980s":12,"1990s":15,"2000s":20})[(ctx.flavour&&ctx.flavour.priceEra)||ctx.era]||25))}.</div>
+     <div style="font:700 15px/1 ${E.body};letter-spacing:.24em;text-transform:uppercase">${HOME?"Seats at the table":"Phone your order"}</div>
+     <div style="font:${E.dw} 44px/1.1 ${E.disp};margin-top:4px;white-space:nowrap">${HOME?"Everyone":phone}</div></div>
+   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">${HOME?"Dinner at six, seven nights.<br>Seconds are on the house.":`Open 5 pm till late, seven nights.<br>Free delivery over ${((ctx.flavour&&ctx.flavour.currency)==="¥"?"¥3,000":"$"+(({"1930s-40s":2,"1950s":3,"1960s":5,"1970s":8,"1980s":12,"1990s":15,"2000s":20})[(ctx.flavour&&ctx.flavour.priceEra)||ctx.era]||25))}.`}</div>
    <div style="position:absolute;left:30px;top:310px;width:388px;height:1px;background:${SOFT};opacity:.6"></div>
    <div data-fit data-min="15" style="position:absolute;left:30px;top:322px;width:388px;height:220px;overflow:hidden;font-size:20px;color:${INK}">
-     <div style="font:700 15px/1.2 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${SPOT};margin-bottom:.4em">Talk on the delivery run</div>
+     <div style="font:700 15px/1.2 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${SPOT};margin-bottom:.4em">${HOME?"Talk at the table":"Talk on the delivery run"}</div>
      ${run.map(r=>`<div style="font:500 1em/1.3 ${E.body};margin-bottom:.4em;padding-left:1em;text-indent:-1em"><span style="color:${SPOT};font-weight:700">+</span> ${r}</div>`).join("")}</div>
    <div style="position:absolute;left:34px;top:572px;width:372px;height:200px;background:#fbfaf6;color:#222;box-shadow:0 5px 14px rgba(0,0,0,.3);transform:rotate(-2.5deg);padding:14px 20px;box-sizing:border-box;display:flex;flex-direction:column">
      <div style="font:700 14px/1 ${E.body};letter-spacing:.26em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">${esc(T.fort)}</div>
@@ -198,7 +201,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:700 15px/1 ${E.body};letter-spacing:.14em;text-align:center">LUCKY NUMBERS &nbsp;${lucky}</div></div>
    <div style="position:absolute;left:914px;top:14px;bottom:14px;width:412px;display:flex;flex-direction:column;gap:12px">
      <div style="flex:none;padding:14px 18px 12px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}box-shadow:0 5px 14px rgba(0,0,0,.35)">
-       ${kick("Takeaway menu")}
+       ${kick(HOME?"Home kitchen menu":"Takeaway menu")}
        <div data-fit data-min="22" style="height:92px;overflow:hidden;font-size:46px;display:flex;align-items:center;margin-top:2px"><div style="max-width:100%;font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
        <div data-fit data-min="16" style="height:50px;overflow:hidden;font-size:20px;margin-top:2px"><div style="font:italic 500 1em/1.25 ${E.body};color:${SOFT}">${esc(sign)}</div></div></div>
      ${logoPanel}
@@ -208,7 +211,7 @@ window.MENU_FORMATS[ID]=ctx=>{
        <div style="font:700 15px/1 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">A word from the kitchen</div>
        <div data-fit data-min="14" style="flex:1;min-height:0;overflow:hidden;font-size:31px;margin-top:8px;display:flex;flex-direction:column;justify-content:center"><div style="font:500 1em/1.3 ${E.body}">${esc(sent(note.t))}</div></div>
        <div style="font:600 34px/1 'Caveat',cursive;color:${readable(toHex(pa),"#fbfaf6",4.5)};text-align:right;margin-top:4px">${esc(note.by)}</div>
-       ${special?`<div style="flex:none;margin-top:10px;padding-top:10px;border-top:2px dashed ${readable(toHex(pa),"#fbfaf6",3)}"><div style="font:700 14px/1 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">Chef's special, No. 20</div><div data-fit data-min="15" style="height:56px;overflow:hidden;font-size:24px;margin-top:6px"><div style="font:${E.dw} 1em/1.1 ${E.disp};text-transform:uppercase;color:#222">${esc(special)}</div></div></div>`:""}</div></div>
+       ${special?`<div style="flex:none;margin-top:10px;padding-top:10px;border-top:2px dashed ${readable(toHex(pa),"#fbfaf6",3)}"><div style="font:700 14px/1 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">${HOME?"Tonight\u2019s special":"Chef's special, No. 20"}</div><div data-fit data-min="15" style="height:56px;overflow:hidden;font-size:24px;margin-top:6px"><div style="font:${E.dw} 1em/1.1 ${E.disp};text-transform:uppercase;color:#222">${esc(special)}</div></div></div>`:""}</div></div>
    `;
 
   /* ---------- inside: photo band, three panels of numbered dishes ---------- */

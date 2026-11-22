@@ -3546,7 +3546,8 @@
     "Four friends, four tickets"
    ]
   },
-  "number": "2002"
+  "number": "2002",
+  "pay": ""
  },
  "The Little Mermaid (1989)": {
   "venue": "Chef Louis's Palace Kitchen",
@@ -7682,7 +7683,11 @@
    ]
   },
   "number": "",
-  "currency": "£"
+  "currency": "£",
+  "words": {
+   "BEACH SNACKS": "FROM THE BEACH HOUSE",
+   "Open until the sun goes down.": "Tea at four, supper at eight."
+  }
  },
  "Airplane! (1980)": {
   "venue": "Trans American Galley",
@@ -8335,7 +8340,23 @@
    ]
   },
   "number": "",
-  "pay": true
+  "pay": true,
+  "words": {
+   "All hands to the long table": "Order at the counter",
+   "The courses in procession": "The menu board",
+   "Bill of Fare": "Menu Board",
+   "To Begin": "Fries and Sides",
+   "The Remove": "Burgers and Pies",
+   "Entremets": "Sweets",
+   "The Cordials": "Shakes",
+   "The whole feast, per cover": "One of everything",
+   "Covers laid for 4": "Meals for 4",
+   "Talk of the hall": "Talk of the counter",
+   "Place card": "Name badge",
+   "laid for tonight": "open tonight",
+   "From the host": "From the manager"
+  },
+  "counter": true
  },
  "Clerks II (2006)": {
   "venue": "Mooby's",
@@ -8647,7 +8668,12 @@
   },
   "number": "",
   "words": {
-   "Bus 96": "Car 96"
+   "Bus 96": "Car 96",
+   "Dining Car": "Campaign Bus",
+   "TRAIN 96": "BUS 96",
+   "Dinner Timetable": "Campaign Timetable",
+   "Heard in the club car": "Heard on the bus",
+   "Out the window, nearly there.": "Next stop, the rally."
   }
  },
  "The Waterboy (1998)": {
@@ -9154,7 +9180,13 @@
     "Forty eight hours, no more"
    ]
   },
-  "number": "48"
+  "number": "48",
+  "words": {
+   "Breakroom copy": "Bar copy",
+   "Breakroom, all shifts": "Torchy's, all night",
+   "Coffee can by the pot": "Cash at the bar",
+   "Money in the honour box.": "Pay the bartender."
+  }
  },
  "Another 48 Hrs. (1990)": {
   "venue": "Hammond's Release Day Counter",
@@ -10694,7 +10726,11 @@
     "Hollywood bound"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Made in the truck today.": "Made behind the counter today.",
+   "A note from the window": "A note from the counter"
+  }
  },
  "BASEketball (1998)": {
   "venue": "Coop's Driveway Court",
@@ -20359,7 +20395,13 @@
     "Fiorina 161, Class C"
    ]
   },
-  "number": "161"
+  "number": "161",
+  "words": {
+   "Breakroom copy": "Mess copy",
+   "Breakroom, all shifts": "Mess hall, all shifts",
+   "Coffee can by the pot": "Tea urn by the line",
+   "Money in the honour box.": "Issued at the line."
+  }
  },
  "Alien: Resurrection (1997)": {
   "venue": "USM Auriga Crew Mess",
@@ -20862,7 +20904,13 @@
    ]
   },
   "number": "16",
-  "pay": ""
+  "pay": "",
+  "words": {
+   "FORMAL, CLASS OF 2022": "BECCA'S SIXTEENTH",
+   "WEAR YOUR DANCING SHOES": "BRING A CANDLE",
+   "Before the Dance": "Before the Candle",
+   "Last Dance Sweets": "Birthday Sweets"
+  }
  },
  "Into the Woods (2014)": {
   "venue": "The Baker's Shop",

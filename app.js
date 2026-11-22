@@ -2648,13 +2648,38 @@ function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.inclu
    film-flavour "words" {"Old wording":"New wording"}, text only, never inside tags, any case; a match printed all in capitals takes the new wording in capitals */
 /* review 38: a layout set in someone's home takes home words unless the film names its own (lab: Hereditary's kitchen and the Gates family house
    printed "Ration sheet", "Access", "Badge" and "QUARANTINE"; stadium: Coop's driveway printed a lower bowl and club level) */
-const HOME_WORDS={lab:{"Ration sheet":"Tonight's sheet","Rations":"Snacks","Hot meals continued":"Mains continued","Hot meals":"Mains","Sweet issue":"Something sweet","Canteen":"Drinks","Access":"Guest","Badge":"Name","All areas":"Whole house","QUARANTINE":"DINNER'S ON","MESS OPEN":"DINNER'S ON","Mess open":"Dinner's on"},
+const HOME_WORDS={lab:{"Ration sheet":"Tonight's sheet","Rations":"Snacks","Hot meals continued":"Mains continued","Hot meals":"Mains","Sweet issue":"Something sweet","Canteen":"Drinks","Access":"Guest","Badge":"Name","All areas":"Whole house","QUARANTINE":"DINNER'S ON","MESS OPEN":"DINNER'S ON","Mess open":"Dinner's on","Return tray to the hatch.":"Clear your own plate.","Snacks subject to supply.":"Seconds while they last."/* review 39: National Treasure's Gates family house */},
   stadium:{"Lower Bowl":"Front row","Club Level":"Back step","Upper Deck":"On the fence","Bleacher bums welcome":"Bring a chair","Concession Scorecard":"House scorecard","Concessions":"From the house","Hot Stand":"Off the grill"}};
 const homeVenue=fl=>!!fl&&fl.home!==false&&(fl.home===true||/\b(house|home|kitchen|family|apartment|flat|cottage|homestead|farmhouse|driveway|backyard|pantry)\b/i.test(String(fl.venue||""))&&!/\b(cafe|caf\u00e9|cafeteria|canteen|mess|diner|bar|pub|restaurant|hotel|club|concessions?|stand|arena|stadium|court|break room|lab|laboratory|headquarters|hq)\b/i.test(String(fl.venue||"").replace(/driveway court/i,"driveway")));
 function libWords(html,fl,fmt){const HW=fmt&&HOME_WORDS[fmt]&&homeVenue(fl)?HOME_WORDS[fmt]:null;const W=HW?Object.assign({},HW,fl&&fl.words||{}):fl&&fl.words;if(!W)return html;const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   return String(html).replace(/>([^<]+)</g,(m,t)=>{for(const k in W){const ks=[...new Set([k,esc(k),esc(k).replace(/'/g,"&#39;"),k.replace(/'/g,"\u2019")])];for(const kk of ks){const re=new RegExp(kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"gi");t=t.replace(re,x=>{const n=esc(W[k]);return x===x.toUpperCase()&&x!==x.toLowerCase()?n.toUpperCase():n})}}return ">"+t+"<"})}
 /* 8 Nov: a quote that ends a note keeps its own stop: layouts that add a full stop leave "There goes my milk!". as "There goes my milk!" (text only) */
 function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */.replace(/([^.\s])\.\.(?=\s|$)/g,"$1.")/* review 32: a joined line never prints "midnight.." (an ellipsis of three stays) */+"<")}
+/* review 39 (Josh's call): a hand-built card that does not print its Showtime cue gets a cue strip along the foot, in the card's own ink,
+   paper and body font. It sits in the clear band at the foot of the last page when there is room, else the pages grow to hold it */
+function cueStrip(f){try{
+  const cue=typeof fmtCue==="function"?fmtCue(f):f.P;if(!cue||card.querySelector(".fx-cuestrip"))return;
+  const nz=t=>String(t).toLowerCase().replace(/[‘’]/g,"'").replace(/[^a-z0-9]+/g," ").trim(),core=nz(String(cue).split(" when ").pop()).slice(0,40);
+  if(nz(card.textContent).includes(core))return;
+  const faces=[...card.querySelectorAll(".fx-face")],tg=faces.length?faces[faces.length-1]:card.firstElementChild;if(!tg)return;
+  const H=parseFloat(tg.style.height)||tg.offsetHeight,W=parseFloat(tg.style.width)||tg.offsetWidth;if(!H||!W)return;
+  const tb=tg.getBoundingClientRect(),k=tb.height/H||1,rg=document.createRange(),ink={},fam={};let low=0;
+  for(const e of tg.querySelectorAll("*")){if(!e.offsetParent)continue;for(const t of e.childNodes){if(t.nodeType!==3||!t.textContent.trim())continue;rg.selectNodeContents(t);
+    for(const r of rg.getClientRects()){if(r.width&&r.height)low=Math.max(low,(r.bottom-tb.top)/k)}
+    const cs=getComputedStyle(e),n=t.textContent.trim().length;ink[cs.color]=(ink[cs.color]||0)+n;fam[cs.fontFamily]=(fam[cs.fontFamily]||0)+n}}
+  const top=o=>Object.entries(o).sort((a,b)=>b[1]-a[1])[0];if(!top(ink))return;
+  let bg="";for(const e of [tg,tg.firstElementChild,card.firstElementChild,card]){if(!e)continue;const c=getComputedStyle(e).backgroundColor;if(c&&!/rgba\(0, 0, 0, 0\)|transparent/.test(c)){bg=c;break}}
+  const col=top(ink)[0],el=document.createElement("div");el.className="fx-cuestrip";el.setAttribute("data-cue","1");
+  el.style.cssText=`position:absolute;left:0;width:${W}px;box-sizing:border-box;padding:9px 36px 12px;text-align:center;color:${col};font-family:${top(fam)[0]};font-size:14px;line-height:1.35;z-index:50;${bg?"background:"+bg+";":""}`;
+  el.innerHTML=`<div style="border-top:1px solid currentColor;opacity:.4;margin:0 auto 7px;width:60%"></div><b style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-right:.6em">Showtime cue</b>${ESC(cue)}`;
+  tg.appendChild(el);const sh=el.offsetHeight;
+  if(H-low>=sh+8){el.style.top=(H-sh-2)+"px";el.style.background="transparent";return}
+  /* no room: every page grows by the strip, so two or three page cards keep one size */
+  const d=sh,T=faces.length?faces:[tg];T.forEach(x=>{x.style.height=(parseFloat(x.style.height)||x.offsetHeight)+d+"px";const c=x.firstElementChild;if(c&&c!==el&&!faces.length)return;});
+  if(!faces.length){tg.style.height=H+d+"px"}else{for(const x of faces){const c=[...x.children].find(c=>c!==el&&parseFloat(c.style.height)>=H-2);if(c&&!bg)c.style.height=H+d+"px"}}
+  el.style.top=H+"px";if(!bg)el.style.background=getComputedStyle(card).backgroundColor||"#fff";
+  if(card.classList.contains("fx-paper")&&faces.length){const n=faces.length,row=H>W,ch=+card.dataset.h||0;if(ch){const nh=row?ch+d:ch+d*n;card.dataset.h=nh;card.style.height=nh+"px"}}
+}catch(e){console.warn("cue strip",e)}}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
@@ -2686,6 +2711,7 @@ async function show(f,preferSig){
     styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{priceFix(card,menu,f,spec.flavour||(spec.pay!=null?{pay:spec.pay}:null),"modern","own")/* review 38: a hand-built feast, prom or private dinner sets pay:"" in its spec */}catch(e){console.warn("price sense",e)}try{curlyQuotes(card)}catch(e){}try{sumFix(card)}catch(e){console.warn("totals",e)}/* review 36: hand-built totals add up too (Ghostbusters work order) */dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
+    cueStrip(f);
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
     phoneView(f,spec,menu);scalePreview();try{fitLines(card)}catch(e){}setTimeout(()=>{if(id===renderId)try{fitLines(card)}catch(e){}},1500);
     const refitP=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
@@ -2700,7 +2726,7 @@ async function show(f,preferSig){
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
-      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);foldClear(card);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card);foldClear(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId){fitLines(card);foldClear(card)}},5000);
+      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);foldClear(card);cueStrip(f);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card);foldClear(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId){fitLines(card);foldClear(card)}},5000);
       try{libPhoneView(f,houseShown(fullMenu(f,menu,L.fmt),card),L,card);current.printMenu=houseShown(current.printMenu,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();

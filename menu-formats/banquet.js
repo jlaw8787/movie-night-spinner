@@ -214,7 +214,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const course=(k,ci)=>`<div style="margin:0 0 ${heavy?".3em":".5em"}">
       <div style="display:flex;align-items:center;justify-content:center;gap:.6em;margin-bottom:.3em">
         <span style="flex:none;width:${heavy?"1em":"2.2em"};height:1px;background:${GOLD}"></span>
-        <span style="font:600 .7em/1.2 ${E.body};font-size:max(15px,.7em);letter-spacing:${heavy?".18em":".3em"};white-space:nowrap;text-transform:uppercase;color:${ACC}">${heavy?"":["First","Second","Third","Fourth"][ci]+" Course &nbsp;·&nbsp; "}${esc(LAB[k])}</span>
+        <span style="font:600 .7em/1.2 ${E.body};font-size:max(15px,.7em);letter-spacing:${heavy?".18em":".3em"};white-space:nowrap;text-transform:uppercase;color:${ACC}">${heavy||fl&&fl.counter?"":["First","Second","Third","Fourth"][ci]+" Course &nbsp;·&nbsp; "}${esc(LAB[k])}</span>
         <span style="flex:none;width:${heavy?"1em":"2.2em"};height:1px;background:${GOLD}"></span></div>
       ${(menu[k]||[]).map((it,ii)=>`<div style="margin:0 0 ${heavy?".22em":".36em"}">
         <div style="font:${E.dw} 1.04em/1.12 ${E.disp};text-transform:${dispCase};letter-spacing:${E.upper?".04em":"0"};color:${INK};${press}${heavy?clamp(2):""}">${esc(txt(it.n))}</div>
