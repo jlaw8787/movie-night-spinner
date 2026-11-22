@@ -886,7 +886,58 @@ let pvFace=0,pvDrag=0;
 function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",").map(Number);let x=0,y=0;for(let e=z;e&&!e.classList.contains("fx-face")&&e!==card;e=e.offsetParent){x+=e.offsetLeft;y+=e.offsetTop}/* as tall as what is in it (a short kiosk column stops at its last dish, not at the foot of the taller one) */
   const zr=z.getBoundingClientRect(),k=zr.width/(z.offsetWidth||1)||1;let hb=0;for(const c of z.querySelectorAll("*")){const r=c.getBoundingClientRect();if(r.height)hb=Math.max(hb,r.bottom)}
   const h=hb?Math.min(z.offsetHeight,Math.ceil((hb-zr.top)/k)):z.offsetHeight;return [x-12,y-12,z.offsetWidth+24,h+24]}
-function cardFaces(){
+/* review 39 (Josh, 22 Nov): on a phone the printed menu reads without a tap. Each view whose small print would draw under about 10.5px is
+   cut along clear gutters into reading views (an XY cut on the words: columns first, then bands), each cropped to its words and scaled to
+   the screen width, so dish notes read at about 11px. Tall views are cut again at a line gap to about one screen. Desktop is left alone. */
+function cardFaces(){const base=cardFaces0();if(!swipeW()||pvDesk||!card.classList.contains("fmt"))return base;
+  const key=renderId+"|"+card.innerHTML.length+"|"+(preview.clientWidth||0);if(card._pvr&&card._pvr.key===key)return card._pvr.v;
+  let out=base;try{out=pvReadViews(base)}catch(e){out=base}card._pvr={key,v:out};return out}
+function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FLOOR=10.5,TGT=Math.max(260,pw*sp/11.5),MAXH=Math.max(500,(innerHeight||800)*.92);
+  let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;if(!w||!h)return base;V=[{el,w,h,x:0,y:0,px:0,row:true}]}
+  const out=[];let n=0;const NM=(()=>{const m=(current&&(current.printMenu||current.menu))||{};return ["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/\s+/g," ").trim())).filter(n=>n.length>3)})();
+  const hasDish=L=>{const t=L.map(b=>b[5]).join(" ").toLowerCase().replace(/\s+/g," ");return NM.some(n=>t.includes(n))};
+  for(const v of V){const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
+    if(sp*pw/v.w>=FLOOR){out.push(v);continue}
+    /* page origin on the card: a panel's x is the page's x plus its own px */
+    const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,ox=(eb.left-cb.left)/ck,oy=(eb.top-cb.top)/ck,ylo=(v.y||0)-oy,yhi=ylo+v.h;
+    const B=[],rg=document.createRange();
+    for(const e of v.el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]")||!e.offsetParent&&getComputedStyle(e).position!=="fixed")continue;for(const t of e.childNodes){if(t.nodeType!==3||!t.textContent.trim())continue;rg.selectNodeContents(t);
+      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;const x0=(r.left-eb.left)/k,x1=(r.right-eb.left)/k,y0=(r.top-eb.top)/k,y1=(r.bottom-eb.top)/k,cx=(x0+x1)/2;if(cx<lo||cx>hi||(y0+y1)/2<ylo||(y0+y1)/2>yhi)continue;B.push([x0,y0,x1,y1,t.textContent.trim().length,t.textContent])}}}
+    if(B.reduce((a,b)=>a+b[4],0)<60){out.push(v);continue}
+    const gaps=(L,ax,min)=>{/* clear runs along one axis (0: x, 1: y) between word boxes */const s=L.map(b=>[b[ax],b[ax+2]]).sort((a,b)=>a[0]-b[0]),G=[];let end=-1e9;for(const [a,z] of s){if(end>-1e9&&a-end>=min)G.push([end,a]);end=Math.max(end,z)}return G};
+    const bb=L=>[Math.min(...L.map(b=>b[0])),Math.min(...L.map(b=>b[1])),Math.max(...L.map(b=>b[2])),Math.max(...L.map(b=>b[3]))];
+    const regions=[];
+    const cut=(L,depth)=>{if(!L.length)return;const [x0,y0,x1,y1]=bb(L),w=x1-x0;
+      if(w>TGT&&depth<8){/* columns: every clear gutter that leaves both sides 110px or more, then neighbours merged while they fit the target */
+        const G=gaps(L,0,14).filter(([a,z])=>a-x0>=160&&x1-z>=160);
+        if(G.length){const xs=[x0,...G.map(([a,z])=>(a+z)/2),x1+1];let segs=[];for(let i=0;i<xs.length-1;i++){const S=L.filter(b=>(b[0]+b[2])/2>=xs[i]&&(b[0]+b[2])/2<xs[i+1]);if(S.length)segs.push(S)}
+          const M=[];for(const S of segs){const last=M[M.length-1];if(last){const [a]=bb(last),[,,z]=bb(S);if(z-a<=TGT){last.push(...S);continue}}M.push([...S])}
+          if(M.length>1){for(const S of M)cut(S,depth+1);return}}
+        /* no column gutter all the way down: a band across the page (a sign, a section bar) may hide one; cut at the line gap that frees it */
+        /* else cut into bands at the clear line gaps (18px or more) when any band has a column gutter of its own (Kamar-Taj: the sign across
+           the top and the footer row hid the gutter between the poster and the menu); the merge below joins bands back where they fit */
+        const has=S=>{const [p,,q]=bb(S);return gaps(S,0,14).some(([a2,z2])=>a2-p>=160&&q-z2>=160)};
+        for(const [a,z] of gaps(L,1,6).sort((p,q)=>(q[1]-q[0])-(p[1]-p[0])).slice(0,12)){const m=(a+z)/2,T=L.filter(b=>(b[1]+b[3])/2<m),D=L.filter(b=>(b[1]+b[3])/2>=m);const nar=S=>{const [p,,q]=bb(S);return q-p<=TGT&&S.length>=6};if(T.length&&D.length&&(has(T)||has(D)||nar(T)||nar(D))){cut(T,depth+1);cut(D,depth+1);return}}
+        const H=gaps(L,1,18).map(([a,z])=>(a+z)/2);if(H.length){const ys=[-1e9,...H,1e9],bands=[];for(let i=0;i<ys.length-1;i++){const S=L.filter(b=>(b[1]+b[3])/2>=ys[i]&&(b[1]+b[3])/2<ys[i+1]);if(S.length)bands.push(S)}
+          if(bands.length>1){for(const S of bands)cut(S,depth+1);return}}}
+      regions.push(L)};
+    cut(B,0);
+    /* reading order: top to bottom by band, left to right inside it */
+    regions.sort((p,q)=>{const a=bb(p),b=bb(q);return a[3]<=b[1]+4?-1:b[3]<=a[1]+4?1:a[0]-b[0]});
+    /* scraps (a caption, a form number, a split heading) are not views of their own: they join the next region when the pair still fits
+       the target width and about a screen, else they stay on the full-size view only. Neighbours that fit together are joined too */
+    {const chars=L=>L.reduce((a,b)=>a+b[4],0),fits=(P,Q)=>{const [a0,b0,a1,b1]=bb([...P,...Q]),wp=bb(P),wq=bb(Q);return (a1-a0<=TGT||a1-a0<=1.35*Math.min(wp[2]-wp[0],wq[2]-wq[0]))&&(b1-b0)*pw/(a1-a0+28)<=MAXH*1.1};
+      for(let i=0;i<regions.length;i++){const R=regions[i];if(chars(R)>=40)continue;const j=[i+1,i-1].find(j=>regions[j]&&fits(R,regions[j]));if(j!=null)regions[j].push(...R);regions.splice(i,1);i--}
+      for(let i=0;i<regions.length-1;i++){if(fits(regions[i],regions[i+1])){regions[i].push(...regions[i+1]);regions.splice(i+1,1);i--}}}
+    /* the whole view stays first, as the overview (sign, poster, props); reading views follow only for the blocks that carry dishes */
+    const R2=regions.filter(hasDish);if(!R2.length){out.push(v);continue}out.push(v);
+    for(const L of R2){const [x0,y0,x1,y1]=bb(L),w=Math.min(v.w,x1-x0+28),kk=pw/w,cx=Math.max(lo,Math.min(hi-w,x0-14));
+      /* tall regions: cut at the line gap nearest each screenful */
+      const ys=[y0-14];const G=(gaps(L,1,12).length?gaps(L,1,12):gaps(L,1,6)).map(([a,z])=>(a+z)/2);let at=y0-14;
+      while(y1+14-at>MAXH/kk*1.15){const want=at+MAXH/kk,c=G.filter(g=>g>at+MAXH/kk*.45&&g<=want).pop();if(!c)break;ys.push(c);at=c}ys.push(y1+14);
+      for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1})}}}
+  return out.length&&out.length<=14?out:base}
+function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
   const fs=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];
   if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
@@ -951,7 +1002,9 @@ function pvFirstDish(fs){let best=0,bestC=0;const C=[];try{const m=(current&&(cu
     /* review 32: the first page that carries a real share of the food, not the fullest one ("The Menu, continued" on Grease's third page
        had more lines than the page with the starters and burgers) */
     /* three dishes at least: a cover whose tagline names two (the Grinch's "Roast beast. Who pudding.") is not the menu */
-    if(bestC>=3){const need=Math.max(3,Math.ceil(bestC*.4));const i=C.findIndex(c=>c>=need);if(i>=0)best=i}}catch(e){}return best}
+    if(bestC>=3){const need=Math.max(3,Math.ceil(bestC*.4));const i=C.findIndex(c=>c>=need);if(i>=0)best=i}
+    /* review 39: with reading views on a phone, open on the first reading view with a dish (the overview stays one swipe back) */
+    if(fs.some(f=>f.read)){const i=fs.findIndex((f,j)=>f.read&&C[j]>0);if(i>=0)best=i}}catch(e){}return best}
 const pvDots=document.createElement("div");pvDots.className="pv-dots";pvDots.hidden=true;$("easel").after(pvDots);
 pvDots.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)pvGo(+b.dataset.i)});
 function paintDots(n){
@@ -971,7 +1024,7 @@ function pvGo(i){
 /* half views of a wide page: text the view edge cuts so that less than 60% shows ("Parr", "DUMB") is hidden, so the edge reads as a clean peek */
 function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
   card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));card.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});if(!key)return;
-  const b=f.el.getBoundingClientRect(),lo=f.px!=null?f.px:f.x,hi=lo+f.w,off=[];
+  const b=f.el.getBoundingClientRect(),lo=f.px!=null?f.px:f.x,hi=lo+f.w,off=[];/* review 39: the scale the card is drawn at right now (a page turn may still be sliding), not the one it is heading to */{const ow=f.el===card?card.offsetWidth:f.el.offsetWidth;if(ow&&b.width)k=b.width/ow}
   const rg=document.createRange();
   for(const e of f.el.querySelectorAll("*")){const tn=[...e.childNodes].filter(n=>n.nodeType===3&&n.textContent.trim());if(!tn.length)continue;
     /* measure the words themselves, not the box around them */
