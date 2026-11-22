@@ -162,7 +162,7 @@
    "kind": "quote"
   },
   "winks": [
-   "The smiley badge with a blood spot",
+   "The smiley face with a blood spot",
    "Archie the owl ship",
    "The Doomsday Clock near midnight",
    "Dr Manhattan on Mars"
@@ -1091,7 +1091,8 @@
     "No leaving home"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 0.6
  },
  "Black Widow (2021)": {
   "venue": "Safe House Kitchen",
@@ -2579,8 +2580,30 @@
    ]
   },
   "number": "42",
-  "beach": true,
-  "pay": ""
+  "beach": false,
+  "pay": "",
+  "strip": [
+   [
+    "Tank report",
+    ""
+   ],
+   [
+    "Water",
+    "24°C"
+   ],
+   [
+    "Filter",
+    "Gunked up"
+   ],
+   [
+    "Plan",
+    "Escape"
+   ],
+   [
+    "Next clean",
+    "Never"
+   ]
+  ]
  },
  "Mrs. Doubtfire (1993)": {
   "venue": "Hillard Family Kitchen",
@@ -2799,7 +2822,7 @@
   },
   "winks": [
    "Ellie's adventure book with its empty pages",
-   "A grape soda cap pinned on as a badge",
+   "Ellie's grape soda cap, pinned on Russell",
    "Dug and his talking collar",
    "Kevin the bird who loves chocolate",
    "Muntz's blimp, the Spirit of Adventure"
@@ -4047,7 +4070,11 @@
   "priceEra": "1800s",
   "currency": "coin",
   "coin": "drachmas",
-  "side": "Arena floor"
+  "side": "Arena floor",
+  "words": {
+   "Lower Bowl": "Front row",
+   "Club Level": "Gods' box"
+  }
  },
  "The Emperor's New Groove (2000)": {
   "venue": "Mudka's Meat Hut",
@@ -8563,7 +8590,8 @@
     "Delivered in person"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Kingpin (1996)": {
   "venue": "National Bowling Stadium",
@@ -8815,7 +8843,8 @@
     "Fought for in court"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Field of Dreams (1989)": {
   "venue": "Kinsella Farm Table",
@@ -9976,7 +10005,9 @@
    "Sweet issue": "Sweet stuff",
    "Canteen": "Vending",
    "All areas": "Library only",
-   "Return tray to the hatch.": "Write an essay. 1,000 words."
+   "Return tray to the hatch.": "Write an essay. 1,000 words.",
+   "Access": "Detention",
+   "Badge": "Hall pass"
   },
   "pay": ""
  },
@@ -10905,7 +10936,14 @@
     "Home by dinner"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Tab's chalked on the wall": "Grandma's rules on the fridge",
+   "Behind the bar": "In Grandma's fridge",
+   "From the bar": "From the fridge",
+   "Tab No.": "House No.",
+   "Last call:": "Lights out:"
+  }
  },
  "Wayne's World 2 (1993)": {
   "venue": "Waynestock Festival Grounds",
@@ -12575,7 +12613,7 @@
    "kind": "quote"
   },
   "winks": [
-   "Curtis and his toy Santa double",
+   "Curtis and the plastic double",
    "Carol Newman, the school principal",
    "Tinsel football with the elves",
    "Bernard, the head elf"
@@ -12684,7 +12722,10 @@
     "Holiday Party, All Staff"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Cover at the door, no dress code": "All staff welcome, holiday sweaters encouraged"
+  }
  },
  "The Grinch (2018)": {
   "venue": "Whoville Main Street Cafe",
@@ -14232,7 +14273,10 @@
     "Dinner and dancing"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Fill the card, win a cup. Easy.": "Dinner and dancing. RSVP to Muriel."
+  }
  },
  "Strictly Ballroom (1992)": {
   "venue": "Pan Pacific Grand Prix",
@@ -14835,7 +14879,30 @@
    ]
   },
   "number": "",
-  "priceEra": "1970s"
+  "priceEra": "1970s",
+  "beach": false,
+  "strip": [
+   [
+    "On the Coorong",
+    ""
+   ],
+   [
+    "Wind",
+    "southerly"
+   ],
+   [
+    "Pelicans",
+    "Mr Percival"
+   ],
+   [
+    "Tide",
+    "going out"
+   ],
+   [
+    "Fire",
+    "lit by dark"
+   ]
+  ]
  },
  "The Water Diviner (2014)": {
   "venue": "Istanbul Hotel Dining Room",
@@ -23488,7 +23555,8 @@
    "Bar and grill, since 1984": "Starlite Starbrite Trailer Court",
    "Sticky fingers welcome": "Heard in the park",
    "Spot prize for the loudest cheer": "Ask Alex about the high score"
-  }
+  },
+  "pay": true
  },
  "The Muppet Movie (1979)": {
   "venue": "El Sleezo Cafe",

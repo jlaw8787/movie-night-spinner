@@ -238,7 +238,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const TK=beach?T:Object.assign({},T,LAND[ctx.tone]||LAND.warm);
   /* review 34: a kiosk card set in someone's house, yard or farm is not a business: no KIOSK banner and no licence number
      (Say Anything at Diane Court's house, Young Einstein's apple farm) */
-  const HOMEV=/\b(house|home|kitchen|backyard|yard|driveway|farm|apartment|flat|pool|log|den|camp|tent|roommate)\b/i.test(String(fl.venue||"")+" "+String(fl.sign||""))&&!/\b(stand|stall|shop|store|bar|cafe|caf\u00e9|kiosk|snack|grill|eats)\b/i.test(String(fl.venue||""));
+  const HOMEV=fl.home===true||/\b(house|home|kitchen|backyard|yard|driveway|farm|apartment|flat|pool|log|den|camp|tent|roommate|shack|tank|hut|study|digs|hideout|treehouse|trailer|caravan)\b/i.test(String(fl.venue||"")+" "+String(fl.sign||""))&&!/\b(stand|stall|shop|store|bar|cafe|caf\u00e9|kiosk|snack|grill|eats)\b/i.test(String(fl.venue||""));
   const KICK=HOMEV?(beach?"BEACH SNACKS":"SNACKS ON"):beach?E.kick:E.kick==="SURF SHACK"?"SNACK SHACK":E.kick.replace(/^(BATHING PAVILION|BEACH) /,"");
   const title=clean(f.title||"Tonight's Feature");
   const venue=C(fl.venue)||(beach?"The Beach Kiosk":"The Kiosk");

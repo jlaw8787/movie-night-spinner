@@ -1051,7 +1051,13 @@ $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 function openMenuZoom(trigger){
   if(tab!=="menu"||!card.innerHTML.trim())return;
   const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123);
-  const phone=narrow(),faces=phone?cardFaces():[],paged=faces.length>1;let fi=paged?Math.min(pvFace,faces.length-1):0;
+  const phone=narrow();
+  /* review 38: on a desktop the full size view opens where the dish notes read at 13px or more (Storm Boy opened at 9px): fit to the screen when
+     that is big enough, else fit to the width and scroll down, else one panel at a time (the half view's panels), else zoomed in to pan */
+  const small=!phone&&typeof cardSmallPx==="function"?cardSmallPx():0,wholeK=Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch),widthK=Math.min(1.4,(innerWidth-80)/cw);
+  const deskRead=!phone&&small>0&&small<99&&wholeK*small<13;
+  const deskFaces=deskRead&&widthK*small<13&&pvDesk?cardFaces():[];
+  const faces=phone?cardFaces():deskFaces,paged=faces.length>1;let fi=paged?Math.min(pvFace,faces.length-1):0;
   const fw=()=>paged?faces[fi].w:cw,fh=()=>paged?faces[fi].h:ch;
   const o=document.createElement("dialog");o.className="mzoom"+(paged?" mz-paged":"");o.setAttribute("aria-label","Printed menu, full size");
   o.innerHTML=`<div class="mz-bar"><button type="button" class="mz-out" aria-label="Zoom out">−</button><button type="button" class="mz-fit">Fit</button><button type="button" class="mz-in" aria-label="Zoom in">+</button></div><div class="mz-scroll"><div class="mz-sheet"></div></div>`+
@@ -1059,7 +1065,9 @@ function openMenuZoom(trigger){
     (phone&&fw()>fh()*1.15?`<p class="mz-turn">Turn your phone sideways for a bigger view</p>`:"");
   const sc=o.querySelector(".mz-scroll"),sheet=o.querySelector(".mz-sheet");
   const home=card.nextSibling,keepT=card.style.transform;sheet.appendChild(card);card.style.transformOrigin="0 0";card.style.transition="none";card.style.opacity="";
-  const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
+  const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):paged?Math.min(1.4,(innerWidth-80)/fw()):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
+  /* the opening zoom on a desktop: big enough to read, never wider than the screen unless there is no other way */
+  const readK=()=>!deskRead?fit():paged?Math.min(1.4,(innerWidth-80)/fw()):widthK*small>=13?widthK:Math.min(2.5,13/small);
   let k=1;
   const paint=()=>{const f=paged?faces[fi]:{x:0,y:0};card.style.transform=`translate(${-f.x*k}px,${-f.y*k}px) scale(${k})`;sheet.style.width=fw()*k+"px";sheet.style.height=fh()*k+"px"};
   /* zoom around a point on screen (the middle by default, or between two fingers) */
@@ -1084,7 +1092,7 @@ function openMenuZoom(trigger){
     sc.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();const r=sc.getBoundingClientRect();set(k*Math.exp(-e.deltaY/200),e.clientX-r.left,e.clientY-r.top)},{passive:false})}
   o.addEventListener("click",e=>{if(e.target===o||e.target===sc)dismissModal(o)});
   mountModal(o,".mz-fit",trigger||preview,()=>{card.style.transform=keepT;card.style.transformOrigin="";card.style.transition="";preview.insertBefore(card,home&&home.parentNode===preview?home:preview.firstChild);scalePreview()});
-  toFit();if(paged){const f0=fi;fi=-1;go(f0)}
+  toFit();if(deskRead){k=readK();paint();sc.scrollLeft=0;sc.scrollTop=0}if(paged){const f0=fi;fi=-1;go(f0)}
   /* turning the phone: stay at fit if it was at fit */
   const onRz=()=>{if(!o.isConnected){removeEventListener("resize",onRz);return}const t=o.querySelector(".mz-turn");if(t)t.hidden=innerWidth>innerHeight;if(Math.abs(k-fitWas)<.01){toFit();fitWas=k}};let fitWas=k;
   addEventListener("resize",onRz);o.querySelector(".mz-fit").addEventListener("click",()=>{fitWas=k});
@@ -1501,8 +1509,46 @@ function shopLines(list){
      for(let i=out.length-1;i>=0;i--){const pm=out[i].match(/^1 (?:jar|bottle|packet|bag|tin|carton|tub|block) (.+?)@/i);if(!pm)continue;const it=pm[1].toLowerCase();
        if(out.some((y,j)=>j!==i&&new RegExp("^[\\d./ ]+\\s*(?:g|kg|ml|l|L)?\\s+"+it.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"(?:,[^@]*)?@","i").test(y)))out.splice(i,1)}
      lines.length=0;lines.push(...out)}
-  return lines;
+  return shopTidy(lines);
 }
+/* review 38: the last pass over the list, so the same thing is never bought twice ("1kg watermelon" and "1kg watermelon flesh",
+   "1 orange" under Produce and "7 oranges" under Drinks, "250ml cold lager" and "4 bottles of lager", three salt lines),
+   and method words stay in the method ("to taste", "to decorate", "(for the cornmeal)") */
+const TIDY_TAIL=/\s*\((?:for|to|plus|optional)\b[^)]*\)|,\s*(?:to taste|to decorate|to garnish|to serve|for garnish|for serving|for dusting|for decorating|optional|for (?!frying|deep)[a-z-]+(?: [a-z-]+){0,3})\b[^@,]*/gi;
+const TIDY_ADJ=/^(?:cold|chilled|ice[- ]cold|icy|fresh|freshly|ripe|cubed|seedless|very cold)\s+/i;
+const PACK_ML={bottle:375,bottles:375,stubby:375,stubbies:375,can:375,cans:375,tinny:375,tinnies:375,longneck:750,longnecks:750};
+function shopTidy(lines){
+  const cl=lines.map(l=>{const at=l.lastIndexOf("@");let t=l.slice(0,at).replace(TIDY_TAIL,"").replace(/\s+of fresh\s+/i," ").replace(/\s{2,}/g," ").trim();return t+l.slice(at)});
+  /* "salt and pepper" covers a plain salt or pepper line */
+  if(cl.some(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l)))for(let i=cl.length-1;i>=0;i--)if(/^((sea |table |cooking |fine )?salt|(freshly )?(ground |cracked )?(black )?pepper)@/i.test(cl[i]))cl.splice(i,1);
+  /* one salt line and one pepper line */
+  const SALT=/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?|pinch of|cups?)?\s+)?(?:(?:a )?pinch(?:es)? of )?((?:(?:sea|table|cooking|fine|kosher|flaky|coarse|rock|smoked|pink|himalayan)\s+)+)?salt(\s+flakes?)?(?:,[^@]*)?(\s+and\s+salt\s+flakes)?@/i;
+  const PEP=/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?)?\s+)?(?:(?:a )?pinch(?:es)? of )?((?:freshly )?(?:ground |cracked |coarsely ground )?(?:black|white)?\s*)pepper(corns)?(?:,[^@]*)?@/i;
+  for(const [RE,name] of [[SALT,"salt"],[PEP,"pepper"]]){const hit=cl.map((l,i)=>[l,i]).filter(([l])=>RE.test(l)&&!/\b(and|&) (?!salt flakes)/i.test(l.split("@")[0].replace(/^salt and (freshly ground )?(black )?pepper/i,"")));
+    if(hit.length<2)continue;const kinds=new Set();for(const [l] of hit){const m=l.match(RE);let k=name==="salt"?((m[1]||"").replace(/\b(sea|table|cooking|fine|kosher|coarse|rock)\b/gi,"").replace(/flaky/i,"").trim().toLowerCase()+((m[2]||/flaky/i.test(m[1]||""))?" flakes":"")).trim():((m[1]||"").replace(/freshly|ground|cracked|coarsely/gi,"").trim().toLowerCase());if(m[3])kinds.add("flakes");if(k&&!/^(table|cooking|fine|sea|kosher|coarse|rock)$/.test(k)&&k!=="black")kinds.add(k)}
+    const at=hit[0][0].split("@")[1];const ks=[...kinds].map(k=>k==="flakes"?"salt flakes":name==="salt"?k.replace(/ flakes$/,"")+" salt":k+" pepper");
+    const line=(name==="salt"?["salt",...ks.filter(k=>k!=="salt")]:["black pepper",...ks.filter(k=>k!=="black pepper")]).join(", ").replace(/, ([^,]+)$/," and $1")+"@"+at;
+    for(let k=hit.length-1;k>=0;k--)cl.splice(hit[k][1],1);cl.splice(Math.min(hit[0][1],cl.length),0,line)}
+  /* the same thing twice, in any aisle: added up into the first line */
+  const P=l=>{const at=l.lastIndexOf("@"),a=l.slice(at+1);let t=l.slice(0,at),each=0;{const e=t.match(/,\s*(\d+)ml each$/i);if(e){each=+e[1];t=t.slice(0,e.index)}}
+    const m=t.match(/^(\d+(?:\.\d+)?)\s?(kg|g|ml|L|l)?\s+(?:(bottles?|stubbies|stubby|cans?|tinnies|tinny|longnecks?)\s+(?:of\s+)?)?(.+)$/);if(!m)return null;
+    let item=m[4].replace(TIDY_ADJ,"").replace(TIDY_ADJ,"").replace(/\s+(flesh|pieces|chunks|wedges)$/i,"").toLowerCase();
+    if(/[,(+]/.test(item))return null;
+    const sing=item.replace(/(oes)$/,"o").replace(/(ies)$/,"y").replace(/([^s])s$/,"$1");
+    let q=+m[1],u=(m[2]||"").toLowerCase();if(u==="kg"){q*=1000;u="g"}if(u==="l"){q*=1000;u="ml"}
+    return {q,u,pack:m[3]?m[3].toLowerCase():"",each,item,sing,a,orig:t}};
+  const out=[];
+  for(const l of cl){const p=P(l);if(!p){out.push(l);continue}
+    const j=out.findIndex(x=>{const y=P(x);return y&&y.sing===p.sing&&x!==l});
+    if(j<0){out.push(l);continue}
+    const y=P(out[j]);
+    /* drinks by the pack: millilitres fold into whole bottles or cans */
+    if(y.pack||p.pack){const pk=y.pack||p.pack,per=(y.pack?y.each:p.each)||PACK_ML[pk]||375;const ml=(y.pack?y.q*per:y.u==="ml"?y.q:y.q*per)+(p.pack?p.q*per:p.u==="ml"?p.q:p.q*per);
+      if((y.pack||y.u==="ml"||!y.u)&&(p.pack||p.u==="ml"||!p.u)){const n=Math.ceil(ml/per-0.05);const word=n>1?(/y$/.test(pk)?pk.replace(/y$/,"ies"):/s$/.test(pk)?pk:pk+"s"):pk.replace(/ies$/,"y").replace(/s$/,"");out[j]=`${n} ${word} ${y.pack?y.item:p.item}${per!==(PACK_ML[pk]||375)?`, ${per}ml each`:""}@${y.a}`;continue}}
+    if(y.u===p.u){const q=y.q+p.q;const name=y.u?y.item:(q>1.01?(/y$/.test(y.sing)&&!/[aeiou]y$/.test(y.sing)?y.sing.replace(/y$/,"ies"):/o$/.test(y.sing)&&/mango|tomato|potato/.test(y.sing)?y.sing+"es":y.sing+(/s$/.test(y.sing)?"":"s")):y.sing);
+      out[j]=(y.u==="g"&&q>=1000?`${+(q/1000).toFixed(2)}kg`:y.u==="ml"&&q>=1000?`${+(q/1000).toFixed(2)}\u00a0L`:y.u?`${Math.round(q)}${y.u}`:`${Math.ceil(q-0.05)}`)+" "+name+"@"+(p.a==="Produce"?p.a:y.a);continue}
+    out.push(l)}
+  return out}
 const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
 const BUY_N=t=>{const m=String(t).trim().match(/^(\d+)(?:\s+(\d)\/(\d))?|^(\d)\/(\d)/);return m?(m[1]?+m[1]+(m[2]?m[2]/m[3]:0):m[4]/m[5]):0};
 function buyBy(t){let x=String(t).trim();
@@ -1546,7 +1592,7 @@ function buyBy(t){let x=String(t).trim();
     const B=[[/\b(golden syrup|treacle|condensed milk|evaporated milk|coconut milk|coconut cream)\b/,"tin"],[/\b(mayonnaise|mustard|jam|honey|relish|chutney|pickles|peanut butter|vegemite)\b/,"jar"],[/\b(sauce|ketchup|vinegar|oil|syrup|cordial)\b/,"bottle"]];
     for(const [rx,pk] of B)if(rx.test(lo)&&!/\b(bunch|knob|head|clove|stick)\b/.test(lo))return `1 ${pk} ${x}`}
   /* a cut word at the front of produce ("2 tbsp chopped mint" is handled above; "500g sliced mushrooms" is just mushrooms) */
-  x=x.replace(/^([\d\/ .]+\s*(?:g|kg|ml|l|L)?\s+)(?:finely |roughly |thinly )?(?:chopped|diced|sliced|shredded|minced|snipped|torn)\s+(?!.*\b(cheese|cheddar|mozzarella|parmesan|pecorino|gruyere|ham|salami|turkey|beef|pork|chicken|almonds|coconut)\b)/i,"$1");
+  x=x.replace(/^([\d\/ .]+\s*(?:g|kg|ml|l|L)?\s+)(?:finely |roughly |thinly )?(?:chopped|diced|sliced|shredded|minced|snipped|torn)\s+(?!.*\b(cheese|cheddar|mozzarella|parmesan|pecorino|gruy[eè]re|ham|salami|turkey|beef|pork|chicken|almonds|coconut)\b)/i,"$1");
   return x}
 const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|hulled|snipped|half juiced|half sliced|to taste|to serve|for serving|plus extra( for [^,]+)?|cut into [^,]+|at room temperature)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed|hulled|snipped))?\s*$/i;
 const STAPLE_RE=/^(salt|sea salt|table salt|cooking salt|fine salt|kosher salt|flaky salt|salt flake|sea salt flake|pepper|black pepper|ground black pepper|cracked black pepper|white pepper|salt and pepper|salt and black pepper|salt and freshly ground black pepper)$/;
@@ -2190,7 +2236,7 @@ const pfPrem=n=>PF_PREM.test(n)&&!PF_HAND.test(n);
 const PF_SWEETCAP={"1800s":.1,"1930s-40s":.3,"1950s":.5,"1960s":.9,"1970s":2,"1980s":5,"1990s":8,"2000s":11,"modern":16};
 const PF_CHEAPV=/\b(canteen|cafeteria|mess|commissary|soldiers'? club|staff)\b/i,pfVenueK=(fl,fmt)=>{const v=String(fl&&fl.venue||"");if(fl&&typeof fl.priceK==="number")return fl.priceK;
     /* review 36: price the venue's level, not just the decade: a school lunch or a hawker plate is cheap, a five-star hotel bar dear (flavour.priceK overrides) */
-    if(/\b(elementary|primary|kindergarten|lunchroom|hawker|food centre)\b/i.test(v))return .32;
+    if(/\b(elementary|primary|kindergarten|lunchroom|hawker|food centre)\b/i.test(v)||/\b(school|high|academy|college) (cafeteria|canteen|lunch)/i.test(v))return .32;/* review 38: a school cafeteria (Spider-Man: Homecoming's $11.50 mains) */
     /* review 37: a snack stand, candy shop or drive-thru charges snack prices (The Sandlot's 1962 burgers at $1.95, Willy Wonka's candy shop) */
     if(/\b(snack (stand|bar|shack)|concessions?|drive-thru|drive thru|hot dog (stand|cart)|candy (shop|store)|sweet shop|lolly shop|soda fountain)\b/i.test(v))return .5;
     if(/\b(park hyatt|ritz|savoy|plaza|four seasons|waldorf|penthouse|bellagio|continental|grand budapest)\b/i.test(v))return 1.8;
@@ -2297,7 +2343,7 @@ function pfMark(root){const PR=/^(\s*)(\d{1,3})?\.(\d\d)(\s*)$/,tw=document.crea
    where the price sat: a mess or prison "Issue", a home or camp nothing, the Wasteland what it trades in (flavour.pay: a word, a list
    of words that take turns, "" for nothing, or true where the venue does charge: a boarding house, a hotel dining room, a takeaway) */
 const PAY_NOT=/\b(diner|caf[eé]|cafeteria|canteen|pub|bar|tavern|inn|hotel|motel|restaurant|tent|steakhouse|roadhouse|bakehouse|chophouse|coffee ?house|alehouse|tea ?house|public house|station house|clubhouse|house of|lounge|grill|shop|store|kiosk|stand|truck|cart|parlou?r|bistro|club|deli|bakery|market|saloon|lodge|counter|bodega|joint|trattoria|pizzeria|commissary|cantina|brasserie|food court|concession|snack bar|tea room|opera house|reception hall)\b/i,
-  PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen|swamp|sietch|workshop|cookhouse|bunkhouse|chuck ?wagon|lifeboat|locker room|green room|backstage|great hall|common room)\b/i,
+  PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen|swamp|sietch|workshop|cookhouse|bunkhouse|chuck ?wagon|lifeboat|locker room|green room|backstage|great hall|common room|study|flat|digs|safe ?house|shack|bell tower|webcam room|bedroom|dorm|loft|lighthouse|houseboat|caravan|trailer|feast|welcome dinner|private dinner|prom|formal|wedding|shower)\b/i,/* review 38: studies, flats, digs, shacks, feasts and proms */
   PAY_MESS=/\b(mess|barracks|prison|jail|gaol|bunker|outpost|base|fort|army|stalag|pow camp|brig)\b/i;
 function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.pay!=null)return fl.pay;if(fmt==="own"||fmt==="takeaway"||fmt==="truck")return null;
   /* review 37: a banquet or an invitation is a host feeding guests (Grinch, Batman v Superman, Flash Gordon, Mulan, The Hobbit): no prices unless flavour.pay is true */
@@ -2313,9 +2359,9 @@ function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
   for(const e of root.querySelectorAll("[data-sum],[data-echo]")){e.textContent=W[0];
     /* review 37: a total line with nothing left to total goes (Grandma's Boy printed "Carried over", "Running tab" with no amounts) */
     if(!String(W[0]).trim()&&e.hasAttribute("data-sum")&&e.parentElement&&e.parentElement!==root&&e.parentElement.children.length<=3)e.parentElement.style.display="none"}
-  const PAYW=/\b(prices?|priced|cash|(?:cover|service|tray|corkage|extra|no|room) charges?|charges? (?:apply|applies|extra|may)|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst)\b/i;
+  const PAYW=/\b(prices?|priced|cash|(?:cover|service|tray|corkage|extra|no|room) charges?|charges? (?:apply|applies|extra|may)|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst|bill no\.?|coin of the realm|subject to change|on the tab|tab's chalked|bar tab|running tab|start a tab)\b/i;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),N=[];let t;while((t=tw.nextNode()))N.push(t);
-  for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;const ss=v.split(/(?<=[.!])\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
+  for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;const ss=v.split(/(?<=[.!])(?<!\bNo\.)\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
     const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
   for(const t of N)if(/,\s*,/.test(t.nodeValue))t.nodeValue=t.nodeValue.replace(/\s*,\s*,\s*/g,", ");
   root.dataset.nopay="1";return T.length}
@@ -2555,7 +2601,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;try{planWire(f)}catch(e){}
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{priceFix(card,menu,f,spec.flavour||null,"modern","own")}catch(e){console.warn("price sense",e)}try{curlyQuotes(card)}catch(e){}try{sumFix(card)}catch(e){console.warn("totals",e)}/* review 36: hand-built totals add up too (Ghostbusters work order) */dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{priceFix(card,menu,f,spec.flavour||(spec.pay!=null?{pay:spec.pay}:null),"modern","own")/* review 38: a hand-built feast, prom or private dinner sets pay:"" in its spec */}catch(e){console.warn("price sense",e)}try{curlyQuotes(card)}catch(e){}try{sumFix(card)}catch(e){console.warn("totals",e)}/* review 36: hand-built totals add up too (Ghostbusters work order) */dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
@@ -3699,9 +3745,9 @@ function showWelcome(){
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* phones: a Spin button pinned to the bottom until the wheel is on screen */
-{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false,pairSeen=false,phoneSeen=false;
+{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false,pairSeen=false,phoneSeen=false,footSeen=false;
  /* the floating Spin button steps aside while the wheel or the menu buttons are on screen, so it never sits over them */
- const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||pairSeen||prepSeen||phoneSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||pairSeen||prepSeen||phoneSeen||footSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
  if("IntersectionObserver" in window){new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
    if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts);
    /* and while the menu itself is being read on a phone, so it never covers a dish */
@@ -3711,7 +3757,9 @@ function showWelcome(){
    /* and while the prep sheet is being read, so it never sits over the method */
    new IntersectionObserver(es=>{prepSeen=es[0].isIntersecting;upd()},{threshold:0}).observe($("preview"));
    /* and while this week's film is on screen, so it never covers its buttons */
-   {const wp=$("weekPanel");if(wp)new IntersectionObserver(es=>{weekSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(wp)}}
+   {const wp=$("weekPanel");if(wp)new IntersectionObserver(es=>{weekSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(wp)}
+   /* review 38: and over the footer credits, so it never covers their text */
+   {const ft=document.querySelectorAll(".credit");if(ft.length){const seen=new Set();const io=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?seen.add(e.target):seen.delete(e.target));footSeen=seen.size>0;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"});ft.forEach(e=>io.observe(e))}}}
  window.addEventListener("scroll",upd,{passive:true});
  $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
  window.__spinbarUpd=upd;}
