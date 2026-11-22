@@ -930,12 +930,15 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FL
       for(let i=0;i<regions.length;i++){const R=regions[i];if(chars(R)>=40)continue;const j=[i+1,i-1].find(j=>regions[j]&&fits(R,regions[j]));if(j!=null)regions[j].push(...R);regions.splice(i,1);i--}
       for(let i=0;i<regions.length-1;i++){if(fits(regions[i],regions[i+1])){regions[i].push(...regions[i+1]);regions.splice(i+1,1);i--}}}
     /* the whole view stays first, as the overview (sign, poster, props); reading views follow only for the blocks that carry dishes */
-    const R2=regions.filter(hasDish);if(!R2.length){out.push(v);continue}out.push(v);
+    const R2=regions.filter(hasDish);if(!R2.length){out.push(v);continue}out.push(v);const at0=out.length;
     for(const L of R2){const [x0,y0,x1,y1]=bb(L),w=Math.min(v.w,x1-x0+28),kk=pw/w,cx=Math.max(lo,Math.min(hi-w,x0-14));
       /* tall regions: cut at the line gap nearest each screenful */
       const ys=[y0-14];const G=(gaps(L,1,12).length?gaps(L,1,12):gaps(L,1,6)).map(([a,z])=>(a+z)/2);let at=y0-14;
       while(y1+14-at>MAXH/kk*1.15){const want=at+MAXH/kk,c=G.filter(g=>g>at+MAXH/kk*.45&&g<=want).pop();if(!c)break;ys.push(c);at=c}ys.push(y1+14);
-      for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i]})}}}
+      for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i]})}}
+    /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
+       takes the panel's place instead of following it (the card had opened on dot 4 of 4 with dots 3 and 4 the same menu) */
+    if(out.length-at0===1){const r=out[at0];if(r.w>=.85*v.w&&r.h>=.8*v.h)out.splice(at0-1,1)}}
   return out.length&&out.length<=14?out:base}
 function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
