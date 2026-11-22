@@ -1,0 +1,71 @@
+{
+ "id": "The Muppets Take Manhattan (1984)",
+ "old": "Fozzie's hibernation honey joys",
+ "dish": {
+  "n": "Fozzie's hibernation honey buns",
+  "note": "Sticky cinnamon buns glazed in warm honey butter, enough to sleep through winter on.",
+  "how": "Unroll the pastry, brush with half the melted butter and scatter with the brown sugar and cinnamon. Roll up from the long side, cut into eight and sit the buns in a buttered tin. Bake at 200°C for 18 minutes until golden. Warm the honey with the rest of the butter and spoon it over the hot buns.",
+  "shop": [
+   "2 sheets frozen puff pastry@Frozen",
+   "60g butter@Dairy",
+   "60g brown sugar@Pantry",
+   "2 tsp ground cinnamon@Spices",
+   "3 tbsp honey@Pantry"
+  ],
+  "prep_min": 12,
+  "cook_min": 18,
+  "make_ahead": "Roll and cut the buns up to 1 day ahead, covered in the fridge; bake and glaze to serve",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 2,
+    "u": "",
+    "item": "sheets frozen puff pastry, thawed",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter, melted",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "brown sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "tsp",
+    "item": "ground cinnamon",
+    "aisle": "Spices"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "honey",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Brush the pastry with half the butter and scatter with the sugar and cinnamon.",
+    "min": 4
+   },
+   {
+    "text": "Roll up from the long side, cut into eight and sit the buns in a buttered tin.",
+    "min": 6
+   },
+   {
+    "text": "Bake at 200°C until golden.",
+    "min": 18
+   },
+   {
+    "text": "Warm the honey with the rest of the butter and spoon over the hot buns.",
+    "min": 3
+   }
+  ]
+ }
+}

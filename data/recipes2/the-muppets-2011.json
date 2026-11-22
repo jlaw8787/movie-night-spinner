@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Swedish Chef meatballs",
+   "n": "Swedish Chef's flying meatballs",
    "course": "s",
    "prep_min": 15,
    "cook_min": 21,
@@ -156,244 +156,188 @@
    }
   },
   {
-   "n": "Smalltown diner fries",
+   "n": "Balcony box popcorn",
    "course": "s",
-   "prep_min": 19,
-   "cook_min": 21,
-   "make_ahead": "Cut the potatoes up to 4 hours ahead and keep them in cold water; drain, dry and fry just before serving",
+   "prep_min": 3,
+   "cook_min": 8,
+   "make_ahead": "Pop it up to 2 hours ahead and keep it loose in a dry bowl; bag it to serve",
    "ingredients": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "potatoes",
-     "aisle": "Produce"
+     "q": 150,
+     "u": "g",
+     "item": "popping corn",
+     "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
      "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "sea salt flakes",
-     "aisle": "Spices"
+     "item": "fine salt",
+     "aisle": "Pantry"
     },
     {
-     "q": 100,
-     "u": "ml",
-     "item": "tomato sauce",
+     "q": 8,
+     "u": "",
+     "item": "paper bags",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into thick fries, rinse and dry.",
-     "min": 15
+     "text": "Heat the oil in a large lidded pot with three kernels until they pop.",
+     "min": 3
     },
     {
-     "text": "Fry in the vegetable oil at 140C until soft.",
-     "min": 10
-    },
-    {
-     "text": "Rest the fries.",
-     "min": 5
-    },
-    {
-     "text": "Fry again in the oil at 190C until crisp.",
-     "min": 6
-    },
-    {
-     "text": "Toss with sea salt and pile into paper cones with tomato sauce on the side.",
+     "text": "Add the rest of the kernels, cover and shake over the heat until the popping slows.",
      "min": 4
+    },
+    {
+     "text": "Toss with the melted butter and salt and fill the paper bags.",
+     "min": 3
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Steak frites with bearnaise",
+   "n": "Animal's drumstick chicken",
    "course": "m",
-   "prep_min": 32,
-   "cook_min": 27,
-   "make_ahead": "Cut the potatoes and do the first fry up to 3 hours ahead; sear the steaks and make the bearnaise just before serving",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Coat the drumsticks in the glaze up to 1 day ahead, covered in the fridge; roast just before serving",
    "ingredients": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "potatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
+     "q": 12,
      "u": "",
-     "item": "sirloin steaks",
+     "item": "chicken drumsticks",
      "aisle": "Meat"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "white wine vinegar",
+     "q": 80,
+     "u": "g",
+     "item": "honey",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "tarragon, chopped",
-     "aisle": "Produce"
+     "q": 60,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
     },
     {
      "q": 2,
      "u": "",
-     "item": "egg yolks",
-     "aisle": "Dairy"
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "butter, melted",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
      "u": "",
-     "item": "salt and pepper, to taste",
-     "aisle": "Spices"
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into thin fries.",
-     "min": 12
-    },
-    {
-     "text": "Fry twice in the vegetable oil until crisp.",
-     "min": 18
-    },
-    {
-     "text": "Season the steaks with salt and pepper and sear.",
+     "text": "Mix the honey, soy sauce, garlic and sesame oil and coat the drumsticks.",
      "min": 8
     },
     {
-     "text": "Rest the steaks.",
-     "min": 5
+     "text": "Roast on a lined tray at 200°C, turning and basting twice, until sticky and dark.",
+     "min": 40
     },
     {
-     "text": "Reduce the vinegar with the tarragon.",
-     "min": 4
-    },
-    {
-     "text": "Whisk in the egg yolks over gentle heat.",
-     "min": 5
-    },
-    {
-     "text": "Slowly add the melted butter, whisking.",
-     "min": 5
-    },
-    {
-     "text": "Serve the steak over the fries.",
-     "min": 2
+     "text": "Scatter with sesame seeds and spring onion and serve with napkins.",
+     "min": 3
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Mushroom frites with bearnaise",
-     "prep_min": 30,
-     "cook_min": 26,
-     "make_ahead": "Cut the potatoes up to 3 hours ahead and keep them in cold water; fry, sear the mushrooms and make the bearnaise on the night",
+     "n": "Animal's drumstick cauliflower (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "Cut the cauliflower up to 1 day ahead; glaze and roast on the night",
      "ingredients": [
       {
        "q": 1,
-       "u": "kg",
-       "item": "potatoes",
+       "u": "",
+       "item": "large cauliflower, cut in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
        "aisle": "Produce"
       },
       {
        "q": 1,
-       "u": "l",
-       "item": "vegetable oil, for frying",
+       "u": "tsp",
+       "item": "sesame oil",
        "aisle": "Pantry"
       },
       {
-       "q": 8,
-       "u": "",
-       "item": "large portobello mushrooms",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
+       "q": 1,
        "u": "tbsp",
-       "item": "olive oil",
+       "item": "sesame seeds",
        "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "white wine vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "tarragon, chopped",
-       "aisle": "Produce"
       },
       {
        "q": 2,
        "u": "",
-       "item": "egg yolks",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "butter, melted",
-       "aisle": "Dairy"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
       }
      ],
      "steps": [
       {
-       "text": "Cut the potatoes into thin fries.",
-       "min": 12
+       "text": "Mix the honey, soy sauce, garlic and sesame oil and toss the florets in it.",
+       "min": 8
       },
       {
-       "text": "Fry twice in the vegetable oil until crisp.",
-       "min": 18
+       "text": "Roast on a lined tray at 210°C, turning once, until sticky and charred at the edges.",
+       "min": 35
       },
       {
-       "text": "Sear the mushrooms in the olive oil until browned and tender, season with salt and pepper and keep warm.",
-       "min": 10
-      },
-      {
-       "text": "Reduce the vinegar with the tarragon.",
-       "min": 4
-      },
-      {
-       "text": "Whisk in the egg yolks over gentle heat.",
-       "min": 5
-      },
-      {
-       "text": "Slowly add the melted butter, whisking.",
-       "min": 5
-      },
-      {
-       "text": "Serve the mushrooms over the fries with the bearnaise.",
-       "min": 2
+       "text": "Scatter with sesame seeds and spring onion.",
+       "min": 3
       }
      ],
      "af": true
@@ -401,7 +345,7 @@
    }
   },
   {
-   "n": "Green peppermint biscuit slice",
+   "n": "Kermit's green peppermint slice",
    "course": "w",
    "prep_min": 31,
    "cook_min": 135,
@@ -545,6 +489,176 @@
    ],
    "veg": true,
    "af": true
+  },
+  {
+   "n": "Miss Piggy's croque monsieur",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Make the cheese sauce up to 1 day ahead and keep it chilled; build and grill to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sliced ham",
+     "aisle": "Deli"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Deli"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "grated nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag mixed salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the milk and cook until thick.",
+     "min": 8
+    },
+    {
+     "text": "Stir in half the gruyère, the mustard and nutmeg.",
+     "min": 2
+    },
+    {
+     "text": "Make four sandwiches of bread, ham and a little sauce, top with the rest of the sauce and cheese.",
+     "min": 6
+    },
+    {
+     "text": "Grill at 220°C until bubbling and browned.",
+     "min": 7
+    },
+    {
+     "text": "Serve with the salad leaves.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Miss Piggy's croque fromage (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Make the cheese sauce up to 1 day ahead and keep it chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "gruyère, grated",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "grated nutmeg",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag mixed salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in a little of the butter until golden.",
+       "min": 6
+      },
+      {
+       "text": "Melt the rest of the butter, stir in the flour, whisk in the milk and cook until thick, then stir in half the gruyère, the mustard and nutmeg.",
+       "min": 10
+      },
+      {
+       "text": "Make four sandwiches of bread, mushrooms and a little sauce, top with the rest of the sauce and cheese.",
+       "min": 6
+      },
+      {
+       "text": "Grill at 220°C until bubbling and browned.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

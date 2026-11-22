@@ -1,0 +1,67 @@
+{
+ "id": "The Muppets (2011)",
+ "old": "Smalltown diner fries",
+ "dish": {
+  "n": "Balcony box popcorn",
+  "note": "Buttered popcorn in paper bags. Statler and Waldorf hated it, then finished the bag.",
+  "how": "Heat the oil in a large lidded pot with three kernels. When they pop, add the rest of the kernels, cover and shake over the heat until the popping slows. Tip into a bowl, pour over the melted butter, toss with the salt and fill paper bags.",
+  "shop": [
+   "150g popping corn@Pantry",
+   "2 tbsp vegetable oil@Pantry",
+   "60g butter@Dairy",
+   "1 tsp fine salt@Pantry",
+   "8 paper bags@Pantry"
+  ],
+  "prep_min": 3,
+  "cook_min": 8,
+  "make_ahead": "Pop it up to 2 hours ahead and keep it loose in a dry bowl; bag it to serve",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 150,
+    "u": "g",
+    "item": "popping corn",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "vegetable oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter, melted",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "fine salt",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "paper bags",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Heat the oil in a large lidded pot with three kernels until they pop.",
+    "min": 3
+   },
+   {
+    "text": "Add the rest of the kernels, cover and shake over the heat until the popping slows.",
+    "min": 4
+   },
+   {
+    "text": "Toss with the melted butter and salt and fill the paper bags.",
+    "min": 3
+   }
+  ]
+ }
+}
