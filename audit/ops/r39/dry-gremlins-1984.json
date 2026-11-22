@@ -1,0 +1,41 @@
+{
+ "id": "Gremlins (1984)",
+ "ops": [
+  {
+   "old": "cider gravy",
+   "new": "apple gravy",
+   "done": true
+  },
+  {
+   "old": "cider gravy",
+   "new": "apple gravy",
+   "done": true
+  },
+  {
+   "old": "200ml apple cider@Bottle shop",
+   "new": "200ml apple juice@Drinks",
+   "done": true
+  },
+  {
+   "old": "200ml apple cider@Bottle shop",
+   "new": "200ml apple juice@Drinks",
+   "done": true
+  },
+  {
+   "old": "apple cider",
+   "new": "apple juice",
+   "done": true
+  },
+  {
+   "old": "apple cider",
+   "new": "apple juice",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": [
+  "not found: cider gravy",
+  "not found: 200ml apple cider@Bottle shop",
+  "not found: apple cider"
+ ]
+}

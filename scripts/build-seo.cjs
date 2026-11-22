@@ -67,7 +67,7 @@ const ALL = films.map((f, i) => {
   /* review 38: kids, family, Christmas and wizard menus print the alcohol-free version of a dish (DRY_THEMES in app.js): so does the page
      (The Fellowship of the Ring's card serves hot buttered apple, the page listed hot buttered ale) */
   const dry = DRY_THEMES.includes(f.theme);
-  const dishes = ((d.r2 && d.r2.dishes) || []).map(x0 => { const af = dry && x0.alt && x0.alt.af; const x = af ? { ...x0, ...af, alt: undefined, af: true, n0: x0.n } : x0; return { ...x, note: notes[String(x.n).toLowerCase()] || notes[String(x0.n).toLowerCase()] || '' }; });
+  const dishes = ((d.r2 && d.r2.dishes) || []).map(x0 => { const af = dry && x0.alt && x0.alt.af; const x = af ? { ...x0, ...af, n: String(af.n || x0.n).replace(/\s*\((alcohol|booze)[- ]free\)$/i, ''), alt: undefined, af: true, n0: x0.n } : x0;/* review 39: the card prints the name without "(alcohol-free)" */ return { ...x, note: notes[String(x.n).toLowerCase()] || notes[String(x0.n).toLowerCase()] || '' }; });
   if (!dishes.length) for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: [], steps: [] });
   /* review 32: every dish printed on the menu is on the page. The ones without a full recipe card (the menu cooks five) follow in their
      course, marked "On the printed menu", with how it is made; they stay out of the Recipe list in the JSON-LD */
