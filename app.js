@@ -1582,6 +1582,10 @@ const PACK_ML={bottle:375,bottles:375,stubby:375,stubbies:375,can:375,cans:375,t
 function shopTidy(lines){
   const cl=lines.map(l=>{const at=l.lastIndexOf("@");let t=l.slice(0,at).replace(TIDY_TAIL,"").replace(/\s+of fresh\s+/i," ").replace(/\s{2,}/g," ").trim();
     /* a clause about serving or prepping stays in the method ("2 ripe peaches, sliced, plus 1 for serving", "150g feta, crumbled", "1 L ginger ale, cold") */
+    /* review 39: method words off the list ("for frying", "to grate", "cooled", "for the sauce", "juiced for 90ml"), a pinch is just the jar, soft butter is butter */
+    t=t.replace(/,?\s+for (?:deep[- ]?|shallow[- ]?)?(?:frying|fry)$/i,"").replace(/,\s*(?:to grate|cooled(?: slightly)?|soft|softened|at room temp(?:erature)?|juiced(?: for \d+\s?ml)?)$/i,"").replace(/\s+for (?:the [a-z]+(?: [a-z]+)?|stirring|serving|dusting|dipping)$/i,m=>(t.match(/ for /g)||[]).length>1?m:"")
+      .replace(/^(?:(?:a|1|2|3) (?:small )?)?pinch(?:es)?(?: of)? (.+)$/i,"$1").replace(/^(\d+(?:\.\d+)?\s?(?:g|kg)?\s*)(?:soft|softened)?\s*(?:salted |unsalted )?butter$/i,"$1butter").replace(/^(?:(\d+ (?:bottles?|jars?) )|1 )?(?:tomato )?ketchup$/i,(m,a)=>(a||"1 bottle ")+"tomato sauce")
+      .replace(/^1 ((?:dill |bread and butter )?pickles|(?:maraschino|cocktail|glac[eé]) cherries|capers|olives|(?:American |yellow |Dijon |wholegrain )?mustard)$/i,(m,x)=>(/mustard/i.test(x)&&!/dijon|wholegrain/i.test(x)?"1 bottle ":"1 jar ")+x).replace(/^1 (?!(?:bottles?|jars?|packets?|bags?|tins?|tubs?|cartons?|boxe?s?) )((?:[a-z]+ )?food colou?ring|[a-z ]*(?:syrup|essence|extract))$/i,"1 bottle $1");
     t=t.replace(/,\s*(a pinch|a little|a dash|a splash|some|optional)$/i,"").replace(/\b(plenty of|lots of|a little) /i,"").replace(/^(\d+ (?:knobs?|pieces?) ginger)\s*\(\d+\s*cm\)$/i,"$1");t=t.replace(/,\s*[^,@]*\b(serv(e|ing)|to taste|decorat|garnish|plus|to give|whip)\w*[^@]*$/i,"").replace(/\s*\((whip it|whipped|to whip|for whipping|softened|chilled|cold)\)/i,"")
       .replace(/,\s*((finely |thinly |roughly |lightly )?(crumbled|cold|chilled|ice[- ]cold|softened|melted|beaten|sliced|chopped|diced|grated|juiced|zested|halved|peeled|minced|crushed|torn|cubed|drained|rinsed|whipped|shaved or crushed|crushed or shaved|in wheels|in wedges|quartered|stalks chopped|at room temperature)(\s+and\s+\w+)?)$/i,"")
       .replace(/^(\d+)\s*x\s*(\d+)ml (cans?|bottles?|stubbies) of (.+)$/i,(m,n,ml,pk,it)=>`${n} ${pk} ${it}, ${ml}ml each`);
@@ -1589,17 +1593,23 @@ function shopTidy(lines){
     {const g=t.match(/^(?:a |(\d+(?:\.\d+)?)\s*(g|cm)?\s*)?(?:(knobs?|pieces?)(?: of)?\s+)?(?:fresh )?ginger(?:,\s*(\d+)\s*cm)?$/i);
      if(g){const n=+(g[1]||1),u=(g[2]||"").toLowerCase(),gr=u==="g"?n:u==="cm"?n*5:g[4]?n*(+g[4])*5:n*20;t="ginger "+gr+"g"}}
     return t+l.slice(at)});
+  /* review 39: a pack line goes when the same thing is on the list by weight or volume, so oil and sauce bottles never add up like drinks;
+     a bare "1 bottle oil" goes beside a named oil, or becomes vegetable oil */
+  {const tx=l=>l.slice(0,l.lastIndexOf("@")),PK=/^1 (?:bag|packet|jar|bottle|tin|tub|carton|block|box) (?:of )?(.+)$/i;
+   for(let i=cl.length-1;i>=0;i--){const m=tx(cl[i]).match(PK);if(!m)continue;const it=m[1].toLowerCase().replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+     if(cl.some((y,j)=>j!==i&&new RegExp("^[\\d./ ]+\\s*(?:g|kg|ml|l|L)\\s+(?:(?:cold|chilled|fresh|good)\\s+)?"+it+"$","i").test(tx(y))))cl.splice(i,1)}
+   const oi=cl.findIndex(l=>/^1 bottle oil@/i.test(l));if(oi>=0){if(cl.some((l,j)=>j!==oi&&/\b(vegetable|canola|sunflower|neutral|peanut|rice bran) oil@/i.test(l)))cl.splice(oi,1);else cl[oi]=cl[oi].replace(/^1 bottle oil/i,"1 bottle vegetable oil")}}
   /* ginger lines add up into whole knobs */
   {const gi=cl.map((l,i)=>[l,i]).filter(([l])=>/^ginger \d+g@/.test(l));if(gi.length){const gr=gi.reduce((a,[l])=>a+ +l.match(/(\d+)g@/)[1],0),n=Math.max(1,Math.ceil(gr/20-0.1)),at=gi[0][0].split("@")[1];
     for(let k=gi.length-1;k>=0;k--)cl.splice(gi[k][1],1);cl.splice(gi[0][1],0,`${n} knob${n>1?"s":""} ginger@${at}`)}}
   /* the same line twice ("salt and pepper", "1 bunch coriander") is one */
   for(let i=cl.length-1;i>=0;i--)if(cl.indexOf(cl[i])<i&&!/^\d/.test(cl[i]))cl.splice(i,1);
   /* "salt and pepper" covers a plain salt or pepper line */
-  {const spi=cl.findIndex(l=>/^salt and (freshly ground )?(black |white )?pepper(, mixed)?@/i.test(l));if(spi>=0){let flakes=false,white=/white/i.test(cl[spi]);
+  {const spi=cl.findIndex(l=>/^salt and (freshly ground |cracked |ground )?(black |white )?pepper(, mixed)?@/i.test(l));if(spi>=0){let flakes=false,white=/white/i.test(cl[spi]);
     for(let i=cl.length-1;i>=0;i--){if(i===spi)continue;const x=cl[i].split("@")[0];
       if(/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?)?\s+)?(?:(?:a )?pinch(?:es)? of )?(?:(?:sea|table|cooking|fine|kosher|flaky|coarse|rock)\s+)*salt(\s+flakes?)?$/i.test(x)||/^salt and salt flakes$/i.test(x)){if(/flak/i.test(x))flakes=true;cl.splice(i,1);continue}
       if(/^(?:[\d./ ]+\s*(?:tsp|tbsp|g)?\s+)?(freshly )?(ground |cracked )?(black |white )?pepper(corns)?$/i.test(x)){if(/white/i.test(x))white=true;cl.splice(i,1)}}
-    const at2=cl.findIndex(l=>/^salt and (freshly ground )?(black |white )?pepper/i.test(l)),a2=cl[at2].split("@")[1];cl[at2]=(flakes?"salt, salt flakes and ":"salt and ")+(white?"black and white ":"")+"pepper@"+a2}}
+    const at2=cl.findIndex(l=>/^salt and (freshly ground |cracked |ground )?(black |white )?pepper/i.test(l)),a2=cl[at2].split("@")[1];cl[at2]=(flakes?"salt, salt flakes and ":"salt and ")+(white?"black and white ":"")+"pepper@"+a2}}
   /* one salt line and one pepper line */
   const SALT=/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?|pinch of|cups?)?\s+)?(?:(?:a )?pinch(?:es)? of )?((?:(?:sea|table|cooking|fine|kosher|flaky|coarse|rock|smoked|pink|himalayan)\s+)+)?salt(\s+flakes?)?(?:,[^@]*)?(\s+and\s+salt\s+flakes)?@/i;
   const PEP=/^(?:[\d./ ]+\s*(?:tsp|tbsp|g|pinch(?:es)?)?\s+)?(?:(?:a )?pinch(?:es)? of )?((?:freshly )?(?:ground |cracked |coarsely ground )?(?:black|white)?\s*)pepper(corns)?(?:,[^@]*)?@/i;
@@ -1630,7 +1640,42 @@ function shopTidy(lines){
     if(y.u===p.u){const q=y.q+p.q;const pk=!y.u&&y.item.match(/^(bunch|bag|jar|packet|tin|can|punnet|block|tub|carton|loaf|sheet|tray|box|bottle)\s+(.+)$/i);const name=pk?(q>1.01?({bunch:"bunches",box:"boxes",loaf:"loaves"}[pk[1].toLowerCase()]||pk[1]+"s"):pk[1])+" "+pk[2]:y.u?y.item:(q>1.01?(/y$/.test(y.sing)&&!/[aeiou]y$/.test(y.sing)?y.sing.replace(/y$/,"ies"):/o$/.test(y.sing)&&/mango|tomato|potato/.test(y.sing)?y.sing+"es":y.sing+(/s$/.test(y.sing)?"":"s")):y.sing);
       out[j]=(y.u==="g"&&q>=1000?`${+(q/1000).toFixed(2)}kg`:y.u==="ml"&&q>=1000?`${+(q/1000).toFixed(2)}\u00a0L`:y.u?`${Math.round(q)}${y.u}`:`${Math.ceil(q-0.05)}`)+" "+name+"@"+(p.a==="Produce"?p.a:y.a);continue}
     out.push(l)}
-  return out}
+  return shopTidy2(out)}
+/* review 39: the things that still came twice (review 39 counted them on all 1,000 lists): eggs beside yolks or whites (Mickey Blue Eyes
+   bought 5 eggs, 4 yolks and 4 whites), ice cream by the litre and by the scoop (Speed), a cheese by the slice and by the gram (Rocky),
+   white bread twice (Cinderella Man), the same pack in two words (KPop Demon Hunters' bag and packet of caster sugar) */
+function shopTidy2(L){
+  const at=l=>l.slice(l.lastIndexOf("@")+1),tx=l=>l.slice(0,l.lastIndexOf("@"));let out=L.slice();
+  /* eggs: the whole eggs plus the larger of the yolks and the whites (one egg gives a yolk and a white) */
+  {let whole=0,Y=0,W=0,first=-1,a="Dairy",n=0;const keep=[];
+   out.forEach((l,i)=>{const t=tx(l);let m;
+     if((m=t.replace(/\s*\((?:from|\d+ (?:yolks?|whites?))[^)]*\)$/i,"").match(/^(\d+) (?:large |free-range |brown |hard-boiled |boiled )?eggs?(?:,\s*separated)?(?:, (\d+) whole and (\d+) (whites?|yolks?))?$/i))){whole+=m[2]!=null?+m[2]:+m[1];if(m[4])(/yolk/i.test(m[4])?Y+=+m[3]:W+=+m[3]);}
+     else if((m=t.replace(/\s*\(from[^)]*\)$/i,"").match(/^(\d+) (?:large )?egg (yolks?|whites?)$/i))){/yolk/i.test(m[2])?Y+=+m[1]:W+=+m[1]}
+     else{keep.push(l);return}
+     n++;if(first<0){first=keep.length;a=at(l)}});
+   if(n>1||(n===1&&(Y||W))){const e=whole+Math.max(Y,W);keep.splice(first,0,`${e} egg${e>1?"s":""}@${a}`);out=keep}}
+  /* ice cream: litres and scoops of the same flavour add up, bought by the whole litre */
+  {const g={},order=[];out=out.filter((l,i)=>{const t=tx(l);let m=t.match(/^(\d+(?:\.\d+)?)\s?(L|ml)\s+(.*ice cream)$/i)||t.match(/^(\d+)\s+(scoops?)(?: of)?\s+(.*ice cream)$/i);if(!m)return true;
+     const ml=/^L$/i.test(m[2])?+m[1]*1000:/ml/i.test(m[2])?+m[1]:+m[1]*60,k=m[3].toLowerCase().replace(/^(good|soft|premium)\s+/,"");
+     if(!g[k]){g[k]={ml:0,a:at(l),name:m[3].replace(/^(good|soft|premium)\s+/i,"")};order.push([k,i])}g[k].ml+=ml;return false});
+   for(const [k,i] of order.reverse()){const L2=Math.max(1,Math.ceil(g[k].ml/1000-0.1));out.splice(Math.min(i,out.length),0,`${L2}\u00a0L ${g[k].name}@${g[k].a}`)}}
+  /* a cheese by the slice (20g) and by the gram is one weight; vintage, sharp, aged and fresh are the same buy */
+  {const CH="provolone|cheddar|mozzarella|parmesan|swiss cheese|gruy[eè]re|pecorino|haloumi|halloumi|brie|american cheese|feta|ricotta|gouda|emmental|colby|monterey jack",g={},ord=[];
+   out=out.filter((l,i)=>{const t=tx(l);const m=t.match(new RegExp("^(\\d+)\\s?(g|slices? of)\\s+(?:(?:vintage|sharp|aged|mild|tasty|fresh|firm|good|young|block|grated|shredded|sliced)\\s+)*("+CH+")$","i"));if(!m)return true;
+     const k=m[3].toLowerCase(),gr=/^g$/i.test(m[2])?+m[1]:+m[1]*20;if(!g[k]){g[k]={gr:0,n:0,a:at(l),lines:[],i};ord.push(k)}g[k].gr+=gr;g[k].n++;g[k].lines.push(l);return false});
+   for(const k of ord.slice().sort((x,y)=>g[y].i-g[x].i)){const c=g[k];out.splice(Math.min(c.i,out.length),0,...(c.n>1?[`${Math.round(c.gr/10)*10}g ${k.replace(/^american cheese$/,"American cheese").replace(/^swiss cheese$/,"Swiss cheese")}@${c.a}`]:c.lines))}}
+  /* white bread: slices and loaves add up (a loaf is about 20 slices) */
+  {let sl=0,lo=0,n=0,i0=-1,a="Bakery";out=out.filter((l,i)=>{const t=tx(l);let m;
+     if((m=t.match(/^(\d+) slices? (?:of )?(?:(?:thick|thin|soft|day-old|stale|sliced|sandwich)\s+)*white bread$/i)))sl+=+m[1];else if((m=t.match(/^(\d+) (?:small |large )?(?:loa(?:f|ves)) (?:of )?(?:(?:thick|soft|sliced|sandwich)\s+)*white bread$/i)))lo+=+m[1];else return true;
+     n++;if(i0<0){i0=i;a=at(l)}return false});
+   if(n){const line=lo||sl>20?(()=>{const k=Math.max(lo,Math.ceil((sl+lo*20)/20-0.05));return `${k} loa${k>1?"ves":"f"} white bread`})():`${sl} slices of white bread`;out.splice(Math.min(i0,out.length),0,line+"@"+a)}}
+  /* the same thing as two packs ("1 bag caster sugar" and "1 packet caster sugar"), or a pack beside a measured amount of it */
+  {const PK=/^1 (?:bag|packet|jar|bottle|tin|tub|carton|block|box) (?:of )?(.+)$/i;
+   out=out.filter((l,i)=>{const m=tx(l).match(PK);if(!m)return true;const it=m[1].toLowerCase();
+     return !out.some((y,j)=>{if(j===i)return false;const t=tx(y).toLowerCase();if(j<i&&PK.test(t)&&t.match(PK)[1]===it)return true;
+       return new RegExp("^[\\d./ ]+\\s*(?:g|kg|ml|l)?\\s+"+it.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"$","i").test(tx(y))})})}
+  /* the same plain line twice */
+  return out.filter((l,i)=>out.indexOf(l)===i)}
 const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
 const BUY_N=t=>{const m=String(t).trim().match(/^(\d+)(?:\s+(\d)\/(\d))?|^(\d)\/(\d)/);return m?(m[1]?+m[1]+(m[2]?m[2]/m[3]:0):m[4]/m[5]):0};
 function buyBy(t){let x=String(t).trim();
