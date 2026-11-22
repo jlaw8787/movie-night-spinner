@@ -170,53 +170,53 @@
    }
   },
   {
-   "n": "Columbia Inn cheese puffs",
+   "n": "Club car cheese straws",
    "course": "s",
-   "prep_min": 25,
-   "cook_min": 20,
-   "make_ahead": "Make the choux paste up to 1 day ahead, covered in the fridge; pipe and bake on the night, best warm",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Bake up to 1 day ahead and keep in an airtight tin; warm for 3 minutes",
    "ingredients": [
     {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
+     "q": 2,
      "u": "",
-     "item": "eggs",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
      "aisle": "Dairy"
     },
     {
      "q": 120,
      "u": "g",
-     "item": "vintage cheddar, grated",
+     "item": "sharp cheddar, grated",
      "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Bring water and the butter to the boil, beat in the flour until it forms a ball, then cool.",
-     "min": 10
+     "text": "Heat the oven to 200C and line two trays.",
+     "min": 2
     },
     {
-     "text": "Beat in the eggs one at a time, then the cheddar.",
-     "min": 6
+     "text": "Brush the pastry with egg, scatter one sheet with cheddar and paprika and lay the other on top.",
+     "min": 5
     },
     {
-     "text": "Pipe small balls onto lined trays.",
-     "min": 4
+     "text": "Cut into strips and twist each one onto the trays.",
+     "min": 8
     },
     {
-     "text": "Bake at 200C until puffed and golden.",
-     "min": 25
+     "text": "Bake until puffed and golden.",
+     "min": 15
     }
    ],
    "veg": true,

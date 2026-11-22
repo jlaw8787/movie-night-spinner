@@ -207,7 +207,7 @@
   {
    "n": "Pub sausages, steak and potato salad",
    "course": "m",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 40,
    "make_ahead": "Potato salad up to 1 day, keep chilled",
    "ingredients": [
@@ -269,7 +269,7 @@
     },
     {
      "text": "Serve with a stack of white bread and the potato salad.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -277,7 +277,7 @@
    "alt": {
     "veg": {
      "n": "Pub sausages, mushroom steaks and potato salad (vegetarian)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 40,
      "make_ahead": "Potato salad up to 1 day, keep chilled",
      "ingredients": [
@@ -345,7 +345,7 @@
       },
       {
        "text": "Serve with a stack of white bread and the potato salad.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

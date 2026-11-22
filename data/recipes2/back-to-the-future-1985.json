@@ -203,7 +203,7 @@
    }
   },
   {
-   "n": "Doc's breakfast machine fry-up",
+   "n": "Lou's breakfast plate",
    "course": "m",
    "prep_min": 5,
    "cook_min": 15,
@@ -327,9 +327,9 @@
    }
   },
   {
-   "n": "Uncle Joey's welcome home cake",
+   "n": "Lou's yellow layer cake",
    "course": "w",
-   "prep_min": 25,
+   "prep_min": 22,
    "cook_min": 35,
    "make_ahead": "Bake the day before, ice on the day",
    "ingredients": [
@@ -374,12 +374,6 @@
      "u": "g",
      "item": "icing sugar",
      "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "tube blue writing icing",
-     "aisle": "Pantry"
     }
    ],
    "steps": [
@@ -398,10 +392,6 @@
     {
      "text": "Beat the remaining 150g butter with the icing sugar and the last 2 tbsp milk until fluffy and spread over the top.",
      "min": 7
-    },
-    {
-     "text": "Pipe WELCOME HOME JOEY across the cake with the blue writing icing.",
-     "min": 3
     }
    ],
    "veg": true,

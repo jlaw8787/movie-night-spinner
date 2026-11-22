@@ -182,8 +182,10 @@ function flavourOf(ctx,neutral){
   /* review 36: the year the guest is in the room (The Water Diviner's 1919 Istanbul guesthouse, not 2014); an inn or guesthouse has rooms, not suites, and no tray charge before 1950 */
   const stayY=String(fl.year||(/^(18|19|20)\d\d$/.test(String(fl.number||""))&&+fl.number<=+((ctx.f||{}).year||9999)?fl.number:(ctx.f||{}).year)||""),
     roomWord=/\b(guest ?house|boarding|pension|inn|hotel dining room|lodging)\b/i.test(String(fl.venue||""))||+stayY<1950?"room":"suite",trayOk=+stayY>=1950;
+  /* review 37: a family home, mansion or palace on this layout (Insidious, Annie, The Dark Knight) reads as a home, not a hotel: no front desk, room number or wake-up call. flavour.home overrides */
+  const vv=String(fl.venue||""),home=fl.home!=null?!!fl.home:/\b(home|house|manor|mansion|estate|kitchen|penthouse|palace|apartment|family|dining room)\b/i.test(vv)&&!/\b(hotel|inn|resort|hyatt|ritz|bathhouse|lodge|motel|suite|executive|hq)\b/i.test(vv),palace=home&&/\bpalace\b/i.test(vv);
   const winks=(fl.winks||[]).map(d).filter(Boolean);
-  return{stayY,roomWord,trayOk,venue:d(fl.venue)||neutral.venue,sign:d(fl.sign)||neutral.sign,
+  return{stayY,roomWord,trayOk:trayOk&&!home,home,palace,venue:d(fl.venue)||neutral.venue,sign:d(fl.sign)||neutral.sign,
     note:fl.note&&fl.note.text?{text:d(fl.note.text),by:d(fl.note.by)||neutral.by}:{text:d(neutral.noteText(ctx)),by:neutral.by},
     winks:winks.length?winks:neutral.winks(ctx),prop:fl.prop&&fl.prop.title?{kind:fl.prop.kind||"card",title:d(fl.prop.title),lines:(fl.prop.lines||[]).map(d).filter(Boolean).slice(0,3)}:neutral.prop(ctx),
     num:/^\d{1,4}$/.test(String(fl.number||""))?String(fl.number):"",has:!!ctx.flavour};
@@ -250,12 +252,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const crest=`<div style="position:absolute;left:50%;top:28px;width:84px;height:84px;margin-left:-42px;border-radius:50%;border:${era===2?4:3}px solid ${rule};box-shadow:inset 0 0 0 5px ${paper},inset 0 0 0 6px ${rule};display:flex;align-items:center;justify-content:center">
     <span style="font-family:${D};font-weight:${L.dw};font-size:${mono.length>1?32:40}px;line-height:1;color:${rule};letter-spacing:.02em;${L.ital?"font-style:italic;":""}${inkSpread}">${esc(mono.toUpperCase())}</span></div>`;
   const header=`<div data-fbox style="position:absolute;left:44px;right:44px;top:120px;height:130px;text-align:center;display:flex;flex-direction:column;justify-content:safe center;overflow:hidden">
-    ${kick(VOICE[t],K.acc,"center")}
+    ${kick(F.home?(F.palace?"From the palace kitchen":"Dinner is served"):VOICE[t],K.acc,"center")}
     <div data-fline="2" data-fs="26" style="${dispStyle}font-size:${F.venue.length>24?42:50}px;line-height:1.04;color:${K.ink};margin-top:8px;${inkSpread}">${esc(F.venue)}</div>
     <div data-fs="15" style="font:italic 400 20px/1.2 ${B};color:${K.soft};margin-top:7px">${esc(F.sign)}</div></div>`;
   const heroTop=262,heroH=720,posW=480,colW=360;
   const lp=logoPanel(ctx,{maxW:colW-36,maxH:74,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
-    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your ${F.roomWord} ${esc(F.stayY)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
+    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:F.home?`${F.palace?"At the palace":"At home"}, ${esc(F.stayY)}`:`In your ${F.roomWord} ${esc(F.stayY)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
     style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
   /* 15 Nov, Josh (call 5): under a poster (which carries the title) the logo plaque goes and the front desk note moves up into its place,
      headed "In your suite, year". Flavour logoPanel:true keeps the plaque for a poster with no title. */
@@ -264,12 +266,12 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${noPlaque?"":lp}`;
   /* 15 Nov, Josh: the showtime cue reads "Wake-up call" under the front desk note and takes the place of the Dial 0 line, so it fits more often */
   const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:${noPlaque?1004:1130}px;height:${noPlaque?322:196}px;box-sizing:border-box;padding-bottom:4px;overflow:hidden;display:flex;flex-direction:column">
-    ${noPlaque?`<div data-fs="13" style="flex:none;font:700 16px/1.15 ${B};letter-spacing:.24em;text-transform:uppercase;color:${K.acc};opacity:.75;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid ${rgba(K.acc,.6)}">In your ${F.roomWord}, ${esc(F.stayY)}</div>`:""}
-    ${kick("From the front desk")}
+    ${noPlaque?`<div data-fs="13" style="flex:none;font:700 16px/1.15 ${B};letter-spacing:.24em;text-transform:uppercase;color:${K.acc};opacity:.75;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid ${rgba(K.acc,.6)}">${F.home?(F.palace?"At the palace":"At home"):"In your "+F.roomWord}, ${esc(F.stayY)}</div>`:""}
+    ${kick(F.home?"From the kitchen":"From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
-    ${ctx.f.P?`<div data-drop data-cue data-fs="14" style="margin-top:auto;padding-top:12px;font:italic 400 17px/1.3 ${B};color:${K.ink}"><span style="font-style:normal;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:${K.acc};display:block;margin-bottom:4px">Wake-up call</span>${esc(sentence(dry(ctx.f.P)))}</div>`:""}
-    ${ctx.f.P?"":`<div data-drop data-fs="14" style="padding-top:10px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div>`}</div>`;
+    ${ctx.f.P?`<div data-drop data-cue data-fs="14" style="margin-top:auto;padding-top:12px;font:italic 400 17px/1.3 ${B};color:${K.ink}"><span style="font-style:normal;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:${K.acc};display:block;margin-bottom:4px">${F.home?"Showtime":"Wake-up call"}</span>${esc(sentence(dry(ctx.f.P)))}</div>`:""}
+    ${ctx.f.P?"":`<div data-drop data-fs="14" style="padding-top:10px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">${F.home?"Seconds in the kitchen.":"Dial 0 for the kitchen. Open all night."}</div>`}</div>`;
   /* door hanger: a die-cut card with a hole, type only */
   const hg=mix(hex(K.acc),[0,0,0],dark?0:.08),hgc=contrast(hg,[255,255,255])>=4.5?"#fffaf0":"#161412";
   const box=`<span style="display:inline-block;width:15px;height:15px;border:2px solid ${hgc};margin-right:9px;vertical-align:-2px;flex:none"></span>`;
@@ -279,10 +281,10 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.28;mix-blend-mode:multiply"></div>
       <div style="position:absolute;left:50%;top:89px;width:1px;height:0"></div>
       <div data-fbox style="position:absolute;left:18px;right:16px;top:102px;bottom:14px;overflow:hidden;color:${hgc}">
-        <div data-fs="14" style="font:700 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">Order by 2 am</div>
-        <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1.05;margin:6px 0 8px">Room ${esc(room)}</div>
+        <div data-fs="14" style="font:700 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">${F.home?"Movie night":"Order by 2 am"}</div>
+        <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1.05;margin:6px 0 8px">${F.home?"Tonight":"Room "+esc(room)}</div>
         ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(dry(it.n))}</span></div>`).join("")}
-        <div data-fs="14" style="font:700 14px/1.3 ${B};margin-top:4px;letter-spacing:.06em">GUESTS &nbsp;${box}1 &nbsp;${box}2</div></div></div></div>`;
+        ${F.home?"":`<div data-fs="14" style="font:700 14px/1.3 ${B};margin-top:4px;letter-spacing:.06em">GUESTS &nbsp;${box}1 &nbsp;${box}2</div>`}</div></div></div>`;
   const front=face(crest+header+hero+note+hanger);
 
   /* ---- back: second still full bleed, the film's prop, the menu, fine print. 15 Nov: per-film flavour caption labels the still in place of the
@@ -291,14 +293,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const pr=F.prop,pk=pr.kind;
   const prop=`<div style="position:absolute;right:34px;top:${secH-82}px;width:226px;transform:rotate(${(-T.rot*.7+1.5).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
     <div data-fbox style="position:relative;padding:13px 18px 12px;max-height:126px;overflow:hidden">
-      <div data-fs="14" style="font:700 14px/1 ${B};letter-spacing:.2em;text-transform:uppercase;color:${K.acc}">${pk==="ticket"||pk==="stub"?"Admit one":pk==="tag"?"Hang on your door":"Front desk"}</div>
+      <div data-fs="14" style="font:700 14px/1 ${B};letter-spacing:.2em;text-transform:uppercase;color:${K.acc}">${pk==="ticket"||pk==="stub"?"Admit one":pk==="tag"?"Hang on your door":F.home?"On the fridge":"Front desk"}</div>
       <div data-fs="15" style="${dispStyle}font-size:23px;line-height:1.05;color:#1c1712;margin:7px 0 6px">${esc(pr.title)}</div>
       ${pr.lines.map(l=>`<div data-fs="14" style="font:700 15px/1.3 ${B};color:#2a2420">${esc(dry(l))}</div>`).join("")}</div></div>`;
   const second=`<div style="position:absolute;left:0;right:0;top:0;height:${secH}px;overflow:hidden;background:${K.deep}">
     ${ph.secondPoster?posterHTML(ph.second,true,"",era,t):photoHTML(ph.second,ph.secondPos,era,t)}
     <div style="position:absolute;left:30px;bottom:18px;background:${rgba("#fffaf0",.92)};padding:7px 12px;font:700 14px/1.2 ${B};letter-spacing:.14em;text-transform:uppercase;color:#1c1712">${esc(ctx.flavour&&ctx.flavour.caption?clean(ctx.flavour.caption):F.venue)}</div></div>
     <div style="position:absolute;left:0;right:0;top:${secH}px;height:8px;background:${rule}"></div>`;
-  const labels=era<2?["Appetisers","From the grill","Desserts",fm?"Fountain service":"Bar service"]:["To begin","From the kitchen","Something sweet",fm?"From the fountain":"From the bar"];
+  const labels=era<2?["Appetisers","From the grill","Desserts",fm?"Fountain service":"Bar service"]:["To begin","From the kitchen","Something sweet",fm?"From the fountain":F.home?"To drink":"From the bar"];
   const keys=["s","m","w","d"];
   const item=(k,it,i)=>`<div data-gap style="padding-bottom:18px">
     <div style="display:flex;align-items:baseline;gap:16px"><span data-fs="18" style="flex:1;font:700 28px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span data-fs="18" style="font:700 28px/1 ${B};color:${K.acc}">${price(k,i)}</span></div>
@@ -309,7 +311,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox style="position:absolute;left:48px;right:48px;top:${secH+84}px;bottom:150px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:48px;right:48px;bottom:36px;height:100px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:10px">
-    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">${F.trayOk?"A tray charge applies to every order. ":""}Prices subject to change. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Form RS ${esc(room)}. Images: TMDB.</div></div>`;
+    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">${F.trayOk?"A tray charge applies to every order. ":""}${F.home?"":"Prices subject to change. "}${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}${F.home?"":`Form RS ${esc(room)}. `}Images: TMDB.</div></div>`;
   const back=face(second+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

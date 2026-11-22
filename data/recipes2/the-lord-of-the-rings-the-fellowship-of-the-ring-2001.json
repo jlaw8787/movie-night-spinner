@@ -4,7 +4,7 @@
   {
    "n": "Pippin's hobbit fry-up",
    "course": "s",
-   "prep_min": 15,
+   "prep_min": 13,
    "cook_min": 20,
    "make_ahead": "Best served hot",
    "ingredients": [
@@ -66,7 +66,7 @@
     },
     {
      "text": "Serve on a big platter.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -74,7 +74,7 @@
    "alt": {
     "veg": {
      "n": "Pippin's hobbit fry-up (vegetarian)",
-     "prep_min": 10,
+     "prep_min": 8,
      "cook_min": 20,
      "make_ahead": "Best served hot",
      "ingredients": [
@@ -136,7 +136,7 @@
       },
       {
        "text": "Serve on a big platter.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

@@ -1,0 +1,25 @@
+{
+ "id": "The Rock (1996)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Glass beads nobody can drop",
+    "Green flares to abort",
+    "The rocket threat of VX gas"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Anchor Steam beer on tap",
+    "note": "Anchor Steam beer pulled from the tap.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

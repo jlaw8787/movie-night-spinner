@@ -146,7 +146,7 @@
   {
    "n": "Chimichangas",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 28,
    "cook_min": 220,
    "make_ahead": "Filling up to 2 days ahead, fry to serve",
    "ingredients": [
@@ -236,7 +236,7 @@
     },
     {
      "text": "Serve with sour cream, guacamole and salsa.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -244,7 +244,7 @@
    "alt": {
     "veg": {
      "n": "Chimichangas (vegetarian)",
-     "prep_min": 25,
+     "prep_min": 23,
      "cook_min": 40,
      "make_ahead": "Filling up to 2 days ahead, fry to serve",
      "ingredients": [
@@ -346,7 +346,7 @@
       },
       {
        "text": "Serve with sour cream, guacamole and salsa.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

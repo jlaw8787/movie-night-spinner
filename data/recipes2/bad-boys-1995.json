@@ -4,7 +4,7 @@
   {
    "n": "Miami croquetas",
    "course": "s",
-   "prep_min": 38,
+   "prep_min": 31,
    "cook_min": 490,
    "make_ahead": "Chill overnight, up to 1 day before frying",
    "ingredients": [
@@ -82,7 +82,7 @@
     },
     {
      "text": "Dust with the flour for dusting, dip in beaten egg and coat in breadcrumbs.",
-     "min": 10
+     "min": 3
     },
     {
      "text": "Fry in 180C oil until golden and hot throughout. Drain.",
@@ -94,7 +94,7 @@
    "alt": {
     "veg": {
      "n": "Miami mushroom croquetas",
-     "prep_min": 38,
+     "prep_min": 31,
      "cook_min": 495,
      "make_ahead": "Chill overnight, up to 1 day before frying",
      "ingredients": [
@@ -172,7 +172,7 @@
       },
       {
        "text": "Dust with the flour for dusting, dip in beaten egg and coat in breadcrumbs.",
-       "min": 10
+       "min": 3
       },
       {
        "text": "Fry in 180C oil until golden and hot throughout. Drain.",
@@ -548,11 +548,11 @@
    "af": true
   },
   {
-   "n": "Ocean view mojito",
+   "n": "Ocean view mint crush",
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "Squeeze the lime juice up to 1 day ahead and keep it chilled; muddle, add the rum and top with soda water to order",
+   "make_ahead": "Squeeze the lime juice up to 1 day ahead and keep it chilled; muddle, add the apple juice and top with soda water to order",
    "ingredients": [
     {
      "q": 1,
@@ -573,10 +573,10 @@
      "aisle": "Produce"
     },
     {
-     "q": 180,
+     "q": 150,
      "u": "ml",
-     "item": "white rum",
-     "aisle": "Bottle shop"
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
     },
     {
      "q": 500,
@@ -597,7 +597,7 @@
      "min": 3
     },
     {
-     "text": "Add the rum and divide between glasses filled with crushed ice.",
+     "text": "Add the apple juice and divide between glasses filled with crushed ice.",
      "min": 2
     },
     {
@@ -606,67 +606,7 @@
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Mike Lowrey's ocean view mint crush",
-     "prep_min": 8,
-     "cook_min": 0,
-     "make_ahead": "Squeeze the lime juice up to 1 day ahead and keep it chilled; muddle, add the apple juice and top with soda water to order",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "",
-       "item": "large bunch mint",
-       "aisle": "Produce"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "sugar syrup",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "lime juice",
-       "aisle": "Produce"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "cloudy apple juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "crushed ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 400,
-       "u": "ml",
-       "item": "soda water",
-       "aisle": "Drinks"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Gently muddle the mint leaves with the syrup and lime juice in a jug, without shredding the mint.",
-       "min": 3
-      },
-      {
-       "text": "Add the apple juice and divide between glasses filled with crushed ice.",
-       "min": 2
-      },
-      {
-       "text": "Top with soda water, stir gently and garnish with a mint sprig.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

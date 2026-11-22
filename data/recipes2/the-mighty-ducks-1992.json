@@ -546,7 +546,7 @@
   {
    "n": "District 5 rinkside hot chocolate",
    "course": "d",
-   "prep_min": 5,
+   "prep_min": 3,
    "cook_min": 10,
    "make_ahead": "Make fresh",
    "ingredients": [
@@ -580,7 +580,7 @@
     },
     {
      "text": "Pour into big mugs and pile marshmallows on top. Ducks fly together.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -588,7 +588,7 @@
    "alt": {
     "veg": {
      "n": "District 5 rinkside hot chocolate (vegetarian)",
-     "prep_min": 5,
+     "prep_min": 3,
      "cook_min": 10,
      "make_ahead": "Make fresh",
      "ingredients": [
@@ -622,7 +622,7 @@
       },
       {
        "text": "Pour into big mugs and pile marshmallows on top.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

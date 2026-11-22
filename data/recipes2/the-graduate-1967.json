@@ -4,7 +4,7 @@
   {
    "n": "Graduation party prawn cocktail",
    "course": "s",
-   "prep_min": 20,
+   "prep_min": 16,
    "cook_min": 0,
    "make_ahead": "Make the sauce up to 2 days ahead; build the glasses to serve",
    "ingredients": [
@@ -74,11 +74,11 @@
     },
     {
      "text": "Pile on the prawns and spoon over the sauce.",
-     "min": 5
+     "min": 3
     },
     {
      "text": "Dust with paprika and hang a lemon wedge on each glass.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -87,7 +87,7 @@
     "veg": {
      "n": "Graduation party avocado cocktail (vegetarian)",
      "course": "s",
-     "prep_min": 15,
+     "prep_min": 13,
      "cook_min": 0,
      "make_ahead": "Make the sauce up to 2 days ahead; build the glasses to serve",
      "ingredients": [
@@ -145,7 +145,7 @@
       },
       {
        "text": "Spoon over the sauce and dust with paprika.",
-       "min": 5
+       "min": 3
       }
      ]
     }
@@ -872,7 +872,7 @@
     "af": {
      "n": "Mrs Robinson's late-night iced black tea (alcohol-free)",
      "course": "d",
-     "prep_min": 10,
+     "prep_min": 8,
      "cook_min": 0,
      "make_ahead": "Brew and chill the tea up to a day ahead; pour to order",
      "ingredients": [
@@ -908,7 +908,7 @@
       },
       {
        "text": "Pour over ice in short glasses and finish with orange peel.",
-       "min": 5
+       "min": 3
       }
      ]
     }

@@ -140,7 +140,7 @@
   {
    "n": "Leopold's rooftop dinner",
    "course": "m",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 35,
    "make_ahead": "Slice the lemons and fennel and chop the shallot up to 1 day ahead; roast the fish and whisk the sauce fresh",
    "ingredients": [
@@ -228,7 +228,7 @@
     },
     {
      "text": "Serve the fish with the potatoes and the sauce.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -236,7 +236,7 @@
    "alt": {
     "af": {
      "n": "Leopold's rooftop dinner",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 35,
      "make_ahead": "Prep the lemons, fennel and shallot up to 1 day ahead in the fridge; roast the fish and whisk the verjuice sauce fresh",
      "ingredients": [
@@ -324,13 +324,13 @@
       },
       {
        "text": "Serve the fish with the potatoes and the sauce.",
-       "min": 5
+       "min": 3
       }
      ]
     },
     "veg": {
      "n": "Leopold's rooftop dinner (vegetarian)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 35,
      "make_ahead": "Cut the cauliflower steaks and slice the fennel and lemons up to 1 day ahead; roast and whisk the sauce fresh",
      "ingredients": [
@@ -424,14 +424,14 @@
       },
       {
        "text": "Serve the cauliflower and fennel with the potatoes and the sauce.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": false
     },
     "veg_af": {
      "n": "Leopold's rooftop dinner (vegetarian)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 35,
      "make_ahead": "Cut the cauliflower steaks up to 1 day ahead and chop the shallot; roast the cauliflower and whisk the sauce on the night",
      "ingredients": [
@@ -525,7 +525,7 @@
       },
       {
        "text": "Serve the cauliflower and fennel with the potatoes and the sauce.",
-       "min": 5
+       "min": 3
       }
      ]
     }

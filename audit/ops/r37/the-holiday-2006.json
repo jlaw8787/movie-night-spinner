@@ -1,0 +1,30 @@
+{
+ "id": "The Holiday (2006)",
+ "ops": [
+  {
+   "old": "Chicken roasted with lemon, thyme and garlic. Dinner with Arthur, who calls Iris the leading lady.",
+   "new": "Chicken roasted with lemon, thyme and garlic.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Glass of Bordeaux red",
+    "note": "A glass of Bordeaux red wine.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Arthur Abbott, the old screenwriter",
+    "Miles, who used only the good notes",
+    "Graham, Mr Napkin Head"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

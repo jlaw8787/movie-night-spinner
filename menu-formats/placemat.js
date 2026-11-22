@@ -329,7 +329,7 @@ window.MENU_FORMATS.placemat=ctx=>{
       ${(p.lines||[]).slice(0,3).map(l=>`<div data-fit="ptitle" style="position:relative;font:700 14px/1.3 ${L.body};color:${L.ink}">${esc(dry(l))}</div>`).join("")}
     </div>`;
 
-  const fine=`${family?"*With a grown-up's meal. Every drink is alcohol-free. ":""}Prices subject to change.${winks[0]?` Table talk: ${winks[0].replace(/\.$/,"")}.`:""} Form PM-${num||f.year}. Images: TMDB.`;
+  const fine=`${family?"Soft drinks only. ":""}Prices subject to change.${winks[0]?` Table talk: ${winks[0].replace(/\.$/,"")}.`:""} Form PM-${num||f.year}. Images: TMDB.`;
 
   /* border by era, wear by tone */
   const outer={

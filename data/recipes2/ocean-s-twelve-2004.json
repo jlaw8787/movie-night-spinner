@@ -4,7 +4,7 @@
   {
    "n": "Beef bitterballen",
    "course": "s",
-   "prep_min": 50,
+   "prep_min": 45,
    "cook_min": 970,
    "make_ahead": "Fill the day before, chill overnight",
    "ingredients": [
@@ -92,7 +92,7 @@
     },
     {
      "text": "Serve with grainy mustard.",
-     "min": 8
+     "min": 3
     }
    ],
    "veg": false,
@@ -100,7 +100,7 @@
    "alt": {
     "veg": {
      "n": "Amsterdam mushroom bitterballen",
-     "prep_min": 50,
+     "prep_min": 48,
      "cook_min": 755,
      "make_ahead": "Fill the day before, chill overnight",
      "ingredients": [
@@ -200,7 +200,7 @@
       },
       {
        "text": "Serve with grainy mustard.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

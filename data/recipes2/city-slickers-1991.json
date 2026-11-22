@@ -204,7 +204,7 @@
   {
    "n": "New York bagel bites",
    "course": "s",
-   "prep_min": 15,
+   "prep_min": 10,
    "cook_min": 0,
    "make_ahead": "Best built just before serving; slice the red onion and chop the dill up to 1 day ahead, covered in the fridge",
    "ingredients": [
@@ -256,7 +256,7 @@
     },
     {
      "text": "Top with smoked salmon, capers, thin red onion and dill.",
-     "min": 8
+     "min": 3
     }
    ],
    "veg": false,
@@ -264,7 +264,7 @@
    "alt": {
     "veg": {
      "n": "New York bagel bites (vegetarian)",
-     "prep_min": 14,
+     "prep_min": 9,
      "cook_min": 4,
      "make_ahead": "Slice the beetroot and toss with the lemon up to 1 day ahead in the fridge; toast the bagels and top just before serving",
      "ingredients": [
@@ -326,7 +326,7 @@
       },
       {
        "text": "Top with beetroot, capers, thin red onion and dill.",
-       "min": 8
+       "min": 3
       }
      ],
      "af": true

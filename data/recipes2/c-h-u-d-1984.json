@@ -195,7 +195,7 @@
   {
    "n": "The Reverend's soup kitchen stew",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 19,
    "cook_min": 155,
    "make_ahead": "Up to 2 days, reheats well",
    "ingredients": [
@@ -273,7 +273,7 @@
     },
     {
      "text": "Serve with Italian bread.",
-     "min": 15
+     "min": 4
     }
    ],
    "veg": false,
@@ -281,7 +281,7 @@
    "alt": {
     "veg": {
      "n": "The Reverend's soup kitchen stew (vegetarian)",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 48,
      "make_ahead": "Up to 2 days, reheats well",
      "ingredients": [
@@ -365,7 +365,7 @@
       },
       {
        "text": "Serve with Italian bread.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

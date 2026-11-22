@@ -45,12 +45,6 @@
      "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "lemon myrtle",
-     "aisle": "Pantry"
-    },
-    {
      "q": 8,
      "u": "",
      "item": "bamboo skewers",
@@ -71,7 +65,7 @@
      "min": 4
     },
     {
-     "text": "Melt the butter with the lemon myrtle and brush over. Serve with lemon wedges.",
+     "text": "Melt the butter with grated lemon zest and brush over. Serve with lemon wedges.",
      "min": 4
     }
    ],
@@ -121,12 +115,6 @@
        "aisle": "Dairy"
       },
       {
-       "q": 1,
-       "u": "tsp",
-       "item": "lemon myrtle",
-       "aisle": "Pantry"
-      },
-      {
        "q": 8,
        "u": "",
        "item": "bamboo skewers",
@@ -147,7 +135,7 @@
        "min": 5
       },
       {
-       "text": "Melt the butter with the lemon myrtle and brush over. Serve with lemon wedges.",
+       "text": "Melt the butter with grated lemon zest and brush over. Serve with lemon wedges.",
        "min": 4
       }
      ],
@@ -156,135 +144,143 @@
    }
   },
   {
-   "n": "Street cart hot dogs with sauerkraut",
+   "n": "Crumbed calamari rings",
    "course": "s",
-   "prep_min": 5,
-   "cook_min": 22,
-   "make_ahead": "Fry the onions up to 1 day ahead and reheat",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Crumb the rings up to 4 hours ahead and keep them in the fridge on a tray",
    "ingredients": [
     {
-     "q": 8,
-     "u": "",
-     "item": "frankfurts",
-     "aisle": "Meat"
+     "q": 500,
+     "u": "g",
+     "item": "squid tubes",
+     "aisle": "Seafood"
     },
     {
-     "q": 8,
-     "u": "",
-     "item": "soft hot dog rolls",
-     "aisle": "Bakery"
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
     },
     {
      "q": 2,
      "u": "",
-     "item": "brown onions",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "L",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, cut into wedges",
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "vegetable oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
+     "q": 150,
      "u": "g",
-     "item": "sauerkraut",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "yellow mustard",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bottle tomato sauce",
+     "item": "tartare sauce",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Fry the sliced onions slowly until soft and golden.",
-     "min": 15
-    },
-    {
-     "text": "Simmer or grill the frankfurts.",
-     "min": 7
-    },
-    {
-     "text": "Warm the rolls and fill with frankfurt, onion, sauerkraut and mustard.",
+     "text": "Cut the squid tubes into 1cm rings and pat dry.",
      "min": 5
+    },
+    {
+     "text": "Dust in flour, dip in egg and press into the breadcrumbs.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil to 180C and fry the rings in batches until golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain, salt and serve with lemon wedges and tartare.",
+     "min": 2
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Street cart veggie hot dogs with sauerkraut (vegetarian)",
+     "n": "Crumbed haloumi fingers (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 8,
+     "make_ahead": "Crumb the fingers up to 4 hours ahead and keep them in the fridge",
      "ingredients": [
       {
-       "q": 8,
-       "u": "",
-       "item": "vegetarian frankfurts",
-       "aisle": "Frozen"
+       "q": 360,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
       },
       {
-       "q": 8,
-       "u": "",
-       "item": "soft hot dog rolls",
-       "aisle": "Bakery"
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "",
-       "item": "brown onions",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "L",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut into wedges",
        "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
+       "q": 150,
        "u": "g",
-       "item": "sauerkraut",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "yellow mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bottle tomato sauce",
+       "item": "tartare sauce",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Fry the sliced onions slowly until soft and golden.",
-       "min": 15
+       "text": "Cut the haloumi into thick fingers and pat dry.",
+       "min": 3
       },
       {
-       "text": "Grill or pan fry the vegetarian frankfurts as the packet says.",
-       "min": 7
+       "text": "Dust in flour, dip in egg and press into the breadcrumbs.",
+       "min": 3
       },
       {
-       "text": "Warm the rolls and fill with frankfurt, onion, sauerkraut and mustard.",
-       "min": 5
+       "text": "Fry in hot oil until golden, about 2 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Drain and serve with lemon wedges and tartare.",
+       "min": 2
       }
-     ],
-     "prep_min": 5,
-     "cook_min": 22,
-     "make_ahead": "Fry the onions up to 1 day ahead and reheat"
+     ]
     }
    }
   },
@@ -320,12 +316,6 @@
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "lemon myrtle",
-     "aisle": "Pantry"
-    },
-    {
      "q": 2,
      "u": "",
      "item": "lemons",
@@ -342,7 +332,7 @@
      "min": 5
     },
     {
-     "text": "Melt the butter with the garlic and lemon myrtle, spoon over the fish and serve with the lemons cut into wedges.",
+     "text": "Melt the butter with the garlic and a squeeze of lemon, spoon over the fish and serve with the lemons cut into wedges.",
      "min": 5
     }
    ],
@@ -353,7 +343,7 @@
      "n": "That's-a-knife barbecued eggplant",
      "prep_min": 5,
      "cook_min": 23,
-     "make_ahead": "Best grilled just before serving; crush the garlic and measure out the butter and lemon myrtle up to 1 day ahead",
+     "make_ahead": "Best grilled just before serving; crush the garlic and measure out the butter up to 1 day ahead",
      "ingredients": [
       {
        "q": 2,
@@ -386,12 +376,6 @@
        "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tsp",
-       "item": "lemon myrtle",
-       "aisle": "Pantry"
-      },
-      {
        "q": 2,
        "u": "",
        "item": "lemons",
@@ -408,7 +392,7 @@
        "min": 18
       },
       {
-       "text": "Melt the butter with the garlic and lemon myrtle, spoon over the eggplant and serve with the lemons cut into wedges.",
+       "text": "Melt the butter with the garlic and a squeeze of lemon, spoon over the eggplant and serve with the lemons cut into wedges.",
        "min": 5
       }
      ],
@@ -417,97 +401,77 @@
    }
   },
   {
-   "n": "New York baked cheesecake",
+   "n": "Apple crumble with custard",
    "course": "w",
    "prep_min": 20,
-   "cook_min": 271,
-   "make_ahead": "Make the day before; it needs at least 3 hours in the fridge",
+   "cook_min": 40,
+   "make_ahead": "Stew the apples and rub the crumble up to 1 day ahead; bake on the night",
    "ingredients": [
     {
-     "q": 250,
-     "u": "g",
-     "item": "plain sweet biscuits",
-     "aisle": "Pantry"
+     "q": 6,
+     "u": "",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 750,
-     "u": "g",
-     "item": "cream cheese",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 180,
+     "q": 60,
      "u": "g",
      "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 3,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "sour cream",
-     "aisle": "Dairy"
-    },
-    {
      "q": 1,
      "u": "tsp",
-     "item": "vanilla extract",
-     "aisle": "Pantry"
+     "item": "ground cinnamon",
+     "aisle": "Spices"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "lemon",
-     "aisle": "Produce"
-    },
-    {
-     "q": 300,
+     "q": 100,
      "u": "g",
-     "item": "frozen mixed berries",
-     "aisle": "Frozen"
+     "item": "cold butter",
+     "aisle": "Dairy"
     },
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "caster sugar, for sauce",
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
      "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Crush the biscuits, mix with the melted butter and press into the tin.",
+     "text": "Peel, core and slice the apples.",
+     "min": 12
+    },
+    {
+     "text": "Stew the apples with the sugar, cinnamon and a splash of water.",
      "min": 10
     },
     {
-     "text": "Beat the cream cheese and sugar, then the eggs, sour cream, vanilla and lemon juice.",
-     "min": 10
+     "text": "Rub the butter into the flour, stir in the oats and brown sugar and scatter over the apples.",
+     "min": 8
     },
     {
-     "text": "Pour onto the base and bake at 160C until set with a slight wobble.",
-     "min": 55
-    },
-    {
-     "text": "Turn the oven off and cool the cake inside.",
+     "text": "Bake at 180C until golden, then serve hot with warm custard.",
      "min": 30
-    },
-    {
-     "text": "Chill until firm.",
-     "min": 180
-    },
-    {
-     "text": "Simmer the berries with the sugar and spoon over each slice.",
-     "min": 6
     }
    ],
    "veg": true,

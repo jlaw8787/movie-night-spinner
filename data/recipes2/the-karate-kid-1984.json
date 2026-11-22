@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Bonsai edamame and sesame cucumbers",
+   "n": "Bonsai green beans and sesame cucumbers",
    "course": "s",
    "prep_min": 9,
    "cook_min": 24,
@@ -11,7 +11,7 @@
     {
      "q": 400,
      "u": "g",
-     "item": "frozen edamame",
+     "item": "frozen green beans",
      "aisle": "Frozen"
     },
     {
@@ -73,7 +73,7 @@
      "min": 20
     },
     {
-     "text": "Steam the edamame in their pods, then toss with flaky salt, chilli and sesame oil.",
+     "text": "Steam the green beans in their pods, then toss with flaky salt, chilli and sesame oil.",
      "min": 4
     },
     {
@@ -85,16 +85,16 @@
    "af": true
   },
   {
-   "n": "Bonsai broccolini",
+   "n": "Bonsai broccoli",
    "course": "s",
    "prep_min": 3,
    "cook_min": 9,
-   "make_ahead": "Blanch the broccolini up to 1 day ahead and chill; char and toss with the sauce just before serving",
+   "make_ahead": "Blanch the broccoli up to 1 day ahead and chill; char and toss with the sauce just before serving",
    "ingredients": [
     {
      "q": 2,
      "u": "",
-     "item": "bunches broccolini",
+     "item": "bunches broccoli",
      "aisle": "Produce"
     },
     {
@@ -118,7 +118,7 @@
    ],
    "steps": [
     {
-     "text": "Blanch the broccolini and drain. Slice the garlic.",
+     "text": "Blanch the broccoli and drain. Slice the garlic.",
      "min": 4
     },
     {
@@ -134,15 +134,15 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Bonsai broccolini (vegetarian)",
+     "n": "Bonsai broccoli (vegetarian)",
      "prep_min": 3,
      "cook_min": 9,
-     "make_ahead": "Blanch and drain the broccolini up to 1 day ahead, chilled; char with the garlic and toss on the night",
+     "make_ahead": "Blanch and drain the broccoli up to 1 day ahead, chilled; char with the garlic and toss on the night",
      "ingredients": [
       {
        "q": 2,
        "u": "",
-       "item": "bunches broccolini",
+       "item": "bunches broccoli",
        "aisle": "Produce"
       },
       {
@@ -166,7 +166,7 @@
      ],
      "steps": [
       {
-       "text": "Blanch the broccolini and drain. Slice the garlic.",
+       "text": "Blanch the broccoli and drain. Slice the garlic.",
        "min": 4
       },
       {

@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Knuckle sandwich ham hock sliders",
+   "n": "Knuckle sandwich ham hock buns",
    "course": "s",
    "prep_min": 20,
    "cook_min": 150,
@@ -85,7 +85,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Knuckle sandwich smoky jackfruit sliders (vegetarian)",
+     "n": "Knuckle sandwich smoky jackfruit buns (vegetarian)",
      "course": "s",
      "prep_min": 15,
      "cook_min": 25,
@@ -150,7 +150,7 @@
        "min": 15
       },
       {
-       "text": "Mix the slaw, build the sliders and serve.",
+       "text": "Mix the slaw, build the buns and serve.",
        "min": 15
       }
      ]
@@ -614,7 +614,7 @@
   {
    "n": "White '56 T-bird vanilla malt sundae",
    "course": "w",
-   "prep_min": 15,
+   "prep_min": 13,
    "cook_min": 5,
    "make_ahead": "Make the hot fudge up to a week ahead and rewarm; scoop to serve",
    "ingredients": [
@@ -676,7 +676,7 @@
     },
     {
      "text": "Top with malted cream, crushed Maltesers and a cherry.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": true,

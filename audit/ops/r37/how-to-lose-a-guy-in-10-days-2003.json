@@ -1,0 +1,30 @@
+{
+ "id": "How to Lose a Guy in 10 Days (2003)",
+ "ops": [
+  {
+   "old": "Beef roasted medium-rare, rich wine sauce, potato gratin and asparagus, love fern on the table.",
+   "new": "Beef roasted medium-rare, rich wine sauce, potato gratin and asparagus.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The love fern",
+    "The diamond advertising pitch",
+    "Andie's How To column at Composure"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cosmopolitan with orange twist",
+    "note": "Vodka, cranberry and lime with orange twist.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

@@ -1375,7 +1375,7 @@ function planPlural(item,q){if(!(q>1))return item;if(/^cob loa(f|ves)\b/i.test(i
   if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(pi>0){if(!PL_MASS.test(w[pi-1]))w[pi-1]=pl(w[pi-1])}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
 /* "rib eye", "round steak", "ear of corn": rib, round, square, disc, ear, head, wheel and log are the food's own name, not a container,
    unless "of" follows or the word ends the name ("4 pastry rounds"). So "9 thin beef round steaks", never "beef rounds of steaks" */
-const planCont=(w,i)=>PL_CONT.test(w[i])&&!(i>0&&/^fillets?$/i.test(w[i]))&&!(/^(rib|ear|head|wheel|log|round|square|disc)$/i.test(w[i])&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery")&&!(/^cobs?$/i.test(w[i])&&/^loa(f|ves)$/i.test(w[i+1]||""));
+const planCont=(w,i)=>PL_CONT.test(w[i])&&!(/^rolls?$/i.test(w[i])&&/^(wrappers?|skins?|pastry)$/i.test(w[i+1]||""))/* review 37: "16 spring rolls of wrappers" */&&!(i>0&&/^fillets?$/i.test(w[i]))&&!(/^(rib|ear|head|wheel|log|round|square|disc)$/i.test(w[i])&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery")&&!(/^cobs?$/i.test(w[i])&&/^loa(f|ves)$/i.test(w[i+1]||""));
 /* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
 function planOne(item){let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");let tail="";if(par>0){tail=head.slice(par);head=head.slice(0,par)}
   /* only the first container word counts: "1 handful mint leaves" and "1 packet banana leaves" keep their leaves */
@@ -1422,7 +1422,9 @@ function shopLines(list){
   const tally={},order=[];
   const flat=[];for(const {d,k} of list)for(const i of d.ingredients||[]){if(WATER_RE.test(String(i.item))&&!/stock/i.test(i.item))continue;
     const bs=baseOf(i);if(bs){const g=baseG(i.q,i);for(const [q,u,item,aisle] of bs.buy(g,i))flat.push({i:{q,u,item,aisle},k});continue}/* review 13: "lychees (565g tin)" bought by the tin reads "a 565g tin lychees", never "1 lychee (565g tin)" */
-    flat.push({i:Object.assign({},i,{item:packNote(packFirst(i),k)}),k})}
+    flat.push({i:Object.assign({},i,{item:packNote(packFirst(i),k).replace(/^(neutral|flavourless|light) oil\b/i,"vegetable oil").replace(/^(full[- ]cream|whole|full[- ]fat) milk\b/i,"milk")}),k})}
+  /* review 37: one thing sits in one aisle ("2 sheets puff pastry" was under Bakery and again under Frozen, leg ham under Meat and Deli) */
+  {const first={};for(const x of flat){const pk=planKey(x.i.item);if(first[pk]&&first[pk]!==x.i.aisle)x.i=Object.assign({},x.i,{aisle:first[pk]});else first[pk]=x.i.aisle}}
   /* "a pinch of chilli powder" beside "1/2 tsp chilli powder" is one line: a pinch is an eighth of a teaspoon (review 12) */
   {const keys=new Set(flat.map(({i})=>planKey(i.item)));for(const x of flat){const m=String(x.i.item).match(/^(?:a )?(pinch(?:es)?|dash(?:es)?)(?: of)? (.+)$/i);
     if(m&&keys.has(planKey(m[2]))&&(x.i.q==null||!x.i.u)){x.i=Object.assign({},x.i,{item:m[2],u:"tsp",q:(x.i.q||1)/8})}}}
@@ -1490,6 +1492,9 @@ function shopLines(list){
      "1 tbsp grated ginger", "100ml lemon juice"): buyBy turns each into the thing on the shelf. Two lines that land on the same buy merge */
   {const out=[];for(const l of lines){const at=l.lastIndexOf("@"),b=buyBy(l.slice(0,at));const nl=b+l.slice(at);
      const twin=out.findIndex(x=>x.toLowerCase()===nl.toLowerCase());if(twin>=0)continue;
+     /* review 37: the same buy under two aisles ("2 sheets of puff pastry" in Bakery and in Frozen) is one line, added up, in the first aisle */
+     {const cm=nl.match(/^(\d+) (.+)@(.+)$/),ci=cm?out.findIndex(x=>{const y=x.match(/^(\d+) (.+)@(.+)$/);return y&&y[2].toLowerCase()===cm[2].toLowerCase()&&y[3]!==cm[3]}):-1;
+      if(ci>=0){const y=out[ci].match(/^(\d+) (.+)@(.+)$/);out[ci]=`${+y[1]+ +cm[1]} ${y[2]}@${y[3]}`;continue}}
      const fm=nl.match(/^(\d+) (lemon|lime|orange)s?(@.+)$/i),fi=fm?out.findIndex(x=>{const y=x.match(/^(\d+) (lemon|lime|orange)s?(@.+)$/i);return y&&y[2].toLowerCase()===fm[2].toLowerCase()&&y[3]===fm[3]}):-1;
      if(fi>=0){const n=+out[fi].match(/^\d+/)[0]+ +fm[1];out[fi]=`${n} ${fm[2].toLowerCase()}s${fm[3]}`;continue}out.push(nl)}
      /* review 35: a jar or bottle line goes when the same thing is already on the list by weight or volume ("60g butter" and "1 block butter") */
@@ -1511,6 +1516,8 @@ function buyBy(t){let x=String(t).trim();
   if((m=x.match(/^(\d+)\s?ml\s+(?:fresh(?:ly squeezed)?\s+)?(lemon|lime|orange)\s+juice$/i))){const per={lemon:40,lime:25,orange:80}[m[2].toLowerCase()],n=Math.max(1,Math.ceil(+m[1]/per-0.15));return `${n} ${m[2].toLowerCase()}${n>1?(m[2].toLowerCase()==="lemon"?"s":m[2].toLowerCase()==="lime"?"s":"s"):""}`}
   /* grated or minced ginger and garlic by the spoon */
   if(/^[\d\/ ]+\s*(tbsp|tsp)\s+(?:freshly\s+)?(?:grated|minced|chopped|crushed)?\s*(?:fresh\s+)?ginger$/i.test(x))return "1 knob ginger";
+  /* review 37: "1 5cm piece ginger" reads as the knob you buy */
+  if((m=x.match(/^(\d+)\s+(?:x\s+)?(\d+)\s?cm\s+pieces?\s+(?:of\s+)?(?:fresh\s+)?(ginger|galangal|turmeric)\b/i))){const n=Math.max(1,Math.ceil(+m[1]*+m[2]/8-0.05));return `${n} knob${n>1?"s":""} ${m[3].toLowerCase()}`}
   if(/^[\d\/ ]+\s*(tbsp|tsp)\s+(?:minced|crushed|chopped)\s+garlic$/i.test(x))return "1 head garlic";
   /* cabbage by the cup: a quarter is about 3 cups shredded */
   if((m=x.match(/^([\d\/ ]+)\s*cups?\s+(?:of\s+)?(?:finely\s+)?(?:shredded|sliced|chopped)\s+((?:red |green |savoy |wombok |chinese )?cabbage)$/i))){const c=BUY_N(m[1]);return `${c<=3?"1/4":c<=6?"1/2":"1"} ${m[2].toLowerCase()}`}
@@ -1534,6 +1541,10 @@ function buyBy(t){let x=String(t).trim();
       [/\b(sugar|flour|cornflour|baking powder|bicarb(?:onate)?(?: of soda)?|baking soda|cocoa|yeast|gelatine|cornstarch|semolina|polenta|breadcrumbs|panko|oats|desiccated coconut|shredded coconut|coconut|sprinkles|cornmeal|rice|lentils|couscous|nuts|almonds|walnuts|pecans|peanuts|pistachios|raisins|sultanas|currants|chocolate chips|choc chips|chocolate|cereal|crisps|chips|popcorn|marshmallows|seeds|sesame seeds|chia|tea|tea leaves|cheese|parmesan|cheddar|mozzarella|feta)\b/,"packet"],
       [/\b(paprika|cumin|cinnamon|nutmeg|turmeric|coriander|chill?i flakes|chill?i powder|cayenne|oregano|thyme|allspice|cloves|ginger|garam masala|curry powder|five spice|mixed spice|cardamom|star anise|saffron|sumac|za'?atar|dukkah|bay leaves|celery salt|onion powder|garlic powder|stock powder|seasoning|spice|dried herbs|herbs)\b/,"jar"]];
     for(const [rx,pk] of P)if(rx.test(lo))return `1 ${pk} ${it.replace(/^(?:(?:finely |roughly )?(?:chopped|grated|crushed|ground|melted|softened)\s+)(?=.*\b(sugar|cheese|parmesan|nuts|almonds|chocolate|butter)\b)/i,"")}`}
+  /* review 37: a line with no amount at all ("tomato sauce", "sweetened condensed milk") says the pack you buy */
+  if(!/^(\d|a |an |\d\/)/i.test(x)&&!STAPLE_RE.test(x.toLowerCase())){const lo=x.toLowerCase();
+    const B=[[/\b(golden syrup|treacle|condensed milk|evaporated milk|coconut milk|coconut cream)\b/,"tin"],[/\b(mayonnaise|mustard|jam|honey|relish|chutney|pickles|peanut butter|vegemite)\b/,"jar"],[/\b(sauce|ketchup|vinegar|oil|syrup|cordial)\b/,"bottle"]];
+    for(const [rx,pk] of B)if(rx.test(lo)&&!/\b(bunch|knob|head|clove|stick)\b/.test(lo))return `1 ${pk} ${x}`}
   /* a cut word at the front of produce ("2 tbsp chopped mint" is handled above; "500g sliced mushrooms" is just mushrooms) */
   x=x.replace(/^([\d\/ .]+\s*(?:g|kg|ml|l|L)?\s+)(?:finely |roughly |thinly )?(?:chopped|diced|sliced|shredded|minced|snipped|torn)\s+(?!.*\b(cheese|cheddar|mozzarella|parmesan|pecorino|gruyere|ham|salami|turkey|beef|pork|chicken|almonds|coconut)\b)/i,"$1");
   return x}
@@ -1805,12 +1816,14 @@ function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")
      "A word from ...", "Heard at the counter" and "Overheard on the ward" over it become "A note from ..." */
   /* review 33 (Josh): a signed note says it is a note. The name under it reads "A note from Muriel", unless a heading over it already
      says so (tea room), so a line in a character's voice is never mistaken for a line from the film */
+  /* review 37: the headings turn into "A note from ..." first, so the name under a tavern's "A word from Tia Dalma" is not given a second one */
+  h=h.replace(/>(\s*)(?:Overheard|Heard) (?:at|on|in) the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)
+    .replace(/>(\s*)(?:A word|Word) from ([^<]{1,40}?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from ${w}${b}<`)
+    .replace(/>(\s*)From the (host|director's desk)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`);
   {const by=String(n.by||"").trim();if(by&&!new RegExp("A note from "+rx(e(by)),"i").test(h)){const at=h.search(new RegExp(alt));
     if(at>=0){const tail=h.slice(at),re=new RegExp(`>(\\s*)(?:[\u2014\u2013-]\\s*)?(${rx(e(by))}|${rx(by)}|${rx(e(by).replace(/'/g,"&#39;"))})(\\s*)<`),m=tail.match(re);
       if(m)h=h.slice(0,at)+tail.replace(re,(x,a,b2,c)=>`>${a}<span data-notefrom>A note from </span>${b2}${c}<`)}}}
-  return h.replace(/>(\s*)(?:Overheard|Heard) (?:at|on|in) the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)
-    .replace(/>(\s*)(?:A word|Word) from ([^<]{1,40}?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from ${w}${b}<`)
-    .replace(/>(\s*)From the (host|director's desk)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)}
+  return h}
 /* review 33: "A note from Muriel" is longer than the bare name it replaced; where its box is tight the line steps down in size,
    then reads "from Muriel", so nothing is cut (Annie, Newsies) */
 function noteFromFit(root){if(!root)return;for(const sp of root.querySelectorAll("[data-notefrom]")){const el=sp.parentElement;if(!el)continue;
@@ -2152,7 +2165,7 @@ function houseCap(root,menu,fmt){
      4. a seafood or steak starter is never well under a plain one
      5. clean endings (.00 .25 .50 .75 .95 .99, cents in fives). One odd ending stays: the film's number hidden in the cents (Josh's Easter egg rule) */
 const PF_LEVEL={"1800s":.1,"1930s-40s":.2,"1950s":.45,"1960s":.8,"1970s":1.4,"1980s":3,"1990s":4.5,"2000s":6.5,"modern":9};
-const PF_CHEAP=/\b(pancakes?|pikelets?|waffles?|slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
+const PF_CHEAP=/\b(pancakes?|pikelets?|waffles?|slices?|hot ?dogs?|chill?i dogs?|snow ?cones?|slushies|slushie|shaved ice|icy poles?|ice blocks?|ice pops?|ice lollies|popsicles?|franks|frankfurts?|wieners?|cookies?(?!'s)|cupcakes?|lollipops?|lollies|peanuts|popcorn|pretzels?|crisps|corn dogs?|buckeyes?|fairy bread|garlic knots?|hash ?browns?|doughnut holes|donut holes|spiced (?:nuts|pecans|almonds|peanuts)|boiled peanuts)\b/i,PF_NOTCHEAP=/\b(pizza pie|whole|platter|pie|cake|loaf|tart|plate)\b/i;
 /* review 32: bar and counter bites too (crackling, pickled eggs and onions, potato scallops, a plain meat pie or sausage roll, chips, a scone) */
 const PF_BITE=/\b(jelly( gems| cubes| cups)?|crackling|pork scratchings|pork rinds|chicharrones|cheese puffs|puffs|biscuits|lamingtons?|party pies?|pickled (eggs?|onions?)|potato (scallops?|cakes?)|sausage rolls?|meat pies?|chips|fries|scones?|nuts|olives|samosas?)\b/i,PF_NOTBITE=/\b(fish and chips|steak|loaded|platter|board|with (fish|steak|chicken|prawns?)|(and|with) (fries|chips|crackling|slaw)|(chips|fries) inside)\b/i;
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
@@ -2178,6 +2191,8 @@ const PF_SWEETCAP={"1800s":.1,"1930s-40s":.3,"1950s":.5,"1960s":.9,"1970s":2,"19
 const PF_CHEAPV=/\b(canteen|cafeteria|mess|commissary|soldiers'? club|staff)\b/i,pfVenueK=(fl,fmt)=>{const v=String(fl&&fl.venue||"");if(fl&&typeof fl.priceK==="number")return fl.priceK;
     /* review 36: price the venue's level, not just the decade: a school lunch or a hawker plate is cheap, a five-star hotel bar dear (flavour.priceK overrides) */
     if(/\b(elementary|primary|kindergarten|lunchroom|hawker|food centre)\b/i.test(v))return .32;
+    /* review 37: a snack stand, candy shop or drive-thru charges snack prices (The Sandlot's 1962 burgers at $1.95, Willy Wonka's candy shop) */
+    if(/\b(snack (stand|bar|shack)|concessions?|drive-thru|drive thru|hot dog (stand|cart)|candy (shop|store)|sweet shop|lolly shop|soda fountain)\b/i.test(v))return .5;
     if(/\b(park hyatt|ritz|savoy|plaza|four seasons|waldorf|penthouse|bellagio|continental|grand budapest)\b/i.test(v))return 1.8;
     return /^(canteen|lab|hospital)$/.test(fmt||"")||PF_CHEAPV.test(v)?.55:1};
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
@@ -2285,6 +2300,8 @@ const PAY_NOT=/\b(diner|caf[eé]|cafeteria|canteen|pub|bar|tavern|inn|hotel|mote
   PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen|swamp|sietch|workshop|cookhouse|bunkhouse|chuck ?wagon|lifeboat|locker room|green room|backstage|great hall|common room)\b/i,
   PAY_MESS=/\b(mess|barracks|prison|jail|gaol|bunker|outpost|base|fort|army|stalag|pow camp|brig)\b/i;
 function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.pay!=null)return fl.pay;if(fmt==="own"||fmt==="takeaway"||fmt==="truck")return null;
+  /* review 37: a banquet or an invitation is a host feeding guests (Grinch, Batman v Superman, Flash Gordon, Mulan, The Hobbit): no prices unless flavour.pay is true */
+  if(fmt==="banquet"||fmt==="invite"||fmt==="prom")return "";/* a school dance or formal is paid by the ticket (Halloween 2018, Carrie, Footloose) */
   const v=String(fl.venue||"");if(!v)return null;
   if(fl.camp==="army"||PAY_MESS.test(v)&&!/\b(cafeteria|canteen|diner|caf[eé]|club)\b/i.test(v))return "Issue";
   if(fl.camp==="summer")return "";
@@ -2293,7 +2310,9 @@ function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.p
 function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
   T.sort((a,b)=>a.compareDocumentPosition(b)&Node.DOCUMENT_POSITION_FOLLOWING?-1:1);
   for(const t of T){const m=t.nodeValue.match(/^(\s*)[\s\S]*?(\s*)$/);t.nodeValue=m[1]+W[i++%W.length]+m[2]}
-  for(const e of root.querySelectorAll("[data-sum],[data-echo]"))e.textContent=W[0];
+  for(const e of root.querySelectorAll("[data-sum],[data-echo]")){e.textContent=W[0];
+    /* review 37: a total line with nothing left to total goes (Grandma's Boy printed "Carried over", "Running tab" with no amounts) */
+    if(!String(W[0]).trim()&&e.hasAttribute("data-sum")&&e.parentElement&&e.parentElement!==root&&e.parentElement.children.length<=3)e.parentElement.style.display="none"}
   const PAYW=/\b(prices?|priced|cash|(?:cover|service|tray|corkage|extra|no|room) charges?|charges? (?:apply|applies|extra|may)|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst)\b/i;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),N=[];let t;while((t=tw.nextNode()))N.push(t);
   for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;const ss=v.split(/(?<=[.!])\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
@@ -2311,7 +2330,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   const dish=[];for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it){const nm=norm(it.label||it.n);if(nm.length>2)dish.push({k,n:it.label||it.n,nm,house:!!it.house})}
   if(!dish.length)return 0;
   /* review 36: where nobody pays, every price on the card goes, in whatever money the layout printed it ("12 cr" in a galley, "9 gold coins", "4s 8d") */
-  {const pw=payWord(fl,fmt);if(pw!=null){const MR=/^\s*((\$|£|¥|€)\s?\d{1,4}([.,]\d\d)?|\d{1,4}\.\d\d|\.\d\d|\d{1,4}\s?(¢|c|cr|credits|d|p|pfennigs?|solari|gold coins?|silver|silver pennies|Galleons?|Sickles?|Knuts?|crowns?|gp|kr)|\d{1,3}s(\s\d{1,2}d)?|\d+ Galleons?( \d+ Sickles?)?)\s*$/i,
+  {const pw=payWord(fl,fmt);if(pw!=null){const MR=/^\s*((\$|£|¥|€)\s?\d{1,4}([.,]\d\d)?|\d{1,4}\.\d\d|\.\d\d|\d{1,4}\s?(¢|c|cr|credits|d|p|pfennigs?|solari|gold coins?|silver|silver pennies|taels?|ryo|denarii|drachmas?|coppers?|doubloons|Galleons?|Sickles?|Knuts?|crowns?|gp|kr)|\d{1,3}s(\s\d{1,2}d)?|\d+ Galleons?( \d+ Sickles?)?)\s*$/i,
      tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),T=[];let t;while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;if(MR.test(t.nodeValue))T.push(t)}
      if(T.length>=2)return payFix(root,T,pw)}}
   const PR=/^(\s*)(\$|£)?(\d{1,3})(?:\.(\d\d))?(\s*)$|^(\s*)(\d{1,2})(¢|c)(\s*)$|^(\s*)\.(\d\d)(\s*)$/;
@@ -2394,6 +2413,9 @@ function priceFix0(root,menu,f,fl,era,fmt){
       else for(const x of sw)if(x.v>=m0)x.v=Math.max(step(m0),m0*.8)}}}
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
   {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
+  /* review 37: a cocktail costs at least any bar snack (Casino Royale's Vesper sat under the olive picks), and a coffee or tea is never dearer than the cheapest starter (Bad Boys' cafecito) */
+  {const hb=maxOf(by("s").filter(x=>PF_BAR.test(x.n)||/\b(picks|olives|nuts)\b/i.test(x.n)));if(hb!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<hb)x.v=hb}
+  {const lo=minOf(by("s"));if(lo!=null)for(const x of by("d"))if(/\b(coffee|espresso|cafecito|caf[eé]|cortado|tea|latte|cappuccino|flat white)\b/i.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.v>lo){x.v=lo;x.down=1}}
   /* review 35: champagne or wine by the glass costs more than any soft drink or coffee and more than the cheapest starter (Roman Holiday's
      champagne for lunch sat at the price of the zucchini flowers and the iced espresso) */
   {const D=by("d"),FZ=/\b(champagne|prosecco|spumante|cava|wine|claret|sherry|port)\b/i,soft=D.filter(x=>!PF_SP.test(x.n)),hs=maxOf(soft),

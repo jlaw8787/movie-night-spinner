@@ -4,7 +4,7 @@
   {
    "n": "Island platter of haloumi, feta and figs",
    "course": "s",
-   "prep_min": 15,
+   "prep_min": 11,
    "cook_min": 5,
    "make_ahead": "Best served warm",
    "ingredients": [
@@ -72,7 +72,7 @@
     },
     {
      "text": "Arrange everything on a big platter with the olives and figs.",
-     "min": 7
+     "min": 3
     }
    ],
    "veg": true,
@@ -81,7 +81,7 @@
   {
    "n": "London 1918 pasties",
    "course": "s",
-   "prep_min": 25,
+   "prep_min": 23,
    "cook_min": 30,
    "make_ahead": "Up to 1 day, reheat to serve",
    "ingredients": [
@@ -143,7 +143,7 @@
     },
     {
      "text": "Serve with English mustard.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -151,7 +151,7 @@
    "alt": {
     "veg": {
      "n": "London 1918 cheese and vegetable pasties",
-     "prep_min": 25,
+     "prep_min": 23,
      "cook_min": 30,
      "make_ahead": "Up to 1 day, reheat to serve",
      "ingredients": [
@@ -225,7 +225,7 @@
       },
       {
        "text": "Serve with English mustard.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true
@@ -235,7 +235,7 @@
   {
    "n": "Liberation night stew",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 28,
    "cook_min": 210,
    "make_ahead": "Stew up to 2 days ahead, fry the fries fresh",
    "ingredients": [
@@ -313,7 +313,7 @@
     },
     {
      "text": "Serve the stew with the frites.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -321,7 +321,7 @@
    "alt": {
     "af": {
      "n": "Liberation night stew",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 210,
      "make_ahead": "Stew up to 2 days ahead, fry the fries fresh",
      "ingredients": [
@@ -417,13 +417,13 @@
       },
       {
        "text": "Serve the stew with the frites.",
-       "min": 5
+       "min": 3
       }
      ]
     },
     "veg": {
      "n": "Veld celebration stew (vegetarian)",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 110,
      "make_ahead": "Stew up to 2 days ahead, fry the fries fresh",
      "ingredients": [
@@ -519,14 +519,14 @@
       },
       {
        "text": "Serve the stew with the frites.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": false
     },
     "veg_af": {
      "n": "Veld celebration stew (vegetarian, alcohol-free)",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 110,
      "make_ahead": "Stew up to 2 days ahead, fry the fries fresh",
      "ingredients": [
@@ -622,7 +622,7 @@
       },
       {
        "text": "Serve the stew with the frites.",
-       "min": 5
+       "min": 3
       }
      ]
     }

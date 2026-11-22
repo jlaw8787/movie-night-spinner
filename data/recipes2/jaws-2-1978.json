@@ -4,7 +4,7 @@
   {
    "n": "Sailing trip sandwiches",
    "course": "s",
-   "prep_min": 15,
+   "prep_min": 11,
    "cook_min": 0,
    "make_ahead": "Up to 3 hours, wrap tight",
    "ingredients": [
@@ -52,7 +52,7 @@
     },
     {
      "text": "Pile into the rolls with sliced avocado and crisp cos.",
-     "min": 7
+     "min": 3
     },
     {
      "text": "Wrap tight in paper for the boat.",
@@ -64,7 +64,7 @@
    "alt": {
     "veg": {
      "n": "Sailing trip sandwiches (vegetarian)",
-     "prep_min": 15,
+     "prep_min": 11,
      "cook_min": 0,
      "make_ahead": "Up to 3 hours, wrap tight",
      "ingredients": [
@@ -118,7 +118,7 @@
       },
       {
        "text": "Pile into the rolls with sliced avocado and crisp cos.",
-       "min": 7
+       "min": 3
       },
       {
        "text": "Wrap tight in paper for the boat.",
@@ -132,7 +132,7 @@
   {
    "n": "Amity Island fried clams",
    "course": "s",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 15,
    "make_ahead": "Cut the calamari into strips up to 1 day ahead and keep chilled; soak, dredge and fry just before serving",
    "ingredients": [
@@ -194,7 +194,7 @@
     },
     {
      "text": "Serve with tartare and lemon wedges.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -202,7 +202,7 @@
    "alt": {
     "veg": {
      "n": "Amity Island fried king oyster mushrooms",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 15,
      "make_ahead": "Slice the mushrooms up to 1 day ahead and keep chilled; soak, dredge and fry just before serving",
      "ingredients": [
@@ -264,7 +264,7 @@
       },
       {
        "text": "Serve with tartare and lemon wedges.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

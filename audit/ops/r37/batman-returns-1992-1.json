@@ -1,0 +1,25 @@
+{
+ "id": "Batman Returns (1992)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Tree lighting in Gotham Plaza",
+    "The Penguin's duck vehicle",
+    "I am Catwoman, hear me roar"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Sardines on toast with lemon",
+    "note": "Tinned fish on hot toast with lemon.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

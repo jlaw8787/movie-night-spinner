@@ -1,0 +1,11 @@
+{"id":"Stuart Little (1999)","old":"That's-a-lot-of-Littles cheese puffs","dish":{
+ "n":"That's-a-lot-of-Littles pigs in blankets","note":"Cocktail sausages rolled in puff pastry and baked golden, for the whole Little family.",
+ "how":"Heat the oven to 200C. Cut 2 thawed sheets of puff pastry into 24 strips. Wrap each of 24 cocktail sausages in a strip, seam side down on a lined tray, and brush with beaten egg. Bake 18 to 20 minutes until puffed and golden. Serve with tomato sauce and mustard.",
+ "shop":["24 cocktail sausages@Meat","2 sheets puff pastry@Frozen","1 egg@Dairy","1 bottle tomato sauce@Pantry","1 jar American mustard@Pantry"],
+ "prep_min":15,"cook_min":20,"make_ahead":"Wrap up to 1 day ahead and keep covered in the fridge; bake on the night","veg":false,"af":true,
+ "ingredients":[{"q":24,"u":"","item":"cocktail sausages","aisle":"Meat"},{"q":2,"u":"","item":"sheets puff pastry, thawed","aisle":"Frozen"},{"q":1,"u":"","item":"egg, beaten","aisle":"Dairy"},{"q":1,"u":"","item":"bottle tomato sauce","aisle":"Pantry"},{"q":1,"u":"","item":"jar American mustard","aisle":"Pantry"}],
+ "steps":[{"text":"Heat the oven to 200C and cut the pastry into 24 strips.","min":5},{"text":"Wrap each sausage in a strip, seam down on a lined tray, and brush with egg.","min":10},{"text":"Bake until puffed and golden.","min":20}],
+ "alt":{"veg":{"n":"That's-a-lot-of-Littles veggie pigs in blankets (vegetarian)","prep_min":15,"cook_min":20,"make_ahead":"Wrap up to 1 day ahead and keep covered in the fridge",
+   "ingredients":[{"q":24,"u":"","item":"vegetarian cocktail sausages","aisle":"Frozen"},{"q":2,"u":"","item":"sheets puff pastry, thawed","aisle":"Frozen"},{"q":1,"u":"","item":"egg, beaten","aisle":"Dairy"},{"q":1,"u":"","item":"bottle tomato sauce","aisle":"Pantry"}],
+   "steps":[{"text":"Heat the oven to 200C and cut the pastry into 24 strips.","min":5},{"text":"Wrap each sausage in a strip and brush with egg.","min":10},{"text":"Bake until puffed and golden.","min":20}]}},
+ "vegNote":"Vegetarian cocktail sausages rolled in puff pastry and baked golden."}}

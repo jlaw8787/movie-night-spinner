@@ -4,7 +4,7 @@
   {
    "n": "New York bodega bagel bites",
    "course": "s",
-   "prep_min": 20,
+   "prep_min": 15,
    "cook_min": 0,
    "make_ahead": "Beat the cream cheese with the chives and lemon up to 1 day ahead in the fridge; toast the bagels and build just before serving",
    "ingredients": [
@@ -68,7 +68,7 @@
     },
     {
      "text": "Top with smoked salmon, capers, red onion and dill.",
-     "min": 8
+     "min": 3
     },
     {
      "text": "Finish with cracked pepper and serve on a board with lemon wedges.",
@@ -80,7 +80,7 @@
    "alt": {
     "veg": {
      "n": "New York bodega bagel bites with beetroot lox",
-     "prep_min": 25,
+     "prep_min": 20,
      "cook_min": 5,
      "make_ahead": "Dress the beetroot and soak it up to 1 day ahead in the fridge and beat the cream cheese up to 1 day ahead; toast the bagels and build just before serving",
      "ingredients": [
@@ -160,7 +160,7 @@
       },
       {
        "text": "Top with folds of beetroot, capers, red onion and dill.",
-       "min": 8
+       "min": 3
       },
       {
        "text": "Finish with cracked pepper and serve on a board with lemon wedges.",
@@ -420,7 +420,7 @@
   {
    "n": "Karaoke bar sliders and mac and cheese",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 28,
    "cook_min": 15,
    "make_ahead": "Bake the mac and cheese cups up to 1 day ahead and reheat at 180C; shape and cook the patties on the night",
    "ingredients": [
@@ -486,7 +486,7 @@
     },
     {
      "text": "Serve in slider buns with pickles alongside the mac and cheese cups.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -494,7 +494,7 @@
    "alt": {
     "veg": {
      "n": "Sliders and mac and cheese party plate (vegetarian)",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 15,
      "make_ahead": "Bake the mac and cheese cups up to 1 day ahead, cover in the fridge and reheat; cook the plant-based patties just before serving",
      "ingredients": [
@@ -566,7 +566,7 @@
       },
       {
        "text": "Serve in slider buns with pickles alongside the mac and cheese cups.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

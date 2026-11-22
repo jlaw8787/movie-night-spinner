@@ -1,0 +1,25 @@
+{
+ "id": "Barbarian (2022)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The double booked rental",
+    "AJ Gill's basement tapes",
+    "The first basement door"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Detroit Coney dogs with onions",
+    "note": "Hot dogs with chilli sauce and onions.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

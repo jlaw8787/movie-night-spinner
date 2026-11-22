@@ -4,7 +4,7 @@
   {
    "n": "Melbourne Cup marquee canapés",
    "course": "s",
-   "prep_min": 35,
+   "prep_min": 30,
    "cook_min": 3,
    "make_ahead": "Up to 2 hours ahead, keep chilled",
    "ingredients": [
@@ -17,13 +17,13 @@
     {
      "q": 100,
      "u": "g",
-     "item": "crème fraîche",
+     "item": "horseradish cream",
      "aisle": "Dairy"
     },
     {
      "q": 100,
      "u": "g",
-     "item": "smoked salmon",
+     "item": "rare roast beef",
      "aisle": "Seafood"
     },
     {
@@ -59,7 +59,7 @@
    ],
    "steps": [
     {
-     "text": "Top the blinis with crème fraîche and smoked salmon.",
+     "text": "Top the blinis with horseradish cream and rare roast beef.",
      "min": 8
     },
     {
@@ -76,7 +76,7 @@
     },
     {
      "text": "Arrange everything on platters.",
-     "min": 8
+     "min": 3
     }
    ],
    "veg": false,
@@ -84,7 +84,7 @@
    "alt": {
     "veg": {
      "n": "Melbourne Cup marquee canapés (vegetarian)",
-     "prep_min": 29,
+     "prep_min": 27,
      "cook_min": 11,
      "make_ahead": "Up to 2 hours ahead, keep chilled",
      "ingredients": [
@@ -97,7 +97,7 @@
       {
        "q": 100,
        "u": "g",
-       "item": "crème fraîche",
+       "item": "horseradish cream",
        "aisle": "Dairy"
       },
       {
@@ -157,7 +157,7 @@
      ],
      "steps": [
       {
-       "text": "Top the blinis with crème fraîche, beetroot and dill.",
+       "text": "Top the blinis with horseradish cream, beetroot and dill.",
        "min": 8
       },
       {
@@ -178,7 +178,7 @@
       },
       {
        "text": "Arrange everything on platters.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true
@@ -496,7 +496,7 @@
   {
    "n": "Vanilla slice",
    "course": "w",
-   "prep_min": 45,
+   "prep_min": 38,
    "cook_min": 200,
    "make_ahead": "Make the day before",
    "ingredients": [
@@ -554,11 +554,11 @@
     },
     {
      "text": "Pour between the pastry sheets in a lined tin.",
-     "min": 8
+     "min": 3
     },
     {
      "text": "Top with passionfruit icing.",
-     "min": 5
+     "min": 3
     },
     {
      "text": "Set overnight, then cut with a hot knife.",

@@ -55,7 +55,7 @@
   {
    "n": "Carne asada fries",
    "course": "s",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 85,
    "make_ahead": "Marinate up to 1 day ahead",
    "ingredients": [
@@ -131,7 +131,7 @@
     },
     {
      "text": "Top with the steak, avocado and sour cream.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -139,7 +139,7 @@
    "alt": {
     "veg": {
      "n": "Asada portobello fries",
-     "prep_min": 18,
+     "prep_min": 16,
      "cook_min": 55,
      "make_ahead": "Marinate up to 4 hours ahead",
      "ingredients": [
@@ -221,7 +221,7 @@
       },
       {
        "text": "Top with the mushrooms, avocado and sour cream.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

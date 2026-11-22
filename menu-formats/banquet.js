@@ -206,7 +206,8 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(fl&&fl.year||f.year)} &nbsp;·&nbsp; Covers laid for ${esc(String(fl&&fl.covers||4))}</div>`;
 
   /* ---------- back: courses in procession ---------- */
-  const LAB=fam?{s:"To Begin",m:"The Remove",w:"Entremets",d:"The Cordials"}:{s:"To Begin",m:"The Remove",w:"Entremets",d:"From the Cellar"};
+  /* review 37: a card that pours nothing alcoholic has no cellar (The Hobbit, The Wizard of Oz) */const DRY=!((ctx.menu&&ctx.menu.d)||[]).some(it=>it&&/\b(wine|ale|beer|mead|cider|rum|whisk(e)?y|brandy|gin|vodka|champagne|prosecco|sherry|port|liqueur|cocktail|martini|punch with|bourbon|sake|lager|stout|claret|grog)\b/i.test((it.n||"")+" "+(it.note||"")));
+  const LAB=fam||DRY?{s:"To Begin",m:"The Remove",w:"Entremets",d:"The Cordials"}:{s:"To Begin",m:"The Remove",w:"Entremets",d:"From the Cellar"};
   const keys=["s","m","w","d"].filter(k=>(menu[k]||[]).length);
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>8;
   const clamp=n=>`display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:${n};overflow:hidden;`;

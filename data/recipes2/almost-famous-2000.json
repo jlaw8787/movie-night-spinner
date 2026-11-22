@@ -478,7 +478,7 @@
     "veg": {
      "n": "Riot House room service mushroom Diane (vegetarian)",
      "course": "m",
-     "prep_min": 10,
+     "prep_min": 8,
      "cook_min": 40,
      "make_ahead": "Make the sauce base up to a day ahead; cook the fries and mushrooms to serve",
      "ingredients": [
@@ -546,14 +546,14 @@
       },
       {
        "text": "Serve with chips and parsley.",
-       "min": 5
+       "min": 3
       }
      ]
     },
     "af": {
      "n": "Riot House room service steak Diane (alcohol-free)",
      "course": "m",
-     "prep_min": 10,
+     "prep_min": 8,
      "cook_min": 40,
      "make_ahead": "Slice the mushrooms up to a day ahead; cook the fries and steaks to serve",
      "ingredients": [
@@ -621,14 +621,14 @@
       },
       {
        "text": "Serve the steaks with the sauce and chips.",
-       "min": 5
+       "min": 3
       }
      ]
     },
     "veg_af": {
      "n": "Riot House room service mushroom Diane (vegetarian, alcohol-free)",
      "course": "m",
-     "prep_min": 10,
+     "prep_min": 8,
      "cook_min": 40,
      "make_ahead": "Slice the garlic and parsley up to a day ahead; cook the fries and mushrooms to serve",
      "ingredients": [
@@ -696,7 +696,7 @@
       },
       {
        "text": "Serve with chips and parsley.",
-       "min": 5
+       "min": 3
       }
      ]
     }

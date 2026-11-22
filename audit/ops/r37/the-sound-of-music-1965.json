@@ -1,0 +1,21 @@
+{
+ "id": "The Sound of Music (1965)",
+ "ops": [
+  {
+   "old": "Dinner at the villa, the children marched in by the bosun's whistle.",
+   "new": "Dinner at the villa, the children marched.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Play clothes cut from the old bedroom curtains",
+    "The rowboat tipping everyone into the lake",
+    "A marionette show in the villa salon"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

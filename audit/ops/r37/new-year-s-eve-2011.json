@@ -1,0 +1,34 @@
+{
+ "id": "New Year's Eve (2011)",
+ "ops": [
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Classic champagne cocktail",
+    "note": "Champagne over a sugar cube and bitters.",
+    "alc": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The ball that stalls halfway",
+    "Two couples racing for the $25,000 baby bonus",
+    "A hospital patient with one last wish",
+    "Two strangers stuck in an elevator"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "New York knish with spicy brown mustard",
+    "note": "Potato knish with spicy brown mustard."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

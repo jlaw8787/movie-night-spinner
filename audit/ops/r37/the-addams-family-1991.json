@@ -1,0 +1,26 @@
+{
+ "id": "The Addams Family (1991)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Thing the hand",
+    "Cousin Itt in the hall",
+    "Lurch answering the door",
+    "Fester's light bulb trick"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Black Russian",
+    "note": "Vodka over ice with coffee liqueur.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

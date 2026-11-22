@@ -1,0 +1,29 @@
+{
+ "id": "Eagle vs Shark (2007)",
+ "ops": [
+  {
+   "old": "Peppery beef in thick gravy, a slice of tasty cheese, puff lids, for Jarrod's hometown.",
+   "new": "Peppery beef in thick gravy, a slice of tasty cheese, puff lids.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Lily at the Meaty Boy counter",
+    "Jarrod and his fighting video game",
+    "Jarrod's plan to fight his old bully"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "L&P spider with vanilla ice cream",
+    "note": "L&P lemon soda with vanilla ice cream."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

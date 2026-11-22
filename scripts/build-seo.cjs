@@ -32,6 +32,10 @@ const THEMES = (() => { const m = rd('app.js').match(/const T=(\{[\s\S]*?\}\});/
 const COURSE = { s: 'Snacks', m: 'Mains', w: 'Sweets', d: 'Drinks' };
 /* review 31: the page uses the app's own split of a recipe's time (dishTimes in app.js), so pickling, chilling and resting count as
    waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
+/* review 37: printed names on the hand-built menus (formats.js items carry the recipe key k and the printed name n) */
+const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
+  const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) { const m = {}; const walk = v => { if (Array.isArray(v)) v.forEach(walk); else if (v && typeof v === 'object') { if (typeof v.k === 'string' && typeof v.n === 'string' && v.n.trim() && v.n !== v.k) m[v.k.toLowerCase()] = v.n; Object.values(v).forEach(walk); } }; walk(spec); if (Object.keys(m).length) out[id] = m; }
+  return out; })();
 const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const line = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', i)); };
   const a = src.indexOf('function dishTimes('), b = src.indexOf('\n/*', a);
   const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const WAIT_LEAD='), (() => { const i = src.indexOf('const isWaitStep='); return src.slice(i, src.indexOf('};', i) + 2); })(), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
@@ -63,6 +67,8 @@ const ALL = films.map((f, i) => {
      course, marked "On the printed menu", with how it is made; they stay out of the Recipe list in the JSON-LD */
   { const have = new Set(dishes.map(y => String(y.n).toLowerCase()));
     for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase())) { have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: String(x).split('@')[0] })), steps: [], extra: true }); } }
+  /* review 37: a hand-built menu prints its own short name for a dish ("Buddy Holly chicken", not "Buddy Holly's chicken basket"): the page uses it */
+  { const nm = HB_NAMES[id]; if (nm) for (const y of dishes) { const v = nm[String(y.n).toLowerCase()]; if (v) y.n = v; } }
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
 });
@@ -170,7 +176,7 @@ function filmPage(x) {
       const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(degC(st.text))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
-      return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.extra ? '<span class="tag">On the printed menu</span>' : ''}</h3>
+      return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg && c !== 'd' ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
 ${ingr || steps ? `<details><summary>${y.extra ? 'How it is made' : 'Recipe for 4'}</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
     }).join('\n');

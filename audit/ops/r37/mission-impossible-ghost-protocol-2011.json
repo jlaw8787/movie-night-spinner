@@ -1,0 +1,26 @@
+{
+ "id": "Mission: Impossible - Ghost Protocol (2011)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pelmeni with sour cream and dill",
+    "note": "Pork dumplings boiled and served with sour cream and dill.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Climbing the outside of the Burj Khalifa",
+    "The projector screen in the Kremlin corridor",
+    "The train carriage full of gear",
+    "The party at Brij Nath's in Mumbai"
+   ],
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

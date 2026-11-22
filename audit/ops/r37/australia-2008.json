@@ -1,0 +1,34 @@
+{
+ "id": "Australia (2008)",
+ "ops": [
+  {
+   "old": "Puff pastry cases of creamy prawns and dill. The Darwin ball, the Drover in a white jacket.",
+   "new": "Puff pastry cases of creamy prawns and dill.",
+   "done": true
+  },
+  {
+   "old": "Crisp meringue with whipped cream and passionfruit, the cattle station's Sunday pudding.",
+   "new": "Crisp meringue with whipped cream and passionfruit.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Nullah, King George and Over the Rainbow",
+    "The stampede toward the cliff face",
+    "Neil Fletcher, the station manager"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Warm cheese scones with tomato chutney",
+    "note": "Warm cheese scones with native tomato relish."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

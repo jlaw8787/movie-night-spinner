@@ -233,10 +233,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cnt=k=>items[k]?items[k].length:"";
   /* a film with a real result prints it: flavour.score = {home:[4 numbers],guests:[4 numbers]} (Next Goal Wins) */
   const SCR=(f=>f&&Array.isArray(f.home)&&Array.isArray(f.guests)&&f.home.length===4&&f.guests.length===4?f:null)((ctx.flavour||{}).score);
+  /* review 37: with no real result (flavour.score) the board counts the dishes per course; it no longer prints a made-up Home 3 2 1 2 v Guests 0 0 0 0 on every film */
+  const hdr0=`<div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab("Course")}${["s","m","w","d"].map(k=>`<div style="flex:0 0 46px;text-align:center;font:700 12px/1 ${BF};letter-spacing:.06em;color:${B.lab};text-transform:uppercase">${({s:"Snack",m:"Main",w:"Sweet",d:"Drink"})[k]}</div>`).join("")}<div style="flex:0 0 60px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">All</div></div>`;
   const board=`<div style="background:${B.bg};padding:14px 16px 12px;border:${e.board==="manual"?"6px solid #1a3022":"4px solid #2a2a2a"};box-shadow:0 4px 12px rgba(0,0,0,.35);flex:none">
-    ${hdr}
-    <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[1])}${["s","m","w","d"].map((k,i)=>cell(SCR?SCR.home[i]:cnt(k))).join("")}${cell(SCR?SCR.home.reduce((a,v)=>a+v,0):total,60)}</div>
-    <div style="display:flex;gap:6px;align-items:center">${lab(SB[2])}${[0,1,2,3].map(i=>cell(SCR?SCR.guests[i]:0)).join("")}${cell(SCR?SCR.guests.reduce((a,v)=>a+v,0):0,60)}</div>
+    ${SCR?hdr:hdr0}
+    <div style="display:flex;gap:6px;align-items:center;margin-bottom:${SCR?6:0}px">${lab(SCR?SB[1]:"Dishes")}${["s","m","w","d"].map((k,i)=>cell(SCR?SCR.home[i]:cnt(k))).join("")}${cell(SCR?SCR.home.reduce((a,v)=>a+v,0):total,60)}</div>
+    ${SCR?`<div style="display:flex;gap:6px;align-items:center">${lab(SB[2])}${[0,1,2,3].map(i=>cell(SCR.guests[i])).join("")}${cell(SCR.guests.reduce((a,v)=>a+v,0),60)}</div>`:""}
     <div style="display:flex;justify-content:space-between;margin-top:9px;font:700 15px/1.2 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase"><span>${SB[4]} ${esc(num.slice(0,6))}</span><span>Now serving: ${esc(C[0]?C[0][1]:"Snacks")}</span></div></div>`;
   /* the showtime cue (15 Nov, Josh: stadium never printed it): a ticker under the scoreboard, in the board's own lights */
   const cueTxt=clean(f.P||"").trim();
@@ -258,6 +260,8 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* ---------- BACK: section map of stills, concessions ---------- */
   const MX=660;
+  /* review 37: the front row suits the ground (an ice rink is rinkside, a ballpark field level), flavour.side sets it */
+  const side=clean((ctx.flavour||{}).side||"")||"Front row";
   let pool=stills.slice(0,4);
   /* review 18: the poster is already on the front and the photo pass never shows a photo twice, so it only fills the map when there is no still
      at all (Phar Lap's second section printed as an empty black tile) */
@@ -269,7 +273,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   for(let i=0;i<n;i++){const tw=n===4?(gw-gap)/2:gw,th=n===1?gh:(gh-gap)/2,x=gx+(n===4?(i%2)*(tw+gap):0),y=gy+(n===4?Math.floor(i/2)*(th+gap):n===2?i*(th+gap):0);
     tiles.push(`<div style="position:absolute;left:${x}px;top:${y}px;width:${tw}px;height:${th}px;overflow:hidden;background:#222;outline:3px solid ${acc}">${srcs[i]===pSrc?`<img src="${pSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:photo(srcs[i],pf,"center 35%",overlay(),[],pSrc)}
       <div style="position:absolute;left:0;top:0;background:${band};color:${bandText};font:${e.dw} 20px/1 ${DF};padding:8px 12px;letter-spacing:.04em">SEC ${100+(i+1)}</div>
-      <div style="position:absolute;left:0;right:0;bottom:0;padding:24px 12px 8px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));font:700 15px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:#fbf6ea">${e.secs[i]}</div></div>`)}
+      <div style="position:absolute;left:0;right:0;bottom:0;padding:24px 12px 8px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));font:700 15px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:#fbf6ea">${i===3?esc(side):e.secs[i]}</div></div>`)}
   const mapHead=`<div style="position:absolute;left:${gx}px;top:26px;width:${gw}px">${kick(t.gate,acc,15)}<div style="font:${e.dw} 38px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Section Map</div></div>`;
   /* menu */
   const CX=MX+30,CWall=W-CX-34,colGap=26;

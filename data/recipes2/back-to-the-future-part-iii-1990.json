@@ -108,7 +108,7 @@
   {
    "n": "Doc's blacksmith shop stew",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 28,
    "cook_min": 190,
    "make_ahead": "Up to 2 days, keep chilled, flavour improves",
    "ingredients": [
@@ -180,7 +180,7 @@
     },
     {
      "text": "Serve with the crusty bread for mopping up.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -188,7 +188,7 @@
    "alt": {
     "af": {
      "n": "Doc's blacksmith shop stew",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 190,
      "make_ahead": "Up to 2 days, keep chilled, flavour improves",
      "ingredients": [
@@ -266,13 +266,13 @@
       },
       {
        "text": "Serve with the crusty bread for mopping up.",
-       "min": 5
+       "min": 3
       }
      ]
     },
     "veg": {
      "n": "Doc's blacksmith shop mushroom stew",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 65,
      "make_ahead": "Up to 2 days, keep chilled, flavour improves",
      "ingredients": [
@@ -368,14 +368,14 @@
       },
       {
        "text": "Serve with the crusty bread for mopping up.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": false
     },
     "veg_af": {
      "n": "Doc's blacksmith shop mushroom stew",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 65,
      "make_ahead": "Up to 2 days, keep chilled, flavour improves",
      "ingredients": [
@@ -477,7 +477,7 @@
       },
       {
        "text": "Serve with the crusty bread for mopping up.",
-       "min": 5
+       "min": 3
       }
      ]
     }

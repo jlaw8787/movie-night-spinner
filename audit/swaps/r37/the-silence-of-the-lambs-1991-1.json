@@ -1,0 +1,117 @@
+{
+ "id": "The Silence of the Lambs (1991)",
+ "old": "Red wine and blood orange sangria",
+ "dish": {
+  "n": "Blood orange and red grape cooler",
+  "note": "Red grape and blood orange juice with black tea and honey over sliced fruit.",
+  "how": "Steep the tea bags in the boiling water for 5 minutes, lift out and cool. This gives a dry, grippy finish. Stir the grape juice with the tea, blood orange juice, vanilla and honey until the honey dissolves. Add the sliced orange, diced apple and cinnamon stick. Chill for at least 2 hours. Pour over ice in wine glasses, spooning some fruit into each, and top with a splash of soda water.",
+  "shop": [
+   "600ml red grape juice@Drinks",
+   "2 black tea bags@Drinks",
+   "250ml boiling water@Pantry",
+   "200ml blood orange juice@Drinks",
+   "1 tsp vanilla extract@Pantry",
+   "2 tbsp honey@Pantry",
+   "1 orange@Produce",
+   "1 apple@Produce",
+   "1 cinnamon stick@Pantry",
+   "200ml soda water@Drinks",
+   "1 bag ice@Frozen"
+  ],
+  "prep_min": 20,
+  "cook_min": 120,
+  "make_ahead": "Make a jug ahead, chill",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 600,
+    "u": "ml",
+    "item": "red grape juice",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "black tea bags",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 250,
+    "u": "ml",
+    "item": "boiling water",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 200,
+    "u": "ml",
+    "item": "blood orange juice",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "vanilla extract",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "honey",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "orange",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "apple",
+    "aisle": "Produce"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "cinnamon stick",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 200,
+    "u": "ml",
+    "item": "soda water",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 2,
+    "u": "cup",
+    "item": "ice",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and cool. This gives a dry, grippy finish.",
+    "min": 10
+   },
+   {
+    "text": "Stir the grape juice with the tea, blood orange juice, vanilla and honey until the honey dissolves.",
+    "min": 3
+   },
+   {
+    "text": "Add the sliced orange, diced apple and cinnamon stick.",
+    "min": 5
+   },
+   {
+    "text": "Chill for at least 2 hours.",
+    "min": 120
+   },
+   {
+    "text": "Pour over ice in wine glasses, spooning some fruit into each, and top with a splash of soda water.",
+    "min": 2
+   }
+  ]
+ }
+}

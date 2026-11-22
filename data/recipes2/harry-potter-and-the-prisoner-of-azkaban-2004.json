@@ -130,7 +130,7 @@
   {
    "n": "Leaky Cauldron stew",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 28,
    "cook_min": 210,
    "make_ahead": "Up to 2 days, reheat to serve",
    "ingredients": [
@@ -204,7 +204,7 @@
     },
     {
      "text": "Serve with crusty bread and butter.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -212,7 +212,7 @@
    "alt": {
     "af": {
      "n": "Leaky Cauldron stew",
-     "prep_min": 30,
+     "prep_min": 28,
      "cook_min": 180,
      "make_ahead": "Up to 2 days, reheat to serve",
      "ingredients": [
@@ -286,13 +286,13 @@
       },
       {
        "text": "Serve with crusty bread and butter.",
-       "min": 5
+       "min": 3
       }
      ]
     },
     "veg": {
      "n": "Leaky Cauldron stew (vegetarian)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 100,
      "make_ahead": "Up to 2 days, reheat to serve",
      "ingredients": [
@@ -378,14 +378,14 @@
       },
       {
        "text": "Serve with crusty bread and butter.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": false
     },
     "veg_af": {
      "n": "Leaky Cauldron stew (vegetarian, alcohol-free)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 100,
      "make_ahead": "Up to 2 days, reheat to serve",
      "ingredients": [
@@ -471,7 +471,7 @@
       },
       {
        "text": "Serve with crusty bread and butter.",
-       "min": 5
+       "min": 3
       }
      ]
     }

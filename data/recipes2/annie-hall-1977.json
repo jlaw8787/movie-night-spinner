@@ -4,7 +4,7 @@
   {
    "n": "Lobster bites",
    "course": "s",
-   "prep_min": 25,
+   "prep_min": 23,
    "cook_min": 5,
    "make_ahead": "Up to 2 hours, assemble just before serving",
    "ingredients": [
@@ -66,7 +66,7 @@
     },
     {
      "text": "Pile the lobster on top.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -74,7 +74,7 @@
    "alt": {
     "veg": {
      "n": "Lobster bites (vegetarian)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 5,
      "make_ahead": "Up to 2 hours, assemble just before serving",
      "ingredients": [
@@ -146,7 +146,7 @@
       },
       {
        "text": "Pile the filling on top.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

@@ -1,0 +1,30 @@
+{
+ "id": "Fantastic Beasts and Where to Find Them (2016)",
+ "ops": [
+  {
+   "old": "Filo strudel of cinnamon apple and sultanas. Queenie read your mind.",
+   "new": "Filo strudel of cinnamon apple and sultanas.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Pickett the Bowtruckle in Newt's pocket",
+    "Queenie reading minds",
+    "Frank the Thunderbird released over New York"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Kielbasa with mustard on rye",
+    "note": "Kielbasa sausage with mustard on rye.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

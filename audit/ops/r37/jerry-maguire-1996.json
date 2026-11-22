@@ -1,0 +1,24 @@
+{
+ "id": "Jerry Maguire (1996)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "You had me at hello",
+    "Help me help you",
+    "Ray says a human head weighs eight pounds"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Double espresso over ice",
+    "note": "Two shots of espresso poured over ice."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

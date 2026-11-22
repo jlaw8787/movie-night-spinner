@@ -1,0 +1,26 @@
+{
+ "id": "Office Space (1999)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Lumbergh needs you in on Saturday",
+    "Milton and the red stapler",
+    "The printer beaten in the field",
+    "Initech and Lumbergh's coffee mug"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Strawberry daiquiri",
+    "note": "Strawberries, rum and lime blended with ice.",
+    "alc": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

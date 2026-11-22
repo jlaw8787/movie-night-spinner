@@ -377,7 +377,7 @@
   {
    "n": "Crispy fish sliders with tartare",
    "course": "m",
-   "prep_min": 20,
+   "prep_min": 15,
    "cook_min": 12,
    "make_ahead": "Make the tartare up to 2 days ahead, keep chilled",
    "ingredients": [
@@ -455,7 +455,7 @@
     },
     {
      "text": "Dust the fish in flour, dip in beaten egg and coat in panko.",
-     "min": 8
+     "min": 3
     },
     {
      "text": "Shallow fry until golden and cooked through.",
@@ -471,7 +471,7 @@
    "alt": {
     "veg": {
      "n": "Harold's crispy haloumi sliders with tartare",
-     "prep_min": 20,
+     "prep_min": 15,
      "cook_min": 12,
      "make_ahead": "Make the tartare up to 2 days ahead, keep chilled",
      "ingredients": [
@@ -543,7 +543,7 @@
       },
       {
        "text": "Dust the haloumi in flour, dip in beaten egg and coat in panko.",
-       "min": 8
+       "min": 3
       },
       {
        "text": "Shallow fry until golden.",
@@ -559,11 +559,11 @@
    }
   },
   {
-   "n": "Doogie's salted caramel malt shakes",
+   "n": "Doogie's caramel malt shakes",
    "course": "w",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "Make the salted caramel up to 1 week ahead and keep it in the fridge; blend the shakes to order",
+   "make_ahead": "Make the caramel up to 1 week ahead and keep it in the fridge; blend the shakes to order",
    "ingredients": [
     {
      "q": 100,
@@ -610,7 +610,7 @@
    ],
    "steps": [
     {
-     "text": "Make salted caramel: melt the sugar until amber, whisk in the cream and the butter, then a little salt, and cool.",
+     "text": "Make caramel: melt the sugar until amber, whisk in the cream and the butter, then a little salt, and cool.",
      "min": 2
     },
     {

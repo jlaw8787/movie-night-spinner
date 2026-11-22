@@ -205,7 +205,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const still2=`<div style="position:absolute;left:24px;right:24px;top:${SY}px;height:${SH}px">
     <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s2,(stills[1]||stills[0])?"still":"poster")}</div>${prop}
     <div style="position:absolute;right:12px;bottom:12px;background:${paper};color:${ink};font:italic 400 15px/1.2 ${B};padding:5px 10px">Now showing, ${esc(f.year||"")}</div></div>`;
-  const backFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;font:400 14px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${PLACE.k==="store"?"Prices include tea for one. Form TR-"+esc(num)+".":PLACE.k==="home"?"Made at home, served in the front room.":PLACE.k==="party"?"Tea and cake for every guest.":"Pay on the way out."} Images: TMDB</div>`;
+  const backFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;font:400 14px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${PLACE.k==="store"?/* review 37: no "tea included" over a priced pot of tea (The Dressmaker, Miracle on 34th Street) */((ctx.menu&&ctx.menu.d||[]).some(it=>it&&/\btea\b/i.test(it.n||""))?"":"Prices include tea for one. ")+"Form TR-"+esc(num)+".":PLACE.k==="home"?"Made at home, served in the front room.":PLACE.k==="party"?"Tea and cake for every guest.":"Pay on the way out."} Images: TMDB</div>`;
   const back=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:8px;${E.frame};pointer-events:none"></div>
     ${bHead}${menu}${still2}${backFoot}${fitImg()}</div>`;

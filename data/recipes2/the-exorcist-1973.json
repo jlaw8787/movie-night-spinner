@@ -225,7 +225,7 @@
   {
    "n": "Pea and ham soup",
    "course": "m",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 125,
    "make_ahead": "Keeps 3 days chilled",
    "ingredients": [
@@ -287,7 +287,7 @@
     },
     {
      "text": "Serve with crusty bread. Eat it, don't throw it.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -295,7 +295,7 @@
    "alt": {
     "veg": {
      "n": "Pea and smoked tofu soup",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 95,
      "make_ahead": "Keeps 3 days chilled",
      "ingredients": [
@@ -375,7 +375,7 @@
       },
       {
        "text": "Serve with crusty bread. Eat it, don't throw it.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

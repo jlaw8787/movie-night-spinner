@@ -2,11 +2,11 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Za'atar flatbreads with hummus and labneh",
+   "n": "Sumac and sesame flatbreads with hummus and labneh",
    "course": "s",
    "prep_min": 9,
    "cook_min": 6,
-   "make_ahead": "Best grilled just before serving; brush with oil and sprinkle with za'atar up to 2 hours ahead",
+   "make_ahead": "Best grilled just before serving; brush with oil and sprinkle with sumac and sesame up to 2 hours ahead",
    "ingredients": [
     {
      "q": 4,
@@ -23,7 +23,7 @@
     {
      "q": 3,
      "u": "tbsp",
-     "item": "za'atar",
+     "item": "sumac and sesame",
      "aisle": "Spices"
     },
     {
@@ -41,7 +41,7 @@
    ],
    "steps": [
     {
-     "text": "Brush the flatbreads with oil and sprinkle generously with za'atar.",
+     "text": "Brush the flatbreads with oil and sprinkle generously with sumac and sesame.",
      "min": 5
     },
     {
@@ -116,7 +116,7 @@
   {
    "n": "Prince Ali's parade lamb",
    "course": "m",
-   "prep_min": 25,
+   "prep_min": 23,
    "cook_min": 325,
    "make_ahead": "Roast the lamb up to 1 day ahead, keep covered in the fridge and reheat; cook the rice and toast the almonds on the night",
    "ingredients": [
@@ -198,7 +198,7 @@
     },
     {
      "text": "Pile the lamb over the rice and scatter with almonds.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,

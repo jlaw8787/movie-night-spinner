@@ -202,7 +202,7 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="position:absolute;left:26px;right:26px;top:20px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${ink};padding-bottom:8px">
        <div style="max-width:470px"><div style="font:${E.dw} 54px/.95 ${dd};text-transform:uppercase;color:${ink}">Duty Roster</div>
          <div style="font:700 18px/1.25 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:clip">${x(venue)}</div></div>
-       <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>Honour box by the kettle</div>
+       <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>${/* review 37: a kettle honour box is Australian or British; an American station keeps a coffee can */(ctx.f&&ctx.f.theme==="aussie")||/^(£|£sd)$/.test(String((ctx.flavour||{}).currency||""))||/^(GB|UK|AU|NZ)$/.test(String((ctx.flavour||{}).country||""))?"Honour box by the kettle":"Coffee can by the pot"}</div>
      </div>
      ${evid(second,26,128,712,340-RAISE,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
      <div style="position:absolute;left:26px;top:${490-RAISE}px;width:712px;height:${424+RAISE}px;display:flex;justify-content:space-between">

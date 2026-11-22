@@ -776,17 +776,29 @@
    }
   },
   {
-   "n": "Red wine and blood orange sangria",
+   "n": "Blood orange and red grape cooler",
    "course": "d",
-   "prep_min": 10,
+   "prep_min": 20,
    "cook_min": 120,
    "make_ahead": "Make a jug ahead, chill",
    "ingredients": [
     {
-     "q": 750,
+     "q": 600,
      "u": "ml",
-     "item": "Chianti",
-     "aisle": "Bottle shop"
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
     },
     {
      "q": 200,
@@ -795,10 +807,10 @@
      "aisle": "Drinks"
     },
     {
-     "q": 60,
-     "u": "ml",
-     "item": "brandy",
-     "aisle": "Bottle shop"
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
     },
     {
      "q": 2,
@@ -822,7 +834,13 @@
      "q": 1,
      "u": "",
      "item": "cinnamon stick",
-     "aisle": "Spices"
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
     },
     {
      "q": 2,
@@ -833,122 +851,28 @@
    ],
    "steps": [
     {
-     "text": "Stir the Chianti with the juice, brandy and honey until the honey dissolves.",
-     "min": 5
+     "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and cool. This gives a dry, grippy finish.",
+     "min": 10
+    },
+    {
+     "text": "Stir the grape juice with the tea, blood orange juice, vanilla and honey until the honey dissolves.",
+     "min": 3
     },
     {
      "text": "Add the sliced orange, diced apple and cinnamon stick.",
      "min": 5
     },
     {
-     "text": "Chill for at least 2 hours, which is the resting time.",
+     "text": "Chill for at least 2 hours.",
      "min": 120
     },
     {
-     "text": "Pour over ice in wine glasses, spooning some fruit into each. For non-drinkers, make it with sour cherry juice and blood orange juice topped with soda.",
-     "min": 0
+     "text": "Pour over ice in wine glasses, spooning some fruit into each, and top with a splash of soda water.",
+     "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Red grape and blood orange cooler",
-     "prep_min": 20,
-     "cook_min": 120,
-     "make_ahead": "Make a jug ahead, chill",
-     "ingredients": [
-      {
-       "q": 600,
-       "u": "ml",
-       "item": "red grape juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "black tea bags",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "blood orange juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "honey",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "orange",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "apple",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "cinnamon stick",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "soda water",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 2,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and cool. This gives a dry, grippy finish.",
-       "min": 10
-      },
-      {
-       "text": "Stir the grape juice with the tea, blood orange juice, vanilla and honey until the honey dissolves.",
-       "min": 3
-      },
-      {
-       "text": "Add the sliced orange, diced apple and cinnamon stick.",
-       "min": 5
-      },
-      {
-       "text": "Chill for at least 2 hours.",
-       "min": 120
-      },
-      {
-       "text": "Pour over ice in wine glasses, spooning some fruit into each, and top with a splash of soda water.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

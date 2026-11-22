@@ -2,75 +2,107 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "That's-a-lot-of-Littles cheese puffs",
+   "n": "That's-a-lot-of-Littles pigs in blankets",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 25,
-   "make_ahead": "Pipe the puffs and freeze them raw up to a month ahead; bake from frozen",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Wrap up to 1 day ahead and keep covered in the fridge; bake on the night",
    "ingredients": [
     {
-     "q": 125,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 125,
-     "u": "ml",
-     "item": "milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
+     "q": 24,
      "u": "",
-     "item": "eggs",
+     "item": "cocktail sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
      "aisle": "Dairy"
     },
     {
-     "q": 120,
-     "u": "g",
-     "item": "gruyere, finely grated",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "",
+     "item": "bottle tomato sauce",
+     "aisle": "Pantry"
     },
     {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "Dijon mustard",
+     "q": 1,
+     "u": "",
+     "item": "jar American mustard",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Bring the water, milk, butter and a pinch of salt to the boil, tip in the flour and beat until it leaves the sides of the pan.",
+     "text": "Heat the oven to 200C and cut the pastry into 24 strips.",
      "min": 5
     },
     {
-     "text": "Cool for 5 minutes, then beat in the eggs one at a time until glossy.",
-     "min": 8
+     "text": "Wrap each sausage in a strip, seam down on a lined tray, and brush with egg.",
+     "min": 10
     },
     {
-     "text": "Beat in the mustard and most of the cheese, then pipe or spoon small balls onto lined trays and top with the rest of the cheese.",
-     "min": 7
-    },
-    {
-     "text": "Bake at 200C until puffed, golden and crisp.",
-     "min": 25
+     "text": "Bake until puffed and golden.",
+     "min": 20
     }
    ],
-   "veg": true,
-   "af": true
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "That's-a-lot-of-Littles veggie pigs in blankets (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Wrap up to 1 day ahead and keep covered in the fridge",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C and cut the pastry into 24 strips.",
+       "min": 5
+      },
+      {
+       "text": "Wrap each sausage in a strip and brush with egg.",
+       "min": 10
+      },
+      {
+       "text": "Bake until puffed and golden.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cereal box cornflake chicken tenders",

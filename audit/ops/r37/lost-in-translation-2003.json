@@ -1,0 +1,25 @@
+{
+ "id": "Lost in Translation (2003)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bob's whisper at the very end",
+    "A wedding procession in Kyoto",
+    "The hotel bar late at night"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Wagyu katsu sando",
+    "note": "Crumbed wagyu sandwich on soft white bread.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

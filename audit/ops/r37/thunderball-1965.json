@@ -1,0 +1,30 @@
+{
+ "id": "Thunderball (1965)",
+ "ops": [
+  {
+   "old": "Grilled lobster tails with Bahamian baked macaroni, on Largo's terrace above the shark pool.",
+   "new": "Grilled lobster tails with Bahamian baked macaroni.",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Largo's shark pool at Palmyra",
+    "The Disco Volante splitting in two",
+    "The underwater battle with the frogmen"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Conch salad with lime and chilli",
+    "note": "Raw conch with lime and chilli.",
+    "meat": true
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}

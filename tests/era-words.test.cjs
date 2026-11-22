@@ -32,5 +32,15 @@ for(const [id,key] of Object.entries(idx)){const y=+(id.match(/\((\d{4})\)$/)||[
    const y=OLD[id]||(+f.year<1960?+f.year:(fl.priceEra&&fl.priceEra!=="1800s"?EY[fl.priceEra]:null));if(!y)continue;
    const txt=[];for(const c of 'SMWK')for(const d of f[c]||[])if(Array.isArray(d))txt.push(d[0],d[1]);const h=house[id]||{};for(const k of ['s','d'])if(h[k])txt.push(h[k].n,h[k].note);
    for(const t of txt)for(const [rx,yr] of W){if(yr===1550&&y>=1550)continue;if(y>=yr)continue;const m=String(t||'').match(rx);if(m&&!(LOCAL[id]&&LOCAL[id].test(m[0])))bad.push(`${id} (set about ${y}): "${m[0]}" in "${String(t).slice(0,60)}"`)}}}
+/* review 37: newer trends checked on every film against the year it is set (priceEra, else release): broccolini, edamame, togarashi and
+   wasabi mayo before 1995, za'atar, sumac and nigella before 2000, salted caramel before 2005, whipped feta and espresso tonic before 2012,
+   sliders before 1985. A film set where the food is local keeps it */
+{const FL=JSON.parse(fs.readFileSync(path.join(R,'data/film-flavour.json'),'utf8'));
+ const EY={"1800s":1880,"1930s-40s":1940,"1950s":1955,"1960s":1965,"1970s":1975,"1980s":1985,"1990s":1995,"2000s":2005,"modern":2020};
+ const W2=[[/\bbroccolini\b/i,1995],[/\bedamame\b/i,1995],[/\btogarashi\b/i,1995],[/\bwasabi mayo\b/i,1995],[/\b(za'?atar|sumac|nigella)\b/i,2000],[/\bsalted caramel\b/i,2005],[/\bwhipped feta\b/i,2012],[/\bespresso tonic\b/i,2012],[/\bsliders?\b/i,1985]];
+ const LOCAL2={"Aladdin (1992)":/za'?atar|sumac|nigella/i,"Aladdin (2019)":/za'?atar|sumac|nigella/i,"Lawrence of Arabia (1962)":/za'?atar|sumac/i,"Casablanca (1942)":/za'?atar|sumac/i,"The Mummy (1999)":/za'?atar|sumac|nigella/i,"The Mummy Returns (2001)":/za'?atar|sumac|nigella/i,"Raiders of the Lost Ark (1981)":/za'?atar|sumac|nigella/i,"Indiana Jones and the Last Crusade (1989)":/za'?atar|sumac|nigella/i,"Lost in Translation (2003)":/edamame|togarashi|wasabi/i,"Rising Sun (1993)":/edamame|togarashi|wasabi/i,"You Only Live Twice (1967)":/edamame|togarashi/i,"The Karate Kid Part II (1986)":/edamame|togarashi/i,"Blade Runner (1982)":/togarashi/i,"Gallipoli (1981)":/sumac|za'?atar/i,"The Water Diviner (2014)":/sumac|za'?atar/i,"The Lighthorsemen (1987)":/sumac|za'?atar/i,"Mulan (1998)":/edamame/i,"Mamma Mia! (2008)":/whipped feta/i};
+ for(const f of films){const id=`${f.title} (${f.year})`,fl=FL[id]||{};if(fl.world==="storybook")continue;const y=fl.priceEra?EY[fl.priceEra]:+f.year;if(!y)continue;
+   const txt=[];for(const c of 'SMWK')for(const d of f[c]||[])if(Array.isArray(d))txt.push(d[0],d[1]);const h=house[id]||{};for(const k of ['s','d'])if(h[k])txt.push(h[k].n,h[k].note);
+   for(const t of txt)for(const [rx,yr] of W2){if(y>=yr)continue;const m=String(t||'').match(rx);if(m&&!(LOCAL2[id]&&LOCAL2[id].test(m[0])))bad.push(`${id} (set about ${y}): "${m[0]}" in "${String(t).slice(0,60)}"`)}}}
 if(bad.length){console.log(`FAIL: ${bad.length} dishes out of their time:\n  `+bad.join('\n  '));process.exit(1)}
 console.log('PASS: no 2010s food trends on films released before 2010');

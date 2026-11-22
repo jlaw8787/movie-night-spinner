@@ -286,7 +286,7 @@
   {
    "n": "Food critic's steak",
    "course": "m",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 30,
    "make_ahead": "Up to 1 day for the sauce, fry chips fresh",
    "ingredients": [
@@ -352,7 +352,7 @@
     },
     {
      "text": "Serve the steak with the fries, sauce and a green salad.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -360,7 +360,7 @@
    "alt": {
     "veg": {
      "n": "Food critic's cauliflower steak",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 43,
      "make_ahead": "Up to 1 day for the sauce, fry chips fresh",
      "ingredients": [
@@ -432,7 +432,7 @@
       },
       {
        "text": "Serve the cauliflower steaks with the fries, sauce and a green salad.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true
@@ -442,7 +442,7 @@
   {
    "n": "Crème brûlée and jelly",
    "course": "w",
-   "prep_min": 20,
+   "prep_min": 18,
    "cook_min": 305,
    "make_ahead": "Up to 1 day, torch just before serving",
    "ingredients": [
@@ -502,7 +502,7 @@
     },
     {
      "text": "Sprinkle with sugar, torch and serve with the jelly.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -510,7 +510,7 @@
    "alt": {
     "veg": {
      "n": "Crème brûlée and jelly (vegetarian)",
-     "prep_min": 20,
+     "prep_min": 18,
      "cook_min": 305,
      "make_ahead": "Up to 1 day, torch just before serving",
      "ingredients": [
@@ -570,7 +570,7 @@
       },
       {
        "text": "Sprinkle with sugar, torch and serve with the jelly.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

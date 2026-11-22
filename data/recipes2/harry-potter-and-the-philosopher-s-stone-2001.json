@@ -146,7 +146,7 @@
   {
    "n": "Great Hall honey chicken and Yorkshires",
    "course": "m",
-   "prep_min": 25,
+   "prep_min": 23,
    "cook_min": 50,
    "make_ahead": "Best served hot",
    "ingredients": [
@@ -246,7 +246,7 @@
     },
     {
      "text": "Serve everything together.",
-     "min": 5
+     "min": 3
     }
    ],
    "veg": false,
@@ -254,7 +254,7 @@
    "alt": {
     "veg": {
      "n": "Great Hall honey haloumi and Yorkshires",
-     "prep_min": 25,
+     "prep_min": 23,
      "cook_min": 52,
      "make_ahead": "Best served hot",
      "ingredients": [
@@ -354,7 +354,7 @@
       },
       {
        "text": "Serve everything together.",
-       "min": 5
+       "min": 3
       }
      ],
      "af": true

@@ -1,0 +1,74 @@
+{
+ "id": "Bad Boys (1995)",
+ "old": "Ocean view mojito",
+ "dish": {
+  "n": "Ocean view mint crush",
+  "note": "Mint, lime and cloudy apple over crushed ice, topped with soda.",
+  "how": "Gently muddle the mint leaves with the syrup and lime juice in a jug, without shredding the mint. Add the apple juice and divide between glasses filled with crushed ice. Top with soda water, stir gently and garnish with a mint sprig.",
+  "shop": [
+   "1 large bunch mint@Produce",
+   "60ml sugar syrup@Drinks",
+   "60ml lime juice@Produce",
+   "150ml cloudy apple juice@Drinks",
+   "500g crushed ice@Frozen",
+   "400ml soda water@Drinks"
+  ],
+  "prep_min": 8,
+  "cook_min": 0,
+  "make_ahead": "Squeeze the lime juice up to 1 day ahead and keep it chilled; muddle, add the apple juice and top with soda water to order",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "large bunch mint",
+    "aisle": "Produce"
+   },
+   {
+    "q": 60,
+    "u": "ml",
+    "item": "sugar syrup",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 60,
+    "u": "ml",
+    "item": "lime juice",
+    "aisle": "Produce"
+   },
+   {
+    "q": 150,
+    "u": "ml",
+    "item": "cloudy apple juice",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 500,
+    "u": "g",
+    "item": "crushed ice",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 400,
+    "u": "ml",
+    "item": "soda water",
+    "aisle": "Drinks"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Gently muddle the mint leaves with the syrup and lime juice in a jug, without shredding the mint.",
+    "min": 3
+   },
+   {
+    "text": "Add the apple juice and divide between glasses filled with crushed ice.",
+    "min": 2
+   },
+   {
+    "text": "Top with soda water, stir gently and garnish with a mint sprig.",
+    "min": 3
+   }
+  ]
+ }
+}

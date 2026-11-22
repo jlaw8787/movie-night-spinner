@@ -1,0 +1,33 @@
+{
+ "id": "The Goonies (1985)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Sloth, the Fratellis' big secret",
+    "Mikey's inhaler",
+    "The pirate ship in the cavern"
+   ],
+   "done": true
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Chilli cheese hot dog",
+    "note": "Hot dog with chilli and cheese.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Chocolate malted milkshake",
+    "note": "Chocolate and malt blended with milk and ice cream."
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-22",
+ "misses": []
+}
