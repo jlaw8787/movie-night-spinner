@@ -927,17 +927,17 @@ function cardFaces(){
 function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(fi||0)+(pvDesk?"d":"");card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
   let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange();
     for(const e of el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]"))continue;for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;rg.selectNodeContents(n);
-      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const a=Math.max(0,Math.floor(((r.left-b.left)/k-8)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+8)/R));for(let i=a;i<=z;i++)cov[i]=1}}}
+      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const pd=pvDesk?8:5,a=Math.max(0,Math.floor(((r.left-b.left)/k-pd)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+pd)/R));for(let i=a;i<=z;i++)cov[i]=1}}}/* review 39: 5px either side on a phone, so a 20px gap between two columns (the placemat's menu and its side column) is a gutter */
     /* candidate cuts: the middle of every clear run (long runs offer a point every 60px); then the fewest panels (2 to 4) that keep every
        panel 200 to 440px wide, or failing that the split with the narrowest widest panel (Wall-E: photos, two menu columns, photos) */
-    const C=[];for(let i=1;i<N-1;){if(cov[i]){i++;continue}let j=i;while(j<N-1&&!cov[j])j++;const a=i*R,z=j*R;if(z-a>=8){if(z-a>120)for(let x=a+30;x<z-30;x+=60)C.push(x);else C.push(Math.round((a+z)/2))}i=j}
-    const MIN=200,best={};
+    const C=[];for(let i=1;i<N-1;){if(cov[i]){i++;continue}let j=i;while(j<N-1&&!cov[j])j++;const a=i*R,z=j*R;if(z-a>=8){if(z-a>120){for(let x=a+30;x<z-30;x+=60)C.push(x);C.push(a+12,z-12)}else C.push(Math.round((a+z)/2))}i=j}C.sort((x,y)=>x-y);/* review 39: a long clear run also offers its two ends, so a panel can start right at its text and not show a sliver of the photo beside it */
+    const MIN=pvDesk?200:160,best={};
     const split=n=>{/* DP: widest panel minimised for n panels over cut points */const P=[0,...C.filter(x=>x>=MIN&&x<=w-MIN),w],M=P.length;
       let D=P.map((x,i)=>i===0?{m:0,c:[]}:null);
       for(let k=1;k<=n;k++){const E=P.map(()=>null);for(let j=1;j<M;j++)for(let i=0;i<j;i++){const d=D[i];if(!d)continue;if(k<n&&j===M-1)continue;const pw=P[j]-P[i];if(pw<MIN)continue;const m=Math.max(d.m,pw);if(!E[j]||m<E[j].m)E[j]={m,c:j<M-1?[...d.c,P[j]]:d.c}}D=E}
       return D[M-1]};
     let pick=null;if(pvDesk){/* review 35: desktop halves, a wide page in two at its clearest middle gutter */const r=split(2);if(r&&r.m<=w*.7)pick=r}
-    else for(let n=2;n<=4;n++){const r=split(n);if(!r)continue;if(r.m<=440){pick=r;break}if(!pick||r.m<pick.m)pick=r}
+    else{/* review 39: phone panels narrow enough for the notes to read at about 11px (cardSmallPx), up to five panels */const tgt=Math.max(300,Math.min(440,(preview.clientWidth||360)*cardSmallPx()/11));for(let n=2;n<=5;n++){const r=split(n);if(!r)continue;if(r.m<=tgt){pick=r;break}if(!pick||r.m<pick.m)pick=r}}
     if(pick&&pick.m<=w*.72)cuts=pick.c}catch(e){cuts=[]}
   card._pvp[key]=cuts;return cuts}
 /* review 31: a multi-page or panelled card opens on the page with the most dishes on it (Die Hard and Casablanca opened on a cover) */
