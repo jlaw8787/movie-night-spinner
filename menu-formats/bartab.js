@@ -99,6 +99,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   loadFonts();
   const W=528,H=1056,P=26,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",g=G[ERA_G[era]],t=TONE[ctx.tone]||TONE.warm;
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
+  /* review 38: a bar tab set in someone's home (Grandma's Boy, Pineapple Express, Blade's safehouse) is not a bar: no tab, no "behind the bar" */
+  const homeV=fl.home===true||/\b(house|home|apartment|flat|place|safe ?house|kitchen|study|loft|dorm|trailer|den|basement|garage|hideout|pad)\b/i.test(String(fl.venue||""))&&!/\b(bar|pub|tavern|saloon|lounge|club|inn|grill|diner|joint|room)\b/i.test(String(fl.venue||""));
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
@@ -115,7 +117,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const voice=t.voice;
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* 2000 reads "2000", never "00" (review 12) */
   const price=priceFor(era,yr,fl.number);
-  const LBL=(ctx.flavour&&ctx.flavour.labels)||{};/* review 33: a film can name its own headings (Hall Pass runs the week) */const C={s:LBL.s||(fam?"Snacks":"Bar snacks"),m:LBL.m||"Plates",w:LBL.w||"Afters",d:fam?"From the fountain":LBL.d||"Behind the bar"};
+  const LBL=(ctx.flavour&&ctx.flavour.labels)||{};/* review 33: a film can name its own headings (Hall Pass runs the week) */const C={s:LBL.s||(fam?"Snacks":"Bar snacks"),m:LBL.m||"Plates",w:LBL.w||"Afters",d:fam?"From the fountain":LBL.d||(homeV?"From the fridge":"Behind the bar")};if(homeV&&!LBL.s&&!fam)C.s="Snacks";
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
   const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
@@ -195,7 +197,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${logoPanel}
     <div ${A}-box style="position:absolute;left:${P+6}px;top:${BT}px;width:${W-2*P-12}px;height:${BH}px;overflow:hidden;--k:1;display:flex;flex-direction:column;justify-content:safe center">${course("s")}${course("m")}</div>
     <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:${heroPoster?980:976}px">${ledger("Carried over",front)}</div>
-    <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:${heroPoster?1020:1014}px;color:${sub};font:500 16px/1.2 ${g.body};letter-spacing:.14em;text-transform:uppercase;text-align:center;white-space:nowrap;overflow:hidden">Tab No. ${esc(number)} &middot; ${esc(voice[0])}</div>
+    <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:${heroPoster?1020:1014}px;color:${sub};font:500 16px/1.2 ${g.body};letter-spacing:.14em;text-transform:uppercase;text-align:center;white-space:nowrap;overflow:hidden">${homeV?`No. ${esc(number)} &middot; Help yourself`:`Tab No. ${esc(number)} &middot; ${esc(voice[0])}`}</div>
     ${wearLayer}</div>`;
 
   /* back */
@@ -221,12 +223,12 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div ${A}-box style="position:absolute;left:${P+6}px;top:362px;width:${W-2*P-12}px;height:300px;overflow:hidden;--k:1;display:flex;flex-direction:column;justify-content:safe center">${course("w")}${course("d")}</div>
     <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:676px">${ledger("Running tab",total,1)}</div>
     <div ${A}-box ${A}-min=".8" style="position:absolute;left:${P+6}px;top:736px;width:258px;height:236px;overflow:hidden;--k:1;color:${ink}">
-      <div style="color:${acc};font:600 max(14px,calc(16px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px">${fam?"From the counter":"From the bar"}</div>
+      <div style="color:${acc};font:600 max(14px,calc(16px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px">${fam?"From the counter":homeV?"From the house":"From the bar"}</div>
       <div style="font:italic 500 max(15px,calc(20px*var(--k)))/1.3 ${g.body}">"${esc(note.text)}"</div>
       <div style="margin-top:4px;font:400 max(22px,calc(32px*var(--k)))/1.05 'Caveat Brush',cursive;color:${acc};text-align:right">${esc(note.by)}</div></div>
     ${coaster}
     <div ${A}-box ${A}-min=".9" style="position:absolute;left:${P+6}px;right:${P+6}px;top:990px;height:52px;overflow:hidden;--k:1;color:${sub};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-      ${cue?`<span ${A}-drop>Last call: ${esc(cue)} </span>`:""}${winks.length?`<span ${A}-drop>Bar talk: ${esc(winks.slice(0,3).join(". "))}. </span>`:""}<span>Prices subject to change. ${esc(g.print)}. Tab No. ${esc(number)}. ${esc(yr)}.${fam?" Soft drinks only.":""}</span></div>
+      ${cue?`<span ${A}-drop>${homeV?"Showtime":"Last call"}: ${esc(cue)} </span>`:""}${winks.length?`<span ${A}-drop>${homeV?"Overheard":"Bar talk"}: ${esc(winks.slice(0,3).join(". "))}. </span>`:""}<span>${homeV?"":"Prices subject to change. "}${esc(g.print)}. ${homeV?"No.":"Tab No."} ${esc(number)}. ${esc(yr)}.${fam?" Soft drinks only.":""}</span></div>
     ${wearLayer}</div>`;
   return {w:W,h:H,faces:[f0,f1]};
 };
