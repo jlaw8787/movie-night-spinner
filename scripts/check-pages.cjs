@@ -22,4 +22,14 @@ for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.i
   const hay=N(src.join(' | '))+' | '+N(block(id));const dry=DRY.includes(f.theme);
   for(const n of names){if(!hay.includes(N(n)))bad.push(`${id}: page lists "${n}", not on the card`);
     else if(dry&&BOOZE.test(n.replace(/ginger beer|root beer|spiced cider|apple cider|butterbeer/ig,''))&&!/\b(free|juice|zero|soda|cordial|pie|braised|bites|figs|cake|sauce|gravy|stew|glazed|battered)\b/i.test(n))bad.push(`${id}: dry card, page lists "${n}"`)}}
+/* review 39: a shared-layout page prints every dish the card prints (house lines too) with the card's own note, and a dry page names no alcohol */
+const CP=(()=>{try{return rj('data/card-print.json')}catch(e){return {}}})(),FF=rj('data/film-format.json');
+const NOTEBOOZE=/\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|lager|stout|cider|sherry|liqueur|schnapps|prosecco|sake|vermouth|beer|ale)\b/i;
+const DE=t=>String(t).replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.includes(id))continue;const s=slug(id),p=path.join(R,'menu',s,'index.html');if(!fs.existsSync(p))continue;
+  const lib=!!(FF[id]&&FF[id].format)&&!block(id);const page=fs.readFileSync(p,'utf8');
+  const arts=[...page.matchAll(/<h3>([^<]+)(?:<span[^>]*>[^<]*<\/span>)*<\/h3>\s*(?:<p>([^<]*)<\/p>)?/g)].map(m=>[N(DE(m[1])),DE(m[2]||'')]);
+  if(lib){const cp=CP[id];if(!cp)bad.push(`${id}: no printed list in data/card-print.json (node scripts/render-previews.cjs "${id}")`);
+    else for(const r of cp){const a=arts.find(x=>x[0]===N(r[1]));if(!a)bad.push(`${id}: card prints "${r[1]}", page leaves it out`);else if(N(a[1])!==N(r[2]))bad.push(`${id}: page note for "${r[1]}" differs from the card`)}}
+  if(DRY.includes(f.theme))for(const a of arts){const t=a[1].replace(/ginger beer|root beer|ginger ale|butterbeer|apple cider|wine vinegar|rum essence|sherry vinegar|sake lees/ig,'');if(NOTEBOOZE.test(t)&&!/\b(alcohol-free|non-alcoholic|zero)\b/i.test(t))bad.push(`${id}: dry page note names alcohol: "${a[1].slice(0,80)}"`)}}
 console.log(bad.join('\n'));console.log(`check-pages: ${bad.length} page dishes not on their card`);process.exit(bad.length?1:0);

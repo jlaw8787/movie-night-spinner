@@ -34,6 +34,8 @@ const DRY_THEMES = (() => { const m = rd('app.js').match(/const DRY_THEMES=(\[[^
 /* review 31: the page uses the app's own split of a recipe's time (dishTimes in app.js), so pickling, chilling and resting count as
    waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
 /* review 37: printed names on the hand-built menus (formats.js items carry the recipe key k and the printed name n) */
+const CARD_PRINT = (() => { try { return rj('data/card-print.json'); } catch (e) { return {}; } })();
+const HOUSE = (() => { try { return rj('data/film-house.json'); } catch (e) { return {}; } })();
 const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
   const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) { const m = {}; const walk = v => { if (Array.isArray(v)) v.forEach(walk); else if (v && typeof v === 'object') { if (typeof v.k === 'string' && typeof v.n === 'string' && v.n.trim() && v.n !== v.k) m[v.k.toLowerCase()] = v.n; Object.values(v).forEach(walk); } }; walk(spec); if (Object.keys(m).length) out[id] = m; }
   return out; })();
@@ -73,6 +75,13 @@ const ALL = films.map((f, i) => {
     for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase()) && !(dry && c === 'd' && /\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|ale|beer|lager|stout|cider|sherry|port|highball|martini|margarita|mead|cocktail|liqueur|schnapps|prosecco|spritz)\b/i.test(String(r[0]) + ' ' + String(r[1] || '')))) {/* review 38: a dry card never prints the alcoholic drink, so its page does not list it (Ratatouille's Bordeaux) */ have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: String(x).split('@')[0] })), steps: [], extra: true }); } }
   /* review 37: a hand-built menu prints its own short name for a dish ("Buddy Holly chicken", not "Buddy Holly's chicken basket"): the page uses it */
   { const nm = HB_NAMES[id]; if (nm) for (const y of dishes) { const v = nm[String(y.n).toLowerCase()]; if (v) y.n = v; } }
+  /* review 39: a shared-layout page reads the card as printed (data/card-print.json, saved by render-previews with each preview): every note
+     is the card's note, alcohol-free on a dry card, and the house starter and drink the card prints are on the page too */
+  { const cp = CARD_PRINT[id]; if (cp && cp.length) { const L = t => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), by = new Map(cp.map(r => [L(r[1]), r]));
+    const used = new Set();
+    for (const y of dishes) { const r = by.get(L(y.n)) || by.get(L(y.n0)); if (r) { y.note = r[2]; used.add(r); } }
+    for (const r of cp) if (!used.has(r) && !dishes.some(y => L(y.n) === L(r[1]))) { const hs = HOUSE[id] && HOUSE[id][r[0] === 'd' ? 'd' : 's']; dishes.push({ n: r[1], course: r[0], note: r[2], ingredients: [], steps: [], extra: true, house: !!r[3], veg: hs ? !hs.meat : false }); }
+    const ord = { s: 0, m: 1, w: 2, d: 3 }; dishes.sort((a, b) => ord[a.course] - ord[b.course]); } }
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
 });
@@ -180,7 +189,7 @@ function filmPage(x) {
       const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(degC(st.text))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
-      return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg && c !== 'd' ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}</h3>
+      return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg && c !== 'd' ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.house ? '<span class="tag">House</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
 ${ingr || steps ? `<details><summary>${y.extra ? 'How it is made' : 'Recipe for 4'}</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
     }).join('\n');

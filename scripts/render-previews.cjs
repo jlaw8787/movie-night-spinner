@@ -21,9 +21,10 @@ fs.mkdirSync(OUT,{recursive:true});
 const wide=args.includes('--wide')?new Set(execFileSync('python3',['-c',"import os,sys\nfrom PIL import Image\nfor f in os.listdir(sys.argv[1]):\n w,h=Image.open(os.path.join(sys.argv[1],f)).size\n if w/h>=1.5: print(f[:-4])",OUT]).toString().split('\n').filter(Boolean)):null;
 const PS=require('./preview-stamp.cjs'),SF=path.join(ROOT,PS.STAMPS),stamps=fs.existsSync(SF)?JSON.parse(fs.readFileSync(SF,'utf8')):{};
 const stale=args.includes('--stale');
+const PF=path.join(ROOT,'data/card-print.json'),printed=fs.existsSync(PF)?JSON.parse(fs.readFileSync(PF,'utf8')):{};
 const todo=(named.length?named:films).filter(id=>wide?wide.has(slug(id)):stale?stamps[id]!==PS.stamp(id):all||named.length||!fs.existsSync(path.join(OUT,slug(id)+'.jpg')));
 /* the fingerprint is saved as each preview lands, and written out every 25 films so a stopped run keeps what it did */
-const saveStamps=()=>{const o={};for(const k of Object.keys(stamps).sort())o[k]=stamps[k];fs.writeFileSync(SF,JSON.stringify(o,null,0).replace(/","/g,'",\n"')+'\n')};
+const saveStamps=()=>{const o={};for(const k of Object.keys(stamps).sort())o[k]=stamps[k];fs.writeFileSync(SF,JSON.stringify(o,null,0).replace(/","/g,'",\n"')+'\n');const q={};for(const k of Object.keys(printed).sort())q[k]=printed[k];fs.writeFileSync(PF,'{\n'+Object.entries(q).map(([k,v])=>JSON.stringify(k)+':'+JSON.stringify(v)).join(',\n')+'\n}\n')};
 const server=spawn('python3',['-m','http.server',PORT,'--bind','127.0.0.1'],{cwd:ROOT,stdio:'ignore'});
 process.on('exit',()=>server.kill());
 const ready=async()=>{for(let i=0;i<60;i++){const ok=await new Promise(r=>{http.get(ORIGIN+'/index.html',res=>{res.resume();r(res.statusCode===200)}).on('error',()=>r(false))});if(ok)return;await new Promise(r=>setTimeout(r,250))}throw Error('server did not start')};
@@ -38,6 +39,10 @@ async function snap(page,id){
     const wrap=document.createElement('div');wrap.id='snapWrap';wrap.style.cssText='position:fixed;left:0;top:0;z-index:2147483647;background:#fff';
     document.body.appendChild(wrap);const k=c.cloneNode(true);k.style.transform='none';k.style.position='relative';wrap.appendChild(k);
     const r=k.getBoundingClientRect();return {w:r.width,h:r.height}});
+  /* review 39: the film page lists what the card prints, so each render also saves the printed dish list (names and notes as printed,
+     alcohol-free on a dry card, house lines marked) to data/card-print.json, under the same fingerprint as the preview */
+  try{printed[id]=await page.evaluate(()=>{const f=current,m=f.printMenu||f.menu||{},dry=typeof dryNow==='function'&&dryNow(f),T=x=>{let t=String(x||'');try{t=dietText(f,t)}catch(e){}try{if(dry)t=dryText(t,true)}catch(e){}return t};
+    const out=[];for(const k of ['s','m','w','d'])for(const it of (m[k]||[]))if(it&&(it.label||it.n))out.push([k,T(it.label||it.n),T(it.note||''),it.house?1:0]);return out})}catch(e){}
   const tmp=path.join(os.tmpdir(),'rp-'+slug(id)+'.png');
   await page.locator('#snapWrap').screenshot({path:tmp});
   return tmp;
