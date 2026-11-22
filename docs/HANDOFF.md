@@ -2129,3 +2129,9 @@ Josh: fix review 39, quick ones first. Before starting, Josh asked if the fun wa
 - Phone result, opening view on all 1,000 (probe at 390): notes 11px or more on 555, 9 to 11px on 252, 7 to 9px on 182, under 7 on 11 (before: most 6 to 9). Still small: one wide column with long one-line notes (campfire 49, galley 24, banquet 19, hand-built 18, prom 16, tea room 14, newspaper 10). check-phone-panels 0 of 1,000. All node tests pass.
 - Not done yet: everything else in docs/review-39.md, and the checks review 38 left unfinished (menu-fit and price-sense in chunks of 125, cut-notes on a photo-on dump of 0 to 499).
 - 22 Nov, 8:33pm: deployed on Josh's go. main fast-forwarded 5304a264 to cdd6b331, Publish site run 45012726583 passed first time (live app.js?v=ffaee2b5).
+
+## 22 Nov, 8:32pm onwards: review 39 carried on (branch fix/review-39)
+
+- Josh (phone): The Muppets 2011 menu didn't open cleanly or swipe right. Cause: pvReadViews added a reading view that was nearly the whole candy bar panel, so the card opened on dot 4 of 4 with dots 3 and 4 the same menu. Now a single reading view at 85% or more of its panel's width and 80% of its height takes the panel's place. check-phone-panels 0 of films 0 to 249, all node tests pass.
+- 22 Nov, 8:50pm: that fix live on Josh's go. main 6f5f3d95 to e54abdd1, Publish site run 45014264689 passed (live app.js?v=df632adf).
+- Josh's call: hand-built one-offs with no printed Showtime cue get a cue strip along the foot of the card in that card's own colours and font (card a touch taller).
