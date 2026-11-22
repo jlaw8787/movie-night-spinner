@@ -1408,7 +1408,8 @@ function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planD
     if(have.has(key)){if(q!=null)add.push({q,u,item,aisle:i.aisle});continue}
     if(seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
   const ready=[...planLate(f).values()].map(n=>`${n}@${READY}`);
-  return shopLines(base.map(d=>({d,k})).concat(add.length?[{d:{ingredients:add},k}]:[])).concat(taste,ready)}
+  /* review 38: the unmeasured lines from the printed-only dishes go through the same last pass, so "1 piece ginger (3cm)" meets "1 knob ginger" */
+  return shopTidy(shopLines(base.map(d=>({d,k})).concat(add.length?[{d:{ingredients:add},k}]:[])).concat(taste)).concat(ready)}
 const WHOLE_RE=/^(bags?|packets?|tins?|cans?|bottles?|jars?|tubs?|loa(f|ves)|punnets?|box(es)?|cartons?|blocks?|rolls?|sheets?|tubes?|sachets?)\b/i;
 /* things a recipe uses ready-made that no shop sells: shopped as what you actually buy, with a first step to make them */
 const baseG=(q,i)=>/^cups? /i.test(i.item)?q*185:i.u==="g"?q:i.u==="kg"?q*1000:null;
@@ -1520,7 +1521,7 @@ const PACK_ML={bottle:375,bottles:375,stubby:375,stubbies:375,can:375,cans:375,t
 function shopTidy(lines){
   const cl=lines.map(l=>{const at=l.lastIndexOf("@");let t=l.slice(0,at).replace(TIDY_TAIL,"").replace(/\s+of fresh\s+/i," ").replace(/\s{2,}/g," ").trim();
     /* a clause about serving or prepping stays in the method ("2 ripe peaches, sliced, plus 1 for serving", "150g feta, crumbled", "1 L ginger ale, cold") */
-    t=t.replace(/,\s*[^,@]*\b(serv(e|ing)|to taste|decorat|garnish|plus|to give|whip)\w*[^@]*$/i,"").replace(/\s*\((whip it|whipped|to whip|for whipping|softened|chilled|cold)\)/i,"")
+    t=t.replace(/,\s*(a pinch|a little|a dash|a splash|some|optional)$/i,"").replace(/\b(plenty of|lots of|a little) /i,"").replace(/^(\d+ (?:knobs?|pieces?) ginger)\s*\(\d+\s*cm\)$/i,"$1");t=t.replace(/,\s*[^,@]*\b(serv(e|ing)|to taste|decorat|garnish|plus|to give|whip)\w*[^@]*$/i,"").replace(/\s*\((whip it|whipped|to whip|for whipping|softened|chilled|cold)\)/i,"")
       .replace(/,\s*((finely |thinly |roughly |lightly )?(crumbled|cold|chilled|ice[- ]cold|softened|melted|beaten|sliced|chopped|diced|grated|juiced|zested|halved|peeled|minced|crushed|torn|cubed|drained|rinsed|whipped|shaved or crushed|crushed or shaved|in wheels|in wedges|quartered|stalks chopped|at room temperature)(\s+and\s+\w+)?)$/i,"")
       .replace(/^(\d+)\s*x\s*(\d+)ml (cans?|bottles?|stubbies) of (.+)$/i,(m,n,ml,pk,it)=>`${n} ${pk} ${it}, ${ml}ml each`);
     /* ginger, however a recipe measures it, is bought by the knob (about 20g, or 4cm) */
@@ -1530,6 +1531,8 @@ function shopTidy(lines){
   /* ginger lines add up into whole knobs */
   {const gi=cl.map((l,i)=>[l,i]).filter(([l])=>/^ginger \d+g@/.test(l));if(gi.length){const gr=gi.reduce((a,[l])=>a+ +l.match(/(\d+)g@/)[1],0),n=Math.max(1,Math.ceil(gr/20-0.1)),at=gi[0][0].split("@")[1];
     for(let k=gi.length-1;k>=0;k--)cl.splice(gi[k][1],1);cl.splice(gi[0][1],0,`${n} knob${n>1?"s":""} ginger@${at}`)}}
+  /* the same line twice ("salt and pepper", "1 bunch coriander") is one */
+  for(let i=cl.length-1;i>=0;i--)if(cl.indexOf(cl[i])<i&&!/^\d/.test(cl[i]))cl.splice(i,1);
   /* "salt and pepper" covers a plain salt or pepper line */
   {const spi=cl.findIndex(l=>/^salt and (freshly ground )?(black |white )?pepper(, mixed)?@/i.test(l));if(spi>=0){let flakes=false,white=/white/i.test(cl[spi]);
     for(let i=cl.length-1;i>=0;i--){if(i===spi)continue;const x=cl[i].split("@")[0];
@@ -1549,12 +1552,13 @@ function shopTidy(lines){
     const m=t.match(/^(\d+(?:\.\d+)?)\s?(kg|g|ml|L|l)?\s+(?:(bottles?|stubbies|stubby|cans?|tinnies|tinny|longnecks?)\s+(?:of\s+)?)?(.+)$/);if(!m)return null;
     let item=m[4].replace(/^(small|large|medium|big)\s+/i,"").replace(TIDY_ADJ,"").replace(TIDY_ADJ,"").replace(/^(small|large|medium|big)\s+/i,"").replace(/\s+(flesh|pieces|chunks|wedges)$/i,"").toLowerCase();
     if(/[,(+]/.test(item))return null;
+    item=item.replace(/^(bunch(?:es)?|bags?|jars?|packets?|tins?|cans?|punnets?|blocks?|tubs?|cartons?|loa(?:f|ves)|sheets?|trays?|box(?:es)?|bottles?)\s+(?:of\s+)?/i,w=>({bunches:"bunch",boxes:"box",loaves:"loaf"}[w.trim().replace(/\s+of$/i,"").toLowerCase()]||w.trim().replace(/\s+of$/i,"").replace(/s$/i,""))+" ");
     const sing=item.replace(/(oes)$/,"o").replace(/(ies)$/,"y").replace(/([^s])s$/,"$1");
     let q=+m[1],u=(m[2]||"").toLowerCase();if(u==="kg"){q*=1000;u="g"}if(u==="l"){q*=1000;u="ml"}
     return {q,u,pack:m[3]?m[3].toLowerCase():"",each,item,sing,a,orig:t}};
   const out=[];
   for(const l of cl){const p=P(l);if(!p){out.push(l);continue}
-    const j=out.findIndex(x=>{const y=P(x);return y&&y.sing===p.sing&&x!==l});
+    const j=out.findIndex(x=>{const y=P(x);return y&&y.sing===p.sing});
     if(j<0){out.push(l);continue}
     const y=P(out[j]);
     /* drinks by the pack: millilitres fold into whole bottles or cans */
@@ -1562,7 +1566,7 @@ function shopTidy(lines){
       if((y.pack||y.u==="ml"||!y.u)&&(p.pack||p.u==="ml"||!p.u)){const n=Math.ceil(ml/per-0.05);const word=n>1?(/y$/.test(pk)?pk.replace(/y$/,"ies"):/s$/.test(pk)?pk:pk+"s"):pk.replace(/ies$/,"y").replace(/s$/,"");out[j]=`${n} ${word} ${y.pack?y.item:p.item}${per!==(PACK_ML[pk]||375)?`, ${per}ml each`:""}@${y.a}`;continue}}
     /* a count beside a weight (8 small potatoes and 1kg potatoes, 4 small pumpkins and 800g pumpkin) becomes one weight at a standard size */
     if(!!y.u!==!!p.u&&(y.u==="g"||p.u==="g")){const w=EACH_G.find(([re])=>re.test(y.sing))||(/pumpkin/.test(y.sing)?[0,200]:null);if(w){const q=(y.u?y.q:y.q*w[1])+(p.u?p.q:p.q*w[1]);out[j]=(q>=1000?`${+(q/1000).toFixed(2)}kg`:`${Math.round(q)}g`)+" "+(y.u?y.item:p.item)+"@"+(p.a==="Produce"?p.a:y.a);continue}}
-    if(y.u===p.u){const q=y.q+p.q;const name=y.u?y.item:(q>1.01?(/y$/.test(y.sing)&&!/[aeiou]y$/.test(y.sing)?y.sing.replace(/y$/,"ies"):/o$/.test(y.sing)&&/mango|tomato|potato/.test(y.sing)?y.sing+"es":y.sing+(/s$/.test(y.sing)?"":"s")):y.sing);
+    if(y.u===p.u){const q=y.q+p.q;const pk=!y.u&&y.item.match(/^(bunch|bag|jar|packet|tin|can|punnet|block|tub|carton|loaf|sheet|tray|box|bottle)\s+(.+)$/i);const name=pk?(q>1.01?({bunch:"bunches",box:"boxes",loaf:"loaves"}[pk[1].toLowerCase()]||pk[1]+"s"):pk[1])+" "+pk[2]:y.u?y.item:(q>1.01?(/y$/.test(y.sing)&&!/[aeiou]y$/.test(y.sing)?y.sing.replace(/y$/,"ies"):/o$/.test(y.sing)&&/mango|tomato|potato/.test(y.sing)?y.sing+"es":y.sing+(/s$/.test(y.sing)?"":"s")):y.sing);
       out[j]=(y.u==="g"&&q>=1000?`${+(q/1000).toFixed(2)}kg`:y.u==="ml"&&q>=1000?`${+(q/1000).toFixed(2)}\u00a0L`:y.u?`${Math.round(q)}${y.u}`:`${Math.ceil(q-0.05)}`)+" "+name+"@"+(p.a==="Produce"?p.a:y.a);continue}
     out.push(l)}
   return out}
@@ -2395,7 +2399,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   /* review 36: where nobody pays, every price on the card goes, in whatever money the layout printed it ("12 cr" in a galley, "9 gold coins", "4s 8d") */
   {const pw=payWord(fl,fmt);if(pw!=null){const MR=/^\s*((\$|£|¥|€)\s?\d{1,4}([.,]\d\d)?|\d{1,4}\.\d\d|\.\d\d|\d{1,4}\s?(¢|c|cr|credits|d|p|pfennigs?|solari|gold coins?|silver|silver pennies|taels?|ryo|denarii|drachmas?|coppers?|doubloons|Galleons?|Sickles?|Knuts?|crowns?|gp|kr)|\d{1,3}s(\s\d{1,2}d)?|\d+ Galleons?( \d+ Sickles?)?)\s*$/i,
      tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),T=[];let t;while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;if(MR.test(t.nodeValue))T.push(t)}
-     if(T.length>=2)return payFix(root,T,pw)}}
+     if(T.length>=2)return payFix(root,T,pw);/* review 38: no prices to swap, but the bill and coin lines still go (Notre Dame printed "Coin of the realm only. Bill No. 96") */if(pw==="")payFix(root,T,pw)}}
   const PR=/^(\s*)(\$|£)?(\d{1,3})(?:\.(\d\d))?(\s*)$|^(\s*)(\d{1,2})(¢|c)(\s*)$|^(\s*)\.(\d\d)(\s*)$/;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),P=[],seen=new Set(),cand=[];let t;
   while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;const m=t.nodeValue.match(PR);if(m)cand.push([t,m])}
