@@ -1,0 +1,51 @@
+# Runs every test in tests/*.test.cjs on every push, to any branch.
+# Checks only: no deploy, no secrets, nothing is written back to the repo.
+# A red cross on the commit means a test broke; the step log and the summary name it.
+name: Checks
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Browser for the dialog test (uses the runner's own Chrome)
+        run: |
+          mkdir -p "$RUNNER_TEMP/pw"
+          npm install --prefix "$RUNNER_TEMP/pw" --no-save --no-audit --no-fund playwright-core@1.56.1
+          echo "PLAYWRIGHT_MODULE=$RUNNER_TEMP/pw/node_modules/playwright-core" >> "$GITHUB_ENV"
+          echo "MNS_BROWSER=$(command -v google-chrome || command -v chromium)" >> "$GITHUB_ENV"
+      - name: Scripts parse
+        run: |
+          bad=0
+          for f in *.js menu-formats/*.js; do
+            [ -f "$f" ] || continue
+            node --check "$f" || { echo "::error file=$f::$f does not parse"; bad=1; }
+          done
+          exit $bad
+      - name: Tests
+        run: |
+          failed=""
+          for t in tests/*.test.cjs; do
+            echo "::group::$t"
+            if node "$t"; then echo "PASS $t"; else echo "::error file=$t::$t failed"; failed="$failed $t"; fi
+            echo "::endgroup::"
+          done
+          {
+            echo "## Tests"
+            for t in tests/*.test.cjs; do
+              case " $failed " in *" $t "*) echo "- FAIL $t";; *) echo "- pass $t";; esac
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$failed" ]; then echo "Failed:$failed"; exit 1; fi
