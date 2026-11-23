@@ -3,7 +3,12 @@
  "ops": [
   {
    "set": "cue",
-   "value": "Serve the snacks when MacReady heats the wire.",
+   "value": "Serve the snacks when MacReady runs the blood test.",
+   "done": true
+  },
+  {
+   "old": "The hot wire blood test",
+   "new": "A copper wire in the flame",
    "done": true
   }
  ],

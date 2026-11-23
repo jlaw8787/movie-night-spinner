@@ -318,7 +318,7 @@ const FMT_FILMS={
     roach:["/3fycb4TETdZ0mleBqQQYzrMiCGS.jpg","His cockroach, along for every shift",118],
     groups:[
       {h:"Today's finds",en:"Brought home by Wall-E",left:true,items:[
-        {k:"Wall-E's stuffed pressed round loaf",n:"Cooler box pressed round loaf",d:"Hollowed round loaf filled with ham, roast bell pepper, pesto, mozzarella and spinach, pressed and sliced.",note:"Packed tight, like the cooler he carries his finds home in."},
+        {k:"Wall-E's stuffed pressed round loaf",n:"Cooler box pressed loaf",d:"Hollowed loaf filled with ham, roast pepper, pesto, mozzarella and spinach, pressed and sliced.",note:"Packed tight, like the cooler he carries his finds home in."},
         {k:"Plant-in-a-boot pea and mint smash",n:"Plant-in-a-boot pea smash",d:"Peas crushed with mint, feta, lemon and olive oil, green shoots on top, crunchy pita chips.",note:"He found the seedling in an old fridge and kept it in a boot."},
         {k:"Trash cube puffed rice bars",n:"Trash cube rice bars",d:"Marshmallow puffed rice, cut into cubes and stacked into towers.",note:"Compacted and stacked, like his towers over the city."}]},
       {h:"Sweet",en:"Built to last",left:true,items:[
