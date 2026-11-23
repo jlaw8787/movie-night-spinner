@@ -48,12 +48,14 @@ async function snap(page,id){
   try{printed[id]=await page.evaluate(()=>{const f=current,m=f.printMenu||f.menu||{},dry=typeof dryNow==='function'&&dryNow(f),T=x=>{let t=String(x||'');try{t=dietText(f,t)}catch(e){}try{if(dry)t=dryText(t,true)}catch(e){}return t};
     const out=[];for(const k of ['s','m','w','d'])for(const it of (m[k]||[]))if(it&&(it.label||it.n))out.push([k,T(it.label||it.n),T(it.note||''),it.house?1:0]);return out})}catch(e){}
   try{const hb=await page.evaluate(()=>{const a=typeof pvArgs!=='undefined'&&pvArgs;if(!a||!a[1]||a[1].fmt==='lib')return null;
-    const N=t=>String(t||'').toLowerCase().replace(/[\u2018\u2019']/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/[^a-z0-9]+/g,' ').trim(),face=N(card.textContent);
+    const lines=card.innerText.split('\n').map(x=>x.trim()).filter(Boolean),N=t=>String(t||'').toLowerCase().replace(/[\u2018\u2019']/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/[^a-z0-9]+/g,' ').trim(),face=N(card.textContent);
     const menu=a[2]||{},cs=FMT_COURSES.map(c=>c[0]).filter(c=>(menu[c]||[]).some(it=>it&&it.label)),out=[];
     fmtPhone.querySelectorAll('.fp-sec').forEach((sec,gi)=>{const c=cs[+sec.dataset.g]||'m';sec.querySelectorAll('.fp-dish').forEach(ar=>{const q=s=>{const e=ar.querySelector(s);return e?e.textContent.replace(/\s+/g,' ').trim():''};
-      const n=q('.fp-name'),desc=q('.fp-desc'),film=q('.fp-film'),on=t=>t&&face.includes(N(t));if(!n)return;
+      let n=q('.fp-name');const desc=q('.fp-desc'),film=q('.fp-film'),on=t=>t&&face.includes(N(t));if(!n)return;
       const note=[on(desc)&&desc,on(film)&&film].filter(Boolean).join(' ')||desc||film;
-      out.push({c,n,note,printed:on(n)?1:0,ing:[...ar.querySelectorAll('.fp-ing li')].map(x=>x.textContent.trim()),steps:[...ar.querySelectorAll('.fp-steps li,.fp-step1')].map(x=>x.textContent.trim())})})});
+      /* the card may print its own name for the dish above the same words (Big's "Caviar canapés"): the page takes the card's name */
+      let pr=on(n)?1:0;if(!pr)for(const t of [desc,film]){if(!t||!on(t))continue;const i=lines.findIndex(l=>N(l)===N(t)||N(l).startsWith(N(t)));if(i>0){const nm=lines.slice(Math.max(0,i-2),i).reverse().find(l=>!/^[\s$£€.,\d¢cp/-]*$/.test(l)&&N(l).length>2);if(nm){n=nm.replace(/\s*[$£€]?\d+(?:[.,]\d+)?\s*$/,'').trim();if(n===n.toUpperCase())n=n.charAt(0)+n.slice(1).toLowerCase();pr=1;break}}}
+      out.push({c,n,note,printed:pr,ing:[...ar.querySelectorAll('.fp-ing li')].map(x=>x.textContent.trim()),steps:[...ar.querySelectorAll('.fp-steps li,.fp-step1')].map(x=>x.textContent.trim())})})});
     return out});if(hb)hbPrinted[id]=hb;else delete hbPrinted[id]}catch(e){}
   const tmp=path.join(os.tmpdir(),'rp-'+slug(id)+'.png');
   await page.locator('#snapWrap').screenshot({path:tmp});

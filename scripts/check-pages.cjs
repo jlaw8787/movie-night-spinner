@@ -13,14 +13,14 @@ const FMT=rd('formats.js');
 const DRY=(()=>{const m=rd('app.js').match(/const DRY_THEMES=(\[[^\]]*\]);/);return m?JSON.parse(m[1]):[]})();const DRYF=(()=>{const m=rd('app.js').match(/const DRY_FILMS=(\[[^\]]*\]);/);return m?JSON.parse(m[1]):[]})();const isDry=f=>DRY.includes(f.theme)||DRYF.includes(f.title+' ('+f.year+')');
 const BOOZE=/\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|ale|beer|lager|stout|cider|sherry|highball|martini|margarita|mead|liqueur|schnapps|prosecco)\b/i;
 const block=id=>{const i=FMT.indexOf(JSON.stringify(id)+':{');if(i<0)return '';const j=FMT.indexOf('\n  "',i+5);return FMT.slice(i,j<0?i+20000:j)};
-let bad=[];const CP0=(()=>{try{return rj('data/card-print.json')}catch(e){return {}}})(),HO0=(()=>{try{return rj('data/film-house.json')}catch(e){return {}}})();
+let bad=[];const HB0=(()=>{try{return rj('data/card-print-hb.json')}catch(e){return {}}})(),CP0=(()=>{try{return rj('data/card-print.json')}catch(e){return {}}})(),HO0=(()=>{try{return rj('data/film-house.json')}catch(e){return {}}})();
 for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.includes(id))continue;const s=slug(id),p=path.join(R,'menu',s,'index.html');if(!fs.existsSync(p))continue;
   const page=fs.readFileSync(p,'utf8'),names=[...page.matchAll(/<h3>([^<]+)/g)].map(m=>m[1].trim());
   const src=[];for(const k of 'SMWK')for(const r of f[k]||[])src.push(r[0]);
   if(E[id]&&E[id].menu)for(const c of 'smwd')for(const it of E[id].menu[c]||[])src.push(it.n);
   try{const r2=rj('data/recipes2/'+s+'.json');for(const d of r2.dishes||[]){src.push(d.n);for(const a of Object.values(d.alt||{}))src.push(a.n)}}catch(e){}
   /* review 39: the page shows the card's house lines too; the printed list (data/card-print.json) and the house lines count as on the card */
-  for(const r of (CP0[id]||[]))src.push(r[1]);{const h=HO0[id]||{};for(const c of ['s','d'])if(h[c]&&h[c].n)src.push(h[c].n)}
+  for(const r of (CP0[id]||[]))src.push(r[1]);for(const r of (HB0[id]||[]))if(r.printed)src.push(r.n);{const h=HO0[id]||{};for(const c of ['s','d'])if(h[c]&&h[c].n)src.push(h[c].n)}
   const hay=N(src.join(' | '))+' | '+N(block(id));const dry=isDry(f);
   for(const n of names){if(!hay.includes(N(n)))bad.push(`${id}: page lists "${n}", not on the card`);
     else if(dry&&BOOZE.test(n.replace(/ginger beer|root beer|spiced cider|apple cider|butterbeer/ig,''))&&!/\b(free|juice|zero|soda|cordial|pie|braised|bites|figs|cake|sauce|gravy|stew|glazed|battered)\b/i.test(n))bad.push(`${id}: dry card, page lists "${n}"`)}}
@@ -39,10 +39,10 @@ for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.i
 {const HB=(()=>{try{return rj('data/card-print-hb.json')}catch(e){return {}}})();
  for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.includes(id))continue;if(!block(id))continue;const s=slug(id),p=path.join(R,'menu',s,'index.html');if(!fs.existsSync(p))continue;
   const hb=HB[id];if(!hb){bad.push(`${id}: no hand-built print list in data/card-print-hb.json (node scripts/render-previews.cjs "${id}")`);continue}
-  const page=fs.readFileSync(p,'utf8'),arts=[...page.matchAll(/<article class="dish"[^>]*><h3>([^<]+)(?:<span[^>]*>[^<]*<\/span>)*<\/h3>\s*(?:<p>([^<]*)<\/p>)?([\s\S]*?)<\/article>/g)].map(m=>({n:N(DE(m[1])),note:DE(m[2]||''),ing:[...(m[3].match(/<ul>([\s\S]*?)<\/ul>/)||['',''])[1].matchAll(/<li>([^<]*)<\/li>/g)].map(x=>N(DE(x[1])))}));
+  const page=fs.readFileSync(p,'utf8'),arts=[...page.matchAll(/<article class="dish"[^>]*><h3>([^<]+)(?:<span[^>]*>[^<]*<\/span>)*<\/h3>\s*(?:<p>([^<]*)<\/p>)?([\s\S]*?)<\/article>/g)].map(m=>({n:N(DE(m[1])),note:DE(m[2]||''),ing:[...(m[3].match(/<ul>([\s\S]*?)<\/ul>/)||['',''])[1].matchAll(/<li>([^<]*)<\/li>/g)].map(x=>N(DE(x[1]).replace(/°/g,'')))}));
   const want=hb.filter(r=>r.printed);
   for(const a of arts)if(!want.some(r=>N(r.n)===a.n))bad.push(`${id}: page lists "${a.n}", the card does not print it`);
   for(const r of want){const a=arts.find(x=>x.n===N(r.n));if(!a){bad.push(`${id}: card prints "${r.n}", page leaves it out`);continue}
    if(N(a.note)!==N(r.note))bad.push(`${id}: page note for "${r.n}" differs from the card`);
-   if((r.ing||[]).length&&a.ing.join('|')!==(r.ing||[]).map(N).join('|'))bad.push(`${id}: page recipe for "${r.n}" differs from the phone menu`)}}}
+   if((r.ing||[]).length&&a.ing.map(x=>x.replace(/°/g,'')).join('|')!==(r.ing||[]).map(x=>N(String(x).replace(/°/g,''))).join('|'))bad.push(`${id}: page recipe for "${r.n}" differs from the phone menu`)}}}
 console.log(bad.join('\n'));console.log(`check-pages: ${bad.length} page dishes not on their card`);process.exit(bad.length?1:0);

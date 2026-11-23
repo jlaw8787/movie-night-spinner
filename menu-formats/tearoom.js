@@ -180,7 +180,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     /* review 34: nobody charges at home (Paddington's kitchen, the Dwarfs' cottage): a home tea prints no prices */
     const n=clean(it.n),p=PLACE.k==="home"?"":price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?(fl.priceEra==="1800s"?LSD1800:LSD):E.coin);
     return `<div style="break-inside:avoid;margin:0 0 .5em"><div style="display:flex;gap:.6em;align-items:baseline"><span style="flex:1;font-family:${D};font-weight:${E.dw};font-size:max(15px,1em);line-height:1.15;color:${ink}">${esc(n)}</span>${p?`<span style="flex:none;font:600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span>`:""}</div>
-      ${it.note?`<div data-note="1" style="font:italic 400 max(12px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
+      ${it.note?`<div data-note="1" style="font:italic 400 max(13px,.76em)/1.3 ${B};color:${ink};opacity:1;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
   }
   let flow="";
   ["s","m","w","d"].forEach((k,ci)=>{const items=(m[k]||[]).slice(0,4);if(!items.length)return;

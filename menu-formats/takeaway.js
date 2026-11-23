@@ -231,7 +231,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const course=k=>`<div style="margin-bottom:.5em">
      <div style="display:flex;justify-content:space-between;align-items:center;background:${BAR};color:${BARINK};padding:.14em .5em .1em;${eg==="new"?"border-radius:8px;":""}margin-bottom:.32em">
        <span style="font:${E.dw} .9em/1.15 ${E.disp};font-size:max(18px,.9em);text-transform:uppercase;letter-spacing:.04em">${esc(LAB[k])}</span>
-       <span style="font:700 .55em/1 ${E.body};font-size:max(14px,.55em);letter-spacing:.2em;text-transform:uppercase">No. ${BASE[k]}${menu[k].length>1?" to "+(BASE[k]+menu[k].length-1):""}</span></div>
+       <span style="font:700 .55em/1 ${E.body};font-size:max(14px,.55em);letter-spacing:.2em;text-transform:uppercase">${HOME?"":`No. ${BASE[k]}${menu[k].length>1?" to "+(BASE[k]+menu[k].length-1):""}`}</span></div>
      ${menu[k].map((it,i)=>`<div style="display:flex;gap:.4em;margin:0 0 ${heavy?".22em":".42em"}">
        <span style="flex:none;min-width:1.5em;margin-right:.2em;font:${E.dw} 1em/1.1 ${E.disp};color:${SPOT}">${BASE[k]+i}.</span>
        <div style="flex:1;min-width:0">
