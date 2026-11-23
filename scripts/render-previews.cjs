@@ -57,8 +57,9 @@ async function snap(page,id){
       /* review 43: the page reads the card line for line. The card's own line under the dish name is the note (Casino printed "Buttermilk batter.
          Count them. We did." while the phone says "ten berries in every one"); the next line joins it only when it is the dish's film line, so a
          footer elsewhere on the card no longer tags on (The Godfather's "An orange on every table."). A dry rename takes the card's name. */
-      {const P=l=>/^[\s$£€.,\d¢cp\/-]*$/.test(l)||/^[$£€]?\d+(?:[.,]\d+)?\s*(?:¢|c|p)?$/.test(l),NN=N(n),names=new Set(all.map(N));
-       let i=lines.findIndex((l,k)=>!usedL.has(k)&&(N(l)===NN||N(l).startsWith(NN+' ')));
+      {const P=l=>/^[\s$£€.,\d¢cp\/-]*$/.test(l)||/^[$£€]?\d+(?:[.,]\d+)?\s*(?:¢|c|p)?$/.test(l)||/^[IVXLC]{1,5}\.?$/.test(l)||/^[A-Z]?\d{1,2}$/.test(l),NN=N(n),names=new Set(all.map(N)),NL=l=>N(l).replace(/^[a-z]?\d{1,2}\s*(?=[a-z])/,'').replace(/^[ivx]{1,4}\s+/,'');
+       /* a price can sit hard against the name ("Orange butter cake3.50") and a code can lead it ("A1 Espresso & anisette") */
+       let i=lines.findIndex((l,k)=>{if(usedL.has(k))return false;const a=NL(l);return a===NN||a.startsWith(NN+' ')||(a.startsWith(NN)&&/^\d/.test(a.slice(NN.length)))});
        if(i<0&&!on(n)){const W=t=>new Set(N(t).split(' ').filter(w=>w.length>2)),wn=W(n);let best=-1,bs=0;lines.forEach((l,k)=>{if(usedL.has(k)||P(l))return;const wl=W(l);if(!wl.size)return;let c=0;wn.forEach(w=>{if(wl.has(w))c++});const sc=c/Math.max(wn.size,wl.size);if(sc>bs){bs=sc;best=k}});if(bs>=0.6){i=best;n=lines[best].replace(/\s*[$£€]?\d+(?:[.,]\d+)?\s*$/,'').trim()}}
        if(i>=0){usedL.add(i);const rel=t=>{const a=new Set(N(t).split(' ').filter(w=>w.length>3));return N(desc+' '+film).split(' ').some(w=>w.length>3&&a.has(w))};
         let j=i+1;while(j<lines.length&&P(lines[j]))j++;const L1=lines[j];
