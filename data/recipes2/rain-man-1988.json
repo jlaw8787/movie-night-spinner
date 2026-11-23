@@ -443,7 +443,7 @@
    }
   },
   {
-   "n": "Maple syrup bourbon smash",
+   "n": "Maple syrup lemon smash",
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
@@ -452,7 +452,7 @@
     {
      "q": 200,
      "u": "ml",
-     "item": "bourbon",
+     "item": "cold black tea",
      "aisle": "Bottle shop"
     },
     {
@@ -496,7 +496,7 @@
      "min": 3
     },
     {
-     "text": "Add bourbon and ice, shake hard, and strain into rocks glasses packed with crushed ice.",
+     "text": "Add the cold tea and ice, shake hard, and strain into rocks glasses packed with crushed ice.",
      "min": 4
     },
     {
@@ -505,81 +505,7 @@
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Maple syrup smoked tea smash",
-     "prep_min": 14,
-     "cook_min": 15,
-     "make_ahead": "Tea up to 2 days ahead, keep chilled",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "smoked black tea bags",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "maple syrup",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "lemons, juiced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 32,
-       "u": "",
-       "item": "mint leaves",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "green apple",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "cup",
-       "item": "crushed ice",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill.",
-       "min": 15
-      },
-      {
-       "text": "Juice the lemons and slice the apple thinly.",
-       "min": 5
-      },
-      {
-       "text": "Press the mint gently with the syrup and lemon juice in a shaker, one drink at a time.",
-       "min": 3
-      },
-      {
-       "text": "Add 50ml of the tea and ice, shake hard, and strain into rocks glasses packed with crushed ice.",
-       "min": 4
-      },
-      {
-       "text": "Garnish with a mint sprig and an apple slice.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

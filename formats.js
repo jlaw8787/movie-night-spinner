@@ -644,14 +644,14 @@ const FMT_FILMS={
     cue:["/51hHkBv4hj31bnaECQcXR0RYkGX.jpg","Prom night, 1985: off to hospital, not the prom","0% 45%"],
     groups:[
       {h:"Starters",c:"pink",left:true,items:[
-        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Crumbed risotto balls, mozzarella middle, marinara.",note:"Arancini. Have you seen my baseball?",p:"6.50"},
-        {k:"Pat Healy's architect garlic knots",n:"Pat Healy's architect garlic knots",d:"Garlic butter knots, parmesan, marinara.",note:"Healy spies on Mary in Miami.",p:"4.25"}],
-        house:{n:"Magda's cheese ball and crackers",d:"Cheddar and cream cheese rolled in chopped nuts, with crackers.",note:"Cheese ball from Magda next door.",p:"3.95"}},
+        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Crumbed risotto balls, mozzarella middle, marinara.",note:"Arancini rolled the size of a baseball. Hands off Warren's.",p:"6.50"},
+        {k:"Pat Healy's architect garlic knots",n:"Pat Healy's architect garlic knots",d:"Garlic butter knots, parmesan, marinara.",note:"Garlic knots, easy eating on a Miami stakeout.",p:"4.25"}],
+        house:{n:"Magda's cheese ball and crackers",d:"Cheddar and cream cheese rolled in chopped nuts, with crackers.",note:"Nut-crusted cheese ball, Magda's party trick next door.",p:"3.95"}},
       {h:"Mains",c:"yellow",left:true,items:[
         {k:"Warren's franks and beans",n:"Warren's franks and beans",d:"Smoky franks, molasses baked beans, slaw.",note:"Franks and beans, Ted's prom night disaster.",p:"8.95"},
-        {k:"Puffy's body-cast chicken cordon bleu",n:"Puffy's body-cast chicken cordon bleu",d:"Ham and swiss chicken, crumbed, mustard cream.",note:"Puffy ends up in a full body cast.",p:"12.95"}]},
+        {k:"Puffy's body-cast chicken cordon bleu",n:"Puffy's body-cast chicken cordon bleu",d:"Ham and swiss chicken, crumbed, mustard cream.",note:"Crumbed chicken cordon bleu, soft enough for Puffy in his body cast.",p:"12.95"}]},
       {h:"Dessert",c:"aqua",items:[
-        {k:"Hair gel meringues with lemon curd",n:"Hair gel meringues with lemon curd",d:"Vanilla meringues, whipped cream, lemon curd.",note:"Meringues. Mary thinks it's hair gel.",p:"5.50"}]},
+        {k:"Hair gel meringues with lemon curd",n:"Hair gel meringues with lemon curd",d:"Vanilla meringues, whipped cream, lemon curd.",note:"Glossy meringue peaks that could pass for hair gel.",p:"5.50"}]},
       {h:"Drinks",c:"pink",items:[
         {k:"Senior prom punch",n:"Senior prom punch",d:"Pineapple, ginger beer, rum and lime sorbet.",note:"Pineapple punch for the senior prom.",p:"4.50"}],
         house:{n:"Beer. Not lite beer, beer.",d:"Ice cold, by the bottle.",note:"Cold beer after 36 holes of golf.",p:"2.75",alc:true}}]},
@@ -2317,7 +2317,7 @@ function fmtNowShowing(f,spec,menu,poster){
   /* drawn trim only: a row of marquee bulbs */
   const bulbs=(n,c)=>`<div aria-hidden="true" style="display:flex;justify-content:space-between;padding:0 10px">${Array.from({length:n},()=>`<span style="width:11px;height:11px;border-radius:50%;background:${c};box-shadow:0 0 6px ${c}"></span>`).join("")}</div>`;
   const price=p=>`<span style="${DISP};font-size:20px;line-height:1;color:${PINK};flex:none">${ESC(p)}</span>`;
-  const row=(name,p,film,food)=>`<div style="padding:7px 0 8px;border-top:2px dashed rgba(23,179,166,.45)"><div style="display:flex;align-items:baseline;gap:8px"><span style="${BODY};font-weight:800;font-size:18px;line-height:1.12;color:${INK};flex:0 1 auto;min-width:0">${ESC(name)}</span><span aria-hidden="true" style="flex:1;min-width:12px;border-bottom:2px dotted rgba(43,22,48,.3);transform:translateY(-4px)"></span>${price(p)}</div><div style="${BODY};font-weight:700;font-style:italic;font-size:15px;line-height:1.28;color:${DEEP};margin-top:3px">${ESC(film)}</div><div style="${BODY};font-size:15px;line-height:1.28;color:${SOFT};margin-top:1px">${ESC(food)}</div></div>`;
+  const row=(name,p,film,food)=>`<div style="padding:7px 0 8px;border-top:2px dashed rgba(23,179,166,.45)"><div style="display:flex;align-items:baseline;gap:8px"><span style="${BODY};font-weight:800;font-size:18px;line-height:1.12;color:${INK};flex:0 1 auto;min-width:0">${ESC(name)}</span>${spec.pay===""?"":`<span aria-hidden="true" style="flex:1;min-width:12px;border-bottom:2px dotted rgba(43,22,48,.3);transform:translateY(-4px)"></span>${price(p)}`}</div><div style="${BODY};font-size:15px;line-height:1.28;color:${SOFT};margin-top:3px">${ESC(food)}</div><div style="${BODY};font-weight:700;font-style:italic;font-size:15px;line-height:1.28;color:${DEEP};margin-top:1px">${ESC(film)}</div><!-- review 42: food first, then the gag --></div>`;
   const dish=x=>{const it=pick(x.k);return row(it.label||x.n||x.k,x.p,x.note,it.desc||x.d||"")};
   const house=h=>!h||(h.alc&&dry)||(h.meat&&veg)?"":row(h.n,h.p,h.note,h.d);
   const tab=g=>{const c=COL[g.c]||PINK,ink=g.c==="yellow"?INK:"#fff";return `<div style="display:flex;align-items:center;margin-bottom:2px"><span style="${DISP};font-size:25px;line-height:1;letter-spacing:.05em;text-transform:uppercase;color:${ink};background:${c};padding:6px 16px 5px;border-radius:4px;box-shadow:3px 3px 0 ${PLUM};white-space:nowrap">${ESC(g.h)}</span><span aria-hidden="true" style="flex:1;height:4px;margin-left:12px;border-radius:2px;background:${c}"></span></div>`};

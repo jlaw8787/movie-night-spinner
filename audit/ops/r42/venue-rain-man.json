@@ -1,0 +1,52 @@
+{
+ "id": "Rain Man (1988)",
+ "ops": [
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Wallbrook apple juice",
+    "note": "Cold cloudy apple juice in a paper cup, poured at the same time every day."
+   },
+   "done": true
+  },
+  {
+   "old": "Maple syrup bourbon smash",
+   "new": "Maple syrup lemon smash",
+   "done": true
+  },
+  {
+   "old": "Maple syrup bourbon smash (vegetarian)",
+   "new": "Maple syrup lemon smash (vegetarian)",
+   "done": true
+  },
+  {
+   "old": "Bourbon shaken hard with real maple syrup, lemon and mint",
+   "new": "Cold black tea shaken hard with real maple syrup, lemon and mint",
+   "done": true
+  },
+  {
+   "old": "Add 50ml bourbon and a scoop of ice",
+   "new": "Add 100ml cold black tea and a scoop of ice",
+   "done": true
+  },
+  {
+   "old": "200ml bourbon@Bottle shop",
+   "new": "4 black tea bags@Pantry",
+   "done": true
+  },
+  {
+   "old": "bourbon",
+   "new": "cold black tea",
+   "done": true
+  },
+  {
+   "old": "Add bourbon and ice",
+   "new": "Add the cold tea and ice",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-23",
+ "misses": [
+  "not found: Maple syrup bourbon smash (vegetarian)"
+ ]
+}
