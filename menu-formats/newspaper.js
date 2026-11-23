@@ -185,7 +185,7 @@ const TONES={
 
 root.MENU_FORMATS.newspaper=ctx=>{
   /* review 32: the cover price is in the film's own money (Oliver!'s London paper said "TWO CENTS") */
-  const coverPrice=us=>{const cu=ctx.flavour&&ctx.flavour.currency;return cu==="£sd"?"ONE PENNY":cu==="£"?"40P":cu==="G"?"FIVE KNUTS":cu==="€"?"€1":cu==="coin"?"ONE "+String(ctx.flavour.coin||"coins").toUpperCase().replace(/IES$/,"Y").replace(/S$/,""):us};
+  const coverPrice=us=>{const cu=ctx.flavour&&ctx.flavour.currency;if(ctx.flavour&&ctx.flavour.cover)return String(ctx.flavour.cover)/* review 43: flavour.cover sets a paper's own price (Enfield 1977, 8P) */;return cu==="£sd"?"ONE PENNY":cu==="£"?"40P":cu==="G"?"FIVE KNUTS":cu==="€"?"€1":cu==="coin"?"ONE "+String(ctx.flavour.coin||"coins").toUpperCase().replace(/IES$/,"Y").replace(/S$/,""):us};
   const f=ctx.f||{},fl=ctx.flavour||null,logo=ctx.logo||null,pal=ctx.palette||{};
   const E=ERAS[ctx.era]||ERAS.modern,T=TONES[ctx.tone]||TONES.warm,K=E.kind;
   /* era type pairing */

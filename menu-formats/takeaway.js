@@ -165,7 +165,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* ---------- outside: delivery panel, wraparound photo, cover ---------- */
   /* review 39: a family home or a flat on this layout (The Big Sick, Big Daddy, Blue Beetle, The Heat, Turning Red) prints home words, not a delivery panel */
-  const HOME=HOME0;
+  const HOME=HOME0;/* review 43: a fortune slip only comes with a Chinese takeaway */const FORT=ctx.flavour&&ctx.flavour.fortune!=null?!!ctx.flavour.fortune:!HOME&&/chin|\bwok|dragon|panda|jade|dynasty|szechuan|sichuan|canton|hunan|dumpling|lotus|mandarin|peking|bamboo|lucky|fortune|kung pao|chow mein|noodle house/i.test([ctx.flavour&&ctx.flavour.venue,ctx.flavour&&ctx.flavour.sign].join(" "));
   const phone="555 0"+(num?num.padStart(3,"0").slice(-3):(yy||"00")+"1");
   const run=(winks.length?winks.slice(0,3):["Every street in town","Hot or it is free","Napkins in every bag"]).map(w=>esc(w.replace(/\.$/,"")));
   /* lucky numbers: the film's own number and year when it has them, the rest drawn from the title so no two films share a set */
@@ -197,10 +197,10 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:700 15px/1.2 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${SPOT};margin-bottom:.4em">${HOME?"Talk at the table":"Talk on the delivery run"}</div>
      ${run.map(r=>`<div style="font:500 1em/1.3 ${E.body};margin-bottom:.4em;padding-left:1em;text-indent:-1em"><span style="color:${SPOT};font-weight:700">+</span> ${r}</div>`).join("")}</div>
    <div style="position:absolute;left:34px;top:572px;width:372px;height:200px;background:#fbfaf6;color:#222;box-shadow:0 5px 14px rgba(0,0,0,.3);transform:rotate(-2.5deg);padding:14px 20px;box-sizing:border-box;display:flex;flex-direction:column">
-     <div style="font:700 14px/1 ${E.body};letter-spacing:.26em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">${esc(T.fort)}</div>
+     <div style="font:700 14px/1 ${E.body};letter-spacing:.26em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">${esc(FORT?T.fort:(HOME?"Note on the fridge":"Note in the bag"))}</div>
      <div data-fit data-min="16" style="flex:1;min-height:0;overflow:hidden;font-size:26px;display:flex;flex-direction:column;justify-content:center;text-align:center"><div style="font:italic 500 1em/1.2 ${E.body}">${esc(sent(prop.title))}</div>
        ${prop.lines.length?`<div style="font:500 .7em/1.3 ${E.body};font-size:max(15px,.7em);margin-top:.3em">${prop.lines.map(l=>esc(sent(l))).join(" ")}</div>`:""}</div>
-     <div style="font:700 15px/1 ${E.body};letter-spacing:.14em;text-align:center">LUCKY NUMBERS &nbsp;${lucky}</div></div>
+     ${FORT?`<div style="font:700 15px/1 ${E.body};letter-spacing:.14em;text-align:center">LUCKY NUMBERS &nbsp;${lucky}</div>`:""}</div>
    <div style="position:absolute;left:914px;top:14px;bottom:14px;width:412px;display:flex;flex-direction:column;gap:12px">
      <div style="flex:none;padding:14px 18px 12px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}box-shadow:0 5px 14px rgba(0,0,0,.35)">
        ${kick(HOME?"Home kitchen menu":US?"Takeout menu":"Takeaway menu")}

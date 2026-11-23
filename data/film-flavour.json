@@ -561,7 +561,15 @@
     "Escort: Hope"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Ration sheet": "Today's menu",
+   "EXPERIMENT IN PROGRESS": "NOW SERVING",
+   "Results may vary. Seconds encouraged.": "Pay at the register.",
+   "Rations": "Snacks",
+   "Sweet issue": "Something sweet",
+   "Hot meals": "Mains"
+  }
  },
  "Iron Man 2 (2010)": {
   "venue": "Stark Expo Food Court",
@@ -1346,7 +1354,15 @@
     "Escort required"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Ration sheet": "Today's menu",
+   "EXPERIMENT IN PROGRESS": "NOW SERVING",
+   "Results may vary. Seconds encouraged.": "Pay at the register.",
+   "Rations": "Snacks",
+   "Sweet issue": "Something sweet",
+   "Hot meals": "Mains"
+  }
  },
  "Fantastic Four (2005)": {
   "venue": "Baxter Building Canteen",
@@ -3957,7 +3973,11 @@
   "number": "",
   "priceEra": "1800s",
   "currency": "coin",
-  "coin": "gold coins"
+  "coin": "gold coins",
+  "words": {
+   "Tea at home, in the front room": "Tea in the castle kitchen",
+   "Made at home, served in the front room.": "Made in the castle kitchen, served in the great hall."
+  }
  },
  "Encanto (2021)": {
   "venue": "Casa Madrigal Kitchen",
@@ -8399,7 +8419,7 @@
   "pay": true,
   "words": {
    "All hands to the long table": "Order at the counter",
-   "The courses in procession": "The menu board",
+   "The courses in procession": "Order at the counter",
    "Bill of Fare": "Menu Board",
    "To Begin": "Fries and Sides",
    "The Remove": "Burgers and Pies",
@@ -8410,7 +8430,8 @@
    "Talk of the hall": "Talk of the counter",
    "Place card": "Name badge",
    "laid for tonight": "open tonight",
-   "From the host": "From the manager"
+   "From the host": "From the manager",
+   "One of everything": "The Mooby's family feast"
   },
   "counter": true
  },
@@ -9937,7 +9958,15 @@
     "Basement Division"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Ration sheet": "Today's menu",
+   "EXPERIMENT IN PROGRESS": "NOW SERVING",
+   "Results may vary. Seconds encouraged.": "Pay at the register.",
+   "Rations": "Snacks",
+   "Sweet issue": "Something sweet",
+   "Hot meals": "Mains"
+  }
  },
  "The Heat (2013)": {
   "venue": "Mullins Family Kitchen",
@@ -13560,7 +13589,15 @@
     "Memory: Implant"
    ]
   },
-  "number": "2084"
+  "number": "2084",
+  "words": {
+   "Ration sheet": "Today's menu",
+   "EXPERIMENT IN PROGRESS": "NOW SERVING",
+   "Results may vary. Seconds encouraged.": "Pay at the register.",
+   "Rations": "Snacks",
+   "Sweet issue": "Something sweet",
+   "Hot meals": "Mains"
+  }
  },
  "Blade Runner (1982)": {
   "venue": "White Dragon Noodle Bar",
@@ -16446,7 +16483,11 @@
   },
   "number": "",
   "currency": "G",
-  "pay": ""
+  "pay": "",
+  "words": {
+   "Ration sheet": "Tonight's spread",
+   "Clearance required past this line.": "Ask the room for seconds."
+  }
  },
  "Fantastic Beasts and Where to Find Them (2016)": {
   "venue": "Kowalski Quality Baked Goods",
@@ -18382,7 +18423,11 @@
   "world": "storybook",
   "priceEra": "1800s",
   "currency": "coin",
-  "coin": "drubloons"
+  "coin": "drubloons",
+  "words": {
+   "Rooms above, stabling round the back.": "Rooms above, moorings round the back.",
+   "Coin of the realm only.": "Drubloons only."
+  }
  },
  "Avatar: The Way of Water (2022)": {
   "venue": "Metkayina Reef Village",
@@ -18525,7 +18570,8 @@
   "priceEra": "1930s-40s",
   "currency": "coin",
   "coin": "coppers",
-  "coinMid": 8
+  "coinMid": 8,
+  "fortune": true
  },
  "Kill Bill: Vol. 1 (2003)": {
   "venue": "House of Blue Leaves",
@@ -21532,7 +21578,9 @@
   },
   "number": "1977",
   "priceEra": "1970s",
-  "pay": ""
+  "pay": "",
+  "cover": "8P",
+  "country": "GB"
  },
  "The Evil Dead (1981)": {
   "venue": "The Cabin in the Woods",
@@ -24750,5 +24798,8 @@
   },
   "number": "7",
   "priceEra": "2000s"
+ },
+ "Big Trouble in Little China (1986)": {
+  "fortune": true
  }
 }

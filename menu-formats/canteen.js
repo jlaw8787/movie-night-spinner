@@ -171,7 +171,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* timetable strip */
   /* review 35: flavour.slots (per film, optional) sets the five timetable times when the film fixes them (Danger Close: the battle ran late afternoon to dusk) */
   const slots=Array.isArray(fl.slots)&&fl.slots.length===5?fl.slots:school?["Period 1","Period 2","Lunch","Period 4","Period 5"]:mess?["0600","0900","Chow","1500","2200"]:prison?["0600","0900","Chow","1400","2100"]:["9:00","10:30","Lunch","2:00","3:30"];
-  const fall=school?(usSchool?["Homeroom","Math","","Library","Gym"]:["Assembly","Maths","",  "Library","Sport"]):mess?["Reveille","Drill","","Duty roster","Lights out"]:prison?["Count","Yard","","Work detail","Lock-up"]:["Briefing","Meetings","","Reports","Home time"];
+  const fall=school?(usSchool?["Homeroom","Math","","Library","Gym"]:["Assembly","Maths","",  "Library","Sport"]):mess?["Reveille","Drill","","Duty roster","Lights out"]:prison?["Count","Yard","","Work detail","Lock-up"]:["Shift starts","Break","","Reports",(!fl.currency&&f.theme!=="aussie"&&!/^(AU|NZ|GB|IE|CA)$/i.test(String(fl.country||"")))?"Clock out":"Knock-off"]/* review 43: a workplace runs on shifts, not a school day */;
   const lunchAt=`12:${String((parseInt(number,10)||0)%60).padStart(2,"0")}`;
   /* a long wink keeps a whole phrase (cut at a comma, "and" or "with"), never a fragment like "Bruce Bogtrotter and the"; if no clean phrase fits, the plain subject is used */
   const cut=(w,n)=>{if(!w||w.length<=n)return w;for(const sep of [", "," and "," with "," at "," in "," on "]){const i=w.indexOf(sep);if(i>3&&i<=n)return w.slice(0,i)}return null};

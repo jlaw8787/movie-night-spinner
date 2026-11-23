@@ -144,7 +144,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const stills=ctx.stills||[];
   const PM=!!poster; /* poster mode: the whole poster is the hero, the first still is only the fallback */
   const hero=PM?{src:img(poster,"w780"),poster:true}:{src:img(stills[0],"w1280"),poster:false};
-  const sec=Object.assign({},SEC,AU?{}:{m:"Mains"},fam?{d:"Soft Drinks"}:{});
+  const sec=Object.assign({},SEC,AU?{w:"Desserts"}:GB?{m:"Mains"}:{m:"Mains",w:"Desserts"}/* review 43: puddings are British; an Aussie or North American pub says desserts */,fam?{d:"Soft Drinks"}:{});
 
   const P=ctx.palette||{};
   const BOARD="#1f2623",CHALK="#f1efe6";
