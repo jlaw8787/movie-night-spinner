@@ -2695,6 +2695,8 @@ function priceFix0(root,menu,f,fl,era,fmt){
     else if(m[4]==null&&v>=1){s=m[1]+(m[2]||"")+(Math.abs(v-Math.round(v))<.001?Math.round(v):v.toFixed(2))+m[5]}
     else s=m[1]+(m[2]||"")+(v<1&&!m[2]?"."+String(Math.round(v*100)).padStart(2,"0"):v.toFixed(2))+m[5];
     if(s!==x.t.nodeValue){x.t.nodeValue=s;n++}}
+  /* review 44: on a dollar card whole-number prices carry their "$" ("7" read as no price at all: Venom, the JFK food court, Toretto's) */
+  if(window.__pfDollar)for(const x of [...P,...O]){const v=x.t.nodeValue,mm=v.match(/^(\s*)(\d{1,3})(\s*)$/);if(mm&&+mm[2]>=1){x.t.nodeValue=mm[1]+"$"+mm[2]+mm[3];n++}}
   return n}
 /* review 31 (item 6): a "Cold Drinks" heading over a warm punch, or "Hot Drinks" over an iced one, reads plain "Drinks" */
 const HF_WARM=/\b(warm|hot|mulled|toddy|tea|coffee|cocoa|hot chocolate|cider|grog|wassail|posset|espresso|latte|cappuccino|chai)\b/i,HF_COLD=/\b(iced|cold|frozen|slush\w*|float|shake|soda|lemonade|cooler|spritz|fizz|frapp\w*|smoothie|sundae)\b/i;

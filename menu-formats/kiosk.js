@@ -242,7 +242,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* review 44: off the beach the banner follows the venue (a snack bar, a stall, a corner store), and a place that is no business at all
      (Happy Feet's colony, Halloween Town Square) reads "SNACKS ON" over its sign. "BAR AND GRILL" never prints off a beach */
   const VW=String(fl.venue||"")+" "+String(fl.sign||"");
-  const LANDK=/\bkiosk\b/i.test(VW)?"KIOSK":/\b(snack ?bar|concessions?|refreshments?|canteen|tuck ?shop)\b/i.test(VW)?"SNACK BAR":/\b(stall|stand|cart|booth|truck|van|wagon)\b/i.test(VW)?"STALL":/\bcorner (store|shop)\b/i.test(VW)?"CORNER STORE":/\b(store|shop|mart|market|deli|bodega|grocer[sy]?|newsagent|servo|gas station|kwik|quik)\b/i.test(VW)?"STORE":/\b(grill|bar|cafe|caf\u00e9|diner|eats|bakery)\b/i.test(VW)?"SNACK BAR":"SNACKS ON";
+  const LANDK=/\bkiosk\b/i.test(VW)?"KIOSK":/\b(snack ?bar|concessions?|refreshments?|canteen|tuck ?shop)\b/i.test(VW)?"SNACK BAR":/\b(stall|stand|cart|booth|truck|van|wagon)\b/i.test(VW)?"STALL":/\bcorner (store|shop)\b/i.test(VW)?"CORNER STORE":/\b(store|shop|mart|market|deli|bodega|grocer[sy]?|newsagent|servo|gas station|kwik|quik)\b/i.test(VW)?"STORE":/\b(grill|bar|cafe|caf\u00e9|diner|eats|bakery|burgers?|pizza|tacos?|hot dogs?|fish and chips|chippy|takeaway|takeout)\b/i.test(VW)?"SNACK BAR":"SNACKS ON";
   const KICK=HOMEV?(beach?"BEACH SNACKS":"SNACKS ON"):beach?E.kick:typeof fl.kick==="string"?fl.kick:LANDK;
   const title=clean(f.title||"Tonight's Feature");
   const venue=C(fl.venue)||(beach?"The Beach Kiosk":"The Kiosk");
