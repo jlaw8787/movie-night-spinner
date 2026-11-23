@@ -89,133 +89,155 @@
    "af": true
   },
   {
-   "n": "Crown jewels cheese straws",
+   "n": "Kevin's cheddar and pecan cheese ball",
    "course": "s",
-   "prep_min": 17,
-   "cook_min": 12,
-   "make_ahead": "Up to 2 days, airtight",
+   "prep_min": 12,
+   "cook_min": 4,
+   "make_ahead": "Up to 2 days, wrapped and chilled; roll in the pecans to serve",
    "ingredients": [
     {
-     "q": 2,
-     "u": "",
-     "item": "sheets puff pastry",
-     "aisle": "Frozen"
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar, finely grated",
+     "aisle": "Dairy"
     },
     {
      "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "pecans, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
      "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "cheddar",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "parmesan",
-     "aisle": "Dairy"
+     "item": "boxes Ritz crackers",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 200C. Brush the pastry with beaten egg.",
+     "text": "Beat the cream cheese, cheddar, mustard and paprika until smooth.",
+     "min": 6
+    },
+    {
+     "text": "Shape into a ball, wrap and chill 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Toast the pecans in a dry pan until fragrant, then cool.",
      "min": 4
     },
     {
-     "text": "Cover with grated cheddar and parmesan.",
-     "min": 5
-    },
-    {
-     "text": "Cut into thin strips and twist each a few times.",
-     "min": 8
-    },
-    {
-     "text": "Bake on lined trays until golden.",
-     "min": 12
+     "text": "Roll the ball in the pecans and serve with the crackers.",
+     "min": 3
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Queen's coronation chicken",
+   "n": "Orlando buttermilk fried chicken and biscuits",
    "course": "m",
-   "prep_min": 12,
-   "cook_min": 35,
-   "make_ahead": "Up to 1 day, keep chilled",
+   "prep_min": 24,
+   "cook_min": 28,
+   "make_ahead": "Soak the chicken up to a day ahead in the fridge; bake the biscuits and fry the chicken on the day",
    "ingredients": [
     {
-     "q": 800,
-     "u": "g",
-     "item": "chicken breast",
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh pieces",
      "aisle": "Meat"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "mayonnaise",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "Greek yoghurt",
+     "q": 720,
+     "u": "ml",
+     "item": "buttermilk",
      "aisle": "Dairy"
     },
     {
-     "q": 2,
-     "u": "tsp",
-     "item": "curry powder",
-     "aisle": "Spices"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "apricot jam",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 50,
+     "q": 250,
      "u": "g",
-     "item": "sultanas",
+     "item": "plain flour",
      "aisle": "Pantry"
     },
     {
      "q": 300,
      "u": "g",
-     "item": "cooked rice",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "bag salad leaves",
-     "aisle": "Produce"
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Poach the chicken, then cool and shred.",
-     "min": 3
+     "text": "Soak the chicken in 500ml of the buttermilk with 1 tsp salt for 2 hours in the fridge.",
+     "min": 120
     },
     {
-     "text": "Poach.",
-     "min": 15
+     "text": "Rub 80g of the cold butter into the self-raising flour, stir in the rest of the buttermilk, pat out 3cm thick and cut 8 rounds.",
+     "min": 10
     },
     {
-     "text": "Cool.",
-     "min": 20
+     "text": "Bake the biscuits at 220°C until risen and golden.",
+     "min": 14
     },
     {
-     "text": "Mix the mayonnaise, yoghurt, curry powder, jam and sultanas and fold through the chicken.",
-     "min": 6
+     "text": "Mix the plain flour with the paprika, garlic powder, 1 tsp salt and 1 tsp pepper, and heat the oil to 170°C.",
+     "min": 8
     },
     {
-     "text": "Serve with rice and salad leaves.",
+     "text": "Dredge the chicken and fry in batches until golden and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Beat the rest of the butter with the honey and serve with the chicken and biscuits.",
      "min": 3
     }
    ],
@@ -223,81 +245,89 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Queen's coronation chickpeas",
-     "prep_min": 12,
-     "cook_min": 32,
-     "make_ahead": "Up to 1 day, keep chilled",
+     "n": "Orlando buttermilk fried cauliflower and biscuits",
+     "prep_min": 24,
+     "cook_min": 24,
+     "make_ahead": "Soak the cauliflower up to a day ahead in the fridge; bake the biscuits and fry on the day",
      "ingredients": [
       {
-       "q": 800,
-       "u": "g",
-       "item": "canned chickpeas, drained",
-       "aisle": "Pantry"
-      },
-      {
        "q": 1,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
+       "u": "",
+       "item": "large cauliflower, in big florets",
+       "aisle": "Produce"
       },
       {
-       "q": 200,
-       "u": "g",
-       "item": "mayonnaise",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "Greek yoghurt",
+       "q": 720,
+       "u": "ml",
+       "item": "buttermilk",
        "aisle": "Dairy"
       },
       {
-       "q": 2,
-       "u": "tsp",
-       "item": "curry powder, divided",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "apricot jam",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 50,
+       "q": 250,
        "u": "g",
-       "item": "sultanas",
+       "item": "plain flour",
        "aisle": "Pantry"
       },
       {
        "q": 300,
        "u": "g",
-       "item": "cooked rice",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 140,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
        "aisle": "Pantry"
       },
       {
        "q": 1,
-       "u": "",
-       "item": "bag salad leaves",
-       "aisle": "Produce"
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Pat the chickpeas dry, toss with the oil and 1 tsp of the curry powder and roast at 200C for 15 minutes until firm.",
-       "min": 20
+       "text": "Soak the cauliflower in 500ml of the buttermilk with 1 tsp salt for 1 hour in the fridge.",
+       "min": 60
       },
       {
-       "text": "Cool.",
-       "min": 15
+       "text": "Rub 80g of the cold butter into the self-raising flour, stir in the rest of the buttermilk, pat out 3cm thick and cut 8 rounds.",
+       "min": 10
       },
       {
-       "text": "Mix the mayonnaise, yoghurt, remaining curry powder, jam and sultanas and fold through the chickpeas.",
-       "min": 6
+       "text": "Bake the biscuits at 220°C until risen and golden.",
+       "min": 14
       },
       {
-       "text": "Serve with rice and salad leaves.",
+       "text": "Mix the plain flour with the paprika, garlic powder, 1 tsp salt and 1 tsp pepper, and heat the oil to 170°C.",
+       "min": 8
+      },
+      {
+       "text": "Dredge the cauliflower and fry in batches until golden and tender.",
+       "min": 8
+      },
+      {
+       "text": "Beat the rest of the butter with the honey and serve with the cauliflower and biscuits.",
        "min": 3
       }
      ],
@@ -371,7 +401,7 @@
    "af": true
   },
   {
-   "n": "King Bob's banana caramel thickshake",
+   "n": "King Bob's banana caramel milkshake",
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,

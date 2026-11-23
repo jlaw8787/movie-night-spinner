@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 0,
-   "make_ahead": "Mix the Marie Rose sauce up to 2 days ahead and keep it covered in the fridge; build the glasses just before serving",
+   "make_ahead": "Mix the cocktail sauce up to 2 days ahead and keep it covered in the fridge; build the glasses just before serving",
    "ingredients": [
     {
      "q": 500,
@@ -33,14 +33,14 @@
      "aisle": "Produce"
     },
     {
-     "q": 120,
-     "u": "g",
-     "item": "whole egg mayonnaise",
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
      "aisle": "Pantry"
     },
     {
-     "q": 2,
-     "u": "tbsp",
+     "q": 150,
+     "u": "ml",
      "item": "tomato sauce",
      "aisle": "Pantry"
     },
@@ -58,20 +58,20 @@
     },
     {
      "q": 1,
-     "u": "",
-     "item": "pinch of sweet paprika",
-     "aisle": "Spices"
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
     },
     {
-     "q": 4,
+     "q": 1,
      "u": "",
-     "item": "slices buttered brown bread",
-     "aisle": "Bakery"
+     "item": "packet saltine crackers",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Stir the mayonnaise, tomato sauce, chilli sauce and lemon juice together for the Marie Rose sauce.",
+     "text": "Stir the tomato sauce, horseradish, Worcestershire sauce, chilli sauce and lemon juice together for the cocktail sauce.",
      "min": 3
     },
     {
@@ -83,11 +83,11 @@
      "min": 3
     },
     {
-     "text": "Pile the prawns into the glasses, spoon over the rest of the sauce and dust with paprika.",
+     "text": "Pile the prawns into the glasses, spoon over the rest of the sauce.",
      "min": 3
     },
     {
-     "text": "Serve with lemon wedges and triangles of buttered brown bread.",
+     "text": "Serve with lemon wedges and saltine crackers.",
      "min": 2
     }
    ],
@@ -98,7 +98,7 @@
      "n": "Sunset Strip avocado and palm heart cocktail",
      "prep_min": 17,
      "cook_min": 0,
-     "make_ahead": "Mix the Marie Rose sauce up to 2 days ahead and keep it covered in the fridge; build the glasses just before serving",
+     "make_ahead": "Mix the cocktail sauce up to 2 days ahead and keep it covered in the fridge; build the glasses just before serving",
      "ingredients": [
       {
        "q": 400,
@@ -131,14 +131,14 @@
        "aisle": "Produce"
       },
       {
-       "q": 120,
-       "u": "g",
-       "item": "whole egg mayonnaise",
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
        "aisle": "Pantry"
       },
       {
-       "q": 2,
-       "u": "tbsp",
+       "q": 150,
+       "u": "ml",
        "item": "tomato sauce",
        "aisle": "Pantry"
       },
@@ -156,20 +156,20 @@
       },
       {
        "q": 1,
-       "u": "",
-       "item": "pinch of sweet paprika",
-       "aisle": "Spices"
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
       },
       {
-       "q": 4,
+       "q": 1,
        "u": "",
-       "item": "slices buttered brown bread",
-       "aisle": "Bakery"
+       "item": "packet saltine crackers",
+       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Stir the mayonnaise, tomato sauce, chilli sauce and lemon juice together for the Marie Rose sauce.",
+       "text": "Stir the tomato sauce, horseradish, Worcestershire sauce, chilli sauce and lemon juice together for the cocktail sauce.",
        "min": 3
       },
       {
@@ -181,11 +181,11 @@
        "min": 4
       },
       {
-       "text": "Pile the palm hearts on top, spoon over the rest of the sauce and dust with paprika.",
+       "text": "Pile the palm hearts on top, spoon over the rest of the sauce.",
        "min": 3
       },
       {
-       "text": "Serve with lemon wedges and triangles of buttered brown bread.",
+       "text": "Serve with lemon wedges and saltine crackers.",
        "min": 2
       }
      ]
@@ -707,7 +707,7 @@
    }
   },
   {
-   "n": "Dodger Stadium knickerbocker glory",
+   "n": "Dodger Stadium strawberry sundae",
    "course": "w",
    "prep_min": 25,
    "cook_min": 5,
