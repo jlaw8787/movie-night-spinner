@@ -2192,6 +2192,7 @@ Josh: quick ones first (alcohol on dry film pages, page-only dishes, recipe plur
 - Not done (outside Josh's list): price outliers (Muppets Take Manhattan egg cream, Lethal Weapon 3, The Grinch, Clerks III, Cloudy, Bad Santa's bare numbers), The Godfather arancini risotto lines, Inside Man and Big card versus phone names, Tango & Cash's Manhattan, Hocus Pocus 2 photo booth, Napoleon's "Main tray" above Starters.
 - Next (waiting on Josh): deploy review 41 on his go (check main is still 4c6f2014 first), then a fresh re-score.
 - 23 Nov, 5:25pm: deployed on Josh's go. main fast-forwarded 4c6f2014 to ee81d86e, Publish site run 45130856737 passed first time (live app.js?v=e3d60a2d).
+- 23 Nov, 9:55pm: Coming to America McDowell's tray liner (sunburst mark, no arches) and Soul Glo coupon deployed on Josh's go. main fast-forwarded a52710aa to 111f6752, Publish site run 45169110113 passed, live files match.
 
 ## 23 Nov, 5:30pm onwards: review 42 (branch fix/review-42 off main a52710aa, NOT deployed, held for Josh's go)
 
