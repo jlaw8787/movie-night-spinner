@@ -126,8 +126,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const BAR=LK&&LK.bar?LK.bar:dark?toHex(mix(pa,[0,0,0],.15)):eg==="old"?INK:toHex(mix(pa,[0,0,0],eg==="late"?.1:.3));
   const BARINK=readable(dark?"#ffffff":toHex(paper),BAR,4.8);
   const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
+  /* review 42: a card set in America says takeout (dollars with no currency of its own, not an Aussie film, no other country) */
+  const US=!(fl&&fl.currency)&&f.theme!=="aussie"&&!(fl&&fl.world)&&(!(fl&&fl.country)||fl.country==="US");
   const venue=clean(fl&&fl.venue||"Golden Door Kitchen");
-  const sign=clean(fl&&fl.sign||"Takeaway and delivery, open late");
+  const sign=clean(fl&&fl.sign||(US?"Takeout and delivery, open late":"Takeaway and delivery, open late"));
   const HOME0=!!fl&&fl.home!==false&&(fl.home===true||/\b(family|kitchen|apartment|flat|house|home|temple|loft|dorm)\b/i.test(String(fl.venue||""))&&!/\b(restaurant|cafe|takeaway|takeout|diner|shop|bar|express|palace|garden|wok|noodle|pizza|grill)\b/i.test(String(fl.venue||"")));
   const note=fl&&fl.note&&fl.note.text?{t:txt(fl.note.text),by:clean(fl.note.by||"The Cook")}:{t:HOME0?"Everything here is cooked at home and put out to share. Pull up a chair.":"Everything here is cooked when you ring, packed hot and sent straight out. Thanks for ordering in tonight.",by:"The Cook"};
   const winks=(fl&&fl.winks||[]).map(txt).filter(Boolean);
@@ -201,7 +203,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:700 15px/1 ${E.body};letter-spacing:.14em;text-align:center">LUCKY NUMBERS &nbsp;${lucky}</div></div>
    <div style="position:absolute;left:914px;top:14px;bottom:14px;width:412px;display:flex;flex-direction:column;gap:12px">
      <div style="flex:none;padding:14px 18px 12px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}box-shadow:0 5px 14px rgba(0,0,0,.35)">
-       ${kick(HOME?"Home kitchen menu":"Takeaway menu")}
+       ${kick(HOME?"Home kitchen menu":US?"Takeout menu":"Takeaway menu")}
        <div data-fit data-min="22" style="height:92px;overflow:hidden;font-size:46px;display:flex;align-items:center;margin-top:2px"><div style="max-width:100%;font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
        <div data-fit data-min="16" style="height:50px;overflow:hidden;font-size:20px;margin-top:2px"><div style="font:italic 500 1em/1.25 ${E.body};color:${SOFT}">${esc(sign)}</div></div></div>
      ${logoPanel}

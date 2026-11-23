@@ -15,7 +15,7 @@ for p in glob.glob(R+'/data/recipes2/*.json'):
             ws=re.findall(r"[a-z]+",it)
             if ws: FOOD.add(stem(ws[-1]))
             if len(ws)>1: FOOD.add(stem(ws[-2]+' '+ws[-1]))
-EXTRA="""fried grilled roasted baked toasted braised smoked crumbed battered glazed stewed poached seared steamed pickled whipped iced chilled frozen
+EXTRA="""fried grilled roasted baked toasted braised smoked crumbed breaded battered takeout glazed stewed poached seared steamed pickled whipped iced chilled frozen
 creamy crisp crunchy sticky spiced salted sweet savoury cake pie tart roll rolls bun buns burger sandwich toastie toast soup stew salad sauce dip chips fries
 cocktail shake float punch tea coffee beer wine juice soda lemonade cordial slushy sundae pudding biscuit cookie slice scone pastry dumpling noodle rice
 curry taco wrap skewer slider fritter croquette nugget wing rib steak chop roast mash gravy custard cream jelly trifle mousse brownie muffin doughnut
