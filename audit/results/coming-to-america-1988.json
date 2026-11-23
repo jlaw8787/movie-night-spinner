@@ -36,6 +36,34 @@
       "done": true,
       "settled": "2026-11-08",
       "applied": "2026-11-08"
+    },
+    {
+      "text": "Beef patties from the corner store (McDowell's, On the side)",
+      "where": "dish",
+      "verdict": "cut",
+      "why": "Cut on 24 Nov 2026 (Josh): no beef patty shop or patties appear in the film. Replaced by My-T-Sharp boxing rings.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-24"
+    },
+    {
+      "text": "My-T-Sharp boxing rings: As argued over at the barbershop next door. Joe Louis or Marciano?",
+      "where": "dish",
+      "verdict": "ok",
+      "why": "Added 24 Nov 2026 (Josh). Source: the My-T-Sharp barbershop scenes, where the regulars argue over the greatest boxer, Joe Louis or Rocky Marciano.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=coming-to-america",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-24"
+    },
+    {
+      "text": "Apple turnovers with the note 'Sweet as Randy Watson's Sexual Chocolate.'",
+      "where": "dish",
+      "verdict": "cut",
+      "why": "Swapped on 24 Nov 2026 (Josh) for Apple pye, McDowell's knock-off of the McDonald's apple pie: 'This one is our version.' Royal Sweet Box combo now reads 'Apple pye and rose petal crisps'.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-24"
     }
   ],
   "checked_ok": 10,
@@ -50,7 +78,6 @@
     "missing": [
       "Soul Glo and the curl juice (Darryl)",
       "Randy Watson and Sexual Chocolate (the barbershop)",
-      "Clarence's Rocky Marciano argument (the barbershop)",
       "Semmi's hot tub (the flat)",
       "The royal bath (Zamunda)",
       "Cleo and the golden arcs (McDowell's)"
@@ -76,5 +103,12 @@
       "Shake note brings in Soul Glo and the Mick-Shake line (transcript)",
       "Turnover note brings in Randy Watson and Sexual Chocolate (transcript)"
     ]
-  }
+  },
+  "changes": [
+    {
+      "date": "2026-11-24",
+      "by": "Josh",
+      "what": "Two swaps on the McDowell's card: beef patties (not in the film) out for My-T-Sharp boxing rings (the barbershop boxing argument); apple turnovers out for Apple pye; Royal Sweet Box combo line updated."
+    }
+  ]
 }
