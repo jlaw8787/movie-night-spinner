@@ -270,7 +270,7 @@
     {
      "q": 1,
      "u": "kg",
-     "item": "frozen shoestring fries",
+     "item": "frozen shoestring chips",
      "aisle": "Frozen"
     },
     {
@@ -312,7 +312,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 25
     },
     {
@@ -324,7 +324,7 @@
      "min": 8
     },
     {
-     "text": "Serve the steaks with pepper sauce and fries.",
+     "text": "Serve the steaks with pepper sauce and chips.",
      "min": 2
     }
    ],
@@ -353,7 +353,7 @@
       {
        "q": 1,
        "u": "kg",
-       "item": "frozen shoestring fries",
+       "item": "frozen shoestring chips",
        "aisle": "Frozen"
       },
       {
@@ -389,7 +389,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the fries until crisp.",
+       "text": "Bake the chips until crisp.",
        "min": 25
       },
       {

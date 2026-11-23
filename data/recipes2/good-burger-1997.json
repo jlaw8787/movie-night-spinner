@@ -6,12 +6,12 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 30,
-   "make_ahead": "Make the sauce up to 3 days ahead and keep it in the fridge; cook the fries to serve",
+   "make_ahead": "Make the sauce up to 3 days ahead and keep it in the fridge; cook the chips to serve",
    "ingredients": [
     {
      "q": 1,
      "u": "kg",
-     "item": "frozen thick-cut fries",
+     "item": "frozen thick-cut chips",
      "aisle": "Frozen"
     },
     {
@@ -59,7 +59,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries on two trays at 220C, turning once, until deep gold and crisp.",
+     "text": "Bake the chips on two trays at 220C, turning once, until deep gold and crisp.",
      "min": 30
     },
     {
@@ -67,7 +67,7 @@
      "min": 5
     },
     {
-     "text": "Salt the hot fries and serve with a big bowl of sauce.",
+     "text": "Salt the hot chips and serve with a big bowl of sauce.",
      "min": 10
     }
    ],

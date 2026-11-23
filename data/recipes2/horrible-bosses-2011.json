@@ -501,12 +501,12 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 25,
-   "make_ahead": "Roll the mince into balls and mix the sauce up to 1 day ahead, keep chilled; bake the fries and cook the bacon and patties on the night",
+   "make_ahead": "Roll the mince into balls and mix the sauce up to 1 day ahead, keep chilled; bake the chips and cook the bacon and patties on the night",
    "ingredients": [
     {
      "q": 1,
      "u": "kg",
-     "item": "frozen fries",
+     "item": "frozen chips",
      "aisle": "Frozen"
     },
     {
@@ -566,7 +566,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 25
     },
     {
@@ -593,12 +593,12 @@
      "n": "Swap your boss double black bean cheeseburgers",
      "prep_min": 25,
      "cook_min": 37,
-     "make_ahead": "Shape the black bean patties and mix the sauce up to 1 day ahead, keep chilled; bake the fries and fry the patties and mushrooms on the night",
+     "make_ahead": "Shape the black bean patties and mix the sauce up to 1 day ahead, keep chilled; bake the chips and fry the patties and mushrooms on the night",
      "ingredients": [
       {
        "q": 1,
        "u": "kg",
-       "item": "frozen fries",
+       "item": "frozen chips",
        "aisle": "Frozen"
       },
       {
@@ -706,7 +706,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the fries at 220C until crisp.",
+       "text": "Bake the chips at 220C until crisp.",
        "min": 25
       },
       {

@@ -239,7 +239,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 35,
-   "make_ahead": "Shape the patties up to a day ahead and chill; cook the fries and grill to serve",
+   "make_ahead": "Shape the patties up to a day ahead and chill; cook the chips and grill to serve",
    "ingredients": [
     {
      "q": 800,
@@ -286,13 +286,13 @@
     {
      "q": 750,
      "u": "g",
-     "item": "frozen shoestring fries",
+     "item": "frozen shoestring chips",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 30
     },
     {
@@ -308,7 +308,7 @@
      "min": 4
     },
     {
-     "text": "Serve with the fries.",
+     "text": "Serve with the chips.",
      "min": 2
     }
    ],
@@ -320,7 +320,7 @@
      "course": "m",
      "prep_min": 10,
      "cook_min": 35,
-     "make_ahead": "Marinate the mushrooms up to 4 hours ahead; cook the fries and grill to serve",
+     "make_ahead": "Marinate the mushrooms up to 4 hours ahead; cook the chips and grill to serve",
      "ingredients": [
       {
        "q": 4,
@@ -361,13 +361,13 @@
       {
        "q": 750,
        "u": "g",
-       "item": "frozen shoestring fries",
+       "item": "frozen shoestring chips",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Bake the fries at 220C until crisp.",
+       "text": "Bake the chips at 220C until crisp.",
        "min": 30
       },
       {
@@ -375,7 +375,7 @@
        "min": 10
       },
       {
-       "text": "Build the burgers with pickles and sauce and serve with fries.",
+       "text": "Build the burgers with pickles and sauce and serve with chips.",
        "min": 5
       }
      ]
@@ -387,7 +387,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 40,
-   "make_ahead": "Slice the mushrooms up to a day ahead; cook the fries and steaks to serve",
+   "make_ahead": "Slice the mushrooms up to a day ahead; cook the chips and steaks to serve",
    "ingredients": [
     {
      "q": 4,
@@ -440,7 +440,7 @@
     {
      "q": 750,
      "u": "g",
-     "item": "frozen thick-cut fries",
+     "item": "frozen thick-cut chips",
      "aisle": "Frozen"
     },
     {
@@ -452,7 +452,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until golden.",
+     "text": "Bake the chips at 220C until golden.",
      "min": 30
     },
     {
@@ -480,7 +480,7 @@
      "course": "m",
      "prep_min": 8,
      "cook_min": 40,
-     "make_ahead": "Make the sauce base up to a day ahead; cook the fries and mushrooms to serve",
+     "make_ahead": "Make the sauce base up to a day ahead; cook the chips and mushrooms to serve",
      "ingredients": [
       {
        "q": 6,
@@ -521,7 +521,7 @@
       {
        "q": 750,
        "u": "g",
-       "item": "frozen thick-cut fries",
+       "item": "frozen thick-cut chips",
        "aisle": "Frozen"
       },
       {
@@ -533,7 +533,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the fries at 220C until golden.",
+       "text": "Bake the chips at 220C until golden.",
        "min": 30
       },
       {
@@ -555,7 +555,7 @@
      "course": "m",
      "prep_min": 8,
      "cook_min": 40,
-     "make_ahead": "Slice the mushrooms up to a day ahead; cook the fries and steaks to serve",
+     "make_ahead": "Slice the mushrooms up to a day ahead; cook the chips and steaks to serve",
      "ingredients": [
       {
        "q": 4,
@@ -602,13 +602,13 @@
       {
        "q": 750,
        "u": "g",
-       "item": "frozen thick-cut fries",
+       "item": "frozen thick-cut chips",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Bake the fries until golden.",
+       "text": "Bake the chips until golden.",
        "min": 30
       },
       {
@@ -630,7 +630,7 @@
      "course": "m",
      "prep_min": 8,
      "cook_min": 40,
-     "make_ahead": "Slice the garlic and parsley up to a day ahead; cook the fries and mushrooms to serve",
+     "make_ahead": "Slice the garlic and parsley up to a day ahead; cook the chips and mushrooms to serve",
      "ingredients": [
       {
        "q": 6,
@@ -671,7 +671,7 @@
       {
        "q": 750,
        "u": "g",
-       "item": "frozen thick-cut fries",
+       "item": "frozen thick-cut chips",
        "aisle": "Frozen"
       },
       {
@@ -683,7 +683,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the fries until golden.",
+       "text": "Bake the chips until golden.",
        "min": 30
       },
       {

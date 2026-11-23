@@ -122,12 +122,12 @@
    "course": "s",
    "prep_min": 3,
    "cook_min": 30,
-   "make_ahead": "Grate the cheeses up to a day ahead; bake the fries to serve",
+   "make_ahead": "Grate the cheeses up to a day ahead; bake the chips to serve",
    "ingredients": [
     {
      "q": 750,
      "u": "g",
-     "item": "frozen thick-cut fries",
+     "item": "frozen thick-cut chips",
      "aisle": "Frozen"
     },
     {
@@ -163,7 +163,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 25
     },
     {
@@ -408,13 +408,13 @@
     {
      "q": 750,
      "u": "g",
-     "item": "frozen shoestring fries",
+     "item": "frozen shoestring chips",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 20
     },
     {
@@ -426,7 +426,7 @@
      "min": 4
     },
     {
-     "text": "Serve with the rings and fries.",
+     "text": "Serve with the rings and chips.",
      "min": 2
     }
    ],
@@ -473,13 +473,13 @@
       {
        "q": 750,
        "u": "g",
-       "item": "frozen shoestring fries",
+       "item": "frozen shoestring chips",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Bake the fries.",
+       "text": "Bake the chips.",
        "min": 20
       },
       {

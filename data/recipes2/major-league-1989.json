@@ -126,12 +126,12 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 22,
-   "make_ahead": "Make the slaw up to 1 day ahead and keep chilled. Bake the fries and grill the kielbasa on the night",
+   "make_ahead": "Make the slaw up to 1 day ahead and keep chilled. Bake the chips and grill the kielbasa on the night",
    "ingredients": [
     {
      "q": 800,
      "u": "g",
-     "item": "frozen fries",
+     "item": "frozen chips",
      "aisle": "Frozen"
     },
     {
@@ -185,7 +185,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 25
     },
     {
@@ -197,7 +197,7 @@
      "min": 8
     },
     {
-     "text": "Split the rolls, lay a kielbasa in each, pile on fries, drizzle with barbecue sauce and top with slaw.",
+     "text": "Split the rolls, lay a kielbasa in each, pile on chips, drizzle with barbecue sauce and top with slaw.",
      "min": 4
     }
    ],
@@ -208,12 +208,12 @@
      "n": "Cleveland Polish boy with fries and slaw (vegetarian)",
      "prep_min": 20,
      "cook_min": 22,
-     "make_ahead": "Shred the cabbage and grate the carrot up to 1 day ahead and dress the slaw up to 3 hours ahead, keep chilled. Bake the fries and grill the sausages on the night",
+     "make_ahead": "Shred the cabbage and grate the carrot up to 1 day ahead and dress the slaw up to 3 hours ahead, keep chilled. Bake the chips and grill the sausages on the night",
      "ingredients": [
       {
        "q": 800,
        "u": "g",
-       "item": "frozen fries",
+       "item": "frozen chips",
        "aisle": "Frozen"
       },
       {
@@ -273,7 +273,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the fries at 220C until crisp.",
+       "text": "Bake the chips at 220C until crisp.",
        "min": 25
       },
       {
@@ -285,7 +285,7 @@
        "min": 8
       },
       {
-       "text": "Split the rolls, lay a sausage in each, pile on fries, drizzle with barbecue sauce and top with slaw.",
+       "text": "Split the rolls, lay a sausage in each, pile on chips, drizzle with barbecue sauce and top with slaw.",
        "min": 4
       }
      ],

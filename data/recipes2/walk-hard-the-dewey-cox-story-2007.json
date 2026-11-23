@@ -81,12 +81,12 @@
    "course": "s",
    "prep_min": 8,
    "cook_min": 25,
-   "make_ahead": "Make the cheese sauce up to 2 days ahead and reheat with a splash of milk; bake the fries on the night",
+   "make_ahead": "Make the cheese sauce up to 2 days ahead and reheat with a splash of milk; bake the chips on the night",
    "ingredients": [
     {
      "q": 1,
      "u": "kg",
-     "item": "frozen shoestring fries",
+     "item": "frozen shoestring chips",
      "aisle": "Frozen"
     },
     {
@@ -122,7 +122,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the frozen shoestring fries at 220C for 20 minutes.",
+     "text": "Bake the frozen shoestring chips at 220C for 20 minutes.",
      "min": 26
     },
     {
@@ -130,7 +130,7 @@
      "min": 3
     },
     {
-     "text": "Pour over the fries and scatter with sliced spring onion.",
+     "text": "Pour over the chips and scatter with sliced spring onion.",
      "min": 3
     }
    ],

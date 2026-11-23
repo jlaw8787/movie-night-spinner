@@ -248,7 +248,7 @@
     {
      "q": 600,
      "u": "g",
-     "item": "frozen shoestring fries",
+     "item": "frozen shoestring chips",
      "aisle": "Frozen"
     }
    ],
@@ -258,7 +258,7 @@
      "min": 720
     },
     {
-     "text": "Bake the fries at 220C.",
+     "text": "Bake the chips at 220C.",
      "min": 20
     },
     {
@@ -350,13 +350,13 @@
       {
        "q": 600,
        "u": "g",
-       "item": "frozen shoestring fries",
+       "item": "frozen shoestring chips",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Bake the fries at 220C.",
+       "text": "Bake the chips at 220C.",
        "min": 20
       },
       {

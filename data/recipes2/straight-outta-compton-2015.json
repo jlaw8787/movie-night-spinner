@@ -162,12 +162,12 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 35,
-   "make_ahead": "Make the chilli up to 3 days ahead and reheat; bake the fries to serve",
+   "make_ahead": "Make the chilli up to 3 days ahead and reheat; bake the chips to serve",
    "ingredients": [
     {
      "q": 750,
      "u": "g",
-     "item": "frozen crinkle-cut fries",
+     "item": "frozen crinkle-cut chips",
      "aisle": "Frozen"
     },
     {
@@ -215,7 +215,7 @@
    ],
    "steps": [
     {
-     "text": "Bake the fries at 220C until crisp.",
+     "text": "Bake the chips at 220C until crisp.",
      "min": 30
     },
     {
@@ -223,7 +223,7 @@
      "min": 25
     },
     {
-     "text": "Pile the fries on a tray, spoon over the chilli and scatter with cheese.",
+     "text": "Pile the chips on a tray, spoon over the chilli and scatter with cheese.",
      "min": 3
     },
     {
@@ -239,12 +239,12 @@
      "course": "s",
      "prep_min": 25,
      "cook_min": 30,
-     "make_ahead": "Make the chilli up to 3 days ahead; bake the fries to serve",
+     "make_ahead": "Make the chilli up to 3 days ahead; bake the chips to serve",
      "ingredients": [
       {
        "q": 750,
        "u": "g",
-       "item": "frozen crinkle-cut fries",
+       "item": "frozen crinkle-cut chips",
        "aisle": "Frozen"
       },
       {
@@ -280,7 +280,7 @@
      ],
      "steps": [
       {
-       "text": "Bake the fries until crisp.",
+       "text": "Bake the chips until crisp.",
        "min": 30
       },
       {
@@ -288,7 +288,7 @@
        "min": 20
       },
       {
-       "text": "Top the fries with chilli and cheese and grill.",
+       "text": "Top the chips with chilli and cheese and grill.",
        "min": 5
       }
      ]

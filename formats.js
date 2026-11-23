@@ -644,7 +644,7 @@ const FMT_FILMS={
     cue:["/51hHkBv4hj31bnaECQcXR0RYkGX.jpg","Prom night, 1985: off to hospital, not the prom","0% 45%"],
     groups:[
       {h:"Starters",c:"pink",left:true,items:[
-        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Breaded risotto balls, mozzarella middle, marinara.",note:"Arancini rolled the size of a baseball. Hands off Warren's.",p:"6.50"},
+        {k:"Warren's baseball arancini",n:"Warren's baseball arancini",d:"Breaded risotto balls, mozzarella middle, marinara.",note:"Risotto balls rolled big as a baseball, mozzarella inside. Hands off Warren's.",p:"6.50"},
         {k:"Pat Healy's architect garlic knots",n:"Pat Healy's architect garlic knots",d:"Garlic butter knots, parmesan, marinara.",note:"Garlic knots, easy eating on a Miami stakeout.",p:"4.25"}],
         house:{n:"Magda's cheese ball and crackers",d:"Cheddar and cream cheese rolled in chopped nuts, with crackers.",note:"Nut-crusted cheese ball, Magda's party trick next door.",p:"3.95"}},
       {h:"Mains",c:"yellow",left:true,items:[
@@ -653,7 +653,7 @@ const FMT_FILMS={
       {h:"Dessert",c:"aqua",items:[
         {k:"Hair gel meringues with lemon curd",n:"Hair gel meringues with lemon curd",d:"Vanilla meringues, whipped cream, lemon curd.",note:"Glossy meringue peaks that could pass for hair gel.",p:"5.50"}]},
       {h:"Drinks",c:"pink",items:[
-        {k:"Senior prom punch",n:"Senior prom punch",d:"Pineapple, ginger beer, rum and lime sorbet.",note:"Pineapple punch for the senior prom.",p:"4.50"}],
+        {k:"Senior prom punch",n:"Senior prom punch",d:"Pineapple, ginger beer, rum and lime sorbet.",note:"Pineapple juice, ginger ale and sherbet in a big bowl, poured at the senior prom.",p:"4.50"}],
         house:{n:"Beer. Not lite beer, beer.",d:"Ice cold, by the bottle.",note:"Cold beer after 36 holes of golf.",p:"2.75",alc:true}}]},
   "She's All That (1999)":{fmt:"seniorprom",pay:"",brand:"The Senior Prom",phoneTitle:"She's All That",tag:"Prom queen in six weeks.",
     head:["The Senior Prom","Southern California, prom night"],
