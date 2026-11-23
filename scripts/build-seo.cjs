@@ -45,6 +45,8 @@ const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.cr
 const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const line = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', i)); };
   const a = src.indexOf('function dishTimes('), b = src.indexOf('\n/*', a);
   const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const WAIT_LEAD='), (() => { const i = src.indexOf('const isWaitStep='); return src.slice(i, src.indexOf('};', i) + 2); })(), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
+/* review 42: step times as the phone shows them (stepTimed in app.js) */
+const stepTimed = (() => { const vm = require('vm'), src = rd('app.js'); const i = src.indexOf('function stepTimed('); const ctx = {}; vm.createContext(ctx); vm.runInContext(src.slice(i, src.indexOf('\n', i)) + ';globalThis.stepTimed=stepTimed;', ctx); return ctx.stepTimed; })();
 const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 48 * 60) { const h = Math.round(m / 30) / 2; return (h % 1 ? h.toFixed(1) : h) + ' hours'; } const d = Math.round(m / 1440); return d + (d === 1 ? ' day' : ' days'); };
 
 const COURSE_CAT = { s: 'Appetizer', m: 'Main course', w: 'Dessert', d: 'Drink' };
@@ -212,7 +214,7 @@ function filmPage(x) {
       const T = y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null);
       const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
-      const steps = (y.steps || []).map(st => `<li>${esc(degC(st.text))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
+      const steps = (y.steps || []).map(st => `<li>${esc(degC(stepTimed(st.text, st.min)))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
       return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg && c !== 'd' ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.house ? '<span class="tag">House</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
 ${ingr || steps ? `<details><summary>${y.extra ? 'How it is made' : 'Recipe for 4'}</summary>${ingr ? `<ul>${ingr}</ul>` : ''}${steps ? `<ol>${steps}</ol>` : ''}</details>` : ''}</article>`;
@@ -249,7 +251,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
     ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})(y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null))),
     suitableForDiet: y.veg ? 'https://schema.org/VegetarianDiet' : undefined,
     recipeIngredient: (y.ingredients || []).map(ing),
-    recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(degC(st.text)) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(degC(y.how)) }] : undefined)
+    recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(degC(stepTimed(st.text, st.min))) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(degC(y.how)) }] : undefined)
   });
   const ld = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'WebPage', '@id': canon, url: canon, name: title, description: desc, inLanguage: 'en-AU', isPartOf: { '@type': 'WebSite', name: 'Reel Dinner', url: SITE + '/' },
