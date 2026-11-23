@@ -190,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};word-spacing:.12em;color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
    <div style="position:absolute;left:50px;top:136px;width:${PW+12}px;height:${PH+12}px;padding:6px;box-sizing:border-box;background:${frame};box-shadow:0 10px 26px rgba(0,0,0,.3)">${heroBox}</div>
    <div style="position:absolute;left:546px;top:136px;width:220px;height:${PH+12}px;display:flex;flex-direction:column;gap:16px">
-     ${noPanel?`<div style="flex:none;font:600 16px/1.25 ${E.body};letter-spacing:.16em;white-space:nowrap;text-transform:uppercase;color:${ACC};text-align:center;border-bottom:1px solid ${GOLD};padding-bottom:12px">Now showing, ${esc(fl&&fl.year||f.year)}</div>`:logoPanel}
+     ${noPanel?`<div style="flex:none;font:600 16px/1.25 ${E.body};letter-spacing:.16em;white-space:nowrap;text-transform:uppercase;color:${ACC};text-align:center;border-bottom:1px solid ${GOLD};padding-bottom:12px">Served tonight</div>`/* review 44: a feast is not a cinema: no "Now showing, year" */:logoPanel}
      <div data-fit data-min="16" style="flex:none;height:170px;overflow:hidden;font-size:20px;text-align:center;color:${SOFT}">
        <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
      <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:${noPanel?24:19}px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
@@ -241,7 +241,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:64px;right:64px;top:610px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
      <span style="font:600 20px/1.2 ${E.body};color:${INK}">The whole feast, per cover</span><span style="font:700 26px/1 ${E.body};color:${ACC}">${esc(fee)}</span></div>
    <div data-fit data-min="14" style="position:absolute;left:64px;width:440px;top:650px;height:44px;overflow:hidden;font-size:16px;color:${SOFT}">
-     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Form BF ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
+     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Poster and stills: TMDB.</div></div>
    <div style="position:absolute;left:43px;top:698px;width:730px;height:296px;padding:5px;box-sizing:border-box;background:${frame};box-shadow:0 8px 20px rgba(0,0,0,.28)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${secIsPoster?stage(second):photo(second,secPos)}</div></div>
    <div style="position:absolute;left:48px;right:48px;top:1000px;font:italic 16px/1.2 ${E.body};color:${SOFT};text-align:center">${esc(venue)}, laid for tonight</div>

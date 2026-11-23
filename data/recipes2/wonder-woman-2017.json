@@ -160,400 +160,85 @@
    "af": true
   },
   {
-   "n": "Liberation night stew",
+   "n": "Hippolyta's lamb kleftiko",
    "course": "m",
-   "prep_min": 28,
-   "cook_min": 210,
-   "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
+   "prep_min": 15,
+   "cook_min": 230,
+   "make_ahead": "Rub the lamb the night before and keep it covered in the fridge",
    "ingredients": [
     {
-     "q": 1.2,
+     "q": 1.5,
      "u": "kg",
-     "item": "beef chuck, diced",
+     "item": "lamb shoulder, bone in",
      "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
     },
     {
      "q": 2,
      "u": "tbsp",
-     "item": "vegetable oil, for browning",
+     "item": "olive oil",
      "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "onions, sliced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 375,
-     "u": "ml",
-     "item": "dark beer",
-     "aisle": "Bottle shop"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "dried thyme",
-     "aisle": "Spices"
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
     },
     {
      "q": 2,
      "u": "",
-     "item": "bay leaves",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "Dijon mustard",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "kg",
-     "item": "potatoes, cut in chips",
+     "item": "onions, sliced",
      "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
-     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Brown the beef in batches in the browning oil.",
-     "min": 15
+     "text": "Heat the oven to 160C. Rub the lamb with the garlic, lemon juice, oregano, oil and salt.",
+     "min": 8
     },
     {
-     "text": "Cook the onions slowly.",
+     "text": "Sit it on the potatoes and onions, wrap tight in baking paper and foil.",
+     "min": 6
+    },
+    {
+     "text": "Bake low until the lamb falls apart.",
+     "min": 210
+    },
+    {
+     "text": "Open the parcel, raise the oven to 200C and brown.",
      "min": 20
     },
     {
-     "text": "Add the beer, thyme, bay leaves and mustard and braise at 160C.",
-     "min": 180
-    },
-    {
-     "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
-     "min": 25
-    },
-    {
-     "text": "Serve the stew with the frites.",
-     "min": 3
+     "text": "Pull the lamb into pieces and serve with the potatoes and juices.",
+     "min": 4
     }
    ],
    "veg": false,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Liberation night stew",
-     "prep_min": 28,
-     "cook_min": 210,
-     "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
-     "ingredients": [
-      {
-       "q": 1.2,
-       "u": "kg",
-       "item": "beef chuck, diced",
-       "aisle": "Meat"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil, for browning",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "onions, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "beef stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 75,
-       "u": "ml",
-       "item": "strong black coffee",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "molasses",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "malt vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "dried thyme",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "bay leaves",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "Dijon mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes, cut in chips",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil, for frying",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brown the beef in batches in the browning oil.",
-       "min": 15
-      },
-      {
-       "text": "Cook the onions slowly.",
-       "min": 20
-      },
-      {
-       "text": "Add the stock, coffee, molasses, malt vinegar, thyme, bay leaves and mustard and braise at 160C.",
-       "min": 180
-      },
-      {
-       "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
-       "min": 25
-      },
-      {
-       "text": "Serve the stew with the frites.",
-       "min": 3
-      }
-     ]
-    },
-    "veg": {
-     "n": "Veld celebration stew (vegetarian)",
-     "prep_min": 28,
-     "cook_min": 110,
-     "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
-     "ingredients": [
-      {
-       "q": 600,
-       "u": "g",
-       "item": "field mushrooms, quartered",
-       "aisle": "Produce"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "tin brown lentils, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil, for browning",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "onions, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 375,
-       "u": "ml",
-       "item": "dark beer",
-       "aisle": "Bottle shop"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "mushroom stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "dried thyme",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "bay leaves",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "Dijon mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes, cut in chips",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil, for frying",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brown the mushrooms in the browning oil in batches.",
-       "min": 12
-      },
-      {
-       "text": "Cook the onions slowly.",
-       "min": 20
-      },
-      {
-       "text": "Add the beer, stock, lentils, thyme, bay leaves, mustard and sugar and braise at 160C.",
-       "min": 75
-      },
-      {
-       "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
-       "min": 25
-      },
-      {
-       "text": "Serve the stew with the frites.",
-       "min": 3
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Veld celebration stew (vegetarian, alcohol-free)",
-     "prep_min": 28,
-     "cook_min": 110,
-     "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
-     "ingredients": [
-      {
-       "q": 600,
-       "u": "g",
-       "item": "field mushrooms, quartered",
-       "aisle": "Produce"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "tin brown lentils, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil, for browning",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "onions, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 625,
-       "u": "ml",
-       "item": "mushroom stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "malt vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "dried thyme",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "bay leaves",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "Dijon mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes, cut in chips",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil, for frying",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brown the mushrooms in the browning oil in batches.",
-       "min": 12
-      },
-      {
-       "text": "Cook the onions slowly.",
-       "min": 20
-      },
-      {
-       "text": "Add all the mushroom stock, the malt vinegar, lentils, thyme, bay leaves, mustard and sugar and braise at 160C.",
-       "min": 75
-      },
-      {
-       "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
-       "min": 25
-      },
-      {
-       "text": "Serve the stew with the frites.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   },
   {
    "n": "Diana's raspberry ripple ice cream cones",
@@ -641,23 +326,29 @@
    "af": true
   },
   {
-   "n": "Veld Belgian ale with orange and honey",
+   "n": "Honeyed white wine with orange",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 5,
-   "make_ahead": "Syrup up to 3 days, chilled",
+   "prep_min": 8,
+   "cook_min": 3,
+   "make_ahead": "Make the honey syrup a day ahead and keep it chilled",
    "ingredients": [
     {
-     "q": 1,
-     "u": "",
-     "item": "orange, peeled zest and 1 strip for garnish",
-     "aisle": "Produce"
+     "q": 750,
+     "u": "ml",
+     "item": "dry white wine, chilled",
+     "aisle": "Drinks"
     },
     {
-     "q": 60,
+     "q": 80,
      "u": "g",
      "item": "honey",
      "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
     },
     {
      "q": 60,
@@ -666,106 +357,81 @@
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "pinch of crushed coriander seed",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lemon",
-     "aisle": "Produce"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "bottles Belgian white ale, 330ml each",
-     "aisle": "Bottle shop"
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Simmer the orange zest with the honey, water and coriander seed, then cool and strain.",
-     "min": 8
-    },
-    {
-     "text": "Put a spoon of syrup and a squeeze of lemon in each of 4 chilled glasses.",
+     "text": "Warm the honey, the peel of one orange and the water until runny.",
      "min": 3
     },
     {
-     "text": "Pour the ale slowly so it builds a head.",
-     "min": 2
+     "text": "Cool the syrup, then stir it into the chilled wine.",
+     "min": 10
     },
     {
-     "text": "Twist orange peel over the top.",
-     "min": 2
+     "text": "Pour over ice with a twist of the other orange.",
+     "min": 3
     }
    ],
    "veg": true,
    "af": false,
    "alt": {
     "af": {
-     "n": "Veld Belgian brew with orange and honey",
-     "prep_min": 10,
-     "cook_min": 5,
-     "make_ahead": "Syrup up to 3 days, chilled",
+     "n": "Honeyed white grape with orange",
+     "prep_min": 8,
+     "cook_min": 3,
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "orange, peeled zest and 1 strip for garnish",
-       "aisle": "Produce"
+       "q": 750,
+       "u": "ml",
+       "item": "white grape juice, chilled",
+       "aisle": "Drinks"
       },
       {
-       "q": 60,
+       "q": 250,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
        "u": "g",
        "item": "honey",
        "aisle": "Pantry"
       },
       {
-       "q": 60,
-       "u": "ml",
-       "item": "water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
+       "q": 2,
        "u": "",
-       "item": "pinch of crushed coriander seed",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lemon",
+       "item": "oranges",
        "aisle": "Produce"
       },
       {
-       "q": 4,
-       "u": "",
-       "item": "bottles alcohol-free wheat beer, 330ml each",
-       "aisle": "Drinks"
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Simmer the orange zest with the honey, water and coriander seed, then cool and strain.",
-       "min": 8
-      },
-      {
-       "text": "Put a spoon of syrup and a squeeze of lemon in each of 4 chilled glasses.",
+       "text": "Warm the honey with the peel of one orange until runny.",
        "min": 3
       },
       {
-       "text": "Pour the alcohol-free wheat beer slowly so it builds a head.",
-       "min": 2
+       "text": "Cool, then stir into the grape juice and soda water.",
+       "min": 10
       },
       {
-       "text": "Twist orange peel over the top.",
-       "min": 2
+       "text": "Pour over ice with a twist of the other orange.",
+       "min": 3
       }
-     ]
+     ],
+     "veg": true,
+     "af": true
     }
    }
   }

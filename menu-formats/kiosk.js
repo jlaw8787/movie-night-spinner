@@ -239,7 +239,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* review 34: a kiosk card set in someone's house, yard or farm is not a business: no KIOSK banner and no licence number
      (Say Anything at Diane Court's house, Young Einstein's apple farm) */
   const HOMEV=fl.home===true||/\b(house|home|kitchen|backyard|yard|driveway|farm|apartment|flat|pool|log|den|camp|tent|roommate|shack|tank|hut|study|digs|hideout|treehouse|trailer|caravan)\b/i.test(String(fl.venue||"")+" "+String(fl.sign||""))&&!/\b(stand|stall|shop|store|bar|cafe|caf\u00e9|kiosk|snack|grill|eats)\b/i.test(String(fl.venue||""));
-  const KICK=HOMEV?(beach?"BEACH SNACKS":"SNACKS ON"):beach?E.kick:E.kick==="SURF SHACK"?"SNACK SHACK":E.kick.replace(/^(BATHING PAVILION|BEACH) /,"");
+  /* review 44: off the beach the banner follows the venue (a snack bar, a stall, a corner store), and a place that is no business at all
+     (Happy Feet's colony, Halloween Town Square) reads "SNACKS ON" over its sign. "BAR AND GRILL" never prints off a beach */
+  const VW=String(fl.venue||"")+" "+String(fl.sign||"");
+  const LANDK=/\bkiosk\b/i.test(VW)?"KIOSK":/\b(snack ?bar|concessions?|refreshments?|canteen|tuck ?shop)\b/i.test(VW)?"SNACK BAR":/\b(stall|stand|cart|booth|truck|van|wagon)\b/i.test(VW)?"STALL":/\bcorner (store|shop)\b/i.test(VW)?"CORNER STORE":/\b(store|shop|mart|market|deli|bodega|grocer[sy]?|newsagent|servo|gas station|kwik|quik)\b/i.test(VW)?"STORE":/\b(grill|bar|cafe|caf\u00e9|diner|eats|bakery)\b/i.test(VW)?"SNACK BAR":"SNACKS ON";
+  const KICK=HOMEV?(beach?"BEACH SNACKS":"SNACKS ON"):beach?E.kick:typeof fl.kick==="string"?fl.kick:LANDK;
   const title=clean(f.title||"Tonight's Feature");
   const venue=C(fl.venue)||(beach?"The Beach Kiosk":"The Kiosk");
   const sign=C(fl.sign)||venue;
@@ -319,7 +323,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="${caps(15,"#4a3a28",.16)}">Tag No. ${esc(num)}</div>
       <div style="font:${E.dw}${pT.z}px/1.05 ${disp};color:#1b1712;margin:4px 0 4px">${esc(prop.title)}</div>
       ${prop.lines.map(l=>`<div style="font:500 16px/1.25 ${body};color:#3a2f22">${esc(trunc(l,30))}</div>`).join("")}</div>`;
-  const capHtml=`<div style="display:inline-block;margin-top:12px;max-width:${PM?300:PW-80}px;background:${rgba(DARK,.78)};padding:6px 12px;${caps(15,"#ffffff",.16)}">${PM?"Now showing, "+esc(year):esc(trunc(venue,34))+", out the front"}</div>`;
+  const capHtml=`<div style="display:inline-block;margin-top:12px;max-width:${PM?300:PW-80}px;background:${rgba(DARK,.78)};padding:6px 12px;${caps(15,"#ffffff",.16)}">${PM?esc(trunc(venue.toLowerCase()===sign.toLowerCase()?(HOMEV?"Help yourself":"Open today"):venue,34)):esc(trunc(venue,34))+", out the front"}</div>`;
 
   /* beach photo with everything that sits on it; the logo, note and tag go where they cover the least face, the crop slides to suit */
   const safe=JSON.stringify({pos:[[50,40],[30,40],[70,40],[10,40],[90,40],[50,22]],items:[
