@@ -1198,7 +1198,8 @@
     "Powers: none, loves it"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": "Issue"
  },
  "Deadpool & Wolverine (2024)": {
   "venue": "Wade's Apartment Kitchen",
@@ -3417,7 +3418,9 @@
   "seal": "/xgAMCuWUqn18pTbC3zssYIOgSuM.jpg",
   "priceEra": "1800s",
   "world": "storybook",
-  "pay": ""
+  "pay": "",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "Monsters University (2013)": {
   "venue": "Oozma Kappa House",
@@ -4128,7 +4131,9 @@
   "number": "",
   "priceEra": "1800s",
   "world": "storybook",
-  "pay": true
+  "pay": true,
+  "currency": "coin",
+  "coin": "cacao beans"
  },
  "Shrek 2 (2004)": {
   "venue": "Far Far Away Palace",
@@ -4975,7 +4980,9 @@
   "seal": "/8OuE97mvLVhNUj7ANhHFsISvPVz.jpg",
   "priceEra": "1800s",
   "world": "storybook",
-  "pay": ""
+  "pay": "",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "Cruella (2021)": {
   "venue": "House of the Baroness",
@@ -5027,7 +5034,9 @@
   },
   "number": "",
   "priceEra": "1800s",
-  "world": "storybook"
+  "world": "storybook",
+  "currency": "coin",
+  "coin": "sous"
  },
  "Aladdin (2019)": {
   "venue": "Agrabah Palace Gardens",
@@ -8968,7 +8977,8 @@
     "Team before self"
    ]
   },
-  "number": "1971"
+  "number": "1971",
+  "pay": ""
  },
  "Rudy (1993)": {
   "venue": "Joliet Mill Break Room",
@@ -10128,7 +10138,8 @@
   "meal": "lunch",
   "time": "1:00 pm",
   "sideStill": "/leehjwM57DKJ79XMUll4oAF0kin.jpg",
-  "sideLine": "Lunch, then the Cubs, then the art."
+  "sideLine": "Lunch, then the Cubs, then the art.",
+  "priceK": 1.8
  },
  "Sixteen Candles (1984)": {
   "venue": "Baker Family Kitchen",
@@ -11509,7 +11520,8 @@
    "When the bell rings": "After the last hand",
    "Lunch counter": "Bar snacks"
   },
-  "reward": "£500000"
+  "reward": "£500000",
+  "pay": ""
  },
  "Ocean's Eleven (2001)": {
   "venue": "The Bellagio",
@@ -11666,7 +11678,8 @@
   "number": "10000000",
   "sideStill": "/jb7N5T4KweVIWdpDxRERFj9eaKV.jpg",
   "sideLine": "Valet parking for one Aston Martin only.",
-  "currency": "€"
+  "currency": "€",
+  "priceK": 2
  },
  "Skyfall (2012)": {
   "venue": "Skyfall Lodge Kitchen",
@@ -15522,7 +15535,7 @@
   "number": "1969",
   "sideStill": "/j0IobR8VH9x0Y5koAcnB7VkPW04.jpg",
   "sideLine": "Don't touch the dial. Or the dessert.",
-  "currency": "€"
+  "currency": "L"
  },
  "The Mummy (1999)": {
   "venue": "Hamunaptra Dig Camp",
@@ -15701,7 +15714,9 @@
   },
   "number": "13",
   "priceEra": "1800s",
-  "world": "storybook"
+  "world": "storybook",
+  "currency": "coin",
+  "coin": "pieces of eight"
  },
  "Pirates of the Caribbean: At World's End (2007)": {
   "venue": "Shipwreck Cove Galley",
@@ -15802,7 +15817,8 @@
    ]
   },
   "number": "1914",
-  "school": false
+  "school": false,
+  "pay": "Issue"
  },
  "Pirates of the Caribbean: On Stranger Tides (2011)": {
   "venue": "Queen Anne's Revenge Galley",
@@ -15963,7 +15979,9 @@
   "number": "",
   "world": "storybook",
   "priceEra": "1800s",
-  "pay": ""
+  "pay": "",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "Ace Ventura: When Nature Calls (1995)": {
   "venue": "Wachati Village Hut",
@@ -16187,7 +16205,9 @@
   },
   "number": "111",
   "priceEra": "1800s",
-  "world": "storybook"
+  "world": "storybook",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "The Lord of the Rings: The Two Towers (2002)": {
   "venue": "Meduseld, Edoras",
@@ -16517,7 +16537,9 @@
   },
   "number": "",
   "priceEra": "1800s",
-  "world": "storybook"
+  "world": "storybook",
+  "currency": "coin",
+  "coin": "silver pennies"
  },
  "The Hobbit: The Battle of the Five Armies (2014)": {
   "venue": "Erebor, Lonely Mountain",
@@ -18358,7 +18380,9 @@
   },
   "number": "",
   "world": "storybook",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "currency": "coin",
+  "coin": "drubloons"
  },
  "Avatar: The Way of Water (2022)": {
   "venue": "Metkayina Reef Village",
@@ -18971,7 +18995,8 @@
   "words": {
    "Cash only. No change given.": "The D is silent. Cash only."
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "pay": ""
  },
  "True Grit (2010)": {
   "venue": "Fort Smith Boarding House",
@@ -19854,7 +19879,10 @@
     "Ask at the cantina"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "coin",
+  "coin": "pesos",
+  "coinMid": 15000
  },
  "Desperado (1995)": {
   "venue": "Tarasco Bar",
@@ -19879,7 +19907,10 @@
    ]
   },
   "number": "",
-  "priceK": 0.55
+  "priceK": 0.55,
+  "currency": "coin",
+  "coin": "pesos",
+  "coinMid": 25
  },
  "Once Upon a Time in Mexico (2003)": {
   "venue": "Puerco Pibil Stand",
@@ -21105,7 +21136,9 @@
    ]
   },
   "number": "1979",
-  "currency": "€"
+  "currency": "coin",
+  "coin": "drachmas",
+  "coinMid": 150
  },
  "Mission: Impossible 2 (2000)": {
   "venue": "Sydney to Atlanta Flight",
@@ -23445,7 +23478,8 @@
    ]
   },
   "number": "1935",
-  "words": {}
+  "words": {},
+  "pay": "Issue"
  },
  "The Wolf of Wall Street (2013)": {
   "venue": "The Naomi",
@@ -23831,7 +23865,8 @@
   "words": {
    "In your suite 2000": "In your suite 1973"
   },
-  "pay": true
+  "pay": true,
+  "priceEra": "1970s"
  },
  "Flashdance (1983)": {
   "venue": "Mawby's",
