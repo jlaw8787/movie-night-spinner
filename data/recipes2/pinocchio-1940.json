@@ -185,7 +185,7 @@
    "af": true
   },
   {
-   "n": "Spaghetti and meatballs",
+   "n": "Polpette al sugo with crusty bread",
    "course": "m",
    "prep_min": 20,
    "cook_min": 50,
@@ -242,7 +242,7 @@
     {
      "q": 500,
      "u": "g",
-     "item": "spaghetti",
+     "item": "crusty Italian loaf",
      "aisle": "Pantry"
     }
    ],
@@ -260,7 +260,7 @@
      "min": 40
     },
     {
-     "text": "Cook the spaghetti.",
+     "text": "Warm the bread in the oven.",
      "min": 10
     },
     {
@@ -272,7 +272,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Geppetto's spaghetti and mushroom ricotta meatballs",
+     "n": "Mushroom ricotta polpette with crusty bread",
      "prep_min": 25,
      "cook_min": 54,
      "make_ahead": "Meatballs and sauce up to 2 days",
@@ -346,7 +346,7 @@
       {
        "q": 500,
        "u": "g",
-       "item": "spaghetti",
+       "item": "crusty Italian loaf",
        "aisle": "Pantry"
       }
      ],
@@ -368,7 +368,7 @@
        "min": 25
       },
       {
-       "text": "Cook the spaghetti.",
+       "text": "Warm the bread in the oven.",
        "min": 10
       },
       {

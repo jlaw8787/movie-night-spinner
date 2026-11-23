@@ -138,16 +138,16 @@
    }
   },
   {
-   "n": "Training camp edamame",
+   "n": "Training camp salted soybeans",
    "course": "s",
    "prep_min": 5,
    "cook_min": 10,
-   "make_ahead": "Steam the edamame up to 1 day ahead and keep it chilled; toss in the wok with the garlic and chilli just before serving",
+   "make_ahead": "Steam the soybeans up to 1 day ahead and keep it chilled; toss in the wok with the garlic and ginger just before serving",
    "ingredients": [
     {
      "q": 500,
      "u": "g",
-     "item": "frozen edamame",
+     "item": "frozen soybeans in the pod",
      "aisle": "Frozen"
     },
     {
@@ -159,7 +159,7 @@
     {
      "q": 1,
      "u": "tsp",
-     "item": "chilli flakes",
+     "item": "ginger, grated",
      "aisle": "Spices"
     },
     {
@@ -177,11 +177,11 @@
    ],
    "steps": [
     {
-     "text": "Steam the edamame for 4 minutes.",
+     "text": "Steam the soybeans for 4 minutes.",
      "min": 5
     },
     {
-     "text": "Toss in a hot wok with the garlic, chilli flakes and a splash of soy.",
+     "text": "Toss in a hot wok with the garlic, ginger and a splash of soy.",
      "min": 4
     },
     {
@@ -262,7 +262,7 @@
     {
      "q": 125,
      "u": "ml",
-     "item": "sweet chilli sauce",
+     "item": "plum sauce",
      "aisle": "Pantry"
     }
    ],
@@ -284,7 +284,7 @@
      "min": 20
     },
     {
-     "text": "Heat the oil to 180°C and fry the rolls in batches until golden. Drain and serve with sweet chilli sauce.",
+     "text": "Heat the oil to 180°C and fry the rolls in batches until golden. Drain and serve with plum sauce.",
      "min": 12
     }
    ],

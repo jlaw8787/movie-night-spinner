@@ -133,7 +133,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* which kind of canteen: a prison or an army mess gets its own day, not school periods ("Mess Hall" is not a school hall) */
   const vs=venue+" "+sign,prison=/prison|jail|gaol|cell block|block [a-z]\b|alcatraz|belle reve|shawshank|penitentiary/i.test(vs),
     mess=!prison&&/\bmess\b|\bbase\b|\bfort\b|barracks|\brig\b|nui dat|rebel|army|navy|squadron/i.test(vs)&&!/police academy/i.test(vs),
-    school=!prison&&!mess&&(/school|academy|high|primary|college|class|camp|university|campus|dining hall|\bhall\b(?! block)/i.test(vs)||(!fl.venue&&FAMILY.has(f.theme)));
+    school=fl.school!==false&&!prison&&!mess&&(/school|academy|high|primary|college|class|camp|university|campus|dining hall|\bhall\b(?! block)/i.test(vs)||(!fl.venue&&FAMILY.has(f.theme)));
   const accRaw=ctx.palette&&ctx.palette.accent;
   const paper=hx(accRaw)&&sat(accRaw)>.22?mix(g.paper,accRaw,.07):g.paper;
   const ink=g.ink;
@@ -145,7 +145,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sub=mix(cellInk,cell,.15);/* review 36: darker notes, the canteen read soft on screen */
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* a 2000 film reads "No. 2000", never "No. 00" (review 12) */
   const price=priceFor(era,yr,fl.number);/* 15 Nov: flavour.year (per film, optional) prints the story year on the form in place of the release year (The Great Escape: 1944); prices still go by the release year */
-  const C=school?{s:"Starters",m:"Main tray",w:"Pudding",d:"Drinks"}:{s:"Starters",m:"Hot line",w:"Sweets",d:"Drinks"};
+  /* review 41: an American school says Math, Gym and Dessert (Napoleon Dynamite printed "Maths", "Sport" and "Pudding"); a card with no currency of
+     its own is in dollars, so it is American unless it is an Aussie film or names another country. flavour.school false keeps school words off a
+     mansion's lunch hall (Atlantis) */
+  const usSchool=school&&!fl.currency&&f.theme!=="aussie"&&!/^(AU|NZ|GB|IE|CA)$/i.test(String(fl.country||""));
+  const C=school?{s:"Starters",m:"Main tray",w:usSchool?"Dessert":"Pudding",d:"Drinks"}:{s:"Starters",m:"Hot line",w:"Sweets",d:"Drinks"};
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
   const PR={},rnd=v=>Math.max(.05,Math.round(v*20)/20),SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
@@ -167,7 +171,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* timetable strip */
   /* review 35: flavour.slots (per film, optional) sets the five timetable times when the film fixes them (Danger Close: the battle ran late afternoon to dusk) */
   const slots=Array.isArray(fl.slots)&&fl.slots.length===5?fl.slots:school?["Period 1","Period 2","Lunch","Period 4","Period 5"]:mess?["0600","0900","Chow","1500","2200"]:prison?["0600","0900","Chow","1400","2100"]:["9:00","10:30","Lunch","2:00","3:30"];
-  const fall=school?["Assembly","Maths","",  "Library","Sport"]:mess?["Reveille","Drill","","Duty roster","Lights out"]:prison?["Count","Yard","","Work detail","Lock-up"]:["Briefing","Meetings","","Reports","Home time"];
+  const fall=school?(usSchool?["Homeroom","Math","","Library","Gym"]:["Assembly","Maths","",  "Library","Sport"]):mess?["Reveille","Drill","","Duty roster","Lights out"]:prison?["Count","Yard","","Work detail","Lock-up"]:["Briefing","Meetings","","Reports","Home time"];
   const lunchAt=`12:${String((parseInt(number,10)||0)%60).padStart(2,"0")}`;
   /* a long wink keeps a whole phrase (cut at a comma, "and" or "with"), never a fragment like "Bruce Bogtrotter and the"; if no clean phrase fits, the plain subject is used */
   const cut=(w,n)=>{if(!w||w.length<=n)return w;for(const sep of [", "," and "," with "," at "," in "," on "]){const i=w.indexOf(sep);if(i>3&&i<=n)return w.slice(0,i)}return null};

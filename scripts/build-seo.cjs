@@ -53,7 +53,11 @@ const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q
 /* review 34: cups go plural over one (the app already said "3 cups"), and temperatures read "200°C" as they do in the app */
 const degC = t => String(t == null ? '' : t).replace(/(\d)\s?C\b/g, '$1°C').replace(/(\d)\s?F\b/g, '$1°F');
 /* review 35: metric amounts read as the app writes them: decimals, never fractions ("1.5 L", "375ml", "1.2kg"), litres with a capital L */
-const ing = i => { let u = i.u || ''; const met = /^(g|kg|ml|l|L)$/.test(u); const q = met ? (i.q == null || i.q === '' ? '' : String(+(+i.q).toFixed(2))) : frac(i.q); if (u === 'cup' && (+i.q > 1)) u = 'cups'; if (u === 'l' || u === 'L') return clean(degC([q && q + ' L', i.item].filter(Boolean).join(' '))); const tight = met; return clean(degC([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' '))); };
+/* review 41: count lines read as the app writes them ("1 black tea bag", "2 tins crushed tomatoes", "2 star anise"): the app's own planPlural and planOne */
+const PLN = (() => { const vm = require('vm'), src = rd('app.js'); const line = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', i)); };
+  const fn = k => { const i = src.indexOf(k); return src.slice(i, src.indexOf('\n', src.indexOf('return [', i))); };
+  const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const PL_CONT='), line('const PL_MASS='), line('const planCont='), line('const PL_IRREG='), (() => { const i = src.indexOf('const planSing='); return src.slice(i, src.indexOf('};', i) + 2); })(), fn('function planPlural('), fn('function planOne('), ';globalThis.P={planPlural,planOne};'].join('\n'), ctx); return ctx.P; })();
+const ing = i => { if (!i.u && i.q != null && i.q !== '' && +i.q > 0) i = { ...i, item: +i.q > 1.01 ? PLN.planPlural(i.item, +i.q) : PLN.planOne(i.item) }; let u = i.u || ''; const met = /^(g|kg|ml|l|L)$/.test(u); const q = met ? (i.q == null || i.q === '' ? '' : String(+(+i.q).toFixed(2))) : frac(i.q); if (u === 'cup' && (+i.q > 1)) u = 'cups'; if (u === 'l' || u === 'L') return clean(degC([q && q + ' L', i.item].filter(Boolean).join(' '))); const tight = met; return clean(degC([q && (tight ? q + u : q + (u ? ' ' + u : '')), i.item].filter(Boolean).join(' '))); };
 const cap = t => { t = clean(t); return t.charAt(0).toUpperCase() + t.slice(1); };
 /* width and height of a jpeg, read from its frame header */
 /* previews are shot at 2x (scripts/render-previews.cjs), so pages show them at half their pixel size */

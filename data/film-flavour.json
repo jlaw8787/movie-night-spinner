@@ -2860,7 +2860,22 @@
    ]
   },
   "number": "",
-  "pay": ""
+  "pay": "",
+  "words": {
+   "Ration sheet.": "Tonight's sheet.",
+   "Rations": "Snacks",
+   "Hot meals continued": "Mains continued",
+   "Hot meals": "Mains",
+   "Sweet issue": "Something sweet",
+   "Canteen": "Drinks",
+   "Access": "Console",
+   "Badge": "Pass",
+   "All areas": "All islands",
+   "Return tray to the hatch.": "Clear your plate, Riley.",
+   "Rations subject to supply.": "Seconds while they last.",
+   "MESS OPEN": "DINNER'S ON",
+   "QUARANTINE": "DINNER'S ON"
+  }
  },
  "Madagascar (2005)": {
   "venue": "Central Park Zoo Canteen",
@@ -2948,7 +2963,15 @@
     "Collateral: one shrink ray"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Return tray to the hatch.": "Minions clear the trays.",
+   "Rations subject to supply.": "Bananas subject to Minions.",
+   "Ration sheet.": "Lab sheet.",
+   "Rations": "Snacks",
+   "Sweet issue": "Sweets",
+   "Canteen": "Drinks"
+  }
  },
  "Wallace & Gromit: The Curse of the Were-Rabbit (2005)": {
   "venue": "Anti-Pesto HQ",
@@ -5082,7 +5105,19 @@
    ]
   },
   "number": "",
-  "home": false
+  "home": false,
+  "words": {
+   "Ration sheet.": "Pantry sheet.",
+   "Hot food. Eat it fast.": "Cook it before sunset.",
+   "Canteen": "Drinks",
+   "Return tray to the hatch.": "Back inside before dark.",
+   "Rations subject to supply.": "Stock subject to supply runs.",
+   "Access": "Home",
+   "Badge": "Survivor",
+   "All areas": "Sam too",
+   "Form LAB": "Log No. ",
+   "Sweet issue": "Something sweet"
+  }
  },
  "The Lost Boys (1987)": {
   "venue": "Santa Carla Boardwalk Eats",
@@ -6093,7 +6128,12 @@
    ]
   },
   "number": "",
-  "pay": ""
+  "pay": "",
+  "words": {
+   "Return tray to the hatch.": "Leave the tray by the pipes.",
+   "Rations subject to supply.": "Eat before the clock runs out.",
+   "Canteen": "Drinks"
+  }
  },
  "The Conjuring (2013)": {
   "venue": "Perron Farmhouse Kitchen",
@@ -12296,7 +12336,7 @@
    "title": "Turbo Man Parade",
    "lines": [
     "It's Turbo Time!",
-    "Dementor not invited"
+    "Booster rides up front"
    ]
   },
   "number": ""
@@ -15693,7 +15733,7 @@
   "venue": "Lost City of D Book Tour",
   "sign": "Loretta Sage signing today",
   "note": {
-   "text": "I wore sequins to a jungle rescue, so I'm wearing them to dinner too. Pass the coconut prawns.",
+   "text": "I wore sequins to a jungle rescue, so I'm wearing them to dinner too. Pass the coconut shrimp.",
    "by": "Loretta Sage",
    "kind": "note"
   },
@@ -15735,7 +15775,8 @@
     "Keep dry"
    ]
   },
-  "number": "1914"
+  "number": "1914",
+  "school": false
  },
  "Pirates of the Caribbean: On Stranger Tides (2011)": {
   "venue": "Queen Anne's Revenge Galley",
@@ -16387,11 +16428,16 @@
    "MESS OPEN": "OVEN ON",
    "Ration sheet.": "Bakery board.",
    "Rations": "From the oven",
-   "Hot meals": "Pastries",
+   "Hot meals": "From the kitchen",
    "Sweet issue": "Sweets",
    "Canteen": "Counter",
    "Return tray to the hatch.": "Thank you for your custom.",
-   "Rations subject to supply.": "Baked fresh daily."
+   "Rations subject to supply.": "Baked fresh daily.",
+   "Access": "Open",
+   "Badge": "Order",
+   "All areas": "Fresh daily",
+   "Form LAB": "Docket No. ",
+   "Lv ": "No. "
   }
  },
  "The Hobbit: An Unexpected Journey (2012)": {
@@ -16526,7 +16572,14 @@
   },
   "number": "",
   "currency": "coin",
-  "coin": "emeralds"
+  "coin": "emeralds",
+  "slots": [
+   "Lecture 1",
+   "Lecture 2",
+   "Lunch",
+   "Lecture 3",
+   "Lecture 4"
+  ]
  },
  "The Wizard of Oz (1939)": {
   "venue": "Emerald City Palace",
@@ -22591,7 +22644,7 @@
    "Lucky numbers": "Badge no.",
    "Cooked slow, packed with care": "Hot off the fryer",
    "at your door before the trailers end": "handed out the window",
-   "Overheard": "In the car park"
+   "Overheard": "In the parking lot"
   },
   "priceK": 0.45
  },
