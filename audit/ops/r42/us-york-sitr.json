@@ -1,0 +1,42 @@
+{
+ "id": "Singin' in the Rain (1952)",
+ "ops": [
+  {
+   "old": "roast beef with Yorkshires",
+   "new": "roast beef with popovers",
+   "done": true
+  },
+  {
+   "old": "roast beef and Yorkshires",
+   "new": "roast beef and popovers",
+   "done": true
+  },
+  {
+   "old": "Yorkshire puddings",
+   "new": "popovers",
+   "done": true
+  },
+  {
+   "old": "Yorkshire puddings",
+   "new": "popovers",
+   "done": true
+  },
+  {
+   "old": "Yorkshire pudding",
+   "new": "popover",
+   "done": true
+  },
+  {
+   "old": "Yorkshire pudding",
+   "new": "popover",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-23",
+ "misses": [
+  "not found: roast beef and Yorkshires",
+  "not found: Yorkshire puddings",
+  "not found: Yorkshire pudding",
+  "not found: Yorkshire pudding"
+ ]
+}

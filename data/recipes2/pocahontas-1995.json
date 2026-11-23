@@ -147,7 +147,7 @@
     {
      "q": 600,
      "u": "g",
-     "item": "chicken thighs, diced",
+     "item": "turkey thighs, diced",
      "aisle": "Meat"
     },
     {
@@ -183,7 +183,7 @@
     {
      "q": 1,
      "u": "tsp",
-     "item": "smoked paprika",
+     "item": "dried sage",
      "aisle": "Spices"
     },
     {
@@ -225,15 +225,15 @@
    ],
    "steps": [
     {
-     "text": "Dice the chicken and pumpkin.",
+     "text": "Dice the turkey and pumpkin.",
      "min": 12
     },
     {
-     "text": "Brown the chicken in the oil.",
+     "text": "Brown the turkey in the oil.",
      "min": 8
     },
     {
-     "text": "Add the pumpkin, corn, beans, tomatoes and paprika.",
+     "text": "Add the pumpkin, corn, beans, tomatoes and sage.",
      "min": 2
     },
     {
@@ -313,7 +313,7 @@
       {
        "q": 1,
        "u": "tsp",
-       "item": "smoked paprika",
+       "item": "dried sage",
        "aisle": "Pantry"
       },
       {
@@ -363,7 +363,7 @@
        "min": 6
       },
       {
-       "text": "Add the pumpkin, corn, both beans, tomatoes, stock and paprika.",
+       "text": "Add the pumpkin, corn, both beans, tomatoes, stock and sage.",
        "min": 2
       },
       {
@@ -455,7 +455,7 @@
    "course": "d",
    "prep_min": 11,
    "cook_min": 30,
-   "make_ahead": "Muddle the berries and stir in the cranberry juice, then chill up to 1 day ahead in the fridge; add ice and sparkling water to serve",
+   "make_ahead": "Muddle the berries and stir in the cranberry juice, then chill up to 1 day ahead in the fridge; add ice and cold water to serve",
    "ingredients": [
     {
      "q": 150,
@@ -472,7 +472,7 @@
     {
      "q": 2,
      "u": "",
-     "item": "limes",
+     "item": "fresh cranberries",
      "aisle": "Produce"
     },
     {
@@ -490,7 +490,7 @@
     {
      "q": 500,
      "u": "ml",
-     "item": "sparkling water",
+     "item": "cold water",
      "aisle": "Drinks"
     },
     {
@@ -502,7 +502,7 @@
    ],
    "steps": [
     {
-     "text": "Muddle most of the blueberries with the mint, lime juice and honey in a jug until the berries burst.",
+     "text": "Muddle most of the blueberries with the mint, cranberries and honey in a jug until the berries burst.",
      "min": 5
     },
     {
@@ -514,7 +514,7 @@
      "min": 3
     },
     {
-     "text": "Top with sparkling water and garnish with blueberries and a mint sprig.",
+     "text": "Top with cold water and garnish with blueberries and a mint sprig.",
      "min": 3
     }
    ],

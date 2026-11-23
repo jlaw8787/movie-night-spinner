@@ -3628,7 +3628,8 @@
   "number": "",
   "priceEra": "1800s",
   "currency": "coin",
-  "coin": "gold coins"
+  "coin": "gold coins",
+  "courses": "formal"
  },
  "Aladdin (1992)": {
   "venue": "Agrabah Marketplace",
@@ -6447,7 +6448,8 @@
     "Mind the gap in time"
    ]
   },
-  "number": "1876"
+  "number": "1876",
+  "courses": "formal"
  },
  "Hitch (2005)": {
   "venue": "Hitch Date Consulting",
@@ -9406,7 +9408,8 @@
   "words": {
    "Maths": "Driving with Hightower",
    "Library": "Riot duty"
-  }
+  },
+  "school": false
  },
  "Bad Boys (1995)": {
   "venue": "Miami Evidence Room Cafe",
@@ -9499,7 +9502,12 @@
     "One ride only"
    ]
   },
-  "number": "2525"
+  "number": "2525",
+  "words": {
+   "Dinner Timetable": "Route Timetable",
+   "Write your order on the check.": "Pass your order up to Annie."
+  },
+  "pay": ""
  },
  "The Naked Gun: From the Files of Police Squad! (1988)": {
   "venue": "Anaheim Stadium Concessions",
@@ -11835,7 +11843,8 @@
   },
   "number": "1912",
   "priceEra": "1930s-40s",
-  "currency": "£sd"
+  "currency": "£sd",
+  "courses": "formal"
  },
  "Moulin Rouge! (2001)": {
   "venue": "The Elephant Room",
@@ -15330,7 +15339,11 @@
     "Shanghai, 1935"
    ]
   },
-  "number": "1935"
+  "number": "1935",
+  "currency": "coin",
+  "coin": "Shanghai dollars",
+  "coinMid": 3,
+  "priceEra": "1930s-40s"
  },
  "Indiana Jones and the Last Crusade (1989)": {
   "venue": "Henry Jones's Study",
@@ -15419,7 +15432,11 @@
     "Do not open in Manhattan"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Dinner Timetable": "Bus Timetable",
+   "Write your order on the check.": "Order from the driver."
+  }
  },
  "Jumanji: The Next Level (2019)": {
   "venue": "Jumanji Desert Outpost",
@@ -16734,7 +16751,8 @@
   },
   "priceEra": "1800s",
   "currency": "coin",
-  "coin": "silver pieces"
+  "coin": "silver pieces",
+  "pay": ""
  },
  "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
   "venue": "Dawn Treader Galley",
@@ -18471,7 +18489,10 @@
    "We deliver": "We carry",
    "Free delivery over $2.": "Carried down the alley, no charge."
   },
-  "priceEra": "1930s-40s"
+  "priceEra": "1930s-40s",
+  "currency": "coin",
+  "coin": "coppers",
+  "coinMid": 8
  },
  "Kill Bill: Vol. 1 (2003)": {
   "venue": "House of Blue Leaves",
@@ -19898,7 +19919,8 @@
    ]
   },
   "number": "1821",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "courses": "formal"
  },
  "Selena (1997)": {
   "venue": "Quintanilla Family Kitchen",
@@ -20372,7 +20394,16 @@
     "Cash only, no questions"
    ]
   },
-  "number": "5"
+  "number": "5",
+  "words": {
+   "Dinner Timetable": "Tonight's Stops",
+   "1st call": "Stop 1",
+   "2nd call": "Stop 2",
+   "3rd call": "Stop 3",
+   "Last call": "Last stop",
+   "Write your order on the check.": "Call your order to the front seat."
+  },
+  "pay": ""
  },
  "Fight Club (1999)": {
   "venue": "Lou's Tavern",
@@ -21190,7 +21221,8 @@
   },
   "number": "27A",
   "priceEra": "1930s-40s",
-  "currency": "£sd"
+  "currency": "£sd",
+  "courses": "formal"
  },
  "No Time to Die (2021)": {
   "venue": "Bond's Cabin, Port Antonio",
@@ -22019,7 +22051,8 @@
    "On stage tonight": "Live from 1969",
    "Two drink minimum at the stage tables": "No Fembots past the door",
    "No discussing Mini-Me, flushed into space at the tables": "Nobody flushes Mini-Me tonight"
-  }
+  },
+  "pay": ""
  },
  "Bring It On (2000)": {
   "venue": "Cheer Nationals Concessions",
@@ -24133,7 +24166,8 @@
    "From the host": "From a guest",
    "The Twelve Oaks Barbecue, laid for tonight": "Scarlett and her father under the tree at Tara"
   },
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "courses": "formal"
  },
  "Monty Python and the Holy Grail (1975)": {
   "venue": "Camelot",

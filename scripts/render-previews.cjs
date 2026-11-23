@@ -52,7 +52,7 @@ async function snap(page,id){
     const menu=a[2]||{},cs=FMT_COURSES.map(c=>c[0]).filter(c=>(menu[c]||[]).some(it=>it&&it.label)),out=[];
     fmtPhone.querySelectorAll('.fp-sec').forEach((sec,gi)=>{const c=cs[+sec.dataset.g]||'m';sec.querySelectorAll('.fp-dish').forEach(ar=>{const q=s=>{const e=ar.querySelector(s);return e?e.textContent.replace(/\s+/g,' ').trim():''};
       let n=q('.fp-name');const desc=q('.fp-desc'),film=q('.fp-film'),on=t=>t&&face.includes(N(t));if(!n)return;
-      const note=[on(desc)&&desc,on(film)&&film].filter(Boolean).join(' ')||desc||film;
+      const note=[on(desc)&&desc,on(film)&&film].filter(Boolean).reduce((a,t)=>a?a+(/[.!?”"')]$/.test(a)?' ':'. ')+t:t,'')||desc||film;/* review 42: two card lines join with a full stop (My Cousin Vinny printed "Butter & sharp cheddar The grits cross-examination.") */
       /* the card may print its own name for the dish above the same words (Big's "Caviar canapés"): the page takes the card's name */
       let pr=on(n)?1:0;if(!pr)for(const t of [desc,film]){if(!t||!on(t))continue;const i=lines.findIndex(l=>N(l)===N(t)||N(l).startsWith(N(t)));if(i>0){const nm=lines.slice(Math.max(0,i-2),i).reverse().find(l=>!/^[\s$£€.,\d¢cp/-]*$/.test(l)&&N(l).length>2);if(nm){n=nm.replace(/\s*[$£€]?\d+(?:[.,]\d+)?\s*$/,'').trim();if(n===n.toUpperCase())n=n.charAt(0)+n.slice(1).toLowerCase();pr=1;break}}}
       out.push({c,n,note,printed:pr,ing:[...ar.querySelectorAll('.fp-ing li')].map(x=>x.textContent.trim()),steps:[...ar.querySelectorAll('.fp-steps li,.fp-step1')].map(x=>x.textContent.trim())})})});

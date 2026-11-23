@@ -2520,7 +2520,7 @@ function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
     if(!String(W[0]).trim()&&e.hasAttribute("data-sum")&&e.parentElement&&e.parentElement!==root&&e.parentElement.children.length<=3)e.parentElement.style.display="none"}
   const PAYW=/\b(prices?|priced|cash|(?:cover|service|tray|corkage|extra|no|room) charges?|charges? (?:apply|applies|extra|may)|paid|pay (at|the|by|on|here)|payment|change given|gratuity|service included|per cover|minimum|cheques?|eftpos|gst|bill no\.?|coin of the realm|subject to change|on the tab|tab's chalked|bar tab|running tab|start a tab)\b/i;
   const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),N=[];let t;while((t=tw.nextNode()))N.push(t);
-  for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;const ss=v.split(/(?<=[.!])(?<!\bNo\.)\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
+  for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;if(PF_DISH.has(pfKey(v))||(t.parentElement&&t.parentElement.closest("[data-note]")))continue;/* review 42: a dish name or note that says cash or paid is food, not a pay line (Cliffhanger printed no name for "Treasury cash apple strudel") */const ss=v.split(/(?<=[.!])(?<!\bNo\.)\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
     const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
   for(const t of N)if(/,\s*,/.test(t.nodeValue))t.nodeValue=t.nodeValue.replace(/\s*,\s*,\s*/g,", ");
   root.dataset.nopay="1";return T.length}
@@ -2528,8 +2528,9 @@ function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;cons
   /* review 35: one way to write cents: "60¢" on an American (or any non-Australian) dollar card, "60c" on an Australian or New Zealand one */
   const k=pfMark(root);{const au=f&&f.theme==="aussie",tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){const m=t.nodeValue.match(/^(\s*)(\d{1,2})(¢|c)(\s*)$/);if(m&&m[3]!==(au?"c":"¢"))t.nodeValue=m[1]+m[2]+(au?"c":"¢")+m[4]}}
   return n+k}
+let PF_DISH=new Set();const pfKey=x=>String(x||"").toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9' ]+/g," ").replace(/\s+/g," ").trim();
 function priceFix0(root,menu,f,fl,era,fmt){
-  if(!root||!menu)return 0;
+  if(!root||!menu)return 0;PF_DISH=new Set();for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it){for(const x of [it.label,it.n,it.note])if(x)PF_DISH.add(pfKey(x))}
   /* review 31: layouts print "fry-up" as "fry up", so hyphens count as spaces when a price is tied to its dish */
   const norm=s=>String(s||"").toLowerCase().replace(/[’']/g,"'").replace(/[-‐–]/g," ").replace(/\s+/g," ").trim();
   const dish=[];for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it){const nm=norm(it.label||it.n);if(nm.length>2)dish.push({k,n:it.label||it.n,nm,house:!!it.house})}

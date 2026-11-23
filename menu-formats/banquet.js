@@ -207,7 +207,9 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* ---------- back: courses in procession ---------- */
   /* review 37: a card that pours nothing alcoholic has no cellar (The Hobbit, The Wizard of Oz) */const DRY=!((ctx.menu&&ctx.menu.d)||[]).some(it=>it&&/\b(wine|ale|beer|mead|cider|rum|whisk(e)?y|brandy|gin|vodka|champagne|prosecco|sherry|port|liqueur|cocktail|martini|punch with|bourbon|sake|lager|stout|claret|grog)\b/i.test((it.n||"")+" "+(it.note||"")));
-  const LAB=fam||DRY?{s:"To Begin",m:"The Remove",w:"Entremets",d:"The Cordials"}:{s:"To Begin",m:"The Remove",w:"Entremets",d:"From the Cellar"};
+  /* review 42: the Victorian service words only at a formal period dinner (flavour.courses "formal"); the Citadel, a casino or a state dinner print plain course words */
+  const FORMAL=!!(ctx.flavour&&ctx.flavour.courses==="formal");
+  const LAB=FORMAL?(fam||DRY?{s:"To Begin",m:"The Remove",w:"Entremets",d:"The Cordials"}:{s:"To Begin",m:"The Remove",w:"Entremets",d:"From the Cellar"}):{s:"To Begin",m:"The Feast",w:"Sweets",d:"To Drink"};
   const keys=["s","m","w","d"].filter(k=>(menu[k]||[]).length);
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>8;
   const clamp=n=>`display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:${n};overflow:hidden;`;
@@ -233,7 +235,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const back=`${stock()}${border()}
    <div data-pvzoom="40,30,736,672" aria-hidden="true" style="position:absolute;left:40px;top:30px;width:736px;height:672px;pointer-events:none"></div>
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick("The courses in procession")}</div>
-   <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">Bill of Fare</div>
+   <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${FORMAL?"Bill of Fare":"Tonight's Feast"}</div>
    <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:64px;right:64px;top:${heavy?136:150}px;height:${heavy?470:454}px;overflow:hidden;font-size:${heavy?20:28}px;text-align:center;display:flex;flex-direction:column">
      <div style="margin:auto 0">${courses}</div></div>
    <div style="position:absolute;left:64px;right:64px;top:610px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
