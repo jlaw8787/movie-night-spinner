@@ -247,6 +247,13 @@ const CAMP={
   army:{t:"Chow Line",n:"Nailed to the mess tent",b:"Mentioned in dispatches"}
 };
 const LABEL={s:"Fireside Snacks",m:"Off the Fire",w:"Campfire Treats",d:"Drinks"};
+/* review 44: a campfire card set indoors (E.T.'s closet, A Quiet Place's cellar, Tucker and Dale's holiday house) has no fire: its stock words
+   say table and wall, not fire. flavour.fire true or false decides, otherwise the venue and sign do */
+const noFire=fl=>{fl=fl||{};if(typeof fl.fire==="boolean")return !fl.fire;const t=String(fl.venue||"")+" "+String(fl.sign||"");
+  return /\b(closet|cellar|basement|house|home|bedroom|room|kitchen|attic|apartment|flat|bunker|lab|hall|office|garage|shed|barn|holiday)\b/i.test(t)&&!/\b(fire|campfire|bonfire|hearth|fireplace|fireside|camp|campsite|beach|lodge|cabin)\b/i.test(t)};
+const INDOOR={gritty:{t:"Grub's Up",n:"Nailed to the wall",b:"Earned the hard way"},glossy:{n:"From the host"},warm:{n:"Pinned up by the door"},eerie:{n:"Found on the table"},
+  playful:{n:"Scribbled on the wall"},grand:{n:"From the host",b:"Told over supper"},tender:{t:"Supper Is Served",n:"Left on the table"},tense:{t:"Supper Before Dark",n:"Passed round the table",b:"Before the lights go"},scrappy:{n:"Taped to the wall"}};
+const INDOOR_LABEL={s:"Snacks",m:"Mains",w:"Treats",d:"Drinks"};
 const CAMP_LABEL={summer:{s:"Trail Snacks",m:"Mess Hall Mains",w:"Campfire Treats",d:"Canteen Drinks"},army:{s:"Ration Snacks",m:"Mess Mains",w:"Sweet Rations",d:"Canteen Drinks"}};
 const FB={venue:"The Camp Mess Hall",sign:"Lights out at ten",by:"The Camp Director",
   noteText:c=>(c.f&&c.f.T)||"Wash up, line up, and save room for the campfire.",
@@ -340,7 +347,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LK=ctx.flavour&&ctx.flavour.look||{};
   const ty=Object.assign({},TYPE[E.g],LK.type),P=Object.assign({},PAPER[E.g],LK.paper);
   const C=inks(ctx.palette,P.bg,"#7a2e1c");
-  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */CK=ctx.flavour&&ctx.flavour.camp,V=Object.assign({},VOICE[tone],CK==="summer"?CAMP.summer[tone]:CK==="army"?CAMP.army:{},LB),LBL=Object.assign({},LABEL,CK&&CAMP_LABEL[CK]||{},LB);
+  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */CK=ctx.flavour&&ctx.flavour.camp,NOFIRE=noFire(ctx.flavour),V=Object.assign({},VOICE[tone],NOFIRE?INDOOR[tone]:{},CK==="summer"?CAMP.summer[tone]:CK==="army"?CAMP.army:{},LB),LBL=Object.assign({},LABEL,NOFIRE?INDOOR_LABEL:{},CK&&CAMP_LABEL[CK]||{},LB);
   const ph=heroes(ctx),year=String(ctx.f.year||"");
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo}`;
@@ -407,11 +414,11 @@ ${strip?`    <div data-box style="position:absolute;left:474px;top:${flip?334:47
     <div data-box data-menu="418,378" style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply;column-gap:24px">${menuHTML(cs,era,ty,C,tone,LBL)}</div>
     <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${esc(LB.call||(CK==="summer"||CK==="army"?"Bugle call":"When to serve"))}</div>
-      <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||"Serve the mains when the campfire is lit.")}</div>
+      <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||(NOFIRE?"Serve the mains when the film starts.":"Serve the mains when the campfire is lit."))}</div>
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}
     <div data-box style="position:absolute;left:38px;top:900px;width:596px;height:40px;overflow:hidden;font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB.${CK?" Form CM "+esc(F.number)+".":F.number?" No. "+esc(F.number)+".":""}</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":(CK==="summer"||CK==="army"?"Ask the cook about: ":"Round the fire: ")}${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"Soft drinks only. ":""}Poster and stills: TMDB.${CK?" Form CM "+esc(F.number)+".":F.number?" No. "+esc(F.number)+".":""}</span>${rest.map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":(CK==="summer"||CK==="army"?"Ask the cook about: ":NOFIRE?"Look out for: ":"Round the fire: ")}${T(w)}.</span>`).join("")}
     </div>
     ${wearLayer(P,tone,seed+20)}
   </div>`;

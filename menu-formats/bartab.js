@@ -117,7 +117,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const voice=t.voice;
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* 2000 reads "2000", never "00" (review 12) */
   const price=priceFor(era,yr,fl.number);
-  const LBL=(ctx.flavour&&ctx.flavour.labels)||{};/* review 33: a film can name its own headings (Hall Pass runs the week) */const C={s:LBL.s||(fam?"Snacks":"Bar snacks"),m:LBL.m||"Plates",w:LBL.w||"Afters",d:fam?"From the fountain":LBL.d||(homeV?"From the fridge":"Behind the bar")};if(homeV&&!LBL.s&&!fam)C.s="Snacks";
+  /* review 44: "Afters" is British: an American bar says Dessert */const US44=(fl44=>!(fl44&&fl44.currency)&&ctx.f&&ctx.f.theme!=="aussie"&&!(fl44&&fl44.world)&&(!(fl44&&fl44.country)||fl44.country==="US"))(ctx.flavour);
+  const LBL=(ctx.flavour&&ctx.flavour.labels)||{};/* review 33: a film can name its own headings (Hall Pass runs the week) */const C={s:LBL.s||(fam?"Snacks":"Bar snacks"),m:LBL.m||"Plates",w:LBL.w||(US44?"Dessert":"Afters"),d:fam?"From the fountain":LBL.d||(homeV?"From the fridge":"Behind the bar")};if(homeV&&!LBL.s&&!fam)C.s="Snacks";
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
   const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));

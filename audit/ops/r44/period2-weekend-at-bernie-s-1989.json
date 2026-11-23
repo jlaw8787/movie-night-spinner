@@ -1,0 +1,36 @@
+{
+ "id": "Weekend at Bernie's (1989)",
+ "ops": [
+  {
+   "old": "1 bottle sweet chilli sauce",
+   "new": "1 jar orange marmalade",
+   "done": true
+  },
+  {
+   "old": "sweet chilli sauce",
+   "new": "orange marmalade dip",
+   "done": true
+  },
+  {
+   "old": "sweet chilli dip",
+   "new": "orange marmalade dip",
+   "done": true
+  },
+  {
+   "old": "with sweet chilli",
+   "new": "with orange marmalade dip",
+   "done": true
+  },
+  {
+   "old": "sweet chilli",
+   "new": "orange marmalade",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-23",
+ "misses": [
+  "not found: 1 bottle sweet chilli sauce",
+  "not found: sweet chilli sauce",
+  "not found: sweet chilli"
+ ]
+}

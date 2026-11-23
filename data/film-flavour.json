@@ -569,7 +569,8 @@
    "Rations": "Snacks",
    "Sweet issue": "Something sweet",
    "Hot meals": "Mains"
-  }
+  },
+  "pay": ""
  },
  "Iron Man 2 (2010)": {
   "venue": "Stark Expo Food Court",
@@ -1100,7 +1101,8 @@
    ]
   },
   "number": "",
-  "priceK": 0.6
+  "priceK": 0.6,
+  "pay": ""
  },
  "Black Widow (2021)": {
   "venue": "Safe House Kitchen",
@@ -1681,7 +1683,8 @@
     "Handle with large gloves"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Blade (1998)": {
   "venue": "Whistler's Safehouse",
@@ -3213,7 +3216,8 @@
     "Do not drop"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Inspector Gadget (1999)": {
   "venue": "Gadgetmobile Garage",
@@ -5719,7 +5723,8 @@
   "number": "",
   "words": {
    "Return tray to the hatch.": "Be afraid. Be very afraid."
-  }
+  },
+  "pay": ""
  },
  "Hocus Pocus (1993)": {
   "venue": "Sanderson Sisters' Cottage",
@@ -7631,7 +7636,8 @@
     "Stockroom and Electronics"
    ]
   },
-  "number": "40"
+  "number": "40",
+  "pay": ""
  },
  "Meet the Fockers (2004)": {
   "venue": "Focker Family Kitchen",
@@ -8901,7 +8907,8 @@
   "number": "",
   "words": {
    "Special Investigations": "Revenge for Hire"
-  }
+  },
+  "pay": ""
  },
  "Screwed (2000)": {
   "venue": "Chicken Hole",
@@ -9024,7 +9031,8 @@
     "Jersey number 45"
    ]
   },
-  "number": "45"
+  "number": "45",
+  "pay": ""
  },
  "Die Hard 2 (1990)": {
   "venue": "Dulles Airport Snack Bar",
@@ -9048,7 +9056,8 @@
     "Dulles, Christmas Eve"
    ]
   },
-  "number": "140"
+  "number": "140",
+  "pay": true
  },
  "Lethal Weapon (1987)": {
   "venue": "Murtaugh Family Kitchen",
@@ -9212,7 +9221,8 @@
     "Detroit PD"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Beverly Hills Cop III (1994)": {
   "venue": "Wonder World Snack Stand",
@@ -9785,7 +9795,8 @@
     "Jump Street"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Heat (1995)": {
   "venue": "Kate Mantilini",
@@ -9880,7 +9891,8 @@
     "Desk duty"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Super Troopers (2001)": {
   "venue": "Spurbury Station Diner",
@@ -11048,7 +11060,8 @@
     "Back for all twelve"
    ]
   },
-  "number": "12"
+  "number": "12",
+  "pay": ""
  },
  "Grandma's Boy (2006)": {
   "venue": "Grandma Lilly's House",
@@ -13265,7 +13278,8 @@
     "Do not neuralyze"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Last Action Hero (1993)": {
   "venue": "Pandora Theater",
@@ -13565,7 +13579,8 @@
     "Old Detroit"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Total Recall (1990)": {
   "venue": "Rekall Memory Lounge",
@@ -13745,8 +13760,8 @@
   "number": ""
  },
  "Bill & Ted's Excellent Adventure (1989)": {
-  "venue": "Circle K, San Dimas",
-  "sign": "Be excellent. Phone booth out the back.",
+  "venue": "San Dimas Mall",
+  "sign": "Be excellent. Historical figures welcome.",
   "note": {
    "text": "Be excellent to each other. Party on, dudes!",
    "by": "Abraham Lincoln",
@@ -14309,10 +14324,12 @@
   },
   "number": "",
   "pay": [
-   "Trade",
    "1 gal fuel",
    "2 tins",
-   "Trade"
+   "1 tin",
+   "1 gal fuel",
+   "3 tins",
+   "2 tins"
   ]
  },
  "Mad Max Beyond Thunderdome (1985)": {
@@ -21482,7 +21499,8 @@
     "Item: one tape recorder"
    ]
   },
-  "number": "8"
+  "number": "8",
+  "pay": ""
  },
  "Scream 2 (1997)": {
   "venue": "Windsor College Student Union",
@@ -23239,7 +23257,8 @@
    ]
   },
   "number": "27",
-  "words": {}
+  "words": {},
+  "pay": ""
  },
  "True Lies (1994)": {
   "venue": "Jamal Khaled's Party",

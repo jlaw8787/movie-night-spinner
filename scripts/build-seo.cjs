@@ -16,6 +16,8 @@ const SITE = 'https://reeldinner.com';
 const rd = p => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const rj = p => { try { return JSON.parse(rd(p)); } catch (e) { return {}; } };
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+/* review 44: a page address folds accents first (Amélie is amelie-2001, not am-lie-2001); data files and previews keep the plain slug */
+const pslug = s => slug(s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''));
 /* no em dashes anywhere on these pages: spaced dashes read as commas, number ranges as "to" */
 const clean = s => String(s == null ? '' : s)
   .replace(/(\d)\s*[\u2013\u2014]\s*(\d)/g, '$1 to $2')
@@ -49,6 +51,14 @@ const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const l
 const stepTimed = (() => { const vm = require('vm'), src = rd('app.js'); const i = src.indexOf('function stepTimed('); const ctx = {}; vm.createContext(ctx); vm.runInContext(src.slice(i, src.indexOf('\n', i)) + ';globalThis.stepTimed=stepTimed;', ctx); return ctx.stepTimed; })();
 const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 48 * 60) { const h = Math.round(m / 30) / 2; return (h % 1 ? h.toFixed(1) : h) + ' hours'; } const d = Math.round(m / 1440); return d + (d === 1 ? ' day' : ' days'); };
 
+/* review 44: a generated film page lists the app's own ingredient lines (data/page-recipes.json, from scripts/page-recipes.cjs), so the page
+   never says "8 tsp" or "1650g" where the app says "3 tbsp" or "1.7kg". Hand-built pages already carry the phone's lines */
+const CARD_VENUE = (() => { try { return rj('data/card-venue.json'); } catch (e) { return {}; } })();
+const PAGE_REC = (() => { try { return rj('data/page-recipes.json'); } catch (e) { return {}; } })();
+const ingLines = (x, y) => { const R = PAGE_REC[x.id] || {}, K = t => String(t || '').replace(/\s*\((vegetarian|alcohol[- ]free)[^)]*\)\s*$/i, '').toLowerCase();
+  const hit = Object.keys(R).find(k => K(k) === K(y.n)) || Object.keys(R).find(k => y.n0 && K(k) === K(y.n0));
+  const dry = DRY_THEMES.includes(x.f.theme) || DRY_FILMS.includes(x.id);
+  return hit && (y.ingredients || []).length && (y.ingredients || []).some(i => i.q != null) ? R[hit].map(t => clean(degC(dry ? dryText(t, true) : t))) : (y.ingredients || []).map(ing); };
 const COURSE_CAT = { s: 'Appetizer', m: 'Main course', w: 'Dessert', d: 'Drink' };
 const KEYS = { s: 'S', m: 'M', w: 'W', d: 'K' };
 const frac = q => { if (q == null || q === '') return ''; const w = Math.floor(q), f = Math.round((q - w) * 100) / 100, F = { 0.25: '1/4', 0.33: '1/3', 0.5: '1/2', 0.67: '2/3', 0.75: '3/4' }[f]; return F ? (w ? w + ' ' : '') + F : String(+q.toFixed(2)); };
@@ -74,7 +84,7 @@ const dryDish = y => { const D = t => typeof t === 'string' ? dryText(t, true) :
   ingredients: (y.ingredients || []).map(i => ({ ...i, item: D(i.item) })), steps: (y.steps || []).map(t => typeof t === 'string' ? D(t) : { ...t, text: D(t.text) }) }; };
 /* every film's page facts, built once */
 const ALL = films.map((f, i) => {
-  const id = f.title + ' (' + f.year + ')', s = slug(id), d = rj('data/film/' + s + '.json');
+  const id = f.title + ' (' + f.year + ')', ds = slug(id), s = pslug(id), d = rj('data/film/' + ds + '.json');
   const shown = f.title.replace(/ - /g, ', ');
   const fl = ((d.kit || d.lib || {}).flavour) || {};
   const notes = {};
@@ -108,8 +118,8 @@ const ALL = films.map((f, i) => {
         prep_min: (r.ing || []).length ? was.prep_min : undefined, cook_min: (r.ing || []).length ? was.cook_min : undefined, wait_min: was.wait_min, veg: !!was.veg, af: !!was.af, _T: (r.ing || []).length && (was.prep_min || was.cook_min) ? dishTimes(was, 1) : null }; });
     if (keep.length) { dishes.length = 0; dishes.push(...keep); } } }
   if (dry) for (let i = 0; i < dishes.length; i++) dishes[i] = dryDish(dishes[i]);
-  return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
-    preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
+  return { i, id, s, ds, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
+    preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', ds + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', ds + '.jpg')) : null };
 });
 const BY_THEME = {}; for (const x of ALL) (BY_THEME[x.theme] = BY_THEME[x.theme] || []).push(x);
 const BY_GENRE = {}; for (const x of ALL) for (const g of x.genres) (BY_GENRE[g] = BY_GENRE[g] || []).push(x);
@@ -186,7 +196,7 @@ const card = x => `<li><a href="/menu/${x.s}/"><img src="${posterUrl(x.poster, '
 /* each dish has an anchor so the Recipe entries in the JSON-LD point at their own spot on the page (all-in-one recipe list) */
 const dishId = y => 'dish-' + slug(clean(y.n)).slice(0, 60);
 function filmPage(x) {
-  const { f, d, s, shown, id } = x, canon = `${SITE}/menu/${s}/`, open = '/?film=' + encodeURIComponent(id);
+  const { f, d, s, ds, shown, id } = x, canon = `${SITE}/menu/${s}/`, open = '/?film=' + encodeURIComponent(id);
   const names = x.dishes.map(y => clean(y.n));
   const taken = new Map(), used = new Set();
   for (const y of x.dishes) { const b0 = dishId(y); let k = b0, n = 2; while (used.has(k)) k = b0 + '-' + n++; used.add(k); taken.set(y, k); }
@@ -206,14 +216,14 @@ function filmPage(x) {
     `${head}${from}. Recipes for 4 and a printable menu.`,
     `${head}. Recipes for 4, a shopping list and a printable menu.`
   ].map(clean).find(t => t.length <= 155) || clean(`${head}. Recipes for 4 and a printable menu.`);
-  const img = x.preview ? `${SITE}/assets/menu-previews/${s}.jpg` : (x.poster ? posterUrl(x.poster, 'w500') : '');
+  const img = x.preview ? `${SITE}/assets/menu-previews/${ds}.jpg` : (x.poster ? posterUrl(x.poster, 'w500') : '');
   const lede = [d.D, d.T].filter(Boolean).map(esc);
   const courses = [...'smwd'].map(c => {
     const ds = x.dishes.filter(y => y.course === c); if (!ds.length) return '';
     return `<h2>${COURSE[c]}</h2>\n` + ds.map(y => {
       const T = y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null);
       const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
-      const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
+      const ingr = ingLines(x, y).map(t => `<li>${esc(t)}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(degC(stepTimed(st.text, st.min)))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
       return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg && c !== 'd' ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.house ? '<span class="tag">House</span>' : ''}</h3>
 ${y.note ? `<p>${esc(cap(y.note))}</p>` : ''}${meta ? `<div class="meta">${meta}</div>` : ''}
@@ -231,13 +241,13 @@ ${x.poster ? `<img src="${posterUrl(x.poster)}" width="342" height="513" alt="${
 <h1>${esc(shown)} (${f.year}) movie night dinner menu</h1>
 <div class="hi">
 ${lede.length ? `<p class="lead">${lede.join(' ')}</p>` : ''}
-${x.venue ? `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>` : ''}
+${x.venue && (CARD_VENUE[x.id] || !CARD_PRINT[x.id]) && (!CARD_PRINT[x.id] || CARD_VENUE[x.id]) ? `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>` : ''}
 <a class="btn" href="${open}">Open this menu in Reel Dinner</a>
 <p class="small">Print the menu, get the shopping list and plan the night, free.</p>
 </div>
 </div>
 ${x.preview ? `<h2>The printed menu</h2>
-<figure class="preview"><img src="/assets/menu-previews/${s}.jpg" width="${Math.round(x.preview.w / 2)}" height="${Math.round(x.preview.h / 2)}" alt="Printed movie night menu for ${esc(shown)} (${f.year})" loading="lazy"><figcaption>Open it in Reel Dinner to print it full size.</figcaption></figure>` : ''}
+<figure class="preview"><img src="/assets/menu-previews/${ds}.jpg" width="${Math.round(x.preview.w / 2)}" height="${Math.round(x.preview.h / 2)}" alt="Printed movie night menu for ${esc(shown)} (${f.year})" loading="lazy"><figcaption>Open it in Reel Dinner to print it full size.</figcaption></figure>` : ''}
 ${courses}
 ${d.P ? `<h2>When to serve</h2>\n<p>${esc(d.P)}</p>` : ''}
 <p><a class="btn" href="${open}">Cook this menu</a></p>
@@ -250,7 +260,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
     keywords: clean(`${shown}, movie night, ${f.year}, film menu`),
     ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})(y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null))),
     suitableForDiet: y.veg ? 'https://schema.org/VegetarianDiet' : undefined,
-    recipeIngredient: (y.ingredients || []).map(ing),
+    recipeIngredient: ingLines(x, y),
     recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(degC(stepTimed(st.text, st.min))) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(degC(y.how)) }] : undefined)
   });
   const ld = { '@context': 'https://schema.org', '@graph': [

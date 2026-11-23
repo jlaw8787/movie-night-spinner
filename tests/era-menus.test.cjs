@@ -73,7 +73,7 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  }
 
  const phone=ctx.phone(f,spec,menu);
- assert.equal((phone.match(/class="fp-dish"/g)||[]).length,menu.all.length,id+' phone dishes');
+ assert.equal((phone.match(/class="fp-dish"/g)||[]).length,menu.all.length+(spec.extras||[]).length,id+' phone dishes');/* review 44: printed extras show too */
  assert.equal((phone.match(/role="tab"/g)||[]).length,4,id+' phone courses');
  assert.ok(phone.includes(ESCForTest(spec.phoneTitle)),id+' short phone title');
 }

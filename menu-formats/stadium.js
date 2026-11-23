@@ -174,6 +174,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const venue=clean(fl.venue||(title.length<=22?title+" Concessions":"Stadium Concessions")),sign=clean(fl.sign||t.gate);
   const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Manager"}:{text:"Grab a seat, grab a bite, and stay for the whole game. The stands are open till the final whistle.",by:"The Stand Manager"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
+  /* review 44: a locker room, box or clubhouse has no aisles and no hawkers (Space Jam) */
+  const inRoom=/\b(locker|room|backstage|suite|clubhouse|office|bus|dugout|garage|gym|house|home|kitchen|tent)\b/i.test(String(fl.venue||"")+" "+String(fl.sign||""));
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"General Admission",lines:["Good for one game","Keep this stub"]};
   const num=String(fl.number||"").replace(/\D/g,"")||(String(year).slice(-2)==="00"?String(year):String(year).slice(-2))||"7";
   const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
@@ -303,7 +305,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="flex:1;font:700 ${tr.d}px/1.15 ${BF};color:${ink};${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.dw} ${tr.d}px/1.15 ${DF};color:${acc};white-space:nowrap">${pr[k][i]}</span></div>
       ${nl?`<div style="font:400 ${tr.n}px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(tr.nl>=4?6:nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
   const colA=C.slice(0,sp.s).map(course).join(""),colB=C.slice(sp.s).map(course).join("");
-  const menuHead=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:26px">${kick(t.hawk,acc,15)}<div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Concessions</div></div>`;
+  const menuHead=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:26px">${kick(inRoom?"Grab a plate before the whistle.":t.hawk,acc,15)}<div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Concessions</div></div>`;
   const menu=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>`;
   const nLen=clean(note.text).length,nSize=nLen>120?18:20;
   const noteBox=`<div style="position:absolute;left:${CX}px;width:${CWall}px;bottom:24px;border-top:3px solid ${acc};padding-top:10px">

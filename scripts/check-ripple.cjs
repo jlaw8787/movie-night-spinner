@@ -11,6 +11,7 @@ const json = p => JSON.parse(rd(p));
 const has = p => fs.existsSync(path.join(R, p));
 const jsConst = (file, name) => { const c = {}; vm.runInNewContext(rd(file) + `\n;this.__v=${name}`, c); return c.__v; };
 const slug = (t, y) => (t + ' (' + y + ')').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); /* same as scripts/build-data.cjs */
+const pslug = (t, y) => slug(t.normalize('NFD').replace(/[\u0300-\u036f]/g, ''), y);
 
 const films = json('data/films.json');
 const PSTAMP = require('./preview-stamp.cjs'), STAMPS = has(PSTAMP.STAMPS) ? json(PSTAMP.STAMPS) : {};
@@ -44,7 +45,7 @@ for (const f of films) {
   if (!has(`data/recipes2/${s}.json`) && !has(`data/recipes/${s}.json`)) miss('recipes');
   if (!has(`menu/${s}/index.html`)) miss('Google film page');
   if (!has(`assets/menu-previews/${s}.jpg`)) miss('printed menu preview picture');
-  if (!sitemap.includes(`/menu/${s}/`)) miss('sitemap entry');
+  if (!sitemap.includes(`/menu/${pslug(f.title, f.year)}/`)) miss('sitemap entry');/* review 44: page addresses fold accents */
   const tv = keyed['written quiz questions'][id]; if (tv && (!Array.isArray(tv) || tv.length < 3)) miss('under 3 written quiz questions');
 }
 

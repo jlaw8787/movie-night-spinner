@@ -321,7 +321,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};font-size:${venue.length>24?26:32}px;line-height:1.05;margin:4px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div>
       ${n<=10?`<div style="font-family:${BODY};font-weight:600;color:${e.ink};font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">${home?"Help yourself. The kitchen never shuts":"Coffee shop, open early and late"}</div>`:`<div style="height:6px"></div>`}
       <div data-fit style="flex:1;min-height:0;overflow:hidden">${menuHtml}</div>
-      <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?"Ask the desk about "+low1(winks[0]):"",`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
+      <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?String(winks[0]).replace(/[.!?]+$/,""):""/* review 44: a film touch is not a desk service ("Ask the desk about Powder on the floor") */,`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
     </div>
     <div style="position:absolute;left:${LW+46}px;top:26px;bottom:26px;width:2px;background:${mix(e.ink,e.paper,.55)}"></div>
     ${stamp}${postmark}

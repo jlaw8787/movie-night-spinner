@@ -1055,12 +1055,14 @@ function cardSmallPx(){const key=renderId+"|"+card.innerHTML.length;if(card._smk
   try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,L=[];let tot=0;
     for(const e of card.querySelectorAll("*")){if(!e.offsetWidth||e.closest("[aria-hidden=true],[data-np]"))continue;let n=0;for(const c of e.childNodes)if(c.nodeType===3)n+=c.textContent.trim().length;if(n<12)continue;
       const r=e.getBoundingClientRect(),k=r.width/e.offsetWidth/ck,f=parseFloat(getComputedStyle(e).fontSize)*(k>0?k:1);if(f>0){L.push([f,n]);tot+=n}}
-    L.sort((a,b)=>a[0]-b[0]);let acc=0;for(const [f,n] of L){acc+=n;if(acc>=tot*.2){px=f;break}}}catch(e){}
+    L.sort((a,b)=>a[0]-b[0]);card._smin=L.length?L[0][0]:99;let acc=0;for(const [f,n] of L){acc+=n;if(acc>=tot*.2){px=f;break}}}catch(e){}
   card._smk=key;card._smpx=px;return px}
+/* review 44: the smallest print on the card (Back to the Future's clock tower flyer and guest check), read with cardSmallPx */
+function cardMinPx(){cardSmallPx();return card._smin||99}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;try{if(IOS_SAFARI)setTimeout(()=>iosBakeFilters(card),80)}catch(e){}
   /* review 35: on desktop a card whose notes would print under 11px when the whole sheet fits the column shows a page (a wide page in two
      halves) at a time with the dots, so notes read at 11px or more (Thunderdome 7px, Goldfinger and Lebowski 7.3px, Jurassic Park 8.4px) */
-  pvDesk=false;if(!window.__mnsNoDesk&&tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<14}/* review 36: 14px floor at 1280 (Goldfinger 12px, Gladiator 13px) */
+  pvDesk=false;if(!window.__mnsNoDesk&&tab==="menu"&&!swipeW()&&card.classList.contains("fmt")&&card.innerHTML.trim()){const cw0=+card.dataset.w||card.offsetWidth||1123;pvDesk=cardSmallPx()*pw/cw0<14||cardMinPx()*pw/cw0<9}/* review 44: no print under 9px at 1280 either *//* review 36: 14px floor at 1280 (Goldfinger 12px, Gladiator 13px) */
   /* review 34: on desktop a two or three page menu shrunk whole into the column printed its notes at 4 to 7px (Grease, Gallipoli):
      when the whole sheet would scale under 0.62 it shows one page at a time at column width, with the dots to turn the page */
   const deskFaces=tab==="menu"&&!swipeW()&&(pvDesk||card.classList.contains("fx-paper")&&card.querySelectorAll(".fx-face").length>1&&pw/(+card.dataset.w||1123)<.62);
@@ -1769,7 +1771,8 @@ const stepParts=t=>{const ss=String(t).split(/(?<=[.!?])\s+(?=[A-Z])/),tip=ss.fi
    a step only counts as waiting with heat in it when it opens on the wait ("Cool, then chill"). "Cut and soak" is waiting (Grease fries) */
 const WAIT_LEAD=/^(cover and )?(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|stand|infuse|set|churn|rise)(?!\s+(the|a|an|each|it|them)\b(?!\s+(cool|rest|set|stand|chill)))\b/i;
 const isWaitStep=t=>{const x=String(t.text).trim(),m=t.min||0;if(m<10)return false;if(/\b(in the fridge|overnight|the day before|in the freezer)\b/i.test(x)&&!/\b(bake|roast|grill|fry|simmer|boil)\s+(at|for|until|in)\b/i.test(x))return true;if(HEAT_RE.test(x)&&!WAIT_LEAD.test(x))return false;
-  return WAIT_RE.test(x)||/\band (soak|marinate|steep)\b/i.test(x)||(m>=240&&!HEAT_RE.test(x))};
+  /* review 44: an hour or more of brining, rising or curing off the heat is waiting, wherever the verb sits (Bad Santa's turkey brine) */
+  return WAIT_RE.test(x)||/\band (soak|marinate|steep)\b/i.test(x)||(m>=240&&!HEAT_RE.test(x))||(m>=60&&!HEAT_RE.test(x)&&/\b(brine[sd]?|brining|rise|proof|prove|cure|marinate|soak|steep|rest|set|chill|freeze|dry)\b/i.test(x))};
 function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let wait=0;for(const t of st)if(isWaitStep(t))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
   /* split by the steps themselves when their minutes add up to the recipe's total: hands-on, heat and waiting each counted where they happen */
@@ -1782,7 +1785,14 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
   if(st.length&&st.every(t=>typeof t.min==="number"&&t.min>=0)&&sum>0){wait=st.filter(isW).reduce((a,t)=>a+(t.min||0),0);c2=heat;p2=Math.max(0,sum-heat-wait)}
   else{/* otherwise take the waiting off cooking, but never below the heat steps, and the rest off prep */
     c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait);/* someone always has to chop, season or mix: prep is never shown as 0 */if(st.length&&p2<5)p2=5}
-  const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
+  /* review 44: prep is only the hands-on steps. Where the steps are timed and prep came out longer than its own hands-on steps (rising,
+     resting and brining sat in it: Bad Santa's turkey "Prep 3 hr 3 min"), the rest is waiting. And a dish that shows only "Cook" still
+     needs hands: stove-top steps (fry, sear, stir, whisk, flip) count towards the sheet's hands-on total (Oliver! claimed 13 min) */
+  const timed=st.filter(t=>typeof t.min==="number"&&t.min>0);
+  if(timed.length){const hs=timed.filter(t=>!isW(t)&&!isH(t)).reduce((a,t)=>a+t.min,0);if(hs>=5&&p2>hs+10){wait+=p2-hs;p2=hs}}
+  const stove=timed.filter(t=>isH(t)&&ACTIVE_HEAT.test(String(t.text))&&!PASSIVE_HEAT.test(String(t.text))).reduce((a,t)=>a+Math.min(t.min,/\b(simmer|slowly|low heat|braise)\b/i.test(String(t.text))?5:15),0);/* a stove step needs hands for about its first 15 minutes; a slow simmer only for a stir now and then */
+  const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2,h3=k>1.01?Math.round((p2+stove)*(1+(k-1)/2)/5)*5:p2+stove;return {prep:p3,cook:c2,wait,active:p3+c2,hands:Math.max(p3,h3)}}
+const ACTIVE_HEAT=/\b(fry|fries|frying|sear|sauté|saute|stir|stir-fry|whisk|flip|toss|griddle|grill|toast|brown|scramble|caramelise|reduce|deep-fry|pan-fry)\b/i,PASSIVE_HEAT=/\b(bake|roast|braise|slow[- ]cook|in the oven|oven)\b/i;
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
 /* so do the notes after the name: "(about 10 limes)" is "(about 22 limes)" for 9, "about 600g" and a split ("80ml for the mash, 125ml for the coating") scale too.
@@ -1817,7 +1827,9 @@ const planDur=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min"
 /* review 40: a dish whose method or shopping says overnight, the day before or the night before (rice soaked overnight, risotto made the
    day before) puts "start the day before" on the Prep sheet even when no step is timed that long */
 const OVER_RE=/\b(overnight|the day before|a day ahead|the night before)\b/i;
-function prepSaysOver(x){try{if((x.steps||[]).some(s=>OVER_RE.test(s.text)))return true;if((x.ingredients||[]).some(i=>OVER_RE.test(String(i.item||""))))return true;
+/* review 44: chilling a drink or making ice overnight is not a day-before job (Home Alone's cola): only food that needs the night counts */
+const OVER_CHILL=/\b(chill|cold|fridge|ice|freeze|frozen)\b/i;
+function prepSaysOver(x){try{if(x.course==="d"&&(x.steps||[]).every(s=>!OVER_RE.test(s.text)||OVER_CHILL.test(s.text)))return false;if((x.steps||[]).some(s=>OVER_RE.test(s.text)))return true;if((x.ingredients||[]).some(i=>OVER_RE.test(String(i.item||""))))return true;
   return (x.ingredients||[]).some(i=>{const b=baseOf(i);return b&&OVER_RE.test(b.step(baseG(i.q,i),i))})}catch(e){return false}}
 /* a wait: its length, and on its own when to start (review 13: "12 hr, start the day before wait" read back to front) */
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days"))(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
@@ -1878,7 +1890,7 @@ function prepHTML2(f,menu){
      Only folded lines print already dried; the rest stay raw for kidsDryDom. The folded line's tick carries the others (data-of) */
   const dryP=typeof dryNow==="function"&&dryNow(f);
   const shop=prepShopGroups(f).map(([a,l])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${(dryP?dryJoin(l.map(x=>[x,dryText(x,true)])):l.map(x=>({x,of:[x],text:x}))).map(e=>{const x=e.x,k=tickKey(x),on=!!tk[k],more=e.of.slice(1).map(tickKey);return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${more.length?` data-of="${ESC(more.join("\n"))}"`:""}${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(more.length?e.text:x)}</li>`}).join("")}</ul></div>`).join("");
-  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),overN=ds.some((x,i)=>!aheadAt[i]&&!x.extra&&prepSaysOver(x)),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
+  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+(x.hands!=null?x.hands:x.prep),0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),overN=ds.some((x,i)=>!aheadAt[i]&&!x.extra&&prepSaysOver(x)),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook&&T.prep?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:hot&&T.cook?`Cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
@@ -2030,7 +2042,8 @@ function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")
   h=h.replace(/>(\s*)(?:Overheard|Heard) (?:at|on|in) the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)
     .replace(/>(\s*)(?:A word|Word) from ([^<]{1,40}?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from ${w}${b}<`)
     .replace(/>(\s*)From the (host|director's desk)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`);
-  {const by=String(n.by||"").trim();if(by&&!new RegExp("A note from "+rx(e(by)),"i").test(h)){const at=h.search(new RegExp(alt));
+  /* review 44: a heading that already says "A note from the host" (banquet) keeps the bare name under it, never a second "A note from" */
+  {const by=String(n.by||"").trim();if(by&&!new RegExp("A note from "+rx(e(by)),"i").test(h)&&!/>\s*A note from the [a-z]+(?: [a-z]+)?\s*</i.test(h)){const at=h.search(new RegExp(alt));
     if(at>=0){const tail=h.slice(at),re=new RegExp(`>(\\s*)(?:[\u2014\u2013-]\\s*)?(${rx(e(by))}|${rx(by)}|${rx(e(by).replace(/'/g,"&#39;"))})(\\s*)<`),m=tail.match(re);
       if(m)h=h.slice(0,at)+tail.replace(re,(x,a,b2,c)=>`>${a}<span data-notefrom>A note from </span>${b2}${c}<`)}}}
   return h}
@@ -2140,7 +2153,10 @@ const dryJoin=ps=>{const out=[],at=new Map();for(const [x,s] of ps){const m=Stri
 function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
   /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
   const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}
-  nodes.forEach((n,i)=>{const t=n.nodeValue;if(!/[a-z]/i.test(t))return;const pv=i?nodes[i-1].nodeValue.slice(-24):"",nx=i<nodes.length-1?nodes[i+1].nodeValue.slice(0,24):"",gl=(a,b)=>a&&b&&!/\s$/.test(a)&&!/^\s/.test(b)?" ":"";
+  /* review 44: the context only reaches across nodes in the same line (a heading and the note under it are two lines): the phone's
+     "Osmanthus honey soda" over "Soda water sweetened..." lost its "Soda" (Mulan, Logan, Arrival, I Love You, Man) */
+  const blk=x=>{const e=x.parentElement;return e&&(e.closest("p,h1,h2,h3,h4,h5,h6,li,td,th,dt,dd,button")||e)},same=(a,b)=>a&&b&&blk(a)===blk(b);
+  nodes.forEach((n,i)=>{const t=n.nodeValue;if(!/[a-z]/i.test(t))return;const pv=i&&same(nodes[i-1],n)?nodes[i-1].nodeValue.slice(-24):"",nx=i<nodes.length-1&&same(nodes[i+1],n)?nodes[i+1].nodeValue.slice(0,24):"",gl=(a,b)=>a&&b&&!/\s$/.test(a)&&!/^\s/.test(b)?" ":"";
     const pre=pv+gl(pv,t),post=gl(t,nx)+nx,all=dryText(pre+t+post,on);let v=dryText(t,on);
     if(all.startsWith(dryText(pre,on)===pre?pre:"\u0000")&&all.endsWith(post)&&all.length>=pre.length+post.length)v=all.slice(pre.length,all.length-post.length||undefined);
     if(v!==t)todo.push([n,v])});
@@ -2469,7 +2485,7 @@ function pfFmt(u,p,all){const gs=(n,sep)=>String(n).replace(/\B(?=(\d{3})+(?!\d)
     case "kr":return gs(u,",")+" kr";
     case "sfx":{const pl=all&&all.find(x=>x.k==="sfx"&&x.u!==1),nm=u===1?pfOne(p.name):p.u!==1?p.name:pl?pl.name:p.name+"s";return gs(u,",")+" "+nm}
     case "pfx":return p.pre+gs(u,p.pre==="Rp "?".":",");
-    default:return (p.pre||"")+u}}
+    default:return (p.pre||(p.k==="n"&&window.__pfDollar?"$":""))+u}}/* review 44: a dollar card that prints whole-number prices ("7", "21") marks them "$7" too (Venom's corner store, the JFK food court and Toretto's read as unpriced) */
 function sumFix(root){if(!root)return 0;
   /* a price repeated in a line of text ("Frosty Palace burger, 1.50, with a cup of coffee") is copied from the dish's own printed price */
   for(const e of root.querySelectorAll("[data-echo]")){const src=root.querySelector(`[data-echo-src="${e.getAttribute("data-echo")}"]`);if(src&&src.textContent.trim())e.textContent=src.textContent.trim()}
@@ -2529,7 +2545,7 @@ function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
     const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
   for(const t of N)if(/,\s*,/.test(t.nodeValue))t.nodeValue=t.nodeValue.replace(/\s*,\s*,\s*/g,", ");
   root.dataset.nopay="1";return T.length}
-function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;const n=priceFix0(root,menu,f,fl,era,fmt);if((fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"||root.dataset.nopay)return n;
+function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;window.__pfDollar=!(fl&&fl.currency&&fl.currency!=="$")&&fmt!=="own";let n;try{n=priceFix0(root,menu,f,fl,era,fmt)}finally{window.__pfDollar=false}if((fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"||root.dataset.nopay)return n;
   /* review 35: one way to write cents: "60¢" on an American (or any non-Australian) dollar card, "60c" on an Australian or New Zealand one */
   const k=pfMark(root);{const au=f&&f.theme==="aussie",tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){const m=t.nodeValue.match(/^(\s*)(\d{1,2})(¢|c)(\s*)$/);if(m&&m[3]!==(au?"c":"¢"))t.nodeValue=m[1]+m[2]+(au?"c":"¢")+m[4]}}
   return n+k}
@@ -2741,6 +2757,13 @@ const HOME_WORDS={lab:{"Ration sheet":"Tonight's sheet","Rations":"Snacks","Hot 
 const homeVenue=fl=>!!fl&&fl.home!==false&&(fl.home===true||/\b(house|home|kitchen|family|apartment|flat|cottage|homestead|farmhouse|driveway|backyard|pantry)\b/i.test(String(fl.venue||""))&&!/\b(cafe|caf\u00e9|cafeteria|canteen|mess|diner|bar|pub|restaurant|hotel|club|concessions?|stand|arena|stadium|court|break room|lab|laboratory|headquarters|hq)\b/i.test(String(fl.venue||"").replace(/driveway court/i,"driveway")));
 function libWords(html,fl,fmt){const HW=fmt&&HOME_WORDS[fmt]&&homeVenue(fl)?HOME_WORDS[fmt]:null;const W=HW?Object.assign({},HW,fl&&fl.words||{}):fl&&fl.words;if(!W)return html;const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   return String(html).replace(/>([^<]+)</g,(m,t)=>{for(const k in W){const ks=[...new Set([k,esc(k),esc(k).replace(/'/g,"&#39;"),k.replace(/'/g,"\u2019")])];const tpl=HW&&k in HW&&!(fl&&fl.words&&k in fl.words)/* review 43: a layout's stock word swaps only as that word, in its own case or capitals, never inside a dish ("Comedian's badge cookies") */;for(const kk of ks){const kq=kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");const re=tpl?new RegExp("(?<![A-Za-z])(?:"+kq+"|"+kq.toUpperCase()+")(?![A-Za-z])","g"):new RegExp(kq,"gi");t=t.replace(re,x=>{const n=esc(W[k]);return x===x.toUpperCase()&&x!==x.toLowerCase()?n.toUpperCase():n})}}return ">"+t+"<"})}
+/* review 44: words fit where the film is set. On a card set in America (the tests/spelling.test.cjs rule, US_NOT kept in step with its NOTUS)
+   the layout's stock headings read the American way: a heading that is only "Sweets" or "Afters" reads Desserts or Dessert, "Takeaway"
+   reads Takeout. Dish names and notes are left alone (their words are fixed in the data) */
+const US_NOT=new Set(['The Babadook (2014)','Finding Nemo (2003)','Mission: Impossible 2 (2000)','Top End Wedding (2019)','Anyone But You (2023)','Babe (1995)','Happy Feet (2006)','Peter Rabbit (2018)','Peter Rabbit 2: The Runaway (2021)','Mad Max (1979)','Mad Max 2 (1981)','Mad Max: Fury Road (2015)','Furiosa: A Mad Max Saga (2024)','Wolf Creek (2005)','Crocodile Dundee (1986)','Crocodile Dundee II (1988)','Moulin Rouge! (2001)','Australia (2008)','Hunt for the Wilderpeople (2016)','Boy (2010)','Eagle vs Shark (2007)','What We Do in the Shadows (2014)','Next Goal Wins (2023)']);
+function usCard(f,fl){fl=fl||{};const id=f&&(f.id||f.title+" ("+f.year+")");return !!f&&f.theme!=="aussie"&&f.theme!=="galaxy"&&!US_NOT.has(id)&&!fl.currency&&fl.world!=="storybook"&&(!fl.country||fl.country==="US")}
+function libUS(html,f,fl){if(!usCard(f,fl))return html;
+  return String(html).replace(/>(\s*)(Sweets|SWEETS|Afters|AFTERS|Takeaway orders|TAKEAWAY ORDERS|Takeaway|TAKEAWAY)(\s*)</g,(m,a,w,b)=>{const lo=w.toLowerCase(),to=lo==="sweets"?"Desserts":lo==="afters"?"Dessert":lo==="takeaway orders"?"Takeout orders":"Takeout";return ">"+a+(w===w.toUpperCase()?to.toUpperCase():to)+b+"<"})}
 /* 8 Nov: a quote that ends a note keeps its own stop: layouts that add a full stop leave "There goes my milk!". as "There goes my milk!" (text only) */
 function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */.replace(/([^.\s])\.\.(?=\s|$)/g,"$1.")/* review 32: a joined line never prints "midnight.." (an ellipsis of three stays) */+"<")}
 /* review 39 (Josh's call): a hand-built card that does not print its Showtime cue gets a cue strip along the foot, in the card's own ink,
@@ -2809,7 +2832,7 @@ async function show(f,preferSig){
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,LM=libMenu(fullMenu(f,menu,L.fmt)),r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:LM,poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,focus:L.focus||null,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
-      r.faces=window.priceTidy(r.faces.map(h=>libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour,L.fmt))),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
+      r.faces=window.priceTidy(r.faces.map(h=>libUS(libStops(libWords(libNoteKind(libVary(h,f),L.flavour),L.flavour,L.fmt)),f,L.flavour)),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);try{houseCap(card,LM,L.fmt)}catch(e){console.warn("house prices",e)}try{quoteMarks(card,L.flavour)}catch(e){}try{curlyQuotes(card)}catch(e){}current.printMenu=LM;try{priceFix(card,LM,f,L.flavour,L.era,L.fmt)}catch(e){console.warn("price sense",e)}try{sumFix(card)}catch(e){console.warn("totals",e)}try{headFix(card,LM)}catch(e){}try{noteFromFit(card);document.fonts&&document.fonts.ready.then(()=>noteFromFit(card))}catch(e){}dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}

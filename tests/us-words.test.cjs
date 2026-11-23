@@ -10,7 +10,7 @@ const rj=p=>JSON.parse(fs.readFileSync(path.join(R,p),'utf8'));
 const FL=rj('data/film-flavour.json'),FILMS=rj('data/films.json'),HO=rj('data/film-house.json');
 const SKIP=new Set(['Thor: The Dark World (2013)','Thor: Ragnarok (2017)','Cruella (2021)','Cars 2 (2011)','Arthur Christmas (2011)','Alien 3 (1992)','Avengers: Age of Ultron (2015)','Willy Wonka & the Chocolate Factory (1971)','The Fifth Element (1997)','Thor: Love and Thunder (2022)','Austin Powers: The Spy Who Shagged Me (1999)']);
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const AU=/\b(spring onions?|icing sugar|rump|spuds?|golden syrup|thickshakes?|cos( lettuce)?|fairy floss|toffee apples?|cordial|tinned|marylands|chicken salt(ed)?|salt beef|silverside|bicarb|marie rose|hot chips|potato gems|pikelets|mash)\b/i;
+const AU=/\b(spring onions?|icing sugar|rump|spuds?|golden syrup|thickshakes?|cos( lettuce)?|fairy floss|toffee apples?|cordial|tinned|marylands|chicken salt(ed)?|salt beef|silverside|bicarb|marie rose|hot chips|potato gems|pikelets|mash|(?<!royal )icing|rashers?|choc[- ]chips?|pouring cream|tyres?|takeaway)\b/i;/* review 44: icing, rashers, choc chip, pouring cream, tyre, takeaway */
 const bad=[];
 for(const f of FILMS){const id=f.title+' ('+f.year+')',fl=FL[id]||{};
   const us=f.theme!=='aussie'&&f.theme!=='galaxy'&&!NOTUS.has(id)&&!fl.currency&&fl.world!=='storybook'&&(!fl.country||fl.country==='US');
@@ -20,5 +20,5 @@ for(const f of FILMS){const id=f.title+' ('+f.year+')',fl=FL[id]||{};
   const dp=path.join(R,'data/diet',slug(id)+'.json');if(fs.existsSync(dp))for(const v of Object.values(rj('data/diet/'+slug(id)+'.json').notes||{}))strs.push(...Object.values(v));
   const rp=path.join(R,'data/recipes',slug(id)+'.json');if(fs.existsSync(rp))for(const l of Object.values(rj('data/recipes/'+slug(id)+'.json')))if(Array.isArray(l))for(const it of l)if(it&&it.note)strs.push(it.note);
   for(const s of strs){if(typeof s!=='string')continue;const m=s.match(AU);if(m&&!/white bean mash|Maryland crab/i.test(s))bad.push(`${id}: "${m[0]}" in: ${s.slice(0,110)}`)}}
-if(bad.length){console.log(`FAIL: ${bad.length} Australian words on American cards:\n  `+bad.slice(0,40).join('\n  '));process.exit(1)}
+if(bad.length){console.log(`FAIL: ${bad.length} Australian words on American cards:\n  `+bad.slice(0,400).join('\n  '));process.exit(1)}
 console.log('PASS: American cards print American food words (names, notes, house lines, veg and no-alcohol notes).');

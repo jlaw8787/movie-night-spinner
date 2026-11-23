@@ -5,7 +5,7 @@
      node scripts/check-pages.cjs ["Film (Year)" ...] */
 const fs=require('fs'),path=require('path');const R=path.join(__dirname,'..');
 const rd=p=>fs.readFileSync(path.join(R,p),'utf8'),rj=p=>JSON.parse(rd(p));
-const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const slug=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');/* review 44: page addresses fold accents */
 const N=s=>String(s||'').toLowerCase().replace(/&amp;/g,'&').replace(/&#39;|&quot;|[’'"“”]/g,"'").replace(/[^a-z0-9à-ÿ']+/g,' ').trim();
 const films=rj('data/films.json'),NAMED=process.argv.slice(2);
 const E=(()=>{const s=rd('movie-menus.js'),pre='const MOVIE_MENU_EDITIONS = ';return JSON.parse(s.slice(s.indexOf(pre)+pre.length).replace(/;\s*$/,''))})();
