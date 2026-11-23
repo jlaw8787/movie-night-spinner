@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Vince's double cheese sliders with fries",
+   "n": "Vince's double cheese mini burgers with fries",
    "course": "s",
    "prep_min": 8,
    "cook_min": 20,
@@ -17,7 +17,7 @@
     {
      "q": 8,
      "u": "",
-     "item": "soft slider buns",
+     "item": "mini burger buns",
      "aisle": "Bakery"
     },
     {
@@ -85,7 +85,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Vince's double cheese mushroom sliders with fries (vegetarian)",
+     "n": "Vince's double cheese mushroom mini burgers with fries (vegetarian)",
      "course": "s",
      "prep_min": 7,
      "cook_min": 20,
@@ -106,7 +106,7 @@
       {
        "q": 8,
        "u": "",
-       "item": "soft slider buns",
+       "item": "mini burger buns",
        "aisle": "Bakery"
       },
       {
@@ -156,7 +156,7 @@
        "min": 8
       },
       {
-       "text": "Build the sliders with onion, pickle and sauce and serve with the fries.",
+       "text": "Build the mini burgers with onion, pickle and sauce and serve with the fries.",
        "min": 4
       }
      ]

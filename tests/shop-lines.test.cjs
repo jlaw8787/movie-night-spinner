@@ -20,8 +20,9 @@ assert.ok(lines(ee,8).some(l=>/^1 bottle sesame oil@/.test(l)),'sesame oil is a 
 
 // fix 6: notes inside an item follow the guests
 const find=(id,g,re)=>{const l=lines(id,g).find(x=>re.test(x));assert.ok(l,`${id} at ${g}: no line for ${re}`);return l};
-assert.match(find('romancing-the-stone-1984',9,/lime juice/),/\(about 2[23] limes\)/,'lime count at 9');
-assert.match(find('romancing-the-stone-1984',2,/lime juice/),/\(about 5 limes\)/,'lime count at 2');
+/* review 40: lime juice by the fruit folds into the whole limes on the list */
+assert.match(find('romancing-the-stone-1984',9,/limes?@/),/^(2[3-9]|3\d) limes@/,'lime count at 9');
+assert.match(find('romancing-the-stone-1984',2,/limes?@/),/^[5-9] limes@/,'lime count at 2');
 assert.match(find('rocky-v-1990',9,/steaks/),/about 1\.[34]kg/,'steak weight at 9');
 // "round", "rib" and the like name the cut, not a container: "9 thin beef round steaks", never "beef rounds of steaks"
 assert.match(find('rocky-v-1990',9,/steak/),/^9 thin beef round steaks, about 1\.[34]kg@Meat$/,'round steaks read properly at 9');
@@ -29,7 +30,8 @@ assert.match(find('rocky-v-1990',1,/steak/),/^1 thin beef round steak, about 150
 assert.ok(!lines('con-air-1997',9).some(l=>/rounds of/.test(l)),'no "rounds of" in Con Air');
 assert.match(find('how-the-grinch-stole-christmas-2000',9,/cob/),/^3 round cob loaves@Bakery$/,'round cob loaves');
 assert.match(find('madagascar-2005',1,/rib eye/),/^1 rib eye steak@/,'one rib eye steak, singular');
-{const m=find('rocky-v-1990',9,/milk,/),sum=[...m.matchAll(/(\d+(?:\.\d+)?)\s?(ml|L)\b(?= for)/g)].reduce((a,x)=>a+(+x[1])*(x[2]==='L'?1000:1),0);assert.ok(sum>1400&&sum<1700,'milk split adds up to the line: '+m)}
+/* review 40: no "for the gravy" split on the list, one milk line */
+{const m=find('rocky-v-1990',9,/milk@/),q=m.match(/^(\d+(?:\.\d+)?)\s?(ml|L|\u00a0L)/),sum=q?(+q[1])*(/L/.test(q[2])?1000:1):0;assert.ok(sum>1400&&sum<1700&&!/ for /.test(m),'one milk line: '+m)}
 // a tin or bag size never scales
 assert.ok(!lines('rocky-v-1990',9).some(l=>/\(\d+ ?g\)/.test(l)&&/tins?|cans?/.test(l)&&!/\(400 ?g\)/.test(l)),'tin sizes stay put');
 

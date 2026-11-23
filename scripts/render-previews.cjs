@@ -22,9 +22,13 @@ const wide=args.includes('--wide')?new Set(execFileSync('python3',['-c',"import 
 const PS=require('./preview-stamp.cjs'),SF=path.join(ROOT,PS.STAMPS),stamps=fs.existsSync(SF)?JSON.parse(fs.readFileSync(SF,'utf8')):{};
 const stale=args.includes('--stale');
 const PF=path.join(ROOT,'data/card-print.json'),printed=fs.existsSync(PF)?JSON.parse(fs.readFileSync(PF,'utf8')):{};
+/* review 40: a hand-built one-off prints its own dishes (formats/<key>.js), so its film page reads what the card and phone menu print:
+   each phone dish (name, the description and film line as the card prints them, the phone's own recipe), kept only when the card prints
+   the name. Saved to data/card-print-hb.json */
+const HF=path.join(ROOT,'data/card-print-hb.json'),hbPrinted=fs.existsSync(HF)?JSON.parse(fs.readFileSync(HF,'utf8')):{};
 const todo=(named.length?named:films).filter(id=>wide?wide.has(slug(id)):stale?stamps[id]!==PS.stamp(id):all||named.length||!fs.existsSync(path.join(OUT,slug(id)+'.jpg')));
 /* the fingerprint is saved as each preview lands, and written out every 25 films so a stopped run keeps what it did */
-const saveStamps=()=>{const o={};for(const k of Object.keys(stamps).sort())o[k]=stamps[k];fs.writeFileSync(SF,JSON.stringify(o,null,0).replace(/","/g,'",\n"')+'\n');const q={};for(const k of Object.keys(printed).sort())q[k]=printed[k];fs.writeFileSync(PF,'{\n'+Object.entries(q).map(([k,v])=>JSON.stringify(k)+':'+JSON.stringify(v)).join(',\n')+'\n}\n')};
+const saveStamps=()=>{const o={};for(const k of Object.keys(stamps).sort())o[k]=stamps[k];fs.writeFileSync(SF,JSON.stringify(o,null,0).replace(/","/g,'",\n"')+'\n');const q={};for(const k of Object.keys(printed).sort())q[k]=printed[k];fs.writeFileSync(PF,'{\n'+Object.entries(q).map(([k,v])=>JSON.stringify(k)+':'+JSON.stringify(v)).join(',\n')+'\n}\n');const h={};for(const k of Object.keys(hbPrinted).sort())h[k]=hbPrinted[k];fs.writeFileSync(HF,'{\n'+Object.entries(h).map(([k,v])=>JSON.stringify(k)+':'+JSON.stringify(v)).join(',\n')+'\n}\n')};
 const server=spawn('python3',['-m','http.server',PORT,'--bind','127.0.0.1'],{cwd:ROOT,stdio:'ignore'});
 process.on('exit',()=>server.kill());
 const ready=async()=>{for(let i=0;i<60;i++){const ok=await new Promise(r=>{http.get(ORIGIN+'/index.html',res=>{res.resume();r(res.statusCode===200)}).on('error',()=>r(false))});if(ok)return;await new Promise(r=>setTimeout(r,250))}throw Error('server did not start')};
@@ -43,6 +47,14 @@ async function snap(page,id){
      alcohol-free on a dry card, house lines marked) to data/card-print.json, under the same fingerprint as the preview */
   try{printed[id]=await page.evaluate(()=>{const f=current,m=f.printMenu||f.menu||{},dry=typeof dryNow==='function'&&dryNow(f),T=x=>{let t=String(x||'');try{t=dietText(f,t)}catch(e){}try{if(dry)t=dryText(t,true)}catch(e){}return t};
     const out=[];for(const k of ['s','m','w','d'])for(const it of (m[k]||[]))if(it&&(it.label||it.n))out.push([k,T(it.label||it.n),T(it.note||''),it.house?1:0]);return out})}catch(e){}
+  try{const hb=await page.evaluate(()=>{const a=typeof pvArgs!=='undefined'&&pvArgs;if(!a||!a[1]||a[1].fmt==='lib')return null;
+    const N=t=>String(t||'').toLowerCase().replace(/[\u2018\u2019']/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/[^a-z0-9]+/g,' ').trim(),face=N(card.textContent);
+    const menu=a[2]||{},cs=FMT_COURSES.map(c=>c[0]).filter(c=>(menu[c]||[]).some(it=>it&&it.label)),out=[];
+    fmtPhone.querySelectorAll('.fp-sec').forEach((sec,gi)=>{const c=cs[+sec.dataset.g]||'m';sec.querySelectorAll('.fp-dish').forEach(ar=>{const q=s=>{const e=ar.querySelector(s);return e?e.textContent.replace(/\s+/g,' ').trim():''};
+      const n=q('.fp-name'),desc=q('.fp-desc'),film=q('.fp-film'),on=t=>t&&face.includes(N(t));if(!n)return;
+      const note=[on(desc)&&desc,on(film)&&film].filter(Boolean).join(' ')||desc||film;
+      out.push({c,n,note,printed:on(n)?1:0,ing:[...ar.querySelectorAll('.fp-ing li')].map(x=>x.textContent.trim()),steps:[...ar.querySelectorAll('.fp-steps li,.fp-step1')].map(x=>x.textContent.trim())})})});
+    return out});if(hb)hbPrinted[id]=hb;else delete hbPrinted[id]}catch(e){}
   const tmp=path.join(os.tmpdir(),'rp-'+slug(id)+'.png');
   await page.locator('#snapWrap').screenshot({path:tmp});
   return tmp;

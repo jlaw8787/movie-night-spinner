@@ -267,7 +267,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== surf report strip ===== */
   /* 14 Nov (menu scan): the full-height poster took 593px and left the board tiny; the poster panel is 520 wide and a still fills under the poster */
   const SH=84,PH=H-SH,PW=PM?520:740;
-  const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
+  /* review 40: British and Irish water runs cold (About Time's Cornwall printed 23°C); flavour.water sets it outright */
+  const swell=(+num%5)+2,cold=/^£/.test(String(fl.currency||""))||/^(GB|IE|UK)$/i.test(String(fl.country||"")),water=fl.water!=null?+fl.water:cold?(+yy%4)+13:(+yy%7)+17,tideH=(+yy%12)||12;
   const cells=beach?[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water}°C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]]
     :[["Out front",""],["Sky",ctx.tone==="eerie"?"Fog":["Fine","Clear","Cloudy","Overcast"][+num%4]],["Wind",["still","light breeze","gusty","fresh"][+num%4]],["Temp",/\bwinter\b/i.test(String(fl.sign||"")+" "+String(fl.venue||""))?`-${(+yy%9)+6}°C`:`${water+4}°C`],[FAMILY.has(ctx.f&&ctx.f.theme)||HOMEV?"Kitchen shuts":"Last orders",`${(+yy%3)+8}:${["00","15","30","45"][+num%4]}`]];
   /* 15 Nov: optional per film, flavour strip ([[head,""],[label,value],...]) and forecast replace the stock "Out front" cells away from the beach (The Last Starfighter) */

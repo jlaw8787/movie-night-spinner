@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Car-crusher cheeseburger sliders",
+   "n": "Car-crusher cheeseburger mini burgers",
    "course": "s",
    "prep_min": 10,
    "cook_min": 12,
@@ -17,7 +17,7 @@
     {
      "q": 8,
      "u": "",
-     "item": "soft slider buns",
+     "item": "mini burger buns",
      "aisle": "Bakery"
     },
     {
@@ -89,7 +89,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Car-crusher smashed mushroom sliders (vegetarian)",
+     "n": "Car-crusher smashed mushroom mini burgers (vegetarian)",
      "course": "s",
      "prep_min": 10,
      "cook_min": 15,
@@ -110,7 +110,7 @@
       {
        "q": 8,
        "u": "",
-       "item": "soft slider buns",
+       "item": "mini burger buns",
        "aisle": "Bakery"
       },
       {

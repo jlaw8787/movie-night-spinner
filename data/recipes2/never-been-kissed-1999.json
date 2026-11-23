@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Coleslaw king pulled chicken sliders",
+   "n": "Coleslaw king pulled chicken rolls",
    "course": "s",
    "prep_min": 20,
    "cook_min": 25,
@@ -59,7 +59,7 @@
     {
      "q": 8,
      "u": "",
-     "item": "soft slider rolls",
+     "item": "soft roll rolls",
      "aisle": "Bakery"
     }
    ],
@@ -85,7 +85,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Coleslaw king crispy tofu sliders (vegetarian)",
+     "n": "Coleslaw king crispy tofu rolls (vegetarian)",
      "course": "s",
      "prep_min": 20,
      "cook_min": 20,
@@ -136,7 +136,7 @@
       {
        "q": 8,
        "u": "",
-       "item": "soft slider rolls",
+       "item": "soft roll rolls",
        "aisle": "Bakery"
       }
      ],
@@ -150,7 +150,7 @@
        "min": 5
       },
       {
-       "text": "Make the slaw and build the sliders.",
+       "text": "Make the slaw and build the rolls.",
        "min": 20
       }
      ]

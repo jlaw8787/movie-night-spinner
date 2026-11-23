@@ -1,0 +1,29 @@
+{
+ "id": "Rocky III (1982)",
+ "ops": [
+  {
+   "old": "Mix sour cream with lime juice for a crema.",
+   "new": "Mix sour cream with lime juice.",
+   "done": true
+  },
+  {
+   "old": "lime crema",
+   "new": "lime sour cream",
+   "done": true
+  },
+  {
+   "old": "the crema",
+   "new": "the lime sour cream",
+   "done": true
+  },
+  {
+   "old": "crema",
+   "new": "sour cream",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-23",
+ "misses": [
+  "not found: the crema"
+ ]
+}

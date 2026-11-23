@@ -242,7 +242,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const setNo=num||(yy?"8"+yy[1]:"88");
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span data-sum="set" data-sum-k="1.7" style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
-     <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">The first of every course for two, packed in one bag, ready by the opening credits.</div></div>`;
+     <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">${HOME?"The first of every course for two, on the table by the opening credits.":"The first of every course for two, packed in one bag, ready by the opening credits."}</div></div>`;
   /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
   const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];
   const tileSrc=i=>extra.length?IMG+"w780"+extra[i%extra.length]:"";
@@ -254,7 +254,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:0;top:0;width:1344px;height:226px;overflow:hidden;background:#111">${photo(second,stills[1]?"50% 42%":"50% 30%")}
      <div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
      <div style="position:absolute;left:28px;bottom:14px;width:398px;font:${E.dw} 34px/1.02 ${E.disp};color:#fff;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6);text-wrap:balance">${esc(venue.length>34?"The menu":venue)}</div>
-     <div style="position:absolute;right:28px;bottom:16px;font:700 16px/1 ${E.body};color:#fff;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 2px 6px rgba(0,0,0,.7)">Order by number</div></div>
+     <div style="position:absolute;right:28px;bottom:16px;font:700 16px/1 ${E.body};color:#fff;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 2px 6px rgba(0,0,0,.7)">${HOME?"Pass it round":"Order by number"}</div></div>
    <div style="position:absolute;left:0;right:0;top:226px;height:6px;background:${BAR}"></div>
    ${pnl(0,best.sp[0].map(course).join(""))}
    ${pnl(1,best.sp[1].map(course).join(""))}

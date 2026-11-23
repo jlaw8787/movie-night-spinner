@@ -7211,7 +7211,8 @@
     "San Francisco, one night only"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Anyone But You (2023)": {
   "venue": "Sydney Harbour Reception",
@@ -10929,7 +10930,8 @@
     "Dude. Sweet. Paid."
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": ""
  },
  "Billy Madison (1995)": {
   "venue": "Madison Hotels HQ",
@@ -12223,8 +12225,8 @@
   "pay": ""
  },
  "A Christmas Story (1983)": {
-  "venue": "Chop Suey Palace",
-  "sign": "Chop Suey Palace, Hohman",
+  "venue": "The Parker Kitchen",
+  "sign": "The Parkers, Cleveland Street, Hohman",
   "note": {
    "text": "Mum made her famous meatloaf again. I'll eat every bite if it means Santa hears about it.",
    "by": "Ralphie Parker",
@@ -12245,7 +12247,9 @@
     "No backing out."
    ]
   },
-  "number": "200"
+  "number": "200",
+  "home": true,
+  "pay": ""
  },
  "The Muppet Christmas Carol (1992)": {
   "venue": "Fozziwig's Party Hall",
@@ -16378,7 +16382,17 @@
     "Check which one is yours"
    ]
   },
-  "number": "1926"
+  "number": "1926",
+  "words": {
+   "MESS OPEN": "OVEN ON",
+   "Ration sheet.": "Bakery board.",
+   "Rations": "From the oven",
+   "Hot meals": "Pastries",
+   "Sweet issue": "Sweets",
+   "Canteen": "Counter",
+   "Return tray to the hatch.": "Thank you for your custom.",
+   "Rations subject to supply.": "Baked fresh daily."
+  }
  },
  "The Hobbit: An Unexpected Journey (2012)": {
   "venue": "Bag End Dining Room",
@@ -19781,7 +19795,8 @@
     "Open after midnight"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 0.55
  },
  "Once Upon a Time in Mexico (2003)": {
   "venue": "Puerco Pibil Stand",

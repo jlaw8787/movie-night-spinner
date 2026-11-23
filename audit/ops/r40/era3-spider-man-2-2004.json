@@ -1,0 +1,29 @@
+{
+ "id": "Spider-Man 2 (2004)",
+ "ops": [
+  {
+   "old": "cold brew over ice with milk",
+   "new": "strong iced coffee with milk",
+   "done": true
+  },
+  {
+   "old": "150ml cold brew",
+   "new": "150ml strong cold coffee",
+   "done": true
+  },
+  {
+   "old": "Cold brew",
+   "new": "Strong coffee",
+   "done": true
+  },
+  {
+   "old": "Refrigerate leftover cold brew.",
+   "new": "Refrigerate leftover coffee."
+  }
+ ],
+ "misses": [
+  "not found: cold brew over ice with milk",
+  "not found: 150ml cold brew",
+  "not found: Cold brew"
+ ]
+}

@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Two out of three sliders",
+   "n": "Two out of three mini burgers",
    "course": "s",
    "prep_min": 9,
    "cook_min": 8,
@@ -17,7 +17,7 @@
     {
      "q": 8,
      "u": "",
-     "item": "small soft slider buns",
+     "item": "small mini burger buns",
      "aisle": "Bakery"
     },
     {
@@ -69,7 +69,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Two out of three mushroom sliders (vegetarian)",
+     "n": "Two out of three mushroom mini burgers (vegetarian)",
      "course": "s",
      "prep_min": 10,
      "cook_min": 10,
@@ -90,7 +90,7 @@
       {
        "q": 8,
        "u": "",
-       "item": "small soft slider buns",
+       "item": "small mini burger buns",
        "aisle": "Bakery"
       },
       {

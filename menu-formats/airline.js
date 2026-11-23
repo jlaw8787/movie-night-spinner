@@ -294,7 +294,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const liv=toHex(mix(hex(K.deep),hex(K.acc),era===3||era===4?.25:.08)),onLiv="#fffaf0";
   const face=inner=>`<div data-fmtface="${ID}" style="position:absolute;inset:0;width:${W}px;height:${H}px;overflow:hidden;background:${paper};color:${K.ink};font-family:${B}">
     ${paperLayers(t,dark,H)}${inner}${P.border==="band"||P.border==="bleed"||G==="jet"?"":borderHTML(P.border==="deco"?"double":P.border,K.acc,T.gilt,P.border==="round"?18:0).replace(/inset:1[246]px/g,"inset:8px").replace(/inset:21px/g,"inset:13px").replace(/inset:17px/g,"inset:11px").replace(/inset:26px/g,"inset:16px")}</div>`;
-  const price=(k,i)=>{if(k==="m"||k==="w")return"Included";
+  /* review 40: the meal is all included (starters too, they read as a gap among "Included" mains); only the trolley charges */
+  const price=(k,i)=>{if(k==="s"||k==="m"||k==="w")return"Included";
     const base={s:[6,7,5,8],d:[5,7,6,8]}[k][i%4];if(k==="d"&&i===0)return eggPrice(base,"",yy,Math.max(era,0));return money(base,era)};
   const kick=(s,col,al)=>`<div data-fs="14" style="font:700 16px/1.15 ${B};letter-spacing:.2em;text-transform:uppercase;color:${col||K.acc};text-align:${al||"left"}">${esc(s)}</div>`;
   /* era family sets the whole build of the card, not just its colours:

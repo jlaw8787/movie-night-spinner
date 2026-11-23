@@ -42,5 +42,24 @@ for(const [id,key] of Object.entries(idx)){const y=+(id.match(/\((\d{4})\)$/)||[
  for(const f of films){const id=`${f.title} (${f.year})`,fl=FL[id]||{};if(fl.world==="storybook")continue;const y=fl.priceEra?EY[fl.priceEra]:+f.year;if(!y)continue;
    const txt=[];for(const c of 'SMWK')for(const d of f[c]||[])if(Array.isArray(d))txt.push(d[0],d[1]);const h=house[id]||{};for(const k of ['s','d'])if(h[k])txt.push(h[k].n,h[k].note);
    for(const t of txt)for(const [rx,yr] of W2){if(y>=yr)continue;const m=String(t||'').match(rx);if(m&&!(LOCAL2[id]&&LOCAL2[id].test(m[0])))bad.push(`${id} (set about ${y}): "${m[0]}" in "${String(t).slice(0,60)}"`)}}}
+/* review 40: the year a film is set (data/film-set-year.json, else priceEra, else release) against food that came later, on the printed
+   dishes, house lines, hand-built specs (formats.js) and poster editions (movie-menus.js). Sliders before 2005, cold brew before 2008,
+   edible glitter before 2012, brown butter choc chip cookies and hot or chilli honey before 2010, whipped ricotta or goat's cheese before
+   2010, lime crema and fish tacos before 1985, ciabatta and tiramisu before 1985, aioli before 1985 in America, chipotle before 1990,
+   mezcal before 2008 outside Mexico, elderflower before 2000 in America, panko before 1995. Local food stays (Hawaii, Mexico, Japan). */
+{const FL=JSON.parse(fs.readFileSync(path.join(R,'data/film-flavour.json'),'utf8')),SY=JSON.parse(fs.readFileSync(path.join(R,'data/film-set-year.json'),'utf8'));
+ const EY={"1800s":1880,"1930s-40s":1940,"1950s":1955,"1960s":1965,"1970s":1975,"1980s":1985,"1990s":1995,"2000s":2005,"modern":2020};
+ const W3=[[/\bsliders?\b/i,2005],[/\bcold brew\b/i,2008],[/\bedible glitter\b/i,2012],[/\bbrown butter choc/i,2010],[/\b(hot|chill?i) honey\b(?! and lemon)/i,2010],[/\bwhipped (ricotta|goat)/i,2010],[/\blime crema\b/i,1985],[/\bfish tacos?\b/i,1985],[/\bciabatta\b/i,1985],[/\btiramis[uù]\b/i,1985],[/\bchipotle\b/i,1990],[/\bpanko\b/i,1995]];
+ const US=[/\baioli\b/i,1985],MEZ=[/\bmezcal\b/i,2008],ELD=[/\belderflower\b/i,2000];
+ const KEEP={"Harold & Kumar Go to White Castle (2004)":/slider/i,"Moana (2016)":/panko/i,"Moana 2 (2024)":/panko/i,"Shrek (2001)":/panko/i,"Shrek 2 (2004)":/glitter|aioli/i,"Point Break (1991)":/fish tacos?/i,"Top Gun (1986)":/fish tacos?/i,"The Shawshank Redemption (1994)":/fish tacos?/i,"Demolition Man (1993)":/fish tacos?|elderflower/i,"Return of the Jedi (1983)":/panko/i,"Star Wars (1977)":/mezcal/i,"Star Wars: Episode II - Attack of the Clones (2002)":/chill?i honey/i,"Desperado (1995)":/mezcal/i,"The Good, the Bad and the Ugly (1966)":/mezcal/i,"El Mariachi (1992)":/mezcal/i,"Once Upon a Time in Mexico (2003)":/mezcal|chipotle/i,"Three Amigos! (1986)":/chipotle/i,"Lost in Translation (2003)":/panko/i,"Kill Bill: Vol. 1 (2003)":/panko/i,"The Big Lebowski (1998)":/lime crema/i};
+ const E=(()=>{const t=fs.readFileSync(path.join(R,'movie-menus.js'),'utf8'),pre='const MOVIE_MENU_EDITIONS = ';return JSON.parse(t.slice(t.indexOf(pre)+pre.length).replace(/;\s*$/,''))})();
+ const FMT=fs.readFileSync(path.join(R,'formats.js'),'utf8'),blk=id=>{const i=FMT.indexOf(JSON.stringify(id)+':{');if(i<0)return '';const j=FMT.indexOf('\n  "',i+5);return FMT.slice(i,j<0?i+20000:j)};
+ const strs=v=>typeof v==='string'?[v]:Array.isArray(v)?v.flatMap(strs):v&&typeof v==='object'?Object.values(v).flatMap(strs):[];
+ for(const f of films){const id=`${f.title} (${f.year})`,fl=FL[id]||{};if(fl.world==="storybook")continue;if(["galaxy","fairytale"].includes(f.theme))continue;
+   const y=SY[id]||(fl.priceEra?EY[fl.priceEra]:+f.year);if(!y)continue;
+   const txt=[];for(const c of 'SMWK')for(const d of f[c]||[])if(Array.isArray(d))txt.push(d[0],d[1]);const h=house[id]||{};for(const k of ['s','d'])if(h[k])txt.push(h[k].n,h[k].note);
+   if(E[id])txt.push(...strs(E[id].menu||{}));const b=blk(id);if(b)txt.push(b.replace(/<[^>]*>/g,' '));
+   const rules=[...W3];if(!['aussie'].includes(f.theme)&&f.theme!=='mex')rules.push(US);if(f.theme!=='mex')rules.push(MEZ);if(!/Four Weddings|Sound of Music|My Fair Lady|Bambi|Narnia|Notting Hill|Bridget Jones|Paddington|Love Actually|About Time|Last Christmas|Harry Potter/.test(id))rules.push(ELD);
+   for(const t of txt)for(const [rx,yr] of rules){if(y>=yr)continue;const m=String(t||'').match(rx);if(m&&!(KEEP[id]&&KEEP[id].test(m[0])))bad.push(`${id} (set about ${y}): "${m[0]}" in "${String(t).slice(0,70)}"`)}}}
 if(bad.length){console.log(`FAIL: ${bad.length} dishes out of their time:\n  `+bad.join('\n  '));process.exit(1)}
 console.log('PASS: no 2010s food trends on films released before 2010');

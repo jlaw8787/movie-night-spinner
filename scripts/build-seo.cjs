@@ -31,11 +31,14 @@ const GENRES = rj('data/film-genres.json');
 const THEMES = (() => { const m = rd('app.js').match(/const T=(\{[\s\S]*?\}\});/); return m ? JSON.parse(m[1]) : {}; })();
 const COURSE = { s: 'Snacks', m: 'Mains', w: 'Sweets', d: 'Drinks' };
 const DRY_THEMES = (() => { const m = rd('app.js').match(/const DRY_THEMES=(\[[^\]]*\]);/); return m ? JSON.parse(m[1]) : []; })();
+const DRY_FILMS = (() => { const m = rd('app.js').match(/const DRY_FILMS=(\[[^\]]*\]);/); return m ? JSON.parse(m[1]) : []; })();
 /* review 31: the page uses the app's own split of a recipe's time (dishTimes in app.js), so pickling, chilling and resting count as
    waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
 /* review 37: printed names on the hand-built menus (formats.js items carry the recipe key k and the printed name n) */
 const CARD_PRINT = (() => { try { return rj('data/card-print.json'); } catch (e) { return {}; } })();
 const HOUSE = (() => { try { return rj('data/film-house.json'); } catch (e) { return {}; } })();
+/* review 40: hand-built one-offs, as their card and phone menu print them (render-previews saves it) */
+const CARD_HB = (() => { try { return rj('data/card-print-hb.json'); } catch (e) { return {}; } })();
 const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
   const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) { const m = {}; const walk = v => { if (Array.isArray(v)) v.forEach(walk); else if (v && typeof v === 'object') { if (typeof v.k === 'string' && typeof v.n === 'string' && v.n.trim() && v.n !== v.k) m[v.k.toLowerCase()] = v.n; Object.values(v).forEach(walk); } }; walk(spec); if (Object.keys(m).length) out[id] = m; }
   return out; })();
@@ -66,7 +69,7 @@ const ALL = films.map((f, i) => {
   for (const k of 'SMWK') for (const r of (d[k] || f[k] || [])) notes[String(r[0]).toLowerCase()] = r[1];
   /* review 38: kids, family, Christmas and wizard menus print the alcohol-free version of a dish (DRY_THEMES in app.js): so does the page
      (The Fellowship of the Ring's card serves hot buttered apple, the page listed hot buttered ale) */
-  const dry = DRY_THEMES.includes(f.theme);
+  const dry = DRY_THEMES.includes(f.theme) || DRY_FILMS.includes(id);
   const dishes = ((d.r2 && d.r2.dishes) || []).map(x0 => { const af = dry && x0.alt && x0.alt.af; const x = af ? { ...x0, ...af, n: String(af.n || x0.n).replace(/\s*\((alcohol|booze)[- ]free\)$/i, ''), alt: undefined, af: true, n0: x0.n } : x0;/* review 39: the card prints the name without "(alcohol-free)" */ return { ...x, note: notes[String(x.n).toLowerCase()] || notes[String(x0.n).toLowerCase()] || '' }; });
   if (!dishes.length) for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: [], steps: [] });
   /* review 32: every dish printed on the menu is on the page. The ones without a full recipe card (the menu cooks five) follow in their
@@ -82,6 +85,13 @@ const ALL = films.map((f, i) => {
     for (const y of dishes) { const r = by.get(L(y.n)) || by.get(L(y.n0)); if (r) { y.note = r[2]; used.add(r); } }
     for (const r of cp) if (!used.has(r) && !dishes.some(y => L(y.n) === L(r[1]))) { const hs = HOUSE[id] && HOUSE[id][r[0] === 'd' ? 'd' : 's']; dishes.push({ n: r[1], course: r[0], note: r[2], ingredients: [], steps: [], extra: true, house: !!r[3], veg: hs ? !hs.meat : false }); }
     const ord = { s: 0, m: 1, w: 2, d: 3 }; dishes.sort((a, b) => ord[a.course] - ord[b.course]); } }
+  /* review 40: a hand-built page lists only what the card prints, with the card's words and the phone menu's recipe (The Godfather page
+     had films.json notes and Goodfellas listed four dishes the card never prints) */
+  { const hb = CARD_HB[id]; if (hb && hb.length) { const L = t => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const keep = hb.filter(r => r.printed).map(r => { const was = dishes.find(y => L(y.n) === L(r.n) || L(y.n0) === L(r.n)) || {};
+      return { n: r.n, course: r.c, note: r.note, ingredients: (r.ing || []).map(t => ({ item: t })), steps: (r.steps || []).map(t => ({ text: t })), extra: !(r.ing || []).length,
+        prep_min: (r.ing || []).length ? was.prep_min : undefined, cook_min: (r.ing || []).length ? was.cook_min : undefined, wait_min: was.wait_min, veg: !!was.veg, af: !!was.af, _T: (r.ing || []).length && (was.prep_min || was.cook_min) ? dishTimes(was, 1) : null }; });
+    if (keep.length) { dishes.length = 0; dishes.push(...keep); } } }
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
 });
@@ -185,7 +195,7 @@ function filmPage(x) {
   const courses = [...'smwd'].map(c => {
     const ds = x.dishes.filter(y => y.course === c); if (!ds.length) return '';
     return `<h2>${COURSE[c]}</h2>\n` + ds.map(y => {
-      const T = (y.prep_min || y.cook_min) ? dishTimes(y, 1) : null;
+      const T = y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null);
       const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
       const ingr = (y.ingredients || []).map(i => `<li>${esc(ing(i))}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(degC(st.text))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
@@ -222,7 +232,7 @@ ${x.genres.length ? `<p class="small">Genres: ${x.genres.map(g => `<a href="/men
     image: img ? [img] : undefined, author: { '@type': 'Organization', name: 'Reel Dinner', url: SITE + '/' },
     recipeCategory: COURSE_CAT[y.course] || 'Main course', recipeYield: '4 servings',
     keywords: clean(`${shown}, movie night, ${f.year}, film menu`),
-    ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null)),
+    ...((T => T ? { prepTime: iso(T.prep), cookTime: T.cook ? iso(T.cook) : undefined, totalTime: iso(T.prep + T.cook + T.wait) } : {})(y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null))),
     suitableForDiet: y.veg ? 'https://schema.org/VegetarianDiet' : undefined,
     recipeIngredient: (y.ingredients || []).map(ing),
     recipeInstructions: (y.steps || []).length ? y.steps.map(st => ({ '@type': 'HowToStep', text: clean(degC(st.text)) })) : (y.how ? [{ '@type': 'HowToStep', text: clean(degC(y.how)) }] : undefined)

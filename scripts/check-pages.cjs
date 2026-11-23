@@ -10,7 +10,7 @@ const N=s=>String(s||'').toLowerCase().replace(/&amp;/g,'&').replace(/&#39;|&quo
 const films=rj('data/films.json'),NAMED=process.argv.slice(2);
 const E=(()=>{const s=rd('movie-menus.js'),pre='const MOVIE_MENU_EDITIONS = ';return JSON.parse(s.slice(s.indexOf(pre)+pre.length).replace(/;\s*$/,''))})();
 const FMT=rd('formats.js');
-const DRY=(()=>{const m=rd('app.js').match(/const DRY_THEMES=(\[[^\]]*\]);/);return m?JSON.parse(m[1]):[]})();
+const DRY=(()=>{const m=rd('app.js').match(/const DRY_THEMES=(\[[^\]]*\]);/);return m?JSON.parse(m[1]):[]})();const DRYF=(()=>{const m=rd('app.js').match(/const DRY_FILMS=(\[[^\]]*\]);/);return m?JSON.parse(m[1]):[]})();const isDry=f=>DRY.includes(f.theme)||DRYF.includes(f.title+' ('+f.year+')');
 const BOOZE=/\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|ale|beer|lager|stout|cider|sherry|highball|martini|margarita|mead|liqueur|schnapps|prosecco)\b/i;
 const block=id=>{const i=FMT.indexOf(JSON.stringify(id)+':{');if(i<0)return '';const j=FMT.indexOf('\n  "',i+5);return FMT.slice(i,j<0?i+20000:j)};
 let bad=[];const CP0=(()=>{try{return rj('data/card-print.json')}catch(e){return {}}})(),HO0=(()=>{try{return rj('data/film-house.json')}catch(e){return {}}})();
@@ -21,7 +21,7 @@ for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.i
   try{const r2=rj('data/recipes2/'+s+'.json');for(const d of r2.dishes||[]){src.push(d.n);for(const a of Object.values(d.alt||{}))src.push(a.n)}}catch(e){}
   /* review 39: the page shows the card's house lines too; the printed list (data/card-print.json) and the house lines count as on the card */
   for(const r of (CP0[id]||[]))src.push(r[1]);{const h=HO0[id]||{};for(const c of ['s','d'])if(h[c]&&h[c].n)src.push(h[c].n)}
-  const hay=N(src.join(' | '))+' | '+N(block(id));const dry=DRY.includes(f.theme);
+  const hay=N(src.join(' | '))+' | '+N(block(id));const dry=isDry(f);
   for(const n of names){if(!hay.includes(N(n)))bad.push(`${id}: page lists "${n}", not on the card`);
     else if(dry&&BOOZE.test(n.replace(/ginger beer|root beer|spiced cider|apple cider|butterbeer/ig,''))&&!/\b(free|juice|zero|soda|cordial|pie|braised|bites|figs|cake|sauce|gravy|stew|glazed|battered)\b/i.test(n))bad.push(`${id}: dry card, page lists "${n}"`)}}
 /* review 39: a shared-layout page prints every dish the card prints (house lines too) with the card's own note, and a dry page names no alcohol */
@@ -33,5 +33,16 @@ for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.i
   const arts=[...page.matchAll(/<h3>([^<]+)(?:<span[^>]*>[^<]*<\/span>)*<\/h3>\s*(?:<p>([^<]*)<\/p>)?/g)].map(m=>[N(DE(m[1])),DE(m[2]||'')]);
   if(lib){const cp=CP[id];if(!cp)bad.push(`${id}: no printed list in data/card-print.json (node scripts/render-previews.cjs "${id}")`);
     else for(const r of cp){const a=arts.find(x=>x[0]===N(r[1]));if(!a)bad.push(`${id}: card prints "${r[1]}", page leaves it out`);else if(N(a[1])!==N(r[2]))bad.push(`${id}: page note for "${r[1]}" differs from the card`)}}
-  if(DRY.includes(f.theme))for(const a of arts){const t=a[1].replace(/ginger beer|root beer|ginger ale|butterbeer|apple cider|wine vinegar|rum essence|sherry vinegar|sake lees/ig,'');if(NOTEBOOZE.test(t)&&!/\b(alcohol-free|non-alcoholic|zero)\b/i.test(t))bad.push(`${id}: dry page note names alcohol: "${a[1].slice(0,80)}"`)}}
+  if(isDry(f))for(const a of arts){const t=a[1].replace(/ginger beer|root beer|ginger ale|butterbeer|apple cider|wine vinegar|rum essence|sherry vinegar|sake lees/ig,'');if(NOTEBOOZE.test(t)&&!/\b(alcohol-free|non-alcoholic|zero)\b/i.test(t))bad.push(`${id}: dry page note names alcohol: "${a[1].slice(0,80)}"`)}}
+/* review 40: a hand-built page is the card: only dishes the card prints (data/card-print-hb.json, saved by render-previews), each with
+   the card's words and the phone menu's shopping lines */
+{const HB=(()=>{try{return rj('data/card-print-hb.json')}catch(e){return {}}})();
+ for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.includes(id))continue;if(!block(id))continue;const s=slug(id),p=path.join(R,'menu',s,'index.html');if(!fs.existsSync(p))continue;
+  const hb=HB[id];if(!hb){bad.push(`${id}: no hand-built print list in data/card-print-hb.json (node scripts/render-previews.cjs "${id}")`);continue}
+  const page=fs.readFileSync(p,'utf8'),arts=[...page.matchAll(/<article class="dish"[^>]*><h3>([^<]+)(?:<span[^>]*>[^<]*<\/span>)*<\/h3>\s*(?:<p>([^<]*)<\/p>)?([\s\S]*?)<\/article>/g)].map(m=>({n:N(DE(m[1])),note:DE(m[2]||''),ing:[...(m[3].match(/<ul>([\s\S]*?)<\/ul>/)||['',''])[1].matchAll(/<li>([^<]*)<\/li>/g)].map(x=>N(DE(x[1])))}));
+  const want=hb.filter(r=>r.printed);
+  for(const a of arts)if(!want.some(r=>N(r.n)===a.n))bad.push(`${id}: page lists "${a.n}", the card does not print it`);
+  for(const r of want){const a=arts.find(x=>x.n===N(r.n));if(!a){bad.push(`${id}: card prints "${r.n}", page leaves it out`);continue}
+   if(N(a.note)!==N(r.note))bad.push(`${id}: page note for "${r.n}" differs from the card`);
+   if((r.ing||[]).length&&a.ing.join('|')!==(r.ing||[]).map(N).join('|'))bad.push(`${id}: page recipe for "${r.n}" differs from the phone menu`)}}}
 console.log(bad.join('\n'));console.log(`check-pages: ${bad.length} page dishes not on their card`);process.exit(bad.length?1:0);

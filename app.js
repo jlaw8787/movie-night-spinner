@@ -1282,12 +1282,13 @@ function dietDish(d,af=dietAF()){
 function dietKey(){const v=DIET.veg,a=dietAF();return v&&a?"veg_af":v?"veg":a?"af":""}
 /* family and Christmas films always print dry: their menus take the written alcohol-free versions (name, menu line, film copy) before the word swaps,
    but only on the menus, so the plan, prep sheet and shopping keep the cook's own diet settings and no dish is left off */
-const DRY_THEMES=["kids","fairytale","xmas","wizard"];
-const dietMenuOnly=f=>!dietKey()&&!!f&&DRY_THEMES.includes(f.theme);
+/* review 40: films TMDB files under Family print alcohol-free too, whatever their theme (Red Dog, Treasure Planet, School of Rock); tests/dry-family keeps the list whole. Die Hard and Love Actually are adult Christmas films and keep their drinks (Josh, 23 Nov) */
+const DRY_THEMES=["kids","fairytale","xmas","wizard"];const DRY_FILMS=["Addams Family Values (1993)","Atlantis: The Lost Empire (2001)","Babe (1995)","Big Hero 6 (2014)","Father of the Bride (1991)","Flash Gordon (1980)","Good Burger (1997)","Hocus Pocus (1993)","Hook (1991)","How to Train Your Dragon (2010)","Jumanji (1995)","Kung Fu Panda (2008)","Kung Fu Panda 2 (2011)","Megamind (2010)","Muppet Treasure Island (1996)","Nacho Libre (2006)","Night at the Museum (2006)","Phar Lap (1983)","Red Dog (2011)","School of Rock (2003)","Short Circuit (1986)","Storm Boy (1976)","Teenage Mutant Ninja Turtles (1990)","Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)","Teenage Mutant Ninja Turtles III (1993)","The Goonies (1985)","The Incredibles (2004)","The Karate Kid (1984)","The Man from Snowy River (1982)","The Princess Diaries (2001)","The Witches (1990)","Treasure Planet (2002)","Turner & Hooch (1989)","Wall-E (2008)"];const dryFilm=f=>!!f&&(DRY_THEMES.includes(f.theme)||DRY_FILMS.includes(f.title+" ("+f.year+")"));
+const dietMenuOnly=f=>!dietKey()&&dryFilm(f);
 /* 13 Nov: with Vegetarian on, a dry film's menus read vegetarian and alcohol-free (Bad Santa printed the bourbon highball) */
-const dietKeyF=f=>{const k=dietKey(),dry=!!f&&DRY_THEMES.includes(f.theme);return k==="veg"&&dry?"veg_af":k||(dry?"af":"")};
+const dietKeyF=f=>{const k=dietKey(),dry=dryFilm(f);return k==="veg"&&dry?"veg_af":k||(dry?"af":"")};
 /* the dish a menu shows: a dry film takes the written alcohol-free version whatever the diet. One with none keeps what the cook's settings give (the dry words still swap) */
-function dietMenuDish(f,d){const dry=!!f&&DRY_THEMES.includes(f.theme);let x=dietDish(d,dry||dietAF());if(x.blocked==="alcohol"&&dry&&!dietAF())x=dietDish(d,false);return x}
+function dietMenuDish(f,d){const dry=dryFilm(f);let x=dietDish(d,dry||dietAF());if(x.blocked==="alcohol"&&dry&&!dietAF())x=dietDish(d,false);return x}
 function dietWhich(d,x){const alt=d.alt||{};if(!x.tag)return "";if(x.tag==="af")return "af";return alt.veg_af&&x.n===alt.veg_af.n?"veg_af":"veg"}
 function dietShop(x){return (x.ingredients||[]).map(i=>`${i.u?planQty(i.q,i.u):planQty(i.q,"")} ${i.item}@${i.aisle||"Other"}`.trim())}
 function dietItem(f,it){
@@ -1379,7 +1380,7 @@ function planMains(r2,ck){if(!ck)return ck;const key=d=>String(d.orig||d.n).toLo
    cooks the five planFive picks from those; the others stay on the list unticked */
 function planTrim(f,r2,ck0){const inn=r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase()));if(inn.length<=5)return ck0;return planFive(f,inn)||ck0}
 /* a dry card (kids, fairytale, Christmas and wizard films) cooks and shops the same alcohol-free versions it prints */
-const planDish=(f,d)=>dietDish(d,dietAF()||DRY_THEMES.includes(f&&f.theme));
+const planDish=(f,d)=>dietDish(d,dietAF()||dryFilm(f));
 const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>planDish(f,d)),
     /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
     ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=planMains(r2,ok?planTrim(f,r2,ck0):r2.length>5?planFive(f,r2):null),
@@ -1675,6 +1676,30 @@ function shopTidy2(L){
      return !out.some((y,j)=>{if(j===i)return false;const t=tx(y).toLowerCase();if(j<i&&PK.test(t)&&t.match(PK)[1]===it)return true;
        return new RegExp("^[\\d./ ]+\\s*(?:g|kg|ml|l)?\\s+"+it.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"$","i").test(tx(y))})})}
   /* the same plain line twice */
+  return shopTidy3(out.filter((l,i)=>out.indexOf(l)===i))}
+/* review 40: what is left of the method on the list ("4 eggs, separated", "6 oranges, 5 juiced and 1 in wheels", "450ml thickened cream,
+   300ml for the pots and the rest for piping", "2 limes, zested, then cut into wedges") goes, keeping a buy note in brackets ("(1 jar)",
+   "(or 1 small eggplant)"); then the doubles review 40 counted: plain sugar beside caster sugar, ice cubes beside a bag of ice, juice
+   "(about 4 lemons)" beside whole lemons, two kinds of cocktail cherry, the same cream twice */
+const SHOP_METHOD=/^(?:(?:lightly |roughly |finely |thinly |thickly )?(?:separated|toasted|peeled|juiced|zested|sliced|halved|quartered|diced|chopped|cut|crushed|studded|grated|shredded|trimmed|scrubbed|rinsed|drained|deseeded|seeded|cored|pitted|stalks?|tails?|cooked and|kept|with some|one |two |half |all \d|\d+(?:\s?(?:g|ml))? (?:for|in|juiced|zested|sliced|cut|ground|whole|kept|crushed|grated|to))|to (?:dust|serve|garnish|decorate)|for (?:the |dusting|whipping|piping|serving|dipping))/i;
+function shopTidy3(L){const at=l=>l.slice(l.lastIndexOf("@")),tx=l=>l.slice(0,l.lastIndexOf("@"));
+  let out=L.map(l=>{let t=tx(l);const m=t.match(/^([^,(]+?)((?:\s*\([^)]*\))?),\s*(.+)$/);if(m&&SHOP_METHOD.test(m[3])&&!/^cooked$/i.test(m[3])){let keep=m[2];
+      const br=m[3].match(/\((or [^,)]+|\d+ (?:jar|tin|bag|packet|bunch|bottle)s?)[^)]*\)/i);if(!keep&&br)keep=" ("+br[1].trim()+")";t=m[1].trim()+(keep||"")}
+    t=t.replace(/\s*\(about \d+\s?ml\)/i,"").replace(/\s+for whipping$/i,"").replace(/,\s*sliced or grated$/i,"");return t+at(l)});
+  const has=re=>out.findIndex(l=>re.test(tx(l)));
+  /* sugar: caster sugar does for plain sugar */
+  if(has(/caster sugar$/i)>=0)out=out.filter(l=>!/^(?:1 (?:packet|bag) |[\d.]+\s?(?:g|kg|tbsp|tsp|cups?)\s+)?(?:white |granulated )?sugar$/i.test(tx(l)));
+  /* ice: one bag covers the cubes */
+  {const b=has(/^\d+ bags? (?:of )?(?:crushed )?ice$/i);if(b>=0)out=out.filter((l,i)=>i===b||!/^(?:\d+ (?:large |small )?)?ice cubes?$|^\d+ bags? (?:of )?(?:crushed )?ice$/i.test(tx(l)))}
+  /* juice by the fruit: "120ml lemon juice (about 4 lemons)" and "2 lemons" are 6 lemons */
+  for(const fr of ["lemon","lime","orange"]){const j=out.findIndex(l=>new RegExp("^\\d+\\s?ml (?:fresh |freshly squeezed )?"+fr+" juice \\(about (\\d+) "+fr,"i").test(tx(l))),w=out.findIndex(l=>new RegExp("^(\\d+) "+fr+"s?$","i").test(tx(l)));
+    if(j>=0&&w>=0){const n=+tx(out[j]).match(/\(about (\d+)/)[1]+ +tx(out[w]).match(/^(\d+)/)[1];out[w]=`${n} ${fr}${n>1?(fr==="lemon"?"s":fr==="lime"?"s":"s"):""}${at(out[w])}`;out.splice(j,1)}}
+  /* cherries: maraschino and cocktail cherries are one jar */
+  {const a=out.findIndex(l=>/maraschino cherries$/i.test(tx(l))),b=out.findIndex(l=>/cocktail cherries$/i.test(tx(l)));if(a>=0&&b>=0){const n=x=>+(tx(x).match(/^(\d+) (?!jar)/)||[0,0])[1];const q=n(out[a])+n(out[b]);out[a]=(q?q+" ":"1 jar ")+"maraschino cherries"+at(out[a]);out.splice(b,1)}}
+  /* the same measured thing twice once the method words are off ("150ml thickened cream" and "200ml thickened cream") */
+  {const P=l=>{const m=tx(l).match(/^(\d+(?:\.\d+)?)\s?(g|ml)\s+(.+)$/i);return m?{q:+m[1],u:m[2].toLowerCase(),it:m[3].toLowerCase()}:null};
+   for(let i=out.length-1;i>=0;i--){const p=P(out[i]);if(!p)continue;const j=out.findIndex((l,k)=>k<i&&(y=>y&&y.u===p.u&&y.it===p.it)(P(l)));if(j<0)continue;const y=P(out[j]);const q=y.q+p.q;
+     out[j]=(q>=1000?`${+(q/1000).toFixed(2)}${p.u==="g"?"kg":"\u00a0L"}`:`${Math.round(q)}${p.u}`)+" "+tx(out[j]).replace(/^\S+\s+/,"")+at(out[j]);out.splice(i,1)}}
   return out.filter((l,i)=>out.indexOf(l)===i)}
 const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
 const BUY_N=t=>{const m=String(t).trim().match(/^(\d+)(?:\s+(\d)\/(\d))?|^(\d)\/(\d)/);return m?(m[1]?+m[1]+(m[2]?m[2]/m[3]:0):m[4]/m[5]):0};
@@ -1783,9 +1808,15 @@ function scaleOne(t,k){const keep=(m,off)=>PER_BEFORE.test(t.slice(0,off))||PER_
   let nn=noun;if(nv>1&&v===1)nn=/(ch|sh|x|s)$/i.test(noun)?noun+"es":/y$/i.test(noun)&&!/(ay|ey|oy)$/i.test(noun)?noun.slice(0,-1)+"ies":noun+"s";if(nv===1&&v>1)nn=planSing(noun);return out+mid+" "+nn})}
 /* hands-on and cooking are always plain hours and minutes; only waiting talks about days */
 const planDur=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
+/* review 40: a dish whose method or shopping says overnight, the day before or the night before (rice soaked overnight, risotto made the
+   day before) puts "start the day before" on the Prep sheet even when no step is timed that long */
+const OVER_RE=/\b(overnight|the day before|a day ahead|the night before)\b/i;
+function prepSaysOver(x){try{if((x.steps||[]).some(s=>OVER_RE.test(s.text)))return true;if((x.ingredients||[]).some(i=>OVER_RE.test(String(i.item||""))))return true;
+  return (x.ingredients||[]).some(i=>{const b=baseOf(i);return b&&OVER_RE.test(b.step(baseG(i.q,i),i))})}catch(e){return false}}
 /* a wait: its length, and on its own when to start (review 13: "12 hr, start the day before wait" read back to front) */
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days"))(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
-const planWhen=m=>m>=1440?(d=>`, start ${d===1?"the day":d+" days"} before`)(Math.round(m/1440)):m>=600?", start the day before":"";
+/* review 40: an 8 hour wait (a step that says overnight) starts the day before, not "7 hr earlier" */
+const planWhen=m=>m>=1440?(d=>`, start ${d===1?"the day":d+" days"} before`)(Math.round(m/1440)):m>=480?", start the day before":"";
 /* review 14: the dish list in Director's cut reads the same kids' and alcohol-free words as the card and Prep sheet ("Rye and jasmine tea highball" in kids' mode) */
 function planHTML(f){const h=planHTML0(f);if(typeof document==='undefined'||!dryNow(f))return h;try{const t=document.createElement('template');t.innerHTML=h;kidsDryDom(t.content,f);const d=document.createElement('div');d.appendChild(t.content);return d.innerHTML}catch(e){return h}}
 function planHTML0(f){
@@ -1841,7 +1872,7 @@ function prepHTML2(f,menu){
      Only folded lines print already dried; the rest stay raw for kidsDryDom. The folded line's tick carries the others (data-of) */
   const dryP=typeof dryNow==="function"&&dryNow(f);
   const shop=prepShopGroups(f).map(([a,l])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${(dryP?dryJoin(l.map(x=>[x,dryText(x,true)])):l.map(x=>({x,of:[x],text:x}))).map(e=>{const x=e.x,k=tickKey(x),on=!!tk[k],more=e.of.slice(1).map(tickKey);return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${more.length?` data-of="${ESC(more.join("\n"))}"`:""}${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(more.length?e.text:x)}</li>`}).join("")}</ul></div>`).join("");
-  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
+  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),aheadAt=ds.map((x,i)=>!x.extra&&aheadWhole(x)&&TT[i].wait>=CAL_LONG),waitMax=TT.reduce((m,x,i)=>aheadAt[i]?m:Math.max(m,x.wait),0),overN=ds.some((x,i)=>!aheadAt[i]&&!x.extra&&prepSaysOver(x)),aheadN=(LB0=>ds.filter((x,i)=>aheadAt[i]).map(x=>LB0[x.orig||x.n]&&!x.tag?LB0[x.orig||x.n]:x.n))(planLabels(f)),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook&&T.prep?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:hot&&T.cook?`Cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
@@ -1853,7 +1884,7 @@ function prepHTML2(f,menu){
     <div class="pp-title">${ESC(f.title)}</div>
     <p class="pp-serves">${((PW,LD,ND)=>{/* review 27: a short wait is already inside "longest on the night", and a long one that fits while the longest dish cooks
       adds nothing, so neither prints as a second total. Only a wait that starts before the night's cooking says how much earlier */
-      const XT=ND.filter(d=>!d.ahead&&d.wait>=CAL_LONG&&d.wait<600).reduce((m,d)=>Math.max(m,d.active+d.wait-LD.lead),0);return [...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":XT>0?`start ${planDur(XT)} earlier, for waiting`:""):"",aheadN.length&&!PW.length?`make ahead: ${aheadN.length>1?aheadN.length+" dishes":aheadN[0]}`:""]})(PWN,calLead(prepNight(ds,TT)),prepNight(ds,TT)).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}
+      const XT=ND.filter(d=>!d.ahead&&d.wait>=CAL_LONG&&d.wait<480).reduce((m,d)=>Math.max(m,d.active+d.wait-LD.lead),0);return [...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",(waitMax||overN)&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=480||overN?"start the day before":XT>0?`start ${planDur(XT)} earlier, for waiting`:""):"",aheadN.length&&!PW.length?`make ahead: ${aheadN.length>1?aheadN.length+" dishes":aheadN[0]}`:""]})(PWN,calLead(prepNight(ds,TT)),prepNight(ds,TT)).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
@@ -2017,7 +2048,7 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
    never under 65% of its size, so nothing reads "Curry before the clock hits MID". Works on every printed menu. */
 /* kids' mode, alcohol-free, and family films: one dry pass over the finished card and phone menu, on every layout and hand-built menu alike.
    Whole drink names first, then single words; cooking phrases lose just the alcohol word; vinegars and root, ginger and butter beer are left alone. */
-const dryNow=f=>dietAF()||DRY_THEMES.includes(f&&f.theme);
+const dryNow=f=>dietAF()||dryFilm(f);
 const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v,W="beer|stout|ale|guinness|lager|red wine|white wine|wine|cider|bourbon|whisk(?:e)?y|rum|brandy|sherry|marsala|tequila|vodka|sake|champagne|port";
   const r=(re,v)=>[re,typeof v==="function"?v:m=>cap(m,v)];
   /* a proper name swapped mid-sentence goes lower case ("a nice grape juice", not "a nice Grape juice"); capitals and sentence starts stay */

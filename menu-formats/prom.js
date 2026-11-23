@@ -179,7 +179,10 @@ const TONE={
  tense:{wear:.45,tilt:1,photo:"contrast(1.16)",kick:"DOORS CLOSE AT MIDNIGHT",ticket:"Chaperones present",close:"No one leaves before the last song."},
  scrappy:{wear:.9,tilt:-3.5,photo:"contrast(1.12)",kick:"PARENTS NOT INVITED",ticket:"Tell no one",close:"If the cops come, you were never here."}
 };
-const SEC={s:"Before the Dance",m:"The Main Event",w:"Last Dance Sweets",d:"The Punch Bowl"};
+const SEC_DANCE={s:"Before the Dance",m:"The Main Event",w:"Last Dance Sweets",d:"The Punch Bowl"},SEC_PARTY={s:"The Spread",m:"The Main Event",w:"Sweets",d:"The Punch Bowl"};
+/* review 40: party words for a house or frat party on this layout */
+const PARTY_KICK={"FORMAL DINNER DANCE":"PARTY TONIGHT","SOCK HOP":"HOUSE PARTY","SPRING FORMAL":"HOUSE PARTY","SENIOR PROM":"HOUSE PARTY","PROM NIGHT":"PARTY NIGHT","SPRING FLING":"HOUSE PARTY","FORMAL":"THE PARTY"};
+const PARTY_T={warm:{close:"Thanks to everyone who brought a plate."},playful:{kick:"BRING YOUR BEST MOVES",ticket:"Come as you are"},grand:{kick:"THE PARTY OF THE YEAR",ticket:"Dress to impress",close:"The house thanks you for coming."},tender:{kick:"STAY TILL THE LAST SONG",ticket:"Keep this one",close:"Slow songs at eleven."},tense:{ticket:"Neighbours warned"},eerie:{close:"Please stay inside after dark."}};
 
 /* grain: real noise texture (svg turbulence), fine fibre plus sparse speckle */
 const grain=(a,light,freq,sparse)=>{const c=light?"1 ":"0.22 ",k=sparse?(9*a).toFixed(3):(1.4*a).toFixed(3),o=sparse?(-5.6*a).toFixed(3):(-.35*a).toFixed(3);
@@ -211,7 +214,7 @@ function photo(src,w,h,o){
 }
 
 window.MENU_FORMATS[ID]=ctx=>{
-  const f=ctx.f||{},E=ERA[ctx.era]||ERA.modern,T=TONE[ctx.tone]||TONE.warm;
+  const f=ctx.f||{},E=ERA[ctx.era]||ERA.modern;let T=TONE[ctx.tone]||TONE.warm;
   const fam=FAMILY.has(f.theme),C=s=>fam?dry(clean(s)):clean(s);
   const year=String(f.year||"").slice(0,4)||"1999",yy=year.slice(-2);
   const fl=ctx.flavour||{};
@@ -252,7 +255,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const comp=/grand prix|championship|competition|ballroom|dance comp|dance-off|regional|nationals/i.test(String(fl&&fl.venue||"")+" "+String(fl&&fl.sign||"")+" "+(f.title||""));
   /* the class year follows the film where it is set in another year (Animal House is 1962, released 1978) */
   const classOf=fl&&/^\d{4}$/.test(String(fl.classOf||""))?String(fl.classOf):year;
-  const kick=comp?`DANCE CHAMPIONSHIP, ${year}`:`${E.kick}, CLASS OF ${classOf}`;
+  /* review 40: a house or frat party is a party, not a school dance: no "Class of", no "Before the Dance", party words on the ticket */
+  const party=!comp&&(fl&&fl.party===true||/\b(house|party|place|kitchen|dreamhouse|apartment|frat|fraternity|sorority|kappa|delta|backyard|basement|bash|pad)\b/i.test(String(fl&&fl.venue||""))&&!/\b(prom|formal|dance|ball|gym|school|high)\b/i.test(String(fl&&fl.venue||"")));
+  if(party)T=Object.assign({},T,PARTY_T[ctx.tone]||{});
+  const kick=comp?`DANCE CHAMPIONSHIP, ${year}`:party?(PARTY_KICK[E.kick]||E.kick):`${E.kick}, CLASS OF ${classOf}`;
+  const SEC=party?SEC_PARTY:SEC_DANCE;
   const sT=fitType(sign,W-96,PMq?58:92,E.dcw,PMq?40:56,24,1.04,2);
   let banner;
   const signHtml=`<div style="${caps(18,E.proc==="letterpress"||E.proc==="offset"?mix(bandText,band,.15):ACC==band?bandText:bandText,.22)};text-align:center">${esc(kick)}</div>

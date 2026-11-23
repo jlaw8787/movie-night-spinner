@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Big Kahuna pineapple sliders",
+   "n": "Big Kahuna pineapple mini burgers",
    "course": "s",
    "prep_min": 10,
    "cook_min": 10,
@@ -35,7 +35,7 @@
     {
      "q": 8,
      "u": "",
-     "item": "slider buns",
+     "item": "mini burger buns",
      "aisle": "Bakery"
     },
     {
@@ -73,7 +73,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Big Kahuna pineapple haloumi sliders (vegetarian)",
+     "n": "Big Kahuna pineapple haloumi mini burgers (vegetarian)",
      "course": "s",
      "prep_min": 6,
      "cook_min": 10,
@@ -100,7 +100,7 @@
       {
        "q": 8,
        "u": "",
-       "item": "slider buns",
+       "item": "mini burger buns",
        "aisle": "Bakery"
       },
       {

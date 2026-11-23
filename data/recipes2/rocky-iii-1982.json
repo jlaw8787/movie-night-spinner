@@ -11,7 +11,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "ciabatta loaf",
+     "item": "Italian loaf",
      "aisle": "Bakery"
     },
     {
@@ -59,7 +59,7 @@
    ],
    "steps": [
     {
-     "text": "Slice the ciabatta into 12 pieces and brush with olive oil.",
+     "text": "Slice the loaf into 12 pieces and brush with olive oil.",
      "min": 4
     },
     {
@@ -83,16 +83,16 @@
    "af": true
   },
   {
-   "n": "Venice beach fish tacos",
+   "n": "Venice beach fried clams",
    "course": "s",
    "prep_min": 30,
    "cook_min": 0,
-   "make_ahead": "Mix the crema up to 1 day ahead, chilled; whisk the batter and fry the fish just before serving",
+   "make_ahead": "Mix the lime sour cream up to 1 day ahead, chilled; whisk the batter and fry the fish just before serving",
    "ingredients": [
     {
      "q": 500,
      "u": "g",
-     "item": "flathead fillets, cut in strips",
+     "item": "cod fillets, cut in strips",
      "aisle": "Seafood"
     },
     {
@@ -150,11 +150,11 @@
      "min": 5
     },
     {
-     "text": "Mix the sour cream with lime juice for a crema.",
+     "text": "Mix the sour cream with lime juice.",
      "min": 3
     },
     {
-     "text": "Dip the flathead strips in the batter and fry in the vegetable oil at 180C in batches until crisp.",
+     "text": "Dip the cod strips in the batter and fry in the vegetable oil at 180C in batches until crisp.",
      "min": 12
     },
     {
@@ -162,7 +162,7 @@
      "min": 5
     },
     {
-     "text": "Fill with cabbage, fish, crema and salsa.",
+     "text": "Fill with cabbage, fish, sour cream and salsa.",
      "min": 5
     }
    ],
@@ -170,15 +170,15 @@
    "af": false,
    "alt": {
     "af": {
-     "n": "Venice beach fish tacos",
+     "n": "Venice beach fried clams",
      "prep_min": 30,
      "cook_min": 0,
-     "make_ahead": "Mix the crema up to 1 day ahead, chilled; whisk the soda water batter and fry the fish just before serving",
+     "make_ahead": "Mix the lime sour cream up to 1 day ahead, chilled; whisk the soda water batter and fry the fish just before serving",
      "ingredients": [
       {
        "q": 500,
        "u": "g",
-       "item": "flathead fillets, cut in strips",
+       "item": "cod fillets, cut in strips",
        "aisle": "Seafood"
       },
       {
@@ -236,11 +236,11 @@
        "min": 5
       },
       {
-       "text": "Mix the sour cream with lime juice for a crema.",
+       "text": "Mix the sour cream with lime juice.",
        "min": 3
       },
       {
-       "text": "Dip the flathead strips in the batter and fry in the vegetable oil at 180C in batches until crisp.",
+       "text": "Dip the cod strips in the batter and fry in the vegetable oil at 180C in batches until crisp.",
        "min": 12
       },
       {
@@ -248,7 +248,7 @@
        "min": 5
       },
       {
-       "text": "Fill with cabbage, fish, crema and salsa.",
+       "text": "Fill with cabbage, fish, sour cream and salsa.",
        "min": 5
       }
      ]
@@ -257,7 +257,7 @@
      "n": "Venice beach battered haloumi tacos",
      "prep_min": 30,
      "cook_min": 0,
-     "make_ahead": "Mix the crema and cut the haloumi up to 1 day ahead, chilled; make the batter and fry just before serving",
+     "make_ahead": "Mix the lime sour cream and cut the haloumi up to 1 day ahead, chilled; make the batter and fry just before serving",
      "ingredients": [
       {
        "q": 400,
@@ -320,7 +320,7 @@
        "min": 5
       },
       {
-       "text": "Mix the sour cream with lime juice for a crema.",
+       "text": "Mix the sour cream with lime juice.",
        "min": 3
       },
       {
@@ -332,7 +332,7 @@
        "min": 5
       },
       {
-       "text": "Fill with cabbage, haloumi, crema and salsa.",
+       "text": "Fill with cabbage, haloumi, sour cream and salsa.",
        "min": 5
       }
      ],
@@ -342,7 +342,7 @@
      "n": "Venice beach battered haloumi tacos (alcohol-free)",
      "prep_min": 30,
      "cook_min": 0,
-     "make_ahead": "Mix the crema and cut the haloumi up to 1 day ahead, chilled; make the soda water batter and fry just before serving",
+     "make_ahead": "Mix the lime sour cream and cut the haloumi up to 1 day ahead, chilled; make the soda water batter and fry just before serving",
      "ingredients": [
       {
        "q": 400,
@@ -405,7 +405,7 @@
        "min": 5
       },
       {
-       "text": "Mix the sour cream with lime juice for a crema.",
+       "text": "Mix the sour cream with lime juice.",
        "min": 3
       },
       {
@@ -417,7 +417,7 @@
        "min": 5
       },
       {
-       "text": "Fill with cabbage, haloumi, crema and salsa.",
+       "text": "Fill with cabbage, haloumi, sour cream and salsa.",
        "min": 5
       }
      ]
@@ -589,7 +589,7 @@
    }
   },
   {
-   "n": "Thunderlips charity tiramisu",
+   "n": "Thunderlips charity cannoli",
    "course": "w",
    "prep_min": 30,
    "cook_min": 717,
