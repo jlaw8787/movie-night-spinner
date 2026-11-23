@@ -50,9 +50,20 @@ async function snap(page,id){
   try{const hb=await page.evaluate(()=>{const a=typeof pvArgs!=='undefined'&&pvArgs;if(!a||!a[1]||a[1].fmt==='lib')return null;
     const lines=card.innerText.split('\n').map(x=>x.trim()).filter(Boolean),N=t=>String(t||'').toLowerCase().replace(/[\u2018\u2019']/g,"'").replace(/[\u201c\u201d]/g,'"').replace(/[^a-z0-9]+/g,' ').trim(),face=N(card.textContent);
     const menu=a[2]||{},cs=FMT_COURSES.map(c=>c[0]).filter(c=>(menu[c]||[]).some(it=>it&&it.label)),out=[];
+    const usedL=new Set(),all=[...fmtPhone.querySelectorAll('.fp-name')].map(e=>e.textContent.replace(/\s+/g,' ').trim());
     fmtPhone.querySelectorAll('.fp-sec').forEach((sec,gi)=>{const c=cs[+sec.dataset.g]||'m';sec.querySelectorAll('.fp-dish').forEach(ar=>{const q=s=>{const e=ar.querySelector(s);return e?e.textContent.replace(/\s+/g,' ').trim():''};
       let n=q('.fp-name');const desc=q('.fp-desc'),film=q('.fp-film'),on=t=>t&&face.includes(N(t));if(!n)return;
-      const note=[on(desc)&&desc,on(film)&&film].filter(Boolean).reduce((a,t)=>a?a+(/[.!?”"')]$/.test(a)?' ':'. ')+t:t,'')||desc||film;/* review 42: two card lines join with a full stop (My Cousin Vinny printed "Butter & sharp cheddar The grits cross-examination.") */
+      let note=[on(desc)&&desc,on(film)&&film].filter(Boolean).reduce((a,t)=>a?a+(/[.!?”"')]$/.test(a)?' ':'. ')+t:t,'')||desc||film;/* review 42: two card lines join with a full stop (My Cousin Vinny printed "Butter & sharp cheddar The grits cross-examination.") */
+      /* review 43: the page reads the card line for line. The card's own line under the dish name is the note (Casino printed "Buttermilk batter.
+         Count them. We did." while the phone says "ten berries in every one"); the next line joins it only when it is the dish's film line, so a
+         footer elsewhere on the card no longer tags on (The Godfather's "An orange on every table."). A dry rename takes the card's name. */
+      {const P=l=>/^[\s$£€.,\d¢cp\/-]*$/.test(l)||/^[$£€]?\d+(?:[.,]\d+)?\s*(?:¢|c|p)?$/.test(l),NN=N(n),names=new Set(all.map(N));
+       let i=lines.findIndex((l,k)=>!usedL.has(k)&&(N(l)===NN||N(l).startsWith(NN+' ')));
+       if(i<0&&!on(n)){const W=t=>new Set(N(t).split(' ').filter(w=>w.length>2)),wn=W(n);let best=-1,bs=0;lines.forEach((l,k)=>{if(usedL.has(k)||P(l))return;const wl=W(l);if(!wl.size)return;let c=0;wn.forEach(w=>{if(wl.has(w))c++});const sc=c/Math.max(wn.size,wl.size);if(sc>bs){bs=sc;best=k}});if(bs>=0.6){i=best;n=lines[best].replace(/\s*[$£€]?\d+(?:[.,]\d+)?\s*$/,'').trim()}}
+       if(i>=0){usedL.add(i);const rel=t=>{const a=new Set(N(t).split(' ').filter(w=>w.length>3));return N(desc+' '+film).split(' ').some(w=>w.length>3&&a.has(w))};
+        let j=i+1;while(j<lines.length&&P(lines[j]))j++;const L1=lines[j];
+        if(L1&&!names.has(N(L1))&&!(L1===L1.toUpperCase()&&L1.split(' ').length<=4)&&rel(L1)){let t=L1;let k=j+1;while(k<lines.length&&P(lines[k]))k++;const L2=lines[k];
+          if(L2&&film&&N(L2).length>8&&(N(film).includes(N(L2))||N(L2).includes(N(film)))&&!N(t).includes(N(L2)))t=t+(/[.!?”"')]$/.test(t)?' ':'. ')+L2;note=t}}}
       /* the card may print its own name for the dish above the same words (Big's "Caviar canapés"): the page takes the card's name */
       let pr=on(n)?1:0;if(!pr)for(const t of [desc,film]){if(!t||!on(t))continue;const i=lines.findIndex(l=>N(l)===N(t)||N(l).startsWith(N(t)));if(i>0){const nm=lines.slice(Math.max(0,i-2),i).reverse().find(l=>!/^[\s$£€.,\d¢cp/-]*$/.test(l)&&N(l).length>2);if(nm){n=nm.replace(/\s*[$£€]?\d+(?:[.,]\d+)?\s*$/,'').trim();if(n===n.toUpperCase())n=n.charAt(0)+n.slice(1).toLowerCase();pr=1;break}}}
       out.push({c,n,note,printed:pr,ing:[...ar.querySelectorAll('.fp-ing li')].map(x=>x.textContent.trim()),steps:[...ar.querySelectorAll('.fp-steps li,.fp-step1')].map(x=>x.textContent.trim())})})});
