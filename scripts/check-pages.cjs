@@ -33,6 +33,11 @@ for(const f of films){const id=f.title+' ('+f.year+')';if(NAMED.length&&!NAMED.i
   const arts=[...page.matchAll(/<h3>([^<]+)(?:<span[^>]*>[^<]*<\/span>)*<\/h3>\s*(?:<p>([^<]*)<\/p>)?/g)].map(m=>[N(DE(m[1])),DE(m[2]||'')]);
   if(lib){const cp=CP[id];if(!cp)bad.push(`${id}: no printed list in data/card-print.json (node scripts/render-previews.cjs "${id}")`);
     else for(const r of cp){const a=arts.find(x=>x[0]===N(r[1]));if(!a)bad.push(`${id}: card prints "${r[1]}", page leaves it out`);else if(N(a[1])!==N(r[2]))bad.push(`${id}: page note for "${r[1]}" differs from the card`)}}
+  /* review 41: a shared-layout page lists only what the card prints (Turner & Hooch's page had a second main the card has no room for) */
+  if(lib&&CP[id])for(const a of arts)if(!CP[id].some(r=>N(r[1])===a[0]))bad.push(`${id}: page lists "${a[0]}", the card does not print it`);
+  /* review 41: a dry page names no alcohol anywhere, recipe lines and method too (Violent Night's alcohol-free stout, Miracle on 34th Street's red wine) */
+  if(isDry(f)){const body=DE((page.match(/<main[\s\S]*<\/main>/)||[''])[0].replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ')).replace(/ginger beer|root beer|ginger ale|butterbeer|wine vinegar|rice wine vinegar|sherry vinegar|cider vinegar|malt vinegar|wine glass(es)?|rum essence|sake lees|beer garden|Big Whiskey/ig,'');
+    const m=body.match(/[^.]{0,40}\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|lager|stout|cider|sherry|liqueur|schnapps|prosecco|vermouth|beer|ale)\b[^.]{0,30}/i);if(m)bad.push(`${id}: dry page names alcohol: "${m[0].trim()}"`)}
   if(isDry(f))for(const a of arts){const t=a[1].replace(/ginger beer|root beer|ginger ale|butterbeer|apple cider|wine vinegar|rum essence|sherry vinegar|sake lees/ig,'');if(NOTEBOOZE.test(t)&&!/\b(alcohol-free|non-alcoholic|zero)\b/i.test(t))bad.push(`${id}: dry page note names alcohol: "${a[1].slice(0,80)}"`)}}
 /* review 40: a hand-built page is the card: only dishes the card prints (data/card-print-hb.json, saved by render-previews), each with
    the card's words and the phone menu's shopping lines */

@@ -60,6 +60,12 @@ const cap = t => { t = clean(t); return t.charAt(0).toUpperCase() + t.slice(1); 
 const jpgSize = f => { const b = fs.readFileSync(f); let i = 2; while (i < b.length) { const m = b[i + 1], L = b.readUInt16BE(i + 2); if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) }; i += 2 + L; } return { w: 600, h: 849 }; };
 const iso = m => 'PT' + Math.max(0, Math.round(m || 0)) + 'M';
 
+/* review 41: a kids, family, Christmas or wizard page runs the same dry pass the phone menu runs (dryText in app.js), so the page, card and
+   phone say the same thing word for word (Violent Night's page bought alcohol-free stout, the phone pours ginger beer) */
+const dryText = (() => { const vm = require('vm'), src = rd('app.js'); const grab = (k, end) => { const i = src.indexOf(k), j = src.indexOf(end, i); return src.slice(i, j + end.length); };
+  const ctx = {}; vm.createContext(ctx); vm.runInContext([grab('const KDRY=', '})();'), grab('const KFIX=', '})();'), grab('const dryFold=', '\n'), grab('const KKEEP=', '\n'), grab('const dryKeep=', '\n'), grab('const dryText=', '\n'), grab('const dryText0=', '\n'), ';globalThis.dryText=dryText;'].join('\n'), ctx); return ctx.dryText; })();
+const dryDish = y => { const D = t => typeof t === 'string' ? dryText(t, true) : t; return { ...y, n: D(y.n), note: D(y.note), how: D(y.how), make_ahead: D(y.make_ahead),
+  ingredients: (y.ingredients || []).map(i => ({ ...i, item: D(i.item) })), steps: (y.steps || []).map(t => typeof t === 'string' ? D(t) : { ...t, text: D(t.text) }) }; };
 /* every film's page facts, built once */
 const ALL = films.map((f, i) => {
   const id = f.title + ' (' + f.year + ')', s = slug(id), d = rj('data/film/' + s + '.json');
@@ -82,8 +88,11 @@ const ALL = films.map((f, i) => {
      is the card's note, alcohol-free on a dry card, and the house starter and drink the card prints are on the page too */
   { const cp = CARD_PRINT[id]; if (cp && cp.length) { const L = t => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), by = new Map(cp.map(r => [L(r[1]), r]));
     const used = new Set();
-    for (const y of dishes) { const r = by.get(L(y.n)) || by.get(L(y.n0)); if (r) { y.note = r[2]; used.add(r); } }
+    for (const y of dishes) { const r = by.get(L(y.n)) || by.get(L(y.n0)) || (dry ? by.get(L(dryText(y.n, true))) : null); if (r) { y.note = r[2]; used.add(r); if (dry) y.cardN = r[1]; } }
     for (const r of cp) if (!used.has(r) && !dishes.some(y => L(y.n) === L(r[1]))) { const hs = HOUSE[id] && HOUSE[id][r[0] === 'd' ? 'd' : 's']; dishes.push({ n: r[1], course: r[0], note: r[2], ingredients: [], steps: [], extra: true, house: !!r[3], veg: hs ? !hs.meat : false }); }
+    /* review 41: the card is the list. A recipe the shared layout has no room to print is not on the page either (Turner & Hooch's
+       beer-battered fish and chips, 133 dishes on 130 pages) */
+    for (let i = dishes.length - 1; i >= 0; i--) if (!cp.some(r => L(r[1]) === L(dishes[i].n) || L(r[1]) === L(dishes[i].n0) || (dry && L(r[1]) === L(dryText(dishes[i].n, true))))) dishes.splice(i, 1);
     const ord = { s: 0, m: 1, w: 2, d: 3 }; dishes.sort((a, b) => ord[a.course] - ord[b.course]); } }
   /* review 40: a hand-built page lists only what the card prints, with the card's words and the phone menu's recipe (The Godfather page
      had films.json notes and Goodfellas listed four dishes the card never prints) */
@@ -92,6 +101,7 @@ const ALL = films.map((f, i) => {
       return { n: r.n, course: r.c, note: r.note, ingredients: (r.ing || []).map(t => ({ item: t })), steps: (r.steps || []).map(t => ({ text: t })), extra: !(r.ing || []).length,
         prep_min: (r.ing || []).length ? was.prep_min : undefined, cook_min: (r.ing || []).length ? was.cook_min : undefined, wait_min: was.wait_min, veg: !!was.veg, af: !!was.af, _T: (r.ing || []).length && (was.prep_min || was.cook_min) ? dishTimes(was, 1) : null }; });
     if (keep.length) { dishes.length = 0; dishes.push(...keep); } } }
+  if (dry) for (let i = 0; i < dishes.length; i++) dishes[i] = dryDish(dishes[i]);
   return { i, id, s, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', s + '.jpg')) : null };
 });
