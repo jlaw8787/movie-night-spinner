@@ -16,6 +16,8 @@ const lobbyPoster=f=>TMDB_POSTERS[f.id]||null;
 `+rd('tmdb-posters.js')+rd('formats.js')+`;this.specs=FMT_FILMS;this.renderers=FMT_RENDER;this.palettes=FMT_PHONE;this.menu=fmtMenu;this.phone=fmtPhoneHTML;`,ctx);
 
 const identityText=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/[’‘]/g,"'").replace(/\s+/g,' ').toLowerCase();
+/* Josh, 23 Nov 2026: Coming to America prints all seven of its dishes (Soul Glo chicken and rose petal crisps added); the two extras keep their card method */
+const FULL={'Coming to America (1988)':'2,2,2,1'};
 const batch=['Anchorman: The Legend of Ron Burgundy (2004)',...Object.entries(ctx.specs).filter(([,spec])=>spec.art).map(([id])=>id)];
 let dishes=0;
 for(const[id,spec]of Object.entries(ctx.specs)){
@@ -27,10 +29,11 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  for(const it of menu.all){assert.ok(it.how&&it.shop.length,id+' / '+it.n);dishes++;}
  if(!batch.includes(id))continue;
  const exact=f.edition?f.edition.menu:f.recipe;
- assert.equal([menu.s.length,menu.m.length,menu.w.length,menu.d.length].join(','),'2,1,1,1',id);
- assert.equal(menu.all.length,5,id);
+ assert.equal([menu.s.length,menu.m.length,menu.w.length,menu.d.length].join(','),FULL[id]||'2,1,1,1',id);
+ assert.equal(menu.all.length,FULL[id]?FULL[id].split(',').reduce((a,b)=>a+ +b,0):5,id);
  for(const it of menu.all){
   const original=['s','m','w','d'].flatMap(k=>exact[k]).find(x=>x.n===it.n);
+  if(FULL[id]&&!original)continue;
   assert.ok(original,id+' exact recipe: '+it.n);
   assert.equal(it.how,original.how,id+' method: '+it.n);
   assert.equal(JSON.stringify(it.shop),JSON.stringify(original.shop),id+' shopping: '+it.n);
@@ -58,7 +61,7 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  }
  if(spec.art&&!sheet){
   const imageSources=[...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m=>m[1]);
-  assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'),id+' imagery uses authentic film assets and paper texture');
+  assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'||(new RegExp('^assets/menu-art/'+spec.fmt+'-[\\w-]+\\.png$').test(src)&&fs.existsSync(path.join(root,src)))),id+' imagery uses authentic film assets, paper texture or the menu\'s own drawn art');
   const used=Object.entries(spec.art).filter(([,path])=>html.includes(path));
   for(const [role,path] of used){
    assert.match(path,/^\/[A-Za-z0-9]+\.(?:jpg|png|svg)$/,id+' valid '+role+' image path');
@@ -70,7 +73,7 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  }
 
  const phone=ctx.phone(f,spec,menu);
- assert.equal((phone.match(/class="fp-dish"/g)||[]).length,5,id+' phone dishes');
+ assert.equal((phone.match(/class="fp-dish"/g)||[]).length,menu.all.length,id+' phone dishes');
  assert.equal((phone.match(/role="tab"/g)||[]).length,4,id+' phone courses');
  assert.ok(phone.includes(ESCForTest(spec.phoneTitle)),id+' short phone title');
 }
