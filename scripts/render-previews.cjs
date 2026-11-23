@@ -56,7 +56,7 @@ async function snap(page,id){
       /* the card may print its own name for the dish above the same words (Big's "Caviar canapés"): the page takes the card's name */
       let pr=on(n)?1:0;if(!pr)for(const t of [desc,film]){if(!t||!on(t))continue;const i=lines.findIndex(l=>N(l)===N(t)||N(l).startsWith(N(t)));if(i>0){const nm=lines.slice(Math.max(0,i-2),i).reverse().find(l=>!/^[\s$£€.,\d¢cp/-]*$/.test(l)&&N(l).length>2);if(nm){n=nm.replace(/\s*[$£€]?\d+(?:[.,]\d+)?\s*$/,'').trim();if(n===n.toUpperCase())n=n.charAt(0)+n.slice(1).toLowerCase();pr=1;break}}}
       out.push({c,n,note,printed:pr,ing:[...ar.querySelectorAll('.fp-ing li')].map(x=>x.textContent.trim()),steps:[...ar.querySelectorAll('.fp-steps li,.fp-step1')].map(x=>x.textContent.trim())})})});
-    return out});if(hb)hbPrinted[id]=hb;else delete hbPrinted[id]}catch(e){}
+    return out});if(hb)hbPrinted[id]=hb;else delete hbPrinted[id]}catch(e){console.error("hb",id,String(e).slice(0,300))}
   const tmp=path.join(os.tmpdir(),'rp-'+slug(id)+'.png');
   await page.locator('#snapWrap').screenshot({path:tmp});
   return tmp;
