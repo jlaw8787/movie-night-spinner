@@ -2550,7 +2550,7 @@ function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
     const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
   for(const t of N)if(/,\s*,/.test(t.nodeValue))t.nodeValue=t.nodeValue.replace(/\s*,\s*,\s*/g,", ");
   root.dataset.nopay="1";return T.length}
-function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;window.__pfDollar=!(fl&&fl.currency&&fl.currency!=="$")&&fmt!=="own";let n;try{n=priceFix0(root,menu,f,fl,era,fmt)}finally{window.__pfDollar=false}if((fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"||root.dataset.nopay)return n;
+function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;window.__pfDollar=!(fl&&fl.currency&&fl.currency!=="$")&&fmt!=="own"&&fmt!=="arcade";/* review 45: arcade prices are tickets ("7 TIX"), never "$7TIX" */let n;try{n=priceFix0(root,menu,f,fl,era,fmt)}finally{window.__pfDollar=false}if((fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"||root.dataset.nopay)return n;
   /* review 35: one way to write cents: "60¢" on an American (or any non-Australian) dollar card, "60c" on an Australian or New Zealand one */
   const k=pfMark(root);{const au=f&&f.theme==="aussie",tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){const m=t.nodeValue.match(/^(\s*)(\d{1,2})(¢|c)(\s*)$/);if(m&&m[3]!==(au?"c":"¢"))t.nodeValue=m[1]+m[2]+(au?"c":"¢")+m[4]}}
   return n+k}
