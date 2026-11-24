@@ -176,62 +176,48 @@
    }
   },
   {
-   "n": "Polka-Dot Man's spotty skewers",
+   "n": "Polka-Dot Man's franks and beans",
    "course": "s",
-   "prep_min": 16,
-   "cook_min": 10,
-   "make_ahead": "Reduce the balsamic up to 1 week ahead; thread the skewers and drizzle on the day",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best made on the day",
    "ingredients": [
     {
-     "q": 250,
-     "u": "g",
-     "item": "bocconcini",
+     "q": 6,
+     "u": "",
+     "item": "frankfurts, sliced into coins",
      "aisle": "Deli"
     },
     {
-     "q": 250,
-     "u": "g",
-     "item": "cherry tomatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
+     "q": 2,
      "u": "",
-     "item": "bunch basil",
-     "aisle": "Produce"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "balsamic vinegar",
+     "item": "tins baked beans",
      "aisle": "Pantry"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "tbsp",
-     "item": "olive oil",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "yellow mustard",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Reduce the balsamic in a small pan until syrupy and cool.",
-     "min": 10
+     "text": "Tip the beans into a pan with the sugar and mustard.",
+     "min": 3
     },
     {
-     "text": "Thread bocconcini, tomatoes and basil onto toothpicks.",
-     "min": 12
-    },
-    {
-     "text": "Lay on a white platter and drizzle with oil.",
-     "min": 2
-    },
-    {
-     "text": "Dot the balsamic all over the plate.",
-     "min": 2
+     "text": "Add the frankfurt coins and simmer until hot through.",
+     "min": 8
     }
    ],
-   "veg": true,
+   "veg": false,
    "af": true
   },
   {

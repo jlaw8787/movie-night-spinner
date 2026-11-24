@@ -2,146 +2,57 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Church shootout canapés",
+   "n": "Canteen grilled cheese with tomato soup",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 0,
-   "make_ahead": "Up to 3 hours, keep chilled",
+   "prep_min": 5,
+   "cook_min": 13,
+   "make_ahead": "Best made just before serving",
    "ingredients": [
     {
-     "q": 6,
+     "q": 8,
      "u": "",
-     "item": "slices rye bread",
+     "item": "slices white bread",
      "aisle": "Bakery"
-    },
-    {
-     "q": 30,
-     "u": "g",
-     "item": "butter, softened",
-     "aisle": "Dairy"
     },
     {
      "q": 200,
      "u": "g",
-     "item": "smoked salmon",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "crème fraîche",
+     "item": "cheddar, sliced",
      "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "small bunch dill",
-     "aisle": "Produce"
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
     },
     {
-     "q": null,
+     "q": 2,
      "u": "",
-     "item": "black pepper, to taste",
+     "item": "tins tomato soup",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Butter the rye and cut into small squares.",
+     "text": "Butter the bread on the outside and fill with the cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Griddle in a hot pan until golden on both sides and melted inside.",
      "min": 8
     },
     {
-     "text": "Top each with a fold of smoked salmon, a small spoon of crème fraîche, a dill sprig and pepper.",
-     "min": 12
+     "text": "Heat the soup.",
+     "min": 5
+    },
+    {
+     "text": "Cut the sandwiches in half and serve with cups of soup.",
+     "min": 2
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Church shootout canapés (vegetarian)",
-     "prep_min": 27,
-     "cook_min": 3,
-     "make_ahead": "Up to 3 hours, keep chilled",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "carrots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 0.5,
-       "u": "",
-       "item": "lemon, juiced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "pinch smoked paprika",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 6,
-       "u": "",
-       "item": "slices rye bread",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 30,
-       "u": "g",
-       "item": "butter, softened",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 100,
-       "u": "ml",
-       "item": "crème fraîche",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch dill",
-       "aisle": "Produce"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "black pepper, to taste",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Peel the carrots into ribbons, blanch for 1 minute, drain and dress with the oil, soy, lemon juice and smoked paprika.",
-       "min": 10
-      },
-      {
-       "text": "Butter the rye and cut into small squares.",
-       "min": 8
-      },
-      {
-       "text": "Top each with a fold of carrot, a small spoon of crème fraîche, a dill sprig and pepper.",
-       "min": 12
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Castor's peach slices",

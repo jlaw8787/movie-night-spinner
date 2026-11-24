@@ -1,0 +1,127 @@
+[
+ {
+  "id": "Face/Off (1997)",
+  "old": "Church shootout canapés",
+  "new": {
+   "n": "Canteen grilled cheese with tomato soup",
+   "note": "Cheddar griddled crisp on white bread, cut in halves, a cup of tomato soup to dunk.",
+   "how": "Butter the bread on the outside and fill with the cheddar. Griddle in a hot pan until golden on both sides and melted inside. Heat the soup. Cut the sandwiches in half and serve with cups of soup.",
+   "shop": [
+    "8 slices white bread@Bakery",
+    "200g cheddar@Dairy",
+    "40g butter@Dairy",
+    "2 tins tomato soup@Pantry"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 13,
+    "make_ahead": "Best made just before serving",
+    "ingredients": [
+     {
+      "q": 8,
+      "u": "",
+      "item": "slices white bread",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 200,
+      "u": "g",
+      "item": "cheddar, sliced",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "tins tomato soup",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Butter the bread on the outside and fill with the cheddar.",
+      "min": 5
+     },
+     {
+      "text": "Griddle in a hot pan until golden on both sides and melted inside.",
+      "min": 8
+     },
+     {
+      "text": "Heat the soup.",
+      "min": 5
+     },
+     {
+      "text": "Cut the sandwiches in half and serve with cups of soup.",
+      "min": 2
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "The Suicide Squad (2021)",
+  "old": "Polka-Dot Man's spotty skewers",
+  "new": {
+   "n": "Polka-Dot Man's franks and beans",
+   "note": "Sliced franks in sweet baked beans, spooned out by the ladle on the tray.",
+   "how": "Tip the beans into a pan with the sugar and mustard. Add the frankfurt coins and simmer until hot through.",
+   "shop": [
+    "6 frankfurts@Deli",
+    "2 tins baked beans@Pantry",
+    "1 tbsp brown sugar@Pantry",
+    "1 tsp yellow mustard@Pantry"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 8,
+    "make_ahead": "Best made on the day",
+    "ingredients": [
+     {
+      "q": 6,
+      "u": "",
+      "item": "frankfurts, sliced into coins",
+      "aisle": "Deli"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "tins baked beans",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "brown sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "yellow mustard",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Tip the beans into a pan with the sugar and mustard.",
+      "min": 3
+     },
+     {
+      "text": "Add the frankfurt coins and simmer until hot through.",
+      "min": 8
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Use vegetarian frankfurts."
+  }
+ }
+]

@@ -1128,7 +1128,8 @@ function openMenuZoom(trigger){
      that is big enough, else fit to the width and scroll down, else one panel at a time (the half view's panels), else zoomed in to pan */
   const small=!phone&&typeof cardSmallPx==="function"?cardSmallPx():0,wholeK=Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch),widthK=Math.min(1.4,(innerWidth-80)/cw);
   const deskRead=!phone&&small>0&&small<99&&wholeK*small<13;
-  const deskFaces=deskRead&&widthK*small<13&&pvDesk?cardFaces():[];
+  /* review 47: a card the desktop column shows a page or panel at a time opens full size with the same pages and the page buttons (Gremlins, Zoolander, Hot Shots! opened on one clipped panel with no way to turn) */
+  const deskFaces=!phone&&pvDesk?cardFaces():[];
   const faces=phone?cardFaces():deskFaces,paged=faces.length>1;let fi=paged?Math.min(pvFace,faces.length-1):0;
   const fw=()=>paged?faces[fi].w:cw,fh=()=>paged?faces[fi].h:ch;
   const o=document.createElement("dialog");o.className="mzoom"+(paged?" mz-paged":"");o.setAttribute("aria-label","Printed menu, full size");
@@ -1136,7 +1137,7 @@ function openMenuZoom(trigger){
     (paged?`<div class="mz-pages"><button type="button" class="mz-prev" aria-label="Previous page"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="mz-pg" aria-live="polite"></span><button type="button" class="mz-next" aria-label="Next page"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>`:"")+
     (phone&&fw()>fh()*1.15?`<p class="mz-turn">Turn your phone sideways for a bigger view</p>`:"");
   const sc=o.querySelector(".mz-scroll"),sheet=o.querySelector(".mz-sheet");
-  const home=card.nextSibling,keepT=card.style.transform;sheet.appendChild(card);card.style.transformOrigin="0 0";card.style.transition="none";card.style.opacity="";
+  const home=card.nextSibling,keepT=card.style.transform;card.style.clipPath="";pvMask(null);/* review 47: the column view's clip and panel mask do not come into the full size view */sheet.appendChild(card);card.style.transformOrigin="0 0";card.style.transition="none";card.style.opacity="";
   const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):paged?Math.min(1.4,(innerWidth-80)/fw()):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
   /* the opening zoom on a desktop: big enough to read, never wider than the screen unless there is no other way */
   const readK=()=>!deskRead?fit():paged?Math.min(1.4,(innerWidth-80)/fw()):widthK*small>=13?widthK:Math.min(2.5,13/small);
@@ -1146,7 +1147,7 @@ function openMenuZoom(trigger){
   const set=(v,px=sc.clientWidth/2,py=sc.clientHeight/2)=>{const cx=(sc.scrollLeft+px)/k,cy=(sc.scrollTop+py)/k;k=Math.max(Math.min(.25,fit()),Math.min(2.5,v));paint();sc.scrollLeft=cx*k-px;sc.scrollTop=cy*k-py};
   const toFit=()=>{k=fit();paint();sc.scrollLeft=0;sc.scrollTop=0};
   const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;pvFace=i;paint();sc.scrollLeft=0;sc.scrollTop=0;
-    o.querySelector(".mz-pg").textContent=faces[0].part?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
+    o.querySelector(".mz-pg").textContent=faces[0].part&&faces.length===2?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
   o.querySelector(".mz-in").addEventListener("click",()=>set(k*1.25));
   o.querySelector(".mz-out").addEventListener("click",()=>set(k/1.25));
   o.querySelector(".mz-fit").addEventListener("click",toFit);
@@ -2774,7 +2775,9 @@ function libWords(html,fl,fmt){const HW=fmt&&HOME_WORDS[fmt]&&homeVenue(fl)?HOME
 const US_NOT=new Set(['The Babadook (2014)','Finding Nemo (2003)','Mission: Impossible 2 (2000)','Top End Wedding (2019)','Anyone But You (2023)','Babe (1995)','Happy Feet (2006)','Peter Rabbit (2018)','Peter Rabbit 2: The Runaway (2021)','Mad Max (1979)','Mad Max 2 (1981)','Mad Max: Fury Road (2015)','Furiosa: A Mad Max Saga (2024)','Wolf Creek (2005)','Crocodile Dundee (1986)','Crocodile Dundee II (1988)','Moulin Rouge! (2001)','Australia (2008)','Hunt for the Wilderpeople (2016)','Boy (2010)','Eagle vs Shark (2007)','What We Do in the Shadows (2014)','Next Goal Wins (2023)']);
 function usCard(f,fl){fl=fl||{};const id=f&&(f.id||f.title+" ("+f.year+")");return !!f&&f.theme!=="aussie"&&f.theme!=="galaxy"&&!US_NOT.has(id)&&!fl.currency&&fl.world!=="storybook"&&(!fl.country||fl.country==="US")}
 function libUS(html,f,fl){if(!usCard(f,fl))return html;
-  return String(html).replace(/>(\s*)(Sweets|SWEETS|Afters|AFTERS|Takeaway orders|TAKEAWAY ORDERS|Takeaway|TAKEAWAY)(\s*)</g,(m,a,w,b)=>{const lo=w.toLowerCase(),to=lo==="sweets"?"Desserts":lo==="afters"?"Dessert":lo==="takeaway orders"?"Takeout orders":"Takeout";return ">"+a+(w===w.toUpperCase()?to.toUpperCase():to)+b+"<"})}
+  return String(html).replace(/>(\s*)(Sweets|SWEETS|Afters|AFTERS|Takeaway orders|TAKEAWAY ORDERS|Takeaway|TAKEAWAY)(\s*)</g,(m,a,w,b)=>{const lo=w.toLowerCase(),to=lo==="sweets"?"Desserts":lo==="afters"?"Dessert":lo==="takeaway orders"?"Takeout orders":"Takeout";return ">"+a+(w===w.toUpperCase()?to.toUpperCase():to)+b+"<"})
+    /* review 47: an American card reads Fahrenheit (the kiosk's weather and surf strip) and buys the room a round, never shouts it */
+    .replace(/>(\s*)(-?\d{1,2})°C(\s*)</g,(m,a,c,b)=>">"+a+Math.round(+c*9/5+32)+"°F"+b+"<").replace(/>([^<]*)shout the room([^<]*)</g,(m,a,b)=>">"+a+"buy the room a round"+b+"<")}
 /* 8 Nov: a quote that ends a note keeps its own stop: layouts that add a full stop leave "There goes my milk!". as "There goes my milk!" (text only) */
 function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */.replace(/([^.\s])\.\.(?=\s|$)/g,"$1.")/* review 32: a joined line never prints "midnight.." (an ellipsis of three stays) */+"<")}
 /* review 39 (Josh's call): a hand-built card that does not print its Showtime cue gets a cue strip along the foot, in the card's own ink,
