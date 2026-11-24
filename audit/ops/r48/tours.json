@@ -1,0 +1,137 @@
+[
+{"id":"Indiana Jones and the Last Crusade (1989)","ops":[
+ {"ren":"Venice cod, prosciutto and sardine toasts","to":"Smoked cod and sardine toasts"},
+ {"note":"Smoked cod and sardine toasts","to":"Baguette toasts with smoked cod, prosciutto and fig, or sardines and raisins."},
+ {"ren":"Circus train peanut caramel popcorn balls","to":"Peanut caramel popcorn balls"},
+ {"note":"Peanut caramel popcorn balls","to":"Nuts and kernels in corn syrup toffee, fist-sized, for Marcus Brody's visit."},
+ {"ren":"Austrian castle pretzels","to":"Soft pretzels with camembert dip"},
+ {"note":"Soft pretzels with camembert dip","to":"Homemade soft pretzels with a warm camembert and paprika butter dip."},
+ {"ren":"Hatay lamb kebabs with garlic yogurt","to":"Lamb kebabs with garlic yogurt"},
+ {"note":"Lamb kebabs with garlic yogurt","to":"Spiced ground lamb with sumac and parsley on skewers, grilled hot, with flatbread."},
+ {"ren":"Zeppelin dining room schnitzel","to":"Junior's pork schnitzel"},
+ {"note":"Junior's pork schnitzel","to":"Crisp pork schnitzel with warm potato salad, cut at the desk among the notes."},
+ {"ren":"Petra rose and pistachio cake","to":"Rose and pistachio cake"},
+ {"note":"Rose and pistachio cake","to":"Almond and pistachio cake soaked in lemon rosewater syrup, a slice beside the diary."}
+]},
+{"id":"Raiders of the Lost Ark (1981)","ops":[
+ {"set":"flavour.sign","value":"Marion's bar, Patan, Nepal"},
+ {"ren":"Cairo dates","to":"Not-bad dates"},
+ {"note":"Not-bad dates","to":"Medjool dates stuffed with almonds, wrapped in bacon and drizzled with honey. Good ones."},
+ {"ren":"Cairo market falafel","to":"Chickpea fritters with lemon tahini"},
+ {"note":"Chickpea fritters with lemon tahini","to":"Crisp fritters of raw chickpeas and herbs with lemon tahini sauce, by the stove."},
+ {"note":"Golden idol gruyère cheese puffs","to":"Gruyère and cayenne choux baked hollow, tomato dip, gold as the idol."},
+ {"ren":"Basbousa semolina cake","to":"Semolina coconut cake"},
+ {"note":"Semolina coconut cake","to":"Semolina, coconut and yoghurt cake with an almond on each square, soaked in syrup."}
+]},
+{"id":"Harry Potter and the Philosopher's Stone (2001)","ops":[
+ {"ren":"Trolley chocolate frogs with honeycomb","to":"Chocolate frogs with honeycomb"},
+ {"ren":"Hogwarts Christmas roast turkey","to":"Herb-buttered roast turkey"},
+ {"note":"Herb-buttered roast turkey","to":"Turkey breast with chipolatas in bacon and honey parsnips, there the moment the feast appears."},
+ {"set":"house.s","value":{"n":"Pigs in blankets with cranberry","note":"Sausages in bacon with cranberry sauce, piled on the house tables.","meat":true}}
+]},
+{"id":"Harry Potter and the Chamber of Secrets (2002)","ops":[
+ {"ren":"Dursley dinner violet cream puffs","to":"Molly's violet cream puffs"},
+ {"note":"Molly's violet cream puffs","to":"Crisp choux filled with vanilla Chantilly, pale purple icing and a sugared flower on top."},
+ {"ren":"Lockhart's treacle toffee","to":"Burrow treacle toffee"},
+ {"note":"Burrow treacle toffee","to":"Hard buttery toffee of brown sugar, treacle and golden syrup, wrapped for Ginny's trunk."},
+ {"ren":"Bubbling Polyjuice jelly","to":"Errol's green apple jelly"},
+ {"note":"Errol's green apple jelly","to":"Fresh green apple juice jelly set in small glasses, wobbly as Errol's landings."}
+]},
+{"id":"Harry Potter and the Prisoner of Azkaban (2004)","ops":[
+ {"ren":"Lupin's chocolate","to":"Honeycomb chocolate slabs"},
+ {"note":"Honeycomb chocolate slabs","to":"Crunchy honeycomb broken into slabs and half dipped in dark chocolate, good after a dementor."},
+ {"ren":"One-Eyed Witch coconut ice","to":"Coconut ice"},
+ {"note":"Coconut ice","to":"Condensed milk and coconut in white and pink layers, cut chunky and kept in a jar on the bar."},
+ {"ren":"Tea leaf reading biscuits","to":"Earl Grey and lemon biscuits"},
+ {"note":"Earl Grey and lemon biscuits","to":"Crisp Earl Grey and lemon shortbread with a pot of tea. No Grim in the cup."}
+]},
+{"id":"Harry Potter and the Goblet of Fire (2005)","ops":[
+ {"ren":"World Cup campsite sausages","to":"Sausage baps with brown sauce"},
+ {"note":"Sausage baps with brown sauce","to":"Sticky pan fried sausages and golden onions in soft rolls, passed round late in the night."}
+]},
+{"id":"Harry Potter and the Order of the Phoenix (2007)","ops":[
+ {"ren":"Hog's Head pork and sage sausage rolls","to":"Pork and sage sausage rolls"},
+ {"note":"Pork and sage sausage rolls","to":"Mince, onion and herbs in puff pastry, baked golden, with English mustard on the side."},
+ {"ren":"Great Hall thyme roast chicken and gravy","to":"Thyme roast chicken and gravy"},
+ {"note":"Thyme roast chicken and gravy","to":"Chicken roasted with thyme, potatoes and gravy, for the Order round the long table."},
+ {"ren":"Umbridge's pink cupcakes","to":"Tonks's pink cupcakes"},
+ {"note":"Tonks's pink cupcakes","to":"Vanilla cupcakes with bright pink buttercream, the colour of Tonks's hair this week."}
+]},
+{"id":"Harry Potter and the Half-Blood Prince (2009)","ops":[
+ {"ren":"Hogwarts Express Cornish pasties","to":"Cornish pasties"},
+ {"note":"Cornish pasties","to":"Peppery skirt, potato, swede and onion in crimped shortcrust, cut small for the party."},
+ {"ren":"Ron's love potion truffles","to":"Love potion truffles"},
+ {"note":"Love potion truffles","to":"Dark chocolate and cream truffles rolled in cocoa. Check who sent them."},
+ {"ren":"Wizard Wheezes chocolate honeycomb","to":"Chocolate honeycomb"},
+ {"note":"Chocolate honeycomb","to":"Syrup toffee foamed with bicarb, set crunchy and half dipped in dark chocolate."}
+]},
+{"id":"Harry Potter and the Deathly Hallows: Part 1 (2010)","ops":[
+ {"set":"flavour.venue","value":"Forest of Dean Camp"},
+ {"set":"flavour.sign","value":"The Tent, Somewhere Safe"},
+ {"set":"cue","value":"Serve the snacks when the trio pitch the tent in the forest."},
+ {"ren":"Burrow wedding canapés","to":"Salmon blinis and cheese puffs"},
+ {"note":"Salmon blinis and cheese puffs","to":"Blinis with crème fraîche, smoked salmon and dill, plus gruyère choux, from the beaded bag."},
+ {"ren":"Tottenham Court Road café toasties","to":"Ham and cheddar toasties"},
+ {"note":"Ham and cheddar toasties","to":"Ham, vintage cheddar and English mustard toasted in buttered bread over the camp stove."},
+ {"ren":"Shell Cottage seaside crab toasts","to":"Tinned crab toasts"},
+ {"note":"Tinned crab toasts","to":"Mayo and lemon crab on toasted sourdough fingers, the tins packed by Hermione."},
+ {"ren":"Frozen pond foil baked trout with potatoes","to":"Foil baked trout with potatoes"},
+ {"note":"Foil baked trout with potatoes","to":"Whole trout stuffed with lemon, dill and butter, cooked in foil in the embers."},
+ {"ren":"Godric's Hollow steak and onion pie","to":"Steak and onion pie"},
+ {"note":"Steak and onion pie","to":"Steak and onion under puff pastry, eaten in the tent on a snowy Christmas Eve."},
+ {"ren":"Harry's birthday lemon curd sponge","to":"Lemon curd sponge"},
+ {"note":"Lemon curd sponge","to":"Butter sponge layers with lemon zest and lemon curd, a slice wrapped for later."},
+ {"ren":"Hot cocoa in the tent","to":"Hot cocoa by the stove"}
+]},
+{"id":"Harry Potter and the Deathly Hallows: Part 2 (2011)","ops":[
+ {"ren":"Dragon escape chilli wings","to":"D.A. chilli wings"},
+ {"note":"D.A. chilli wings","to":"Crisp baked wings glazed with honey, soy and red chilli, for the students holding out."},
+ {"ren":"Hogsmeade sausage rolls with brown sauce","to":"Hog's Head sausage rolls"},
+ {"note":"Hog's Head sausage rolls","to":"Pork and sage sausage rolls with brown sauce, sent up the tunnel by Aberforth."},
+ {"ren":"Great Hall lemon roast chicken","to":"Lemon roast chicken"},
+ {"ren":"Platform nine and three-quarters treacle tart","to":"Treacle tart"},
+ {"note":"Treacle tart","to":"Golden syrup and lemon treacle tart, served warm in thick slices."},
+ {"set":"house.s","value":{"n":"Fish finger butties with tartare","note":"Fish finger sandwiches with tartare sauce, cut in halves for the room.","meat":true}}
+]},
+{"id":"Fantastic Beasts and Where to Find Them (2016)","ops":[
+ {"set":"house.d","value":{"n":"Gin fizz with fresh lemon","note":"Gin, lemon, sugar and soda, shaken. It's Prohibition, so ask quietly.","alc":true}}
+]},
+{"id":"Fantastic Beasts: The Crimes of Grindelwald (2018)","ops":[
+ {"ren":"French Ministry gruyère gougères","to":"Big top gruyère gougères"},
+ {"ren":"Hogwarts staff room chicken leek pie","to":"Chicken and leek pie"},
+ {"note":"Chicken and leek pie","to":"Browned chicken thigh in creamy thyme and Dijon sauce under puff, sold by the slice."}
+]},
+{"id":"Fantastic Beasts: The Secrets of Dumbledore (2022)","ops":[
+ {"ren":"Berlin pretzels","to":"Minister Vogel's pretzels"},
+ {"note":"Minister Vogel's pretzels","to":"Soft pretzels dipped in bicarb water and topped with rock salt, for the German delegation."},
+ {"ren":"Hog's Head sausage rolls and brown sauce","to":"British delegation sausage rolls"},
+ {"note":"British delegation sausage rolls","to":"Pork, onion and sage rolled in puff and baked golden, with tangy brown sauce."},
+ {"ren":"Berlin schnitzel","to":"Crumbed pork schnitzel"},
+ {"note":"Crumbed pork schnitzel","to":"Crumbed pork loin fried in butter, warm potato salad, served once the votes are in."},
+ {"ren":"Kowalski bakery potato pierogi","to":"Jacob's potato pierogi"},
+ {"note":"Jacob's potato pierogi","to":"Dough parcels of mashed potato and cheddar, boiled then pan-fried with onions."},
+ {"ren":"Jacob and Queenie's wedding cake","to":"Three-layer victory sponge"},
+ {"note":"Three-layer victory sponge","to":"Butter sponge layers with buttercream and raspberry jam, iced and cut for the winner."}
+]},
+{"id":"Ocean's Twelve (2004)","ops":[
+ {"ren":"Beef bitterballen","to":"Beef crocchette"},
+ {"note":"Beef crocchette","to":"Crisp fried croquettes of shredded beef in a thick creamy filling."},
+ {"ren":"Rome pork saltimbocca with sage butter","to":"Pork saltimbocca with sage butter"},
+ {"ren":"Amsterdam stroopwafel affogato","to":"Caramel wafer affogato"},
+ {"note":"Caramel wafer affogato","to":"Caramel wafers and vanilla ice cream under hot espresso, on the terrace."}
+]},
+{"id":"Walk the Line (2005)","ops":[
+ {"ren":"Dyess farm biscuits and sausage gravy","to":"Biscuits and sausage gravy"},
+ {"note":"Biscuits and sausage gravy","to":"Buttermilk biscuits under peppery sausage gravy, ladled onto the tray."},
+ {"ren":"Hendersonville Thanksgiving turkey","to":"Sliced turkey with gravy"},
+ {"note":"Sliced turkey with gravy","to":"Roast turkey with cornbread stuffing, gravy and cranberry sauce, on a steel tray."}
+]},
+{"id":"Indiana Jones and the Kingdom of the Crystal Skull (2008)","ops":[
+ {"ren":"Marshall College diner fries","to":"Canteen fries in paper cones"},
+ {"note":"Canteen fries in paper cones","to":"Thick twice-fried fries with sea salt and ketchup, eaten between crates."},
+ {"ren":"Nazca lines beef empanadas","to":"Beef hand pies"},
+ {"note":"Beef hand pies","to":"Flaky pastry round cumin ground beef, olive and egg, baked golden, green salsa."},
+ {"ren":"Nazca chicken with green sauce","to":"Garlic drumsticks with green sauce"},
+ {"note":"Garlic drumsticks with green sauce","to":"Charred garlic cumin drumsticks with cilantro jalapeño sauce and fries."}
+]}
+]

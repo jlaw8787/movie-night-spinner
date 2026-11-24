@@ -158,7 +158,7 @@
    }
   },
   {
-   "n": "Honey roasted carrots with feta dip",
+   "n": "Honey roasted carrots with cheese dip",
    "course": "s",
    "prep_min": 13,
    "cook_min": 25,
@@ -197,14 +197,14 @@
     {
      "q": 150,
      "u": "g",
-     "item": "feta",
-     "aisle": "Deli"
+     "item": "cream cheese",
+     "aisle": "Dairy"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "Greek yoghurt",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "bunch",
+     "item": "chives, snipped",
+     "aisle": "Produce"
     }
    ],
    "steps": [
@@ -217,7 +217,7 @@
      "min": 25
     },
     {
-     "text": "Whip the feta with the yoghurt for the dip.",
+     "text": "Whip the cream cheese with a splash of milk and snipped chives for the dip.",
      "min": 5
     }
    ],

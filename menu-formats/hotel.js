@@ -293,7 +293,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const pr=F.prop,pk=pr.kind;
   const prop=`<div style="position:absolute;right:34px;top:${secH-82}px;width:226px;transform:rotate(${(-T.rot*.7+1.5).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
     <div data-fbox style="position:relative;padding:13px 18px 12px;max-height:126px;overflow:hidden">
-      <div data-fs="14" style="font:700 14px/1 ${B};letter-spacing:.2em;text-transform:uppercase;color:${K.acc}">${pk==="ticket"||pk==="stub"?"Admit one":pk==="tag"?"Hang on your door":F.home?(F.palace||+F.stayY<1930||(ctx.flavour&&ctx.flavour.world==="storybook")?"From the kitchen":"On the fridge"):"Front desk"}</div>
+      <div data-fs="14" style="font:700 14px/1 ${B};letter-spacing:.2em;text-transform:uppercase;color:${K.acc}">${pk==="ticket"||pk==="stub"?"Admit one":pk==="tag"&&!F.home?"Hang on your door":F.home?(F.palace||+F.stayY<1930||(ctx.flavour&&ctx.flavour.world==="storybook")?"From the kitchen":"On the fridge"):"Front desk"}</div>
       <div data-fs="15" style="${dispStyle}font-size:23px;line-height:1.05;color:#1c1712;margin:7px 0 6px">${esc(pr.title)}</div>
       ${pr.lines.map(l=>`<div data-fs="14" style="font:700 15px/1.3 ${B};color:#2a2420">${esc(dry(l))}</div>`).join("")}</div></div>`;
   const second=`<div style="position:absolute;left:0;right:0;top:0;height:${secH}px;overflow:hidden;background:${K.deep}">

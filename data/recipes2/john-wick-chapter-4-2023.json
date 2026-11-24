@@ -2,170 +2,81 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Bar currywurst",
+   "n": "Bar yakitori skewers",
    "course": "s",
-   "prep_min": 13,
-   "cook_min": 35,
-   "make_ahead": "Make the sauce up to 3 days ahead, keep chilled and reheat; fry the chips and grill the bratwurst fresh",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Make the tare up to a week ahead and thread the skewers in the morning; grill to serve",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "bratwurst",
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, cubed",
      "aisle": "Meat"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "brown onion",
+     "u": "bunch",
+     "item": "spring onions, in 3cm lengths",
      "aisle": "Produce"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "tomato paste",
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
      "aisle": "Pantry"
     },
     {
-     "q": 2,
-     "u": "tsp",
-     "item": "curry powder",
-     "aisle": "Spices"
+     "q": 80,
+     "u": "ml",
+     "item": "mirin",
+     "aisle": "Pantry"
     },
     {
-     "q": 1,
+     "q": 60,
+     "u": "ml",
+     "item": "sake",
+     "aisle": "Liquor"
+    },
+    {
+     "q": 2,
      "u": "tbsp",
      "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "tbsp",
-     "item": "white vinegar",
-     "aisle": "Pantry"
+     "u": "tsp",
+     "item": "shichimi togarashi",
+     "aisle": "Spices"
     },
     {
-     "q": 200,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 600,
-     "u": "g",
-     "item": "potatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil",
+     "q": 12,
+     "u": "",
+     "item": "bamboo skewers, soaked",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into chips and fry in the vegetable oil until golden.",
-     "min": 20
+     "text": "Simmer the soy, mirin, sake and sugar until syrupy for the tare.",
+     "min": 8
     },
     {
-     "text": "Grill the bratwurst slowly until browned, then slice.",
-     "min": 20
-    },
-    {
-     "text": "Soften the onion, add the tomato paste, curry powder, sugar, vinegar and water and simmer.",
+     "text": "Thread the chicken and spring onion onto the skewers.",
      "min": 10
     },
     {
-     "text": "Pour over the sausage and dust with curry powder. Serve with the chips.",
+     "text": "Grill hot, turning and brushing with the tare, until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Brush once more with tare and finish with shichimi.",
      "min": 3
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Berlin currywurst (vegetarian)",
-     "prep_min": 12,
-     "cook_min": 35,
-     "make_ahead": "Make the sauce up to 3 days ahead, keep chilled and reheat; fry the chips and grill the vegetarian bratwurst fresh",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "vegetarian bratwurst",
-       "aisle": "Deli"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "brown onion",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "tomato paste",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "curry powder",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "white vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 600,
-       "u": "g",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cut the potatoes into chips and fry in the vegetable oil until golden.",
-       "min": 20
-      },
-      {
-       "text": "Grill the vegetarian bratwurst until browned, then slice.",
-       "min": 12
-      },
-      {
-       "text": "Soften the onion, add the tomato paste, curry powder, sugar, vinegar and water and simmer.",
-       "min": 10
-      },
-      {
-       "text": "Pour over the sliced bratwurst and dust with curry powder. Serve with the chips.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": false
   },
   {
    "n": "Cheese puffs (gougères)",

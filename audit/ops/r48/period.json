@@ -1,0 +1,31 @@
+[
+{"id":"Peter Pan (1953)","ops":[
+ {"ren":"Minted pea and feta toasts","to":"Minted pea and Wensleydale toasts"},
+ {"note":"Minted pea and Wensleydale toasts","to":"Toasted bread with crushed peas, mint, crumbled Wensleydale and lemon, ridged like a crocodile."},
+ {"sub":"crumbled feta","to":"crumbled Wensleydale"},{"sub":"feta","to":"Wensleydale"},{"sub":"Smash the peas","to":"Crush the peas"},{"sub":"then smash with","to":"then crush with"}
+]},
+{"id":"It Happened One Night (1934)","ops":[
+ {"ren":"Young carrots with herb sour cream dip","to":"Young carrots with herb cream cheese"},
+ {"note":"Young carrots with herb cream cheese","to":"Sweet raw young carrots with a chive, dill and lemon cream cheese, the way Peter eats them."},
+ {"sub":"Mix 300ml sour cream with","to":"Soften 250g cream cheese with a splash of milk,"},{"sub":"Mix the sour cream with","to":"Soften the cream cheese with a splash of milk,"},
+ {"ren":"Cinnamon mocha","to":"Cinnamon coffee with cocoa"},
+ {"note":"Cinnamon coffee with cocoa","to":"Strong coffee, hot milk and a spoon of cocoa with cinnamon and brown sugar."}
+]},
+{"id":"Who Framed Roger Rabbit (1988)","ops":[
+ {"ren":"Honey roasted carrots with feta dip","to":"Honey roasted carrots with cheese dip"},
+ {"note":"Honey roasted carrots with cheese dip","to":"Baby carrots roasted with honey, cumin and thyme, a cream cheese and chive dip."},
+ {"sub":"Whip 150g feta with 100g Greek yoghurt","to":"Whip 150g cream cheese with a splash of milk and snipped chives"},{"sub":"Whip the feta with the yoghurt","to":"Whip the cream cheese with a splash of milk and snipped chives"},
+ {"ren":"Toon-safe French onion dip","to":"Toon-safe onion cheese spread"},
+ {"sub":"in sour cream and cream cheese with chives","to":"beaten into cream cheese with chives"}
+]},
+{"id":"Three Amigos! (1986)","ops":[{"note":"Santa Poco street corn","to":"Charred corn with lime butter, crumbled cotija, chilli powder and cilantro."}]},
+{"id":"Field of Dreams (1989)","ops":[{"note":"Ray's cornfield corn on the cob","to":"Charred Iowa corn with melted butter, salt and a pinch of chilli, picked that morning."}]},
+{"id":"Coco (2017)","ops":[{"note":"Marigold bridge corn","to":"Charred corn with lime mayo, crumbled cotija, chilli powder and cilantro."}]},
+{"id":"Encanto (2021)","ops":[{"note":"Pandebono cheese bread","to":"Colombian cheese bread rolls with tapioca and salty white cheese, baked puffed and golden."}]},
+{"id":"Holiday Inn (1942)","ops":[{"note":"Valentine's night gruyère heart toasts","to":"Heart-shaped white toasts with tomato chutney and melted gruyère."},{"sub":"8 slices sourdough","to":"8 slices white bread"}]},
+{"id":"Road to Perdition (2002)","ops":[{"sub":"Warm sourdough","to":"Warm rye loaf"}]},
+{"id":"Oppenheimer (2023)","ops":[{"sub":"Sourdough under melted","to":"Thick toast under melted"}]},
+{"id":"Rear Window (1954)","ops":[{"ren":"Village antipasto with marinated bocconcini","to":"Village antipasto with marinated mozzarella"}]},
+{"id":"Pirates of the Caribbean: Dead Men Tell No Tales (2017)","ops":[{"set":"house.s","value":{"n":"Conch fritters with lime and pepper sauce","note":"Chopped conch in a crisp batter with a sharp lime and pepper sauce to dip.","meat":true}}]},
+{"id":"Monty Python and the Holy Grail (1975)","ops":[{"note":"Patsy's coconut prawns","to":"Crisp coconut-crumbed prawns with a lime dip. Patsy brings the coconut halves."}]}
+]

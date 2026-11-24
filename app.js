@@ -889,10 +889,12 @@ function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",")
 /* review 39 (Josh, 22 Nov): on a phone the printed menu reads without a tap. Each view whose small print would draw under about 10.5px is
    cut along clear gutters into reading views (an XY cut on the words: columns first, then bands), each cropped to its words and scaled to
    the screen width, so dish notes read at about 11px. Tall views are cut again at a line gap to about one screen. Desktop is left alone. */
-function cardFaces(){const base=cardFaces0();if(!swipeW()||pvDesk||!card.classList.contains("fmt"))return base;
+function cardFaces(){const base=cardFaces0();if(!card.classList.contains("fmt"))return base;
+  /* review 48: on desktop a page whose notes still print under 13px at column width is read in column views too, as the phone does */
+  if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return base}
   const key=renderId+"|"+card.innerHTML.length+"|"+(preview.clientWidth||0);if(card._pvr&&card._pvr.key===key)return card._pvr.v;
   let out=base;try{out=pvReadViews(base)}catch(e){out=base}card._pvr={key,v:out};return out}
-function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),FLOOR=10.5,TGT=Math.max(260,pw*sp/11.5),MAXH=Math.max(500,(innerHeight||800)*.92);
+function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),desk=!swipeW(),FLOOR=desk?13:10.5,TGT=Math.max(260,pw*sp/(desk?13.5:11.5)),MAXH=Math.max(500,(innerHeight||800)*.92);
   let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;if(!w||!h)return base;V=[{el,w,h,x:0,y:0,px:0,row:true}]}
   const out=[];let n=0;const NM=(()=>{const m=(current&&(current.printMenu||current.menu))||{};return ["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/\s+/g," ").trim())).filter(n=>n.length>3)})();
   const nDish=L=>L.filter(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))}).length;const hasDish=L=>L.some(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))});/* a line that is the dish name, not a cue that mentions the cornbread */
@@ -1601,8 +1603,10 @@ function shopTidy(lines){
       .replace(/^(?:(?:a|1|2|3) (?:small )?)?pinch(?:es)?(?: of)? (.+)$/i,"$1").replace(/^(\d+(?:\.\d+)?\s?(?:g|kg)?\s*)(?:soft|softened)?\s*(?:salted |unsalted )?butter$/i,"$1butter").replace(/^(?:(\d+ (?:bottles?|jars?) )|1 )?(?:tomato )?ketchup$/i,(m,a)=>(a||"1 bottle ")+"tomato sauce")
       .replace(/^1 ((?:dill |bread and butter )?pickles|(?:maraschino|cocktail|glac[eé]) cherries|capers|olives|(?:American |yellow |Dijon |wholegrain )?mustard)$/i,(m,x)=>(/mustard/i.test(x)&&!/dijon|wholegrain/i.test(x)?"1 bottle ":"1 jar ")+x).replace(/^1 (?!(?:bottles?|jars?|packets?|bags?|tins?|tubs?|cartons?|boxe?s?) )((?:[a-z]+ )?food colou?ring|[a-z ]*(?:syrup|essence|extract))$/i,"1 bottle $1");
     t=t.replace(/,\s*(a pinch|a little|a dash|a splash|some|optional)$/i,"").replace(/\b(plenty of|lots of|a little) /i,"").replace(/^(\d+ (?:knobs?|pieces?) ginger)\s*\(\d+\s*cm\)$/i,"$1");t=t.replace(/,\s*[^,@]*\b(serv(e|ing)|to taste|decorat|garnish|plus|to give|whip)\w*[^@]*$/i,"").replace(/\s*\((whip it|whipped|to whip|for whipping|softened|chilled|cold)\)/i,"")
-      .replace(/,\s*((finely |thinly |roughly |lightly )?(crumbled|cold|chilled|ice[- ]cold|softened|melted|beaten|sliced|chopped|diced|grated|juiced|zested|halved|peeled|minced|crushed|torn|cubed|drained|rinsed|whipped|shaved or crushed|crushed or shaved|in wheels|in wedges|quartered|stalks chopped|at room temperature)(\s+and\s+\w+)?)$/i,"")
-      .replace(/^(\d+)\s*x\s*(\d+)ml (cans?|bottles?|stubbies) of (.+)$/i,(m,n,ml,pk,it)=>`${n} ${pk} ${it}, ${ml}ml each`);
+      .replace(/,\s*((finely |thinly |roughly |lightly |slightly )?(crumbled|cold|chilled|ice[- ]cold|softened|melted|beaten|sliced|chopped|diced|grated|juiced|zested|halved|peeled|minced|crushed|torn|cubed|drained|rinsed|whipped|shaved or crushed|crushed or shaved|in wheels|in wedges|quartered|stalks chopped|at room temperature)(\s+and\s+\w+)?)$/i,"")
+      .replace(/^(\d+)\s*x\s*(\d+)ml (cans?|bottles?|stubbies) of (.+)$/i,(m,n,ml,pk,it)=>`${n} ${pk} ${it}, ${ml}ml each`)
+      /* review 48: a plain onion is a brown onion here, so "1 brown onion" and "2 onions" add up to one line (The Departed, Shawshank) */
+      .replace(/^([\d./½¼¾]+)\s+(?:yellow\s+)?onion(s?)$/i,"$1 brown onion$2");
     /* ginger, however a recipe measures it, is bought by the knob (about 20g, or 4cm) */
     {const g=t.match(/^(?:a |(\d+(?:\.\d+)?)\s*(g|cm)?\s*)?(?:(knobs?|pieces?)(?: of)?\s+)?(?:fresh )?ginger(?:,\s*(\d+)\s*cm)?$/i);
      if(g){const n=+(g[1]||1),u=(g[2]||"").toLowerCase(),gr=u==="g"?n:u==="cm"?n*5:g[4]?n*(+g[4])*5:n*20;t="ginger "+gr+"g"}}
@@ -2405,9 +2409,9 @@ const PF_BITE=/\b(jelly( gems| cubes| cups)?|crackling|pork scratchings|pork rin
 const pfCheap=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||(PF_BITE.test(n)&&!PF_NOTBITE.test(n));
 const pfCheap0=n=>(PF_CHEAP.test(n)&&!PF_NOTCHEAP.test(n))||/\b(meat pies?|sausage rolls?)\b/i.test(n);/* a main that is a pie or pasty is still a meal: only the old list caps mains */
 const PF_BAR=/\b(nuts|peanuts|crisps|chips and dip|popcorn|pretzels?|olives|pork scratchings|bar snacks?)\b(?!.*\b(crusted|crumbed|stuffed|chicken|prawns?|steak|squid|calamari|loaded|caramel|toffee|lolly|lollies|chocolate)\b)/i;
-const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck|venison|pheasant|grouse|quail|goose)\b/i;
+const PF_PREM=/\b(steaks?|sirloin|calamari|squid|rib ?eye|t-bone|porterhouse|filet|fillet|wagyu|prime rib|surf and turf|lobster|crab|prawns?|shrimp|(?<!potato )scallops?|oysters?|roast|chateaubriand|veal|lamb|salmon|barramundi|snapper|duck|venison|pheasant|grouse|quail|goose)\b/i;
 const PF_SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|sake|bellini|mimosa|shandy|beer|ale|lager|stout|cider|mai tai|grog|punch|sherry|port|mead|claret)\b/i;
-const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne)\b/i;
+const PF_COCK=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|cocktail|martini|margarita|mai tai|daiquiri|mojito|colada|spritz|negroni|champagne|kir|sidecar|manhattan|old fashioned|cosmopolitan|mimosa|bellini|blue hawaii|hurricane|highball|cognac|brandy|sazerac|gimlet|julep|bloody mary|aperol|campari|absinthe|schnapps)\b/i;/* review 48: kir royale, sidecar, Blue Hawaii and the rest count too */
 /* review 31: a band per decade for the middle main on a card, in dollars of the day (the saloon menus and the hand-built ones sit inside these) */
 const PF_BAND={"1800s":[.12,.9],"1930s-40s":[.3,1.4],"1950s":[.6,2.5],"1960s":[1,3.5],"1970s":[2,7],"1980s":[3.5,12],"1990s":[5,18],"2000s":[7,24],"modern":[10,32]};
 /* review 32: the dearest a plain glass of beer, cider or a pint can be in each decade, in dollars of the day */
@@ -2428,6 +2432,9 @@ const PF_CHEAPV=/\b(canteen|cafeteria|mess|commissary|soldiers'? club|staff)\b/i
     /* review 37: a snack stand, candy shop or drive-thru charges snack prices (The Sandlot's 1962 burgers at $1.95, Willy Wonka's candy shop) */
     if(/\b(snack (stand|bar|shack)|concessions?|drive-thru|drive thru|hot dog (stand|cart)|candy (shop|store)|sweet shop|lolly shop|soda fountain)\b/i.test(v))return .5;
     if(/\b(park hyatt|ritz|savoy|plaza|four seasons|waldorf|penthouse|bellagio|continental|grand budapest)\b/i.test(v))return 1.8;
+    /* review 48: a bar tab is bar food (Onward's $14 mozzarella sticks, Creed's $26 cheesesteaks, a $16 doughnut at a dive bar): priced like a
+       placemat or counter card of its year, unless the bar is a hotel, club, casino or resort one */
+    if(fmt==="bartab"&&!/\b(hotel|club|casino|resort|lounge|ritz|plaza)\b/i.test(v))return .6;
     return /^(canteen|lab|hospital)$/.test(fmt||"")||PF_CHEAPV.test(v)?.55:1};
 const PF_BEER=/\b(beer|ale|lager|bitter|stout|porter|pint|cider|pilsner|pils|ipa|stubby|schooner|middy|tinnie|longneck|draught|draft|shandy|radler|mild)\b/i;
 /* the money of the film's place (flavour.currency): an English pub in pounds and pence, Edwardian London in shillings and pence, Busan in won.
@@ -2533,7 +2540,13 @@ function pfMark(root){const PR=/^(\s*)(\d{1,3})?\.(\d\d)(\s*)$/,tw=document.crea
 const PAY_NOT=/\b(diner|caf[eé]|cafeteria|canteen|pub|bar|tavern|inn|hotel|motel|restaurant|tent|steakhouse|roadhouse|bakehouse|chophouse|coffee ?house|alehouse|tea ?house|public house|station house|clubhouse|house of|lounge|grill|shop|store|kiosk|stand|truck|cart|parlou?r|bistro|club|deli|bakery|market|saloon|lodge|counter|bodega|joint|trattoria|pizzeria|commissary|cantina|brasserie|food court|concession|snack bar|tea room|opera house|reception hall)\b/i,
   PAY_HOME=/\b(kitchen|family|house|home|homestead|farmhouse|farm|manor|mansion|estate|cottage|cabin|apartment|dining room|dining hall|treehouse|cellar|basement|dreamhouse|table|backyard|hideout|den|burrow|hut|lair|station|camp|galley|hab|nursery|attic|pantry|party|brunch|barbecue|convent|orphanage|soup kitchen|swamp|sietch|workshop|cookhouse|bunkhouse|chuck ?wagon|lifeboat|locker room|green room|backstage|great hall|common room|study|flat|digs|safe ?house|shack|bell tower|webcam room|bedroom|dorm|loft|lighthouse|houseboat|caravan|trailer|feast|welcome dinner|private dinner|prom|formal|wedding|shower)\b/i,/* review 38: studies, flats, digs, shacks, feasts and proms */
   PAY_MESS=/\b(mess|barracks|prison|jail|gaol|bunker|outpost|base|fort|army|stalag|pow camp|brig)\b/i;
-function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.pay!=null)return fl.pay;if(fmt==="own"||fmt==="takeaway"||fmt==="truck")return null;
+/* review 48: a place that sells no food (a florist, a garage, a comic or video store, a gym, a pawn shop, a gallery, a studio) prints no prices,
+   whatever layout it sits on, unless its name says it has a cafe, bar, kitchen or counter of its own */
+const PAY_NOFOOD=/\b(florist|flower shop|video (store|shop)|comics?|comic (shop|store)|garage|gym|pawn ?shop|christmas shop|toy (shop|barn|store|floor)|hardware|barber ?shop|car wash|auto parts|gallery|studio|training camp|gladiator school|newsroom|office|chuck ?wagon|campaign truck)\b/i,
+  PAY_FOODIN=/\b(caf[eé]|diner|canteen|cafeteria|bar|snack|restaurant|kitchen|lunch|grill|deli|bakery|pizza|truck stop|food|craft services|takeout|takeaway)\b/i;
+function payWord(fl,fmt){if(!fl)return null;if(fl.pay===true)return null;if(fl.pay!=null)return fl.pay;
+  if(PAY_NOFOOD.test(String(fl.venue||""))&&!PAY_FOODIN.test(String(fl.venue||"")))return "";
+  if(fmt==="own"||fmt==="takeaway"||fmt==="truck")return null;
   /* review 37: a banquet or an invitation is a host feeding guests (Grinch, Batman v Superman, Flash Gordon, Mulan, The Hobbit): no prices unless flavour.pay is true */
   if(fmt==="banquet"||fmt==="invite"||fmt==="prom")return "";/* a school dance or formal is paid by the ticket (Halloween 2018, Carrie, Footloose) */
   const v=String(fl.venue||"");if(!v)return null;
@@ -2554,6 +2567,8 @@ function payFix(root,T,w){const W=Array.isArray(w)?w:[w];let i=0;
   for(const t of N){const v=t.nodeValue;if(!PAYW.test(v)||/[“”"]/.test(v))continue;if(PF_DISH.has(pfKey(v))||(t.parentElement&&t.parentElement.closest("[data-note]")))continue;/* review 42: a dish name or note that says cash or paid is food, not a pay line (Cliffhanger printed no name for "Treasury cash apple strudel") */const ss=v.split(/(?<=[.!])(?<!\bNo\.)\s+/);if(ss.length<2&&v.trim().split(/\s+/).length>12)continue;
     const keep=ss.filter(x=>!PAYW.test(x));t.nodeValue=(v.match(/^\s*/)[0])+keep.join(" ")+(keep.length?v.match(/\s*$/)[0]:"")}
   for(const t of N)if(/,\s*,/.test(t.nodeValue))t.nodeValue=t.nodeValue.replace(/\s*,\s*,\s*/g,", ");
+  /* review 48: an emptied price between two commas sat in its own node ("pot roast,, with a cup of coffee" on Man of Steel and The Flash) */
+  {let last=null;for(const t of N){const v=t.nodeValue;if(!v.trim())continue;if(last&&/,\s*$/.test(last.nodeValue)&&/^\s*,/.test(v))t.nodeValue=v.replace(/^\s*,/,"");last=t}}
   root.dataset.nopay="1";return T.length}
 function priceFix(root,menu,f,fl,era,fmt){if(root)delete root.dataset.nopay;window.__pfDollar=!(fl&&fl.currency&&fl.currency!=="$")&&fmt!=="own"&&fmt!=="arcade";/* review 45: arcade prices are tickets ("7 TIX"), never "$7TIX" */let n;try{n=priceFix0(root,menu,f,fl,era,fmt)}finally{window.__pfDollar=false}if((fl&&fl.currency&&fl.currency!=="$")||!root||fmt==="own"||root.dataset.nopay)return n;
   /* review 35: one way to write cents: "60¢" on an American (or any non-Australian) dollar card, "60c" on an Australian or New Zealand one */
@@ -2649,7 +2664,10 @@ function priceFix0(root,menu,f,fl,era,fmt){
       if(m0<med*.8)for(const x of mn()){if(x.v<=hi)x.v=hi*1.2+step(hi)*mn().indexOf(x)}
       else for(const x of sw)if(x.v>=m0)x.v=Math.max(step(m0),m0*.8)}}}
   {const m0=minM();if(m0!=null)for(const x of by("d"))if(!PF_SP.test(x.n)&&x.v>=m0)x.v=Math.max(step(m0),m0*.6)}
-  {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
+  {const lo=minOf(by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))));if(lo!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<lo)x.v=lo}
+  /* review 48: a cocktail costs at least two fifths of the cheapest main and at least the dearest sweet's half (Forgetting Sarah Marshall's
+     $2.75 Blue Hawaii beside $7.50 grilled pineapple, Batman's $1.00 Kir royale at a 1989 museum cafe) */
+  {const m0=minM(),hw=maxOf(by("w"));for(const x of by("d"))if(PF_COCK.test(x.n)){const fl0=Math.max(m0!=null?m0*.4:0,hw!=null?hw*.5:0);if(x.v<fl0)x.v=Math.ceil(fl0/step(fl0))*step(fl0)}}/* review 33: a cocktail is never the cheapest thing on the card (Kingsman's martini) */
   /* review 37: a cocktail costs at least any bar snack (Casino Royale's Vesper sat under the olive picks), and a coffee or tea is never dearer than the cheapest starter (Bad Boys' cafecito) */
     {const hb=maxOf(by("s").filter(x=>PF_BAR.test(x.n)||/\b(picks|olives|nuts)\b/i.test(x.n)));if(hb!=null)for(const x of by("d"))if(PF_COCK.test(x.n)&&x.v<hb)x.v=hb}
   {const lo=minOf(by("s"));if(lo!=null)for(const x of by("d"))if(/\b(coffee|espresso|cafecito|caf[eé]|cortado|tea|latte|cappuccino|flat white)\b/i.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)&&x.v>lo){x.v=lo;x.down=1}}
@@ -2777,7 +2795,9 @@ function usCard(f,fl){fl=fl||{};const id=f&&(f.id||f.title+" ("+f.year+")");retu
 function libUS(html,f,fl){if(!usCard(f,fl))return html;
   return String(html).replace(/>(\s*)(Sweets|SWEETS|Afters|AFTERS|Takeaway orders|TAKEAWAY ORDERS|Takeaway|TAKEAWAY)(\s*)</g,(m,a,w,b)=>{const lo=w.toLowerCase(),to=lo==="sweets"?"Desserts":lo==="afters"?"Dessert":lo==="takeaway orders"?"Takeout orders":"Takeout";return ">"+a+(w===w.toUpperCase()?to.toUpperCase():to)+b+"<"})
     /* review 47: an American card reads Fahrenheit (the kiosk's weather and surf strip) and buys the room a round, never shouts it */
-    .replace(/>(\s*)(-?\d{1,2})°C(\s*)</g,(m,a,c,b)=>">"+a+Math.round(+c*9/5+32)+"°F"+b+"<").replace(/>([^<]*)shout the room([^<]*)</g,(m,a,b)=>">"+a+"buy the room a round"+b+"<")}
+    .replace(/>(\s*)(-?\d{1,2})°C(\s*)</g,(m,a,c,b)=>">"+a+Math.round(+c*9/5+32)+"°F"+b+"<").replace(/>([^<]*)shout the room([^<]*)</g,(m,a,b)=>">"+a+"buy the room a round"+b+"<")
+    /* review 48: and spells the layout's own words the American way (From the cart, honor, favorite, color, neighbor, theater, armor, curb) */
+    .replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/\b(From the )(cake )?trolley\b/g,(x,a,c)=>a+(c?"dessert ":"")+"cart").replace(/\bFROM THE (CAKE )?TROLLEY\b/g,(x,c)=>"FROM THE "+(c?"DESSERT ":"")+"CART").replace(/\b([Hh])onour/g,"$1onor").replace(/\b([Ff])avourite/g,"$1avorite").replace(/\b([Cc])olour/g,"$1olor").replace(/\bCOLOUR/g,"COLOR").replace(/\b([Nn])eighbour/g,"$1eighbor").replace(/\b([Tt])heatre\b/g,"$1heater").replace(/\bTHEATRE\b/g,"THEATER").replace(/\b([Aa])rmour/g,"$1rmor").replace(/\bkerb\b/g,"curb")+"<")}
 /* 8 Nov: a quote that ends a note keeps its own stop: layouts that add a full stop leave "There goes my milk!". as "There goes my milk!" (text only) */
 function libStops(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/([.!?\u2026])(["\u201d\u2019]|&quot;)\./g,"$1$2").replace(/([!?])\.(?=\s|$)/g,"$1")/* 15 Nov: "get out?." and "Oliver!." lose the stop */.replace(/([^.\s])\.\.(?=\s|$)/g,"$1.")/* review 32: a joined line never prints "midnight.." (an ellipsis of three stays) */+"<")}
 /* review 39 (Josh's call): a hand-built card that does not print its Showtime cue gets a cue strip along the foot, in the card's own ink,
@@ -5765,7 +5785,7 @@ function snackPair(f){
 }
 
 /* a shared film link lands on that film's menu, once any welcome card is out of the way */
-function toSharedFilm(){try{const id=new URLSearchParams(location.search).get("film");if(!id||!current||current.id!==id||document.querySelector("dialog.welcome[open]")||window.__sharedDone)return;window.__sharedDone=true;$("theatre").scrollIntoView({behavior:"auto",block:"start"})}catch(e){}}
+function toSharedFilm(){try{const id=new URLSearchParams(location.search).get("film");if(!id||!current||current.id!==id||document.querySelector("dialog.welcome[open]")||window.__sharedDone)return;window.__sharedDone=true;/* review 48: on desktop a shared film opens at the menu tabs, like a spin does, so the first screen shows dishes and not only the marquee */if(window.innerWidth>=900){const tb=document.querySelector(".side .tabs");if(tb){window.scrollTo({top:Math.max(0,scrollY+tb.getBoundingClientRect().top-12),behavior:"auto"});return}}$("theatre").scrollIntoView({behavior:"auto",block:"start"})}catch(e){}}
 
 /* rentals: a tape you've got out opens straight to its menu */
 function isRentedOut(f){return (member.out||[]).some(r=>r.id===f.id)&&!watched.has(f.id)}

@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Cairo dates",
+   "n": "Not-bad dates",
    "course": "s",
    "prep_min": 15,
    "cook_min": 8,
@@ -57,7 +57,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Cairo dates (vegetarian)",
+     "n": "Not-bad dates (vegetarian)",
      "prep_min": 15,
      "cook_min": 8,
      "make_ahead": "Stuff the dates and wrap in eggplant up to 1 day ahead, covered in the fridge; bake and drizzle with honey on the night",
@@ -118,7 +118,7 @@
    }
   },
   {
-   "n": "Cairo market falafel",
+   "n": "Chickpea fritters with lemon tahini",
    "course": "s",
    "prep_min": 25,
    "cook_min": 490,
@@ -211,64 +211,52 @@
    "af": true
   },
   {
-   "n": "Sallah's koshari rice and lentils",
+   "n": "Dal bhat with tomato achar",
    "course": "m",
-   "prep_min": 30,
-   "cook_min": 50,
-   "make_ahead": "Cook the lentils and make the tomato sauce up to 2 days ahead, chilled; cook the rice and macaroni and fry the onions on the night",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Make the dal and achar a day ahead and keep chilled; cook the rice on the night",
    "ingredients": [
     {
-     "q": 200,
+     "q": 300,
      "u": "g",
-     "item": "long grain rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "brown lentils",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "macaroni",
+     "item": "red lentils",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "tin crushed tomatoes",
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
      "aisle": "Pantry"
     },
     {
-     "q": 2,
+     "q": 1,
+     "u": "tsp",
+     "item": "cumin seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
      "u": "",
-     "item": "garlic cloves",
+     "item": "brown onion, sliced",
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground cumin",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "chilli flakes",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
+     "q": 3,
      "u": "",
-     "item": "tin chickpeas, drained",
-     "aisle": "Pantry"
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
     },
     {
-     "q": 2,
-     "u": "",
-     "item": "brown onions, sliced",
+     "q": 3,
+     "u": "cm",
+     "item": "piece ginger, grated",
      "aisle": "Produce"
     },
     {
@@ -276,31 +264,71 @@
      "u": "tbsp",
      "item": "vegetable oil",
      "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Cook the rice, lentils and macaroni separately.",
-     "min": 30
+     "text": "Rinse the lentils and simmer with the turmeric and 1 L water until soft and thick, then season.",
+     "min": 25
     },
     {
-     "text": "Simmer the tomatoes with the garlic, cumin and chilli into a sauce.",
-     "min": 20
-    },
-    {
-     "text": "Fry the onions in oil until crisp.",
+     "text": "Cook the rice.",
      "min": 15
     },
     {
-     "text": "Layer rice, lentils and macaroni, then top with the sauce, chickpeas and onions.",
-     "min": 5
+     "text": "Fry the cumin seeds, onion, garlic and ginger in the oil, add the potatoes, garam masala and a splash of water and cook until tender.",
+     "min": 20
+    },
+    {
+     "text": "Char the tomatoes and chilli in a dry pan, then pound with salt, the lemon juice and coriander for the achar.",
+     "min": 10
+    },
+    {
+     "text": "Spoon the dal over the rice with the potatoes and achar on the side.",
+     "min": 3
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Basbousa semolina cake",
+   "n": "Semolina coconut cake",
    "course": "w",
    "prep_min": 20,
    "cook_min": 40,

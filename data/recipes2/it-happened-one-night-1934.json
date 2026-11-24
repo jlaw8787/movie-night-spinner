@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Young carrots with herb sour cream dip",
+   "n": "Young carrots with herb cream cheese",
    "course": "s",
    "prep_min": 10,
    "cook_min": 0,
@@ -15,9 +15,9 @@
      "aisle": "Produce"
     },
     {
-     "q": 300,
-     "u": "ml",
-     "item": "sour cream",
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, softened",
      "aisle": "Dairy"
     },
     {
@@ -45,7 +45,7 @@
      "min": 5
     },
     {
-     "text": "Mix the sour cream with snipped chives, chopped dill and a squeeze of lemon.",
+     "text": "Soften the cream cheese with a splash of milk, snipped chives, chopped dill and a squeeze of lemon.",
      "min": 5
     }
    ],
@@ -388,7 +388,7 @@
    "af": true
   },
   {
-   "n": "Cinnamon mocha",
+   "n": "Cinnamon coffee with cocoa",
    "course": "d",
    "prep_min": 10,
    "cook_min": 10,

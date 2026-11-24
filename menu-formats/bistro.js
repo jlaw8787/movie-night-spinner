@@ -327,11 +327,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${kick("From the house")}
     <div data-fs="14" style="font:italic 400 19px/1.3 ${B};color:${K.ink};margin-top:8px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="22" style="font:400 32px/1.1 ${S};color:${K.acc};text-align:right;margin-top:4px;transform:rotate(-3deg)">${esc(F.note.by)}</div></div>`;
+  /* review 48: a family kitchen or a house is not booked: "Places set, dinner for two", no table number (Get Out, Meet the Parents, The Aristocats) */
+  const HOMEB=(ctx.flavour&&ctx.flavour.home===true)||/\b(kitchen|house|home|estate|manor|apartment|family)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""))&&!/\b(restaurant|bistro|caf[eé]|brasserie|hotel|club|inn|grill|tavern|bar)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""));
   const resv=`<div style="position:absolute;left:390px;top:818px;width:248px;height:106px;transform:rotate(${(rot*.6).toFixed(1)}deg);background:${dark?"#f4ecdc":"#fffdf8"};box-shadow:0 3px 10px rgba(0,0,0,.28);border-top:5px solid ${K.acc};overflow:hidden">
     ${paperLayers("glossy",false,106)}
     <div data-fbox style="position:absolute;inset:10px 14px 8px;text-align:center;overflow:hidden">
-      <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1;color:${dark?"#1c1712":K.ink};letter-spacing:.2em;text-transform:uppercase">Reserved</div>
-      <div data-fs="14" style="font:700 16px/1.3 ${B};color:${dark?"#1c1712":K.ink};margin-top:7px">Table ${esc(table)} &middot; for ${party} &middot; ${time}</div>
+      <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1;color:${dark?"#1c1712":K.ink};letter-spacing:.2em;text-transform:uppercase">${HOMEB?"Places set":"Reserved"}</div>
+      <div data-fs="14" style="font:700 16px/1.3 ${B};color:${dark?"#1c1712":K.ink};margin-top:7px">${HOMEB?`Dinner for ${party} &middot; ${time}`:`Table ${esc(table)} &middot; for ${party} &middot; ${time}`}</div>
       <div data-fs="14" style="font:italic 400 15px/1.2 ${B};color:#555;margin-top:2px">${esc(F.winks[0]||"Kept until the opening credits")}</div></div></div>`;
   const front=face(header+hero+board+note+resv);
 
