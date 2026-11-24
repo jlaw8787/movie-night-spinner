@@ -101,3 +101,4 @@ console.log(`films ${lite.length}, editions ${lite.filter(f => f.e).length}, mis
 
 /* static film pages, sitemap.xml and robots.txt for Google (menu/<slug>/) */
 require('./build-seo.cjs');
+require('./build-layout-tracker.cjs');/* 24 Nov: docs/layout-tracker.csv */
