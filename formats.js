@@ -664,16 +664,16 @@ const FMT_FILMS={
     cue:["/675B5ALS1WMXkhptLhRWgKckBcp.jpg","Laney and Zack at the beach","60% 40%"],
     groups:[
       {h:"Starters",items:[
-        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"",note:"Falafel in warm pita with tahini, served by Laney in the falafel hat.",p:"4.50"},
+        {k:"Laney's falafel shift wraps",n:"Laney's falafel shift wraps",d:"",note:"Falafel in warm pita with tahini, served by the kid in the falafel hat.",p:"4.50"},
         {k:"Brock Hudson's Real World nachos",n:"Brock Hudson's Real World nachos",d:"",note:"Black bean and cheddar nachos, loaded for the Real World party.",p:"5.25"}],
         house:{n:"Simon's breakfast muffins",d:"",note:"Warm blueberry muffins, ready before Simon gets up.",p:"1.50"}},
       {h:"Mains",items:[
         {k:"Hacky sack meatball subs",n:"Hacky sack meatball subs",d:"",note:"Meatball and provolone rolls, kept well clear of the hacky sack act.",p:"5.95"},
-        {k:"Beach day fish tacos",n:"Beach day fish tacos",d:"",note:"Grilled fish in soft tortillas with lime slaw, for the beach day Laney says yes to.",p:"6.50"}]},
+        {k:"Beach day fish tacos",n:"Beach day fish tacos",d:"",note:"Grilled fish in soft tortillas with lime slaw, for a day at the beach.",p:"6.50"}]},
       {h:"Dessert",items:[
         {k:"Red dress on the stairs strawberry shortcake",n:"Red dress on the stairs strawberry shortcake",d:"",note:"Berry shortcake with cream, red as the dress on the stairs.",p:"3.75"}]},
       {h:"Drinks",items:[
-        {k:"Laney's foghorn prom punch",n:"Laney's foghorn prom punch",d:"",note:"Pineapple and cranberry punch from the prom, foghorn for Dean.",p:"2.25"}],
+        {k:"Foghorn prom punch",n:"Foghorn prom punch",d:"",note:"Pineapple and cranberry punch from the prom, foghorn for Dean.",p:"2.25"}],
         house:{n:"Sparkling water by the pool",d:"",note:"Sparkling water chilled with lime, for the first dance, not the last.",p:"1.00"}}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",sign:"assets/era/slims/slims-sign.webp",motto:"The next best thing<br>to a time machine",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",

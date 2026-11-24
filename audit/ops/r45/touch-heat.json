@@ -1,0 +1,53 @@
+{
+ "id": "The Heat (2013)",
+ "ops": [
+  {
+   "old": "Mullins family roast beef and gravy",
+   "new": "Sunday roast beef and gravy",
+   "done": true
+  },
+  {
+   "old": "Ashburn and Mullins whiskey sour",
+   "new": "Boston whiskey sour",
+   "done": true
+  },
+  {
+   "old": "Poured cold at the Southie bar, Mullins family style.",
+   "new": "Poured cold at the Southie bar.",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Serve the mains when the whole family sits down to argue.",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Southie, Boston: Dinner at Six",
+   "done": true
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ashburn, the by-the-book FBI agent",
+    "The tracheotomy in the restaurant",
+    "Brother Jason, fresh out of prison"
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "House Rules",
+    "lines": [
+     "No cops at the table",
+     "Weapons stay in the fridge"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}
