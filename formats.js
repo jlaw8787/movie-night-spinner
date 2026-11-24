@@ -767,7 +767,7 @@ const FMT_FILMS={
       {h:"Cold tea",sub:"In a cup, from the cellar",items:[
         {k:"Bootleg lager",note:"Capone's own beer. Every bar in town has to stock it.",p:"25¢",how:"Chill 8 bottles of crisp lager for at least 3 hours. Pour into heavy glass steins straight down the middle so each gets a proper head.",shop:["8 bottles lager@Bottle shop"]},
         {k:"Canadian rye",note:"Down from the border by the truckload.",p:"50¢",how:"Pour 30ml Canadian rye whisky per person over one large ice cube in a short glass, then add a small splash of cold water to open it up.",shop:["700ml Canadian rye whisky@Bottle shop","1 bag large ice cubes@Frozen"]},
-        {k:"Rye whiskey old fashioned",note:"Rye and bitters stirred over one big cube, for when Ness finally drinks. Here endeth the lesson.",p:"40¢"}]}]},
+        {k:"Rye whiskey old fashioned",note:"Rye and bitters, the night Ness finally drinks. Here endeth the lesson.",p:"40¢"}]}]},
   "Friday (1995)":{fmt:"market",brand:"Normandie & Western Market",
     sign:["Off Normandie","Normandie & Western Market","Open 7 days"],
     sub:"Porch menu &nbsp;·&nbsp; Serves four &nbsp;·&nbsp; Summer 1995",
