@@ -358,8 +358,8 @@
    "n": "Fuller's cola",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 240,
-   "make_ahead": "Chill the cola overnight",
+   "cook_min": 0,
+   "make_ahead": "Keep the cola in the fridge until pouring",
    "ingredients": [
     {
      "q": 1.25,
@@ -382,8 +382,8 @@
    ],
    "steps": [
     {
-     "text": "Chill the cola in the fridge overnight, or at least 4 hours.",
-     "min": 240
+     "text": "Keep the cola cold in the fridge until pouring.",
+     "min": 0
     },
     {
      "text": "Slice the lemon and fill four tall glasses with ice, dropping a lemon slice into each.",

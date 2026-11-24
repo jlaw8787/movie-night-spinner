@@ -4982,7 +4982,7 @@ async function storyCanvas(f){
   let tf=88,tl;do{tl=wrap(f.title,`${tf}px "Limelight"`,940);if(tl.length<=2)break;tf-=8}while(tf>48);
   x.fillStyle=CREAM;x.font=`${tf}px "Limelight"`;for(const l of tl.slice(0,2)){x.fillText(l,W/2,y);y+=tf*1.05}
   const spec=typeof fmtSpec==="function"?fmtSpec(f):null,L=f._lib||{};
-  const venue=(L.flavour&&L.flavour.venue)||(spec&&(spec.sign?spec.sign[1]:spec.brand))||"";
+  const venue=(L.flavour&&L.flavour.venue)||(spec&&(Array.isArray(spec.sign)?spec.sign[1]:spec.brand))||"";
   if(venue){y+=4;spaced(String(venue).toUpperCase().slice(0,40),y,'500 30px "Oswald"',BRASS,6);y+=30}
   y+=40;x.strokeStyle="rgba(231,192,105,.5)";x.lineWidth=2;x.beginPath();x.moveTo(140,y);x.lineTo(W-140,y);x.stroke();y+=70;
   const m=(current&&current.id===f.id&&current.menu)||makeMenu(f),NAMES={s:"STARTERS",m:"MAINS",w:"SWEETS",d:"DRINKS"};

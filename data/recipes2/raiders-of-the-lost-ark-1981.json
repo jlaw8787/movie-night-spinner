@@ -5,7 +5,7 @@
    "n": "Not-bad dates",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 8,
+   "cook_min": 12,
    "make_ahead": "Stuff and wrap the dates up to 1 day ahead, covered in the fridge; bake and drizzle with honey on the night",
    "ingredients": [
     {
@@ -15,22 +15,16 @@
      "aisle": "Produce"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "goat's cheese",
-     "aisle": "Deli"
-    },
-    {
      "q": 12,
      "u": "",
      "item": "almonds, toasted",
      "aisle": "Pantry"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "prosciutto",
-     "aisle": "Deli"
+     "q": 6,
+     "u": "",
+     "item": "rashers streaky bacon, halved",
+     "aisle": "Meat"
     },
     {
      "q": 2,
@@ -41,16 +35,16 @@
    ],
    "steps": [
     {
-     "text": "Split the dates and stuff each with goat's cheese and an almond.",
-     "min": 8
+     "text": "Split the dates and press an almond into each.",
+     "min": 6
     },
     {
-     "text": "Wrap each in a piece of prosciutto.",
+     "text": "Wrap each in half a rasher of streaky bacon.",
      "min": 7
     },
     {
-     "text": "Bake at 200C for 8 minutes and drizzle with honey.",
-     "min": 8
+     "text": "Bake at 200C for 12 minutes until the bacon crisps, then drizzle with honey.",
+     "min": 12
     }
    ],
    "veg": false,
@@ -67,12 +61,6 @@
        "u": "",
        "item": "medjool dates",
        "aisle": "Produce"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "goat's cheese",
-       "aisle": "Deli"
       },
       {
        "q": 12,
@@ -101,7 +89,7 @@
      ],
      "steps": [
       {
-       "text": "Split the dates and stuff each with goat's cheese and an almond.",
+       "text": "Split the dates and press an almond into each.",
        "min": 8
       },
       {

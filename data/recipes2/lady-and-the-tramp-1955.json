@@ -2,11 +2,11 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Tony's garlic bread",
+   "n": "Tony's bruschetta",
    "course": "s",
-   "prep_min": 10,
-   "cook_min": 12,
-   "make_ahead": "Spread up to 1 day ahead, bake just before serving",
+   "prep_min": 8,
+   "cook_min": 6,
+   "make_ahead": "Toast just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -15,15 +15,15 @@
      "aisle": "Bakery"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "butter, softened",
-     "aisle": "Dairy"
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 2,
      "u": "",
-     "item": "garlic cloves, crushed",
+     "item": "garlic cloves, halved",
      "aisle": "Produce"
     },
     {
@@ -41,16 +41,16 @@
    ],
    "steps": [
     {
-     "text": "Mash the butter with the garlic, parsley and parmesan.",
-     "min": 6
-    },
-    {
-     "text": "Split the loaf and spread thickly.",
+     "text": "Slice the loaf thickly.",
      "min": 4
     },
     {
-     "text": "Bake at 200C until crisp at the edges, then cut into thick slices and serve in the alley behind the restaurant.",
-     "min": 12
+     "text": "Toast the slices under a hot grill until golden at the edges.",
+     "min": 6
+    },
+    {
+     "text": "Rub each slice with cut garlic, drizzle with olive oil and scatter with parsley and parmesan, then serve in the alley behind the restaurant.",
+     "min": 4
     }
    ],
    "veg": true,
@@ -388,7 +388,7 @@
     {
      "q": 50,
      "u": "g",
-     "item": "dark chocolate chips",
+     "item": "candied orange peel",
      "aisle": "Pantry"
     },
     {
@@ -414,7 +414,7 @@
      "min": 720
     },
     {
-     "text": "Beat the ricotta with the icing sugar and orange zest, then fold in the chocolate chips.",
+     "text": "Beat the ricotta with the icing sugar and orange zest, then fold in the candied peel.",
      "min": 10
     },
     {
