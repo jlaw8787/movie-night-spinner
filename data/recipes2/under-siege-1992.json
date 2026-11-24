@@ -589,179 +589,61 @@
    "af": true
   },
   {
-   "n": "USS Missouri navy grog",
+   "n": "USS Missouri bug juice punch",
    "course": "d",
-   "prep_min": 8,
+   "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "Dissolve the honey syrup up to 3 days ahead and keep it in the fridge; shake each round to order over ice",
+   "make_ahead": "Mix the juices and honey up to 1 day ahead and keep chilled",
    "ingredients": [
     {
-     "q": 2,
+     "q": 120,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "grapefruit juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
      "u": "tbsp",
      "item": "honey",
      "aisle": "Pantry"
     },
     {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
      "q": 2,
-     "u": "tbsp",
-     "item": "hot water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 90,
-     "u": "ml",
-     "item": "dark rum",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 90,
-     "u": "ml",
-     "item": "white rum",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 60,
-     "u": "ml",
-     "item": "grapefruit juice",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "tray ice",
+     "u": "cup",
+     "item": "crushed ice",
      "aisle": "Frozen"
     },
     {
      "q": 1,
      "u": "",
-     "item": "tray crushed ice",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "whole nutmeg, to grate",
-     "aisle": "Spices"
+     "item": "lime, in wheels",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Dissolve the honey in the hot water.",
-     "min": 2
+     "text": "Stir the juices and honey until the honey melts.",
+     "min": 3
     },
     {
-     "text": "Shake both rums, lime juice, grapefruit juice and the honey syrup with ice.",
-     "min": 2
-    },
-    {
-     "text": "Strain into tumblers packed with crushed ice.",
-     "min": 2
-    },
-    {
-     "text": "Add a lime wheel to each and grate a little nutmeg on top.",
+     "text": "Pour over crushed ice, top with soda and add a lime wheel.",
      "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "USS Missouri navy tea punch",
-     "prep_min": 8,
-     "cook_min": 15,
-     "make_ahead": "Steep and chill the spiced tea up to 2 days ahead in the fridge; make the honey syrup and shake to order",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "honey",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "hot water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "black tea bags",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 0.25,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "grapefruit juice",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "tray ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "tray crushed ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "whole nutmeg, to grate",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out, stir in the vanilla and chill.",
-       "min": 15
-      },
-      {
-       "text": "Dissolve the honey in the hot water.",
-       "min": 2
-      },
-      {
-       "text": "Shake 180ml of the tea, the lime juice, grapefruit juice and the honey syrup with ice.",
-       "min": 2
-      },
-      {
-       "text": "Strain into tumblers packed with crushed ice.",
-       "min": 2
-      },
-      {
-       "text": "Add a lime wheel to each and grate a little nutmeg on top.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

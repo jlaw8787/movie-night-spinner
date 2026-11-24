@@ -123,455 +123,148 @@
    "af": true
   },
   {
-   "n": "Brij Nath's party onion bhajis",
+   "n": "Train carriage herring on black bread",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 27,
-   "make_ahead": "Make the yoghurt dip up to 1 day ahead; slice the onions in the morning but fry just before serving",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Slice the onion and pick the dill up to 2 hours ahead; build just before serving",
    "ingredients": [
     {
-     "q": 3,
+     "q": 8,
      "u": "",
-     "item": "onions, thinly sliced",
-     "aisle": "Produce"
+     "item": "slices dark rye bread",
+     "aisle": "Bakery"
     },
     {
-     "q": 1,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
+     "q": 40,
      "u": "g",
-     "item": "chickpea flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "rice flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground cumin",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground turmeric",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "chilli powder",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "green chilli, finely chopped",
-     "aisle": "Produce"
-    },
-    {
-     "q": 0.5,
-     "u": "cup",
-     "item": "coriander, chopped, for the bhajis",
-     "aisle": "Produce"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "Greek yoghurt",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 0.5,
-     "u": "cup",
-     "item": "mint leaves",
-     "aisle": "Produce"
-    },
-    {
-     "q": 0.5,
-     "u": "cup",
-     "item": "coriander leaves, for the dip",
-     "aisle": "Produce"
+     "q": 300,
+     "u": "g",
+     "item": "pickled herring fillets",
+     "aisle": "Deli"
     },
     {
      "q": 1,
      "u": "",
-     "item": "lime, juiced",
+     "item": "red onion, in thin rings",
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
-     "aisle": "Pantry"
+     "q": 0.5,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Toss the onions with the salt and leave to soften.",
-     "min": 10
+     "text": "Butter the rye and cut each slice in half.",
+     "min": 4
     },
     {
-     "text": "Stir in the chickpea flour, rice flour, cumin, turmeric, chilli powder, green chilli and coriander, then add the water to make a thick, sticky batter.",
-     "min": 5
-    },
-    {
-     "text": "Blend the yoghurt with the mint, coriander for the dip and lime juice.",
-     "min": 5
-    },
-    {
-     "text": "Heat the oil to 175C in a deep pan.",
-     "min": 10
-    },
-    {
-     "text": "Fry heaped spoonfuls of batter in batches until deep golden and crisp.",
-     "min": 15
-    },
-    {
-     "text": "Drain and serve hot with the yoghurt.",
-     "min": 2
+     "text": "Top with herring, onion rings and dill, grind over pepper and serve cold.",
+     "min": 6
     }
    ],
-   "veg": true,
+   "veg": false,
    "af": true
   },
   {
-   "n": "Dubai lamb machboos",
+   "n": "Kremlin chicken Kiev with buttered peas",
    "course": "m",
-   "prep_min": 25,
-   "cook_min": 115,
-   "make_ahead": "Cook the lamb in its broth up to 2 days ahead and keep it in the fridge; cook the rice and fry the topping on the night",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "Make the garlic butter up to 3 days ahead; crumb the chicken up to 1 day ahead and keep chilled",
    "ingredients": [
     {
-     "q": 400,
+     "q": 100,
      "u": "g",
-     "item": "basmati rice",
-     "aisle": "Pantry"
+     "item": "soft butter",
+     "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "kg",
-     "item": "boneless lamb shoulder, in 5cm pieces",
-     "aisle": "Meat"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "vegetable oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "onions, sliced, one kept for the topping",
-     "aisle": "Produce"
-    },
-    {
-     "q": 4,
+     "q": 2,
      "u": "",
      "item": "garlic cloves, crushed",
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "ginger, grated",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "tsp",
-     "item": "ground cumin",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "tsp",
-     "item": "ground coriander",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground turmeric",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "cinnamon stick",
-     "aisle": "Spices"
-    },
-    {
-     "q": 6,
-     "u": "",
-     "item": "cardamom pods, cracked",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "dried limes, pierced",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "tomatoes, chopped",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "tomato paste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1.5,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1.5,
-     "u": "l",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "slivered almonds",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "sultanas",
-     "aisle": "Pantry"
-    },
-    {
      "q": 0.5,
-     "u": "cup",
-     "item": "coriander leaves",
+     "u": "",
+     "item": "bunch flat-leaf parsley, chopped",
      "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, for the peas",
+     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Rinse the rice and leave it to soak.",
-     "min": 5
-    },
-    {
-     "text": "Brown the lamb in batches in 2 tbsp of the oil.",
-     "min": 12
-    },
-    {
-     "text": "Add two of the onions and cook until soft.",
-     "min": 10
-    },
-    {
-     "text": "Stir in the garlic, ginger, spices, dried limes, tomatoes, tomato paste and salt.",
-     "min": 3
-    },
-    {
-     "text": "Add the water, cover and simmer until the lamb is tender.",
-     "min": 75
-    },
-    {
-     "text": "Lift out the lamb and keep warm. Measure 750ml of the broth back into the pot, add the drained rice, cover and cook on low.",
+     "text": "Mash the butter with garlic and parsley, roll into a log and freeze, 20 min.",
      "min": 20
     },
     {
-     "text": "Rest the rice off the heat. Meanwhile fry the last onion in the rest of the oil until deep brown, adding the almonds and sultanas at the end.",
+     "text": "Butterfly and pound the chicken thin, wrap each round a quarter of the butter and chill.",
+     "min": 15
+    },
+    {
+     "text": "Dip in flour, egg and crumbs twice.",
      "min": 10
     },
     {
-     "text": "Pile the rice on a platter and top with the lamb, onions, almonds, sultanas and coriander.",
-     "min": 5
+     "text": "Fry until golden, then bake at 200C, 15 min.",
+     "min": 20
+    },
+    {
+     "text": "Cook the peas and toss with butter. Serve with the chicken.",
+     "min": 6
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Dubai chickpea and cauliflower machboos",
-     "prep_min": 25,
-     "cook_min": 53,
-     "make_ahead": "Brown the cauliflower and make the spiced chickpea base up to 1 day ahead; cook the rice and fry the topping on the night",
-     "ingredients": [
-      {
-       "q": 400,
-       "u": "g",
-       "item": "basmati rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small cauliflower, in florets",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "onions, sliced, one kept for the topping",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "garlic cloves, crushed",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "ginger, grated",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "ground cumin",
-       "aisle": "Spices"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "ground coriander",
-       "aisle": "Spices"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "ground turmeric",
-       "aisle": "Spices"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "cinnamon stick",
-       "aisle": "Spices"
-      },
-      {
-       "q": 6,
-       "u": "",
-       "item": "cardamom pods, cracked",
-       "aisle": "Spices"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "dried limes, pierced",
-       "aisle": "Spices"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "tomatoes, chopped",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "tomato paste",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 800,
-       "u": "g",
-       "item": "tinned chickpeas, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "slivered almonds",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "sultanas",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 0.5,
-       "u": "cup",
-       "item": "coriander leaves",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Rinse the rice and leave it to soak.",
-       "min": 5
-      },
-      {
-       "text": "Brown the cauliflower in 2 tbsp of the oil and set aside.",
-       "min": 10
-      },
-      {
-       "text": "Cook two of the onions in the pan until soft.",
-       "min": 10
-      },
-      {
-       "text": "Stir in the garlic, ginger, spices, dried limes, tomatoes, tomato paste and salt.",
-       "min": 3
-      },
-      {
-       "text": "Add the chickpeas and stock and simmer.",
-       "min": 15
-      },
-      {
-       "text": "Stir in the drained rice and cauliflower, cover and cook on low until the stock is absorbed.",
-       "min": 20
-      },
-      {
-       "text": "Rest the rice off the heat. Meanwhile fry the last onion in the rest of the oil until deep brown, adding the almonds and sultanas at the end.",
-       "min": 10
-      },
-      {
-       "text": "Pile the rice on a platter and top with the onions, almonds, sultanas and coriander.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "Benji's Kremlin mushroom stroganoff",
@@ -679,284 +372,126 @@
    "af": true
   },
   {
-   "n": "Dubai sandstorm luqaimat",
+   "n": "Siding syrniki with sour cream and jam",
    "course": "w",
    "prep_min": 15,
-   "cook_min": 90,
-   "make_ahead": "Best fried and eaten the same night; the batter can prove slowly in the fridge for up to 8 hours",
+   "cook_min": 15,
+   "make_ahead": "Mix the batter up to 1 day ahead and keep chilled; fry to serve",
    "ingredients": [
     {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "saffron threads",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "milk, warmed",
+     "q": 500,
+     "u": "g",
+     "item": "cottage cheese",
      "aisle": "Dairy"
     },
     {
-     "q": 250,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "cornflour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 7,
-     "u": "g",
-     "item": "dried yeast",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
+     "q": 3,
      "u": "tbsp",
      "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "ground cardamom",
-     "aisle": "Spices"
-    },
-    {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "salt",
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
-     "u": "ml",
-     "item": "warm water",
-     "aisle": "Pantry"
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
-     "aisle": "Pantry"
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
     },
     {
-     "q": 125,
-     "u": "ml",
-     "item": "date syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
+     "q": 4,
      "u": "tbsp",
-     "item": "sesame seeds, toasted",
+     "item": "cherry jam",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Soak the saffron in the warm milk.",
+     "text": "Mix the cottage cheese, eggs, sugar, salt and 100g of the flour.",
      "min": 5
     },
     {
-     "text": "Whisk the flour, cornflour, yeast, sugar, cardamom and salt with the saffron milk and warm water into a thick, smooth batter.",
-     "min": 5
+     "text": "Shape 12 small thick rounds in the rest of the flour.",
+     "min": 8
     },
     {
-     "text": "Cover and leave until bubbly and doubled.",
-     "min": 60
+     "text": "Fry in butter until golden, 3 minutes a side, 15 min in batches.",
+     "min": 15
     },
     {
-     "text": "Heat the oil to 175C in a deep pan.",
-     "min": 10
-    },
-    {
-     "text": "Drop in small spoonfuls of batter in batches and fry, turning, until deep golden.",
-     "min": 20
-    },
-    {
-     "text": "Drain, toss with the warmed date syrup and scatter with sesame seeds.",
-     "min": 5
+     "text": "Serve warm with sour cream and jam.",
+     "min": 2
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Mumbai party mango gin cooler",
+   "n": "Samovar tea with lemon and jam",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 25,
-   "make_ahead": "Make the cardamom syrup up to 1 week ahead and blend the mango up to 1 day ahead, both in the fridge; shake to order",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Slice the lemons up to 2 hours ahead",
    "ingredients": [
     {
-     "q": 60,
-     "u": "g",
-     "item": "caster sugar",
+     "q": 4,
+     "u": "tsp",
+     "item": "strong black tea leaves",
      "aisle": "Pantry"
     },
     {
-     "q": 60,
-     "u": "ml",
-     "item": "water",
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "sugar cubes",
      "aisle": "Pantry"
     },
     {
      "q": 4,
-     "u": "",
-     "item": "cardamom pods, crushed",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "large mango, flesh only",
-     "aisle": "Produce"
-    },
-    {
-     "q": 240,
-     "u": "ml",
-     "item": "gin",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "limes, juiced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 400,
-     "u": "ml",
-     "item": "soda water, chilled",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lime, cut into wheels",
-     "aisle": "Produce"
+     "u": "tbsp",
+     "item": "cherry jam",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Simmer the sugar, water and cardamom until dissolved, then cool and strain.",
-     "min": 25
+     "text": "Brew the tea in the boiling water, 4 min, and strain.",
+     "min": 5
     },
     {
-     "text": "Blend the mango until smooth.",
-     "min": 3
-    },
-    {
-     "text": "Shake the gin, mango, lime juice and syrup hard with ice, in two batches.",
-     "min": 4
-    },
-    {
-     "text": "Strain into four tall glasses of ice, top with soda and garnish with lime wheels.",
+     "text": "Pour over a lemon slice in each glass and serve with sugar and jam.",
      "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Mumbai party mango cooler (alcohol-free)",
-     "prep_min": 12,
-     "cook_min": 33,
-     "make_ahead": "Brew and chill the tea and make the cardamom syrup up to 2 days ahead; blend the mango up to 1 day ahead and shake to order",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "green tea bags",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "cardamom pods, crushed",
-       "aisle": "Spices"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "large mango, flesh only",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes, juiced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 400,
-       "u": "ml",
-       "item": "tonic water, chilled",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lime, cut into wheels",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the tea bags in the boiling water for 4 minutes and lift them out. Simmer the sugar, water and cardamom until dissolved, then strain. Chill both.",
-       "min": 35
-      },
-      {
-       "text": "Blend the mango until smooth.",
-       "min": 3
-      },
-      {
-       "text": "Shake the tea, mango, lime juice and syrup hard with ice, in two batches.",
-       "min": 4
-      },
-      {
-       "text": "Strain into four tall glasses of ice, top with tonic and garnish with lime wheels.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

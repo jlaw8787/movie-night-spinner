@@ -116,6 +116,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const acc=(ctx.palette&&inkOn(ctx.palette.accent,paper,4.6))||E.accent;
   const darkPanel=(ctx.palette&&hex(ctx.palette.dark)&&lum(hex(ctx.palette.dark))<.04)?ctx.palette.dark:"#15171b";
   const venue=clean(fl&&fl.venue)||"Staff Mess Hall",sign=clean(fl&&fl.sign)||"Research station, all personnel";
+  /* review 45: a lab card is not always a lab. kind reads the venue (flavour labKind overrides): only a real lab prints the plate tab;
+     a home prints family words (no ration sheet, rank badge or tray hatch); a shop prints counter words; the rest are messes and canteens */
+  const vs=venue+" "+sign;
+  const kind=(fl&&fl.labKind)||(/\blab\b|laborator|telepod|\blair\b/i.test(vs)?"lab":/bak(ery|ed)|\bshop\b|\bstore\b|goods/i.test(vs)?"shop":/kitchen|\bhouse\b|\bhome\b|basement/i.test(vs)?"home":"mess");
+  const KW=kind==="home"?{sheet:"Tonight's sheet.",kick:"Dinner's on the table.",stamp:"DINNER'S ON",heads:["Snacks","Mains","Something sweet","Drinks"],acc:"Home",lv:"No. ",badge:"Guest",all:"All rooms",form:"Kitchen sheet ",foot:"Clear your own plate. Seconds while they last."}
+    :kind==="shop"?{sheet:"Ration sheet.",kick:"Baked fresh this morning.",stamp:"OPEN",heads:LAB,acc:"Access",lv:"Lv ",badge:"Badge",all:"All areas",form:"Form LAB",foot:"Return tray to the hatch. Rations subject to supply."}
+    :{sheet:"Ration sheet.",kick:T.kick,stamp:T.stamp,heads:LAB,acc:"Access",lv:"Lv ",badge:"Badge",all:"All areas",form:"Form LAB",foot:"Return tray to the hatch. Rations subject to supply."};
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
   const stills=(ctx.stills||[]).slice(),poster=ctx.poster||(((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&f.id)?TMDB_POSTERS[f.id]:null)||null;
   const posterSrc=poster?ctx.img(poster,"w780"):"";
@@ -140,18 +147,18 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* the showtime cue (8 Nov: lab never printed it): above the side column. Last to give way (data-spare 4, after the stamp, plate tab and logo squash), but before any dish note: notes come first */
   const cueTxt=clean(f.P||"").trim();
   const cueTag=cueTxt?`<div data-cue data-spare="4" style="flex:none;margin-top:10px;font:italic 400 15px/1.3 ${B};color:${ink};border-left:3px solid ${acc};padding:2px 0 2px 10px"><b style="font-style:normal;font-weight:700;color:${acc};text-transform:uppercase;letter-spacing:.08em">Showtime:</b> ${esc(cueTxt)}</div>`:"";
-  const plateTab=`<div data-spare="2" style="flex:none;color:${ink};font:600 15px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;margin-top:12px">Plate A<span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">, samples for four</span></div>`;/* review 44: no "Now showing, year" run into the plate label */
-  const stamp=`<div data-spare="1" style="flex:none;align-self:flex-start;max-width:${RW-12}px;box-sizing:border-box;margin:12px 0 0 6px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 18px/1.1 ${D};letter-spacing:.1em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
+  const plateTab=kind!=="lab"?"":`<div data-spare="2" style="flex:none;color:${ink};font:600 15px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;margin-top:12px">Plate A<span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">, samples for four</span></div>`;/* review 44: no "Now showing, year" run into the plate label */
+  const stamp=`<div data-spare="1" style="flex:none;align-self:flex-start;max-width:${RW-12}px;box-sizing:border-box;margin:12px 0 0 6px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 18px/1.1 ${D};letter-spacing:.1em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(KW.stamp)}</div>`;
   const hero=`<div style="position:absolute;left:${M}px;top:${PY}px;width:${PW}px;height:${PH}px">${marks}<div style="position:absolute;inset:0;overflow:hidden;background:#111;outline:1px solid ${ink}">${heroImg}</div></div>`;
   const cap="";
 
   /* badge: laminated access card, ID photo from a second still */
   const by=clean(fl&&fl.note&&fl.note.by)||"Duty Officer";
   const badge=`<div style="position:absolute;right:${M+4}px;top:16px;width:178px;height:236px;transform:rotate(${T.tilt}deg);background:linear-gradient(160deg,rgba(255,255,255,.55),rgba(255,255,255,0) 40%),#fbfbf7;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.32);border:1px solid rgba(0,0,0,.18);overflow:hidden;z-index:3">
-    <div style="background:${acc};color:#fff;font:${E.dw} 18px/1 ${D};letter-spacing:.1em;text-transform:uppercase;padding:9px 12px 8px;display:flex;justify-content:space-between;white-space:nowrap"><span>Access</span><span>Lv ${esc(num.slice(-2))}</span></div>
+    <div style="background:${acc};color:#fff;font:${E.dw} 18px/1 ${D};letter-spacing:.1em;text-transform:uppercase;padding:9px 12px 8px;display:flex;justify-content:space-between;white-space:nowrap"><span>${KW.acc}</span><span>${KW.lv}${esc(num.slice(-2))}</span></div>
     <div style="display:flex;gap:10px;padding:10px 10px 0">
       <div style="width:76px;height:84px;flex:none;overflow:hidden;border:1px solid #888;background:#222">${idSrc?`<img src="${idSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:${pf}">`:posterSrc?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:contain">`:""}</div>
-      <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">Badge<br>No. ${esc(num)}<br><span style="color:${acc}">All areas</span></div>
+      <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">${KW.badge}<br>No. ${esc(num)}<br><span style="color:${acc}">${KW.all}</span></div>
     </div>
     <div data-fith="22" data-min="14" style="margin:4px 10px 0;height:44px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
     <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:4px;font:400 14px/1.15 ${B};color:#333;height:37px;overflow:hidden">${esc(venue)}</div>
@@ -161,7 +168,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const head=`<div style="position:absolute;left:${M}px;top:${M}px;width:${W-2*M-200}px">
     <div style="font:600 16px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase;color:${acc};white-space:nowrap;overflow:hidden">${esc(sign)}</div>
     <div data-fitw="50" style="margin-top:4px;font-family:${D};font-weight:${E.dw};font-size:50px;line-height:1;text-transform:uppercase;color:${ink};white-space:nowrap;overflow:hidden;letter-spacing:${E.head==="double"?".02em":"0"}">${esc(venue)}</div>
-    <div data-fitw="20" data-min="15" style="margin-top:6px;font-family:${B};font-weight:400;font-size:20px;line-height:1.2;color:${ink};white-space:nowrap;overflow:hidden">Ration sheet. ${esc(T.kick)}</div>
+    <div data-fitw="20" data-min="15" style="margin-top:6px;font-family:${B};font-weight:400;font-size:20px;line-height:1.2;color:${ink};white-space:nowrap;overflow:hidden">${KW.sheet} ${esc(KW.kick)}</div>
   </div>`;
   const rule=E.head==="double"?`border-top:2px solid ${ink};border-bottom:2px solid ${ink};height:3px`:E.head==="bar"?`background:${ink};height:8px`:E.head==="box"?`background:${acc};height:5px`:`background:${acc};height:2px`;
   const hrule=`<div style="position:absolute;left:${M}px;top:${M+104}px;width:${W-2*M-200}px;${rule}"></div>`;
@@ -180,7 +187,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PQ=(()=>{const P={},M={};secs.forEach(x=>{const k="smwd"[x.ci];M[k]=x.items;P[k]=x.items.map((it,ii)=>price(f,fl,x.ci,ii,clean(it.n),E.scale))});return window.priceSense?window.priceSense(M,P):P})();
   const tot=secs.reduce((a,x)=>a+x.items.length,0);let seen=0,flowA="",flow="";
   secs.forEach(x=>{
-    const h=`<div data-sec><div style="break-inside:avoid">${secHead(LAB[x.ci]).replace("<div ","<div data-hd ")}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div></div>`;
+    const h=`<div data-sec><div style="break-inside:avoid">${secHead(KW.heads[x.ci]).replace("<div ","<div data-hd ")}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div></div>`;
     if(seen<tot/2)flowA+=h;else flow+=h;seen+=x.items.length;
   });
   function row(it,ci,ii){
@@ -194,7 +201,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menu=`<div data-fit="27" data-foot style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
   const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${posterSrc&&!(fl&&fl.logoPanel===true)?"":logo.html}${stamp}${plateTab}${cueTag}<div data-fit="24" data-side style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
   const foot=`<div style="position:absolute;left:${M}px;right:${M}px;bottom:14px;border-top:1px solid ${ink};padding-top:5px;display:flex;justify-content:space-between;gap:16px;font:400 14px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">
-    <span style="overflow:hidden;text-overflow:clip">Form ${esc(ID.toUpperCase())}${esc(num)}, rev. ${esc(f.year||"")}. Return tray to the hatch. Rations subject to supply.</span><span>Sheet 1 of 1. Images: TMDB</span></div>`;
+    <span style="overflow:hidden;text-overflow:clip">${KW.form==="Form LAB"?"Form "+esc(ID.toUpperCase()):KW.form}${esc(num)}, rev. ${esc(f.year||"")}. ${KW.foot}</span><span>Sheet 1 of 1. Images: TMDB</span></div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:10px;${E.frame};pointer-events:none;opacity:.8"></div>

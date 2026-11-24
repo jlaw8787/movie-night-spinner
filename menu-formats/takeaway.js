@@ -235,12 +235,13 @@ window.MENU_FORMATS[ID]=ctx=>{
        <span style="font:${E.dw} .9em/1.15 ${E.disp};font-size:max(18px,.9em);text-transform:uppercase;letter-spacing:.04em">${esc(LAB[k])}</span>
        <span style="font:700 .55em/1 ${E.body};font-size:max(14px,.55em);letter-spacing:.2em;text-transform:uppercase">${HOME?"":`No. ${BASE[k]}${menu[k].length>1?" to "+(BASE[k]+menu[k].length-1):""}`}</span></div>
      ${menu[k].map((it,i)=>`<div style="display:flex;gap:.4em;margin:0 0 ${heavy?".22em":".42em"}">
-       <span style="flex:none;min-width:1.5em;margin-right:.2em;font:${E.dw} 1em/1.1 ${E.disp};color:${SPOT}">${BASE[k]+i}.</span>
+       ${HOME?"":`<span style="flex:none;min-width:1.5em;margin-right:.2em;font:${E.dw} 1em/1.1 ${E.disp};color:${SPOT}">${BASE[k]+i}.</span>`}
        <div style="flex:1;min-width:0">
          <div style="display:flex;justify-content:space-between;gap:.5em;align-items:baseline">
            <span style="font:700 1em/1.12 ${E.body};color:${INK};text-transform:${up};${heavy?clamp(2):""}">${esc(txt(it.n))}</span>
            <span ${i===0?'data-sum-in="set" ':""}style="flex:none;font:700 1em/1.1 ${E.body};color:${INK}">${price(k,i)}</span></div>
          ${it.note&&!(nIt>12&&i>1)?`<div style="font:italic 500 .76em/1.28 ${E.body};font-size:max(15px,.76em);color:${SOFT};margin-top:.1em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div></div>`).join("")}</div>`;
+  /* review 45: a home kitchen prints no order numbers and no set dinner deal */
   const setNo=num||(yy?"8"+yy[1]:"88");
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span data-sum="set" data-sum-k="1.7" style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
@@ -260,7 +261,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:0;right:0;top:226px;height:6px;background:${BAR}"></div>
    ${pnl(0,best.sp[0].map(course).join(""))}
    ${pnl(1,best.sp[1].map(course).join(""))}
-   ${pnl(2,best.sp[2].map(course).join("")+setDinner)}
+   ${pnl(2,best.sp[2].map(course).join("")+(HOME?"":setDinner))}
    <div data-fit data-min="14" style="position:absolute;left:922px;top:712px;width:396px;height:86px;overflow:hidden;font-size:16px;color:${SOFT}">
      <div style="font:500 1em/1.3 ${E.body}">${cue?`Kitchen tip: ${esc(sent(cue))} `:""}${winks[3]?`Overheard: ${esc(sent(winks[3]))} `:""}Prices subject to change. Form TK ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
    ${folds}`;

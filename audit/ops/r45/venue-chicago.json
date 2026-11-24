@@ -1,0 +1,42 @@
+{
+ "id": "Chicago (2002)",
+ "ops": [
+  {
+   "set": "flavour.venue",
+   "value": "The Onyx Club",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Chicago. All That Jazz, nightly.",
+   "done": true
+  },
+  {
+   "old": "Murderess' Row cheese straws",
+   "new": "Speakeasy cheese straws",
+   "done": true
+  },
+  {
+   "old": "Hotel Cicero gin fizz",
+   "new": "Prohibition gin fizz",
+   "done": true
+  },
+  {
+   "old": "Plenty of ice, unlike Cicero. Gin, lemon and syrup shaken, topped with soda.",
+   "new": "Gin, lemon and syrup shaken over plenty of ice, topped with soda.",
+   "done": true
+  },
+  {
+   "old": "Liver sausage spread on rye crackers with mustard, a little favour from Mama.",
+   "new": "Liver sausage spread on rye crackers with hot mustard.",
+   "done": true
+  },
+  {
+   "old": "Rye whiskey and sweet vermouth with a cherry, smuggled into Cook County by Mama.",
+   "new": "Rye whiskey and sweet vermouth stirred cold, with a cherry.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

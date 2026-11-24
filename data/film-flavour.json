@@ -6142,8 +6142,8 @@
   "priceEra": "1930s-40s"
  },
  "Saw (2004)": {
-  "venue": "Abandoned Bathroom Cell",
-  "sign": "Mind the Pipes, Gents",
+  "venue": "The Gordon House",
+  "sign": "Alison and Diana wait at home",
   "note": {
    "text": "Adam, dinner's off. We're chained to pipes in a filthy bathroom, so save your strength and think before we move.",
    "by": "Dr Lawrence Gordon",
@@ -6163,12 +6163,7 @@
    ]
   },
   "number": "",
-  "pay": "",
-  "words": {
-   "Return tray to the hatch.": "Leave the tray by the pipes.",
-   "Rations subject to supply.": "Eat before the clock runs out.",
-   "Canteen": "Drinks"
-  }
+  "pay": ""
  },
  "The Conjuring (2013)": {
   "venue": "Perron Farmhouse Kitchen",
@@ -6508,7 +6503,8 @@
   },
   "number": "",
   "sideStill": "/sMNFREVa7h7iCBQgsuadvdJz5FT.jpg",
-  "sideLine": "First date by jet ski. Mind the kick."
+  "sideLine": "First date by jet ski. Mind the kick.",
+  "pay": ""
  },
  "Mystic Pizza (1988)": {
   "venue": "Mystic Pizza",
@@ -6584,8 +6580,8 @@
   "pay": ""
  },
  "Love Actually (2003)": {
-  "venue": "Arrivals Hall Cafe",
-  "sign": "Welcome. Hugs Free of Charge.",
+  "venue": "Karen and Harry's House",
+  "sign": "London, Christmas Eve",
   "note": {
    "text": "Right, biscuits. Every single biscuit in Number 10 is mine tonight, and nobody tells the Americans.",
    "by": "the Prime Minister",
@@ -7769,7 +7765,27 @@
   "words": {
    "BEACH SNACKS": "FROM THE BEACH HOUSE",
    "Open until the sun goes down.": "Tea at four, supper at eight."
-  }
+  },
+  "beach": false,
+  "strip": [
+   [
+    "The house",
+    ""
+   ],
+   [
+    "Table tennis",
+    "Dad versus Tim"
+   ],
+   [
+    "Beach walk",
+    "After tea"
+   ],
+   [
+    "Cricket",
+    "Not today"
+   ]
+  ],
+  "forecast": "Cornish, changeable"
  },
  "Airplane! (1980)": {
   "venue": "Trans American Galley",
@@ -8642,7 +8658,9 @@
     "Enter in a keg"
    ]
   },
-  "number": ""
+  "number": "",
+  "currency": "€",
+  "country": "DE"
  },
  "Walk Hard: The Dewey Cox Story (2007)": {
   "venue": "Cox Family Lounge",
@@ -9197,7 +9215,8 @@
    "card": "#ffffff",
    "cardInk": "#2b1838",
    "photoF": "contrast(1.05) saturate(1.2) brightness(1.04)"
-  }
+  },
+  "priceK": 2
  },
  "Beverly Hills Cop II (1987)": {
   "venue": "Beverly Hills Station House",
@@ -9607,8 +9626,8 @@
   "pay": "Issue"
  },
  "The Rock (1996)": {
-  "venue": "Alcatraz Island Mess Hall",
-  "sign": "The Rock: Last Meal Served",
+  "venue": "The Fairmont Hotel Suite",
+  "sign": "Room service, Nob Hill, San Francisco",
   "note": {
    "text": "Your best? Losers always whine about their best.",
    "by": "John Mason",
@@ -9627,7 +9646,8 @@
     "Goodspeed and Mason"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 2
  },
  "Face/Off (1997)": {
   "venue": "Erewhon Prison Canteen",
@@ -9833,7 +9853,7 @@
   "winks": [
    "Gittes' bandaged nose, courtesy of a sharp blade",
    "Evelyn Mulwray and the flaw in her eye",
-   "The slap: “My sister, my daughter.”",
+   "Pocket watches under the tires",
    "The Los Angeles water mystery"
   ],
   "prop": {
@@ -9978,7 +9998,8 @@
    "Rations": "Snacks",
    "Sweet issue": "Something sweet",
    "Hot meals": "Mains"
-  }
+  },
+  "labKind": "mess"
  },
  "The Heat (2013)": {
   "venue": "Mullins Family Kitchen",
@@ -11982,8 +12003,8 @@
   "number": ""
  },
  "Chicago (2002)": {
-  "venue": "Cook County Jail Kitchen",
-  "sign": "Cook County Jail, Chicago",
+  "venue": "The Onyx Club",
+  "sign": "Chicago. All That Jazz, nightly.",
   "note": {
    "text": "And that's showbiz, kid.",
    "by": "Roxie Hart",
@@ -12878,7 +12899,8 @@
   "number": "",
   "words": {
    "Cover at the door, no dress code": "All staff welcome, holiday sweaters encouraged"
-  }
+  },
+  "pay": ""
  },
  "The Grinch (2018)": {
   "venue": "Whoville Main Street Cafe",
@@ -13967,7 +13989,8 @@
   "words": {
    "All areas": "Hab only"
   },
-  "home": false
+  "home": false,
+  "labKind": "mess"
  },
  "Gravity (2013)": {
   "venue": "Shuttle Explorer Cabin",
@@ -15338,7 +15361,7 @@
   }
  },
  "Jumanji (1995)": {
-  "venue": "Parrish Shoe Factory",
+  "venue": "The Parrish House",
   "sign": "Brantford, New Hampshire",
   "note": {
    "text": "You think monkeys, mosquitoes, and lions are bad? That's just the beginning.",
@@ -15974,7 +15997,28 @@
     "Zora Bennett, team lead"
    ]
   },
-  "number": "3"
+  "number": "3",
+  "pay": "",
+  "beach": false,
+  "strip": [
+   [
+    "Field report",
+    ""
+   ],
+   [
+    "Sea",
+    "Mosasaurus"
+   ],
+   [
+    "Land",
+    "Titanosaurus"
+   ],
+   [
+    "Air",
+    "Quetzalcoatlus"
+   ]
+  ],
+  "forecast": "Hot, still, keep to the boat"
  },
  "Hunt for the Wilderpeople (2016)": {
   "venue": "Bush Hut Kitchen",
@@ -17253,7 +17297,7 @@
   "number": "",
   "words": {
    "Ask about pie": "Ask about pancakes",
-   "Pie so good it ought to be a crime": "Pancakes the size of a hubcap",
+   "Pie so good it ought to be a crime": "One stack feeds the whole house",
    "slice from the pie case": "pancake off the griddle",
    "The Pie Case": "The Griddle"
   }
@@ -20281,8 +20325,8 @@
   "number": ""
  },
  "Ghost (1990)": {
-  "venue": "Oda Mae's Reading Room",
-  "sign": "Readings from beyond, walk-ins welcome",
+  "venue": "Sam and Molly's Tribeca Loft",
+  "sign": "Tribeca, New York. Ditto.",
   "note": {
    "text": "No, you relax, you're the dead guy!",
    "by": "Oda Mae Brown",
@@ -23754,7 +23798,8 @@
    "The lunch counter menu": "The mess hall menu",
    "at FedNet": "to Rico, Buenos Aires",
    "Another frame from Starship Troopers.": "A warrior bug at Rico's back."
-  }
+  },
+  "pay": ""
  },
  "Superman II (1980)": {
   "venue": "Ron's Diner",

@@ -1,0 +1,44 @@
+{
+ "id": "Jurassic World Rebirth (2025)",
+ "ops": [
+  {
+   "set": "flavour.pay",
+   "value": "",
+   "done": true
+  },
+  {
+   "set": "flavour.beach",
+   "value": false,
+   "done": true
+  },
+  {
+   "set": "flavour.strip",
+   "value": [
+    [
+     "Field report",
+     ""
+    ],
+    [
+     "Sea",
+     "Mosasaurus"
+    ],
+    [
+     "Land",
+     "Titanosaurus"
+    ],
+    [
+     "Air",
+     "Quetzalcoatlus"
+    ]
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.forecast",
+   "value": "Hot, still, keep to the boat",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-23",
+ "misses": []
+}

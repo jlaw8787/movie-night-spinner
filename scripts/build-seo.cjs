@@ -41,6 +41,9 @@ const CARD_PRINT = (() => { try { return rj('data/card-print.json'); } catch (e)
 const HOUSE = (() => { try { return rj('data/film-house.json'); } catch (e) { return {}; } })();
 /* review 40: hand-built one-offs, as their card and phone menu print them (render-previews saves it) */
 const CARD_HB = (() => { try { return rj('data/card-print-hb.json'); } catch (e) { return {}; } })();
+/* review 45: a hand-built menu's own name (its spec brand: Louis', Sal's Famous Pizzeria) for the page's "The menu comes from" line */
+const HB_BRAND = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
+  const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.brand === 'string' && spec.brand.trim()) out[id] = spec.brand.trim(); return out; })();
 const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
   const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) { const m = {}; const walk = v => { if (Array.isArray(v)) v.forEach(walk); else if (v && typeof v === 'object') { if (typeof v.k === 'string' && typeof v.n === 'string' && v.n.trim() && v.n !== v.k) m[v.k.toLowerCase()] = v.n; Object.values(v).forEach(walk); } }; walk(spec); if (Object.keys(m).length) out[id] = m; }
   return out; })();
@@ -49,6 +52,7 @@ const dishTimes = (() => { const vm = require('vm'), src = rd('app.js'); const l
   const ctx = {}; vm.createContext(ctx); vm.runInContext([line('const WAIT_RE='), line('const HEAT_RE='), line('const TIP_RE='), line('const stepParts='), line('const WAIT_LEAD='), (() => { const i = src.indexOf('const isWaitStep='); return src.slice(i, src.indexOf('};', i) + 2); })(), src.slice(a, b), ';globalThis.dishTimes=dishTimes;'].join('\n'), ctx); return ctx.dishTimes; })();
 /* review 42: step times as the phone shows them (stepTimed in app.js) */
 const stepTimed = (() => { const vm = require('vm'), src = rd('app.js'); const i = src.indexOf('function stepTimed('); const ctx = {}; vm.createContext(ctx); vm.runInContext(src.slice(i, src.indexOf('\n', i)) + ';globalThis.stepTimed=stepTimed;', ctx); return ctx.stepTimed; })();
+const planMin = (() => { const src = rd('app.js'); const i = src.indexOf('const planMin='); const vm = require('vm'), ctx = {}; vm.createContext(ctx); vm.runInContext(src.slice(i, src.indexOf('\n', i)) + ';globalThis.planMin=planMin;', ctx); return ctx.planMin; })();
 const span = m => { m = Math.round(m); if (m < 120) return m + ' min'; if (m < 48 * 60) { const h = Math.round(m / 30) / 2; return (h % 1 ? h.toFixed(1) : h) + ' hours'; } const d = Math.round(m / 1440); return d + (d === 1 ? ' day' : ' days'); };
 
 /* review 44: a generated film page lists the app's own ingredient lines (data/page-recipes.json, from scripts/page-recipes.cjs), so the page
@@ -118,7 +122,7 @@ const ALL = films.map((f, i) => {
         prep_min: (r.ing || []).length ? was.prep_min : undefined, cook_min: (r.ing || []).length ? was.cook_min : undefined, wait_min: was.wait_min, veg: !!was.veg, af: !!was.af, _T: (r.ing || []).length && (was.prep_min || was.cook_min) ? dishTimes(was, 1) : null }; });
     if (keep.length) { dishes.length = 0; dishes.push(...keep); } } }
   if (dry) for (let i = 0; i < dishes.length; i++) dishes[i] = dryDish(dishes[i]);
-  return { i, id, s, ds, f, d, shown, venue: fl.venue || '', theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
+  return { i, id, s, ds, f, d, shown, venue: fl.venue || HB_BRAND[id] || '', hb: !fl.venue && !!HB_BRAND[id], theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', ds + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', ds + '.jpg')) : null };
 });
 const BY_THEME = {}; for (const x of ALL) (BY_THEME[x.theme] = BY_THEME[x.theme] || []).push(x);
@@ -222,7 +226,8 @@ function filmPage(x) {
     const ds = x.dishes.filter(y => y.course === c); if (!ds.length) return '';
     return `<h2>${COURSE[c]}</h2>\n` + ds.map(y => {
       const T = y._T || ((y.prep_min || y.cook_min) ? dishTimes(y, 1) : null);
-      const meta = [T ? `Prep ${span(T.prep)}${T.cook ? ', cook ' + span(T.cook) : ''}${T.wait >= 30 ? ', then ' + span(T.wait) + ' to rest or set' : ''}` : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
+      /* review 45: the page writes times as the phone does ("Prep 15 min, cook 1 hr 28 min, 1 hr waiting"), with the app's own planMin */
+      const meta = [T && (T.prep || T.cook) ? ['Prep ' + planMin(T.prep || 5), T.cook ? 'cook ' + planMin(T.cook) : '', T.wait ? planMin(T.wait) + ' waiting' : ''].filter(Boolean).join(', ') : '', y.make_ahead ? 'Make ahead: ' + esc(degC(y.make_ahead)) : ''].filter(Boolean).join(' · ');
       const ingr = ingLines(x, y).map(t => `<li>${esc(t)}</li>`).join('');
       const steps = (y.steps || []).map(st => `<li>${esc(degC(stepTimed(st.text, st.min)))}</li>`).join('') || (y.how ? `<li>${esc(degC(y.how))}</li>` : '');
       return `<article class="dish" id="${did(y)}"><h3>${esc(y.n)}${y.veg && c !== 'd' ? '<span class="tag">Vegetarian</span>' : ''}${c === 'd' && y.af ? '<span class="tag">No alcohol</span>' : ''}${y.house ? '<span class="tag">House</span>' : ''}</h3>
@@ -241,7 +246,7 @@ ${x.poster ? `<img src="${posterUrl(x.poster)}" width="342" height="513" alt="${
 <h1>${esc(shown)} (${f.year}) movie night dinner menu</h1>
 <div class="hi">
 ${lede.length ? `<p class="lead">${lede.join(' ')}</p>` : ''}
-${x.venue && (CARD_VENUE[x.id] || !CARD_PRINT[x.id]) && (!CARD_PRINT[x.id] || CARD_VENUE[x.id]) ? `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>` : ''}
+${x.venue && (CARD_VENUE[x.id] || !CARD_PRINT[x.id]) && (!CARD_PRINT[x.id] || CARD_VENUE[x.id]) ? (x.hb ? `<p>The menu comes from <strong>${esc(x.venue)}</strong>, in the world of the film.</p>` : `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>`) : ''}
 <a class="btn" href="${open}">Open this menu in Reel Dinner</a>
 <p class="small">Print the menu, get the shopping list and plan the night, free.</p>
 </div>

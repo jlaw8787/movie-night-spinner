@@ -1,0 +1,583 @@
+[
+ {
+  "id": "Mission: Impossible - Ghost Protocol (2011)",
+  "old": "Brij Nath's party onion bhajis",
+  "new": {
+   "n": "Train carriage herring on black bread",
+   "note": "Pickled herring on buttered rye with red onion and dill, a cold bite for the siding.",
+   "how": "Butter 8 slices of dark rye bread and cut each in half. Lay a piece of pickled herring on each with thin red onion rings and dill. Grind over black pepper and serve cold.",
+   "shop": [
+    "1 loaf dark rye bread@Bakery",
+    "40g butter@Dairy",
+    "300g pickled herring fillets@Deli",
+    "1 red onion@Produce",
+    "1 bunch dill@Produce"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 0,
+    "make_ahead": "Slice the onion and pick the dill up to 2 hours ahead; build just before serving",
+    "ingredients": [
+     {
+      "q": 8,
+      "u": "",
+      "item": "slices dark rye bread",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 300,
+      "u": "g",
+      "item": "pickled herring fillets",
+      "aisle": "Deli"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "red onion, in thin rings",
+      "aisle": "Produce"
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "item": "bunch dill",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Butter the rye and cut each slice in half.",
+      "min": 4
+     },
+     {
+      "text": "Top with herring, onion rings and dill, grind over pepper and serve cold.",
+      "min": 6
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Buttered rye with pickled beetroot, red onion and dill instead of herring."
+  }
+ },
+ {
+  "id": "Mission: Impossible - Ghost Protocol (2011)",
+  "old": "Dubai lamb machboos",
+  "new": {
+   "n": "Kremlin chicken Kiev with buttered peas",
+   "note": "Crumbed chicken breast round a core of garlic butter, with buttered peas, cut at the table.",
+   "how": "Mash 100g soft butter with 2 crushed garlic cloves and chopped parsley, roll into a log and freeze 20 minutes. Butterfly 4 chicken breasts, pound thin, wrap each round a quarter of the butter and chill. Dip in flour, beaten egg and breadcrumbs twice, fry until golden then bake at 200C for 15 minutes. Serve with buttered peas.",
+   "shop": [
+    "4 chicken breasts@Meat",
+    "100g butter@Dairy",
+    "1 garlic bulb@Produce",
+    "1 bunch flat-leaf parsley@Produce",
+    "50g plain flour@Pantry",
+    "3 eggs@Dairy",
+    "150g dried breadcrumbs@Pantry",
+    "500ml vegetable oil@Pantry",
+    "500g frozen peas@Frozen"
+   ],
+   "r2": {
+    "prep_min": 30,
+    "cook_min": 30,
+    "make_ahead": "Make the garlic butter up to 3 days ahead; crumb the chicken up to 1 day ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 100,
+      "u": "g",
+      "item": "soft butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "garlic cloves, crushed",
+      "aisle": "Produce"
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "item": "bunch flat-leaf parsley, chopped",
+      "aisle": "Produce"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "chicken breasts",
+      "aisle": "Meat"
+     },
+     {
+      "q": 50,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 3,
+      "u": "",
+      "item": "eggs, beaten",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "dried breadcrumbs",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "vegetable oil, for frying",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "g",
+      "item": "frozen peas",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 20,
+      "u": "g",
+      "item": "butter, for the peas",
+      "aisle": "Dairy"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Mash the butter with garlic and parsley, roll into a log and freeze, 20 min.",
+      "min": 20
+     },
+     {
+      "text": "Butterfly and pound the chicken thin, wrap each round a quarter of the butter and chill.",
+      "min": 15
+     },
+     {
+      "text": "Dip in flour, egg and crumbs twice.",
+      "min": 10
+     },
+     {
+      "text": "Fry until golden, then bake at 200C, 15 min.",
+      "min": 20
+     },
+     {
+      "text": "Cook the peas and toss with butter. Serve with the chicken.",
+      "min": 6
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Crumbed mushroom and gruyère Kiev with the same garlic butter and buttered peas."
+  }
+ },
+ {
+  "id": "Mission: Impossible - Ghost Protocol (2011)",
+  "old": "Dubai sandstorm luqaimat",
+  "new": {
+   "n": "Siding syrniki with sour cream and jam",
+   "note": "Golden cottage cheese pancakes with sour cream and cherry jam, still warm from the pan.",
+   "how": "Mix 500g cottage cheese with 2 eggs, 3 tbsp sugar, a pinch of salt and 100g plain flour. Shape into 12 small thick rounds in more flour. Fry in butter over medium heat for 3 minutes a side until golden. Serve warm with sour cream and cherry jam.",
+   "shop": [
+    "500g cottage cheese@Dairy",
+    "2 eggs@Dairy",
+    "3 tbsp caster sugar@Pantry",
+    "150g plain flour@Pantry",
+    "40g butter@Dairy",
+    "200g sour cream@Dairy",
+    "1 jar cherry jam@Pantry"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 15,
+    "make_ahead": "Mix the batter up to 1 day ahead and keep chilled; fry to serve",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "cottage cheese",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "eggs",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "item": "caster sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 200,
+      "u": "g",
+      "item": "sour cream",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "cherry jam",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Mix the cottage cheese, eggs, sugar, salt and 100g of the flour.",
+      "min": 5
+     },
+     {
+      "text": "Shape 12 small thick rounds in the rest of the flour.",
+      "min": 8
+     },
+     {
+      "text": "Fry in butter until golden, 3 minutes a side, 15 min in batches.",
+      "min": 15
+     },
+     {
+      "text": "Serve warm with sour cream and jam.",
+      "min": 2
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Mission: Impossible - Ghost Protocol (2011)",
+  "old": "Mumbai party mango gin cooler",
+  "new": {
+   "n": "Samovar tea with lemon and jam",
+   "note": "Strong black tea poured hot over lemon, a spoon of jam on the side to stir in.",
+   "how": "Brew 4 tsp strong black tea leaves in 1 litre of boiling water for 4 minutes and strain. Pour into glasses with a slice of lemon in each, and serve with sugar cubes and a little dish of cherry jam to stir in.",
+   "shop": [
+    "1 box strong black tea@Pantry",
+    "2 lemons@Produce",
+    "1 box sugar cubes@Pantry",
+    "1 jar cherry jam@Pantry"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 5,
+    "make_ahead": "Slice the lemons up to 2 hours ahead",
+    "ingredients": [
+     {
+      "q": 4,
+      "u": "tsp",
+      "item": "strong black tea leaves",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "l",
+      "item": "boiling water",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 12,
+      "u": "",
+      "item": "sugar cubes",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "cherry jam",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brew the tea in the boiling water, 4 min, and strain.",
+      "min": 5
+     },
+     {
+      "text": "Pour over a lemon slice in each glass and serve with sugar and jam.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Enchanted (2007)",
+  "old": "Pancakes, bacon and scrambled eggs",
+  "new": {
+   "n": "Ballroom roast salmon with herbed potatoes",
+   "note": "Salmon roasted with lemon and dill butter, baby potatoes in herbs, plated for the ball.",
+   "how": "Boil 800g baby potatoes until tender, then toss with butter, parsley and chives. Lay 4 salmon fillets on a lined tray, top each with a slice of lemon, dill and a knob of butter and roast at 200C for 12 minutes. Serve the salmon on the potatoes with lemon wedges.",
+   "shop": [
+    "800g baby potatoes@Produce",
+    "4 salmon fillets, skin on@Seafood",
+    "60g butter@Dairy",
+    "2 lemons@Produce",
+    "1 bunch dill@Produce",
+    "1 bunch flat-leaf parsley@Produce",
+    "1 bunch chives@Produce"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 25,
+    "make_ahead": "Boil the potatoes up to 1 day ahead; warm them in the butter and herbs to serve",
+    "ingredients": [
+     {
+      "q": 800,
+      "u": "g",
+      "item": "baby potatoes",
+      "aisle": "Produce"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "salmon fillets, skin on",
+      "aisle": "Seafood"
+     },
+     {
+      "q": 60,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "lemons",
+      "aisle": "Produce"
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "item": "bunch dill",
+      "aisle": "Produce"
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "item": "bunch flat-leaf parsley, chopped",
+      "aisle": "Produce"
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "item": "bunch chives, chopped",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Boil the potatoes until tender, 18 min.",
+      "min": 18
+     },
+     {
+      "text": "Top the salmon with lemon, dill and butter and roast at 200C, 12 min.",
+      "min": 14
+     },
+     {
+      "text": "Toss the potatoes with butter and herbs and serve under the salmon.",
+      "min": 4
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Roast cauliflower steaks with the same lemon and dill butter and herbed potatoes."
+  }
+ },
+ {
+  "id": "Fantastic Beasts and Where to Find Them (2016)",
+  "old": "1926 New York beef pot roast",
+  "new": {
+   "n": "Kowalski's mushroom and sauerkraut kulebiak",
+   "note": "Flaky pastry loaf of mushroom, sauerkraut and dill, sliced thick at the bakery counter.",
+   "how": "Fry 1 diced onion and 400g sliced mushrooms in butter until dry. Stir in 300g drained sauerkraut, 2 chopped hard-boiled eggs, dill and pepper and cool. Lay a sheet of puff pastry on a tray, pile the filling down the middle, cover with a second sheet, seal, brush with egg and bake at 200C for 30 minutes until deep golden. Slice thick.",
+   "shop": [
+    "1 brown onion@Produce",
+    "400g button mushrooms@Produce",
+    "40g butter@Dairy",
+    "300g sauerkraut@Deli",
+    "3 eggs@Dairy",
+    "1 bunch dill@Produce",
+    "2 sheets frozen puff pastry@Frozen"
+   ],
+   "r2": {
+    "prep_min": 25,
+    "cook_min": 40,
+    "make_ahead": "Make and cool the filling up to 1 day ahead; fill and bake on the day",
+    "ingredients": [
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 400,
+      "u": "g",
+      "item": "button mushrooms, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 300,
+      "u": "g",
+      "item": "sauerkraut, drained",
+      "aisle": "Deli"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "hard-boiled eggs, chopped",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "item": "bunch dill, chopped",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "sheets frozen puff pastry, thawed",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "egg, beaten",
+      "aisle": "Dairy"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Fry the onion and mushrooms in butter until dry, 10 min.",
+      "min": 10
+     },
+     {
+      "text": "Stir in the sauerkraut, egg, dill and pepper and cool.",
+      "min": 15
+     },
+     {
+      "text": "Fill and seal between the pastry sheets and brush with egg.",
+      "min": 8
+     },
+     {
+      "text": "Bake at 200C until deep golden, 30 min.",
+      "min": 30
+     },
+     {
+      "text": "Slice thick.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Under Siege (1992)",
+  "old": "USS Missouri navy grog",
+  "new": {
+   "n": "USS Missouri bug juice punch",
+   "note": "Lime, grapefruit and honey over crushed ice with soda, the dry ship's own punch.",
+   "how": "Stir 120ml lime juice, 250ml grapefruit juice and 3 tbsp honey until the honey melts. Pour over crushed ice in 4 glasses, top with soda water and add a lime wheel.",
+   "shop": [
+    "4 limes@Produce",
+    "500ml grapefruit juice@Drinks",
+    "1 jar honey@Pantry",
+    "1L soda water@Drinks",
+    "1 bag crushed ice@Frozen"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 0,
+    "make_ahead": "Mix the juices and honey up to 1 day ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 120,
+      "u": "ml",
+      "item": "lime juice",
+      "aisle": "Produce"
+     },
+     {
+      "q": 250,
+      "u": "ml",
+      "item": "grapefruit juice",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "item": "honey",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 600,
+      "u": "ml",
+      "item": "soda water",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 2,
+      "u": "cup",
+      "item": "crushed ice",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lime, in wheels",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Stir the juices and honey until the honey melts.",
+      "min": 3
+     },
+     {
+      "text": "Pour over crushed ice, top with soda and add a lime wheel.",
+      "min": 2
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ }
+]

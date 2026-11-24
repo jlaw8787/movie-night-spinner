@@ -1,0 +1,93 @@
+[
+ {
+  "id": "Starship Troopers (1997)",
+  "old": "Captured Brain Bug roast cauliflower",
+  "new": {
+   "n": "Captured Brain Bug cauliflower cheese",
+   "note": "Whole cauliflower baked under a bubbling cheddar sauce, carried in and carved at the mess table.",
+   "how": "Boil a whole cauliflower for 8 minutes, drain well and sit it in a baking dish. Melt 40g butter, stir in 40g plain flour for a minute, then whisk in 500ml milk until thick. Off the heat stir in 150g grated cheddar, 1 tsp mustard and salt. Pour over the cauliflower, top with 50g more cheddar and 30g breadcrumbs and bake at 200C for 25 minutes until golden. Carve at the table.",
+   "shop": [
+    "1 large whole cauliflower, leaves trimmed@Produce",
+    "40g butter@Dairy",
+    "40g plain flour@Pantry",
+    "500ml milk@Dairy",
+    "200g cheddar@Dairy",
+    "1 jar Dijon mustard@Pantry",
+    "30g dried breadcrumbs@Pantry"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 40,
+    "make_ahead": "Make the cheese sauce up to 1 day ahead and keep it chilled; boil and bake on the day",
+    "ingredients": [
+     {
+      "q": 1,
+      "u": "",
+      "item": "large whole cauliflower, leaves trimmed",
+      "aisle": "Produce"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "milk",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 200,
+      "u": "g",
+      "item": "cheddar, grated",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "Dijon mustard",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 30,
+      "u": "g",
+      "item": "dried breadcrumbs",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Boil the whole cauliflower for 8 minutes, drain well and sit it in a baking dish.",
+      "min": 15
+     },
+     {
+      "text": "Melt the butter, stir in the flour for a minute, then whisk in the milk until thick.",
+      "min": 8
+     },
+     {
+      "text": "Off the heat stir in 150g of the cheddar, the mustard and a pinch of salt.",
+      "min": 2
+     },
+     {
+      "text": "Pour over the cauliflower, top with the rest of the cheddar and the breadcrumbs and bake at 200C until golden, 25 min.",
+      "min": 25
+     },
+     {
+      "text": "Carve at the table.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ }
+]

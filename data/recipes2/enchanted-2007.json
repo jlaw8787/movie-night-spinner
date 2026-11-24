@@ -132,186 +132,71 @@
    "af": true
   },
   {
-   "n": "Pancakes, bacon and scrambled eggs",
+   "n": "Ballroom roast salmon with herbed potatoes",
    "course": "m",
-   "prep_min": 12,
-   "cook_min": 29,
-   "make_ahead": "Make the batter up to 4 hours ahead in the fridge; cook the pancakes, bacon and eggs just before serving",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Boil the potatoes up to 1 day ahead; warm them in the butter and herbs to serve",
    "ingredients": [
     {
-     "q": 250,
+     "q": 800,
      "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tsp",
-     "item": "baking powder",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 6,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 375,
-     "u": "ml",
-     "item": "buttermilk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "butter, for cooking",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "rashers bacon",
-     "aisle": "Meat"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "strawberries",
+     "item": "baby potatoes",
      "aisle": "Produce"
     },
     {
-     "q": 100,
-     "u": "ml",
-     "item": "maple syrup",
-     "aisle": "Pantry"
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets, skin on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch chives, chopped",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Whisk the flour, baking powder, 2 of the eggs and the buttermilk into a batter.",
-     "min": 6
+     "text": "Boil the potatoes until tender, 18 min.",
+     "min": 18
     },
     {
-     "text": "Cook the pancakes in half the butter in the pan and keep warm.",
-     "min": 15
+     "text": "Top the salmon with lemon, dill and butter and roast at 200C, 12 min.",
+     "min": 14
     },
     {
-     "text": "Fry the bacon until crisp.",
-     "min": 8
-    },
-    {
-     "text": "Scramble the remaining eggs softly in the rest of the butter.",
-     "min": 5
-    },
-    {
-     "text": "Slice the strawberries.",
+     "text": "Toss the potatoes with butter and herbs and serve under the salmon.",
      "min": 4
-    },
-    {
-     "text": "Pile everything onto big plates with the maple syrup on the side.",
-     "min": 3
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Pancakes, smoky mushrooms and scrambled eggs",
-     "prep_min": 12,
-     "cook_min": 29,
-     "make_ahead": "Slice the mushrooms up to 1 day ahead and make the batter up to 4 hours ahead; cook everything just before serving",
-     "ingredients": [
-      {
-       "q": 250,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "baking powder",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 6,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 375,
-       "u": "ml",
-       "item": "buttermilk",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "butter, for cooking",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "button mushrooms, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "smoked paprika",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 250,
-       "u": "g",
-       "item": "strawberries",
-       "aisle": "Produce"
-      },
-      {
-       "q": 100,
-       "u": "ml",
-       "item": "maple syrup",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Whisk the flour, baking powder, 2 of the eggs and the buttermilk into a batter.",
-       "min": 6
-      },
-      {
-       "text": "Cook the pancakes in a buttered pan and keep warm.",
-       "min": 15
-      },
-      {
-       "text": "Fry the mushrooms in the rest of the butter with the smoked paprika and soy sauce until crisp at the edges.",
-       "min": 8
-      },
-      {
-       "text": "Scramble the remaining eggs softly.",
-       "min": 5
-      },
-      {
-       "text": "Slice the strawberries.",
-       "min": 4
-      },
-      {
-       "text": "Pile everything onto big plates with the maple syrup on the side.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "Poison candy apples",

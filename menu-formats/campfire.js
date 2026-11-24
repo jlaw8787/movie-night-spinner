@@ -288,7 +288,7 @@ function photo(url,o){
     ${o.half?HALFTONE(o.half):""}${o.sheen?SHEEN(o.sheen):""}${o.extra||""}
   </div></div>`;
 }
-function logoPanel(ctx,x,y,maxW,ty,C,P,year){
+function logoPanel(ctx,x,y,maxW,ty,C,P,year,tkt){/* review 45: tkt, a Now showing ticket sits beside it, so this line says Movie night */
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
   const dark=`position:absolute;left:${x}px;top:${y}px;max-width:${maxW}px;padding:14px 20px 10px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".8",2,[255,255,255],.08,4)};border-radius:6px;box-shadow:0 8px 18px rgba(0,0,0,.45);transform:rotate(${(TONE[ctx.tone]||TONE.warm).tilt*.4}deg)`;
   const light=dark.replace(`background-color:${C.dark}`,`background-color:${P.print}`);
@@ -296,7 +296,7 @@ function logoPanel(ctx,x,y,maxW,ty,C,P,year){
   return`<div data-lpanel data-dark="${esc(dark)}" data-light="${esc(light)}" style="${dark}">
     ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:${maxW-40}px;max-height:96px;object-fit:contain">`:""}
     <div data-title-fb data-box style="${url?"display:none;":""}width:${maxW-40}px;max-height:110px;overflow:hidden"><div data-fs="${fbSize}" data-min="20" style="font:${ty.dw} ${fbSize}px ${ty.disp};line-height:1.02;color:${C.onDark};${ty.up?"text-transform:uppercase;":""}">${title}</div></div>
-    <div data-pink data-pink-l="${C.ink}" data-pink-d="${C.onDark}" style="margin-top:8px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.22em;text-transform:uppercase;color:${C.onDark}">${ctx.flavour&&ctx.flavour.camp==="summer"?"Session of "+esc(year):esc(ctx.flavour&&ctx.flavour.est?"Est. "+ctx.flavour.est:"Now showing")}</div>
+    <div data-pink data-pink-l="${C.ink}" data-pink-d="${C.onDark}" style="margin-top:8px;font:${ty.cw} 16px ${ty.caps};letter-spacing:.22em;text-transform:uppercase;color:${C.onDark}">${ctx.flavour&&ctx.flavour.camp==="summer"?"Session of "+esc(year):esc(ctx.flavour&&ctx.flavour.est?"Est. "+ctx.flavour.est:tkt?"Movie night":"Now showing")}</div>
   </div>`;
 }
 function prop(p,ty,C,P,x,y,w,h){
@@ -376,7 +376,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fs="${vs}" data-min="24" style="margin-top:6px;font:${ty.dw} ${vs}px ${ty.disp};line-height:1.02;${ty.up?"text-transform:uppercase;":""}color:${P.ink};${mis}transform:rotate(${TN.tilt*.3}deg);transform-origin:left">${T(F.venue)}</div>
     </div>
     ${ph.heroIsPoster?`${photo(ph.hero,{poster:1,x:14,y:104,w:440,h:650,pad:10,print:P.print,rot:TN.tilt*.5,sheen:E.sheen})}
-    ${logoPanel(ctx,466,130,196,ty,C,P,year)}
+    ${logoPanel(ctx,466,130,196,ty,C,P,year,true)}
     <div style="position:absolute;left:470px;top:${strip?(flip?642:318):420}px;width:186px;box-sizing:border-box;padding:12px 14px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
       <div style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};line-height:1.15">Now showing</div>
       <div style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:4px">${T(F.venue)}</div></div>`:`${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:"center 35%"})}

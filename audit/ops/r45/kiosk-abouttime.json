@@ -1,0 +1,39 @@
+{
+ "id": "About Time (2013)",
+ "ops": [
+  {
+   "set": "flavour.beach",
+   "value": false,
+   "done": true
+  },
+  {
+   "set": "flavour.strip",
+   "value": [
+    [
+     "The house",
+     ""
+    ],
+    [
+     "Table tennis",
+     "Dad versus Tim"
+    ],
+    [
+     "Beach walk",
+     "After tea"
+    ],
+    [
+     "Cricket",
+     "Not today"
+    ]
+   ],
+   "done": true
+  },
+  {
+   "set": "flavour.forecast",
+   "value": "Cornish, changeable",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-23",
+ "misses": []
+}
