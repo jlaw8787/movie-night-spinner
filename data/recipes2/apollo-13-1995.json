@@ -130,7 +130,7 @@
    "af": true
   },
   {
-   "n": "Mission Control smoked brisket",
+   "n": "Moon party smoked brisket",
    "course": "m",
    "prep_min": 18,
    "cook_min": 300,
@@ -290,7 +290,7 @@
    }
   },
   {
-   "n": "Aquarius lifeboat chicken pot pies",
+   "n": "Marilyn's chicken pot pies",
    "course": "m",
    "prep_min": 15,
    "cook_min": 37,
@@ -458,52 +458,52 @@
    }
   },
   {
-   "n": "Odyssey heat shield crème brûlée",
+   "n": "Heat shield baked Alaska",
    "course": "w",
    "prep_min": 20,
-   "cook_min": 40,
-   "make_ahead": "Bake the custards up to 2 days ahead and chill; burn the sugar to serve",
+   "cook_min": 5,
+   "make_ahead": "Build the sponge and ice cream dome up to 2 days ahead and keep frozen",
    "ingredients": [
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "pouring cream",
-     "aisle": "Dairy"
-    },
     {
      "q": 1,
      "u": "",
-     "item": "vanilla bean, split",
-     "aisle": "Pantry"
+     "item": "round sponge cake",
+     "aisle": "Bakery"
     },
     {
-     "q": 6,
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
      "u": "",
-     "item": "egg yolks",
+     "item": "egg whites",
      "aisle": "Dairy"
     },
     {
-     "q": 80,
+     "q": 200,
      "u": "g",
-     "item": "caster sugar, plus 4 tbsp for the tops",
+     "item": "caster sugar",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Warm the cream with the vanilla seeds and pod until steaming, then take off the heat.",
+     "text": "Sit the sponge on a lined tray and pile the ice cream on top in a dome. Freeze until hard.",
      "min": 5
     },
     {
-     "text": "Whisk the yolks and 80g sugar, then whisk in the cream and strain into 4 ramekins.",
+     "text": "Whisk the egg whites to soft peaks, then add the sugar a spoon at a time until glossy.",
      "min": 8
     },
     {
-     "text": "Bake in a water bath at 150C until just set with a wobble, then chill.",
-     "min": 35
+     "text": "Spread the meringue over the ice cream and sponge, sealing it to the tray.",
+     "min": 5
     },
     {
-     "text": "Sprinkle each with sugar and scorch with a blowtorch or under a hot grill until dark amber.",
+     "text": "Bake at 230C until the peaks are scorched golden, then serve straight away.",
      "min": 5
     }
    ],

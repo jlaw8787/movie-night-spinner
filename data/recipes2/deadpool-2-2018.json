@@ -247,12 +247,48 @@
    "af": true
   },
   {
-   "n": "Wade and Vanessa's steak frites",
+   "n": "Ice Box Salisbury steak with fries",
    "course": "m",
    "prep_min": 15,
-   "cook_min": 25,
-   "make_ahead": "Cut the potatoes up to 1 day ahead and keep them in cold water, then dry well before roasting; sear the steaks and make the sauce on the night",
+   "cook_min": 60,
+   "make_ahead": "Shape the patties a day ahead and keep chilled",
    "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
     {
      "q": 1,
      "u": "kg",
@@ -262,261 +298,38 @@
     {
      "q": 3,
      "u": "tbsp",
-     "item": "oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "sirloin steaks",
-     "aisle": "Meat"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "ml",
-     "item": "red wine",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "beef stock",
+     "item": "vegetable oil",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into chips, toss in oil and roast until crisp.",
-     "min": 20
+     "text": "Cut the potatoes into chips, toss in the oil and salt.",
+     "min": 5
     },
     {
-     "text": "Sear the steaks in a very hot pan, add butter and baste for a minute, then rest.",
+     "text": "Roast the chips at 220C, turning once, until crisp.",
+     "min": 35
+    },
+    {
+     "text": "Mix the mince, breadcrumbs, egg and salt and shape into 4 oval patties.",
+     "min": 5
+    },
+    {
+     "text": "Brown the patties and set aside.",
      "min": 8
     },
     {
-     "text": "Add the red wine and stock to the pan and reduce until glossy.",
+     "text": "Fry the onions in the same pan until brown, then stir in the flour.",
      "min": 10
     },
     {
-     "text": "Slice the steak and serve by candlelight.",
-     "min": 2
+     "text": "Whisk in the stock, return the patties and simmer until cooked through.",
+     "min": 15
     }
    ],
    "veg": false,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Wade and Vanessa's steak frites",
-     "prep_min": 15,
-     "cook_min": 25,
-     "make_ahead": "Cut the chips up to 1 day ahead and hold them in cold water; roast, sear the steaks and reduce the stock sauce on the night",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "sirloin steaks",
-       "aisle": "Meat"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "red wine vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 400,
-       "u": "ml",
-       "item": "beef stock",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cut the potatoes into chips, toss in oil and roast until crisp.",
-       "min": 20
-      },
-      {
-       "text": "Sear the steaks in a very hot pan, add butter and baste for a minute, then rest.",
-       "min": 8
-      },
-      {
-       "text": "Add the stock and vinegar to the pan and reduce until glossy.",
-       "min": 10
-      },
-      {
-       "text": "Slice the steak and serve by candlelight.",
-       "min": 2
-      }
-     ]
-    },
-    "veg": {
-     "n": "Wade and Vanessa's portobello steak frites",
-     "prep_min": 15,
-     "cook_min": 37,
-     "make_ahead": "Cut the chips up to 1 day ahead in cold water and crush the garlic; roast the chips and cook the mushrooms and sauce on the night",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 8,
-       "u": "",
-       "item": "large portobello mushrooms",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "garlic cloves, crushed",
-       "aisle": "Produce"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "red wine",
-       "aisle": "Bottle shop"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "mushroom stock",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cut the potatoes into chips, toss in 2 tbsp of the oil and roast at 220C until crisp.",
-       "min": 30
-      },
-      {
-       "text": "Brush the portobello mushrooms with the rest of the oil and sear in a very hot pan, then add the butter and garlic and baste until tender.",
-       "min": 10
-      },
-      {
-       "text": "Lift out the mushrooms, add the red wine and mushroom stock to the pan and reduce until glossy.",
-       "min": 10
-      },
-      {
-       "text": "Slice the mushrooms thickly and serve with the chips and sauce by candlelight.",
-       "min": 2
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Wade and Vanessa's portobello steak frites (alcohol free)",
-     "prep_min": 15,
-     "cook_min": 37,
-     "make_ahead": "Cut the chips up to 1 day ahead in cold water; roast the chips, sear the mushrooms and reduce the sauce on the night",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 8,
-       "u": "",
-       "item": "large portobello mushrooms",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "garlic cloves, crushed",
-       "aisle": "Produce"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "extra mushroom stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "red wine vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "mushroom stock",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cut the potatoes into chips, toss in 2 tbsp of the oil and roast at 220C until crisp.",
-       "min": 30
-      },
-      {
-       "text": "Brush the portobello mushrooms with the rest of the oil and sear in a very hot pan, then add the butter and garlic and baste until tender.",
-       "min": 10
-      },
-      {
-       "text": "Lift out the mushrooms, add all the mushroom stock and the red wine vinegar to the pan and reduce until glossy.",
-       "min": 10
-      },
-      {
-       "text": "Slice the mushrooms thickly and serve with the chips and sauce by candlelight.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   },
   {
    "n": "Firefist's flame-grilled peri peri chicken",

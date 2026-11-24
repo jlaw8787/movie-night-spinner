@@ -1,0 +1,22 @@
+{
+ "id": "Casablanca (1942)",
+ "ops": [
+  {
+   "old": "Rick's Café olives and almonds",
+   "new": "Café olives and almonds",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Casablanca, Open Late",
+   "done": true
+  },
+  {
+   "set": "cue",
+   "value": "Pour the mint tea when Sam sits down at the piano.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

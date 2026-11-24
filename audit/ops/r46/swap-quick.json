@@ -1,0 +1,22 @@
+[
+ {"id":"Home Alone 2: Lost in New York (1992)","old":"Lobster mac and cheese","new":{
+  "n":"Lobster Newburg on toast points",
+  "note":"Lobster in a sherry, butter and egg yolk cream over toast points, the Plaza's old supper dish.",
+  "how":"Gently poach the meat of 2 lobster tails in 40g butter for 4 minutes and cut into chunks. Add 3 tbsp dry sherry and bubble for a minute. Whisk 300ml cream with 3 egg yolks, pour in and stir over low heat until it coats a spoon, without boiling. Season with salt, a pinch of cayenne and nutmeg. Toast 8 slices of white bread, cut off the crusts and halve into triangles. Spoon the lobster over the toast points and dust with paprika.",
+  "shop":["2 lobster tails@Seafood","40g butter@Dairy","1 bottle dry sherry@Bottle shop","300ml thickened cream@Dairy","3 eggs@Dairy","8 slices white bread@Bakery","cayenne pepper@Spices","ground nutmeg@Spices","sweet paprika@Spices"],
+  "r2":{"prep_min":15,"cook_min":15,"make_ahead":"Best made just before serving","ingredients":[
+   {"q":2,"u":"","item":"lobster tails, meat removed","aisle":"Seafood"},{"q":40,"u":"g","item":"butter","aisle":"Dairy"},{"q":3,"u":"tbsp","item":"dry sherry","aisle":"Bottle shop"},{"q":300,"u":"ml","item":"thickened cream","aisle":"Dairy"},{"q":3,"u":"","item":"egg yolks","aisle":"Dairy"},{"q":8,"u":"","item":"slices white bread","aisle":"Bakery"},{"q":1,"u":"pinch","item":"cayenne pepper","aisle":"Spices"},{"q":1,"u":"pinch","item":"ground nutmeg","aisle":"Spices"},{"q":1,"u":"tsp","item":"sweet paprika","aisle":"Spices"}],
+   "steps":[{"text":"Poach the lobster meat gently in the butter, then cut into chunks.","min":4},{"text":"Add the sherry and bubble for a minute.","min":1},{"text":"Whisk the cream with the yolks, pour in and stir over low heat until it coats a spoon, without boiling. Season with salt, cayenne and nutmeg.","min":6},{"text":"Toast the bread, cut off the crusts and halve into triangles.","min":4},{"text":"Spoon the lobster over the toast points and dust with paprika.","min":3}],
+   "veg":false,"af":false},
+  "veg":"Mushroom Newburg on toast points: swap the lobster for 400g mixed mushrooms sautéed in the butter.",
+  "af":"Leave out the sherry and add a squeeze of lemon at the end."}},
+ {"id":"The Greatest Showman (2017)","old":"Ringmaster's red velvet cake","new":{
+  "n":"Ringmaster's raspberry jelly roll",
+  "note":"Light sponge rolled around raspberry jam and dusted with powdered sugar, cut in rounds for the stalls.",
+  "how":"Whisk 4 eggs and 120g caster sugar until thick and pale, about 6 minutes. Fold in 120g self-raising flour. Spread in a lined Swiss roll tin and bake at 200C for 9 minutes. Turn out onto baking paper dusted with caster sugar, roll up from the short end while hot and cool. Unroll, spread with 200g raspberry jam, roll again and dust with icing sugar. Slice into rounds.",
+  "shop":["4 eggs@Dairy","120g caster sugar@Pantry","120g self-raising flour@Pantry","200g raspberry jam@Pantry","icing sugar@Pantry"],
+  "r2":{"prep_min":20,"cook_min":9,"make_ahead":"Bake and fill up to 1 day ahead, kept covered","ingredients":[
+   {"q":4,"u":"","item":"eggs","aisle":"Dairy"},{"q":120,"u":"g","item":"caster sugar","aisle":"Pantry"},{"q":120,"u":"g","item":"self-raising flour","aisle":"Pantry"},{"q":200,"u":"g","item":"raspberry jam","aisle":"Pantry"},{"q":2,"u":"tbsp","item":"icing sugar","aisle":"Pantry"}],
+   "steps":[{"text":"Whisk the eggs and caster sugar until thick and pale.","min":6},{"text":"Fold in the flour, spread in a lined Swiss roll tin and bake at 200C.","min":9},{"text":"Turn out onto sugared baking paper, roll up from the short end while hot and leave to cool.","min":30},{"text":"Unroll, spread with the jam, roll again and dust with icing sugar.","min":5},{"text":"Slice into rounds.","min":3}],
+   "veg":true,"af":true}}}
+]

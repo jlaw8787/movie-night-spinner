@@ -536,93 +536,63 @@
    }
   },
   {
-   "n": "Ringmaster's red velvet cake",
+   "n": "Ringmaster's raspberry jelly roll",
    "course": "w",
-   "prep_min": 25,
-   "cook_min": 45,
-   "make_ahead": "Up to 2 days",
+   "prep_min": 20,
+   "cook_min": 9,
+   "make_ahead": "Bake and fill up to 1 day ahead, kept covered",
    "ingredients": [
     {
-     "q": 125,
-     "u": "g",
-     "item": "butter, softened",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
+     "q": 4,
      "u": "",
      "item": "eggs",
      "aisle": "Dairy"
     },
     {
-     "q": 250,
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
      "u": "g",
      "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
+     "q": 200,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    },
+    {
      "q": 2,
      "u": "tbsp",
-     "item": "cocoa",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "buttermilk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "red food colouring",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "butter, softened, for the icing",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 250,
-     "u": "g",
      "item": "icing sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "gold sprinkles",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 175C and line two tins.",
-     "min": 5
+     "text": "Whisk the eggs and caster sugar until thick and pale.",
+     "min": 6
     },
     {
-     "text": "Beat the butter and sugar, add the eggs, then fold in the flour, cocoa, buttermilk and colouring.",
-     "min": 12
+     "text": "Fold in the flour, spread in a lined Swiss roll tin and bake at 200C.",
+     "min": 9
     },
     {
-     "text": "Bake in two tins.",
+     "text": "Turn out onto sugared baking paper, roll up from the short end while hot and leave to cool.",
      "min": 30
     },
     {
-     "text": "Cool, then beat the icing butter with the icing sugar and a splash of vanilla.",
-     "min": 12
+     "text": "Unroll, spread with the jam, roll again and dust with icing sugar.",
+     "min": 5
     },
     {
-     "text": "Layer and cover the cake and add gold sprinkles.",
-     "min": 11
+     "text": "Slice into rounds.",
+     "min": 3
     }
    ],
    "veg": true,

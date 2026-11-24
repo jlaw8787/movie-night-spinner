@@ -1,0 +1,1194 @@
+[
+ {
+  "id": "The Shawshank Redemption (1994)",
+  "old": "Zihuatanejo guacamole",
+  "new": {
+   "n": "Mess hall split pea soup",
+   "note": "Split peas simmered thick with a ham hock, ladled into tin bowls.",
+   "how": "Soften the onion, carrot and celery in a splash of oil in a big pot. Add the split peas, ham hock, bay leaves and water and bring to the boil. Simmer gently, stirring now and then, until the peas collapse and the soup is thick. Lift out the hock, pull the meat off the bone, shred it and stir it back in. Season and ladle into bowls.",
+   "shop": [
+    "500g green split peas@Pantry",
+    "1 smoked ham hock@Meat",
+    "1 brown onion@Produce",
+    "2 carrots@Produce",
+    "2 celery sticks@Produce",
+    "2l water@Pantry",
+    "2 bay leaves@Spices"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 95,
+    "make_ahead": "Make up to 3 days ahead and keep chilled; it thickens, so loosen with water when reheating",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "green split peas",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "smoked ham hock",
+      "aisle": "Meat"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "carrots, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "celery sticks, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "l",
+      "item": "water",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "bay leaves",
+      "aisle": "Spices"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Soften the onion, carrot and celery in a splash of oil in a big pot.",
+      "min": 10
+     },
+     {
+      "text": "Add the split peas, ham hock, bay leaves and water and bring to the boil.",
+      "min": 5
+     },
+     {
+      "text": "Simmer gently, stirring now and then, until the peas collapse and the soup is thick.",
+      "min": 90
+     },
+     {
+      "text": "Lift out the hock, pull the meat off the bone, shred it and stir it back in. Season and ladle into bowls.",
+      "min": 10
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Leave out the ham hock and stir in a pinch of smoked paprika."
+  }
+ },
+ {
+  "id": "The Shawshank Redemption (1994)",
+  "old": "Zihuatanejo grilled fish tacos",
+  "new": {
+   "n": "Friday fish chowder with saltines",
+   "note": "White fish, potato and onion in a milky chowder, saltine crackers on the tray.",
+   "how": "Melt the butter and soften the onion. Stir in the flour for a minute. Whisk in the stock, add the potatoes and simmer until just tender. Pour in the milk, add the fish and simmer gently until it flakes. Season. Ladle into bowls with crackers on the side.",
+   "shop": [
+    "600g firm white fish fillets@Seafood",
+    "500g potatoes@Produce",
+    "1 brown onion@Produce",
+    "40g butter@Dairy",
+    "2 tbsp plain flour@Pantry",
+    "500ml fish stock@Pantry",
+    "500ml full cream milk@Dairy",
+    "1 packet water crackers@Pantry"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 31,
+    "make_ahead": "Make the potato base a day ahead; add the milk and fish on the day",
+    "ingredients": [
+     {
+      "q": 600,
+      "u": "g",
+      "item": "firm white fish fillets, in chunks",
+      "aisle": "Seafood"
+     },
+     {
+      "q": 500,
+      "u": "g",
+      "item": "potatoes, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "fish stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "full cream milk",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "packet water crackers",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Melt the butter and soften the onion.",
+      "min": 8
+     },
+     {
+      "text": "Stir in the flour for a minute.",
+      "min": 2
+     },
+     {
+      "text": "Whisk in the stock, add the potatoes and simmer until just tender.",
+      "min": 15
+     },
+     {
+      "text": "Pour in the milk, add the fish and simmer gently until it flakes. Season.",
+      "min": 8
+     },
+     {
+      "text": "Ladle into bowls with crackers on the side.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Use vegetable stock and swap the fish for corn kernels and extra potato."
+  }
+ },
+ {
+  "id": "Tango & Cash (1989)",
+  "old": "LA street tacos",
+  "new": {
+   "n": "Block C chili and crackers",
+   "note": "Beef and bean chili ladled into bowls, saltine crackers on the tray.",
+   "how": "Brown the mince with the onion and garlic. Stir in the chilli powder and cumin. Add the tomatoes, beans and a cup of water and simmer until thick. Season. Ladle into bowls with crackers on the side.",
+   "shop": [
+    "500g beef mince@Meat",
+    "1 brown onion@Produce",
+    "2 garlic cloves@Produce",
+    "2 tbsp chilli powder@Spices",
+    "1 tsp ground cumin@Spices",
+    "400g tin crushed tomatoes@Pantry",
+    "400g tin red kidney beans@Pantry",
+    "1 packet water crackers@Pantry"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 30,
+    "make_ahead": "Make up to 2 days ahead; it is better the next day",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "beef mince",
+      "aisle": "Meat"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "garlic cloves, crushed",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "chilli powder",
+      "aisle": "Spices"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "ground cumin",
+      "aisle": "Spices"
+     },
+     {
+      "q": 400,
+      "u": "g",
+      "item": "tin crushed tomatoes",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 400,
+      "u": "g",
+      "item": "tin red kidney beans, drained",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "packet water crackers",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the mince with the onion and garlic.",
+      "min": 10
+     },
+     {
+      "text": "Stir in the chilli powder and cumin.",
+      "min": 2
+     },
+     {
+      "text": "Add the tomatoes, beans and a cup of water and simmer until thick. Season.",
+      "min": 30
+     },
+     {
+      "text": "Ladle into bowls with crackers on the side.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Swap the mince for a second tin of beans and a diced capsicum."
+  }
+ },
+ {
+  "id": "Tango & Cash (1989)",
+  "old": "Kiki's chilli shrimp cucumber bites",
+  "new": {
+   "n": "Mess hall corn dogs",
+   "note": "Franks dipped in cornmeal batter and fried golden, yellow mustard to dip.",
+   "how": "Pat the frankfurts dry and push a skewer into each. Whisk the cornmeal, flour, baking powder and a pinch of salt, then the egg and buttermilk, into a thick batter. Pour into a tall glass. Heat the oil to 180C. Dip each frankfurt in the batter and fry, turning, until deep golden. Drain and serve with mustard.",
+   "shop": [
+    "8 frankfurts@Deli",
+    "150g fine cornmeal@Pantry",
+    "120g plain flour@Pantry",
+    "2 tsp baking powder@Pantry",
+    "1 egg@Dairy",
+    "250ml buttermilk@Dairy",
+    "1l vegetable oil@Pantry",
+    "8 wooden skewers@Pantry",
+    "1 squeeze bottle yellow mustard@Pantry"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 17,
+    "make_ahead": "Best fried just before serving",
+    "ingredients": [
+     {
+      "q": 8,
+      "u": "",
+      "item": "frankfurts",
+      "aisle": "Deli"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "fine cornmeal",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 120,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "item": "baking powder",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "egg",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 250,
+      "u": "ml",
+      "item": "buttermilk",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "l",
+      "item": "vegetable oil, for frying",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "wooden skewers",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "squeeze bottle yellow mustard",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Pat the frankfurts dry and push a skewer into each.",
+      "min": 5
+     },
+     {
+      "text": "Whisk the cornmeal, flour, baking powder and a pinch of salt, then the egg and buttermilk, into a thick batter. Pour into a tall glass.",
+      "min": 5
+     },
+     {
+      "text": "Heat the oil to 180C.",
+      "min": 5
+     },
+     {
+      "text": "Dip each frankfurt in the batter and fry, turning, until deep golden.",
+      "min": 12
+     },
+     {
+      "text": "Drain and serve with mustard.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Use vegetarian frankfurts."
+  }
+ },
+ {
+  "id": "Tango & Cash (1989)",
+  "old": "Tango's tailored rib eye",
+  "new": {
+   "n": "Tango's Salisbury steak",
+   "note": "Beef patties simmered in brown onion gravy, green beans on the side.",
+   "how": "Mix the mince, breadcrumbs, egg and salt and shape into 4 oval patties. Brown the patties on both sides and set aside. Fry the onions in the same pan until soft and brown, then stir in the flour. Whisk in the stock and Worcestershire, return the patties and simmer until cooked through. Boil the beans until tender and serve beside the patties.",
+   "shop": [
+    "600g beef mince@Meat",
+    "40g dried breadcrumbs@Pantry",
+    "1 egg@Dairy",
+    "2 brown onions@Produce",
+    "2 tbsp plain flour@Pantry",
+    "500ml beef stock@Pantry",
+    "1 tbsp Worcestershire sauce@Pantry",
+    "300g green beans@Produce"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 30,
+    "make_ahead": "Shape the patties a day ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 600,
+      "u": "g",
+      "item": "beef mince",
+      "aisle": "Meat"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "dried breadcrumbs",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "egg",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "brown onions, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "beef stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "Worcestershire sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 300,
+      "u": "g",
+      "item": "green beans",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Mix the mince, breadcrumbs, egg and salt and shape into 4 oval patties.",
+      "min": 5
+     },
+     {
+      "text": "Brown the patties on both sides and set aside.",
+      "min": 8
+     },
+     {
+      "text": "Fry the onions in the same pan until soft and brown, then stir in the flour.",
+      "min": 10
+     },
+     {
+      "text": "Whisk in the stock and Worcestershire, return the patties and simmer until cooked through.",
+      "min": 15
+     },
+     {
+      "text": "Boil the beans until tender and serve beside the patties.",
+      "min": 5
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Use plant-based mince patties and vegetable stock."
+  }
+ },
+ {
+  "id": "The Suicide Squad (2021)",
+  "old": "Ratcatcher's honey baked camembert",
+  "new": {
+   "n": "Ratcatcher's red beans and rice",
+   "note": "Red beans simmered soft with onion, celery and pepper, spooned over white rice.",
+   "how": "Soften the onion, celery, capsicum and garlic in a little oil. Stir in the Cajun seasoning. Add the beans and stock and simmer, mashing a few beans to thicken. Season. Cook the rice while the beans simmer. Spoon the beans over the rice in small bowls.",
+   "shop": [
+    "2 tins red kidney beans@Pantry",
+    "1 brown onion@Produce",
+    "2 celery sticks@Produce",
+    "1 green capsicum@Produce",
+    "2 garlic cloves@Produce",
+    "1 tsp Cajun seasoning@Spices",
+    "500ml vegetable stock@Pantry",
+    "300g long grain rice@Pantry"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 45,
+    "make_ahead": "Make the beans up to 2 days ahead",
+    "ingredients": [
+     {
+      "q": 2,
+      "u": "",
+      "item": "tins red kidney beans, drained",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "celery sticks, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "green capsicum, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "garlic cloves, crushed",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "Cajun seasoning",
+      "aisle": "Spices"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "vegetable stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 300,
+      "u": "g",
+      "item": "long grain rice",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Soften the onion, celery, capsicum and garlic in a little oil.",
+      "min": 10
+     },
+     {
+      "text": "Stir in the Cajun seasoning.",
+      "min": 2
+     },
+     {
+      "text": "Add the beans and stock and simmer, mashing a few beans to thicken. Season.",
+      "min": 30
+     },
+     {
+      "text": "Cook the rice while the beans simmer.",
+      "min": 15
+     },
+     {
+      "text": "Spoon the beans over the rice in small bowls.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "The Suicide Squad (2021)",
+  "old": "Harley's palace tenderloin and red wine",
+  "new": {
+   "n": "Belle Reve jambalaya",
+   "note": "Chicken, smoked sausage and rice cooked in one pot with peppers and Cajun spice.",
+   "how": "Brown the chicken and sausage in a big pot and set aside. Soften the onion, capsicum and celery in the same pot, then stir in the Cajun seasoning. Add the rice and stir to coat. Add the tomatoes, stock, chicken and sausage, cover and simmer until the rice is tender. Season.",
+   "shop": [
+    "500g chicken thighs@Meat",
+    "250g smoked sausage@Deli",
+    "1 brown onion@Produce",
+    "1 red capsicum@Produce",
+    "2 celery sticks@Produce",
+    "2 tsp Cajun seasoning@Spices",
+    "400g tin crushed tomatoes@Pantry",
+    "300g long grain rice@Pantry",
+    "750ml chicken stock@Pantry"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 25,
+    "make_ahead": "Best made on the day",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "chicken thighs, diced",
+      "aisle": "Meat"
+     },
+     {
+      "q": 250,
+      "u": "g",
+      "item": "smoked sausage, sliced",
+      "aisle": "Deli"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "red capsicum, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "celery sticks, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "item": "Cajun seasoning",
+      "aisle": "Spices"
+     },
+     {
+      "q": 400,
+      "u": "g",
+      "item": "tin crushed tomatoes",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 300,
+      "u": "g",
+      "item": "long grain rice",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 750,
+      "u": "ml",
+      "item": "chicken stock",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the chicken and sausage in a big pot and set aside.",
+      "min": 8
+     },
+     {
+      "text": "Soften the onion, capsicum and celery in the same pot, then stir in the Cajun seasoning.",
+      "min": 8
+     },
+     {
+      "text": "Add the rice and stir to coat.",
+      "min": 3
+     },
+     {
+      "text": "Add the tomatoes, stock, chicken and sausage, cover and simmer until the rice is tender. Season.",
+      "min": 25
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Leave out the chicken and sausage; use smoked tofu and vegetable stock."
+  }
+ },
+ {
+  "id": "Edge of Tomorrow (2014)",
+  "old": "Normandy beach mussels",
+  "new": {
+   "n": "Corned beef hash with a fried egg",
+   "note": "Corned beef and potato hash fried crisp in patties, a fried egg on each.",
+   "how": "Mash the corned beef roughly with the potatoes and onion, season and shape into 4 patties. Fry the patties in half the oil until crisp on both sides. Fry the eggs in the rest of the oil. Sit an egg on each patty.",
+   "shop": [
+    "340g tin corned beef@Pantry",
+    "600g potatoes@Produce",
+    "1 brown onion@Produce",
+    "4 eggs@Dairy",
+    "2 tbsp vegetable oil@Pantry"
+   ],
+   "r2": {
+    "prep_min": 25,
+    "cook_min": 16,
+    "make_ahead": "Boil the potatoes and shape the patties a day ahead",
+    "ingredients": [
+     {
+      "q": 340,
+      "u": "g",
+      "item": "tin corned beef",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 600,
+      "u": "g",
+      "item": "potatoes, boiled and cooled",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, finely diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "eggs",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "vegetable oil",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Mash the corned beef roughly with the potatoes and onion, season and shape into 4 patties.",
+      "min": 5
+     },
+     {
+      "text": "Fry the patties in half the oil until crisp on both sides.",
+      "min": 12
+     },
+     {
+      "text": "Fry the eggs in the rest of the oil.",
+      "min": 4
+     },
+     {
+      "text": "Sit an egg on each patty.",
+      "min": 2
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Swap the corned beef for grated cheddar and chopped spring onion."
+  }
+ },
+ {
+  "id": "Edge of Tomorrow (2014)",
+  "old": "Angel of Verdun chicken, cider and cream",
+  "new": {
+   "n": "Angel of Verdun chicken and leek pie",
+   "note": "Chicken and leek in a creamy sauce under a golden puff pastry lid.",
+   "how": "Brown the chicken in the butter, then add the leeks and cook until soft. Stir in the flour. Add the stock and cream and simmer until thick. Season and tip into a pie dish to cool a little. Lay the pastry over, trim and brush with beaten egg. Bake at 200C until puffed and golden.",
+   "shop": [
+    "800g chicken thighs@Meat",
+    "2 leeks@Produce",
+    "40g butter@Dairy",
+    "3 tbsp plain flour@Pantry",
+    "400ml chicken stock@Pantry",
+    "150ml thickened cream@Dairy",
+    "1 sheet puff pastry@Frozen",
+    "1 egg@Dairy"
+   ],
+   "r2": {
+    "prep_min": 20,
+    "cook_min": 53,
+    "make_ahead": "Make the filling up to 2 days ahead; top and bake on the day",
+    "ingredients": [
+     {
+      "q": 800,
+      "u": "g",
+      "item": "chicken thighs, diced",
+      "aisle": "Meat"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "leeks, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "butter",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 400,
+      "u": "ml",
+      "item": "chicken stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 150,
+      "u": "ml",
+      "item": "thickened cream",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "sheet puff pastry",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "egg",
+      "aisle": "Dairy"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the chicken in the butter, then add the leeks and cook until soft.",
+      "min": 8
+     },
+     {
+      "text": "Stir in the flour.",
+      "min": 2
+     },
+     {
+      "text": "Add the stock and cream and simmer until thick. Season and tip into a pie dish to cool a little.",
+      "min": 15
+     },
+     {
+      "text": "Lay the pastry over, trim and brush with beaten egg.",
+      "min": 5
+     },
+     {
+      "text": "Bake at 200C until puffed and golden.",
+      "min": 30
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Swap the chicken for mushrooms and use vegetable stock."
+  }
+ },
+ {
+  "id": "Edge of Tomorrow (2014)",
+  "old": "Gunfire: army tea with dark rum",
+  "new": {
+   "n": "Army brew with condensed milk",
+   "note": "Strong black tea stewed in a big pot, sweetened with condensed milk, in metal mugs.",
+   "how": "Brew the tea bags in the boiling water in a big pot until very strong. Stir a tablespoon of condensed milk into each mug and pour the tea over.",
+   "shop": [
+    "6 black tea bags@Drinks",
+    "1.2l boiling water@Pantry",
+    "4 tbsp sweetened condensed milk@Pantry"
+   ],
+   "r2": {
+    "prep_min": 2,
+    "cook_min": 5,
+    "make_ahead": "Brew just before serving",
+    "ingredients": [
+     {
+      "q": 6,
+      "u": "",
+      "item": "black tea bags",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 1.2,
+      "u": "l",
+      "item": "boiling water",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "sweetened condensed milk",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brew the tea bags in the boiling water in a big pot until very strong.",
+      "min": 5
+     },
+     {
+      "text": "Stir a tablespoon of condensed milk into each mug and pour the tea over.",
+      "min": 2
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "The Great Escape (1963)",
+  "old": "Fourth of July potato moonshine",
+  "new": {
+   "n": "Red Cross parcel cocoa",
+   "note": "Cocoa stirred up from the parcel tins with powdered milk and sugar, hot in tin mugs.",
+   "how": "Mix the cocoa, sugar and milk powder in a jug with a splash of hot water to a paste. Whisk in the rest of the boiling water and pour into mugs.",
+   "shop": [
+    "4 tbsp cocoa@Pantry",
+    "4 tbsp caster sugar@Pantry",
+    "8 tbsp full cream milk powder@Pantry",
+    "1l boiling water@Pantry"
+   ],
+   "r2": {
+    "prep_min": 2,
+    "cook_min": 3,
+    "make_ahead": "Mix the dry powder up to a week ahead",
+    "ingredients": [
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "cocoa",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "caster sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 8,
+      "u": "tbsp",
+      "item": "full cream milk powder",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "l",
+      "item": "boiling water",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Mix the cocoa, sugar and milk powder in a jug with a splash of hot water to a paste.",
+      "min": 2
+     },
+     {
+      "text": "Whisk in the rest of the boiling water and pour into mugs.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Police Academy (1984)",
+  "old": "Blue Oyster bar oysters",
+  "new": {
+   "n": "Mess hall chicken noodle soup",
+   "note": "Chicken, egg noodles, carrot and celery in a clear broth, ladled hot.",
+   "how": "Soften the onion, carrot and celery in a little oil. Add the stock and chicken and simmer until the chicken is cooked. Lift it out and shred. Add the noodles and simmer until tender. Return the chicken, season and scatter with parsley.",
+   "shop": [
+    "400g chicken thighs@Meat",
+    "1.5l chicken stock@Pantry",
+    "2 carrots@Produce",
+    "2 celery sticks@Produce",
+    "1 brown onion@Produce",
+    "150g dried egg noodles@Pantry",
+    "1 bunch parsley@Produce"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 33,
+    "make_ahead": "Make the broth a day ahead; add the noodles on the day",
+    "ingredients": [
+     {
+      "q": 400,
+      "u": "g",
+      "item": "chicken thighs",
+      "aisle": "Meat"
+     },
+     {
+      "q": 1.5,
+      "u": "l",
+      "item": "chicken stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "carrots, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "celery sticks, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "dried egg noodles",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch parsley",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Soften the onion, carrot and celery in a little oil.",
+      "min": 8
+     },
+     {
+      "text": "Add the stock and chicken and simmer until the chicken is cooked. Lift it out and shred.",
+      "min": 25
+     },
+     {
+      "text": "Add the noodles and simmer until tender.",
+      "min": 8
+     },
+     {
+      "text": "Return the chicken, season and scatter with parsley.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Use vegetable stock and swap the chicken for white beans."
+  }
+ },
+ {
+  "id": "Police Academy (1984)",
+  "old": "Blue Oyster blue lagoon",
+  "new": {
+   "n": "Cadet blue lemonade",
+   "note": "Fresh lemonade tinted blue, over ice with a lemon wheel and a cherry.",
+   "how": "Juice 5 lemons and stir with the sugar until it dissolves. Add the cold water and colouring. Pour over ice with a wheel of the last lemon and a cherry.",
+   "shop": [
+    "6 lemons@Produce",
+    "150g caster sugar@Pantry",
+    "1l cold water@Pantry",
+    "3 drops blue food colouring@Pantry",
+    "4 maraschino cherries@Pantry"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 0,
+    "make_ahead": "Make up to 1 day ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 6,
+      "u": "",
+      "item": "lemons",
+      "aisle": "Produce"
+     },
+     {
+      "q": 150,
+      "u": "g",
+      "item": "caster sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "l",
+      "item": "cold water",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 3,
+      "u": "",
+      "item": "drops blue food colouring",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "maraschino cherries",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Juice 5 lemons and stir with the sugar until it dissolves.",
+      "min": 5
+     },
+     {
+      "text": "Add the cold water and colouring.",
+      "min": 2
+     },
+     {
+      "text": "Pour over ice with a wheel of the last lemon and a cherry.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Apollo 13 (1995)",
+  "old": "Odyssey heat shield crème brûlée",
+  "new": {
+   "n": "Heat shield baked Alaska",
+   "note": "Ice cream on sponge under a meringue shell, scorched golden in a hot oven.",
+   "how": "Sit the sponge on a lined tray and pile the ice cream on top in a dome. Freeze until hard. Whisk the egg whites to soft peaks, then add the sugar a spoon at a time until glossy. Spread the meringue over the ice cream and sponge, sealing it to the tray. Bake at 230C until the peaks are scorched golden, then serve straight away.",
+   "shop": [
+    "1 round sponge cake@Bakery",
+    "1l vanilla ice cream@Frozen",
+    "4 egg whites@Dairy",
+    "200g caster sugar@Pantry"
+   ],
+   "r2": {
+    "prep_min": 20,
+    "cook_min": 5,
+    "make_ahead": "Build the sponge and ice cream dome up to 2 days ahead and keep frozen",
+    "ingredients": [
+     {
+      "q": 1,
+      "u": "",
+      "item": "round sponge cake",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 1,
+      "u": "l",
+      "item": "vanilla ice cream",
+      "aisle": "Frozen"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "egg whites",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 200,
+      "u": "g",
+      "item": "caster sugar",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Sit the sponge on a lined tray and pile the ice cream on top in a dome. Freeze until hard.",
+      "min": 5
+     },
+     {
+      "text": "Whisk the egg whites to soft peaks, then add the sugar a spoon at a time until glossy.",
+      "min": 8
+     },
+     {
+      "text": "Spread the meringue over the ice cream and sponge, sealing it to the tray.",
+      "min": 5
+     },
+     {
+      "text": "Bake at 230C until the peaks are scorched golden, then serve straight away.",
+      "min": 5
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ }
+]

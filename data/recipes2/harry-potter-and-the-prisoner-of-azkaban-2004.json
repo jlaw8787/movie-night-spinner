@@ -128,7 +128,7 @@
    "af": true
   },
   {
-   "n": "Leaky Cauldron stew",
+   "n": "Three Broomsticks beef stew",
    "course": "m",
    "prep_min": 28,
    "cook_min": 210,
@@ -211,7 +211,7 @@
    "af": false,
    "alt": {
     "af": {
-     "n": "Leaky Cauldron stew",
+     "n": "Three Broomsticks beef stew",
      "prep_min": 28,
      "cook_min": 180,
      "make_ahead": "Up to 2 days, reheat to serve",
@@ -535,61 +535,49 @@
    "af": true
   },
   {
-   "n": "Pumpkin juice",
+   "n": "Three Broomsticks butterbeer",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 30,
-   "make_ahead": "Up to 2 days, keep chilled",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "Whip the cream up to 2 hours ahead and keep chilled",
    "ingredients": [
     {
-     "q": 400,
-     "u": "g",
-     "item": "butternut pumpkin, cubed",
-     "aisle": "Produce"
+     "q": 1.25,
+     "u": "l",
+     "item": "cream soda",
+     "aisle": "Drinks"
     },
     {
-     "q": 750,
+     "q": 4,
+     "u": "tbsp",
+     "item": "butterscotch sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
      "u": "ml",
-     "item": "apple juice",
-     "aisle": "Drinks"
+     "item": "thickened cream",
+     "aisle": "Dairy"
     },
     {
      "q": 1,
      "u": "tbsp",
-     "item": "honey",
+     "item": "icing sugar",
      "aisle": "Pantry"
-    },
-    {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "ground cinnamon",
-     "aisle": "Spices"
-    },
-    {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "ground ginger",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Roast the pumpkin at 200C until soft and cool.",
-     "min": 30
+     "text": "Whip the cream with the icing sugar to soft, floppy peaks.",
+     "min": 4
     },
     {
-     "text": "Blend with the juice, honey, cinnamon and ginger until smooth.",
-     "min": 3
+     "text": "Stir a tablespoon of butterscotch sauce into each tankard and pour in the cold cream soda.",
+     "min": 2
     },
     {
-     "text": "Strain, chill and serve in glasses over ice.",
-     "min": 7
+     "text": "Spoon the cream foam on top and serve straight away.",
+     "min": 2
     }
    ],
    "veg": true,

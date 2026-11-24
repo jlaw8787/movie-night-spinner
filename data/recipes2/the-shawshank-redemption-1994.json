@@ -79,70 +79,74 @@
    "af": true
   },
   {
-   "n": "Zihuatanejo guacamole",
+   "n": "Mess hall split pea soup",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 0,
-   "make_ahead": "Best fresh",
+   "cook_min": 95,
+   "make_ahead": "Make up to 3 days ahead and keep chilled; it thickens, so loosen with water when reheating",
    "ingredients": [
     {
-     "q": 3,
+     "q": 500,
+     "u": "g",
+     "item": "green split peas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
      "u": "",
-     "item": "ripe avocados",
+     "item": "smoked ham hock",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
      "aisle": "Produce"
     },
     {
      "q": 2,
      "u": "",
-     "item": "limes",
+     "item": "carrots, diced",
      "aisle": "Produce"
     },
     {
-     "q": 0.5,
+     "q": 2,
      "u": "",
-     "item": "red onion",
+     "item": "celery sticks, diced",
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "jalapeno",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "handful coriander",
-     "aisle": "Produce"
-    },
-    {
-     "q": 230,
-     "u": "g",
-     "item": "corn chips",
+     "q": 2,
+     "u": "l",
+     "item": "water",
      "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 2,
      "u": "",
-     "item": "salt, to taste",
+     "item": "bay leaves",
      "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Mash the avocados roughly with lime juice and salt.",
+     "text": "Soften the onion, carrot and celery in a splash of oil in a big pot.",
+     "min": 10
+    },
+    {
+     "text": "Add the split peas, ham hock, bay leaves and water and bring to the boil.",
      "min": 5
     },
     {
-     "text": "Stir in the finely diced red onion, jalapeno and chopped coriander.",
-     "min": 8
+     "text": "Simmer gently, stirring now and then, until the peas collapse and the soup is thick.",
+     "min": 90
     },
     {
-     "text": "Serve straight away with warm corn chips.",
-     "min": 2
+     "text": "Lift out the hock, pull the meat off the bone, shred it and stir it back in. Season and ladle into bowls.",
+     "min": 10
     }
    ],
-   "veg": true,
+   "veg": false,
    "af": true
   },
   {

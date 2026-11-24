@@ -1,0 +1,29 @@
+{
+ "id": "Star Wars: Episode II - Attack of the Clones (2002)",
+ "ops": [
+  {
+   "old": "Dex's Diner patty melts and fries",
+   "new": "Coruscant patty melts and fries",
+   "done": true
+  },
+  {
+   "old": "Dex's diner coffee",
+   "new": "Bottomless diner coffee",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Diner check",
+    "lines": [
+     "Table for Obi-Wan",
+     "Info on the house"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

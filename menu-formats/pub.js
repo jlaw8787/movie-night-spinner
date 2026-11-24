@@ -195,7 +195,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     var tT=fitType(title,PFW-44,104,E.dcw,56,26,1.05,2);
     logoHtml=`<div style="position:absolute;left:${PX}px;top:${ZY+38}px;max-width:${PFW}px;box-sizing:border-box;padding:17px 22px;background:${rgba(DARK,.82)};font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
-  var capTxt=PM?`Now showing, ${year}`:sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
+  /* review 46: a pub set in an earlier decade (flavour.priceEra) heads its poster with the sign, not the release year (Red Dog's "Now showing, 2011" over 1970s prices) */
+  var capTxt=PM&&!fl.priceEra?`Now showing, ${year}`:PM?(sign||venue):sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
   var capHtml=`<div style="position:absolute;left:${PX}px;top:${ZY}px;max-width:${PFW}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
 
   /* ===== blackboard ===== */

@@ -1,0 +1,42 @@
+{
+ "id": "John Wick: Chapter 4 (2023)",
+ "ops": [
+  {
+   "set": "tagline",
+   "value": "The Continental. Dinner is served.",
+   "done": true
+  },
+  {
+   "set": "flavour.venue",
+   "value": "The Osaka Continental",
+   "done": true
+  },
+  {
+   "set": "flavour.priceK",
+   "value": 2,
+   "done": true
+  },
+  {
+   "old": "Berlin currywurst",
+   "new": "Continental bar currywurst",
+   "done": true
+  },
+  {
+   "old": "Paris steak frites",
+   "new": "Continental steak frites",
+   "done": true
+  },
+  {
+   "old": "Sacré-Coeur croissant pudding",
+   "new": "Continental croissant pudding",
+   "done": true
+  },
+  {
+   "old": "Sacré-Cœur steps cognac sidecar",
+   "new": "Continental cognac sidecar",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

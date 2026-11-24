@@ -374,6 +374,13 @@ root.MENU_FORMATS.newspaper=ctx=>{
     <div style="display:flex">${fit.r.cols.map((c,i)=>rule4(fit.cw,i===0,columnHTML(f,courses,c,fit.t,fit.cw))).join("")}</div>
   </main>
   <footer style="position:absolute;left:${PX}px;right:${PX}px;bottom:${PY}px">${winksLine}${fine("Page 2 of 2")}</footer>`);
-  return {w:W,h:H,faces:[front,page2]};
+  /* review 46: the lunch counter words only where there is a counter. A home (Cap's apartment, 284 Green Street, the lodging house), an office or
+     newsroom (Gittes and Associates, FedNet, the Bugle) and a dinner (Kane's welcome dinner) print their own; flavour.paperKind overrides */
+  const PK=(fl&&fl.paperKind)||((fl&&fl.home===true)||/\b(apartment|house|home|street|flat|lodging)\b/i.test(venue)?"home":/\b(associates|office|newsroom|break room|fednet|canteen|union)\b/i.test(venue)?"office":/\b(dinner|party|banquet)\b/i.test(venue)?"dinner":"counter");
+  const PKW=PK==="home"?[["THE LUNCH COUNTER MENU","THE KITCHEN TABLE MENU"],["Printed offset at the counter.","Printed at the kitchen table."],["Set in hot metal at the counter.","Set by hand at the kitchen table."],["behind the counter","in the kitchen"]]
+    :PK==="office"?[["THE LUNCH COUNTER MENU","THE OFFICE LUNCH MENU"],["Printed offset at the counter.","Run off in the back office."],["Set in hot metal at the counter.","Set in hot metal in the back office."],["behind the counter","in the back office"]]
+    :PK==="dinner"?[["THE LUNCH COUNTER MENU","TONIGHT'S DINNER MENU"],["Printed offset at the counter.","Printed for the occasion."],["Set in hot metal at the counter.","Set in hot metal for the occasion."],["behind the counter","in the kitchen"]]:[];
+  const fixW=h=>PKW.length?String(h).replace(/>([^<]+)</g,(m,t)=>{let o=t;for(const [x,y] of PKW)o=o.split(x).join(y).split(x.replace(/'/g,"&#39;")).join(y.replace(/'/g,"&#39;"));return ">"+o+"<"}):h;
+  return {w:W,h:H,faces:[fixW(front),fixW(page2)]};
 };
 })();

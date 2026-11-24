@@ -1,0 +1,235 @@
+[
+ {
+  "id": "Harry Potter and the Prisoner of Azkaban (2004)",
+  "old": "Pumpkin juice",
+  "new": {
+   "n": "Three Broomsticks butterbeer",
+   "note": "Butterscotch cream soda under a thick cream foam, served in tankards.",
+   "how": "Whip the cream with the icing sugar to soft, floppy peaks. Stir a tablespoon of butterscotch sauce into each tankard and pour in the cold cream soda. Spoon the cream foam on top and serve straight away.",
+   "shop": [
+    "1.25l cream soda@Drinks",
+    "4 tbsp butterscotch sauce@Pantry",
+    "150ml thickened cream@Dairy",
+    "1 tbsp icing sugar@Pantry"
+   ],
+   "r2": {
+    "prep_min": 8,
+    "cook_min": 0,
+    "make_ahead": "Whip the cream up to 2 hours ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 1.25,
+      "u": "l",
+      "item": "cream soda",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "butterscotch sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 150,
+      "u": "ml",
+      "item": "thickened cream",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "icing sugar",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Whip the cream with the icing sugar to soft, floppy peaks.",
+      "min": 4
+     },
+     {
+      "text": "Stir a tablespoon of butterscotch sauce into each tankard and pour in the cold cream soda.",
+      "min": 2
+     },
+     {
+      "text": "Spoon the cream foam on top and serve straight away.",
+      "min": 2
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "The Big Sick (2017)",
+  "old": "Chicago deep dish sausage pizza",
+  "new": {
+   "n": "Lamb karahi with naan",
+   "note": "Lamb cooked down hard with tomato, ginger and green chilli in the karahi, warm naan to scoop.",
+   "how": "Brown the lamb in the oil in a wide pan. Add the garlic, ginger and spices and stir for a minute. Add the tomatoes and a splash of water, cover and simmer until the lamb is tender. Uncover, add the chillies and cook hard, stirring, until the sauce clings to the meat. Season. Warm the naan and scatter the karahi with coriander.",
+   "shop": [
+    "800g lamb shoulder@Meat",
+    "2 tbsp vegetable oil@Pantry",
+    "4 garlic cloves@Produce",
+    "1 thumb ginger@Produce",
+    "4 tomatoes@Produce",
+    "2 green chillies@Produce",
+    "1 tsp ground cumin@Spices",
+    "1 tsp ground coriander@Spices",
+    "1 tsp garam masala@Spices",
+    "4 naan breads@Bakery",
+    "1 bunch coriander@Produce"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 60,
+    "make_ahead": "Make up to 2 days ahead; it is better the next day",
+    "ingredients": [
+     {
+      "q": 800,
+      "u": "g",
+      "item": "lamb shoulder, diced",
+      "aisle": "Meat"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "vegetable oil",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "garlic cloves, crushed",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "thumb ginger, grated",
+      "aisle": "Produce"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "tomatoes, chopped",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "green chillies, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "ground cumin",
+      "aisle": "Spices"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "ground coriander",
+      "aisle": "Spices"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "garam masala",
+      "aisle": "Spices"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "naan breads",
+      "aisle": "Bakery"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "bunch coriander",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the lamb in the oil in a wide pan.",
+      "min": 10
+     },
+     {
+      "text": "Add the garlic, ginger and spices and stir for a minute.",
+      "min": 2
+     },
+     {
+      "text": "Add the tomatoes and a splash of water, cover and simmer until the lamb is tender.",
+      "min": 50
+     },
+     {
+      "text": "Uncover, add the chillies and cook hard, stirring, until the sauce clings to the meat. Season.",
+      "min": 10
+     },
+     {
+      "text": "Warm the naan and scatter the karahi with coriander.",
+      "min": 5
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Swap the lamb for paneer and chickpeas, added for the last 10 minutes."
+  }
+ },
+ {
+  "id": "Indiana Jones and the Dial of Destiny (2023)",
+  "old": "Mint tea in Tangier",
+  "new": {
+   "n": "Syracuse blood orange soda",
+   "note": "Fresh blood orange juice topped with soda water over ice, a wheel of orange on top.",
+   "how": "Juice 5 oranges and stir with the sugar until it dissolves. Pour over ice, top with soda water and add a wheel of the last orange.",
+   "shop": [
+    "6 blood oranges@Produce",
+    "2 tbsp caster sugar@Pantry",
+    "750ml soda water@Drinks"
+   ],
+   "r2": {
+    "prep_min": 8,
+    "cook_min": 0,
+    "make_ahead": "Juice up to 4 hours ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 6,
+      "u": "",
+      "item": "blood oranges",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "caster sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 750,
+      "u": "ml",
+      "item": "soda water",
+      "aisle": "Drinks"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Juice 5 oranges and stir with the sugar until it dissolves.",
+      "min": 5
+     },
+     {
+      "text": "Pour over ice, top with soda water and add a wheel of the last orange.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ }
+]

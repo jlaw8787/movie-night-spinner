@@ -1,0 +1,34 @@
+{
+ "id": "The Suicide Squad (2021)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Popcorn shrimp with remoulade",
+    "note": "Small shrimp fried crisp in a cornmeal coat. King Shark says nom nom.",
+    "meat": true
+   },
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Iced sweet tea from the urn",
+    "note": "Black tea brewed strong, sugared and poured over ice."
+   },
+   "done": true
+  },
+  {
+   "old": "Corto Maltese mango batida",
+   "new": "Mango and coconut cooler",
+   "done": true
+  },
+  {
+   "old": "Mango, coconut milk and lime blended with ice, rum for adult glasses.",
+   "new": "Mango, coconut milk and lime blended with crushed ice.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

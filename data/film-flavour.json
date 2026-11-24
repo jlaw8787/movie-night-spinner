@@ -1040,7 +1040,7 @@
  },
  "Captain Marvel (2019)": {
   "venue": "Maria Rambeau's Kitchen",
-  "sign": "Louisiana, 1995. Goose Stays Off the Bench",
+  "sign": "Louisiana, 1995. Goose Stays Off the Counter",
   "note": {
    "text": "Higher, further, faster, baby.",
    "by": "Carol Danvers",
@@ -4703,7 +4703,7 @@
   ],
   "prop": {
    "kind": "receipt",
-   "title": "Tiana's Palace Bill",
+   "title": "Opening Night Bill",
    "lines": [
     "Table one: gumbo and beignets",
     "Thanks for coming"
@@ -8526,7 +8526,7 @@
    "kind": "ticket",
    "title": "Pairs Final",
    "lines": [
-    "Centre ice",
+    "Center ice",
     "Iron Lotus attempt"
    ]
   },
@@ -8953,7 +8953,7 @@
  },
  "Big Daddy (1999)": {
   "venue": "Sonny's Apartment",
-  "sign": "Sonny Koufax, Do Not Disturb",
+  "sign": "Do Not Disturb",
   "note": {
    "text": "Dented cans are half price. Microsoft went down three points. We gotta save some money.",
    "by": "Sonny Koufax",
@@ -9698,7 +9698,7 @@
   "pay": "Issue"
  },
  "Hot Shots! (1991)": {
-  "venue": "Navy Base Mess Hall",
+  "venue": "Navy Base Officers' Club",
   "sign": "Operation Sleepy Weasel",
   "note": {
    "text": "Cheryl and I loved the Strogonoff.",
@@ -10120,7 +10120,7 @@
   "winks": [
    "Going undercover as a beach bum",
    "Alan Stanwyk and his unusual offer",
-   "Gail Stanwyk, the wife at the centre of it all",
+   "Gail Stanwyk, the wife at the center of it all",
    "Dr Rosenpenis and Ted Nugent",
    "A newspaper boss always wanting a story"
   ],
@@ -11469,7 +11469,7 @@
   "coinMid": 1
  },
  "John Wick: Chapter 4 (2023)": {
-  "venue": "Osaka Continental",
+  "venue": "The Osaka Continental",
   "sign": "Continental Osaka, Koji Presiding",
   "note": {
    "text": "A good death only comes after a good life.",
@@ -11491,7 +11491,8 @@
    ]
   },
   "number": "",
-  "currency": "¥"
+  "currency": "¥",
+  "priceK": 2
  },
  "Taken (2008)": {
   "venue": "Kim's Birthday Party",
@@ -12029,7 +12030,7 @@
  },
  "Casablanca (1942)": {
   "venue": "Rick's Café Américain",
-  "sign": "Rick's Cafe, Open Late",
+  "sign": "Casablanca, Open Late",
   "note": {
    "text": "Rick's has the best table in town tonight, and the champagne is on the house. Do try to leave quietly.",
    "by": "Captain Renault",
@@ -12088,7 +12089,7 @@
   },
   "winks": [
    "The throne of knives",
-   "A case with a hole in the centre",
+   "A case with a hole in the center",
    "Ransom's chunky knit sweater",
    "Blanc and his Southern drawl"
   ],
@@ -14093,7 +14094,9 @@
     "Result: passed"
    ]
   },
-  "number": ""
+  "number": "",
+  "home": true,
+  "pay": ""
  },
  "Edge of Tomorrow (2014)": {
   "venue": "Heathrow Base Mess",
@@ -18241,7 +18244,7 @@
   ],
   "prop": {
    "kind": "receipt",
-   "title": "Dex's Diner",
+   "title": "Diner check",
    "lines": [
     "Table for Obi-Wan",
     "Info on the house"
@@ -18836,7 +18839,9 @@
     "Audit: scheduled"
    ]
   },
-  "number": ""
+  "number": "",
+  "home": true,
+  "pay": ""
  },
  "KPop Demon Hunters (2025)": {
   "venue": "HUNTR/X Tour Backstage",
@@ -23658,8 +23663,8 @@
   }
  },
  "Apollo 13 (1995)": {
-  "venue": "Aquarius, the Lifeboat",
-  "sign": "Apollo 13, April 1970. Houston on the radio",
+  "venue": "The Lovell House",
+  "sign": "Houston, July 1969. The moon landing party",
   "note": {
    "text": "Failure is not an option!",
    "by": "Gene Kranz",
@@ -23680,13 +23685,8 @@
    ]
   },
   "number": "13",
-  "words": {
-   "From the bridge": "From Mission Control",
-   "Deck 5": "Lunar Module",
-   "paid in ship's credit": "paid on splashdown",
-   "Crew quarters": "Rounding the moon"
-  },
-  "pay": ""
+  "pay": "",
+  "home": true
  },
  "Mars Attacks! (1996)": {
   "venue": "Galaxy Casino",

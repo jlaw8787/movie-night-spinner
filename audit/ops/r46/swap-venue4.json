@@ -1,0 +1,335 @@
+[
+ {
+  "id": "Face/Off (1997)",
+  "old": "Castor's lavish dinner",
+  "new": {
+   "n": "Erewhon canteen sloppy joes",
+   "note": "Beef simmered in a sweet tomato sauce, piled on soft buns, eaten in magnetic boots.",
+   "how": "Brown the mince with the onion and capsicum. Stir in the tomato sauce, sugar, Worcestershire and mustard and simmer until thick. Season. Toast the buns lightly and pile the beef in.",
+   "shop": [
+    "600g beef mince@Meat",
+    "1 brown onion@Produce",
+    "1 green capsicum@Produce",
+    "250ml tomato sauce@Pantry",
+    "2 tbsp brown sugar@Pantry",
+    "1 tbsp Worcestershire sauce@Pantry",
+    "1 tbsp yellow mustard@Pantry",
+    "6 soft burger buns@Bakery"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 18,
+    "make_ahead": "Make the filling up to 2 days ahead",
+    "ingredients": [
+     {
+      "q": 600,
+      "u": "g",
+      "item": "beef mince",
+      "aisle": "Meat"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "green capsicum, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 250,
+      "u": "ml",
+      "item": "tomato sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "brown sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "Worcestershire sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "yellow mustard",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 6,
+      "u": "",
+      "item": "soft burger buns",
+      "aisle": "Bakery"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the mince with the onion and capsicum.",
+      "min": 10
+     },
+     {
+      "text": "Stir in the tomato sauce, sugar, Worcestershire and mustard and simmer until thick. Season.",
+      "min": 15
+     },
+     {
+      "text": "Toast the buns lightly and pile the beef in.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Swap the mince for brown lentils."
+  }
+ },
+ {
+  "id": "Deadpool 2 (2018)",
+  "old": "Wade and Vanessa's steak frites",
+  "new": {
+   "n": "Ice Box Salisbury steak with fries",
+   "note": "Beef patties in brown onion gravy on the tray, fries on the side.",
+   "how": "Cut the potatoes into chips, toss in the oil and salt. Roast the chips at 220C, turning once, until crisp. Mix the mince, breadcrumbs, egg and salt and shape into 4 oval patties. Brown the patties and set aside. Fry the onions in the same pan until brown, then stir in the flour. Whisk in the stock, return the patties and simmer until cooked through.",
+   "shop": [
+    "600g beef mince@Meat",
+    "40g dried breadcrumbs@Pantry",
+    "1 egg@Dairy",
+    "2 brown onions@Produce",
+    "2 tbsp plain flour@Pantry",
+    "500ml beef stock@Pantry",
+    "1kg potatoes@Produce",
+    "3 tbsp vegetable oil@Pantry"
+   ],
+   "r2": {
+    "prep_min": 15,
+    "cook_min": 60,
+    "make_ahead": "Shape the patties a day ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 600,
+      "u": "g",
+      "item": "beef mince",
+      "aisle": "Meat"
+     },
+     {
+      "q": 40,
+      "u": "g",
+      "item": "dried breadcrumbs",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "egg",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "brown onions, sliced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "beef stock",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "kg",
+      "item": "potatoes",
+      "aisle": "Produce"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "item": "vegetable oil",
+      "aisle": "Pantry"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Cut the potatoes into chips, toss in the oil and salt.",
+      "min": 5
+     },
+     {
+      "text": "Roast the chips at 220C, turning once, until crisp.",
+      "min": 35
+     },
+     {
+      "text": "Mix the mince, breadcrumbs, egg and salt and shape into 4 oval patties.",
+      "min": 5
+     },
+     {
+      "text": "Brown the patties and set aside.",
+      "min": 8
+     },
+     {
+      "text": "Fry the onions in the same pan until brown, then stir in the flour.",
+      "min": 10
+     },
+     {
+      "text": "Whisk in the stock, return the patties and simmer until cooked through.",
+      "min": 15
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Use plant-based mince patties and vegetable stock."
+  }
+ },
+ {
+  "id": "They Live (1988)",
+  "old": "Steel mill boilermakers",
+  "new": {
+   "n": "Soup kitchen sweet iced tea",
+   "note": "Black tea brewed strong in the urn, sugared and poured over ice in tin cups.",
+   "how": "Brew the tea bags in the boiling water, then lift them out and stir in the sugar. Cool, then chill. Pour over ice with a slice of lemon.",
+   "shop": [
+    "6 black tea bags@Drinks",
+    "1.5l boiling water@Pantry",
+    "100g caster sugar@Pantry",
+    "1 lemon@Produce"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 6,
+    "make_ahead": "Make up to 2 days ahead and keep chilled",
+    "ingredients": [
+     {
+      "q": 6,
+      "u": "",
+      "item": "black tea bags",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 1.5,
+      "u": "l",
+      "item": "boiling water",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 100,
+      "u": "g",
+      "item": "caster sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brew the tea bags in the boiling water, then lift them out and stir in the sugar.",
+      "min": 6
+     },
+     {
+      "text": "Cool, then chill.",
+      "min": 60
+     },
+     {
+      "text": "Pour over ice with a slice of lemon.",
+      "min": 2
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Addams Family Values (1993)",
+  "old": "Debbie's black widow lobster",
+  "new": {
+   "n": "Black widow sloppy joes",
+   "note": "Beef in a dark, sticky tomato sauce on soft buns, the camp's Thanksgiving play night supper.",
+   "how": "Brown the mince with the onion. Stir in the tomato sauce, sugar and Worcestershire and simmer until thick and dark. Season. Toast the buns lightly and pile the beef in.",
+   "shop": [
+    "600g beef mince@Meat",
+    "1 brown onion@Produce",
+    "250ml tomato sauce@Pantry",
+    "2 tbsp brown sugar@Pantry",
+    "1 tbsp Worcestershire sauce@Pantry",
+    "6 soft burger buns@Bakery"
+   ],
+   "r2": {
+    "prep_min": 10,
+    "cook_min": 18,
+    "make_ahead": "Make the filling up to 2 days ahead",
+    "ingredients": [
+     {
+      "q": 600,
+      "u": "g",
+      "item": "beef mince",
+      "aisle": "Meat"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "brown onion, diced",
+      "aisle": "Produce"
+     },
+     {
+      "q": 250,
+      "u": "ml",
+      "item": "tomato sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "brown sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "item": "Worcestershire sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 6,
+      "u": "",
+      "item": "soft burger buns",
+      "aisle": "Bakery"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Brown the mince with the onion.",
+      "min": 10
+     },
+     {
+      "text": "Stir in the tomato sauce, sugar and Worcestershire and simmer until thick and dark. Season.",
+      "min": 15
+     },
+     {
+      "text": "Toast the buns lightly and pile the beef in.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true
+   },
+   "veg": "Swap the mince for brown lentils."
+  }
+ }
+]

@@ -290,7 +290,7 @@
    }
   },
   {
-   "n": "Consume meatloaf with mashed potatoes and onion gravy",
+   "n": "Consume meatloaf with mashed potatoes",
    "course": "m",
    "prep_min": 20,
    "cook_min": 90,
@@ -785,70 +785,53 @@
    "af": true
   },
   {
-   "n": "Steel mill boilermakers",
+   "n": "Soup kitchen sweet iced tea",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 0,
-   "make_ahead": "Chill the beer well; pour to order",
+   "cook_min": 6,
+   "make_ahead": "Make up to 2 days ahead and keep chilled",
    "ingredients": [
     {
-     "q": 4,
+     "q": 6,
      "u": "",
-     "item": "x 375ml bottles cold lager",
-     "aisle": "Bottle shop"
+     "item": "black tea bags",
+     "aisle": "Drinks"
     },
     {
-     "q": 120,
-     "u": "ml",
-     "item": "rye whiskey",
-     "aisle": "Bottle shop"
+     "q": 1.5,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Pour the lager into 4 chilled glasses.",
-     "min": 2
+     "text": "Brew the tea bags in the boiling water, then lift them out and stir in the sugar.",
+     "min": 6
     },
     {
-     "text": "Serve each with a 30ml shot of rye to drop in or sip alongside.",
-     "min": 3
+     "text": "Cool, then chill.",
+     "min": 60
+    },
+    {
+     "text": "Pour over ice with a slice of lemon.",
+     "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Steel mill ginger beer and cola (alcohol-free)",
-     "course": "d",
-     "prep_min": 5,
-     "cook_min": 0,
-     "make_ahead": "Chill the drinks well; pour to order",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "x 375ml bottles ginger beer",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "cola",
-       "aisle": "Drinks"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Pour the ginger beer into 4 chilled glasses.",
-       "min": 2
-      },
-      {
-       "text": "Add a shot of cola to each.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

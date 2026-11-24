@@ -119,9 +119,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* review 45: a lab card is not always a lab. kind reads the venue (flavour labKind overrides): only a real lab prints the plate tab;
      a home prints family words (no ration sheet, rank badge or tray hatch); a shop prints counter words; the rest are messes and canteens */
   const vs=venue+" "+sign;
-  const kind=(fl&&fl.labKind)||(/\blab\b|laborator|telepod|\blair\b/i.test(vs)?"lab":/bak(ery|ed)|\bshop\b|\bstore\b|goods/i.test(vs)?"shop":/kitchen|\bhouse\b|\bhome\b|basement/i.test(vs)?"home":"mess");
+  const kind=(fl&&fl.labKind)||(/\blab\b|laborator|telepod|\blair\b/i.test(vs)?"lab":/bak(ery|ed)|\bshop\b|\bstore\b|goods/i.test(vs)?"shop":/kitchen|\bhouse\b|\bhome\b|basement/i.test(vs)?"home":/telescope|observatory|break room|library|lounge|headquarters|\bhq\b/i.test(vs)?"work":"mess");/* review 46: a work place (The Dish at Parkes, break rooms, MIB) prints tea room words, not MESS OPEN and a ration sheet */
   const KW=kind==="home"?{sheet:"Tonight's sheet.",kick:"Dinner's on the table.",stamp:"DINNER'S ON",heads:["Snacks","Mains","Something sweet","Drinks"],acc:"Home",lv:"No. ",badge:"Guest",all:"All rooms",form:"Kitchen sheet ",foot:"Clear your own plate. Seconds while they last."}
-    :kind==="shop"?{sheet:"Ration sheet.",kick:"Baked fresh this morning.",stamp:"OPEN",heads:LAB,acc:"Access",lv:"Lv ",badge:"Badge",all:"All areas",form:"Form LAB",foot:"Return tray to the hatch. Rations subject to supply."}
+    :kind==="shop"?{sheet:"Today's sheet.",kick:"Baked fresh this morning.",stamp:"OPEN",heads:["Savouries","Mains","From the oven","Drinks"],acc:"Counter",lv:"No. ",badge:"Customer",all:"All counters",form:"Shop sheet ",foot:"Pay at the counter. Baked while it lasts."}
+    :kind==="work"?{sheet:"Today's sheet.",kick:"Something hot between shifts.",stamp:"ON BREAK",heads:["Snacks","Mains","Something sweet","Drinks"],acc:"Access",lv:"Lv ",badge:"Staff",all:"All areas",form:"Staff sheet ",foot:"Wash your own cup. Snacks while they last."}
     :{sheet:"Ration sheet.",kick:T.kick,stamp:T.stamp,heads:LAB,acc:"Access",lv:"Lv ",badge:"Badge",all:"All areas",form:"Form LAB",foot:"Return tray to the hatch. Rations subject to supply."};
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
   const stills=(ctx.stills||[]).slice(),poster=ctx.poster||(((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&f.id)?TMDB_POSTERS[f.id]:null)||null;

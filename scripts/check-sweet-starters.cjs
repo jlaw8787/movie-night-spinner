@@ -11,6 +11,9 @@ const SAV=/\b(crab|fish|lamb|potato|rice|salmon|prawn|shrimp|tuna|zucchini|polen
 /* American buttermilk biscuits and plain scones are bread, not sweets */
 const BREAD=/buttermilk biscuits|boarding house biscuits|Grandma's biscuits|Meeko's biscuits|Honeycomb and biscuits|country scones|buttermilk scones/i;
 const KEEP={
+ "Ace Ventura: Pet Detective (1994)|Ace's white chocolate animal crackers":"a crunchy bar snack from the pet detective's pockets (it read as savoury while it said choc; review 46 spelled it out)",
+ "Dodgeball: A True Underdog Story (2004)|Globo Gym chocolate peanut protein balls":"the gym's pre-game protein snack, eaten before the match (review 46 spelled out choc)",
+ "Justice League (2017)|Cyborg circuit chocolate pretzel rods":"salty pretzel rods, a snack to pick at (review 46 spelled out choc)",
  "Hop (2011)":"the Easter Bunny's candy factory: E.B. snacks on jellybeans all film (the rocky road was a starter before the 8 Nov rename)",
  "Elf (2003)":"the film's joke: Buddy eats sweets as his four main food groups",
  "Stakeout (1987)":"stakeout doughnuts, eaten in the car before supper",

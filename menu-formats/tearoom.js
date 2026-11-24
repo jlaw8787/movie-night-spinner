@@ -125,9 +125,9 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* review 33: the tea room's stock words suit a store or a tea room. A home, a cave, a pub or a party gets its own line and hours
      (Tangled's Snuggly Duckling was "The Tea Room, top floor, children's tea served with a wink"; Up's house had morning tea from 10) */
-  const VS=venue+" "+sign,PLACE=/duckling|tavern|\bpub\b|\binn\b|reading room/i.test(VS)?{k:"other",sub:"Come in, sit down, tea's on",hrs:"Open till the last pot's poured.",kick:"Leave your troubles at the door."}
+  const VS=venue+" "+sign,PLACE=/duckling|tavern|\bpub\b|\binn\b|reading room|theat(re|er)|scala|opera|music hall/i.test(VS)?{k:"other",sub:"Come in, sit down, tea's on",hrs:"Open till the last pot's poured.",kick:"Leave your troubles at the door."}
     :/\bparty\b|shower/i.test(VS)?{k:"party",sub:"Tea party, all welcome",hrs:"Tea served all afternoon.",kick:null}
-    :/house|home|kitchen|cottage|flat|apartment|windsor gardens|street|nursery|\bcave\b|garden|castle/i.test(VS)?{k:"home",sub:"Tea at home, in the front room",hrs:"Tea's on when the kettle boils.",kick:"Wipe your feet on the way in."}
+    :/house|home|kitchen|cottage|flat|apartment|\bloft\b|penthouse|studio|windsor gardens|street|nursery|\bcave\b|garden|castle/i.test(VS)?{k:"home",sub:"Tea at home, in the front room",hrs:"Tea's on when the kettle boils.",kick:"Wipe your feet on the way in."}
     :{k:"store",sub:"The Tea Room, top floor",hrs:"Luncheon 11.30 till 2.30. Afternoon tea from 3.",kick:null};
   const KICK=PLACE.kick&&/trolley|top floor|children's tea|basement|gloves/i.test(T.kick)?PLACE.kick:T.kick;
   /* ---------- front: store band, window display, logo, gift tag, note ---------- */

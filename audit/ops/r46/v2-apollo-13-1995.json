@@ -1,0 +1,61 @@
+{
+ "id": "Apollo 13 (1995)",
+ "ops": [
+  {
+   "set": "flavour.venue",
+   "value": "The Lovell House",
+   "done": true
+  },
+  {
+   "set": "flavour.sign",
+   "value": "Houston, July 1969. The moon landing party",
+   "done": true
+  },
+  {
+   "set": "flavour.words",
+   "value": null,
+   "done": true
+  },
+  {
+   "set": "flavour.home",
+   "value": true,
+   "done": true
+  },
+  {
+   "old": "Mission Control smoked brisket",
+   "new": "Moon party smoked brisket",
+   "done": true
+  },
+  {
+   "old": "Aquarius lifeboat chicken pot pies",
+   "new": "Marilyn's chicken pot pies",
+   "done": true
+  },
+  {
+   "old": "Hot chicken and leek pot pies. Freezing cold in the Aquarius lifeboat.",
+   "new": "Hot chicken and leek pot pies under flaky lids, for the long night.",
+   "done": true
+  },
+  {
+   "old": "Devilled eggs with paprika. Lovell's party watches Armstrong walk on the Moon.",
+   "new": "Devilled eggs with paprika, passed round as Armstrong walks on the Moon.",
+   "done": true
+  },
+  {
+   "old": "Lovell isn't used to the champagne.",
+   "new": "Champagne over a sugar cube and bitters. Jim isn't used to it.",
+   "done": true
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Percolator coffee",
+    "note": "Strong black coffee from the percolator, kept on all night.",
+    "alc": false
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

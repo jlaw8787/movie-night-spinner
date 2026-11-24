@@ -120,318 +120,63 @@
    }
   },
   {
-   "n": "Normandy beach mussels",
+   "n": "Corned beef hash with a fried egg",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 0,
-   "make_ahead": "Chop the eschalots and garlic up to 1 day ahead; steam the mussels just before serving, they do not hold",
+   "prep_min": 25,
+   "cook_min": 16,
+   "make_ahead": "Boil the potatoes and shape the patties a day ahead",
    "ingredients": [
     {
-     "q": 2,
-     "u": "",
-     "item": "eschalots",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "cloves garlic",
-     "aisle": "Produce"
-    },
-    {
-     "q": 60,
+     "q": 340,
      "u": "g",
-     "item": "butter, divided",
+     "item": "tin corned beef",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, boiled and cooled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
      "aisle": "Dairy"
     },
     {
-     "q": 1,
-     "u": "kg",
-     "item": "cleaned mussels",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "white wine",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "small bunch parsley",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "loaf crusty bread",
-     "aisle": "Bakery"
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Chop the eschalots and garlic.",
+     "text": "Mash the corned beef roughly with the potatoes and onion, season and shape into 4 patties.",
      "min": 5
     },
     {
-     "text": "Soften in some butter in a big pot.",
+     "text": "Fry the patties in half the oil until crisp on both sides.",
+     "min": 12
+    },
+    {
+     "text": "Fry the eggs in the rest of the oil.",
      "min": 4
     },
     {
-     "text": "Add the mussels and wine, cover and steam until open.",
-     "min": 5
-    },
-    {
-     "text": "Toss through chopped parsley and a knob of butter.",
-     "min": 3
-    },
-    {
-     "text": "Serve with crusty bread to mop up.",
-     "min": 3
+     "text": "Sit an egg on each patty.",
+     "min": 2
     }
    ],
    "veg": false,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Normandy beach mussels",
-     "prep_min": 20,
-     "cook_min": 0,
-     "make_ahead": "Chop the eschalots and garlic up to 1 day ahead and mix the stock and verjuice; steam the mussels to order",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "eschalots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "cloves garlic",
-       "aisle": "Produce"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "butter, divided",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "cleaned mussels",
-       "aisle": "Seafood"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "fish stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 50,
-       "u": "ml",
-       "item": "verjuice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch parsley",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "loaf crusty bread",
-       "aisle": "Bakery"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Chop the eschalots and garlic.",
-       "min": 5
-      },
-      {
-       "text": "Soften in some butter in a big pot.",
-       "min": 4
-      },
-      {
-       "text": "Add the mussels, fish stock and verjuice, cover and steam until open.",
-       "min": 5
-      },
-      {
-       "text": "Toss through chopped parsley and a knob of butter.",
-       "min": 3
-      },
-      {
-       "text": "Serve with crusty bread to mop up.",
-       "min": 3
-      }
-     ]
-    },
-    "veg": {
-     "n": "Normandy beach mushrooms in white wine",
-     "prep_min": 10,
-     "cook_min": 15,
-     "make_ahead": "Chop the eschalots and garlic up to 1 day ahead; cook the mushrooms in the wine on the night and toss through the parsley and butter at the end",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "eschalots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "cloves garlic",
-       "aisle": "Produce"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "butter, divided",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 800,
-       "u": "g",
-       "item": "mixed mushrooms, torn or thickly sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "white wine",
-       "aisle": "Bottle shop"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch parsley",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "loaf crusty bread",
-       "aisle": "Bakery"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Chop the eschalots and garlic.",
-       "min": 5
-      },
-      {
-       "text": "Soften in some butter in a big pot.",
-       "min": 4
-      },
-      {
-       "text": "Turn the heat up, add the mushrooms and cook until browned.",
-       "min": 6
-      },
-      {
-       "text": "Add the wine, cover and simmer until the juices reduce by half.",
-       "min": 5
-      },
-      {
-       "text": "Toss through chopped parsley and a knob of butter.",
-       "min": 2
-      },
-      {
-       "text": "Serve with crusty bread to mop up.",
-       "min": 3
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Normandy beach mushrooms in garlic butter (alcohol-free)",
-     "prep_min": 10,
-     "cook_min": 15,
-     "make_ahead": "Cook the mushrooms in the stock and verjuice up to 1 day ahead and reheat gently; add the parsley and a knob of butter just before serving",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "eschalots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "cloves garlic",
-       "aisle": "Produce"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "butter, divided",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 800,
-       "u": "g",
-       "item": "mixed mushrooms, torn or thickly sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 170,
-       "u": "ml",
-       "item": "vegetable stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "verjuice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch parsley",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "loaf crusty bread",
-       "aisle": "Bakery"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Chop the eschalots and garlic.",
-       "min": 5
-      },
-      {
-       "text": "Soften in some butter in a big pot.",
-       "min": 4
-      },
-      {
-       "text": "Turn the heat up, add the mushrooms and cook until browned.",
-       "min": 6
-      },
-      {
-       "text": "Add the stock and verjuice, cover and simmer until the juices reduce by half.",
-       "min": 5
-      },
-      {
-       "text": "Toss through chopped parsley and a knob of butter.",
-       "min": 2
-      },
-      {
-       "text": "Serve with crusty bread to mop up.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   },
   {
    "n": "Same day again Welsh rarebit",
@@ -517,41 +262,41 @@
    "af": true
   },
   {
-   "n": "Angel of Verdun chicken, cider and cream",
+   "n": "Angel of Verdun chicken and leek pie",
    "course": "m",
    "prep_min": 20,
-   "cook_min": 31,
-   "make_ahead": "Brown and simmer the chicken in the cider up to 2 days ahead and keep it in the fridge; reheat gently, stir in the cream and serve",
+   "cook_min": 53,
+   "make_ahead": "Make the filling up to 2 days ahead; top and bake on the day",
    "ingredients": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "chicken thighs",
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, diced",
      "aisle": "Meat"
     },
     {
-     "q": 30,
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 2,
-     "u": "",
-     "item": "eschalots, sliced",
-     "aisle": "Produce"
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "mushrooms, sliced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 375,
+     "q": 400,
      "u": "ml",
-     "item": "apple cider",
-     "aisle": "Bottle shop"
+     "item": "chicken stock",
+     "aisle": "Pantry"
     },
     {
      "q": 150,
@@ -562,351 +307,40 @@
     {
      "q": 1,
      "u": "",
-     "item": "small bunch parsley",
-     "aisle": "Produce"
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
     },
     {
      "q": 1,
      "u": "",
-     "item": "baguette",
-     "aisle": "Bakery"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "salt and pepper, to taste",
-     "aisle": "Pantry"
+     "item": "egg",
+     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Season the chicken.",
-     "min": 5
-    },
-    {
-     "text": "Brown in butter, 4 minutes a side, then set aside.",
+     "text": "Brown the chicken in the butter, then add the leeks and cook until soft.",
      "min": 8
     },
     {
-     "text": "Soften the eschalots and mushrooms in the pan.",
-     "min": 6
+     "text": "Stir in the flour.",
+     "min": 2
     },
     {
-     "text": "Pour in the cider and scrape up the browned bits.",
-     "min": 3
+     "text": "Add the stock and cream and simmer until thick. Season and tip into a pie dish to cool a little.",
+     "min": 15
     },
     {
-     "text": "Return the chicken, cover and simmer.",
-     "min": 25
+     "text": "Lay the pastry over, trim and brush with beaten egg.",
+     "min": 5
     },
     {
-     "text": "Stir in the cream and simmer until glossy.",
-     "min": 3
-    },
-    {
-     "text": "Scatter with parsley and serve with a warm baguette.",
-     "min": 1
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 30
     }
    ],
    "veg": false,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Angel of Verdun chicken, apple and cream",
-     "prep_min": 20,
-     "cook_min": 31,
-     "make_ahead": "Simmer the chicken in the apple juice, stock and vinegar up to 2 days ahead; reheat, then add the cream and parsley on the night",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "chicken thighs",
-       "aisle": "Meat"
-      },
-      {
-       "q": 30,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eschalots, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "mushrooms, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "cloudy apple juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 75,
-       "u": "ml",
-       "item": "chicken stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "apple cider vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "thickened cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch parsley",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "baguette",
-       "aisle": "Bakery"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Season the chicken.",
-       "min": 5
-      },
-      {
-       "text": "Brown in butter, 4 minutes a side, then set aside.",
-       "min": 8
-      },
-      {
-       "text": "Soften the eschalots and mushrooms in the pan.",
-       "min": 6
-      },
-      {
-       "text": "Pour in the apple juice, stock and vinegar and scrape up the browned bits.",
-       "min": 3
-      },
-      {
-       "text": "Return the chicken, cover and simmer.",
-       "min": 25
-      },
-      {
-       "text": "Stir in the cream and simmer until glossy.",
-       "min": 3
-      },
-      {
-       "text": "Scatter with parsley and serve with a warm baguette.",
-       "min": 1
-      }
-     ]
-    },
-    "veg": {
-     "n": "Angel of Verdun mushrooms, cider and cream",
-     "prep_min": 15,
-     "cook_min": 26,
-     "make_ahead": "Brown the mushrooms and simmer them with the beans and cider up to 1 day ahead; reheat and stir in the cream to serve",
-     "ingredients": [
-      {
-       "q": 700,
-       "u": "g",
-       "item": "mixed mushrooms, thickly sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "tin cannellini beans, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 30,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eschalots, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 375,
-       "u": "ml",
-       "item": "apple cider",
-       "aisle": "Bottle shop"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "thickened cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch parsley",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "baguette",
-       "aisle": "Bakery"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Season the mushrooms.",
-       "min": 5
-      },
-      {
-       "text": "Brown in the butter in batches over high heat, then set aside.",
-       "min": 8
-      },
-      {
-       "text": "Soften the eschalots in the pan.",
-       "min": 6
-      },
-      {
-       "text": "Pour in the cider and scrape up the browned bits.",
-       "min": 3
-      },
-      {
-       "text": "Return the mushrooms, add the beans and simmer until the cider reduces by half.",
-       "min": 15
-      },
-      {
-       "text": "Stir in the cream and simmer until glossy.",
-       "min": 3
-      },
-      {
-       "text": "Scatter with parsley and serve with a warm baguette.",
-       "min": 1
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Angel of Verdun mushrooms, apple and cream",
-     "prep_min": 15,
-     "cook_min": 26,
-     "make_ahead": "Cook the mushrooms and beans in the apple juice and vinegar up to 1 day ahead and reheat gently; add the cream just before serving",
-     "ingredients": [
-      {
-       "q": 700,
-       "u": "g",
-       "item": "mixed mushrooms, thickly sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "tin cannellini beans, drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 30,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eschalots, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "cloudy apple juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "cider vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "thickened cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch parsley",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "baguette",
-       "aisle": "Bakery"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Season the mushrooms.",
-       "min": 5
-      },
-      {
-       "text": "Brown in the butter in batches over high heat, then set aside.",
-       "min": 8
-      },
-      {
-       "text": "Soften the eschalots in the pan.",
-       "min": 6
-      },
-      {
-       "text": "Pour in the apple juice and vinegar and scrape up the browned bits.",
-       "min": 3
-      },
-      {
-       "text": "Return the mushrooms, add the beans and simmer until the liquid reduces by half.",
-       "min": 15
-      },
-      {
-       "text": "Stir in the cream and simmer until glossy.",
-       "min": 3
-      },
-      {
-       "text": "Scatter with parsley and serve with a warm baguette.",
-       "min": 1
-      }
-     ]
-    }
-   }
+   "af": true
   },
   {
    "n": "Farmhouse beef and mushroom stew with mash",
@@ -1230,11 +664,11 @@
    "af": true
   },
   {
-   "n": "Gunfire: army tea with dark rum",
+   "n": "Army brew with condensed milk",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 0,
-   "make_ahead": "Best brewed fresh and hot; put the sugar and rum in the mugs up to 1 hour ahead",
+   "prep_min": 2,
+   "cook_min": 5,
+   "make_ahead": "Brew just before serving",
    "ingredients": [
     {
      "q": 6,
@@ -1245,118 +679,28 @@
     {
      "q": 1.2,
      "u": "l",
-     "item": "freshly boiled water",
+     "item": "boiling water",
      "aisle": "Pantry"
     },
     {
-     "q": 8,
-     "u": "tsp",
-     "item": "brown sugar",
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweetened condensed milk",
      "aisle": "Pantry"
-    },
-    {
-     "q": 120,
-     "u": "ml",
-     "item": "dark rum",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Warm a big teapot with boiling water and tip it out.",
-     "min": 2
-    },
-    {
-     "text": "Add the tea bags and freshly boiled water and leave to stew until properly strong.",
+     "text": "Brew the tea bags in the boiling water in a big pot until very strong.",
      "min": 5
     },
     {
-     "text": "Put sugar and rum into each of four metal mugs.",
+     "text": "Stir a tablespoon of condensed milk into each mug and pour the tea over.",
      "min": 2
-    },
-    {
-     "text": "Pour in the tea, add a splash of milk and stir well.",
-     "min": 1
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Gunfire: army tea with molasses",
-     "prep_min": 10,
-     "cook_min": 0,
-     "make_ahead": "Best brewed fresh and hot; mix the sugar, molasses, vanilla and nutmeg in the mugs up to 1 hour ahead",
-     "ingredients": [
-      {
-       "q": 6,
-       "u": "",
-       "item": "black tea bags",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1.2,
-       "u": "l",
-       "item": "freshly boiled water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 8,
-       "u": "tsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "molasses",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "pinch ground nutmeg",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "full cream milk",
-       "aisle": "Dairy"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Warm a big teapot with boiling water and tip it out.",
-       "min": 2
-      },
-      {
-       "text": "Add the tea bags and freshly boiled water and leave to stew until properly strong.",
-       "min": 5
-      },
-      {
-       "text": "Put the sugar, a little molasses, a few drops of vanilla and the nutmeg into each of four metal mugs.",
-       "min": 2
-      },
-      {
-       "text": "Pour in the tea, add a splash of milk and stir well.",
-       "min": 1
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

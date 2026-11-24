@@ -1,0 +1,36 @@
+{
+ "id": "Harry Potter and the Prisoner of Azkaban (2004)",
+ "ops": [
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cherry syrup and soda",
+    "note": "Cherry syrup topped with soda over ice, the Minister's order at the bar.",
+    "alc": false
+   },
+   "done": true
+  },
+  {
+   "old": "Leaky Cauldron stew",
+   "new": "Three Broomsticks beef stew",
+   "done": true
+  },
+  {
+   "old": "Diagon Alley style",
+   "new": "Hogsmeade style",
+   "done": true
+  },
+  {
+   "old": "Knight Bus ham and cheese toasties",
+   "new": "Fireside ham and cheese toasties",
+   "done": true
+  },
+  {
+   "old": "tomato soup to dunk, eaten on the move.",
+   "new": "tomato soup to dunk, by the fire.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

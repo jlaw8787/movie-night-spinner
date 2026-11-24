@@ -1,0 +1,29 @@
+{
+ "id": "The Princess and the Frog (2009)",
+ "ops": [
+  {
+   "old": "Tiana's Palace shrimp and grits",
+   "new": "Palace shrimp and grits",
+   "done": true
+  },
+  {
+   "old": "Tiana's Palace caramel bananas",
+   "new": "Bayou caramel bananas",
+   "done": true
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "receipt",
+    "title": "Opening Night Bill",
+    "lines": [
+     "Table one: gumbo and beignets",
+     "Thanks for coming"
+    ]
+   },
+   "done": true
+  }
+ ],
+ "applied": "2026-11-24",
+ "misses": []
+}

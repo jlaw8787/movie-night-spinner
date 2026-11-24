@@ -199,146 +199,77 @@
    "af": true
   },
   {
-   "n": "Castor's lavish dinner",
+   "n": "Erewhon canteen sloppy joes",
    "course": "m",
-   "prep_min": 15,
-   "cook_min": 10,
-   "make_ahead": "Split the lobster tails and make the garlic parsley butter up to 4 hours ahead in the fridge; grill just before serving and dress the salad at the last minute",
+   "prep_min": 10,
+   "cook_min": 18,
+   "make_ahead": "Make the filling up to 2 days ahead",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "lobster tails",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 80,
+     "q": 600,
      "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
+     "item": "beef mince",
+     "aisle": "Meat"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "",
-     "item": "garlic cloves, crushed",
+     "item": "brown onion, diced",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "bunch parsley, chopped",
+     "item": "green capsicum, diced",
      "aisle": "Produce"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "salad leaves",
-     "aisle": "Produce"
+     "q": 250,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
     },
     {
      "q": 2,
-     "u": "",
-     "item": "lemons",
-     "aisle": "Produce"
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
     },
     {
-     "q": 3,
+     "q": 1,
      "u": "tbsp",
-     "item": "extra virgin olive oil",
+     "item": "Worcestershire sauce",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Split the lobster tails lengthways.",
-     "min": 6
+     "text": "Brown the mince with the onion and capsicum.",
+     "min": 10
     },
     {
-     "text": "Melt the butter with the garlic and chopped parsley and brush over the lobster flesh.",
-     "min": 4
+     "text": "Stir in the tomato sauce, sugar, Worcestershire and mustard and simmer until thick. Season.",
+     "min": 15
     },
     {
-     "text": "Grill the lobster flesh side up for 6 to 8 minutes until just white.",
-     "min": 8
-    },
-    {
-     "text": "Whisk the juice of the lemons with the olive oil into a vinaigrette, toss the salad leaves and serve alongside.",
-     "min": 5
+     "text": "Toast the buns lightly and pile the beef in.",
+     "min": 3
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Castor's lavish dinner (vegetarian)",
-     "prep_min": 10,
-     "cook_min": 10,
-     "make_ahead": "Score the mushrooms and make the garlic parsley butter up to 1 day ahead; grill just before serving and dress the salad at the last minute",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "large king oyster mushrooms, halved lengthways",
-       "aisle": "Produce"
-      },
-      {
-       "q": 80,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "garlic cloves, crushed",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bunch parsley, chopped",
-       "aisle": "Produce"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "salad leaves",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "lemons",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "extra virgin olive oil",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Score the cut side of the mushrooms in a criss-cross.",
-       "min": 4
-      },
-      {
-       "text": "Melt the butter with the garlic and chopped parsley and brush over the mushrooms.",
-       "min": 4
-      },
-      {
-       "text": "Grill cut side down, then flip and baste until golden and tender.",
-       "min": 8
-      },
-      {
-       "text": "Whisk the juice of the lemons with the olive oil into a vinaigrette, toss the salad leaves and serve alongside.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "Peach cobbler",

@@ -120,29 +120,35 @@
    }
   },
   {
-   "n": "LA street tacos",
+   "n": "Block C chili and crackers",
    "course": "s",
-   "prep_min": 18,
-   "cook_min": 71,
-   "make_ahead": "Marinate the steak in the lime juice, garlic and cumin up to 4 hours ahead in the fridge; grill and fill the tortillas on the night",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Make up to 2 days ahead; it is better the next day",
    "ingredients": [
     {
      "q": 500,
      "u": "g",
-     "item": "skirt steak",
+     "item": "beef mince",
      "aisle": "Meat"
     },
     {
-     "q": 4,
+     "q": 1,
      "u": "",
-     "item": "limes",
+     "item": "brown onion, diced",
      "aisle": "Produce"
     },
     {
      "q": 2,
      "u": "",
-     "item": "garlic cloves",
+     "item": "garlic cloves, crushed",
      "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
     },
     {
      "q": 1,
@@ -151,271 +157,125 @@
      "aisle": "Spices"
     },
     {
-     "q": 12,
-     "u": "",
-     "item": "small corn tortillas",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "white onion",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "small bunch coriander",
-     "aisle": "Produce"
-    },
-    {
-     "q": 150,
+     "q": 400,
      "u": "g",
-     "item": "salsa verde",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin red kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet water crackers",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Marinate the steak in lime juice, crushed garlic and cumin.",
-     "min": 65
-    },
-    {
-     "text": "Grill hot on both sides.",
-     "min": 6
-    },
-    {
-     "text": "Rest the steak, then chop small.",
+     "text": "Brown the mince with the onion and garlic.",
      "min": 10
     },
     {
-     "text": "Warm the tortillas and dice the onion.",
-     "min": 5
+     "text": "Stir in the chilli powder and cumin.",
+     "min": 2
     },
     {
-     "text": "Fill the tortillas with steak, onion, coriander and salsa verde, with lime wedges on the side.",
-     "min": 5
+     "text": "Add the tomatoes, beans and a cup of water and simmer until thick. Season.",
+     "min": 30
+    },
+    {
+     "text": "Ladle into bowls with crackers on the side.",
+     "min": 3
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "LA street tacos (vegetarian)",
-     "prep_min": 40,
-     "cook_min": 13,
-     "make_ahead": "Marinate the mushrooms in the lime juice, garlic, cumin and oil up to 1 day ahead in the fridge; grill and slice on the night",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "large portobello mushrooms",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "garlic cloves",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "ground cumin",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "neutral oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "small corn tortillas",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "white onion",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "small bunch coriander",
-       "aisle": "Produce"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "salsa verde",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Marinate the mushrooms in the juice of 2 limes, crushed garlic, cumin and oil.",
-       "min": 30
-      },
-      {
-       "text": "Grill hot on both sides until dark and tender.",
-       "min": 8
-      },
-      {
-       "text": "Slice the mushrooms thin.",
-       "min": 5
-      },
-      {
-       "text": "Warm the tortillas and dice the onion.",
-       "min": 5
-      },
-      {
-       "text": "Fill the tortillas with mushroom, onion, coriander and salsa verde, with wedges of the other limes on the side.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
-   "n": "Tango's tailored rib eye",
+   "n": "Tango's Salisbury steak",
    "course": "m",
    "prep_min": 10,
-   "cook_min": 260,
-   "make_ahead": "Dry-brine 4 to 12 hours",
+   "cook_min": 30,
+   "make_ahead": "Shape the patties a day ahead and keep chilled",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "rib eye steaks (about 200g each)",
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
      "aisle": "Meat"
     },
     {
+     "q": 40,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
      "q": 1,
-     "u": "tsp",
-     "item": "fine salt",
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tbsp",
-     "item": "neutral oil",
+     "item": "Worcestershire sauce",
      "aisle": "Pantry"
     },
     {
-     "q": 50,
+     "q": 300,
      "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "sprigs thyme",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "garlic cloves",
+     "item": "green beans",
      "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Pat the steaks dry, season with salt and refrigerate uncovered to dry-brine.",
-     "min": 245
+     "text": "Mix the mince, breadcrumbs, egg and salt and shape into 4 oval patties.",
+     "min": 5
     },
     {
-     "text": "Heat a heavy pan with oil until hot and sear the steaks hard on both sides, in batches.",
-     "min": 12
+     "text": "Brown the patties on both sides and set aside.",
+     "min": 8
     },
     {
-     "text": "Lower the heat, add the butter, thyme and crushed garlic and baste. Take out at 54C in the centre for medium rare.",
-     "min": 2
+     "text": "Fry the onions in the same pan until soft and brown, then stir in the flour.",
+     "min": 10
     },
     {
-     "text": "Rest the steaks, slice and spoon over the pan butter.",
-     "min": 11
+     "text": "Whisk in the stock and Worcestershire, return the patties and simmer until cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Boil the beans until tender and serve beside the patties.",
+     "min": 5
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Tango's tailored king oyster steak",
-     "prep_min": 10,
-     "cook_min": 15,
-     "make_ahead": "Score the mushrooms up to 1 day ahead, covered in the fridge; salt, sear and baste on the night",
-     "ingredients": [
-      {
-       "q": 600,
-       "u": "g",
-       "item": "large king brown mushrooms, halved lengthways",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "fine salt",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "neutral oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 50,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "sprigs thyme",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "garlic cloves",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Score the cut side of the mushrooms in a criss-cross, pat dry and season with salt.",
-       "min": 8
-      },
-      {
-       "text": "Heat a heavy pan with oil until hot and sear the mushrooms hard, cut side down first, then turn, in batches.",
-       "min": 10
-      },
-      {
-       "text": "Lower the heat, add the butter, thyme and crushed garlic and baste for 2 to 3 minutes.",
-       "min": 3
-      },
-      {
-       "text": "Rest briefly, slice and spoon over the pan butter.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "Kiki's cupcakes",

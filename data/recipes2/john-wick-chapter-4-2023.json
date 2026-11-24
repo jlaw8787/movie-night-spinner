@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Berlin currywurst",
+   "n": "Bar currywurst",
    "course": "s",
    "prep_min": 13,
    "cook_min": 35,
@@ -233,7 +233,7 @@
    "af": true
   },
   {
-   "n": "Paris steak frites",
+   "n": "Steak frites",
    "course": "m",
    "prep_min": 25,
    "cook_min": 750,
@@ -308,7 +308,7 @@
    "af": false,
    "alt": {
     "af": {
-     "n": "Paris steak frites",
+     "n": "Steak frites",
      "prep_min": 25,
      "cook_min": 750,
      "make_ahead": "Salt the steaks the night before",
@@ -549,7 +549,7 @@
    }
   },
   {
-   "n": "Sacré-Coeur croissant pudding",
+   "n": "Croissant pudding",
    "course": "w",
    "prep_min": 15,
    "cook_min": 55,
@@ -614,7 +614,7 @@
    "af": true
   },
   {
-   "n": "Sacré-Cœur steps cognac sidecar",
+   "n": "Cognac sidecar",
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
