@@ -1,5 +1,5 @@
-/* Review 48: American cards spell American. For every card the tests/us-words.test.cjs rule calls American, swap British and
-   Australian spellings (honour, favourite, colour, neighbour, armour, theatre, kerb, mum, queue, coriander, trolley) in the printed
+/* Review 48: American cards use American words. For every card the tests/us-words.test.cjs rule calls American, swap Australian
+   words (kerb, mum, queue, coriander, trolley) in the printed
    copies only: dish names and notes, house lines, flavour, cue, tagline, diet notes, poster editions and hand-built blocks. Recipes'
    methods and shopping lists keep the Australian words for the cook here. Names change the same way in every file that keys on them.
      node scripts/r48-us-spell.cjs [--dry] */
@@ -7,9 +7,9 @@ const fs=require('fs'),path=require('path');const R=path.join(__dirname,'..');co
 const rj=p=>JSON.parse(fs.readFileSync(path.join(R,p),'utf8'));
 const t=fs.readFileSync(path.join(R,'tests/spelling.test.cjs'),'utf8');const NOTUS=new Set(eval(t.match(/const NOTUS=new Set\((\[[^\]]*\])\)/)[1]));
 const SKIP=new Set(['Thor: The Dark World (2013)','Thor: Ragnarok (2017)','Cruella (2021)','Cars 2 (2011)','Arthur Christmas (2011)','Alien 3 (1992)','Avengers: Age of Ultron (2015)','Willy Wonka & the Chocolate Factory (1971)','The Fifth Element (1997)','Thor: Love and Thunder (2022)','Austin Powers: The Spy Who Shagged Me (1999)','Teenage Mutant Ninja Turtles III (1993)']);
-const MAP=[[/\bhonour(s|ed|ing)?\b/g,'honor$1'],[/\bHonour(s)?\b/g,'Honor$1'],[/\bfavourite(s)?\b/g,'favorite$1'],[/\bFavourite(s)?\b/g,'Favorite$1'],[/\bcolour(s|ed|ful)?\b/g,'color$1'],[/\bColour(s|ed|ful)?\b/g,'Color$1'],[/\bCOLOURS\b/g,'COLORS'],
- [/\bneighbour(s|hood|ly)?\b/g,'neighbor$1'],[/\bNeighbour(s|hood)?\b/g,'Neighbor$1'],[/\barmour(ed)?\b/g,'armor$1'],[/\bArmour\b/g,'Armor'],[/\btheatre(s)?\b/g,'theater$1'],[/\bTheatre(s)?\b/g,'Theater$1'],[/\bkerb\b/g,'curb'],
- [/\bmum(s)?\b/g,'mom$1'],[/\bMum(s)?\b/g,'Mom$1'],[/\bfor the queue\b/g,'for the line'],[/\bcoriander\b/g,'cilantro'],[/\bCoriander\b/g,'Cilantro'],[/\bcake trolley\b/g,'dessert cart'],[/\bthe trolley\b/g,'the cart'],[/\bTrolley\b/g,'Cart'],[/\btravelling\b/g,'traveling'],[/\bPink Ladies coconut ice\b/g,'Pink Ladies coconut candy']];
+/* review 48: only the words change. Spelling stays Australian across the site (review 19, tests/spelling.test.cjs): favourite, colour,
+   honour, theatre and armour print on every card */
+const MAP=[[/\bkerb\b/g,'curb'],[/\bmum(s)?\b/g,'mom$1'],[/\bMum(s)?\b/g,'Mom$1'],[/\bfor the queue\b/g,'for the line'],[/\bcoriander\b/g,'cilantro'],[/\bCoriander\b/g,'Cilantro'],[/\bcake trolley\b/g,'dessert cart'],[/\bthe trolley\b/g,'the cart'],[/\bTrolley\b/g,'Cart'],[/\bPink Ladies coconut ice\b/g,'Pink Ladies coconut candy']];
 const sw=s=>{let o=s;for(const [a,b] of MAP)o=o.replace(a,b);return o};
 const walk=v=>typeof v==='string'?sw(v):Array.isArray(v)?v.map(walk):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[sw(k),walk(x)])):v;
 const FL=rj('data/film-flavour.json'),FILMS=rj('data/films.json'),HO=rj('data/film-house.json'),DN=rj('data/dish-names.json'),DNO=rj('data/dish-notes.json');

@@ -33,7 +33,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    if(!f._lib)continue;n++;const L=f._lib,fl=L.flavour||{},bad=[],txt=card.innerText,low=norm(txt);
    const cur=fl.currency||'$';if(cur==='coin')SYM.coin=new RegExp('\\d '+String(fl.coin||'coins').split(' ')[0].replace(/(ies|s)$/,''),'i');
    /* 1. money */
-   const hasPrice=/\d\.\d\d|\d+¢|\.\d\d\b|£|€|₩|¥|\d+d\b/.test(txt);
+   const hasPrice=/\d\.\d\d(?!\s?[apAP]\.?[mM])|\d+¢|\.\d\d\b(?!\s?[apAP]\.?[mM])|£|€|₩|¥|\d+d\b/.test(txt);
    /* review 32: a priced card says what money it is: bare figures (".25", "1.75") with no mark anywhere fail */
    if(hasPrice&&cur==='$'&&fl.world!=='storybook'&&!fl.coin&&!/\$\s?\d|\d\s?¢|\b\d{1,2}c\b/.test(txt))bad.push('prices with no money mark');
    if(hasPrice){if(cur==='$'){if(FOREIGN.test(txt))bad.push('foreign money on a dollar card')}
