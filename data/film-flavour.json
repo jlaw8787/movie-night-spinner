@@ -2985,12 +2985,12 @@
   },
   "number": "",
   "words": {
-   "Return tray to the hatch.": "Minions clear the trays.",
-   "Rations subject to supply.": "Bananas subject to Minions.",
-   "Ration sheet.": "Lab sheet.",
    "Rations": "Snacks",
    "Sweet issue": "Sweets",
-   "Canteen": "Drinks"
+   "Canteen": "Drinks",
+   "Keep food off the bench.": "Minions clear the trays.",
+   "Samples subject to supply.": "Bananas subject to Minions.",
+   "Something sweet": "Sweets"
   }
  },
  "Wallace & Gromit: The Curse of the Were-Rabbit (2005)": {
@@ -5722,7 +5722,7 @@
   },
   "number": "",
   "words": {
-   "Return tray to the hatch.": "Be afraid. Be very afraid."
+   "Keep food off the bench.": "Be afraid. Be very afraid."
   },
   "pay": ""
  },
@@ -11638,7 +11638,8 @@
   "number": "12",
   "sideStill": "/zlh9NRccdWXevA5WNpkco39iK3a.jpg",
   "sideLine": "Lake Como, and nobody's paying full price.",
-  "currency": "€"
+  "currency": "€",
+  "pay": ""
  },
  "The Italian Job (1969)": {
   "venue": "Mr Bridger's Prison Table",
@@ -12478,7 +12479,11 @@
     "Punched by the Conductor"
    ]
   },
-  "number": ""
+  "number": "",
+  "pay": "",
+  "words": {
+   "Write your order on the check.": "Hot chocolate comes round with the waiters."
+  }
  },
  "How the Grinch Stole Christmas (2000)": {
   "venue": "Whoville Feast Hall",

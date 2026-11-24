@@ -210,7 +210,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const CX=SW+26,CW=W-CX-26-(e.border==="none"?0:10);
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
-  const menuTop=118,lounge=winks.slice(0,2),fineTxt="Write your order on the check. Prices subject to change."+(fam?" Soft drinks only.":"")+" Images: TMDB.";
+  const menuTop=118,lounge=winks.slice(0,2),fineTxt=((ctx.flavour&&ctx.flavour.words&&ctx.flavour.words["Write your order on the check."])||typeof usCard!=="function"||usCard(ctx.f,ctx.flavour)?"Write your order on the check.":"Write your order on the card.")/* review 49: "check" is the American word; the Orient Express and the Busan train take the card */+" Prices subject to change."+(fam?" Soft drinks only.":"")+" Images: TMDB.";
   const fineH=(lounge.length?26+lounge.length*20:0)+8+wrapLines(fineTxt,15,CW,e.cw+.04)*19.5+(e.border==="none"?20:26),menuH=H-menuTop-fineH-18;
   const tiers=[{d:30,n:22,g:20,h:38,nl:3},{d:28,n:21,g:18,h:34,nl:2},{d:26,n:19,g:14,h:30,nl:2},{d:24,n:18,g:11,h:28,nl:2},{d:22,n:17,g:9,h:26,nl:1},{d:21,n:16,g:7,h:24,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:5,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*2.6+8;

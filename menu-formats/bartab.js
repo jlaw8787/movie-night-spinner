@@ -100,7 +100,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const W=528,H=1056,P=26,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",g=G[ERA_G[era]],t=TONE[ctx.tone]||TONE.warm;
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
   /* review 38: a bar tab set in someone's home (Grandma's Boy, Pineapple Express, Blade's safehouse) is not a bar: no tab, no "behind the bar" */
-  const homeV=fl.home===true||/\b(house|home|apartment|flat|place|safe ?house|kitchen|study|loft|dorm|trailer|den|basement|garage|hideout|pad)\b/i.test(String(fl.venue||""))&&!/\b(bar|pub|tavern|saloon|lounge|club|inn|grill|diner|joint|room)\b/i.test(String(fl.venue||""));
+  const homeV=fl.home===true||/\b(house|home|apartment|flat|place|safe ?house|kitchen|study|loft|dorm|trailer|den|basement|garage|hideout|pad|man ?cave|cave)\b/i.test(String(fl.venue||""))/* review 49: Sydney's man cave */&&!/\b(bar|pub|tavern|saloon|lounge|club|inn|grill|diner|joint|room)\b/i.test(String(fl.venue||""));
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";

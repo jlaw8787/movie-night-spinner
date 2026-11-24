@@ -327,6 +327,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${kick("From the house")}
     <div data-fs="14" style="font:italic 400 19px/1.3 ${B};color:${K.ink};margin-top:8px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="22" style="font:400 32px/1.1 ${S};color:${K.acc};text-align:right;margin-top:4px;transform:rotate(-3deg)">${esc(F.note.by)}</div></div>`;
+  /* review 49: a home or a dinner nobody pays for prints "Place card", not the restaurant's "Carte no." (Get Out, Bridget Jones, Pongo's flat) */
   /* review 48: a family kitchen or a house is not booked: "Places set, dinner for two", no table number (Get Out, Meet the Parents, The Aristocats) */
   const HOMEB=(ctx.flavour&&ctx.flavour.home===true)||/\b(kitchen|house|home|estate|manor|apartment|family)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""))&&!/\b(restaurant|bistro|caf[eé]|brasserie|hotel|club|inn|grill|tavern|bar)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""));
   const resv=`<div style="position:absolute;left:390px;top:818px;width:248px;height:106px;transform:rotate(${(rot*.6).toFixed(1)}deg);background:${dark?"#f4ecdc":"#fffdf8"};box-shadow:0 3px 10px rgba(0,0,0,.28);border-top:5px solid ${K.acc};overflow:hidden">
@@ -360,7 +361,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox style="position:absolute;left:46px;right:46px;top:${secH+40}px;bottom:112px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:46px;right:46px;bottom:34px;height:74px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:8px;text-align:center">
-    <div data-fs="14" style="font:400 16px/1.35 ${B};color:${K.soft}">Prices subject to change. Service included. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}Carte no. ${esc(F.num||ctx.f.year)}. Images: TMDB.</div></div>`;
+    <div data-fs="14" style="font:400 16px/1.35 ${B};color:${K.soft}">Prices subject to change. Service included. ${fm?"Soft drinks only. ":""}${wk?esc(wk)+". ":""}${HOMEB||typeof payWord==="function"&&payWord(ctx.flavour,"bistro")===""?"Place card":"Carte no."} ${esc(F.num||ctx.f.year)}. Images: TMDB.</div></div>`;
   const back=face(second+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

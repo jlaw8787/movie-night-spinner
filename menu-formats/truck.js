@@ -85,6 +85,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),tx=s=>fam?dry(s):clean(s);
   const title=clean(f.title||"Tonight's Feature"),year=f.year||"";
   const venue=clean(fl.venue||(title.length<=20?title+" Truck":"The Lunch Truck")),sign=clean(fl.sign||"Hot food from the window");
+  /* review 49: a truck card set in a home (Fagin's houseboat, Jesse and Chester's house, the Kim family kitchen) has no board of the day, no
+     window and no queue: Dinner Tonight, a plate number and talk at the table */
+  const homeT=fl.home===true||/\b(house|home|kitchen|houseboat|flat|apartment)\b/i.test(venue)&&!/\b(shop|store|market|stall|caf[eé]|diner|truck|stand|garage|depot)\b/i.test(venue);
   const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Cook"}:{text:"Everything on the board is cooked to order. Wait by the window and we'll call your number.",by:"The Cook"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"Order Ticket",lines:["Keep this ticket","We call your number"]};
@@ -168,7 +171,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const board=`<div style="position:absolute;left:${RX}px;top:${BH}px;width:${RW}px;height:${boardH}px;box-sizing:border-box;border:${e.frame};background:${e.bbg};overflow:hidden;${e.board==="matte"?"border-radius:0 0 0 0;":""}box-shadow:inset 0 0 30px rgba(0,0,0,${e.board==="enamel"?.15:.5})">
     ${boardTex}
     <div style="position:absolute;left:${pad}px;right:${pad}px;top:22px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:${e.board==="enamel"?`3px solid ${e.btx}`:`2px solid ${mix(e.btx,e.bbg,.6)}`};padding-bottom:10px">
-      <div style="${boardTitle};color:${e.btx}">${e.board_t}</div>${kick(t.win.length>34?"Order at the window":t.win,bacc,14)}</div>
+      <div style="${boardTitle};color:${e.btx}">${homeT?"Dinner Tonight":e.board_t}</div>${kick(homeT&&!(fl.words&&fl.words[t.win])?"Seconds while they last.":t.win.length>34?"Order at the window":t.win,bacc,14)}</div>
     <div data-tbox style="position:absolute;left:${pad}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>
     ${TFIT}
     ${cueN?`<div data-fit="cue" style="position:absolute;left:${pad}px;width:${CWall}px;bottom:16px;border-top:1px solid ${mix(e.btx,e.bbg,.7)};padding-top:6px;font:italic 400 15px/1.3 ${BF};color:${bsoft}"><b style="font-style:normal;color:${bacc}">Showtime:</b> ${esc(cap(cue))}</div>`:""}</div>`;
@@ -179,7 +182,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const nLen=clean(note.text).length,nSize=nLen>150?16:nLen>110?17:nLen>80?18:19;
   const CWD=280,C2X=RX+20+CWD+16,C2W=RW-20-CWD-16-20,LH=boardH>560?68:96,TH=WH-40-LH-14;
   const card=`<div style="position:absolute;left:${RX+20}px;top:${WY+20}px;width:${CWD}px;height:${WH-40}px;box-sizing:border-box;padding:14px 18px 10px;background:#fbf7ec;transform:rotate(${t.tilt*.6}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
-    <div>${kick("Overheard at the window",acc,14)}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
+    <div>${kick(homeT?"Overheard at the table":"Overheard at the window",acc,14)}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
     <div style="font:400 ${ei<2?36:32}px/1 ${SF};color:${acc};text-align:right">${esc(note.by)}</div></div>`;
   const logoPanel=`<div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:${C2X}px;top:${WY+20}px;width:${C2W}px;height:${LH}px;padding:10px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
       ${fl.panelStill&&posSrc?`<img src="${ctx.img(fl.panelStill,"w780")}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${fl.panelPos||"center 40%"};filter:${pf}">`
@@ -187,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
          :`<div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;${clamp(3)}">${esc(title)}</div>`}</div>`;
   const tick=`<div style="position:absolute;left:${C2X}px;top:${WY+20+LH+14}px;width:${C2W}px;height:${TH}px;box-sizing:border-box;padding:10px 14px;background:${darkTruck?"#f3f0e6":"#ffffff"};border-top:8px solid ${acc};box-shadow:0 4px 12px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
     <div style="display:flex;gap:12px;align-items:flex-start;justify-content:space-between">
-    <div style="flex:0 0 auto">${kick("Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?36:num.slice(-4).length===3?42:48}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
+    <div style="flex:0 0 auto">${kick(homeT?"Your plate":"Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?36:num.slice(-4).length===3?42:48}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
     <div style="flex:1;min-width:0;text-align:right"><div style="font:700 15px/1.15 ${BF};color:#15171c;text-transform:uppercase;letter-spacing:.06em;${clamp(1)}">${esc(prop.title)}</div>
     ${(prop.lines||[]).slice(0,boardH>560?1:2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div></div>
     <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(3)}">${fam?"Soft drinks only. ":""}Images: TMDB. Prices subject to change.${winks[0]?" "+esc(winks[0])+".":""}</div></div>`;/* review 32: the credit line comes first, so a tight ticket drops the wink, never the TMDB credit */

@@ -891,15 +891,34 @@ function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",")
    the screen width, so dish notes read at about 11px. Tall views are cut again at a line gap to about one screen. Desktop is left alone. */
 function cardFaces(){const base=cardFaces0();if(!card.classList.contains("fmt"))return base;
   /* review 48: on desktop a page whose notes still print under 13px at column width is read in column views too, as the phone does */
-  if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return base}
+  if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return pvCover(base)}
   const key=renderId+"|"+card.innerHTML.length+"|"+(preview.clientWidth||0);if(card._pvr&&card._pvr.key===key)return card._pvr.v;
-  let out=base;try{out=pvReadViews(base)}catch(e){out=base}card._pvr={key,v:out};return out}
+  let out=base;try{out=pvReadViews(base)}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
+/* review 49: on desktop every part of the card shows on some page of the views and the full size view. Views cut to the dish blocks (the
+   hospital meal form's two halves, the dim sum order sheet, a candy bar's side columns) left the header, poster, scenes, nurse's note and
+   cue on no page at all (Rain Man, Kung Fu Panda 2, Roger Rabbit's middle column). A page with text outside every view gets a whole-page
+   overview ahead of its views (marked cover, so the column still opens on the dishes) */
+function pvCover(V){if(!V||!V.length||swipeW()||!pvDesk)return V;
+  const key=renderId+"|"+card.innerHTML.length+"|"+V.map(v=>(v.part||"")+Math.round(v.x||0)+","+Math.round(v.y||0)+","+Math.round(v.w)+","+Math.round(v.h)).join(";");if(card._pvc&&card._pvc.key===key)return card._pvc.v;
+  let out=V;try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1;if(!cb.width)return V;
+    const faces=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];const F=faces.length?faces:[card.querySelector(".fx-face")||card];
+    const rg=document.createRange(),miss=new Map();
+    for(const fe of F){const tw=document.createTreeWalker(fe,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){const s=t.textContent.trim();if(!s)continue;const el=t.parentElement;if(!el||el.closest("[aria-hidden=true]"))continue;if(!el.closest(".pv-off")){const cs=getComputedStyle(el);if(cs.visibility==="hidden"||cs.display==="none")continue}/* a line stepped aside for the view on show still counts */
+      rg.selectNodeContents(t);const r=rg.getBoundingClientRect();if(!r.width||!r.height)continue;const cx=((r.left+r.right)/2-cb.left)/ck,cy=((r.top+r.bottom)/2-cb.top)/ck;
+      if(!V.some(v=>cx>=(v.x||0)-2&&cx<=(v.x||0)+v.w+2&&cy>=(v.y||0)-2&&cy<=(v.y||0)+v.h+2))miss.set(fe,(miss.get(fe)||0)+s.length)}}
+    if(![...miss.values()].some(n=>n>=12))return V;
+    out=[];const done=new Set();
+    for(const v of V){const fe=F.find(x=>x===v.el||x.contains(v.el)||v.el.contains(x)&&F.length===1)||F[0];
+      if(!done.has(fe)&&(miss.get(fe)||0)>=12){done.add(fe);const r=fe.getBoundingClientRect(),w=parseFloat(fe.style.width)||+card.dataset.w||r.width/ck,h=parseFloat(fe.style.height)||+card.dataset.h||r.height/ck;
+        const x=fe===card?0:(r.left-cb.left)/ck,y=fe===card?0:(r.top-cb.top)/ck;if(!V.some(u=>Math.abs((u.x||0)-x)<4&&Math.abs((u.y||0)-y)<4&&Math.abs(u.w-w)<8&&Math.abs(u.h-h)<8))out.push({el:fe,w,h,x,y,px:0,row:true,part:"whole"+F.indexOf(fe),cover:1})}
+      out.push(v)}}catch(e){out=V}
+  card._pvc={key,v:out};return out}
 function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),desk=!swipeW(),FLOOR=desk?13:10.5,TGT=Math.max(260,pw*sp/(desk?13.5:11.5)),MAXH=Math.max(500,(innerHeight||800)*.92);
   let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;if(!w||!h)return base;V=[{el,w,h,x:0,y:0,px:0,row:true}]}
   const out=[];let n=0;const NM=(()=>{const m=(current&&(current.printMenu||current.menu))||{};return ["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/\s+/g," ").trim())).filter(n=>n.length>3)})();
   const nDish=L=>L.filter(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))}).length;const hasDish=L=>L.some(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))});/* a line that is the dish name, not a cue that mentions the cornbread */
   for(const v of V){const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
-    if(sp*pw/v.w>=FLOOR){out.push(v);continue}
+    if(sp*pw/v.w>=FLOOR||desk&&/^zoom/.test(v.part||"")){out.push(v);continue}/* review 49: on desktop a block the layout marks to read ([data-pvzoom], the dim sum order sheet) shows whole, never cut into slivers of dish names */
     /* page origin on the card: a panel's x is the page's x plus its own px */
     const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,ox=(eb.left-cb.left)/ck,oy=(eb.top-cb.top)/ck,ylo=(v.y||0)-oy,yhi=ylo+v.h;
     const B=[],rg=document.createRange();
@@ -1010,7 +1029,7 @@ function pvFirstDish(fs){let best=0,bestC=0;const C=[];try{const m=(current&&(cu
     if(f.panel&&f.el.getBoundingClientRect().width){const eb=f.el.getBoundingClientRect(),k=eb.width/(parseFloat(f.el.style.width)||+card.dataset.w||eb.width)||1,rg=document.createRange();/* scale of the page itself: a two-page card is twice the page across */
       for(const e of f.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();const cx=((r.left+r.right)/2-eb.left)/k,cy=((r.top+r.bottom)/2-eb.top)/k;if(r.width&&cx>=f.px&&cx<f.px+f.w&&(f.ly==null||cy>=f.ly&&cy<f.ly+f.h))txt+=" "+n.textContent}}
     else txt=f.el.textContent;/* not laid out yet (first draw): the page's own text */
-    txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=names.filter(n=>txt.includes(n)).length;C[i]=c;if(c>bestC){bestC=c;best=i}}
+    txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=f.cover?0:names.filter(n=>txt.includes(n)).length;/* review 49: a whole-page overview is never the opening view */C[i]=c;if(c>bestC){bestC=c;best=i}}
     /* review 32: the first page that carries a real share of the food, not the fullest one ("The Menu, continued" on Grease's third page
        had more lines than the page with the starters and burgers) */
     /* three dishes at least: a cover whose tagline names two (the Grinch's "Roast beast. Who pudding.") is not the menu */
@@ -1140,16 +1159,16 @@ function openMenuZoom(trigger){
     (phone&&fw()>fh()*1.15?`<p class="mz-turn">Turn your phone sideways for a bigger view</p>`:"");
   const sc=o.querySelector(".mz-scroll"),sheet=o.querySelector(".mz-sheet");
   const home=card.nextSibling,keepT=card.style.transform;card.style.clipPath="";pvMask(null);/* review 47: the column view's clip and panel mask do not come into the full size view */sheet.appendChild(card);card.style.transformOrigin="0 0";card.style.transition="none";card.style.opacity="";
-  const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):paged?Math.min(1.4,(innerWidth-80)/fw()):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
+  const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):paged?Math.min(1.4,(innerWidth-80)/fw(),faces[fi]&&faces[fi].cover?(innerHeight-160)/fh():9):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
   /* the opening zoom on a desktop: big enough to read, never wider than the screen unless there is no other way */
-  const readK=()=>!deskRead?fit():paged?Math.min(1.4,(innerWidth-80)/fw()):widthK*small>=13?widthK:Math.min(2.5,13/small);
+  const readK=()=>!deskRead||paged&&faces[fi]&&faces[fi].cover?fit():paged?Math.min(1.4,(innerWidth-80)/fw()):widthK*small>=13?widthK:Math.min(2.5,13/small);
   let k=1;
   const paint=()=>{const f=paged?faces[fi]:{x:0,y:0};card.style.transform=`translate(${-f.x*k}px,${-f.y*k}px) scale(${k})`;sheet.style.width=fw()*k+"px";sheet.style.height=fh()*k+"px"};
   /* zoom around a point on screen (the middle by default, or between two fingers) */
   const set=(v,px=sc.clientWidth/2,py=sc.clientHeight/2)=>{const cx=(sc.scrollLeft+px)/k,cy=(sc.scrollTop+py)/k;k=Math.max(Math.min(.25,fit()),Math.min(2.5,v));paint();sc.scrollLeft=cx*k-px;sc.scrollTop=cy*k-py};
   const toFit=()=>{k=fit();paint();sc.scrollLeft=0;sc.scrollTop=0};
-  const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;pvFace=i;paint();sc.scrollLeft=0;sc.scrollTop=0;
-    o.querySelector(".mz-pg").textContent=faces[0].part&&faces.length===2?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
+  const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;pvFace=i;if(!phone)k=readK();/* review 49: each desktop page opens at its own reading size (a whole-page overview fits the screen) */paint();sc.scrollLeft=0;sc.scrollTop=0;
+    o.querySelector(".mz-pg").textContent=faces.length===2&&faces.every(f=>/^(panel|p\d)/.test(f.part||""))?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;/* review 49: Left and Right only for two halves of one page */o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
   o.querySelector(".mz-in").addEventListener("click",()=>set(k*1.25));
   o.querySelector(".mz-out").addEventListener("click",()=>set(k/1.25));
   o.querySelector(".mz-fit").addEventListener("click",toFit);
@@ -2582,7 +2601,7 @@ function priceFix0(root,menu,f,fl,era,fmt){
   const dish=[];for(const k of ["s","m","w","d"])for(const it of menu[k]||[])if(it){const nm=norm(it.label||it.n);if(nm.length>2)dish.push({k,n:it.label||it.n,nm,house:!!it.house})}
   if(!dish.length)return 0;
   /* review 36: where nobody pays, every price on the card goes, in whatever money the layout printed it ("12 cr" in a galley, "9 gold coins", "4s 8d") */
-  {const pw=payWord(fl,fmt);if(pw!=null){const MR=/^\s*((\$|£|¥|€)\s?\d{1,4}([.,]\d\d)?|\d{1,4}\.\d\d|\.\d\d|\d{1,4}\s?(¢|c|cr|credits|d|p|pfennigs?|solari|gold coins?|silver|silver pennies|taels?|ryo|denarii|drachmas?|coppers?|doubloons|Galleons?|Sickles?|Knuts?|crowns?|gp|kr)|\d{1,3}s(\s\d{1,2}d)?|\d+ Galleons?( \d+ Sickles?)?)\s*$/i,
+  {const pw=payWord(fl,fmt);if(pw!=null){const MR=/^\s*((\$|£|¥|€)\s?\d{1,4}([.,]\d\d)?|\d{1,4}\.\d\d|\.\d\d|\d{1,4}([.,]\d\d)?\s?(¢|c|cr|credits|d|p|pfennigs?|solari|gold coins?|silver|silver pennies|taels?|ryo|denarii|drachmas?|coppers?|doubloons|Galleons?|Sickles?|Knuts?|crowns?|gp|kr)|\d{1,3}s(\s\d{1,2}d)?|\d+ Galleons?( \d+ Sickles?)?)\s*$/i,
      tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),T=[];let t;while((t=tw.nextNode())){if(t.parentElement&&t.parentElement.closest("[data-np]"))continue;if(MR.test(t.nodeValue))T.push(t)}
      if(T.length>=2)return payFix(root,T,pw);/* review 38: no prices to swap, but the bill and coin lines still go (Notre Dame printed "Coin of the realm only. Bill No. 96") */if(pw==="")payFix(root,T,pw)}}
   const PR=/^(\s*)(\$|£)?(\d{1,3})(?:\.(\d\d))?(\s*)$|^(\s*)(\d{1,2})(¢|c)(\s*)$|^(\s*)\.(\d\d)(\s*)$/;
