@@ -129,7 +129,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     :/\bparty\b|shower/i.test(VS)?{k:"party",sub:"Tea party, all welcome",hrs:"Tea served all afternoon.",kick:null}
     :/house|home|kitchen|cottage|flat|apartment|\bloft\b|penthouse|studio|windsor gardens|street|nursery|\bcave\b|garden|castle/i.test(VS)?{k:"home",sub:"Tea at home, in the front room",hrs:"Tea's on when the kettle boils.",kick:"Wipe your feet on the way in."}
     :{k:"store",sub:"The Tea Room, top floor",hrs:"Luncheon 11.30 till 2.30. Afternoon tea from 3.",kick:null};
-  const KICK=PLACE.kick&&/trolley|top floor|children's tea|basement|gloves/i.test(T.kick)?PLACE.kick:T.kick;
+  const KICK=PLACE.kick&&(PLACE.k==="home"/* review 52: a home never closes (Ghost's loft) */||/trolley|top floor|children's tea|basement|gloves/i.test(T.kick))?PLACE.kick:T.kick;
   /* ---------- front: store band, window display, logo, gift tag, note ---------- */
   const bandH=132;
   const vs=venue.length<=14?52:venue.length<=22?44:36;

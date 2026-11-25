@@ -43,7 +43,9 @@ const HOUSE = (() => { try { return rj('data/film-house.json'); } catch (e) { re
 const CARD_HB = (() => { try { return rj('data/card-print-hb.json'); } catch (e) { return {}; } })();
 /* review 45: a hand-built menu's own name (its spec brand: Louis', Sal's Famous Pizzeria) for the page's "The menu comes from" line */
 const HB_BRAND = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
-  const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.brand === 'string' && spec.brand.trim()) out[id] = spec.brand.trim(); return out; })();
+  const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.venue === 'string' && spec.venue.trim()) out[id] = spec.venue.trim(); else if (spec && typeof spec.brand === 'string' && spec.brand.trim()) out[id] = spec.brand.trim(); return out; })();
+/* review 52: a hand-built spec's "venue" is the place its card prints (Chez Bippy, Lou's Cafe), set by hand, so its page always names it */
+const HB_VENUE = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; } const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.venue === 'string' && spec.venue.trim()) out[id] = spec.venue.trim(); return out; })();
 const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
   const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) { const m = {}; const walk = v => { if (Array.isArray(v)) v.forEach(walk); else if (v && typeof v === 'object') { if (typeof v.k === 'string' && typeof v.n === 'string' && v.n.trim() && v.n !== v.k) m[v.k.toLowerCase()] = v.n; Object.values(v).forEach(walk); } }; walk(spec); if (Object.keys(m).length) out[id] = m; }
   return out; })();
@@ -206,7 +208,8 @@ function filmPage(x) {
   for (const y of x.dishes) { const b0 = dishId(y); let k = b0, n = 2; while (used.has(k)) k = b0 + '-' + n++; used.add(k); taken.set(y, k); }
   const did = y => taken.get(y);
   /* review 31: Google cuts titles past about 60 characters, so the brand drops first, then "dinner" */
-  const title = [`${shown} (${f.year}) movie night dinner menu | Reel Dinner`, `${shown} (${f.year}) movie night dinner menu`, `${shown} (${f.year}) movie night menu`, `${shown} movie night menu`, `${shown} (${f.year}) menu`].find(t => t.length <= 60) || `${shown} (${f.year}) menu`;
+  /* review 52: one title format on every page, always with the year (a long film name runs past 60 characters; Google cuts the end, the name and year lead) */
+  const title = `${shown} (${f.year}) movie night menu`;
   const listed = names.length > 3 ? names.slice(0, 3).join(', ') + ' and more' : names.join(', ').replace(/, ([^,]*)$/, ' and $1');
   /* review 30: the description always ends on a whole sentence, never cut mid-word. Longest version that fits in 155 */
   const two = names.length > 2 ? names.slice(0, 2).join(' and ') + ' and more' : listed;
@@ -246,7 +249,7 @@ ${x.poster ? `<img src="${posterUrl(x.poster)}" width="342" height="513" alt="${
 <h1>${esc(shown)} (${f.year}) movie night dinner menu</h1>
 <div class="hi">
 ${lede.length ? `<p class="lead">${lede.join(' ')}</p>` : ''}
-${x.venue && (CARD_VENUE[x.id] || !CARD_PRINT[x.id]) && (!CARD_PRINT[x.id] || CARD_VENUE[x.id]) ? (x.hb ? `<p>The menu comes from <strong>${esc(x.venue)}</strong>, in the world of the film.</p>` : `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>`) : ''}
+${x.venue && (HB_VENUE[x.id] || ((CARD_VENUE[x.id] || !CARD_PRINT[x.id]) && (!CARD_PRINT[x.id] || CARD_VENUE[x.id]))) ? (x.hb ? `<p>The menu comes from <strong>${esc(x.venue)}</strong>, in the world of the film.</p>` : `<p>The menu is set at <strong>${esc(x.venue)}</strong>, from the world of the film.</p>`) : ''}
 <a class="btn" href="${open}">Open this menu in Reel Dinner</a>
 <p class="small">Print the menu, get the shopping list and plan the night, free.</p>
 </div>

@@ -682,9 +682,9 @@
   "venue": "Jane's Flat, Greenwich",
   "sign": "Thor's welcome home dinner",
   "note": {
-   "text": "Eat first and quarrel after. I mean it, both of you, in front of the whole court.",
+   "text": "Eat first, both of you. The quarrelling can wait until the plates are clear.",
    "by": "Frigga",
-   "kind": "quote"
+   "kind": "note"
   },
   "winks": [
    "Loki, as Captain America",
@@ -17415,7 +17415,7 @@
   "venue": "17 Cherry Tree Lane",
   "sign": "Tea Served Properly",
   "note": {
-   "text": "Napkins on laps, children. Tea is poured, the scones are warm, and nobody leaves the table early.",
+   "text": "Napkins on laps, children. Tea is poured, the crumpets are warm, and nobody leaves the table early.",
    "by": "Mary Poppins",
    "kind": "note"
   },
@@ -17952,7 +17952,8 @@
     "Bonnet required"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 0.55
  },
  "Father of the Bride (1991)": {
   "venue": "Banks Home Reception",
@@ -19032,7 +19033,8 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "priceK": 1.15
  },
  "Blazing Saddles (1974)": {
   "venue": "Rock Ridge Chuckwagon",
@@ -19138,7 +19140,8 @@
   },
   "number": "1878",
   "priceEra": "1800s",
-  "pay": true
+  "pay": true,
+  "priceK": 0.85
  },
  "The Good, the Bad and the Ugly (1966)": {
   "venue": "Sad Hill Trading Post",
@@ -19165,7 +19168,8 @@
   },
   "number": "",
   "priceEra": "1800s",
-  "reward": "$2,000"
+  "reward": "$2,000",
+  "priceK": 0.75
  },
  "Butch Cassidy and the Sundance Kid (1969)": {
   "venue": "Hole in the Wall Hideout",
@@ -19234,7 +19238,8 @@
    ]
   },
   "number": "",
-  "priceEra": "1800s"
+  "priceEra": "1800s",
+  "priceK": 1.05
  },
  "Young Guns (1988)": {
   "venue": "Tunstall Ranch Cookhouse",
@@ -19305,7 +19310,8 @@
   },
   "number": "",
   "priceEra": "1800s",
-  "reward": "$1,000"
+  "reward": "$1,000",
+  "priceK": 0.92
  },
  "City Slickers (1991)": {
   "venue": "Cow Camp Chuck Wagon",
@@ -20159,7 +20165,8 @@
    "Mezzanine": "Floor",
    "Bleachers": "Back rows"
   },
-  "side": "Ringside"
+  "side": "Ringside",
+  "priceK": 0.6
  },
  "Rocky IV (1985)": {
   "venue": "Balboa House Kitchen",

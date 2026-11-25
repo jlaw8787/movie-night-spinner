@@ -181,7 +181,7 @@ const PAPER=[
   {bg:"#f2ebdc",fox:[140,125,100],fib:[110,100,86],ink:"#1b1814"}
 ];
 const VOICE={
-  gritty:{k:"Hot grub, no credit",w:"Wanted for supper",c:"When the bell rings"},
+  gritty:{k:"Hot grub, no credit",w:"Wanted for supper",c:"Supper bell"},
   glossy:{k:"Fine dining west of the river",w:"Wanted at the table",c:"Served promptly"},
   warm:{k:"Hot meals, warm welcome",w:"Wanted at the table",c:"Supper bell"},
   eerie:{k:"Open past midnight",w:"Last seen at supper",c:"When the lamps go low"},

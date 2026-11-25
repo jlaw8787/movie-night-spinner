@@ -307,7 +307,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     <div data-box style="position:absolute;left:34px;top:1098px;width:532px;height:84px;overflow:hidden;border-top:3px double ${C.ink};padding-top:6px;box-sizing:border-box">
       <div data-fs="17" data-min="14" style="font:${ty.bw} 17px ${ty.body};line-height:1.25"><b style="font-weight:${ty.cw};color:${C.ink};letter-spacing:.1em;text-transform:uppercase">Ring the gong:</b> ${T(ctx.f.P||"Serve the mains when the torches are lit.")}</div>
-      <div style="font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.82;margin-top:2px"><span data-fs="15" data-min="14">Poster and stills: TMDB.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":(window.winkSaid||(()=>false))(F.winks[0])?(fam?"Overheard on the island: ":"Overheard at the bar: "):(fam?"Tiki talk: ":"Bar talk: ")}${T(w)}.</span>`).join("")}</div>
+      <div style="font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.82;margin-top:2px"><span data-fs="15" data-min="14">Poster and stills: TMDB.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":(window.winkSaid||(()=>false))(F.winks[0])?(fam?"Overheard on the island: ":!(/\b(bar|lounge|tiki|club|grog|luau)\b/i.test(String(F.venue||"")))?"Overheard: ":"Overheard at the bar: "):(fam?"Tiki talk: ":(/\b(bar|lounge|tiki|club|grog|luau)\b/i.test(String(F.venue||"")))?"Bar talk: ":"Word around here: ")}${T(w)}.</span>`).join("")}</div>
     </div>
     ${wearLayer(P,tone,seed+20,true)}
   </div>`;

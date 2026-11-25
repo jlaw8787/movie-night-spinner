@@ -110,6 +110,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const f=ctx.f||{},E=LK?Object.assign({},ERA[eraGroup(ctx.era||"modern")],LK):ERA[eraGroup(ctx.era||"modern")],T=LK?Object.assign({},TONE[ctx.tone]||TONE.grand,LK.kick?{kick:LK.kick}:{},LK.toast?{toast:LK.toast}:{}):TONE[ctx.tone]||TONE.grand,root=rootPath(ctx);
   loadFonts(ID+"-"+eraGroup(ctx.era||"modern")+(LK&&LK.fonts?"-"+LK.fonts.join("-"):""),E.fonts.concat(["Pinyon+Script"]));
   const fam=isFamily(f),fl=ctx.flavour||null,menu=ctx.menu||{};
+  /* review 52: a flat or a family house is no banquet hall (Thor: The Dark World's Greenwich flat) */const homeB=/\b(flat|house|home|kitchen|apartment|loft|cottage)\b/i.test(String(fl&&fl.venue||""))&&!/\b(hall|palace|great house|manor|white house|summit)\b/i.test(String(fl&&fl.venue||""));
   /* the showtime cue on the front, under the toasts (8 Nov: banquet never printed it; the back is too full on some films) */
   const cueB=clean(fam?dry(f.P||""):(f.P||"")).trim();
   const D=dry;const txt=s=>fam?D(s):clean(s);
@@ -203,7 +204,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:600 16px/1.2 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">From the host</div>
      <div style="font:italic ${E.bodyW} 1em/1.34 ${E.body}">${esc(sent(note.t))}</div>
      <div style="font:400 1.6em/1.1 'Pinyon Script',cursive;color:${ACC};text-align:right;margin-top:.1em">${esc(note.by)}</div></div>
-   <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(fl&&fl.year||f.year)} &nbsp;·&nbsp; Covers laid for ${esc(String(fl&&fl.covers||4))}</div>`;
+   <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(fl&&fl.year||f.year)} &nbsp;·&nbsp; ${homeB?"Places set for":"Covers laid for"} ${esc(String(fl&&fl.covers||4))}</div>`;
 
   /* ---------- back: courses in procession ---------- */
   /* review 37: a card that pours nothing alcoholic has no cellar (The Hobbit, The Wizard of Oz) */const DRY=!((ctx.menu&&ctx.menu.d)||[]).some(it=>it&&/\b(wine|ale|beer|mead|cider|rum|whisk(e)?y|brandy|gin|vodka|champagne|prosecco|sherry|port|liqueur|cocktail|martini|punch with|bourbon|sake|lager|stout|claret|grog)\b/i.test((it.n||"")+" "+(it.note||"")));
@@ -234,7 +235,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* the footer gets two lines of room above the photo, so the credit never sits under it */
   const back=`${stock()}${border()}
    <div data-pvzoom="40,30,736,672" aria-hidden="true" style="position:absolute;left:40px;top:30px;width:736px;height:672px;pointer-events:none"></div>
-   <div style="position:absolute;left:60px;right:60px;top:50px">${kick("The courses in procession")}</div>
+   <div style="position:absolute;left:60px;right:60px;top:50px">${kick(homeB?"Tonight's courses":"The courses in procession")}</div>
    <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${FORMAL?"Bill of Fare":"Tonight's Feast"}</div>
    <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:64px;right:64px;top:${heavy?136:150}px;height:${heavy?470:454}px;overflow:hidden;font-size:${heavy?20:28}px;text-align:center;display:flex;flex-direction:column">
      <div style="margin:auto 0">${courses}</div></div>

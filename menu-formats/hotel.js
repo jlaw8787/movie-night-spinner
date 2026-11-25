@@ -237,6 +237,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const inkSpread=P.ink?`text-shadow:0 0 ${P.ink}px ${rgba(K.ink,.55)};`:"";
   const dispStyle=`font-family:${D};font-weight:${L.dw};letter-spacing:${L.ls};${L.caps?"text-transform:uppercase;":""}`;
   const room=F.num||("4"+yy);
+  /* review 52: no room TV before about 1950 (Some Like It Hot's 1929 Seminole Ritz, The Water Diviner's 1919 Istanbul) */
+  const preTV=era===0||/^1[89]\d\d|^19[0-4]|^1[89]00s|^19[0-4]0s|1930s-40s/.test(String((ctx.f._lib&&ctx.f._lib.flavour&&ctx.f._lib.flavour.priceEra)||(ctx.flavour&&ctx.flavour.priceEra)||""));
   const gold=T.gilt||era===0||era===6;
   const rule=gold?"#b48a35":K.acc;
   const face=inner=>`<div data-fmtface="${ID}" style="position:absolute;inset:0;width:${W}px;height:${H}px;overflow:hidden;background:${paper};color:${K.ink};font-family:${B}">
@@ -311,7 +313,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const menuBox=`<div data-fbox style="position:absolute;left:48px;right:48px;top:${secH+84}px;bottom:150px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:48px;right:48px;bottom:36px;height:100px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:10px">
-    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">${F.trayOk?"A tray charge applies to every order. ":""}${F.home?"":"Prices subject to change. "}${fm?"Soft drinks only. ":""}${wk?(F.home?"On screen tonight: ":"On the TV in your room: ")+esc(wk)+". ":""}${F.home?"":`Form RS ${esc(room)}. `}Images: TMDB.</div></div>`;
+    <div data-fs="14" style="font:400 16px/1.38 ${B};color:${K.soft}">${F.trayOk?"A tray charge applies to every order. ":""}${F.home?"":"Prices subject to change. "}${fm?"Soft drinks only. ":""}${wk?(F.home?"On screen tonight: ":preTV?"Talk in the lobby: ":"On the TV in your room: ")+esc(wk)+". ":""}${F.home?"":`Form RS ${esc(room)}. `}Images: TMDB.</div></div>`;
   const back=face(second+prop+menuBox+fine);
   FX.schedule(fontsP);
   return{w:W,h:H,faces:[front,back]};

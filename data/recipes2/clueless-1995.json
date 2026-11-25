@@ -213,11 +213,11 @@
    "af": true
   },
   {
-   "n": "Tai's makeover sushi bowls",
+   "n": "Tai's makeover California rolls",
    "course": "m",
-   "prep_min": 30,
+   "prep_min": 35,
    "cook_min": 25,
-   "make_ahead": "Cook and season the rice up to 3 hours ahead, covered at room temperature; mix the dressing up to 2 days ahead and slice the salmon and avocado just before serving",
+   "make_ahead": "Cook and season the rice up to 3 hours ahead, covered at room temperature; roll just before serving",
    "ingredients": [
     {
      "q": 300,
@@ -238,9 +238,15 @@
      "aisle": "Pantry"
     },
     {
-     "q": 400,
+     "q": 6,
+     "u": "",
+     "item": "nori sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
      "u": "g",
-     "item": "sashimi salmon",
+     "item": "crab sticks",
      "aisle": "Seafood"
     },
     {
@@ -256,12 +262,6 @@
      "aisle": "Produce"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "frozen edamame",
-     "aisle": "Frozen"
-    },
-    {
      "q": 4,
      "u": "tbsp",
      "item": "pickled ginger",
@@ -272,133 +272,28 @@
      "u": "tbsp",
      "item": "soy sauce",
      "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "sesame oil",
-     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Rinse and cook the rice, then season with the rice vinegar and sugar and cool slightly.",
+     "text": "Rinse and cook the rice, then season with the rice vinegar and sugar and cool.",
      "min": 25
     },
     {
-     "text": "Slice the salmon, avocados and cucumber. Cook the edamame.",
-     "min": 10
+     "text": "Cut the avocados and cucumber into long strips.",
+     "min": 5
     },
     {
-     "text": "Mix the soy with the sesame oil.",
-     "min": 1
+     "text": "Spread rice over each nori sheet on a bamboo mat, lay crab, avocado and cucumber along one edge and roll up firmly.",
+     "min": 20
     },
     {
-     "text": "Top bowls of rice with salmon, avocado, cucumber, edamame and pickled ginger and dress.",
+     "text": "Slice each roll into 8 and serve with soy and pickled ginger.",
      "min": 5
     }
    ],
    "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Tai's makeover sushi bowls with tofu",
-     "prep_min": 25,
-     "cook_min": 25,
-     "make_ahead": "Fry the tofu up to 1 day ahead and chill it; cook the rice up to 3 hours ahead, covered, and slice the avocado just before serving",
-     "ingredients": [
-      {
-       "q": 300,
-       "u": "g",
-       "item": "sushi rice",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "rice vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 400,
-       "u": "g",
-       "item": "firm tofu, cubed",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "avocados",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "Lebanese cucumber",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "frozen edamame",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "pickled ginger",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "sesame oil",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Rinse and cook the rice, then season with the rice vinegar and sugar and cool slightly.",
-       "min": 25
-      },
-      {
-       "text": "Fry the tofu in the vegetable oil until golden, then splash with a little of the soy sauce.",
-       "min": 10
-      },
-      {
-       "text": "Slice the avocados and cucumber. Cook the edamame.",
-       "min": 8
-      },
-      {
-       "text": "Mix the rest of the soy with the sesame oil.",
-       "min": 1
-      },
-      {
-       "text": "Top bowls of rice with tofu, avocado, cucumber, edamame and pickled ginger and dress.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
+   "af": true
   },
   {
    "n": "Amber's pastel cupcakes",

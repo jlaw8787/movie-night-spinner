@@ -500,109 +500,43 @@
    "af": true
   },
   {
-   "n": "Lemon shandy",
+   "n": "Fresh-squeezed lemonade",
    "course": "d",
-   "prep_min": 15,
-   "cook_min": 15,
-   "make_ahead": "Juice the lemons and mix with the syrup up to 1 day ahead in the fridge; add soda water and lager to pour",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make the lemon syrup up to a day ahead; top with soda to serve",
    "ingredients": [
     {
-     "q": 4,
+     "q": 6,
      "u": "",
      "item": "lemons",
      "aisle": "Produce"
     },
     {
      "q": 100,
-     "u": "ml",
-     "item": "sugar syrup",
+     "u": "g",
+     "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 750,
+     "q": 800,
      "u": "ml",
      "item": "soda water",
      "aisle": "Drinks"
-    },
-    {
-     "q": 1.32,
-     "u": "l",
-     "item": "lager, cold",
-     "aisle": "Bottle shop"
     }
    ],
    "steps": [
     {
-     "text": "Juice the lemons and mix the juice with the syrup, then chill.",
-     "min": 5
-    },
-    {
-     "text": "Chill four pint glasses in the freezer.",
-     "min": 15
-    },
-    {
-     "text": "Pour some lemon mix into each glass, add soda water, then top slowly with cold lager.",
+     "text": "Stir the juice of 5 lemons with the sugar until it dissolves.",
      "min": 3
     },
     {
-     "text": "Stir once and add a lemon wheel. Use extra soda water and lemon for anyone driving.",
-     "min": 2
+     "text": "Pour over ice in 4 tall glasses, top with soda and add a lemon wheel.",
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Callahan lemon shandy (alcohol-free)",
-     "prep_min": 15,
-     "cook_min": 10,
-     "make_ahead": "Juice the lemons and mix with the syrup up to 1 day ahead in the fridge; add soda water and alcohol-free lager to pour",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "lemons",
-       "aisle": "Produce"
-      },
-      {
-       "q": 100,
-       "u": "ml",
-       "item": "sugar syrup",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 750,
-       "u": "ml",
-       "item": "soda water",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1.32,
-       "u": "l",
-       "item": "alcohol-free lager, cold",
-       "aisle": "Drinks"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Juice three of the lemons, cut the last into wheels and mix the juice with the syrup, then chill.",
-       "min": 5
-      },
-      {
-       "text": "Chill four pint glasses in the freezer.",
-       "min": 15
-      },
-      {
-       "text": "Pour some lemon mix into each glass, add soda water, then top slowly with cold alcohol-free lager.",
-       "min": 3
-      },
-      {
-       "text": "Stir once and add a lemon wheel.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

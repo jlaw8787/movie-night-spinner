@@ -538,155 +538,55 @@
    "af": true
   },
   {
-   "n": "Gator's whiskey sour",
+   "n": "Gator's cherry limeade",
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "Squeeze the lemons and make the sugar syrup up to 2 days ahead in the fridge; shake each drink to order",
+   "make_ahead": "Squeeze the limes ahead; build to serve",
    "ingredients": [
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "bourbon",
-     "aisle": "Bottle shop"
-    },
     {
      "q": 4,
      "u": "",
-     "item": "lemons",
+     "item": "limes",
      "aisle": "Produce"
     },
     {
      "q": 80,
      "u": "ml",
-     "item": "sugar syrup",
-     "aisle": "Pantry"
+     "item": "cherry syrup",
+     "aisle": "Drinks"
     },
     {
-     "q": 2,
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
      "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "aromatic bitters",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 4,
      "u": "",
-     "item": "maraschino cherries",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "cup",
-     "item": "ice",
+     "item": "bag ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "For each drink, put the bourbon, the lemon juice, the sugar syrup and a little egg white in a shaker.",
-     "min": 1
+     "text": "Stir the lime juice with the cherry syrup.",
+     "min": 2
     },
     {
-     "text": "Shake without ice for 10 seconds to build the foam, then add ice and shake hard for 10 seconds more.",
-     "min": 1
-    },
-    {
-     "text": "Strain over fresh ice in a rocks glass.",
-     "min": 1
-    },
-    {
-     "text": "Add a few drops of aromatic bitters on the foam and a cherry.",
-     "min": 1
-    },
-    {
-     "text": "For non-drinkers, swap the bourbon for cold black tea.",
-     "min": 1
+     "text": "Pour over crushed ice, top with soda and add a cherry.",
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Gator's lemon sour",
-     "prep_min": 5,
-     "cook_min": 12,
-     "make_ahead": "Steep and chill the vanilla tea up to 2 days ahead in the fridge and squeeze the lemons the day before; shake each drink to order",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "black tea bags",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 0.5,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "lemons",
-       "aisle": "Produce"
-      },
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "sugar syrup",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "maraschino cherries",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the tea bags in the boiling water for 4 minutes, lift out and cool the tea.",
-       "min": 12
-      },
-      {
-       "text": "For each drink, put 50ml of the cold tea, a drop of vanilla, the lemon juice, the sugar syrup and a little egg white in a shaker.",
-       "min": 1
-      },
-      {
-       "text": "Shake without ice for 10 seconds to build the foam, then add ice and shake hard for 10 seconds more.",
-       "min": 2
-      },
-      {
-       "text": "Strain over fresh ice in a rocks glass and add a cherry.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

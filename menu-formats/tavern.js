@@ -165,7 +165,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:400 max(14px,.64em)/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;color:${acc}">A word from ${esc(by)}</div>
     <div data-note="1" style="font:italic 400 max(15px,.8em)/1.25 ${B};color:${ink};margin-top:.1em">"${esc(note||"Wipe your boots, warm your hands and sit where you like. The kettle is always on and the hearth never goes out.")}"</div>
     <div data-drop="1" style="font:400 max(26px,1.3em)/1.05 'Pinyon Script',cursive;color:${ink}">${esc(by)}</div></div>`;
-  if(f.P)flow+=`<div data-drop2="1" style="margin:0 0 .5em;text-align:center;font-size:max(15px,.76em);line-height:1.3;color:${ink}"><span style="font-family:${D};font-weight:${E.dw};color:${acc}">When the bell rings: </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
+  if(f.P)flow+=`<div data-drop2="1" style="margin:0 0 .5em;text-align:center;font-size:max(15px,.76em);line-height:1.3;color:${ink}"><span style="font-family:${D};font-weight:${E.dw};color:${acc}">On cue: </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.64em);line-height:1.3;color:${ink}"><span style="letter-spacing:.16em;text-transform:uppercase;color:${acc}">${winks.every((window.winkSaid||(()=>false)))?"Heard by the fire":"Talk by the fire"} </span>${winks.map(esc).join(` ${E.orn} `)}</div>`;
 

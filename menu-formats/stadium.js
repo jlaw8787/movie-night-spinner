@@ -171,11 +171,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),tx=s=>fam?dry(s):clean(s);
   const fl=ctx.flavour||{};
   const title=clean(f.title||"Tonight's Feature"),year=f.year||"";
-  const venue=clean(fl.venue||(title.length<=22?title+" Concessions":"Stadium Concessions")),sign=clean(fl.sign||t.gate);
-  const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Manager"}:{text:"Grab a seat, grab a bite, and stay for the whole game. The stands are open till the final whistle.",by:"The Stand Manager"};
+  const venue=clean(fl.venue||(title.length<=22?title+" Concessions":"Stadium Concessions")),sign=clean(fl.sign||t.gate);/* review 52: wh() below swaps whistle for bell at a fight */
+  const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Manager"}:{text:"Grab a seat, grab a bite, and stay for the whole game. The stands are open till the final "+(/ring|kumite|boxing|spectrum/i.test(String(fl.side||"")+" "+String(fl.venue||""))?"bell":"whistle")+".",by:"The Stand Manager"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   /* review 44: a locker room, box or clubhouse has no aisles and no hawkers (Space Jam) */
   const inRoom=/\b(locker|room|backstage|suite|clubhouse|office|bus|dugout|garage|gym|house|home|kitchen|tent)\b/i.test(String(fl.venue||"")+" "+String(fl.sign||""));
+  /* review 52: a fight is called by a bell, not a whistle (Rocky, Bloodsport); a big screen only where one fits (not before the 1980s, not in a locker room, camp, pit or hall) */
+  const fight=/ring|kumite|boxing|spectrum/i.test(String(fl.side||"")+" "+venue),wh=s=>fight?String(s).replace(/whistle/g,"bell"):s;
+  const bigOK=!inRoom&&ei>=Math.max(0,ERAS.findIndex(x=>/198|80s/.test(x)))&&!/\b(camp|pit|pitch|driveway|hall|gym)\b/i.test(venue)&&!/^1[89]|^19[0-7]/.test(String(fl.priceEra||""));
+  const screenLab=bigOK?"On the big screen tonight":/locker/i.test(venue)?"Locker room talk":/camp/i.test(venue)?"Talk at camp":/\b(hall|expo)\b/i.test(venue)?"Talk in the hall":inRoom?"Talk in the room":fight?"Talk at ringside":"Talk in the stands";
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"General Admission",lines:["Good for one game","Keep this stub"]};
   const num=String(fl.number||"").replace(/\D/g,"")||(String(year).slice(-2)==="00"?String(year):String(year).slice(-2))||"7";
   const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
@@ -244,7 +248,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="display:flex;justify-content:space-between;margin-top:9px;font:700 15px/1.2 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase"><span>${SB[4]} ${esc(num.slice(0,6))}</span><span>Now serving: ${esc(C[0]?C[0][1]:"Snacks")}</span></div></div>`;
   /* the showtime cue (15 Nov, Josh: stadium never printed it): a ticker under the scoreboard, in the board's own lights */
   const cueTxt=clean(f.P||"").trim();
-  const cueTick=cueTxt?`<div data-cue style="margin-top:8px;display:flex;align-items:center;gap:12px;padding:7px 14px;background:${cellBg};border:2px solid ${e.board==="manual"?"#1a3022":"#2a2a2a"};box-shadow:0 3px 10px rgba(0,0,0,.3)"><span style="flex:none;font:700 14px/1.2 ${BF};letter-spacing:.14em;color:${e.board==="manual"?B.lab:acc};text-transform:uppercase">On the big screen</span><span style="flex:1;min-width:0;font:600 15px/1.25 ${BF};color:${B.dig};text-shadow:${B.glow};${clamp(2)}">${esc(cueTxt)}</span></div>`:"";
+  const cueTick=cueTxt?`<div data-cue style="margin-top:8px;display:flex;align-items:center;gap:12px;padding:7px 14px;background:${cellBg};border:2px solid ${e.board==="manual"?"#1a3022":"#2a2a2a"};box-shadow:0 3px 10px rgba(0,0,0,.3)"><span style="flex:none;font:700 14px/1.2 ${BF};letter-spacing:.14em;color:${e.board==="manual"?B.lab:acc};text-transform:uppercase">${bigOK?"On the big screen":"Showtime cue"}</span><span style="flex:1;min-width:0;font:600 15px/1.25 ${BF};color:${B.dig};text-shadow:${B.glow};${clamp(2)}">${esc(cueTxt)}</span></div>`:"";
   /* ticket */
   const sec=(num+"101").slice(0,3),row=(title.replace(/[^A-Z]/gi,"").charAt(0)||"A").toUpperCase(),seat=String(total||1);
   const ticket=`<div style="display:flex;transform:rotate(${t.tilt*.5}deg);background:${darkPaper?"#f2efe6":mix(paper,"#ffffff",.55)};box-shadow:0 3px 10px rgba(0,0,0,.3);border-top:6px solid ${acc};flex:none">
@@ -276,7 +280,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     tiles.push(`<div style="position:absolute;left:${x}px;top:${y}px;width:${tw}px;height:${th}px;overflow:hidden;background:#222;outline:3px solid ${acc}">${srcs[i]===pSrc?`<img src="${pSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:photo(srcs[i],pf,"center 35%",overlay(),[],pSrc)}
       <div style="position:absolute;left:0;top:0;background:${band};color:${bandText};font:${e.dw} 20px/1 ${DF};padding:8px 12px;letter-spacing:.04em">SEC ${100+(i+1)}</div>
       <div style="position:absolute;left:0;right:0;bottom:0;padding:24px 12px 8px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));font:700 15px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:#fbf6ea">${i===3?esc(side):e.secs[i]}</div></div>`)}
-  const mapHead=`<div style="position:absolute;left:${gx}px;top:26px;width:${gw}px">${kick(t.gate,acc,15)}<div style="font:${e.dw} 38px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Section Map</div></div>`;
+  const mapHead=`<div style="position:absolute;left:${gx}px;top:26px;width:${gw}px">${kick(wh(t.gate),acc,15)}<div style="font:${e.dw} 38px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Section Map</div></div>`;
   /* menu */
   const CX=MX+30,CWall=W-CX-34,colGap=26;
   const pr=prices(items,e,ei,egg);
@@ -305,13 +309,13 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="flex:1;font:700 ${tr.d}px/1.15 ${BF};color:${ink};${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.dw} ${tr.d}px/1.15 ${DF};color:${acc};white-space:nowrap">${pr[k][i]}</span></div>
       ${nl?`<div style="font:400 ${tr.n}px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(tr.nl>=4?6:nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
   const colA=C.slice(0,sp.s).map(course).join(""),colB=C.slice(sp.s).map(course).join("");
-  const menuHead=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:26px">${kick(inRoom?"Grab a plate before the whistle.":t.hawk,acc,15)}<div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Concessions</div></div>`;
+  const menuHead=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:26px">${kick(wh(inRoom?"Grab a plate before the whistle.":t.hawk),acc,15)}<div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Concessions</div></div>`;
   const menu=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div>`;
   const nLen=clean(note.text).length,nSize=nLen>120?18:20;
   const noteBox=`<div style="position:absolute;left:${CX}px;width:${CWall}px;bottom:24px;border-top:3px solid ${acc};padding-top:10px">
     <div style="display:flex;gap:18px;align-items:flex-end"><div style="flex:1;font:italic 400 ${nSize}px/1.34 ${BF};color:${ink};${clamp(3)}">"${esc(note.text)}"</div>
     <div style="flex:none;font:400 ${ei<2?38:34}px/1 ${SF};color:${acc};max-width:230px;text-align:right">${esc(note.by)}</div></div>
-    ${winks.length?`<div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:8px;${clamp(1)}">On the big screen tonight: ${esc(winks.slice(0,2).join(". "))}.</div>`:""}
+    ${winks.length?`<div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:8px;${clamp(1)}">${screenLab}: ${esc(winks.slice(0,2).join(". "))}.</div>`:""}
     <div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:4px">Prices subject to change.${fam?" Soft drinks only.":""} ${esc(title.length>40?"":title+", "+year+". ")}Images: TMDB.</div></div>`;
   const back=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${mapHead}${tiles.join("")}<div style="position:absolute;left:${MX}px;top:30px;bottom:30px;width:2px;background:${mix(ink,paper,.7)}"></div>${menuHead}${menu}${noteBox}</div>`;
   return {w:W,h:H,faces:[front,back]};

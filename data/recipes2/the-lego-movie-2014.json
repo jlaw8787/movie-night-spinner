@@ -657,44 +657,42 @@
    "af": true
   },
   {
-   "n": "Overpriced $37 hot chocolate",
+   "n": "Overpriced $37 coffee",
    "course": "d",
    "prep_min": 3,
-   "cook_min": 10,
-   "make_ahead": "Grate the chocolate up to a day ahead; heat to serve",
+   "cook_min": 8,
+   "make_ahead": "Brew and froth to serve",
    "ingredients": [
     {
-     "q": 1,
-     "u": "l",
+     "q": 500,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
      "item": "milk",
      "aisle": "Dairy"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "milk chocolate, chopped",
-     "aisle": "Pantry"
-    },
-    {
      "q": 1,
      "u": "tbsp",
-     "item": "cocoa powder, plus extra to dust",
+     "item": "cocoa powder",
      "aisle": "Pantry"
-    },
-    {
-     "q": 125,
-     "u": "ml",
-     "item": "thickened cream, whipped",
-     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Heat the milk until steaming, then whisk in the chocolate and cocoa until smooth.",
-     "min": 10
+     "text": "Brew the coffee strong.",
+     "min": 5
     },
     {
-     "text": "Pour into 4 mugs, top with whipped cream and dust with cocoa.",
+     "text": "Heat the milk until steaming and froth it.",
+     "min": 3
+    },
+    {
+     "text": "Pour the coffee into 4 big mugs, top with the milk and foam, and dust with cocoa.",
      "min": 3
     }
    ],

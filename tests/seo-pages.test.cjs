@@ -24,7 +24,7 @@ for(const f of films){
   assert.ok(locs.has(`https://reeldinner.com/menu/${s}/`),`${id}: missing from sitemap.xml`);
   assert.ok(index.includes(`href="/menu/${s}/"`),`${id}: missing from the A to Z index`);
   assert.ok(h.includes(`<link rel="canonical" href="https://reeldinner.com/menu/${s}/">`),`${id}: canonical`);
-  assert.ok(/<title>[^<]+ (movie night (dinner )?)?menu( \| Reel Dinner)?<\/title>/.test(h),`${id}: title`);
+  assert.ok(/<title>[^<]+ \(\d{4}\) movie night menu<\/title>/.test(h),`${id}: title (review 52: one format, with the year)`);
   const desc=((h.match(/<meta name="description" content="([^"]*)"/)||[])[1]||'').replace(/&(amp|quot|lt|gt);/g,'_');
   assert.ok(desc.length>50&&desc.length<=155,`${id}: description length ${desc.length}`);
   /* review 30: never cut mid-word ("Recipes for 4, a...") */
@@ -48,7 +48,7 @@ for(const f of films){
   assert.ok(!/cook \d{4,} min/.test(h),`${d}: cook time in thousands of minutes`);
   for(const m of h.matchAll(/"cookTime":"PT(\d+)M"/g))assert.ok(+m[1]<=12*60,`${d}: cookTime ${m[1]} min`);
   const t=(h.match(/<title>([^<]*)<\/title>/)||[])[1]||'';if(t.replace(/&amp;/g,'&').length>60)long++}
- assert.ok(long<=8,`${long} film page titles over 60 characters`)}
+ /* review 52: one title format with the year; only film names over 36 characters run past 60 */assert.ok(long<=50,`${long} film page titles over 60 characters`)}
 for(const t of fs.readdirSync(path.join(root,'menu/theme'))){const h=fs.readFileSync(path.join(root,'menu/theme',t,'index.html'),'utf8');assert.ok(!/\b[Aa] [AEIOU][a-z]/.test(h.replace(/<[^>]+>/g,' ')),`theme ${t}: a before a vowel`)}
 for(const f of ['menu/index.html','sitemap.xml','robots.txt'])assert.ok(!/\u2014/.test(fs.readFileSync(path.join(root,f),'utf8')),`${f}: em dash`);
 console.log(`PASS: ${films.length} film pages, ${locs.size} sitemap URLs, ${recipes} recipes with structured data, no em dashes.`);

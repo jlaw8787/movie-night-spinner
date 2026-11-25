@@ -745,110 +745,37 @@
    "af": true
   },
   {
-   "n": "Every pair sold old fashioned",
+   "n": "Every pair sold Coke float",
    "course": "d",
-   "prep_min": 5,
+   "prep_min": 3,
    "cook_min": 0,
-   "make_ahead": "Make the sugar syrup up to a week ahead; stir to order",
+   "make_ahead": "Chill the Coke; build to serve",
    "ingredients": [
     {
-     "q": 240,
-     "u": "ml",
-     "item": "bourbon",
-     "aisle": "Bottle shop"
+     "q": 1.5,
+     "u": "l",
+     "item": "Coca-Cola, chilled",
+     "aisle": "Drinks"
     },
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "sugar syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "dashes Angostura bitters",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "wide strips orange peel",
-     "aisle": "Produce"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "dark cocktail cherries",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "cup",
-     "item": "ice",
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Stir the bourbon, syrup and bitters with ice until very cold.",
+     "text": "Put 2 scoops of ice cream in each of 4 tall glasses.",
      "min": 2
     },
     {
-     "text": "Strain over fresh ice in 4 short glasses.",
-     "min": 1
-    },
-    {
-     "text": "Twist the orange peel over each glass and drop in with a cherry.",
-     "min": 2
+     "text": "Pour the cold Coke slowly down the side so it foams, and serve with a long spoon and a straw.",
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Every pair sold cherry cola (alcohol-free)",
-     "course": "d",
-     "prep_min": 5,
-     "cook_min": 0,
-     "make_ahead": "Chill the cola; build to order",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "l",
-       "item": "cola, chilled",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "wide strips orange peel",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "dark cocktail cherries, plus 2 tbsp of their syrup",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Fill 4 short glasses with ice and add the cherry syrup.",
-       "min": 2
-      },
-      {
-       "text": "Top with cola, twist in the orange peel and add a cherry.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

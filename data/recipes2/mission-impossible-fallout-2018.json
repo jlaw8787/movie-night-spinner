@@ -708,145 +708,43 @@
    "af": true
   },
   {
-   "n": "White Widow's French 75",
+   "n": "White Widow's lemon fizz",
    "course": "d",
-   "prep_min": 7,
-   "cook_min": 20,
-   "make_ahead": "Make and cool the sugar syrup up to 1 week ahead and chill the flutes and wine; shake to order",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the lemons ahead; shake to serve",
    "ingredients": [
     {
-     "q": 40,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 40,
-     "u": "ml",
-     "item": "hot water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 120,
-     "u": "ml",
-     "item": "gin",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 2,
+     "q": 4,
      "u": "",
-     "item": "lemons, juiced",
+     "item": "lemons",
      "aisle": "Produce"
     },
     {
-     "q": 2,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Drinks"
     },
     {
      "q": 500,
      "u": "ml",
-     "item": "sparkling wine, chilled",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lemon, peeled into long twists",
-     "aisle": "Produce"
+     "item": "sparkling mineral water",
+     "aisle": "Drinks"
     }
    ],
    "steps": [
     {
-     "text": "Stir the sugar into the hot water until dissolved, then cool.",
-     "min": 20
-    },
-    {
-     "text": "Shake the gin, lemon juice and syrup hard with ice.",
-     "min": 2
-    },
-    {
-     "text": "Strain into four chilled flutes and top with sparkling wine.",
+     "text": "Shake the lemon juice and syrup with ice and strain into 4 flutes.",
      "min": 3
     },
     {
-     "text": "Twist a strip of lemon peel over each glass and drop it in.",
+     "text": "Top with sparkling water and add a long lemon twist.",
      "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "White Widow's French 75 (alcohol-free)",
-     "prep_min": 7,
-     "cook_min": 20,
-     "make_ahead": "Make and cool the sugar syrup up to 1 week ahead and chill the flutes and sparkling; shake to order",
-     "ingredients": [
-      {
-       "q": 40,
-       "u": "g",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 40,
-       "u": "ml",
-       "item": "hot water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 120,
-       "u": "ml",
-       "item": "non-alcoholic gin",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "lemons, juiced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 500,
-       "u": "ml",
-       "item": "alcohol-free sparkling wine, chilled",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lemon, peeled into long twists",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Stir the sugar into the hot water until dissolved, then cool.",
-       "min": 20
-      },
-      {
-       "text": "Shake the non-alcoholic gin, lemon juice and syrup hard with ice.",
-       "min": 2
-      },
-      {
-       "text": "Strain into four chilled flutes and top with the alcohol-free sparkling wine.",
-       "min": 3
-      },
-      {
-       "text": "Twist a strip of lemon peel over each glass and drop it in.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

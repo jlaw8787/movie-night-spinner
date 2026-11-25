@@ -533,109 +533,43 @@
    "af": true
   },
   {
-   "n": "Brain's bathtub moonshine sour",
+   "n": "Brain's jam jar lemonade",
    "course": "d",
-   "prep_min": 8,
+   "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "Mix the base up to 4 hours ahead",
+   "make_ahead": "Squeeze the lemons ahead; shake to serve",
    "ingredients": [
     {
-     "q": 240,
-     "u": "ml",
-     "item": "corn or white whiskey",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 3,
+     "q": 4,
      "u": "",
      "item": "lemons",
      "aisle": "Produce"
     },
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "caster sugar",
-     "aisle": "Pantry"
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Drinks"
     },
     {
-     "q": 4,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
     }
    ],
    "steps": [
     {
-     "text": "Juice the lemons and stir the sugar into the juice with a little warm water.",
-     "min": 3
+     "text": "Shake the lemon juice and syrup with ice.",
+     "min": 2
     },
     {
-     "text": "Shake the whiskey with the lemon mix and ice, then strain into 4 ice-filled jam jars. Top up with lemonade and lemon for anyone not drinking.",
-     "min": 5
+     "text": "Strain into 4 ice-filled jam jars and top with soda.",
+     "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Brain's bathtub moonshine sour (alcohol-free)",
-     "prep_min": 8,
-     "cook_min": 15,
-     "make_ahead": "Mix the base up to 4 hours ahead",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "",
-       "item": "green tea bags",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 250,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "lemons",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "caster sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 30,
-       "u": "ml",
-       "item": "warm water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the tea bags in the boiling water for 3 minutes, lift them out and chill.",
-       "min": 15
-      },
-      {
-       "text": "Juice the lemons and stir the sugar into the juice with the warm water.",
-       "min": 3
-      },
-      {
-       "text": "Shake the tea with the lemon mix and ice, then strain into 4 ice-filled jam jars.",
-       "min": 5
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }
