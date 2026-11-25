@@ -42,10 +42,10 @@ const HOUSE = (() => { try { return rj('data/film-house.json'); } catch (e) { re
 /* review 40: hand-built one-offs, as their card and phone menu print them (render-previews saves it) */
 const CARD_HB = (() => { try { return rj('data/card-print-hb.json'); } catch (e) { return {}; } })();
 /* review 45: a hand-built menu's own name (its spec brand: Louis', Sal's Famous Pizzeria) for the page's "The menu comes from" line */
+const HB_VENUE = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; } const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.venue === 'string' && spec.venue.trim()) out[id] = spec.venue.trim(); return out; })();
 const HB_BRAND = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
   const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.venue === 'string' && spec.venue.trim()) out[id] = spec.venue.trim(); else if (spec && typeof spec.brand === 'string' && spec.brand.trim()) out[id] = spec.brand.trim(); return out; })();
 /* review 52: a hand-built spec's "venue" is the place its card prints (Chez Bippy, Lou's Cafe), set by hand, so its page always names it */
-const HB_VENUE = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; } const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) if (spec && typeof spec.venue === 'string' && spec.venue.trim()) out[id] = spec.venue.trim(); return out; })();
 const HB_NAMES = (() => { const vm = require('vm'), ctx = { ESC: x => x }; vm.createContext(ctx); try { vm.runInContext(rd('formats.js') + ';this.F=FMT_FILMS;', ctx); } catch (e) { return {}; }
   const out = {}; for (const [id, spec] of Object.entries(ctx.F || {})) { const m = {}; const walk = v => { if (Array.isArray(v)) v.forEach(walk); else if (v && typeof v === 'object') { if (typeof v.k === 'string' && typeof v.n === 'string' && v.n.trim() && v.n !== v.k) m[v.k.toLowerCase()] = v.n; Object.values(v).forEach(walk); } }; walk(spec); if (Object.keys(m).length) out[id] = m; }
   return out; })();
@@ -124,7 +124,7 @@ const ALL = films.map((f, i) => {
         prep_min: (r.ing || []).length ? was.prep_min : undefined, cook_min: (r.ing || []).length ? was.cook_min : undefined, wait_min: was.wait_min, veg: !!was.veg, af: !!was.af, _T: (r.ing || []).length && (was.prep_min || was.cook_min) ? dishTimes(was, 1) : null }; });
     if (keep.length) { dishes.length = 0; dishes.push(...keep); } } }
   if (dry) for (let i = 0; i < dishes.length; i++) dishes[i] = dryDish(dishes[i]);
-  return { i, id, s, ds, f, d, shown, venue: fl.venue || HB_BRAND[id] || '', hb: !fl.venue && !!HB_BRAND[id], theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
+  return { i, id, s, ds, f, d, shown, venue: HB_VENUE[id] || fl.venue || HB_BRAND[id] || '', hb: !!HB_VENUE[id] || (!fl.venue && !!HB_BRAND[id]),/* review 52: a hand-built card's own venue wins over an old flavour venue (Friday, Pelham) */ theme: f.theme, genres: GENRES[id] || [], poster: POSTERS[id] || '', dishes,
     preview: fs.existsSync(path.join(ROOT, 'assets/menu-previews', ds + '.jpg')) ? jpgSize(path.join(ROOT, 'assets/menu-previews', ds + '.jpg')) : null };
 });
 const BY_THEME = {}; for (const x of ALL) (BY_THEME[x.theme] = BY_THEME[x.theme] || []).push(x);
