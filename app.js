@@ -1749,7 +1749,7 @@ function shopTidy3(L){const at=l=>l.slice(l.lastIndexOf("@")),tx=l=>l.slice(0,l.
    "4 cans German lager", "80g egg" beside "2 eggs", "1 drop" and "1 tsp" of a food colouring, a bare "nutmeg" beside a jar of it.
    Only words that never change the buy fold away (extra virgin, whole egg, small, baby, good, junmai, peated, German...), so tinned and fresh,
    light and dark soy, dried and fresh herbs stay apart. A pack covers a spoonful of the same thing; packs and measures of a sized pack add up */
-const SHOP4_ADJ=/\b(?:extra virgin|whole egg|good(?: quality)?|junmai|peated|single malt|blended|scotch|german|chopped(?= dill)|ground(?= nutmeg)|crushed(?= candy)|good)\s+/gi;
+const SHOP4_ADJ=/\b(?:extra virgin|whole egg|good(?: quality)?|junmai|peated|single malt|blended|scotch|german|chopped(?= dill)|ground(?= nutmeg)|crushed(?= candy)|light(?= soy)|frozen(?= (?:puff|shortcrust|filo))|good)\s+/gi;
 const SHOP4_EACH={egg:50,"candy cane":12};
 function shopTidy4(L){const at=l=>l.slice(l.lastIndexOf("@")),tx=l=>l.slice(0,l.lastIndexOf("@"));
   const sing=w=>w.replace(/(tomato|potato|mango)es$/,"$1").replace(/ies$/,"y").replace(/([^s])s$/,"$1");
@@ -1776,7 +1776,7 @@ function shopTidy4(L){const at=l=>l.slice(l.lastIndexOf("@")),tx=l=>l.slice(0,l.
       const pk=n>1?(/x$/i.test(p0.pk)?p0.pk.replace(/x$/i,"xes"):/s$/i.test(p0.pk)?p0.pk:p0.pk+"s"):p0.pk.replace(/(x)es$/i,"$1").replace(/s$/i,"");
       line=(p0.fmt==="x"?`${n} x ${size}${su} ${pk} ${name}`:p0.fmt==="each"?`${n} ${pk} ${name}, ${size}ml each`:`${n} ${pk} ${name}`)}
     else if(ms.length&&!cs.length&&ms.every(m=>m.u===ms[0].u)){const q=ms.reduce((a,m)=>a+m.q,0),u=ms[0].u;line=(q>=1000?`${+(q/1000).toFixed(2)}${u==="g"?"kg":"\u00a0L"}`:`${Math.round(q)}${u}`)+" "+name}
-    else if(cs.length&&!packs.length&&ms.every(m=>m.u==="g")&&(!ms.length||SHOP4_EACH[ps[0].key])){const n=cs.reduce((a,c)=>a+c.q,0)+ms.reduce((a,m)=>a+Math.ceil(m.q/SHOP4_EACH[ps[0].key]-0.05),0);const nm=cs[0].it;line=`${n} ${n>1&&!/s$/.test(nm)?nm+"s":nm}`}
+    else if(cs.length&&!packs.length&&ms.every(m=>m.u==="g")&&(!ms.length||SHOP4_EACH[ps[0].key])){const n=cs.reduce((a,c)=>a+c.q,0)+ms.reduce((a,m)=>a+Math.ceil(m.q/SHOP4_EACH[ps[0].key]-0.05),0);const nm=cs[0].it;line=`${n} ${n>1&&!/s$/.test(nm)&&!/^\S+s (of )?/.test(nm)?nm+"s":nm}`}
     else if(sp.length&&!ms.length&&!cs.length&&!packs.length&&/colou?ring|essence|extract|bitters|sauce/i.test(name))line=`1 bottle ${name}`;
     else if(bare.length&&bare.length<g.length){bare.forEach(b=>drop.add(g[ps.indexOf(b)]));continue}
     if(!line)continue;L[i]=line+at(L[i]);for(const x of g.slice(1))drop.add(x)}
