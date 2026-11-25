@@ -167,7 +167,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-drop="1" style="font:400 max(26px,1.3em)/1.05 'Pinyon Script',cursive;color:${ink}">${esc(by)}</div></div>`;
   if(f.P)flow+=`<div data-drop2="1" style="margin:0 0 .5em;text-align:center;font-size:max(15px,.76em);line-height:1.3;color:${ink}"><span style="font-family:${D};font-weight:${E.dw};color:${acc}">When the bell rings: </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
-  if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.64em);line-height:1.3;color:${ink}"><span style="letter-spacing:.16em;text-transform:uppercase;color:${acc}">Heard by the fire </span>${winks.map(esc).join(` ${E.orn} `)}</div>`;
+  if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.64em);line-height:1.3;color:${ink}"><span style="letter-spacing:.16em;text-transform:uppercase;color:${acc}">${winks.every((window.winkSaid||(()=>false)))?"Heard by the fire":"Talk by the fire"} </span>${winks.map(esc).join(` ${E.orn} `)}</div>`;
 
   const MX=PX+PW+40,MY=PY,MH=PH+8;
   const menu=`<div data-fit="26" data-menu="${MX},${W-MX-36}" style="position:absolute;left:${MX}px;top:${MY}px;width:${W-MX-36}px;height:${MH}px;overflow:hidden;font-size:26px">${flow}</div>`;

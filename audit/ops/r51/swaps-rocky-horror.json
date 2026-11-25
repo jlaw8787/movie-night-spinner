@@ -1,0 +1,113 @@
+[
+ {
+  "id": "The Rocky Horror Picture Show (1975)",
+  "old": "Red lips cranberry Cape Codder",
+  "new": {
+   "n": "Red lips cranberry Cape Codder",
+   "note": "Vodka over ice topped with tart cranberry juice and a squeeze of fresh lime.",
+   "how": "Vodka poured over ice and topped with tart cranberry juice and a squeeze of fresh lime. Fill 4 highball glasses with ice. Pour 45ml vodka into each, top with 120ml cranberry juice and squeeze in a lime wedge.",
+   "shop": [
+    "180ml vodka@Bottle shop",
+    "500ml cranberry juice@Drinks",
+    "2 limes@Produce",
+    "1 bag ice@Frozen"
+   ],
+   "af": "Cranberry and white grape juice over ice with a squeeze of fresh lime.",
+   "r2": {
+    "prep_min": 4,
+    "cook_min": 0,
+    "make_ahead": "",
+    "ingredients": [
+     {
+      "q": 180,
+      "u": "ml",
+      "item": "vodka",
+      "aisle": "Bottle shop"
+     },
+     {
+      "q": 500,
+      "u": "ml",
+      "item": "cranberry juice",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "limes, cut into wedges",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "bag",
+      "item": "ice",
+      "aisle": "Frozen"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Fill 4 highball glasses with ice.",
+      "min": 3
+     },
+     {
+      "text": "Pour 45ml vodka into each and top with the cranberry juice.",
+      "min": 3
+     },
+     {
+      "text": "Squeeze in a lime wedge and drop it in.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": false,
+    "alt": {
+     "af": {
+      "n": "Red lips cranberry Cape Codder (alcohol-free)",
+      "prep_min": 4,
+      "cook_min": 0,
+      "make_ahead": "",
+      "ingredients": [
+       {
+        "q": 500,
+        "u": "ml",
+        "item": "cranberry juice",
+        "aisle": "Drinks"
+       },
+       {
+        "q": 200,
+        "u": "ml",
+        "item": "white grape juice",
+        "aisle": "Drinks"
+       },
+       {
+        "q": 2,
+        "u": "",
+        "item": "limes, cut into wedges",
+        "aisle": "Produce"
+       },
+       {
+        "q": 1,
+        "u": "bag",
+        "item": "ice",
+        "aisle": "Frozen"
+       }
+      ],
+      "steps": [
+       {
+        "text": "Fill 4 highball glasses with ice.",
+        "min": 3
+       },
+       {
+        "text": "Pour in the cranberry juice and top with the white grape juice.",
+        "min": 3
+       },
+       {
+        "text": "Squeeze in a lime wedge and drop it in.",
+        "min": 3
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+]

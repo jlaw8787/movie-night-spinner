@@ -303,29 +303,23 @@
    "af": true
   },
   {
-   "n": "Logan's rye and maple old fashioned",
+   "n": "Logan's maple root beer on the rocks",
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "Stir the rye, maple syrup and bitters together up to 2 days ahead in a jar in the fridge; stir over ice and strain to order",
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 240,
-     "u": "ml",
-     "item": "Canadian rye whisky",
-     "aisle": "Bottle shop"
+     "q": 1,
+     "u": "l",
+     "item": "root beer, cold",
+     "aisle": "Drinks"
     },
     {
      "q": 4,
      "u": "tsp",
      "item": "maple syrup",
      "aisle": "Pantry"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "dashes aromatic bitters",
-     "aisle": "Bottle shop"
     },
     {
      "q": 1,
@@ -338,100 +332,24 @@
      "u": "",
      "item": "large ice cubes",
      "aisle": "Frozen"
-    },
-    {
-     "q": 2,
-     "u": "cup",
-     "item": "ice, for stirring",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Stir the rye, maple syrup and bitters over ice in a jug until very cold.",
-     "min": 1
+     "text": "Put one large ice cube in each of 4 heavy tumblers.",
+     "min": 3
     },
     {
-     "text": "Strain into four heavy tumblers over one large ice cube each.",
-     "min": 2
+     "text": "Stir in the maple syrup, pour over the root beer and stir once.",
+     "min": 3
     },
     {
      "text": "Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
-     "min": 2
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Logan's rye and maple old fashioned (alcohol-free)",
-     "prep_min": 5,
-     "cook_min": 15,
-     "make_ahead": "Brew and chill the smoky tea up to 2 days ahead in the fridge; stir with the maple syrup, vanilla and zest over ice to order",
-     "ingredients": [
-      {
-       "q": 3,
-       "u": "",
-       "item": "smoky black tea bags",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tsp",
-       "item": "maple syrup",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 0.5,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "orange",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "large ice cubes",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 2,
-       "u": "cup",
-       "item": "ice, for stirring",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and chill the tea.",
-       "min": 15
-      },
-      {
-       "text": "Stir 240ml of the tea with the maple syrup, vanilla and a strip of orange zest over ice in a jug until very cold.",
-       "min": 1
-      },
-      {
-       "text": "Strain into four heavy tumblers over one large ice cube each.",
-       "min": 2
-      },
-      {
-       "text": "Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

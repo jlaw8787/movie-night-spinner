@@ -1,0 +1,243 @@
+[
+ {
+  "id": "The Shawshank Redemption (1994)",
+  "old": "Rooftop ginger beer shandy",
+  "new": {
+   "n": "Rooftop ginger beer with lime",
+   "note": "Ice-cold spicy ginger beer with fresh ginger coins and lime, in frosted glasses for the tarring crew.",
+   "how": "Ice-cold ginger beer with fresh lime and thin coins of ginger, poured into frosted glasses in the sun. Put 4 glasses in the freezer for 30 minutes. Slice a 3cm knob of ginger into thin coins and cut 2 limes into wedges. Fill each glass with 330ml cold ginger beer, squeeze in a lime wedge and add 2 ginger coins.",
+   "shop": [
+    "1.5L ginger beer@Drinks",
+    "1 knob ginger@Produce",
+    "2 limes@Produce"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 0,
+    "make_ahead": "Freeze the glasses 30 minutes ahead",
+    "ingredients": [
+     {
+      "q": 1.5,
+      "u": "l",
+      "item": "ginger beer, cold",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "knob ginger (3 cm)",
+      "aisle": "Produce"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "item": "limes",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Put 4 glasses in the freezer for 30 minutes.",
+      "min": 0
+     },
+     {
+      "text": "Slice the ginger into thin coins and cut the limes into wedges.",
+      "min": 3
+     },
+     {
+      "text": "Fill each glass with ginger beer, squeeze in a lime wedge and add 2 ginger coins.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "Terminator 2: Judgment Day (1991)",
+  "old": "T-1000 frozen margarita",
+  "new": {
+   "n": "T-1000 frozen lime slushie",
+   "note": "Fresh lime and sugar blended with ice into a silvery slush, salt on the rim, liquid metal in a glass.",
+   "how": "Fresh lime juice, sugar syrup and soda blended with ice into a frosty slush, poured into salt-rimmed glasses with a lime wheel. Rub the rims of 4 glasses with lime and dip in salt. Blend 150ml fresh lime juice, 100ml sugar syrup, 200ml soda water and 4 cups of ice for 30 seconds until smooth and slushy. Pour into the glasses and add a lime wheel to each.",
+   "shop": [
+    "6 limes@Produce",
+    "100ml sugar syrup@Pantry",
+    "250ml soda water@Drinks",
+    "salt flakes@Pantry",
+    "2 bags ice@Frozen"
+   ],
+   "r2": {
+    "prep_min": 8,
+    "cook_min": 0,
+    "make_ahead": "",
+    "ingredients": [
+     {
+      "q": 6,
+      "u": "",
+      "item": "limes",
+      "aisle": "Produce"
+     },
+     {
+      "q": 100,
+      "u": "ml",
+      "item": "sugar syrup",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 200,
+      "u": "ml",
+      "item": "soda water",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "salt flakes",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "cups",
+      "item": "ice",
+      "aisle": "Frozen"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Rub the rims of 4 glasses with lime and dip in salt.",
+      "min": 3
+     },
+     {
+      "text": "Juice 5 limes and slice the last one into wheels.",
+      "min": 4
+     },
+     {
+      "text": "Blend the lime juice, sugar syrup, soda water and ice for 30 seconds until slushy.",
+      "min": 3
+     },
+     {
+      "text": "Pour into the glasses and add a lime wheel to each.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "The Fugitive (1993)",
+  "old": "Big Dog pale ale from Goose Island",
+  "new": {
+   "n": "Green River lime soda for the parade",
+   "note": "Chicago's bright green lime soda over ice with a lime wedge, poured on St Patrick's Day.",
+   "how": "Chicago's own bright green lime soda poured over ice with a squeeze of lime. Chill 4 bottles of Green River or another lime soda. Fill 4 glasses with ice, pour the soda over and push a lime wedge onto each rim.",
+   "shop": [
+    "4 x 355ml bottles Green River or lime soda@Drinks",
+    "1 lime@Produce",
+    "1 bag ice@Frozen"
+   ],
+   "r2": {
+    "prep_min": 4,
+    "cook_min": 0,
+    "make_ahead": "",
+    "ingredients": [
+     {
+      "q": 4,
+      "u": "",
+      "item": "bottles Green River or lime soda (355 ml each), cold",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lime, cut into wedges",
+      "aisle": "Produce"
+     },
+     {
+      "q": 1,
+      "u": "bag",
+      "item": "ice",
+      "aisle": "Frozen"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Fill 4 glasses with ice.",
+      "min": 3
+     },
+     {
+      "text": "Pour the lime soda over and push a lime wedge onto each rim.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ },
+ {
+  "id": "X-Men (2000)",
+  "old": "Logan's rye and maple old fashioned",
+  "new": {
+   "n": "Logan's maple root beer on the rocks",
+   "note": "Root beer stirred with Canadian maple syrup over one big ice cube, a flamed orange twist.",
+   "how": "Cold root beer stirred with a little Canadian maple syrup over one big ice cube, finished with an orange twist. Put one large ice cube in each of 4 heavy tumblers. Stir 1 tsp maple syrup into each, pour over 250ml cold root beer and stir once. Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
+   "shop": [
+    "1L root beer@Drinks",
+    "4 tsp maple syrup@Pantry",
+    "1 orange@Produce",
+    "1 bag large ice cubes@Frozen"
+   ],
+   "r2": {
+    "prep_min": 5,
+    "cook_min": 0,
+    "make_ahead": "",
+    "ingredients": [
+     {
+      "q": 1,
+      "u": "l",
+      "item": "root beer, cold",
+      "aisle": "Drinks"
+     },
+     {
+      "q": 4,
+      "u": "tsp",
+      "item": "maple syrup",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "orange",
+      "aisle": "Produce"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "large ice cubes",
+      "aisle": "Frozen"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Put one large ice cube in each of 4 heavy tumblers.",
+      "min": 3
+     },
+     {
+      "text": "Stir in the maple syrup, pour over the root beer and stir once.",
+      "min": 3
+     },
+     {
+      "text": "Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ }
+]

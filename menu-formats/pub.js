@@ -277,7 +277,7 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
       <div style="position:absolute;right:22px;bottom:18px;font:26px/1.5 ${sig};color:${fit(acc,"#f8f2e3","#1d3a6a",4)}">${esc(trunc(note.by,20))}</div></div>`;
-  const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?sentence(trunc(winks[0],60))+" ":""}Prices subject to change.${AU?` Licence ${num}.`:GB?" Licensed premises.":""}`;
+  const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?((window.winkSaid||(()=>false))(winks[0])?"Overheard at the bar: ":"Bar talk: ")+sentence(trunc(winks[0],60))+" ":""}Prices subject to change.${AU?` Licence ${num}.`:GB?" Licensed premises.":""}`;
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
   const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
 

@@ -1,0 +1,177 @@
+[
+ {
+  "id": "Casablanca (1942)",
+  "old": "Moroccan mint tea",
+  "new": {
+   "n": "Rick's champagne cocktail",
+   "note": "A sugar cube soaked in bitters under ice-cold champagne with a twist of lemon, on the house.",
+   "how": "A sugar cube soaked in aromatic bitters at the bottom of a coupe, topped with ice-cold champagne and a twist of lemon. Chill a bottle of champagne and 4 coupes. Drop a sugar cube into each glass and shake 2 dashes of bitters onto it. Top slowly with champagne and twist a strip of lemon peel over each glass.",
+   "shop": [
+    "1 bottle champagne@Bottle shop",
+    "4 sugar cubes@Pantry",
+    "1 bottle aromatic bitters@Bottle shop",
+    "1 lemon@Produce"
+   ],
+   "af": "A sugar cube soaked in orange zest under ice-cold sparkling apple juice, a twist of lemon.",
+   "r2": {
+    "prep_min": 4,
+    "cook_min": 0,
+    "make_ahead": "",
+    "ingredients": [
+     {
+      "q": 1,
+      "u": "",
+      "item": "bottle champagne, chilled",
+      "aisle": "Bottle shop"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "item": "sugar cubes",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 8,
+      "u": "dashes",
+      "item": "aromatic bitters",
+      "aisle": "Bottle shop"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Chill 4 coupes. Drop a sugar cube into each and shake 2 dashes of bitters onto it.",
+      "min": 3
+     },
+     {
+      "text": "Top slowly with the champagne.",
+      "min": 3
+     },
+     {
+      "text": "Twist a strip of lemon peel over each glass and drop it in.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": false,
+    "alt": {
+     "af": {
+      "n": "Rick's sparkling apple cocktail",
+      "prep_min": 4,
+      "cook_min": 0,
+      "make_ahead": "",
+      "ingredients": [
+       {
+        "q": 750,
+        "u": "ml",
+        "item": "sparkling apple juice, chilled",
+        "aisle": "Drinks"
+       },
+       {
+        "q": 4,
+        "u": "",
+        "item": "sugar cubes",
+        "aisle": "Pantry"
+       },
+       {
+        "q": 1,
+        "u": "",
+        "item": "orange",
+        "aisle": "Produce"
+       },
+       {
+        "q": 1,
+        "u": "",
+        "item": "lemon",
+        "aisle": "Produce"
+       }
+      ],
+      "steps": [
+       {
+        "text": "Chill 4 coupes. Drop a sugar cube into each and grate a little orange zest over it.",
+        "min": 3
+       },
+       {
+        "text": "Top slowly with the sparkling apple juice.",
+        "min": 3
+       },
+       {
+        "text": "Twist a strip of lemon peel over each glass and drop it in.",
+        "min": 3
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": "Crocodile Dundee (1986)",
+  "old": "Walkabout Creek rum and ginger beer",
+  "new": {
+   "n": "Walkabout Creek cold pot",
+   "note": "Ice-cold lager pulled into a frosted pot glass on a beer coaster, outback pub style.",
+   "how": "Ice-cold lager poured into frosted pot glasses, outback pub style. Put 4 pot glasses in the freezer for 30 minutes. Pour the cold lager slowly down the side of each glass, straightening up at the end for a two finger head, and stand each on a beer coaster.",
+   "shop": [
+    "4 x 375ml bottles lager@Bottle shop"
+   ],
+   "af": "Ice-cold alcohol-free lager in a frosted pot glass on a beer coaster.",
+   "r2": {
+    "prep_min": 3,
+    "cook_min": 0,
+    "make_ahead": "Freeze the glasses 30 minutes ahead",
+    "ingredients": [
+     {
+      "q": 4,
+      "u": "",
+      "item": "bottles lager (375 ml each), cold",
+      "aisle": "Bottle shop"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Put 4 pot glasses in the freezer for 30 minutes.",
+      "min": 0
+     },
+     {
+      "text": "Pour the lager slowly down the side of each glass, straightening up for a two finger head.",
+      "min": 3
+     }
+    ],
+    "veg": true,
+    "af": false,
+    "alt": {
+     "af": {
+      "n": "Walkabout Creek cold pot (alcohol-free)",
+      "prep_min": 3,
+      "cook_min": 0,
+      "make_ahead": "",
+      "ingredients": [
+       {
+        "q": 4,
+        "u": "",
+        "item": "bottles alcohol-free lager (375 ml each), cold",
+        "aisle": "Drinks"
+       }
+      ],
+      "steps": [
+       {
+        "text": "Put 4 pot glasses in the freezer for 30 minutes.",
+        "min": 0
+       },
+       {
+        "text": "Pour the lager slowly down the side of each glass, straightening up for a two finger head.",
+        "min": 3
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+]

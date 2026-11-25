@@ -22,8 +22,8 @@ function fmtLous(f,spec,menu,poster){
     <div style="${MONO};font-size:13px;line-height:1.35;text-align:center">${spec.flyer[1]}</div>
     <div style="${MONO};font-size:11px;letter-spacing:.04em;text-align:center;margin-top:5px;color:#555;text-transform:uppercase">${ESC(spec.flyer[2])}</div></div>`;
   const check=`<div style="position:relative;width:100%;box-sizing:border-box;background:#e7f1df;border:1px solid #9cb894;padding:8px 11px 10px;box-shadow:0 6px 12px rgba(0,0,0,.3);transform:rotate(-1.5deg);color:#1f4a2a">
-    <div style="display:flex;justify-content:space-between;gap:6px;${BODY};font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #9cb894;padding-bottom:3px;white-space:nowrap"><span>Guest check</span><span>${ESC(spec.check)}</span></div>
-    <div style="${BODY};font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:${RED};margin-top:5px">Showtime cue</div>
+    <div style="display:flex;justify-content:space-between;gap:6px;${BODY};font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid #9cb894;padding-bottom:3px;white-space:nowrap"><span>Guest check</span><span>${ESC(spec.check)}</span></div>
+    <div style="${BODY};font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:${RED};margin-top:5px">Showtime cue</div>
     <div style="${PEN};font-size:21px;line-height:1.05;color:#1d2f8a;margin-top:1px">${ESC(fmtCue(f))}</div></div>`;
   /* review 24: the poster, flyer and guest check stood 43px taller than the wall, so the check hung over the bottom edge into the surround,
      and on paper the white print padding beside it showed as a white bar under the teal band. The poster and the flyer's photo are a little

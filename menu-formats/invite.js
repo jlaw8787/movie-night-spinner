@@ -302,11 +302,11 @@ window.MENU_FORMATS.invite=function(ctx){
      <div style="position:absolute;left:0;right:0;top:38px;height:1px;background:rgba(0,0,0,.12)"></div>
      ${kick("Place card","15px")}
      <div style="margin-top:10px;font:${E.dw} 30px/1 ${dd};${up}color:${ink}">Table ${x(num)}</div>
-     <div data-fit="14" style="height:36px;overflow:hidden;margin-top:4px;font:15px/1.2 ${bd};font-size:15px;color:${ink}">${x(winks[1]?`Seated near: ${winks[1]}`:"Your seat, saved")}</div>
+     <div data-fit="14" style="height:36px;overflow:hidden;margin-top:4px;font:15px/1.2 ${bd};font-size:15px;color:${ink}">${x(winks[1]&&(window.winkPerson||(()=>false))(winks[1])?`Seated near: ${winks[1]}`:"Your seat, saved")}</div>
    </div>
    <div style="position:absolute;left:286px;top:756px;width:274px;height:116px;box-sizing:border-box;padding:10px 14px;border:1px solid ${acc};text-align:left;color:${ink}">
      <div style="display:flex;justify-content:space-between;align-items:baseline">${kick("R.S.V.P.","15px")}<span style="font:15px/1 ${bd};opacity:.8">${x(f.year||"")}</span></div>
-     <div data-fit="14" style="height:76px;overflow:hidden;margin-top:4px;font:16px/1.3 ${bd};font-size:16px">${x(f.P?`Showtime: ${M.sent(f.P)}`:"Kindly reply before the film starts.")}${winks[0]?` <i data-opt>Also on the list: ${x(winks[0])}.</i>`:""}${fam?" Soft drinks only.":""}</div>
+     <div data-fit="14" style="height:76px;overflow:hidden;margin-top:4px;font:16px/1.3 ${bd};font-size:16px">${x(f.P?`Showtime: ${M.sent(f.P)}`:"Kindly reply before the film starts.")}${winks[0]?` <i data-opt>${(window.winkPerson||(()=>false))(winks[0])?"Also on the list":"Watch for"}: ${x(winks[0])}.</i>`:""}${fam?" Soft drinks only.":""}</div>
    </div>`;
   return {w:W,h:H,faces:[front,back]};
 };

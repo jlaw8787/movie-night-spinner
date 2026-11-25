@@ -478,139 +478,53 @@
    "af": true
   },
   {
-   "n": "Walkabout Creek rum and ginger beer",
+   "n": "Walkabout Creek cold pot",
    "course": "d",
-   "prep_min": 8,
+   "prep_min": 3,
    "cook_min": 0,
-   "make_ahead": "Best built to order; squeeze the lime juice up to 1 day ahead and keep the ginger beer chilled",
+   "make_ahead": "Freeze the glasses 30 minutes ahead",
    "ingredients": [
-    {
-     "q": 1,
-     "u": "",
-     "item": "tray ice",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 60,
-     "u": "ml",
-     "item": "lime juice",
-     "aisle": "Produce"
-    },
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "ginger beer, chilled",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 180,
-     "u": "ml",
-     "item": "dark rum",
-     "aisle": "Bottle shop"
-    },
     {
      "q": 4,
      "u": "",
-     "item": "lime wedges",
-     "aisle": "Produce"
+     "item": "bottles lager (375 ml each), cold",
+     "aisle": "Bottle shop"
     }
    ],
    "steps": [
     {
-     "text": "Fill tall glasses with ice and add lime juice to each.",
+     "text": "Put 4 pot glasses in the freezer for 30 minutes.",
+     "min": 0
+    },
+    {
+     "text": "Pour the lager slowly down the side of each glass, straightening up for a two finger head.",
      "min": 3
-    },
-    {
-     "text": "Add the ginger beer to each glass.",
-     "min": 2
-    },
-    {
-     "text": "Slowly pour the rum over the back of a spoon so it floats on top.",
-     "min": 2
-    },
-    {
-     "text": "Add a lime wedge and stir at the table.",
-     "min": 1
     }
    ],
    "veg": true,
    "af": false,
    "alt": {
     "af": {
-     "n": "Walkabout Creek spiced ginger beer",
-     "prep_min": 8,
-     "cook_min": 15,
-     "make_ahead": "Brew, sweeten and chill the dark tea up to 2 days ahead in the fridge; build the glasses to order",
+     "n": "Walkabout Creek cold pot (alcohol-free)",
+     "prep_min": 3,
+     "cook_min": 0,
+     "make_ahead": "",
      "ingredients": [
-      {
-       "q": 1,
-       "u": "",
-       "item": "black tea bag",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 120,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "molasses",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 0.5,
-       "u": "tsp",
-       "item": "vanilla extract",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "tray ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "lime juice",
-       "aisle": "Produce"
-      },
-      {
-       "q": 600,
-       "u": "ml",
-       "item": "ginger beer, chilled",
-       "aisle": "Drinks"
-      },
       {
        "q": 4,
        "u": "",
-       "item": "lime wedges",
-       "aisle": "Produce"
+       "item": "bottles alcohol-free lager (375 ml each), cold",
+       "aisle": "Drinks"
       }
      ],
      "steps": [
       {
-       "text": "Brew the tea bag in the boiling water for 5 minutes, remove it, stir in the molasses and vanilla and chill.",
-       "min": 15
+       "text": "Put 4 pot glasses in the freezer for 30 minutes.",
+       "min": 0
       },
       {
-       "text": "Fill tall glasses with ice and add lime juice to each.",
+       "text": "Pour the lager slowly down the side of each glass, straightening up for a two finger head.",
        "min": 3
-      },
-      {
-       "text": "Add the ginger beer to each glass.",
-       "min": 2
-      },
-      {
-       "text": "Slowly pour the dark tea over the back of a spoon so it floats on top.",
-       "min": 2
-      },
-      {
-       "text": "Add a lime wedge and stir at the table.",
-       "min": 1
       }
      ]
     }

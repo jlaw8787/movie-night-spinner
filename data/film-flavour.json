@@ -700,7 +700,10 @@
     "One way, bring a hammer"
    ]
   },
-  "number": ""
+  "number": "",
+  "look": {
+   "kick": "Dinner at the flat tonight"
+  }
  },
  "Thor: Love and Thunder (2022)": {
   "venue": "New Asgard Tourist Cafe",
@@ -3624,7 +3627,8 @@
   "sideLine": "A rowboat for two on the lagoon.",
   "priceEra": "1800s",
   "currency": "coin",
-  "coin": "gold coins"
+  "coin": "gold coins",
+  "party": 3
  },
  "Beauty and the Beast (1991)": {
   "venue": "Castle Dining Room",
@@ -5478,7 +5482,8 @@
   },
   "number": "",
   "sideStill": "/Ae58bf7Yj6OPzwKerPgXSnxCJdh.jpg",
-  "sideLine": "Garden party at the Armitages. Smile and nod."
+  "sideLine": "Garden party at the Armitages. Smile and nod.",
+  "party": 5
  },
  "Hereditary (2018)": {
   "venue": "Graham Family Kitchen",
@@ -7653,7 +7658,8 @@
   },
   "number": "",
   "sideStill": "/eATd2HoFCNVxiRC5FuIKVHasUfL.jpg",
-  "sideLine": "Dinner with both families. Brace yourself."
+  "sideLine": "Dinner with both families. Brace yourself.",
+  "party": 6
  },
  "Valentine's Day (2010)": {
   "venue": "Reed's Flower Shop",
@@ -9865,7 +9871,7 @@
   "venue": "Shawshank Prison Mess Hall",
   "sign": "Shawshank State Penitentiary",
   "note": {
-   "text": "Andy got us a cold beer each on the roof. For an hour we felt like free men. Make it last.",
+   "text": "Andy got the tarring crew a cold one each on the roof. For an hour we felt like free men. Make it last.",
    "by": "Red",
    "kind": "note"
   },
@@ -17514,7 +17520,8 @@
   "sideStill": "/mogz3SNwI1yUryoqfFlijJDgHfK.jpg",
   "sideLine": "Dinner on the rooftops of Paris.",
   "currency": "F",
-  "priceEra": "1930s-40s"
+  "priceEra": "1930s-40s",
+  "party": 4
  },
  "The Fox and the Hound (1981)": {
   "venue": "Widow Tweed's Farm",
@@ -17924,8 +17931,8 @@
   "number": ""
  },
  "Easter Parade (1948)": {
-  "venue": "Hannah and Hewes Studio",
-  "sign": "Ballroom Lessons Daily",
+  "venue": "Fifth Avenue Supper Room",
+  "sign": "New York, Easter 1912",
   "note": {
    "text": "I suppose I'm a lemon!",
    "by": "Hannah Brown",
@@ -22713,7 +22720,7 @@
    "The bus and train wreck",
    "A Peter Pan right off the dam",
    "I didn't kill my wife!",
-   "Kelly's 12-year-old Scotch for the collar"
+   "The one-armed man on the El train"
   ],
   "prop": {
    "kind": "poster",

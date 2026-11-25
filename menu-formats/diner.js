@@ -207,7 +207,7 @@ window.MENU_FORMATS.diner=ctx=>{
       <div style="font:400 ${N&&N.text.length>95?16:18}px/1.3 ${SERIF};color:${K.ink}">${N?ESC(N.text):night?"Lock the door behind you, hon. Sit where you can see the road.":"Coffee's on the house if you finish the pie, hon."}</div>
       <div style="font:400 20px/1.5 ${HAND};color:#23324f;margin-top:2px;white-space:nowrap">${N?ESC(N.by):"Dot, the counter"}</div></div></div>`;
   const backFoot=`<div style="position:absolute;left:40px;right:40px;bottom:20px;font:400 15px/19px ${SANS};color:${K.mute}">
-    ${W[4]?`<div style="font-style:italic;font-family:${SERIF};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Overheard at the counter: ${ESC(low(W[4]))}.</div>`:""}
+    ${W[4]?`<div style="font-style:italic;font-family:${SERIF};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${(window.winkSaid||(()=>false))(W[4])?"Overheard at the counter":"On the TV tonight"}: ${ESC(low(W[4]))}.</div>`:""}
     <div style="display:flex;justify-content:space-between"><span>${night?V.fine:pieOr(DAY.fine,"Prices subject to change. Refills on the coffee.")}</span><span>Form No. ${num||"13-"+yy}</span></div></div>`;
   const lastFoot=`<div style="position:absolute;left:40px;right:40px;bottom:26px;display:flex;justify-content:space-between;font:400 15px/1 ${SANS};color:${K.mute}"><span>${ESC(venue)}. Turn over for the cover.</span><span>Form No. ${num||"13-"+yy}</span></div>`;
   const s1=stills[1]||stills[0],s2=stills[2]||stills[1]||stills[0];

@@ -281,7 +281,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
         <div style="font-family:'${e.sig}',cursive;color:${ACC};${fs(e.sig==="Pinyon Script"?40:42,22)};line-height:1.1;margin-top:4px;padding-right:12px;text-align:right">${esc(note.by)}</div>
       </div></div>`;
 
-  const fine=[`Prices subject to change`,f.P?`Showtime: ${clean(f.P).replace(/\.$/,"")}`:"",winks[1]?`Lost and found: ${winks[1]}`:"",`Board No. ${num}`].filter(Boolean).join(". ")+".";
+  const fine=[`Prices subject to change`,f.P?`Showtime: ${clean(f.P).replace(/\.$/,"")}`:"",winks[1]?`${(window.winkSaid||(()=>false))(winks[1])?"Overheard at the counter":"On screen tonight"}: ${winks[1]}`:"",`Board No. ${num}`].filter(Boolean).join(". ")+".";
 
   const board=`<div style="position:absolute;left:${FR}px;top:${BT}px;width:${W-2*FR}px;height:${BH}px;background:${BOARD};overflow:hidden">
     ${e.grooves?`<div style="position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(0,0,0,.55) 0 2px,rgba(255,255,255,.035) 2px 3px,transparent 3px 14px)"></div>`:""}

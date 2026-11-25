@@ -233,7 +233,7 @@
      "min": 5
     },
     {
-     "text": "Add the brandy and let it bubble off, then cool for 5 minutes.",
+     "text": "Add a splash of apple juice and let it bubble off, then cool for 5 minutes.",
      "min": 5
     },
     {
@@ -320,7 +320,7 @@
        "min": 10
       },
       {
-       "text": "Add the brandy and let it bubble off, then cool.",
+       "text": "Add a splash of apple juice and let it bubble off, then cool.",
        "min": 3
       },
       {
@@ -977,58 +977,43 @@
    "af": true
   },
   {
-   "n": "Big Dog pale ale from Goose Island",
+   "n": "Green River lime soda for the parade",
    "course": "d",
-   "prep_min": 2,
+   "prep_min": 4,
    "cook_min": 0,
-   "make_ahead": "Chill the beer well",
+   "make_ahead": "",
    "ingredients": [
     {
      "q": 4,
      "u": "",
-     "item": "x 355ml bottles Goose Island pale ale or IPA",
-     "aisle": "Bottle shop"
+     "item": "bottles Green River or lime soda (355 ml each), cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bag",
+     "item": "ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Chill the beer and 4 glasses.",
-     "min": 1
+     "text": "Fill 4 glasses with ice.",
+     "min": 3
     },
     {
-     "text": "Pour slowly with a good head.",
-     "min": 1
+     "text": "Pour the lime soda over and push a lime wedge onto each rim.",
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Big Dog alcohol-free pale ale (alcohol-free)",
-     "course": "d",
-     "prep_min": 2,
-     "cook_min": 0,
-     "make_ahead": "Chill the alcohol-free beer and the glasses well",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "x 330ml bottles alcohol-free pale ale",
-       "aisle": "Drinks"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Chill the beer and glasses.",
-       "min": 1
-      },
-      {
-       "text": "Pour with a good head.",
-       "min": 1
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

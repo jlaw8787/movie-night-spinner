@@ -266,7 +266,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    ${pnl(1,best.sp[1].map(course).join(""))}
    ${pnl(2,best.sp[2].map(course).join("")+(HOME?"":setDinner))}
    <div data-fit data-min="14" style="position:absolute;left:922px;top:712px;width:396px;height:86px;overflow:hidden;font-size:16px;color:${SOFT}">
-     <div style="font:500 1em/1.3 ${E.body}">${cue?`Kitchen tip: ${esc(sent(cue))} `:""}${winks[3]?`Overheard: ${esc(sent(winks[3]))} `:""}Prices subject to change. Form TK ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
+     <div style="font:500 1em/1.3 ${E.body}">${cue?`Kitchen tip: ${esc(sent(cue))} `:""}${winks[3]?`${(window.winkSaid||(()=>false))(winks[3])?"Overheard":"On screen tonight"}: ${esc(sent(winks[3]))} `:""}Prices subject to change. Form TK ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
    ${folds}`;
 
   window.__fmtFitLater();

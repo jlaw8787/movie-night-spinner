@@ -444,28 +444,22 @@
    }
   },
   {
-   "n": "Rooftop ginger beer shandy",
+   "n": "Rooftop ginger beer with lime",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 30,
-   "make_ahead": "Put the glasses in the freezer up to 1 day ahead; slice the ginger and build the drinks just before serving",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Freeze the glasses 30 minutes ahead",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "bottles lager (375 ml each), cold",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "ginger beer",
+     "q": 1.5,
+     "u": "l",
+     "item": "ginger beer, cold",
      "aisle": "Drinks"
     },
     {
      "q": 1,
      "u": "",
-     "item": "knob ginger (3cm)",
+     "item": "knob ginger (3 cm)",
      "aisle": "Produce"
     },
     {
@@ -477,68 +471,20 @@
    ],
    "steps": [
     {
-     "text": "Put 4 glasses in the freezer to chill.",
-     "min": 30
+     "text": "Put 4 glasses in the freezer for 30 minutes.",
+     "min": 0
     },
     {
      "text": "Slice the ginger into thin coins and cut the limes into wedges.",
-     "min": 6
+     "min": 3
     },
     {
-     "text": "Pour lager into each glass, top with ginger beer, squeeze in a lime wedge and add 2 ginger coins. For anyone not drinking, use all ginger beer with extra lime.",
-     "min": 4
+     "text": "Fill each glass with ginger beer, squeeze in a lime wedge and add 2 ginger coins.",
+     "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Rooftop ginger beer shandy",
-     "prep_min": 10,
-     "cook_min": 30,
-     "make_ahead": "Put the glasses in the freezer up to 1 day ahead; slice the ginger and build the drinks just before serving",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "bottles alcohol-free lager (375 ml each), cold",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 600,
-       "u": "ml",
-       "item": "ginger beer",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "knob ginger (3cm)",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Put 4 glasses in the freezer to chill.",
-       "min": 30
-      },
-      {
-       "text": "Slice the ginger into thin coins and cut the limes into wedges.",
-       "min": 6
-      },
-      {
-       "text": "Pour alcohol-free lager into each glass, top with ginger beer, squeeze in a lime wedge and add 2 ginger coins.",
-       "min": 4
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

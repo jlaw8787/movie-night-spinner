@@ -466,24 +466,18 @@
   {
    "n": "Red lips cranberry Cape Codder",
    "course": "d",
-   "prep_min": 12,
+   "prep_min": 4,
    "cook_min": 0,
-   "make_ahead": "Squeeze the limes up to 1 day ahead in the fridge and chill the coupes; shake each drink to order",
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 160,
+     "q": 180,
      "u": "ml",
      "item": "vodka",
      "aisle": "Bottle shop"
     },
     {
-     "q": 60,
-     "u": "ml",
-     "item": "orange liqueur",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 120,
+     "q": 500,
      "u": "ml",
      "item": "cranberry juice",
      "aisle": "Drinks"
@@ -491,41 +485,27 @@
     {
      "q": 2,
      "u": "",
-     "item": "limes, juiced",
+     "item": "limes, cut into wedges",
      "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "orange",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "cup",
+     "u": "bag",
      "item": "ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Chill four coupes.",
-     "min": 5
+     "text": "Fill 4 highball glasses with ice.",
+     "min": 3
     },
     {
-     "text": "For each drink, measure 40ml vodka, 15ml orange liqueur, 30ml cranberry juice and the juice of half a lime into a shaker.",
-     "min": 2
+     "text": "Pour 45ml vodka into each and top with the cranberry juice.",
+     "min": 3
     },
     {
-     "text": "Shake each drink with ice for 15 seconds.",
-     "min": 4
-    },
-    {
-     "text": "Strain into the coupes.",
-     "min": 1
-    },
-    {
-     "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in.",
+     "text": "Squeeze in a lime wedge and drop it in.",
      "min": 3
     }
    ],
@@ -533,19 +513,19 @@
    "af": false,
    "alt": {
     "af": {
-     "n": "Red lips cranberry cosmopolitan (alcohol-free)",
-     "prep_min": 12,
-     "cook_min": 5,
-     "make_ahead": "Juice the limes and orange up to 1 day ahead in the fridge and chill the coupes; shake each drink with ice to order",
+     "n": "Red lips cranberry Cape Codder (alcohol-free)",
+     "prep_min": 4,
+     "cook_min": 0,
+     "make_ahead": "",
      "ingredients": [
       {
-       "q": 200,
+       "q": 500,
        "u": "ml",
        "item": "cranberry juice",
        "aisle": "Drinks"
       },
       {
-       "q": 80,
+       "q": 200,
        "u": "ml",
        "item": "white grape juice",
        "aisle": "Drinks"
@@ -553,41 +533,27 @@
       {
        "q": 2,
        "u": "",
-       "item": "limes, juiced",
+       "item": "limes, cut into wedges",
        "aisle": "Produce"
       },
       {
        "q": 1,
-       "u": "",
-       "item": "orange",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "cup",
+       "u": "bag",
        "item": "ice",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Chill four coupes.",
-       "min": 5
+       "text": "Fill 4 highball glasses with ice.",
+       "min": 3
       },
       {
-       "text": "Cut 4 strips of peel from the orange, then juice it.",
-       "min": 2
+       "text": "Pour in the cranberry juice and top with the white grape juice.",
+       "min": 3
       },
       {
-       "text": "For each drink, measure 50ml cranberry juice, 20ml white grape juice, 15ml orange juice and the juice of half a lime into a shaker.",
-       "min": 2
-      },
-      {
-       "text": "Shake each drink with ice for 15 seconds and strain into the coupes.",
-       "min": 5
-      },
-      {
-       "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in.",
+       "text": "Squeeze in a lime wedge and drop it in.",
        "min": 3
       }
      ]

@@ -22,6 +22,11 @@ window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an
   let s=t.replace(/[\s.,;:]+$/,"");const s0=s;for(let n=0;n<4&&D.test(s);n++)s=s.replace(D,"").replace(/[\s,;:]+$/,"");
   if(s===s0)return t;s=s.replace(/,\s*\S+$/,"");return s+(/[.!?]\s*$/.test(t)?".":"")};
 /* prices that make sense on their own card, for shared layouts: every main above every starter and sweet, a drink with spirits above every plain drink and sweet; a raised price keeps its own cents (the film's number lives there) and the card's price style, and nothing prints as 100 cents */
+/* review 50: a footer label has to fit the film moment it carries. "Overheard" labels take only a line someone says (quote marks, a question or
+   exclamation, or speech words like I, you, my, we); a scene or a person prints under a screen or talk label instead ("Lost and found: Elijah's brittle bones").
+   winkPerson: a moment that is a person (a name, then a comma or nothing), the only kind that can sit on a guest list or a seat card */
+window.winkSaid=w=>{const t=String(w||"").trim();return /["\u201c\u201d]/.test(t)||/[!?]["\u201d']?$/.test(t)||/\b(I|I'm|I'll|I've|I'd)\b/.test(t)||/\b(you|you're|you'll|your|we|we're|we'll|my|me|our|us|let's|don't|ain't|gonna|wanna)\b/i.test(t)};
+window.winkPerson=w=>{const t=String(w||"").trim();return /^(?:(?:Dr|Mr|Mrs|Ms|Miss|Sir|Lady|Uncle|Aunt|Captain|Professor) )?[A-Z][a-z]+(?: [A-Z][a-z]+){0,2}(?:,|$)/.test(t)&&!/['\u2019]s\b/.test(t.split(",")[0])};
 window.priceSense=function(menu,P,opt){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry|blue lagoon|curacao|mimosa|bellini|shandy)\b/i;
   const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢|\dc$/.test(x)),csym=all.some(x=>/\dc$/.test(x))?"c":"¢",dot=all.some(x=>/^\D*\.\d\d$/.test(x));
   const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢|\dc$/.test(x)?n/100:n};
@@ -1317,8 +1322,8 @@ function dietKey(){const v=DIET.veg,a=dietAF();return v&&a?"veg_af":v?"veg":a?"a
 /* family and Christmas films always print dry: their menus take the written alcohol-free versions (name, menu line, film copy) before the word swaps,
    but only on the menus, so the plan, prep sheet and shopping keep the cook's own diet settings and no dish is left off */
 /* review 40: films TMDB files under Family print alcohol-free too, whatever their theme (Red Dog, Treasure Planet, School of Rock); tests/dry-family keeps the list whole. Die Hard and Love Actually are adult Christmas films and keep their drinks (Josh, 23 Nov) */
-/* review 45: DRY_FILMS also holds cards set where nobody drinks (prisons, messes, galleys, hospital and workplace canteens, a school cafeteria, a lab in orbit): they print their written alcohol-free drinks */
-const DRY_THEMES=["kids","fairytale","xmas","wizard"];const DRY_FILMS=["Addams Family Values (1993)","Atlantis: The Lost Empire (2001)","Babe (1995)","Big Hero 6 (2014)","Father of the Bride (1991)","Flash Gordon (1980)","Good Burger (1997)","Hocus Pocus (1993)","Hook (1991)","How to Train Your Dragon (2010)","Jumanji (1995)","Kung Fu Panda (2008)","Kung Fu Panda 2 (2011)","Megamind (2010)","Muppet Treasure Island (1996)","Nacho Libre (2006)","Night at the Museum (2006)","Phar Lap (1983)","Red Dog (2011)","School of Rock (2003)","Short Circuit (1986)","Storm Boy (1976)","Teenage Mutant Ninja Turtles (1990)","Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)","Teenage Mutant Ninja Turtles III (1993)","The Goonies (1985)","The Incredibles (2004)","The Karate Kid (1984)","The Man from Snowy River (1982)","The Princess Diaries (2001)","The Witches (1990)","Treasure Planet (2002)","Turner & Hooch (1989)","Wall-E (2008)","Tango & Cash (1989)","Face/Off (1997)","Red Heat (1988)","Police Academy (1984)","Con Air (1997)","Independence Day (1996)","Armageddon (1998)","The Matrix (1999)","Iron Man (2008)","Shutter Island (2010)","Smile (2022)","American Pie (1999)","Deadpool 2 (2018)","The Suicide Squad (2021)","Jurassic World Dominion (2022)","Anchorman 2: The Legend Continues (2013)","22 Jump Street (2014)","Stripes (1981)","Alien: Resurrection (1997)","Friday the 13th (1980)","First Blood (1982)","Project Hail Mary (2026)","Beverly Hills Cop II (1987)","Predator (1987)","Under Siege (1992)"];const dryFilm=f=>!!f&&(DRY_THEMES.includes(f.theme)||DRY_FILMS.includes(f.title+" ("+f.year+")"));
+/* review 45: DRY_FILMS also holds cards set where nobody drinks (prisons, messes, galleys, hospital and workplace canteens, a school cafeteria, a lab in orbit; review 50 adds Shawshank, the Pescadero and Cook County hospital cards and the Xavier school kitchen): they print their written alcohol-free drinks */
+const DRY_THEMES=["kids","fairytale","xmas","wizard"];const DRY_FILMS=["Addams Family Values (1993)","Atlantis: The Lost Empire (2001)","Babe (1995)","Big Hero 6 (2014)","Father of the Bride (1991)","Flash Gordon (1980)","Good Burger (1997)","Hocus Pocus (1993)","Hook (1991)","How to Train Your Dragon (2010)","Jumanji (1995)","Kung Fu Panda (2008)","Kung Fu Panda 2 (2011)","Megamind (2010)","Muppet Treasure Island (1996)","Nacho Libre (2006)","Night at the Museum (2006)","Phar Lap (1983)","Red Dog (2011)","School of Rock (2003)","Short Circuit (1986)","Storm Boy (1976)","Teenage Mutant Ninja Turtles (1990)","Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)","Teenage Mutant Ninja Turtles III (1993)","The Goonies (1985)","The Incredibles (2004)","The Karate Kid (1984)","The Man from Snowy River (1982)","The Princess Diaries (2001)","The Witches (1990)","Treasure Planet (2002)","Turner & Hooch (1989)","Wall-E (2008)","Tango & Cash (1989)","Face/Off (1997)","Red Heat (1988)","Police Academy (1984)","Con Air (1997)","Independence Day (1996)","Armageddon (1998)","The Matrix (1999)","Iron Man (2008)","Shutter Island (2010)","Smile (2022)","American Pie (1999)","Deadpool 2 (2018)","The Suicide Squad (2021)","Jurassic World Dominion (2022)","Anchorman 2: The Legend Continues (2013)","22 Jump Street (2014)","Stripes (1981)","Alien: Resurrection (1997)","Friday the 13th (1980)","First Blood (1982)","Project Hail Mary (2026)","Beverly Hills Cop II (1987)","Predator (1987)","Under Siege (1992)","The Shawshank Redemption (1994)","Terminator 2: Judgment Day (1991)","The Fugitive (1993)","X-Men (2000)","Jerry Maguire (1996)"];const dryFilm=f=>!!f&&(DRY_THEMES.includes(f.theme)||DRY_FILMS.includes(f.title+" ("+f.year+")"));
 const dietMenuOnly=f=>!dietKey()&&dryFilm(f);
 /* 13 Nov: with Vegetarian on, a dry film's menus read vegetarian and alcohol-free (Bad Santa printed the bourbon highball) */
 const dietKeyF=f=>{const k=dietKey(),dry=dryFilm(f);return k==="veg"&&dry?"veg_af":k||(dry?"af":"")};
@@ -1738,7 +1743,44 @@ function shopTidy3(L){const at=l=>l.slice(l.lastIndexOf("@")),tx=l=>l.slice(0,l.
   {const P=l=>{const m=tx(l).match(/^(\d+(?:\.\d+)?)\s?(g|ml)\s+(.+)$/i);return m?{q:+m[1],u:m[2].toLowerCase(),it:m[3].toLowerCase()}:null};
    for(let i=out.length-1;i>=0;i--){const p=P(out[i]);if(!p)continue;const j=out.findIndex((l,k)=>k<i&&(y=>y&&y.u===p.u&&y.it===p.it)(P(l)));if(j<0)continue;const y=P(out[j]);const q=y.q+p.q;
      out[j]=(q>=1000?`${+(q/1000).toFixed(2)}${p.u==="g"?"kg":"\u00a0L"}`:`${Math.round(q)}${p.u}`)+" "+tx(out[j]).replace(/^\S+\s+/,"")+at(out[j]);out.splice(i,1)}}
-  return out.filter((l,i)=>out.indexOf(l)===i)}
+  return shopTidy4(out.filter((l,i)=>out.indexOf(l)===i))}
+/* review 50: the doubles left on about 40 Prep sheets are the same buy under two names: "1 bottle olive oil" and "60ml extra virgin olive oil",
+   mayonnaise and whole egg mayonnaise, small and baby potatoes, "400g passata" beside "2 x 700g bottles of passata", "1 can lager" beside
+   "4 cans German lager", "80g egg" beside "2 eggs", "1 drop" and "1 tsp" of a food colouring, a bare "nutmeg" beside a jar of it.
+   Only words that never change the buy fold away (extra virgin, whole egg, small, baby, good, junmai, peated, German...), so tinned and fresh,
+   light and dark soy, dried and fresh herbs stay apart. A pack covers a spoonful of the same thing; packs and measures of a sized pack add up */
+const SHOP4_ADJ=/\b(?:extra virgin|whole egg|good(?: quality)?|junmai|peated|single malt|blended|scotch|german|chopped(?= dill)|ground(?= nutmeg)|crushed(?= candy)|good)\s+/gi;
+const SHOP4_EACH={egg:50,"candy cane":12};
+function shopTidy4(L){const at=l=>l.slice(l.lastIndexOf("@")),tx=l=>l.slice(0,l.lastIndexOf("@"));
+  const sing=w=>w.replace(/(tomato|potato|mango)es$/,"$1").replace(/ies$/,"y").replace(/([^s])s$/,"$1");
+  const key=it=>sing(it.toLowerCase().replace(SHOP4_ADJ,"").replace(SHOP4_ADJ,"").replace(/\b(?:small|baby|chat|new)\s+(?=potato)/,"small ").replace(/\s+/g," ").trim());
+  const PK="bottles?|jars?|cans?|tins?|packets?|bags?|tubs?|cartons?|blocks?|box(?:es)?";
+  const parse=l=>{const t=tx(l).trim();let m;
+    if((m=t.match(new RegExp("^(\\d+)\\s*x\\s*(\\d+(?:\\.\\d+)?)\\s?(g|ml)\\s+("+PK+")\\s+(?:of\\s+)?(.+)$","i"))))return {k:"pack",n:+m[1],size:+m[2],su:m[3].toLowerCase(),pk:m[4],it:m[5],fmt:"x"};
+    if((m=t.match(new RegExp("^(\\d+)\\s?(ml|g)\\s+("+PK+")\\s+(?:of\\s+)?(.+)$","i"))))return {k:"pack",n:1,size:+m[1],su:m[2].toLowerCase(),pk:m[3],it:m[4],fmt:"x"};
+    if((m=t.match(new RegExp("^(\\d+)\\s+("+PK+")\\s+(?:of\\s+)?(.+?)(?:,\\s*(\\d+)ml each)?$","i"))))return {k:"pack",n:+m[1],size:m[4]?+m[4]:0,su:"ml",pk:m[2],it:m[3],fmt:m[4]?"each":""};
+    if((m=t.match(/^(\d+) slices? (?:of )?(.+?) \((\d+)g\)$/i)))return {k:"m",q:+m[3],u:"g",it:m[2]};
+    if((m=t.match(/^(\d+(?:\.\d+)?)\s?(kg|g|ml|L|l)\s+(.+)$/)))return {k:"m",q:+m[1]*(/^kg$/i.test(m[2])||/^l$/i.test(m[2])?1000:1),u:/g/i.test(m[2])?"g":"ml",it:m[3]};
+    if((m=t.match(/^(\d+(?:\.\d+)?)\s+(drops?|tsp|tbsp|dashes|dash)\s+(.+)$/i)))return {k:"sp",it:m[3]};
+    if((m=t.match(/^(\d+)\s+(.+)$/)))return {k:"c",q:+m[1],it:m[2]};
+    if(/^[a-z][a-z ]+$/i.test(t))return {k:"bare",it:t};return null};
+  const P=L.map(l=>{const p=parse(l);return p&&p.it&&!/[,(]/.test(p.it)?Object.assign(p,{key:key(p.it)}):null});
+  const drop=new Set();
+  for(let i=0;i<L.length;i++){if(drop.has(i)||!P[i])continue;const g=[i];for(let j=i+1;j<L.length;j++)if(!drop.has(j)&&P[j]&&P[j].key===P[i].key)g.push(j);if(g.length<2)continue;
+    const ps=g.map(x=>P[x]),name=ps.map(p=>p.it).sort((a,b)=>b.length-a.length)[0].replace(/^good(?: quality)? /i,""),packs=ps.filter(p=>p.k==="pack"),ms=ps.filter(p=>p.k==="m"),cs=ps.filter(p=>p.k==="c"),bare=ps.filter(p=>p.k==="bare"),sp=ps.filter(p=>p.k==="sp");
+    let line=null;
+    if(packs.length){const p0=packs.find(p=>p.size)||packs[0],size=p0.size,su=p0.su;const SUM=/^(cans?|tins?|cartons?)$/i.test(p0.pk)||size;let n=SUM?packs.reduce((a,p)=>a+(p.size&&size&&p.size!==size?Math.ceil(p.n*p.size/size):p.n),0):Math.max(...packs.map(p=>p.n));
+      if(size){const extra=ms.filter(m=>m.u===su).reduce((a,m)=>a+m.q,0);if(extra)n=Math.ceil((n*size+extra)/size-0.05);if(ms.some(m=>m.u!==su))continue}
+      else if(ms.some(m=>m.q>500))continue;
+      if(cs.length)continue;
+      const pk=n>1?(/x$/i.test(p0.pk)?p0.pk.replace(/x$/i,"xes"):/s$/i.test(p0.pk)?p0.pk:p0.pk+"s"):p0.pk.replace(/(x)es$/i,"$1").replace(/s$/i,"");
+      line=(p0.fmt==="x"?`${n} x ${size}${su} ${pk} ${name}`:p0.fmt==="each"?`${n} ${pk} ${name}, ${size}ml each`:`${n} ${pk} ${name}`)}
+    else if(ms.length&&!cs.length&&ms.every(m=>m.u===ms[0].u)){const q=ms.reduce((a,m)=>a+m.q,0),u=ms[0].u;line=(q>=1000?`${+(q/1000).toFixed(2)}${u==="g"?"kg":"\u00a0L"}`:`${Math.round(q)}${u}`)+" "+name}
+    else if(cs.length&&!packs.length&&ms.every(m=>m.u==="g")&&(!ms.length||SHOP4_EACH[ps[0].key])){const n=cs.reduce((a,c)=>a+c.q,0)+ms.reduce((a,m)=>a+Math.ceil(m.q/SHOP4_EACH[ps[0].key]-0.05),0);const nm=cs[0].it;line=`${n} ${n>1&&!/s$/.test(nm)?nm+"s":nm}`}
+    else if(sp.length&&!ms.length&&!cs.length&&!packs.length&&/colou?ring|essence|extract|bitters|sauce/i.test(name))line=`1 bottle ${name}`;
+    else if(bare.length&&bare.length<g.length){bare.forEach(b=>drop.add(g[ps.indexOf(b)]));continue}
+    if(!line)continue;L[i]=line+at(L[i]);for(const x of g.slice(1))drop.add(x)}
+  return L.filter((l,i)=>!drop.has(i))}
 const BUY_HERB="(?:flat-leaf |italian |thai |fresh )?(chives|parsley|coriander|mint|basil|dill|thyme|rosemary|sage|oregano|tarragon)";
 const BUY_N=t=>{const m=String(t).trim().match(/^(\d+)(?:\s+(\d)\/(\d))?|^(\d)\/(\d)/);return m?(m[1]?+m[1]+(m[2]?m[2]/m[3]:0):m[4]/m[5]):0};
 function buyBy(t){let x=String(t).trim();
@@ -2659,6 +2701,8 @@ function priceFix0(root,menu,f,fl,era,fmt){
   {const cap=tgt&&PF_PINT[tgt];if(cap)for(const x of by("d"))if(PF_BEER.test(x.n)&&!PF_COCK.test(x.n)&&!/\b(mulled|punch|jug|pitcher|bucket|tower|flight)\b/i.test(x.n)&&x.v>cap){x.v=cap;x.down=1}}
   /* review 33: a plain soft drink is held to its decade (PF_SOFT) and never dearer than the dearest sweet */
   {const cap=tgt&&PF_SOFT[tgt],wHi=maxOf(by("w"));for(const x of by("d"))if(PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)){let c=Infinity;if(cap)c=cap;if(wHi!=null)c=Math.min(c,wHi);if(x.v>c){x.v=c;x.down=1}}}
+  /* review 50: a shake, malt, float or smoothie is never cheaper than a plain soft drink on the same card (Rocky III's 60¢ shake under 90¢ lemonade) */
+  {const hi=maxOf(by("d").filter(x=>PF_SOFTD.test(x.n)&&!PF_SP.test(x.n)&&!PF_NOTSOFT.test(x.n)));if(hi!=null)for(const x of by("d"))if(/\b(shakes?|milkshakes?|malts?|malted|floats?|smoothies?|frapp\w*)\b/i.test(x.n)&&!PF_SP.test(x.n)&&x.v<hi){x.v=hi;x.down=0}}
   /* review 33: no real starter costs under two fifths of the dearest one (The Other Guys' $2.25 dip beside $7.75 bagel bites) */
   {const L=by("s").filter(x=>!(pfCheap(x.n)&&!pfPrem(x.n))),hi=maxOf(L);if(hi!=null)for(const x of L)if(x.v<hi*.4){const st=step(hi*.4);x.v=Math.ceil(hi*.4/st-1e-9)*st+(st<.25?0:0)}}
   /* 4. a seafood or steak starter never well under a plain one */
@@ -2813,7 +2857,8 @@ function libWords(html,fl,fmt){const HW=fmt&&HOME_WORDS[fmt]&&homeVenue(fl)?HOME
 const US_NOT=new Set(['The Babadook (2014)','Finding Nemo (2003)','Mission: Impossible 2 (2000)','Top End Wedding (2019)','Anyone But You (2023)','Babe (1995)','Happy Feet (2006)','Peter Rabbit (2018)','Peter Rabbit 2: The Runaway (2021)','Mad Max (1979)','Mad Max 2 (1981)','Mad Max: Fury Road (2015)','Furiosa: A Mad Max Saga (2024)','Wolf Creek (2005)','Crocodile Dundee (1986)','Crocodile Dundee II (1988)','Moulin Rouge! (2001)','Australia (2008)','Hunt for the Wilderpeople (2016)','Boy (2010)','Eagle vs Shark (2007)','What We Do in the Shadows (2014)','Next Goal Wins (2023)']);
 function usCard(f,fl){fl=fl||{};const id=f&&(f.id||f.title+" ("+f.year+")");return !!f&&f.theme!=="aussie"&&f.theme!=="galaxy"&&!US_NOT.has(id)&&!fl.currency&&fl.world!=="storybook"&&(!fl.country||fl.country==="US")}
 function libUS(html,f,fl){if(!usCard(f,fl))return html;
-  return String(html).replace(/>(\s*)(Sweets|SWEETS|Afters|AFTERS|Takeaway orders|TAKEAWAY ORDERS|Takeaway|TAKEAWAY)(\s*)</g,(m,a,w,b)=>{const lo=w.toLowerCase(),to=lo==="sweets"?"Desserts":lo==="afters"?"Dessert":lo==="takeaway orders"?"Takeout orders":"Takeout";return ">"+a+(w===w.toUpperCase()?to.toUpperCase():to)+b+"<"})
+  /* review 50: "Takeaway orders: 555-0138" carries its number in the same text (Die Hard with a Vengeance) */
+  return String(html).replace(/\bTakeaway orders(?=:)/g,"Takeout orders").replace(/\bTAKEAWAY ORDERS(?=:)/g,"TAKEOUT ORDERS").replace(/>(\s*)(Sweets|SWEETS|Afters|AFTERS|Takeaway orders|TAKEAWAY ORDERS|Takeaway|TAKEAWAY)(\s*)</g,(m,a,w,b)=>{const lo=w.toLowerCase(),to=lo==="sweets"?"Desserts":lo==="afters"?"Dessert":lo==="takeaway orders"?"Takeout orders":"Takeout";return ">"+a+(w===w.toUpperCase()?to.toUpperCase():to)+b+"<"})
     /* review 47: an American card reads Fahrenheit (the kiosk's weather and surf strip) and buys the room a round, never shouts it */
     .replace(/>(\s*)(-?\d{1,2})°C(\s*)</g,(m,a,c,b)=>">"+a+Math.round(+c*9/5+32)+"°F"+b+"<").replace(/>([^<]*)shout the room([^<]*)</g,(m,a,b)=>">"+a+"buy the room a round"+b+"<")
     /* review 48: and uses the American word for the layout's own lines (From the cart, curb); spelling stays Australian site-wide */

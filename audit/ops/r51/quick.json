@@ -1,0 +1,66 @@
+[
+{"id":"The Shawshank Redemption (1994)","ops":[
+ {"set":"cue","value":"Pour the ginger beer when the tarring crew gets their cold ones on the roof."},
+ {"sub":"One cold beer on the roof.","to":"One cold one on the roof."},
+ {"set":"flavour.note","value":{"text":"Andy got the tarring crew a cold one each on the roof. For an hour we felt like free men. Make it last.","by":"Red","kind":"note"}}]},
+{"id":"Terminator 2: Judgment Day (1991)","ops":[
+ {"set":"house.d","value":{"n":"Ice-cold lime Jarritos","note":"Mexican lime soda straight from the cooler, a wedge of lime pushed into the neck.","alc":false}}]},
+{"id":"The Fugitive (1993)","ops":[
+ {"sub":"Add the brandy and let it bubble off","to":"Add a splash of apple juice and let it bubble off"},
+ {"sub":"60ml brandy@Bottle shop","to":"60ml apple juice@Drinks"},
+ {"sub":"Kelly's 12-year-old Scotch for the collar","to":"The one-armed man on the El train"}]},
+{"id":"X-Men (2000)","ops":[
+ {"sub":"over one big ice cube, a flamed orange twist.","to":"over one big ice cube, with an orange twist."}]},
+{"id":"Casablanca (1942)","ops":[
+ {"set":"house.d","value":{"n":"Moroccan mint tea, poured high","note":"Green tea steeped with fresh mint and sugar, poured from a height so it froths in small glasses."}},
+ {"set":"cue","value":"Pour the champagne cocktails when Sam sits down at the piano."}]},
+{"id":"Crocodile Dundee (1986)","ops":[
+ {"set":"cue","value":"Pour a cold pot when Mick first sees a bidet in the hotel."}]},
+{"id":"Independence Day (1996)","ops":[
+ {"sub":"Smoky tea and fresh lemonade over crushed strawberries and blueberries.","to":"Fresh lemonade over crushed strawberries and blueberries, a splash of cold smoky tea."}]},
+{"id":"Scream (2022)","ops":[
+ {"note":"Mindy's movie rules pepperoni pizza","to":"Crisp base with passata, mozzarella, pepperoni and chilli flakes, arugula on the side."}]},
+{"id":"The Holdovers (2023)","ops":[
+ {"ren":"Mr Hunham's flaming cherries jubilee","to":"Mr Hunham's cherries jubilee"},
+ {"note":"Mr Hunham's cherries jubilee","to":"Dark cherries warmed in a buttery orange and brandy sauce, spooned hot over vanilla ice cream."}]},
+{"id":"The Ring (2002)","ops":[
+ {"sub":"Fresh vongole, smoky bacon, potato and cream","to":"Fresh clams, smoky bacon, potato and cream"}]},
+{"id":"Unforgiven (1992)","ops":[
+ {"sub":"pickled pink in beets vinegar","to":"pickled pink in beet juice and vinegar"}]},
+{"id":"Dead Poets Society (1989)","ops":[
+ {"sub":"We are food for worms lads. Split peas slow-cooked with smoked paprika.","to":"Split peas slow-cooked with smoked paprika. We are food for worms, lads."},
+ {"sub":"food for worms lads","to":"food for worms, lads"}]},
+{"id":"The Fly (1986)","ops":[
+ {"ren":"Brundle's brown sugar iced latte","to":"Brundle's brown sugar iced coffee"}]},
+{"id":"Rocky III (1982)","ops":[
+ {"ren":"Italian Stallion tomato bruschetta","to":"Italian Stallion tomato garlic toast"},
+ {"ren":"Chilli lime chicken street tacos","to":"Chilli lime chicken soft tacos"}]},
+{"id":"Dazed and Confused (1993)","ops":[
+ {"ren":"Wooderson's michelada","to":"Wooderson's Texas red beer"}]},
+{"id":"The Rocky Horror Picture Show (1975)","ops":[
+ {"note":"Red lips cranberry Cape Codder","to":"Vodka over ice topped with tart cranberry juice and a squeeze of fresh lime."},
+ {"sub":"Vodka shaken hard with orange liqueur, cranberry and fresh lime, strained into chilled coupes with a flamed orange twist. Chill 4 coupes. For each drink, shake 40ml vodka, 15ml orange liqueur, 30ml cranberry juice and 15ml lime juice with plenty of ice for 15 seconds. Strain into the coupes. Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in.","to":"Vodka poured over ice and topped with tart cranberry juice and a squeeze of fresh lime. Fill 4 highball glasses with ice. Pour 45ml vodka into each, top with 120ml cranberry juice and squeeze in a lime wedge."},
+ {"sub":"60ml orange liqueur@Bottle shop","to":"2 limes@Produce"},
+ {"sub":"Cranberry and white grape juice with lime and a flamed orange peel.","to":"Cranberry and white grape juice over ice with a squeeze of fresh lime."},
+ {"sub":"Red lips cranberry cosmopolitan (alcohol-free)","to":"Red lips cranberry Cape Codder (alcohol-free)"}]},
+{"id":"Beauty and the Beast (2017)","ops":[
+ {"ren":"Mrs Potts's coronation chicken sandwiches","to":"Mrs Potts's chicken and almond sandwiches"},
+ {"sub":"curried coronation chicken with apricot and almonds","to":"tarragon chicken with apricot and almonds"},
+ {"sub":"2 tsp mild curry powder","to":"2 tsp chopped tarragon"},
+ {"sub":"1 jar mild curry powder@Pantry","to":"1 bunch tarragon@Produce"}]},
+{"id":"Killer Klowns from Outer Space (1988)","ops":[
+ {"ren":"Bazooka popcorn chicken","to":"Bazooka chicken bites"},
+ {"note":"Bazooka chicken bites","to":"Bite-size buttermilk chicken fried crisp with spicy mayo, fired out of a Klown bazooka."},
+ {"sub":"Bring out the popcorn chicken","to":"Bring out the chicken bites"}]},
+{"id":"Dick Tracy (1990)","ops":[
+ {"sub":"under torched meringue","to":"under browned meringue"}]},
+{"id":"Moulin Rouge! (2001)","ops":[
+ {"sub":"Dry-brined sirloin in cast iron","to":"Salted sirloin seared in cast iron"},
+ {"sub":"Dry-brined sirloin seared hard","to":"Salted sirloin seared hard"}]},
+{"id":"10 Things I Hate About You (1999)","ops":[
+ {"sub":"Chopped fish with scallion, lemon zest and panko, seared, in brioche with arugula.","to":"Chopped salmon with scallion, lemon zest and crumbs, seared, on a toasted bun with lettuce."},
+ {"sub":"lemon zest and panko, seared into patties and served in toasted brioche buns with dill mayo, rocket","to":"lemon zest and breadcrumbs, seared into patties and served in toasted buns with dill mayo, lettuce"},
+ {"sub":"50g panko breadcrumbs@Pantry","to":"50g dry breadcrumbs@Pantry"},
+ {"sub":"4 brioche buns@Bakery","to":"4 soft burger buns@Bakery"},
+ {"sub":"1 bag rocket@Produce","to":"1 butter lettuce@Produce"}]}
+]

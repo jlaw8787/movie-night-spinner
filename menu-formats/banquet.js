@@ -194,7 +194,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="16" style="flex:none;height:170px;overflow:hidden;font-size:20px;text-align:center;color:${SOFT}">
        <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
      <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:${noPanel?24:19}px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
-       <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(LK&&LK.toast?T.toast:fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
+       <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(LK&&LK.toast?T.toast:winks.length&&/toast|cheer/i.test(T.toast)?"Tales at table":fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
        ${toasts.map((t,i)=>`<div style="font:${E.bodyW} 1em/1.28 ${E.body};margin-bottom:.32em"><span style="color:${ACC};font-weight:700">${["I","II","III"][i]}.</span> ${esc(t)}</div>`).join("")}</div>
      ${cueB?`<div data-cue style="flex:none;border-top:1px solid ${GOLD};padding-top:8px;text-align:center;font:italic ${E.bodyW} 15px/1.3 ${E.body};color:${SOFT}"><div style="font:600 13px/1.2 ${E.body};font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.3em">Showtime</div>${esc(cueB)}</div>`:""}
    </div>
@@ -241,7 +241,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:64px;right:64px;top:610px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
      <span style="font:600 20px/1.2 ${E.body};color:${INK}">The whole feast, per cover</span><span style="font:700 26px/1 ${E.body};color:${ACC}">${esc(fee)}</span></div>
    <div data-fit data-min="14" style="position:absolute;left:64px;width:440px;top:650px;height:44px;overflow:hidden;font-size:16px;color:${SOFT}">
-     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Poster and stills: TMDB.</div></div>
+     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`Talk at table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Poster and stills: TMDB.</div></div>
    <div style="position:absolute;left:43px;top:698px;width:730px;height:296px;padding:5px;box-sizing:border-box;background:${frame};box-shadow:0 8px 20px rgba(0,0,0,.28)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${secIsPoster?stage(second):photo(second,secPos)}</div></div>
    <div style="position:absolute;left:48px;right:48px;top:1000px;font:italic 16px/1.2 ${E.body};color:${SOFT};text-align:center">${esc(venue)}, laid for tonight</div>

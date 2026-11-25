@@ -567,135 +567,63 @@
    "af": true
   },
   {
-   "n": "T-1000 frozen margarita",
+   "n": "T-1000 frozen lime slushie",
    "course": "d",
-   "prep_min": 10,
+   "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "Squeeze the limes and mix the juice, tequila, liqueur and syrup up to 1 day ahead in the fridge; blend with ice to order",
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 5,
+     "q": 6,
      "u": "",
      "item": "limes",
      "aisle": "Produce"
     },
     {
-     "q": 180,
-     "u": "ml",
-     "item": "tequila",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 60,
-     "u": "ml",
-     "item": "orange liqueur",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 40,
+     "q": 100,
      "u": "ml",
      "item": "sugar syrup",
      "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "cup",
-     "item": "ice",
-     "aisle": "Frozen"
+     "q": 200,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
     },
     {
      "q": 1,
-     "u": "tbsp",
-     "item": "salt flakes, for the rims",
+     "u": "tsp",
+     "item": "salt flakes",
      "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "cups",
+     "item": "ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Rub the glass rims with lime and dip in salt.",
+     "text": "Rub the rims of 4 glasses with lime and dip in salt.",
      "min": 3
     },
     {
-     "text": "Blend the tequila, the juice of the remaining limes, orange liqueur, sugar syrup and ice until smooth and slushy.",
+     "text": "Juice 5 limes and slice the last one into wheels.",
+     "min": 4
+    },
+    {
+     "text": "Blend the lime juice, sugar syrup, soda water and ice for 30 seconds until slushy.",
      "min": 3
     },
     {
-     "text": "Pour into the glasses and garnish with lime wheels. Serve immediately.",
+     "text": "Pour into the glasses and add a lime wheel to each.",
      "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "T-1000 frozen lime slush",
-     "prep_min": 10,
-     "cook_min": 15,
-     "make_ahead": "Steep and chill the green tea and squeeze the limes up to 1 day ahead in the fridge; blend with ice to order",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "",
-       "item": "green tea bag",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 180,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 5,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "orange juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 40,
-       "u": "ml",
-       "item": "sugar syrup",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "cup",
-       "item": "ice",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "salt flakes, for the rims",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Steep the green tea in the boiling water for 3 minutes, lift out and chill in the freezer.",
-       "min": 15
-      },
-      {
-       "text": "Rub the glass rims with lime and dip in salt.",
-       "min": 3
-      },
-      {
-       "text": "Blend the cold tea, the juice of the remaining limes, orange juice, sugar syrup and ice until smooth and slushy.",
-       "min": 4
-      },
-      {
-       "text": "Pour into the glasses and garnish with lime wheels. Serve immediately.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

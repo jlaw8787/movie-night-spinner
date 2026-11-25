@@ -131,6 +131,9 @@ const ERA={
 function eraOf(e){e=String(e||"").toLowerCase();if(ERA[e])return e;if(/30|40/.test(e))return"1930s-40s";if(/2000|00s/.test(e))return"2000s";const m=e.match(/(19)?([5-9])0/);if(m)return"19"+m[2]+"0s";return"modern"}
 function money(era,k,i,f){const e=ERA[era],v=e.P[k][i%4],y=yy(f);if(e.cents)return v<100?v+"¢":(v/100).toFixed(2);return v.toFixed(2)}
 const LABEL={s:"Starters",m:"Blue Plates",w:"Pie and Sweets",d:"Coffee and Pop"};
+/* review 50: a home takes home headings (no "Blue Plates"), "Pie and Sweets" only when a pie is on, and its own kick line, not "Last stop before" (Paranormal Activity, Barbarian) */
+const LABEL_HOME={s:"Starters",m:"Dinner",w:"Sweets",d:"Drinks"};const KICK_HOME={tense:"Something is not right at",eerie:"Quiet night at",gritty:"Dinner at",scrappy:"Dinner, sort of, at"};
+const motelLabel=(k,home,items)=>k==="w"&&!(items||[]).some(it=>/\bpies?\b/i.test(it.n||""))?"Sweets":(home?LABEL_HOME:LABEL)[k];
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 const low1=w=>/^(The|A|An|Some|Every|His|Her|Their|Its|One|Two|Three|That|This|How|Why|What|Where|When) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w; /* names keep their capitals */
@@ -192,7 +195,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="position:absolute;left:562px;top:${H/2+3}px;width:254px;height:${H/2-3}px;overflow:hidden">${photo(ctx,s3,254,H/2-3,filt)}</div>
       ${noPlate?"":lp(574,14,"left",LBm)}
       <div data-fit style="position:absolute;left:570px;bottom:14px;width:240px;height:150px;overflow:hidden;padding:10px 14px;box-sizing:border-box;background:linear-gradient(90deg,${ACC},${mix(ACC,"#3a1060",.45)});color:#fff;display:flex;flex-direction:column;justify-content:center">
-        <div style="font-family:${BODY};font-weight:700;${fs(14,14)};letter-spacing:.16em;text-transform:uppercase">${esc(T.kick)}</div>
+        <div style="font-family:${BODY};font-weight:700;${fs(14,14)};letter-spacing:.16em;text-transform:uppercase">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
         <div style="font-family:${DISP};${fs(28,16)};line-height:1.1;text-transform:uppercase">${esc(venue)}</div></div>`}
     const zx=ix+24,zw=px-zx-26,zy=iy+22,zh=ih-44,lbh=noPlate?0:LB?LB.h+24:60;
     let mid="";
@@ -202,7 +205,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
         overlay:`background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.55));color:#fff;padding:14px 20px;border-left:8px solid ${ACC}`}[e.cap]||`padding:0 0 0 2px;color:${e.ink}`;
       const plain=!({band:1,box:1,overlay:1})[e.cap];
       mid=`<div data-fit style="flex:0 1 auto;max-height:${zh-lbh-70}px;width:100%;box-sizing:border-box;overflow:hidden;display:flex;flex-direction:column;justify-content:center;${box}">
-        <div style="font-family:${BODY};font-weight:700;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${plain?ACC:"inherit"}">${esc(T.kick)}</div>
+        <div style="font-family:${BODY};font-weight:700;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${plain?ACC:"inherit"}">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
         <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(e.cap==="big"?60:46,18)};line-height:1.06;margin:4px 0;color:${plain?ACC:"inherit"};${e.cap==="overlay"||e.cap==="big"?"text-transform:uppercase;":""}${e.cap==="big"?"text-shadow:3px 3px 0 rgba(42,26,12,.35);":""}">${esc(venue)}</div>
         <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.12em;text-transform:uppercase">${esc(sign)}</div></div>`}
     const foot=`<div style="font-family:${BODY};font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:${mix(e.ink,e.paper,.2)}">Now showing, ${esc(f.year)}</div>`;
@@ -214,7 +217,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
         <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};${fs(era==="1950s"?46:36,18)};line-height:1.05;white-space:nowrap">${esc(venue)}</div>
         <div style="font-family:${BODY};font-weight:600;color:${e.ink};${fs(17,14)};letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">${esc(sign)}</div></div>`
       :`<div data-fit style="position:absolute;left:${B}px;bottom:0;height:${SHb}px;right:${B}px;overflow:hidden;padding:10px 20px;box-sizing:border-box;color:${e.ink};display:flex;flex-direction:column;justify-content:center">
-        <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${ACC}">${esc(T.kick)}</div>
+        <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${ACC}">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
         <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(44,18)};line-height:1.04;white-space:nowrap">${esc(venue)}</div></div>`):"";
     return `<div style="position:absolute;inset:0;background:${e.bcol||DARK}"></div>${panel}${posterEl}${zone}${cap}`}
   const vshort=venue.replace(/^(the)\s+/i,"");
@@ -229,7 +232,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="position:absolute;left:${B}px;top:${B}px;width:${PW}px;height:${PHh}px;overflow:hidden">${photo(ctx,s0,PW,PHh,filt)}<div style="position:absolute;inset:0;background:${linen};mix-blend-mode:multiply"></div>
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,${T.vig}) 100%)"></div>
       <div style="position:absolute;left:0;right:0;bottom:0;height:${Math.round(bs*1.1)+90}px;background:linear-gradient(180deg,rgba(40,26,12,0),rgba(40,26,12,.55))"></div></div>
-      <div style="position:absolute;left:${B+24}px;top:${B+18}px;font-family:'${sigF}',cursive;font-size:44px;color:#fff8e6;text-shadow:0 2px 6px rgba(0,0,0,.7)">${esc(T.kick)}</div>
+      <div style="position:absolute;left:${B+24}px;top:${B+18}px;font-family:'${sigF}',cursive;font-size:44px;color:#fff8e6;text-shadow:0 2px 6px rgba(0,0,0,.7)">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
       <div style="position:absolute;left:${B}px;right:${B}px;top:${H-B-52-Math.round(bs*1.1)}px;text-align:center;font-family:${DISP};font-size:${bs}px;line-height:1.1;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;
         background:linear-gradient(180deg,${tintHi},${tint} 55%,${tintLo});-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:2.5px #fff4dc;filter:drop-shadow(4px 5px 0 rgba(42,26,12,.85)) drop-shadow(0 4px 8px rgba(0,0,0,.4))">${esc(big)}</div>
       <div style="position:absolute;left:${B}px;right:${B}px;bottom:${B+14}px;text-align:center;font-family:${BODY};font-weight:800;font-size:18px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff4dc;text-shadow:0 2px 6px rgba(0,0,0,.8)">${esc(sign)}</div>
@@ -247,7 +250,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
     front=`<div style="position:absolute;inset:0;overflow:hidden">${photo(ctx,s0,W,H,filt)}<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 45%,rgba(0,0,0,${T.vig}) 100%)"></div></div>
       ${lp(22,22,"right")}
       <div data-fit style="position:absolute;left:0;right:0;bottom:44px;height:118px;overflow:hidden;background:${mix(ACC,"#000000",.15)};box-shadow:0 0 0 6px rgba(255,255,255,.85);padding:12px 28px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;transform:skewY(-2deg)">
-        <div style="font-family:${BODY};font-weight:700;color:#fff;${fs(17,14)};letter-spacing:.22em;text-transform:uppercase">${esc(T.kick)}</div>
+        <div style="font-family:${BODY};font-weight:700;color:#fff;${fs(17,14)};letter-spacing:.22em;text-transform:uppercase">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
         <div style="font-family:${DISP};color:#fff;${fs(52,20)};line-height:1;white-space:nowrap">${esc(venue)}</div></div>
       <div style="position:absolute;left:28px;bottom:10px;font-family:${BODY};font-size:16px;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9);letter-spacing:.1em">${esc(sign)}</div>`;
   }else if(e.cap==="multi"){
@@ -258,7 +261,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="position:absolute;left:562px;top:${H/2+3}px;width:254px;height:${H/2-3}px;overflow:hidden">${photo(ctx,s3,254,H/2-3,filt)}</div>
       ${lp(18,18,"left")}
       <div data-fit style="position:absolute;left:18px;bottom:18px;width:520px;height:110px;overflow:hidden;padding:10px 18px;box-sizing:border-box;background:linear-gradient(90deg,${ACC},${mix(ACC,"#3a1060",.45)});color:#fff;display:flex;flex-direction:column;justify-content:center">
-        <div style="font-family:${BODY};font-weight:700;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase">${esc(T.kick)}</div>
+        <div style="font-family:${BODY};font-weight:700;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
         <div style="font-family:${DISP};${fs(30,16)};line-height:1.1;text-transform:uppercase">${esc(venue)}</div></div>`;
   }else{
     /* box, overlay, minimal */
@@ -270,7 +273,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 50%,rgba(0,0,0,${T.vig}) 100%)"></div></div>
       ${lp(inset+16,inset+16,e.cap==="box"?"right":"left")}
       <div data-fit style="position:absolute;left:${e.cap==="minimal"?inset:inset+24}px;${e.cap==="minimal"?`bottom:0;height:${capH}px;right:${inset}px`:`bottom:${inset+24}px;height:${capH}px;max-width:560px`};overflow:hidden;padding:10px 20px;box-sizing:border-box;${boxBg};display:flex;flex-direction:column;justify-content:center">
-        <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${e.cap==="minimal"?ACC:"inherit"}">${esc(T.kick)}</div>
+        <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${e.cap==="minimal"?ACC:"inherit"}">${esc(home?(KICK_HOME[ctx.tone]||"Dinner at"):T.kick)}</div>
         <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(e.cap==="minimal"?44:40,18)};line-height:1.04;white-space:nowrap;${e.cap==="overlay"?"text-transform:uppercase;":""}">${esc(venue)}</div></div>`;
   }
   const front0=`<div style="position:absolute;inset:0;overflow:hidden">${front}${hasP?"":wearFront}${FIT}</div>`;
@@ -280,7 +283,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const dish=n<=6?23:n<=9?21:20,desc=n<=6?17:16;
   const LW=470;
   const menuHtml=C.map(c=>`<div style="margin:0 0 ${n<=6?12:7}px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-family:${BODY};font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:${ACC};${fs(15,14)};white-space:nowrap">${esc(c.k==="d"&&home?"Drinks":LABEL[c.k])}</div><div style="flex:1;border-top:1.5px ${era==="1970s"||era==="1960s"?"dotted":"solid"} ${ACC}88"></div></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-family:${BODY};font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:${ACC};${fs(15,14)};white-space:nowrap">${esc(motelLabel(c.k,home,c.items))}</div><div style="flex:1;border-top:1.5px ${era==="1970s"||era==="1960s"?"dotted":"solid"} ${ACC}88"></div></div>
       ${c.items.map((it,i)=>`<div${it.x?" data-x":""} style="margin:0 0 5px"><div style="display:flex;align-items:baseline;gap:10px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${e.ink};line-height:1.15;${fs(dish,14)}">${esc(it.n)}</div><div style="font-family:${BODY};font-weight:700;color:${e.ink};${fs(dish,14)};white-space:nowrap">${PQ[c.k][i]}</div></div>
         ${it.note?`<div data-n style="display:var(--nd,block);font-family:${BODY};color:${mix(e.ink,e.paper,.3)};line-height:1.25;${fs(desc,12)}">${esc(it.note)}</div>`:""}</div>`).join("")}</div>`).join("");
 
@@ -324,7 +327,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};font-size:${venue.length>24?26:32}px;line-height:1.05;margin:4px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div>
       ${n<=10?`<div style="font-family:${BODY};font-weight:600;color:${e.ink};font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">${home?"Help yourself. The kitchen never shuts":parlour?"Supper in the parlour, behind the office":"Coffee shop, open early and late"}</div>`:`<div style="height:6px"></div>`}
       <div data-fit style="flex:1;min-height:0;overflow:hidden">${menuHtml}</div>
-      <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?String(winks[0]).replace(/[.!?]+$/,""):""/* review 44: a film touch is not a desk service ("Ask the desk about Powder on the floor") */,`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
+      <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?"On the TV tonight: "+String(winks[0]).replace(/[.!?]+$/,""):""/* review 44: a film touch is not a desk service ("Ask the desk about Powder on the floor") */,`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
     </div>
     <div style="position:absolute;left:${LW+46}px;top:26px;bottom:26px;width:2px;background:${mix(e.ink,e.paper,.55)}"></div>
     ${stamp}${postmark}
