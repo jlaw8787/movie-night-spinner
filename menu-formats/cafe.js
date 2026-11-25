@@ -126,7 +126,7 @@ const TONE={
   grand:{f:"contrast(1.08) saturate(1.05)",dust:.12,vig:.5,tilt:-1,wear:.2,kick:"The finest cup in town",noteH:"With the compliments of",card:"Ten visits earns a pot for the table."},
   tender:{f:"brightness(1.06) saturate(.9) contrast(.96)",dust:.18,vig:.3,tilt:-2,wear:.35,kick:"Stay as long as you like",noteH:"A note for you",card:"Ten small visits, one cup to share."},
   tense:{f:"contrast(1.2) saturate(.78)",dust:.24,vig:.65,tilt:2,wear:.6,kick:"Order fast. Pay at the counter",noteH:"Read this, then sit down",card:"Ten stamps. Keep the card on you."},
-  scrappy:{f:"contrast(1.24) saturate(.7) brightness(1.04)",dust:.4,vig:.45,tilt:-5,wear:1,kick:"Cash only. Mugs might not match",noteH:"Scrawled on the back of a docket",card:"Ten stamps gets a cup. Probably."}};
+  scrappy:{f:"contrast(1.24) saturate(.7) brightness(1.04)",dust:.4,vig:.45,tilt:-5,wear:1,kick:"Cash only. Mugs might not match",noteH:"Scrawled on the back of a receipt",card:"Ten stamps gets a cup. Probably."}};
 
 /* ---------- era: board material, type, frame, course heads, prices ---------- */
 const ERA={

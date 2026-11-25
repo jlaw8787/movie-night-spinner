@@ -682,8 +682,8 @@
   "venue": "Jane's Flat, Greenwich",
   "sign": "Thor's welcome home dinner",
   "note": {
-   "text": "Eat first, both of you. The quarrelling can wait until the plates are clear.",
-   "by": "Frigga",
+   "text": "Eat first. You took two years to come back, so the Convergence can wait until the plates are clear.",
+   "by": "Jane",
    "kind": "note"
   },
   "winks": [
@@ -1078,7 +1078,13 @@
    "Compliments of the captain.": "Compliments of Maria.",
    "Printed by the ship's system.": "Printed in Louisiana.",
    "Rationed": "Baked",
-   "All hands": "For two"
+   "All hands": "For two",
+   "Issued DAY 995": "Cooked at Maria's",
+   "For two DAY 995": "For the whole table",
+   "Baked DAY 995": "Baked this morning",
+   "Logged DAY 995": "Poured on the porch",
+   "Form G-1995": "Recipe card 1995",
+   "G-1995": "No. 1995"
   }
  },
  "Ant-Man and the Wasp (2018)": {
@@ -6584,8 +6590,8 @@
   "venue": "Karen and Harry's House",
   "sign": "London, Christmas Eve",
   "note": {
-   "text": "Right, biscuits. Every single biscuit in Number 10 is mine tonight, and nobody tells the Americans.",
-   "by": "the Prime Minister",
+   "text": "Biscuits from my brother at Number 10. Hands off until the first lobster is home from the nativity.",
+   "by": "Karen",
    "kind": "note"
   },
   "winks": [
@@ -6905,7 +6911,8 @@
     "Today you will meet Henry"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 0.7
  },
  "Forgetting Sarah Marshall (2008)": {
   "venue": "Turtle Bay Resort Bar",
@@ -8925,7 +8932,19 @@
   },
   "number": "",
   "words": {
-   "Special Investigations": "Revenge for Hire"
+   "Special Investigations": "Revenge for Hire",
+   "Breakroom copy": "Office copy",
+   "Duty roster 98": "Job board 98",
+   "Duty Roster": "Job Board",
+   "Breakroom, all shifts": "Open for business, all hours",
+   "Coffee can by the pot": "Payback by the job",
+   "Surveillance": "The Hit List",
+   "Day Watch": "Job One",
+   "Swing Shift": "Job Two",
+   "Graveyard": "Job Three",
+   "Desk Duty": "Last Job",
+   "Paperwork pending": "Job pending",
+   "Money in the honour box.": "Payment on completion."
   },
   "pay": ""
  },
@@ -10254,7 +10273,10 @@
   "words": {
    "Doors open, the floor is yours": "Records, tapes and pink lemonade",
    "Psst, from the stage": "Psst, from the counter",
-   "On stage tonight": "On the turntable"
+   "On stage tonight": "On the turntable",
+   "VIP": "Staff only",
+   "After the Show": "Something Sweet",
+   "From the Bar": "From the Soda Fridge"
   }
  },
  "Wayne's World (1992)": {
@@ -10353,7 +10375,8 @@
     "Pedro Sanchez"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 0.4
  },
  "Stand by Me (1986)": {
   "venue": "Camp by the Tracks",
@@ -12003,7 +12026,15 @@
     "Mia's table"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Come in, the pot's always on": "Pure jazz. No samba. No tapas.",
+   "A note from the counter": "A note from the piano",
+   "Ten stamps and your next cup is on us.": "Ten sets and the next one's on Seb.",
+   "From the Counter": "Small Plates",
+   "The Cake Case": "Sweets",
+   "Cups": "Drinks"
+  }
  },
  "Chicago (2002)": {
   "venue": "The Onyx Club",
@@ -12596,7 +12627,8 @@
     "Elf: Marcus"
    ]
   },
-  "number": ""
+  "number": "",
+  "priceK": 0.55
  },
  "The Holiday (2006)": {
   "venue": "Rosehill Cottage",
@@ -13379,7 +13411,8 @@
     "Hill Valley"
    ]
   },
-  "number": "2015"
+  "number": "2015",
+  "priceEra": "modern"
  },
  "Short Circuit (1986)": {
   "venue": "Stephanie's Lunch Truck",
@@ -19360,7 +19393,8 @@
     "Keep it calm"
    ]
   },
-  "number": "22"
+  "number": "22",
+  "priceK": 1.6
  },
  "Oppenheimer (2023)": {
   "venue": "Los Alamos Mess Hall",
@@ -19717,7 +19751,18 @@
     "Larry and Richard: nervous"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Pupu Platters": "Deck Platters",
+   "Ring the gong": "Raise the cocktail flag",
+   "Shack Bar": "Deck Bar",
+   "From the Fire Pit": "From the Grill",
+   "Unfold for the island map.": "Unfold for the beach house map.",
+   "Main Isle": "Main Deck",
+   "Snack Cay": "Snack Bar",
+   "Sweet Reef": "Sweet Dock",
+   "Rough map, roughly right": "Bernie's place, roughly"
+  }
  },
  "Jaws (1975)": {
   "venue": "The Orca Galley",
@@ -20161,7 +20206,7 @@
   "words": {
    "Concession Scorecard": "Fight Night Card",
    "Scoreboard": "Fight card",
-   "Field level": "Ringside",
+   "Field level": "Press row",
    "Mezzanine": "Floor",
    "Bleachers": "Back rows"
   },
@@ -20363,7 +20408,14 @@
     "Ask for Sam"
    ]
   },
-  "number": ""
+  "number": "",
+  "words": {
+   "Tea at home, in the front room": "Dinner in the loft, by the pottery wheel",
+   "Tea's on when the kettle boils.": "Dinner's on when the wheel stops.",
+   "Tea Is Served": "Dinner Is Served",
+   "Tea and drinks": "To drink",
+   "Made at home, served in the front room.": "Made at home, served in the loft."
+  }
  },
  "Serendipity (2001)": {
   "venue": "Serendipity 3",
@@ -20669,7 +20721,17 @@
    "Breakroom copy": "Mess copy",
    "Breakroom, all shifts": "Mess hall, all shifts",
    "Coffee can by the pot": "Tea urn by the line",
-   "Money in the honour box.": "Issued at the line."
+   "Money in the honour box.": "Issued at the line.",
+   "Special Investigations": "Work Correctional Facility",
+   "Duty roster 92": "Work detail 92",
+   "Duty Roster": "Work Detail",
+   "Surveillance": "Inmate Roll",
+   "Day Watch": "Foundry Shift",
+   "Swing Shift": "Lead Works",
+   "Graveyard": "Lights Out",
+   "Desk Duty": "Infirmary",
+   "Unsolved": "Quarantined",
+   "Found on the desk of": "Preached in the mess by"
   }
  },
  "Alien: Resurrection (1997)": {

@@ -464,107 +464,53 @@
    "af": true
   },
   {
-   "n": "Antonowsky's gas station boilermaker",
+   "n": "Antonowsky's gas station cherry cola",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 15,
-   "make_ahead": "Chill the lagers in the fridge and cut the lemon twists up to 1 day ahead; pour the shots to order",
+   "cook_min": 0,
+   "make_ahead": "Cut the lemon twists up to a day ahead; pour to order",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "lagers (375ml)",
-     "aisle": "Bottle shop"
+     "q": 1.25,
+     "u": "L",
+     "item": "cola",
+     "aisle": "Drinks"
     },
     {
-     "q": 120,
+     "q": 40,
      "u": "ml",
-     "item": "rye whiskey",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "dashes aromatic bitters",
-     "aisle": "Bottle shop"
+     "item": "cherry syrup",
+     "aisle": "Drinks"
     },
     {
      "q": 1,
      "u": "",
      "item": "lemon",
      "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Chill the lagers and four shot glasses in the freezer.",
-     "min": 15
+     "text": "Chill 4 tall glasses.",
+     "min": 2
     },
     {
-     "text": "Pour the whiskey into the shot glasses with a dash of bitters and a small lemon twist.",
-     "min": 3
+     "text": "Put the cherry syrup in each glass, fill with ice and top with cola.",
+     "min": 2
     },
     {
-     "text": "Serve each shot alongside a cold lager poured into a chilled glass.",
+     "text": "Stir once and twist a strip of lemon peel over each.",
      "min": 2
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Antonowsky's gas station smoky brew",
-     "prep_min": 5,
-     "cook_min": 15,
-     "make_ahead": "Brew and chill the smoky tea up to 2 days ahead in the fridge; pour into chilled shot glasses on the night",
-     "ingredients": [
-      {
-       "q": 4,
-       "u": "",
-       "item": "alcohol-free lagers (375ml)",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "smoky black tea bag",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "boiling water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "honey",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lemon",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Brew the tea bag in the boiling water for 5 minutes, remove it and stir in the honey. Chill it with the lagers and four shot glasses in the freezer.",
-       "min": 15
-      },
-      {
-       "text": "Pour the tea into the shot glasses with a small lemon twist.",
-       "min": 3
-      },
-      {
-       "text": "Serve each shot alongside a cold alcohol-free lager poured into a chilled glass.",
-       "min": 2
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

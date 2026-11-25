@@ -26,7 +26,7 @@ const band=e=>/193|194|1950/.test(e)?"P":/196|197/.test(e)?"S":/198|199/.test(e)
 const yr2=y=>{const s=String(y||"").slice(-2);return s==="00"?String(y):s}; /* a 2000 film is "2000", never "00" */
 function hash(s){let h=0;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h}
 function price(f,fl,ci,ii,name,scale){
-  const base=[3,8,4,2][ci]+(ii>1?1:0);let c=["25","40","50","65","75","95"][hash(name)%6];
+  const base=[3,8,4,2][ci]+(ii>1?1:0)+(ci===3&&/\b(champagne|sparkling wine|wine|punch|sherry|brandy|gin|rum|whisk(e)?y|cocktail|liqueur|cider)\b/i.test(name)?2:0);/* review 52: a glass of something stronger costs more than the sandwiches (Ladies in Black's champagne punch sat under the egg sandwiches) */let c=["25","40","50","65","75","95"][hash(name)%6];
   if(ci===3&&ii===0&&fl&&/^\d{1,2}$/.test(String(fl.number||"")))c=String(fl.number).padStart(2,"0");
   return scale(base,c);
 }

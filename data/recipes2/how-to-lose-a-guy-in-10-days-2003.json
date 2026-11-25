@@ -502,21 +502,15 @@
    "af": true
   },
   {
-   "n": "Courtside ginger lime shandy",
+   "n": "Courtside ginger lime crush",
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "Up to 2 hours, keep cold",
+   "make_ahead": "Up to 2 hours, keep the ginger beer cold",
    "ingredients": [
     {
-     "q": 800,
-     "u": "ml",
-     "item": "lager",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 750,
-     "u": "ml",
+     "q": 1.25,
+     "u": "L",
      "item": "ginger beer",
      "aisle": "Drinks"
     },
@@ -531,6 +525,12 @@
      "u": "",
      "item": "sprigs mint",
      "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
@@ -539,7 +539,7 @@
      "min": 3
     },
     {
-     "text": "Squeeze a quarter of a lime into each, then pour in the lager, tilting the cup.",
+     "text": "Squeeze a quarter of a lime into each and fill with crushed ice.",
      "min": 3
     },
     {
@@ -548,55 +548,7 @@
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Courtside ginger lime shandy (alcohol-free)",
-     "prep_min": 10,
-     "cook_min": 0,
-     "make_ahead": "Up to 2 hours, keep cold",
-     "ingredients": [
-      {
-       "q": 800,
-       "u": "ml",
-       "item": "alcohol-free lager",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 750,
-       "u": "ml",
-       "item": "ginger beer",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "sprigs mint",
-       "aisle": "Produce"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Chill 4 tall cups or glasses.",
-       "min": 3
-      },
-      {
-       "text": "Squeeze a quarter of a lime into each, then pour in the alcohol-free lager, tilting the cup.",
-       "min": 3
-      },
-      {
-       "text": "Top with the ginger beer, drop in a lime wedge and mint sprig and serve straight away.",
-       "min": 4
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

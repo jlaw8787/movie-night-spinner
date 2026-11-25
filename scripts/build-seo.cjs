@@ -37,6 +37,14 @@ const DRY_FILMS = (() => { const m = rd('app.js').match(/const DRY_FILMS=(\[[^\]
 /* review 31: the page uses the app's own split of a recipe's time (dishTimes in app.js), so pickling, chilling and resting count as
    waiting, not cooking (Tombstone's pickled eggs read "cook 4343 min"). Long times read in hours or days. */
 /* review 37: printed names on the hand-built menus (formats.js items carry the recipe key k and the printed name n) */
+/* review 52: the description lists dishes mid-sentence, so a dish name after the first starts lower case unless its first word is a name
+   ("Mean man spiced peanuts and biscuits and sausage gravy", but "Coney chilli dogs" keeps its capital). A word counts as plain when
+   the dish notes print it in lower case mid-sentence far more often than with a capital. */
+const PLAIN = (() => { const lo = new Map(), up = new Map(), add = (M, k) => M.set(k, (M.get(k) || 0) + 1);
+  for (const f of rj('data/films.json')) for (const k of ['S', 'M', 'W', 'K']) for (const r of f[k] || []) for (const sent of String(r[1] || '').split(/[.!?]\s+/))
+    sent.split(/\s+/).slice(1).forEach(w => { const m = w.replace(/[^A-Za-z'-]/g, ''); if (!m) return; add(/^[a-z]/.test(m) ? lo : up, m.toLowerCase()); });
+  return w => { const k = w.replace(/[^A-Za-z'-]/g, '').toLowerCase(); return (lo.get(k) || 0) >= 2 && (lo.get(k) || 0) > 1.5 * (up.get(k) || 0); }; })();/* mostly lower case mid-sentence */
+const midName = n => { const ws = n.split(/\s+/), w = ws[0]; return /^[A-Z][a-z]/.test(w) && !/.[A-Z]/.test(w) && !/'s$|’s$/.test(w) && PLAIN(w.split('-')[0]) && !ws.slice(1).some(x => /^[A-Z]/.test(x))/* a later capital means a title ("Village of the Year fete") */ ? n[0].toLowerCase() + n.slice(1) : n; };
 const CARD_PRINT = (() => { try { return rj('data/card-print.json'); } catch (e) { return {}; } })();
 const HOUSE = (() => { try { return rj('data/film-house.json'); } catch (e) { return {}; } })();
 /* review 40: hand-built one-offs, as their card and phone menu print them (render-previews saves it) */
@@ -88,6 +96,15 @@ const dryText = (() => { const vm = require('vm'), src = rd('app.js'); const gra
   const ctx = {}; vm.createContext(ctx); vm.runInContext([grab('const KDRY=', '})();'), grab('const KFIX=', '})();'), grab('const dryFold=', '\n'), grab('const KKEEP=', '\n'), grab('const dryKeep=', '\n'), grab('const dryText=', '\n'), grab('const dryText0=', '\n'), ';globalThis.dryText=dryText;'].join('\n'), ctx); return ctx.dryText; })();
 const dryDish = y => { const D = t => typeof t === 'string' ? dryText(t, true) : t; return { ...y, n: D(y.n), note: D(y.note), how: D(y.how), make_ahead: D(y.make_ahead),
   ingredients: (y.ingredients || []).map(i => ({ ...i, item: D(i.item) })), steps: (y.steps || []).map(t => typeof t === 'string' ? D(t) : { ...t, text: D(t.text) }) }; };
+/* review 52: a dish the menu prints without a full recipe card lists its shop lines on the page, which are buying amounts ("1 packet caster
+   sugar", Rocky's "520g plain flour" against 500g in the method). The page takes the method's own amount for the item when it names one,
+   and drops a pack word it cannot match ("rock salt"), so the list reads like a recipe. */
+const howQty = (line, how) => { const L = String(line).trim(), H = String(how || '');
+  const m = L.match(/^(\d+(?:\.\d+)?)\s*(g|kg|ml|L|l)?\s+(?:(packets?|jars?|bags?|bottles?|tins?|cans?|boxes?|tubes?|punnets?|cartons?|blocks?|tubs?|packs?|sachets?|sticks?)\s+)?(.+)$/);
+  if (!m) return L; const item = m[4].replace(/\s*\(.*\)$/, ''), esc = item.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const hm = H.match(new RegExp('(\\d+(?:\\.\\d+)?(?:\\s?(?:g|kg|ml|L|l)\\b|\\s(?:tbsp|tsp|cups?|teaspoons?|tablespoons?)\\b))\\s+(?:of\\s+)?' + esc + '\\b', 'i'));
+  if (hm && (m[3] || m[2])) return hm[1].replace(/\s+(?=(g|kg|ml|L|l)\b)/, '') + ' ' + item;
+  return m[3] ? item : L; };
 /* every film's page facts, built once */
 const ALL = films.map((f, i) => {
   const id = f.title + ' (' + f.year + ')', ds = slug(id), s = pslug(id), d = rj('data/film/' + ds + '.json');
@@ -103,7 +120,7 @@ const ALL = films.map((f, i) => {
   /* review 32: every dish printed on the menu is on the page. The ones without a full recipe card (the menu cooks five) follow in their
      course, marked "On the printed menu", with how it is made; they stay out of the Recipe list in the JSON-LD */
   { const have = new Set(dishes.flatMap(y => [String(y.n).toLowerCase(), String(y.n0 || '').toLowerCase()]));
-    for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase()) && !(dry && c === 'd' && /\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|ale|beer|lager|stout|cider|sherry|port|highball|martini|margarita|mead|cocktail|liqueur|schnapps|prosecco|spritz)\b/i.test(String(r[0]) + ' ' + String(r[1] || '')))) {/* review 38: a dry card never prints the alcoholic drink, so its page does not list it (Ratatouille's Bordeaux) */ have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: String(x).split('@')[0] })), steps: [], extra: true }); } }
+    for (const c of 'smwd') for (const r of (d[KEYS[c]] || f[KEYS[c]] || [])) if (r && r[0] && !have.has(String(r[0]).toLowerCase()) && !(dry && c === 'd' && /\b(wine|bordeaux|champagne|bourbon|whisk(e)?y|rum|vodka|gin|tequila|brandy|ale|beer|lager|stout|cider|sherry|port|highball|martini|margarita|mead|cocktail|liqueur|schnapps|prosecco|spritz)\b/i.test(String(r[0]) + ' ' + String(r[1] || '')))) {/* review 38: a dry card never prints the alcoholic drink, so its page does not list it (Ratatouille's Bordeaux) */ have.add(String(r[0]).toLowerCase()); dishes.push({ n: r[0], course: c, note: r[1], how: r[2], ingredients: (r[3] || []).map(x => ({ item: howQty(String(x).split('@')[0], r[2]) })), steps: [], extra: true }); } }
   /* review 37: a hand-built menu prints its own short name for a dish ("Buddy Holly chicken", not "Buddy Holly's chicken basket"): the page uses it */
   { const nm = HB_NAMES[id]; if (nm) for (const y of dishes) { const v = nm[String(y.n).toLowerCase()]; if (v) y.n = v; } }
   /* review 39: a shared-layout page reads the card as printed (data/card-print.json, saved by render-previews with each preview): every note
@@ -203,7 +220,7 @@ const card = x => `<li><a href="/menu/${x.s}/"><img src="${posterUrl(x.poster, '
 const dishId = y => 'dish-' + slug(clean(y.n)).slice(0, 60);
 function filmPage(x) {
   const { f, d, s, ds, shown, id } = x, canon = `${SITE}/menu/${s}/`, open = '/?film=' + encodeURIComponent(id);
-  const names = x.dishes.map(y => clean(y.n));
+  const names = x.dishes.map((y, i) => i ? midName(clean(y.n)) : clean(y.n));
   const taken = new Map(), used = new Set();
   for (const y of x.dishes) { const b0 = dishId(y); let k = b0, n = 2; while (used.has(k)) k = b0 + '-' + n++; used.add(k); taken.set(y, k); }
   const did = y => taken.get(y);

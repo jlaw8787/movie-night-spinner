@@ -230,7 +230,7 @@ window.MENU_FORMATS.home=function(ctx){
      </div>
    </div>
    ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
-   ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^([^\s]+\s(and|&)\s)?[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
+   ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^([^\s]+\s(and|&)\s)?[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))||/^\d/.test(venue)/* review 52: a street address takes no "the" (17 Cherry Tree Lane) */?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
    ${rcard(cardB,420,548,T.rot*.5,fl.stamp||sy,`${OLD?"Serves everyone at the table.":ICE||LARDER?"Serves everyone round the wireless.":"Serves everyone on the couch."} ${fam?"Soft drinks only. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };

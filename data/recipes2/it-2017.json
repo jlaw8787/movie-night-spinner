@@ -420,62 +420,100 @@
    "n": "Red balloon cupcakes",
    "course": "w",
    "prep_min": 25,
-   "cook_min": 45,
-   "make_ahead": "Keeps 3 days chilled",
+   "cook_min": 20,
+   "make_ahead": "Bake the day before, ice on the day",
    "ingredients": [
     {
-     "q": 1,
-     "u": "",
-     "item": "vanilla cake, 500g, crumbled",
-     "aisle": "Bakery"
+     "q": 185,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
     },
     {
-     "q": 100,
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 185,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
      "u": "g",
      "item": "cream cheese",
      "aisle": "Dairy"
     },
     {
-     "q": 50,
+     "q": 300,
      "u": "g",
      "item": "icing sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
-     "u": "g",
-     "item": "red candy melts",
+     "q": 1,
+     "u": "",
+     "item": "red food colouring gel",
      "aisle": "Pantry"
     },
     {
-     "q": 16,
+     "q": 12,
      "u": "",
-     "item": "lollipop sticks",
+     "item": "paper cupcake cases",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "",
-     "item": "ball string",
+     "item": "ball of kitchen string",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Crumble the cake into the cream cheese beaten with the icing sugar.",
-     "min": 10
-    },
-    {
-     "text": "Roll into balls, push in lollipop sticks and chill.",
-     "min": 40
-    },
-    {
-     "text": "Melt the candy melts and dip the pops.",
-     "min": 15
-    },
-    {
-     "text": "Tie a bit of string to each like a balloon.",
+     "text": "Heat the oven to 180C and line a muffin tin with 12 paper cases.",
      "min": 5
+    },
+    {
+     "text": "Beat 125g butter with the caster sugar until pale, beat in the eggs, then fold in the flour, milk and vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Fill the cases two thirds and bake until a skewer comes out clean.",
+     "min": 20
+    },
+    {
+     "text": "Cool the cakes on a rack.",
+     "min": 30
+    },
+    {
+     "text": "Beat the cream cheese with the other 60g butter and the icing sugar, and colour it bright red.",
+     "min": 6
+    },
+    {
+     "text": "Pipe a tall swirl on each cake and push in a short length of string like a balloon.",
+     "min": 6
     }
    ],
    "veg": true,

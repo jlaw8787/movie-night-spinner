@@ -187,7 +187,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <span style="font:700 15px/1 ${BF};letter-spacing:.16em;color:${acc}">${R0?R0.id:"TRAIN"} ${esc(num.slice(0,4))}</span></div>
     ${rows}
     ${cue?`<div style="font:italic 400 16px/1.35 ${BF};color:${soft};margin-top:7px;${clamp(1)}">Arriving: ${esc(cue.replace(/^./,c=>c.toLowerCase()))}</div>`:""}</div>`;
-  const fine1=`<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;bottom:${inset+12}px;font:400 15px/1.2 ${BF};color:${soft};display:flex;justify-content:space-between;gap:10px"><span style="${clamp(1)}">${esc(title.length>34?title.slice(0,32).replace(/\W+\w*$/,"")+"..." :title)}, ${esc(year)}</span><span>Form DC-${esc(num.slice(-4))}</span></div>`;
+  const fine1=`<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;bottom:${inset+12}px;font:400 15px/1.2 ${BF};color:${soft};display:flex;justify-content:space-between;gap:10px"><span style="${clamp(1)}">${esc(title.length>34?(/[,:] |\s-\s/.test(title)&&title.split(/[,:] |\s-\s/).pop().length<=34?title.split(/[,:] |\s-\s/).pop()/* review 52: a long title prints its subtitle whole (Ghost Protocol), never cut */:title.slice(0,32).replace(/\W+\w*$/,"")+"...") :title)}, ${esc(year)}</span><span>Form DC-${esc(num.slice(-4))}</span></div>`;
   const front=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${header}${hero}${side}${logo}<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;top:${noteTop+6}px;bottom:${inset+34}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">${timetable}</div>${fine1}${frame()}</div>`;
 
   /* ---------- BACK ---------- */

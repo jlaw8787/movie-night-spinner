@@ -225,9 +225,9 @@
   {
    "n": "Alkali Lake beef stew",
    "course": "m",
-   "prep_min": 17,
-   "cook_min": 215,
-   "make_ahead": "Braise the stew up to 2 days ahead and reheat gently; boil and mash the potatoes fresh",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Stew keeps 3 days chilled and is better the next day",
    "ingredients": [
     {
      "q": 1,
@@ -238,7 +238,7 @@
     {
      "q": 2,
      "u": "",
-     "item": "brown onions",
+     "item": "onions",
      "aisle": "Produce"
     },
     {
@@ -248,10 +248,22 @@
      "aisle": "Produce"
     },
     {
-     "q": 375,
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
      "u": "ml",
-     "item": "red wine",
-     "aisle": "Bottle shop"
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bay leaf",
+     "aisle": "Pantry"
     },
     {
      "q": 1,
@@ -260,216 +272,35 @@
      "aisle": "Produce"
     },
     {
-     "q": 100,
+     "q": 80,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "vegetable oil",
-     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Dice the onions and carrots.",
-     "min": 10
-    },
-    {
-     "text": "Brown the beef in batches in oil.",
+     "text": "Brown the beef in batches.",
      "min": 15
     },
     {
-     "text": "Soften the vegetables, return the beef with red wine and water to cover and simmer.",
+     "text": "Soften the onions and carrots, stir in the tomato paste, return the beef with the stock and bay leaf and simmer until tender.",
      "min": 180
     },
     {
-     "text": "Boil the potatoes and mash with plenty of butter.",
-     "min": 5
-    },
-    {
-     "text": "Cook the potatoes.",
-     "min": 20
+     "text": "Boil the potatoes and mash with the butter.",
+     "min": 25
     },
     {
      "text": "Spoon the stew over the mash.",
-     "min": 2
+     "min": 3
     }
    ],
    "veg": false,
-   "af": false,
+   "af": true,
    "alt": {
-    "af": {
-     "n": "Alkali Lake beef stew",
-     "prep_min": 17,
-     "cook_min": 215,
-     "make_ahead": "Braise the stew up to 2 days ahead and reheat gently; boil and mash the potatoes fresh",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "beef chuck, diced",
-       "aisle": "Meat"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "brown onions",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "carrots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 375,
-       "u": "ml",
-       "item": "beef stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "balsamic vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Dice the onions and carrots.",
-       "min": 10
-      },
-      {
-       "text": "Brown the beef in batches in oil.",
-       "min": 15
-      },
-      {
-       "text": "Soften the vegetables, return the beef with the stock, balsamic and water to cover and simmer.",
-       "min": 180
-      },
-      {
-       "text": "Boil the potatoes and mash with plenty of butter.",
-       "min": 5
-      },
-      {
-       "text": "Cook the potatoes.",
-       "min": 20
-      },
-      {
-       "text": "Spoon the stew over the mash.",
-       "min": 2
-      }
-     ]
-    },
     "veg": {
      "n": "Alkali Lake mushroom stew",
-     "prep_min": 17,
-     "cook_min": 80,
-     "make_ahead": "Braise the stew up to 2 days ahead and reheat gently; boil and mash the potatoes fresh",
-     "ingredients": [
-      {
-       "q": 800,
-       "u": "g",
-       "item": "portobello mushrooms, halved",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "tin brown lentils (400g), drained",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "brown onions",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "carrots",
-       "aisle": "Produce"
-      },
-      {
-       "q": 375,
-       "u": "ml",
-       "item": "red wine",
-       "aisle": "Bottle shop"
-      },
-      {
-       "q": 500,
-       "u": "ml",
-       "item": "vegetable stock",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Dice the onions and carrots.",
-       "min": 10
-      },
-      {
-       "text": "Brown the mushrooms in batches in the oil.",
-       "min": 15
-      },
-      {
-       "text": "Soften the onions and carrots, return the mushrooms with the red wine, stock and lentils and simmer until thick.",
-       "min": 45
-      },
-      {
-       "text": "Boil the potatoes and mash with plenty of butter.",
-       "min": 25
-      },
-      {
-       "text": "Spoon the stew over the mash.",
-       "min": 2
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Alkali Lake mushroom stew (alcohol free)",
      "prep_min": 17,
      "cook_min": 80,
      "make_ahead": "Braise the stew up to 2 days ahead and reheat gently; boil and mash the potatoes fresh",
@@ -550,7 +381,8 @@
        "text": "Spoon the stew over the mash.",
        "min": 2
       }
-     ]
+     ],
+     "af": true
     }
    }
   },
@@ -628,7 +460,7 @@
    "af": true
   },
   {
-   "n": "Frozen apple and mint spritz",
+   "n": "Frozen apple and mint soda",
    "course": "d",
    "prep_min": 12,
    "cook_min": 480,
