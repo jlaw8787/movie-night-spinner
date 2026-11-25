@@ -1141,12 +1141,24 @@ function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;con
   const T=(()=>{try{return dishTimes(x,k)}catch(e){return null}})();
   return {time:T&&(T.prep||T.cook)?["Prep "+planMin(T.prep||5),T.cook?"cook "+planMin(T.cook):"",T.wait?planMin(T.wait)+" waiting":""].filter(Boolean).join(", "):"",ing:dishIngList(x,k),steps:(x.ingredients||[]).filter(baseOf).map(i=>baseOf(i).step(baseG(i.q,i)*k,i)).concat((x.steps||[]).map(s=>degC(stepTimed(scaleStep(s.text,k),s.min))))}}catch(e){return null}}
 const phoneGuests=f=>typeof current!=="undefined"&&current===f?PLAN.guests:USUAL;
+/* review 52: a hand-built phone menu's notes carry the dish's price ("1.10 at the appetizing counter"), but the card's prices pass priceFix,
+   so the two drifted (Serpico, Working Girl, Taxi Driver). The phone now reads each price off the drawn card: the price printed beside the
+   dish's own name replaces the one in its note */
+const HB_PR=/(?:[$£]\s?)?(?:\d{1,4})?\.\d{2}\b|\$\d{1,4}\b|\b\d{1,3}¢/;
+function hbCardPrices(spec){if(!spec||!spec.groups||!card||!card.innerHTML)return spec;const N=t=>String(t||"").toLowerCase().replace(/[’']/g,"'").replace(/\s+/g," ").trim();
+  const els=[...card.querySelectorAll("span,div,p,b,strong,td,h3,h4")].filter(e=>e.children.length===0&&e.textContent.trim());
+  const priceOf=n=>{const k=N(n);const e=els.find(x=>N(x.textContent)===k);if(!e)return null;
+    for(let a=e,i=0;a&&a!==card&&i<3;a=a.parentElement,i++){const t=a.textContent,j=t.toLowerCase().indexOf(k);const m=(j>=0?t.slice(j+k.length):t).match(HB_PR);if(m)return m[0].trim()}return null};
+  return {...spec,groups:spec.groups.map(g=>({...g,items:(g.items||[]).map(it=>{const note=String(it.note||"");if(!HB_PR.test(note))return it;const p=priceOf(it.n||it.k);if(!p)return it;
+    const had=note.match(HB_PR)[0];if(had.replace(/[$£\s]/g,"")===p.replace(/[$£\s]/g,""))return it;
+    const out=/^[$£]/.test(had)&&!/^[$£]/.test(p)?had[0]+p:/^[$£]/.test(p)&&!/^[$£]/.test(had)?p.replace(/^[$£]\s?/,""):p;return {...it,note:note.replace(HB_PR,out)}})}))}}
 let pvArgs=null;function phoneRefresh(){if(pvArgs&&pvArgs[0]===current&&fmtPhone.innerHTML)phoneView(...pvArgs)}
 function phoneView(f,spec,menu){
   pvArgs=f?[f,spec,menu]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   setTimeout(()=>{try{kidsDryDom(fmtPhone,f)}catch(e){}},0);
-  fmtPhone.innerHTML=spec.fmt==="lib"?fmtPhoneHTML(f,spec,menu):dietPhone(f,fmtPhoneHTML(f,spec,menu));try{curlyQuotes(fmtPhone)}catch(e){}fmtPhoneWire(fmtPhone);
+  let hbFix=[];if(spec.fmt!=="lib")try{const s2=hbCardPrices(spec);spec.groups.forEach((g,i)=>(g.items||[]).forEach((it,j)=>{const b=s2.groups[i].items[j];if(b.note!==it.note)hbFix.push([String(it.note),String(b.note)])}))}catch(e){hbFix=[]}
+  {let h=spec.fmt==="lib"?fmtPhoneHTML(f,spec,menu):dietPhone(f,fmtPhoneHTML(f,spec,menu));for(const [a,b] of hbFix)for(const [x,y] of [[a,b],[ESC(a),ESC(b)]])h=h.split(x).join(y);fmtPhone.innerHTML=h}try{curlyQuotes(fmtPhone)}catch(e){}fmtPhoneWire(fmtPhone);
   {const fb=fmtPhone.querySelector(".fp-flip");fb.textContent="Read the printed menu full size";fb.addEventListener("click",()=>openMenuZoom(fb))}
   applyPhone();
 }
@@ -2936,7 +2948,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;try{planWire(f)}catch(e){}
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{priceFix(card,menu,f,spec.flavour||(spec.pay!=null?{pay:spec.pay}:null),"modern","own")/* review 38: a hand-built feast, prom or private dinner sets pay:"" in its spec */}catch(e){console.warn("price sense",e)}try{curlyQuotes(card)}catch(e){}try{sumFix(card)}catch(e){console.warn("totals",e)}/* review 36: hand-built totals add up too (Ghostbusters work order) */dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));try{if(!spec.drawn)/* review 52: a card whose drawn prices are the joke keeps them (Julie & Julia's kir at cost, Day 1 of 365, $3.65; Home Alone 2's 9.67 minibar; Serpico's honest guest check) */priceFix(card,menu,f,spec.flavour||(spec.pay!=null?{pay:spec.pay}:null),"modern","own")/* review 38: a hand-built feast, prom or private dinner sets pay:"" in its spec */}catch(e){console.warn("price sense",e)}try{curlyQuotes(card)}catch(e){}try{sumFix(card)}catch(e){console.warn("totals",e)}/* review 36: hand-built totals add up too (Ghostbusters work order) */dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     cueStrip(f);
