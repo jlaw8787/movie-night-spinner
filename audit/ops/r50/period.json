@@ -1,0 +1,13 @@
+[
+{"id":"Wall Street (1987)","ops":[{"set":"house.d","value":{"n":"Bluestar iced coffee","note":"Strong black coffee shaken over ice with sugar syrup and a splash of cream."}}]},
+{"id":"Anchorman: The Legend of Ron Burgundy (2004)","ops":[
+ {"ren":"Carne asada fries","to":"Carne asada plate"},
+ {"sub":"Asada veg fries","to":"Asada veg plate"},
+ {"sub":"Asada portobello fries","to":"Asada portobello plate"}]},
+{"id":"Three Amigos! (1986)","ops":[{"ren":"Santa Poco street corn","to":"Santa Poco grilled corn"}]},
+{"id":"Short Circuit (1986)","ops":[
+ {"ren":"Food truck double burger","to":"Short-order double burger"},
+ {"ren":"Stephanie's food truck egg rolls","to":"Stephanie's lunch truck egg rolls"},
+ {"sub":"out of a food truck window","to":"out of a lunch truck window"}]},
+{"id":"Annie (1982)","ops":[{"set":"flavour.year","value":1933}]}
+]

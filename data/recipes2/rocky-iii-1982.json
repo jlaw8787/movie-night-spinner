@@ -85,342 +85,142 @@
   {
    "n": "Venice beach fried clams",
    "course": "s",
-   "prep_min": 30,
-   "cook_min": 0,
-   "make_ahead": "Mix the lime sour cream up to 1 day ahead, chilled; whisk the batter and fry the fish just before serving",
+   "prep_min": 18,
+   "cook_min": 15,
+   "make_ahead": "Cut the clams or calamari into strips up to 1 day ahead and keep chilled; soak, dredge and fry just before serving",
    "ingredients": [
     {
      "q": 500,
      "u": "g",
-     "item": "cod fillets, cut in strips",
+     "item": "clam meat or calamari, cut into strips",
      "aisle": "Seafood"
     },
     {
-     "q": 300,
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
      "u": "g",
      "item": "plain flour",
      "aisle": "Pantry"
     },
     {
-     "q": 330,
-     "u": "ml",
-     "item": "cold lager",
-     "aisle": "Bottle shop"
-    },
-    {
-     "q": 1,
+     "q": 2,
      "u": "l",
      "item": "vegetable oil, for frying",
      "aisle": "Pantry"
     },
     {
-     "q": 200,
-     "u": "ml",
-     "item": "sour cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 12,
-     "u": "",
-     "item": "small corn tortillas",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 0.25,
-     "u": "",
-     "item": "small cabbage, shredded",
-     "aisle": "Produce"
-    },
-    {
      "q": 4,
      "u": "tbsp",
-     "item": "fresh salsa",
+     "item": "tartare sauce",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wedges",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Whisk the flour with cold lager to a light batter.",
+     "text": "Soak the clam strips in buttermilk for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Mix the cornmeal and flour and dredge the strips.",
      "min": 5
     },
     {
-     "text": "Mix the sour cream with lime juice.",
+     "text": "Heat the vegetable oil to 185C and fry for 90 seconds, in batches.",
+     "min": 10
+    },
+    {
+     "text": "Serve with tartare and lemon wedges.",
      "min": 3
-    },
-    {
-     "text": "Dip the cod strips in the batter and fry in the vegetable oil at 180C in batches until crisp.",
-     "min": 12
-    },
-    {
-     "text": "Warm the tortillas.",
-     "min": 5
-    },
-    {
-     "text": "Fill with cabbage, fish, sour cream and salsa.",
-     "min": 5
     }
    ],
    "veg": false,
-   "af": false,
+   "af": true,
    "alt": {
-    "af": {
-     "n": "Venice beach fried clams",
-     "prep_min": 30,
-     "cook_min": 0,
-     "make_ahead": "Mix the lime sour cream up to 1 day ahead, chilled; whisk the soda water batter and fry the fish just before serving",
+    "veg": {
+     "n": "Venice beach fried king oyster mushrooms",
+     "prep_min": 18,
+     "cook_min": 15,
+     "make_ahead": "Slice the mushrooms up to 1 day ahead and keep chilled; soak, dredge and fry just before serving",
      "ingredients": [
       {
        "q": 500,
        "u": "g",
-       "item": "cod fillets, cut in strips",
-       "aisle": "Seafood"
+       "item": "king oyster mushrooms, stems sliced into rings",
+       "aisle": "Produce"
       },
       {
-       "q": 300,
+       "q": 200,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fine cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
        "u": "g",
        "item": "plain flour",
        "aisle": "Pantry"
       },
       {
-       "q": 330,
-       "u": "ml",
-       "item": "cold soda water",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
+       "q": 2,
        "u": "l",
        "item": "vegetable oil, for frying",
        "aisle": "Pantry"
       },
       {
-       "q": 200,
-       "u": "ml",
-       "item": "sour cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "small corn tortillas",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 0.25,
-       "u": "",
-       "item": "small cabbage, shredded",
-       "aisle": "Produce"
-      },
-      {
        "q": 4,
        "u": "tbsp",
-       "item": "fresh salsa",
+       "item": "tartare sauce",
        "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Whisk the flour with cold soda water to a light batter.",
-       "min": 5
-      },
-      {
-       "text": "Mix the sour cream with lime juice.",
-       "min": 3
-      },
-      {
-       "text": "Dip the cod strips in the batter and fry in the vegetable oil at 180C in batches until crisp.",
-       "min": 12
-      },
-      {
-       "text": "Warm the tortillas.",
-       "min": 5
-      },
-      {
-       "text": "Fill with cabbage, fish, sour cream and salsa.",
-       "min": 5
-      }
-     ]
-    },
-    "veg": {
-     "n": "Venice beach battered halloumi tacos",
-     "prep_min": 30,
-     "cook_min": 0,
-     "make_ahead": "Mix the lime sour cream and cut the haloumi up to 1 day ahead, chilled; make the batter and fry just before serving",
-     "ingredients": [
-      {
-       "q": 400,
-       "u": "g",
-       "item": "haloumi, cut into finger strips",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 330,
-       "u": "ml",
-       "item": "cold lager",
-       "aisle": "Bottle shop"
       },
       {
        "q": 1,
-       "u": "l",
-       "item": "vegetable oil, for frying",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "sour cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
        "u": "",
-       "item": "limes",
+       "item": "lemon, cut into wedges",
        "aisle": "Produce"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "small corn tortillas",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 0.25,
-       "u": "",
-       "item": "small cabbage, shredded",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "fresh salsa",
-       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Whisk the flour with the cold lager to a light batter.",
+       "text": "Soak the mushroom rings in buttermilk for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Mix the cornmeal and flour and dredge the mushrooms.",
        "min": 5
       },
       {
-       "text": "Mix the sour cream with lime juice.",
+       "text": "Heat the vegetable oil to 185C and fry for 2 minutes, in batches.",
+       "min": 10
+      },
+      {
+       "text": "Serve with tartare and lemon wedges.",
        "min": 3
-      },
-      {
-       "text": "Pat the haloumi dry, dip in the batter and fry in the vegetable oil at 180C in batches until crisp and golden. Drain on paper.",
-       "min": 12
-      },
-      {
-       "text": "Warm the tortillas.",
-       "min": 5
-      },
-      {
-       "text": "Fill with cabbage, haloumi, sour cream and salsa.",
-       "min": 5
       }
      ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Venice beach battered halloumi tacos (alcohol-free)",
-     "prep_min": 30,
-     "cook_min": 0,
-     "make_ahead": "Mix the lime sour cream and cut the haloumi up to 1 day ahead, chilled; make the soda water batter and fry just before serving",
-     "ingredients": [
-      {
-       "q": 400,
-       "u": "g",
-       "item": "haloumi, cut into finger strips",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 330,
-       "u": "ml",
-       "item": "cold soda water",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil, for frying",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "sour cream",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "small corn tortillas",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 0.25,
-       "u": "",
-       "item": "small cabbage, shredded",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "fresh salsa",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Whisk the flour with the cold soda water to a light batter.",
-       "min": 5
-      },
-      {
-       "text": "Mix the sour cream with lime juice.",
-       "min": 3
-      },
-      {
-       "text": "Pat the haloumi dry, dip in the batter and fry in the vegetable oil at 180C in batches until crisp and golden. Drain on paper.",
-       "min": 12
-      },
-      {
-       "text": "Warm the tortillas.",
-       "min": 5
-      },
-      {
-       "text": "Fill with cabbage, haloumi, sour cream and salsa.",
-       "min": 5
-      }
-     ]
+     "af": true
     }
    }
   },
@@ -591,77 +391,57 @@
   {
    "n": "Thunderlips charity cannoli",
    "course": "w",
-   "prep_min": 30,
-   "cook_min": 717,
-   "make_ahead": "Make the day before, keep chilled",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Make the filling up to 1 day ahead and chill; fill the shells just before serving",
    "ingredients": [
     {
-     "q": 3,
-     "u": "",
-     "item": "egg yolks",
+     "q": 500,
+     "u": "g",
+     "item": "fresh ricotta",
      "aisle": "Dairy"
     },
     {
      "q": 80,
      "u": "g",
-     "item": "caster sugar",
+     "item": "icing sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 250,
-     "u": "g",
-     "item": "mascarpone",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
-     "u": "ml",
-     "item": "thickened cream, whipped",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 24,
+     "q": 1,
      "u": "",
-     "item": "savoiardi biscuits",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
-     "u": "ml",
-     "item": "strong coffee, cooled",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "cocoa",
-     "aisle": "Pantry"
+     "q": 8,
+     "u": "",
+     "item": "cannoli shells",
+     "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Whisk the yolks with the sugar until pale.",
-     "min": 10
+     "text": "Drain the ricotta in a sieve for 2 hours.",
+     "min": 120
     },
     {
-     "text": "Fold in the mascarpone and whipped cream.",
+     "text": "Beat the ricotta with the icing sugar and orange zest until smooth.",
      "min": 5
     },
     {
-     "text": "Dip the savoiardi briefly in coffee and layer with the cream in a dish.",
-     "min": 8
+     "text": "Melt the chocolate, dip the ends of the shells and let them set.",
+     "min": 10
     },
     {
-     "text": "Repeat and finish with cream.",
-     "min": 3
-    },
-    {
-     "text": "Chill overnight.",
-     "min": 720
-    },
-    {
-     "text": "Dust with cocoa.",
-     "min": 1
+     "text": "Pipe the filling into the shells just before serving.",
+     "min": 5
     }
    ],
    "veg": true,

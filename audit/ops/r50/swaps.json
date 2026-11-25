@@ -1,0 +1,234 @@
+[
+ {
+  "id": "Rocky III (1982)",
+  "old": "Venice beach fried clams",
+  "new": {
+   "n": "Venice beach fried clams",
+   "note": "Clam strips soaked in buttermilk, fried crisp in a cornmeal crust, tartare and lemon.",
+   "how": "Clam meat or calamari soaked in buttermilk, dredged in cornmeal and flour, fried at 185C for 90 seconds, with tartare and lemon. Cut 500g clam meat or calamari into strips and soak in 200ml buttermilk for 15 minutes. Dredge in 100g fine cornmeal mixed with 50g plain flour and fry in batches at 185C for 90 seconds. Serve with tartare and lemon wedges.",
+   "shop": [
+    "500g clam meat or calamari@Seafood",
+    "200ml buttermilk@Dairy",
+    "100g fine cornmeal@Pantry",
+    "50g plain flour@Pantry",
+    "2L vegetable oil@Pantry",
+    "1 jar tartare sauce@Pantry",
+    "1 lemon@Produce"
+   ],
+   "r2": {
+    "prep_min": 18,
+    "cook_min": 15,
+    "make_ahead": "Cut the clams or calamari into strips up to 1 day ahead and keep chilled; soak, dredge and fry just before serving",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "clam meat or calamari, cut into strips",
+      "aisle": "Seafood"
+     },
+     {
+      "q": 200,
+      "u": "ml",
+      "item": "buttermilk",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 100,
+      "u": "g",
+      "item": "fine cornmeal",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 50,
+      "u": "g",
+      "item": "plain flour",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 2,
+      "u": "l",
+      "item": "vegetable oil, for frying",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "item": "tartare sauce",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "lemon, cut into wedges",
+      "aisle": "Produce"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Soak the clam strips in buttermilk for 15 minutes.",
+      "min": 15
+     },
+     {
+      "text": "Mix the cornmeal and flour and dredge the strips.",
+      "min": 5
+     },
+     {
+      "text": "Heat the vegetable oil to 185C and fry for 90 seconds, in batches.",
+      "min": 10
+     },
+     {
+      "text": "Serve with tartare and lemon wedges.",
+      "min": 3
+     }
+    ],
+    "veg": false,
+    "af": true,
+    "alt": {
+     "veg": {
+      "n": "Venice beach fried king oyster mushrooms",
+      "prep_min": 18,
+      "cook_min": 15,
+      "make_ahead": "Slice the mushrooms up to 1 day ahead and keep chilled; soak, dredge and fry just before serving",
+      "ingredients": [
+       {
+        "q": 500,
+        "u": "g",
+        "item": "king oyster mushrooms, stems sliced into rings",
+        "aisle": "Produce"
+       },
+       {
+        "q": 200,
+        "u": "ml",
+        "item": "buttermilk",
+        "aisle": "Dairy"
+       },
+       {
+        "q": 100,
+        "u": "g",
+        "item": "fine cornmeal",
+        "aisle": "Pantry"
+       },
+       {
+        "q": 50,
+        "u": "g",
+        "item": "plain flour",
+        "aisle": "Pantry"
+       },
+       {
+        "q": 2,
+        "u": "l",
+        "item": "vegetable oil, for frying",
+        "aisle": "Pantry"
+       },
+       {
+        "q": 4,
+        "u": "tbsp",
+        "item": "tartare sauce",
+        "aisle": "Pantry"
+       },
+       {
+        "q": 1,
+        "u": "",
+        "item": "lemon, cut into wedges",
+        "aisle": "Produce"
+       }
+      ],
+      "steps": [
+       {
+        "text": "Soak the mushroom rings in buttermilk for 15 minutes.",
+        "min": 15
+       },
+       {
+        "text": "Mix the cornmeal and flour and dredge the mushrooms.",
+        "min": 5
+       },
+       {
+        "text": "Heat the vegetable oil to 185C and fry for 2 minutes, in batches.",
+        "min": 10
+       },
+       {
+        "text": "Serve with tartare and lemon wedges.",
+        "min": 3
+       }
+      ],
+      "af": true
+     }
+    }
+   },
+   "veg": "King oyster mushroom rings soaked in buttermilk, fried crisp in a cornmeal crust, tartare and lemon."
+  }
+ },
+ {
+  "id": "Rocky III (1982)",
+  "old": "Thunderlips charity cannoli",
+  "new": {
+   "n": "Thunderlips charity cannoli",
+   "note": "Crisp shells piped with sweet ricotta and orange, the ends dipped in dark chocolate.",
+   "how": "Drained ricotta beaten with icing sugar and orange zest, piped into crisp bought shells just before serving, the ends dipped in dark chocolate. Drain 500g fresh ricotta for 2 hours, then beat with 80g icing sugar and the zest of 1 orange. Melt 50g dark chocolate and dip the ends of 8 cannoli shells, then let set. Pipe the filling in just before serving.",
+   "shop": [
+    "500g fresh ricotta@Dairy",
+    "80g icing sugar@Pantry",
+    "1 orange@Produce",
+    "50g dark chocolate@Pantry",
+    "8 cannoli shells@Bakery"
+   ],
+   "r2": {
+    "prep_min": 20,
+    "cook_min": 120,
+    "make_ahead": "Make the filling up to 1 day ahead and chill; fill the shells just before serving",
+    "ingredients": [
+     {
+      "q": 500,
+      "u": "g",
+      "item": "fresh ricotta",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 80,
+      "u": "g",
+      "item": "icing sugar",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "item": "orange, zested",
+      "aisle": "Produce"
+     },
+     {
+      "q": 50,
+      "u": "g",
+      "item": "dark chocolate",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 8,
+      "u": "",
+      "item": "cannoli shells",
+      "aisle": "Bakery"
+     }
+    ],
+    "steps": [
+     {
+      "text": "Drain the ricotta in a sieve for 2 hours.",
+      "min": 120
+     },
+     {
+      "text": "Beat the ricotta with the icing sugar and orange zest until smooth.",
+      "min": 5
+     },
+     {
+      "text": "Melt the chocolate, dip the ends of the shells and let them set.",
+      "min": 10
+     },
+     {
+      "text": "Pipe the filling into the shells just before serving.",
+      "min": 5
+     }
+    ],
+    "veg": true,
+    "af": true
+   }
+  }
+ }
+]

@@ -114,7 +114,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const acc=pickAccent(ctx.palette&&ctx.palette.accent,board,4.5,g.acc);
   const sub=mix(ink,board,.28);
   const venue=fl.venue||"The Back Bar",sign=fl.sign||"Open till the credits roll";
-  const voice=t.voice;
+  /* review 49: a kids or family card never asks you to buy the room a round (Onward) */
+  const voice=fam||(typeof dryFilm==="function"&&dryFilm(f))?t.voice.map(v=>/\b(shout|round|bell)\b/i.test(v)?"Order at the bar, sit anywhere":v):t.voice;
   const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* 2000 reads "2000", never "00" (review 12) */
   const price=priceFor(era,yr,fl.number);
   /* review 44: "Afters" is British: an American bar says Dessert */const US44=(fl44=>!(fl44&&fl44.currency)&&ctx.f&&ctx.f.theme!=="aussie"&&!(fl44&&fl44.world)&&(!(fl44&&fl44.country)||fl44.country==="US"))(ctx.flavour);

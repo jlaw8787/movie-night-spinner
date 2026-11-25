@@ -143,7 +143,10 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const ACC=readable(pal.accent,e.paper,4.5,e.acc0);
   const DARK=hex(pal.dark)&&lum(pal.dark)<.08?pal.dark:"#16161a";
   const venue=clean(fl&&fl.venue)||"Roadside Motor Court";
+  /* review 49: at a home the postcard drops "POST CARD", the cue is a note on the fridge, and drinks are Drinks, not "Coffee and Pop" (Paranormal Activity) */
   /* review 37: a rental, cabin, safe house or family kitchen on the postcard (Barbarian, No Time to Die) has no coffee shop or checkout; a prop that names its own checkout time (Scream) sets the key tag's. flavour.home overrides */
+  /* review 49: a motel with no restaurant serves supper in the parlour (Bates Motel: Norman brings sandwiches and milk); flavour.cafe false does the same */
+  const parlour=fl&&fl.cafe===false||/\bparlou?r\b/i.test(clean(fl&&fl.venue)||"");
   const home=fl&&fl.home!=null?!!fl.home:/\b(rental|cabin|house|home|kitchen|apartment|training camp)\b/i.test(venue)&&!/\b(motel|inn|hotel|auto camp|motor court|lodge)\b/i.test(venue);
   const coT=((JSON.stringify(fl&&fl.prop||{}).match(/check ?out (\d{1,2}(?::\d\d)? ?(?:am|pm)?)/i))||[])[1]||"11";
   const sign=clean(fl&&fl.sign)||"Clean rooms, hot coffee, open all night";
@@ -277,7 +280,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const dish=n<=6?23:n<=9?21:20,desc=n<=6?17:16;
   const LW=470;
   const menuHtml=C.map(c=>`<div style="margin:0 0 ${n<=6?12:7}px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-family:${BODY};font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:${ACC};${fs(15,14)};white-space:nowrap">${esc(LABEL[c.k])}</div><div style="flex:1;border-top:1.5px ${era==="1970s"||era==="1960s"?"dotted":"solid"} ${ACC}88"></div></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-family:${BODY};font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:${ACC};${fs(15,14)};white-space:nowrap">${esc(c.k==="d"&&home?"Drinks":LABEL[c.k])}</div><div style="flex:1;border-top:1.5px ${era==="1970s"||era==="1960s"?"dotted":"solid"} ${ACC}88"></div></div>
       ${c.items.map((it,i)=>`<div${it.x?" data-x":""} style="margin:0 0 5px"><div style="display:flex;align-items:baseline;gap:10px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${e.ink};line-height:1.15;${fs(dish,14)}">${esc(it.n)}</div><div style="font-family:${BODY};font-weight:700;color:${e.ink};${fs(dish,14)};white-space:nowrap">${PQ[c.k][i]}</div></div>
         ${it.note?`<div data-n style="display:var(--nd,block);font-family:${BODY};color:${mix(e.ink,e.paper,.3)};line-height:1.25;${fs(desc,12)}">${esc(it.note)}</div>`:""}</div>`).join("")}</div>`).join("");
 
@@ -317,9 +320,9 @@ window.MENU_FORMATS["motel"]=ctx=>{
     <div style="position:absolute;inset:0;background-image:${noise("#6b5a3a",.12+T.wear*.1,.85,200)}${e.linen?","+linen:""}"></div>
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${24+T.wear*40}px rgba(90,70,30,${(.08+T.wear*.2).toFixed(2)})"></div>
     <div style="position:absolute;left:26px;top:20px;width:${LW}px;bottom:20px;display:flex;flex-direction:column">
-      ${n<=10?`<div style="font-family:${BODY};font-weight:700;font-size:15px;letter-spacing:.3em;color:${mix(e.ink,e.paper,.35)}">POST CARD</div>`:""}
+      ${n<=10&&!home?`<div style="font-family:${BODY};font-weight:700;font-size:15px;letter-spacing:.3em;color:${mix(e.ink,e.paper,.35)}">POST CARD</div>`:""}
       <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};font-size:${venue.length>24?26:32}px;line-height:1.05;margin:4px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div>
-      ${n<=10?`<div style="font-family:${BODY};font-weight:600;color:${e.ink};font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">${home?"Help yourself. The kitchen never shuts":"Coffee shop, open early and late"}</div>`:`<div style="height:6px"></div>`}
+      ${n<=10?`<div style="font-family:${BODY};font-weight:600;color:${e.ink};font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">${home?"Help yourself. The kitchen never shuts":parlour?"Supper in the parlour, behind the office":"Coffee shop, open early and late"}</div>`:`<div style="height:6px"></div>`}
       <div data-fit style="flex:1;min-height:0;overflow:hidden">${menuHtml}</div>
       <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?String(winks[0]).replace(/[.!?]+$/,""):""/* review 44: a film touch is not a desk service ("Ask the desk about Powder on the floor") */,`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
     </div>
@@ -330,7 +333,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="font-family:'Caveat',cursive;font-weight:500;color:${T.ink};${fs(23,15)};line-height:1.1;margin-top:2px">${esc(note.t)}</div>
       <div style="font-family:'${sigF}',cursive;color:${T.ink};${fs(sigF==="Mr Dafoe"?34:30,18)};line-height:1.1;text-align:right;margin-top:2px">${esc(note.by)}</div>
       ${prop?`<div style="font-family:${BODY};${fs(14,14)};color:${e.ink};border-top:1px solid ${mix(e.ink,e.paper,.6)};padding-top:3px;margin-top:4px;line-height:1.2">${esc(prop.title)}: ${esc((prop.lines||[]).join(", "))}</div>`:""}
-      ${cueTxt?`<div data-cue style="margin-top:10px"><div style="font-family:${BODY};font-weight:700;${fs(13,12)};letter-spacing:.2em;text-transform:uppercase;color:${mix(ACC,e.ink,.2)}">Note from the desk</div><div style="font-family:${BODY};font-style:italic;${fs(15,13)};line-height:1.3;color:${e.ink};margin-top:3px">${esc(cueTxt)}</div></div>`:""}
+      ${cueTxt?`<div data-cue style="margin-top:10px"><div style="font-family:${BODY};font-weight:700;${fs(13,12)};letter-spacing:.2em;text-transform:uppercase;color:${mix(ACC,e.ink,.2)}">${home?"Note on the fridge":"Note from the desk"}</div><div style="font-family:${BODY};font-style:italic;${fs(15,13)};line-height:1.3;color:${e.ink};margin-top:3px">${esc(cueTxt)}</div></div>`:""}
     </div>
     ${tag}${FIT}</div>`;
   return{w:W,h:H,faces:[front0,back]};

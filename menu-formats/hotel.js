@@ -181,7 +181,7 @@ function flavourOf(ctx,neutral){
   const fl=ctx.flavour||{};const d=x=>clean(x);
   /* review 36: the year the guest is in the room (The Water Diviner's 1919 Istanbul guesthouse, not 2014); an inn or guesthouse has rooms, not suites, and no tray charge before 1950 */
   const stayY=String(fl.year||(/^(18|19|20)\d\d$/.test(String(fl.number||""))&&+fl.number<=+((ctx.f||{}).year||9999)?fl.number:(ctx.f||{}).year)||""),
-    roomWord=/\b(guest ?house|boarding|pension|inn|hotel dining room|lodging)\b/i.test(String(fl.venue||""))||+stayY<1950?"room":"suite",trayOk=+stayY>=1950;
+    roomWord=/\b(guest ?house|boarding|pension|inn|hotel dining room|lodging)\b/i.test(String(fl.venue||""))||+stayY<1950?"room":"suite",trayOk=+stayY>=1950&&!/\b(bar|lounge|lobby|terrace|pool ?side)\b/i.test(String(fl.venue||""));/* review 49: a hotel bar takes no room-service tray charge (Inception, Lost in Translation) */
   /* review 37: a family home, mansion or palace on this layout (Insidious, Annie, The Dark Knight) reads as a home, not a hotel: no front desk, room number or wake-up call. flavour.home overrides */
   const vv=String(fl.venue||""),home=fl.home!=null?!!fl.home:/\b(home|house|manor|mansion|estate|kitchen|penthouse|palace|apartment|family|dining room)\b/i.test(vv)&&!/\b(hotel|inn|resort|hyatt|ritz|bathhouse|lodge|motel|suite|executive|hq)\b/i.test(vv),palace=home&&/\bpalace\b/i.test(vv);
   const winks=(fl.winks||[]).map(d).filter(Boolean);

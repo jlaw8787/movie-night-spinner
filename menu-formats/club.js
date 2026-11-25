@@ -114,7 +114,8 @@ window.MENU_FORMATS["club"]=ctx=>{
   const BODY=`'${e.body}',sans-serif`,DISP=`'${e.disp}',serif`;
   const dispW=e.dw||400,dispSt=(e.ital?"font-style:italic;":"")+(e.up?"text-transform:uppercase;":"")+`letter-spacing:${e.ls};`;
   const filt=`${e.photoF==="none"?"":e.photoF} ${T.f}`;
-  const LABEL={s:"Small Plates",m:"Supper",w:"After the Show",d:family?"Coolers and Floats":"From the Bar"};
+  /* review 49: "Small Plates" is a 2000s menu word, so period clubs print the starter heading of their time */const pe=String(fl&&fl.priceEra||""),sLab=/^(1[0-8]\d\ds|19[0-2]0s)$/.test(pe)||era==="1930s-40s"?"Hors d'Oeuvres":era==="2000s"||era==="modern"?"Small Plates":"To Start";
+  const LABEL={s:sLab,m:"Supper",w:"After the Show",d:family?"Coolers and Floats":"From the Bar"};
 
   /* stock: black gloss with sheen and fine grain; era decides border */
   const stock=`<div style="position:absolute;inset:0;background:${STOCK}"></div>

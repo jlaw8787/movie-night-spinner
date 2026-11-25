@@ -23,7 +23,8 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const vis=(e,all)=>{const out=[];const walk=n=>{if(n.nodeType===3){const t=n.textContent.replace(/\s+/g,' ').trim();if(t)out.push(t);return}if(n.nodeType!==1)return;const s=getComputedStyle(n);if(!all&&(s.display==='none'||s.visibility==='hidden'||n.getAttribute('aria-hidden')==='true'))return;if(/^(SCRIPT|STYLE)$/.test(n.tagName))return;for(const c of n.childNodes)walk(c);if(/^(DIV|P|LI|H\d|TR|BR|SECTION|ARTICLE|HEADER|FOOTER|TD|TH|DT|DD)$/.test(n.tagName)||s.display==='block'||s.display==='flex'||s.display==='grid')out.push('\n')};walk(e);return out.join(' ').replace(/ *\n[ \n]*/g,'\n').replace(/ ([,.;:!?])(?=\s|$)/g,'$1').trim()};/* review 36: inline spans joined with a space printed "$8.25 , with" in the dump only */
    const faces=[...card.querySelectorAll(':scope > *')].map(vis).filter(Boolean);
    const pm=current.printMenu||null,list=[];
-   if(pm)for(const k of ['s','m','w','d'])for(const it of (pm[k]||[]))if(it&&it.n)list.push({c:k,n:it.n,note:it.note||'',d:it.d||it.desc||'',house:!!it.house,extra:!!it.extra});
+   /* review 50: a dry card prints its list through dryText, so the list reads what the card prints */const DRY=typeof dryFilm==='function'&&dryFilm(f)&&typeof dryText==='function',DT=t=>DRY?dryText(String(t),true):t;
+   if(pm)for(const k of ['s','m','w','d'])for(const it of (pm[k]||[]))if(it&&it.n)list.push({c:k,n:DT(it.n),note:DT(it.note||''),d:it.d||it.desc||'',house:!!it.house,extra:!!it.extra});
    const fl=f._lib||null;
    return {fmt:fl?fl.fmt:(fmtSpec(f)||{}).fmt||'card',faces,list,phone:vis(fmtPhone,1),prep:vis(prep,1),cue:f.P||'',venue:fl&&fl.flavour&&fl.flavour.venue||''}},id);
   out[id]=r;n++;if(n%25===0)process.stderr.write(`${n}/${ids.length} ${Math.round((Date.now()-t0)/1000)}s\n`);

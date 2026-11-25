@@ -278,7 +278,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const inkSpread=P.ink?`text-shadow:0 0 ${P.ink}px ${rgba(K.ink,.55)};`:"";
   const dispStyle=`font-family:${D};font-weight:${L.dw};letter-spacing:${L.ls};${L.caps?"text-transform:uppercase;":""}`;
   const table=F.num||String((+yy%24)+1);
-  const time=F.time||(F.lunch?["12:30","1:00","1:15","12:45"][(+yy)%4]+" pm":["7:30","8:00","8:30","9:15","10:45","11:30"][(+yy)%6]+" pm");
+  /* review 49: a sign that names the hour sets the card's time, so one dinner prints one time (Meet the Parents: "7 PM" and "7:30 pm") */const sT=String(F.sign||"").match(/\b(\d{1,2})(?::(\d\d))?\s*([ap])\.?m\b/i);
+  const time=F.time||(sT?`${+sT[1]}:${sT[2]||"00"} ${sT[3].toLowerCase()}m`:"")||(F.lunch?["12:30","1:00","1:15","12:45"][(+yy)%4]+" pm":["7:30","8:00","8:30","9:15","10:45","11:30"][(+yy)%6]+" pm");
   const NUM=["","one","two","three","four","five","six","seven","eight"],party=NUM[F.party]||String(F.party);
   const rot=T.rot;
   const face=(inner)=>`<div data-fmtface="${ID}" style="position:absolute;inset:0;width:${W}px;height:${H}px;overflow:hidden;background:${paper};color:${K.ink};font-family:${B}">
@@ -286,7 +287,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const price=(k,i)=>{const base={s:[11,13,12,15],m:[26,29,24,32],w:[10,12,11,13],d:[8,10,9,12]}[k][i%4];
     if(k==="m"&&i===0&&F.num)return eggPrice(base,F.num,yy,era);if(k==="w"&&i===0)return eggPrice(base,"",yy,era);return money(base,era)};
   /* "Dîner pour deux" only over a French room or a date-night restaurant, never a tailor or a date doctor's office */
-  const voice0=VOICE[t]!=="Dîner pour deux"?VOICE[t]:/\b(paris|france|french|chez|le|la|didier|brasserie|bistro)\b/i.test(F.venue+" "+F.sign)||ctx.f.theme==="romcom"&&/\b(restaurant|dining|bistro|caf[eé]|terrace|supper|dinner)\b/i.test(F.venue+" "+F.sign)?VOICE[t]:"A table for two";
+  const HOMEB=(ctx.flavour&&ctx.flavour.home===true)||/\b(kitchen|house|home|estate|manor|apartment|family)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""))&&!/\b(restaurant|bistro|caf[eé]|brasserie|hotel|club|inn|grill|tavern|bar)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""));
+  /* review 49: a home is not a restaurant: no "Late service, quiet tables" over the family table (Meet the Parents) */
+  const voice0=HOMEB?(F.lunch?"Lunch at home":"Dinner at home"):VOICE[t]!=="Dîner pour deux"?VOICE[t]:/\b(paris|france|french|chez|le|la|didier|brasserie|bistro)\b/i.test(F.venue+" "+F.sign)||ctx.f.theme==="romcom"&&/\b(restaurant|dining|bistro|caf[eé]|terrace|supper|dinner)\b/i.test(F.venue+" "+F.sign)?VOICE[t]:"A table for two";
   const voice=F.party===2?voice0:voice0.replace(/\bTwo forks\b/,`${party[0].toUpperCase()+party.slice(1)} forks`).replace(/\bfor two\b/,"for "+party).replace(/pour deux/,"pour "+({3:"trois",4:"quatre"}[F.party]||party)).replace(/^Dîner/,F.lunch?"Déjeuner":"Dîner");
   const kick=(s,col)=>`<div data-fs="14" style="font:700 18px/1.15 ${B};letter-spacing:.22em;text-transform:uppercase;color:${col||K.acc}">${esc(s)}</div>`;
 
@@ -329,7 +332,6 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-fs="22" style="font:400 32px/1.1 ${S};color:${K.acc};text-align:right;margin-top:4px;transform:rotate(-3deg)">${esc(F.note.by)}</div></div>`;
   /* review 49: a home or a dinner nobody pays for prints "Place card", not the restaurant's "Carte no." (Get Out, Bridget Jones, Pongo's flat) */
   /* review 48: a family kitchen or a house is not booked: "Places set, dinner for two", no table number (Get Out, Meet the Parents, The Aristocats) */
-  const HOMEB=(ctx.flavour&&ctx.flavour.home===true)||/\b(kitchen|house|home|estate|manor|apartment|family)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""))&&!/\b(restaurant|bistro|caf[eé]|brasserie|hotel|club|inn|grill|tavern|bar)\b/i.test(String(ctx.flavour&&ctx.flavour.venue||""));
   const resv=`<div style="position:absolute;left:390px;top:818px;width:248px;height:106px;transform:rotate(${(rot*.6).toFixed(1)}deg);background:${dark?"#f4ecdc":"#fffdf8"};box-shadow:0 3px 10px rgba(0,0,0,.28);border-top:5px solid ${K.acc};overflow:hidden">
     ${paperLayers("glossy",false,106)}
     <div data-fbox style="position:absolute;inset:10px 14px 8px;text-align:center;overflow:hidden">

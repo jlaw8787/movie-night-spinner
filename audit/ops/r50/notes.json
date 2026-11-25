@@ -1,0 +1,21 @@
+[
+{"id":"Goldfinger (1964)","ops":[
+ {"set":"house.s","value":{"n":"Clubhouse ham sandwiches with mustard","note":"Thick-cut ham and hot English mustard on buttered white bread, crusts off, in triangles.","meat":true}},
+ {"note":"Clubhouse prawn toasts","to":"Sesame prawn triangles fried crisp, with hot mustard for dipping."}]},
+{"id":"Free Willy (1993)","ops":[
+ {"note":"Oregon coast clam chowder cups","to":"Creamy clam, bacon and potato soup with thyme and oyster crackers, from Willy's home waters."}]},
+{"id":"Heat (1995)","ops":[
+ {"note":"Diner coffee and pie","to":"Granny Smith apple and cinnamon pie in sweet shortcrust, with a cup of black coffee."}]},
+{"id":"Dumb and Dumber (1994)","ops":[
+ {"set":"house.s","value":{"n":"Hot pepper beef taquitos","note":"Spiced beef rolled in corn tortillas and fried crisp, with a hot pepper salsa to dip.","meat":true}}]},
+{"id":"The Lord of the Rings: The Two Towers (2002)","ops":[
+ {"sub":"Rabbit or chicken stewed with alcohol-free beer, carrots and potatoes.","to":"Rabbit or chicken slow-stewed with thyme, carrots and potatoes."}]},
+{"id":"Violent Night (2022)","ops":[
+ {"sub":"Cold alcohol-free stout with a smoky maple tea shot on the side.","to":"Cold dark ginger beer with a smoky maple tea shot on the side."}]},
+{"id":"The Lord of the Rings: The Return of the King (2003)","ops":[
+ {"sub":"Pale ale over honey ginger syrup and lemon, served over ice.","to":"Ginger beer over honey ginger syrup and lemon, served over ice."}]},
+{"id":"Friday the 13th (1980)","ops":[
+ {"ren":"Counsellors' cabin shandy","to":"Counsellors' cabin ginger lemonade"},
+ {"note":"Counsellors' cabin ginger lemonade","to":"Ginger beer topped with homemade lemonade and lemon slices, snuck into the cabin while it rains."},
+ {"sub":"Cold alcohol-free lager topped with homemade lemonade, with lemon slices.","to":"Ginger beer topped with homemade lemonade, with lemon slices."}]}
+]
