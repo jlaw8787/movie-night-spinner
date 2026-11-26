@@ -897,18 +897,23 @@ function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",")
 /* phone pass (26 Nov): the reading views are measured once per menu and cached. Spun in from another film, the menu's fonts were often still
    loading, so the views were cut on fallback type (Three Men and a Baby: five slivers, the last cutting "Shaken Vanilla Milk"). Each font
    load bumps the cache, and the preview measures again (the opening view moves only if nobody has swiped yet) */
+/* phone lists (26 Nov): the reflowed list copies sit inside the card, off the sheet; cache keys leave them out */
+const cardLen=()=>{let n=card.innerHTML.length;for(const e of card.querySelectorAll(":scope > .pv-list"))n-=e.outerHTML.length;return n};
+/* the card clips to its sheet; while a list copy sits beside it on a phone it does not (the preview frame clips instead) */
+const pvListsOff=()=>{card.querySelectorAll(":scope > .pv-list").forEach(e=>e.remove());if(card.dataset.pvov!=null){card.style.overflow=card.dataset.pvov;delete card.dataset.pvov}};
 let pvFontGen=0;try{const again0=()=>{pvFontGen++;try{if(tab==="menu"&&card.innerHTML.trim())scalePreview()}catch(e){}},again=()=>{again0();setTimeout(again0,600)};/* and once more when the text has settled */document.fonts.addEventListener("loadingdone",again);document.fonts.ready.then(again)}catch(e){}
 function cardFaces(){const base=cardFaces0();if(!card.classList.contains("fmt"))return base;
+  if(!swipeW())pvListsOff();
   /* review 48: on desktop a page whose notes still print under 13px at column width is read in column views too, as the phone does */
   if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return pvCover(base)}
-  const key=renderId+"|"+card.innerHTML.length+"|"+(preview.clientWidth||0)+"|"+pvFontGen;if(card._pvr&&card._pvr.key===key)return card._pvr.v;
+  const key=renderId+"|"+cardLen()+"|"+(preview.clientWidth||0)+"|"+pvFontGen;if(card._pvr&&card._pvr.key===key)return card._pvr.v;
   let out=base;try{out=pvReadViews(base)}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
 /* review 49: on desktop every part of the card shows on some page of the views and the full size view. Views cut to the dish blocks (the
    hospital meal form's two halves, the dim sum order sheet, a candy bar's side columns) left the header, poster, scenes, nurse's note and
    cue on no page at all (Rain Man, Kung Fu Panda 2, Roger Rabbit's middle column). A page with text outside every view gets a whole-page
    overview ahead of its views (marked cover, so the column still opens on the dishes) */
 function pvCover(V){if(!V||!V.length||swipeW()||!pvDesk)return V;
-  const key=renderId+"|"+card.innerHTML.length+"|"+V.map(v=>(v.part||"")+Math.round(v.x||0)+","+Math.round(v.y||0)+","+Math.round(v.w)+","+Math.round(v.h)).join(";");if(card._pvc&&card._pvc.key===key)return card._pvc.v;
+  const key=renderId+"|"+cardLen()+"|"+V.map(v=>(v.part||"")+Math.round(v.x||0)+","+Math.round(v.y||0)+","+Math.round(v.w)+","+Math.round(v.h)).join(";");if(card._pvc&&card._pvc.key===key)return card._pvc.v;
   let out=V;try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1;if(!cb.width)return V;
     const faces=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];const F=faces.length?faces:[card.querySelector(".fx-face")||card];
     const rg=document.createRange(),miss=new Map();
@@ -926,13 +931,51 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
   let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||el.offsetWidth||0,h=parseFloat(el.style.height)||+card.dataset.h||el.offsetHeight||0;if(!w||!h)return base;/* phone pass: older hand-built cards (McDowell's, Lou's) set no sheet size, so read their drawn size */V=[{el,w,h,x:0,y:0,px:0,row:true}]}
   const out=[];let n=0;const NM=(()=>{const m=(current&&(current.printMenu||current.menu))||{};return ["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/\s+/g," ").trim())).filter(n=>n.length>3)})();
   const nDish=L=>L.filter(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))}).length;const hasDish=L=>L.some(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))});/* a line that is the dish name, not a cue that mentions the cornbread */
+  /* phone lists (Josh, 26 Nov): a full-width list (three quarters of the page or more) with the price far right (Moonstruck's secondi, Splash's raw bar, the bistro's main page)
+     could not read bigger than the page without losing its prices. On a phone it gets a swipe of its own: a copy of the list set in the
+     card's own type, colours and paper, at a width that draws its smallest line at about 12px, so names, notes and prices all read without
+     a zoom. The copy sits inside the card, off the sheet, only on a phone; the card itself, desktop, print and Save PDF are not touched */
+  /* switched on for the menus Josh named (26 Nov): the shared bistro layout, Moonstruck and Splash. About 480 more films have a full-width
+     list too small on a phone; add their layout or format class here once he says so (The Italian Job and Silence of the Lambs stay out) */
+  const listOn=!desk&&card.matches(PV_LIST_ON);
+  const minF=L=>{const F=L.filter(b=>b[4]>=8).map(b=>b[8]);return F.length?Math.min(...F):12};
+  /* the blocks to copy: the region's own container, or when its parts are placed apart (the bistro's list and its footer line) each part
+     in turn, top to bottom. A table, a grid, a big picture or text placed inside a part is not reflowed (Anchorman's rundown stays as is) */
+  const okBlock=a=>{for(const e of [a,...a.querySelectorAll("*")]){const cs=getComputedStyle(e);if(e!==a&&(cs.position==="absolute"||cs.position==="fixed")&&e.textContent.trim())return false;if(/table|grid/.test(cs.display))return false;if(e.tagName==="IMG"&&e.offsetWidth>120)return false}return true};
+  /* a part with no prices that cannot reflow (a still with its caption laid over it) comes across as drawn, scaled to the width */
+  const flowAnc=L=>{const E=[...new Set(L.map(b=>b[7]).filter(Boolean))],EP=L.filter(b=>b[6]).map(b=>b[7]);if(!E.length)return null;let a=E[0];while(a&&!E.every(e=>a.contains(e)))a=a.parentElement;
+    if(!a||a===card)return null;if(!a.classList.contains("fx-face")&&!a.querySelector(".fx-face")&&okBlock(a))return [a];
+    const P=[...a.children].filter(c=>E.some(e=>c.contains(e)));if(P.length<2||P.some(c=>c.classList.contains("fx-face")))return null;
+    for(const c of P)if(!okBlock(c)){if(EP.some(e=>c.contains(e)))return null;c._pvRigid=1}else c._pvRigid=0;
+    if(P.every(c=>c._pvRigid))return null;
+    return P.sort((p,q)=>p.getBoundingClientRect().top-q.getBoundingClientRect().top)};
+  if(!desk)pvListsOff();
+  let lx=null;const listViews=L=>{try{const A=flowAnc(L);if(!A)return null;const a=A[0];const ck=card.getBoundingClientRect().width/(card.offsetWidth||1)||1;
+    if(lx==null)lx=Math.max(card.scrollWidth||0,+card.dataset.w||0,card.offsetWidth||0)+120;
+    const base0=A.length>1?A[0].parentElement:a;let bgE=base0,bg="";while(bgE&&bgE!==card.parentElement){const c=getComputedStyle(bgE).backgroundColor;if(c&&!/rgba\(0, 0, 0, 0\)|transparent/.test(c)){bg=c;break}bgE=bgE.parentElement}
+    const pc=getComputedStyle(A.length>1?base0:(a.parentElement||a)),pad=22,F=Math.min(...L.map(b=>b[8])),aw=Math.max(...A.map(x=>x.getBoundingClientRect().width))/ck;
+    const tot=Math.round(Math.min(aw+2*pad,Math.max(330,pw*Math.max(F,9)/12)));
+    const w=document.createElement("div");w.className="pv-list";w.dataset.np="1";w.setAttribute("aria-hidden","true");
+    w.style.cssText=`position:absolute;left:${lx}px;top:0;width:${tot}px;padding:${pad}px;box-sizing:border-box;background:${bg||"#fff"};color:${pc.color};font-family:${pc.fontFamily};font-size:${pc.fontSize};line-height:${pc.lineHeight};text-align:left;overflow:hidden`;
+    for(const a0 of A){if(a0._pvRigid){const r=a0.getBoundingClientRect(),ow=r.width/ck,oh=r.height/ck,sc=Math.min(1,(tot-2*pad)/ow),c=a0.cloneNode(true),bx=document.createElement("div");
+        for(const k of ["left","top","right","bottom","margin"])c.style[k]="";c.style.position="absolute";c.style.left="0";c.style.top="0";c.style.width=ow+"px";c.style.height=oh+"px";c.style.transformOrigin="0 0";c.style.transform=`scale(${sc})`;c.removeAttribute("id");c.querySelectorAll("[id]").forEach(e=>e.removeAttribute("id"));
+        bx.style.cssText=`position:relative;width:${ow*sc}px;height:${oh*sc}px;margin:18px auto 0`;bx.appendChild(c);w.appendChild(bx);continue}
+      const c=a0.cloneNode(true);for(const k of ["position","left","top","right","bottom","transform","height","maxHeight","margin"])c.style[k]="";c.style.width="auto";c.style.maxWidth="100%";c.removeAttribute("id");if(a0!==a)c.style.marginTop="18px";
+    for(const e of c.querySelectorAll("*")){e.removeAttribute("id");if(e.dataset.pvt){e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")}e.classList.remove("pv-off");const iw=parseFloat(e.style.width);if(iw>tot-2*pad)e.style.width="auto";if(e.style.whiteSpace==="nowrap"&&e.textContent.length>24)e.style.whiteSpace="normal";{const t=e.textContent.trim();if(t.length<=12&&/\d/.test(t)&&!e.children.length){e.style.whiteSpace="nowrap";e.style.flexShrink="0"}}/* a price stays on one line ("L. 200", "100 Kč") */}
+    w.appendChild(c)}card.appendChild(w);if(card.dataset.pvov==null){card.dataset.pvov=card.style.overflow||"";card.style.overflow="visible"}lx+=tot+120;
+    const H=w.offsetHeight,kk=pw/tot,scr=MAXH/kk,ys=[0];
+    if(H>scr*1.15){const wr=w.getBoundingClientRect(),rg=document.createRange(),Y=[];for(const t of (function*(){const tw=document.createTreeWalker(w,NodeFilter.SHOW_TEXT);let n;while((n=tw.nextNode()))if(n.textContent.trim())yield n})()){rg.selectNodeContents(t);const fz=parseFloat(getComputedStyle(t.parentElement).fontSize)||12;for(const r of rg.getClientRects())if(r.height)Y.push([0,(r.top-wr.top)/ck,1,(r.bottom-wr.top)/ck,fz])}
+      const G=[];{const S=Y.map(r=>[r[1],r[3],r[4]]).sort((p,q)=>p[0]-q[0]);let end=-1e9,ef=0;for(const [p,q,f] of S){if(end>-1e9&&p-end>=6&&!(ef>=f*1.25))G.push([(end+p)/2,p-end]);/* a heading is never the last line of a swipe */if(q>end){end=q;ef=f}}}
+      /* even swipes, each cut at the widest gap near its share (a section heading, never between a dish and its note) */
+      const nv=Math.ceil(H/scr);let at=0;for(let q=1;q<nv;q++){const want=H*q/nv,C=G.filter(([g])=>g>at+scr*.4&&g<=at+scr&&Math.abs(g-want)<=scr*.25);if(!C.length)break;const c2=C.reduce((m,x)=>x[1]>m[1]+2||x[1]>=m[1]-2&&Math.abs(x[0]-want)<Math.abs(m[0]-want)?x:m)[0];ys.push(c2);at=c2}}
+    ys.push(H);const R=[];for(let i=0;i<ys.length-1;i++)R.push({el:w,w:tot,h:ys[i+1]-ys[i],x:lx-tot-120,y:ys[i],px:0,ly:ys[i],row:true,panel:1,read:1,list:1,hide:[]});return R}catch(e){return null}};
   for(const v of V){if(v.keep){out.push(v);continue}const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
     if(sp*pw/v.w>=FLOOR||desk&&/^zoom/.test(v.part||"")){out.push(v);continue}/* review 49: on desktop a block the layout marks to read ([data-pvzoom], the dim sum order sheet) shows whole, never cut into slivers of dish names */
     /* page origin on the card: a panel's x is the page's x plus its own px */
     const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,ox=(eb.left-cb.left)/ck,oy=(eb.top-cb.top)/ck,ylo=(v.y||0)-oy,yhi=ylo+v.h;
-    const B=[],rg=document.createRange();
+    const B=[],rg=document.createRange(),FZ=new Map(),fsz=e=>{if(!FZ.has(e))FZ.set(e,parseFloat(getComputedStyle(e).fontSize)||12);return FZ.get(e)};
     for(const e of v.el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]")||!e.offsetParent&&getComputedStyle(e).position!=="fixed")continue;for(const t of e.childNodes){if(t.nodeType!==3||!t.textContent.trim())continue;rg.selectNodeContents(t);
-      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;const x0=(r.left-eb.left)/k,x1=(r.right-eb.left)/k,y0=(r.top-eb.top)/k,y1=(r.bottom-eb.top)/k,cx=(x0+x1)/2;if(cx<lo||cx>hi||(y0+y1)/2<ylo||(y0+y1)/2>yhi)continue;B.push([x0,y0,x1,y1,t.textContent.trim().length,t.textContent,(!!e.closest(".fx-price")||PRICE_RX.test(t.textContent.trim()))&&!e.closest('[style*="rotate"]')])}}}/* a tilted prop (guest check, drink chit) is not a menu list */
+      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;const x0=(r.left-eb.left)/k,x1=(r.right-eb.left)/k,y0=(r.top-eb.top)/k,y1=(r.bottom-eb.top)/k,cx=(x0+x1)/2;if(cx<lo||cx>hi||(y0+y1)/2<ylo||(y0+y1)/2>yhi)continue;B.push([x0,y0,x1,y1,t.textContent.trim().length,t.textContent,(!!e.closest(".fx-price")||PRICE_RX.test(t.textContent.trim()))&&!e.closest('[style*="rotate"]'),e,fsz(e)])}}}/* a tilted prop (guest check, drink chit) is not a menu list */
     if(B.reduce((a,b)=>a+b[4],0)<60){out.push(v);continue}
     const gaps=(L,ax,min)=>{/* clear runs along one axis (0: x, 1: y) between word boxes */const s=L.map(b=>[b[ax],b[ax+2]]).sort((a,b)=>a[0]-b[0]),G=[];let end=-1e9;for(const [a,z] of s){if(end>-1e9&&a-end>=min)G.push([end,a]);end=Math.max(end,z)}return G};
     const bb=L=>[Math.min(...L.map(b=>b[0])),Math.min(...L.map(b=>b[1])),Math.max(...L.map(b=>b[2])),Math.max(...L.map(b=>b[3]))];
@@ -969,7 +1012,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
      for(let go=1,g=0;go&&g++<20;){go=0;for(const A of regions){if(!A.length||!hasDish(A)||nP(A))continue;/* a table: the dish column has no prices of its own, they sit in the column beside it */for(const Q of regions){if(Q===A||!Q.length)continue;
        if(!hasDish(Q)&&nP(Q)&&yo(A,Q)>=.5&&xg(A,Q)<120){A.push(...Q);Q.length=0;A._row=1;go=1}}}}
      for(let i=regions.length-1;i>=0;i--)if(!regions[i].length)regions.splice(i,1)}
-    let wideRow=0;for(const L of regions)if(isMenu(L)&&(L._row||nDish(L)<2&&nP(L)>=2)){const [x0,,x1]=bb(L);if(x1-x0>TGT*1.15){wideRow=1;L.length=0}}
+    let wideRow=0;for(const L of regions)if(isMenu(L)&&(L._row||nDish(L)<2&&nP(L)>=2)){const [x0,,x1]=bb(L);if(x1-x0>TGT*1.15){if(listOn&&x1-x0+28>=.75*v.w&&(minF(L)*pw/Math.min(v.w,x1-x0+28)>=10.5||flowAnc(L)))continue;wideRow=1;L.length=0}}
     for(let i=regions.length-1;i>=0;i--)if(!regions[i].length)regions.splice(i,1);
     /* a page whose dish rows run the full width (dish, talent and cost across: Anchorman's rundown) is read whole, never as columns that
        drop the prices; tap still opens it full size */
@@ -991,6 +1034,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
        reading views, and a page with only one dish line on it (a cover's "today's special") stays whole with no reading view */
     if(V.indexOf(v)===0)out.push(v);const at0=out.length;
     for(const L of R2){const [x0,y0,x1,y1]=bb(L),w=Math.min(v.w,x1-x0+28),kk=pw/w,cx=Math.max(lo,Math.min(hi-w,x0-14));
+      if(listOn&&minF(L)*kk<10.5&&x1-x0+28>=.75*v.w){const LV=listViews(L);if(LV){for(const q of LV){n++;q.part="list"+n;out.push(q)}continue}}
       /* tall regions: cut at the line gap nearest each screenful */
       const ys=[y0-14];const G=(gaps(L,1,12).length?gaps(L,1,12):gaps(L,1,6)).map(([a,z])=>(a+z)/2);let at=y0-14;
       while(y1+14-at>MAXH/kk*1.15){const want=at+MAXH/kk,c=G.filter(g=>g>at+MAXH/kk*.45&&g<=want).pop();if(!c)break;ys.push(c);at=c}ys.push(y1+14);
@@ -1023,6 +1067,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
     else if(v.panel&&V.indexOf(v)===0&&out.length-at0>=1&&out[at0-1]===v){const R=out.slice(at0),ry0=Math.min(...R.map(r=>r.y)),ry1=Math.max(...R.map(r=>r.y+r.h)),vy=v.y||0;
       if(ry1>=vy+v.h*.85&&ry0-vy>=v.h*.25&&R.every(r=>r.x>=v.x-2&&r.x+r.w<=v.x+v.w+2))out[at0-1]=Object.assign({},v,{h:Math.round(ry0-vy)})}}
   return out.length&&out.length<=14?out:base}
+const PV_LIST_ON=".lib-bistro,.fmt-moonlit,.fmt-oceansupper";/* phone list swipes: which cards get them (see pvReadViews) */
 const PRICE_RX=/^(?:(?:A?\$|£|€|¥)\s?\d{1,4}(?:[.,]\d{2})?|\d{0,3}[.,]\d{2}|\d{1,3}\s?¢)$/;/* phone pass: a printed price line ($3.50, 2.75, 25¢) for the reading views */
 function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
@@ -1066,7 +1111,7 @@ function cardFaces0(){
 }
 /* gutters on a wide page: the x positions no line of text crosses (measured on the words, a little padding either side).
    Kept per drawn card and page, so swiping does not measure again */
-function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(fi||0)+(pvDesk?"d":"");card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
+function pvPanels(el,w,h,fi){const key=renderId+"|"+cardLen()+"|"+(fi||0)+(pvDesk?"d":"");card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
   let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange();
     for(const e of el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]"))continue;for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;rg.selectNodeContents(n);
       for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const pd=8,a=Math.max(0,Math.floor(((r.left-b.left)/k-pd)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+pd)/R));for(let i=a;i<=z;i++)cov[i]=1}}}
@@ -1118,7 +1163,7 @@ function pvGo(i){card._pvUser=renderId;
   setTimeout(()=>{pvFace=i;card.style.transition="none";scalePreview();requestAnimationFrame(()=>{card.style.transition="opacity .15s";card.style.opacity="";setTimeout(()=>{card.style.transition=""},200)})},150);
 }
 /* half views of a wide page: text the view edge cuts so that less than 60% shows ("Parr", "DUMB") is hidden, so the edge reads as a clean peek */
-function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
+function pvMask(f,k){const key=f&&f.part?f.part+"|"+cardLen():"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
   card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));card.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});if(!key)return;
   const b=f.el.getBoundingClientRect(),lo=f.px!=null?f.px:f.x,hi=lo+f.w,off=[];/* review 39: the scale the card is drawn at right now (a page turn may still be sliding), not the one it is heading to */{const ow=f.el===card?card.offsetWidth:f.el.offsetWidth;if(ow&&b.width)k=b.width/ow}
   const rg=document.createRange();
@@ -1143,7 +1188,7 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
 /* review 35: the size the card's small print (the dish notes) reads at when the whole sheet is scaled by k: the character-weighted fifth
    smallest share of its text, in card pixels (inner transforms counted), times k. Kept per drawn card */
 let pvDesk=false;
-function cardSmallPx(){const key=renderId+"|"+card.innerHTML.length;if(card._smk===key)return card._smpx;let px=99;
+function cardSmallPx(){const key=renderId+"|"+cardLen();if(card._smk===key)return card._smpx;let px=99;
   try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,L=[];let tot=0;
     for(const e of card.querySelectorAll("*")){if(!e.offsetWidth||e.closest("[aria-hidden=true],[data-np]"))continue;let n=0;for(const c of e.childNodes)if(c.nodeType===3)n+=c.textContent.trim().length;if(n<12)continue;
       const r=e.getBoundingClientRect(),k=r.width/e.offsetWidth/ck,f=parseFloat(getComputedStyle(e).fontSize)*(k>0?k:1);if(f>0){L.push([f,n]);tot+=n}}
@@ -4679,7 +4724,7 @@ function noiseTile(){
 async function renderCanvas(src,forPrint){
   const stage=document.createElement("div"),land=src.classList.contains("fmt");
   stage.style.cssText=`position:fixed;left:-20000px;top:0;width:${+src.dataset.w||(land?1123:794)}px;height:${+src.dataset.h||(land?794:1123)}px;`;
-  const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;if(forPrint&&land)clone.classList.add("for-print");
+  const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;clone.querySelectorAll(".pv-list").forEach(e=>e.remove());if(src.dataset.pvov!=null){clone.style.overflow=src.dataset.pvov;delete clone.dataset.pvov}/* phone list copies are for the swipe only */if(forPrint&&land)clone.classList.add("for-print");
   /* review 35: the page or half view (phones, and desktop since review 35) moves a sign and hides words that cross the view's edge; the copy for
      print and Save PDF is always the whole page as drawn */
   clone.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});clone.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));
@@ -5184,7 +5229,7 @@ function printPage(el,w,h){const land=w>h,W=land?1120:792,H=land?790:1118,k=Math
 function fillPrint(){
   const pa=$("printArea");pa.innerHTML="";if(!current)return;
   if(card.classList.contains("fx-paper")){card.querySelectorAll(".fx-face").forEach(fc=>{const c=card.cloneNode(false);c.hidden=false;c.innerHTML=fc.innerHTML;pa.appendChild(printPage(c,parseFloat(fc.style.width)||+card.dataset.w,parseFloat(fc.style.height)||+card.dataset.h))})}
-  else{const c=card.cloneNode(true);c.hidden=false;c.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});c.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
+  else{const c=card.cloneNode(true);c.hidden=false;c.querySelectorAll(".pv-list").forEach(e=>e.remove());if(card.dataset.pvov!=null){c.style.overflow=card.dataset.pvov;delete c.dataset.pvov}c.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});c.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
   for(const el of prepParts()){const st=document.createElement("div");st.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
     const c=el.cloneNode(true);c.hidden=false;c.style.transform="none";c.classList.add("pp-a4");prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);st.remove();pa.appendChild(printPage(c,794,1123))}
 }
