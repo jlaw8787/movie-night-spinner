@@ -935,39 +935,63 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
      could not read bigger than the page without losing its prices. On a phone it gets a swipe of its own: a copy of the list set in the
      card's own type, colours and paper, at a width that draws its smallest line at about 12px, so names, notes and prices all read without
      a zoom. The copy sits inside the card, off the sheet, only on a phone; the card itself, desktop, print and Save PDF are not touched */
-  /* switched on for the menus Josh named (26 Nov): the shared bistro layout, Moonstruck and Splash. About 480 more films have a full-width
-     list too small on a phone; add their layout or format class here once he says so (The Italian Job and Silence of the Lambs stay out) */
-  const listOn=!desk&&card.matches(PV_LIST_ON);
+  /* first for the menus Josh named (the shared bistro layout, Moonstruck, Splash), then site-wide on his call (26 Nov), all but the two films
+     he keeps out of every pass */
+  const listOn=!desk&&!(current&&PV_LIST_OFF.includes(current.id));
   const minF=L=>{const F=L.filter(b=>b[4]>=8).map(b=>b[8]);return F.length?Math.min(...F):12};
   /* the blocks to copy: the region's own container, or when its parts are placed apart (the bistro's list and its footer line) each part
      in turn, top to bottom. A table, a grid, a big picture or text placed inside a part is not reflowed (Anchorman's rundown stays as is) */
   const okBlock=a=>{for(const e of [a,...a.querySelectorAll("*")]){const cs=getComputedStyle(e);if(e!==a&&(cs.position==="absolute"||cs.position==="fixed")&&e.textContent.trim())return false;if(/table|grid/.test(cs.display))return false;if(e.tagName==="IMG"&&e.offsetWidth>120)return false}return true};
   /* a part with no prices that cannot reflow (a still with its caption laid over it) comes across as drawn, scaled to the width */
+  const ck0=()=>card.getBoundingClientRect().width/(card.offsetWidth||1)||1;
   const flowAnc=L=>{const E=[...new Set(L.map(b=>b[7]).filter(Boolean))],EP=L.filter(b=>b[6]).map(b=>b[7]);if(!E.length)return null;let a=E[0];while(a&&!E.every(e=>a.contains(e)))a=a.parentElement;
     if(!a||a===card)return null;if(!a.classList.contains("fx-face")&&!a.querySelector(".fx-face")&&okBlock(a))return [a];
-    const P=[...a.children].filter(c=>E.some(e=>c.contains(e)));if(P.length<2||P.some(c=>c.classList.contains("fx-face")))return null;
-    for(const c of P)if(!okBlock(c)){if(EP.some(e=>c.contains(e)))return null;c._pvRigid=1}else c._pvRigid=0;
+    const ED=L.filter(b=>b[6]||NM.some(m=>String(b[5]).toLowerCase().trim().startsWith(m))).map(b=>b[7]);const P=[...a.children].filter(c=>E.some(e=>c.contains(e))).filter(c=>ED.some(e=>c.contains(e))||c.textContent.replace(/\s+/g," ").trim().length>=c.getBoundingClientRect().height/ck0()/8);/* a tall block with few words and no food (a photo booth strip) stays on the overview only */if(P.length<2||P.some(c=>c.classList.contains("fx-face")))return null;
+    for(const c of P)if(!okBlock(c)){if(EP.some(e=>c.contains(e))||c.textContent.replace(/\s+/g," ").trim().length>120)return null;c._pvRigid=1}else c._pvRigid=0;
     if(P.every(c=>c._pvRigid))return null;
     return P.sort((p,q)=>p.getBoundingClientRect().top-q.getBoundingClientRect().top)};
   if(!desk)pvListsOff();
   let lx=null;const listViews=L=>{try{const A=flowAnc(L);if(!A)return null;const a=A[0];const ck=card.getBoundingClientRect().width/(card.offsetWidth||1)||1;
     if(lx==null)lx=Math.max(card.scrollWidth||0,+card.dataset.w||0,card.offsetWidth||0)+120;
-    const base0=A.length>1?A[0].parentElement:a;let bgE=base0,bg="";while(bgE&&bgE!==card.parentElement){const c=getComputedStyle(bgE).backgroundColor;if(c&&!/rgba\(0, 0, 0, 0\)|transparent/.test(c)){bg=c;break}bgE=bgE.parentElement}
+    const base0=A.length>1?A[0].parentElement:a;let bgE=base0,bg="",bgi="";while(bgE&&bgE!==card.parentElement){const cs2=getComputedStyle(bgE),c=cs2.backgroundColor;if(/gradient/.test(cs2.backgroundImage)&&!bgi)bgi=cs2.backgroundImage;if(c&&!/rgba\(0, 0, 0, 0\)|transparent/.test(c)){bg=c;break}bgE=bgE.parentElement}/* a page painted with a gradient (Rush Hour 2, Joker) keeps it */
     const pc=getComputedStyle(A.length>1?base0:(a.parentElement||a)),pad=22,F=Math.min(...L.map(b=>b[8])),aw=Math.max(...A.map(x=>x.getBoundingClientRect().width))/ck;
     const tot=Math.round(Math.min(aw+2*pad,Math.max(330,pw*Math.max(F,9)/12)));
     const w=document.createElement("div");w.className="pv-list";w.dataset.np="1";w.setAttribute("aria-hidden","true");
-    w.style.cssText=`position:absolute;left:${lx}px;top:0;width:${tot}px;padding:${pad}px;box-sizing:border-box;background:${bg||"#fff"};color:${pc.color};font-family:${pc.fontFamily};font-size:${pc.fontSize};line-height:${pc.lineHeight};text-align:left;overflow:hidden`;
+    w.style.cssText=`position:absolute;left:${lx}px;top:0;width:${tot}px;padding:${pad}px;box-sizing:border-box;background:${bg||"#fff"};${bgi?`background-image:${bgi};`:""}color:${pc.color};font-family:${pc.fontFamily};font-size:${pc.fontSize};line-height:${pc.lineHeight};text-align:left;overflow:hidden`;
     for(const a0 of A){if(a0._pvRigid){const r=a0.getBoundingClientRect(),ow=r.width/ck,oh=r.height/ck,sc=Math.min(1,(tot-2*pad)/ow),c=a0.cloneNode(true),bx=document.createElement("div");
         for(const k of ["left","top","right","bottom","margin"])c.style[k]="";c.style.position="absolute";c.style.left="0";c.style.top="0";c.style.width=ow+"px";c.style.height=oh+"px";c.style.transformOrigin="0 0";c.style.transform=`scale(${sc})`;c.removeAttribute("id");c.querySelectorAll("[id]").forEach(e=>e.removeAttribute("id"));
-        bx.style.cssText=`position:relative;width:${ow*sc}px;height:${oh*sc}px;margin:18px auto 0`;bx.appendChild(c);w.appendChild(bx);continue}
-      const c=a0.cloneNode(true);for(const k of ["position","left","top","right","bottom","transform","height","maxHeight","margin"])c.style[k]="";c.style.width="auto";c.style.maxWidth="100%";c.removeAttribute("id");if(a0!==a)c.style.marginTop="18px";
-    for(const e of c.querySelectorAll("*")){e.removeAttribute("id");if(e.dataset.pvt){e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")}e.classList.remove("pv-off");const iw=parseFloat(e.style.width);if(iw>tot-2*pad)e.style.width="auto";if(e.style.whiteSpace==="nowrap"&&e.textContent.length>24)e.style.whiteSpace="normal";{const t=e.textContent.trim();if(t.length<=12&&/\d/.test(t)&&!e.children.length){e.style.whiteSpace="nowrap";e.style.flexShrink="0"}}/* a price stays on one line ("L. 200", "100 Kč") */}
-    w.appendChild(c)}card.appendChild(w);if(card.dataset.pvov==null){card.dataset.pvov=card.style.overflow||"";card.style.overflow="visible"}lx+=tot+120;
+        bx.dataset.pvrigid="1";bx.style.cssText=`position:relative;width:${ow*sc}px;height:${oh*sc}px;margin:18px auto 0`;bx.appendChild(c);w.appendChild(bx);continue}
+      const c=a0.cloneNode(true);{const S=[a0,...a0.querySelectorAll("*")],C=[c,...c.querySelectorAll("*")];/* the type and colour each line is drawn in (set by the page's own rules), so the copy reads the same off the sheet */
+        for(let i=0;i<S.length&&i<C.length;i++){const cs=getComputedStyle(S[i]),st=C[i].style;for(const k of ["color","fontFamily","fontWeight","fontStyle","fontSize","letterSpacing","textTransform","lineHeight","fontVariant"])st[k]=cs[k]}}
+      c.querySelectorAll('[aria-hidden="true"]').forEach(e=>e.remove());/* paper grain and wear laid over the page would sit over the copy's text */
+      for(const e of [...c.querySelectorAll("*")])if(e.style.position==="absolute"&&!e.textContent.trim())e.remove();
+      for(const k of ["position","left","top","right","bottom","transform","height","maxHeight","margin"])c.style[k]="";c.style.width="auto";c.style.maxWidth="100%";c.removeAttribute("id");if(a0!==a)c.style.marginTop="18px";
+    for(const e of c.querySelectorAll("*")){e.removeAttribute("id");if(e.dataset.pvt){e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")}e.classList.remove("pv-off");const iw=parseFloat(e.style.width);if(iw>tot-2*pad)e.style.width="auto";}
+    w.appendChild(c)}card.appendChild(w);if(card.dataset.pvov==null){card.dataset.pvov=card.style.overflow||"";card.style.overflow="visible"}
+    /* placed: a heading may wrap in the narrower copy, a price stays on one line ("L. 200", "100 Kč") */
+    for(const e of w.querySelectorAll("*")){if(e.closest("[data-pvrigid]"))continue;const t=e.textContent.trim();if(t.length<=12&&/\d/.test(t)&&!e.children.length){e.style.whiteSpace="nowrap";e.style.flexShrink="0"}else if(getComputedStyle(e).whiteSpace!=="normal")e.style.whiteSpace="normal";if([...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim())){const cs3=getComputedStyle(e);if(cs3.textOverflow==="ellipsis"||cs3.webkitLineClamp!=="none"){e.style.textOverflow="clip";e.style.webkitLineClamp="unset";e.style.display=cs3.display==="-webkit-box"?"block":e.style.display;e.style.overflow="visible";e.style.maxHeight="none"}}/* no note cut short with "..." */}lx+=tot+120;
+    /* a copy is used only when it reads clean; otherwise the list keeps its old view: at least two dishes or prices on it, no line cut
+       at the edge, no dish name squeezed past three lines (a scorecard table), pictures under half of it */
+    {const wr=w.getBoundingClientRect(),rg=document.createRange(),tw=document.createTreeWalker(w,NodeFilter.SHOW_TEXT),N=s0=>String(s0).toLowerCase().replace(/\s+/g," ").trim();let t,np=0,nd=0,bad="";
+      while((t=tw.nextNode())){const x=t.textContent.trim();if(!x)continue;rg.selectNodeContents(t);const R=[...rg.getClientRects()].filter(r=>r.width&&r.height);if(!R.length)continue;
+        if(PRICE_RX.test(x))np++;const isD=x.length>3&&NM.some(m=>N(x)===m||N(x).startsWith(m));if(isD)nd++;
+        if(R.some(r=>r.right>wr.right-pad*ck*.4||r.left<wr.left+pad*ck*.4))bad="cut";
+        const lh=parseFloat(getComputedStyle(t.parentElement).fontSize)*1.6*ck,ys2=new Set(R.map(r=>Math.round(r.top/lh)));if(isD&&ys2.size>3)bad="squeezed"}
+      let pic=0;for(const e of w.querySelectorAll("*")){if(e.tagName!=="IMG"&&!/url\(/.test(getComputedStyle(e).backgroundImage))continue;if(e.parentElement&&e.parentElement.closest("img"))continue;const r=e.getBoundingClientRect();pic+=r.width*r.height}{/* empty frames (a photo strip, a still's box) count as pictures too */const seen=new Set();for(const e of w.querySelectorAll("*")){if(e.textContent.trim()||[...seen].some(q=>q.contains(e)))continue;const r=e.getBoundingClientRect();if(r.width*r.height>9000*ck*ck&&r.width>60*ck&&r.height>60*ck){seen.add(e);pic+=r.width*r.height}}}
+      {const T=[];const tw2=document.createTreeWalker(w,NodeFilter.SHOW_TEXT);let t2;while((t2=tw2.nextNode())){if(!t2.textContent.trim())continue;rg.selectNodeContents(t2);for(const r of rg.getClientRects())if(r.width>2&&r.height>2)T.push([r,t2])}
+        for(let i=0;i<T.length&&!bad;i++)for(let j=i+1;j<T.length;j++){if(T[i][1]===T[j][1])continue;const A2=T[i][0],B2=T[j][0],ox=Math.min(A2.right,B2.right)-Math.max(A2.left,B2.left),oy=Math.min(A2.bottom,B2.bottom)-Math.max(A2.top,B2.top);if(ox>4&&oy>Math.min(A2.height,B2.height)*.4){bad="overlap";break}}}/* lines drawn over each other */
+      {const rb=[...w.querySelectorAll("[data-pvrigid]")].reduce((a2,e)=>{const r=e.getBoundingClientRect();return a2+r.width*r.height},0);pic=Math.max(pic,rb)}
+      if(pic>.5*wr.width*wr.height)bad="pictures";{const rh=[...w.querySelectorAll("[data-pvrigid]")].reduce((a2,e)=>a2+e.getBoundingClientRect().height,0);if(rh>.3*wr.height)bad="pictures"}/* a carried-over picture stays a small part of the copy */
+      if(!bgi){const L2=c0=>{const m=String(c0).match(/[\d.]+/g);if(!m)return 1;const f=v=>{v/=255;return v<=.03928?v/12.92:((v+.055)/1.055)**2.4};return .2126*f(+m[0])+.7152*f(+m[1])+.0722*f(+m[2])},lb=L2(w.style.backgroundColor||bg);
+        for(const e of w.querySelectorAll("*")){const x=[...e.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join("").trim();if(!x||!(PRICE_RX.test(x)||NM.some(m=>x.toLowerCase().startsWith(m))))continue;const lt=L2(getComputedStyle(e).color),cr=(Math.max(lt,lb)+.05)/(Math.min(lt,lb)+.05);if(cr<3){bad="faint";break}}}if(np+nd<2)bad=bad||"thin";
+      if(bad){w.remove();lx-=tot+120;return null}}
     const H=w.offsetHeight,kk=pw/tot,scr=MAXH/kk,ys=[0];
     if(H>scr*1.15){const wr=w.getBoundingClientRect(),rg=document.createRange(),Y=[];for(const t of (function*(){const tw=document.createTreeWalker(w,NodeFilter.SHOW_TEXT);let n;while((n=tw.nextNode()))if(n.textContent.trim())yield n})()){rg.selectNodeContents(t);const fz=parseFloat(getComputedStyle(t.parentElement).fontSize)||12;for(const r of rg.getClientRects())if(r.height)Y.push([0,(r.top-wr.top)/ck,1,(r.bottom-wr.top)/ck,fz])}
       const G=[];{const S=Y.map(r=>[r[1],r[3],r[4]]).sort((p,q)=>p[0]-q[0]);let end=-1e9,ef=0;for(const [p,q,f] of S){if(end>-1e9&&p-end>=6&&!(ef>=f*1.25))G.push([(end+p)/2,p-end]);/* a heading is never the last line of a swipe */if(q>end){end=q;ef=f}}}
       /* even swipes, each cut at the widest gap near its share (a section heading, never between a dish and its note) */
       const nv=Math.ceil(H/scr);let at=0;for(let q=1;q<nv;q++){const want=H*q/nv,C=G.filter(([g])=>g>at+scr*.4&&g<=at+scr&&Math.abs(g-want)<=scr*.25);if(!C.length)break;const c2=C.reduce((m,x)=>x[1]>m[1]+2||x[1]>=m[1]-2&&Math.abs(x[0]-want)<Math.abs(m[0]-want)?x:m)[0];ys.push(c2);at=c2}}
+    if(ys.length>1){const wr=w.getBoundingClientRect(),rg=document.createRange(),tw=document.createTreeWalker(w,NodeFilter.SHOW_TEXT),Yd=[];let t;while((t=tw.nextNode())){const x=t.textContent.trim();if(!x||!PRICE_RX.test(x)&&!NM.some(m=>x.toLowerCase().startsWith(m)))continue;rg.selectNodeContents(t);const r=rg.getBoundingClientRect();if(r.height)Yd.push((r.top-wr.top)/ck)}
+      for(let i=ys.length-1;i>=1;i--){const lo2=ys[i-1],hi2=i+1<ys.length?ys[i+1]:H;if(!Yd.some(y=>y>=ys[i]&&y<hi2)||!Yd.some(y=>y>=lo2&&y<ys[i]))ys.splice(i,1)}}/* every swipe carries food */
     ys.push(H);const R=[];for(let i=0;i<ys.length-1;i++)R.push({el:w,w:tot,h:ys[i+1]-ys[i],x:lx-tot-120,y:ys[i],px:0,ly:ys[i],row:true,panel:1,read:1,list:1,hide:[]});return R}catch(e){return null}};
   for(const v of V){if(v.keep){out.push(v);continue}const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
     if(sp*pw/v.w>=FLOOR||desk&&/^zoom/.test(v.part||"")){out.push(v);continue}/* review 49: on desktop a block the layout marks to read ([data-pvzoom], the dim sum order sheet) shows whole, never cut into slivers of dish names */
@@ -1067,7 +1091,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
     else if(v.panel&&V.indexOf(v)===0&&out.length-at0>=1&&out[at0-1]===v){const R=out.slice(at0),ry0=Math.min(...R.map(r=>r.y)),ry1=Math.max(...R.map(r=>r.y+r.h)),vy=v.y||0;
       if(ry1>=vy+v.h*.85&&ry0-vy>=v.h*.25&&R.every(r=>r.x>=v.x-2&&r.x+r.w<=v.x+v.w+2))out[at0-1]=Object.assign({},v,{h:Math.round(ry0-vy)})}}
   return out.length&&out.length<=14?out:base}
-const PV_LIST_ON=".lib-bistro,.fmt-moonlit,.fmt-oceansupper";/* phone list swipes: which cards get them (see pvReadViews) */
+const PV_LIST_OFF=["The Italian Job (1969)","The Silence of the Lambs (1991)"];/* phone list swipes: every card but these (Josh: leave them alone) */
 const PRICE_RX=/^(?:(?:A?\$|£|€|¥)\s?\d{1,4}(?:[.,]\d{2})?|\d{0,3}[.,]\d{2}|\d{1,3}\s?¢)$/;/* phone pass: a printed price line ($3.50, 2.75, 25¢) for the reading views */
 function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
