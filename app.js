@@ -968,8 +968,8 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
          sit inside the 14px margin or across a cut: the top and bottom move to clear them, and a cut that runs through one moves to the next
          clear gap or is dropped */
       {const X=B.filter(b=>b[2]>cx&&b[0]<cx+w),hit=e=>X.find(b=>b[1]<e-1&&b[3]>e+1);
-        let tl;while((tl=hit(ys[0]))&&ys[0]<y0)ys[0]=Math.min(y0-1,tl[3]+1);if(hit(ys[0]))ys[0]=Math.min(...X.filter(b=>b[3]>ys[0]&&b[1]<=y0).map(b=>b[1]))-2;
-        let bl;const E=ys.length-1;while((bl=hit(ys[E]))&&ys[E]>y1)ys[E]=Math.max(y1+1,bl[1]-1);if(hit(ys[E]))ys[E]=Math.max(...X.filter(b=>b[1]<ys[E]&&b[3]>=y1).map(b=>b[3]))+2;
+        let tl,g=0;while((tl=hit(ys[0]))&&ys[0]<y0-1&&g++<40)ys[0]=Math.min(y0-1,tl[3]+1);/* bounded: a line across the region's own top stops it */if(hit(ys[0]))ys[0]=Math.min(...X.filter(b=>b[3]>ys[0]&&b[1]<=y0).map(b=>b[1]))-2;
+        let bl;const E=ys.length-1;g=0;while((bl=hit(ys[E]))&&ys[E]>y1+1&&g++<40)ys[E]=Math.max(y1+1,bl[1]-1);if(hit(ys[E]))ys[E]=Math.max(...X.filter(b=>b[1]<ys[E]&&b[3]>=y1).map(b=>b[3]))+2;
         for(let i=E-1;i>0;i--)if(hit(ys[i]))ys.splice(i,1)}
       for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i]})}}
     /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
@@ -1196,7 +1196,7 @@ function openMenuZoom(trigger){
   const home=card.nextSibling,keepT=card.style.transform;card.style.clipPath="";pvMask(null);/* review 47: the column view's clip and panel mask do not come into the full size view */sheet.appendChild(card);card.style.transformOrigin="0 0";card.style.transition="none";card.style.opacity="";
   const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):paged?Math.min(1.4,(innerWidth-80)/fw(),faces[fi]&&faces[fi].cover?(innerHeight-160)/fh():9):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
   /* the opening zoom on a desktop: big enough to read, never wider than the screen unless there is no other way */
-  const readK=()=>paged&&faces[fi]&&faces[fi].whole?Math.max(fit(),Math.min(3.5,12.6/Math.min(small,tiny))):!deskRead||paged&&faces[fi]&&faces[fi].cover?fit():paged?Math.min(1.4,(innerWidth-80)/fw()):widthK*small>=13?widthK:Math.min(2.5,13/small);
+  const readK=()=>paged&&faces[fi]&&faces[fi].whole?Math.max(fit(),Math.min(3.5,13.2/Math.min(small,tiny))):!deskRead||paged&&faces[fi]&&faces[fi].cover?fit():paged?Math.min(1.4,(innerWidth-80)/fw()):widthK*small>=13?widthK:Math.min(2.5,13/small);
   let k=1;
   const paint=()=>{const f=paged?faces[fi]:{x:0,y:0};card.style.transform=`translate(${-f.x*k}px,${-f.y*k}px) scale(${k})`;sheet.style.width=fw()*k+"px";sheet.style.height=fh()*k+"px"};
   /* zoom around a point on screen (the middle by default, or between two fingers) */
