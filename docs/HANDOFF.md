@@ -2459,3 +2459,4 @@ Josh: do the films that fell back from the list swipes (the ~150 that failed a c
 - Eyeballed: every fixed layout type one or more times (about 40 copies), a 25-film contact sheet of newly fixed films, and old against new copies on 39 films that already worked: same or better (paper now matches the card on the invite and banquet cards, Prizzi's Honor gets both pages). Known cosmetic: Alien's copy is on black without its faint grid.
 - Checks (final code): all node tests pass; ripple 0 gaps; check-view-cuts and check-phone-panels on all 482 list films, 0 and 0; check-fullsize on a random 60, 0.
 - Next: deploy on Josh's go. The 12 left each fail one named check; fix individually if wanted.
+- 27 Nov, 8:20am: deployed on Josh's go. main fast-forwarded 2d97fd56 to 7ae46cff; Publish site run 45903760624 failed once on GitHub's side (deploy step found no artifact), passed on re-run; live sw.js VERSION mns-d3ad1e6d and app.js?v=e97ab02a checked.
