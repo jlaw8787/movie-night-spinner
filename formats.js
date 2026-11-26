@@ -1601,6 +1601,7 @@ function fmtMcdowells(f,spec,menu,poster){
     ${row(708,206,325,turn)}
     <div style="${at(708,272,325,'height:76px')}">${row(0,0,236,crisp)}${crest}</div>
     ${notice}${combos}${badge}${policy}${coupon}${cue}
+    <i data-pvview aria-hidden="true" style="${at(8,178,344,'height:250px;pointer-events:none')}"></i><i data-pvview aria-hidden="true" style="${at(360,178,337,'height:250px;pointer-events:none')}"></i><i data-pvview aria-hidden="true" style="${at(700,178,339,'height:250px;pointer-events:none')}"></i><!-- phone pass: the three columns are the phone swipes -->
     <div style="${at(14,586,1015,`display:flex;justify-content:space-between;${T};font-size:9.5px;letter-spacing:.04em;color:${M}`)}"><span>*Golden Arcs. Not Arches. Totally different.</span><span>Queens Blvd store. Prices in 1988 US dollars.</span></div>
   </section>`;
   return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${R};background-image:linear-gradient(135deg,#d42a3a,#9c0f22);border-radius:20px;box-shadow:inset 0 2px 2px #ef7a7a,inset 0 0 0 7px #8e0b20,inset 0 0 0 9px ${Y},0 13px 24px rgba(0,0,0,.4);${B}">${box}${liner}<div style="${at(40,722,991,`display:flex;justify-content:space-between;${T};font-size:8px;letter-spacing:.08em;color:#ffd38a`)}"><span>MOVIE-NIGHT TRAY LINER / SERVES FOUR</span><span>FILM STILLS & POSTER: TMDB</span></div></div>`;

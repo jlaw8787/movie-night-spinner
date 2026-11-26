@@ -894,10 +894,14 @@ function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",")
 /* review 39 (Josh, 22 Nov): on a phone the printed menu reads without a tap. Each view whose small print would draw under about 10.5px is
    cut along clear gutters into reading views (an XY cut on the words: columns first, then bands), each cropped to its words and scaled to
    the screen width, so dish notes read at about 11px. Tall views are cut again at a line gap to about one screen. Desktop is left alone. */
+/* phone pass (26 Nov): the reading views are measured once per menu and cached. Spun in from another film, the menu's fonts were often still
+   loading, so the views were cut on fallback type (Three Men and a Baby: five slivers, the last cutting "Shaken Vanilla Milk"). Each font
+   load bumps the cache, and the preview measures again (the opening view moves only if nobody has swiped yet) */
+let pvFontGen=0;try{const again0=()=>{pvFontGen++;try{if(tab==="menu"&&card.innerHTML.trim())scalePreview()}catch(e){}},again=()=>{again0();setTimeout(again0,600)};/* and once more when the text has settled */document.fonts.addEventListener("loadingdone",again);document.fonts.ready.then(again)}catch(e){}
 function cardFaces(){const base=cardFaces0();if(!card.classList.contains("fmt"))return base;
   /* review 48: on desktop a page whose notes still print under 13px at column width is read in column views too, as the phone does */
   if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return pvCover(base)}
-  const key=renderId+"|"+card.innerHTML.length+"|"+(preview.clientWidth||0);if(card._pvr&&card._pvr.key===key)return card._pvr.v;
+  const key=renderId+"|"+card.innerHTML.length+"|"+(preview.clientWidth||0)+"|"+pvFontGen;if(card._pvr&&card._pvr.key===key)return card._pvr.v;
   let out=base;try{out=pvReadViews(base)}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
 /* review 49: on desktop every part of the card shows on some page of the views and the full size view. Views cut to the dish blocks (the
    hospital meal form's two halves, the dim sum order sheet, a candy bar's side columns) left the header, poster, scenes, nurse's note and
@@ -919,16 +923,16 @@ function pvCover(V){if(!V||!V.length||swipeW()||!pvDesk)return V;
       out.push(v)}}catch(e){out=V}
   card._pvc={key,v:out};return out}
 function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),desk=!swipeW(),FLOOR=desk?13:10.5,TGT=Math.max(260,pw*sp/(desk?13.5:11.5)),MAXH=Math.max(500,(innerHeight||800)*.92);
-  let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;if(!w||!h)return base;V=[{el,w,h,x:0,y:0,px:0,row:true}]}
+  let V=base;if(!V.length){const el=card.querySelector(".fx-face")||card,w=parseFloat(el.style.width)||+card.dataset.w||el.offsetWidth||0,h=parseFloat(el.style.height)||+card.dataset.h||el.offsetHeight||0;if(!w||!h)return base;/* phone pass: older hand-built cards (McDowell's, Lou's) set no sheet size, so read their drawn size */V=[{el,w,h,x:0,y:0,px:0,row:true}]}
   const out=[];let n=0;const NM=(()=>{const m=(current&&(current.printMenu||current.menu))||{};return ["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/\s+/g," ").trim())).filter(n=>n.length>3)})();
   const nDish=L=>L.filter(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))}).length;const hasDish=L=>L.some(b=>{const t=String(b[5]).toLowerCase().replace(/\s+/g," ").trim();return t.length>3&&NM.some(n=>t===n||t.startsWith(n))});/* a line that is the dish name, not a cue that mentions the cornbread */
-  for(const v of V){const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
+  for(const v of V){if(v.keep){out.push(v);continue}const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
     if(sp*pw/v.w>=FLOOR||desk&&/^zoom/.test(v.part||"")){out.push(v);continue}/* review 49: on desktop a block the layout marks to read ([data-pvzoom], the dim sum order sheet) shows whole, never cut into slivers of dish names */
     /* page origin on the card: a panel's x is the page's x plus its own px */
     const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,ox=(eb.left-cb.left)/ck,oy=(eb.top-cb.top)/ck,ylo=(v.y||0)-oy,yhi=ylo+v.h;
     const B=[],rg=document.createRange();
     for(const e of v.el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]")||!e.offsetParent&&getComputedStyle(e).position!=="fixed")continue;for(const t of e.childNodes){if(t.nodeType!==3||!t.textContent.trim())continue;rg.selectNodeContents(t);
-      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;const x0=(r.left-eb.left)/k,x1=(r.right-eb.left)/k,y0=(r.top-eb.top)/k,y1=(r.bottom-eb.top)/k,cx=(x0+x1)/2;if(cx<lo||cx>hi||(y0+y1)/2<ylo||(y0+y1)/2>yhi)continue;B.push([x0,y0,x1,y1,t.textContent.trim().length,t.textContent])}}}
+      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;const x0=(r.left-eb.left)/k,x1=(r.right-eb.left)/k,y0=(r.top-eb.top)/k,y1=(r.bottom-eb.top)/k,cx=(x0+x1)/2;if(cx<lo||cx>hi||(y0+y1)/2<ylo||(y0+y1)/2>yhi)continue;B.push([x0,y0,x1,y1,t.textContent.trim().length,t.textContent,(!!e.closest(".fx-price")||PRICE_RX.test(t.textContent.trim()))&&!e.closest('[style*="rotate"]')])}}}/* a tilted prop (guest check, drink chit) is not a menu list */
     if(B.reduce((a,b)=>a+b[4],0)<60){out.push(v);continue}
     const gaps=(L,ax,min)=>{/* clear runs along one axis (0: x, 1: y) between word boxes */const s=L.map(b=>[b[ax],b[ax+2]]).sort((a,b)=>a[0]-b[0]),G=[];let end=-1e9;for(const [a,z] of s){if(end>-1e9&&a-end>=min)G.push([end,a]);end=Math.max(end,z)}return G};
     const bb=L=>[Math.min(...L.map(b=>b[0])),Math.min(...L.map(b=>b[1])),Math.max(...L.map(b=>b[2])),Math.max(...L.map(b=>b[3]))];
@@ -956,7 +960,33 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
       for(let i=0;i<regions.length;i++){const R=regions[i];if(chars(R)>=40)continue;const j=[i+1,i-1].find(j=>regions[j]&&fits(R,regions[j]));if(j!=null)regions[j].push(...R);regions.splice(i,1);i--}
       for(let i=0;i<regions.length-1;i++){if(fits(regions[i],regions[i+1])){regions[i].push(...regions[i+1]);regions.splice(i+1,1);i--}}}
     /* the whole view stays first, as the overview (sign, poster, props); reading views follow only for the blocks that carry dishes */
-    const R2=regions.filter(hasDish);if(!R2.length||R2.reduce((a,L)=>a+nDish(L),0)<2){out.push(v);continue}
+    /* phone pass: NM holds only the five cooked dishes, so a block of the extra printed dishes (Moonstruck's whole Secondi e Pasta) was left
+       on the overview. A block with two or more priced lines counts as dishes too, and a column of prices (Anchorman's Cost) joins the dish
+       block beside it, so a dish never swipes without its price */
+    const nP=L=>v.crop?0:L.filter(b=>b[6]).length,isMenu=L=>hasDish(L)||nP(L)>=2;/* a cropped panel (Big Night, The Untouchables) keeps the old rule */
+    {const yo=(P,Q)=>{const [,a0,,a1]=bb(P),[,b0,,b1]=bb(Q);return (Math.min(a1,b1)-Math.max(a0,b0))/Math.max(1,Math.min(a1-a0,b1-b0))};
+     const xg=(P,Q)=>{const [a0,,a1]=bb(P),[b0,,b1]=bb(Q);return Math.max(b0-a1,a0-b1)};
+     for(let go=1,g=0;go&&g++<20;){go=0;for(const A of regions){if(!A.length||!hasDish(A)||nP(A))continue;/* a table: the dish column has no prices of its own, they sit in the column beside it */for(const Q of regions){if(Q===A||!Q.length)continue;
+       if(!hasDish(Q)&&nP(Q)&&yo(A,Q)>=.5&&xg(A,Q)<120){A.push(...Q);Q.length=0;A._row=1;go=1}}}}
+     for(let i=regions.length-1;i>=0;i--)if(!regions[i].length)regions.splice(i,1)}
+    let wideRow=0;for(const L of regions)if(isMenu(L)&&(L._row||nDish(L)<2&&nP(L)>=2)){const [x0,,x1]=bb(L);if(x1-x0>TGT*1.15){wideRow=1;L.length=0}}
+    for(let i=regions.length-1;i>=0;i--)if(!regions[i].length)regions.splice(i,1);
+    /* a page whose dish rows run the full width (dish, talent and cost across: Anchorman's rundown) is read whole, never as columns that
+       drop the prices; tap still opens it full size */
+    if(wideRow&&V.indexOf(v)>0&&!regions.some(isMenu)){out.push(v);continue}
+    if(wideRow&&V.indexOf(v)>0)out.push(v);
+    let R2=regions.filter(isMenu);
+    /* phone pass: a hand-built card can draw a dish name in pieces (Lou's "BREAKFAST" then "PLATE"), so with under two whole-line names
+       found, a block counts the names its joined text holds */
+    if(!base.length&&R2.reduce((a,L)=>a+Math.max(nDish(L),nP(L)>=2?nP(L):0),0)<2){const jd=L=>{const t=L.map(b=>String(b[5])).join(" ").toLowerCase().replace(/\s+/g," ");return NM.filter(n=>t.includes(n)).length};const J=regions.filter(L=>jd(L)>0);if(J.reduce((a,L)=>a+jd(L),0)>=2)R2=J}
+    if(!base.length&&!card.dataset.w&&!card.classList.contains("fx-paper")&&R2.length>1){/* and its views go by column: blocks in the same column join (Lou's grill and breakfast board), and a block with no dish name joins the
+         column it sits under (McDowell's combo bar and badge row), so no dish or combo is left on the overview only */
+      const ov=(P,Q)=>{const a=bb(P),b=bb(Q),m=Math.min(a[2]-a[0],b[2]-b[0]);return m>0?(Math.min(a[2],b[2])-Math.max(a[0],b[0]))/m:0};
+      const cols=R2.map(L=>[...L]),top=Math.min(...cols.map(c=>bb(c)[1]));
+      for(let i=0;i<cols.length;i++)for(let j=i+1;j<cols.length;j++)if(ov(cols[i],cols[j])>=.6){cols[i].push(...cols[j]);cols.splice(j,1);j--}
+      for(const L of regions){if(R2.includes(L)||bb(L)[1]<top-20)continue;let bi=-1,bv=.6;cols.forEach((c,i)=>{const o=ov(c,L);if(o>bv){bv=o;bi=i}});if(bi>=0)cols[bi].push(...L)}
+      const CW=Math.max(TGT,pw*1.6);if(cols.every(c=>bb(c)[2]-bb(c)[0]<=CW))R2=cols}
+    if(!R2.length||R2.reduce((a,L)=>a+Math.max(nDish(L),nP(L)>=2?nP(L):0,1),0)<2){out.push(v);continue}
     /* review 39 (Josh: Men in Black was 8 swipes): only the first page stays as a whole-page overview; a later page goes straight to its
        reading views, and a page with only one dish line on it (a cover's "today's special") stays whole with no reading view */
     if(V.indexOf(v)===0)out.push(v);const at0=out.length;
@@ -970,12 +1000,30 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
       {const X=B.filter(b=>b[2]>cx&&b[0]<cx+w),hit=e=>X.find(b=>b[1]<e-1&&b[3]>e+1);
         let tl,g=0;while((tl=hit(ys[0]))&&ys[0]<y0-1&&g++<40)ys[0]=Math.min(y0-1,tl[3]+1);/* bounded: a line across the region's own top stops it */if(hit(ys[0]))ys[0]=Math.min(...X.filter(b=>b[3]>ys[0]&&b[1]<=y0).map(b=>b[1]))-2;
         let bl;const E=ys.length-1;g=0;while((bl=hit(ys[E]))&&ys[E]>y1+1&&g++<40)ys[E]=Math.max(y1+1,bl[1]-1);if(hit(ys[E]))ys[E]=Math.max(...X.filter(b=>b[1]<ys[E]&&b[3]>=y1).map(b=>b[3]))+2;
-        for(let i=E-1;i>0;i--)if(hit(ys[i]))ys.splice(i,1)}
-      for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i]})}}
+        for(let i=E-1;i>0;i--)if(hit(ys[i]))ys.splice(i,1)
+        /* phone pass: nor through a picture (Toy Story's Launch Pad view ended halfway down The Claw): the edge moves to the side of it
+           that cuts less, the picture kept whole or left out */
+        const IM=v.crop?[]:[...v.el.querySelectorAll("img")].map(im=>{const r=im.getBoundingClientRect();return [(r.left-eb.left)/k,(r.top-eb.top)/k,(r.right-eb.left)/k,(r.bottom-eb.top)/k]}).filter(r=>r[2]-r[0]>40&&r[3]-r[1]>30&&r[2]>cx+8&&r[0]<cx+w-8);
+        const E2=ys.length-1,mv=(i,y)=>{if(!hit(y))ys[i]=y};/* a move that would land on a line of text is not made */
+        for(const r of IM){if(r[1]<ys[E2]-2&&r[3]>ys[E2]+2){if((r[3]+6-ys[E2-1])*kk>MAXH*1.3&&r[1]-6>ys[E2-1]+60)mv(E2,r[1]-6);else mv(E2,r[3]+6)}/* kept whole when the view grows only a little (The Claw stays) */
+          if(r[1]<ys[0]-2&&r[3]>ys[0]+2){if(r[3]-ys[0]<ys[0]-r[1]&&r[3]+6<ys[1]-60)mv(0,r[3]+6);else mv(0,r[1]-6)}}}
+      /* phone pass: words of the next column that stray into the view's side (Dumb and Dumber's first view showed the grill column's
+         "Drinks" in its corner) are listed, and pvMask hides them while the view shows */
+      let hide=[];{const S=new Set(L),E3=ys.length-1;hide=B.filter(b=>!S.has(b)&&b[0]<cx+w&&b[2]>cx&&b[3]>ys[0]&&b[1]<ys[E3]).filter(b=>{const nr=L.filter(a=>a[3]>b[1]-40&&a[1]<b[3]+40);if(!nr.length)return false;
+        return b[0]>Math.max(...nr.map(a=>a[2]))+10||b[2]<Math.min(...nr.map(a=>a[0]))-10}).map(b=>[b[0],b[1],b[2],b[3]])}
+      for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i],hide})}}
     /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
        takes the panel's place instead of following it (the card had opened on dot 4 of 4 with dots 3 and 4 the same menu) */
-    if(V.indexOf(v)===0&&out.length-at0===1){const r=out[at0];if(r.w>=.85*v.w&&r.h>=.8*v.h)out.splice(at0-1,1)}}
+    if(V.indexOf(v)===0&&out.length-at0===1&&out[at0].w>=.85*v.w&&out[at0].h>=.8*v.h)out.splice(at0-1,1)
+    /* phone pass: a later panel read as one view nearly its own width shows as the panel itself, so the cue and the film quote under the
+       dishes stay (Hot Fuzz's specials board lost its showtime and "two guns" line); about the same size, nothing dropped */
+    else if(v.panel&&V.indexOf(v)>0&&out.length-at0===1){const r=out[at0];if(r.w>=.85*v.w&&r.h>=.6*v.h)out.splice(at0,1,v)}
+    /* phone pass: when the reading views fill the bottom of the opening panel (Muriel's poster above the counter list), that panel's swipe
+       stops above them, so the list does not show twice */
+    else if(v.panel&&V.indexOf(v)===0&&out.length-at0>=1&&out[at0-1]===v){const R=out.slice(at0),ry0=Math.min(...R.map(r=>r.y)),ry1=Math.max(...R.map(r=>r.y+r.h)),vy=v.y||0;
+      if(ry1>=vy+v.h*.85&&ry0-vy>=v.h*.25&&R.every(r=>r.x>=v.x-2&&r.x+r.w<=v.x+v.w+2))out[at0-1]=Object.assign({},v,{h:Math.round(ry0-vy)})}}
   return out.length&&out.length<=14?out:base}
+const PRICE_RX=/^(?:(?:A?\$|£|€|¥)\s?\d{1,4}(?:[.,]\d{2})?|\d{0,3}[.,]\d{2}|\d{1,3}\s?¢)$/;/* phone pass: a printed price line ($3.50, 2.75, 25¢) for the reading views */
 function cardFaces0(){
   if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
   const fs=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];
@@ -1000,6 +1048,10 @@ function cardFaces0(){
     if(P.length&&P.length<=2){const cb=card.getBoundingClientRect(),cw=+card.dataset.w||card.offsetWidth||1123,k=cb.width/cw||1;
       const V=P.map((e,i)=>{const r=e.getBoundingClientRect();return {el:card,w:Math.round(r.width/k)+24,h:Math.round(r.height/k)+24,x:Math.round((r.left-cb.left)/k)-12,y:Math.round((r.top-cb.top)/k)-12,px:Math.round((r.left-cb.left)/k)-12,part:"menu"+(i+1),panel:1,crop:1}});
       if(V.every(v=>v.w<cw*.75))return V}return null};
+  /* phone pass: a hand-built card with no sheet size can mark its own swipes ([data-pvview]: McDowell's three columns), so they are exact.
+     The whole card comes first, then the marked views, each shown as drawn */
+  if(!fs.length&&!card.dataset.w){const PV=[...card.querySelectorAll("[data-pvview]")];if(PV.length){const cb=card.getBoundingClientRect(),cw=card.offsetWidth||1123,ch=card.offsetHeight||794,k=cb.width/cw||1;
+    return [{el:card,w:cw,h:ch,x:0,y:0,px:0,row:true,keep:1},...PV.map((e,i)=>{const r=e.getBoundingClientRect(),x=Math.round((r.left-cb.left)/k);return {el:card,w:Math.round(r.width/k),h:Math.round(r.height/k),x,y:Math.round((r.top-cb.top)/k),px:x,row:true,part:"view"+(i+1),panel:1,read:1,keep:1}})]}}
   if(!fs.length&&!card.dataset.w&&card.classList.contains("fmt")){const V=fxPanels();if(V)return V}
   const el=fs[0]||card,w=parseFloat(el.style.width)||+card.dataset.w||0,h=parseFloat(el.style.height)||+card.dataset.h||0;
   if(!w||!h||(w<h*1.2&&w<900))return [];/* a wide page, or a big one (the pub face is 1240 across) */
@@ -1020,7 +1072,8 @@ function pvPanels(el,w,h,fi){const key=renderId+"|"+card.innerHTML.length+"|"+(f
       for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const pd=8,a=Math.max(0,Math.floor(((r.left-b.left)/k-pd)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+pd)/R));for(let i=a;i<=z;i++)cov[i]=1}}}
     /* review 46: on desktop a page view never cuts through a photo or poster (Zoolander's poster lost its right edge and frame): a picture
        narrower than most of the page counts as covered, so the cut falls in the gutter beside it */
-    if(pvDesk)for(const im of el.querySelectorAll("img")){const r=im.getBoundingClientRect();if(!r.width||!r.height)continue;const iw=r.width/k,ih=r.height/k;if(iw>w*.7||ih<h*.15)continue;
+    /* phone pass: on a phone too (the pub poster and The Muppets poster were cut in half across two swipes) */
+    for(const im of el.querySelectorAll("img")){const r=im.getBoundingClientRect();if(!r.width||!r.height)continue;const iw=r.width/k,ih=r.height/k;if(iw>w*.7||ih<h*.15)continue;
       const a=Math.max(0,Math.floor(((r.left-b.left)/k)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k)/R));for(let i=a;i<=z;i++)cov[i]=1}/* review 39: 5px either side on a phone, so a 20px gap between two columns (the placemat's menu and its side column) is a gutter */
     /* candidate cuts: the middle of every clear run (long runs offer a point every 60px); then the fewest panels (2 to 4) that keep every
        panel 200 to 440px wide, or failing that the split with the narrowest widest panel (Wall-E: photos, two menu columns, photos) */
@@ -1078,6 +1131,8 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(
     const words=tn.map(n=>n.textContent.trim()).join(" ").split(/\s+/).length;
     /* 13 Nov: a long line (three words or more) only steps aside when under about two words of it show (48px); a share of its width hid
        the drive-in Showtime line whole (24% in view) while the dish lines beside it ran on past the edge */
+    if(f.hide&&f.hide.length){let t=1e9,bt=-1e9;for(const n of tn){rg.selectNodeContents(n);for(const r of rg.getClientRects())if(r.width){t=Math.min(t,r.top);bt=Math.max(bt,r.bottom)}}t=(t-b.top)/k;bt=(bt-b.top)/k;
+      const mx=(l+rt)/2,my=(t+bt)/2;if(f.hide.some(h=>mx>=h[0]-2&&mx<=h[2]+2&&my>=h[1]-2&&my<=h[3]+2)){off.push(e);continue}}
     if(seen<w-1&&(seen<=0||(f.panel&&seen>0)||(words<=2||seen<48)&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi)))off.push(e)}
   /* review 32: a sign marked [data-pvsign] (the pub fascia) is moved over the panel and scaled to it, so the food panel's band is not left blank (Hot Fuzz) */
   for(const e of off.filter(e=>e.hasAttribute("data-pvsign"))){off.splice(off.indexOf(e),1);let l=1e9,rt=-1e9;for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);for(const r of rg.getClientRects())if(r.width){l=Math.min(l,r.left);rt=Math.max(rt,r.right)}}
