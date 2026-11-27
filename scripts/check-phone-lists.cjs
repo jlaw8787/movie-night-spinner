@@ -11,7 +11,7 @@ const P=[
  ['const listViews=L=>{try{const A=flowAnc(L);if(!A)return null;','const listViews=L=>{try{const A=flowAnc(L);if(!A){window.__pvR&&__pvR.push({r:"noanc",t:L.slice(0,5).map(b=>String(b[5]).trim()).join(" | ").slice(0,70)});return null}'],
  ['return R}catch(e){return null}};','return R}catch(e){window.__pvR&&__pvR.push({r:"err:"+e.message});return null}};'],
  ['const LV=listViews(L);if(LV){','const LV=listViews(L);if(LV){window.__pvR&&__pvR.push({r:"ok",n:LV.length});'],
- ['let out=base;try{out=pvReadViews(base)}catch(e){out=base}','let out=base;try{out=pvReadViews(base)}catch(e){window.__pvR&&__pvR.push({r:"RVERR "+String(e.stack).slice(0,300)});out=base}'],
+ ['catch(e){out=base}if(!swipeW())out=pvCover(out)','catch(e){window.__pvR&&__pvR.push({r:"RVERR "+String(e.stack).slice(0,300)});out=base}if(!swipeW())out=pvCover(out)'],
  ['flowAnc(L)))continue;wideRow=1;','flowAnc(L)))continue;if(listOn&&x1-x0+28>=.75*v.w)window.__pvR&&__pvR.push({r:"wide-noanc",t:L.slice(0,5).map(b=>String(b[5]).trim()).join(" | ").slice(0,70)});wideRow=1;'],
 ];
 let src=fs.readFileSync(process.env.APPJS||path.join(REPO,'app.js'),'utf8');for(const [a,b] of P){if(src.split(a).length!==2)throw new Error('patch miss: '+a);src=src.replace(a,b)}

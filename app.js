@@ -898,7 +898,17 @@ function pvZoomBox(z){const v=z.dataset.pvzoom;if(v!=="self")return v.split(",")
    loading, so the views were cut on fallback type (Three Men and a Baby: five slivers, the last cutting "Shaken Vanilla Milk"). Each font
    load bumps the cache, and the preview measures again (the opening view moves only if nobody has swiped yet) */
 /* phone lists (26 Nov): the reflowed list copies sit inside the card, off the sheet; cache keys leave them out */
-const cardLen=()=>{let n=card.innerHTML.length;for(const e of card.querySelectorAll(":scope > .pv-list"))n-=e.outerHTML.length;return n};
+const pvRawLen=()=>{let n=card.innerHTML.length;for(const e of card.querySelectorAll(":scope > .pv-list"))n-=e.outerHTML.length;return n};
+/* 27 Nov (Red Dog): the edge mask on show (pvMask: words stepped aside, the pub sign moved over the food panel) changes the card's markup, so
+   the length leaves it out. With it in, every call after a page was shown missed the views cache and measured the card with that page's
+   mask on; the sign moved over the food panel refused the list copy, the next call accepted it, and the opening view flipped call to call */
+const cardLen=()=>pvRawLen()-(card.dataset.pvm&&card._pvmR===renderId?card._pvmD||0:0);
+/* lift the edge mask exactly (no empty class or style left behind), so views are measured on the card as drawn */
+function pvMaskLift(){card.querySelectorAll(".pv-off").forEach(e=>{e.classList.remove("pv-off");if(!e.classList.length)e.removeAttribute("class")});
+  card.querySelectorAll("[data-pvt]").forEach(e=>{if(e.dataset.pvt==="-"){e.style.transform="";e.style.transformOrigin=""}else e.style.transform=e.dataset.pvt;e.removeAttribute("data-pvt");if(!e.getAttribute("style"))e.removeAttribute("style")});
+  card._pvmD=0;delete card.dataset.pvm}
+/* run a measure with the mask lifted, then put the mask that was showing back */
+function pvUnmasked(fn){const ms=card.dataset.pvm?card._pvmS:null;if(!ms)return fn();pvMaskLift();try{return fn()}finally{try{pvMask(ms.f,ms.k)}catch(e){}}}
 /* the card clips to its sheet; while a list copy sits beside it on a phone it does not (the preview frame clips instead) */
 const pvListsOff=()=>{card.querySelectorAll(":scope > .pv-list").forEach(e=>e.remove());if(card.dataset.pvov!=null){card.style.overflow=card.dataset.pvov;delete card.dataset.pvov}};
 let pvFontGen=0;try{const again0=()=>{pvFontGen++;try{if(tab==="menu"&&card.innerHTML.trim())scalePreview()}catch(e){}},again=()=>{again0();setTimeout(again0,600)};/* and once more when the text has settled */document.fonts.addEventListener("loadingdone",again);document.fonts.ready.then(again)}catch(e){}
@@ -907,7 +917,7 @@ function cardFaces(){const base=cardFaces0();if(!card.classList.contains("fmt"))
   /* review 48: on desktop a page whose notes still print under 13px at column width is read in column views too, as the phone does */
   if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return pvCover(base)}
   const key=renderId+"|"+cardLen()+"|"+(preview.clientWidth||0)+"|"+pvFontGen;if(card._pvr&&card._pvr.key===key)return card._pvr.v;
-  let out=base;try{out=pvReadViews(base)}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
+  let out=base;try{out=pvUnmasked(()=>pvReadViews(base))}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
 /* review 49: on desktop every part of the card shows on some page of the views and the full size view. Views cut to the dish blocks (the
    hospital meal form's two halves, the dim sum order sheet, a candy bar's side columns) left the header, poster, scenes, nurse's note and
    cue on no page at all (Rain Man, Kung Fu Panda 2, Roger Rabbit's middle column). A page with text outside every view gets a whole-page
@@ -1256,8 +1266,9 @@ function pvGo(i){card._pvUser=renderId;
   setTimeout(()=>{pvFace=i;card.style.transition="none";scalePreview();requestAnimationFrame(()=>{card.style.transition="opacity .15s";card.style.opacity="";setTimeout(()=>{card.style.transition=""},200)})},150);
 }
 /* half views of a wide page: text the view edge cuts so that less than 60% shows ("Parr", "DUMB") is hidden, so the edge reads as a clean peek */
-function pvMask(f,k){const key=f&&f.part?f.part+"|"+cardLen():"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
-  card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));card.querySelectorAll("[data-pvt]").forEach(e=>{e.style.transform=e.dataset.pvt==="-"?"":e.dataset.pvt;e.removeAttribute("data-pvt")});if(!key)return;
+function pvMask(f,k){const key=f&&f.part?f.part+"|"+cardLen():"";if((card.dataset.pvm||"")===key)return;pvMaskLift();if(!key){card._pvmS=null;return}
+  const L0=pvRawLen();try{pvMask0(f,k)}finally{card.dataset.pvm=key;card._pvmS={f,k};card._pvmR=renderId;card._pvmD=pvRawLen()-L0}}
+function pvMask0(f,k){
   const b=f.el.getBoundingClientRect(),lo=f.px!=null?f.px:f.x,hi=lo+f.w,off=[];/* review 39: the scale the card is drawn at right now (a page turn may still be sliding), not the one it is heading to */{const ow=f.el===card?card.offsetWidth:f.el.offsetWidth;if(ow&&b.width)k=b.width/ow}
   const rg=document.createRange();
   for(const e of f.el.querySelectorAll("*")){const tn=[...e.childNodes].filter(n=>n.nodeType===3&&n.textContent.trim());if(!tn.length)continue;
@@ -1281,7 +1292,8 @@ function pvMask(f,k){const key=f&&f.part?f.part+"|"+cardLen():"";if(card.dataset
 /* review 35: the size the card's small print (the dish notes) reads at when the whole sheet is scaled by k: the character-weighted fifth
    smallest share of its text, in card pixels (inner transforms counted), times k. Kept per drawn card */
 let pvDesk=false;
-function cardSmallPx(){const key=renderId+"|"+cardLen();if(card._smk===key)return card._smpx;let px=99;
+function cardSmallPx(){const key=renderId+"|"+cardLen();if(card._smk===key)return card._smpx;return pvUnmasked(cardSmallPx0)}
+function cardSmallPx0(){const key=renderId+"|"+cardLen();let px=99;
   try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,L=[];let tot=0;
     for(const e of card.querySelectorAll("*")){if(!e.offsetWidth||e.closest("[aria-hidden=true],[data-np]"))continue;let n=0;for(const c of e.childNodes)if(c.nodeType===3)n+=c.textContent.trim().length;if(n<12)continue;
       const r=e.getBoundingClientRect(),k=r.width/e.offsetWidth/ck,f=parseFloat(getComputedStyle(e).fontSize)*(k>0?k:1);if(f>0){L.push([f,n]);tot+=n}}
