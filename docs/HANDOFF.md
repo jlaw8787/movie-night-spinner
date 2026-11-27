@@ -2495,3 +2495,12 @@ Josh: fix the two open faults from the 12 fallbacks entry, one at a time. Same r
 - Open, pre-existing (flag for Josh): those 5 full size flags; Eurovision sometimes opens whole on desktop when reached first after another film (main too).
 - Next: deploy on Josh's go.
 - 27 Nov, 2:57pm: deployed on Josh's go. main fast-forwarded d808cfdb to d6f14378; Publish site run 45942853077 passed first try; live sw.js VERSION mns-7ded8b13 and app.js?v=62c1bf1b checked.
+
+## 27 Nov, 3pm onwards: the 5 full size flags (branch fix/fullsize-5 off main a3ec8d85, NOT deployed, held for Josh's go)
+
+Josh: fix the 5 check-fullsize flags from the open faults run. Same rules. Code: app.js (openMenuZoom, fitLines0), menu-formats/takeaway.js; preview stamps. No card-ops, so no edition-sync needed.
+- Elf, Die Hard with a Vengeance, C.H.U.D., A Goofy Movie (cue strip label "Showtime cue" 13px, 11.6px at the opening zoom of 0.893): tried the label at 14px first, but it wrapped the strip to two lines on The Pope of Greenwich Village and The Freshman and grew 12 printed pages by 1px, so it was taken out. Instead a desktop card shown whole whose smallest line reads under 12px at the opening zoom gets two full size pages, "Whole menu" (opens at the same zoom as before; marked cover when the old opening was fit to the screen) and "Whole menu, close up". Print untouched.
+- Screwed (takeaway cover title ran off the card's right edge): a real fault, but only when the film's logo does not load (the typed title is the logo's fallback; the live cover and the menu preview show the logo, previews re-rendered byte-identical). The title's size was guessed from its letter count and Syne 800 runs wider than the guess. The title is now [data-fitw] and fitLines0 steps it down (never under 65%) until its longest word fits its box. Of the 20 takeaway films only the 6 that spilled change, by 3 to 15%: Screwed 47 to 40px, The Avengers, Quantumania, Turning Red, Elemental, Everything Everywhere All at Once.
+- Checks: all node tests pass; ripple 0 gaps after render-previews --stale (20 takeaway films, stamps only); on the 20 takeaway films check-phone-panels 0, check-view-cuts 0, check-print-text pass, check-menu-fit 0, check-phone-fit pass; cue strips on all 76 hand-built cards with one identical to main (strip.cjs debug probe, not committed).
+- check-fullsize on all 1,000: 0 films (was 5).
+- Next: deploy on Josh's go.
