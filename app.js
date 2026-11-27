@@ -2498,6 +2498,8 @@ function descRoom(card){const k=card.getBoundingClientRect().width/(card.offsetW
     if(cs.boxSizing==="border-box"&&e.style.height&&/px$/.test(e.style.height))e.style.height=(parseFloat(e.style.height)+addB+addT)+"px"}}
 function fitLines0(card){try{kidsDryDom(card)}catch(e){}
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
+    /* 27 Nov: a wrapping title marked [data-fitw] steps down until its longest word fits its box (the takeaway cover's SCREWED ran off the card) */
+    if(e.hasAttribute("data-fitw"))return (e.scrollWidth>e.clientWidth+1||e.dataset.fl0)&&e.textContent.trim().length>1;
     if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&cs.textOverflow!=="ellipsis")return false;if(cs.overflow==="visible"&&cs.overflowX==="visible")return false;
     if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return (e.scrollWidth>e.clientWidth+1||e.dataset.fl0)&&e.textContent.trim().length>1});
   /* review 18: the base size is taken again when a layout's own fit pass has changed the type since this pass last set it. Before, the first

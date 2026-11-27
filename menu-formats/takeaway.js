@@ -161,7 +161,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
   const lh=lr?Math.min(lr<1.6?150:110,Math.round(268/lr)):0,lw=lr?Math.round(lh*lr):0;
   const tl=clean(f.title).length,lw0=Math.max(...clean(f.title).split(/\s+/).map(w=>w.length)),tsz=Math.max(22,Math.min(tl<=14?54:tl<=26?42:tl<=40?32:28,Math.floor(268/(lw0*(eg==="new"?.8:.66)))));
-  const titleType=`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:uppercase;color:currentColor">${esc(f.title)}</div>`;
+  const titleType=`<div data-fitw style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:uppercase;color:currentColor">${esc(f.title)}</div>`;
   const logoPanel=`<div data-lpanel data-dark="rgba(12,10,10,.82)" data-light="rgba(252,249,242,.92)" data-darkink="#fff" data-lightink="#151515" style="position:relative;flex:none;padding:14px 20px 12px;background:rgba(12,10,10,.82);color:#fff;border-radius:${eg==="new"?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.4);text-align:center">
       ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo2&&__fmtLogo2(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:268px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType}</div>`:titleType}
       <div style="font:700 15px/1 ${E.body};letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;margin-top:10px;opacity:.9">${HOME0?"Movie night at home":"Movie night order"}, ${esc(f.year)}</div></div>`;
