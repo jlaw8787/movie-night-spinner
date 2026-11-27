@@ -1135,7 +1135,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
     if(!R2.length||R2.reduce((a,L)=>a+Math.max(nDish(L),nP(L)>=2?nP(L):0,1),0)<2){out.push(v);continue}
     /* review 39 (Josh: Men in Black was 8 swipes): only the first page stays as a whole-page overview; a later page goes straight to its
        reading views, and a page with only one dish line on it (a cover's "today's special") stays whole with no reading view */
-    if(V.indexOf(v)===0)out.push(v);const at0=out.length;
+    if(V.indexOf(v)===0||v.crop)out.push(v);const at0=out.length;/* a cropped menu card (The Untouchables' Bill of Fare) keeps its whole view before its reading views, so its heading, stamp and footer still show */
     for(const L of R2){const [x0,y0,x1,y1]=bb(L),w=Math.min(v.w,x1-x0+28),kk=pw/w,cx=Math.max(lo,Math.min(hi-w,x0-14));
       if(listOn&&minF(L)*kk<10.5&&x1-x0+28>=.75*v.w){const LV=listViews(L);if(LV){for(const q of LV){n++;q.part="list"+n;out.push(q)}continue}}
       /* tall regions: cut at the line gap nearest each screenful */
