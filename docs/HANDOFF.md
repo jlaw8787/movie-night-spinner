@@ -2504,3 +2504,4 @@ Josh: fix the 5 check-fullsize flags from the open faults run. Same rules. Code:
 - Checks: all node tests pass; ripple 0 gaps after render-previews --stale (20 takeaway films, stamps only); on the 20 takeaway films check-phone-panels 0, check-view-cuts 0, check-print-text pass, check-menu-fit 0, check-phone-fit pass; cue strips on all 76 hand-built cards with one identical to main (strip.cjs debug probe, not committed).
 - check-fullsize on all 1,000: 0 films (was 5).
 - Next: deploy on Josh's go.
+- 27 Nov, 5:40pm: deployed on Josh's go. main fast-forwarded a3ec8d85 to be3ccf24; Publish site run 45959712432 passed first try; live sw.js VERSION mns-02db7257 and app.js?v=f5717d4e checked.
