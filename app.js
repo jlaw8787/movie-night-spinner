@@ -1072,7 +1072,7 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
     if(ys.length>1){const wr=w.getBoundingClientRect(),rg=document.createRange(),tw=document.createTreeWalker(w,NodeFilter.SHOW_TEXT),Yd=[];let t;while((t=tw.nextNode())){const x=t.textContent.trim();if(!x||!PRICE_RX.test(x)&&!NM.some(m=>x.toLowerCase().startsWith(m)))continue;rg.selectNodeContents(t);const r=rg.getBoundingClientRect();if(r.height)Yd.push((r.top-wr.top)/ck)}
       for(let i=ys.length-1;i>=1;i--){const lo2=ys[i-1],hi2=i+1<ys.length?ys[i+1]:H;if(!Yd.some(y=>y>=ys[i]&&y<hi2)||!Yd.some(y=>y>=lo2&&y<ys[i]))ys.splice(i,1)}}/* every swipe carries food */
     ys.push(H);const R=[];for(let i=0;i<ys.length-1;i++)R.push({el:w,w:tot,h:ys[i+1]-ys[i],x:lx-tot-120,y:ys[i],px:0,ly:ys[i],row:true,panel:1,read:1,list:1,hide:[]});return R}catch(e){return null}};
-  for(const v of V){if(v.keep){out.push(v);continue}const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
+  for(const v of V){if(v.keep){out.push(v);continue}const pgW=parseFloat(v.el.style.width)||+card.dataset.w||v.el.offsetWidth||v.w,eb=v.el.getBoundingClientRect(),k=eb.width/pgW||1,lo=v.px!=null?v.px:0,hi=lo+v.w;
     if(sp*pw/v.w>=FLOOR||desk&&/^zoom/.test(v.part||"")){out.push(v);continue}/* review 49: on desktop a block the layout marks to read ([data-pvzoom], the dim sum order sheet) shows whole, never cut into slivers of dish names */
     /* page origin on the card: a panel's x is the page's x plus its own px */
     const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,ox=(eb.left-cb.left)/ck,oy=(eb.top-cb.top)/ck,ylo=(v.y||0)-oy,yhi=ylo+v.h;
@@ -1158,7 +1158,10 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
          "Drinks" in its corner) are listed, and pvMask hides them while the view shows */
       let hide=[];{const S=new Set(L),E3=ys.length-1;hide=B.filter(b=>!S.has(b)&&b[0]<cx+w&&b[2]>cx&&b[3]>ys[0]&&b[1]<ys[E3]).filter(b=>{const nr=L.filter(a=>a[3]>b[1]-40&&a[1]<b[3]+40);if(!nr.length)return false;
         return b[0]>Math.max(...nr.map(a=>a[2]))+10||b[2]<Math.min(...nr.map(a=>a[0]))-10}).map(b=>[b[0],b[1],b[2],b[3]])}
-      for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i],hide})}}
+      const lt=L.map(b=>String(b[5])).join(" ").toLowerCase().replace(/\s+/g," "),nm=NM.filter(x=>lt.includes(x));for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i],hide,_nm:nm})}}
+    /* phone pass (Ratatouille): when a page gets list swipes, a close-up of the same page whose dishes all sit in a list copy is the same dishes twice, so it goes */
+    {const LQ=out.slice(at0).filter(q=>q.list);if(LQ.length){const lt=[...new Set(LQ.map(q=>q.el))].map(e=>e.textContent).join(" ").toLowerCase().replace(/\s+/g," ");
+      for(let i=out.length-1;i>=at0;i--){const q=out[i];if(!q.list&&q._nm&&q._nm.length&&q._nm.every(x=>lt.includes(x)))out.splice(i,1)}}}
     /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
        takes the panel's place instead of following it (the card had opened on dot 4 of 4 with dots 3 and 4 the same menu) */
     if(V.indexOf(v)===0&&out.length-at0===1&&out[at0].w>=.85*v.w&&out[at0].h>=.8*v.h)out.splice(at0-1,1)
@@ -1239,7 +1242,7 @@ function pvPanels(el,w,h,fi){const key=renderId+"|"+cardLen()+"|"+(fi||0)+(pvDes
 function pvFirstDish(fs){let best=0,bestC=0;const C=[];try{const m=(current&&(current.printMenu||current.menu))||{},names=["s","m","w","d"].flatMap(k=>(m[k]||[]).filter(Boolean).map(x=>String(x.label||x.n).toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ").trim())).filter(n=>n.length>3);
   if(!names.length)return 0;const b=card.getBoundingClientRect();
   for(let i=0;i<fs.length;i++){const f=fs[i];let txt="";
-    if(f.panel&&f.el.getBoundingClientRect().width){const eb=f.el.getBoundingClientRect(),k=eb.width/(parseFloat(f.el.style.width)||+card.dataset.w||eb.width)||1,rg=document.createRange();/* scale of the page itself: a two-page card is twice the page across */
+    if(f.panel&&f.el.getBoundingClientRect().width){const eb=f.el.getBoundingClientRect(),k=eb.width/(parseFloat(f.el.style.width)||+card.dataset.w||f.el.offsetWidth||eb.width)||1,rg=document.createRange();/* scale of the page itself: a two-page card is twice the page across */
       for(const e of f.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();const cx=((r.left+r.right)/2-eb.left)/k,cy=((r.top+r.bottom)/2-eb.top)/k;if(r.width&&cx>=f.px&&cx<f.px+f.w&&(f.ly==null||cy>=f.ly&&cy<f.ly+f.h))txt+=" "+n.textContent}}
     else txt=f.el.textContent;/* not laid out yet (first draw): the page's own text */
     txt=txt.toLowerCase().replace(/[-‐–]/g," ").replace(/\s+/g," ");const c=f.cover?0:names.filter(n=>txt.includes(n)).length;/* review 49: a whole-page overview is never the opening view */C[i]=c;if(c>bestC){bestC=c;best=i}}
