@@ -21,9 +21,11 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const best=new Map(),rg=document.createRange();const nx=o.querySelector('.mz-next');let guard=0;
    const measure=()=>{const sh=o.querySelector('.mz-sheet').getBoundingClientRect();const tw=document.createTreeWalker(card,NodeFilter.SHOW_TEXT);let t;
      while((t=tw.nextNode())){const s=t.textContent.trim();if(!s||s.length<2)continue;const el=t.parentElement;if(!el||el.closest('[aria-hidden=true]'))continue;const cs=getComputedStyle(el);if(cs.visibility==='hidden'||cs.display==='none'||+cs.opacity===0)continue;
-      rg.selectNodeContents(t);const rs=[...rg.getClientRects()].filter(r=>r.width&&r.height);if(!rs.length)continue;
+      rg.selectNodeContents(t);const eb=el.getBoundingClientRect();/* 27 Nov: a line's box is cut to its own element top to bottom; a tall face's ascent pokes past a line-height:1 box (Good Will Hunting's L STREET TAVERN rose 7px over the card top while drawn whole) */
+      const rs=[...rg.getClientRects()].filter(r=>r.width&&r.height).map(r=>eb.height&&eb.height<r.height?{left:r.left,right:r.right,top:Math.max(r.top,eb.top),bottom:Math.min(r.bottom,eb.bottom)}:r);if(!rs.length)continue;
       const whole=rs.every(r=>r.left>=sh.left-1&&r.right<=sh.right+1&&r.top>=sh.top-1&&r.bottom<=sh.bottom+1);
       const k=card.getBoundingClientRect().width/(card.offsetWidth||1),px=parseFloat(cs.fontSize)*k;const key=s.slice(0,60);const prev=best.get(key)||0;if(whole&&px>prev)best.set(key,px);else if(!best.has(key))best.set(key,0)}};
+   const pv=o.querySelector('.mz-prev');while(pv&&!pv.disabled&&guard++<20){pv.click();await new Promise(r=>setTimeout(r,120))}guard=0;/* 27 Nov: start from the first page; it opens on the column's page (Right side) and the pages before it went unchecked */
    measure();while(nx&&!nx.disabled&&guard++<20){nx.click();await new Promise(r=>setTimeout(r,120));measure()}
    o.querySelector('.mz-fit');try{dismissModal(o)}catch(e){o.close();o.remove()}await new Promise(r=>setTimeout(r,150));
    return [...best].filter(([s,px])=>px<12).map(([s,px])=>`"${s}" ${px?px.toFixed(1)+'px':'never whole'}`)},id);
