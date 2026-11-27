@@ -1160,7 +1160,8 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
         return b[0]>Math.max(...nr.map(a=>a[2]))+10||b[2]<Math.min(...nr.map(a=>a[0]))-10}).map(b=>[b[0],b[1],b[2],b[3]])}
       const lt=L.map(b=>String(b[5])).join(" ").toLowerCase().replace(/\s+/g," "),nm=NM.filter(x=>lt.includes(x));for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i],hide,_nm:nm})}}
     /* phone pass (Ratatouille): when a page gets list swipes, a close-up of the same page whose dishes all sit in a list copy is the same dishes twice, so it goes */
-    {const LQ=out.slice(at0).filter(q=>q.list);if(LQ.length){const lt=[...new Set(LQ.map(q=>q.el))].map(e=>e.textContent).join(" ").toLowerCase().replace(/\s+/g," ");
+    {const LQ=out.slice(at0).filter(q=>q.list);if(LQ.length){/* only what each list swipe shows counts: one copy can hold a column no swipe shows (Elf's Bake Case) */
+      const lt=LQ.map(q=>{const eb=q.el.getBoundingClientRect(),k=eb.width/(q.el.offsetWidth||eb.width)||1,rg=document.createRange();let t="";for(const e of q.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();if(!r.width)continue;const cy=((r.top+r.bottom)/2-eb.top)/k;if(cy>=q.ly&&cy<q.ly+q.h)t+=" "+n.textContent}return t}).join(" ").toLowerCase().replace(/\s+/g," ");
       for(let i=out.length-1;i>=at0;i--){const q=out[i];if(!q.list&&q._nm&&q._nm.length&&q._nm.every(x=>lt.includes(x)))out.splice(i,1)}}}
     /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
        takes the panel's place instead of following it (the card had opened on dot 4 of 4 with dots 3 and 4 the same menu) */
