@@ -2519,3 +2519,4 @@ Josh: deploy fix/fullsize-5 on his go, then the leftover phone faults (The Untou
 - Debug tools used (not committed): view dump, visible-text pass and contact sheet scripts in the session box.
 - Open, pre-existing (flag for Josh): A Bug's Life sometimes leaves its showtime cue and Princess Dot note off every phone view (main the same). Ratatouille keeps one header close-up that repeats the soup (its header lines are not in a list swipe, so the strict rule keeps it).
 - Next: deploy on Josh's go.
+- 28 Nov, 8:16am: deployed on Josh's go. main fast-forwarded f107b84d to 88d351c6; Publish site run 46075380313 passed first try; expected live sw.js VERSION mns-8a4f6044 and app.js?v=8f1fd535 (live check not run: the web fetch needed Josh's approval, unanswered).
