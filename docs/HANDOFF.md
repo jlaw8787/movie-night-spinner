@@ -2494,3 +2494,4 @@ Josh: fix the two open faults from the 12 fallbacks entry, one at a time. Same r
 - check-fullsize on all 1,000 (first full run): 5 flags, the same on main with the old and new check, not touched: "Showtime cue" heading at 11.6px on Elf, Die Hard with a Vengeance, C.H.U.D. and A Goofy Movie; Screwed's "Screwed" never whole.
 - Open, pre-existing (flag for Josh): those 5 full size flags; Eurovision sometimes opens whole on desktop when reached first after another film (main too).
 - Next: deploy on Josh's go.
+- 27 Nov, 2:57pm: deployed on Josh's go. main fast-forwarded d808cfdb to d6f14378; Publish site run 45942853077 passed first try; live sw.js VERSION mns-7ded8b13 and app.js?v=62c1bf1b checked.
