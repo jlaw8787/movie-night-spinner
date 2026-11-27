@@ -1391,7 +1391,10 @@ function openMenuZoom(trigger){
   /* the smallest printed line anywhere on the card (a stamp, a form number, a side panel), not just the dish notes cardSmallPx reads */
   const tiny=(()=>{let m=99;try{const tw=document.createTreeWalker(card,NodeFilter.SHOW_TEXT);let t;while((t=tw.nextNode())){if(t.textContent.trim().length<2)continue;const el=t.parentElement;if(!el||el.closest("[aria-hidden=true]"))continue;const cs=getComputedStyle(el);if(+cs.opacity===0)continue;const f=parseFloat(cs.fontSize);/* masked lines count too: the column view hides them, the full size view shows them */if(f>2&&f<m)m=f}}catch(e){}return m})();
   if(!phone&&faces.length>1&&small>0&&small<99&&(wholeK*Math.min(small,tiny)<12.5||cutsText()))faces.push({el:card,w:cw,h:ch,x:0,y:0,px:0,row:true,part:"whole",whole:1});
-  const paged=faces.length>1;let fi=paged?Math.min(pvFace,faces.length-1):0;
+  /* 27 Nov: a desktop card shown whole whose smallest line reads under 12px at the opening zoom (the 13px Showtime cue label on Elf, Die Hard
+     with a Vengeance, C.H.U.D. and A Goofy Movie at 11.6px) gets the same last page, so every line reads at 12px somewhere; the print is untouched */
+  let fit0=false;if(!phone&&!faces.length&&small>0&&small<99){const k0=deskRead?(widthK*small>=13?widthK:Math.min(2.5,13/small)):wholeK;if(k0*tiny<12){fit0=true;faces.push({el:card,w:cw,h:ch,x:0,y:0,px:0,row:true,part:"fit",cover:deskRead?0:1/* opens at the same zoom as before */},{el:card,w:cw,h:ch,x:0,y:0,px:0,row:true,part:"whole",whole:1})}}
+  const paged=faces.length>1;let fi=fit0?0:paged?Math.min(pvFace,faces.length-1):0;
   const fw=()=>paged?faces[fi].w:cw,fh=()=>paged?faces[fi].h:ch;
   const o=document.createElement("dialog");o.className="mzoom"+(paged?" mz-paged":"");o.setAttribute("aria-label","Printed menu, full size");
   o.innerHTML=`<div class="mz-bar"><button type="button" class="mz-out" aria-label="Zoom out">−</button><button type="button" class="mz-fit">Fit</button><button type="button" class="mz-in" aria-label="Zoom in">+</button></div><div class="mz-scroll"><div class="mz-sheet"></div></div>`+
@@ -1407,8 +1410,8 @@ function openMenuZoom(trigger){
   /* zoom around a point on screen (the middle by default, or between two fingers) */
   const set=(v,px=sc.clientWidth/2,py=sc.clientHeight/2)=>{const cx=(sc.scrollLeft+px)/k,cy=(sc.scrollTop+py)/k;k=Math.max(Math.min(.25,fit()),Math.min(3.5,v));paint();sc.scrollLeft=cx*k-px;sc.scrollTop=cy*k-py};
   const toFit=()=>{k=fit();paint();sc.scrollLeft=0;sc.scrollTop=0};
-  const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;if(!faces[i].whole)pvFace=i;if(!phone)k=readK();/* review 49: each desktop page opens at its own reading size (a whole-page overview fits the screen) */paint();sc.scrollLeft=0;sc.scrollTop=0;
-    o.querySelector(".mz-pg").textContent=faces[fi].whole?"Whole menu, close up":faces.filter(f=>!f.whole).length===2&&faces.filter(f=>!f.whole).every(f=>/^(panel|p\d)/.test(f.part||""))?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;/* review 49: Left and Right only for two halves of one page */o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
+  const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;if(!faces[i].whole&&!fit0)pvFace=i;if(!phone)k=readK();/* review 49: each desktop page opens at its own reading size (a whole-page overview fits the screen) */paint();sc.scrollLeft=0;sc.scrollTop=0;
+    o.querySelector(".mz-pg").textContent=faces[fi].whole?"Whole menu, close up":faces[fi].part==="fit"?"Whole menu":faces.filter(f=>!f.whole).length===2&&faces.filter(f=>!f.whole).every(f=>/^(panel|p\d)/.test(f.part||""))?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;/* review 49: Left and Right only for two halves of one page */o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
   o.querySelector(".mz-in").addEventListener("click",()=>set(k*1.25));
   o.querySelector(".mz-out").addEventListener("click",()=>set(k/1.25));
   o.querySelector(".mz-fit").addEventListener("click",toFit);
