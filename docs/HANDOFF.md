@@ -2532,3 +2532,4 @@ Josh: confirm the live build, then A Bug's Life's missing cue and note on phone.
 - Open, pre-existing (flag for Josh): the kiosk footer strip ("Dinner at / Forecast / Spotted", "Kitchen shuts" and so on) spans both panels and sits in no phone view on most of the 30 kiosk films (A Bug's Life, Finding Nemo's Bruce line, The Sandlot, Nightmare Before Christmas), on main too. Fix idea: give the strip a view of its own, or carry it into the second panel's list copy. Ratatouille's repeated header close-up is still open.
 - Debug tools used (not committed): view dump, visible-text pass and contact sheet scripts in the session box.
 - Next: deploy on Josh's go.
+- 28 Nov, 10:55am: deployed on Josh's go. main fast-forwarded 1f25b80f to 4b86572f; Publish site run 46090481171 passed first try; live check done: sw.js mns-5337ae8e and app.js?v=f43cc779 on reeldinner.com.
