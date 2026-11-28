@@ -2568,3 +2568,4 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Checks: node tests pass; ripple 0 gaps; check-view-cuts, check-fullsize and check-phone-panels 0 on Ratatouille; eyeballed all four Ratatouille phone views.
 - Still open: Eurovision sometimes opens whole on desktop.
 - Next: deploy on Josh's go.
+- 28 Nov, 3:30pm: deployed on Josh's go. main fast-forwarded 5665dc15 to 1a5a173d; Publish site run 46111169163 passed; live check done: sw mns-b2ce8580, app.js?v=9d02cd80.
