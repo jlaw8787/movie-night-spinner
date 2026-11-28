@@ -2558,3 +2558,13 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Next: deploy on Josh's go.
 - Still open: Ratatouille's repeated header close-up; Eurovision sometimes opens whole on desktop.
 - 28 Nov, 2:10pm: deployed on Josh's go. main fast-forwarded 22c0fcf6 to 46641eb2; Publish site run 46106155855 passed; live check done: sw mns-987c359d, Thor's film page prints prawns.
+
+## 28 Nov, 2:15pm onwards: Ratatouille's repeated close-up (branch fix/ratatouille-closeup off main 5665dc15, NOT deployed, held for Josh's go)
+
+- Cause: the close-up after the whole menu held Gusteau's heading (Restaurant · Paris, Gusteau's, Cook with heart) plus the soup. The heading lines are in no list swipe, so the 27 Nov rule kept the close-up and the soup read twice. On the whole-menu view the two small heading lines draw at about 8 to 9px, so dropping the close-up would lose them.
+- Fix (app.js, pvReadViews drop pass, phone only): when the only lines of a close-up that no list swipe shows are a heading block of three lines or more above everything a swipe does show, and the page reads in two list swipes or more, the close-up stops just under the heading. The trim is applied last (q._trim), after every other pass. Ratatouille now: whole menu, Gusteau's heading, starters and dessert, mains and drink.
+- Ripple (all 1,000 at 390x844, main vs branch, the 13 that differed rescanned twice a side): only Ratatouille changes. Tried and backed out: a looser rule also trimmed True Lies to a lone "Menu" (no view) and re-laid Turner & Hooch's single list into broken price views, hence the three-line and two-swipe limits. Say Anything would trim cleanly but is left as is under the narrow rule.
+- Build stamps: sw mns-7ab3fa75 (check sw.js), app.js?v=a440a65e. No data change, no preview re-render.
+- Checks: node tests pass; ripple 0 gaps; check-view-cuts, check-fullsize and check-phone-panels 0 on Ratatouille; eyeballed all four Ratatouille phone views.
+- Still open: Eurovision sometimes opens whole on desktop.
+- Next: deploy on Josh's go.

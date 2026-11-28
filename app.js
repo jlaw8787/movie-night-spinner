@@ -1189,11 +1189,15 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
          "Drinks" in its corner) are listed, and pvMask hides them while the view shows */
       let hide=[];{const S=new Set(L),E3=ys.length-1;hide=B.filter(b=>!S.has(b)&&b[0]<cx+w&&b[2]>cx&&b[3]>ys[0]&&b[1]<ys[E3]).filter(b=>{const nr=L.filter(a=>a[3]>b[1]-40&&a[1]<b[3]+40);if(!nr.length)return false;
         return b[0]>Math.max(...nr.map(a=>a[2]))+10||b[2]<Math.min(...nr.map(a=>a[0]))-10}).map(b=>[b[0],b[1],b[2],b[3]])}
-      const nm=L.map(b=>String(b[5]).toLowerCase().replace(/\s+/g," ").trim()).filter(x=>x.length>2);/* every line of the close-up, not just its dishes: a cue or quote beside them must show in the list too */for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i],hide,_nm:nm})}}
+      const nm=L.map(b=>String(b[5]).toLowerCase().replace(/\s+/g," ").trim()).filter(x=>x.length>2);/* every line of the close-up, not just its dishes: a cue or quote beside them must show in the list too */for(let i=0;i<ys.length-1;i++){n++;out.push({el:v.el,w,h:ys[i+1]-ys[i],x:ox+cx,y:oy+ys[i],px:cx,row:true,part:"read"+n,panel:1,read:1,ly:ys[i],hide,_nm:nm,_L:L.map(b=>[b[1],b[3],String(b[5]).toLowerCase().replace(/\s+/g," ").trim()]).filter(b=>b[2].length>2)})}}
     /* phone pass (Ratatouille): when a page gets list swipes, a close-up of the same page whose every line shows in a list swipe is the same lines twice, so it goes */
     {const LQ=out.slice(at0).filter(q=>q.list);if(LQ.length){/* only what each list swipe shows counts: one copy can hold a column no swipe shows (Elf's Bake Case) */
       const lt=LQ.map(q=>{const eb=q.el.getBoundingClientRect(),k=eb.width/(q.el.offsetWidth||eb.width)||1,rg=document.createRange();let t="";for(const e of q.el.querySelectorAll("*"))for(const n of e.childNodes){if(n.nodeType!==3)continue;rg.selectNodeContents(n);const r=rg.getBoundingClientRect();if(!r.width)continue;const cy=((r.top+r.bottom)/2-eb.top)/k;if(cy>=q.ly&&cy<q.ly+q.h)t+=" "+n.textContent}return t}).join(" ").toLowerCase().replace(/\s+/g," ");
-      for(let i=out.length-1;i>=at0;i--){const q=out[i];if(!q.list&&q._nm&&q._nm.length&&q._nm.every(x=>lt.includes(x)))out.splice(i,1)}}}
+      for(let i=out.length-1;i>=at0;i--){const q=out[i];if(q.list||!q._nm||!q._nm.length)continue;if(q._nm.every(x=>lt.includes(x))){out.splice(i,1);continue}
+        /* Ratatouille: when the only lines no list swipe shows are a heading block above the rest (Gusteau's name and its two small lines), the
+           close-up stops above the first line a swipe shows, so the soup is not read twice. Three lines or more (a name with a line above and below): a lone "Menu" (True Lies) made no view, and on a page read in one list swipe (Turner & Hooch) the shorter view re-laid the list, so it needs two swipes or more */
+        const IN=(q._L||[]).filter(b=>(b[0]+b[1])/2>=q.ly&&(b[0]+b[1])/2<q.ly+q.h),M=IN.filter(b=>!lt.includes(b[2])),C=IN.filter(b=>lt.includes(b[2]));
+        if(M.length>=3&&C.length&&LQ.length>=2){const m1=Math.max(...M.map(b=>b[1])),c0=Math.min(...C.map(b=>b[0]));if(m1<c0){const nh=Math.round(Math.min(c0-2,m1+10)-q.ly);if(nh>20&&nh<q.h)q._trim=nh}}}}}
     /* review 39 (Josh, The Muppets 2011 on his phone): one reading view that is nearly the whole panel is the same picture twice, so it
        takes the panel's place instead of following it (the card had opened on dot 4 of 4 with dots 3 and 4 the same menu) */
     if(V.indexOf(v)===0&&out.length-at0===1&&out[at0].w>=.85*v.w&&out[at0].h>=.8*v.h)out.splice(at0-1,1)
@@ -1206,6 +1210,8 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
       if(ry1>=vy+v.h*.85&&ry0-vy>=v.h*.25&&R.every(r=>r.x>=v.x-2&&r.x+r.w<=v.x+v.w+2))out[at0-1]=Object.assign({},v,{h:Math.round(ry0-vy)})}
     if(lvAlt){const C=out.filter(q=>!q.list&&q.el===v.el),seen=lvAlt.lost.filter(b=>{const cx2=(b[0]+b[2])/2,cy2=(b[1]+b[3])/2;return C.some(q=>cx2>=(q.px||0)&&cx2<=(q.px||0)+q.w&&cy2>=(q.ly!=null?q.ly:0)&&cy2<=(q.ly!=null?q.ly:0)+q.h)}).reduce((t,b)=>t+b[4],0);
       if(!out.slice(at0).some(q=>q.list)&&lvAlt.got>seen&&lvAlt.got*2>=lvAlt.lost.reduce((t,b)=>t+b[4],0)){out.splice(at0);for(const q of lvAlt.LV){n++;q.part="list"+n;out.push(q)}}else lvAlt.nw.forEach(e=>e.remove())}}
+  /* the heading trim (Ratatouille) lands last, so no later pass reads the shorter close-up (Turner & Hooch split its list when it did) */
+  for(const q of out)if(q._trim){q.h=q._trim;delete q._trim}
   return out.length&&out.length<=14?out:base}
 const PV_LIST_OFF=["The Italian Job (1969)","The Silence of the Lambs (1991)"];/* phone list swipes: every card but these (Josh: leave them alone) */
 const PRICE_RX=/^(?:(?:A?\$|£|€|¥)\s?\d{1,4}(?:[.,]\d{2})?|\d{0,3}[.,]\d{2}|\d{1,3}\s?¢)$/;/* phone pass: a printed price line ($3.50, 2.75, 25¢) for the reading views */
