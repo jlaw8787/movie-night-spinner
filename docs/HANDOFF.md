@@ -2585,3 +2585,14 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Next: deploy on Josh's go.
 - 28 Nov, 4:20pm: deployed on Josh's go. main fast-forwarded 5113b2cb to 0632faf7; Publish site run 46115899915 failed once on GitHub's side (deploy step found no artifact), passed on re-run; live check done: sw mns-35da8b4f on reeldinner.com.
 - Still open: Eurovision's last drink note overlaps "FROM THE KITCHEN" (pre-existing).
+
+## 28 Nov, 4:25pm onwards: Eurovision's drink note and Kingsman's Showtime line (branch fix/eurovision-drink off main 18b599ec, NOT deployed, held for Josh's go)
+
+- Eurovision (Josh: fix the overlap): on a fresh load the last drink note ("...a toast to Husavik.") ran into "From the kitchen". Cause: menu-formats/pub.js adds its Google Fonts sheet but set no .ready, so the app's await ran before the sheet's @font-face rules existed (document.fonts.ready and fonts.check say yes for a face that is not declared yet) and the board measured the fallback face: list 551px in a 518px box. A repeat visit (sheet cached) drew it right. Tried and backed out first: an app-side practice draw and fonts.load in app.js (no effect, the faces were not declared yet).
+- Fix (pub.js only): PUB_READY resolves when the sheet has loaded and every face (900, 800, 700, 500, italic 500, italic 800) has loaded, 4 second cap, set as MENU_FORMATS.pub.ready, the pattern diner, home, prom and others already use. Every pub film's first load now matches its settled draw (Eurovision 33px over to 12, the normal spacing). Good Will Hunting's first load now prints its house starter and drink (Hot salted pretzels, Irish whiskey with a lager back), as a repeat visit already did; its film page follows.
+- Kingsman (Josh: fix it on this branch): drawn with the real fonts its menu needs the cue's room, so pub dropped the Showtime line and the app's cue strip took the chalk ink (the card's most used colour) and read white on the cream wall, over the fine print (check-print-text failed on main). Fix (pub.js): a cue the board gives up prints in the foot band, its own line above the fine print, same dark ink, "SHOWTIME:" in caps; cueStrip then finds it and adds nothing. Card back to 1527px.
+- Ripple: pub only (10 films). Previews re-rendered for all 10; only Kingsman's and Good Will Hunting's (house lines) show a real change, the rest are re-encode noise. Desktop views at 1280: 10 of 10 same as main. check-phone-lists twice: same as main.
+- Build stamps: sw mns-3ccca2fc, app.js?v=6be29d08 (app.js unchanged), pub "pub":"0884c251".
+- Checks: node tests pass; ripple 0 gaps; check-view-cuts, check-phone-panels, check-fullsize, check-menu-fit 0 on the 10, main and branch; check-print-text PASS on the 10 (main fails on Kingsman).
+- Open: kiosk.js also fits by measuring and sets no .ready (30 kiosk films); not looked at.
+- Next: deploy on Josh's go.

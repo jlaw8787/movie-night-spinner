@@ -283,7 +283,10 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
       <div style="position:absolute;right:22px;bottom:18px;font:26px/1.5 ${sig};color:${fit(acc,"#f8f2e3","#1d3a6a",4)}">${esc(trunc(note.by,20))}</div></div>`;
   const fine=`${fam?"Kids welcome. ":""}${T.close} ${winks[0]?((window.winkSaid||(()=>false))(winks[0])?"Overheard at the bar: ":"Bar talk: ")+sentence(trunc(winks[0],60))+" ":""}Prices subject to change.${AU?` Licence ${num}.`:GB?" Licensed premises.":""}`;
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
-  const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
+  /* 28 Nov (Kingsman): a Showtime cue that gives its room on the board to the menu prints here, on its own line above the fine print and in the
+     same ink. Before, the app's cue strip took the chalk colour (the card's most used ink) and read white on the cream wall over the fine print */
+  const footCue=cue&&dropCue?fitType("Showtime: "+cue,W-60,96,.5,15,13,1.3,2):null;
+  const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${footCue?`<div style="font-size:${footCue.z}px;margin-bottom:3px;color:#1d1610"><span style="${caps(footCue.z,"#1d1610",.16)}">Showtime:</span> ${esc(cue)}</div>`:""}${esc(fine)}</div>`;
 
   const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}${under?raffle:""}<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;height:${NB-(BY+BH+20)}px;display:flex;flex-direction:column">${under?"":raffle}${noteHtml}</div>${fineHtml}</div>`;
   return {w:W,h:H,faces:[face]};
