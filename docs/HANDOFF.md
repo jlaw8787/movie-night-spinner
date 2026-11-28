@@ -2569,3 +2569,17 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Still open: Eurovision sometimes opens whole on desktop.
 - Next: deploy on Josh's go.
 - 28 Nov, 3:30pm: deployed on Josh's go. main fast-forwarded 5665dc15 to 1a5a173d; Publish site run 46111169163 passed; live check done: sw mns-b2ce8580, app.js?v=9d02cd80.
+
+## 28 Nov, 3:25pm onwards: Eurovision opening whole on desktop (branch fix/eurovision-desk off main 5113b2cb, NOT deployed, held for Josh's go)
+
+- Josh picked the narrow rule (fix the cause, sweep all 1,000).
+- Cause: the pub page's photo ends at about 588px and the text column starts at about 608px. pvPanels pads text by 8px and rounds to 4px steps, so the 20px gap came out at 4 to 8px, right on the 8px gutter line. Some loads found a gutter (cut at 556, 598 or 610 depending on how far the page had drawn), most found none, and pvPanels keeps its first answer, so the column showed the whole card with notes at about 9px. Fresh contexts at 1280: main opened in halves 1 time in 10.
+- Fix (app.js, pvPanels, desktop only): a photo with 16px or more of clear page between its edge and the nearest text beside it is a gutter, cut in the middle of the gap, unless a line of text runs across the photo's edge or the cut. Phone untouched by design (pvDesk is off on a phone).
+- Tried and backed out: also keying pvPanels on pvFontGen (measure again once fonts settle). Not needed for Eurovision (20 of 20 without it) and it moved the cut by 2px on about 14 films.
+- Result: Eurovision opens in two halves on the dishes, 18 of 18 then 20 of 20 loads (via Home Alone and direct). Cut at 598 on a fresh load.
+- Ripple (all 1,000 at 1280x800, main vs branch, the 31 that differed rescanned twice a side): changed on purpose by the rule, Brewster's Millions (main: 6 views, the Bill of Fare read view cut Spike's Chilli Dogs at the foot; branch: four clean halves, eyeballed) and Screwed (page 1 cut moves from 900 to 461, so the photo goes with the right half, everything still reads, eyeballed). Everything else differs by 2px cut flips that main shows on its own run to run.
+- Build stamps: sw mns-35da8b4f, app.js?v=6be29d08. No data change.
+- Checks: node tests pass; ripple 0 gaps; check-view-cuts, check-phone-panels and check-fullsize 0 on Eurovision, Brewster's Millions and Screwed, main and branch.
+- Open, pre-existing (flag for Josh): Eurovision's last drink note ("...a toast to Husavik.") runs into "FROM THE KITCHEN" on the chalkboard, the same on main.
+- Push: this session was refused push access, so the branch was not pushed from here.
+- Next: Josh to review Brewster's Millions and Screwed, then push and deploy on his go.

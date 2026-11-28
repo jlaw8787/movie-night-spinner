@@ -1257,7 +1257,7 @@ function cardFaces0(){
 }
 /* gutters on a wide page: the x positions no line of text crosses (measured on the words, a little padding either side).
    Kept per drawn card and page, so swiping does not measure again */
-function pvPanels(el,w,h,fi){const key=renderId+"|"+cardLen()+"|"+(fi||0)+(pvDesk?"d"+pvFontGen:"");/* 28 Nov: on desktop measured again once fonts settle (Eurovision kept a cut from a half-drawn page) */card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
+function pvPanels(el,w,h,fi){const key=renderId+"|"+cardLen()+"|"+(fi||0)+(pvDesk?"d":"");card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
   let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange(),TX=[],IM=[];
     for(const e of el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]"))continue;for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;rg.selectNodeContents(n);
       for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const pd=8,a=Math.max(0,Math.floor(((r.left-b.left)/k-pd)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+pd)/R));for(let i=a;i<=z;i++)cov[i]=1;TX.push([(r.left-b.left)/k,(r.right-b.left)/k])}}}
