@@ -2581,5 +2581,7 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Build stamps: sw mns-35da8b4f, app.js?v=6be29d08. No data change.
 - Checks: node tests pass; ripple 0 gaps; check-view-cuts, check-phone-panels and check-fullsize 0 on Eurovision, Brewster's Millions and Screwed, main and branch.
 - Open, pre-existing (flag for Josh): Eurovision's last drink note ("...a toast to Husavik.") runs into "FROM THE KITCHEN" on the chalkboard, the same on main.
-- Push: this session was refused push access, so the branch was not pushed from here.
-- Next: Josh to review Brewster's Millions and Screwed, then push and deploy on his go.
+- Push: the first push request was refused; on retry Josh approved access and fix/eurovision-desk (0632faf7) was pushed.
+- Next: deploy on Josh's go.
+- 28 Nov, 4:20pm: deployed on Josh's go. main fast-forwarded 5113b2cb to 0632faf7; Publish site run 46115899915 failed once on GitHub's side (deploy step found no artifact), passed on re-run; live check done: sw mns-35da8b4f on reeldinner.com.
+- Still open: Eurovision's last drink note overlaps "FROM THE KITCHEN" (pre-existing).
