@@ -2533,3 +2533,15 @@ Josh: confirm the live build, then A Bug's Life's missing cue and note on phone.
 - Debug tools used (not committed): view dump, visible-text pass and contact sheet scripts in the session box.
 - Next: deploy on Josh's go.
 - 28 Nov, 10:55am: deployed on Josh's go. main fast-forwarded 1f25b80f to 4b86572f; Publish site run 46090481171 passed first try; live check done: sw.js mns-5337ae8e and app.js?v=f43cc779 on reeldinner.com.
+
+## 28 Nov, 12:30pm onwards: the kiosk footer strip on phone (branch fix/kiosk-strip off main b8e884dd, NOT deployed, held for Josh's go)
+
+Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 kiosk films. Same rules. Code: app.js only (new pvStripView, called from cardFaces after pvReadViews); build stamps app.js?v=7939962d, sw mns-0aa64582. No card-ops and no layout file change, so no edition-sync and no preview re-render.
+- Cause: the strip runs the full width of the page under both panels, so pvPanels' panels and the list copies never hold it whole. On main the first four cells read at 11px on panel 1 at best, and the last three (Dinner at or Kitchen shuts, Forecast or Conditions, Spotted) were in no view on all 30 (The Sandlot and Thor: none of the strip in any view).
+- Fix (phone only): a band across the foot of a wide page (absolute, flex row, 95% of the page wide or more, 16% of its height or less, four cells or more) whose cells are not all in a view at 10.5px or more gets one swipe of its own at the end: a .pv-list copy of the band in its own paper, type and colours, the head cell on its own row, short cells two to a row, long ones (Forecast, Spotted) full width, at a width where its smallest line draws at about 12px. Last view, so the menu still opens on the food (pvFirstDish). Desktop never builds it; print and Save PDF strip .pv-list as before. The Italian Job and The Silence of the Lambs left out (PV_LIST_OFF).
+- Result (390x844, all 1,000, main vs branch): exactly the 30 kiosk films gain a "strip" view, no other film; every strip cell on all 30 now shows whole at 12 to 14px (debug probe, every cell checked). Other view differences (Cloudy with a Chance of Meatballs, Attack of the Clones, The Mummy Returns, Say Anything's list numbering) flip the same way on main run to run. Eyeballed 9 films (A Bug's Life, Nemo, Sandlot, Young Einstein, Lethal Weapon 2, Storm Boy, Thor, Lost Boys, Jaws 2): each reads as a small report card in the film's strip colours.
+- Checks: node tests pass; ripple 0 gaps; build-data stamped; check-phone-panels 0; check-view-cuts 0; check-fullsize 0 of 1,000.
+- Found on the way, not touched (flag for Josh): Thor: Love and Thunder's strip prints "Temp 9 C" (data/film-flavour.json strip; should be 9°C). A data fix re-renders its menu preview.
+- Still open: Ratatouille's repeated header close-up; Eurovision sometimes opens whole on desktop.
+- Debug tools used (not committed): strip probe, view scan and screenshot scripts in the session box.
+- Next: deploy on Josh's go.

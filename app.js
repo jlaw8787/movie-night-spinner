@@ -917,7 +917,29 @@ function cardFaces(){const base=cardFaces0();if(!card.classList.contains("fmt"))
   /* review 48: on desktop a page whose notes still print under 13px at column width is read in column views too, as the phone does */
   if(!swipeW()){if(!pvDesk)return base;const pw=preview.clientWidth||760,sp=cardSmallPx(),wv=Math.max(...base.map(v=>v.w||0),0);if(!wv||sp*pw/wv>=13)return pvCover(base)}
   const key=renderId+"|"+cardLen()+"|"+(preview.clientWidth||0)+"|"+pvFontGen;if(card._pvr&&card._pvr.key===key)return card._pvr.v;
-  let out=base;try{out=pvUnmasked(()=>pvReadViews(base))}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
+  let out=base;try{out=pvUnmasked(()=>pvStripView(pvReadViews(base)))}catch(e){out=base}if(!swipeW())out=pvCover(out);card._pvr={key,v:out};return out}
+/* kiosk footer strip (Josh, 28 Nov): a report band across the foot of a wide page ("Out front / Sky / Wind / Temp / Dinner at / Forecast /
+   Spotted") spans both panels, so on a phone its cells sat in no view or read at 11px. When a cell of such a band shows in no view at 10.5px
+   or more, the band gets a swipe of its own at the end: a copy in its own paper, type and colours, its cells wrapped two to a row at a width
+   where its smallest line draws at about 12px. Phone only, like the list copies (.pv-list: desktop never builds it, print strips it) */
+function pvStripView(V){if(!swipeW()||!V||!V.length||!card.classList.contains("fmt")||(current&&PV_LIST_OFF.includes(current.id)))return V;
+  try{const cb=card.getBoundingClientRect(),ck=cb.width/(card.offsetWidth||1)||1,pw=preview.clientWidth||360;if(!cb.width)return V;
+    const pg=card.querySelector(".fx-face")||card,PWd=parseFloat(pg.style.width)||+card.dataset.w||pg.offsetWidth,PHt=parseFloat(pg.style.height)||+card.dataset.h||pg.offsetHeight;if(!PWd||!PHt)return V;
+    const S=[...pg.querySelectorAll("div")].find(e=>{if(e.closest(".pv-list"))return false;const cs=getComputedStyle(e);if(cs.position!=="absolute"||!/flex/.test(cs.display)||/column/.test(cs.flexDirection))return false;
+      const r=e.getBoundingClientRect(),w=r.width/ck,h=r.height/ck,y=(r.top-cb.top)/ck;return w>=PWd*.95&&h<=PHt*.16&&y+h>=PHt-4&&[...e.children].filter(c=>c.textContent.trim()).length>=4});
+    if(!S)return V;
+    const cells=[...S.children].filter(c=>c.textContent.trim()),minF=c=>Math.min(...[c,...c.querySelectorAll("*")].filter(e=>[...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim())).map(e=>parseFloat(getComputedStyle(e).fontSize)||12));
+    const seen=c=>{const r=c.getBoundingClientRect(),x0=(r.left-cb.left)/ck,x1=(r.right-cb.left)/ck,y0=(r.top-cb.top)/ck,y1=(r.bottom-cb.top)/ck,f=minF(c);
+      return V.some(v=>!v.list&&(v.el===card||v.el===pg||v.el.contains(S))&&x0>=(v.x||0)-2&&x1<=(v.x||0)+v.w+2&&y0>=(v.y||0)-2&&y1<=(v.y||0)+v.h+2&&f*pw/v.w>=10.5)};
+    if(cells.every(seen))return V;
+    const F=Math.min(...cells.map(minF)),tot=Math.round(Math.max(300,Math.min(560,pw*F/12))),lx=Math.max(card.scrollWidth||0,+card.dataset.w||0,card.offsetWidth||0,...[...card.querySelectorAll(":scope > .pv-list")].map(e=>e.offsetLeft+e.offsetWidth))+120;
+    const w=S.cloneNode(true);w.classList.add("pv-list");w.dataset.np="1";w.setAttribute("aria-hidden","true");
+    Object.assign(w.style,{position:"absolute",left:lx+"px",top:"0",width:tot+"px",height:"auto",display:"flex",flexWrap:"wrap",alignItems:"stretch",padding:"14px 10px",boxSizing:"border-box",gap:"0"});
+    const C=[...w.children].filter(c=>c.textContent.trim());C.forEach((c,i)=>{const long=c.textContent.trim().length>26||i===0;
+      Object.assign(c.style,{flex:long?"1 1 100%":"1 1 40%",width:"auto",minWidth:"0",boxSizing:"border-box",borderLeft:"none",borderTop:i?"1px solid rgba(255,255,255,.3)":"none",padding:"10px 14px"});
+      c.querySelectorAll("*").forEach(e=>{if(e.style.whiteSpace==="nowrap"&&e.textContent.trim().length>14)e.style.whiteSpace="normal"})});
+    card.appendChild(w);if(card.dataset.pvov==null){card.dataset.pvov=card.style.overflow||"";card.style.overflow="visible"}
+    return [...V,{el:w,w:tot,h:Math.ceil(w.offsetHeight),x:lx,y:0,px:0,ly:0,row:true,panel:1,read:1,list:1,part:"strip",hide:[]}]}catch(e){return V}}
 /* review 49: on desktop every part of the card shows on some page of the views and the full size view. Views cut to the dish blocks (the
    hospital meal form's two halves, the dim sum order sheet, a candy bar's side columns) left the header, poster, scenes, nurse's note and
    cue on no page at all (Rain Man, Kung Fu Panda 2, Roger Rabbit's middle column). A page with text outside every view gets a whole-page
