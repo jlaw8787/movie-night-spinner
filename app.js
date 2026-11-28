@@ -1257,18 +1257,22 @@ function cardFaces0(){
 }
 /* gutters on a wide page: the x positions no line of text crosses (measured on the words, a little padding either side).
    Kept per drawn card and page, so swiping does not measure again */
-function pvPanels(el,w,h,fi){const key=renderId+"|"+cardLen()+"|"+(fi||0)+(pvDesk?"d":"");card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
-  let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange();
+function pvPanels(el,w,h,fi){const key=renderId+"|"+cardLen()+"|"+(fi||0)+(pvDesk?"d"+pvFontGen:"");/* 28 Nov: on desktop measured again once fonts settle (Eurovision kept a cut from a half-drawn page) */card._pvp=card._pvp||{};if(card._pvp[key])return card._pvp[key];
+  let cuts=[];try{const b=el.getBoundingClientRect(),k=b.width/w||1,R=4,N=Math.ceil(w/R),cov=new Uint8Array(N),rg=document.createRange(),TX=[],IM=[];
     for(const e of el.querySelectorAll("*")){if(e.closest("[aria-hidden=true]"))continue;for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;rg.selectNodeContents(n);
-      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const pd=8,a=Math.max(0,Math.floor(((r.left-b.left)/k-pd)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+pd)/R));for(let i=a;i<=z;i++)cov[i]=1}}}
+      for(const r of rg.getClientRects()){if(!r.width||!r.height)continue;{const cy=((r.top+r.bottom)/2-b.top)/k;if(cy<h*.16||cy>h*.93)continue}/* the sign along the top and the fine print may cross a panel edge: they step aside in panel views (pvMask) */const pd=8,a=Math.max(0,Math.floor(((r.left-b.left)/k-pd)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k+pd)/R));for(let i=a;i<=z;i++)cov[i]=1;TX.push([(r.left-b.left)/k,(r.right-b.left)/k])}}}
     /* review 46: on desktop a page view never cuts through a photo or poster (Zoolander's poster lost its right edge and frame): a picture
        narrower than most of the page counts as covered, so the cut falls in the gutter beside it */
     /* phone pass: on a phone too (the pub poster and The Muppets poster were cut in half across two swipes) */
     for(const im of el.querySelectorAll("img")){const r=im.getBoundingClientRect();if(!r.width||!r.height)continue;const iw=r.width/k,ih=r.height/k;if(iw>w*.7||ih<h*.15)continue;
-      const a=Math.max(0,Math.floor(((r.left-b.left)/k)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k)/R));for(let i=a;i<=z;i++)cov[i]=1}/* review 39: 5px either side on a phone, so a 20px gap between two columns (the placemat's menu and its side column) is a gutter */
+      const a=Math.max(0,Math.floor(((r.left-b.left)/k)/R)),z=Math.min(N-1,Math.ceil(((r.right-b.left)/k)/R));for(let i=a;i<=z;i++)cov[i]=1;IM.push([(r.left-b.left)/k,(r.right-b.left)/k])}/* review 39: 5px either side on a phone, so a 20px gap between two columns (the placemat's menu and its side column) is a gutter */
     /* candidate cuts: the middle of every clear run (long runs offer a point every 60px); then the fewest panels (2 to 4) that keep every
        panel 200 to 440px wide, or failing that the split with the narrowest widest panel (Wall-E: photos, two menu columns, photos) */
-    const C=[];for(let i=1;i<N-1;){if(cov[i]){i++;continue}let j=i;while(j<N-1&&!cov[j])j++;const a=i*R,z=j*R;if(z-a>=8){if(z-a>120){for(let x=a+30;x<z-30;x+=60)C.push(x);C.push(a+12,z-12)}else C.push(Math.round((a+z)/2))}i=j}C.sort((x,y)=>x-y);/* review 39: a long clear run also offers its two ends, so a panel can start right at its text and not show a sliver of the photo beside it */
+    const C=[];for(let i=1;i<N-1;){if(cov[i]){i++;continue}let j=i;while(j<N-1&&!cov[j])j++;const a=i*R,z=j*R;if(z-a>=8){if(z-a>120){for(let x=a+30;x<z-30;x+=60)C.push(x);C.push(a+12,z-12)}else C.push(Math.round((a+z)/2))}i=j}/* 28 Nov (Eurovision, desktop only): a photo with 16px or more of clear page between its edge and the nearest text beside it is a gutter,
+       cut in the middle of that gap. The text padding and 4px rounding above left a 20px gap at 4 to 8px, so the page split on some loads only */
+    if(pvDesk)for(const [l,rr] of IM)for(const [e,dir] of [[rr,1],[l,-1]]){if(e<200||e>w-200)continue;let g=1e9;for(const [t0,t1] of TX){if(t0<e-1&&t1>e+1){g=-1;break}const d=dir>0?t0-e:e-t1;if(d>=-1&&d<g)g=d}
+      if(g>=16&&g<1e9){const x=Math.round(e+dir*g/2);if(!TX.some(([t0,t1])=>t0<x&&t1>x)&&!C.some(c=>Math.abs(c-x)<=g/2))C.push(x)}}
+    C.sort((x,y)=>x-y);/* review 39: a long clear run also offers its two ends, so a panel can start right at its text and not show a sliver of the photo beside it */
     const MIN=200,best={};
     const split=n=>{/* DP: widest panel minimised for n panels over cut points */const P=[0,...C.filter(x=>x>=MIN&&x<=w-MIN),w],M=P.length;
       let D=P.map((x,i)=>i===0?{m:0,c:[]}:null);
