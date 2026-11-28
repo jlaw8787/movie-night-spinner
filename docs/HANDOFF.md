@@ -2546,3 +2546,14 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Debug tools used (not committed): strip probe, view scan and screenshot scripts in the session box.
 - Next: deploy on Josh's go.
 - 28 Nov, 1:46pm: deployed on Josh's go. main fast-forwarded b8e884dd to a7bd6782; Publish site run 46104411996 passed first try; expected live sw.js VERSION mns-0aa64582 and app.js?v=7939962d (live check not run: the web fetch needed Josh's approval, unanswered).
+- 28 Nov, 1:50pm: live check done. reeldinner.com serves sw mns-0aa64582 and app.js?v=7939962d.
+
+## 28 Nov, 1:50pm onwards: Thor's strip temperature (branch fix/thor-temp off main 22c0fcf6, NOT deployed, held for Josh's go)
+
+- "9 C" in Thor: Love and Thunder's strip is now "9°C" (data/film-flavour.json).
+- Ripple: with the degree sign in place, libUS (review 47) read Thor as an American card (no country set) and printed 48°F. New Asgard is in Norway ("off the fjord"), so Josh's rule (wording fits where the film is set) wants Celsius: Thor's flavour now has "country": "NO". That turns off usCard for this film only. Knock-on: tests/spelling.test.cjs then caught "shrimp" in the fish soup note, now "prawns" (data/films.json and data/dish-notes.json). Prices still print in $ (no currency set), same as before. No other card line changed (card-print diff is the soup note only).
+- Order that works: build-data, render-previews --stale, build-data again (the film page reads card-print.json, which render-previews writes).
+- Build stamps: sw mns-987c359d, app.js?v=7939962d (app.js untouched).
+- Checks: node tests pass; ripple 0 gaps; check-phone-panels 0 (all 1,000); check-view-cuts 0 and check-fullsize 0 on Thor (the only film changed); Thor preview re-rendered and eyeballed (strip reads 9°C).
+- Next: deploy on Josh's go.
+- Still open: Ratatouille's repeated header close-up; Eurovision sometimes opens whole on desktop.
