@@ -14,11 +14,15 @@ function periodPrice(base1990,year,seed){const x=base1990*cpi(year)*(0.88+((seed
   const ends=x<10?[".95",".50",".25",".75"]:[".95",".50",".00"];const w=Math.floor(x);return w+ends[seed%ends.length]}
 
 const W=1056,H=1344,ID="pub";
+/* 28 Nov (Eurovision's chalkboard): the board fits its type by measuring the text, so the app waits on .ready (set at the foot) until this sheet and
+   its faces have landed. Before, a fresh load measured the fallback face and the last drink note ran into "From the kitchen" */
+let PUB_READY=Promise.resolve();
 if(!document.getElementById("fmt-pub-fonts")){
   const l=document.createElement("link");l.id="fmt-pub-fonts";l.rel="stylesheet";
   l.href=rdFontHref("family=DM+Serif+Display&family=Ranchers&family=Poller+One&family=Sansita:wght@900&family=Kanit:ital,wght@1,800&family=Saira+Extra+Condensed:wght@800&family=Sofia+Sans+Extra+Condensed:wght@800&family=Schibsted+Grotesk:wght@900&family=Source+Serif+4:ital,wght@0,500;0,700;1,500&family=Karla:ital,wght@0,500;0,800;1,500&family=Cabin:ital,wght@0,500;0,700;1,500&family=Barlow:ital,wght@0,500;0,700;1,500&family=Work+Sans:ital,wght@0,500;0,700;1,500&family=Homemade+Apple","swap");
   /* warm every face as soon as the sheet lands, so menu fitting measures with real metrics */
-  l.onload=()=>{try{["DM Serif Display", "Ranchers", "Poller One", "Sansita", "Kanit", "Saira Extra Condensed", "Sofia Sans Extra Condensed", "Schibsted Grotesk", "Source Serif 4", "Karla", "Cabin", "Barlow", "Work Sans", "Homemade Apple"].forEach(f=>{document.fonts.load(`800 20px "${f}"`);document.fonts.load(`500 20px "${f}"`);document.fonts.load(`italic 500 20px "${f}"`)})}catch(e){}};
+  PUB_READY=new Promise(done=>{setTimeout(done,4000);l.onerror=done;
+  l.onload=()=>{const w=[];try{["DM Serif Display", "Ranchers", "Poller One", "Sansita", "Kanit", "Saira Extra Condensed", "Sofia Sans Extra Condensed", "Schibsted Grotesk", "Source Serif 4", "Karla", "Cabin", "Barlow", "Work Sans", "Homemade Apple"].forEach(f=>{w.push(...["900","800","700","500","italic 500","italic 800"].map(v=>document.fonts.load(`${v} 20px "${f}"`)))})}catch(e){}Promise.all(w.map(x=>x.catch(()=>0))).then(done)}});
   document.head.appendChild(l);
 }
 /* ---------- text safety ---------- */
@@ -284,4 +288,5 @@ var numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(
   const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}${under?raffle:""}<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;height:${NB-(BY+BH+20)}px;display:flex;flex-direction:column">${under?"":raffle}${noteHtml}</div>${fineHtml}</div>`;
   return {w:W,h:H,faces:[face]};
 };
+window.MENU_FORMATS[ID].ready=PUB_READY;
 })();
