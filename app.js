@@ -1136,6 +1136,15 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
     /* review 39 (Josh: Men in Black was 8 swipes): only the first page stays as a whole-page overview; a later page goes straight to its
        reading views, and a page with only one dish line on it (a cover's "today's special") stays whole with no reading view */
     if(V.indexOf(v)===0||v.crop)out.push(v);const at0=out.length;/* a cropped menu card (The Untouchables' Bill of Fare) keeps its whole view before its reading views, so its heading, stamp and footer still show */
+    /* A Bug's Life (28 Nov): a later page has no overview, so a block with no dish on it (the showtime cue, Princess Dot's note, the tent tag)
+       was in no view when the page cut into small close-ups; whether it did hung on the film shown before. When such a block is left out and
+       the page's dishes run most of its width, the page's list swipe is tried too, and it takes the close-ups' place when it shows more of
+       the left-out text than they do and carries at least half of it (a kiosk's footer strip caught by a close-up stays; Ghostbusters:
+       Afterlife's copy carries only a few of its left-out lines, so its close-ups stay) */
+    let lvAlt=null;
+    if(listOn&&V.indexOf(v)>0&&!v.crop&&R2.length>1){const U=R2.flat(),[ux0,,ux1]=bb(U),lost=regions.filter(L=>!R2.includes(L)).flat().filter(b=>b[4]>=3);
+      if(lost.reduce((t,b)=>t+b[4],0)>=40&&ux1-ux0+28>=.75*v.w){const had=new Set(card.querySelectorAll(".pv-list")),LV=listViews(U),nw=[...card.querySelectorAll(".pv-list")].filter(e=>!had.has(e)),lt=nw.map(e=>e.textContent.replace(/\s+/g," ")).join(" ");
+        if(LV){const got=lost.filter(b=>lt.includes(String(b[5]).replace(/\s+/g," ").trim().slice(0,24))).reduce((t,b)=>t+b[4],0);lvAlt={LV,nw,lost,got}}else nw.forEach(e=>e.remove())}}
     for(const L of R2){const [x0,y0,x1,y1]=bb(L),w=Math.min(v.w,x1-x0+28),kk=pw/w,cx=Math.max(lo,Math.min(hi-w,x0-14));
       if(listOn&&minF(L)*kk<10.5&&x1-x0+28>=.75*v.w){const LV=listViews(L);if(LV){for(const q of LV){n++;q.part="list"+n;out.push(q)}continue}}
       /* tall regions: cut at the line gap nearest each screenful */
@@ -1172,7 +1181,9 @@ function pvReadViews(base){const pw=preview.clientWidth||360,sp=cardSmallPx(),de
     /* phone pass: when the reading views fill the bottom of the opening panel (Muriel's poster above the counter list), that panel's swipe
        stops above them, so the list does not show twice */
     else if(v.panel&&V.indexOf(v)===0&&out.length-at0>=1&&out[at0-1]===v){const R=out.slice(at0),ry0=Math.min(...R.map(r=>r.y)),ry1=Math.max(...R.map(r=>r.y+r.h)),vy=v.y||0;
-      if(ry1>=vy+v.h*.85&&ry0-vy>=v.h*.25&&R.every(r=>r.x>=v.x-2&&r.x+r.w<=v.x+v.w+2))out[at0-1]=Object.assign({},v,{h:Math.round(ry0-vy)})}}
+      if(ry1>=vy+v.h*.85&&ry0-vy>=v.h*.25&&R.every(r=>r.x>=v.x-2&&r.x+r.w<=v.x+v.w+2))out[at0-1]=Object.assign({},v,{h:Math.round(ry0-vy)})}
+    if(lvAlt){const C=out.filter(q=>!q.list&&q.el===v.el),seen=lvAlt.lost.filter(b=>{const cx2=(b[0]+b[2])/2,cy2=(b[1]+b[3])/2;return C.some(q=>cx2>=(q.px||0)&&cx2<=(q.px||0)+q.w&&cy2>=(q.ly!=null?q.ly:0)&&cy2<=(q.ly!=null?q.ly:0)+q.h)}).reduce((t,b)=>t+b[4],0);
+      if(!out.slice(at0).some(q=>q.list)&&lvAlt.got>seen&&lvAlt.got*2>=lvAlt.lost.reduce((t,b)=>t+b[4],0)){out.splice(at0);for(const q of lvAlt.LV){n++;q.part="list"+n;out.push(q)}}else lvAlt.nw.forEach(e=>e.remove())}}
   return out.length&&out.length<=14?out:base}
 const PV_LIST_OFF=["The Italian Job (1969)","The Silence of the Lambs (1991)"];/* phone list swipes: every card but these (Josh: leave them alone) */
 const PRICE_RX=/^(?:(?:A?\$|£|€|¥)\s?\d{1,4}(?:[.,]\d{2})?|\d{0,3}[.,]\d{2}|\d{1,3}\s?¢)$/;/* phone pass: a printed price line ($3.50, 2.75, 25¢) for the reading views */
