@@ -2545,3 +2545,4 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Still open: Ratatouille's repeated header close-up; Eurovision sometimes opens whole on desktop.
 - Debug tools used (not committed): strip probe, view scan and screenshot scripts in the session box.
 - Next: deploy on Josh's go.
+- 28 Nov, 1:46pm: deployed on Josh's go. main fast-forwarded b8e884dd to a7bd6782; Publish site run 46104411996 passed first try; expected live sw.js VERSION mns-0aa64582 and app.js?v=7939962d (live check not run: the web fetch needed Josh's approval, unanswered).
