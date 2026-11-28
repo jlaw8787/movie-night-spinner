@@ -2557,3 +2557,4 @@ Josh: the kiosk footer strip (Dinner at / Forecast / Spotted) on phone, all 30 k
 - Checks: node tests pass; ripple 0 gaps; check-phone-panels 0 (all 1,000); check-view-cuts 0 and check-fullsize 0 on Thor (the only film changed); Thor preview re-rendered and eyeballed (strip reads 9°C).
 - Next: deploy on Josh's go.
 - Still open: Ratatouille's repeated header close-up; Eurovision sometimes opens whole on desktop.
+- 28 Nov, 2:10pm: deployed on Josh's go. main fast-forwarded 22c0fcf6 to 46641eb2; Publish site run 46106155855 passed; live check done: sw mns-987c359d, Thor's film page prints prawns.
